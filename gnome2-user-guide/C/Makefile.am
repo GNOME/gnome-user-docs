@@ -29,3 +29,5 @@ install-data-hook-omf:
 	-scrollkeeper-update -p $(scrollkeeper_localstate_dir) -o $(DESTDIR)$(omf_dest_dir)
 
 dist-hook: app-dist-hook
+
+EXTRA_DIST += $(extraomf)
