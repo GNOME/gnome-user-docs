@@ -1,0 +1,877 @@
+<!DOCTYPE article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.1//EN"[
+]>
+<article id="index" lang="es"> 
+ 
+  <artheader> 
+  <title>Si usted es nuevo en Linux/Unix</title>
+    <copyright>
+      <year>2000</year>
+      <holder>Alexander Kirillov</holder>
+    </copyright>
+    <copyright>
+      <year>2001</year>
+      <holder>Manuel de Vega Barreiro y grupo Gnome-es (traducción al Castellano)</holder>
+    </copyright>
+
+      <legalnotice id="legalnotice">
+      <para>
+        Permission is granted to copy, distribute and/or modify this
+        document under the terms of the <ulink type="help"
+        url="gnome-help:fdl"><citetitle>GNU Free Documentation
+        License</citetitle></ulink>, Version 1.1 or any later version
+        published by the Free Software Foundation with no Invariant
+        Sections, no Front-Cover Texts, and no Back-Cover Texts. You
+        may obtain a copy of the <citetitle>GNU Free Documentation
+        License</citetitle> from the Free Software Foundation by
+        visiting <ulink type="http" url="http://www.fsf.org">their Web
+        site</ulink> or by writing to: Free Software Foundation, Inc.,
+        59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+      </para>
+	
+	<para>
+	  Many of the names used by companies to distinguish their
+	  products and services are claimed as trademarks. Where those
+	  names appear in any GNOME documentation, and those
+	  trademarks are made aware to the members of the GNOME
+	  Documentation Project, the names have been printed in caps
+	  or initial caps.
+	</para>
+           <para>
+       Se permite la copia, distribución y/o modificación de este 
+       documento bajo los términos de la licencia de documentación libre
+       de GNU, versión 1.1 o cualquier versión posterior publicada por la
+       fundación para el software libre; sin secciones invariantes, sin 
+       portada, y sin contraportada.
+       Una copia de esta licencia esta disponible en la fundación para el
+       software libre y puede leerse en 
+       <ulink type="help" url="gnome-help:fdl">linea</ulink>.
+       </para>
+
+
+      <para> 
+        Muchos de los nombres usados por las compañías para diferencias sus 
+        productos y servicios son reclamados como marcas registradas. Allí 
+        donde estos nombres aparezcan en la documentación de Gnome, y cuando
+        los miembros del proyecto de documentación Gnome hayan sido informados
+        de esas marcas registradas, los nombres estarán impresos en mayúsculas
+        o como nombres propios.
+      </para>
+
+
+      </legalnotice>
+    </artheader>
+<sect1 id="introduction"> 
+    <title>Introducción</title>
+
+
+  <para> Uno de los objetivos de Gnome es hacer su sistema fácil de usar,
+     sin que necesite aprender los detalles técnicos sobre el sistema
+operativo. No obstante, hay algunas nociones básicas de Unix
+     con las que debe familiarizarse, incluso cuando utilice la interfaz
+     gráfica amigable suministrada por Gnome. Para los nuevos usuarios,
+     estos comandos se engloban en este documento. Si usted necesita más
+     información acerca de UNIX, debería leer la documentación que suminisitrada
+     con
+     su sistema. Existen también numerosos libros y guías
+     disponibles en Internet para todas las versiones de UNIX.
+  </para>
+
+  <para> La siguiente guía se aplica a todas las versiones de UNIX y todos 
+     los sistemas operativos parecidos a UNIX , incluidos tanto sistmas comerciales
+     como <systemitem>Solaris</systemitem> y sistemas operativos de código
+     abierto como <systemitem>BSD</systemitem> y <systemitem>Linux</systemitem>.
+     Parte del material de esta guía está basado en la guía
+     <citetitle>Instalación de Linux e primeros pasos</citetitle>, escrita por 
+     Matt Welsh, Phil Hughes, David Bandel, Boris Beletsky, Sean Dreilinger, 
+     Robert Kiesling, Evan Liebovitch, y Henry Pierce. La guía está disponible 
+     para descargar o consultar directamente en la dirección URL
+     <ulink url="http://www.linuxdoc.org" type="http">Proyecto de
+     Documentación Linux</ulink> o del <ulink url="http://www.oswg.org">
+     Grupo de Escritores de Código Abierto</ulink>.
+<footnote>
+<PARA>
+Una versión en castellano de esta guia se encuentra en las paginas de
+<ULINK URL="http://LuCAS.hispalinux.es/Manuales-LuCAS/LIPP/lipp-1.1-html-2/" TYPE="http">proyecto Lucas</ULINK>. 
+</PARA>
+</footnote>.
+
+  </para>
+  </sect1>
+
+  <sect1 id="new-users">
+    <title>Usuarios</title> 
+    <para> UNIX es un sistema operativo multiusuario: fue designado para
+      permitir a varios usuarios trabajar en la misma computadora, ya sea 
+      simultáneamente (utilizando varios terminales o en conexiones de red)
+      o en turnos. En sistemas UNIX, para identificarse usted en el sistema,
+      debe conectarse, lo que conlleva introducir su <emphasis>nombre de
+      acceso</emphasis> (el nombre que el sistema utiliza para 
+      identificarle) y su <emphasis>contraseña</emphasis>, que es su clave
+      personal para introducirse en su cuenta personal. Porque sólo usted
+      conoce su clave de acceso, nadie más puede introducirse en el sistema
+      con su nombre de acceso. Normalmente se escoge el nombre, el apellido
+      o alguna variación de éstos como su nombre de acceso, por lo que si
+      su nombre es: Sasha Beilinson, su nombre de acceso podría ser:
+      <systemitem>Sasha</systemitem>.
+    </para>
+    <para> Cada usuario tiene un espacio separado para guardar sus
+      documentos (llamado <emphasis>directorio personal</emphasis>).
+      UNIX posee un sistema de permisos (ver <xref linkend="permissions">),
+      por lo cual en un Sistema UNIX apropiadamente configurado, un usuario
+      no puede cambiar archivos pertenecientes a otro usuario o al sistema.
+      Esto también permite a cada usuario, configurar varios aspectos del
+      sistema &mdash;  para sí mismo, sin afectar a otros.
+    </para>
+    <para> En cada sistema UNIX, hay un usuario especial, llamado
+      <emphasis>administrador del sistema</emphasis>, con el nombre de
+      acceso <systemitem>root</systemitem>. Este usuario tiene
+      <emphasis>completo</emphasis> control sobre el sistema &mdash;
+      incluyendo acceso total a todos los archivos de sistema y de los
+      usuarios. Tiene autoridad para cambiar las claves de acceso de los
+      usuarios existentes y añadir nuevos usuarios, instalar y desinstalar
+      software, además de otras cosas. El administrador del Sistema, es
+      normalmente la persona responsable del correcto funcionamiento
+      del sistema, por lo que si presenta algún problema, debe acudir a él.
+    </para>
+    <important>
+      <title>IMPORTANTE</title>
+      <para> Incluso si usted es el único usuario en su ordenador (por
+        ejemplo, si es ordenador personal), por lo que usted también es el
+        administrador del sistema, es importante que cree una cuenta de
+        usuario y la utilice para su trabajo diario, accediendo como
+        administrador ("root") sólo cuando sea necesario para el
+        mantenimiento del sistema. Dado que "root" puede hacer cualquier
+        cosa, es fácil cometer errores que tengan consecuencias catastróficas.
+        Imagine el usuario "root" como un sombrero mágico que le da a usted
+        mucho poder, con el que puede, con un movimiento de manos, crear o
+        destruir ciudades enteras. Ya que es fácil mover las manos de forma
+        destructiva, no es una buena idea utilizar el sombrero mágico
+        cuando no es necesario, a pesar de lo maravilloso que se siente.
+      </para>
+    </important>
+  </sect1>
+  <sect1 id="new-file">
+    <title>Archivo y nombres de archivos</title>
+    <para> En la mayoría de los sistemas operativos (incluyendo UNIX),
+      existe el concepto de <emphasis>archivo</emphasis>, que es sólo
+      un conjunto de información con un nombre (llamado <emphasis>nombre
+      del archivo</emphasis>. Ejemplos de archivos, podrían ser su examen
+      final de historia, un mensaje de correo electrónico, o un programa
+      que pueda ser ejecutado. Esencialmente, cualquier cosa guardada
+      en disco es guardado en un archivo individual.
+    </para>
+    <sect2 id="new-filenames">
+      <title>Nombres de archivos</title>
+      <para>
+        Los archivos son identificados por sus nombres. Por ejemplo, el
+        archivo que contiene una conferencia hablada, puede ser guardada
+        bajo el nombre de archivo <filename>talk.txt</filename>. No existe
+        un formato estándar para los nombres de los archivos, como existe
+        en MS-DOS y otros sistemas operativos; en general, el nombre de un
+        archivo puede contener cualquier carácter (excepto el carácter &ndash;
+        vea la explicación de los caminos de nombres debajo) y es limitado
+        ,en su extensión, a 256 caracteres.
+      </para>
+      <important>
+	<title>IMPORTANTE</title>
+	<para>
+          A diferencia de MS-DOS, los nombres de archivo en UNIX son sensibles
+          a mayúsculas o minúsculas: <filename>midocumento.txt</filename>
+          y <filename>MiDocumento.txt</filename>, son considerados como
+          dos archivos diferentes.
+	</para>
+      </important>
+      <para>
+        También debe conocer algunas convenciones en UNIX, que si bien no
+        son obligatorias, normalmente es una buena idea seguirlas.
+	<itemizedlist>
+	  <listitem>
+	    <para> Es costumbre utilizar el formato
+              <filename>nombrearchivo.extensión</filename>, para nombres
+              de archivo, en el que la extensión indica el tipo de archivo;
+              por ejemplo, la extensión <filename>txt</filename> es
+              normalmente utilizada para archivos de texto simple;
+              en tanto que la extensión jpeg es utilizada para gráficos en
+              formato JPEG, y así. En particular, la aplicación
+              <application>Gestor de Archivos de Gnome</application>
+              (<application>Nautilus</application>) utiliza extensiones para
+              determinar el tipo de archivo. Usted puede ver o cambiar 
+              todas las
+              extensiones de archivo reconocidas por
+              <application>Gnome</application>, 
+              escogiendo la opción 
+              <menuchoice>
+              <guimenuitem>tipos MIME</guimenuitem>
+	      </menuchoice> 
+	       de la sección 
+	      <menuchoice> 
+              <guimenu>Manejadores de documentos</guimenu>
+	      </menuchoice> 
+               en el
+	      <application>Centro de control de GNOME</application>.
+              
+              Observe que la convención estándar en UNIX es que los 
+              <emphasis>ejecutables</emphasis> no tienen extensiones.
+            </para>
+          </listitem>
+	  
+	  <listitem>
+	    <para> Los archivos y directorios cuyos nombres comienzan con
+              un punto (.), son normalmente, <emphasis>archivos de
+              configuración</emphasis>, esto significa que estos archivos
+              contienen propiedades y preferencias para varias aplicaciones.
+              Por ejemplo, Gnome guarda todos sus configuraciones en varios
+              archivos en los directorios <filename>.gnome</filename> y
+              <filename>.gnome-desktop</filename> en el directorio personal
+              del usuario. Como la mayor parte del tiempo usted no necesita
+              editar estos documentos manualmente, ni siquiera conocer su
+              preciso nombre o localización, 
+              <application>Nautilus</application>
+              no suele mostrar estos archivos. Usted puede cambiar la
+              configuración como se indica en el <ulink type="help"
+	      url="gnome-help:nautilus">manual de Nautilus</ulink>.
+	    </para>
+	  </listitem>
+	  
+	  <listitem> 
+	    <para> Los archivos cuyos nombres terminan con (~), por lo
+              general son archivos de soporte (copias de seguridad) creados
+              por varias aplicaciones. Por ejemplo, cuando usted edita
+              un archivo <filename>miarchivo.txt</filename> con
+              <application>emacs</application>, se guarda la versión previa
+              en el archivo <filename>miarchivo.txt~</filename>. 
+	    </para>
+	  </listitem>
+	</itemizedlist>
+      </para>
+    </sect2>
+    <sect2 id="new-wildcards">
+      <title> Caracteres comodín</title> 
+
+      <para> Cuando usted entra órdenes desde la línea de comandos,
+        puede utilizar los llamados <emphasis>Caracteres comodín</emphasis>,
+        en lugar de un nombre de archivo exacto. El carácter comodín más
+        común es *, que corresponde a cualquier secuencia de símbolos
+        (incluyendo una línea vacía). Por ejemplo, la orden
+        <command>ls *.txt</command> va a listar todos los archivos con la
+        extensión <filename>txt</filename>, y la orden 
+        <command>rm capítulo*</command> va a borrar todos los archivos cuyos
+        nombres comiencen con  <filename>capítulo</filename>
+        (<command>ls</command> y <command>rm</command> son órdenes UNIX para
+        listar o borrar archivos).  Otro carácter comodín es ?,
+        que corresponde a cualquier símbolo individual: por ejemplo:
+        <command>rm capítulo?.txt</command> borrará todos los archivos
+        <filename>capítulo1.txt, capítulo2.txt</filename>, pero no el
+        <filename>capítulo10.txt</filename>
+      </para>
+      <para>Muchos de los nuevos usuarios de GNOME prefiere utilizar el
+          <application>Gestor de Archivos GNOME</application> para
+          realizar las operaciones con los archivos, antes que hacerlo
+          desde la línea de comandos. Los caracteres comodín también
+          son útiles para <application>Nautilus</application> en los
+          diálogos de selección de archivos y de visualización de filtros.
+      </para>
+    </sect2>
+
+
+    <sect2 id="quoting">
+      <title>Uso de espacios, comas, etc. en los nombres de ficheros</title>
+      <para>
+Como se menciono anteriormente, un nombre de fichero puede contener no solo letras
+y números, sino también espacios, comas, etc. &mdash; cualquier carácter destino
+de la barra (/). Sin embargo, si esta usando comandos tecleados en la linea de comandos,
+debe tener cuidado cuando use estos ficheros. Para evitar problemas, es recomendable que
+ponga entre comillas (') los nombres de ficheros con cualquier otra cosa que no sea
+letras, números, y puntos: para borrar <filename>Mi Fichero</filename>, debe teclear
+<command>rm 'Mi Fichero'</command> en vez de <command>rm Mi Fichero</command>. 
+      </para>
+      <para>
+Por supuesto, si usa exclusivamente herramientas gráficas como el gestor de 
+ficheros de Gnome, no deberá preocuparse de estas cosas: para borrar el fichero
+<filename>Mi Fichero</filename>, simplemente arrastrelo a la papelera.
+      </para>
+    </sect2>
+
+
+  </sect1>
+  <sect1 id="new-dirs">
+    <title>Directorios y rutas</title> 
+    <sect2 id="new-dirstruct">
+      <title>Estructura de directorios</title>
+      <para>
+        Ahora, discutiremos el concepto de directorios. Un
+        <emphasis>directorio</emphasis> es una colección de archivos.
+        Se puede pensar como una <quote>carpeta</quote> que contiene muchos
+        documentos diferentes. A los directorios se les da nombres,
+        por los que pueden ser identificados. Más aún, los directorios
+        se mantienen en una estructura como de árbol, es decir,
+        el directorio puede contener otros directorios. El directorio de 
+        más nivel es llamado el <quote>directorio raíz</quote> y denotado por
+        <filename>/</filename>; que contiene los archivos de su sistema.
+      </para>
+      <sect3 id="new-path">
+	<title>Rutas</title>
+	<para>
+          Una <emphasis>ruta</emphasis> ("path") es realmente 
+el <quote>nombre completo</quote> del fichero; contiene no solo el
+nombre del fichero, sino tambien su situación.Usted puede referirse 
+a un archivo por su ruta,
+          que se hace del nombre del documento, precedido por el nombre
+          del directorio que contiene ese documento. Este, a su vez, es
+          precedido por el nombre del directorio que contiene
+          <emphasis>este directorio</emphasis> y así. Una ruta típica
+          puede ser así: <filename>/home/sasha/talk.txt</filename> que
+          se refiere al archivo <filename>talk.txt</filename> en el
+          directorio <filename>sasha</filename>, el cual a su vez es un
+          subdirectorio de <filename>/home</filename>.
+	</para>
+	<para>
+          Como puede ver, el directorio y el nombre del archivo están
+          separados por una sola barra (/). Por esta razón los nombres
+          de los archivos no pueden contener en sí mismos el carácter /.
+          Los usuarios de MS-DOS encontrarán familiar esta convención,
+          a pesar de que en el mundo del MS-DOS se utiliza la barra
+          invertida (\). El directorio que contiene un subdirectorio dado,
+          es conocido como el <emphasis>directorio padre</emphasis>.
+          Aquí el directorio <filename>home</filename> es el padre del
+          directorio <filename>sasha</filename>.
+	</para>
+	<para>
+          Cada usuario tiene un directorio personal ("home"), el cual es
+          el directorio aparte  que utiliza ese usuario para guardar
+          sus archivos. Normalmente, los directorios personales de los
+          usuarios están contenidos bajo <filename>/home</filename>, y son
+          nombrados por el usuario que posee ese directorio, por lo que el
+          directorio personal del usuario <systemitem>sasha</systemitem>
+          sería  <filename>/home/sasha</filename>.
+	</para>
+      </sect3>
+    </sect2>
+    <sect2 id="new-relative"> 
+      <title>Nombres de directorios relativos</title>
+      <para>
+        En cualquier momento, las órdenes que usted introduce son asumidas
+        como <emphasis>relativas</emphasis> al directorio actual de trabajo.
+        Usted puede pensar que su directorio de trabajo es el directorio en
+        el que está actualmente <quote>localizado</quote>. Cuando usted se conecta
+        por primera vez, su directorio de trabajo es su directorio personal
+        &mdash; para el usuario sasha, esto sería
+        <filename>/casa/sasha</filename>. Cuando quiera referirse a un
+        archivo lo puede hacer en relación con su actual directorio
+        de trabajo, en lugar de especificar el nombre completo de la ruta
+        del archivo.
+      </para>
+      <para>
+        Por ejemplo, si su directorio actual es
+        <filename>/home/sasha</filename>, y tiene ahí un archivo llamado
+        <filename>talk.txt</filename>, puede referirse a éste por el nombre
+        del archivo: una orden como <command>emacs talk.txt</command>
+        ejecutada desde el directorio <filename>/home/sasha</filename>
+        es equivalente a <command>emacs /home/sasha/talk.txt</command>
+        (<application>emacs</application> es un editor extremadamente
+        poderoso para documentos de texto; los nuevos usuarios pueden
+        preferir algo más simple, tal como <application>gnotepad</application>,
+        pero para un usuario avanzado, <application>emacs</application>
+        es indispensable).
+      </para>
+      <para>
+        Similarmente, si en <filename>/home/sasha</filename> tiene un
+        subdirectorio llamado <filename>textos</filename> y, en ese
+        subdirectorio un archivo llamado
+        <filename>teoria_campo.txt</filename>, usted puede referirse a
+        éste como <filename>textos/teoria_campo.txt</filename>.
+      </para>
+      <para> Si usted comienza un nombre de un archivo (como
+        <filename>textos/teoria_campo.txt</filename>) con otro carácter
+        que no sea /, usted se está refiriendo al archivo en términos
+        relativos a su actual directorio de trabajo. Esto es conocido como
+        una ruta relativa. Por otro lado, si usted comienza el nombre del
+        archivo con un /, el sistema interpreta esto como una ruta completa
+        &mdash; esto es, una ruta que incluye la ruta completa al archivo,
+        comenzando por el directorio raíz, /.El uso de una ruta completa
+        es conocido como una <emphasis>ruta absoluta</emphasis>.
+      </para>
+    </sect2>
+    <sect2 id="new-path-conv">
+      <title>Convenciones de ruta</title> 
+      <para>
+        Aquí hay algunas convenciones estándar que puede utilizar en las rutas:
+      </para>
+      <para>
+	<filename>~/</filename> &mdash; directorio personal del usuario
+      </para>
+      <para>
+	<filename>./</filename>  &mdash; directorio actual de trabajo
+      </para>
+      <para>
+	<filename>../</filename>  &mdash; directorio padre del directorio
+        actual
+      </para>
+      <para>
+        Por ejemplo, si el directorio actual del usuario sasha es
+        <filename>/home/sasha/papers</filename>, puede referirse al
+        archivo <filename>/home/sasha/talk.txt</filename> como
+        <filename>~/talk.txt</filename> o como
+        <filename>../talk.txt</filename>.
+      </para>
+    </sect2>
+  </sect1>
+  <sect1 id="permissions">
+    <title>Permisos</title>
+    <para>
+      Cada archivo en su sistema tiene un <emphasis>dueño</emphasis> &mdash;
+      uno de los usuarios (normalmente el que ha creado este archivo), y un
+      sistema de permisos que regula el acceso a éste archivo.
+    </para>
+    <para>
+      Para archivos ordinarios, existen 3 tipos de permisos de acceso:
+      leer, escribir y ejecutar ("Read", "Write", "eXecute") ( el último
+      sólo tiene sentido para archivos ejecutables). Estos permisos pueden
+      ser establecidos independientemente para 3 categorías de usuarios:
+      el dueño del archivo, los usuarios en el grupo que posee el archivo
+      y todos los demás. Las discusiones de grupos de usuarios van más allá
+      del alcance de este documento; las otras dos categorías se explican
+      por sí mismas. <!--¿Qué grupo de usuarios? No creo que las otras dos
+      categorías se expliquen por sí mismas. Ayudaría si existiera una
+      exposición que explicara explícitamente quién pertenece a dónde.-->
+      Por tanto si los permisos en un archivo
+      <filename>/home/sasha/talk.txt</filename> están establecer para leer
+      y escribir por el usuario sasha, quien es el dueño del documento, y ser
+      leído solo por todos los demás, sólo sasha podrá modificar este
+      archivo. <!--Qué tal añadir algo en paréntesis aquí, como (Desde
+      que sasha creó este documento <filename>talk.txt</filename>, sasha
+      tiene el más amplio rango de derechos de acceso al documento.)....
+      o algo por el estilo?-->
+    </para>
+
+    <para>
+      Todos los nuevos archivos creados llevan algunos permisos estándar,
+      por lo general leer/escribir para el usuario creador y leer sólo para
+      todos los demás. Usted puede ver los permisos utilizando el
+      Gestor de Archivos de GNOME, apretando el botón derecho del ratón  en
+      el archivo, y escogiendo <guimenuitem>Propiedades</guimenuitem> en el
+      menú desplegable, y entonces la pestaña <guilabel>Permisos</guilabel>.
+      Utilizando este diálogo, puede también cambiar los permisos &mdash;
+      sólo presione en el cuadrado que representa el permiso para modificar
+      su estado. Por supuesto, sólo el dueño del archivo o el administrador
+      del sistema puede cambiar los permisos de un archivo. Los usuarios
+      avanzados también pueden cambiar los permisos de los archivos cuando
+      se establecen en la creación de los mismos  &mdash; vea las páginas
+      del manual para su entorno de líneas de comandos, "shell" (normalmente
+      <command>bash</command>, <command>csh</command> o
+      <command>tsch</command>) y consulte la orden <command>umask</command>.
+    </para>
+
+    <para>
+      Un archivo también puede tener propiedades especiales de permiso
+      como UID, GID y bit <quote>sticky</quote>. Estos permisos son sólo 
+para usuarios
+      avanzados &mdash; no los cambie a menos que usted sepa lo que está
+      haciendo. (Si usted es curioso: estos permisos son típicamente
+      utilizados en archivos ejecutables para permitir al usuario ejecutar
+      <emphasis>algunas</emphasis> órdenes para leer o modificar archivos
+      para los cuales el propio usuario no tiene acceso.)
+    </para>
+    <para> 
+      Al igual que los archivos, los directorios también tienen permisos
+      especiales. Otra vez, existen 3 posibles permisos: leer, escribir y
+      ejecutar (<quote>Read</quote>,<quote>Write</quote> y 
+      <quote>eXecute</quote>). No obstante, tienen diferente
+      significado: el llamado permiso de <quote>leer</quote> para un directorio, significa
+      permiso para listar el contenido del directorio o buscar un archivo;
+      <quote>escribir</quote> significa permiso para crear y eliminar archivos en el
+      directorio, y <quote>ejecutar</quote> significa permiso para acceder a los
+      archivos en el directorio.
+    </para>
+    <para>
+      Note que los permisos otorgados a un archivo dependen de los permisos
+      del directorio en el cual el documento está localizado: para ser capaz
+      de leer un archivo, el usuario necesita tener el permiso de leer para
+      el propio archivo y el permiso <quote>ejecutar</quote> para el directorio que lo
+      contiene. Por tanto, si el usuario sasha no quiere que nadie más vea
+      sus archivos, puede lograr esto eliminando los permisos de ejecución
+      de su directorio personal para todos los demás usuarios. De esta manera,
+      sólo él (y, por supuesto, el administrador <quote>root</quote>) podrán leer
+      cualquiera de sus archivos, sin importar cuales sean los permisos
+      individuales de los archivos.
+    </para>
+    <para> Una explicación detallada del sistema de permisos puede ser
+      encontrada, por ejemplo, 
+
+
+en las 
+<ulink type="info" url="info:fileutils">páginas info</ulink>
+del paquete de <citetitle>Utilidades de Archivos</citetitle> GNU. 
+      </para>
+  </sect1>
+
+  <sect1 id="symlinks">
+    <title>Enlaces simbólicos</title>
+    <para>
+      Además de los archivos regulares, UNIX tiene también archivos
+      especiales llamados <emphasis>enlaces simbólicos</emphasis>
+      ("symbolic links" o <emphasis>symlinks</emphasis>, para acortar).
+      Estos archivos no contienen datos; en su lugar solo son
+      "apuntadores" o "atajos" a otros archivos. Por ejemplo, sasha puede
+      tener un symlink llamado <filename>ft.txt</filename> que apunta al
+      documento <filename>pruebas/teoriacampo.txt</filename>; de esta manera
+      cuando un programa trata de acceder al archivo
+      <filename>ft.txt</filename>, el archivo
+      <filename>pruebas/teoriacampo.txt</filename> será abierto en su lugar.
+      Como puede ver por este ejemplo, el symlink y el archivo destino pueden
+      tener nombres diferentes y ser localizados en directorios diferentes.
+    </para>
+    <para> Note que eliminar, mover o renombrar un documento symlink no tiene
+      efecto en el archivo destino: si sasha trata de eliminar el
+      archivo <filename>ft.txt</filename>, es el symlink lo que se eliminará,
+      y el archivo <filename>pruebas/teoriacampo.txt</filename> seguirá
+      inalterado. También los permisos del symlink no tienen significado
+      alguno, son los permisos del archivo destino los que determinan
+      si el usuario tiene acceso a éste.
+    </para>
+
+    <para> Los symlinks también pueden apuntar a directorios. Por ejemplo,
+      en el servidor de FTP de GNOME (<systemitem>ftp.gnome.org</systemitem>),
+      existe un archivo <filename>/pub/GNOME/stable/releases/october-gnome</filename>, que en el
+      momento en que se escribe este manual, es un enlace simbólico al 
+directorio
+      <filename>/pub/GNOME/stable/releases/gnome-1.0.53</filename>. 
+&mdash; como podra imaginar, <quote>October Gnome</quote> es simplemente
+otro nombre de la versión 1.0.53 de Gnome.
+    </para>
+  </sect1>
+  <sect1 id="new-mount">
+    <title>Montar y desmontar dispositivos</title>
+    <para>
+      Como hemos mencionado anteriormente, los directorios en un entorno
+      UNIX están organizados en un árbol, cuyo directorio raíz es
+      <filename>/</filename>. A diferencia de otros sistemas operativos
+      como MS-DOS, no hay nombres especiales para los archivos en 
+      la unidad de disquete o en el CD-ROM: <emphasis>todos</emphasis>
+      los archivos accesibles por su sistema deben aparecen en él
+      árbol de directorios principal que empieza por <filename>/</filename>.
+    </para>
+    <para>
+      Por tanto, antes de que usted tenga acceso a los archivos en un
+      disquete o CD-ROM, usted debe dar a su sistema una orden para
+      incorporar los contenidos del disquete en el árbol directorio
+      principal, al cual se le refiere como <emphasis>montaje</emphasis>
+      del disquete. 
+Puede verlo como el equivalente software a la conexion del dispositivo
+a su sistema.
+Típicamente, los contenidos del CD-ROM aparecen bajo
+      el nombre <filename>mnt/cdrom</filename>; los del disquete bajo
+      <filename>/mnt/floppy</filename> (éstos son los llamados
+      <emphasis>puntos de montaje</emphasis> y son definidos en el
+      archivo especial de configuración, <filename>/etc/fstab</filename>).
+      El acceso a una unidad, de esta manera, no significa que el sistema
+      copiará todos los archivos del CD al directorio
+      <filename>/mnt/cdrom</filename>. En su lugar, esto significa que el
+      directorio <filename>/mnt/cdrom</filename> 
+      <emphasis>representa</emphasis> al CD-ROM: Cuando un programa trata
+      de tener acceso, digamos a un archivo llamado
+      <filename>/mnt/cdrom/index.html</filename>, el sistema buscará el
+      archivo <filename>index.html</filename> en el CD-ROM.
+    </para>
+    <para>
+      Por tanto, en pocas palabras: antes de que usted pueda utilizar
+      archivos en una unidad, usted debe "montarlo". Similarmente 
+      <emphasis>antes de sacar el disco del lector, usted debe
+      desmontarlo.</emphasis>
+    </para>
+    <para>
+      Cuando utilice GNOME, usualmente no tiene que preocuparse por montar
+      y desmontar: GNOME busca el archivo con la configuración apropiada y
+      localiza los iconos para todas las unidades en su escritorio. Al hacer
+      doble clic en cualquiera de estos iconos, automáticamente se monta la
+      unidad correspondiente (si no estaba montado ya) y ejecuta el
+      gestor de archivos en el directorio apropiado. Similarmente, si usted
+      hace doble clic en el icono unidad y escoge la orden <guimenuitem>Sacar
+      disco</guimenuitem> del menú desplegable, GNOME desmonta
+      automáticamente antes de sacarlo. Usted puede también montar/desmontar
+      una unidad presionando con el botón derecho del ratón en el icono de su
+      escritorio y escogiendo <guimenuitem>Montar unidad</guimenuitem> o
+      <guimenuitem>Desmontar unidad</guimenuitem> del menú desplegable, o
+      utilizando el aplique de montaje de discos.
+    </para>
+    <para>
+      Note que usted no puede desmontar una unidad si está siendo utilizado
+      por algún programa; por ejemplo, si usted tiene abierta una ventana
+      terminal en el directorio de la unidad que usted está tratando de
+      desmontar. Entonces, recibe el mensaje de error "Controlador ocupado"
+      mientras intenta desmontar la unidad, asegúrese de que ninguna de sus
+      aplicaciones abiertas esté teniendo acceso a un archivo o directorio
+      en esta unidad.
+    </para>
+    <para>
+      No obstante GNOME no puede impedir que usted saque el disco manualmente
+      de la unidad &mdash, en este caso es su responsabilidad el desmontar la
+      unidad antes de hacerlo. Para unidades de CD o Zip, el sistema bloquea
+      el botón de sacado de la unidad mientras la unidad esté montado, para
+      los disquetes, esto es técnicamente imposible.
+    </para>
+
+    <important>
+      <title>IMPORTANTE</title>
+      <para>
+        Si usted saca un disquete utilizando un botón de sacado de la unidad
+        sin desmontarlo primero, usted puede perder sus datos!
+      </para>
+    </important>
+
+    <para> Algunos sistemas tienen programas especiales como 
+<application>supermount</application> o <application>magicdev</application>, 
+      que montan automáticamente una unidad cuando
+      se inserta un disco y desmonta la unidad si ésta no se ha utilizado
+      por un período de tiempo específico. En este caso, usted nunca
+      deberá preocuparse de montar/desmontar unidades usted mismo; no 
+necesita por tanto ni leer esta sección.
+    </para>
+    <para>
+      El permitir a los usuarios el montar y desmontar unidades conlleva
+      algunos riesgos de seguridad, muchos sistemas multiusuarios se 
+      configuran de modo
+      que sólo el usuario administrador "root"  puede montar y desmontar
+      una unidad. Esta es la causa mas probable de los errores al intentar
+      montar un dispositivo. En este caso, plantee este problema al 
+      administrador de su sistema.
+    </para>
+    <para>
+      Si la computadora es su estación de trabajo personal o el ordenador
+      personal de casa y no le preocupa la seguridad, usted puede
+      dar permiso de montar unidades a usuarios ordinarios. La manera más
+      fácil de permitir ello es el uso de la aplicación
+      <application><emphasis>linuxconf</emphasis></application> (que sólo
+      puede ser ejecutada por el usuario administrador "root"). Sólo
+      seleccione la unidad a la que quiere acceder en la sección
+      <guilabel>Unidades de acceso local</guilabel> de la pestaña
+      <guilabel>Opciones</guilabel> de la opción 
+      <guilabel>Montable por usuarios</guilabel>. Su unidad será ahora
+      montable por los usuarios.
+    </para>
+    <para>
+      Si <application><emphasis>linuxconf</emphasis></application>  no está
+      disponible, usted debe editar el archivo
+      <filename>/etc/fstab</filename> para incluir acceso a usuarios. Esto
+      se hace añadiendo el atributo del "usuario" a la unidad. Por ejemplo:
+    </para>
+    <para>
+      Si su archivo <filename>fstab</filename> contiene una línea como ésta: 
+    </para>
+      <programlisting>
+/dev/cdrom /mnt/cdrom iso9660 exec,dev,ro,noauto 0 0
+      </programlisting>
+      <para>
+      añada la palabra "usuario" a la cuarta columna:
+    </para>
+    <programlisting>
+/dev/cdrom /mnt/cdrom iso9660 user,exec,dev,ro,noauto 0 0
+    </programlisting>
+  </sect1>
+
+
+  <sect1 id="devices">
+    <title>Controladores y dispositivos</title>
+    <para>
+En Unix, la palabra <quote>dispositivo</quote> se usa para todos los dispositivos
+periféricos conectados al ordenador; esto incluye los discos duros, disqueteras
+y CDROM, tarjetas de vídeo y audio, puertos serie y paralelo, y demás cosas.
+Cada dispositivo tiene un nombre, como <filename>/dev/hda</filename>. Los nombres
+mas comunes se listan a continuación (para Linux; otras variedades de Unix pueden
+usar nombres de dispositivos ligeramente diferentes).
+    </para>
+    <itemizedlist>
+      <listitem><para> <filename>/dev/hd*</filename> (donde *=a,b,c,
+	  &hellip;): son los dispositivos IDE, como discos duros,
+lectores CDROM y dispositivos ZIP. <filename>/dev/hda</filename> representa
+el dispositivo maestro del primer controlador IDE (usualmente el primer disco
+duro,  <filename>C:</filename> en windows), <filename>/dev/hdb</filename>
+es el dispositivo esclavo del primer controlador (puede ser un segundo disco 
+duro o un CDROM), y así sucesivamente.
+Véase también la <link linkend="zippartition">nota</link> mas abajo acerca
+de los dispositivos ZIP.
+	  </para></listitem>
+
+      <listitem><para>
+	  <filename>/dev/sd*</filename> (donde *=a,b,c, &hellip;):
+son los dispositivos SCSI, normalmente discos duros.
+	</para></listitem>
+    </itemizedlist>
+
+    <note>
+      <title>NOTA</title> 
+      <para>
+Si los acrónimos IDE y SCSI son nuevos para usted, he aquí una breve
+explicación: hay dos tipos de interfaces para discos duros y otros
+dispositivos similares: IDE ( y sus parientes como EIDE, ATAPI, etc.)
+y SCSI. SCSI proporciona mejores prestaciones, pero es mas caro, así que 
+se usa solo en los servidores. Si no esta seguro del tipo de dispositivos
+que tiene, lo mas probable es que sean IDE. 
+</para>
+    </note> 
+    <itemizedlist>
+      <listitem><para>
+	  <filename>/dev/fd*</filename> (donde *=0,1, etc) 
+son las disqueteras; <filename>/dev/fd0</filename> es la primera
+disquetera (se corresponde con <filename>A:</filename> en windows),
+<filename>/dev/fd1</filename> es la segunda 
+	  (<filename>B:</filename>), etc.
+	</para>
+      </listitem>
+      <listitem><para>
+	  <filename>/dev/lp*</filename> (donde *=0,1, etc) 
+son los puertos paralelos; generalmente, estos puertos se usan
+para conectar impresoras a su ordenador. 
+<filename>/dev/lp0</filename> se corresponde con 
+	  <filename>LPT1</filename> en Windows,
+	  <filename>/dev/lp1</filename> con <filename>LPT2</filename>,
+	  etc.
+	</para>
+      </listitem>
+      <listitem><para> <filename>/dev/ttyS*</filename> (donde *=0,1,
+	  etc) son los puertos serie; estos puertos se usan generalmente
+un ratón o un módem. <filename>/dev/ttyS0</filename> se corresponde con
+	  <filename>COM1</filename> en Windows,
+	  <filename>/dev/ttyS1</filename> con <filename>COM2</filename>,
+	  etc.
+	</para>
+      </listitem>
+      <listitem><para> 
+	  <filename>/dev/audio</filename> y
+	  <filename>/dev/dsp</filename> &mdash; 
+estos dos dispositivos se usan para la tarjeta de audio (no hay equivalentes,
+ya que se usan para diferentes tipos de ficheros de audio).
+	</para>
+	</listitem>
+    </itemizedlist>
+    <para>
+Además, es una practica común disponer de enlaces simbólicos,
+<filename>/dev/floppy, /dev/modem</filename> y <filename>/dev/cdrom</filename>,
+apuntando a los nombres reales de los dispositivos que correspondan 
+a la disquetera, módem, y CDROM, respectivamente.
+    </para>
+    <para>
+En raras ocasiones necesitara usar los nombres de los dispositivos. 
+En particular, si necesita acceder a un fichero en dispositivo, no 
+usara el nombre del dispositivo (como <filename>/dev/fd0</filename>);
+en su lugar, primero montara el dispositivo de forma vera que su contenido
+como un subdirectorio (por ejemplo, <filename>/mnt/floppy</filename>)
+en el árbol de directorios principal, y usara entonces ese directorio 
+para acceder a los ficheros;
+Véase <xref linkend="new-mount"> para mas información. Prácticamente el
+único momento en que necesitara usar los nombres de los dispositivos
+sera cuando este configurando algún nuevo programa.  
+Por ejemplo, un programa de fax puede pedirle el nombre del dispositivo
+que representa su módem ( en cuyo caso puede o bien darle el nombre real
+del dispositivo, como <filename>/dev/ttyS1</filename>, o bien usar
+simplemente un enlace simbólico <filename>/dev/modem</filename>).
+    </para>
+    <para>
+Y solo para satisfacer su curiosidad: también hay un dispositivo
+llamado <filename>/dev/null</filename> que actúa como un 
+<quote>agujero negro</quote>: puede enviar allí cualquier información,
+y jamas volverá. Así que si no quiere que le molesten los mensajes de
+error, redirijalos a <filename>/dev/null</filename> -:).
+    </para>
+
+    <sect2 id="partitions">
+      <title>Particiones</title>
+      <para>
+Observe que se puede subdividir un disco duro (o un dispositivo similar)
+en partes que se comportan a todos los efectos como discos independientes,
+aunque residan físicamente en el mismo disco.
+Estas partes se llaman <quote>particiones</quote> (en Windows, se conocen
+como <quote>discos lógicos</quote>).
+Por ejemplo, puede dividir el disco duro en varias particiones, e instalar
+diferentes sistemas operativos en diferentes particiones; puede formatear
+de nuevo cada partición independientemente del resto.
+La división del disco duro se realiza normalmente durante la instalación
+del sistema operativo; para mas información remitase a su guia de instalación. 
+      </para> 
+      <para> 
+Si ha dividido su disco duro, entonces cada partición se considera como
+un dispositivo separado. Por ejemplo, si su disco duro es 
+<filename>/dev/hda</filename>, entonces nos referiremos a la primera partición de este
+dispositivo como <filename>/dev/hda1</filename>, la segunda como 
+<filename>/dev/hda2</filename>, y así sucesivamente.
+      </para>
+      <warning id="zippartition">
+	<title>Particionar discos ZIP</title> 
+
+	<para>
+Por razones que desconocemos, los disco ZIP preformateados a la venta
+en las tiendas o formateados usando las herramientas ZIP de Iomega en Windows
+están particionados de una forma curiosa:
+tienen solo una partición (de tipo windows, por supuesto). De este modo, si
+su dispositivo ZIP es <filename>/dev/hdc</filename>, el nombre correcto del
+dispositivo que debería usar para estos discos es <filename>/dev/hdc4</filename>.
+	</para>
+      </warning>
+    </sect2>
+  </sect1>
+  <sect1 id="X11"> 
+    <title>Interfaz gráfica de usuario: el sistema de ventanas X, el gestor de ventanas, y los entornos de escritorios.</title>
+    <para>
+Unix es un sistema modular: se compone de muchos componentes de forma que el
+usuario (o el administrador de sistemas) pueda escoger aquellos componentes
+que necesite. En particular, hay varias capas de software responsables de la
+interfaz gráfica de usuario. Estas capas son: el sistema de ventanas X, el gestor
+de ventanas, y el entorno de escritorio.
+    </para>
+    <para>El 
+<emphasis>sistema de ventanas X</emphasis> (También conocido como X, o X11) es
+el componente de los sistemas Unix responsable de virtualmente todas las operaciones
+gráficas básicas &mdash; en particular, de dibujar los iconos, los fondos, y
+las ventanas en las que se ejecutan las aplicaciones.
+Sin las X, solo tendríamos la linea de comandos. X11 determina la resolución de
+la pantalla y la profundidad de color, mueve el cursor del ratón alrededor de
+la pantalla, etc. Sirve de base para otros componentes de la interfaz gráfica
+de usuario como los gestores de ventanas y los entornos de escritorio.
+    </para>
+    <para>Los 
+<emphasis>gestores de ventanas</emphasis> amplian las capacidades del sistema
+de ventanas X poniendo bordes y botones alrededor de la ventanas, lo que permite
+al usuario moverlas, cerrarlas, ocultarlas o cambiar su tamaño.  
+X11 se usa casi siempre en combinación con un gestor de ventanas, ya que seria
+prácticamente inutilizable sin el.
+Hay muchos gestores de ventanas disponibles para X11; los mas populares
+son 
+<application>fvwm</application>,
+      <application>mwm</application>, <application>kwm</application>
+      (usado por KDE), <application>Enlightenment</application>, y
+      <application>Sawfish</application>.
+    </para>
+    <para>
+Finalmente, un <emphasis>entorno de escritorio</emphasis> va un paso mas 
+allá del gestor de ventanas, añadiendo un gestor gráfico de ficheros desde
+el cual podrá arrastrar y soltar elementos sobre su escritorio, un panel
+que puede usarse para lanzar las aplicaciones usadas frecuentemente, y 
+un conjunto de aplicaciones y utilidades. 
+Hay varios entornos de escritorio disponibles para todas las versiones
+de Unix; Los mas populares son  
+<ulink type="http" url="http://www.gnome.org">GNOME</ulink>, 
+<ulink type="http" url="http://www.kde.org">KDE</ulink> y 
+<ulink type="http" url="http://www.sun.com/solaris/cde/">CDE</ulink>
+(pronto sustituido por GNOME).
+    </para>
+    <para> 
+casi todos los entornos de escritorio contienen un gestor de ventanas
+como parte integral; por ejemplo, KDE contiene su propio gestor de
+ficheros, <application>kwm</application> (es posible usar KDE con otro
+gestor de ventanas, pero poca gente lo hace). Gnome no dispone de su
+propio gestor de ventanas; le permite escoger cualquier gestor de ventanas
+que tenga ya en su sistema. Para hacer la vida mas fácil a los nuevos
+usuarios, se distribuye generalmente el gestor de ventanas 
+<application>Sawfish</application> con Gnome y se usa por defecto;
+puede cambiar a otro gestor de ventanas usando el 
+<application>Centro de control de GNOME</application>.
+Observe en cualquier caso que necesita un gestor de ventanas compatible con
+Gnome para usar algunas de las funcionalidades de Gnome, como el gestor de
+sesiones, el aplique barra de tareas, etc.
+    </para>
+
+    </sect1>
+	
+  
+</article>
+
