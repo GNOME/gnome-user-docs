@@ -33,13 +33,13 @@ Updated section: 9.10 Setting Themes in the Desktop
 All chapters: Removed the word "Shows" from graphic text equivalents.
 
 Updated screenshots:
-typical_anno_desktop.tiff - Updated screenshot, no change to Screenshot Instructions required
-menu_panel.tiff - Updated screenshot, no change to Screenshot Instructions required
-naut_prop_emblem_window.png - Updated screenshot, no change to Screenshot Instructions required
-cc_theme_window_tab.tiff - New screenshot, Screenshot Instructions updated
-cc_theme_tab.tiff - Updated screenshot, no change to Screenshot Instructions required
-cc_metacity.tiff - Updated screenshot, no change to Screenshot Instructions required
-cc_basic_keyboardshortcuts.tiff - Updated screenshot, no change to Screenshot Instructions required
+typical_anno_desktop - Updated screenshot, no change to Screenshot Instructions required
+menu_panel - Updated screenshot, no change to Screenshot Instructions required
+naut_prop_emblem_window - Updated screenshot, no change to Screenshot Instructions required
+cc_theme_window_tab - New screenshot, Screenshot Instructions updated
+cc_theme_tab - Updated screenshot, no change to Screenshot Instructions required
+cc_metacity - Updated screenshot, no change to Screenshot Instructions required
+cc_basic_keyboardshortcuts - Updated screenshot, no change to Screenshot Instructions required
 
 
 
@@ -51,18 +51,30 @@ Date: 24 January 2003
 
 Screenshot Changes between Version 2.3 and 2.4
 ==============================================
-launcher_popup.png, naut_iconview_window.png,
-cc_accessx_mouse_tab.png, cc_accessx_filters_tab.png,
-cc_accessx_keyboard_tab.png, cc_filesprograms_tab.png,
-cc_windows.png, cc_network.png, cc_font_tab.png,
-run_button.png, screenshot_button.png, searchtool_button.png,
-naut_file_navigation_pane.png, naut_home_launcher.png,
-naut_tree_tab.png, naut_notes_tab.png, naut_listview_window.png,
-naut_viewpane_text_window.png, naut_history_tab.png,
-rmedia_floppy_format_dialog.png, naut_pref_speed_dialog.png,
-naut_pref_iconcaptions_dialog.png, naut_pref_icon_dialog.png,
-naut_pref_view_dialog.png
-
+launcher_popup.png - Updated screenshot, no change to Screenshot Instructions required
+naut_iconview_window.png - Updated screenshot, no change to Screenshot Instructions required
+cc_accessx_mouse_tab.png - New screenshot, instructions pending
+cc_accessx_filters_tab.png - New screenshot, instructions pending
+cc_accessx_keyboard_tab.png - Updated screenshot, no change to Screenshot Instructions required
+cc_filesprograms_tab.png - Updated screenshot, no change to Screenshot Instructions required
+cc_windows.png - New screenshot, instructions pending
+cc_network.png - Updated screenshot, no change to Screenshot Instructions required
+cc_font_tab.png - Updated screenshot, no change to Screenshot Instructions required
+run_button.png - New screenshot, instructions pending
+screenshot_button.png - New screenshot, instructions pending
+searchtool_button.png - New screenshot, instructions pending
+naut_file_navigation_pane.png - Updated screenshot, no change to Screenshot Instructions required
+naut_home_launcher.png - Updated screenshot, no change to Screenshot Instructions required
+naut_tree_tab.png - Updated screenshot, no change to Screenshot Instructions required
+naut_notes_tab.png - Updated screenshot, no change to Screenshot Instructions required
+naut_listview_window.png - Updated screenshot, no change to Screenshot Instructions required
+naut_viewpane_text_window.png - Updated screenshot, no change to Screenshot Instructions required
+naut_history_tab.png - Updated screenshot, no change to Screenshot Instructions required
+rmedia_floppy_format_dialog.png - New screenshot, instructions pending
+naut_pref_speed_dialog.png - Updated screenshot, no change to Screenshot Instructions required
+naut_pref_iconcaptions_dialog.png - Updated screenshot, no change to Screenshot Instructions required
+naut_pref_icon_dialog.png - Updated screenshot, no change to Screenshot Instructions required
+naut_pref_view_dialog.png - Updated screenshot, no change to Screenshot Instructions required
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Manual revision: 2.3
