@@ -1,3 +1,4 @@
 SUBDIRS = \
 	C \
-	es 
+	es \
+	it 
