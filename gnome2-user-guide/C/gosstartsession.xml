@@ -1,507 +1,281 @@
+
+
+
 <chapter id="gosgetstarted-1">
-  <title>Desktop Sessions</title>
-  <highlights>
-	 <para>This chapter provides the information you need to start, manage, and
-		end a desktop session.</para>
-  </highlights>
-  <sect1 id="gosgetstarted-69">
-	 <title>Starting a Desktop Session</title>
-	 <indexterm>
-		<primary>sessions</primary>
-		<secondary>starting</secondary>
-	 </indexterm>
-	 <para>A desktop session occurs between the time you log in to the desktop
-		and the time that you log out. The login screen, displayed by the <application>
-		Login Manager</application>, is your gateway to the desktop. The login screen
-		provides fields for you to enter your user name and password. The 
-		<guimenu> Options</guimenu> menu on the login screen lists your login
-		options, for example you can select the language of your session. </para>
-	 <para>You start a desktop session when you log in. The <application>Session
-		Manager</application> starts after the <application>Login Manager</application>
-		authenticates your user name and password. The <application>Session Manager
-		</application> enables you to manage the session. For example, you can save the
-		state of your most recent session and return to that session the next time that
-		you log in. The <application>Session Manager</application> saves and restores
-		the following functions: </para>
-	 <itemizedlist>
-		<listitem>
-		  <para>The appearance and behavior settings, for example fonts, colors,
-			 and mouse settings. </para>
-		</listitem>
-		<listitem>
-		  <para>The applications that you were running, for example file manager
-			 and text editor windows. You can not save and restore certain types of
-			 application with <application>Session Manager</application>. For example, if
-			 you start the <application>vi</application> editor from the command line in a
-			 terminal window, <application>Session Manager</application> can not restore
-			 your editing session. </para>
-		</listitem>
-	 </itemizedlist>
-  </sect1>
-  <sect1 id="gosstartsession-1">
-	 <title>Session Power Management</title>
-	 <indexterm>
-		<primary>sessions</primary>
-		<secondary>power management</secondary>
-	 </indexterm>
-	 <para>This section describes actions that you can perform to minimize power usage during
-		your current session. </para>
-	 <sect2 id="gosstartsession-3">
-		<title>To Set a Screensaver</title>
-		<para>To set a screensaver, open the 
-		  <guimenu>Global Menu</guimenu> then choose 
-		  <menuchoice>
-			 <guimenu>Programs</guimenu>
-			 <guisubmenu>Settings</guisubmenu>
-			 <guisubmenu>Desktop</guisubmenu>
-			 <guimenuitem>Screensaver</guimenuitem>
-		  </menuchoice>. </para>
-		<para>You can set a screensaver to switch on after a specific period of
-		  desktop inactivity. You can open the screensaver with a keyboard action or a
-		  mouse action, or you can assign a password to lock the screensaver. You can
-		  also instruct the desktop to shut down the monitor after the screensaver
-		  starts. </para>
-	 </sect2>
-	 <sect2 id="gosstartsession-4">
-		<title>To Lock the Screen</title>
-		<para>To lock the screen click on the following button in the GNOME
-		  Panel: </para>
-		<screenshot> 
-		  <mediaobject> 
-			 <imageobject>
-				<imagedata fileref="figures/lockscreen_icon.png" format="PNG"/> 
-			 </imageobject> 
-			 <textobject> 
-				<phrase>Screenshot of Lock Screen icon</phrase> 
-			 </textobject> 
-		  </mediaobject> 
-		</screenshot> 
-		<para>To unlock the screen, type your user name and password in the
-		  locked screen dialog. </para>
-	 </sect2>
-  </sect1>
-  <sect1 id="gosstartsession-2">
-	 <title>Managing the Session</title>
-	 <indexterm>
-		<primary>sessions</primary>
-		<secondary>managing</secondary>
-	 </indexterm>
-	 <para>You can configure the <application>Session Manager</application>
-		capplet to control the session management of the GNOME desktop. The
-		<application> Session Manager</application> recognizes the following types of
-		application: 
-		<itemizedlist>
-		  <listitem>
-			 <para>Applications that are GNOME compliant. When you save the
-				settings for your session, the <application>Session Manager</application> saves
-				all of the GNOME-compliant applications. If you log out, then log in again,
-				<application> Session Manager</application> automatically starts up the
-				GNOME-compliant applications. </para>
-		  </listitem>
-		  <listitem>
-			 <para>Applications that are not GNOME-compliant. When you save the
-				settings for your session, the <application>Session Manager</application> does
-				not save any applications that are not GNOME compliant. If you log out, then
-				log in again, <application>Session Manager</application> does not start up
-				these applications. You must either use an executable command to restart the
-				applications, or you must instruct <application>Session Manager</application>
-				to use a startup program for each application.</para>
-		  </listitem>
-		</itemizedlist></para>
-	 <sect2 id="gosstartsession-9">
-		<title>Defining Session Behavior When You Log In and Log Out</title>
-		<para>You can use <application>Session Manager</application> to set the
-		  session behavior when you log in and log out. For example, you can enable or
-		  disable a logout prompt. To open the <application>Session Manager</application>
-		  capplet, open the 
-		  <guimenu>Global Menu</guimenu> then choose 
-		  <menuchoice>
-			 <guimenu> Programs</guimenu>
-			 <guisubmenu>Settings</guisubmenu>
-			 <guisubmenu> Session</guisubmenu>
-			 <guimenuitem>Session Properties &amp; Startup Programs</guimenuitem>
-		  </menuchoice>. </para>
-	 </sect2>
-	 <sect2 id="gosstartsession-6">
-		<title>To Use Startup Programs</title>
-		<para>To instruct the <application>Session Manager</application> to use
-		  startup programs for applications that are not GNOME compliant, use the
-		  <application> Session Manager</application> capplet. Open the 
-		  <guimenu>Global Menu</guimenu> then choose 
-		  <menuchoice>
-			 <guimenu>Programs</guimenu>
-			 <guisubmenu>Settings</guisubmenu>
-			 <guisubmenu>Session</guisubmenu>
-			 <guimenuitem>Session Properties &amp; Startup Programs</guimenuitem>
-		  </menuchoice>. You can use the interactive controls in the 
-		  <guilabel>Startup Programs</guilabel> section to add, edit, and delete
-		  programs. If you save your settings and log out, the next time that you log in,
-		  the startup programs start the required applications. </para>
-	 </sect2>
-	 <sect2 id="gosstartsession-8">
-		<title>To Set Startup Hints</title>
-		<para>To instruct the <application>Session Manager</application> to
-		  display startup hints when you log in to a session, open the 
-		  <guimenu>Global Menu </guimenu> then choose 
-		  <menuchoice>
-			 <guimenu>Programs</guimenu>
-			 <guisubmenu> Settings</guisubmenu>
-			 <guimenuitem>Startup Hint</guimenuitem>
-		  </menuchoice>. </para>
-	 </sect2>
-	 <sect2 id="gosstartsession-10">
-		<title>To View Session Properties</title>
-		<para>To view the properties of the current session, open the 
-		  <guimenu>Global Menu</guimenu> then choose 
-		  <menuchoice>
-			 <guimenu>Programs</guimenu>
-			 <guisubmenu>Settings</guisubmenu>
-			 <guisubmenu>Session</guisubmenu>
-			 <guimenuitem>Session Properties</guimenuitem>
-		  </menuchoice>. The 
-		  <guilabel> Session Properties</guilabel> dialog lists the
-		  following:</para>
-		<itemizedlist>
-		  <listitem>
-			 <para>All GNOME applications that are currently running, that can
-				connect to the <application>Session Manager</application>, and that can save
-				the state of the application.</para>
-		  </listitem>
-		  <listitem>
-			 <para>All capplets that can connect to the <application>Session
-				Manager</application>, and that can save the state of the capplet.</para>
-		  </listitem>
-		</itemizedlist>
-		<para>You can use the 
-		  <guilabel>Session Properties</guilabel> dialog to perform a limited
-		  number of actions on the session properties of an application or capplet. For
-		  example, you can edit the priority, style, and state of any GNOME application
-		  or capplet that is in the list. </para>
-	 </sect2>
-	 <sect2 id="gosstartsession-11">
-		<title>To Set Session Properties</title>
-		<para>To access the <application>Session Properties</application> dialog
-		  open the 
-		  <guimenu>Global Menu</guimenu> then choose 
-		  <menuchoice>
-			 <guimenu>Programs</guimenu>
-			 <guisubmenu>Settings</guisubmenu>
-			 <guisubmenu>Session</guisubmenu>
-			 <guimenuitem>Session Properties</guimenuitem>
-		  </menuchoice>. </para>
-		<para><xref linkend="sessprop01"/> lists the session properties that you
-		  can configure. </para>
-		<table frame="topbot" id="sessprop01">
-		<title>Session Properties </title>
-		<tgroup cols="2" colsep="1" rowsep="1">
-		  <colspec colname="COLSPEC0" colwidth="18.86*"/><colspec
-		  colname="COLSPEC1" colwidth="47.14*"/>
-		  <thead>
-			 <row>
-				<entry colsep="0" rowsep="1">
-				  <para>Option</para></entry>
-				<entry colsep="0" rowsep="1">
-				  <para>Function</para></entry>
-			 </row>
-		  </thead>
-		  <tbody>
-			 <row>
-				<entry colsep="0" rowsep="0">
-				  <para>
-					 <guilabel>Order</guilabel></para></entry>
-				<entry colsep="0" rowsep="0">
-				  <para>Use this field to set the priority order for the selected
-					 application. The priority order determines the sequence in which the session
-					 manager starts applications when you start a GNOME session. An application that
-					 is assigned a low priority order is started before an application with a high
-					 priority order. The default setting is 50.</para>
-				  <note>
-					 <para>Priority order is intended for advanced users
-						only.</para>
-				  </note></entry>
-			 </row>
-			 <row>
-				<entry colname="COLSPEC0" colsep="0" rowsep="0">
-				  <para>
-					 <guilabel>Style </guilabel></para></entry>
-				<entry colname="COLSPEC1" colsep="0" rowsep="0">
-				  <para> Click on this button to choose a style for the selected
-					 application. The style setting determines the restart style of an application.
-					 Choose one of the following styles:
-					 <itemizedlist>
-						<listitem>
-						  <para>
-							 <guilabel>Normal</guilabel></para>
-						  <para>An application that is displayed with a 
-							 <guilabel>Normal</guilabel> restart style is started
-							 automatically when you start a GNOME session. You can use the 
-							 <command>kill</command> command to close applications
-							 with this style during a session.</para>
-						</listitem>
-						<listitem>
-						  <para>
-							 <guilabel>Respawn</guilabel></para>
-						  <para>An application that is displayed with a 
-							 <guilabel>Respawn</guilabel> restart style restarts
-							 automatically whenever you close or kill the application. Applications are
-							 given this style when the application must run continuously during your GNOME
-							 session. To kill an application with a 
-							 <guilabel>Respawn </guilabel> restart style, select the
-							 application then click on the 
-							 <guibutton> Remove</guibutton> button.</para>
-						</listitem>
-						<listitem>
-						  <para>
-							 <guilabel>Trash</guilabel></para>
-						  <para>An application that is displayed with a 
-							 <guilabel>Trash</guilabel> restart style is not started
-							 when you start a GNOME session.</para>
-						</listitem>
-						<listitem>
-						  <para>
-							 <guilabel>Settings</guilabel></para>
-						  <para>An application that is displayed with a 
-							 <guilabel>Settings</guilabel> restart style is started
-							 automatically when you start a GNOME session. Applications with this style
-							 usually have a low priority order, and store your configuration settings for
-							 GNOME and GNOME-compliant applications.</para>
-						</listitem>
-					 </itemizedlist></para></entry>
-			 </row>
-			 <row>
-				<entry colname="COLSPEC0" colsep="0" rowsep="0">
-				  <para>
-					 <guibutton>Remove </guibutton></para></entry>
-				<entry colname="COLSPEC1" colsep="0" rowsep="0">
-				  <para> Click on the 
-					 <guibutton>Remove</guibutton> button to delete the selected
-					 application from the list. The application is removed from the session manager,
-					 and closed. Removed applications are not started the next time that you log in
-					 to start a new GNOME session.</para></entry>
-			 </row>
-			 <row>
-				<entry colname="COLSPEC0" colsep="0" rowsep="0">
-				  <para>
-					 <guibutton>Try </guibutton></para></entry>
-				<entry colname="COLSPEC1" colsep="0" rowsep="0">
-				  <para> Click on the 
-					 <guibutton>Try</guibutton> button to temporarily implement the
-					 changes you make in this dialog. Changes are not saved until you click on the 
-					 <guibutton>OK</guibutton> button.</para></entry>
-			 </row>
-			 <row>
-				<entry colname="COLSPEC0" colsep="0" rowsep="0">
-				  <para>
-					 <guibutton>Revert </guibutton></para></entry>
-				<entry colname="COLSPEC1" colsep="0" rowsep="0">
-				  <para> Click on the 
-					 <guibutton>Revert</guibutton> button to remove any changes you
-					 make in this dialog and to return to the last saved settings. </para></entry>
-			 </row>
-			 <row>
-				<entry colname="COLSPEC0" colsep="0" rowsep="0">
-				  <para>
-					 <guibutton>OK</guibutton></para></entry>
-				<entry colname="COLSPEC1" colsep="0" rowsep="0">
-				  <para>Click on the 
-					 <guibutton> OK</guibutton> button to implement your changes and
-					 to save the settings. </para></entry>
-			 </row>
-			 <row>
-				<entry colname="COLSPEC0" colsep="0" rowsep="0">
-				  <para>
-					 <guibutton>Cancel </guibutton></para></entry>
-				<entry colname="COLSPEC1" colsep="0" rowsep="0">
-				  <para> Click on the 
-					 <guibutton>Cancel</guibutton> button to remove any unsaved
-					 changes and to close the <application>Session Properties</application>
-					 dialog.</para></entry>
-			 </row>
-			 <row>
-				<entry colname="COLSPEC0" colsep="0" rowsep="0">
-				  <para>
-					 <guibutton>Help </guibutton></para></entry>
-				<entry colname="COLSPEC1" colsep="0" rowsep="0">
-				  <para> Click on the 
-					 <guibutton>Help</guibutton> button to display the <application>
-					 Session Properties</application> online help.</para></entry>
-			 </row>
-		  </tbody>
-		</tgroup>
-		</table>
-	 </sect2>
-	 <sect2 id="gosgetstarted-74">
-		<title>To Save Session Settings</title>
-		<para>To save session settings at any time during a session, open the 
-		  <guimenu> Global Menu</guimenu> then choose 
-		  <menuchoice>
-			 <guimenu>Programs</guimenu>
-			 <guisubmenu>Settings</guisubmenu>
-			 <guisubmenu>Session</guisubmenu>
-			 <guimenuitem>Save Current Session</guimenuitem>
-		  </menuchoice>.</para>
-	 </sect2>
-	 <sect2 id="gosstartsession-12">
-		<title>To Change to a Different Session</title>
-		<para>You can use Session Options to manage multiple sessions on GNOME.
-		  To change from one session to another you must first save a session with a
-		  different name. Once you have saved more than one session, you can change from
-		  one session to another. </para>
-		<sect3 id="gosstartsession-13">
-		  <title>To Save a Session with a Different Name</title>
-		  <para>To save a session with a different name, perform the following
-			 actions.
-			 <orderedlist>
-				<listitem>
-				  <para>Open the 
-					 <guimenu>Global Menu</guimenu> then choose 
-					 <menuchoice>
-						<guimenu>Programs</guimenu>
-						<guisubmenu>Settings</guisubmenu>
-						<guisubmenu>Session</guisubmenu>
-						<guimenuitem>Session Properties &amp; Startup
-						  Programs</guimenuitem>
-					 </menuchoice>.</para>
-				</listitem>
-				<listitem>
-				  <para>In the 
-					 <guilabel>Options</guilabel> area, make sure that the 
-					 <guilabel> Automatically save changes to session</guilabel>
-					 option is not selected. If the option is selected, deselect the option, then
-					 click on the 
-					 <guibutton> Try</guibutton> button.</para>
-				</listitem>
-				<listitem>
-				  <para>In the 
-					 <guilabel>Choose Current Session</guilabel> area, click on the 
-					 <guibutton>Add</guibutton> button.</para>
-				</listitem>
-				<listitem>
-				  <para>In the 
-					 <guilabel>Add a new session</guilabel> dialog, specify a name
-					 for the new session and click 
-					 <guibutton>OK</guibutton>.</para>
-				</listitem>
-				<listitem>
-				  <para>In the <application>Session Properties and Startup Programs
-					 </application> capplet, click 
-					 <guibutton>OK</guibutton>.</para>
-				</listitem>
-				<listitem>
-				  <para>Open the 
-					 <guimenu>Global Menu</guimenu> then choose 
-					 <menuchoice>
-						<guimenu>Programs</guimenu>
-						<guisubmenu>Settings</guisubmenu>
-						<guisubmenu>Session</guisubmenu>
-						<guimenuitem>Save Current Session </guimenuitem>
-					 </menuchoice>.</para>
-				</listitem>
-			 </orderedlist></para>
-		  <para>The session is saved with the name you specify, and with the
-			 current settings.</para>
-		</sect3>
-		<sect3 id="gosstartsession-14">
-		  <title>To Change to a Different Session</title>
-		  <para>To change to a different session, perform the following actions.
-			 <orderedlist>
-				<listitem>
-				  <para>Open the 
-					 <guimenu>Global Menu</guimenu> then choose 
-					 <menuchoice>
-						<guimenu>Programs</guimenu>
-						<guisubmenu>Settings</guisubmenu>
-						<guisubmenu>Session</guisubmenu>
-						<guimenuitem>Session Properties &amp; Startup
-						  Programs</guimenuitem>
-					 </menuchoice>.</para>
-				</listitem>
-				<listitem>
-				  <para>In the 
-					 <guilabel>Options</guilabel> area, make sure that the 
-					 <guilabel> Automatically save changes to session</guilabel>
-					 option is not selected. If the option is selected, deselect the option, then
-					 click on the 
-					 <guibutton> Try</guibutton> button.</para>
-				</listitem>
-				<listitem>
-				  <para>In the 
-					 <guilabel>Choose Current Session</guilabel> area, select the
-					 session that you want and click 
-					 <guibutton>OK</guibutton>.</para>
-				</listitem>
-				<listitem>
-				  <para>Logout of the desktop without saving the current
-					 setup.</para>
-				</listitem>
-				<listitem>
-				  <para>Login to the desktop.</para>
-				</listitem>
-			 </orderedlist></para>
-		</sect3>
-	 </sect2>
-  </sect1>
-  <sect1 id="gosgetstarted-73">
-	 <title>Ending a Session</title>
-	 <indexterm>
-		<primary>sessions</primary>
-		<secondary>ending</secondary>
-	 </indexterm>
-	 <para>Before you end a desktop session you might want to save your current
-		settings so that you can restore the session later. A dialog asks you if you
-		want to save your current settings during the log out process.</para>
-	 <para>You can end your GNOME desktop session in one of the following ways: 
-		<informaltable frame="topbot">
-		  <tgroup cols="2" colsep="0" rowsep="0"><colspec colname="COLSPEC1"
-			 colwidth="33*"/>
-			 <colspec colname="COLSPEC2" colwidth="33*"/>
-			 <thead>
-				<row rowsep="1">
-				  <entry colname="COLSPEC1">
-					 <para>Action</para></entry>
-				  <entry>
-					 <para> Button</para></entry>
-				</row>
-			 </thead>
-			 <tbody>
-				<row>
-				  <entry colname="COLSPEC1">
-					 <para>Close down all your currently active processes, then
-						click on the 
-						<guibutton>Log Out of GNOME</guibutton> button.
-						</para></entry>
-				  <entry>
-					 <screenshot> 
-						<mediaobject> 
-						  <imageobject>
-							 <imagedata fileref="figures/logout_icon.png" format="PNG"/> 
-						  </imageobject> 
-						  <textobject> 
-							 <phrase>Screenshot of Log Out icon</phrase> 
-						  </textobject> 
-						</mediaobject> 
-					 </screenshot>
-				  </entry>
-				</row>
-				<row>
-				  <entry colname="COLSPEC1">
-					 <para>Open the 
-						<guimenu>Global Menu</guimenu>, then choose the 
-						<guimenuitem>Log out</guimenuitem> menu item.</para></entry>
-				  <entry colname="COLSPEC2">
-					 <screenshot> 
-						<mediaobject> 
-						  <imageobject>
-							 <imagedata fileref="figures/footprint_icon.png" format="PNG"/> 
-						  </imageobject> 
-						  <textobject> 
-							 <phrase>Screenshot of Global Menu icon</phrase> 
-						  </textobject> 
-						</mediaobject> 
-					 </screenshot></entry>
-				</row>
-			 </tbody>
-		  </tgroup>
-		</informaltable></para>
-  </sect1>
-</chapter> 
+<title>Desktop Sessions</title>
+<highlights><para>This chapter provides the information you need to start,
+manage, and end a desktop session.</para></highlights>
+<sect1 id="gosgetstarted-69">
+<title>Starting a Desktop Session</title>
+<indexterm><primary>sessions</primary><secondary>starting</secondary></indexterm>
+<para>A desktop session occurs between the time that you log in to the desktop
+ and the time that you log out. The login screen, displayed by the <application>
+Login Manager</application>, is your gateway to the desktop. The login screen
+provides fields for you to enter your user name and password. The <guimenu>
+Options</guimenu> menu on the login screen lists your login options, for example
+you can select the language of your session. </para>
+<para>You start a desktop session when you log in. The session manager starts
+after the <application>Login Manager</application> authenticates your username
+and password. The session manager enables you to manage the session. For example,
+you can save the state of your most recent session and return to that session
+the next time that you log in. The session manager saves and restores the
+following: </para>
+<itemizedlist>
+<listitem><para>The appearance and behavior settings, for example fonts, colors,
+and mouse settings. </para></listitem>
+<listitem><para>The applications that you were running, for example file manager
+and text editor windows. You can not save and restore applications that the
+session manager does not manage. For example, if you start the <application>
+vi</application> editor from the command line in a terminal window, session
+manager can not restore your editing session. </para></listitem>
+</itemizedlist></sect1>
+<sect1 id="gosstartsession-1">
+<title>Locking Your Screen</title>
+<para>This section provides information on how to lock your screen, and how
+to configure your screensaver.</para>
+<sect2 id="gosstartsession-4">
+<title>To Lock Your Screen</title>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows Lock Screen icon.</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+<indexterm><primary>sessions</primary><secondary>locking screen</secondary>
+</indexterm><indexterm><primary>locking screen</primary></indexterm><indexterm>
+<primary>Lock Screen button</primary></indexterm><para>To lock the screen,
+perform one of the following actions:</para>
+<itemizedlist>
+<listitem><para>Choose <menuchoice><guimenu>Actions</guimenu><guimenuitem>
+Lock Display</guimenuitem></menuchoice>.</para></listitem>
+<listitem><para>If the <guibutton>Lock Screen</guibutton> button is present
+on a panel, click on the <guibutton>Lock Screen</guibutton> button. </para>
+<para>To add the <guibutton>Lock Screen</guibutton> button to a panel, right-click
+on the panel. Choose <menuchoice><guimenu>Add to panel</guimenu><guimenuitem>
+Lock button</guimenuitem></menuchoice> from the panel popup menu.</para></listitem>
+</itemizedlist>
+<para>When you lock your screen, the screensaver starts. To unlock the screen,
+move your mouse to display the locked screen dialog. Enter your username and
+password in the locked screen dialog, then press <keycap>Enter</keycap>.</para>
+<note><para>To lock your screen correctly, you must have a screensaver enabled.
+</para>
+</note>
+</sect2>
+<sect2 id="gosstartsession-3">
+<title>To Set a Screensaver</title>
+<indexterm><primary>sessions</primary><secondary>setting screensaver</secondary>
+</indexterm><indexterm><primary>screensaver, setting</primary></indexterm>
+<indexterm><primary>xscreensaver</primary><see>screensaver</see></indexterm>
+<para>To set your screensaver, perform the following steps:</para>
+<orderedlist>
+<listitem><para>Right-click on the <guibutton>Lock Screen</guibutton> button,
+then choose <guimenuitem>Properties</guimenuitem> from the popup menu. An <guilabel>
+XScreenSaver</guilabel> dialog is displayed.</para>
+<para>If the <guibutton>Lock Screen</guibutton> button is not present on a
+panel, you can add the button to a panel. To add the <guibutton>Lock Screen
+</guibutton> button to a panel, right-click on the panel. Choose <menuchoice>
+<guimenu>Add to panel</guimenu><guimenuitem>Lock button</guimenuitem>
+</menuchoice> from the panel popup menu. </para></listitem>
+<listitem><para>Choose the screensaver that you require from the list box
+at the left side of the <guilabel>XScreenSaver</guilabel> dialog. </para>
+</listitem>
+<listitem><para>To enable the screensaver, select the <guilabel>Enabled</guilabel>
+option.</para></listitem>
+<listitem><para>To configure your screensaver, click on the <guilabel>Screensaver
+Options</guilabel> tab. Configure your screensaver in the <guilabel>Screensaver
+Options</guilabel> tabbed section. The following table describes the dialog
+elements on the <guilabel>Screensaver Options</guilabel> tabbed section: 
+</para>
+<informaltable frame="topbot">
+<tgroup cols="2" colsep="0" rowsep="0"><colspec colname="COLSPEC2" colwidth="40.38*"/>
+<colspec colname="COLSPEC3" colwidth="59.62*"/>
+<thead>
+<row rowsep="1"><entry valign="top"><para>Setting</para></entry><entry valign="top"><para>
+Function</para></entry></row>
+</thead>
+<tbody>
+<row><entry valign="top"><para><guilabel>Saver Timeout</guilabel></para></entry>
+<entry valign="top"><para>Specify how long to wait to start the screensaver
+after the last use of the mouse or keyboard.</para></entry></row>
+<row>
+
+<entry valign="top"><para><guilabel>Cycle Timeout</guilabel></para></entry>
+<entry valign="top"><para>Specify how long to display a particular screensaver
+before the next screensaver starts.</para></entry></row>
+<row><entry valign="top"><para><guilabel>Fade Duration</guilabel></para></entry>
+<entry valign="top"><para>Specify how long to take to fade to black when the
+screensaver starts.</para></entry></row>
+<row><entry valign="top"><para><guilabel>Fade Ticks</guilabel></para></entry>
+<entry valign="top"><para>Type how many times per second the colormap changes
+to create a fade effect. Specify a high number for a smooth fade. However,
+a high number in this text box might cause the fade to take longer than the <guilabel>
+Fade Duration</guilabel>.</para></entry></row>
+<row><entry valign="top"><para><guilabel>Lock Timeout</guilabel></para></entry>
+<entry valign="top"><para>Specify the delay between the start of the screensaver
+and when the screen locks.</para></entry></row>
+<row><entry colname="COLSPEC2" valign="top"><para><guilabel>Password Timeout
+</guilabel></para></entry><entry colname="COLSPEC3" valign="top"><para>Specify
+how long to display the password dialog before displaying the screensaver
+again.</para></entry></row>
+<row><entry colname="COLSPEC2" valign="top"><para><guilabel>Verbose</guilabel></para></entry>
+<entry colname="COLSPEC3" valign="top"><para>Select this option if you want
+to display screensaver diagnostic information.</para></entry></row>
+<row><entry colname="COLSPEC2" valign="top"><para><guilabel>Install Colormap
+</guilabel></para></entry><entry colname="COLSPEC3" valign="top"><para>Select
+this option to install a private colormap when the screensaver is active.
+Use of a private colormap might improve the quality of the color in particular
+screensavers.</para></entry></row>
+<row><entry colname="COLSPEC2" valign="top"><para><guilabel>Fade Colormap
+</guilabel></para></entry><entry colname="COLSPEC3" valign="top"><para>Select
+this option if you want your display to fade to black when the screensaver
+starts.</para></entry></row>
+<row><entry colname="COLSPEC2" valign="top"><para><guilabel>Unfade Colormap
+</guilabel></para></entry><entry colname="COLSPEC3" valign="top"><para>Select
+this option if you want your display to fade from black to the screen contents
+when the screensaver ends.</para></entry></row>
+<row><entry colname="COLSPEC2" valign="top"><para><guilabel>Require Password
+</guilabel></para></entry><entry colname="COLSPEC3" valign="top"><para>Select
+this option to require the entry of your password to return to the desktop
+after the screensaver locks.</para></entry></row>
+</tbody>
+</tgroup>
+</informaltable>
+</listitem>
+<listitem><para>Click <guibutton>OK</guibutton> to apply your changes, then
+close the <guilabel>XScreenSaver</guilabel> dialog.</para></listitem>
+</orderedlist>
+</sect2>
+</sect1>
+<sect1 id="gosstartsession-2">
+<title>Managing the Session</title>
+<indexterm><primary>preference tools</primary><secondary>Session Properties
+&amp; Startup Programs</secondary></indexterm><indexterm><primary>sessions
+</primary><secondary>managing</secondary></indexterm><para>To configure the
+session management of the GNOME desktop, choose <menuchoice><guimenu>Applications
+</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>
+Advanced</guisubmenu><guimenuitem>Session Properties &amp; Startup
+Programs</guimenuitem></menuchoice>. The <application>Session Properties &amp;
+Startup Programs</application> preference tool recognizes the following types
+of application: </para>
+<itemizedlist>
+<listitem><indexterm><primary>startup applications</primary><secondary>session-managed
+</secondary></indexterm><para>Applications that are session-managed. When
+you save the settings for your session, the session manager saves all of the
+session-managed applications. If you log out, then log in again, the session
+manager automatically starts the session-managed applications. </para></listitem>
+<listitem><para>Applications that are not session-managed. When you save the
+settings for your session, the session manager does not save any applications
+that are not session-managed. If you log out, then log in again, the session
+manager does not start non-session-managed applications. You must start the
+application manually. Alternatively, you can use the <application>Session
+Properties &amp; Startup Programs</application> preference tool to specify
+non-session-managed applications that you want to automatically start. For
+more information, see <xref linkend="goscustsession-5"/>.</para></listitem>
+</itemizedlist>
+<sect2 id="gosstartsession-9">
+<title>Defining Session Behavior When You Log In and Log Out</title>
+<indexterm><primary>sessions</primary><secondary>login behavior</secondary>
+</indexterm><indexterm><primary>sessions</primary><secondary>logout behavior
+</secondary></indexterm><para>To set how a session behaves when you log in
+and log out, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>
+Desktop Preferences</guisubmenu><guisubmenu>Advanced</guisubmenu>
+<guimenuitem>Session Properties &amp; Startup Programs</guimenuitem></menuchoice>.
+Make the changes you require in the <guilabel>Session Options</guilabel> tabbed
+section. For example, you can select to display a splash screen when you log
+in. </para>
+</sect2>
+<sect2 id="gosstartsession-6">
+<title>To Use Startup Applications</title>
+<indexterm><primary>startup programs</primary><see>startup applications</see>
+</indexterm><indexterm><primary>sessions</primary><secondary>using startup
+applications</secondary></indexterm><indexterm><primary>startup applications
+</primary><secondary>non-session-managed</secondary></indexterm><para>You
+can configure your sessions to start with applications that are not session-managed.
+To configure non-session-managed startup applications, choose <menuchoice>
+<guimenu>Applications</guimenu><guisubmenu>Desktop Preferences
+</guisubmenu><guisubmenu>Advanced</guisubmenu><guimenuitem>Session
+Properties &amp; Startup Programs</guimenuitem></menuchoice>. Use the <guilabel>
+Startup Programs</guilabel> tabbed section to add, edit, and delete applications.
+If you save your settings and log out, the next time that you log in, the
+startup applications start automatically. </para>
+</sect2>
+<sect2 id="gosstartsession-10">
+<title>To Browse Applications in the Current Session</title>
+<indexterm><primary>sessions</primary><secondary>browsing applications</secondary>
+</indexterm><para>To browse the applications in the current session, choose <menuchoice>
+<guimenu>Applications</guimenu><guisubmenu>Desktop Preferences
+</guisubmenu><guisubmenu>Advanced</guisubmenu><guimenuitem>Session
+Properties &amp; Startup Programs</guimenuitem></menuchoice>. The <guilabel>
+Current Session</guilabel> tabbed section lists the following:</para>
+<itemizedlist>
+<listitem><para>All GNOME applications that are currently running, that can
+connect to the session manager, and that can save the state of the application.
+</para></listitem>
+<listitem><para>All desktop preference tools that can connect to the session
+manager, and that can save the state of the tool.</para></listitem>
+</itemizedlist>
+<para>You can use the <guilabel>Current Session</guilabel> tabbed section
+to perform a limited number of actions on the session properties of an application
+or preference tool. For example, you can edit the startup order, and restart
+style of any GNOME application or desktop preference tool that is in the list.
+For more information, see <xref linkend="goscustlookandfeel-27"/>.</para>
+</sect2>
+<sect2 id="gosgetstarted-74">
+<title>To Save Session Settings</title>
+<indexterm><primary>sessions</primary><secondary>saving settings</secondary>
+</indexterm><para>To save your session settings, perform the following steps: 
+</para>
+<orderedlist>
+<listitem><para>Configure your session to automatically save settings when
+you end the session. To configure your session, choose <menuchoice><guimenu>
+Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu>
+<guisubmenu>Advanced</guisubmenu><guimenuitem>Session Properties &amp;
+Startup Programs</guimenuitem></menuchoice>. The <application>Session Properties
+&amp; Startup Programs</application> preference tool starts. Select the <guilabel>
+Automatically save changes to session</guilabel> option on the <guilabel>
+Session Options</guilabel> tabbed section.</para></listitem>
+<listitem><para>End your session. </para></listitem>
+</orderedlist>
+<para>If you do not select the <guilabel>Automatically save changes to session
+</guilabel> option, when you log out, a dialog asks if you want to save your
+current settings. To save your settings, select the option, then continue
+to log out.</para>
+</sect2>
+</sect1>
+<sect1 id="gosgetstarted-73">
+<title>Ending a Session</title>
+<indexterm><primary>sessions</primary><secondary>ending</secondary></indexterm>
+<indexterm><primary>sessions</primary><secondary>logging out</secondary></indexterm>
+<indexterm><primary>logging out</primary></indexterm>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows Log Out icon.</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+<para>To end your session, close all your currently active processes, then
+perform one of the following actions:</para>
+<itemizedlist>
+<listitem><para>Click on the <guibutton>Log Out</guibutton> button.</para>
+</listitem>
+<listitem><para>Choose <menuchoice><guimenu>Actions</guimenu><guimenuitem>
+Log out</guimenuitem></menuchoice>.</para></listitem>
+<listitem><para>Open the <guimenu>GNOME Menu</guimenu>, then choose <guimenuitem>
+Log out</guimenuitem>.</para></listitem>
+</itemizedlist>
+<para>Before you end a desktop session you might want to save your current
+settings so that you can restore the session later. During the log out process,
+a dialog asks if you want to save your current settings. In the <application>
+Session Properties &amp; Startup Programs</application> preference tool, you
+can select an option to automatically save your current settings.</para>
+</sect1>
+</chapter>
+
