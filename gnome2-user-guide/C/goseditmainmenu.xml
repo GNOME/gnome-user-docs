@@ -5,7 +5,8 @@
 <chapter id="goseditmainmenu-1">
 <title>Working With Menus</title>
 <highlights><para>This chapter describes how to use menus in the desktop.
-</para></highlights>
+</para>
+</highlights>
 <sect1 id="goseditmainmenu-2">
 <title>Introduction to Menus</title>
 <indexterm><primary>menus</primary><secondary>introduction</secondary></indexterm>
@@ -16,12 +17,13 @@ panels.</para>
 <para>You can access the following menus from the desktop:</para>
 <itemizedlist>
 <listitem><para><guimenu>Applications</guimenu> menu: You can access many
-of the applications, commands, and configuration options on your desktop from
-the <guimenu>Applications</guimenu> menu.</para></listitem>
-<listitem><para><guimenu>Actions</guimenu> menu: You can access various desktop
-commands from the <guimenu>Actions</guimenu> menu. For example, you can start
-the <application>Search Tool</application> application, or log out of the
-desktop. </para></listitem>
+of your applications, commands, and configuration options from the <guimenu>
+Applications</guimenu> menu. You can also access the desktop preference tools
+from the <guimenu>Applications</guimenu> menu.</para></listitem>
+<listitem><para><guimenu>Actions</guimenu> menu: You can access various commands
+that enable you to perform desktop tasks from the <guimenu>Actions</guimenu>
+menu. For example, you can start the <application>Search Tool</application>
+application, or log out of the desktop. </para></listitem>
 <listitem><para><guimenu>GNOME Menu</guimenu>: You can also access the items
 in the <guimenu>Applications</guimenu> and <guimenu>Actions</guimenu> menus
 from the <guimenu>GNOME Menu</guimenu>. You can have many <guimenu>GNOME Menu
@@ -65,10 +67,13 @@ menu also contains a submenu that allows you to perform menu-related tasks.
 </para>
 <itemizedlist>
 <listitem><para>Add launchers to panels. </para></listitem>
+<listitem><para>Remove launchers from menus.</para></listitem>
 <listitem><para>Open the <guilabel>Run Program</guilabel> dialog with the
 launcher command in the dialog.</para></listitem>
 <listitem><para>Add menus to panels. You can add a menu as a menu object or
 as a drawer object. </para></listitem>
+<listitem><para>Add new items to menus.</para></listitem>
+<listitem><para>Change the properties of submenus and launchers.</para></listitem>
 </itemizedlist>
 <para><xref linkend="goseditmainmenu-FIG-39"/> shows the popup menu.</para>
 <indexterm><primary>launcher popup menu</primary><secondary>illustration</secondary>
@@ -102,6 +107,9 @@ Description</para></entry></row>
 <row><entry valign="top"><para><guimenuitem>Add this launcher to panel</guimenuitem></para></entry>
 <entry valign="top"><para>Adds the launcher to the panel from which you open
 the menu.</para></entry></row>
+<row><entry colname="COLSPEC0"><para><guimenuitem>Remove this item</guimenuitem></para></entry>
+<entry colname="COLSPEC1"><para>Removes the launcher from the menu.</para></entry>
+</row>
 <row><entry valign="top"><para><guimenuitem>Put into run dialog</guimenuitem></para></entry>
 <entry valign="top"><para>Displays the <guilabel>Run Program</guilabel> dialog
 with  the command from the <guilabel>Command</guilabel> field of the launcher
@@ -110,6 +118,9 @@ in  the command field on the <guilabel>Run Program</guilabel> dialog. </para></e
 <row><entry colname="COLSPEC0"><para><guimenuitem>Help on <replaceable>application_name
 </replaceable></guimenuitem></para></entry><entry colname="COLSPEC1"><para>
 Opens the online help for the application.</para></entry></row>
+<row><entry colname="COLSPEC0"><para><guimenuitem>Properties</guimenuitem></para></entry>
+<entry colname="COLSPEC1"><para>Displays a dialog that enables you to edit
+the properties of the launcher.</para></entry></row>
 <row><entry colname="COLSPEC0" valign="top"><para><menuchoice><guimenu>Entire
 menu</guimenu><guimenuitem>Add this as drawer to panel</guimenuitem>
 </menuchoice></para></entry><entry colname="COLSPEC1" valign="top"><para>
@@ -120,6 +131,14 @@ menu</guimenu><guimenuitem>Add this as menu to panel</guimenuitem>
 </menuchoice></para></entry><entry colname="COLSPEC1" valign="top"><para>
 Adds the submenu as a menu object to the panel from which you open the menu.
 </para></entry></row>
+<row><entry colname="COLSPEC0"><para><menuchoice><guimenu>Entire menu
+</guimenu><guimenuitem>Add new item to this menu</guimenuitem></menuchoice></para></entry>
+<entry colname="COLSPEC1"><para>Enables you to add an item to the submenu.
+</para></entry></row>
+<row><entry colname="COLSPEC0"><para><menuchoice><guimenu>Entire menu
+</guimenu><guimenuitem>Properties</guimenuitem></menuchoice></para></entry>
+<entry colname="COLSPEC1"><para>Displays a dialog that enables you to edit
+the properties of the submenu.</para></entry></row>
 </tbody>
 </tgroup>
 </table>
@@ -131,8 +150,10 @@ Adds the submenu as a menu object to the panel from which you open the menu.
 <indexterm><primary>menus</primary><secondary>Applications menu</secondary>
 </indexterm><para>The <guimenu>Applications</guimenu> menu contains a hierarchy
 of submenus, from which you can start the standard GNOME applications and
-preference tools. The <guimenu>Applications</guimenu> menu also includes the
-file manager and the help browser.</para>
+preference tools. The <guimenu>Applications</guimenu> menu contains the <guimenu>
+Desktop Preferences</guimenu> menu. You can use the <guimenu>Desktop Preferences
+</guimenu> menu to start the desktop preference tools. The <guimenu>Applications
+</guimenu> menu also includes the file manager and the help browser.</para>
 <para>The <guimenu>Applications</guimenu> menu resides in the following places: 
 </para>
 <itemizedlist>
@@ -145,9 +166,9 @@ Nautilus</application></para></listitem>
 <sect1 id="goseditmainmenu-51">
 <title>Actions Menu</title>
 <indexterm><primary>menus</primary><secondary>Actions menu</secondary></indexterm>
-<para>The <guimenu>Actions</guimenu> menu contains various desktop commands. <xref
-linkend="goseditmainmenu-TBL-52"/> describes the commands in the <guimenu>
-Actions</guimenu> menu.</para>
+<para>The <guimenu>Actions</guimenu> menu contains various commands that enable
+you to perform desktop tasks. <xref linkend="goseditmainmenu-TBL-52"/> describes
+the commands in the <guimenu>Actions</guimenu> menu.</para>
 <table frame="topbot" id="goseditmainmenu-TBL-52">
 <title>Actions Menu Commands</title>
 <tgroup cols="2" colsep="0" rowsep="0"><colspec colwidth="38.48*"/><colspec
@@ -166,10 +187,10 @@ information, see <xref linkend="gospanel-23"/>.</para></entry></row>
 application. For more information, see the <citetitle>Search Tool</citetitle>
 manual.</para></entry></row>
 <row><entry valign="top"><para><guimenuitem>Screenshot</guimenuitem></para></entry>
-<entry valign="top"><para>Takes a screenshot of your desktop,
-and opens the <guilabel>Screenshot</guilabel> dialog. Use the <guilabel>Screenshot
-</guilabel> dialog to save the screenshot.</para></entry></row>
-<row><entry valign="top"><para><guimenuitem>Lock Display</guimenuitem></para></entry>
+<entry valign="top"><para>Takes a screenshot of the desktop, and opens the <guilabel>
+Screenshot</guilabel> dialog. Use the <guilabel>Screenshot</guilabel> dialog
+to save the screenshot.</para></entry></row>
+<row><entry valign="top"><para><guimenuitem>Lock Screen</guimenuitem></para></entry>
 <entry valign="top"><para>Locks your screen. </para></entry></row>
 <row><entry valign="top"><para><guimenuitem>Log Out</guimenuitem></para></entry>
 <entry valign="top"><para>Logs you out of the current session. </para></entry>
@@ -207,10 +228,10 @@ Program</guimenuitem>.</para></listitem>
 <para>The default shortcut keys to display the <guilabel>Run Program</guilabel>
 dialog is <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>. You can change the shortcut
 keys that display the <guilabel>Run Program</guilabel> dialog in the <application>
-Desktop Preferences</application>. To change the shortcut keys, choose <menuchoice>
-<guimenu>Applications</guimenu><guisubmenu>Desktop Preferences
-</guisubmenu><guimenuitem>Keyboard Shortcuts</guimenuitem></menuchoice>.</para>
-</listitem>
+Keyboard Shortcuts</application> preference tool. To change the shortcut keys,
+choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop
+Preferences</guisubmenu><guimenuitem>Keyboard Shortcuts</guimenuitem>
+</menuchoice>.</para></listitem>
 <listitem><para>From a launcher popup menu</para>
 <para>Right-click on a launcher in a menu, then choose <guilabel>Put into
 run dialog</guilabel> from the popup menu. The <guilabel>Run Program</guilabel>
@@ -233,7 +254,7 @@ Run Program</guilabel> dialog. </para></listitem>
 </orderedlist>
 </sect2>
 <sect2 id="goseditmainmenu-53">
-<title>Taking Screenshots</title>
+<title>To Take a Screenshot</title>
 <indexterm><primary>screenshots, taking</primary></indexterm><para>You can
 take a screenshot in any of the following ways:</para>
 <itemizedlist>
@@ -322,24 +343,24 @@ introduction</secondary></indexterm>
     <imagedata fileref="figures/open_main_menu.png" format="PNG"/>
   </imageobject>
   <textobject>
-	<phrase>Shows open GNOME Menu. Menu items: Programs, Favorites, Applets, Run, Panel, Lock Screen, Log Out.
+	<phrase>Shows open GNOME Menu. Menu items: Applications, CDE Menu, Run Program, Search for Files, Screenshot, Lock Screen, Log Out.
 </phrase>
   </textobject>
 </mediaobject>
 </screenshot>
 <para>You can access almost all of the standard applications, commands, and
-configuration options on your desktop from the <guimenu>GNOME Menu</guimenu>. 
-</para>
+configuration options from the <guimenu>GNOME Menu</guimenu>. </para>
 <para>The <guimenu>GNOME Menu</guimenu> provides the following top-level menus
 and special menu items: </para>
 <itemizedlist>
 <listitem><para><guimenu>Applications</guimenu>: Contains all applications
 and preference tools. This menu also includes the file manager and the help
 browser.</para></listitem>
-<listitem><para><guimenu>Actions</guimenu>: Contains desktop commands the <guimenuitem>
-Lock Display</guimenuitem> and <guimenuitem>Log Out</guimenuitem> menu items.
-The items in the <guimenu>Actions</guimenu> menu are at the top level of the <guimenu>
-GNOME Menu</guimenu>. </para></listitem>
+<listitem><para><guimenu>Actions</guimenu>: Contains commands that enable
+you to perform desktop tasks, for example the <guimenuitem>Lock Screen</guimenuitem>
+and <guimenuitem>Log Out</guimenuitem> commands. The items in the <guimenu>
+Actions</guimenu> menu are at the top level of the <guimenu>GNOME Menu</guimenu>. 
+</para></listitem>
 </itemizedlist>
 <para>You can add <guimenu>GNOME Menu</guimenu> buttons to your panels. By
 default, the <guimenu>GNOME Menu</guimenu> is represented on panels by a stylized
@@ -381,6 +402,139 @@ as you want to your panels. To add a <guimenu>GNOME Menu</guimenu> to a panel,
 right-click on any vacant space on the panel. Choose <menuchoice><guimenu>
 Add to Panel</guimenu><guimenuitem>GNOME Menu</guimenuitem></menuchoice>.
 </para>
+</sect2>
+</sect1>
+<sect1 id="goseditmainmenu-54">
+<title>Customizing Your Menus</title>
+<indexterm><primary>menus</primary><secondary>customizing</secondary></indexterm>
+<para>You can modify the contents of the following menus:</para>
+<itemizedlist>
+<listitem><para><guimenu>Applications</guimenu> menu</para></listitem>
+<listitem><para><guimenu>Desktop Preferences</guimenu> menu</para></listitem>
+</itemizedlist>
+<para>You use the following desktop components to customize menus:</para>
+<itemizedlist>
+<listitem><para>Menus on panels</para></listitem>
+<listitem><para><application>Nautilus</application> file manager</para></listitem>
+</itemizedlist>
+<para>When you use panels to customize your menus, you use the launcher popup
+menu. For more information, see <xref linkend="goseditmainmenu-11"/>.</para>
+<para>When you use <application>Nautilus</application> to customize your menus,
+you must access the <guimenu>Applications</guimenu> menu or the <guimenu>
+Desktop Preferences</guimenu> menu from within <application>Nautilus</application>.
+To access the <guimenu>Applications</guimenu> menu or the <guimenu>Desktop
+Preferences</guimenu> menu, open a <application>Nautilus</application> window.
+Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Start Here</guimenuitem>
+</menuchoice>. Double-click on the <guilabel>Applications</guilabel> object
+or on the <guilabel>Desktop Preferences</guilabel> object. For more information
+on <application>Nautilus</application>, see <emphasis>Nautilus File Manager
+</emphasis>.</para>
+<sect2 id="goseditmainmenu-61">
+<title>To Add a Menu</title>
+<indexterm><primary>menus</primary><secondary>adding</secondary></indexterm>
+<para>To add a menu, perform the following steps:</para>
+<orderedlist>
+<listitem><para>In a <application>Nautilus</application> window, access the
+location where you want to add the menu. For example, to add a menu to the <guimenu>
+Applications</guimenu> menu, choose <menuchoice><guimenu>Go</guimenu>
+<guimenuitem>Start Here</guimenuitem></menuchoice>, then double-click on the <guilabel>
+Applications</guilabel> object.</para></listitem>
+<listitem><para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>
+New Folder</guimenuitem></menuchoice>. An untitled folder is added to the
+view pane. The name of the folder is selected.</para></listitem>
+<listitem><para>Type a name for the folder, then press <keycap>Return</keycap>. 
+</para></listitem>
+</orderedlist>
+<para>The next time that you log out then log in again, the menu is in the
+assigned location.</para>
+</sect2>
+<sect2 id="goseditmainmenu-55">
+<title>To Add a Launcher to a Menu</title>
+<indexterm><primary>menus</primary><secondary>adding launchers to</secondary>
+</indexterm><para>To add a launcher to a menu, perform the following steps:
+</para>
+<orderedlist>
+<listitem><para>Right-click on any item in the menu to which you want to add
+the launcher.</para></listitem>
+<listitem><para>Choose <menuchoice><guimenu>Entire menu</guimenu>
+<guimenuitem>Add new item to this menu</guimenuitem></menuchoice>. A <guilabel>
+Create Launcher</guilabel> dialog is displayed.</para></listitem>
+<listitem><para>Enter the properties of the launcher in the <guilabel>Create
+Launcher</guilabel> dialog. For more information on the elements in the <guilabel>
+Create Launcher</guilabel> dialog, see <emphasis>Working With Panels</emphasis>.
+</para></listitem>
+<listitem><para>Click <guibutton>OK</guibutton>.</para></listitem>
+</orderedlist>
+</sect2>
+<sect2 id="goseditmainmenu-56">
+<title>To Copy a Launcher to a Menu</title>
+<indexterm><primary>menus</primary><secondary>copying launchers to</secondary>
+</indexterm><para>To copy an existing launcher to a menu, perform the following
+steps:</para>
+<orderedlist>
+<listitem><para>In a <application>Nautilus</application> window, access the
+location from which you want to copy the launcher. For example, to copy a
+launcher from the <guimenu>Applications</guimenu> menu, choose <menuchoice>
+<guimenu>Go</guimenu><guimenuitem>Start Here</guimenuitem></menuchoice>,
+then double-click on the <guilabel>Applications</guilabel> object.</para>
+</listitem>
+<listitem><para>Select the launcher that you want to copy, then choose <menuchoice>
+<guimenu>Edit</guimenu><guimenuitem>Copy File</guimenuitem></menuchoice>.
+</para></listitem>
+<listitem><para>In a <application>Nautilus</application> window, access the
+location to which you want to copy the launcher.</para></listitem>
+<listitem><para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>
+Paste Files</guimenuitem></menuchoice>. The launcher is added to the new location.
+</para></listitem>
+</orderedlist>
+<para>Alternatively, you can drag the launcher from one location to another.
+</para>
+<para>The next time that you log out then log in again, the launcher is in
+the new menu location.</para>
+</sect2>
+<sect2 id="goseditmainmenu-62">
+<title>To Edit the Properties of a Menu</title>
+<indexterm><primary>menus</primary><secondary>editing properties</secondary>
+</indexterm><para>To edit the properties of a menu, perform the following
+steps:</para>
+<orderedlist>
+<listitem><para>Right-click on any item in the menu that you want to edit.
+</para></listitem>
+<listitem><para>Choose <menuchoice><guimenu>Entire menu</guimenu>
+<guimenuitem>Properties</guimenuitem></menuchoice>. A <guilabel>Launcher Properties
+</guilabel> dialog is displayed.</para></listitem>
+<listitem><para>Modify the properties of the menu in the <guilabel>Launcher
+Properties</guilabel> dialog. For more information on the elements in the <guilabel>
+Launcher Properties</guilabel> dialog, see <emphasis>Working With Panels</emphasis>.
+</para></listitem>
+<listitem><para>Click <guibutton>OK</guibutton>.</para></listitem>
+</orderedlist>
+</sect2>
+<sect2 id="goseditmainmenu-57">
+<title>To Edit a Menu Item</title>
+<indexterm><primary>menus</primary><secondary>editing menu items</secondary>
+</indexterm><para>To edit a menu item, perform the following steps:</para>
+<orderedlist>
+<listitem><para>Right-click on the item that you want to edit.</para></listitem>
+<listitem><para>Choose <guimenuitem>Properties</guimenuitem>. A <guilabel>
+Launcher Properties</guilabel> dialog is displayed.</para></listitem>
+<listitem><para>Modify the properties of the launcher in the <guilabel>Launcher
+Properties</guilabel> dialog. For more information on the elements in the <guilabel>
+Launcher Properties</guilabel> dialog, see <emphasis>Working With Panels</emphasis>.
+</para></listitem>
+<listitem><para>Click <guibutton>OK</guibutton>.</para></listitem>
+</orderedlist>
+</sect2>
+<sect2 id="goseditmainmenu-58">
+<title>To Delete an Item from a Menu</title>
+<indexterm><primary>menus</primary><secondary>deleting menu items</secondary>
+</indexterm><para>To delete an item from a menu, use the launcher
+popup menu. To delete an item from a menu, perform the following steps:</para>
+<orderedlist>
+<listitem><para>Right-click on the item that you want to delete.</para></listitem>
+<listitem><para>Choose <guimenuitem>Remove this item</guimenuitem>. </para>
+</listitem>
+</orderedlist>
 </sect2>
 </sect1>
 </chapter>
