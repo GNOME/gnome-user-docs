@@ -1,0 +1,437 @@
+  
+  <appendix id="troubleshooting-0">
+    <title>Before You Use the Assistive Technologies</title>
+    <sect1 id="troubleshooting-21">
+      <title>System Administrator Tasks</title>
+      <sect2 id="troubleshooting-27">
+        <title>Configuring the Desktop for Accessible Login</title>
+        <para>The Java Desktop System Release 3 includes an Accessible Login feature.
+The feature allows users to log in to their desktop session even if they cannot
+easily use the screen, mouse, or keyboard in the usual way. This feature allows
+the user to launch assistive technologies at login time by means of special
+gestures from the standard keyboard and from a keyboard, pointing device,
+or switch device attached to the USB or PS/2 mouse port. The feature also
+allows the user to change the visual appearance of the login dialog before
+the user logs in, for instance to use a higher-contrast color scheme for better
+visibility. </para>
+        <para>To enable Accessible Login, the system administrator must perform the
+following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Configure the desktop to use the GNOME Display Manager (GDM)
+as the login manager. See <xref linkend="troubleshooting-34"/> for more information.</para>
+          </listitem>
+          <listitem>
+            <para>Make some configuration changes to GDM.  The system administrator
+can make these changes by manually modifying the following three human-readable
+configuration files as described in <xref linkend="troubleshooting-28"/> and <xref linkend="troubleshooting-29"/>:</para>
+            <itemizedlist>
+              <listitem>
+                <para>
+                  <filename>/etc/X11/gdm/gdm.conf</filename>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <filename>/etc/X11/gdm/modules/AccessKeyMouseEvents</filename>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <filename>/etc/X11/gdm/modules/AccessDwellMouseEvents</filename>
+                </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </orderedlist>
+        <sect3 id="troubleshooting-34">
+          <title>To Use GDM as the Login Manager</title>
+          <para>To configure the desktop to use GDM as the login manager, perform the
+following steps:</para>
+          <orderedlist>
+            <listitem>
+              <para>Log in as the <literal>root</literal> user.</para>
+            </listitem>
+            <listitem>
+              <para>Enter the following command to stop the <application>dtlogin</application> manager:</para>
+              <para>
+                <command>/usr/dt/bin/dtconfig -d</command>
+              </para>
+            </listitem>
+            <listitem>
+              <para>Edit the <filename>/etc/inittab</filename> file as follows:</para>
+              <para>
+                <command>co:234:respawn:/usr/lib/saf/ttymon -g -h -p &quot;`uname -n` console
+&gt; login: &quot; -T sun -d</command>
+              </para>
+              <para>
+                <command>/dev/console -l console -m ldterm,ttcompat &gt;       co:234:wait:/opt/jds/bin/gdm</command>
+              </para>
+              <para>This comments out the line to start ttymon and adds a line to start
+GDM.</para>
+            </listitem>
+            <listitem>
+              <para>Enter the following commands to create a <filename>/var/lib/gdm</filename> directory:</para>
+              <para>
+                <command>mkdir -p /var/lib/gdm</command>
+              </para>
+              <para>
+                <command>chown gdm:gdm /var/lib/gdm</command>
+              </para>
+            </listitem>
+            <listitem>
+              <para>Reboot your system.</para>
+            </listitem>
+          </orderedlist>
+        </sect3>
+        <sect3 id="troubleshooting-28">
+          <title>To Edit the GDM Configuration File</title>
+          <orderedlist>
+            <listitem>
+              <para>Log in as the <literal>root</literal> user.</para>
+            </listitem>
+            <listitem>
+              <para>Edit the file <filename>/etc/X11/gdm/gdm.conf</filename>.</para>
+            </listitem>
+            <listitem>
+              <para>Search the file for the following line: </para>
+              <para>
+                <literal>#Greeter=/usr/bin/gdmgreeter</literal>
+              </para>
+              <para>and replace the line with the following:</para>
+              <para>
+                <literal>Greeter=/usr/bin/gdmlogin</literal>
+              </para>
+              <para>This step enables a standard login greeting rather than a graphical
+login greeting.</para>
+            </listitem>
+            <listitem>
+              <para>Search the file for the following line: </para>
+              <para>
+                <literal>#AddGtkModules=false</literal>
+              </para>
+              <para>and replace the line with the following:</para>
+              <para>
+                <literal>AddGtkModules=true</literal>
+              </para>
+            </listitem>
+            <listitem>
+              <para>Search the file for the following line: </para>
+              <para>
+                <literal>#GtkModulesList=gail:atk-bridge:dwellmouselistener:keymouselistener</literal>
+              </para>
+              <para>and remove the <literal>#</literal> from the start of the line so that
+the line reads:</para>
+              <para>
+                <literal>GtkModulesList=gail:atk-bridge:dwellmouselistener:keymouselistener</literal>
+              </para>
+              <note>
+                <para>The above lines must be displayed as single lines in the <filename>gdm.conf</filename> file without line breaks. The formatting of this guide
+may display the lines over two lines.</para>
+              </note>
+              <para>This step and previous step enable the use of assistive technologies
+such as the Onscreen Keyboard, Screen Reader, and Magnifier.</para>
+              <note>
+                <para>System administrators may wish to load only the minimum subset
+of these modules which is required to support their user base.  Depending
+on your end-user needs, not all of the above GtkModules may need to be  loaded.
+ If your end-users need the integrated Screen Reader and Magnifier, you must
+include <literal>gail</literal> and <literal>atk-bridge</literal>.  If your
+users need to use a pointing device without buttons or switches, include <literal>dwellmouselistener</literal>.  If some of your users use pointing devices
+with switches, alternative physical keyboards, or switch/button devices, include <literal>keymouselistener</literal>.  Including all four modules is suitable for most
+system configurations.  The Onscreen Keyboard can operate without <literal>gail</literal> and <literal>atk-bridge</literal>, but with a reduced feature
+set. For optimum accessibility we recommend including <literal>gail</literal>
+and <literal>atk-bridge</literal>.</para>
+              </note>
+            </listitem>
+            <listitem>
+              <para>To allow users to change the color and contrast scheme of
+the login dialog, include the following line in the file: </para>
+              <para>
+                <literal>AllowThemeChange=true</literal>
+              </para>
+            </listitem>
+            <listitem>
+              <para>To restrict user changes to the visual appearance to a subset
+of the available themes, you can add a line similar to the following: </para>
+              <para>
+                <literal>GtkThemesToAllow=blueprint,HighContrast,HighContrastInverse</literal>
+              </para>
+            </listitem>
+            <listitem>
+              <para>Save the <filename>gdm.conf</filename> file.</para>
+            </listitem>
+          </orderedlist>
+        </sect3>
+        <sect3 id="troubleshooting-29">
+          <title>To Use Gestures to Launch Assistive Technologies</title>
+          <para>Once <literal>keymouselistener</literal> and/or <literal>dwellmouselistener</literal> have been added to the GtkModules loaded by GDM, you can assign
+end-user actions to launch specific assistive technologies. These gesture
+associations are contained in the following files, respectively: </para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <filename>/etc/X11/gdm/modules/AccessKeyMouseEvents</filename>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <filename>/etc/X11/gdm/modules/AccessDwellMouseEvents</filename>
+              </para>
+            </listitem>
+          </itemizedlist>
+          <para>The gesture format is described in the two files.  The following section
+demonstrates some suggested examples that have been tested with common usage
+scenarios.</para>
+          <sect4 id="troubleshooting-30">
+            <title>To Launch the Gnopernicus Screen Reader Using a Keyboard Combination</title>
+            <para>In the file <filename>AccessKeyMouseEvents</filename>, the following
+line associates <keycombo><keycap>Control</keycap><keycap>S</keycap></keycombo> held for one second
+with the Screen Reader in &quot;speech and braille&quot; mode: </para>
+            <para>
+              <literal>&lt;Control&gt;s 1 1000 1000 srcore --login --disable-magnifier
+--enable-speech --enable-braille</literal>
+            </para>
+            <para>You can assign similar key combinations to launch the Screen Reader
+in &quot;magnification only&quot; mode, such as:</para>
+            <para>
+              <literal>&lt;Control&gt;m 1 1000 1000 srcore --login --enable-magnifier
+--disable-speech</literal>
+            </para>
+            <note>
+              <para>The above lines must be displayed as single lines in the <filename>AccessKeyMouseEvents</filename> file without line breaks. The formatting of
+this guide may display the lines over two lines.</para>
+            </note>
+          </sect4>
+          <sect4 id="troubleshooting-31">
+            <title>To Launch the Onscreen Keyboard (GOK) Using a Switch or Button Gesture</title>
+            <para>You can use end-user button, key, or switch actions to launch assistive
+technologies.  Since the primary input device for many Onscreen Keyboard users
+is a switch or buttons, this is a good way to allow such users to signal their
+need for the Onscreen Keyboard at login time.</para>
+            <para>To reduce the likelihood of launching the application unintentionally,
+you can associate the gestures with multiple switch presses and/or minimum
+durations.  For example, the following line in the file <filename>AccessKeyMouseEvents</filename> associates three presses of &quot;Switch 2&quot; for a minimum of 100 milliseconds
+each within 2 seconds, with the launch of the Onscreen Keyboard
+in  &quot;inverse scanning&quot; mode:</para>
+            <para>
+              <literal>&lt;Switch2&gt;3 100 2000 gok --login --accessmethod=inversescanning
+--scan-action=switch1 --select-action=switch2</literal>
+            </para>
+            <para>Users of single switches may prefer the 'automatic scanning' access
+method. The following line associates GOK with a prolonged press (&gt; 4 seconds)
+of switch 1 on an alternate access device:</para>
+            <para>
+              <literal>&lt;Switch&gt;1 4000 5000 gok --login --accessmethod=automaticscanning
+--scan-action=switch1 --select-action=switch1</literal>
+            </para>
+            <note>
+              <para>The above lines must be displayed as single lines in the <filename>AccessKeyMouseEvents</filename> file without line breaks. The formatting of
+this guide may display the lines over two lines.</para>
+            </note>
+          </sect4>
+          <sect4 id="troubleshooting-32">
+            <title>To Launch the Onscreen Keyboard (GOK) in Dwell Mode Using a Motion-only
+Gesture</title>
+            <para>You can also define gestures that involve only the motion of a pointing
+device such as the system mouse or an alternative pointing device such as
+a head pointer or trackball.  All such gestures are specified by the same
+syntax, that is there is no distinction between a core mouse gesture and motion
+from an alternate input device.  </para>
+            <para>Motion gestures are defined as crossing events into and out of the login
+dialog window.  If the <literal>dwellmouselistener</literal> GtkModule is
+loaded, alternative pointing devices are temporarily latched to the core pointer
+so that motion from alternative devices results in movement of the onscreen
+pointer.</para>
+            <para>The following gesture can be completed by moving the onscreen pointer,
+ starting from inside the login dialog, across the top edge, back into the
+dialog across the top edge, out of the dialog via the left edge, back into
+the dialog via the left edge, and similarly through bottom and right-hand
+edges of the dialog, in  a cross pattern.  The gesture launches GOK in Dwell
+mode.  Note that the <literal>--input-device</literal> parameter specified
+in the gesture must match the name of the user input device as specified in <filename>/etc/X11/XF86Config</filename>.</para>
+            <para>
+              <literal>TTLLBBRR O 10000 gok --login --access-method=dwellselection
+--input-device=MOUSE[3]</literal>
+            </para>
+            <note>
+              <para>The above line must be displayed as a single line in the <filename>AccessKeyMouseEvents</filename> file without line breaks. The formatting of
+this guide may display the line over two lines.</para>
+            </note>
+          </sect4>
+        </sect3>
+        <sect3 id="troubleshooting-33">
+          <title>Additional Requirements for Accessible Login</title>
+          <para>To use text-to-speech services at login time, for example when you are
+using the Screen Reader in Speech mode, the GDM user must be a member of the
+&quot;audio&quot; group. You can confirm this by checking the file <filename>/etc/group</filename>.  Please see the <citetitle>Java Desktop System Release 3 Administration
+Guide</citetitle> for details about changing group membership.</para>
+          <para>To facilitate Accessible Login using alternative pointing devices and
+end-user switch devices such as sip-and-puff switches, wheelchair-mounted
+switches, trackballs, and so on, you may need to modify your X server system
+configuration to recognize these devices.  Most devices which emulate mouse
+buttons, including USB single switches, mouse-like pointing devices, and devices
+that emulate them, can be used with Accessible Login and the Onscreen Keyboard.</para>
+          <para>In the Java Desktop System Release 3, the GDM user has a readable home
+directory.  If this setting is removed for security reasons, the Screen Reader
+and Magnifier will not function properly during Accessible Login.</para>
+          <note>
+            <para>Alternate input devices should not be configured to control the
+primary onscreen pointer. This may result in undesirable behavior or cause
+situations from which the user of the alternate input devices cannot recover
+without the use of the primary keyboard or mouse.</para>
+          </note>
+        </sect3>
+      </sect2>
+      <sect2 id="troubleshooting-22">
+        <title>Enabling the Standard Greeter</title>
+        <para>To enable the standard GDM greeter, perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Log in as the <literal>root</literal> user.</para>
+          </listitem>
+          <listitem>
+            <para>Edit the file <filename>/etc/X11/gdm/gdm.conf</filename>.</para>
+          </listitem>
+          <listitem>
+            <para>Search the file for the following line: </para>
+            <para>
+              <literal>#Greeter=/usr/bin/gdmgreeter</literal>
+            </para>
+            <para>and replace the line with the following:</para>
+            <para>
+              <literal>Greeter=/usr/bin/gdmlogin</literal>
+            </para>
+          </listitem>
+          <listitem>
+            <para>Save the file.</para>
+          </listitem>
+        </orderedlist>
+      </sect2>
+      <sect2 id="troubleshooting-7">
+        <title>Configuring the Java Environment for Accessibility</title>
+        <para>To configure the Java Environment for accessibility, perform the following
+steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Log in as the <literal>root</literal> user to the base directory
+of the Java SDK installation. </para>
+          </listitem>
+          <listitem>
+            <para>Enter the following command to change to the <filename>jre/lib</filename> directory:</para>
+            <para>
+              <command>cd jre/lib</command>
+            </para>
+          </listitem>
+          <listitem>
+            <para>Enter the following command:</para>
+            <para>
+              <command>ln -s /usr/share/jar/accessibility.properties</command>
+            </para>
+          </listitem>
+          <listitem>
+            <para>Enter the following command to change to the <filename>ext</filename> directory:</para>
+            <para>
+              <command>cd ext</command>
+            </para>
+          </listitem>
+          <listitem>
+            <para>Execute the following command: </para>
+            <para>
+              <command>ln -s /usr/share/jar/gnome-java-bridge.jar</command>
+            </para>
+          </listitem>
+        </orderedlist>
+      </sect2>
+      <sect2 id="troubleshooting-6">
+        <title>Enabling Full Screen Magnification in Gnopernicus</title>
+        <para>To enable full screen magnification in <application>Gnopernicus</application>,
+perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Configure two video cards as :0.0 and :0.1.</para>
+            <note>
+              <para>It is not essential that both video cards have the same resolution
+and bit depth. However, if the resolutions and bit depths of both cards differ
+greatly, the apparent magnification factor may differ slightly from the nominal
+magnification factor.</para>
+            </note>
+          </listitem>
+          <listitem>
+            <para>Click <guibutton>Launch</guibutton>, then choose<menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Screen Reader and Magnifier</guimenuitem></menuchoice> to start <application>Gnopernicus</application>.</para>
+          </listitem>
+          <listitem>
+            <para>Click on <guibutton>Preferences</guibutton>.</para>
+          </listitem>
+          <listitem>
+            <para>Click on <guibutton>Magnifier</guibutton>.</para>
+          </listitem>
+          <listitem>
+            <para>Click on <guibutton>Add/Modify</guibutton>.</para>
+          </listitem>
+          <listitem>
+            <para>Specify :0.0 as the Source for magnification.</para>
+          </listitem>
+          <listitem>
+            <para>Specify :0.1 as the Target for magnification.</para>
+          </listitem>
+          <listitem>
+            <para>Set the Zoomer Placement to be [0,0,1023,767].</para>
+            <note>
+              <para>These instructions assume a video resolution of 1024x768. </para>
+            </note>
+          </listitem>
+          <listitem>
+            <para>Restart <application>Gnopernicus</application>. The magnified
+view is displayed on the second display 0.1.</para>
+          </listitem>
+        </orderedlist>
+      </sect2>
+    </sect1>
+    <sect1 id="troubleshooting-26">
+      <title>User Tasks</title>
+      <sect2 id="troubleshooting-4">
+        <title>Disabling the Screensaver for Gnopernicus Users</title>
+        <para>To disable the screensaver, perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Click <guibutton>Launch</guibutton>, then choose <menuchoice><guimenu>Preferences</guimenu><guisubmenu>Display</guisubmenu><guimenuitem>Screensaver</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>In the <guilabel>Display Modes</guilabel> tabbed section,
+deselect the <guilabel>Lock Screen After</guilabel> check box.</para>
+          </listitem>
+          <listitem>
+            <para>In the <guilabel>Mode</guilabel> drop-down list, select <guilabel>Disable Screen Saver</guilabel>.</para>
+          </listitem>
+          <listitem>
+            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Restart Daemon</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></menuchoice> to close the <guilabel>Screensaver</guilabel>
+dialog.</para>
+          </listitem>
+        </orderedlist>
+      </sect2>
+      <sect2 id="troubleshooting-16">
+        <title>Maximizing GNOME Terminal for GOK Users</title>
+        <para>If you are a <application>GOK</application> user, you cannot use the<application> GNOME Terminal</application> application in Full Screen mode because the <application>GNOME Terminal</application> window obscures the <application>GOK</application>
+display.</para>
+        <para>To resize the <application>GNOME Terminal</application> window for use
+with the <application>GOK</application> application, perform the following
+steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Do not enable the Full Screen mode in <application>GNOME Terminal</application>.</para>
+          </listitem>
+          <listitem>
+            <para>Give focus to the <application>GNOME Terminal</application>
+window.</para>
+          </listitem>
+          <listitem>
+            <para>Press <keycap>F10</keycap> to maximize the application.</para>
+          </listitem>
+        </orderedlist>
+      </sect2>
+    </sect1>
+  </appendix>
