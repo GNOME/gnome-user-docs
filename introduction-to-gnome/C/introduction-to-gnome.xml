@@ -2,9 +2,9 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.0">
-  <!ENTITY manrevision "2.0">
-  <!ENTITY date "June 2002">
+  <!ENTITY appversion "2.2">
+  <!ENTITY manrevision "2.2">
+  <!ENTITY date "March 2003">
   <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file. 
        Use the appversion entity to specify the version of the application.
@@ -17,7 +17,7 @@
   <title>Introduction to GNOME V&manrevision;</title>
     <copyright> 
       <year>2001</year> 
-      <year>2002</year> 
+      <year>2003</year> 
       <holder>Alexander Kirillov</holder> 
     </copyright>
     <copyright> 
@@ -69,6 +69,18 @@
 	    David C. Mason,  David A. Wheeler
 	  </para>
 	  <para role="publisher">GNOME Documentation Project</para>
+	</revdescription> 
+      </revision> 
+      <revision> 
+	<revnumber>Introduction to GNOME V2.0</revnumber> 
+	<date>June 2002</date> 
+	<revdescription> 
+	  <para role="author">
+               Alexander Kirillov
+	    	<email>kirillov@math.sunysb.edu</email>,
+	    David C. Mason,  David A. Wheeler
+	  </para>
+	  <para role="publisher">GNOME Documentation Project</para>
 	  <para>Updated for GNOME 2.0. Some descriptions and
 	  screenshots are borrowed from <citetitle>GNOME Desktop 2.0
 	  User Guide</citetitle> (May 2002), by Sun GNOME
@@ -93,8 +105,8 @@
 
 
   <releaseinfo>
-      This document was  last updated in June 2002. It describes GNOME
-      2.0.   
+      This document was  last updated in &date;. It describes GNOME
+      2.2.   
     </releaseinfo>
     <legalnotice> <title>Feedback</title> <para> To report a bug or
       make a suggestion regarding this document, follow the directions
@@ -150,8 +162,8 @@
     url="http://www.gnu.org" type="http">GNU website</ulink>.  
     </para>
     <para>
-      This guide describes GNOME 2.0 which is the latest (as of June 
-      2002) release of GNOME. 
+      This guide describes GNOME 2.2 which is the latest (as of March 
+      2003) release of GNOME. 
     </para>
   </sect1>
 
@@ -177,9 +189,7 @@
       website</ulink>.
     </para>
     <para> The authors of this document assume that you are
-      using the default configuration of GNOME (that is, default GTK
-      theme and <application>Sawfish</application> window manager with
-      <guilabel>Crux</guilabel> theme). GNOME is highly
+      using the default configuration of GNOME. GNOME is highly
       configurable, so it is easy to change not only the look but also
       the behavior of GNOME; however, we recommend that you do so only
       after you already have some experience with GNOME.
@@ -271,14 +281,19 @@
       <variablelist>
         <!-- ############## -->
 	<varlistentry>
-	  <term><guibutton>GNOME Menu</guibutton> button</term>
+	  <term><guimenu>Applications</guimenu> and
+	  <guimenu>Actions</guimenu>  menus</term>
 	  <listitem>
-	    <para>This is the button with the stylized footprint (in
-	      the example of <xref linkend="desktop-fig"/>, it is the
-	      left-most button on the top panel). Clicking this button
-	      brings up a menu containing all GNOME applications and
-	      commands, including the logout command.
-	    </para> 
+	    <para><guimenu>Applications</guimenu> menu gives you
+	      access to all GNOME applications installed on your
+	      system. <guimenu>Actions</guimenu> menu contains useful
+	      commands such as <guimenuitem>Search for
+	      files</guimenuitem>, <guimenuitem>Run
+	      command</guimenuitem>, <guimenuitem>Open
+	      recent</guimenuitem> (documents),  and <guimenuitem>Log
+	      Out</guimenuitem> command. In the screenshot above, you
+	      can see both these menus on left side of the top
+	      panel. </para>
 	  </listitem>
 	</varlistentry>
         <!-- ############## -->
@@ -286,34 +301,34 @@
 	  <term>Other menus</term>
 	  <listitem>
 	    <para>
-	      Panels can also contain other menus, either submenus of
-	    the <guimenu>GNOME Menu</guimenu> or menus created by
-	    the user. In the example above, the top panel contains
-	    <guimenu>Applications</guimenu> and
-	    <guimenu>Actions</guimenu> menus. Both are
-	    actually submenus of the  <guimenu>GNOME Menu</guimenu>.
-	    </para> 
+	      Panels can also contain other menus. Most important of
+	      them is the <guimenu>Main Menu</guimenu> (sometimes also
+	      called <guimenu>GNOME Menu</guimenu>) which combines
+	      <guimenu>Applications</guimenu> and
+	      <guimenu>Actions</guimenu> menu. The panel can also
+	      contain other menus  created
+	      by the user.</para>
 	  </listitem>
 	</varlistentry>
 
         <!-- ############## -->
 	<varlistentry>
-	  <term>Application launchers</term>
+	  <term>Launchers</term>
 	  <listitem>
-	    <para>These buttons start various programs.
+	    <para>These are buttons that start various programs.
 	    </para> 
 	  </listitem>
 	</varlistentry>
         <!-- ############## -->
 	<varlistentry>
-	  <term>Panel applets</term>
+	  <term>Applets</term>
 	  <listitem>
 	    <para>These are tiny programs designed to
-	      work inside the panel. For example, the
-	      <application>clock</application> applet on the far right
+	      work inside the panel. For example,  the
+	      <application>clock</application> applet in the middle 
 	      of the top panel    shows the current time, and the
-	      <application>Window List</application> applet (in the
-	      left side of the bottom panel) shows the list of all application
+	      <application>Window List</application> applet in the
+	      left side of the bottom panel shows the list of all application
 	      windows  on your desktop (this will be discussed in
 	      detail in <xref linkend="tasklist"/>). 
 	    </para> 
@@ -325,9 +340,10 @@
 
       <para> As with all GNOME components, panels are highly
 	configurable: you can add or remove application launchers and
-	applets, edit the <guimenu>GNOME Menu</guimenu>, change the panel
-	background, or even remove and create new panels. This will be
-	discussed in <xref linkend="customizing-panel"/>. 
+	applets, edit the <guimenu>Applications</guimenu> menu, change
+	the panel background, or even remove and create new
+	panels. This will be discussed in <xref
+	linkend="customizing-panel"/>.
       </para>
       <note>
 	<title>NOTE</title>
@@ -340,8 +356,8 @@
 	</note>
       <para>
 	To configure an object, get help on it, or remove it
-	from the panel, right-click on it and select the appropriate
-	item from the popup menu. To hide the panel when you are not
+	from the panel, right-click on it and choose the appropriate
+	item from the context menu. To hide the panel when you are not
 	using it, click on one of the <guibutton>Hide
 	buttons</guibutton>.  They are the small arrows at the ends of the
 	panel.
@@ -349,21 +365,20 @@
       <para>More panel operations are available from the
 	<guimenu>Panel</guimenu> menu, which you can open by
 	right-clicking in any vacant space on the panel (for example,
-	in the hide arrows) and selecting
-	<guisubmenu>Panel</guisubmenu> from the menu. The
-	<guimenu>Panel</guimenu> menu also contains the <ulink type="help"
-	url="ghelp:panel">Panel manual</ulink>, which describes
-	all these options in detail.  </para>
+	in the hide arrows).  To learn more about using panel, choose
+	<guimenuitem>Help</guimenuitem> from the
+	<guimenu>Panel</guimenu> menu. 
+	</para>
     </sect2>
 <!-- =======Subsection ============ -->
     <sect2 id="desktop"> 
       <title>Desktop</title> 
       <para>
-	Everything outside the panel is called the 
-	<quote>desktop</quote>. You can place icons for files, applications,
-        and other items on the desktop (a default collection of icons is
-        installed with GNOME).  You can then double-click on an item
-        to use it:
+	Everything outside the panel is called the <quote>desktop
+	background</quote>. You can place icons for files,
+	applications, and other items on the desktop background (a default
+	collection of icons is installed with GNOME).  You can then
+	double-click on an item to use it:
       </para>
       <itemizedlist mark="bullet">
 	<listitem>
@@ -380,27 +395,61 @@
 	<listitem>  
 
 	  <para>
-	    If it is a folder (directory), the <application>File
+	    If it is a folder, the <application>File
 	    Manager</application> will start and show the contents of
-	    that directory. Your desktop will probably have an icon
-	    showing a house and labeled as 
-	    <guilabel><replaceable>yourname</replaceable>'s
-	    Home</guilabel>. Double-clicking on this icon will start
-	    the <application>File Manager</application> in your home
-	    directory.
+	    that directory. 
 	  </para>
 	</listitem>
       </itemizedlist>
       <para>
 	The easiest way to place an item on the desktop is to drag a
 	file from a file manager window, as described in detail in
-	the <ulink type="help" url="ghelp:nautilus">Nautilus
+	the <ulink type="help"
+	url="ghelp:user-guide/wgosnautilus.xml">Nautilus 
 	manual</ulink>. Once the item is placed on the desktop, you
 	can move it around the desktop using the left mouse button, or
 	you can click on it with the right mouse button to bring up
-	the popup menu which allows you to delete the item or change
+	the context menu which allows you to delete the item or change
 	its properties.
-    </para>
+      </para>
+      <para>
+	By default, your desktop contains the following objects:
+	<variablelist>
+	  <varlistentry>
+	    <term>Home folder</term>
+	    <listitem><para>This icon provides access to your home
+	    folder. 
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term>Start Here</term>
+	    <listitem><para>
+		This object provides access to special functions of
+		GNOME file manager,
+		<application>Nautilus</application>. These special
+		functions include menu editing (see <xref
+		  linkend="customizing-menus"/>), desktop preference
+	    tools (see <xref 
+		  linkend="customizing-desktop"/>), and  access to
+	    machines on your local   
+		local network (if you have any).  
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term>Trash can</term>
+	    <listitem><para> Double-clicking on the trash can icon
+		shows all files you have removed using the file
+		manager. This gives you an opportunity to restore a
+		file which was removed by mistake. You can also empty
+		the trash can which permanently and irrevocably
+		deletes all these files.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+      </para>
     </sect2>
 
 <!-- =======Subsection ============ -->
@@ -438,27 +487,26 @@
 	  </para></listitem>
       </itemizedlist>
       <para>
-	In addition, right-clicking on any vacant
-	place on your desktop brings up the <guimenu>Desktop
-	Background</guimenu> menu, which allows you to change the desktop
-	background or other properties, or add a new object to the
-	desktop. Clicking on the desktop with the middle mouse button
-	produces the <guimenu>Root</guimenu> menu, provided by the
-	window manager (see <xref linkend="windows"/>).  </para>
+	In addition, right-clicking on any vacant place on your
+	desktop background brings up the <guimenu>Desktop
+	Background</guimenu> menu, which allows you to change the
+	desktop background image or other properties, or add a new object to
+	the desktop.</para>
     </sect2>
 
 <!-- =======Subsection:Logging out ============ -->
     <sect2 id="logout"> 
       <title>Logging Out</title> 
       
-      <para> To log out of GNOME, click on the <guimenu>GNOME Menu</guimenu>
-	button and select <guimenuitem>Log out</guimenuitem>. GNOME
-	will prompt you for confirmation; it will also give you an
-	option to save the session &mdash; that is, information about
-	currently open applications and their location on the screen
-	will be saved, so that when you login next time, the same
-	applications will be in the same places (this only works for
-	applications which are fully GNOME-compliant).
+      <para> To log out of GNOME, click on the
+	<guimenu>Actions</guimenu> menu and choose <guimenuitem>Log
+	Out</guimenuitem>.<!-- GNOME will prompt you for confirmation;
+	it will also give you an option to save the session &mdash;
+	--> GNOME will automatically save the current session (that
+	is, information about currently open applications and their
+	location on the screen), so that when you log in next time, the
+	same applications will be in the same places. Note this only
+	works for applications which are fully GNOME-compliant.
       </para>
     </sect2>
 	
@@ -468,42 +516,31 @@
 <sect1 id="windows">
     <title>Working With Windows</title>
     <para>
-      The X
-      Window System, a graphical system used by all UNIX-like 
-      operating systems, allows you to have several windows on your
-      screen, with a different application running in each window. By
-      itself, however, the X Window System can only do very low-level
-      operations, so it is always used in combination with another
-      piece of software, called a <emphasis>window manager</emphasis>. A
-      window manager provides windows' frames, titlebar, and buttons.
-      It also allows you to move, close, and resize windows. GNOME can
-      work with many window managers. The most popular are <ulink
-      type="http" url="http://sawmill.sourceforge.net">
-      <application>Sawfish</application></ulink> (included as part of
-      the GNOME distribution) and <ulink type="http"
-      url="http://www.gnome.org/softwaremap/projects/Metacity">
-      <application>Metacity</application></ulink>. Each window manager
-      can use many different styles of window decorations and buttons.
-      (This is referred to as the <quote>window manager
-      theme</quote>.)  Since it is impossible to cover them all, in
-      this section we only describe the default window manager shipped
-      with GNOME, <application>Sawfish</application>, and its default
-      theme, <guilabel>Crux</guilabel>. An example of the window
-      titlebar using the <guilabel>Crux</guilabel> theme is shown in <xref
-      linkend="cruxborder"/>
+      As most modern desktop environments, GNOME allows you to have
+      several windows on your screen, with a different application
+      running in each window. This section describes various windows
+      operations: moving, resizing, closing, hiding. 
+    </para>
+    <para>
+      Many of these operation are controlled by buttons located at the
+      window titlebar. Descriptions in this section assume
+      that you are using the default configuration of GNOME, so the
+      buttons in the window titlebar look as  shown in
+      <xref linkend="windowborder"/>.  
     </para>
 
+
 <!-- figure -->
-    <figure id="cruxborder">
-     <title>Window Titlebar Using  Crux Theme.</title>
+    <figure id="windowborder">
+     <title>Window Titlebar Using Default Theme</title>
      <screenshot>
 	<mediaobject> 
 	  <imageobject><imagedata
 		fileref="figures/titlebar_anno_window.png" format="PNG"/> 
 	  </imageobject>
 	  <textobject> 
-	    <phrase>Titlebar in Crux style, focused. Close button in
-	    the left side, minimize, maximize, and shade buttons on
+	    <phrase>Titlebar in default style, focused. Window ops button in
+	    the left side, minimize, maximize, and close buttons on
 	    the right. </phrase>
 	  </textobject>
 	</mediaobject>
@@ -511,6 +548,26 @@
     </screenshot>
    </figure>
 <!-- /figure --> 
+
+    <note>
+      <title>Note for advanced users</title>
+      <para>
+	All the windows operations are actually managed by a piece of
+	software called <emphasis>window manager</emphasis>. By
+	default, GNOME uses <application>Metacity</application> window
+	manager, which is included with GNOME. GNOME can also be used
+	with other window managers, such as
+	<application>Sawfish</application> (which was used in GNOME
+	1.4). To switch to <application>Sawfish</application> window
+	manager, open a terminal window and enter the following
+	command: <command>killall metacity; sawfish&amp;</command>. If
+	everything worked smoothly, save current session by entering
+	the command  <command>gnome-session-save</command> so that
+	next time you login, <application>Sawfish</application> is
+	started automatically. 
+      </para>
+    </note>      
+
     <para>
       So, what can you do with windows?
     </para>
@@ -522,9 +579,11 @@
 	  <listitem>
 	    <para> To <emphasis>close</emphasis> a window, click on
 	      the <guibutton>Close Window</guibutton> button (with the
-	      small <quote>x</quote>) in the window titlebar. If the
-	      application has any unsaved data, it will prompt you to
-	      save it.
+	      small <quote>x</quote>) in the right side of window
+	      titlebar. If the application has any unsaved data, it
+	      will prompt you to save it. You can also use keyboard
+	      shortcut
+	      <keycombo><keycap>Alt</keycap><keycap>F4</keycap></keycombo>. 
 	    </para>
 	    <para>
 	      To <emphasis>maximize</emphasis> a window, i.e. make it
@@ -545,13 +604,11 @@
 	      applet</link> and can be restored as described below.
 	    </para>
 	    <para> A convenient alternative to minimizing windows is
-	      <emphasis>shading</emphasis> them. When you shade a window, it
-	      <quote>rolls up</quote> into its own titlebar, so the
-	      titlebar is the only part of the window left on the
-	      screen. To shade a window, click on the 
-	      <guibutton>Shade</guibutton> button; to unshade, click
-	      on this button again. You can also shade and unshade a 
-	      window by  double-clicking on the titlebar.
+	      to <quote>shade</quote> it, or <quote>roll up</quote> a
+	      window into its own titlebar, so the titlebar is the
+	      only part of the window left on the screen. You can roll
+	      up and unroll a window by double-clicking on the
+	      titlebar.
 	    </para>
 	  </listitem>
 	</varlistentry>
@@ -563,11 +620,7 @@
 	    <para> Windows on your screen can overlap, so that one of
 	      the windows is <quote>on top</quote> of another. You can
 	      <quote>raise</quote> a window (i.e., put it on top of
-	      all others) by clicking on the window titlebar. You can
-	      also switch a window from raised to lowered and back by
-	      right-clicking in the titlebar, or by right-clicking
-	      anywhere inside the window while holding down the 
-	      <keycap>Alt</keycap> key.
+	      all others) by clicking anywhere in that window. 
 	    </para>
 	  </listitem>
 	</varlistentry>
@@ -584,15 +637,13 @@
 	      be running as well.) To help you see which window has
 	      focus, the titlebar of this window has a different color
 	      (the left side is blue, as opposed to gray for all other
-	      windows). To change the focus to another window, just click
-	      anywhere in that window. You can also click in the
-	      window titlebar to focus and raise the window
-	      simultaneously.
+	      windows). By default, clicking in a window both raises it
+              and gives focus to it. 
 	  </para>
 	  <para>
 	    You can also use the <keycombo><keycap>Alt</keycap>
 	    <keycap>Tab</keycap> </keycombo> shortcut to switch
-	    between windows. This cyclically switches all existing
+	    between windows. This cyclically switches between all existing
 	    windows. The window to which you switch is raised and
 	    given focus.
 	  </para>
@@ -604,11 +655,9 @@
           </term>     
 	  <listitem>
 	    <para> To move a window, drag its titlebar to a new
-	      location using the left mouse button (i.e., click in the
-	      title bar and move the mouse without releasing the
-	      button). You can also move a window by clicking anywhere
-	      inside the window while holding down the
-	      <keycap>Alt</keycap> key.
+	      location using the left mouse button. You can also move
+	      a window by clicking anywhere inside the window while
+	      holding down the <keycap>Alt</keycap> key.
 	    </para>
 	    <para> 
 	      To resize a window, place the mouse cursor on any of the
@@ -632,7 +681,7 @@
 	minimized window, just click on its title in the
 	<application>Window List</application>
 	applet. Right-clicking on the window title brings up the
-	popup menu which allows you to shade a
+	context menu which allows you to shade a
 	window, close it, etc. <!-- NEEDS WORK 
         or kill the application running in the
 	window. The last option should only be used when an
@@ -645,16 +694,15 @@
     <sect2 id="wm-menus">
       <title>Window  Menu</title>
       <para>
-	<application>Sawfish</application> also provides a menu for
+	GNOME also provides a menu for
 	each window; this menu contains all the operations for this
 	window described above, and then some. To access this menu,
-	right-click on the <guibutton>Close</guibutton> button, or
-	click anywhere inside the window with  the <link
-	linkend="conventions">middle mouse button</link> while holding
-	down the <keycap>Alt</keycap> key.
+	click on the <guibutton>Window Menu</guibutton> button at the
+	left side of the window titlebar, or use keyboard shortcut
+	<keycombo><keycap>Alt</keycap><keycap>Space</keycap></keycombo>. 
       </para>
     </sect2>
-    <sect2 id="wm-desktop-menu">
+ <!--   <sect2 id="wm-desktop-menu">
       <title>Root Menu</title>
       <para>
         Finally, <application>Sawfish</application> also provides a 
@@ -731,7 +779,7 @@
 	</varlistentry>
       </variablelist>
     </sect2>
-	      
+	-->      
   </sect1>
 
 <!-- ==================Section: ======================== -->
@@ -747,10 +795,10 @@
     </para>
 
     <para>To open a new <application>Nautilus</application> window,
-      choose the <menuchoice><guimenu>Applications</guimenu>
-      <guimenuitem>Home folder</guimenuitem></menuchoice> in the
-      <guimenu>GNOME Menu</guimenu>, or double-click on any folder
-      icon on your desktop, such as the <guiicon>Home</guiicon> icon.
+      choose <guimenuitem>Home folder</guimenuitem> from the
+      <guimenu>Applications</guimenu> menu, or double-click on any
+      folder icon on your desktop, such as the <guiicon>Home</guiicon>
+      icon.
     </para>
 
     <sect2 id="nautilus-fm">
@@ -780,7 +828,7 @@
         (for data files, it starts the appropriate application which
         opens this file, as configured in the <application>File Types and
         Programs </application> preference tool). Right-clicking on a
-        file or folder produces a popup menu.  Using this menu, you
+        file or folder produces a context menu.  Using this menu, you
         can delete or rename the file, view and change file properties
         or permissions, and more.
       </para>
@@ -794,7 +842,13 @@
 	you want to move, and drag it from one window into another
 	using the mouse. You can also drag a file or folder to the
 	desktop. To copy a file, press-and-hold the <keycap>Ctrl</keycap>
-	key while dragging the file.
+	key while dragging the file. You can also copy and move files
+	using keyboard shortcuts
+	<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>, 
+	<keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo>, and
+	<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>
+	(see <ulink url="ghelp:user-guide/wgosnautilus.xml"
+	type="help">Nautilus manual</ulink> for details).  
       </para>
       <para>
 	To delete files, drag them to the trash can icon on your
@@ -805,7 +859,8 @@
 	customizable, so you can easily change the way files are
 	displayed (for example, you can choose a custom icon for a
 	given file). For a detailed description of all these
-	possibilities, read the <citetitle>Nautilus manual</citetitle>,
+	possibilities, read the <ulink url="ghelp:user-guide/wgosnautilus.xml"
+	type="help"><citetitle>Nautilus manual</citetitle></ulink>,
 	available from the <guimenu>Help</guimenu> menu of
 	<application>Nautilus</application>. 
       </para>
@@ -816,14 +871,19 @@
 	Accessing Floppies and Other Removable Media</title>
       <para>
 	To access files on floppy disks, CD-ROMs and other removable
-	media, right-click on any vacant spot on the desktop and
-	choose the required media from the
-	<guisubmenu>Disks</guisubmenu> submenu of the 
-	<guimenu>Desktop Background</guimenu> menu.  (This assumes your
-	system is correctly configured, that is, you have the
-	appropriate entry in <filename>/etc/fstab</filename>
-	file.)  This will open a <application>Nautilus</application>
-	window showing the contents of the selected media. 
+	media, insert the disk in drive. Depending on configuration of
+	your sytem, it may automatically recognize an inserted disk
+	and put an icon for it on the desktop (in technical language,
+	this is called <quote>automounting</quote>). Otherwise,
+	right-click on any vacant spot on the desktop and choose the
+	required media from the <guisubmenu>Disks</guisubmenu> submenu
+	of the <guimenu>Desktop Background</guimenu> menu.  (This
+	assumes your system is correctly configured, that is, you have
+	the appropriate entry in <filename>/etc/fstab</filename>
+	file.)  This will place an icon for the disk on the
+	desktop. Double-clicking on this icon to will open a
+	<application>Nautilus</application> window showing the
+	contents of the selected media.
       </para>
       <warning>
 	<title>WARNING</title> 
@@ -842,7 +902,7 @@
 	      <para>
 		Unmount the disk by right-clicking on the disk icon on
 		the desktop and choosing <guimenuitem>Unmount
-		volume</guimenuitem> from the popup menu. 
+		volume</guimenuitem> from the context menu. 
 	      </para>
 	    </listitem>
 	  </orderedlist>
@@ -857,7 +917,7 @@
 	In addition to the basic features listed above,
 	<application>Nautilus</application> has many other advanced
 	and exciting capabilities. Here we list some of them,
-	referring the reader to the <citetitle>>Nautilus
+	referring the reader to the <citetitle>Nautilus
 	manual</citetitle> for detailed descriptions.
       </para>
       <itemizedlist>
@@ -876,7 +936,7 @@
 	<listitem>
 	  <para>You can assign an <quote>emblem</quote> (such as
 	    <guilabel>New</guilabel> or <guilabel>Favorite</guilabel>)
-	    to a file, which will be put on top of the file icon.
+	    to a file. This emblem will be put on top of the file icon.
 	  </para>
 	</listitem>
 	<listitem>
@@ -913,16 +973,17 @@
       anything: background color, key bindings, location of panels,
       contents of the <guimenu>GNOME Menu</guimenu>, and more. To see
       examples of different customizations of the GNOME desktop, take a
-      look at the screenshots on the <ulink type="http"
-      url="http://www.gnome.org/start/2.0/screenshots/index.html">GNOME
-      website</ulink> and notice how different they look.
+      look at the screenshots in <ulink type="http"
+      url="http://vhost.dulug.duke.edu/~louie/screenshots/2.2/">GNOME
+      users gallery</ulink> and notice how different they look.
     </para>
+<!-- STOP HERE -->
     <para>The following sections list
       some of the most common customizations.  In addition, you can
       change properties of various items &mdash; most notably, panels
       and icons on your desktop &mdash; by clicking on them with the
-      right mouse button and selecting
-      <guimenuitem>Properties</guimenuitem> from the popup menu.
+      right mouse button and choosing
+      <guimenuitem>Properties</guimenuitem> from the context menu.
     </para>
     <para>
       Almost every GNOME application has its own preferences settings
@@ -946,12 +1007,12 @@
 	then on the tool you require.
     </para>
     <para>
-      Here we would like to give  an overview of the most commonly
+      Below you will find an overview of the most commonly
       used preferences tools.
     </para>
     <variablelist>
       <varlistentry>
-	<term>Background</term>
+	<term><guilabel>Background</guilabel></term>
 	<listitem> 
 	<para>
 	    This tool allows you to change desktop background. You can
@@ -976,31 +1037,74 @@
 	  </term>
 	  <listitem> 
 	    <para>
-	      This tool allows you to change the desktop theme (to be
-	      precise, the GTK2 theme). A <emphasis>theme</emphasis> is a
-	      collection of settings that determine the look of all menus,
-	      panels, toolbars, scrollbars, checkbuttons and other elements
-	      of graphical user interface for all GNOME applications. 
+	      This tool allows you to change the desktop theme. A
+	      <emphasis>theme</emphasis> is a collection of settings
+	      that determine the look of your desktop and all GNOME
+	      applications. It consists
+	      of the following components:
 	    </para>
+	    <variablelist>
+	      <varlistentry>
+		<term>Controls</term> <listitem><para> This component
+		(sometimes also called <quote>widget</quote> theme)
+		determines the appearance of menus, panels, toolbars,
+		buttons, and other elements of user interface in all
+		GNOME applications.
+		  </para>
+		</listitem>
+	      </varlistentry>
+	      <!-- ========== -->
+	      <varlistentry>
+		<term>Window borders</term>
+		<listitem><para>
+		    This component determines the appearance of
+		window borders, titlebar, and buttons placed in the
+		titlebar. 
+		    </para>
+		</listitem>
+	      </varlistentry>
+	      <!-- ========== -->
+	      <varlistentry>
+		<term>Icon theme</term> 
+		<listitem>
+		  <para> This component determines the set of icons
+		    used by GNOME file manager and other applications
+		    for files of various types. These icons are also
+		    used on the desktop, for files you place there and
+		    for standard objects such as home directory or
+		    <guilabel>Start Here</guilabel> location.
+		    </para>
+		</listitem>
+	      </varlistentry>
+	    </variablelist>
+	    <note>
+	      <title>NOTE</title>
+	      <para>
+		Users upgrading from GNOME 2.0 will notice that the
+		layout of this tool and terminology has changed: GNOME
+		2.2 uses the word <quote>theme</quote> to refer to the
+		complete collection of appearance settings, so a theme
+		now consists of several components. In GNOME 2.0, this
+		was called a <quote>metatheme</quote>.
+	      </para>
+	    </note>
 	    <para>
-	      You can select one of the themes installed as part of your
-	      GNOME distribution, or download and install more themes
-	      from the Internet. In particular, you can find many GTK
-	      themes at the <ulink type="http"
-		url="http://sunshineinabag.co.uk/">Sunshine In a
-		Bag</ulink> website (look for GTK2 themes).
+              The theme tool allows you to select one of the themes
+	      installed as part of your GNOME distribution. You can
+	      also cerate a custom theme by selecting individual theme
+	      components (Icon, Window border). To do so, click on
+	      <guibutton>Details</guibutton> button. Finally, you can
+	      download and install more themes from the Internet. In
+	      particular, you can find many themes at the <ulink
+	      type="http" url="http://art.gnome.org/">GNOME
+	      theme</ulink> website. Please note that this site (as
+	      well as many other Interent resources) use more
+	      technical (and more precise) terminology: the
+	      <guilabel>Controls</guilabel> component is called a
+	      <quote>GTK2 theme</quote>, and <guilabel>Window
+	      borders</guilabel> component is called a <quote>Metacity
+	      theme</quote>.
 	    </para>
-	    <para>
-	      Please note that a GTK2 theme will not change the appearance
-	      of the window decorations,  (the borders, titlebars, and buttons in
-	      window titlebar); this is determined by your window
-	      manager settings and can be changed as described in <xref
-		linkend="customizing-wm"/>. Also, a GTK 2 theme only
-	      controls GNOME 2 applications. If you are using GNOME 1.x
-	      applications in GNOME 2, their appearance will not be
-	      affected (it is determined by a GTK1 theme which is
-	      configured independently from the GTK2 themes).
-	  </para>
 	  </listitem>
 	</varlistentry>
 
@@ -1010,26 +1114,15 @@
 	  <listitem> 
 	  <para>
 	      This tool allows you to choose the default font which will
-	      be used by all menus, dialogs, and other user interface
-	      elements. This overrides the font specified by your
-	      desktop theme.   
+	      be used by  menus, dialogs, and other user interface
+	      elements. You can also choose fonts to be used for icon
+	      captions on the desktop and for windows titlebars. 
 	    </para>
 	  </listitem>
 	</varlistentry>
-<!--	<varlistentry>
-	<term><guilabel>Session</guilabel></term>
-	  <listitem> 
-	    <para>NEEDS WORK
-	      In this section you can define
-	      the startup programs (that is, programs that are run every
-	      time you log in), enable or disable login hints and logout
-	      confirmation dialog. 
-	</para>
-      </listitem>
-      </varlistentry> -->
     </variablelist>
     </sect2>
-    <sect2 id="customizing-wm">
+<!--    <sect2 id="customizing-wm">
       <title>Customizing the Window Manager</title>
       <para>
 	To customize the <application>Sawfish</application> window
@@ -1052,7 +1145,7 @@
 	tool which allows you to specify keybindings for various
 	window operations) are only recommended for advanced users.
       </para>
-    </sect2>
+    </sect2> -->
     <sect2 id="customizing-panel">
       <title>Customizing Panels</title>
       <para>
@@ -1061,12 +1154,12 @@
 	  <listitem><para>
 	      To remove a panel, right-click on a vacant space on the
 	      panel and choose <guimenuitem>Remove this
-	      panel</guimenuitem> from the panel popup menu. 
+	      panel</guimenuitem> from the panel context menu. 
 	    </para></listitem>
 	  <listitem><para>
 	      To create a new panel, right-click on a vacant space on
 	      any existing panel and choose <guimenuitem>Create 
-	      panel</guimenuitem> from the panel popup menu.
+	      panel</guimenuitem> from the panel context menu.
 	    </para></listitem>
 	  <listitem><para>
 	      To move an existing panel to a new location, drag it
@@ -1081,23 +1174,23 @@
 	      To modify a panel's properties (background, size,
 	      auto-hide),  right-click on a vacant space on the
 	      panel and choose <guimenuitem>Properties</guimenuitem>
-	      from the panel popup menu. 
+	      from the panel context menu. 
 	    </para></listitem>
 	  <listitem><para>
 	      To remove an object (menu, applet, or application launcher),
 	      from the panel, right-click on the object and choose
 	      <guimenuitem>Remove from panel</guimenuitem> from the
-	      object popup menu. 
+	      object context menu. 
 	    </para></listitem>
 	  <listitem><para>
 	      To add a new object to the panel, right-click on a
 	      vacant space on the panel and choose
 	      <guimenuitem>Add to panel</guimenuitem> 
-	      from the panel popup menu. Alternatively, to add an
+	      from the panel context menu. Alternatively, to add an
 	      application from one of the menus as a launcher to the
 	      panel,  right-click on the menu
 	      item and choose <guimenuitem>Add this launcher to
-	      panel</guimenuitem> from the popup menu.  
+	      panel</guimenuitem> from the context menu.  
 	    </para></listitem>
 	  <listitem><para>
 	      To move a panel object, drag it with the middle mouse
@@ -1106,10 +1199,31 @@
 	    </para></listitem>
 	  <listitem><para>
 	      To configure a panel object, right-click on it and choose
-	      <guimenuitem>Properties</guimenuitem> from the popup
+	      <guimenuitem>Properties</guimenuitem> from the context
 	      menu. 
 	    </para></listitem>
 	</itemizedlist>
+      </para>
+    </sect2>
+
+    <sect2 id="customizing-menus">
+      <title>Customizing Menus</title>
+      <para>
+	To modify the appearance of menus, use
+	<application>Theme</application> and
+	<application>Font</application> preference tools described in
+	<xref linkend="customizing-desktop"/>.  You can also customize
+	the <emphasis>contents</emphasis> of the
+	<guimenu>Applications</guimenu> menu. To do this, open 
+	<guilabel>Start Here</guilabel> object on the desktop and
+	double-click on <guimenu>Applications</guimenu> icon. This
+	will show the contents of the <guimenu>Applications</guimenu>
+	menu as if it were a folder. Now you can move, add, and delete
+	items in this menu in the same way you move or delete
+	files. For more information, see <ulink type="help"
+	url="ghelp:user-guide/wgoseditmainmenu.xml">Working With
+	Menus</ulink> chapter of <citetitle>GNOME User
+	Guide</citetitle>. 
       </para>
     </sect2>
 
@@ -1121,36 +1235,29 @@
     <para>
       GNOME comes with many applications and utilities; in addition,
       GNOME allows you to use any third party applications such as
-      <application>Netscape</application>), KDE applications, or other
+      <application>Netscape</application>, KDE applications, or other
       applications and utilities installed on your system. You can
-      also use  GNOME 1.x applications under GNOME 2 (if you have
-      installed appropriate GNOME 1.x libraries).
+      also use  GNOME 1.x applications under GNOME 2.2 (if you have
+      installed appropriate GNOME 1.x libraries). Note, however, that
+      GNOME 1.x applications will not use font and theme settings of
+      GNOME 2.2, so their appearance will differ from that of GNOME
+      2.2 applications. 
     </para>
 
     <para>
       Below is a partial list of some of the most useful tools and
-      applications found in the <guimenu>GNOME Menu</guimenu>.
+      applications found in the <guimenu>Applications</guimenu> and
+      <guimenu>Actions</guimenu> menus. You can access these menus by
+      clicking on the correpsondign button in the <guilabel>Menu
+      Panel</guilabel>, or by using keyboards shortcut
+      <keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo>. 
     </para>
-    <note>
-      <title>NOTE</title>
-      <para>
-	The contents of the <guimenu>GNOME Menu</guimenu> depends on the
-	applications installed on your system. In addition, if you are
-	using a copy of GNOME packaged by someone other than the GNOME
-	project (for example, packaged as part of your Linux
-	distribution), the menu is likely to be slightly different
-	from the one described here. For example, distributors can add
-	some distribution-specific applications to the menu, or even
-	completely reorganize the menus. In this case refer to the
-	documentation that came with your distribution. 
-      </para>
-    </note>
 
   
   <sect2 id="actions">
       <title>Actions Menu</title>
       <para>
-	This submenu contains the following utilities. 
+	This menu contains the following utilities. 
       </para>
       
       
@@ -1196,12 +1303,57 @@
 	    </para>
 	  </listitem>
 	</varlistentry>
+	<!-- ########## -->
+	<!-- ########## -->
+	<varlistentry>
+	  <term><guimenuitem>Open Recent</guimenuitem>
+	  </term>     
+	  <listitem>
+	    <para> 
+	      This utility shows the list of files you have recently
+	      accessed. You can choose one of these files to open it
+	      using the appropriate application. 
+	    </para>
+	  </listitem>
+	</varlistentry>
+	<!-- ########## -->
+	<varlistentry>
+	  <term><guimenuitem>Lock Screen</guimenuitem>
+	  </term>     
+	  <listitem>
+	    <para> 
+	      This utility locks the screen, starting a
+	      screensaver. In order to unlock the screen and continue
+	      the work, you will need to enter your password. This is
+	      useful when you need to leave the computer running  unattended
+	      for some time. 
+	    </para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guimenuitem>Log Out</guimenuitem>
+	  </term>     
+	  <listitem>
+	    <para> 
+	      This finishes your GNOME session, stopping all running
+	      applications and returning you to login screen. 
+	    </para>
+	  </listitem>
+	</varlistentry>
       </variablelist>
     </sect2>
 
     <sect2 id="applications">
-      <title>Applications Menu</title>
-
+      <title>Core GNOME Applications</title>
+      <para>
+	Applications menu contains all GNOME applications installed on
+	your system. In addition, it also shows many non-GNOME
+	applications which are installed on your system. Here we list
+	those GNOME applications which form part of GNOME Desktop
+	environment. These applications are included in the standard
+	GNOME distributions and must be available on any system
+	running GNOME. 
+      </para>
 	
       <variablelist>	
 	<!-- ########## -->
@@ -1209,33 +1361,33 @@
 	  <term><guisubmenu>Accessories</guisubmenu>
 	  </term>     
 	  <listitem>
-	    <para> These include office and productivity applications
+	    <para> These include productivity applications
 	    such as:
             </para>     
 	    <itemizedlist>
-
-	  <!--     <listitem><para>
-		  <application>Gnumeric</application>,
-		  a full-featured Excel-compatible spreadsheet.
-		</para>
-                This is not under accessories.  On my menu this goes
-		under Other.  Moving this to under Other.
-	      </listitem>
-	     <listitem><para>
-		  <application>AbiWord</application>, a lightweight
-		  word processing application.
-		</para>
-	      </listitem>    -->
-
 	      <listitem><para>
-		  <application>GNOME Calculator</application>
+		  <application>Calculator</application>
 		</para>
 	      </listitem>
-	      <listitem><para> Several text editors, from the simple and
-		  easy to use <application>Gnome editor</application>
-		  (gedit), to (arguably) the most powerful text
-		  editor ever created, <application>Emacs</application>
-		  (which is not a GNOME application)
+	      <listitem><para> <application>Character
+		  Map</application>, which allows you to select any
+		  symbol in virtually any human alphabet (provided
+		  that you have fonts to show these symbols). This is
+		  a quick way to insert in text you are typing a
+		  symbol that can not be directly entered from the
+		  keyboard.
+		</para>
+	      </listitem>
+	      <listitem><para>
+		  <application>File Roller</application>, a utility
+		  for viewing, unpacking and creating compressed
+		  archive files.  
+		</para>
+	      </listitem>
+	      <listitem><para>
+		  <application>Text Editor</application>
+		  (gedit), a lightweight text editor capable `of
+		  handling multilanguage texts. 
 		</para>
 	      </listitem>
 	      <listitem><para>
@@ -1275,21 +1427,14 @@
 	  </term>     
 	  <listitem>
 	    <itemizedlist>
-	      <listitem><para> 
-		  <application>Gimp</application> &mdash;
-		  an image editing program for power users; it rivals
-		  <application>Photoshop</application>.
-		</para>
-	      </listitem>
 	      <listitem>
-		<para>Image viewers such as <application>Eye of
-		    GNOME</application>, <application>GQview</application> and
-		  <application>gThumb</application>.
+		<para><application>Eye of
+		    GNOME</application> image viewer
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <application>GNOME Postscript Viewer</application>,
+		  <application>GgvPostscript Viewer</application>,
 		  which can also be used for viewing PDF files. 
 		</para>
 	      </listitem>
@@ -1298,65 +1443,9 @@
 	</varlistentry>
 	<!-- ########## -->
 	<varlistentry>
-	  <term><guisubmenu>Internet</guisubmenu></term>     
-	  <listitem>
-	    <para>
-	      Here you will find the <application>Galeon</application> web
-	      browser. If you haven't used it before, give it a try
-	      &mdash; you will never go back to
-	      <application>Netscape</application>. 
-	    </para>
-	    <para>Depending on the
-	      software installed on your system, you are also likely to find
-	      here:
-	    </para>
-	    <itemizedlist>
-	      <listitem>
-		<para>		
-                 <application>Netscape</application> web
-	      browser
-		</para>
-	      </listitem>
-	      <listitem><para> <application>X-Chat</application>, an 
-		  Internet Relay Chat (IRC) client.
-		</para></listitem>
-		  <listitem><para>
-		  <application>GNOME-ICU</application> for talking
-		  with other people using ICQ protocol.
-		</para></listitem> 
-	      <listitem><para>
-		  <application>gftp</application>, a graphical
-		  tool for file transfers, supporting FTP, HTTP, and
-		  SSH protocols. Note that the GNOME file manager,
-		  <application>Nautilus</application>, also has
-		  built-in FTP capabilities.
-		</para>
-	      </listitem>
-	    </itemizedlist>
-	  </listitem>
-	</varlistentry>
-	<!-- ########## -->
-	<varlistentry>
-	  <term><guisubmenu>Other</guisubmenu></term>     
-	  <listitem>
-	    <para>
-	      Shows all applications which do not belong to one of the
-	      other categories. In particular, this submenu is likely
-	      to contain many GNOME 1.x applications  such as
-	      <application>AbiWord</application>, a lightweight word
-	      processing application and
-	      <application>Gnumeric</application>, 
-                  a full-featured Excel-compatible spreadsheet. 
-            </para>
-	  </listitem>
-        <!-- Hopefully I did the formatting is corrrectly. -->
-	</varlistentry>
-
-	<!-- ########## -->
-	<varlistentry>
 	  <term><guisubmenu>Programming</guisubmenu></term>     
 	  <listitem> 
-	    <para><application>Bug report tool</application>.  Use this
+	    <para><application>Bug Report tool</application>.  Use this
 	    tool to make suggestions and report bugs in GNOME
 	    applications.
 	    </para>
@@ -1368,8 +1457,8 @@
 	  <listitem>
 	  <para>
 	    Here you will find a <application>CD player</application>,
-	    <application>Volume Control</application>, and an MP3
-	    player <application>XMMS</application>.
+	    <application>Volume Control</application>, and 
+	    <application>Sound Recorder</application>.
 	  </para>
 	  </listitem>
 	</varlistentry>
@@ -1407,48 +1496,32 @@
 		  doing.   
 		</para>
 	      </listitem>
-
-	      <listitem>
-		<para>
-		  <application>Archive Generator</application>, a tool
-		  for creating archive files. 
-		  </para>
-	      </listitem>
-
 	      <listitem>
 		<para>
 		  <application>Floppy Formatter</application>, a tool 
                   for formatting floppy disks.
 		  </para>
 	      </listitem>
+	      <listitem>
+		<para>
+		  <application>Terminal</application>, which gives you
+		  access to the most powerful (but not the most user
+		  friendly) interface ever created &mdash; the command
+		  line prompt.
+		  </para>
+	      </listitem>
 	    </itemizedlist>
-
-	  <para> This submenu also contains tools for managing
-	      software installed on your system, namely
-	      <application>GnoRPM</application> and <application>Red
-	      Carpet</application> (if you are using the distribution
-	      of GNOME prepared by Ximian, Inc.).
-	      <application>GnoRPM</application> allows you to view all
-	      software packages installed on your system (if you are
-	      using a distribution of Linux based on RPM packages,
-	      such as Red Hat, SuSe, or Mandrake); it also allows you
-	      to remove, update, or install new packages.
+	  
+	  <para> This submenu may also contain tools for managing
+	      software installed on your system, such as
+	      <application>Red Carpet</application> (if you are using
+	      the distribution of GNOME prepared by Ximian, Inc.).
 	      <application>Red Carpet</application> provides an
 	      extremely easy, almost one-click, way to update your
-	      GNOME installation.  Both of these utilities, however,
-	      require that you have system administrator (root)
+	      GNOME installation.  This 
+	      requires that you have system administrator (root)
 	      privileges.
 	    </para>
-
-	    <para>
-	      And finally, the same submenu also contains various
-	      terminal emulators (<application>xterm</application>,
-	      <application>Color xterm</application>, and
-	      <application>GNOME Terminal</application>) letting you use
-	      the most powerful (but not the most user friendly) interface
-	      ever created &mdash; the command line prompt. 
-	    </para>
-
 	  </listitem>
 	</varlistentry>
 	<!-- ########## -->
@@ -1474,9 +1547,153 @@
 	</varlistentry>
       </variablelist>
     </sect2>
-  </sect1>
 
-<!-- ==================Section: ======================== -->
+
+
+    <sect2 id="other-applications">
+      <title>Other Applications</title>
+      <para>
+	In addition to the core applications listed above, there is
+	also a variety of GNOME applications that can be installed
+	separately. Most likely, you will find many of them already
+	installed on your system and shown in the
+	<guimenu>Applications</guimenu> menu.  Here we list the most
+	important of them. A full list of software available for
+	GNOME with links to individaul projects' web pages and
+	download locations can be found in <ulink type="http"
+	url="http://www.gnome.org/softwaremap/">GNOME Software
+	Map</ulink>.  
+      </para>
+
+	
+      <variablelist>	
+	<!-- ########## -->
+
+	<!-- ########## -->
+	<varlistentry>
+	  <term><guisubmenu>Internet</guisubmenu></term>     
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+		<para>		
+		  <application>Galeon</application>, a fast  web
+		  browser based on Mozilla
+		</para>
+	      </listitem>
+	      <listitem>
+		<para>		
+		  <application>Evolution</application>, an email
+		  client, calendar and contact manager. 
+		</para>
+	      </listitem>
+	      <listitem><para> <application>X-Chat</application>, an 
+		  Internet Relay Chat (IRC) client.
+		</para></listitem>
+		  <listitem><para>
+		  <application>GNOME-ICU</application> for talking
+		  with other people using ICQ protocol.
+		</para></listitem> 
+	      <listitem><para>
+		  <application>gftp</application>, a graphical
+		  tool for file transfers, supporting FTP, HTTP, and
+		  SSH protocols. Note that the GNOME file manager,
+		  <application>Nautilus</application>, also has
+		  built-in FTP capabilities.
+		</para>
+	      </listitem>
+	    </itemizedlist>
+	  </listitem>
+	</varlistentry>
+	<!-- ########## -->
+	<varlistentry>
+	  <term><guisubmenu>Graphics</guisubmenu></term>     
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+		<para>		
+		  <application>The GIMP</application>, professional
+		  grade image editing program.
+		</para>
+	      </listitem>
+	      <listitem>
+		<para>		
+		  <application>gThumb</application>, a program for
+		  viewing and organizing collections of images (for
+		  examples, digital camera photos). 
+		</para>
+	      </listitem>
+
+
+	    </itemizedlist>
+
+
+	  </listitem>
+	</varlistentry>
+	<!-- ########## -->
+	<varlistentry>
+	  <term><guisubmenu>Sound &amp; Video</guisubmenu></term>     
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+		<para> <application>XMMS</application>, player for
+		  audio CDs and aduio files in  MP3 and Ogg
+		  Vorbis formats.
+		</para>
+	      </listitem>
+	      <listitem>
+		<para> <application>Rhythmbox</application>, an audio
+		  player for MP3 and Ogg Vorbis files. It also has
+		  powerful capabilities for organizing large music
+		  collections, creating and editing playlists,
+		  searching for songs by artist, name, or other
+		  parameters, and more.
+		</para>
+	      </listitem>
+
+	      <listitem>
+		<para> <application>Totem</application> video player,
+		  based on Xine project. It can hanlde most of video
+		  formats and codecs available. It can also be used
+		  for viewing Video CDs and DVDs. Viewing DVDs
+		  requires special decryption software, whose legal
+		  status is unclear in the US. For this reason, this
+		  software is usually not installed by default but can
+		  be downloaded separately if it is legal in your
+		  locality,
+		</para>
+	      </listitem>
+	    </itemizedlist>
+	  </listitem>
+	</varlistentry>
+	<!-- ########## -->
+	<varlistentry>
+	  <term><guisubmenu>Office</guisubmenu></term>     
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+		<para>		
+		  <application>Gnumeric</application>, a full-featured
+		  Excel-compatible sreadsheet.
+		</para>
+	      </listitem>
+	      <listitem>
+		<para>		
+		  <application>AbiWord</application>, a fast and light
+		  word processor. 
+		</para>
+	      </listitem>
+
+	    </itemizedlist>
+
+	  </listitem>
+	</varlistentry>
+
+      </variablelist>
+
+    </sect2>
+ </sect1>
+
+<!-- ==================Section:	======================== -->
 <sect1 id="trouble">
     <title>Help &mdash;  I Am in Trouble!</title>
     <para>
@@ -1491,18 +1708,17 @@
 	does not respond to your mouse clicks and keyboard commands,
 	you can either wait and hope that it wakes up, or kill it. If
 	you decide to kill it (NOTE: You will lose all unsaved data),
-	start the <application>GNOME System monitor</application>
-	(from <menuchoice> <guimenu>GNOME Menu</guimenu>
-	<guisubmenu>Applications</guisubmenu> <guisubmenu>Sytem
-	Tools</guisubmenu> </menuchoice>). Select the application you
-	want to kill and click on <guibutton>End process</guibutton>
-	button at the bottom. You can also right-click on the
-	application name and choose <guimenuitem>End
-	process</guimenuitem>; if it doesn't help, right-click and
-	choose <guimenuitem>Kill process</guimenuitem>. Using the
-	<application>GNOME System monitor</application> also allows
-	you to find and kill all helper processes started by this
-	application.
+	start the <application>System Monitor</application>
+	(from <menuchoice> <guisubmenu>Applications</guisubmenu>
+	<guisubmenu>System Tools</guisubmenu> </menuchoice>). Select
+	the application you want to kill and click on <guibutton>End
+	process</guibutton> button at the bottom. You can also
+	right-click on the application name and choose
+	<guimenuitem>End process</guimenuitem>; if it doesn't help,
+	right-click and choose <guimenuitem>Kill
+	process</guimenuitem>. Using the <application>GNOME System
+	monitor</application> also allows you to find and kill all
+	helper processes started by this application.
 	</para>
       <para>
 	If a GNOME application freezes or crashes (unexpectedly dies)
@@ -1551,7 +1767,7 @@
 	is to remove all your GNOME configuration files and start from
 	scratch. This is an emergency solution, as you lose all
 	configuration settings and will need to configure your menus,
-	panels, etc. again from scratch, that is, from the default GNOME
+`	panels, etc. again from scratch, that is, from the default GNOME
 	configuration. However, this only affects your GNOME configuration,
 	so your data files and settings for non-GNOME applications
 	remain intact. 
@@ -1565,19 +1781,6 @@
         the applications open when you last logged out); resetting
         your GNOME configuration settings; or both.  
       </para>
-      <para>
-	Finally, if you have really severe problems and your system
-	freezes or becomes otherwise unusable as soon as you login,
-	you have one last option. You can  select the
-	<guimenuitem>Failsafe</guimenuitem> session type instead of
-	the default <guimenuitem>GNOME</guimenuitem> in the login
-	screen. Both GNOME and KDE Login Managers support this. In
-	this session type, GNOME is not started; instead, you are
-	presented with a single terminal window. This is almost
-	guaranteed to start, and if you know how to use
-	command-line tools to find and fix your problem, you have a
-	chance. Otherwise, ask an expert.
-      </para> 
     </sect2>
   </sect1>
 
@@ -1590,9 +1793,10 @@
 	GNOME includes detailed documentation for the majority
 	of applications, utilities and other components, such as the panel
 	or the Nautilus file manager. To view a manual for an application,
-	choose the <guimenu>Help</guimenu> menu in the application; to
+	choose the <guimenu>Help</guimenu> menu in the
+	application, or press <keycap>F1</keycap>. To
 	view help about the  panel or panel objects, right-click on it
-	and choose <guimenuitem>Help</guimenuitem> from the popup
+	and choose <guimenuitem>Help</guimenuitem> from the context
 	menu. This will automatically launch the GNOME help browser,
 	<application>Yelp</application>, showing the appropriate
 	manual. 
@@ -1611,8 +1815,8 @@
       <variablelist> 
 	<varlistentry>
 	  <term>
-	    <ulink type="help" url="ghelp:gnome2-user-guide">
-	    <citetitle>GNOME Desktop 2.0 User Guide</citetitle>
+	    <ulink type="help" url="ghelp:user-guide">
+	    <citetitle>GNOME Desktop 2.2 User Guide</citetitle>
 	     </ulink>
           </term>     
 	  <listitem>
@@ -1625,7 +1829,35 @@
 	  </listitem>
 	</varlistentry>
 	<varlistentry>
-	  <term> <ulink type="help" url="gnome-help:unix-primer">
+	  <term>
+	    <ulink type="help" url="ghelp:intro-to-gnome">
+	    <citetitle>Introduction to GNOME</citetitle>
+	     </ulink>
+          </term>     
+	  <listitem>
+	    <para>This is the document you are reading.  
+	    </para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>
+	    <ulink type="help" url="ghelp:user-guide">
+	    <citetitle>GNOME 2.2 System Administrator Guide</citetitle>
+	     </ulink>
+          </term>     
+	  <listitem>
+	    <para> This guide provides in-depth discussion of GNOME
+	    internals. In particular, it explains where GNOME stores
+	    various configuration settings (both per-user and
+	    system-wide). It also contains instructions on setting
+	    system-wide GNOME preferences. It is mostly intended for
+	    system administrators; however, advanced users may also
+	    find it useful.
+	    </para>
+	  </listitem>
+	</varlistentry>
+<!--	<varlistentry>
+	  <term> <ulink type="help" url="ghelp:unix-primer">
 	    <citetitle>If you are new to UNIX/Linux...</citetitle>
 	    </ulink>
 	  </term>     
@@ -1640,7 +1872,7 @@
 	      before, be sure to read this.
 	    </para>
 	  </listitem>
-	</varlistentry>
+	</varlistentry> -->
       </variablelist>
 
       <para><application>Yelp</application> can also be used for
@@ -1660,16 +1892,13 @@
         developer information, and more.
       </para>
       <para>
-	If you can not find an answer to your question there, you
-	may ask other GNOME users and developers on the GNOME mailing list
-        (subscription instructions can be found <ulink type="http"
-	url="http://mail.gnome.org/mailman/listinfo/gnome-list">here</ulink>).
-	Note, however, that this list is for GNOME-related questions
-        only (do not ask how to configure the X Window System, for instance),
-        and it is impolite (to say the least) to ask a question without
-        first checking if this question has already been answered in other 
-        available documents such as the <ulink type="ghelp"
-	url="ghelp:gnome2-user-guide">GNOME User Guide</ulink>. 
+	If you can not find an answer to your question there, you may
+	ask other GNOME users in one of the forums on <ulink
+	type="http" url="http://gnomesupport.org/forums/">GNOME User's
+	Board</ulink>. Before asking a question, please make sure
+	that it  has not been answered in avaialble documents such
+	as <ulink type="help" url="ghelp:user-guide">GNOME User
+	Guide</ulink>.  
      </para>
       <para>
 	Finally, if you use IRC (Internet Relay Chat), you can find
