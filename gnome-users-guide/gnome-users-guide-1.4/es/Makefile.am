@@ -1,6 +1,6 @@
 docname = gnome-users-guide
 lang = es
-omffile = gnome-users-guide-C.omf
+omffile = gnome-user-guide-es.omf
 include $(top_srcdir)/sgmldocs.make
 dist-hook: app-dist-hook
 sgml_ents = \
