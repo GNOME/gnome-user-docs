@@ -26,10 +26,10 @@ directly associated with any particular GNOME application or package.
 %prep
 %setup
 %build
-./configure --prefix %{_prefix}	datadir=%{_datadir} \
-    mandir=$RPM_BUILD_ROOT%{_mandir} \
-    sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
-    localstatedir=$RPM_BUILD_ROOT%{localstatedir}
+./configure --prefix %{_prefix}	--datadir=%{_datadir} \
+    --mandir=$RPM_BUILD_ROOT%{_mandir} \
+    --sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
+    --localstatedir=$RPM_BUILD_ROOT%{localstatedir}
 make 
 
 %install
