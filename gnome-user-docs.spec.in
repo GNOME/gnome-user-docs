@@ -4,10 +4,6 @@
 %define ver             @VERSION@
 %define RELEASE         1
 %define rel             %{?CUSTOM_RELEASE} %{!?CUSTOM_RELEASE:%RELEASE}
-%define prefix          /usr
-%define mandir          /usr/man
-%define datadir         /usr/share
-%define sysconfdir      /etc
 %define localstatedir   /var/lib
 
 
@@ -21,6 +17,7 @@ Source: 	%{name}-%{version}.tar.gz
 Group: 		Documentation
 BuildArch: 	noarch
 BuildRoot: 	/var/tmp/%{name}-%{ver}-root
+BuildRequires:  scrollkeeper
 
 %description
 This package contains general GNOME user documentation which is not 
@@ -29,16 +26,19 @@ directly associated with any particular GNOME application or package.
 %prep
 %setup
 %build
-./configure --prefix %{prefix}
+./configure --prefix %{_prefix}	datadir=%{_datadir} \
+    mandir=$RPM_BUILD_ROOT%{_mandir} \
+    sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
+    localstatedir=$RPM_BUILD_ROOT%{localstatedir}
 make 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make prefix=$RPM_BUILD_ROOT%{prefix} \
-	datadir=$RPM_BUILD_ROOT%{datadir} \
-	mandir=$RPM_BUILD_ROOT%{mandir} \
-	sysconfdir=$RPM_BUILD_ROOT%{sysconfdir} \
-	localstatedir=$RPM_BUILD_ROOT%{localstatedir} install
+make prefix=$RPM_BUILD_ROOT%{_prefix} \
+    datadir=$RPM_BUILD_ROOT%{_datadir} \
+    mandir=$RPM_BUILD_ROOT%{_mandir} \
+    sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
+    localstatedir=$RPM_BUILD_ROOT%{localstatedir} install
 
 
 %clean 
@@ -53,11 +53,16 @@ if which scrollkeeper-udpate>/dev/null 2>&1; then scrollkeeper-udpate; fi
 %files
 %defattr(-, root, root)
 %doc COPYING COPYING-DOCS AUTHORS README ChangeLog NEWS INSTALL
-%{prefix}/share/gnome/help
-%{datadir}/omf/%{name}
+%{_datadir}/gnome/help
+%{_datadir}/omf/%{name}
 
-%changelog 
+%changelog
+* Tue Mar 20 2001 Gregory Leblanc <gleblanc@cu-portland.edu>
+- use RPM defined macros, remove hard-coded paths, add build
+  requirement for scrollkeeper
+ 
 * Sun Mar 11 2001 Dan Mueth <dan@eazel.com>
 - Update as we move to its own module
+
 * Mon Nov 27 2000 Kenny Graunke <kwg@teleport.com>
 - Initial cut
