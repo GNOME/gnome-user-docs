@@ -1,3 +1,4 @@
+figdir = figures
 docname = system-admin-guide
 lang = C
 omffile = system-admin-guide-C.omf
@@ -7,8 +8,10 @@ entities = appendixa.xml \
 	   legal.xml \
 	   menustructure.xml \
 	   mimetypes.xml \
+	   gdm.xml \
 	   performance.xml \
 	   screensavers.xml \
+	   gdm.xml \
 	   sessions.xml \
 	   themes.xml
 
