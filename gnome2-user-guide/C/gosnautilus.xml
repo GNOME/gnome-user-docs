@@ -1,7 +1,4 @@
-<!-- converted from Solbook 2.2 SGML to Docbook 4.2 XML
-# Generator: s2d v1.4 2002-09-19
-#   Jay Han (jhan@acm.org)/Lightsaber Computing (http://www.lightsaber.com)
--->
+<?xml version="1.0" encoding="utf-8"?>
 <chapter id="gosnautilus-1">
   <title>Nautilus File Manager</title>
   <highlights>
@@ -71,7 +68,7 @@ manage your files and folders. <xref linkend="gosnautilus-FIG-1"/> shows a <appl
             <imagedata fileref="figures/naut_iconview_anno_window.png" format="PNG"/>
           </imageobject>
           <textobject>
-            <phrase>A folder in a Nautilus window. Callouts: Menubar, toolbar, location bar, zoom buttons, side pane, view pane, tabs.</phrase>
+            <phrase>A folder in a Nautilus window. Callouts: Menubar, toolbar, location bar, zoom buttons,  side pane, view pane, tabs.</phrase>
           </textobject>
         </mediaobject>
       </screenshot>
@@ -145,16 +142,20 @@ to choose how to display items in your view pane.</para>
                   <para>Displays information about the current file or folder. </para>
                 </listitem>
               </itemizedlist>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" valign="top">
-              <para>Tabs</para>
-            </entry>
-            <entry colname="colspec1" valign="top">
-              <para>Click on a tab to open a tabbed pane.
-The side pane contains the following tabbed panes:</para>
+              <para>The side pane contains a drop-down list box that enables
+you to choose what to display in the side pane. You can choose from the following
+options:</para>
               <itemizedlist>
+                <listitem>
+                  <para>
+                    <guilabel>Information</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Emblems</guilabel>
+                  </para>
+                </listitem>
                 <listitem>
                   <para>
                     <guilabel>History</guilabel>
@@ -253,7 +254,7 @@ pane.</para>
             <imagedata fileref="figures/naut_viewpane_text_window.png" format="PNG"/>
           </imageobject>
           <textobject>
-            <phrase>Nautilus window with plain text document displayed in the view pane.</phrase>
+            <phrase>Nautilus window with PNG file displayed in the view pane.</phrase>
           </textobject>
         </mediaobject>
       </screenshot>
@@ -293,38 +294,25 @@ For more information on views, see <xref linkend="gosnautilus-7"/>.</para>
         <primary>side pane</primary>
         <see>file manager</see>
       </indexterm>
-      <para>The side pane can contain
-the following elements:</para>
+      <para>You can choose what information
+you want to view in the side pane. You can choose to display one of the following:</para>
       <itemizedlist>
         <listitem>
-          <para>An icon that represents the current file or current folder.
-The side pane also contains information about the current file or current
-folder.</para>
+          <para>
+            <guilabel>Information</guilabel>
+          </para>
+          <para>Displays an icon that represents the current file or current folder.
+Also displays information about the current file or current folder. If a file
+is displayed in the view pane, buttons appear in the side pane. The buttons
+enable you to perform actions on a file, other than the default action.</para>
         </listitem>
         <listitem>
-          <para>Tabbed panes that enable you to navigate through your files.</para>
+          <para>
+            <guilabel>Emblems</guilabel>
+          </para>
+          <para>Contains emblems that you can add to a file or folder. For more information
+on emblems, see the next section.</para>
         </listitem>
-        <listitem>
-          <para>If a file is displayed in the view pane, buttons appear in
-the side pane. The buttons enable you to perform actions on a file, other
-than the default action.</para>
-        </listitem>
-      </itemizedlist>
-    </sect2>
-    <sect2 id="gosnautilus-2">
-      <title>Tabbed Panes</title>
-      <indexterm>
-        <primary>tabbed panes</primary>
-        <see>file manager</see>
-      </indexterm>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>tabbed panes</secondary>
-        <tertiary>introduction</tertiary>
-      </indexterm>
-      <para>The side pane can contain
-the following tabbed panes:</para>
-      <itemizedlist>
         <listitem>
           <para>
             <guilabel>History</guilabel>
@@ -343,65 +331,11 @@ recently visited.</para>
             <guilabel>Tree</guilabel>
           </para>
           <para>Displays a hierarchical representation of your file system. You can
-use the <guilabel>Tree</guilabel> tabbed pane to navigate through your files.</para>
+use the <guilabel>Tree</guilabel> to navigate through your files.</para>
         </listitem>
       </itemizedlist>
-      <para><xref linkend="gosnautilus-TBL-9"/> describes how to work with tabbed
-panes.</para>
-      <table frame="topbot" id="gosnautilus-TBL-9">
-        <title>Tabbed Pane Tasks</title>
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="35.09*"/>
-          <colspec colname="colspec1" colwidth="64.91*"/>
-          <thead>
-            <row rowsep="1">
-              <entry valign="top">
-                <para>Task</para>
-              </entry>
-              <entry valign="top">
-                <para>Action</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Open a tabbed pane.</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Click on the tab.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Close a tabbed pane.</para>
-              </entry>
-              <entry valign="top">
-                <para>Click on the tab.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Remove a tab from the side
-pane.</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Right-click
-in the side pane, then choose the tab that you want to remove from the menu.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Add a tab to the side pane.</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Right-click in
-the side pane, then choose the tab that you want to add from the menu.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
+      <para>To close the side pane, click on the <guibutton>X</guibutton> button
+at the top right of the side pane.</para>
     </sect2>
     <sect2 id="gosnautilus-550">
       <title>Icons and Emblems</title>
@@ -682,8 +616,8 @@ As you type a path, <application>Nautilus</application> reads your file system.
 When you type enough characters to uniquely identify a directory, <application>Nautilus</application> completes the name of the directory in the <guilabel>Location</guilabel> field.</para>
         </listitem>
         <listitem>
-          <para>Use the <guilabel>Tree</guilabel> tabbed pane. For more information,
-see <xref linkend="gosnautilus-27"/>.</para>
+          <para>Use the <guilabel>Tree</guilabel> in the side pane. For more
+information, see <xref linkend="gosnautilus-27"/>.</para>
         </listitem>
         <listitem>
           <para>Use the <guibutton>Back</guibutton> toolbar button and the <guibutton>Forward</guibutton> toolbar button to browse through your navigation history.</para>
@@ -698,51 +632,48 @@ choose <menuchoice><guimenu>Actions</guimenu><guimenuitem>Search for
 Files</guimenuitem></menuchoice>.</para>
     </sect2>
     <sect2 id="gosnautilus-27">
-      <title>Using the Tree Tabbed Pane</title>
+      <title>Using the Tree From the Side Pane</title>
       <indexterm>
         <primary>file manager</primary>
-        <secondary>tabbed panes</secondary>
-        <tertiary>Tree</tertiary>
+        <secondary>Tree, using </secondary>
       </indexterm>
       <indexterm>
-        <primary>Tree tabbed pane,
-using</primary>
+        <primary>Tree, using</primary>
       </indexterm>
-      <para>The <guilabel>Tree</guilabel> tabbed pane
-displays a hierarchical representation of your file system. The <guilabel>Tree</guilabel> tabbed pane provides a convenient way to navigate your file
-system. By default, the <guilabel>Tree</guilabel> tabbed pane is not displayed
-in your side pane. To add the <guilabel>Tree</guilabel> tabbed pane to the
-side pane, right-click in the side pane, then choose <guimenuitem>Tree</guimenuitem>
-from the popup menu. </para>
-      <para>In the <guilabel>Tree</guilabel> tabbed pane, folders are represented as follows:</para>
+      <para>The <guilabel>Tree</guilabel> displays a hierarchical representation of your file system.
+The <guilabel>Tree</guilabel> provides a convenient way to navigate your file
+system. To display the <guilabel>Tree</guilabel> in the side pane, choose <guimenuitem>Tree</guimenuitem> from the drop-down list box at the top of the side pane. </para>
+      <para>In the <guilabel>Tree</guilabel>, folders are represented
+as follows:</para>
       <informaltable frame="topbot">
         <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colwidth="42.60*"/>
-          <colspec colwidth="57.40*"/>
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
           <thead>
-            <row>
-              <entry valign="top">
+            <row rowsep="1">
+              <entry>
                 <para>Folder State</para>
               </entry>
-              <entry valign="top">
-                <para>Graphic Representation </para>
+              <entry>
+                <para>Graphic
+Representation </para>
               </entry>
             </row>
           </thead>
           <tbody>
             <row>
-              <entry valign="top">
+              <entry>
                 <para>Closed folder</para>
               </entry>
-              <entry valign="top">
+              <entry>
                 <para>Right arrow</para>
               </entry>
             </row>
             <row>
-              <entry valign="top">
+              <entry>
                 <para>Open folder</para>
               </entry>
-              <entry valign="top">
+              <entry>
                 <para>Down arrow</para>
               </entry>
             </row>
@@ -750,10 +681,9 @@ from the popup menu. </para>
         </tgroup>
       </informaltable>
       <para><xref linkend="gosnautilus-TBL-34"/> describes the tasks that you can
-perform with the <guilabel>Tree</guilabel> tabbed pane, and how to perform
-the tasks.</para>
+perform with the <guilabel>Tree</guilabel>, and how to perform the tasks.</para>
       <table frame="topbot" id="gosnautilus-TBL-34">
-        <title>Tree Tabbed Pane Tasks</title>
+        <title>Tree Tasks</title>
         <tgroup cols="2" colsep="0" rowsep="0">
           <colspec colname="colspec0" colwidth="50*"/>
           <colspec colname="colspec1" colwidth="50*"/>
@@ -770,38 +700,36 @@ the tasks.</para>
           <tbody>
             <row>
               <entry valign="top">
-                <para>Open the <guilabel>Tree</guilabel> tabbed pane.</para>
+                <para>Open the <guilabel>Tree</guilabel>.</para>
               </entry>
               <entry valign="top">
-                <para>Click on the <guilabel>Tree</guilabel>
-tab.</para>
+                <para>Choose <guilabel>Tree</guilabel> from the drop-down
+list box at the top of the side pane.</para>
               </entry>
             </row>
             <row>
               <entry valign="top">
-                <para>Close the <guilabel>Tree</guilabel> tabbed
-pane.</para>
+                <para>Close the <guilabel>Tree</guilabel>.</para>
               </entry>
               <entry valign="top">
-                <para>Click on the <guilabel>Tree</guilabel> tab.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Open a folder in the <guilabel>Tree</guilabel> tabbed pane.</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Click on the arrow next to the folder in the <guilabel>Tree</guilabel> tabbed
-pane. </para>
+                <para>Choose another item from the drop-down list box
+at the top of the side pane.</para>
               </entry>
             </row>
             <row>
               <entry colname="colspec0" valign="top">
-                <para>Close a folder in the <guilabel> Tree</guilabel> tabbed pane.</para>
+                <para>Open a folder in the <guilabel>Tree</guilabel>.</para>
               </entry>
               <entry colname="colspec1" valign="top">
-                <para>Click on the arrow next to the folder in the <guilabel>Tree</guilabel> tabbed
-pane.</para>
+                <para>Click on the arrow next to the folder in the <guilabel>Tree</guilabel>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Close a folder in the <guilabel> Tree</guilabel>.</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Click on the arrow next to the folder in the <guilabel>Tree</guilabel>.</para>
               </entry>
             </row>
             <row>
@@ -810,7 +738,7 @@ pane.</para>
 a folder in the view pane.</para>
               </entry>
               <entry colname="colspec1" valign="top">
-                <para>Select the folder in the <guilabel>Tree</guilabel> tabbed pane.</para>
+                <para>Select the folder in the <guilabel>Tree</guilabel>.</para>
               </entry>
             </row>
             <row>
@@ -819,14 +747,14 @@ a folder in the view pane.</para>
 pane.</para>
               </entry>
               <entry valign="top">
-                <para>Select the file in the <guilabel>Tree</guilabel> tabbed pane.</para>
+                <para>Select the file in the <guilabel>Tree</guilabel>.</para>
               </entry>
             </row>
           </tbody>
         </tgroup>
       </table>
-      <para>You can set your preferences so that the <guilabel>Tree</guilabel> tabbed
-pane does not display files. For more information, see <xref linkend="gosnautilus-57"/>. </para>
+      <para>You can set your preferences so that the <guilabel>Tree</guilabel> does
+not display files. For more information, see <xref linkend="gosnautilus-438"/>. </para>
     </sect2>
     <sect2 id="gosnautilus-28">
       <title>Opening Files</title>
@@ -885,7 +813,8 @@ loading an item in the view pane, choose <menuchoice><guimenu>View</guimenu><gui
         <para>When you display a file in the view pane, the viewer component might
 add menu items to the <application>Nautilus</application> menus. The menu
 items relate to the file type that is displayed. For example, when you display
-a PNG file, the <guimenu>View</guimenu> menu contains <guisubmenu>Interpolation</guisubmenu>, <guisubmenu>Dither</guisubmenu>, and other submenus. </para>
+a PNG file, the <guimenu>Edit</guimenu> menu contains flip and rotate menu
+items. </para>
         <para>Also, when you display some types of file in the view pane, you can
 use the <application>Nautilus</application> zoom buttons to change the size
 of the item.</para>
@@ -901,9 +830,8 @@ for files</secondary>
 file, double-click on the file. For example, if the default action for plain
 text documents is to display the file in a text viewer. In this case, you
 can double-click on the file to  display the file in a text viewer.</para>
-        <para>You can set your <application>Nautilus</application> preferences so
-that you click once on a file to execute the default action. For more information,
-see <xref linkend="gosnautilus-56"/>.</para>
+        <para>You can set your file manager preferences so that you click once on
+a file to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
       </sect3>
       <sect3 id="gosnautilus-30">
         <title>To Execute Non-Default Actions Using the Open With Submenu</title>
@@ -921,7 +849,7 @@ an action on. Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open With</
 submenu opens. The items in this submenu correspond to the contents of the
 following parts of the <application>File Types and Programs</application>
 preference tool:<itemizedlist><listitem><para><guilabel>Default action</guilabel> drop-down list box in
-the <guilabel>Edit file type</guilabel> dialog</para></listitem><listitem><para><guilabel>Viewer Component</guilabel> drop-down list box in
+the <guilabel>Edit file type</guilabel> dialog</para></listitem><listitem><para><guilabel>Viewer component</guilabel> drop-down list box in
 the <guilabel>Edit file type</guilabel> dialog</para></listitem></itemizedlist></para>
           </listitem>
           <listitem>
@@ -948,7 +876,7 @@ shows the side pane when a text file is displayed in the view pane.</para>
                 <imagedata fileref="figures/naut_file_navigation_pane.png" format="PNG"/>
               </imageobject>
               <textobject>
-                <phrase>Side pane. Contains: file icon, file information, file emblem, Open with gedit, Open with buttons, tabs.</phrase>
+                <phrase>Side pane. Contains: file icon, file information, file emblem, Open with gedit, Open with  buttons, tabs.</phrase>
               </textobject>
             </mediaobject>
           </screenshot>
@@ -964,8 +892,8 @@ pane if the actions are excluded in either of the following dialogs: <itemizedli
         </note>
       </sect3>
     </sect2>
-<!--<sect2 id="gosnautilus-32"><title>To Display and Play MP3 Files</title><para>TBD.</para>
-<para><emphasis>Question:</emphasis> Where can we get the information for this section?</para></sect2>-->
+<!--<sect2 id="gosnautilus-32"><title>To Display and Play MP3 Files</title><para>TBD.</para><para><emphasis>Question:</emphasis> Where 
+can we get the information for this section?</para></sect2>-->
     <sect2 id="gosnautilus-445">
       <title>Using the Start Here Location</title>
       <screenshot>
@@ -1056,10 +984,10 @@ loading the FTP site, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Sto
         <primary>file manager</primary>
         <secondary>navigating history list</secondary>
       </indexterm>
-      <para><application>Nautilus</application> maintains
-a history list of files, folders, and FTP sites. You can use the history list
-to navigate to files, folders, and FTP sites that you have recently visited.
-The following sections describe how to navigate your history list.</para>
+      <para>The file manager maintains a history list of
+files, folders, and FTP sites. You can use the history list to navigate to
+files, folders, and FTP sites that you have recently visited. The following
+sections describe how to navigate your history list.</para>
       <para>To clear your history list choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Clear History</guimenuitem></menuchoice>.</para>
       <sect3 id="gosnautilus-77">
         <title>To Navigate Your History List Using the Go Menu</title>
@@ -1092,17 +1020,16 @@ on the item.</para>
         </itemizedlist>
       </sect3>
       <sect3 id="gosnautilus-80">
-        <title>To Navigate Your History List Using the History Tabbed Pane</title>
+        <title>To Navigate Your History List Using History in the Side Pane</title>
         <indexterm>
           <primary>file manager</primary>
-          <secondary>tabbed panes</secondary>
-          <tertiary>History</tertiary>
+          <secondary>History</secondary>
         </indexterm>
-        <para>To display the <guilabel>History</guilabel> tabbed pane, click on the <guilabel>History</guilabel> tab in
-the side pane. The <guilabel>History</guilabel> tabbed pane displays a list
-of your previously-viewed items.</para>
+        <para>To display the <guilabel>History</guilabel> list in the side pane, choose <guilabel>History</guilabel> from the drop-down list box at the top of the side pane.
+The <guilabel>History</guilabel> list in the side pane displays a list of
+your previously-viewed items.</para>
         <para>To display an item from your history list in the view pane, click on
-the item in the <guilabel>History</guilabel> tabbed pane.</para>
+the item in the <guilabel>History</guilabel> list.</para>
       </sect3>
     </sect2>
     <sect2 id="gosnautilus-36">
@@ -1408,17 +1335,8 @@ Click on the items that you want to select.</para>
         </tgroup>
       </table>
       <para>To perform the default action on an item, double-click on the item.
-You can set your <application>Nautilus</application> preferences so that you
-work with <application>Nautilus</application> as follows:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Click once on a file to execute the default action.</para>
-        </listitem>
-        <listitem>
-          <para>Point to an item to select the item.</para>
-        </listitem>
-      </itemizedlist>
-      <para>For more information, see <xref linkend="gosnautilus-56"/>.</para>
+You can set your file manager preferences so that you click once on a file
+to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
     </sect2>
     <sect2 id="gosnautilus-9">
       <title>To Move a File or Folder</title>
@@ -1426,8 +1344,8 @@ work with <application>Nautilus</application> as follows:</para>
         <primary>file manager</primary>
         <secondary>moving files and folders</secondary>
       </indexterm>
-      <para>The following sections describe the ways you
-can move a file or folder.</para>
+      <para>The following sections describe the ways that
+you can move a file or folder.</para>
       <sect3 id="gosnautilus-537">
         <title>Drag to the New Location in a View Pane</title>
         <para>To drag a file or folder to a new location in a view pane, perform the
@@ -1468,9 +1386,10 @@ Files</guimenuitem></menuchoice>.</para>
 <!--<para><emphasis>Question</emphasis>: What is the purpose of the Clear Text command?</para>-->
       </sect3>
       <sect3 id="gosnautilus-539">
-        <title>Drag to the New Location in the Tree Tabbed Pane</title>
-        <para>You can drag a file or folder from the view pane to a location on the <guilabel>Tree</guilabel> tabbed pane. Alternatively, you can drag a file or folder
-within the <guilabel>Tree</guilabel> tabbed pane to another location in the <guilabel>Tree</guilabel> tabbed pane.</para>
+        <title>Drag to the New Location in the Tree</title>
+        <para>You can drag a file or folder from the view pane to a location on the <guilabel>Tree</guilabel> in the side pane. Alternatively, you can drag a file or folder
+within the <guilabel>Tree</guilabel> in the side pane to another location
+in the <guilabel>Tree</guilabel>.</para>
       </sect3>
     </sect2>
     <sect2 id="gosnautilus-10">
@@ -1620,7 +1539,8 @@ the <guilabel>Trash</guilabel> object on the desktop background.</para>
 folder is not moved to <guilabel>Trash</guilabel>, but is deleted from your
 file system immediately. The <guimenuitem>Delete</guimenuitem> menu item is
 only available if you select the <guilabel>Include a Delete command that bypasses
-Trash</guilabel> option in the <guilabel>Preferences</guilabel> dialog. </para>
+Trash</guilabel> option in the <guilabel>File Management Preferences</guilabel>
+dialog. </para>
       <para>To delete a file or folder perform the following steps:</para>
       <orderedlist>
         <listitem>
@@ -1757,25 +1677,25 @@ Trash</guimenuitem></menuchoice>.</para>
       <title>Adding Notes to Folders</title>
       <indexterm>
         <primary>file manager</primary>
-        <secondary>tabbed panes</secondary>
-        <tertiary>Notes</tertiary>
+        <secondary>Notes</secondary>
       </indexterm>
       <indexterm>
-        <primary>notes, adding to folders</primary>
+        <primary>notes, adding
+to folders</primary>
       </indexterm>
-      <para>You
-can use the <guilabel>Notes</guilabel> tab to add a note to a folder. To add
-a note to a folder perform the following steps:</para>
+      <para>You can use <guilabel>Notes</guilabel>
+in the side pane to add a note to a folder. To add a note to a folder perform
+the following steps:</para>
       <orderedlist>
         <listitem>
           <para>Display the folder in the view pane.</para>
         </listitem>
         <listitem>
-          <para>Click on the <guilabel>Notes</guilabel> tab to open the <guilabel>Notes</guilabel> tabbed pane.  The <guilabel>Notes</guilabel> tabbed pane
-opens.</para>
+          <para>Choose <guilabel>Notes</guilabel> from the drop-down list
+box at the top of the side pane.</para>
         </listitem>
         <listitem>
-          <para>Type the note in the <guilabel>Notes</guilabel> tabbed pane. </para>
+          <para>Type the note in the side pane. </para>
         </listitem>
       </orderedlist>
     </sect2>
@@ -2276,7 +2196,7 @@ as</guisubmenu> submenu for a particular file or folder.</para>
         <para>To modify the behavior of a view perform the following steps:</para>
         <orderedlist>
           <listitem>
-            <para>Choose <menuchoice><guimenu>View</guimenu><guimenuitem>View as</guimenuitem></menuchoice>. A <guilabel>Open with Other Viewer</guilabel>
+            <para>Choose <menuchoice><guimenu>View</guimenu><guimenuitem>View as</guimenuitem></menuchoice>. An <guilabel>Open with Other Viewer</guilabel>
 dialog is displayed.</para>
           </listitem>
           <listitem>
@@ -2551,8 +2471,8 @@ tool, click on the <guibutton>Go There</guibutton> button. </para>
       <primary>file manager</primary>
       <secondary>customizing</secondary>
     </indexterm>
-    <para>You can customize <application>Nautilus</application> to
-suit your requirements and preferences. This section describes how to customize <application>Nautilus</application>.</para>
+    <para>You can customize the file manager to suit your requirements
+and preferences. This section describes how to customize the file manager.</para>
     <sect2 id="gosnautilus-17">
       <title>Setting Your Preferences</title>
       <indexterm>
@@ -2565,52 +2485,40 @@ suit your requirements and preferences. This section describes how to customize 
 file manager</primary>
         <see>file manager preferences</see>
       </indexterm>
-      <para>Use the <guilabel>Preferences</guilabel> dialog to set preferences for the <application>Nautilus</application> windows and desktop background. To display the <guilabel>Preferences</guilabel> dialog, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.</para>
+      <para>Use the <guilabel>File Management Preferences</guilabel> dialog to set preferences
+for the file manager. To display the <guilabel>File Management Preferences</guilabel> dialog, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.</para>
       <para>You can set preferences in the following categories: </para>
       <itemizedlist>
         <listitem>
-          <para>The default settings for views. </para>
+          <para>The default settings for views.</para>
         </listitem>
         <listitem>
-          <para>The appearance of the <application>Nautilus</application>
-windows and desktop background.</para>
-        </listitem>
-        <listitem>
-          <para>The behavior and visible components of new <application>Nautilus</application> windows.</para>
-        </listitem>
-        <listitem>
-          <para>The behavior of the desktop background and <guilabel>Trash</guilabel>.</para>
-        </listitem>
-        <listitem>
-          <para>The behavior of items in icon views and list views.</para>
+          <para>The behavior of files and folders, executable text files,
+and <guilabel>Trash</guilabel>.</para>
         </listitem>
         <listitem>
           <para>The information that is displayed in icon captions.</para>
         </listitem>
         <listitem>
-          <para>Items that are displayed in the side pane.</para>
-        </listitem>
-        <listitem>
-          <para>Performance options to improve the performance of <application>Nautilus</application>.</para>
+          <para>Preview options to improve the performance of the file manager.</para>
         </listitem>
       </itemizedlist>
       <sect3 id="gosnautilus-438">
-        <title>To Set View Preferences</title>
+        <title>To Set Views Preferences</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>preferences</secondary>
           <tertiary>views</tertiary>
         </indexterm>
         <para>You can specify a default view,
-and default settings for icon views and list views. To specify your default
-view settings for <application>Nautilus</application> windows, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
-Choose <guilabel>Views</guilabel> from the <guilabel>Preferences</guilabel>
-dialog.</para>
-        <para><xref linkend="gosnautilus-TBL-30"/> lists the view settings that you
-can modify. The <guilabel>Preferences</guilabel> dialog contains an <guilabel>Icon View Defaults</guilabel> group box and a <guilabel>List View Defaults</guilabel> group box. The group boxes contain mostly the same dialog elements.
-Each dialog element is described once in <xref linkend="gosnautilus-TBL-30"/>.</para>
+and select sort options and display options. You can also specify default
+settings for icon views and list views. To specify your default view settings,
+choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Views</guilabel> tab in
+the <guilabel>File Management Preferences</guilabel> dialog to display the <guilabel>Views</guilabel> tabbed section.</para>
+        <para><xref linkend="gosnautilus-TBL-30"/> lists the views settings
+that you can modify. </para>
         <table frame="topbot" id="gosnautilus-TBL-30">
-          <title>View Preferences</title>
+          <title>Views Preferences</title>
           <tgroup cols="2" colsep="0" rowsep="0">
             <colspec colname="colspec0" colwidth="35.09*"/>
             <colspec colname="colspec1" colwidth="64.91*"/>
@@ -2648,15 +2556,14 @@ the items in folders that are displayed in this view.</para>
                 </entry>
               </row>
               <row>
-                <entry colname="colspec0" valign="top">
+                <entry colname="colspec0">
                   <para>
-                    <guilabel>Default zoom level</guilabel>
+                    <guilabel>Sort folders before files</guilabel>
                   </para>
                 </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Select
-the default zoom level for folders that are displayed in this view. The zoom
-level specifies the size of items in a view.</para>
+                <entry colname="colspec1">
+                  <para>Select this option to list folders before
+files when you sort a folder.</para>
                 </entry>
               </row>
               <row>
@@ -2665,14 +2572,38 @@ level specifies the size of items in a view.</para>
                     <guilabel>Sort in reverse</guilabel>
                   </para>
                 </entry>
-                <entry colname="colspec1" valign="top">
+                <entry colname="colspec1">
+                  <para>Select this option
+if you want to reverse the order by which items are sorted in this view. If
+you select this option, the order of the characteristic you select in <guilabel>Arrange Items</guilabel> is reversed. For example, if you select <guilabel>By Name</guilabel> from the <guilabel>Arrange Items</guilabel> drop-down list
+box. You can select the <guilabel>Sort in reverse</guilabel> option to sort
+the items in reverse alphabetical order.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>Show hidden and
+backup files</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
                   <para>Select
-this option if you want to reverse the order by which items are sorted in
-this view. If you select this option, the order of the characteristic you
-select in <guilabel>Arrange Items</guilabel> is reversed. For example, if
-you select <guilabel>By Name</guilabel> from the <guilabel>Arrange Items</guilabel>
-drop-down list box. You can select the <guilabel>Sort in reversed order</guilabel>
-option to sort the items in reverse alphabetical order.</para>
+this option to display hidden files and backup files in the view pane. The
+first character in a hidden filename is a period (.). The last character in
+a backup filename is a tilde (~).</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>Default zoom level</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Icon
+view and list view. Select the default zoom level for folders that are displayed
+in this view. The zoom level specifies the size of items in a view.</para>
                 </entry>
               </row>
               <row>
@@ -2682,277 +2613,31 @@ option to sort the items in reverse alphabetical order.</para>
                   </para>
                 </entry>
                 <entry colname="colspec1" valign="top">
-                  <para>Icon
-view only. Select this option to arrange the items so that the items in the
-folder are closer to each other.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </sect3>
-      <sect3 id="gosnautilus-54">
-        <title>To Select a Nautilus Theme</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>theme</tertiary>
-        </indexterm>
-        <indexterm>
-          <primary>themes</primary>
-          <secondary>Nautilus</secondary>
-        </indexterm>
-        <para><application>Nautilus</application>
-includes themes that you can use to change the look-and-feel of the <application>Nautilus</application> windows and the desktop background. To set your preferences
-for the font and theme of the <application>Nautilus</application> windows
-and desktop background, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Choose <guilabel>Appearance</guilabel> from the <guilabel>Preferences</guilabel> dialog.</para>
-        <para><xref linkend="gosnautilus-TBL-35"/> lists the font and
-theme settings that you can modify. </para>
-        <table frame="topbot" id="gosnautilus-TBL-35">
-          <title>Appearance Preferences</title>
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec0" colwidth="35.09*"/>
-            <colspec colname="colspec1" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry valign="top">
-                  <para>Dialog Element</para>
-                </entry>
-                <entry valign="top">
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Nautilus Themes</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>To change your <application>Nautilus</application>
-theme, choose a theme from the list.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guibutton>Add Theme</guibutton>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>To add a new <application>Nautilus</application> theme, click on the <guibutton>Add New Theme</guibutton> button.
-A dialog is displayed. Use the dialog to find the new theme.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </sect3>
-      <sect3 id="gosnautilus-55">
-        <title>To Set Preferences for New Windows</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>new windows</tertiary>
-        </indexterm>
-        <para>To set your preferences
-for new <application>Nautilus</application> windows, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
-Choose <guilabel>Windows</guilabel> from the <guilabel>Preferences</guilabel>
-dialog.</para>
-        <para><xref linkend="gosnautilus-TBL-36"/> lists the window settings that you
-can modify. </para>
-        <table frame="topbot" id="gosnautilus-TBL-36">
-          <title>New Window Preferences</title>
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec8" colwidth="35.09*"/>
-            <colspec colname="colspec9" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry valign="top">
-                  <para>Option</para>
-                </entry>
-                <entry valign="top">
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry colname="colspec8" valign="top">
-                  <para>
-                    <guilabel>Open each file
-or folder in a separate window</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec9" valign="top">
-                  <para>Select this option to open a new window when you open a
-file or folder.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec8">
-                  <para>
-                    <guilabel>Display side pane</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec9">
-                  <para>Select this option to display a side pane
-in new windows.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec8" valign="top">
-                  <para>
-                    <guilabel>Display toolbar</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec9" valign="top">
                   <para>Select
-this option to display a toolbar in new windows.</para>
+this option to arrange the items in icon view so that the items in the folder
+are closer to each other.</para>
                 </entry>
               </row>
               <row>
-                <entry colname="colspec8" valign="top">
+                <entry colname="colspec0">
                   <para>
-                    <guilabel>Display location
-bar</guilabel>
+                    <guilabel>Use manual layout</guilabel>
                   </para>
                 </entry>
-                <entry colname="colspec9" valign="top">
-                  <para>Select this option to display a location bar in new windows.</para>
+                <entry colname="colspec1">
+                  <para>Select this option if you want to arrange
+the items in icon view manually.</para>
                 </entry>
               </row>
               <row>
-                <entry colname="colspec8" valign="top">
+                <entry colname="colspec0">
                   <para>
-                    <guilabel>Display statusbar</guilabel>
+                    <guilabel>Show only folders</guilabel>
                   </para>
                 </entry>
-                <entry colname="colspec9" valign="top">
-                  <para>Select
-this option to display a statusbar in new windows.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </sect3>
-      <sect3 id="gosnautilus-448">
-        <title>To Set Desktop Background and Trash Preferences</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>Trash</tertiary>
-        </indexterm>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>desktop background</tertiary>
-        </indexterm>
-        <indexterm>
-          <primary>desktop background</primary>
-          <secondary>preferences</secondary>
-        </indexterm>
-        <indexterm>
-          <primary>Trash</primary>
-          <secondary>preferences</secondary>
-        </indexterm>
-        <para>To set your preferences for the <application>Nautilus</application> desktop background and <guilabel>Trash</guilabel>,
-choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Choose <guilabel>Desktop &amp; Trash</guilabel>
-from the <guilabel>Preferences</guilabel> dialog.</para>
-        <para><xref linkend="gosnautilus-TBL-43"/> lists the desktop background
-and <guilabel>Trash</guilabel> settings that you can modify. </para>
-        <table frame="topbot" id="gosnautilus-TBL-43">
-          <title>Windows and Desktop Background Preferences</title>
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec8" colwidth="35.09*"/>
-            <colspec colname="colspec9" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry valign="top">
-                  <para>Option</para>
-                </entry>
-                <entry valign="top">
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Use Nautilus to draw the desktop</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select this option to
-use <application> Nautilus</application> to manage your desktop background.
-If you do not use <application>Nautilus</application> to manage your desktop
-background, you cannot do the following: </para>
-                  <itemizedlist>
-                    <listitem>
-                      <para>Use the <guimenu>Desktop Background</guimenu> menu.</para>
-                    </listitem>
-                    <listitem>
-                      <para>Use <application>Nautilus</application> to change the pattern
-or color of the desktop background. </para>
-                    </listitem>
-                    <listitem>
-                      <para>Use the <application>Nautilus</application> <guilabel> Home</guilabel> launcher and <guilabel>Trash</guilabel> launcher. The <guilabel>Home</guilabel> launcher and <guilabel>Trash</guilabel> launcher are not displayed
-on the desktop background. </para>
-                    </listitem>
-                  </itemizedlist>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec8" valign="top">
-                  <para>
-                    <guilabel>Use your home
-folder as the desktop</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec9" valign="top">
-                  <para>Select this option to use your home directory as the desktop background directory,
-instead of the default directory. If you select this option, the contents
-of your home directory are displayed as desktop background objects.<!--<emphasis>Question</emphasis>: This is not your home location (specified in Preferences dialog)nor the value of the $HOME variable. So what is it?--></para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Ask before emptying the Trash or
-deleting files</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select this
-option to display a confirmation message before <guilabel>Trash</guilabel>
-is emptied, or files are deleted. </para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec8" valign="top">
-                  <para>
-                    <guilabel>Include a Delete
-command that bypasses Trash</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec9" valign="top">
-                  <para>Select this option to add a <guimenuitem>Delete</guimenuitem>
-menu item to the following menus:</para>
-                  <itemizedlist>
-                    <listitem>
-                      <para>The <guimenu>Edit</guimenu> menu.</para>
-                    </listitem>
-                    <listitem>
-                      <para>The popup menu that is displayed when you right-click on a
-file, folder, or desktop background object. </para>
-                    </listitem>
-                  </itemizedlist>
-                  <para>When you select an item then choose the <guimenuitem>Delete</guimenuitem> menu item, the item is deleted from your file system
-immediately.</para>
+                <entry colname="colspec1">
+                  <para>Select this option to display only folders
+in the <guilabel>Tree</guilabel> in the side pane.</para>
                 </entry>
               </row>
             </tbody>
@@ -2960,34 +2645,24 @@ immediately.</para>
         </table>
       </sect3>
       <sect3 id="gosnautilus-56">
-        <title>To Set Icon and List Views Preferences</title>
+        <title>To Set File and Folder Preferences</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>preferences</secondary>
-          <tertiary>icon and list views</tertiary>
-        </indexterm>
-        <indexterm>
-          <primary>file
-manager</primary>
-          <secondary>views</secondary>
-          <tertiary>preferences</tertiary>
+          <tertiary>files</tertiary>
         </indexterm>
         <indexterm>
           <primary>file manager</primary>
-          <secondary>icon view</secondary>
-          <tertiary>preferences</tertiary>
+          <secondary>preferences</secondary>
+          <tertiary>folders</tertiary>
         </indexterm>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>list view</secondary>
-          <tertiary>preferences</tertiary>
-        </indexterm>
-        <para>To set your preferences for items in icon views
-and list views, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Choose <guilabel>Icon &amp; List Views</guilabel> from the <guilabel>Preferences</guilabel> dialog.</para>
+        <para>To set your preferences for files and folders, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
+Click on the <guilabel>Files and Folders</guilabel> tab in the <guilabel>File Management Preferences</guilabel> dialog to display the <guilabel>Files
+and Folders</guilabel> tabbed section.</para>
         <para><xref linkend="gosnautilus-TBL-37"/> lists the settings
-that you can modify for items in icon views and list views. </para>
+that you can modify for files and folders. </para>
         <table frame="topbot" id="gosnautilus-TBL-37">
-          <title>Icon and List Views Preferences</title>
+          <title>Files and Folders Preferences</title>
           <tgroup cols="2" colsep="0" rowsep="0">
             <colspec colname="colspec6" colwidth="35.09*"/>
             <colspec colname="colspec7" colwidth="64.91*"/>
@@ -3002,6 +2677,18 @@ that you can modify for items in icon views and list views. </para>
               </row>
             </thead>
             <tbody>
+              <row>
+                <entry colname="colspec6">
+                  <para>
+                    <guilabel>Open each file or folder in
+a new window</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7">
+                  <para>Select
+this option to open a new window when you open a file or folder.</para>
+                </entry>
+              </row>
               <row>
                 <entry valign="top">
                   <para>
@@ -3029,7 +2716,7 @@ on the item.</para>
               <row>
                 <entry colname="colspec6" valign="top">
                   <para>
-                    <guilabel>Execute files
+                    <guilabel>Execute scripts
 when they are clicked</guilabel>
                   </para>
                 </entry>
@@ -3040,15 +2727,16 @@ script.</para>
                 </entry>
               </row>
               <row>
-                <entry colname="colspec6" valign="top">
+                <entry colname="colspec6">
                   <para>
-                    <guilabel>Display files
-when they are clicked</guilabel>
+                    <guilabel>View scripts when they are
+clicked</guilabel>
                   </para>
                 </entry>
-                <entry colname="colspec7" valign="top">
-                  <para>Select this option to display the contents of an executable file when you
-choose the executable file.</para>
+                <entry colname="colspec7">
+                  <para>Select this
+option to display the contents of an executable file when you choose the executable
+file.</para>
                 </entry>
               </row>
               <row>
@@ -3064,67 +2752,37 @@ asks whether you want to execute the file or display the file. </para>
                 </entry>
               </row>
               <row>
-                <entry colname="colspec6" valign="top">
+                <entry colname="colspec6">
                   <para>
-                    <guilabel>Hidden files</guilabel>
+                    <guilabel>Ask before emptying the Trash
+or deleting files</guilabel>
                   </para>
                 </entry>
-                <entry colname="colspec7" valign="top">
-                  <para>Select this option to display
-hidden files in the view pane. The first character in a hidden file name is
-a period (.).</para>
+                <entry colname="colspec7">
+                  <para>Select this option to display a confirmation message before <guilabel>Trash</guilabel> is emptied, or files are deleted. </para>
                 </entry>
               </row>
               <row>
                 <entry colname="colspec6" valign="top">
                   <para>
-                    <guilabel>Backup files</guilabel>
+                    <guilabel>Include a Delete
+command that bypasses Trash</guilabel>
                   </para>
                 </entry>
-                <entry colname="colspec7" valign="top">
-                  <para>Select this option to display
-backup files in the view pane. The last character in a backup file name is
-a tilde (~).</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Special flags in Properties dialog</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select this option to
-show the following special flags in the <guilabel>Permissions</guilabel> tab
-on a properties dialog:</para>
+                <entry colname="colspec7">
+                  <para>Select this option to add a <guimenuitem>Delete</guimenuitem> menu item to
+the following menus:</para>
                   <itemizedlist>
                     <listitem>
-                      <para>
-                        <guilabel>Set User ID</guilabel>
-                      </para>
+                      <para>The <guimenu>Edit</guimenu> menu.</para>
                     </listitem>
                     <listitem>
-                      <para>
-                        <guilabel>Set Group ID</guilabel>
-                      </para>
-                    </listitem>
-                    <listitem>
-                      <para>
-                        <guilabel>Sticky</guilabel>
-                      </para>
+                      <para>The popup menu that is displayed when you right-click on a
+file, folder, or desktop background object. </para>
                     </listitem>
                   </itemizedlist>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec6" valign="top">
-                  <para>
-                    <guilabel>Folders before
-files</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7" valign="top">
-                  <para>Select this option to list folders before files when you sort a folder.</para>
+                  <para>When you select an item then choose the <guimenuitem>Delete</guimenuitem> menu item, the item is deleted from your file system
+immediately.</para>
                 </entry>
               </row>
             </tbody>
@@ -3150,8 +2808,8 @@ name. Normally only one item of information is visible, but when you zoom
 in on an icon, more of the information is displayed. You can modify what additional
 information is displayed in icon captions. </para>
         <para>To set your preferences for icon captions, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
-Choose <guilabel>Icon Captions</guilabel> from the <guilabel>Preferences</guilabel>
-dialog.</para>
+Click on the <guilabel>Files and Folders</guilabel> tab in the <guilabel>File Management Preferences</guilabel> dialog to display the <guilabel>Files
+and Folders</guilabel> tabbed section. </para>
         <para>Select the items of information that you want to display
 in the icon caption from the three drop-down list boxes. Select the first
 item from the first drop-down list box, select the second item from the second
@@ -3204,20 +2862,6 @@ and Programs</application> preference tool.</para>
                 <entry colname="colspec1" valign="top">
                   <para>Choose
 this option to display the last modification date of  the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Date changed</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the last modification date of  the <firstterm>inode</firstterm> of the item.
-An inode is a data structure that contains information about individual files
-in UNIX file systems. Each file has one inode. An inode contains the node,
-type, owner, and location of a file. </para>
                 </entry>
               </row>
               <row>
@@ -3301,99 +2945,22 @@ no information for the item.</para>
             </tbody>
           </tgroup>
         </informaltable>
-<!--<para><emphasis>Comment:</emphasis> IEL Item: Permissions and Octal permissions above do not match the terms used on the Properties dialog Permissions tab (it uses Text View/Number View).</para>-->
-      </sect3>
-      <sect3 id="gosnautilus-57">
-        <title>To Set Side Pane Preferences</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>side pane</tertiary>
-        </indexterm>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>side pane</secondary>
-          <tertiary>preferences</tertiary>
-        </indexterm>
-        <para>To set your preferences for the side pane, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
-Choose <guilabel>Side Panes</guilabel> from the <guilabel>Preferences</guilabel>
-dialog. </para>
-        <para><xref linkend="gosnautilus-TBL-38"/> lists the side pane
-settings that you can modify. </para>
-        <table frame="topbot" id="gosnautilus-TBL-38">
-          <title>Side Pane Preferences</title>
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec4" colwidth="35.09*"/>
-            <colspec colname="colspec5" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry valign="top">
-                  <para>Option</para>
-                </entry>
-                <entry valign="top">
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry colname="colspec4" valign="top">
-                  <para>
-                    <guilabel>History</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec5" valign="top">
-                  <para> Select this option to display
-the <guilabel>History</guilabel> tab in the side pane.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec4" valign="top">
-                  <para>
-                    <guilabel>Notes</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec5" valign="top">
-                  <para> Select this option to display
-the <guilabel>Notes</guilabel> tab in the side pane.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec4" valign="top">
-                  <para>
-                    <guilabel>Tree</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec5" valign="top">
-                  <para> Select this option to display
-the <guilabel>Tree</guilabel> tab in the side pane.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Show folders only</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select this option to display only folders in the <guilabel>Tree</guilabel> tabbed pane.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
+<!--<para><emphasis>Comment:</emphasis> IEL Item: Permissions and Octal permissions above do not match the terms used on the Properties 
+dialog Permissions tab (it uses Text View/Number View).</para>-->
       </sect3>
       <sect3 id="gosnautilus-60">
-        <title>To Set Performance Preferences</title>
+        <title>To Set Preview Preferences</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>preferences</secondary>
-          <tertiary>performance</tertiary>
+          <tertiary>preview</tertiary>
         </indexterm>
-        <para>Some <application>Nautilus</application> features can affect the speed with which <application>Nautilus</application> responds to your requests. You can modify the behavior of some
-of these features to improve the speed of <application>Nautilus</application>.
-For each performance preference, you can select one of the options described
-in the following table:</para>
+        <para>The file manager include some
+file preview features. The preview features can affect the speed with which
+the file manager responds to your requests. You can modify the behavior of
+some of these features to improve the speed of the file manager. For each
+preview preference, you can select one of the options described in the following
+table:</para>
         <informaltable frame="topbot">
           <tgroup cols="2" colsep="0" rowsep="0">
             <colspec colwidth="35.09*"/>
@@ -3443,11 +3010,12 @@ on other file systems.</para>
             </tbody>
           </tgroup>
         </informaltable>
-        <para>To set your performance preferences, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Choose <guilabel>Performance</guilabel> from the <guilabel>Preferences</guilabel> dialog.</para>
-        <para><xref linkend="gosnautilus-TBL-41"/> lists the performance
- settings that you can modify.</para>
+        <para>To set your preview preferences, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Preview</guilabel> tab in the <guilabel>File Management Preferences</guilabel>
+dialog to display the <guilabel>Preview</guilabel> tabbed section. </para>
+        <para><xref linkend="gosnautilus-TBL-41"/> lists the preview settings
+that you can modify.</para>
         <table frame="topbot" id="gosnautilus-TBL-41">
-          <title>Performance Preferences</title>
+          <title>Preview Preferences</title>
           <tgroup cols="2" colsep="0" rowsep="0">
             <colspec colname="colspec0" colwidth="35.09*"/>
             <colspec colname="colspec1" colwidth="64.91*"/>
@@ -3465,7 +3033,7 @@ on other file systems.</para>
               <row>
                 <entry valign="top">
                   <para>
-                    <guilabel>Show Text in Icons</guilabel>
+                    <guilabel>Show text in icons</guilabel>
                   </para>
                 </entry>
                 <entry valign="top">
@@ -3476,37 +3044,47 @@ content of text files in the icon that represents the file. </para>
               <row>
                 <entry colname="colspec0" valign="top">
                   <para>
-                    <guilabel>Show Number of
-Items in Folders</guilabel>
+                    <guilabel>Show thumbnails</guilabel>
                   </para>
                 </entry>
                 <entry colname="colspec1" valign="top">
-                  <para>Select an option to specify when to show the number of items in folders.</para>
+                  <para>Select
+an option to specify when to show thumbnails of image files. The file manager
+stores the thumbnail files for each folder in a <filename>.thumbnails</filename>
+directory that is one level below the folder.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <guimenu>Only for files smaller than</guimenu>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Specify the maximum
+file size for files for which the file manager creates a thumbnail.</para>
                 </entry>
               </row>
               <row>
                 <entry colname="colspec0" valign="top">
                   <para>
-                    <guilabel>Show Thumbnails
-for Image Files</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Select an option to specify when to show thumbnails of image files. <application>Nautilus</application> stores the thumbnail files for each folder in a <filename>.thumbnails</filename> directory that is one level below the folder.</para>
-                  <para><guilabel>Do not make thumbnails for files larger than</guilabel>: Specify the maximum
-file size for files for which <application>Nautilus</application> creates
-a thumbnail.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Preview Sound
-Files</guilabel>
+                    <guilabel>Preview sound
+files</guilabel>
                   </para>
                 </entry>
                 <entry colname="colspec1" valign="top">
                   <para>Select an option to specify when to preview sound files. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <guilabel>Show number of items</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Select an option to specify when to show the
+number of items in folders.</para>
                 </entry>
               </row>
             </tbody>
@@ -3703,6 +3281,128 @@ then choose <guimenuitem>Properties</guimenuitem>. A dialog displays the propert
 of the media.</para>
       <para>To close the properties dialog, click <guibutton>Close</guibutton>.</para>
     </sect2>
+    <sect2 id="gosnautilus-469">
+      <title>To Format a Floppy Diskette</title>
+      <indexterm>
+        <primary>removable media</primary>
+        <secondary>formatting floppy
+diskette</secondary>
+      </indexterm>
+      <para>To <firstterm>format</firstterm> media
+is to prepare the media for use with a particular file system. When you format
+media, you overwrite any existing information on the media. You can use the
+file manager to format floppy diskettes.</para>
+      <para>To format a floppy diskette, perform the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>Insert the diskette in the diskette drive. Mount the diskette.
+For information on how to mount media, see <xref linkend="gosnautilus-462"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Right-click on the object that represents the diskette on
+the desktop background, then choose <guimenuitem>Format</guimenuitem>. A <guilabel>Floppy formatter</guilabel> dialog is displayed. </para>
+        </listitem>
+        <listitem>
+          <para>Select your format options in the <guilabel>Floppy formatter</guilabel> dialog. The following table describes the elements on the dialog:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="34.54*"/>
+              <colspec colname="colspec1" colwidth="65.46*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>Dialog Element</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Description</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Floppy device</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Displays the name of the floppy device.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Floppy density</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Select the density that you want for the diskette.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>File system type</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Select the type of file system in which you want
+to format the diskette.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>Volume name</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Type a name for the diskette
+in the text box.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Quick</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Select this option to create only the file
+system on the diskette. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Standard</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Select this option to create the file system
+on the diskette, and add a low-level format. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Thorough</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Select this option to create the file system
+on the diskette, add a low-level format, and perform a check for bad blocks. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>Format</guibutton> to format the diskette. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
     <sect2 id="gosnautilus-464">
       <title>To Eject Media</title>
       <indexterm>
@@ -3736,5 +3436,3 @@ the diskette, you might lose the data on the diskette.</para>
     </sect2>
   </sect1>
 </chapter>
-
-

@@ -1,7 +1,4 @@
-<!-- converted from Solbook 2.2 SGML to Docbook 4.2 XML
-# Generator: s2d v1.4 2002-09-19
-#   Jay Han (jhan@acm.org)/Lightsaber Computing (http://www.lightsaber.com)
--->
+<?xml version="1.0" encoding="utf-8"?>
 <chapter id="gospanel-1">
   <title>Working With Panels</title>
   <highlights>
@@ -111,21 +108,21 @@ the <application>Terminal</application> application. <application>Terminal</appl
               </entry>
             </row>
             <row>
-              <entry colname="colspec3" valign="top">
-                <para><application>Volume Control</application> applet</para>
-              </entry>
-              <entry colname="colspec4" valign="top">
-                <para><application>Volume Control</application> enables you to control the volume of the speaker
-on your system.</para>
-              </entry>
-            </row>
-            <row>
               <entry valign="top">
                 <para><application>Clock</application> applet</para>
               </entry>
               <entry valign="top">
                 <para><application>Clock</application> shows the current
 time. Click on the time readout to display a menu of clock commands.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para><application>Volume Control</application>
+applet</para>
+              </entry>
+              <entry colname="colspec4">
+                <para><application>Volume Control</application> enables you to control the volume of the speaker on your system.</para>
               </entry>
             </row>
             <row>
@@ -796,7 +793,8 @@ information, see <xref linkend="gospanel-39"/>.</para>
           <para>Right-click on a vacant space on a panel to open the panel popup menu.
 The panel popup menu contains an <guisubmenu>Add to Panel</guisubmenu> submenu.
 The <guisubmenu>Add to Panel</guisubmenu> submenu enables you to add the following
-objects to your panels: <itemizedlist><listitem><para>Accessory applets</para></listitem><listitem><para>Amusement applets</para></listitem><listitem><para>Internet applets</para></listitem><listitem><para>Multimedia applets</para></listitem><listitem><para>Utility applets</para></listitem><listitem><para>Launchers</para></listitem><listitem><para>GNOME Menu</para></listitem><listitem><para>Drawers</para></listitem><listitem><para><guibutton>Log Out</guibutton> button</para></listitem><listitem><para><guibutton>Lock</guibutton> button</para></listitem></itemizedlist></para>
+objects to your panels: <itemizedlist><listitem><para>Applets in the following categories: Accessory, Amusement,
+Internet, Multimedia, Utility.</para></listitem><listitem><para>Launchers</para></listitem><listitem><para>Launchers from menus</para></listitem><listitem><para>GNOME Menu</para></listitem><listitem><para>Drawers</para></listitem><listitem><para>Buttons for quick access to common functions: <guibutton>Log Out</guibutton> button, <guibutton>Lock</guibutton> button, <guibutton>Screenshot</guibutton> button, <guibutton>Search</guibutton> button, <guibutton>Run</guibutton> button.</para></listitem></itemizedlist></para>
         </listitem>
         <listitem>
           <para>From any menu</para>
@@ -806,9 +804,9 @@ launcher opens. You can use this popup menu to add the launcher to a panel. </pa
         </listitem>
         <listitem>
           <para>From the file manager</para>
-          <para>Each launcher and applet corresponds to a <filename>.desktop</filename>
-file. You can drag the <filename>.desktop</filename> file on to your panels
-to add the launcher or applet to the panel. </para>
+          <para>Each launcher corresponds to a <filename>.desktop</filename> file. You
+can drag the <filename>.desktop</filename> file on to your panels to add the
+launcher to the panel. </para>
 <!--<para><emphasis>Question:</emphasis> Are applets still represented by .desktop files?</para>-->
           <para>Each menu corresponds to a directory. You can drag the directory on
 to your panels to add the directory to the panel as a menu object.</para>
@@ -1796,6 +1794,81 @@ that you can use to configure the screensaver. </para>
       </tgroup>
     </table>
   </sect1>
+  <sect1 id="gospanel-553">
+    <title>Screenshot Button</title>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/screenshot_button.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Screenshot icon.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>panel objects</primary>
+      <secondary>Screenshot button</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>Screenshot button</primary>
+    </indexterm>
+    <para>You can use the <guibutton>Screenshot</guibutton> button to take a screenshot
+of your desktop. </para>
+    <para>To add a <guibutton>Screenshot</guibutton> button to a panel, right-click
+on any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Screenshot Button</guimenuitem></menuchoice>. To take
+a screenshot of your desktop, click on the <guibutton>Screenshot</guibutton>
+button. </para>
+  </sect1>
+  <sect1 id="gospanel-554">
+    <title>Search Button</title>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/searchtool_button.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Search Tool icon.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>panel objects</primary>
+      <secondary>Search button</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>Search button</primary>
+    </indexterm>
+    <para>You can use the <guibutton>Search</guibutton> button to open the <application>Search Tool</application>. </para>
+    <para>To add a <guibutton>Search</guibutton> button to a panel, right-click
+on any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Search Button</guimenuitem></menuchoice>. To open the <application>Search Tool</application>, click on the <guibutton>Search</guibutton> button. </para>
+    <para>For more information on the <application>Search Tool</application>,
+see the <citetitle>Search Tool Manual</citetitle>.</para>
+  </sect1>
+  <sect1 id="gospanel-555">
+    <title>Run Button</title>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/run_button.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Run icon.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>panel objects</primary>
+      <secondary>Run button</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>Run button</primary>
+    </indexterm>
+    <para>You
+can use the <guibutton>Run</guibutton> button to open the <guilabel>Run Program</guilabel> dialog. </para>
+    <para>To add a <guibutton>Run</guibutton> button to a panel, right-click on
+any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Run Button</guimenuitem></menuchoice>. To open the <guilabel>Run Program</guilabel> dialog, click on the <guibutton>Run</guibutton> button. </para>
+    <para>For more information on the <guilabel>Run Program</guilabel> dialog,
+see <citetitle>Working With Menus</citetitle>.</para>
+  </sect1>
 </chapter>
-
-

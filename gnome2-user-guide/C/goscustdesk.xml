@@ -1,7 +1,4 @@
-<!-- converted from Solbook 2.2 SGML to Docbook 4.2 XML
-# Generator: s2d v1.4 2002-09-19
-#   Jay Han (jhan@acm.org)/Lightsaber Computing (http://www.lightsaber.com)
--->
+<?xml version="1.0" encoding="utf-8"?>
 <chapter id="goscustdesk-6">
   <title>Using the Basic Preference Tools</title>
   <highlights>
@@ -103,9 +100,8 @@ settings that you can configure.</para>
             </entry>
             <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
               <para>Choose an image to display on the desktop background.
-To choose an image, click on the <guibutton>Picture</guibutton> button. An
-image selector dialog is displayed. Choose an image from the dialog. Alternatively,
-to choose an image from another directory, click <guibutton>Browse</guibutton>.
+To choose an image, click on the <guibutton>Select picture</guibutton> button.
+An image selector dialog is displayed. Use the dialog to choose an image.
 When you choose an image, click <guibutton>OK</guibutton>. </para>
             </entry>
           </row>
@@ -240,6 +236,29 @@ font</guilabel>
             <entry colname="colspec19" colsep="0" rowsep="0" valign="top">
               <para>Click on the font selector button to select
 a font to use on your desktop background only.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec18" colsep="0" rowsep="0">
+              <para>
+                <guilabel>Window
+title font</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec19" colsep="0" rowsep="0">
+              <para>Click on the font selector button to select a font to use
+in the titlebars of your windows.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec18" colsep="0" rowsep="0">
+              <para>
+                <guilabel>Terminal
+font</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec19" colsep="0" rowsep="0">
+              <para>Click on the font selector button to select a font to use in the <application>Terminal</application> application</para>
             </entry>
           </row>
         </tbody>
@@ -574,9 +593,9 @@ what to display on the toolbars in your GNOME-compliant applications:</para>
 to display toolbars with text as well as an icon on each button. </para>
                 </listitem>
                 <listitem>
-                  <para><guilabel>Priority Text Beside Icons</guilabel>: Select this
-option to display toolbars with an icon only on each button, and with text
-on the most important buttons.</para>
+                  <para><guilabel>Text Beside Icons</guilabel>: Select this option
+to display toolbars with an icon only on each button, and with text on the
+most important buttons.</para>
                 </listitem>
                 <listitem>
                   <para><guilabel>Icons Only</guilabel>: Select this option to display
@@ -856,68 +875,99 @@ settings that you can configure.</para>
         </thead>
         <tbody>
           <row>
-            <entry colname="colspec2" valign="top">
+            <entry colname="colspec2">
               <para>
-                <guilabel>Use HTTP Proxy</guilabel>
+                <guilabel>Direct internet connection</guilabel>
               </para>
             </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Select
-this option to use a proxy server for the HTTP service.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Location</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the DNS name, or the IP
-address of the proxy server to use when you request a HTTP service.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Port</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the port number of the
-HTTP service on the proxy server.</para>
+            <entry colname="colspec3">
+              <para>Select this option
+if you want to connect directly to the Internet, without a proxy server.</para>
             </entry>
           </row>
           <row>
             <entry colname="colspec2">
               <para>
-                <guilabel>Proxy requires username and
-password</guilabel>
+                <guilabel>Manual proxy configuration</guilabel>
               </para>
             </entry>
             <entry colname="colspec3">
-              <para>Select this
-option if the proxy server requires a username and password.</para>
+              <para>Select this option
+if you want to connect to the Internet through a proxy server, and you want
+to configure the proxy server manually.</para>
             </entry>
           </row>
           <row>
             <entry colname="colspec2">
               <para>
-                <guilabel>Username</guilabel>
+                <guilabel>HTTP proxy</guilabel>
               </para>
             </entry>
             <entry colname="colspec3">
-              <para>Enter your username for the proxy server.</para>
+              <para>Enter the DNS name, or the IP address of the
+proxy server to use when you request a HTTP service. Enter the port number
+of the HTTP service on the proxy server in the <guilabel>Port</guilabel> spin
+box.</para>
             </entry>
           </row>
           <row>
-            <entry valign="top">
+            <entry colname="colspec2">
               <para>
-                <guilabel>Password</guilabel>
+                <guilabel>Secure HTTP proxy</guilabel>
               </para>
             </entry>
-            <entry valign="top">
-              <para>Enter your password for the proxy server.</para>
+            <entry colname="colspec3">
+              <para>Enter the DNS name, or the IP address of the
+proxy server to use when you request a Secure HTTP service. Enter the port
+number of the Secure HTTP service on the proxy server in the <guilabel>Port</guilabel> spin box.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2">
+              <para>
+                <guilabel>FTP proxy</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3">
+              <para>Enter the DNS name, or the IP address of the
+proxy server to use when you request a FTP service. Enter the port number
+of the FTP service on the proxy server in the <guilabel>Port</guilabel> spin
+box.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2">
+              <para>
+                <guilabel>Socks host</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3">
+              <para>Enter the DNS name, or the IP address of the
+Socks host to use. Enter the port number for the Socks protocol on the proxy
+server in the <guilabel>Port</guilabel> spin box.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2">
+              <para>
+                <guilabel>Automatic proxy configuration</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3">
+              <para>Select this option
+if you want to connect to the Internet through a proxy server, and you want
+to configure the proxy server automatically.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2">
+              <para>
+                <guilabel>Autoconfiguration URL</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3">
+              <para>Enter the URL that contains the information
+required to configure the proxy server automatically. </para>
             </entry>
           </row>
         </tbody>
@@ -1191,8 +1241,7 @@ you have selected the file, click <guibutton>OK</guibutton>.</para>
               </entry>
               <entry valign="top">
                 <para>Click on this button to open a file manager window
-on the default theme folder. You can delete themes from the file
-manager window.</para>
+on the default theme folder. You can delete themes from the file manager window.</para>
               </entry>
             </row>
           </tbody>
@@ -1265,26 +1314,32 @@ on the default theme folder. You can delete themes from the file manager window.
       </table>
     </sect2>
   </sect1>
-  <sect1 id="goscustwindows-2">
-    <title>Customizing Window Focus</title>
-    <indexterm>
-      <primary>Metacity window manager</primary>
-      <see>window manager</see>
-    </indexterm>
+  <sect1 id="goscustdesk-58">
+    <title>Customizing Windows</title>
     <indexterm>
       <primary>window manager</primary>
       <secondary>customizing</secondary>
     </indexterm>
     <indexterm>
       <primary>preference tools</primary>
-      <secondary>Window Focus</secondary>
+      <secondary>Windows</secondary>
     </indexterm>
-    <para>Use the <application>Window Focus</application> preference tool to customize window focus behavior for your
-desktop.</para>
-    <para><xref linkend="goscustwindows-TBL-3"/> lists the window focus
-settings that you can customize.</para>
-    <table frame="topbot" id="goscustwindows-TBL-3">
-      <title>Settings for Window Focus</title>
+    <para>Use the <application>Windows</application> preference
+tool to customize window behavior for your desktop.</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/cc_windows.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Windows preference tool. The context describes the graphic. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para><xref linkend="goscustwindows-TBL-14"/> lists the window behavior settings
+that you can customize.</para>
+    <table frame="topbot" id="goscustwindows-TBL-14">
+      <title>Settings for Window Behavior</title>
       <tgroup cols="2" colsep="1" rowsep="1">
         <colspec colname="colspec0" colwidth="18.86*"/>
         <colspec colname="colspec1" colwidth="47.14*"/>
@@ -1300,45 +1355,77 @@ settings that you can customize.</para>
         </thead>
         <tbody>
           <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Click to give focus</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option to give focus to a window
-when you click on the window. The window retains focus until you click on
-another window.</para>
-            </entry>
-          </row>
-          <row>
             <entry colname="colspec0" colsep="0" rowsep="0">
               <para>
-                <guilabel>Point
-to give focus</guilabel>
+                <guilabel>Select
+windows when the mouse moves over them</guilabel>
               </para>
             </entry>
             <entry colname="colspec1" colsep="0" rowsep="0">
-              <para>Select this option to give focus to a window when you point
-to the window. The window retains focus until you point to another window.</para>
+              <para>Select this option to give focus to a window when
+you point to the window. The window retains focus until you point to another
+window.</para>
             </entry>
           </row>
           <row>
             <entry colname="colspec0" colsep="0" rowsep="0">
               <para>
                 <guilabel>Raise
-window on focus</guilabel>
+selected windows after a short time</guilabel>
               </para>
             </entry>
             <entry colname="colspec1" colsep="0" rowsep="0">
-              <para>Select this option if you want your windows to be raised
-when the windows receive focus.</para>
+              <para>Select this option to raise windows a short time
+after the window receives focus.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0">
+              <para>
+                <guilabel>Tenths
+of a second before raising the window</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0">
+              <para>Specify the number of tenths of a second to wait
+before raising a window that has received focus.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0">
+              <para>
+                <guilabel>Double-click
+window titles to</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0">
+              <para>Select the behavior that you want to occur when you double-click
+on a window titlebar. Select one of the following options:</para>
+              <itemizedlist>
+                <listitem>
+                  <para><guilabel>Roll up</guilabel>: Shades the window.</para>
+                </listitem>
+                <listitem>
+                  <para><guilabel>Maximize</guilabel>: Maximizes the window.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0">
+              <para>
+                <guilabel>To move
+windows, click while holding down</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0">
+              <para>Select the key to press-and-hold when you drag
+a window to move the window.</para>
             </entry>
           </row>
         </tbody>
       </tgroup>
     </table>
+    <para/>
   </sect1>
 </chapter>
-
-
