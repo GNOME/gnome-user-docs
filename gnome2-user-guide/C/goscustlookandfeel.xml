@@ -6,7 +6,7 @@ you to customize the behavior and appearance of your applications, panels,
 and other user interface items. You can use the <guilabel>Advanced</guilabel>
 preference tools to configure file types, your default applications, and your
 panels. You can also use the <guilabel>Advanced</guilabel> tools to customize
-your sessions and startup programs. This chapter describes how to use the <guilabel>Advanced</guilabel> tools to customize your desktop.</para>
+your sessions and startup programs. This chapter describes how to use the <guilabel>Advanced</guilabel> tools to customize your desktop environment.</para>
   </highlights>
   <sect1 id="goscustlookandfeel-17">
     <title>Opening an Advanced Preference Tool</title>
@@ -20,12 +20,12 @@ for the tool is displayed.</para>
       </listitem>
       <listitem>
         <para>From the <guilabel>Start Here</guilabel> location</para>
-        <para>Open a <application>Nautilus</application> window, then choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Start Here</guimenuitem></menuchoice>.
-Alternatively, double-click on the <guilabel>Start Here</guilabel> object
-on the desktop background. The <guilabel>Start Here</guilabel> location is
-displayed. Double-click on the <guilabel>Desktop Preferences</guilabel> object
-in the <application>Nautilus</application> window, then double-click on the <guilabel>Advanced</guilabel> folder. The <guilabel>Advanced</guilabel> preference tools
-are displayed.</para>
+        <para>Open a <application>Nautilus</application> file manager window, then
+choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Start Here</guimenuitem></menuchoice>. Alternatively, double-click on the <guilabel>Start Here</guilabel>
+object on the desktop. The <guilabel>Start Here</guilabel> location is displayed.
+Double-click on the <guilabel>Desktop Preferences</guilabel> object in the
+file manager window, then double-click on the <guilabel>Advanced</guilabel>
+folder. The <guilabel>Advanced</guilabel> preference tools are displayed.</para>
         <para>Double-click on the tool that you require. The dialog for the tool is
 displayed.</para>
       </listitem>
@@ -42,8 +42,7 @@ enables you to configure a CD database that your system can query. A CD database
 contains information about CDs, such as the name of the artist, the title,
 and the track list. When an application plays a CD, the application can query
 the CD database about the CD, then display the information. </para>
-    <para><xref linkend="goscustlookandfeel-TBL-40"/> describes the
-elements on the <application>CD Database</application> preference tool.</para>
+    <para><xref linkend="goscustlookandfeel-TBL-40"/> describes the elements on the <application>CD Database</application> preference tool.</para>
     <table frame="topbot" id="goscustlookandfeel-TBL-40">
       <title>Settings for CD Database</title>
       <tgroup cols="2" colsep="1" rowsep="1">
@@ -63,7 +62,7 @@ elements on the <application>CD Database</application> preference tool.</para>
           <row>
             <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
               <para>
-                <guilabel>Send no info</guilabel>
+                <guilabel>Send no information</guilabel>
               </para>
             </entry>
             <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
@@ -74,7 +73,7 @@ any information to the CD database server.</para>
           <row>
             <entry colsep="0" rowsep="0" valign="top">
               <para>
-                <guilabel>Send real info</guilabel>
+                <guilabel>Send real information</guilabel>
               </para>
             </entry>
             <entry colsep="0" rowsep="0" valign="top">
@@ -85,13 +84,13 @@ server.</para>
           <row>
             <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
               <para>
-                <guilabel>Send other info</guilabel>
+                <guilabel>Send other information</guilabel>
               </para>
             </entry>
             <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option to send another name and
-hostname to the CD database server. Enter the name in the <guilabel>Name</guilabel>
-field. Enter the hostname in the <guilabel>Hostname</guilabel> field.</para>
+              <para>Select this option to send another
+name and hostname to the CD database server. Enter the name in the <guilabel>Name</guilabel> field. Enter the hostname in the <guilabel>Hostname</guilabel>
+field.</para>
             </entry>
           </row>
           <row>
@@ -121,7 +120,7 @@ server table.</para>
           <row>
             <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
               <para>
-                <guibutton>Update server list</guibutton>
+                <guibutton>Update Server List</guibutton>
               </para>
             </entry>
             <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
@@ -155,14 +154,40 @@ database in the <guilabel>Port</guilabel> field.</para>
       <primary>file types</primary>
       <secondary>configuring</secondary>
     </indexterm>
-    <para>Use the <application>File Types and
-Programs</application> preference tool to specify how files of various types
-are created, displayed, and edited. For example, you can specify that if a
-file is a plain text file, the file is launched in a text editor.</para>
-    <para><application>Nautilus</application> and other GNOME applications check
-the contents of a file to determine the type of a file. If the first lines
-do not determine the type of the file, then the application checks the file
-extension.</para>
+    <indexterm>
+      <primary>services</primary>
+      <secondary>configuring</secondary>
+    </indexterm>
+    <para>Use the <application>File Types and Programs</application> preference tool to configure the following:</para>
+    <variablelist>
+      <varlistentry>
+        <term>File types</term>
+        <listitem>
+          <para>You can specify how files
+of various types are displayed and edited. For example, you can specify an
+icon to represent a particular type of file. For another example, you can
+specify that if a file is a plain text file, the file is launched in a text
+editor.</para>
+          <para>The file manager and other GNOME applications check the contents of
+a file to determine the type of a file. If the first lines do not determine
+the type of the file, then the application checks the filename.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Services</term>
+        <listitem>
+          <para>A <firstterm>Uniform Resource
+Identifier</firstterm> (URI) is a string that identifies a particular location
+in a file system or on the Web. For example, the web address of a web page
+is a URI. A <firstterm>service</firstterm> is a protocol or task that a URI
+requests. For example, the <literal>http://www.gnome.org</literal> URI requests
+the <literal>http</literal> service. </para>
+          <para>You can associate an application with a service, so that the application
+performs the task required by the service. For example, you can associate
+your preferred web browser with the <literal>http</literal> service.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
     <para><xref linkend="goscustdoc-TBL-8"/> describes the elements
 on the <application>File Types and Programs</application> preference tool.</para>
     <table frame="topbot" id="goscustdoc-TBL-8">
@@ -338,11 +363,10 @@ the <guilabel>Choose a file category</guilabel> dialog.</para>
                     </para>
                   </entry>
                   <entry valign="top">
-                    <para>Enter the filename extensions to associate with
-the file type. Enter a filename extension in the field on the left side, then
-click on the <guibutton>Add</guibutton> button. To delete a filename extension,
-select the filename extension in the field on the right side, then click on
-the <guibutton>Remove</guibutton> button. </para>
+                    <para>Enter the file extensions to associate with the
+file type. Enter a file extension in the field on the left side, then press <keycap>Return</keycap>. To delete a file extension, select the file extension in
+the field on the right side, then click on the <guibutton>Remove</guibutton>
+button. </para>
                   </entry>
                 </row>
                 <row>
@@ -372,8 +396,7 @@ the <guibutton>Remove</guibutton> button. </para>
                     </para>
                   </entry>
                   <entry valign="top">
-                    <para>If you do not select the <guilabel>Use category
-defaults</guilabel> option, specify a program to associate with the file type.
+                    <para>Specify a program to associate with the file type.
 Enter the command to start the program in this field. Alternatively, to choose
  a command that you entered previously, click the down arrow button, then
 choose the command to run.</para>
@@ -473,7 +496,7 @@ dialog:</para>
                     </para>
                   </entry>
                   <entry valign="top">
-                    <para>Specify the program to associate with the file type.
+                    <para>Specify the program to associate with the service.
 Enter the command to start the program in this field. Alternatively, to choose
  a command that you entered previously, click the down arrow button, then
 choose the command to run.</para>
@@ -547,7 +570,7 @@ you want a drawer on a panel to close when you choose a launcher in the drawer.<
           <row>
             <entry valign="top">
               <para>
-                <guilabel>Drawer and Panel Animation</guilabel>
+                <guilabel>Drawer and panel animation</guilabel>
               </para>
             </entry>
             <entry valign="top">
@@ -582,15 +605,19 @@ drop-down list.</para>
     </indexterm>
     <para>Use the <application>Preferred
 Applications</application> preference tool to specify the applications that
-you want the desktop to use when the desktop starts an application for you.
-For example, you can specify <application>Xterm</application> as your preferred
-terminal application. When you open the <guimenu>Desktop Background</guimenu>
-menu then choose <guimenuitem>New Terminal</guimenuitem>, <application>Xterm</application> starts.</para>
+you want the desktop environment to use when the desktop environment starts
+an application for you. For example, you can specify <application>Xterm</application>
+as your preferred terminal application. When you open the <guimenu>Desktop</guimenu> menu then choose <guimenuitem>New Terminal</guimenuitem>, <application>Xterm</application> starts.</para>
     <para>You can customize the settings for the <application>Preferred Applications</application> preference tool in the following functional areas.</para>
     <itemizedlist>
       <listitem>
         <para>
           <guilabel>Web Browser</guilabel>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>Mail Reader</guilabel>
         </para>
       </listitem>
       <listitem>
@@ -617,9 +644,9 @@ menu then choose <guimenuitem>New Terminal</guimenuitem>, <application>Xterm</ap
 tabbed section to configure your preferred web browser. The preferred web
 browser opens when you click on a URL. For example, the preferred web browser
 opens when you select a URL in an application, or when you select a URL launcher
-on the desktop background.</para>
-      <para><xref linkend="goscustlookandfeel-TBL-37"/> lists the preferred
-web browser settings that you can configure.</para>
+on the desktop.</para>
+      <para><xref linkend="goscustlookandfeel-TBL-37"/> lists the preferred web browser
+settings that you can configure.</para>
       <table frame="topbot" id="goscustlookandfeel-TBL-37">
         <title>Settings for Preferred Web Browser</title>
         <tgroup cols="2" colsep="1" rowsep="1">
@@ -686,6 +713,85 @@ which to run.</para>
         </tgroup>
       </table>
     </sect2>
+    <sect2 id="goscustlookandfeel-42">
+      <title>Email Client Settings</title>
+      <indexterm>
+        <primary>preferred applications</primary>
+        <secondary>email client</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>email client, preferred application</primary>
+      </indexterm>
+      <para>Use the <application>Mail Reader</application>
+tabbed section to configure your preferred email client. </para>
+      <para><xref linkend="goscustlookandfeel-TBL-43"/> lists the preferred email
+client settings that you can configure.</para>
+      <table frame="topbot" id="goscustlookandfeel-TBL-43">
+        <title>Settings for Preferred Email Client</title>
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="18.86*"/>
+          <colspec colname="colspec1" colwidth="47.14*"/>
+          <thead>
+            <row>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>Option</para>
+              </entry>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>Function</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>Select a Mail Reader</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>Select this option if you want to use a standard
+email client. Use the drop-down combination box to select your preferred email
+client.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>Custom Mail Reader</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>Select this option if you want to use a custom
+email client. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>Command</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>Enter the command to execute to start the custom email
+client.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>Start in Terminal</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>Select this option to run the command in a terminal
+window. Select this option for an email client that does not create a window
+in which to run.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
     <sect2 id="goscustlookandfeel-31">
       <title>Text Editor Settings</title>
       <indexterm>
@@ -697,8 +803,8 @@ which to run.</para>
       </indexterm>
       <para>Use the <application>Text Editor</application>
 tabbed section to configure your preferred text editor.</para>
-      <para><xref linkend="goscustdoc-TBL-1"/> lists the preferred text
-editor settings that you can configure.</para>
+      <para><xref linkend="goscustdoc-TBL-1"/> lists the preferred text editor settings
+that you can configure.</para>
       <table frame="topbot" id="goscustdoc-TBL-1">
         <title>Settings for Preferred Text Editor</title>
         <tgroup cols="2" colsep="1" rowsep="1">
@@ -755,17 +861,9 @@ Select this option to run the command in a terminal window. Select this option
 for an editor that does not create a window in which to run.</para>
                   </listitem>
                 </itemizedlist>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-                <para>
-                  <guibutton>Properties</guibutton>
-                </para>
-              </entry>
-              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-                <para>Click on this button to display the <guilabel>Custom Editor Properties</guilabel> dialog. Use the dialog to modify the properties
-of the custom text editor.</para>
+                <para>After you specify a custom text editor, you can click
+on the <guibutton>Properties</guibutton> button to display the <guilabel>Custom Editor Properties</guilabel> dialog. You can use the dialog to modify
+the properties of the custom text editor.</para>
               </entry>
             </row>
             <row>
@@ -795,8 +893,8 @@ display text files.</para>
       </indexterm>
       <para>Use the <application>Terminal</application> tabbed section
 to configure your preferred terminal.</para>
-      <para><xref linkend="goscustlookandfeel-TBL-35"/> lists the preferred
-terminal settings that you can configure.</para>
+      <para><xref linkend="goscustlookandfeel-TBL-35"/> lists the preferred terminal
+settings that you can configure.</para>
       <table frame="topbot" id="goscustlookandfeel-TBL-35">
         <title>Settings for Preferred Terminal</title>
         <tgroup cols="2" colsep="1" rowsep="1">
@@ -878,9 +976,9 @@ command.</para>
     <para>The <application>Sessions</application>
 preference tool enables you to manage your sessions. You can set session preferences,
 and specify which applications to start when you start a session. You can
-configure sessions to save the state of applications on your desktop, and
-to restore the state when you start another session. You can also use this
-preference tool to manage multiple GNOME sessions.</para>
+configure sessions to save the state of applications in your desktop environment,
+and to restore the state when you start another session. You can also use
+this preference tool to manage multiple GNOME sessions.</para>
     <para>You can customize the settings for sessions and startup applications
 in the following functional areas:</para>
     <itemizedlist>
@@ -908,8 +1006,8 @@ in the following functional areas:</para>
       </indexterm>
       <para>Use the <guilabel>Session Options</guilabel> tabbed section
 to manage multiple sessions, and to set preferences for the current session.</para>
-      <para><xref linkend="goscustsession-TBL-11"/> lists the session
-options settings that you can configure.</para>
+      <para><xref linkend="goscustsession-TBL-11"/> lists the session options settings
+that you can configure.</para>
       <table frame="topbot" id="goscustsession-TBL-11">
         <title>Settings for Session Options</title>
         <tgroup cols="2" colsep="1" rowsep="1">
@@ -978,7 +1076,7 @@ a <guilabel>Save current setup</guilabel> option.</para>
               </entry>
               <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
                 <para>Use this area of the dialog to manage multiple sessions
-on the desktop, as follows:</para>
+in the desktop environment, as follows:</para>
                 <itemizedlist>
                   <listitem>
                     <para>To create a new session, click on the <guibutton>Add</guibutton>
@@ -1018,8 +1116,8 @@ sessions to use.</para>
 Session</guilabel> tabbed section to specify startup order values, and to
 choose restart styles for the session-managed applications in your current
 session. </para>
-      <para><xref linkend="sessprop01"/> lists the session properties
-that you can configure. </para>
+      <para><xref linkend="sessprop01"/> lists the session properties that you can
+configure. </para>
       <table frame="topbot" id="sessprop01">
         <title>Session Properties</title>
         <tgroup cols="2" colsep="1" rowsep="1">
@@ -1139,8 +1237,8 @@ in the <guilabel>Startup Programs</guilabel> tabbed section. The commands
 execute automatically when you log in.</para>
       <para>You can also start session-managed applications automatically. For more
 information, see <xref linkend="goscustsession-16"/>.</para>
-      <para><xref linkend="goscustsession-TBL-19"/> lists the startup
-applications settings that you can configure.</para>
+      <para><xref linkend="goscustsession-TBL-19"/> lists the startup applications
+settings that you can configure.</para>
       <table frame="topbot" id="goscustsession-TBL-19">
         <title>Settings for Startup Programs</title>
         <tgroup cols="2">
@@ -1170,9 +1268,7 @@ startup applications as follows:</para>
                   <listitem>
                     <para>To add a startup application, click on the <guibutton>Add</guibutton> button. The <guilabel>Add Startup Program</guilabel> dialog is
 displayed. Enter the command to start the application in the <guilabel>Startup
-Command</guilabel> field. Alternatively, you can use the <guibutton>Browse</guibutton> button to choose a command to run. You can also use the <guibutton>Browse</guibutton> button to choose a file to append to the command line.
-For example, you can enter <command>emacs</command> on the command line, then
-choose a file to edit. </para>
+Command</guilabel> field. </para>
                     <para>If you specify more than one startup application, use the <guilabel>Priority</guilabel> spin box to specify the startup order of the each application.
 The startup order is the order in which you want the startup applications
 to start.</para>

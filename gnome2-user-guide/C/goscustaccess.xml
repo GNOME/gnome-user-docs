@@ -1,7 +1,7 @@
 <chapter id="goscustaccess-1">
   <title>Using the Accessibility Preference Tools</title>
   <highlights>
-    <para>This chapter describes how to use the <guilabel>Accessibility</guilabel> preference tools to customize your desktop.</para>
+    <para>This chapter describes how to use the <guilabel>Accessibility</guilabel> preference tools to customize your desktop environment.</para>
   </highlights>
   <sect1 id="goscustaccess-2">
     <title>Opening an Accessibility Tool</title>
@@ -15,13 +15,91 @@ The dialog for the tool is displayed.</para>
       </listitem>
       <listitem>
         <para>From the <guilabel>Start Here</guilabel> location</para>
-        <para>Open a <application>Nautilus</application> window, then choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Start Here</guimenuitem></menuchoice>.
-Alternatively, double-click on the <guilabel>Start Here</guilabel> object
-on the desktop background. The <guilabel>Start Here</guilabel> location is
-displayed. Double-click on the <guilabel>Desktop Preferences</guilabel> object
-in the <application>Nautilus</application> window, then double-click on the <guilabel>Accessibility</guilabel> folder. </para>
+        <para>Open a <application>Nautilus</application> file manager window, then
+choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Start Here</guimenuitem></menuchoice>. Alternatively, double-click on the <guilabel>Start Here</guilabel>
+object on the desktop. The <guilabel>Start Here</guilabel> location is displayed.
+Double-click on the <guilabel>Desktop Preferences</guilabel> object in the
+file manager window, then double-click on the <guilabel>Accessibility</guilabel>
+folder. </para>
       </listitem>
     </itemizedlist>
+  </sect1>
+  <sect1 id="goscustaccess-11">
+    <title>Setting Assistive Technology Preferences</title>
+    <indexterm>
+      <primary>accessibility</primary>
+      <secondary>setting assistive technology
+preferences</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>preference tools</primary>
+      <secondary>Assistive Technology</secondary>
+    </indexterm>
+    <para>Use the <application>Assistive Technology</application> preference tool to enable assistive technologies
+in your desktop environment. You can also use the <application>Assistive Technology</application> preference tool to specify assistive technology applications
+to start automatically when you log in.</para>
+    <para><xref linkend="goscustaccess-TBL-14"/> lists the font settings that you
+can configure.</para>
+    <table frame="topbot" id="goscustaccess-TBL-14">
+      <title>Assistive Technology Settings</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="50*"/>
+        <colspec colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <guilabel>Enable assistive technologies</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option to enable assistive technologies
+in your desktop environment. </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guilabel>Screenreader</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option to start the <application>Screenreader</application> application automatically when you log in.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guilabel>Magnifier</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option to start the <application>Magnifier</application> application automatically when you log in.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guilabel>On-screen keyboard</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option to start the <application>On-screen keyboard</application> application automatically when you log in.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
   </sect1>
   <sect1 id="goscustaccess-6">
     <title>Configuring Keyboard Accessibility Options</title>
@@ -65,8 +143,8 @@ accessibility preference tool in the following functional areas:</para>
     </itemizedlist>
     <sect2 id="goscustaccess-8">
       <title>Basic Settings</title>
-      <para><xref linkend="goscustaccess-TBL-1"/> lists the basic keyboard
-accessibility settings that you can modify.</para>
+      <para><xref linkend="goscustaccess-TBL-1"/> lists the basic keyboard accessibility
+settings that you can modify.</para>
       <table frame="topbot" id="goscustaccess-TBL-1">
         <title>Keyboard Accessibility Settings</title>
         <tgroup cols="2" colsep="0" rowsep="0">
@@ -103,9 +181,29 @@ available.</para>
                 </para>
               </entry>
               <entry colname="colspec1">
-                <para>Select this option to enable you to deactivate
-the keyboard accessibility preferences. Specify the period of time that must
-pass before timeout occurs. </para>
+                <para>Select this option to deactivate keyboard
+accessibility preferences if the keyboard is not used for a specified period
+of time. Use the slider to specify the number of seconds of keyboard idle
+time required before the system disables the keyboard accessibility preferences.
+ When the specified number of seconds elapses, the following keyboard accessibility
+preferences are disabled:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Bounce keys</para>
+                  </listitem>
+                  <listitem>
+                    <para>Mouse keys</para>
+                  </listitem>
+                  <listitem>
+                    <para>Slow keys</para>
+                  </listitem>
+                  <listitem>
+                    <para>Sticky keys</para>
+                  </listitem>
+                  <listitem>
+                    <para>Toggle keys</para>
+                  </listitem>
+                </itemizedlist>
               </entry>
             </row>
             <row>
@@ -128,8 +226,8 @@ Settings</guibutton>
                 </para>
               </entry>
               <entry colname="colspec1" valign="top">
-                <para>Click on this button to import an <application>AccessX</application>
-configuration file. </para>
+                <para>Click on this button to import an <application>AccessX</application> configuration
+file. </para>
               </entry>
             </row>
             <row>
@@ -202,11 +300,14 @@ of your settings.</para>
           </tbody>
         </tgroup>
       </table>
+      <para>For more information
+on configuring keyboard accessibility preferences, see <citetitle>GNOME 2.2
+Desktop Accessibility Guide</citetitle>.</para>
     </sect2>
     <sect2 id="goscustaccess-9">
       <title>Filter Settings</title>
-      <para><xref linkend="goscustaccess-TBL-11"/> lists the filter
-settings that you can modify.</para>
+      <para><xref linkend="goscustaccess-TBL-11"/> lists the filter settings that
+you can modify.</para>
       <table frame="topbot" id="goscustaccess-TBL-11">
         <title>Filter Settings</title>
         <tgroup cols="2" colsep="0" rowsep="0">
@@ -322,11 +423,14 @@ of your settings.</para>
           </tbody>
         </tgroup>
       </table>
+      <para>For more information
+on configuring keyboard accessibility preferences, see <citetitle>GNOME 2.2
+Desktop Accessibility Guide</citetitle>.</para>
     </sect2>
     <sect2 id="goscustaccess-10">
       <title>Mouse Settings</title>
-      <para><xref linkend="goscustaccess-TBL-12"/> lists the mouse settings
-that you can modify.</para>
+      <para><xref linkend="goscustaccess-TBL-12"/> lists the mouse settings that
+you can modify.</para>
       <table frame="topbot" id="goscustaccess-TBL-12">
         <title>Mouse Settings</title>
         <tgroup cols="2" colsep="0" rowsep="0">
@@ -399,6 +503,9 @@ before the pointer moves. </para>
           </tbody>
         </tgroup>
       </table>
+      <para>For more information
+on configuring keyboard accessibility preferences, see <citetitle>GNOME 2.2
+Desktop Accessibility Guide</citetitle>.</para>
     </sect2>
   </sect1>
 </chapter>
