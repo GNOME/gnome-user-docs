@@ -1,0 +1,210 @@
+<!-- #################### THE GNOME DESKTOP - CHAPTER ###################### -->
+
+<chapter id="desk">
+ <title>Il desktop GNOME</title>
+ <sect1>
+  <title>Introduzione</title> 
+  <para>  
+   <indexterm id="idx-a27">
+    <primary>Il Desktop GNOME</primary>
+   </indexterm>
+   Il Desktop GNOME fornisce le funzionalità di qualunque sistema operativo
+   tradizionale per il desktop. È possibile trascinare file, programmi e
+   cartella sul desktop. È possibile inoltre trascinare questi oggetti
+   all'interno di applicazioni compatibili con GNOME, permettendo un facile
+   accesso alle risorse del calcolatore.
+  </para>
+  <important>
+   <title>IMPORTANTE</title>
+   <para>
+    Il Desktop di GNOME è attualmente fornito ad un processo sottostante al File
+    Manager di GNOME. Se, per qualunque motivo, questo processo termina la sua
+    esecuzione è possibile avviare nuovamente il File Manager e il vostro
+    desktop tornerà a funzionare. Se dovrete mai eseguire questa operazione non
+    sarà comunque necessario mantenere aperte le finestre del File Manager.
+   </para>
+  </important>
+ </sect1>
+ <sect1 id="deskuse">
+  <title>Usare il Desktop</title>
+  <para>
+   Usare il desktop è semplice come trascinare gli oggetti che desiderate
+   utilizzare più spesso su di questo. Il desktop predefinito includa una
+   cartella per la vostra directory home (solitamente <filename>/home/[nome
+   utente]</filename>. Inoltre, la finestra predefinta del File Manager apparirà
+   in modo da poter accedere rapidamente ad altre aree del sistema.
+  </para>
+  <para>
+   Una volta che un oggetto si trova sul desktop è possibile eseguire su questo
+   un doppio-click per attivare l'azione predefinta oppure cliccarci sopra con
+   il tasto destro del mouse per visualizzare, in un menu, le possibili azioni
+   associate a quel tipo di oggetto. L'azione predefinta dipende appunto dal
+   tipo di oggetto: se questo è un programma, quel programma verrà avviato, se
+   sono dati, verrà avviato il programma appropriato per gestirli, e se invece è
+   una directory, verrà aperta una finestra del file manager per mostrarne il
+   contenuto.
+  </para>
+  <para>
+   Per utilizzare il drag and drop è necessario avere una applicazione GNOME o
+   Motif compatibile. GNOME è compatibile con il drag and drop di Motif,
+   scoprirete che funzionerà con molte delle applicazione che avete installato.
+  </para>
+  <para>
+   Tutti gli oggetti che si trovano sul desktop vengono inseriti nella seguente
+   directory:
+   <programlisting>
+    <prompt>$</prompt>/home/[nome utente]/.nautilus/desktop/  
+   </programlisting>
+   Questo può risultare utile da ricordare nel caso in cui il vostro desktop
+   contenga un oggetto per il quale non è possibile utilizzare il drag and drop.
+  </para>
+  <para>
+   <indexterm id="idx-a28">
+    <primary>Il Desktop GNOME</primary>
+    <secondary>Periferiche Hardware</secondary>
+   </indexterm>
+   Una volta avviato GNOME è possibile montare il CDROM o il lettore floppy
+   collegati al sistema cliccando con il tasto destro del mouse sul desktop e
+   selezionando il menu <guimenuitem>Dischi</guimenuitem>.  Verrà mostrata una
+   icona sul vostro desktop che vi permetterà di accedere a queste periferiche.
+  </para>
+  <important>
+   <title>IMPORTANTE</title>
+   <para>
+    È necessario avere il permesso per montare le periferiche mostrate sul
+    desktop prima di poterle utilizzare. Se non avete i permessi per montare i
+    dischi qualcuno con accesso root, come il vostro amministratore di sistema,
+    ad esempio, può fornirveli, nel modo che segue. Maggiori informazioni su
+    queste componenti del sistema sono presenti ne <xref linkend="newbies">.
+   </para>
+   <para>
+    <indexterm id="idx-a29">
+     <primary>Montare i dischi</primary>
+    </indexterm>
+    Fornisce accesso agli utenti ordinari per il montaggio/smontaggio dei dischi
+    può essere fatto semplicemente se possedete
+    <application><emphasis>linuxconf</emphasis></application> installato sul
+    sistema. Selezionate il disco al quale desiderate dare accesso nella sezione
+    <guilabel>Access local drive</guilabel>. Nella sezione
+    <guilabel>Options</guilabel> selezionate l'opzione <guilabel>User
+     Mountable</guilabel>. Adesso il disco può essere montato dagli utenti.
+   </para>
+   <para>
+    Se <application><emphasis>linuxconf</emphasis></application> non è
+    disponibile qualcuno con accesso root deve editare il file
+    <filename>/etc/fstab</filename> per aggiungere l'accesso agli utenti. Questo
+    viene eseguito aggiungendo al disco l'attributo
+    <emphasis>user</emphasis>. Ad esempio:
+   </para>
+   <para>
+    Se il vostro file fstab contiene una riga come questa:
+    <programlisting>
+     /dev/cdrom /mnt/cdrom iso9660 exec,dev,ro,noauto 0 0
+    </programlisting>
+    Aggiungete "user" alla quarta colonna:
+    <programlisting>
+     /dev/cdrom /mnt/cdrom iso9660 user,exec,dev,ro,noauto 0 0
+    </programlisting>
+   </para>
+   <para>
+    A seconda del sistema utilizzato o dell'ambiente di lavoro, possono esistere
+    alcuni rischi di sicurezza nel permette agli utenti di montare i
+    dischi. Consultate il vostro amministratore di sistema prima di eseguire
+    queste operazioni.
+   </para>
+  </important>
+ </sect1>
+ <sect1 id="deskareas">
+  <title>Aree del Desktop</title>
+  <para>
+   <indexterm id="idx-a30">
+    <primary>Aree del Desktop</primary>
+   </indexterm>
+   <indexterm id="idx-a31">
+    <primary>Desktop Multipli</primary>
+   </indexterm>
+    Le aree del desktop vi permettono di tenere un sistema molto ben organizzato
+   quando si necessita eseguire più operazioni allo stesso tempo. Proprio come
+   aggiungere un nuovo tavolo da lavoro quando il materiale che avete non entra
+   più su quello che utilizzate normalmente, le aree del desktop vi permettono
+   di spostarvi in una nuova zona per avviare nuovi programmi.
+  </para>
+  <para>
+   GNOME è conscio delle aree del desktop anche se queste sono controllate da un
+   altro programma chiamato 'gestore di finestre'. È possibile impostare il
+   numero di aree del dekstop attraverso la configurazione del gestore di
+   finestre che utilizzate. Se state utilizzando il gestore predefinto oppure se
+   il vostro gestore di finestre fornisce uno strumento di configurazione
+   grafico sarete in grado di avviare questo tramite la capplet Window Manager. 
+  </para>
+  <important>
+   <title>IMPORTANTE</title>
+    <para>
+    La maggior parte dei gestori di finestre vi offrono l'opzione di avere
+    desktop multipli, che sono diversi dalle aree del desktop. Le aree del
+    desktop sono estensioni virtuali di un singolo desktop, mentre i desktop
+    multipli sono separati l'uno dell'altro.
+   </para>
+   <para>
+    Le impostazioni predefinite di GNOME sono per utilizzare le aree del desktop
+    con un solo unico desktop. Qyesto perchè con alcune applicazioni, ad esempio
+    quelle che utilizzano Motif, gli utenti possono trovarsi davanti a problemi
+    di drag and drop attraverso i desktop.
+   </para>
+  </important>
+ </sect1>
+ <sect1 id="deskmenus"
+  <title>Altri menu del Desktop</title>
+  <para>
+   <indexterm id="idx-a32">
+    <primary>Il Desktop GNOME</primary>
+    <secondary>Menu del desktop</secondary>
+   </indexterm>
+   Ci sono alcuni menu dek desktop che possono essere utilizzati in
+   GNOME. Questi menu sono accessibili cliccando con il tasto destro del mouse
+   sul desktop stesso. Verrà visualizzato un menu contestuale con le seguenti
+   voci:
+  </para>
+  <ITEMIZEDLIST mark="bullet">
+   <listitem>
+    <para>
+     <guimenuitem>Nuova finestra</guimenuitem> - Questa voce avvia una nuova
+     finestra del File Manager, che visualizzerà la vostra directory home.
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+     <guimenuitem>Nuova cartella</guimenuitem> - Questa voce crea una nuova
+     cartella sul vostro desktop all'interno della quale è possibile inserire
+     dei file: un modo comodo per ordinare il proprio desktop.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <guimenuitem>Nuovo terminale</guimenuitem> - Questa voce avvia un nuovo
+      Terminale GNOME che automaticamente si posizionerà nella directory
+      <filename>/home/[nome utente]</filename> 
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <guimenuitem>Riordina per nome</guimenuitem> - Questa voce ordina le icone
+     del desktop in ordine alfabetico.
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+     <guimenuitem>Dischi</guimenuitem> - Tramite questo sottomenu si accede
+     alla periferiche rimovibili.
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+     <guimenuitem>Cambia sfondo del desktop</guimenuitem> - Questa voce apre la
+     configurazione dello sfondo del GNOME control-center, che vi permettere di
+     riconfigurare lo sfondo del vostro desktop.
+    </para>
+   </listitem>
+  </itemizedlist>
+ </sect1>
+</chapter>
