@@ -1,4 +1,106 @@
 ________________________________________________________________________________
+GNOME 2.6 Desktop User Guide - L10N Readme
+Written by: Brian O'Casey (brian.casey@sun.com)
+Revision number: 2.8
+Date: 05 March 200
+
+For instructions on how to take screenshots for the UG, see the Screenshot Instructions section in this file. 
+
+Changes between Version 2.7 and 2.8
+===================================
+Fixed the following Bugzilla bugs
+o 133372 RE Nautulis spatial model documentation 
+o BUG 109126
+o Bug 122157
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Manual revision: 2.7
+Date: 05 March 2004
+
+PLAINGNOMESTARTPREFTOOLS.SGM Created new chapter with the list of all the preferences tools available from Applications -> Desktop Preferences
+
+Updated the Makefile.am to reflect this new chapter.
+
+goscustdesk.sgm: 
+=================
+Configuring Keyboard Preferences
+o Added Keyboard Layouts <sect2 id="goscustdesk-100"> 
+o Keyboard Layout Options <sect2 id="goscustdesk-101"> 
+
+o Changed Previewing Fonts to Preview a Font and Added "To add a TrueTpye Font in response to bug 122157
+
+o Updated Customizing Desktop Background (sect1 id="goscustdesk-7)
+o Created new section Setting Your Login Photo (sect1 id="goscustdesk-95)
+
+gosnautilus.sgm:
+=================
+o Restructured chapter to cater for new file system
+o Added Browser File manager and Object File Manager 
+o Created New Section To set List Columns Preferences (sect3 id="gosnautilus-490)
+o Created New section To Access Network Servers sect3 id="gosnautilus-508)
+o Created New section To Add a Network Server sect3 id="gosnautilus-509)
+o Created a new section To Open a Parent Folder sect2 id="gosnautilus-511
+o Created a new section To Create a Document sect2 id="gosnautilus-511
+
+
+goseditmainmenu.sgm
+=================
+o Changed Actions menu section. (removed Lock Screen and changed Open Recent to Recent Documents 
+o deleted open-main-menu in goseditmainmenu.sgm
+ 
+gosdeskback.sgm 
+=================
+o Added info to end of To add a Launcher to the Desktop in response to bug 122157
+o Added naut_computer_launcher icon to Table 8-1 Functions of Default Desktop Objects 
+o Added new Table for community in Using the Desktop Menu section.
+o Added com_file_manager_menu to Using the Desktop Menu section
+
+gospanel.sgm
+=============
+o Created Community Only Marked section for Desktop Buttom sect2 id="gospanel-564 
+o Placed Minimise Windows TITLE Button in MercuryOnly marked section.
+o Removed the footprint-icon from the Menus section
+  
+gosmetacity.sgm
+==================
+o Placed marked section in the windows-menu graphic in the Window Menu section
+o Made the Roll Up table row in Table 6-2 a Mercury ONLY marked section.
+o Included On Top as a Community Only marked section in Table 6-2.
+o Added two additional rows to Table ie: Move to Workspace Right and Move to Another Workspace.
+o Renamed "Using the Top Edge Panel to Work With Windows" to "Window
+Selector Applet" and rewrote the text to refer explicitly to the applet,
+rather than the icon what happens to be at top right of the panel. Also plaCED IN A COMMUNITY ONLY SECTION.
+
+
+
+
+New screenshots:
+------------------
+naut_browser_filesystem
+naut_browser_window
+naut_computer_contents
+com_file_manager_window in gosdeskback.sgm
+naut_computer_launcher (icon)
+
+
+Updated screenshots:
+----------------------
+None
+
+Deleted Screenshots
+=====================
+open-main-menu in goseditmainmenu.sgm
+typical-anno-desktop in gosoverview.sgm
+naut-icon-view-window in gosoverview.sgm
+footprint-icon in gosoverview.sgm
+naut-iconview-anno-window in gosnautilus.sgm
+naut-viewpane-text-window in gosnautilus.sgm
+naut-listview-window in gosnautilus.sgm
+naut-audioview-window in gosnautilus.sgm
+window-menu in gosmetacity.sgm
+
+========================================================================
+========================================================================
 GNOME 2.4 Desktop User Guide - L10N Readme
 Written by: Eugene O'Connor (eugene.oconnor@sun.com)
 Revision number: 2.7
