@@ -3,7 +3,7 @@ docname = user-guide
 lang = ro
 extraomf =  gosbasic-ro.omf goscustaccess-ro.omf goscustdesk-ro.omf goscustlookandfeel-ro.omf gosdeskback-ro.omf goseditmainmenu-ro.omf gosmetacity-ro.omf gosnautilus-ro.omf gosoverview-ro.omf gospanel-ro.omf gosstartsession-ro.omf
 omffile = user-guide-ro.omf
-entities = legal.xml front.xml gosbasic.xml goscustaccess.xml goscustdesk.xml goscustlookandfeel.xml gosdeskback.xml goseditmainmenu.xml gosmetacity.xml gosnautilus.xml gosoverview.xml gospanel.xml gosstartsession.xml part1.xml part2.xml wgoscustdesk.xml wgoscustlookandfeel.xml wgosnautilus.xml wgospanel.xml glossary.xml wgosbasic.xml wgosmetacity.xml wgosoverview.xml wgoseditmainmenu.xml wgoscustaccess.xml wgosdeskback.xml wgosstartsession.xml
+entities = legal.xml front.xml glossary.xml gosbasic.xml goscustaccess.xml goscustdesk.xml goscustlookandfeel.xml gosdeskback.xml goseditmainmenu.xml gosmetacity.xml gosnautilus.xml gosoverview.xml gospanel.xml gosstartsession.xml part1.xml part2.xml wgosbasic.xml wgoscustaccess.xml wgoscustdesk.xml wgoscustlookandfeel.xml wgosdeskback.xml wgoseditmainmenu.xml wgosmetacity.xml wgosnautilus.xml wgosoverview.xml wgospanel.xml wgosstartsession.xml
 include $(top_srcdir)/xmldocs.make
 omf_dest_dir=$(datadir)/omf/$(docname)
 #
