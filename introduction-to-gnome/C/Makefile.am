@@ -1,3 +1,5 @@
+omffiles=gnome-intro-C.omf
+omf_dir=$(top_srcdir)/omf-install
 
 gnome_user_docs_intro_helpdir = $(datadir)/gnome/help/gnome-intro/C
 
@@ -37,7 +39,13 @@ manual-pdf: gnome-intro.pdf
 manual-rtf: gnome-intro.rtf
 manual-all: manual-html manual-ps manual-pdf manual-rtf
 
-all: index.html
+all: index.html omf
+
+omf: $(omffiles)
+	-for omffile in $(omffiles); do \
+	  which scrollkeeper-preinstall >/dev/null 2>&1 && scrollkeeper-preinstall $(gnome_user_docs_intro_helpdir)/gnome-intro.sgml $$omffile $(omf_dir)/$$omffile; \
+	done
+
 
 clean:
 	rm -rf gnome-intro
@@ -81,4 +89,5 @@ dist-hook: all
 	cp gnome-intro/*.css $(distdir)/gnome-intro
 	cp gnome-intro/figs/*.png $(distdir)/gnome-intro/figs
 	cp gnome-intro/stylesheet-images/*.gif $(distdir)/gnome-intro/stylesheet-images 
+	cp $(omffiles) $(distdir)
 
