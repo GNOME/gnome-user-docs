@@ -1,10 +1,19 @@
 ________________________________________________________________________________
 GNOME 2.4 Desktop User Guide - L10N Readme
 Written by: Eugene O'Connor (eugene.oconnor@sun.com)
-Revision number: 2.6
-Date: 12 August 2003
+Revision number: 2.7
+Date: 08 September 2003
 
 For instructions on how to take screenshots for the UG, see the Screenshot Instructions section in this file. 
+
+Changes between Version 2.6 and 2.7
+===================================
+Fixed Bugzilla bug 119799. 
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Manual revision: 2.6
+Date: 12 August 2003
 
 Changes between Version 2.5 and 2.6
 ===================================
