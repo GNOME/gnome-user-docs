@@ -5,12 +5,23 @@
 <!-- Maintained for 2.8 compatibility -->
 <anchor id="gosoverview-1"/>
 
+<!-- MOVE THESE ANCHORS -->
+<!-- Desktop Overview / To Find Out More -->
+<anchor id="gosoverview-12"/>
+<!-- Desktop Overview / To Find Out More / About GNOME Desktop Topics -->
+<anchor id="gosoverview-31"/>
+<!-- Desktop Overview / To Find Out More / About Applets -->
+<anchor id="gosgetstarted-33"/>
+<!-- Desktop Overview / To Find Out More / About Applications -->
+<anchor id="gosgetstarted-35"/>
+
+
 <highlights>
-  <para>This chapter introduces you to the features and main components
-  of the GNOME Desktop. Before you start to use the GNOME Desktop read this
-  chapter to familiarize yourself with the various features, and how the main
-  components work. The GNOME Desktop is very configurable, so this chapter describes
-  the typical default configuration, covering the following topics.</para>
+  <para>This chapter introduces you to the features and main components of the
+  desktop. You should read this chapter to familiarize yourself with the various
+  features, and how the main components work.  This chapter describes the default
+  configuration.  Your vendor or system administrator may have configured your
+  desktop to look different than what is described here.</para>
 </highlights>
 
 <section id="overview-intro">
@@ -27,417 +38,107 @@
   you should see a default startup screen, with panels, windows,
   and various icons.</para>
 
-  <para>The major components of the GNOME Desktop are as follows:</para>
+  <para>The major components of the desktop are as follows:</para>
+
+  <variablelist>
+    <varlistentry>
+      <term>Panels</term>
+      <listitem><para>Panels are usually located along the edges of the screen,
+      although they can be configured to float on the desktop.  Panels can
+      contain menus, launchers, and various other tools.  Panels can also
+      contain small utility applications, called
+      <firstterm>panel applets</firstterm>.  For example, you can configure
+      your panel to display the current weather for your location.  For more
+      information on panels, see <xref linkend="panels"/>.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Windows</term>
+      <listitem><para>Most applications run inside of one or more windows.
+      You can display multiple windows on your desktop at the same time.
+      Windows can be resized and moved around to accomodate your workflow.
+      Each window has a <firstterm>titlebar</firstterm> at the top with
+      buttons which allow you to minimize, maximize, and close the window.
+      For more information on working with windows, see
+      <xref linkend="overview-windows"/>.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Workspaces</term>
+      <listitem><para>You can subdivide your desktop into separate
+      <firstterm>workspaces</firstterm>.  Each workspace can contain
+      separate windows, allowing you to group related tasks together.
+      For more information on working with workspaces, see
+      <xref linkend="overview-workspaces"/>.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>File Manager</term>
+      <listitem><para>The <application>Nautilus</application> file manager
+      provides access to your files, folders, and applications.  You can
+      manage the contents of folders in the file manager and open the files
+      in the appropriate applications.  See <xref linkend="nautilus"/> for
+      more information.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Desktop</term>
+      <listitem><para>The desktop is behind all of the other components on the
+      desktop.  You can place objects on the desktop to access your files and
+      directories quickly, or to start applications that you use often.  See
+      <xref linkend="nautilus-desktop"/> for more information.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Preferences</term>
+      <listitem><para>You can customize your desktop using the desktop
+      <firstterm>preference tools</firstterm>.  Each tool controls
+      a particular part of the behavior of the desktop.  The preference
+      tools can be found in the <guimenu>Preferences</guimenu> submenu
+      of the <guimenu>Desktop</guimenu> top-level menu on your panel.
+      See <xref linkend="prefs"/> for more information on the various
+      preference tools.</para></listitem>
+    </varlistentry>
+  </variablelist>
+
+  <para>Your vendor or system administrator can make configuration changes to
+  suit your needs, so your desktop might not match exactly what is described
+  in this manual.  Nevertheless, this manual provides a useful introduction
+  to using the various components of your desktop.</para>
+</section>
+
+<section id="overview-windows">
+  <title>Windows</title>
+
+  <!-- Maintained for 2.8 compatibility -->
+  <anchor id="gosoverview-18"/>
+
+  <indexterm>
+    <primary>windows</primary>
+    <secondary>overview</secondary>
+  </indexterm>
+
+  <para>Each application can run inside of one or more windows.  You can
+  display multiple windows at the same time on your desktop.  Each window
+  has a frame and titlebar which allow you to control the window.</para>
+
+  <para>The following sections describe the types of windows and how you
+  can interact with them.</para>
+
+  <section id="windows-types">
+    <title>Types of Windows</title>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosoverview-16"/>
+
+    <remark>This section needs work.</remark>
+
+    <para>The GNOME Desktop features the following types of window:</para>
+    
     <variablelist>
       <varlistentry>
-        <term>Panels</term>
+        <term>Application windows</term>
         <listitem>
-          <para>Panels are areas in the GNOME Desktop from which you
-          can access all of your system applications and menus. Panels are very
-          configurable.</para>
-          <para>A particularly important panel is the top edge panel. The top
-          edge panel includes the <application>Menu Bar</application>. The
-          <application>Menu Bar</application> contains two special menus, as
-          follows:</para>
-          <itemizedlist>
-            <listitem><para><guimenu>Applications</guimenu> menu: Contains all
-            applications and configuration tools. This menu also includes the
-            file browser and the help browser.</para></listitem>
-            <listitem><para><guimenu>Actions</guimenu> menu: Contains various
-            commands that perform various functions, for example
-            <guimenuitem>Search for Files</guimenuitem> and <guimenuitem>Log
-            Out</guimenuitem>.</para></listitem>
-          </itemizedlist>
-          <para>Click on the <guibutton>Window Selector</guibutton> icon at the
-          extreme right of the top edge panel to display a list of all open
-          windows.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Menus</term>
-        <listitem>
-          <para>You can access all GNOME Desktop functions through menus. You
-          can use the <guimenu>Applications</guimenu> menu to access almost all
-          of the standard applications, commands, and configuration options.
-          You can access the <guimenu>Applications</guimenu> menu from the
-          <guimenu>Main Menu</guimenu> and from the <application>Menu
-          Bar</application> applet.  You can add the <guimenu>Main
-          Menu</guimenu> and the <application>Menu Bar</application>
-          applet to your panels.</para>
-          <para>The <application>Menu Bar</application> applet contains an
-          <guimenu>Actions</guimenu> menu.  The <guimenu>Actions</guimenu>
-          menu contains commands that perform various functions, for example
-          <guimenuitem>Search for Files</guimenuitem> and <guimenuitem>Log
-          Out</guimenuitem>.  The items in the <guimenu>Actions</guimenu>
-          menu are at the top level of the
-          <guimenu>Main Menu</guimenu>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Windows</term>
-        <listitem><para>You can display many windows at the same time.  You
-        can run different applications in each window. The window manager
-        provides frames and buttons for windows. The window manager enables
-        you to perform standard actions such as move, close, and resize
-        windows.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Workspaces</term>
-        <listitem><para>You can subdivide the GNOME Desktop into separate
-        <firstterm>workspaces</firstterm>. A workspace is a discrete area
-        in which you can work. You can specify the number of workspaces
-        in the GNOME Desktop. You can switch to a different workspace,
-        but you can only display one workspace at a time.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><application>Nautilus</application> file manager</term>
-        <listitem>
-          <para>The <application>Nautilus</application> file manager
-          provides an integrated access point to your files and
-          applications.  You can manage the contents of folders in
-          the file manager and open the files in the appropriate
-          applications.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Desktop</term>
-        <listitem>
-          <para>The desktop is behind all of the other components on the
-          desktop.  The desktop is an active component of the user interface.
-          You can place objects on the desktop to access your files and
-          directories quickly, or to start applications that you use often.
-          You can also right-click on the desktop to open a menu.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Preferences</term>
-        <listitem><para>The GNOME Desktop contains dedicated
-        <firstterm>preference tools</firstterm>. Each tool controls
-        a particular part of the behavior of the GNOME Desktop.  To
-        start a preference tool, choose <menuchoice>
-        <guimenu>Applications</guimenu><guimenuitem>Desktop
-        Preferences</guimenuitem></menuchoice>. Choose the item
-        that you want to configure from the submenus.</para></listitem>
-      </varlistentry>
-    </variablelist>
-    <para>The components of the GNOME Desktop are interoperable. Usually, you
-    can perform the same action in several different ways. For example, you can
-    start applications from panels, from menus, or from the desktop.</para>
-    <para>Your system administrator can make configuration changes to suit your
-    needs, so that the GNOME Desktop that you use might not be exactly the same
-    as described in this chapter. Nevertheless, this chapter provides a useful
-    quick guide to how to work with the GNOME Desktop.</para>
-  </section>
-  <section id="gosoverview-502">
-    <title>Panels</title>
-    <indexterm>
-      <primary>panels</primary>
-      <secondary>overview</secondary>
-    </indexterm>
-    <para>You can add or delete panels at any time. When you start a session for
-the first time, the GNOME Desktop contains at least one panel. </para>
-    <para>You can perform the following actions with panels:</para>
-    <itemizedlist>
-      <listitem>
-        <para>Create panels.</para>
-      </listitem>
-      <listitem>
-        <para>Delete panels.</para>
-      </listitem>
-      <listitem>
-        <para>Hide panels.</para>
-      </listitem>
-      <listitem>
-        <para>Add objects to panels.</para>
-      </listitem>
-      <listitem>
-        <para>Manipulate panel objects.</para>
-      </listitem>
-    </itemizedlist>
-    <section id="gosoverview-26">
-      <title>To Create Panels</title>
-      <para>To add a panel, right-click on a vacant space on any panel, then choose <guimenuitem>New Panel</guimenuitem>. The new panel is added to the GNOME Desktop. The
-new panel contains no objects. You can customize the new panel to suit your
-preferences. You can add objects to the panel to fit your own requirements.
-You can also change the background of the panel. You can create as many panels
-as you want.</para>
-    </section>
-    <section id="gosoverview-508">
-      <title>To Delete Panels</title>
-      <para>To delete a panel, right-click on the panel then choose <guimenuitem>Delete This Panel</guimenuitem>.</para>
-    </section>
-    <section id="gosoverview-24">
-      <title>To Hide Panels</title>
-      <para>Panels can have hide buttons at each end of the panel. You click on
-the hide buttons to hide or show the panel.</para>
-    </section>
-    <section id="gosoverview-4">
-      <title>To Add Objects to Panels</title>
-      <para>A panel can hold several types of objects. The panel in <xref linkend="gosoverview-FIG-28"/>
-contains each type of panel object. </para>
-      <figure id="gosoverview-FIG-28">
-        <title>A Panel With Various Panel Objects</title>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/sample_anno_panel.png" format="PNG"/>
-            </imageobject>
-            <textobject>
-              <phrase>A panel with various panel objects. Callouts: Calculator launcher, Menu, CD Player applet, Drawer, Lock button.</phrase>
-            </textobject>
-          </mediaobject>
-        </screenshot>
-      </figure>
-      <para>You can add any of the following objects to all types of panels:</para>
-      <variablelist>
-        <varlistentry>
-         
-          <term>Applets</term>
-          <listitem>
-            <para><firstterm>Applets</firstterm> are small, interactive
-            applications that reside within a panel, for example <application>CD
-            Player</application> in <xref linkend="gosoverview-FIG-28"/>.
-            Each applet has a simple user interface that you can operate with
-            the mouse or keyboard. The following applets appear in your panels
-            by default:</para>
-
-            <itemizedlist>
-              <listitem><para><application>Menu Bar</application>: Provides
-              access to the <guimenu>Applications</guimenu> menu and the
-              <guimenu>Actions</guimenu> menu. You can use the menus
-              to access your applications, preference tools, and other
-              tasks.</para></listitem>
-
-              <listitem><para><application>Clock</application>: Displays the time.
-              You can also configure <application>Clock</application> to display
-              the date.</para></listitem>
-
-              <listitem><para><application>Window Selector</application>: Lists
-              all your open windows. To give focus to a window, click on the
-              window selector icon at the extreme right of the top edge panel,
-              then choose the window.</para></listitem>
-
-              <listitem><para><application>Window List</application>: Displays
-              a button for each window that is open. You can click on a window
-              list button to minimize and restore windows. By default,
-              <application>Window List</application> appears in the edge panel
-              at the bottom of the screen.</para></listitem>
-
-              <listitem><para><application>Workspace Switcher</application>:
-              Displays a visual representation of your workspaces. You can use
-              <application>Workspace Switcher</application> to switch between
-              workspaces. By default, <application>Workspace
-              Switcher</application> appears in the edge panel
-              at the bottom of the screen.</para></listitem>
-            </itemizedlist>
-
-            <para>To add an applet to a panel, right-click on a vacant space
-            on the panel, then choose <guimenuitem>Add to Panel</guimenuitem>.
-            Choose the applet from the <application>Add to the panel</application>
-            dialog.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Launchers</term>
-          <listitem>
-            <para>A <firstterm>launcher</firstterm> starts a particular
-            application, executes a command, or opens a file. The calculator
-            icon in <xref linkend="gosoverview-FIG-28"/> is a launcher for
-            the <application>Calculator</application> application.  A launcher
-            can reside in a panel or in a menu. Click on the launcher to perform
-            the action that is associated with the launcher.</para>
-
-            <para>You can create your own launchers for applications.  For
-            example, you can create a launcher for a word processor application
-            that you use frequently, and place the launcher in a panel for
-            convenient access. To add a new launcher to a panel, right-click
-            on a vacant space on the panel, then choose <menuchoice>
-            <guimenu>Add to Panel</guimenu><guimenuitem>Launcher</guimenuitem>
-            </menuchoice>.</para>
-
-            <para>Alternatively, to add a launcher from a menu, right-click
-            on a vacant space on the panel, then choose <guimenuitem>Add
-            to Panel</guimenuitem>.  Select <guilabel>Application
-            Launcher</guilabel> in the <application>Add to the
-            panel</application> dialog and click <guibutton>Forward</guibutton>.
-            On the following screen, select the application launcher to add
-            and click <guibutton>Add</guibutton>.</para></listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Action buttons</term>
-          <listitem>
-            <para>You can add buttons to your panels to provide quick access
-            to common actions.  You can add the following buttons to your
-            panels:</para>
-            <itemizedlist>
-              <listitem><para><guibutton>Force Quit</guibutton>: Use this
-              button to terminate applications that do not respond to your
-              commands.</para></listitem>
-
-              <listitem><para><guibutton>Lock</guibutton>: Click on this button
-              to lock your screen.  The lock icon in <xref
-              linkend="gosoverview-FIG-28"/> is the <guibutton>Lock</guibutton>
-              button.</para></listitem>
-
-              <listitem><para><guibutton>Log Out</guibutton>: Click on this
-              button to end your session</para></listitem>
-
-              <listitem><para><guibutton>Run</guibutton>: Click on this button
-              to open the <guilabel>Run Application</guilabel> dialog, from
-              which you can run commands.</para></listitem>
-
-              <listitem><para><guibutton>Screenshot</guibutton>: Click on this
-              button to take a screenshot of the screen.</para></listitem>
-
-              <listitem><para><guibutton>Search</guibutton>: Click on this
-              button to start the <application>Search Tool</application>
-              application, from which you can search for files.</para></listitem>
-
-              <listitem><para><guibutton>Show Desktop</guibutton>: Click
-              on this button to minimize all windows and show the
-              desktop.</para></listitem>
-            </itemizedlist>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Menus</term>
-          <listitem>
-            <para>You can access all GNOME Desktop functions through menus.
-            To open a menu from a panel, click on the icon that represents
-            the menu. To open a menu from the <application>Menu
-            Bar</application>, click on the text that represents
-            the menu.</para>
-
-            <para>Menus that you add to your panels are represented by an
-            icon with an arrow. The arrow indicates that the icon represents
-            a menu. For example, see the menu icon in <xref
-            linkend="gosoverview-FIG-28"/>.</para>
-
-            <para>You can add the <guimenu>Main Menu</guimenu> to any of your
-            panels. To add the <guimenu>Main Menu</guimenu> to a panel,
-            right-click on a vacant space on the panel, then choose
-            <guimenuitem>Add to Panel</guimenuitem>.  In the
-            <application>Add to the panel</application> dialog,
-            select <guilabel>Main Menu</guilabel> and click
-            <guibutton>Add</guibutton>.</para>
-
-            <para>You can also add the <application>Menu Bar</application>
-            to any of your panels. To add the <application>Menu Bar</application>
-            to a panel, right-click on a vacant space on the panel, then choose
-            <guimenuitem>Add to Panel</guimenuitem>.  In the
-            <application>Add to the panel</application> dialog,
-            select <guilabel>Menu Bar</guilabel> and click
-            <guibutton>Add</guibutton>.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Drawers</term>
-          <listitem>
-            <para><firstterm>Drawers</firstterm> are sliding extensions to
-            a panel that you can open or close from a drawer icon, as shown
-            in <xref linkend="gosoverview-FIG-28"/>.  Drawers can help you to
-            organize your work when you run a lot of applications
-            simultaneously.  You can place all the same functional elements
-            in a drawer that you can put in any other type of panel.</para>
-
-            <para>To add a drawer to a panel, right-click on a vacant space
-            on the panel, then choose <guimenuitem>Add to Panel</guimenuitem>.
-            In the <application>Add to the panel</application> dialog,
-            select <guilabel>Drawer</guilabel> and click
-            <guibutton>Add</guibutton>.</para>
-
-            <para>To open a drawer click on the drawer. To close a drawer
-            click on the drawer again.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
-    <section id="gosoverview-21">
-      <title>To Manipulate Panel Objects</title>
-      <para>You can manipulate panel objects in the following ways:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Move objects within a panel, or to another panel.</para>
-          <para>You can move any object to another location in the panel. You can also
-move an object from one panel to another panel. Use the middle mouse button
-to drag the panel object to the new location.</para>
-        </listitem>
-        <listitem>
-          <para>Copy menu items to a panel.</para>
-          <para>Drag the item from the menu to the panel. Alternatively, if the menu
-item is a launcher right-click on the menu item, then choose <guimenuitem>Add this launcher to panel</guimenuitem>.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-  </section>
-  <section id="gosoverview-42">
-    <title>Menus</title>
-    <indexterm>
-      <primary>menus</primary>
-      <secondary>overview</secondary>
-    </indexterm>
-    <para>You can access all GNOME Desktop functions through menus. You can
-    access your menus from the following GNOME Desktop components:</para>
-    <variablelist>
-      <varlistentry>
-        <term><application>Main Menu</application></term>
-        <listitem>
-          <para>The <application>Main Menu</application> contains the
-          <guimenu>Applications</guimenu> menu, and various other functions.
-          You can use the <guimenu>Applications</guimenu> menu to access
-          almost all of the standard applications, commands, and configuration
-          options.</para>
-          <para>To add the <guimenu>Main Menu</guimenu> to a panel, right-click
-          on a vacant space on the panel, then choose <guimenuitem>Add to
-          Panel</guimenuitem>.  In the <application>Add to the
-          panel</application> dialog, select <guilabel>Main Menu</guilabel>
-          and click <guibutton>Add</guibutton>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><application>Menu Bar</application></term>
-        <listitem>
-          <para>The <application>Menu Bar</application> contains
-          <guimenu>Applications</guimenu> and <guimenu>Actions</guimenu> menus.
-          You can use the <guimenu>Applications</guimenu> menu and the
-          <guimenu>Actions</guimenu> menu to access almost all of the standard
-          applications, commands, and configuration options.</para>
-          <para>To add the <guimenu>Main Menu</guimenu> to a panel, right-click
-          on a vacant space on the panel, then choose <guimenuitem>Add to
-          Panel</guimenuitem>.  In the <application>Add to the
-          panel</application> dialog, select <guilabel>Menu Bar</guilabel>
-          and click <guibutton>Add</guibutton>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Panels</term>
-        <listitem>
-          <para>You can add as many additional menus as you want to any of your
-          panels.  To open a menu that you add to a panel, click on the menu
-          icon on the panel.  You can perform other actions on your menus,
-          such as copy menu items to panels.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
-  </section>
-
-  <section id="gosoverview-18">
-    <title>Windows</title>
-    <indexterm>
-      <primary>windows</primary>
-      <secondary>overview</secondary>
-    </indexterm>
-    <para>You can display many windows at the same time in the GNOME Desktop.
-    Each window has a frame. The window frame contains active control elements
-    that you can use to work with the window.</para>
-
-    <section id="gosoverview-16">
-      <title>Types of Windows</title>
-      <para>The GNOME Desktop features the following types of window:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Application windows</term>
-          <listitem>
             <para>When you run an application, a frame usually borders the
             window.  The top edge of the application window contains a titlebar.
             The titlebar contains buttons that you can use to work with the
@@ -445,11 +146,11 @@ item is a launcher right-click on the menu item, then choose <guimenuitem>Add th
             perform actions such as open the <guimenu>Window Menu</guimenu>,
             or close the window. The <guimenu>Window Menu</guimenu> provides
             commands that you can perform on the window.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Dialog windows</term>
-          <listitem>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Dialog windows</term>
+        <listitem>
             <para>Dialog windows are associated with interactive processes.
             A dialog window consists of the window frame, and a single
             interactive pane that provides information and controls for the
@@ -457,110 +158,126 @@ item is a launcher right-click on the menu item, then choose <guimenuitem>Add th
             window as a dialog. The frame of a dialog window contains buttons
             that enable you to open the <guimenu>Window Menu</guimenu>, or to
             close the dialog window.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </section>
 
-    <section id="gosoverview-32">
-      <title>To Manipulate Windows</title>
-      <para>You use the frame of an application window or dialog window to perform
-various actions with the window. Most of the control elements are located
-on the top edge of the window frame. <xref linkend="gosoverview-FIG-33"/> shows
-the top edge of a frame for a typical application window.</para>
-      <figure id="gosoverview-FIG-33">
-        <title>Top Edge of Frame for a Typical Application Window</title>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
-            </imageobject>
-            <textobject>
-              <phrase>Top edge of application window frame. Callouts: Window Menu button, Titlebar, Minimize, Maximize, Close Window buttons.</phrase>
-            </textobject>
-          </mediaobject>
-        </screenshot>
-      </figure>
-      <para>The active control elements of the window frame are as follows: </para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="41.65*"/>
-          <colspec colname="colspec1" colwidth="58.35*"/>
-          <thead>
-            <row rowsep="1">
-              <entry valign="top">
-                <para>Control Element</para>
-              </entry>
-              <entry valign="top">
-                <para>Description </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><guibutton>Window Menu</guibutton>
-button</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Click on
-the <guibutton>Window Menu</guibutton> button to open the <guimenu>Window
-Menu</guimenu>. </para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Titlebar</para>
-              </entry>
-              <entry valign="top">
-                <para>You can use the titlebar to move and shade the window. </para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para><guibutton>Minimize</guibutton> button</para>
-              </entry>
-              <entry valign="top">
-                <para>Click on the <guibutton>Minimize</guibutton> button
-to minimize the window. </para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para><guibutton>Maximize</guibutton> button</para>
-              </entry>
-              <entry valign="top">
-                <para>You can use the <guibutton>Maximize</guibutton>
-button to maximize and restore the window.</para>
-                <para>To maximize a window
-click on the <guibutton>Maximize</guibutton> button. To restore the window
-click on the <guibutton>Maximize</guibutton> button again. </para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para><guibutton>Close Window</guibutton> button</para>
-              </entry>
-              <entry valign="top">
-                <para>Click on the <guibutton>Close Window</guibutton> button to close the window. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0">
-                <para>Border</para>
-              </entry>
-              <entry colname="colspec1">
-                <para>Right-click on the border to open the <guimenu>Window Menu</guimenu>.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para>To change the size of windows grab the border of the window, but not
-the titlebar. Drag the border until the window is the size that you require.</para>
-    </section>
+  <section id="windows-manipulating">
+
+    <title>Manipulating Windows</title>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosoverview-32"/>
+
+    <remark>This section needs work.</remark>
+
+    <para>You use the frame of an application window or dialog window to perform
+    various actions with the window. Most of the control elements are located on
+    the top edge of the window frame. <xref linkend="fig-titlebar-anno-window"/>
+    shows the top edge of a frame for a typical application window.</para>
+
+    <figure id="fig-titlebar-anno-window">
+      <title>Titlebar for a Typical Application Window</title>
+      <!-- Maintained for 2.8 compatibility -->
+      <anchor id="gosoverview-FIG-33"/>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Titlebar of application window frame. Callouts: Window Menu
+            button, Titlebar, Minimize, Maximize, Close Window buttons.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+    <para>The active control elements of the window frame are as follows: </para>
+
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="41.65*"/>
+        <colspec colname="colspec1" colwidth="58.35*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Control Element</para>
+            </entry>
+            <entry valign="top">
+              <para>Description </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><guibutton>Window Menu</guibutton> button</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Click on the <guibutton>Window Menu</guibutton> button to
+              open the <guimenu>Window Menu</guimenu>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Titlebar</para>
+            </entry>
+            <entry valign="top">
+              <para>You can use the titlebar to move and roll up the window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><guibutton>Minimize</guibutton> button</para>
+            </entry>
+            <entry valign="top">
+              <para>Click on the <guibutton>Minimize</guibutton> button to
+              minimize the window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><guibutton>Maximize</guibutton> button</para>
+            </entry>
+            <entry valign="top">
+              <para>You can use the <guibutton>Maximize</guibutton>
+              button to maximize and restore the window.</para>
+              <para>To maximize a window click on the
+              <guibutton>Maximize</guibutton> button. To restore the window
+              click on the <guibutton>Maximize</guibutton> button again.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><guibutton>Close Window</guibutton> button</para>
+            </entry>
+            <entry valign="top">
+              <para>Click on the <guibutton>Close Window</guibutton> button to
+              close the window. </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>Border</para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Right-click on the border to open the <guimenu>Window
+              Menu</guimenu>.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+
+    <para>To change the size of windows grab the border of the window,
+    but not the titlebar. Drag the border until the window is the size
+    that you require.</para>
+  </section>
+
     <section id="gosoverview-20">
-      <title>To Give Focus to a Window</title>
+      <title>Giving Focus to a Window</title>
       <para>A window that has focus can receive input from the mouse and the keyboard.
 Only one window can have focus at a time. The window that has focus has a
 different appearance than other windows. </para>
@@ -637,7 +354,10 @@ Switcher</application> display.</para>
   </section>
   <section id="overview-workspaces">
     <title>Workspaces</title>
+
+    <!-- Maintained for 2.8 compatibility -->
     <anchor id="gosoverview-39"/>
+
     <indexterm>
       <primary>workspaces</primary>
       <secondary>overview</secondary>
@@ -702,166 +422,6 @@ is displayed. Use the <guilabel>Number of workspaces</guilabel> spin box to
 specify the number of workspaces that you require.</para>
     </section>
   </section>
-  <section id="gosoverview-56">
-    <title>File Manager</title>
-    <indexterm>
-      <primary>Nautilus file manager</primary>
-      <see>file manager</see>
-    </indexterm>
-    <indexterm>
-      <primary>file manager</primary>
-      <secondary>overview</secondary>
-    </indexterm>
-    <para>The <application>Nautilus</application> file manager provides an
-    integrated access point to your files, applications, FTP sites, and
-    URIs.</para>
-    <para>The file manager enables you to do the following:</para>
-    <variablelist>
-      <varlistentry>
-        <term>View files and folders</term>
-        <listitem><para>You can view your files and folders as icons or as
-        a list.  You can use the file manager to launch applications to
-        view or edit your files.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Manage your files and folders</term>
-        <listitem><para>You can use the file manager to create, move, copy,
-        rename, and remove files and folders.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Run scripts</term>
-        <listitem><para>You can run scripts from the file manager,
-        and you can select files and folders on which to run your
-        scripts.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Customize your files and folders</term>
-        <listitem>
-          <para>You can add emblems to your files and folders to
-          indicate particular states. For example, you can add an
-          <guilabel>Important</guilabel> emblem to a file to indicate
-          that the file is important. You can also customize folders
-          in the following ways:</para>
-
-          <itemizedlist>
-            <listitem><para>Add a note to a folder.</para></listitem>
-            <listitem><para>Specify a custom background or pattern for a
-            folder.</para></listitem>
-            <listitem><para>Specify a zoom setting for a folder.</para></listitem>
-          </itemizedlist>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Open special <firstterm>Uniform Resource Identifiers</firstterm>
-        (URIs)</term>
-        <listitem><para>The GNOME Desktop contains special URIs that enable
-        you to access particular functions from the file manager. For example,
-        to access the preference tools, you can access the
-        <systemitem role="protocol">preferences:///</systemitem>
-        URI in the file manager.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Write CDs</term>
-        <listitem><para>The file manager provides a special location where
-        you can copy files and folders that you want to write to a CD. You
-        can write the contents of the location to a CD easily.</para></listitem>
-      </varlistentry>
-    </variablelist>
-    <para>The file manager also creates the desktop.</para>
-
-    <section id="gosoverview-58">
-      <title>To Open Files from the File Manager</title>
-      <para>To navigate to the file that you want to open, double-click on the <guilabel>Home</guilabel> object on the desktop. A file object window opens.  To navigate
-to the folder where the file that you want to open resides, double-click on
-the folder icons in the file object window. When the file that you want to
-open is displayed, double-click on the file icon to open the file in an application.</para>
-    </section>
-    <section id="gosoverview-57">
-      <title>To Move Files Between Folders</title>
-      <para>You can move files between folders by opening two or more file
-      manager windows.  Drag the files from one window to the other. </para>
-    </section>
-  </section>
-
-  <section id="gosgetstarted-11">
-    <title>Desktop and Desktop Objects</title>
-    <indexterm>
-      <primary>Nautilus desktop</primary>
-      <see>desktop</see>
-    </indexterm>
-    <indexterm>
-      <primary>desktop</primary>
-      <secondary>overview</secondary>
-    </indexterm>
-    <para>The desktop is an active component of the user interface. You can use
-the desktop to perform the following actions:</para>
-    <itemizedlist>
-      <listitem>
-        <para>Start your applications, and open your files and folders. </para>
-        <para>You can add <firstterm>desktop objects</firstterm> for convenient access
-to the files, folders, and applications that you use frequently. For example,
-you add a launcher for an application that you use often.</para>
-      </listitem>
-      <listitem>
-        <para>Open the <guimenu>Desktop</guimenu> menu.</para>
-        <para>Right-click on the desktop to open the <guimenu>Desktop</guimenu> menu.
-You can use the <guimenu>Desktop</guimenu> menu to perform actions on the
-desktop.</para>
-      </listitem>
-    </itemizedlist>
-    <para>The file manager manages the desktop.</para>
-    <section id="gosoverview-29">
-      <title>To Open Desktop Objects</title>
-      <para>To open an object from the desktop, double-click on the object. You
-can set your preferences in a <application>Nautilus</application> window so
-that you click once on an object to execute the default action.</para>
-    </section>
-    <section id="gosoverview-19">
-      <title>To Add Objects to the Desktop</title>
-      <para>You can add desktop objects for convenient access to files, folders,
-and applications that you use frequently. You can add objects to your desktop
-in the following ways:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Use the <guimenu>Desktop</guimenu> menu to add a launcher
-to the desktop.</para>
-        </listitem>
-        <listitem>
-          <para>Drag an object from a file manager window to the desktop.
-For example, you can create a symbolic link to a file that you use often,
-then drag the link to your desktop. The icon for the link is moved to the
-desktop. To open the file, double-click on the icon. You can also drag files
-and folders to the desktop. </para>
-        </listitem>
-        <listitem>
-          <para>Drag an application launcher from a menu to the desktop. For
-example, you can open a menu that contains a launcher for an application that
-you use often, then drag the launcher to your desktop. </para>
-        </listitem>
-      </itemizedlist>
-    </section>
-  </section>
-
-  <section id="gosoverview-55">
-    <title>GNOME Desktop Preferences</title>
-    <indexterm>
-      <primary>preference tools</primary>
-      <secondary>overview</secondary>
-    </indexterm>
-    <para>You can use preference tools to configure almost every feature
-of the GNOME Desktop. Each tool controls a particular part of the behavior
-of the GNOME Desktop. For example, you can use a preference tool to select
-a theme for the GNOME Desktop. A <firstterm>theme</firstterm> is a group of
-coordinated settings that specify the visual appearance of a part of your
-interface. </para>
-    <para>You can start your preference tools in either of the following ways:</para>
-    <itemizedlist>
-      <listitem>
-        <para>Choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>Desktop Preferences</guimenuitem></menuchoice>. Choose the item
-that you require from the submenus. </para>
-      </listitem>
-    </itemizedlist>
-  </section>
 
   <section id="gosoverview-54">
     <title>Applications</title>
@@ -869,6 +429,9 @@ that you require from the submenus. </para>
       <primary>applications</primary>
       <secondary>overview</secondary>
     </indexterm>
+
+    <remark>This section needs work.</remark>
+
     <para>The applications that are provided with the GNOME Desktop
 share several characteristics. For example, the applications have a consistent
 look-and-feel. The applications share characteristics because the applications
@@ -925,64 +488,5 @@ editor. </para>
       </listitem>
     </itemizedlist>
   </section>
-  <section id="gosoverview-12">
-    <title>To Find Out More</title>
-    <indexterm>
-      <primary>help</primary>
-      <secondary>how to find</secondary>
-    </indexterm>
-    <para>The GNOME Desktop provides help if you want to find out more about the
-following areas: </para>
-    <itemizedlist>
-      <listitem>
-        <para>GNOME Desktop topics</para>
-      </listitem>
-      <listitem>
-        <para>Applets</para>
-      </listitem>
-      <listitem>
-        <para>Applications</para>
-      </listitem>
-    </itemizedlist>
-    <section id="gosoverview-31">
-      <title>To Find Out More About GNOME Desktop Topics</title>
-      <indexterm>
-        <primary>help</primary>
-        <secondary>starting help system</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>help</primary>
-        <secondary>GNOME Desktop topics</secondary>
-      </indexterm>
-      <para>You can find out more about particular GNOME
-Desktop topics in the integrated help system. To start
-the help system, choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>Help</guimenuitem></menuchoice>. </para>
-    </section>
-    <section id="gosgetstarted-33">
-      <title>To Find Out More About Applets</title>
-      <indexterm>
-        <primary>applets</primary>
-        <secondary>getting help</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>help</primary>
-        <secondary>applets</secondary>
-      </indexterm>
-      <para>To find out more about a specific applet, right-click on the applet,
-then choose <guimenuitem>Help</guimenuitem>. </para>
-    </section>
-    <section id="gosgetstarted-35">
-      <title>To Find Out More About Applications</title>
-      <indexterm>
-        <primary>applications</primary>
-        <secondary>help</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>help</primary>
-        <secondary>applications</secondary>
-      </indexterm>
-      <para>To find out more about a specific application, start the application,
-then choose <menuchoice><guimenu>Help</guimenu><guimenuitem>Contents</guimenuitem></menuchoice>. Alternatively, start the application then press <keycap>F1</keycap>.</para>
-    </section>
-  </section>
+
 </chapter>
