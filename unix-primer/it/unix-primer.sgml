@@ -125,9 +125,9 @@
       Come in molti altri sistemi operativi anche in UNIX esiste il concetto di
       <emphasis>file</emphasis>, che è un insieme di informazioni a cui viene
       dato un nome (il <emphasis>nome file</emphasis>). Esempi di file possono
-      essere un messaggio di posta elettronica o un programma che può essere
-      eseguito, ma essenzialmente tutto ciò che si trova sul disco è salvato su
-      un file individuale.
+      essere la vostra ricerca di storia, un messaggio di posta elettronica o un
+      programma che può essere eseguito, ma essenzialmente tutto ciò che si
+      trova sul disco è salvato su un file individuale.
     </para>
     <sect2 id="new-filenames">
       <title>Nomi dei file</title>
@@ -520,90 +520,91 @@
       dischi da questi lettori dovete smontarli</emphasis>.
     </para>
     <para>
-      When using GNOME, you usually do not have to worry about
-      mounting and unmounting: GNOME scans the appropriate
-      configuration file and places the icons for all drives on your
-      desktop. Double-clicking on any of these icons automatically
-      mounts the corresponding drive (if it was not already mounted)
-      and starts the file manager in the appropriate directory.
-      Similarly, if you right-click on the drive icon and choose the
-      command <guimenuitem>Eject device</guimenuitem> from the pop-up
-      menu, GNOME automatically unmounts it before ejecting. You can
-      also mount/unmount a drive by right-clicking on its icon on the
-      desktop and choosing <guimenuitem>Mount device</guimenuitem> or
-      <guimenuitem>Unmount device</guimenuitem> from the pop-up menu,
-      or by using the disk mount applet.
+      Quando usate GNOME normalmente non dovete preoccuparvi di montare e
+      smontare i dischi perché GNOME legge i file di configurazione e mette le
+      icone di tutti i dischi sulla scrivania. In questo modo cliccando sopra
+      l'icona verranno automaticamente montati i dischi corrispondenti, sempre
+      che non siano già stati montati e avvia il file manager nella giusta
+      directory; cliccando invece con il tasto destro del mouse e scegliendo il
+      comando <guimenuitem>Espelli il disco</guimenuitem> dal menù a comparsa
+      GNOME smonterà il disco e poi lo espellerà. È possibile anche montare o
+      smontare un disco sempre cliccando sopra l'icona corrispondente e
+      scegliendo <guimenuitem>Monta il disco</guimenuitem> o <guimenuitem>Smonta
+      il disco</guimenuitem> dal menù a comparsa oppure usando l'applet
+      <application>MontaDischi</application>.
     </para>
     <para>
-      Note that you can't unmount a drive if it is being used by some
-      program; for example, if you have a terminal windows open in a
-      directory on the drive you're trying to unmount. So, if you get
-      the error message <quote>Device busy</quote> while trying to
-      unmount a drive, make sure that none of your open applications
-      is accessing a file or directory on this drive.
+      Notate che non potete smontare un disco se questo è in uso da parte di
+      qualche programma; ad esempio se avete una finestra terminale aperta su
+      una directory del disco che volete smontare otterrete il messaggio
+      d'errore <quote>device occupato</quote> se provate a smontarlo. 
     </para>
     <para>
-      However, GNOME cannot prevent you from ejecting the disk using the
-      physical eject button on the drive itself &mdash; in this case,
-      <emphasis>it is your responsibility to unmount the drive</emphasis>
-      before doing so. For CD and Zip drives, the system blocks the eject
-      button on the drive while the drive is mounted; for floppy drives this
-      is technically impossible.
+      In ogni caso GNOME non può impedirvi di espellere un disco usando il
+      bottone fisico d'espulsione &mdash; in questo caso <emphasis>è vostra
+      responsabilità smontare il disco</emphasis> prima di espellerlo. Per
+      alcuni CD e per i dischi ZIP il sistema blocca il bottone d'espulsione se
+      il disco è montato ma per i floppy questo è tecnicamente impossibile.
+      <note>
+	<title>NDT:</title>
+	<para>
+	  almeno nei computer del tipo PC-Compatibile
+	</para>
+      </note>
     </para>
 
     <important>
-      <title>IMPORTANT</title>
+      <title>IMPORTANTE</title>
       <para>
-	If you eject a floppy  disk using the eject button on the drive without
-	first unmounting it, you may lose your data!
+	Se espellete un floppy usando il bottone del lettore senza smontarlo
+	prima potreste perdere i vostri dati.
       </para>
     </important>
 
-    <para> Some systems are running special programs such as
-      <application>supermount</application> or
-      <application>magicdev</application>
-      which automatically mount a drive when a disk is inserted and unmount a
-      drive if it hasn't been used for a specified period of time. In
-      this case, you will probably never need to worry about
-      mounting/unmounting drives yourself; you don't even need to read
-      this section. 
+    <para>
+      Alcuni sistemi possono avere in esecuzione programmi come
+      <application>supermount</application> o
+      <application>magicdev</application> con i quali i dischi vengono montati
+      automaticamente quando viene inserito un disco e smontati quando non
+      vengono più usati per un certo periodo; in questo caso non dovrete
+      preoccuparvi di montare o smontare i dischi e neanche di leggere questa
+      sezione di questo manuale.
     </para>
     <para>
-      Allowing users to mount and unmount drives carries some security
-      risks, so many multi-user systems are configured so that only
-      root can mount or unmount drives. This is the most probable
-      cause of error messages you may be getting while trying to mount
-      a drive. In this case, discuss this matter with your system
-      administrator.
+      Permettere agli utenti di montare e smontare i dischi può portare alcuni
+      problemi di sicurezza; per questa ragione molti sistemi sono configurati
+      in modo che solo l'utente root possa compiere queste azioni. Questa è la
+      ragione più probabile dei messaggi di errore che ottenete quando provate a
+      montare un disco, della qual cosa dovete informare il vostro
+      amministratore di sistema.
     </para>
     <para>
-      If the computer is your personal workstation or home computer
-      and you are not worried about security, you can give mount
-      permission to ordinary users. The easiest way to allow this is
-      to use the application
-      <application><emphasis>linuxconf</emphasis></application> (which
-      can only be run by root).  Just select the drive you want to
-      access in the <guilabel>Access local drive</guilabel> section.
-      In the <guilabel>Options</guilabel> tab select the
-      <guilabel>User Mountable</guilabel> option.  Your drive will now
-      be mountable by users.
+      Se il computer in questione è la vostra workstation personale o il vostro
+      computer casalingo e non siete particolarmente preoccupati dei problemi
+      legati alla sicurezza potete dare il permesso di montare e smontare i
+      dischi agli utenti ordinari. Il modo più semplice è quello di usare il
+      programma <application><emphasis>linuxconf</emphasis></application> (che
+      però può essere usato solo da root). Selezionate il disco che volete far
+      montare e smontare ai vostri utenti nella sezione <guilabel>Access local
+      drive</guilabel>; nella sotto-sezione <guilabel>Opzioni</guilabel>
+      selezionate l'opzione <guilabel>User Mountable</guilabel>. A questo punto
+      il disco potrà essere montato dagli utenti.
     </para>
     <para>
-      If <application><emphasis>linuxconf</emphasis></application> is
-      not available, then you must manually edit the file
-      <filename>/etc/fstab</filename> to include user access. This is
-      done by adding the <quote>user</quote> attribute to the
-      drive. For example:
+      Se non avete a disposizione
+      <application><emphasis>linuxconf</emphasis></application> dovete
+      modificare da soli il file <filename>/etc/fstab</filename> per permettere
+      l'uso da parte degli utenti; aggiungete l'attributo <quote>user</quote> al
+      disco. Ad esempio:
     </para>
     <para>
-      If your <filename>fstab</filename> file contains a line like
-      this:
+      se il vostro file <filename>fstab</filename> contiene una linea simile a:
     </para>
-      <programlisting>
+    <programlisting>
 /dev/cdrom /mnt/cdrom iso9660 exec,dev,ro,noauto 0 0
-      </programlisting>
-      <para>
-      add the word <quote>user</quote> to the fourth column:
+    </programlisting>
+    <para>
+      aggiungete la parola <quote>user</quote> nella quarta colonna:
     </para>
     <programlisting>
 /dev/cdrom /mnt/cdrom iso9660 user,exec,dev,ro,noauto 0 0
@@ -611,206 +612,219 @@
   </sect1>
 
   <sect1 id="devices">
-    <title>Drives and devices</title>
+    <title>Dischi e dispositivi (device)</title>
     <para>
-      Under UNIX, the word <quote>device</quote> is used for all
-      peripheral devices connected to your computer; this includes
-      hard drives, floppy and CD-ROM drives, audio and video cards,
-      serial and parallel ports, and much more. Each device has a
-      name, such as <filename>/dev/hda</filename>. The most common
-      device names are listed below (for Linux; other varieties of
-      UNIX may use slightly different device names).
+      Nei Sistemi Operativi della famiglia Unix la parola
+      <quote>dispositivo</quote> (ma è molto più diffusa, conosciuta ed usata la
+      corrispondente parola inglese <quote>device</quote>) viene usata per
+      indicare tutte le periferiche connesse al vostro computer, comprendendo
+      perciò hard-disk, lettori CD-Rom, schede video e audio, porte seriali e
+      parallele e molto altro. Ogni dispositivo ha un nome proprio come ad
+      esempio <filename>/dev/hda</filename>. Elenchiamo i nomi dei dispositivi
+      più comuni (usati per Linux perché altri Unix usano nomi differenti):
     </para>
     <itemizedlist>
-      <listitem><para> <filename>/dev/hd*</filename> (where *=a,b,c,
-	  &hellip;): these are IDE devices, such as hard drives,
-	  CD-ROM drives and ZIP drives. <filename>/dev/hda</filename>
-	  denotes the master drive on the first IDE controller
-	  (usually your first hard drive, <filename>C:</filename>
-	  under Windows), <filename>/dev/hdb</filename> is the slave
-	  drive on the fist controller (this can be a second hard
-	  drive or a CD-ROM), and so on. See also the <link
-	  linkend="zippartition">note</link> below about ZIP drives.
-	  </para></listitem>
+      <listitem>
+	<para>
+	  <filename>/dev/hd*</filename> (dove *=a,b,c, &hellip;): sono i
+	  dispositivi connessi al bus IDE, come ad esempio gli hard-disk, i
+	  lettori di CD-Rom e ZIP che usano questo tipo di bus. Il nome
+	  <filename>/dev/hda</filename> indica il primo disco del controller IDE
+	  (normalmente il disco denominato <quote>master</quote> o anche disco
+	  <filename>C:</filename> sotto Windows), <filename>/dev/hdb</filename> è
+	  il disco <quote>slave</quote>, cioè il secondo disco del primo canale
+	  del controller, disco che può anche essere un lettore CD-Rom e via
+	  così. Vedi anche la <link linkend="zippartition">nota</link> più
+	  avanti a proposito dei dischi ZIP.
+	</para>
+      </listitem>
 
-      <listitem><para>
-	  <filename>/dev/sd*</filename> (where *=a,b,c, &hellip;):
-	  these are SCSI devices, usually hard drives. 
-	</para></listitem>
+      <listitem>
+	<para>
+	  <filename>/dev/sd*</filename> (dove *=a,b,c, &hellip;): sono i
+	  dispositivi connessi al bus SCSI, normalmente hard-disk.
+	</para>
+      </listitem>
     </itemizedlist>
 
     <note>
-      <title>NOTE</title> 
-      <para>If the acronyms IDE and SCSI are new to you, here is a
-      brief explanation: there are two types of interfaces for hard
-      drives and other similar devices: IDE (and its cousins such as
-      EIDE, ATAPI, etc.) and SCSI. SCSI provides better performance,
-      but is more expensive, so it is only used on
-      servers. If you are not sure what kind of drives you have, most
-      probably it is IDE. </para>
+      <title>NOTA</title> 
+      <para>
+	Se le sigle IDE e SCSI sono per voi sconosciute questa è una breve
+	spiegazione. Esistono due tipi di interfacce per gli hard-disk e altri
+	dispositivi simili: IDE  (e i suoi cuginetti come EIDE, ATAPI ed altri)
+	e SCSI. La seconda offre maggiori prestazioni ma è più costosa e viene
+	usata principalmente sui server, per cui se non sapete quale tipo
+	abbiate voi a disposizione molto probabilmente state usando IDE.
+      </para>
     </note> 
     <itemizedlist>
-      <listitem><para>
-	  <filename>/dev/fd*</filename> (where *=0,1, etc) are floppy
-	  drives; <filename>/dev/fd0</filename> is the first drive (it
-	  corresponds to <filename>A:</filename> under Windows),
-	  <filename>/dev/fd1</filename> is the second
-	  (<filename>B:</filename>), etc. 
+      <listitem>
+	<para>
+	  <filename>/dev/fd*</filename> (dove *=0,1, etc) sono i lettori dei
+	  floppy: <filename>/dev/fd0</filename> è il primo lettore (che
+	  corrisponde al disco <filename>A:</filename> di Windows),
+	  <filename>/dev/fd1</filename> è il secondo (<filename>B:</filename> di
+	  Windows), e via così. 
 	</para>
       </listitem>
-      <listitem><para>
-	  <filename>/dev/lp*</filename> (where *=0,1, etc) are
-	  parallel ports; most commonly, these ports are used to
-	  connect a printer to the
-	  computer. <filename>/dev/lp0</filename> corresponds to
-	  <filename>LPT1</filename> under Windows,
-	  <filename>/dev/lp1</filename> to <filename>LPT2</filename>,
-	  etc.  
+      <listitem>
+	<para>
+	  <filename>/dev/lp*</filename> (dove *=0,1, etc) sono le porte
+	  parallele. Comunemente queste porte vengono usate per connettere le
+	  stampanti al computer. <filename>/dev/lp0</filename> corrisponde a
+	  <filename>LPT1</filename> di Windows, <filename>/dev/lp1</filename> a
+	  <filename>LPT2</filename>, e via così.
 	</para>
       </listitem>
-      <listitem><para> <filename>/dev/ttyS*</filename> (where *=0,1,
-	  etc) are serial ports; these ports are commonly used for
-	  connecting a mouse or a
-	  modem. <filename>/dev/ttyS0</filename> corresponds to
-	  <filename>COM1</filename> under Windows,
-	  <filename>/dev/ttyS1</filename> to <filename>COM2</filename>,
-	  etc.
+      <listitem>
+	<para>
+	  <filename>/dev/ttyS*</filename> (dove *=0,1, etc) sono le porte
+	  seriali, usate comunemente per connettere mouse oppure
+	  modem. <filename>/dev/ttyS0</filename> corrisponde a
+	  <filename>COM1</filename> di Windows, <filename>/dev/ttyS1</filename>
+	  a <filename>COM2</filename>, e via così.
 	</para>
       </listitem>
-      <listitem><para> 
-	  <filename>/dev/audio</filename> and
-	  <filename>/dev/dsp</filename> &mdash; these two device
-	  names are used for your audio card (they are not equivalent,
-	  since they are used for different types of audio files). 
+      <listitem>
+	<para> 
+	  <filename>/dev/audio</filename> and <filename>/dev/dsp</filename>
+	  &mdash; questi due nomi di dispositivi vengono usati tutti e due per
+	  la scheda audio, ma senza equivalenza perché vengono usati per due
+	  differenti tipi di file sonori.
 	</para>
-	</listitem>
+      </listitem>
     </itemizedlist>
     <para>
-      In addition, it is a common practice to have symlinks
-      <filename>/dev/floppy, /dev/modem</filename> and
-      <filename>/dev/cdrom</filename> pointing to the actual device
-      name corresponding to your floppy drive, modem, and CD-ROM drive
-      respectively.
+      È uso comune avere dei link simbolici come
+      <filename>/dev/floppy</filename>, <filename>/dev/modem</filename> e
+      <filename>/dev/cdrom</filename> che puntano al dispositivo reale
+      corrispondente al vostro lettore floppy, al modem e al lettore di CD-Rom
+      rispettivamente.
     </para>
     <para>
-      You rarely need to use these device names. In particular, if you
-      want to access a file on a drive, you do not use the device name
-      (such as <filename>/dev/fd0</filename>); instead, you first
-      mount the device so that its contents shows as a subdirectory
-      (for example, <filename>/mnt/floppy</filename>) in the main
-      directory tree, and then use this directory for accessing
-      files; see <xref linkend="new-mount"> for more information. About
-      the only time when you actually need to use the device names is
-      when you are configuring some newly installed program. For
-      example, a fax program can ask you for the device name for your
-      modem (in which case you can either give it the actual device
-      name, such as <filename>/dev/ttyS1</filename>, or just use the
-      symlink <filename>/dev/modem</filename>).
+      Dovrete usare questi nomi raramente poiché se volete accedere ad un file
+      che si trova su un floppy non dovrete usare il dispositivo (come, nel
+      nostro esempio, <filename>/dev/fd0</filename> oppure
+      <filename>/dev/floppy</filename> quale che sia) ma dovrete prima montare
+      il dispositivo così da poter vedere il suo contenuto dentro ad una
+      sotto-directory (che potrà essere ad esempio
+      <filename>/mnt/floppy</filename> oppure <filename>/floppy</filename>)
+      nella directory principale; vedi anche <xref linkend="new-mount"> per
+      maggiori informazioni. Molto probabilmente dovrete usare questi nomi solo
+      quando dovrete configurare un nuovo programma; ad esempio un programma per
+      spedire fax potrebbe chiedervi il nome del dispositivo del vostro modem,
+      che potrebbe essere <filename>/dev/ttyS1</filename> oppure il link
+      simbolico <filename>/dev/modem</filename>.
     </para>
-    <para> And just for fun: there is also a device
-    <filename>/dev/null</filename> which acts as a <quote>black
-    hole</quote>: you can send to it any information, and it never
-    returns. So if you do not want to be bothered by error messages,
-    re-direct them to <filename>/dev/null</filename> -:).
+    <para>
+      In puro spirito Unix esiste anche un dispositivo
+      <filename>/dev/null</filename> che funziona esattamente come un
+      <quote>buco nero</quote> poiché tutto ciò che viene inviato a questo viene
+      completamente cancellato. Ad esempio, se non volete essere disturbati dai
+      messaggi di errore potete inviarli a <filename>/dev/null</filename> e non
+      li vedrete più -:).
     </para>
 
     <sect2 id="partitions">
-      <title>Partitions</title>
+      <title>Partizioni</title>
       <para>
-	Note that it is possible to subdivide a hard drive (or a
-	similar device) into parts which for all practical purposes
-	behave as independent disks, even though physically they
-	reside on the same disk. These parts are called
-	<quote>partitions</quote> (under Windows, the name
-	<quote>logical disk</quote> is used). For example, you can
-	partition your hard drive into several partitions, and install
-	different operating systems in different partitions; you can
-	reformat each partition independently of the others. This
-	partitioning of the hard drive is usually done during the
-	installation of the operating system; refer to your
-	installation guide for more information.
+	È possibile suddividere un hard-disk (o altri dispositivi simili) in
+	parti che si comportano in tutti gli usi come dischi differenti anche se
+	fisicamente stanno si tratta dello stesso disco. Queste parti vengono
+	chiamate <quote>partizioni</quote> (Windows usa il nome <quote>dischi
+	logici</quote>). Ad esempio è possibile suddividere un solo disco in
+	diverse partizioni ed installare in ognuna diversi sistemi operativi
+	poiché è possibile formattare ogni partizione in modo indipendente l'una
+	dalle altre. Questo <quote>partizionamento</quote> viene normalmente
+	fatto all'atto dell'installazione dei sistemi operativi; seguite le
+	istruzioni di installazioni per maggiori informazioni.
       </para>
-      <para> 
-	If your hard drive has been partitioned then each partition
-	is considered as a separate device. For example, if your hard
-	drive is <filename>/dev/hda</filename>, then the first
-	partition on this drive would be referred to as
-	<filename>/dev/hda1</filename>, the second as
-	<filename>/dev/hda2</filename>, and so on. 
+      <para>
+	Se il vostro hard-disk è stato partizionato ogni partizione viene
+	considerata come un disco diverso: ad esempio se
+	<filename>/dev/hda</filename> è il vostro disco principale allora la
+	prima partizione è <filename>/dev/hda1</filename>, la seconda
+	<filename>/dev/hda2</filename> e via così.
       </para>
       <warning id="zippartition">
-	<title> Partitioning of ZIP disks</title> 
+	<title>Partizionamento dei dischi ZIP</title>
 
-	<para> For reasons unknown to us, the pre-formatted
-	  ZIP disks sold in stores or formatted using Iomega's ZIP
-	  tools under Windows are partitioned in a strange way:
-	  they have only one partition (of Windows type, of course),
-	  but this partition has number 4. Thus, if your ZIP drive is
-	  <filename>/dev/hdc</filename>, the correct device name you
-	  should use for such disks is <filename>/dev/hdc4</filename>.
+	<para>
+	  Per ragioni a noi sconosciute i dischi ZIP pre-formattati usando i
+	  programmi per Windows della ditta IOMEGA produttrice di questi dischi,
+	  sono partizionati in modo al quanto strano: hanno al loro interno una
+	  sola partizione (di tipo Windows, chiaramente) che però ha il numero
+	  4. Così se il vostro lettore di dischi ZIP è
+	  <filename>/dev/hdc</filename>, il dispositivo corretto che dovrete
+	  usare è <filename>/dev/hdc4</filename>.
 	</para>
       </warning>
     </sect2>
   </sect1>
   <sect1 id="X11"> 
-    <title>Graphical user interface: X Window System, window
-      managers, and desktop environments.</title>
+    <title>
+      Interfacce utente grafiche: X Window System, gestori di finestre e
+      ambienti di desktop
+    </title>
     <para>
-      UNIX is a modular system: it consists of many components so that
-      a user (or system administrator) can choose those components he
-      needs.  In particular, there are several layers of software
-      responsible for graphical user interface. These layers are: X
-      Window System, window managers, and desktop environment.
+      Unix è un sistema modulare, che consiste cioè di molti componenti che
+      possono essere scelti dall'utente (o dall'amministratore del sistema) a
+      seconda dei gusti e delle necessità. In particolare ci sono molti livelli
+      di software responsabili dell'interfaccia grafica, livelli che sono
+      l'<quote>X Window System</quote>, i gestori di finestre e gli ambienti di
+      desktop.
     </para>
-    <para> <emphasis>X Window System</emphasis> (also known as X, or
-      X11) is the component of UNIX systems responsible for virtually
-      all basic graphics &mdash; in particular, for drawing icons,
-      backgrounds, and windows in which your applications
-      work. Without X, you only have command line. X11 sets the screen
-      resolution and color depth, moves the mouse cursor around the
-      screen, etc. It serves as a foundation for other components of
-      graphical user interface such as window managers and desktop
-      environments.
+    <para> L'<emphasis>X Window System</emphasis> (conosciuto anche
+      semplicemente come X o X11) è il componente di Unix che gestisce tutti i
+      livelli grafici di base &mdash; in particolare disegna le icone, gli
+      sfondi e le finestre dove girano i programmi. Senza X potete usare solo
+      l'interfaccia grafica. X11 imposta la risoluzione dello schermo, la
+      quantità di colori disponibili, muove il cursore del mouse nello schermo e
+      altro; serve cioè come <quote>base</quote> per tutti gli altri componenti
+      dell'interfaccia utente grafica come i gestori di finestre e gli ambienti
+      di desktop.
     </para>
-    <para> <emphasis>Window manager</emphasis> extends capabilities of
-      X Window System by placing borders and buttons around windows,
-      which allows the user to move, close, hide or resize the
-      windows. X11 is virtually always used in combination with a
-      window manager, since it would be pretty much unusable without
-      one. There are many window managers available for X11; most
-      popular are <application>fvwm</application>,
-      <application>mwm</application>, <application>kwm</application>
-      (used by KDE), <application>Enlightenment</application>, and
+    <para>
+      I <emphasis>gestori di finestre</emphasis> estendono la possibilità dell'X
+      Window System disegnando bordi e bottoni intorno alle finestre,
+      permettendo così all'utente di muovere, chiudere, nascondere e
+      ridimensionare le finestre. Normalmente X11 deve essere usato sempre
+      insieme ad un gestore di finestre perché senza uno di questi rimane quasi
+      inutilizzabile. Esistono molti gestori di finestre per X11, dei quali i
+      più conosciuti sono <application>fvwm</application>,
+      <application>mwm</application>, <application>kwm</application> (usato da
+      KDE), <application>Enlightenment</application>, e
       <application>Sawfish</application>.
     </para>
-    <para> Finally, a <emphasis>desktop environment</emphasis> goes
-      one more step further than a window manager by adding a
-      graphical file manager from which you can drag-and-drop items on
-      your desktop, a panel which can be used to launch frequently
-      used applications, and a set of applications and utilities.
-      There are several desktop environments available for all
-      versions of UNIX; the most popular ones are <ulink type="http"
-      url="http://www.gnome.org">GNOME</ulink>, <ulink type="http"
-      url="http://www.kde.org">KDE</ulink> and <ulink type="http"
-      url="http://www.sun.com/solaris/cde/">CDE</ulink> (soon to be
-      replaced by GNOME).
+    <para>
+      Infine ci sono gli <emphasis>ambienti di desktop</emphasis> che vanno un
+      passo avanti dei gestori di finestre in quanto aggiungono un file manager
+      grafico dal quale potete usare il metodo <quote>drag-n-drop</quote> sui
+      vari elementi, un pannello contenente i programmi maggiormente usati e un
+      insieme di programmi e di utilità. Esistono alcuni ambienti di desktop
+      disponibili per tutte le versioni di Unix, delle quali le più conosciute
+      sono <ulink type="http" url="http://www.gnome.org">GNOME</ulink>, <ulink
+      type="http" url="http://www.kde.org">KDE</ulink> e <ulink type="http"
+      url="http://www.sun.com/solaris/cde/">CDE</ulink> (che però verrà presto
+      rimpiazzato da GNOME).
     </para>
-    <para> Most desktop environments contain a window manager as their
-      integral part; for example, KDE contains its own window manager,
-      <application>kwm</application> (it is possible to use KDE with
-      another window manager, but few people do so).  GNOME has no
-      window manager of its own; it will allow you to choose any
-      window manager you already have on your system. To make life
-      easier for new users, usually the
-      <application>Sawfish</application> window manager is distributed
-      with GNOME and is used by default; you can switch to
-      another window manager using <application>GNOME Control
-      Center</application>. Note however that you will need a
-      GNOME-compliant window manager to use such features of GNOME as 
-      session management, taskbar applet, etc. 
+    <para>
+      Molti ambienti di desktop usano un gestore di finestre loro proprio: ad
+      esempio KDE contiene il suo gestore di finestre
+      <application>kwm</application> (anche se è possibile usare KDE con un
+      altro gestore di finestre nella pratica ben pochi utenti lo fanno). GNOME
+      non ha invece un proprio gestore di finestre, il che permette ad ogni
+      utente di usare quello già installato nel sistema. Per rendere le cose più
+      semplici possibili normalmente il gestore di finestre
+      <application>Sawfish</application> viene distribuito insieme a GNOME come
+      predefinito ma potete cambiarlo usando il <application>Pannello di
+      Controllo</application>, anche se dovete usare un gestore che sia
+      compatibile con GNOME per poter usare alcune caratteristiche come la
+      gestione delle sessioni, l'applet taskbar e altro.
     </para>
 
-    </sect1>
+  </sect1>
 	
   
 </article>
