@@ -1,6 +1,6 @@
-figs = 
+figs =
 docname = glossary
-lang = es 
+lang = es
 omffile = glossary-es.omf
 sgml_ents =
 include $(top_srcdir)/sgmldocs.make
