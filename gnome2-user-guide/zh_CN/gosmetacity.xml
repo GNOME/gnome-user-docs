@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosmetacity-1">
+  <title>使用窗口</title>
+  <highlights>
+    <para>本章中的信息介绍如何在桌面中使用窗口。您可以通过 GNOME 桌面使用几种类型的窗口管理器，例如 <application>Metacity</application> 和 <application> Sawfish</application>。<application>Metacity</application> 中的许多功能也可在 <application>Sawfish</application> 中获得。本章介绍与 <application>Metacity</application> 窗口管理器相关联的功能。</para>
+  </highlights>
+  <sect1 id="gosmetacity-712">
+    <title>窗口和工作区</title>
+    <indexterm>
+      <primary>窗口</primary>
+      <secondary>简介</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>工作区</primary>
+      <secondary>简介</secondary>
+    </indexterm>
+    <para>您可以在桌面上同时显示多个窗口。您的窗口显示在桌面的分区中，这些分区被称为工作区。工作区就是桌面上您可以工作的离散区域。桌面上的每个工作区都包含同一桌面背景、相同的面板和相同的菜单。但是，您可以在各个工作区中运行不同的应用程序和打开不同的窗口。在桌面上一次只能显示一个工作区，但是您可以在其它工作区中打开窗口。 </para>
+    <para><application>“工作区切换器”</application>小程序显示窗口和工作区的可视化表示，如 <xref linkend="gosmetacity-FIG-717"/> 中所示。</para>
+    <figure id="gosmetacity-FIG-717">
+      <title>“工作区切换器”小程序</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>“工作区切换器”小程序。上下文会对此图形加以说明。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>您可以随时添加工作区。要向桌面添加工作区，请右击<application>“工作区切换器”</application>小程序，然后选择<guimenuitem>“首选项”</guimenuitem>。即可显示<guilabel>“工作区切换器首选项”</guilabel>对话框。使用<guilabel>“工作区数量”</guilabel>旋转框指定所需的工作区数量。</para>
+    <sect2 id="gosmetacity-15">
+      <title>窗口管理器行为</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>窗口管理器</secondary>
+      </indexterm>
+      <para>窗口管理器控制窗口的外观和行为。窗口管理器可以管理窗口的位置、聚焦哪个窗口以及窗口框的主题。窗口框包含一些按钮，您可以通过这些按钮执行标准的操作，例如移动、关闭和改变窗口大小。</para>
+      <para>您可以在<application>“窗口焦点”</application>首选项工具中配置窗口管理器的某些设置。本手册介绍与 <application>Metacity</application> 窗口管理器的默认配置相关联的功能。默认配置是在<application>“窗口焦点”</application>首选项工具中指定的。此手册还介绍 Crux 主题的默认功能。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-713">
+    <title>窗口类型</title>
+    <indexterm>
+      <primary>窗口</primary>
+      <secondary>类型</secondary>
+    </indexterm>
+    <para>桌面具有以下类型的窗口： </para>
+    <itemizedlist>
+      <listitem>
+        <para>应用程序窗口</para>
+        <para>当您启动应用程序时，即可打开应用程序窗口。窗口管理器会为应用程序窗口添加一个框。在默认情况下，应用程序窗口的顶沿包含一个标题栏。标题栏包含您可以用来对窗口进行操作的按钮。应用程序窗口框中的按钮使您可以执行诸如打开<guimenu>“窗口菜单”</guimenu>或关闭该窗口之类的操作。<guimenu>“窗口菜单”</guimenu>提供了您可对该窗口执行的大量操作。</para>
+      </listitem>
+      <listitem>
+        <para>对话框窗口</para>
+        <para>对话框窗口是您可在其中输入信息或命令的弹出式窗口。该对话框显示在一个窗口框中。</para>
+        <para>您可以使用框的顶沿来对该窗口进行操作。例如，您可以使用标题栏移动该对话框。窗口框还包含一些能够执行以下任务的按钮：</para>
+        <itemizedlist>
+          <listitem>
+            <para>打开<guimenu>“窗口菜单”</guimenu></para>
+          </listitem>
+          <listitem>
+            <para>关闭对话框窗口</para>
+          </listitem>
+        </itemizedlist>
+        <para>通常，您从应用程序窗口打开对话框窗口。当打开对话框窗口时，通常会显示并且聚焦该窗口。某些对话框窗口在您关闭对话框之后才允许使用该应用程序。</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosmetacity-16">
+      <title>窗口框</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>框</secondary>
+      </indexterm>
+      <para>窗口框是围绕窗口的边框。窗口框包含一个标题栏。标题栏包含您可以用来对窗口进行操作的按钮。</para>
+      <sect3 id="gosmetacity-10">
+        <title>主题</title>
+        <indexterm>
+          <primary>窗口</primary>
+          <secondary>主题</secondary>
+        </indexterm>
+        <para>您可以向窗口框应用多个主题。主题决定窗口框的外观。要为所有的窗口框选择主题，请选择<menuchoice><guimenu>“应用程序”</guimenu><guisubmenu>“桌面首选项”</guisubmenu><guimenuitem>“主题”</guimenuitem></menuchoice>。</para>
+        <para>默认主题是 Crux。本手册介绍与 Crux 主题关联的功能。</para>
+      </sect3>
+      <sect3 id="gosmetacity-17">
+        <title>控制元素</title>
+        <indexterm>
+          <primary>窗口</primary>
+          <secondary>框控制元素</secondary>
+        </indexterm>
+        <para>您可以使用窗口框对窗口执行各种操作。具体来说，标题栏包含各种按钮。下图显示了应用程序窗口的标题栏。</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>窗口标题栏。图注：“窗口菜单”按钮、“标题栏”、“最小化”、“最大化”、“关闭窗口”按钮。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>对话框窗口还包含部分窗口框控制元素。<xref linkend="gosmetacity-TBL-1"/> 介绍了窗口框上从左到右的活动控制元素。</para>
+        <table frame="topbot" id="gosmetacity-TBL-1">
+          <title>窗口框控制元素</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="41.65*"/>
+            <colspec colname="colspec1" colwidth="58.35*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>控制元素</para>
+                </entry>
+                <entry valign="top">
+                  <para>说明</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para><guibutton>“窗口菜单”</guibutton>按钮</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>单击按钮以打开<guimenu>“窗口菜单”</guimenu>。 </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>标题栏</para>
+                </entry>
+                <entry valign="top">
+                  <para>您可以使用标题栏执行以下操作： </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>要对窗口进行聚焦，请单击该标题栏。</para>
+                    </listitem>
+                    <listitem>
+                      <para>要移动窗口，请抓取标题栏，然后将窗口拖动到新位置。</para>
+                    </listitem>
+                    <listitem>
+                      <para>要对窗口应用阴影，双击标题栏。要去除窗口的阴影，请再次双击该标题栏。</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><guibutton>“最小化”</guibutton>按钮</para>
+                </entry>
+                <entry valign="top">
+                  <para>单击<guibutton>“最小化”</guibutton>按钮可以最小化该窗口。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><guibutton>“最大化”</guibutton>按钮</para>
+                </entry>
+                <entry valign="top">
+                  <para>单击<guibutton>“最大化”</guibutton>按钮可以最大化该窗口。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para><guibutton>“关闭窗口”</guibutton>按钮</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>单击<guibutton>“关闭窗口”</guibutton>按钮可以关闭该窗口。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>边框</para>
+                </entry>
+                <entry valign="top">
+                  <para>围绕窗口的边框。使用边框可以执行以下操作： </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>要改变窗口的大小，请抓取边框，然后拖动边框，直到达到新的大小。</para>
+                    </listitem>
+                    <listitem>
+                      <para>要打开<guimenu>“窗口菜单”</guimenu>，请右击该边框。</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>窗口内容</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>窗口框内的区域。使用窗口内容可以执行以下操作：</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>要移动窗口，请按住 <keycap>Alt</keycap> 键，单击窗口内容，然后将窗口拖动到新位置。</para>
+                    </listitem>
+                    <listitem>
+                      <para>要改变窗口的大小，请按住 <keycap>Alt</keycap> 键，然后在要改变其大小的角附近单击鼠标中键。要改变窗口的大小，请从您中击的角开始拖动。</para>
+                    </listitem>
+                    <listitem>
+                      <para>要打开<guimenu>“窗口菜单”</guimenu>，请按住 <keycap> Alt</keycap> 键，然后右击窗口内容。</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-714">
+    <title>用于窗口和工作区的菜单和小程序</title>
+    <indexterm>
+      <primary>窗口</primary>
+      <secondary>小程序和菜单</secondary>
+    </indexterm>
+    <para>本节介绍可以用于处理窗口和工作区的菜单及小程序。</para>
+    <sect2 id="gosmetacity-24">
+      <title>窗口菜单</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/window_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>“窗口菜单”。菜单项：“最小化”、“最大化”、“阴影”、“移动”、“改变大小”、“关闭”、“放置到所有工作区上”、“移动到工作区名称”。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>窗口菜单</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>菜单</primary>
+        <secondary>窗口菜单</secondary>
+      </indexterm>
+      <para><guimenu>“窗口菜单”</guimenu>是可以用于对窗口执行操作的命令菜单。要打开<guimenu>“窗口菜单”</guimenu>，请执行以下操作之一：</para>
+      <itemizedlist>
+        <listitem>
+          <para>单击您要执行操作的窗口上的<guibutton>“窗口菜单”</guibutton>按钮。</para>
+        </listitem>
+        <listitem>
+          <para>按下 <keycombo><keycap>Alt</keycap><keycap>空格键</keycap></keycombo>。</para>
+        </listitem>
+        <listitem>
+          <para>按住 <keycap>Alt</keycap> 键，然后右击要进行操作的窗口的任何部分。</para>
+        </listitem>
+      </itemizedlist>
+      <para><xref linkend="gosmetacity-TBL-25"/> 介绍了<guimenu>“窗口菜单”</guimenu>中的命令和子菜单。</para>
+      <table frame="topbot" id="gosmetacity-TBL-25">
+        <title>窗口菜单命令和子菜单</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="32.34*"/>
+          <colspec colname="colspec3" colwidth="67.66*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>菜单项</para>
+              </entry>
+              <entry valign="top">
+                <para>功能 </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>最小化</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>最小化窗口。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>“最大化”</guimenuitem>或<guimenuitem>“取消最大化”</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>最大化窗口。如果窗口已经最大化，选择<guimenuitem>“取消最大化”</guimenuitem>可以将该窗口恢复到它原来的大小。 </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>“阴影”</guimenuitem>或<guimenuitem>“取消阴影”</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>向窗口应用阴影效果。如果窗口已经应用了阴影效果，选择<guimenuitem>“取消阴影”</guimenuitem>可以将该窗口恢复到它原来的大小。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>移动</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>使您可以使用箭头键移动窗口。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>改变大小</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>使您可以使用箭头键改变窗口的大小。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>关闭</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>关闭窗口。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>“放置到所有工作区上”</guimenuitem>或<guimenuitem>“只放置到此工作区上”</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>将窗口放置到所有工作区上。如果窗口已经放置到了所有工作区上，选择<guimenuitem>“只放置到此工作区上”</guimenuitem>会使窗口只留在当前工作区上。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>“移动到<replaceable>工作区名称</replaceable>”</guimenuitem>或<guimenuitem>“仅在<replaceable>工作区名称</replaceable>上”</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>将窗口移动到所选的工作区上。如果窗口是在所有的工作区上，请选择<guimenuitem>“仅在<replaceable>工作区名称</replaceable>上”</guimenuitem>，以便将窗口放置到所需的工作区上。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosmetacity-18">
+      <title>“窗口列表”小程序</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>“窗口列表”小程序</secondary>
+        <see>“窗口列表”小程序</see>
+      </indexterm>
+      <indexterm>
+        <primary>“窗口列表”小程序 </primary>
+        <secondary>简介</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>窗口列表</primary>
+        <secondary>“窗口列表”小程序</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>小程序</primary>
+        <secondary>窗口列表</secondary>
+      </indexterm>
+      <para><application>“窗口列表”</application>会为每个打开的应用程序窗口显示一个按钮。您可以使用<application>“窗口列表”</application>执行以下任务：</para>
+      <itemizedlist>
+        <listitem>
+          <para>最小化窗口</para>
+          <para>单击代表该窗口的按钮。</para>
+        </listitem>
+        <listitem>
+          <para>恢复一个最小化窗口</para>
+          <para>单击代表该窗口的按钮。</para>
+        </listitem>
+        <listitem>
+          <para>聚焦到窗口</para>
+          <para>单击代表该窗口的按钮。</para>
+        </listitem>
+      </itemizedlist>
+      <para>当打开应用程序窗口时，<application>“窗口列表”</application>会显示一个代表该窗口的按钮。窗口列表按钮显示哪些应用程序窗口是打开的。即使某些窗口处于最小化状态或者其它窗口重叠在某个窗口上，您也可查看哪些窗口是打开的。<application>“窗口列表”</application>可以显示代表当前工作区中窗口的按钮，也可以显示代表所有工作区中窗口的按钮。要选择此选项，您必须更改<application>“窗口列表”</application>的首选项。</para>
+      <para>您也可右击窗口列表按钮以打开该按钮所代表窗口的<guimenu>“窗口菜单”</guimenu>。当您从<application>“窗口列表”</application>中打开<guimenu>“窗口菜单”</guimenu>时，<guimenu>“窗口菜单”</guimenu>并不包含工作区命令。有关<guimenu>“窗口菜单”</guimenu>命令的更多信息，请参阅 <xref linkend="gosmetacity-24"/>。</para>
+      <para><xref linkend="gosmetacity-FIG-8"/> 显示了当以下的窗口处于打开状态时的<application>“窗口列表”</application>：</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <application>gedit</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>字典</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GHex</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GNOME 终端</application>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <figure id="gosmetacity-FIG-8">
+        <title>“窗口列表”小程序</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>“窗口列表”小程序。上下文会对此图形加以说明。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>小程序中的按钮显示窗口的状态。<xref linkend="gosmetacity-TBL-3"/> 解释窗口列表按钮提供的关于该窗口的信息。<xref linkend="gosmetacity-TBL-3"/> 中的示例所指的是 <xref linkend="gosmetacity-FIG-8"/>。</para>
+      <indexterm>
+        <primary>“窗口列表”小程序</primary>
+        <secondary>窗口状态信息</secondary>
+      </indexterm>
+      <table frame="topbot" id="gosmetacity-TBL-3">
+        <title>“窗口列表”按钮上的窗口状态信息</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33*"/>
+          <colspec colname="colspec1" colwidth="33*"/>
+          <colspec colname="colspec2" colwidth="33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>状态</para>
+              </entry>
+              <entry valign="top">
+                <para>指示</para>
+              </entry>
+              <entry valign="top">
+                <para>示例</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>按钮被按下。</para>
+              </entry>
+              <entry valign="top">
+                <para>窗口已聚焦。</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>gedit</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>窗口标题周围有方括号。</para>
+              </entry>
+              <entry valign="top">
+                <para>窗口最小化。</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>[字典]</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>按钮没按下，标题周围没有方括号。</para>
+              </entry>
+              <entry valign="top">
+                <para>窗口已显示，没有最小化。</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>ghex</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>按钮上的数字，在括号中。</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>该按钮代表一组按钮。</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guilabel>Gnome 终端 (3)</guilabel>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="gosmetacity-708">
+        <title>分组按钮</title>
+        <indexterm>
+          <primary>“窗口列表”小程序</primary>
+          <secondary>分组按钮</secondary>
+        </indexterm>
+        <para><application>“窗口列表”</application>可以将代表同一类窗口的按钮分组到一个窗口列表按钮下。<xref linkend="gosmetacity-FIG-8"/> 中的<guibutton>“Gnome 终端”</guibutton>按钮是代表一组按钮的按钮的示例。下图显示打开了一个按钮组的<application>“窗口列表”</application>的示例：</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>打开了按钮组的“窗口列表”小程序。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>要打开一组中的窗口列表，单击代表该组的窗口列表按钮。您可以单击列表中的项目以聚焦窗口、最小化窗口和恢复窗口。</para>
+        <para>要打开按钮组中某个窗口的<guimenu>“窗口菜单”</guimenu>，请右击代表该组的窗口列表按钮。即可显示该组中的窗口列表。要打开该组中某个窗口的<guimenu>“窗口菜单”</guimenu>，请在列表中单击该项目。当您从<application>“窗口列表”</application>中打开<guimenu>“窗口菜单”</guimenu>时，<guimenu>“窗口菜单”</guimenu>并不包含工作区命令。有关<guimenu>“窗口菜单”</guimenu>命令的更多信息，请参阅 <xref linkend="gosmetacity-24"/>。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosmetacity-20">
+      <title>“工作区切换器”小程序</title>
+      <indexterm>
+        <primary>工作区</primary>
+        <secondary>“工作区切换器”小程序</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>小程序</primary>
+        <secondary>工作区切换器</secondary>
+      </indexterm>
+      <para><application>“工作区切换器”</application>显示工作区的可视化表示，如 <xref linkend="gosmetacity-FIG-722"/> 中所示。 <xref linkend="gosmetacity-FIG-722"/> 显示 GNOME 会话包含四个工作区时的小程序。您的工作区显示为小程序上的按钮。小程序中代表当前工作区的按钮背景会变亮。<xref linkend="gosmetacity-FIG-722"/> 中的当前工作区是小程序左侧的工作区。要切换到其它工作区，请单击该小程序中的工作区。</para>
+      <figure id="gosmetacity-FIG-722">
+        <title>“工作区切换器”小程序</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>“工作区切换器”小程序。上下文会对此图形加以说明。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para><application>“工作区切换器”</application>还显示工作区中打开的应用程序窗口和对话框。</para>
+      <para>小程序按照从左到右的顺序显示工作区，并且跨过小程序行。在 <xref linkend="gosmetacity-FIG-722"/> 中，小程序设置为在一行中显示工作区。您可以在<application>“工作区切换器”</application>中指定工作区显示的行数。 您也可更改小程序的默认行为以便在小程序中显示工作区的名称。</para>
+    </sect2>
+    <sect2 id="gosmetacity-27">
+      <title>使用菜单面板对窗口进行操作</title>
+      <indexterm>
+        <primary>菜单面板</primary>
+        <secondary>窗口列表图标</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>窗口列表</primary>
+        <secondary>菜单面板</secondary>
+      </indexterm>
+      <para>从“菜单面板”中，您可以查看当前打开的所有窗口的列表。您也可选择要聚焦的窗口。要查看窗口列表，请单击“菜单面板”最右侧的图标。下图显示了从“菜单面板”显示的窗口列表的示例：</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>从“菜单面板”显示的窗口列表。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>当焦点改变时，您单击用于显示窗口列表的按钮也改变。该图标代表当前聚焦的窗口。要聚焦于某个窗口，请从窗口列表中选择该窗口。</para>
+      <para>窗口列表列出了所有工作区中的窗口。除了当前工作区之外的所有工作区中的窗口都会列在一个分隔符行下。</para>
+      <para>您无法移动“菜单面板”最右侧的图标。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-715">
+    <title>处理窗口</title>
+    <indexterm>
+      <primary>窗口</primary>
+      <secondary>处理</secondary>
+    </indexterm>
+    <para>本部分介绍如何处理窗口。</para>
+    <sect2 id="gosmetacity-28">
+      <title>聚焦窗口</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>聚焦</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>焦点，聚焦窗口</primary>
+      </indexterm>
+      <para>聚焦的窗口可以接收鼠标和键盘的输入。每次只能聚焦一个窗口。聚焦的窗口具有和其它窗口不同的外观。</para>
+      <para>您可以使用以下元素聚焦窗口：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>元素</para>
+              </entry>
+              <entry valign="top">
+                <para>操作</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>鼠标</para>
+              </entry>
+              <entry valign="top">
+                <para>如果该窗口是可见的，则单击该窗口。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>快捷键</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>使用快捷键可以在打开的窗口之间切换。要聚焦窗口，请放开快捷键。在窗口之间进行切换的默认快捷键是 <keycombo><keycap>Alt</keycap><keycap> Tab</keycap></keycombo> 键。 </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>窗口列表</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>单击<application>“窗口列表”</application>中代表该窗口的按钮。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>工作区切换器</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>单击<application>“工作区切换器”</application>显示中要聚焦的窗口。如果单击其它工作区中的窗口，<application>“工作区切换器”</application>会切换到新的工作区，然后聚焦到该窗口。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>菜单面板</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>单击“菜单面板”最右侧的图标。即可显示打开窗口的列表。从该列表中选择窗口。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosmetacity-29">
+      <title>最小化窗口</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>最小化</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>最小化</primary>
+        <secondary>窗口</secondary>
+      </indexterm>
+      <para>要最小化窗口，请执行以下一个操作： </para>
+      <itemizedlist>
+        <listitem>
+          <para>单击窗口框上的<guibutton>“最小化”</guibutton>按钮。</para>
+        </listitem>
+        <listitem>
+          <para>打开<guimenu>“窗口菜单”</guimenu>，然后选择<guimenuitem>“最小化”</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>如果该窗口已经聚焦，单击<application>“窗口列表”</application>中代表该窗口的按钮。 如果该窗口没有聚焦，单击两次代表该窗口的按钮。 </para>
+        </listitem>
+        <listitem>
+          <para>右击<application>“窗口列表”</application>中代表该窗口的按钮，然后选择弹出菜单中的<guimenuitem>“最小化”</guimenuitem>。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-30">
+      <title>最大化窗口</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>最大化</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>最大化窗口</primary>
+      </indexterm>
+      <para>当您最大化窗口时，窗口会尽可能地扩展。要最大化窗口，请执行以下一个操作： </para>
+      <itemizedlist>
+        <listitem>
+          <para>要最大化窗口，单击窗口框上的<guibutton>“最大化”</guibutton>按钮。或者，打开<guimenu>“窗口菜单”</guimenu>，然后选择<guimenuitem>“最大化”</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>右击<application>“窗口列表”</application>中代表该窗口的按钮，然后从<guimenu>“窗口菜单”</guimenu>中选择<guimenuitem>“最大化”</guimenuitem>。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-31">
+      <title>恢复窗口</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>恢复</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>恢复</primary>
+        <secondary>窗口</secondary>
+      </indexterm>
+      <para>要恢复最大化的窗口，请执行以下一个操作： </para>
+      <itemizedlist>
+        <listitem>
+          <para>单击窗口框上的<guibutton>“最大化”</guibutton>按钮。</para>
+        </listitem>
+        <listitem>
+          <para>打开<guimenu>“窗口菜单”</guimenu>。选择<guimenuitem>“取消最大化”</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>右击<application>“窗口列表”</application>中代表窗口的按钮，以便打开<guimenu>“窗口菜单”</guimenu>。选择<guimenuitem>“取消最大化”</guimenuitem>。</para>
+        </listitem>
+      </itemizedlist>
+      <para>要恢复最小化的窗口，请单击<application>“窗口列表”</application>中代表该窗口的按钮。</para>
+    </sect2>
+    <sect2 id="gosmetacity-32">
+      <title>关闭窗口</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>关闭</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>关闭窗口</primary>
+      </indexterm>
+      <para>要关闭窗口，请执行以下一个操作： </para>
+      <itemizedlist>
+        <listitem>
+          <para>单击窗口框上的<guibutton>“关闭窗口”</guibutton>按钮。</para>
+        </listitem>
+        <listitem>
+          <para>打开<guimenu>“窗口菜单”</guimenu>。选择<guimenuitem>“关闭”</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>右击<application>“窗口列表”</application>中代表该窗口的按钮，然后从<guimenu>“窗口菜单”</guimenu>中选择<guimenuitem>“关闭”</guimenuitem>。</para>
+        </listitem>
+      </itemizedlist>
+      <para>如果窗口中有未保存的数据，系统会提示您保存数据。</para>
+    </sect2>
+    <sect2 id="gosmetacity-34">
+      <title>改变窗口大小</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>改变大小</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>改变窗口大小</primary>
+      </indexterm>
+      <para>要改变窗口大小，请执行以下一个操作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>指向窗口的一个角。鼠标指针会发生改变，指示您可以改变窗口的大小。抓取一角，然后拖动窗口，使其达到新的大小。</para>
+        </listitem>
+        <listitem>
+          <para>右击<application>“窗口列表”</application>中代表该窗口的按钮。从<guimenu>“窗口菜单”</guimenu>中选择<guimenuitem>“改变大小”</guimenuitem>。使用箭头键改变窗口的大小。</para>
+        </listitem>
+        <listitem>
+          <para>按住 <keycap>Alt</keycap> 键，然后在要改变其大小的角附近单击鼠标中键。鼠标指针会发生改变，指示您可以从该角改变窗口的大小。要改变窗口的大小，请从您中击的角开始拖动。</para>
+        </listitem>
+        <listitem>
+          <para>要在水平方向上改变窗口的大小，请指向窗口的一个垂直边沿。鼠标指针会发生改变，指示您可以改变窗口的大小。抓取该边沿，然后拖动窗口，使其达到新的大小。</para>
+        </listitem>
+        <listitem>
+          <para>要在垂直方向上改变窗口的大小，请指向窗口的底部边沿。鼠标指针会发生改变，指示您可以改变窗口的大小。抓取该边沿，然后拖动窗口，使其达到新的大小。</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para>您无法改变某些对话框窗口的大小。此外，某些应用程序窗口有一个最小的大小，您无法将该窗口减小为低于该大小。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosmetacity-35">
+      <title>移动窗口</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>移动</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>移动窗口</primary>
+      </indexterm>
+      <para>要移动窗口，请执行以下一个操作： </para>
+      <itemizedlist>
+        <listitem>
+          <para>抓取窗口的标题栏，然后将窗口拖动到新位置。</para>
+        </listitem>
+        <listitem>
+          <para>按住 <keycap>Alt</keycap> 键，然后将窗口拖动到新位置。</para>
+        </listitem>
+        <listitem>
+          <para>打开<guimenu>“窗口菜单”</guimenu>，然后选择<guimenuitem>“移动”</guimenuitem>。使用箭头键将窗口移动到新位置。</para>
+        </listitem>
+        <listitem>
+          <para>右击<application>“窗口列表”</application>中代表该窗口的按钮，然后从<guimenu>“窗口菜单”</guimenu>中选择<guimenuitem>“移动”</guimenuitem>。使用箭头键将窗口移动到新位置。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-36">
+      <title>对窗口应用阴影效果</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>阴影</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>对窗口应用阴影效果</primary>
+      </indexterm>
+      <para>您可以对窗口应用阴影效果或取消阴影，如下所述：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="24.94*"/>
+          <colspec colwidth="75.06*"/>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>阴影</para>
+              </entry>
+              <entry valign="top">
+                <para>缩小窗口，以便只有标题栏是可见的。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>取消阴影</para>
+              </entry>
+              <entry valign="top">
+                <para>将窗口从阴影状态切换回来，以便显示完整的窗口。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>要对窗口应用阴影效果。请执行以下一个操作： </para>
+      <itemizedlist>
+        <listitem>
+          <para>双击窗口的标题栏。要去除窗口的阴影，请再次双击该标题栏。</para>
+        </listitem>
+        <listitem>
+          <para>打开<guimenu>“窗口菜单”</guimenu>。选择<guimenuitem>“阴影”</guimenuitem>。要取消窗口的阴影，请选择<guimenuitem>“取消阴影”</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>右击<application>“窗口列表”</application>中代表该窗口的按钮，然后从<guimenu>“窗口菜单”</guimenu>中选择<guimenuitem>“阴影”</guimenuitem>。要取消窗口的阴影，请选择<guimenuitem>“取消阴影”</guimenuitem>。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-38">
+      <title>将窗口放置到所有工作区上</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>放置到所有工作区上</secondary>
+      </indexterm>
+      <para>要将窗口放置到所有工作区上，请打开<guimenu>“窗口菜单”</guimenu>。选择<guimenuitem>“放置到所有工作区上”</guimenuitem>。要将窗口设置为只在当前工作区中出现，请选择<guimenuitem>“只放置到此工作区上”</guimenuitem>。</para>
+    </sect2>
+    <sect2 id="gosmetacity-46">
+      <title>将窗口移动到其它工作区</title>
+      <indexterm>
+        <primary>窗口</primary>
+        <secondary>移动到其它工作区</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>工作区</primary>
+        <secondary>移动窗口</secondary>
+      </indexterm>
+      <para>您可以通过以下的任一方法将窗口移动到其它工作区：</para>
+      <itemizedlist>
+        <listitem>
+          <para>使用<application>“工作区切换器”</application></para>
+          <para>在<application>“工作区切换器”</application>显示中，将窗口拖动到所需的工作区中。</para>
+        </listitem>
+        <listitem>
+          <para>使用<guimenu>“窗口菜单”</guimenu></para>
+          <para>打开<guimenu>“窗口菜单”</guimenu>。要将窗口移动到下一个工作区，请选择<guimenuitem>“移动到<replaceable>工作区名称</replaceable>”</guimenuitem>。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-716">
+    <title>处理工作区</title>
+    <indexterm>
+      <primary>工作区</primary>
+      <secondary>处理</secondary>
+    </indexterm>
+    <para>本部分介绍如何处理工作区。</para>
+    <sect2 id="gosmetacity-49">
+      <title>在工作区之间切换</title>
+      <indexterm>
+        <primary>工作区</primary>
+        <secondary>切换</secondary>
+      </indexterm>
+      <para>您可以使用以下一个方法切换工作区： </para>
+      <itemizedlist>
+        <listitem>
+          <para>使用<application>“工作区切换器”</application></para>
+          <para>单击<application>“工作区切换器”</application>中要切换到的工作区。</para>
+        </listitem>
+        <listitem>
+          <para>使用快捷键</para>
+          <para>切换工作区的默认快捷键如下所示： </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="50*"/>
+              <colspec colwidth="50*"/>
+              <thead>
+                <row>
+                  <entry valign="top">
+                    <para>默认快捷键</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>功能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>右箭头键</keycap></keycombo></para>
+                  </entry>
+                  <entry valign="top">
+                    <para>向右选择工作区。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>左箭头键</keycap></keycombo></para>
+                  </entry>
+                  <entry valign="top">
+                    <para>向左选择工作区。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-50">
+      <title>添加工作区</title>
+      <indexterm>
+        <primary>工作区</primary>
+        <secondary>添加</secondary>
+      </indexterm>
+      <para>要向桌面添加工作区，请右击<application>“工作区切换器”</application>，然后选择<guimenuitem>“首选项”</guimenuitem>。即可显示<guilabel>“工作区切换器首选项”</guilabel>对话框。使用<guilabel>“工作区数量”</guilabel>旋转框指定所需的工作区数量。<application>“工作区切换器”</application>会将新工作区添加到工作区列表的末尾。</para>
+    </sect2>
+    <sect2 id="gosmetacity-51">
+      <title>命名工作区</title>
+      <indexterm>
+        <primary>工作区</primary>
+        <secondary>命名</secondary>
+      </indexterm>
+      <para>工作区的默认名称是 <literal>Workspace 1</literal>、<literal> Workspace 2</literal>、<literal>Workspace 3</literal> 等等。要为工作区指定名称，请右击<application>“工作区切换器”</application>，然后选择<guimenuitem>“首选项”</guimenuitem>。即可显示<guilabel>“工作区切换器首选项”</guilabel>对话框。使用<guilabel>“工作区”</guilabel>列表框指定工作区的名称。选择一个工作区，然后为该工作区键入新名称。</para>
+    </sect2>
+    <sect2 id="gosmetacity-52">
+      <title>删除工作区</title>
+      <indexterm>
+        <primary>工作区</primary>
+        <secondary>删除</secondary>
+      </indexterm>
+      <para>当您删除工作区时，工作区中的窗口会移动到其它工作区，然后系统会删除该空工作区。</para>
+      <para>要从桌面删除工作区，请右击<application>“工作区切换器”</application>，然后选择<guimenuitem>“首选项”</guimenuitem>。即可显示<guilabel>“工作区切换器首选项”</guilabel>对话框。使用<guilabel>“工作区数量”</guilabel>旋转框指定所需的工作区数量。<application>“工作区切换器”</application>会从工作区列表的末尾开始删除工作区。</para>
+    </sect2>
+  </sect1>
+</chapter>

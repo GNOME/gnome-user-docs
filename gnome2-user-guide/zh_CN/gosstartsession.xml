@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosgetstarted-1">
+  <title>桌面会话</title>
+  <highlights>
+    <para>本章介绍启动、管理和结束桌面会话所需的信息。</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>启动桌面会话</title>
+    <indexterm>
+      <primary>会话</primary>
+      <secondary>启动</secondary>
+    </indexterm>
+    <para>桌面会话会在您登录到桌面后出现，直到您注销后结束。<application>“登录管理器”</application>所显示的登录屏幕是通往桌面的门户。登录屏幕上提供了两个字段，需要您输入用户名和口令。登录屏幕上的<guimenu>“选项”</guimenu>菜单列出了登录选项，例如，您可以选择会话的语言。</para>
+    <para>当您登录时，就启动了一个会话。<application>“登录管理器”</application>验证了您的用户名和口令之后，会话管理器就会启动。通过会话管理器，您可以管理会话。例如，您可以保存最近的会话状态并在您下次登录时返回到该会话。会话管理器保存并恢复以下内容： </para>
+    <itemizedlist>
+      <listitem>
+        <para>外观和行为设置，如字体、颜色和鼠标设置。</para>
+      </listitem>
+      <listitem>
+        <para>当时正在运行的应用程序，如文件管理器和文本编辑器窗口。您无法保存和恢复不属会话管理器管理的应用程序。例如，如果您通过命令行在终端窗口中启动了 <application>vi</application> 编辑器，会话管理器就无法恢复您的编辑会话。</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosgetstarted-65">
+      <title>登录到桌面会话</title>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>登录</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>登录</primary>
+      </indexterm>
+      <para>要登录到会话，请执行以下操作。</para>
+      <orderedlist>
+        <listitem>
+          <para>选择<menuchoice><guimenu>“选项”</guimenu><guimenuitem>“会话”</guimenuitem></menuchoice>。从可用桌面环境的列表中选择 GNOME 桌面。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>“登录管理器”</guilabel>对话框的相应字段中输入您的登录名称，然后单击<guibutton>“确定”</guibutton>。 </para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>“登录管理器”</guilabel>对话框的相应字段中输入您的口令，然后单击<guibutton>“确定”</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+      <para>登录成功后，会话管理器将启动一个会话。 如果这是您第一次登录，会话管理器将启动一个新会话。如果以前已登录过，会话管理器则恢复您以前的会话。</para>
+    </sect2>
+    <sect2 id="gosgetstarted-66">
+      <title>以不同的语言启动会话</title>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>不同的语言，启动</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>语言，以不同的语言启动会话</primary>
+      </indexterm>
+      <para>要以不同的语言启动会话，请执行以下操作。</para>
+      <orderedlist>
+        <listitem>
+          <para>在登录对话框中，选择<menuchoice><guimenu>“选项”</guimenu><guimenuitem>“会话”</guimenuitem></menuchoice>。从可用桌面环境的列表中选择 GNOME 桌面。</para>
+        </listitem>
+        <listitem>
+          <para>在登录对话框中，选择<menuchoice><guimenu>“选项”</guimenu><guimenuitem>“语言”</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>选择包含您想选用的语言的语言组。</para>
+        </listitem>
+        <listitem>
+          <para>选择一种语言。</para>
+        </listitem>
+        <listitem>
+          <para>登录。</para>
+        </listitem>
+      </orderedlist>
+      <para>系统管理员会为您的系统设置默认的语言。<guilabel>“登录管理器”</guilabel>对话框上的<guimenu>“选项”</guimenu>菜单使您可以访问其它语言。当您在<guimenu>“选项”</guimenu>菜单中选择了一种语言后，系统会为您的会话设置 LANG 变量。系统会在会话结束时恢复默认语言。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>锁定屏幕</title>
+    <para>本节介绍了如何锁定屏幕以及如何配置屏幕保护程序。</para>
+    <sect2 id="gosstartsession-4">
+      <title>锁定屏幕</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>“锁定”图标。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>锁定屏幕</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>锁定屏幕</primary>
+      </indexterm>
+      <indexterm>
+        <primary>“锁定按钮”</primary>
+      </indexterm>
+      <para>要锁定屏幕，请执行以下一种操作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>选择<menuchoice><guimenu>“操作”</guimenu><guimenuitem>“锁定屏幕”</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>如果面板上有<guibutton>“锁定”</guibutton>按钮，请单击<guibutton>“锁定”</guibutton>按钮。</para>
+          <para>要将<guibutton>“锁定”</guibutton>按钮添加到面板，请右击该面板。选择<menuchoice><guimenu>“添加到面板”</guimenu><guimenuitem>“锁定按钮”</guimenuitem></menuchoice>。</para>
+        </listitem>
+      </itemizedlist>
+      <para>当您锁定屏幕后，屏幕保护程序就会启动。要解除屏幕锁定，请移动鼠标，显示锁定的屏幕对话框。在锁定的屏幕对话框中输入您的用户名和口令，然后按<keycap>回车</keycap>键。 </para>
+      <note>
+        <para>要正确锁定屏幕，必须启用屏幕保护程序。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosstartsession-3">
+      <title>配置屏幕保护程序</title>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>配置屏幕保护程序</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>屏幕保护程序，配置</primary>
+      </indexterm>
+      <indexterm>
+        <primary>XScreenSaver</primary>
+        <see>屏幕保护程序</see>
+      </indexterm>
+      <para>屏幕保护程序是一种可以在不使用屏幕时用来替换屏幕图像的应用程序。可以通过以下方式使用屏幕保护程序：</para>
+      <itemizedlist>
+        <listitem>
+          <para>在一段指定的空闲时间后激活。</para>
+        </listitem>
+        <listitem>
+          <para>在锁定屏幕后激活。</para>
+        </listitem>
+        <listitem>
+          <para>当系统空闲时，管理监视器使用的电源。</para>
+        </listitem>
+      </itemizedlist>
+      <para>要配置您的屏幕保护应用程序，请执行以下步骤： </para>
+      <orderedlist>
+        <listitem>
+          <para>右击<guibutton>“锁定”</guibutton>按钮，然后从弹出菜单中选择<guimenuitem>“属性”</guimenuitem>。即可显示<guilabel>“XScreenSaver”</guilabel>对话框。</para>
+          <para>如果面板上没有<guibutton>“锁定”</guibutton>按钮，您可以将该按钮添加到面板上。要将<guibutton>“锁定”</guibutton>按钮添加到面板，请右击该面板。选择<menuchoice><guimenu>“添加到面板”</guimenu><guimenuitem>“锁定按钮”</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>要配置您的屏幕保护应用程序，请使用<guilabel>“显示模式”</guilabel>选项卡中的元素。下表介绍了<guilabel>“显示模式”</guilabel>选项卡式部分中的对话框元素： </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>设置</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>功能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>模式</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>使用下拉列表框指定屏幕保护应用程序的行为。从以下选项中选择：</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><guilabel>禁用屏幕保护程序</guilabel>：如果不想使用屏幕保护应用程序，请选择此选项。</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>只显示黑屏</guilabel>：如果想在屏幕锁定后让屏幕变成黑屏，请选择此选项。</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>只显示一种屏幕保护程序</guilabel>：如果希望屏幕锁定后显示列表框中只显示一种屏幕保护画面，请选择此选项。</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>随机屏幕保护程序</guilabel>：如果希望在屏幕锁定后从屏幕保护程序显示列表框中随机选择屏幕保护画面，则选择此选项。</para>
+                      </listitem>
+                    </itemizedlist>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>显示列表框</para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>从列表框中选择所需的屏幕保护画面。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>在此时间之后黑屏</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>指定在上次使用鼠标或键盘之后要等待多长时间才激活屏幕保护程序。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>在此时间之后循环</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>指定特定的屏幕保护画面显示多长时间之后显示下一种屏幕保护画面。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>在此时间之后锁定屏幕</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>如果想在激活屏幕保护程序之后锁定屏幕，请选择此选项。使用旋转框指定激活屏幕保护程序和屏幕锁定之间的延迟时间。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>预览</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>单击此按钮可以预览在屏幕保护程序显示列表框中选定的屏幕保护画面。要停止预览，请按任意键或单击鼠标键。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>设置</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>单击此按钮，显示在屏幕保护程序显示列表框中选定的屏幕保护画面的选项。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>要配置高级选项，请单击<guilabel>“高级”</guilabel>选项卡。下表介绍了<guilabel>“高级”</guilabel>选项卡式部分中的对话框元素： </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>设置</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>功能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>抓取桌面图像</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>有些屏幕保护程序能拍摄桌面的快照，然后对快照进行处理，创建您的屏幕保护画面。选择此选项后，屏幕保护程序就可以拍摄桌面的快照。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>抓取视频帧</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>有些屏幕保护程序能捕获视频帧，然后对捕获的图像进行处理，创建您的屏幕保护画面。如果您的系统有视频捕获卡，选择此选项后，屏幕保护程序就可以捕获视频帧。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>选择随机图像</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>选择此选项后，屏幕保护程序就能够使用选定目录中的图像。在相应字段中键入该目录的路径。或者，单击<guibutton>“浏览”</guibutton>显示一个对话框，您可以从中选择目录。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>详细诊断</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>如果想显示屏幕保护程序诊断信息，请选择此选项。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>显示子进程错误</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>如果想在屏幕上显示与屏幕保护程序子进程相关的错误，请选择此选项。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>启动时显示闪屏</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>如果想让 <application>Xscreensaver</application> 在 <application>Xscreensaver</application> 启动时显示一个闪屏对话框，请选择此选项。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>启用电源管理</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>选择此选项，可打开监视器的电源管理功能。在您不使用监视器时，电源管理功能能够降低监视器的能耗。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>在此时间之后待机</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>指定等待多长时间后将监视器置于待机模式。当监视器处于待机模式时，屏幕为黑屏。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>在此时间之后挂起</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>指定等待多长时间后将监视器置于节电模式。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>在此时间之后关闭</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>指定等待多长时间后关闭监视器。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>安装色彩表</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>选择此选项，当屏幕保护程序激活时会安装一个专用的色彩表。使用专用的色彩表能改进特定屏幕保护画面的颜色质量。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>清屏时渐变为黑屏</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>如果想让显示屏在激活屏幕保护程序后渐变为黑屏，请选择此选项。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>取消清屏时从黑屏淡出</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>如果想让显示屏在屏幕保护程序停止后从黑屏渐变为屏幕实际内容，则选择此选项。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>渐变持续时间</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>指定当屏幕保护程序激活后，要用多长时间才渐变为黑屏。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>“关闭窗口”</guibutton>窗口框按钮，关闭<guilabel>“XScreenSaver”</guilabel>对话框。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>管理会话</title>
+    <indexterm>
+      <primary>首选项工具</primary>
+      <secondary>会话</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>会话</primary>
+      <secondary>管理</secondary>
+    </indexterm>
+    <para>要配置桌面的会话管理，请选择<menuchoice><guimenu>“应用程序”</guimenu><guisubmenu>“桌面首选项”</guisubmenu><guisubmenu>“高级”</guisubmenu><guimenuitem>“会话”</guimenuitem></menuchoice>。<application>“会话”</application>首选项工具能识别以下应用程序类型： </para>
+    <itemizedlist>
+      <listitem>
+        <indexterm>
+          <primary>启动应用程序</primary>
+          <secondary>受会话管理</secondary>
+        </indexterm>
+        <para>受会话管理的应用程序。当保存会话的设置时，会话管理器会保存受该会话管理的所有应用程序。如果注销后再次登录，会话管理器会自动启动受该会话管理的应用程序。 </para>
+      </listitem>
+      <listitem>
+        <para>不受会话管理的应用程序。当保存会话的设置时，会话管理器不会保存不受会话管理的应用程序。如果注销后再次登录，会话管理器不会启动非会话管理的应用程序。您必须手动启动这些应用程序。或者，您可以使用<application>“会话”</application>首选项工具指定您想自动启动的非会话管理应用程序。</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>定义登录和注销时的会话行为</title>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>登录行为</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>注销行为 </secondary>
+      </indexterm>
+      <para>要设置登录和注销时的会话行为，请选择<menuchoice><guimenu>“应用程序 ”</guimenu><guisubmenu>“桌面首选项”</guisubmenu><guisubmenu>“高级”</guisubmenu><guimenuitem>“会话”</guimenuitem></menuchoice>。根据需要在<guilabel>“会话选项”</guilabel>选项卡式部分中进行更改。例如，可以选择在登录时显示闪屏。</para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>使用启动应用程序</title>
+      <indexterm>
+        <primary>启动程序</primary>
+        <see>启动应用程序</see>
+      </indexterm>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>使用启动应用程序</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>启动应用程序</primary>
+        <secondary>非会话管理的</secondary>
+      </indexterm>
+      <para>您可以将会话配置为与非会话管理的应用程序一起启动。要配置非会话管理的启动应用程序，请选择<menuchoice><guimenu>“应用程序”</guimenu><guisubmenu>“桌面首选项”</guisubmenu><guisubmenu>“高级”</guisubmenu><guimenuitem>“会话”</guimenuitem></menuchoice>。使用<guilabel>“启动程序”</guilabel>选项卡式部分可以添加、编辑和删除应用程序。如果保存了设置后注销，那么下次您登录时，这些启动应用程序会自动启动。</para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>浏览当前会话中的应用程序</title>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>浏览应用程序</secondary>
+      </indexterm>
+      <para>要浏览当前会话中的应用程序，请选择<menuchoice><guimenu>“应用程序”</guimenu><guisubmenu>“桌面首选项”</guisubmenu><guisubmenu>“高级”</guisubmenu><guimenuitem>“会话”</guimenuitem></menuchoice>。<guilabel>“当前会话”</guilabel>选项卡式部分列出了以下内容：</para>
+      <itemizedlist>
+        <listitem>
+          <para>所有当前运行的 GNOME 应用程序、可以连接到会话管理器的 GNOME 应用程序和可以保存应用程序状态的 GNOME 应用程序。</para>
+        </listitem>
+        <listitem>
+          <para>所有可以连接到会话管理器的桌面首选项工具，以及可以保存工具状态的桌面首选项工具。</para>
+        </listitem>
+      </itemizedlist>
+      <para>您可以使用<guilabel>“当前会话”</guilabel>选项卡式部分对应用程序或首选项工具的会话属性执行少量操作。例如，可以编辑启动顺序，以及该列表中的任何 GNOME 应用程序或桌面首选项工具的重新启动风格。</para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>保存会话设置</title>
+      <indexterm>
+        <primary>会话</primary>
+        <secondary>保存设置</secondary>
+      </indexterm>
+      <para>要保存会话设置，请执行以下步骤： </para>
+      <orderedlist>
+        <listitem>
+          <para>将会话配置为在结束会话时自动保存设置。要配置会话，请选择<menuchoice><guimenu>“应用程序”</guimenu><guisubmenu>“桌面首选项”</guisubmenu><guisubmenu>“高级”</guisubmenu><guimenuitem>“会话”</guimenuitem></menuchoice>。<application>“会话”</application>首选项工具就会启动。选择<guilabel>“会话选项”</guilabel>选项卡式部分上的<guilabel>“自动保存对会话的更改”</guilabel>选项。</para>
+        </listitem>
+        <listitem>
+          <para>结束会话。</para>
+        </listitem>
+      </orderedlist>
+      <para>如果没有选择<guilabel>“自动保存对会话的更改”</guilabel>选项，当您注销时，会出现一个对话框询问您是否想保存当前设置。要保存设置，请选择该选项，然后继续注销。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>结束会话</title>
+    <indexterm>
+      <primary>会话</primary>
+      <secondary>结束</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>会话</primary>
+      <secondary>注销</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>注销</primary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>“注销”图标。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>要结束会话，请关闭当前所有的活动进程，然后执行以下一项操作：</para>
+    <itemizedlist>
+      <listitem>
+        <para>单击<guibutton>“注销”</guibutton>按钮。</para>
+      </listitem>
+      <listitem>
+        <para>选择<menuchoice><guimenu>“操作”</guimenu><guimenuitem>“注销”</guimenuitem></menuchoice>。</para>
+      </listitem>
+      <listitem>
+        <para>打开<guimenu>“GNOME 菜单”</guimenu>，然后选择<guimenuitem>“注销”</guimenuitem>。</para>
+      </listitem>
+    </itemizedlist>
+    <para>在结束桌面会话前，您可能想保存当前设置，以便以后可以恢复该会话。在注销期间，会显示一个对话框询问您是否想保存当前设置。在<application>“会话”</application>首选项工具中，您可以选择自动保存当前设置的选项。</para>
+  </sect1>
+</chapter>
