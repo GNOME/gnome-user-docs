@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="mimetypes-0">
+  <title>MIME Types</title>
+  <highlights>
+    <para>This chapter describes how applications detect MIME types,
+how to register MIME types, and how to add applications to the GNOME desktop.</para>
+  </highlights>
+  <sect1 id="mimetypes-1">
+    <title>Introduction</title>
+    <indexterm>
+      <primary>MIME types</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <para>A <firstterm>Multipurpose Internet Mail Extension</firstterm>
+(MIME) type identifies the format of a file. The MIME type enables applications
+to read the file. Applications such as Internet browsers and email applications
+use the MIME type to handle files of different types. For example, an email
+application can use the MIME type to detect what type of file is in a file
+attached to an email.</para>
+    <para>In the GNOME desktop, the <application>Nautilus</application> file manager
+uses MIME types to identify the type of a file. The file manager needs to
+know the MIME type of a file to perform the following tasks:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Open the file in an appropriate application.</para>
+      </listitem>
+      <listitem>
+        <para>Display a string that describes the type of file.</para>
+      </listitem>
+      <listitem>
+        <para>Display an appropriate icon to represent the file.</para>
+      </listitem>
+      <listitem>
+        <para>Display a list of other applications that can open the file.</para>
+      </listitem>
+    </itemizedlist>
+    <para>If you add a new application, you must ensure that other applications
+can recognize the files associated with the application. You must perform
+several tasks to enable other applications to detect the MIME type of the
+application files.</para>
+    <para>This section describes how applications detect the MIME types of files,
+and how applications are associated with MIME types. This chapter also describes
+the procedure that you must follow to add a new application.</para>
+  </sect1>
+  <sect1 id="mimetypes-10">
+    <title>Detecting the MIME Type for a File</title>
+    <indexterm>
+      <primary>MIME types</primary>
+      <secondary>detecting</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>detecting MIME types</primary>
+    </indexterm>
+    <para>Applications can detect the MIME type of a file as follows:</para>
+    <orderedlist>
+      <listitem>
+        <para>The application uses <firstterm>file content sniffers</firstterm>
+to search for a particular pattern in the file. A file content sniffer associates
+a specific pattern in a file with a MIME type. If the application finds a
+match for the pattern, the MIME type associated with the pattern is the MIME
+type of the file.</para>
+      </listitem>
+      <listitem>
+        <para>If file content sniffers do not identify the MIME type, then
+the application can check the filename. The application checks the filename
+against the <firstterm>MIME type registry</firstterm>. The MIME type registry
+associates particular filename extensions and filename patterns, with particular
+MIME types. If a match for the filename is found, the MIME type associated
+with the extension or pattern is the MIME type of the file.</para>
+      </listitem>
+    </orderedlist>
+    <para>The following sections provide further information on file content sniffers
+and the MIME type registry.</para>
+    <sect2 id="mimetypes-2">
+      <title>File Content Sniffers</title>
+      <indexterm>
+        <primary>MIME types</primary>
+        <secondary>file content sniffers</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>file content sniffers</primary>
+      </indexterm>
+      <para>File content sniffers are specified in the file <filename>/usr/gnome/etc/gnome-vfs-mime-magic</filename>. The following is an example of a file content sniffer:</para>
+      <literallayout>0	string		\x89PNG					image/png</literallayout>
+      <para>The syntax for file content sniffers is as follows:</para>
+      <literallayout>offset_start[:offset_end] pattern_type pattern [&amp;pattern_mask] type</literallayout>
+      <para><xref linkend="mimetypes-TBL-3"/> describes the fields in a file content
+sniffer.</para>
+      <table frame="topbot" id="mimetypes-TBL-3">
+        <title>Fields in a File Content Sniffer</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="29.90*"/>
+          <colspec colwidth="70.10*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Field</para>
+              </entry>
+              <entry valign="top">
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <literal>offset_start</literal>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Specifies the number of characters to ignore in
+the file before searching for a text pattern.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <literal>pattern_type</literal>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Specifies the type of pattern to search for. The <literal>string</literal> pattern type is the only pattern type that is supported at
+the time of publication of this guide.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <literal>pattern</literal>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Specifies the pattern to search for. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <literal>pattern_mask</literal>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Specifies a <firstterm>pattern mask</firstterm>,
+in hexadecimal format. For more information on pattern masks, see the next
+section.</para>
+                <para>This field is optional. This field is not present in
+the example.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <literal>type</literal>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Specifies the MIME type to associate with files that match
+this entry.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="mimetypes-12">
+        <title>Pattern Masks</title>
+        <indexterm>
+          <primary>MIME types</primary>
+          <secondary>pattern mask</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>pattern mask</primary>
+        </indexterm>
+        <para>A
+pattern mask identifies bits in the pattern to ignore when searching for a
+pattern in a file. The following is an example of a file content sniffer with
+a pattern mask:</para>
+        <literallayout>0     string          BMxxxx\000\000 &amp;0xffff00000000ffff      image/bmp</literallayout>
+        <para>The pattern and mask in the example are as follows:</para>
+        <informaltable frame="none">
+          <tgroup cols="9" colsep="0" rowsep="0">
+            <colspec colwidth="16.54*"/>
+            <colspec colwidth="10.21*"/>
+            <colspec colwidth="10.41*"/>
+            <colspec colwidth="10.21*"/>
+            <colspec colwidth="10.41*"/>
+            <colspec colwidth="10.21*"/>
+            <colspec colwidth="10.41*"/>
+            <colspec colwidth="10.21*"/>
+            <colspec colwidth="10.41*"/>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>Pattern</para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>B</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>M</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>x</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>x</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>x</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>x</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>\000</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>\000</literal>
+                  </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Mask</para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>ff</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>ff</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>00</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>00</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>00</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>00</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>ff</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>
+                    <literal>ff</literal>
+                  </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>The pattern and mask specify a file with the following characteristics:</para>
+        <orderedlist>
+          <listitem>
+            <para>The file begins with <literal>BM</literal>.</para>
+          </listitem>
+          <listitem>
+            <para><literal>BM</literal> is followed by four bytes with any values.</para>
+          </listitem>
+          <listitem>
+            <para>The four bytes are followed by <literal>\000\000</literal>.</para>
+          </listitem>
+        </orderedlist>
+        <para>The file content sniffer specifies that the MIME type of files that
+match the pattern and mask is <literal>image/bmp</literal>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="mimetypes-4">
+      <title>MIME Type Registry</title>
+      <indexterm>
+        <primary>MIME types</primary>
+        <secondary>MIME type registry</secondary>
+      </indexterm>
+      <para>The MIME type registry is located in <filename>/usr/gnome/share/mime-info</filename>. The MIME type registry contains the following files:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>File</para>
+              </entry>
+              <entry valign="top">
+                <para>Filename Extension</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>MIME information file</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <filename>.mime</filename>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>MIME keys file</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <filename>.keys</filename>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>The following sections describe MIME information files and MIME keys
+files.</para>
+      <sect3 id="mimetypes-5">
+        <title>MIME Information Files</title>
+        <indexterm>
+          <primary>MIME types</primary>
+          <secondary>MIME information files</secondary>
+        </indexterm>
+        <para><firstterm>MIME information files</firstterm>
+associate MIME types with one or both of the following:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Filename extensions</para>
+          </listitem>
+          <listitem>
+            <para>Filename patterns</para>
+          </listitem>
+        </itemizedlist>
+        <para>When an application searches for the MIME type of a file, the application
+checks the filename against the MIME information files. If a match for the
+filename is found, the MIME type associated with the extension or pattern
+is the MIME type of the file.</para>
+        <para>In MIME information files, the filename pattern to search for is written
+as a regular expression.</para>
+        <para>The format of MIME type entries in MIME information files is as follows:</para>
+        <literallayout><replaceable>MIME_type</replaceable>
+		ext[,priority]: <replaceable>list_of_extensions</replaceable>
+		regex[,priority]: <replaceable>list_of_regular_expressions</replaceable></literallayout>
+        <para>You can specify a priority value for the filename extension and the
+regular expression. You can use the priority value to differentiate composite
+filenames. For example, you can assign a priority of <literal>1</literal>
+to the <filename>.gz</filename> extension, and assign a higher priority of <literal>2</literal> to the <filename>.tar.gz</filename> extension. In this case, the
+file <filename>abc.tar.gz</filename> takes the MIME type for <filename>.tar.gz</filename>.</para>
+        <note>
+          <para>You must indent the <literal>ext</literal> field and the <literal>regex</literal> field with a tab character (<literal>\t</literal>).</para>
+        </note>
+        <para>The following MIME type entries are samples from the <filename>gnome-vfs.mime</filename> MIME information file:</para>
+        <literallayout>application/x-compressed-tar
+		regex,2: tar\.gz$
+		ext: tgz
+audio/x-real-audio
+		ext: rm ra ram
+image/jpeg
+		ext: jpe jpeg jpg
+image/png
+		ext: png
+text/html
+		ext: html htm HTML
+text/plain
+		ext: asc txt TXT
+text/x-readme
+		regex: README.*</literallayout>
+        <note>
+          <para>The file manager reads the MIME information files alphabetically.
+The alphabetical order determines the order in which MIME types are assigned
+to filename extensions or regular expressions. For example, if the same file
+extension is assigned to different MIME types in the files <filename>abc.mime</filename> and <filename>def.mime</filename>, the MIME type in <filename>abc.mime</filename> is used.</para>
+        </note>
+      </sect3>
+      <sect3 id="mimetypes-11">
+        <title>MIME Keys Files</title>
+        <indexterm>
+          <primary>MIME types</primary>
+          <secondary>MIME keys files</secondary>
+        </indexterm>
+        <para><firstterm>MIME keys file</firstterm> provide information
+about a MIME type that is used in the user interface. For example, the MIME
+keys file provides a description of a MIME type, and specifies an icon to
+represent files of that MIME type.</para>
+        <para>The following is a sample from a MIME keys file:</para>
+        <literallayout>text/html
+		description=HTML page
+		icon_filename=gnome-text-html
+		default_action_type=application
+		short_list_application_ids_for_novice_user_level=mozilla,netscape,galeon
+		category=Documents/World Wide Web</literallayout>
+        <note>
+          <para>You must indent the keys in a MIME keys file with a tab character
+(<literal>\t</literal>).</para>
+        </note>
+        <para><xref linkend="mimetypes-TBL-6"/> describes the most important keys in
+MIME keys files. Typically, the <literal>description</literal> key and the <literal>category</literal> key are localized.</para>
+        <table frame="topbot" id="mimetypes-TBL-6">
+          <title>Keys in MIME Keys Files</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="50*"/>
+            <colspec colname="colspec1" colwidth="50*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>Key</para>
+                </entry>
+                <entry valign="top">
+                  <para>Description</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <literal>can_be_executable</literal>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Specifies whether files of this MIME type
+can be executed.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <literal>description</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Describes the MIME type. This description can be
+displayed in the file manager and other applications.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <literal>icon_filename</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Specifies the filename of an icon to represent the
+MIME type. Does not specify the path to the filename, or the filename extension. </para>
+                  <para>This icon can be displayed in the file manager and other applications.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <literal>default_action_type</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Specifies the category of action to take when a
+file of this MIME type is opened by the user. Enter <literal>application</literal>
+for this MIME type for most applications.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <literal>short_list_application_ids</literal>
+                    <literal>_for_novice_user_level</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Specifies the application to use when a file of this MIME type is opened by
+a user. Specify one or more applications, in order of priority. The applications
+must also be registered in the application registry.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <literal>category</literal>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Specifies a category for the MIME type. The value
+of this key determines the location of the MIME type in the <application>File Types and Programs</application> preference tool.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="mimetypes-7">
+    <title>Registering Applications for MIME Types</title>
+    <indexterm>
+      <primary>MIME types</primary>
+      <secondary>registering applications
+for</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>applications</primary>
+      <secondary>registry</secondary>
+    </indexterm>
+    <para>The <firstterm>application registry</firstterm> contains text files that register applications. The application
+registration files contain a series of key-value pairs that specify details
+for applications. For example, the application registration files contain
+the following information:</para>
+    <itemizedlist>
+      <listitem>
+        <para>The command to use to start the application.</para>
+      </listitem>
+      <listitem>
+        <para>MIME types to associate with the application.</para>
+      </listitem>
+    </itemizedlist>
+    <para>An application registration file can contain one or more application
+registrations. Application registration files have a <filename>.applications</filename> extension.</para>
+    <para>The location of the application registry is <filename>/usr/share/gnome/application-registry</filename>. This directory contains a default application registration file
+that is  called <filename>gnome-vfs.applications</filename>.</para>
+    <para>To register an application, add a registration file for the application
+to the application registry. </para>
+    <para>The following is an example of an application registration:</para>
+    <literallayout>eog
+		command=eog
+		name=Eye of Gnome
+		can_open_multiple_files=true
+		expects_uris=false
+		requires_terminal=false
+		mime_types=image/bmp,image/gif,image/jpeg,image/png,image/tiff,
+image/x-xpixmap,image/x-bmp,image/x-png,image/x-portable-anymap,
+image/x-portable-bitmap,image/x-portable-graymap,
+image/x-portable-pixmap</literallayout>
+    <para><xref linkend="mimetypes-TBL-8"/> describes the keys in application registration
+files.</para>
+    <table frame="topbot" id="mimetypes-TBL-8">
+      <title>Keys for an Application Registration</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="50*"/>
+        <colspec colname="colspec1" colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Key</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>Application identifier</para>
+            </entry>
+            <entry valign="top">
+              <para>Specifies a unique identifier for the application. This
+identifier must be the same as the identifier in the short_list_application_ids_for_novice_user_level
+key in the MIME keys file for the application.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>command</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Specifies the command to use to start the application,
+and any options to use with the command.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>name</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Specifies a name for the application. The name is used
+in the user interface. For example, the name is used in the <guimenu>Open
+With</guimenu> submenu in the file manager.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>can_open_multiple_files</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Specifies whether the application can open several
+files at the same time.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>expects_uris</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Specifies whether the application can process URIs.
+If the value of this key is <literal>true</literal>, the application registration
+entry must also contain a <literal>supported_uri_schemes</literal> key.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>supported_uri_schemes</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Specifies
+the URI schemes that the application can process.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>requires_terminal</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Specifies whether to run the application in a terminal
+window. Enter <literal>true</literal> for this field for an application that
+does not create a window in which to run.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>mime_types</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Specifies the MIME types that the application can
+use.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="mimetypes-9">
+    <title>Adding an Application to the GNOME Desktop</title>
+    <indexterm>
+      <primary>MIME types</primary>
+      <secondary>adding applications</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>applications</primary>
+      <secondary>adding</secondary>
+    </indexterm>
+    <para>To add an application to the GNOME desktop, perform the
+following steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Add a menu item for the application. For more information
+on how to add an item to a menu, see <xref linkend="menustructure-0"/>.</para>
+      </listitem>
+      <listitem>
+        <para>Add an icon for the application to <filename>/usr/gnome/share/icons/<replaceable>theme_name</replaceable>/<replaceable>icon_size</replaceable>/apps</filename>.
+For more information on icons and themes, see <citetitle>Installing Themes</citetitle>. </para>
+      </listitem>
+      <listitem>
+        <para>If the application uses a new MIME type, add a file content
+sniffer for the new MIME type. For more information on file content sniffers,
+see <xref linkend="mimetypes-2"/>.</para>
+      </listitem>
+      <listitem>
+        <para>If the application uses a new MIME type, add a MIME information
+file for the application to the MIME type registry. For more information on
+MIME information files, see <xref linkend="mimetypes-5"/>.</para>
+      </listitem>
+      <listitem>
+        <para>Add a MIME keys file for the application to the MIME type
+registry. For more information on MIME keys files, see <xref linkend="mimetypes-11"/>.</para>
+      </listitem>
+      <listitem>
+        <para>If the application uses a new MIME type, add an icon for the
+MIME type to <filename>/usr/gnome/share/icons/<replaceable>theme_name</replaceable>/<replaceable>icon_size</replaceable>/mimetypes</filename>. For more information on icons
+and themes, see <citetitle>Installing Themes</citetitle>. </para>
+      </listitem>
+      <listitem>
+        <para>To associate the application with a MIME type, add an application
+registration file to the application registry. For more information on the
+application registry, see <xref linkend="mimetypes-7"/>.</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+</chapter>

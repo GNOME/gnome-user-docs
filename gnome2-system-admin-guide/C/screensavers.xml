@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="screensavers-0">
+  <title>Setting Screensavers</title>
+  <highlights>
+    <para>This chapter describes how to set preferences for the screensaver.
+This chapter also provides information on how to modify the displays that
+are available for the screensaver.</para>
+  </highlights>
+  <sect1 id="screensavers-1">
+    <title>Introduction</title>
+    <indexterm>
+      <primary>screensavers</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>XScreenSaver</primary>
+      <see>screensavers</see>
+    </indexterm>
+    <para>A <firstterm>screensaver</firstterm> is an application that
+replaces the image on a screen when the screen is not in use. The screensaver
+application for the GNOME desktop is <application>XScreenSaver</application>.
+The following sections describe how to set preferences for the <application>XScreenSaver</application> application, and how to modify the displays that
+are available for the screensaver.</para>
+    <note>
+      <para>The <application>XScreenSaver</application> application does not
+allow you to lock your screen if you are logged in as <literal>root</literal>.
+If you want to be able to lock your screen, log in as a normal user. To obtain
+system administrator privileges, open a terminal window, then use the <command>su</command> command to log in as <literal>root</literal>.</para>
+    </note>
+  </sect1>
+  <sect1 id="screensavers-2">
+    <title>Setting Screensaver Preferences</title>
+    <indexterm>
+      <primary>screensavers</primary>
+      <secondary>setting preferences</secondary>
+    </indexterm>
+    <para>Default screensaver preferences are stored in a file that
+is called <filename>XScreenSaver</filename>. This file is stored in different
+locations, depending on the platform, as follows:</para>
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="43.76*"/>
+        <colspec colwidth="56.24*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Platform</para>
+            </entry>
+            <entry valign="top">
+              <para>File Location</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>RedHat Linux</para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <filename>/usr/X11R6/lib/X11/app-defaults/XScreenSaver</filename>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Solaris Operating Environment</para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <filename>/usr/openwin/lib/app-defaults/XScreenSaver</filename>
+              </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <para>To modify screensaver application preferences, users can right-click
+on the <guibutton>Lock</guibutton> button, then choose <guimenuitem>Properties</guimenuitem>. The user can then modify preferences in the <guilabel>XScreenSaver</guilabel> dialog. When a user modifies the screensaver preferences, the
+preferences are stored in the home directory of the user, in the <filename>$HOME/.xscreensaver</filename> file. For information on screensaver preferences,
+see <citetitle>GNOME 2.2 Desktop User Guide</citetitle>.</para>
+    <para>Users can also run the command <command>/usr/X11R6/bin/xscreensaver-demo</command> to open the <guilabel>XScreenSaver</guilabel> dialog.</para>
+    <para>To set default screensaver preferences for all users, modify the <filename>XScreenSaver</filename> file. You can also use the <guilabel>XScreenSaver</guilabel> dialog to create a <filename>$HOME/.xscreensaver</filename> file,
+then copy the file to the location of the <filename>XScreenSaver</filename>
+file.</para>
+    <para>To restore the default settings for a user, delete the <filename>$HOME/.xscreensaver</filename> file from the home directory of the user. If no <filename>$HOME/.xscreensaver</filename> file is present, the default preferences in the <filename>XScreenSaver</filename> file are used. </para>
+    <note>
+      <para>The default display behavior of <application>XScreenSaver</application>
+is to display a blank screen. The blank screen might confuse users. You might
+want to change this default display behavior.</para>
+    </note>
+    <para>To activate changes to the screensaver preferences, use the following
+command to reload screensaver preferences:</para>
+    <para><computeroutput>#</computeroutput> <userinput>xscreensaver-command -restart</userinput></para>
+    <note>
+      <para>The <application>xset</application> application does not work
+with <application>XScreenSaver</application> at the time of publication of
+this guide. To modify screensaver preferences, modify the <filename>XScreenSaver</filename> file or the <filename>$HOME/.xscreensaver</filename> file. </para>
+    </note>
+  </sect1>
+  <sect1 id="screensavers-3">
+    <title>Modifying Screensaver Displays</title>
+    <indexterm>
+      <primary>screensavers</primary>
+      <secondary>modifying screensaver
+displays</secondary>
+    </indexterm>
+    <para>The screensaver application allows users
+to choose one or more <firstterm>screensaver displays</firstterm>. A screensaver
+display is an application that displays images on the screen of the user when
+the screen is not in use. The screensaver displays are listed in the <filename>XScreenSaver</filename> file and in the <filename>$HOME/.xscreensaver</filename>
+file. </para>
+    <para>To add a new screensaver display, copy the executable file for the display
+to the <filename>/usr/X11R6/lib/xscreensaver/hacks</filename> directory. Add
+the command for the screensaver display to the <filename>XScreenSaver</filename> file or the <filename>$HOME/.xscreensaver</filename> file. Include
+any arguments that are required to run the screensaver display on the whole
+desktop, rather than in a window. For example, you might want to include the <literal>-root</literal> option to display the screensaver display on the desktop.</para>
+    <para>To disable a screensaver display, add
+a minus sign (-) at the start of the command for the screensaver display in
+the preferences file. The following excerpt from a <filename>$HOME/.xscreensaver</filename> file shows a disabled <literal>Qix (solid)</literal> screensaver
+display:</para>
+    <literallayout>-		 &quot;Qix (solid)&quot; 	qix -root -solid -segments 100</literallayout>
+  </sect1>
+</chapter>

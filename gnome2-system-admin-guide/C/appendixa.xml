@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+  <appendix id="appendixa-0">
+    <title>Hidden Directories</title>
+    <highlights>
+      <para>This appendix describes the hidden directories that the
+GNOME desktop adds to the home directories of users. </para>
+    </highlights>
+    <indexterm>
+      <primary>hidden directories</primary>
+    </indexterm>
+    <indexterm>
+      <primary>.* directories</primary>
+      <see>hidden directories</see>
+    </indexterm>
+    <para>A hidden
+directory is a directory that has a name that begins with a period (.). <xref linkend="appendixa-TBL-2"/> describes the hidden directories that the GNOME
+desktop adds to the home directories of users. </para>
+    <table frame="topbot" id="appendixa-TBL-2">
+      <title>Hidden Directories in User Home Directories</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="50*"/>
+        <colspec colname="colspec1" colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Directory</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.esd_auth</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains the authentication cookie for the GNOME
+sound daemon. The GNOME sound daemon is the Enlightened Sound Daemon (ESD).</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.gconf</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains the <application>GConf</application> configuration
+source for the user. When the user sets a preference, the new preference information
+is added to this location.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.gconfd</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains the following <application>GConf</application>
+daemon details:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Configuration information.</para>
+                </listitem>
+                <listitem>
+                  <para>Lock information for objects that are referenced by an  <firstterm>Interoperable Object Reference (IOR)</firstterm>.</para>
+                </listitem>
+                <listitem>
+                  <para>State information for objects that are referenced by an  IOR.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.gnome</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains user-specific application data that is
+not stored in the <application>GConf</application> repository. For example,
+this directory contains MIME type information and session information for
+the user. </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.gnome-desktop</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>The <application>Nautilus</application> file manager
+contains a preference that enables users to use <application>Nautilus</application>
+to manage the desktop background. If the user selects this option, this directory
+contains the objects that are on the <application>Nautilus</application> desktop
+background of the user. This directory contains the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Objects on the desktop background, for example, the <guilabel>Home</guilabel> object, the <guilabel>Trash</guilabel> object, and other launchers.
+The objects appear in the directory as desktop entry files. For example, the <filename>starthere.desktop</filename> file contains a link to the <guilabel>Start Here</guilabel> location. </para>
+                </listitem>
+                <listitem>
+                  <para>Removable media volumes that are mounted.</para>
+                </listitem>
+              </itemizedlist>
+              <para>The file manager also contains a preference that enables
+users to use the home directory as the desktop background directory, instead
+of <filename>.gnome-desktop</filename>. If a user selects this
+option, the contents of the home directory are displayed as desktop background
+objects.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.gnome2</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains user-specific application data that is
+not stored in the <application>GConf</application> repository. For example,
+this directory contains the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Keyboard shortcut information.</para>
+                </listitem>
+                <listitem>
+                  <para>Window location information.</para>
+                </listitem>
+                <listitem>
+                  <para>Desktop entry files for panel launchers.</para>
+                </listitem>
+              </itemizedlist>
+              <para>This directory also contains user-specific menu data.
+If a user modifies menus, the details are stored here.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.gnome2-private</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Ignore this directory. This directory has no function
+at the time of publication of this guide.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.metacity</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains session data for the <application>Metacity</application> window manager.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.nautilus</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains file manager data that is specific to the
+user. For example, this directory can contain the following: </para>
+              <itemizedlist>
+                <listitem>
+                  <para>Metadata for the directories with which the user works.</para>
+                </listitem>
+                <listitem>
+                  <para><application>Nautilus</application> themes that the user adds.</para>
+                </listitem>
+                <listitem>
+                  <para><application>Nautilus</application> emblems that the user
+adds.</para>
+                </listitem>
+                <listitem>
+                  <para><application>Nautilus</application> desktop background images.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.themes</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains desktop themes and window frame themes
+that the user adds. The user can add themes from the <application>Themes</application>
+preference tool.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.thumbnails</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Contains image thumbnails for the user. The image
+thumbnails are used in the file manager. The file manager contains a preference
+that the user can select to stop generation of thumbnail images.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <filename>.xscreensaver</filename>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Contains
+screensaver configuration data and screensaver preference data.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </appendix>
