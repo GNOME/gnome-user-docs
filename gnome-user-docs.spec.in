@@ -14,6 +14,7 @@ Release: 	%RELEASE
 Copyright: 	FDL
 Distribution: 	GNOME RPMS
 Source: 	%{name}-%{version}.tar.gz
+URL:		http://developer.gnome.org/projects/gdp/
 Group: 		Documentation
 BuildArch: 	noarch
 BuildRoot: 	/var/tmp/%{name}-%{ver}-root
@@ -45,10 +46,10 @@ make prefix=$RPM_BUILD_ROOT%{_prefix} \
 rm -rf $RPM_BUILD_ROOT
 
 %post
-if which scrollkeeper-udpate>/dev/null 2>&1; then scrollkeeper-udpate; fi
+if which scrollkeeper-update>/dev/null 2>&1; then scrollkeeper-update; fi
 
 %postun
-if which scrollkeeper-udpate>/dev/null 2>&1; then scrollkeeper-udpate; fi
+if which scrollkeeper-update>/dev/null 2>&1; then scrollkeeper-update; fi
 
 %files
 %defattr(-, root, root)
