@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosgetstarted-1">
+  <title>デスクトップセッション</title>
+  <highlights>
+    <para>この章では、デスクトップセッションの開始、管理、および終了について説明します。</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>デスクトップセッションの開始</title>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="かいし">開始</secondary>
+    </indexterm>
+    <para>デスクトップにログインし、それをログアウトするまでをデスクトップセッションといいます。<application>ログインマネージャ</application>によって表示されるログイン画面は、デスクトップへの入口です。 ログイン画面には、ユーザー名とパスワードを入力するフィールドがあります。ログイン画面の<guimenu>「オプション」</guimenu>メニューには、セッションで使用する言語を選択するなどのログインオプションがあります。</para>
+    <para>セッションは、ログインすると開始されます。<application>ログインマネージャ</application>がユーザー名とパスワードを認証すると、セッションマネージャが起動します。セッションマネージャはセッションを管理します。たとえば、一番最後のセッションの状態を保存し、次回ログインしたときに、そのセッションから開始することができます。セッションマネージャは次のものを保存し復元します。 </para>
+    <itemizedlist>
+      <listitem>
+        <para>フォント、色、マウス設定など、外観や機能設定</para>
+      </listitem>
+      <listitem>
+        <para>ファイルマネージャウィンドウおよびテキストエディタウィンドウなど、実行していたアプリケーション。セッションマネージャが管理しないアプリケーションは、保存および復元できない。たとえば、端末のコマンドラインから <command> vi</command> エディタを起動した場合、セッションマネージャは編集セッションを復元できない</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosgetstarted-65">
+      <title>デスクトップセッションにログインする</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="ろくいん">ログイン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ろくいん">ログイン</primary>
+      </indexterm>
+      <para>セッションにログインするには、次の操作を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para><menuchoice><guimenu>「オプション」</guimenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。 利用可能なデスクトップ環境のリストから GNOME デスクトップを選びます。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「ログインマネージャ」</guilabel>ダイアログのフィールドにログイン名を入力して、<guibutton>「了解」</guibutton>をクリックします。 </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「ログインマネージャ」</guilabel>ダイアログのフィールドにパスワードを入力して、<guibutton>「了解」</guibutton>をクリックします。 </para>
+        </listitem>
+      </orderedlist>
+      <para>正常にログインできると、セッションマネージャがセッションを開始します。初めてセッションにログインする場合、セッションマネージャは新しいセッションを開始します。以前にログインしていた場合は、セッションマネージャは以前のセッションを復元します。</para>
+    </sect2>
+    <sect2 id="gosgetstarted-66">
+      <title>異なる言語でセッションを開始する</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="ことなるけんこてのかいし">異なる言語での開始</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="けんこことなるけんこてせつしよんをかいし">言語、異なる言語でセッションを開始</primary>
+      </indexterm>
+      <para>異なる言語でセッションを開始するには、次の操作を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ログインダイアログで、<menuchoice><guimenu>「オプション」</guimenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。利用可能なデスクトップ環境のリストから GNOME デスクトップを選びます。</para>
+        </listitem>
+        <listitem>
+          <para>ログインダイアログで、<menuchoice><guimenu>「オプション」</guimenu><guimenuitem>「言語」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>ログインしたい言語が含まれる言語グループを選択します。</para>
+        </listitem>
+        <listitem>
+          <para>言語を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>ログインします。</para>
+        </listitem>
+      </orderedlist>
+      <para>システム管理者は、システムのデフォルトの言語を設定します。ほかの言語には、<guilabel>「ログインマネージャ」</guilabel>ダイアログの<guimenu>「オプション」</guimenu>メニューからアクセスできます。<guimenu>「オプション」</guimenu>メニューで言語を選択すると、システムはそのセッションの LANG 変数を設定します。システムはセッションの終了時にデフォルトの言語に戻します。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>スクリーンロック</title>
+    <para>この節では、スクリーンロックとスクリーンセーバーの設定方法について説明します。</para>
+    <sect2 id="gosstartsession-4">
+      <title>スクリーンロックする</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>スクリーンロック機能を表すロックアイコンのイメージを示しています。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="すくりいんろつく">スクリーンロック</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="すくりいんろつく">スクリーンロック</primary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ろつくほたん">ロックボタン</primary>
+      </indexterm>
+      <para>スクリーンロックするには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para><menuchoice><guimenu>「アクション」</guimenu><guimenuitem>「スクリーンロック」</guimenuitem></menuchoice>を選択する</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「ロック」</guibutton>ボタンがパネルにある場合は、<guibutton>「ロック」</guibutton>ボタンをクリックする。</para>
+          <para><guibutton>「ロック」</guibutton>ボタンをパネルに追加するには、そのパネルで右クリックする<menuchoice><guimenu>「パネルに追加」</guimenu><guimenuitem>「ロックボタン」</guimenuitem></menuchoice>を選択する</para>
+        </listitem>
+      </itemizedlist>
+      <para>スクリーンロックすると、スクリーンセーバーが起動します。スクリーンロックを解除するには、マウスを動かして、「スクリーンロック」ダイアログを表示します。ユーザー名とパスワードを「スクリーンロック」ダイアログに入力して、<command>Return</command> キーを押します。</para>
+      <note>
+        <para>正しくスクリーンロックするには、スクリーンセーバーを有効に設定しておく必要があります。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosstartsession-3">
+      <title>スクリーンセーバーを設定する</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="すくりいんせえはあのせつてい">スクリーンセーバーの設定</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="すくりいんせえはあのせつてい">スクリーンセーバーの設定</primary>
+      </indexterm>
+      <indexterm>
+        <primary>XScreenSaver</primary>
+        <see>スクリーンセーバー</see>
+      </indexterm>
+      <para>スクリーンセーバーは、画面が使用されていないときに、画面の画像の代わりに使用されるアプリケーションです。スクリーンセーバーは、次の方法で使用できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>指定した待機時間のあとに起動</para>
+        </listitem>
+        <listitem>
+          <para>スクリーンロックしたときに起動</para>
+        </listitem>
+        <listitem>
+          <para>システムが待機中にモニタが使用する電力を管理 </para>
+        </listitem>
+      </itemizedlist>
+      <para>スクリーンセーバーを設定するには、次の手順を実行します。 </para>
+      <orderedlist>
+        <listitem>
+          <para><guibutton>「ロック」</guibutton>ボタンを右クリックして、ポップアップメニューから<guimenuitem>「設定」</guimenuitem>を選択します。 <guilabel>「XScreenSaver」</guilabel>ダイアログが表示されます。</para>
+          <para>パネルに<guibutton>「ロック」</guibutton>ボタンがない場合は、ボタンをパネルに追加できます。<guibutton>「ロック」</guibutton>ボタンを追加するには、そのパネルで右クリックします。<menuchoice><guimenu>「パネルに追加」</guimenu><guimenuitem>「ロックボタン」</guimenuitem></menuchoice>を選択します。 </para>
+        </listitem>
+        <listitem>
+          <para>スクリーンセーーバを設定するには、<guilabel>「表示モード」</guilabel>タブ内の要素を使用します。 次の表に、<guilabel>「表示モード」</guilabel>タブセクションのダイアログ要素を示します。 </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>設定</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>機能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「モード」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>ドロップダウンリストを使用して、スクリーンセーバーの動作を指定する。次のオプションから選択する </para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><guilabel>「スクリーンセーバーを無効化にする」</guilabel>: スクリーンセーバーを使用しない場合に選択する</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>「ブランク・スクリーンのみ」</guilabel>: 画面をロックしたときに、画面を空白にする場合に選択する</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>「1 つのスクリーンセーバーのみ」</guilabel>: 画面をロックしたときに、ディスプレイリストから、単一のスクリーンセーバーディスプレイを表示する場合に選択する</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>「ランダムなスクリーンセーバー」</guilabel>: 画面をロックしたときに、ディスプレイリストから無作為に選択したスクリーンセーバーディスプレイを表示する場合に選択する</para>
+                      </listitem>
+                    </itemizedlist>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>ディスプレイリスト</para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>リストから希望のスクリーンセーバーディスプレイを選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「XScreenSaver の起動」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>最後にマウスまたはキーボードを使用してから、スクリーンセーバーを起動するまでの待ち時間を指定する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「繰り返す周期」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>あるスクリーンセーバーの表示から次のスクリーンセーバーの表示までの時間を指定する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「画面ロックの起動」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>スクリーンセーバーが起動したあと、スクリーンロックする場合に選択する。スピンボックスを使用して、スクリーンセーバーの起動とスクリーンロックまでの遅延時間を指定する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>「プレビュー」</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>このボタンをクリックすると、スクリーンセーバーディスプレイリストで選択したスクリーンセーバーディスプレイをプレビューできる。プレビューを停止するには、任意のキーを押すか、マウスボタンをクリックする</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>「設定」</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>このボタンをクリックすると、スクリーンセーバーディスプレイリストで選択したスクリーンセーバーディスプレイのオプションを表示できる</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>拡張機能を設定するには、<guilabel>「拡張」</guilabel>タブをクリックします。次の表に、<guilabel>「 拡張」</guilabel>タブセクションのダイアログ要素を示します。 </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>設定</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>機能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「デスクトップ画像を操作対象にする」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>一部のスクリーンセーバーでは、デスクトップのスクリーンショットを撮ることができるため、そのスクリーンショットを使用してスクリーンセーバーディスプレイを作成できる。スクリーンセーバーでデスクトップのスクリーンショットを撮る場合は、このオプションを選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「ビデオ入力を操作対象にする」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>一部のスクリーンセーバーでは、ビデオのフレームを取り込めるため、取り込んだ画像を使用してスクリーンセーバーディスプレイを作成できる。システムにビデオキャプチャカードがある場合、このオプションを選択すると、スクリーンセーバーでビデオのフレームを取り込むことができる</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「画像をランダムに選択」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>指定したディレクトリ内の画像をスクリーンセーバーに使用する場合に選択する。ディレクトリのパスをフィールドに入力する。または、<guibutton>「参照」</guibutton>をクリックしてダイアログを表示し、ディレクトリを選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「診断情報」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>スクリーンセーバーの診断情報を表示する場合に選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「サブプロセスのエラーを表示する」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>画面上のスクリーンセーバーのサブプロセスに関連するエラーを表示する場合に選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「起動時にスプラッシュスクリーンを表示する」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para><application>Xscreensaver</application> を開始したときに、<application>Xscreensaver</application> が「スプラッシュ」ダイアログを表示するようにする場合に選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「パワーマネージメントを有効にする」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>モニタの電源管理機能を有効にする場合に選択する。電源管理機能は、モニタを使用していないときの電力消費を削減する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「スタンバイ」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>モニタが予備モードになるまでの時間を指定する。モニタが待機モードになると、画面は空白になる</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「サスペンド」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>モニタが省電力モードになるまでの時間を指定する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「電源 OFF」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>モニタの電源を切るまでの時間を指定する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「カラーマップをインストールする」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>スクリーンセーバーがアクティブのとき、専用のカラーマップをインストールする場合に選択する。専用のカラーマップを使用することで、特定のスクリーンセーバーディスプレイの画像品質を改善できる</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「スクリーンセーバーをフェードインする」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>スクリーンセーバーを起動するときに、徐々に黒の画面を表示したい場合に選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>「スクリーンセーバーをフェードアウトする」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>スクリーンセーバーを停止するときに、表示を徐々に黒から画面の内容へ表示したい場合に選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「フェードする時間」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>スクリーンセーバーを起動するときに、黒にフェードする時間を指定します</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guibutton>「ウィンドウを閉じる」</guibutton> ウィンドウフレームボタンをクリックして、<guilabel>「XScreenSaver」</guilabel>ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>セッションの管理</title>
+    <indexterm>
+      <primary sortas="せつていつうる">設定ツール</primary>
+      <secondary sortas="せつしよん">セッション</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="かんり">管理</secondary>
+    </indexterm>
+    <para>デスクトップのセッション管理を設定するには、<menuchoice><guimenu>「アプリケーション」</guimenu><guisubmenu>「デスクトップ設定」</guisubmenu><guisubmenu>「拡張設定」</guisubmenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。<application>セッション</application>設定ツールは、アプリケーションの形式を次のように認識します。 </para>
+    <itemizedlist>
+      <listitem>
+        <indexterm>
+          <primary sortas="すたあとあつふあふりけえしよん">スタートアップアプリケーション</primary>
+          <secondary sortas="せつしよんかんり">セッション管理 </secondary>
+        </indexterm>
+        <para>セッション管理されるアプリケーション。セッションの設定を保存した場合、セッションマネージャはセッション管理下のすべてのアプリケーションを保存する。ログアウトし、再びログインすると、セッションマネージャはセッション管理下のアプリケーションを自動的に起動する</para>
+      </listitem>
+      <listitem>
+        <para>セッション管理されないアプリケーション。セッションの設定を保存した場合、セッションマネージャはセッション管理下でないアプリケーションを保存しない。ログアウトし、再びログインすると、セッションマネージャはセッション管理下でないアプリケーションを起動しない。アプリケーションは手動で起動する必要がある。または、<application>セッション</application>設定ツールを使用して、セッション管理下ではないアプリケーションのうち、自動的に起動するアプリケーションを指定する</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>ログインおよびログアウト時のセッションの動作を定義する</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="ろくいんしのとうさ">ログイン時の動作</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="ろくあうとしのとうさ">ログアウト時の動作</secondary>
+      </indexterm>
+      <para>ログインおよびログアウト時のセッションの動作を定義するには、<menuchoice><guimenu>「アプリケーション」</guimenu><guisubmenu>「デスクトップ設定」</guisubmenu><guisubmenu>「拡張設定」</guisubmenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。<guilabel>「セッションのオプション」</guilabel>タブセクションで、必要な変更を行います。たとえば、ログイン時にスプラッシュ画面を表示するように選択できます。</para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>スタートアップを使用する</title>
+      <indexterm>
+        <primary sortas="すたあとあつふふろくらむ">スタートアッププログラム</primary>
+        <see>スタートアップアプリケーション</see>
+      </indexterm>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="すたあとあつふあふりけえしよんのしよう">スタートアップアプリケーションの使用</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="すたあとあつふあふりけえしよん">スタートアップアプリケーション</primary>
+        <secondary sortas="ひせつしよんかんり">非セッション管理</secondary>
+      </indexterm>
+      <para>セッションは、非セッション管理のアプリケーションで開始するように設定できます。非セッション管理のスタートアップを設定するには、<menuchoice><guimenu>「アプリケーション」</guimenu><guisubmenu>「デスクトップ設定」</guisubmenu><guisubmenu>「拡張設定」</guisubmenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。アプリケーションの追加、編集、および削除には、<guilabel>「自動起動プログラム」</guilabel>タブセクションを使用します。設定を保存し、ログアウトすると、次回ログインしたときにスタートアップが自動的に起動されます。</para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>現在のセッションでアプリケーションをブラウズする</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="あふりけえしよんのさんしよう">アプリケーションの参照</secondary>
+      </indexterm>
+      <para>現在のセッションでアプリケーションをブラウズするには、<menuchoice><guimenu>「アプリケーション」</guimenu><guisubmenu>「デスクトップ設定」</guisubmenu><guisubmenu>「拡張設定」</guisubmenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。<guilabel>「現在のセッション」</guilabel>タブセクションには、次の項目がリストされてます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>現在実行されているすべての GNOME アプリケーション。これらのアプリケーションは、セッションマネージャに接続することができ、そのアプリケーションの状態を保存できる</para>
+        </listitem>
+        <listitem>
+          <para>すべてのデスクトップ設定ツール。これらのツールはセッションマネージャに接続することができ、そのツールの状態を保存できる</para>
+        </listitem>
+      </itemizedlist>
+      <para><guilabel>「現在のセッション」</guilabel>タブセクションを使用して、アプリケーションまたは設定ツールのセッション設定で操作 (数に制限あり) を実行できます。たとえば、起動順序を編集したり、リストに載っているすべての GNOME アプリケーションまたはデスクトップ設定ツールのスタイルを再設定できます。</para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>セッション設定を保存する</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="せつていのほそん">設定の保存</secondary>
+      </indexterm>
+      <para>セッションの設定を保存するには、次の手順を行います。 </para>
+      <orderedlist>
+        <listitem>
+          <para>セッションの終了時に、自動的に設定を保存するようにセッションを設定します。セッションを設定するには、<menuchoice><guimenu> 「アプリケーション」</guimenu><guisubmenu>「デスクトップ設定」</guisubmenu><guisubmenu>「拡張設定」</guisubmenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。<application>セッション</application>設定ツールが起動します。<guilabel>「セッションのオプション」</guilabel>タブセクションの<guilabel>「変更を自動的にセッションに保存する」</guilabel>オプションを選択します。</para>
+        </listitem>
+        <listitem>
+          <para>セッションを終了します。</para>
+        </listitem>
+      </orderedlist>
+      <para><guilabel>「変更を自動的にセッションに保存する」</guilabel>オプションを選択しない場合、ログアウトしたときに、現在の設定を保存するかどうかを問うダイアログが表示されます。設定を保存するには、このオプションを選択してからログアウトします。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>セッションの終了</title>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="しゆうりよう">終了</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="ろくあうと">ログアウト</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="ろくあうと">ログアウト</primary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>ログアウトアイコンを示しています。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>セッションを終了するには、現在アクティブなプロセスをすべて閉じ、次のいずれかの操作を実行します。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>「ログアウト」</guibutton>ボタンをクリックする</para>
+      </listitem>
+      <listitem>
+        <para><menuchoice><guimenu>「アクション」</guimenu><guimenuitem>「ログアウト」</guimenuitem></menuchoice>を選択する</para>
+      </listitem>
+      <listitem>
+        <para><guimenu>GNOME メニュー</guimenu>を開き、<guimenuitem>「ログアウト」</guimenuitem>を選択する</para>
+      </listitem>
+    </itemizedlist>
+    <para>セッションを終了する前に、現在の設定を保存しておくと、次回ログインしたときに、セッションを復元できます。ログアウト処理中に、現在の設定を保存するかどうかを問うダイアログが表示されます。<application>セッション</application>設定ツールでは、現在の設定を自動的に保存するオプションを選択できます。</para>
+  </sect1>
+</chapter>

@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="goscustuserinter-1">
+  <title>拡張設定ツールの使用方法</title>
+  <highlights>
+    <para><guilabel>拡張</guilabel>設定ツールでは、アプリケーション、パネル、およびほかのユーザーインタフェース項目の動作や外観をカスタマイズすることができます。<guilabel>拡張</guilabel>設定ツールを使用して、ファイルの型、デフォルトのアプリケーション、およびパネルを構成できます。また、<guilabel>拡張</guilabel>設定ツールで、セッションおよび起動プログラムもカスタマイズできます。この章では、<guilabel>拡張</guilabel>設定ツールを使用した、デスクトップのカスタマイズ方法について説明します。</para>
+  </highlights>
+  <sect1 id="goscustlookandfeel-17">
+    <title>拡張設定ツールを開く</title>
+    <para><guilabel>拡張</guilabel>設定ツールは、次のいずれかの方法で開くことができます。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guimenu>「デスクトップ設定」</guimenu>メニュー</para>
+        <para><menuchoice><guimenu>「アプリケーション」</guimenu><guisubmenu>「デスクトップ設定」</guisubmenu><guimenuitem>「拡張設定」</guimenuitem></menuchoice>を選択します。サブメニューから必要なツールを選びます。そのツールのダイアログが表示されます。</para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>「ここからスタート」</guilabel>
+        </para>
+        <para><application>Nautilus</application>ウィンドウを開いて、<menuchoice><guimenu>「移動」</guimenu><guimenuitem>「ここからスタート」</guimenuitem></menuchoice>を選択します。または、デスクトップの背景上の<guilabel>「ここからスタート」</guilabel>オブジェクトをダブルクリックします。<guilabel>「ここからスタート」</guilabel>の位置が表示されます。<application>Nautilus</application> ウィンドウの<guilabel>「デスクトップ設定」</guilabel>オブジェクトをダブルクリックして、<guilabel>拡張</guilabel> フォルダをダブルクリックします。<guilabel>拡張</guilabel>設定ツールが表示されます。</para>
+        <para>必要なツールをダブルクリックします。そのツールのダイアログが表示されます。</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="goscustlookandfeel-39">
+    <title>CD データベースの構成</title>
+    <indexterm>
+      <primary sortas="せつていつうる">設定ツール</primary>
+      <secondary sortas="CDてえたへえす">CD データベース</secondary>
+    </indexterm>
+    <para><application>CD データベース</application>設定ツールでは、システムが照会可能な CD データベースを構成できます。CD データベースには、アーティスト名、曲名、および収録曲など、CD に関する情報が含まれています。アプリケーションが CD を再生すると、アプリケーションは CD データベースを照会して、情報を表示します。</para>
+    <para><xref linkend="goscustlookandfeel-TBL-40"/> に、<application>CD データベース</application>設定ツールの要素を示します。</para>
+    <table frame="topbot" id="goscustlookandfeel-TBL-40">
+      <title>CD データベースの設定</title>
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="colspec0" colwidth="18.86*"/>
+        <colspec colname="colspec1" colwidth="47.14*"/>
+        <thead>
+          <row>
+            <entry colsep="0" rowsep="1" valign="top">
+              <para>要素</para>
+            </entry>
+            <entry colsep="0" rowsep="1" valign="top">
+              <para>説明</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>「何も情報を送信しない」</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>CD データベースサーバーに情報を送信しない</para>
+            </entry>
+          </row>
+          <row>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>「実際の情報を送信」</guilabel>
+              </para>
+            </entry>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>ユーザー名とホスト名の情報を CD データベースサーバーに送信する</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>「他の情報を送信」</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>ほかの名前およびホスト名の情報を CD データベースサーバーに送信する。<guilabel>「名前」</guilabel>フィールドに名前を入力し、<guilabel>「ホスト名」</guilabel>フィールドにホスト名を入力する</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>「FreeDB ラウンド・ロビン・サーバ ー」</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>FreeDB は CD データベース。 FreeDB ラウンドロビンサーバーは、FreeDB サーバーの負荷分散構成になる。このサーバーから FreeDB CD データベースにアクセスする</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>「他の FreeDB サーバー」</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>別のサーバーから FreeDB CD データベースにアクセスする場合はこのオプションを選択する。必要なサーバーをサーバー表から選択する</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guibutton>「サーバー・リストを更新」</guibutton>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>サーバー表内の利用可能な FreeDB サーバーのリストを更新する</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>「他のサーバー」</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>ほかの CD データベースを使用する。データベースが存在するサーバの名前を<guilabel>「ホスト名」</guilabel>フィールドに入力する。データベースにアクセスできるポート番号を<guilabel>「ポート」</guilabel>フィールドに入力する</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="goscustdoc-7">
+    <title>ファイルタイプとプログラムの構成</title>
+    <indexterm>
+      <primary sortas="せつていつうる">設定ツール</primary>
+      <secondary sortas="ふあいるたいふとふろくらむ">「ファイルタイプとプログラム」 </secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="ふあいるたいふ">ファイルタイプ</primary>
+      <secondary sortas="こうせい">構成</secondary>
+    </indexterm>
+    <para>さまざまなタイプのファイルを作成、表示、および編集する方法を指定するには、<application>ファイルタイプとプログラム</application>設定ツールを使用します。たとえば、ファイルがプレーンテキストファイルの場合、そのファイルをテキストエディタで起動するように指定できます。</para>
+    <para><application>Nautilus</application> およびほかの GNOME アプリケーションは、ファイルの内容を確認して、ファイルタイプを判断します。最初の行でファイルタイプを判別できない場合、アプリケーションはファイル拡張子を確認します。</para>
+    <para><xref linkend="goscustdoc-TBL-8"/> に、<application>「ファイルタイプとプログラム」</application>設定ツールの要素を説明します。</para>
+    <table frame="topbot" id="goscustdoc-TBL-8">
+      <title>「ファイルタイプとプログラム」設定ツールの要素</title>
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="colspec0" colwidth="18.86*"/>
+        <colspec colname="colspec1" colwidth="47.14*"/>
+        <thead>
+          <row>
+            <entry colsep="0" rowsep="1" valign="top">
+              <para>要素</para>
+            </entry>
+            <entry colsep="0" rowsep="1" valign="top">
+              <para>説明</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>表</para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>ファイルタイプのカテゴリの内容を表示するには、カテゴリ名の横にある右矢印をクリックする。カテゴリが開き、各ファイルタイプの説明と、そのファイルタイプに関連付けられるファイル拡張子が表示される</para>
+              <para>操作するファイルタイプを選択するには、そのファイルをクリックする</para>
+            </entry>
+          </row>
+          <row>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>
+                <guibutton>「ファイルタイプの追加」</guibutton>
+              </para>
+            </entry>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>ファイルタイプを追加する。詳細については、<xref linkend="goscustlookandfeel-28"/> を参照</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guibutton>「サービスの追加」</guibutton>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>サービスを追加する。詳細については、<xref linkend="goscustlookandfeel-30"/> を参照</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guibutton>「編集」</guibutton>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <indexterm>
+                <primary sortas="ふあいるたいふ">ファイルタイプ</primary>
+                <secondary sortas="へんしゆう">編集</secondary>
+              </indexterm>
+              <indexterm>
+                <primary sortas="さあひす">サービス</primary>
+                <secondary sortas="へんしゆう">編集</secondary>
+              </indexterm>
+              <para>ファイルタイプ、サービス、またはファイルタイプのカテゴリを編集するには、編集対象の項目を選択して、<guibutton>「編集」</guibutton>をクリックする</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guibutton>「削除」</guibutton>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>ファイルタイプまたはサービスを削除するには、削除対象の項目を選択して、<guibutton>「削除」</guibutton>をクリックする</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <sect2 id="goscustlookandfeel-28">
+      <title>ファイルタイプを追加する</title>
+      <indexterm>
+        <primary sortas="ふあいるたいふ">ファイルタイプ</primary>
+        <secondary sortas="ついか">追加</secondary>
+      </indexterm>
+      <para>ファイルタイプを追加するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para><menuchoice><guimenu>「アプリケーション」</guimenu><guisubmenu>「デスクトップ設定」</guisubmenu><guisubmenu>「拡張設定」</guisubmenu><guimenuitem>「ファイルタイプとプログラム」</guimenuitem></menuchoice>を選択して、<application>「ファイルタイプとプログラム」</application>設定ツールを起動します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「ファイルタイプの追加」</guibutton>ボタンをクリックします。<guilabel>「ファイルタイプの追加」</guilabel>ダイアログが表示されます。</para>
+        </listitem>
+        <listitem>
+          <para>ダイアログにファイルタイプのプロパティを入力します。以下の表に、<guilabel>「ファイルタイプの追加」</guilabel>ダイアログのダイアログ要素を示します。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="37.42*"/>
+              <colspec colname="colspec1" colwidth="62.58*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>オプション</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>機能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「アイコンなし」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルタイプを表すアイコンを選択する。アイコンを選択するには、<guibutton>「アイコンなし」</guibutton>ボタンをクリックする。「アイコンを選択」 ダイアログが表示される。 ダイアログからアイコンを選択する。別のディレクトリにあるアイコンを選択するには、<guibutton>「参照」</guibutton>をクリックする。 アイコンを選択したら<guibutton>「了解」</guibutton>をクリックする</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「説明」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルタイプの説明を入力する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「MIME タイプ」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>このタイプのファイルの MIME タイプを入力する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「カテゴリ」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para><application>「ファイルタイプとプログラム」</application>設定ツールでファイルタイプの属するカテゴリを入力する。<guibutton>「選択」</guibutton>をクリックして、<guilabel>「ファイルカテゴリを選択」</guilabel>ダイアログからカテゴリを選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「ファイル名の拡張子」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルタイプに関連付けるファイル名の拡張子を入力する。左側のフィールドにファイル拡張子を入力し、 <keycap>Return</keycap> キーを押す。ファイル名の拡張子を削除するには、右側のフィールドからファイル名の拡張子を選択して、<guibutton>「削除」</guibutton>ボタンをクリックする</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「ビューアコンポーネント」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>将来のリリースで情報が追加</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「デフォルトのアクション」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>将来のリリースで情報が追加</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「実行するプログラム」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルタイプに関連付けるプログラムを指定する。このフィールドに、プログラムを起動するコマンドを入力する。あるいは、以前に入力したコマンドを選ぶには、下矢印ボタンをクリックして、実行するコマンドを選ぶ</para>
+                    <para><guibutton>「参照」</guibutton>ボタンを使用して、実行するコマンドを選択することもできる</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「端末内で実行」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>プログラムを端末で実行する。実行するウィンドウを作成しないプログラムには、このオプションを選択する</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goscustlookandfeel-30">
+      <title>サービスを追加する</title>
+      <indexterm>
+        <primary sortas="さあひす">サービス</primary>
+        <secondary sortas="ついか">追加</secondary>
+      </indexterm>
+      <para>サービスを追加するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para><menuchoice><guimenu>「アプリケーション」</guimenu><guisubmenu>「デスクトップ設定」</guisubmenu><guisubmenu>「拡張設定」</guisubmenu><guimenuitem>「ファイルタイプとプログラム」</guimenuitem></menuchoice>を選択して、<application>「ファイルタイプとプログラム」</application>設定ツールを起動します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「サービスの追加」</guibutton>ボタンをクリックします。<guilabel>「サービスの追加」</guilabel>ダイアログが表示されます。</para>
+        </listitem>
+        <listitem>
+          <para>ダイアログにサービスのプロパティを入力します。以下の表に、<guilabel>「サービスの追加」</guilabel>ダイアログのダイアログ要素を示します。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="41.22*"/>
+              <colspec colname="colspec1" colwidth="58.78*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>オプション</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>機能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「説明」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>サービスの説明を入力する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「プロトコル」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>サービスのプロトコルを入力する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「プログラム」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>サービスに関連付けるプログラムを指定する。このフィールドに、プログラムを起動するコマンドを入力する。あるいは、以前に入力したコマンドを選ぶには、下矢印ボタンをクリックして、実行するコマンドを選ぶ。</para>
+                    <para><guibutton>「参照」</guibutton>ボタンを使用して、実行するコマンドを選択することもできる</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「端末内で実行」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>プログラムを端末で実行する。実行するウィンドウを作成しないプログラムには、このオプションを選択する</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="goscustdesk-10">
+    <title>パネルのカスタマイズ</title>
+    <indexterm>
+      <primary sortas="せつていつうる">設定ツール</primary>
+      <secondary sortas="はねる">パネル</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="はねる">パネル</primary>
+      <secondary sortas="とうさとかいかんのかすたまいす">動作と外観のカスタマイズ</secondary>
+    </indexterm>
+    <para><application>パネル</application>設定ツールでは、パネルの動作を構成できます。<application>パネル</application>設定ツールで行った変更は、すべてのパネルに影響します。</para>
+    <table frame="topbot" id="goscustlookandfeel-TBL-22">
+      <title>パネルの設定</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="50*"/>
+        <colspec colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>設定</para>
+            </entry>
+            <entry valign="top">
+              <para>機能</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <guilabel>「ランチャーをクリックし引き出しを閉じる」</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>引き出し内のランチャーを選択したときに、パネル上のその引き出しを閉じる</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guilabel>「アニメーション」</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>アニメーションスタイルでパネルを表示し、隠す</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guilabel>「アニメーションの速度」</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>ドロップダウンリストから、パネルのアニメーション速度を選択する</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="goscustdoc-2">
+    <title>優先するアプリケーションの選択</title>
+    <indexterm>
+      <primary sortas="せつていつうる">設定ツール</primary>
+      <secondary sortas="ゆうせんするあふりけえしよん">優先するアプリケーション </secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="てふおるとのあふりけえしよん">デフォルトのアプリケーション</primary>
+      <see>優先するアプリケーション</see>
+    </indexterm>
+    <para><application>優先するアプリケーション</application>設定ツールでは、デスクトップがアプリケーションを起動するときに、デスクトップが使用するアプリケーションを指定します。たとえば、優先端末アプリケーションとして、<application>Xterm</application> を指定できます。<guimenu>「デスクトップの背景」</guimenu>メニューを開いて、<guimenuitem>「新規端末」</guimenuitem>を選択すると、<application>Xterm </application> が起動します。</para>
+    <para>次の領域内では、<application>優先するアプリケーション</application>設定ツールの設定をカスタマイズできます。</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <guilabel>「Web ブラウザ」</guilabel>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>「テキストエディタ」</guilabel>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>「端末」</guilabel>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="goscustlookandfeel-32">
+      <title>Web ブラウザの設定</title>
+      <indexterm>
+        <primary sortas="ゆうせんするあふりけえしよん">優先するアプリケーション</primary>
+        <secondary sortas="Webふらうさ">Web ブラウザ </secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="Webふらうさ,ゆうせんするあふりけえしよん">Web ブラウザ, 優先するアプリケーション</primary>
+      </indexterm>
+      <para>優先 Web ブラウザを構成するには、<application>Web ブラウザ</application>タブセクションを使用します。優先 Web ブラウザは、URL をクリックしたときに開きます。たとえば、アプリケーションで URL を選択するか、デスクトップ背景で URL ランチャーを選択したときに、優先 Web ブラウザが開きます。</para>
+      <para><xref linkend="goscustlookandfeel-TBL-37"/> に、構成可能な優先 Web ブラウザの設定を示します。</para>
+      <table frame="topbot" id="goscustlookandfeel-TBL-37">
+        <title>優先 Web ブラウザの設定</title>
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="18.86*"/>
+          <colspec colname="colspec1" colwidth="47.14*"/>
+          <thead>
+            <row>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>オプション</para>
+              </entry>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>機能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「Web ブラウザを選択」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>標準の Web ブラウザを使用する。ドロップダウンコンビネーションボックスを使用して、優先 Web ブラウザを選択する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「カスタム Web ブラウザ」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>カスタムの Web ブラウザを使用する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「コマンド」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>カスタム Web ブラウザを起動するコマンドを入力する。クリックした URL をブラウザが表示できるようにするには、コマンドのあとに、<command>&ldquo;%s&rdquo; </command> を指定する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「端末内で実行」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>端末でコマンドを実行する。実行するウィンドウを作成しないブラウザには、このオプションを選択する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="goscustlookandfeel-31">
+      <title>テキストエディタの設定</title>
+      <indexterm>
+        <primary sortas="ゆうせんするあふりけえしよん">優先するアプリケーション</primary>
+        <secondary sortas="てきすとえていた">テキストエディタ</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="てきすとえていた,ゆうせんするあふりけえしよん">テキストエディタ, 優先するアプリケーション</primary>
+      </indexterm>
+      <para><application>「テキストエディタ」</application>タブセクションを使用して、優先テキストエディタを構成します。</para>
+      <para><xref linkend="goscustdoc-TBL-1"/> に、構成可能な優先テキストエディタの設定を示します。</para>
+      <table frame="topbot" id="goscustdoc-TBL-1">
+        <title>優先テキストエディタの設定</title>
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="18.86*"/>
+          <colspec colname="colspec1" colwidth="47.14*"/>
+          <thead>
+            <row>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>オプション</para>
+              </entry>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>機能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「エディタを選択」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>標準のテキストエディタを使用する。ドロップダウンコンビネーションボックスを使用して、優先テキストエディタを指定する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「カスタムエディタ」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>カスタムのテキストエディタを使用する。<guilabel>「カスタムエディタプロパティ」</guilabel>ダイアログが表示されます</para>
+                <itemizedlist>
+                  <listitem>
+                    <para><guilabel>「名前」</guilabel>: カスタムテキストエディタの名前を入力する</para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>「コマンド」</guilabel>: カスタムテキストエディタを起動するコマンドを入力する</para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>「このアプリケーションは複数のファイルを開くことができます」</guilabel>: デフォルトのテキストエディタが複数のファイルを開く場合に選択</para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>「このアプリケーションはシェル上で実行する必要があります」</guilabel>: 端末でコマンドを実行する。実行するウィンドウを作成しないエディタには、このオプションを選択</para>
+                  </listitem>
+                </itemizedlist>
+                <para>カスタムテキストエディタを指定したあと、<guibutton>「プロパティ」</guibutton>ボタンをクリックして、<guilabel>「カスタムエディタプロパティ」</guilabel>ダイアログを表示できる。 ダイアログを使用して、カスタムテキストエディタの設定を変更できる</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「このエディタを使用してファイルマネージャのテキストファイルを開く」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>ファイルマネージャが、テキストファイルの表示にカスタムテキストエディタを起動する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="goscustlookandfeel-34">
+      <title>端末の設定</title>
+      <indexterm>
+        <primary sortas="ゆうせんするあふりけえしよん">優先するアプリケーション</primary>
+        <secondary sortas="たんまつ">端末</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="たんまつ,ゆうせんするあふりけえしよん">端末, 優先するアプリケーション</primary>
+      </indexterm>
+      <para><application>「端末」</application>タブセクションを使用して、優先端末を構成します。</para>
+      <para><xref linkend="goscustlookandfeel-TBL-35"/> に、構成可能な優先端末の設定を示します。</para>
+      <table frame="topbot" id="goscustlookandfeel-TBL-35">
+        <title>優先端末の設定</title>
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="18.86*"/>
+          <colspec colname="colspec1" colwidth="47.14*"/>
+          <thead>
+            <row>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>オプション</para>
+              </entry>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>機能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「端末を選択」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>標準の端末を使用する。ドロップダウンコンビネーションボックスを使用して、優先端末を指定する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「カスタム端末」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>カスタムの端末を使用する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「コマンド」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>カスタム端末を起動するコマンドを入力する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「実行フラグ」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>コマンドに指定する<command>実行</command>オプションを入力する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+  </sect1>
+  <sect1 id="goscustsession-5">
+    <title>セッションの構成</title>
+    <indexterm>
+      <primary sortas="せつていつうる">設定ツール</primary>
+      <secondary sortas="せつしよん">セッション</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="せつてい">設定</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="きとうあふりけえしよん">起動アプリケーション</primary>
+      <secondary sortas="かすたまいす"> カスタマイズ</secondary>
+    </indexterm>
+    <para><application>セッション</application>設定ツールでは、セッションを管理することができます。セッションの環境を設定して、セッションの開始時に起動するアプリケーションを指定できます。また、デスクトップ上のアプリケーションの状態を保存したり、別のセッションの開始時にその状態を復元したりするように、セッションを構成することができます。この設定ツールを使用して、複数の GNOME セッションを管理することもできます。</para>
+    <para>次の機能領域内では、セッションおよび起動アプリケーションの設定をカスタマイズできます。</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <guilabel>「セッションのオプション」</guilabel>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>「現在のセッション」</guilabel>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>「自動起動プログラム」</guilabel>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="goscustsession-16">
+      <title>セッションのオプションの設定</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="おふしよんのせつてい">オプションの設定</secondary>
+      </indexterm>
+      <para><guilabel>「セッションのオプション」</guilabel>タブセクションを使用して、複数のセッションを管理したり、現在のセッションの環境を設定することができます。</para>
+      <para><xref linkend="goscustsession-TBL-11"/> に、構成可能なセッションのオプション設定を示します。</para>
+      <table frame="topbot" id="goscustsession-TBL-11">
+        <title>「セッションのオプション」の設定</title>
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="18.86*"/>
+          <colspec colname="colspec1" colwidth="47.14*"/>
+          <thead>
+            <row>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>オプション</para>
+              </entry>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>機能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「ログイン時にスプラッシュ画面を表示する」</guilabel>
+                </para>
+              </entry>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>セッションを開始したときにスプラッシュ画面を表示する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「ログアウト時にプロンプトを表示する」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>セッションを終了するときに確認ダイアログを表示する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「変更を自動的にセッションに保存する」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <indexterm>
+                  <primary sortas="きとうあふりけえしよん">起動アプリケーション</primary>
+                  <secondary sortas="せつしよんかんり">セッション管理</secondary>
+                </indexterm>
+                <para>セッションマネージャによって、セッションの現在の状態が保存される。セッションマネージャは、セッション管理下にある開いているアプリケーション、およびセッション管理下のアプリケーションと関連付けられている設定を保存する。次回セッションを起動したときに、アプリケーションは保存された設定で自動的に起動する</para>
+                <para>このオプションを選択しない場合は、セッションを終了するときに <guilabel>「ログアウトの確認」</guilabel>ダイアログが<guilabel>「現在の設定を保存」</guilabel>オプションを表示する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「セッション」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para>ダイアログのこの領域を使用して、以下のように、複数のセッションをデスクトップ上で管理する</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>新しいセッションを作成するには、<guibutton>「追加」</guibutton>ボタンをクリックする。<guilabel>「新規セッションの追加」</guilabel>ダイアログが表示される。このダイアログを使用して、セッションの名前を指定する</para>
+                  </listitem>
+                  <listitem>
+                    <para>セッションの名前を変更するには、<guilabel>「現在のセッションを選択」</guilabel>表から変更するセッションを選択する。<guibutton>「編集」</guibutton>ボタンをクリックする。<guilabel>「セッション名の編集」</guilabel>ダイアログが表示される。セッションの新しい名前を入力する</para>
+                  </listitem>
+                  <listitem>
+                    <para>セッションを削除するには、<guilabel>「現在のセッションを選択」</guilabel>表から削除するセッションを選択する。<guibutton>「削除」</guibutton>ボタンをクリックする</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="goscustlookandfeel-27">
+      <title>現在のセッションの設定</title>
+      <indexterm>
+        <primary sortas="きとうあふりけえしよん">起動アプリケーション</primary>
+        <secondary sortas="せつしよんかんり">セッション管理 </secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="せつてい">設定</secondary>
+      </indexterm>
+      <para><guilabel>「現在のセッション」</guilabel>タブセクションを使用して、起動順序の値の指定や、現在のセッションでのセッション管理下のアプリケーションの再起動方式を選択できます。</para>
+      <para><xref linkend="sessprop01"/> に、構成可能な現在のセッションの設定を示します。</para>
+      <table frame="topbot" id="sessprop01">
+        <title>現在のセッションの設定</title>
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="18.86*"/>
+          <colspec colname="colspec1" colwidth="47.14*"/>
+          <thead>
+            <row>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>オプション</para>
+              </entry>
+              <entry colsep="0" rowsep="1" valign="top">
+                <para>機能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「順番」</guilabel>
+                </para>
+              </entry>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para><guilabel>「順番」</guilabel>設定は、セッションマネージャが起動するセッション管理下の起動アプリケーションの順序を指定する。セッションマネージャは、低い値を持つアプリケーションから先に起動する。デフォルトは 50</para>
+                <para>アプリケーションの起動順序を指定するには、表からアプリケーションを選択する。<guilabel>「順番」</guilabel>スピンボックスを使用して、起動順序の値を指定する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「スタイル」</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para><guilabel>「スタイル」</guilabel>設定は、アプリケーションの再起動スタイルを決定する。アプリケーションの再起動スタイルを選択するには、表からアプリケーションを選択して、次のいずれかの方式を選ぶ</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <guilabel>「標準」</guilabel>
+                    </para>
+                    <para>GNOME セッションを開始したときに自動的に起動する。この再起動方式のアプリケーションをセッション中に終了するには、<command>kill</command> コマンドを使用する</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guilabel>「再起動」</guilabel>
+                    </para>
+                    <para>アプリケーションを閉じるまたは終了すると自動的に再起動する。セッション中に継続してアプリケーションを実行する必要がある場合は、アプリケーションにこの方式を指定する。この再起動方式のアプリケーションを終了するには、表からアプリケーションを選択して、<guibutton>「削除」</guibutton>ボタンをクリックする</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guilabel>「手動」</guilabel>
+                    </para>
+                    <para>GNOME セッションの開始時にアプリケーションを起動しない</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guilabel>「設定」</guilabel>
+                    </para>
+                    <para>セッションを開始すると自動的にアプリケーションが起動する。この方式のアプリケーションは、通常、低い起動順序値を持ち、GNOME およびセッション管理下のアプリケーションの構成設定を格納する</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guibutton>「削除」</guibutton>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+                <para><guibutton>「削除」</guibutton>ボタンをクリックすると、リストから選択したアプリケーションを削除する。アプリケーションは、セッションマネージャから削除されて、閉じる。削除したアプリケーションは、次回セッションを開始したときに起動されない</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>
+                  <guibutton>「適用」</guibutton>
+                </para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para><guibutton>「適用」</guibutton>ボタンをクリックすると、起動順序および再起動方式に変更を適用する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="goscustsession-12">
+      <title>自動起動アプリケーションの構成</title>
+      <indexterm>
+        <primary sortas="しとうきとうあふりけえしよん">自動起動アプリケーション</primary>
+        <secondary sortas="ひせつしよんかんり">非セッション管理</secondary>
+      </indexterm>
+      <para><application>セッション</application>設定ツールの<guilabel>「自動起動プログラム」</guilabel>タブセクションを使用して、非セッション管理下の<firstterm>起動アプリケーション</firstterm>を指定できます。自動起動アプリケーションとは、セッションを開始したときに自動的に起動するアプリケーションのことです。非セッション管理下のアプリケーションを実行するコマンドは、 <guilabel>「自動起動プログラム」</guilabel>タブセクションで指定します。コマンドは、ログイン時に自動的に実行されます。</para>
+      <para>セッション管理下のアプリケーションを自動的に起動することもできます。詳細については、<xref linkend="goscustsession-16"/>を参照してください。</para>
+      <para><xref linkend="goscustsession-TBL-19"/> に、構成可能な自動起動アプリケーションの設定を示します。</para>
+      <table frame="topbot" id="goscustsession-TBL-19">
+        <title>自動起動プログラムの設定</title>
+        <tgroup cols="2">
+          <colspec colname="col1" colwidth="18.86*"/>
+          <colspec colname="col2" colwidth="47.14*"/>
+          <thead>
+            <row>
+              <entry colname="col1" colsep="0" valign="top">
+                <para>オプション</para>
+              </entry>
+              <entry colname="col2" colsep="0" valign="top">
+                <para>機能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>「追加された自動起動プログラム」</guilabel>
+                </para>
+              </entry>
+              <entry colname="col2" colsep="0" rowsep="0" valign="top">
+                <para>この表を使用して、以下のように、非セッション管理下の自動起動アプリケーションを管理する</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>自動起動アプリケーションを追加するには、<guibutton>「追加」</guibutton>ボタンをクリックする。<guilabel>「自動起動プログラムの追加」</guilabel>ダイアログが表示される。アプリケーションを起動するコマンドを<guilabel>「自動起動コマンド」</guilabel>フィールドに入力する</para>
+                    <para>複数の自動起動アプリケーションを指定する場合は、<guilabel>「優先順位」</guilabel>スピンボックスを使用して、各アプリケーションの起動順序を指定する。起動順序とは、自動起動アプリケーションを起動する順序を指す</para>
+                  </listitem>
+                  <listitem>
+                    <para>自動起動アプリケーションを編集するには、自動起動アプリケーションを選択して、<guibutton>「編集」</guibutton>ボタンをクリックする。<guilabel>「自動起動プログラムの編集」</guilabel>ダイアログが表示される。ダイアログを使用して、自動起動アプリケーションのコマンドおよび起動順序を変更する</para>
+                  </listitem>
+                  <listitem>
+                    <para>自動起動アプリケーションを削除するには、削除対象の自動起動アプリケーションを選択して、<guilabel>「削除」</guilabel>ボタンをクリックする</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+  </sect1>
+</chapter>
