@@ -1,0 +1,446 @@
+<!-- ## Introduction ###### -->
+<chapter id="gnome-applets">
+  <title>Apliques GNOME</title> 
+  
+  <!-- #### Introduction ###### -->
+  <sect1 id="gnome-applets-intro">
+    <title>Lo básico de los apliques</title> 
+    
+    <!-- #### Intro | What Are Applets? ###### -->
+    <sect2 id="applets-what-are">
+      <title>¿Qué son los apliques?</title> 
+      <para>
+Los apliques son uno de los más populares y útiles objetos que puede añadir
+al <interface>Panel</interface> para personalizar el escritorio. Un aplique
+es una pequeña aplicación que se ejecuta en un área pequeña del 
+<interface>Panel</interface>. Se han escrito apliques para un amplio rango de
+propósitos. Algunos son muy poderosas herramientas interactivas, como el 
+aplique <application>lista de tareas</application> que permite controlar de
+forma sencilla todas las aplicaciones principales. Otros son simples 
+monitores del sistema, mostrando información de la cantidad de energía
+que queda en la batería del portátil (véase  <application>monitor
+ de carga de la batería</application> o información del tiempo (véase 
+ <application>El clima según GNOME</application>. Algunos son simples
+entretenimientos (véase <application>Pez</application>).
+      </para>
+      
+      <para>
+<!-- swallow empequeñecer, poner a escala, reducir -->
+Los apliques se parecen a las aplicaciones reducidas en que ambas residen en el
+<interface>Panel</interface>. Sin embargo las aplicaciones reducidas son en general
+aplicaciones no diseñadas para correr en el <interface>Panel</interface>.
+Típicamente se reducirá una aplicación que ya exista en el área del
+<interface>escritorio</interface> principal, llevándola dentro del <interface>Panel</interface>.
+La aplicación continuara ejecutándose en el <interface>Panel</interface> hasta que se 
+cierre o se devuelva a su tamaño natural, situándola de nuevo en el área principal
+del escritorio cuando se la necesite.
+      </para>
+      
+      <para>
+	<figure id="example-applets-fig">
+	  <title>Ejemplos de apliques</title>
+	  <screenshot>
+	    <screeninfo>Ejemplos de apliques</screeninfo>
+	    <graphic fileref="./figures/example_applets" format="png"
+		     srccredit="muet">
+	    </graphic>
+	  </screenshot>
+	</figure>
+En <xref linkend="example-applets-fig"> se muestran varios ejemplos de apliques. De izquierda
+a derecha, tenemos: 
+(1)Aplique <application>aplique mezclador de sonido</application>, que permite activar o desactivar el sonido y
+controlar su volumen pulsando en el aplique.
+(2)Aplique<application>Monitor de sonido</application>, que muestra el volumen actual del sonido
+interpretado y permite controlar varias de sus características. 
+(3)Aplique <application>GTCD</application>, un lector de CD con todos sus controles disponibles
+desde le aplique y con visualización de la pista y tiempo.
+(4)Aplique <application>montador de discos</application>, usado para montar  y desmontar 
+dispositivos con una simple pulsación de ratón.
+(5)<application>Mapa del escritorio</application> que permite ver y controlar las múltiples
+pantallas virtuales.
+(6)Aplique <application>Lista de tareas</application> que permite controlar las distintas ventanas y
+aplicaciones.
+      </para>
+      <para>
+Hay muchos otros apliques entre los que escoger. En el resto de esté capitulo se dará la
+información básica para permitirle empezar a añadir, mover, y eliminar apliques de los
+<interface>paneles</interface> y a hacer uso de ellos. Los siguientes capítulos recorren
+cada uno de los apliques estándar de GNOME describiéndolos en detalle. Hay además apliques
+adicionales que podrá descargar de la Web. Véase en  
+<ulink type="http" url="http://www.gnome.org/applist/list-martin.phtml">el mapa de software
+GNOME </ulink> la lista de aplicaciones y apliques adicionales de GNOME.
+      </para>
+      <para>
+Según lea el resto de este capitulo, debería probar a añadir y eliminar apliques del
+<interface>panel</interface> y experimentar con ellos libremente.
+      </para>
+    </sect2>
+
+    <!--  Intro | Adding, Moving, and Removing Applets -->
+    <sect2 id="applet-add-move-replace">
+      <title>Añadir, mover, y eliminar apliques</title>
+      
+      <sect3 id="adding-applets">   
+	<title>Añadir apliques al panel</title>
+	<para>
+Para añadir un aplique al <interface>panel</interface>, pulse el botón derecho sobre el
+<interface>panel</interface> y seleccione <menuchoice><guimenu>Panel</guimenu><guisubmenu>Añadir al panel</guisubmenu>
+ <guisubmenu>Aplique</guisubmenu></menuchoice>. Esto mostrara un menú con todos los apliques del sistema,
+divididos en categorías. Al escoger cualquier aplique de este menú se añadirá al 
+<interface>panel</interface>.
+	</para>
+      </sect3>
+
+      <sect3 id="moving-applets">
+	<title>Mover apliques en o entre paneles</title>
+	<para>
+Es fácil mover apliques en un <interface>panel</interface> o entre dos 
+<interface>paneles</interface>. Si se tiene un ratón de tres botones, mueva simplemente el ratón sobre el
+aplique, arrastre el el aplique hasta su nueva posición manteniendo pulsado el botón central del ratón, y finalmente
+suelte el botón central del ratón. Observe que puede arrastrar de esta manera apliques dentro de un 
+<interface>panel</interface> o entre dos <interface>paneles</interface>. Si no se dispone de un ratón de tres botones,
+pulse simplemente el botón derecho sobre el aplique y elija <guimenuitem>Mover</guimenuitem>. El cursor se transformara
+en una cruz y el aplique se moverá siguiendo al ratón hasta que se pulse cualquier botón del ratón para indicar el
+fin del desplazamiento.
+Si, en el transcurso del movimiento, esta sobre otro objeto, el comportamiento dependerá de las preferencias globales
+fijadas para los <interface>paneles</interface> en el <application>centro de control GNOME</application>: el aplique
+que se esta moviendo puede intercambiar su posición con otros objetos, "empujar" todos los objetos que encuentre a su
+paso, o "saltar" sobre todos los demás objetos sin alterarlos. Se puede también obviar el comportamiento por defecto
+manteniendo pulsada la tecla <keycap>Shift</keycap> (para el modo "empujar"), <keycap>Ctrl</keycap> (para el modo
+"intercambiar"), o <keycap>Alt</keycap> (para el modo "libre", esto es saltando sobre otros objetos sin alterarlos)
+mientras lo arrastra.
+	</para>
+	<para>
+Para cambiar las propiedades globales del panel, pulse el botón derecho sobre cualquier aplique o sobre le
+<interface>Panel</interface> y elija 
+	  <menuchoice>
+	    <guimenu>panel</guimenu>
+	    <guimenuitem>Propiedades globales...</guimenuitem>
+	  </menuchoice>.
+El <guilabel>movimiento por defecto</guilabel> esta debajo de la solapa <guilabel>objetos del panel</guilabel>.
+	</para>
+      </sect3>
+      
+      <sect3 id="removing-applets">
+	<title>Eliminar apliques del panel</title> 
+	<para>  
+Para eliminar un aplique del <interface>panel</interface>, pulse el botón derecho sobre el aplique y
+elija <guimenuitem>Quitar del panel...</guimenuitem>.
+	</para>
+      </sect3>
+    </sect2>
+    
+    
+    <!-- #### Intro | The Right-Click Pop-Up Menu ###### -->
+    <sect2 id="right-click-pop-up-menu">
+      <title>El menú desplegable del botón derecho</title>
+      <para>
+Pulsando el botón derecho del ratón sobre cualquier aplique dispara un <guimenu>menú desplegable</guimenu>.
+Este menú siempre contiene ciertos elementos de menú estándar y a menudo tiene ítem adicionales que varían
+dependiendo del aplique particular.
+      </para>
+      <sect3 id="standard-right-click-items"> 
+	<title>Ítem estándar del menú desplegable</title>
+	<para>
+Todos los apliques tienen los siguientes ítem en su <guimenu>menú desplegable</guimenu> del botón derecho:
+	  <variablelist>
+	    <varlistentry>
+	      <term>Quitar del panel</term>
+	      <listitem>
+		<para>
+El ítem de menú <guimenuitem>Quitar del panel</guimenuitem> elimina este aplique del
+<interface>panel</interface>.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    
+	    <varlistentry>
+	      <term>Mover</term>
+	      <listitem>
+		<para>
+Después de eligir <guimenuitem>Mover</guimenuitem>, el puntero del ratón cambiara de apariencia (generalmente
+a una cruz con flechas en cada dirección). Según se mueva el ratón, el aplique le seguirá. Cuando se termine
+el desplazamiento del aplique, pulse cualquier botón del ratón y el aplique se quedara en su posición actual.
+Observe que los apliques pueden moverse de esta manera entre <interface>paneles</interface>.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    
+	    <varlistentry>
+	      <term>panel</term>
+	      <listitem>
+		<para>
+El submenú <guisubmenu>panel</guisubmenu> contiene varios ítem y submenús para añadir y eliminar 
+<guisubmenu>paneles</guisubmenu> y apliques y para cambiar la configuración. 
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    
+	    <varlistentry>
+	      <term>Ayuda</term>
+	      <listitem>
+		<para>
+El ítem de menú <guimenuitem>Ayuda</guimenuitem> presenta el manual de ayuda del aplique.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    
+	    <varlistentry>
+	      <term>Acerca</term>
+	      <listitem>
+		<para>
+El ítem de menú <guimenuitem>Acerca...</guimenuitem> presenta un cajetín de texto con diversa 
+información acerca del aplique, típicamente se incluye el nombre del aplique, la versión, el 
+autor, los derechos de autor, la licencia y su descripción. 
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    
+	  </variablelist>
+	</para>
+      </sect3>
+
+      <sect3 id="common-right-click-items"> 
+	<title>Otros ítem comunes del menú desplegable</title>
+	<para>
+Muchos apliques tienen también otros ítem en los menús desplegables del botón derecho. Algunos de
+los mas comunes son:
+	  <variablelist>
+	    <varlistentry>
+	      <term>Propiedades...</term>
+	      <listitem>
+		<para>
+El ítem de menú <guimenuitem>Propiedades...</guimenuitem> abre el formulario propiedades 
+(véase <xref linkend="applet-properties-dialog">) del aplique. Muchos aplique tienen formularios de
+propiedades, que permiten configurar el comportamiento y la apariencia del aplique.
+		</para>
+	      </listitem>
+	    </varlistentry>  
+	    <varlistentry>
+	      <term>Lanzar...</term>
+	      <listitem>
+		<para>
+El ítem de menú <guimenuitem>Lanzar...</guimenuitem> generalmente invoca un programa
+relacionado de alguna manera con el aplique pero que se ejecuta en su propia ventana
+en vez de hacerlo en el panel. Por ejemplo:
+		</para>
+		<orderedlist>
+		  <listitem>
+		    <para>
+El aplique <application>Carga de la CPU</application>, que monitoriza los programas en
+ejecución, tiene el ítem de menú <guimenuitem>Lanzar gtop...</guimenuitem>. Al seleccionar 
+este ítem de menú arranca <application>GTop</application>, que permite ver y controlar
+los programas en ejecución.
+		    </para>
+		  </listitem>
+		  <listitem>
+		    <para>
+El aplique <application>Lector de CD</application> tiene el ítem de menú 
+<guimenuitem>Lanzar gtcd...</guimenuitem> que arranca el <application>Lector de CD</application>
+de GNOME cuando se selecciona, y que tiene mas funciones que el aplique. 
+		    </para>
+		  </listitem>
+		</orderedlist>
+	      </listitem>
+	    </varlistentry>
+	  </variablelist>
+	</para>
+      </sect3>
+
+      <sect3 id="applet-properties-dialog"> 
+	<title>Formulario de propiedades del aplique</title>
+	<para>
+Muchos apliques tienen propiedades personalizables. Estos aplique dispondrán de un
+ítem de menú <guimenuitem>Propiedades...</guimenuitem> en el <guimenu>menú desplegable</guimenu>
+del botón derecho que presentara el formulario <interface>Propiedades</interface> donde
+se podrá alterar la apariencia y comportamiento del aplique.
+	  <figure id="example-props-dialog-fig">
+	    <title>Un ejemplo de formulario de propiedades de aplique</title>
+	    <screenshot>
+	      <screeninfo>Un ejemplo de formulario de propiedades de aplique</screeninfo>
+	      <graphic fileref="./figures/applet_props_dialog" format="png"
+		       srccredit="muet">
+	      </graphic>
+	    </screenshot>
+	  </figure>
+Todos los formularios <interface>propiedades</interface> disponen de los siguientes
+botones de dialogo:
+	  <itemizedlist>
+	    <listitem>
+	      <para>
+		<guibutton>Aceptar</guibutton> &mdash;
+Al pulsar <guibutton>Aceptar</guibutton> se activara cualquier cambio en las
+propiedades que se haya realizado y se cerrara el formulario <interface>Propiedades</interface>.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+		<guibutton>Aplicar</guibutton> &mdash;
+Al pulsar en cualquier momento <guibutton>Aplicar</guibutton> se activaran los cambios sin cerrar
+el formulario <interface>Propiedades</interface>. Esto resulta útil si se quiere probar los efectos
+de los cambios realizados, pero se quiere continuar cambiado propiedades. 
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+		<guibutton>Cerrar</guibutton> &mdash;
+Al pulsar <guibutton>Cerrar</guibutton> se cerrara el formulario <interface>Propiedades</interface>. 
+Únicamente las propiedades aplicadas previamente con el botón <guibutton>Aplicar</guibutton> permanecerán
+activas. Los otros cambios no se activaran.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+		<guibutton>Ayuda</guibutton> &mdash;
+Al pulsar <guibutton>Ayuda</guibutton> se presentara el manual de la aplicación, 
+abriéndose en la pagina que describe el formulario <interface>Propiedades</interface>. 
+	      </para>
+	    </listitem>
+	  </itemizedlist>
+	</para>
+      </sect3>
+    </sect2>
+
+
+    <!--  
+  <sect2 id="feedback">
+  <title>Feedback</title>
+  <sect3 id="reporting-bugs"> 
+  <title>Informar de errores en los apliques</title>
+  <para>
+Se anima a los usuarios a que informen de errores al
+<ulink type="http" url="http://bugs.gnome.org">sistema de seguimiento de errores de GNOME</ulink>.
+La forma mas fácil de informar sobre errores es usar el programa 
+<application>Herramienta para informar de errores</application> seleccionando  
+  <menuchoice>
+  <guimenu>Menú principal</guimenu> <guisubmenu>Utilidades</guisubmenu>
+  <guimenuitem>Herramienta para informar de errores («Bug-buddy»)</guimenuitem> </menuchoice>.
+Asegúrese de describir completamente lo que hace aflorar el error y, si es posible, 
+describa al desarrollador como reproducir el escenario.
+  </para>
+  </sect3>
+  <sect3 id="documentation-feedback"> 
+  <title>Providing Feedback</title>
+  <para>
+Las sugerencias proporcionadas por de los usuarios de GNOME sobre como mejorar las 
+aplicaciones y la documentación eran bienvenidas. Las sugerencias sobre cambios en las
+aplicaciones deberán enviarse usando la <application>herramienta para informar de errores</application>
+discutida previamente. La sugerencias sobre cambios en la documentación pueden enviarse 
+directamente al autor de la documentación (su dirección de e-correo debería figurar en la
+sección "autores" del documento), o enviando un mensaje a <email>docs@gnome.org</email>.
+  </para>
+  </sect3>
+  <sect3 id="joining-gnome">  
+  <title>Como unirse a GNOME</title>
+  <para>
+GNOME es un proyecto comunitario, creado por cientos de programadores, escritores de
+documentación, diseñadores de artículos, administradores de web, y otras personas,
+la mayoría trabajando de forma voluntaria. Siempre son bienvenidos nuevos colaboradores
+a GNOME. Para unirse al equipo GNOME, visite estos sitios web:
+
+desarrolladores &mdash; 
+    <ulink type="http" url="http://developer.gnome.org">El sitio de desarrollo de GNOME
+    </ulink>, 
+escritores de documentación &mdash; <ulink type="http"
+    url="http://www.gnome.org/gdp">El proyecto de documentación GNOME</ulink>, 
+Diseñadores de iconos &mdash; <ulink type="http"
+    url="http://gnome-icons.sourceforge.net/">Web de iconos GNOME</ulink>, 
+general &mdash; <ulink type="http" url="http://developer.gnome.org/helping/">Ayudar a GNOME</ulink>, 
+o simplemente apúntese a la lista de e-correo gnome-list (véase <ulink
+    type="http" url="http://www.gnome.org/mailing-lists/">Lista de correo GNOME
+    </ulink>) para discutir sobre lo que le interesa hacer.
+  </para>
+  </sect3>
+  </sect2>
+    -->
+  </sect1>
+
+ <!-- ############### Amusements Applets ################ -->
+
+ <sect1 id="Amusements">
+  <title>Amusements Applets</title>
+
+  &FIFTEEN;
+  &FISH;
+  &GEYES;
+  &LIFE;
+  &ODOMETER;
+
+ </sect1>
+
+ <!-- ############### Monitor Applets #################### -->
+ <sect1 id="monitor-applets">
+  <title>Monitor Applets</title>
+
+  &BATTERY;
+  &CPULOAD;
+  &CPUMEMUSAGE;
+  &DISKUSAGE;
+  &LOADAVG;
+  &MEMLOAD;
+  &NETLOAD;
+  &SWAPLOAD;
+
+ </sect1>
+
+
+ <!-- ############### Multimedia Applets #################### -->
+ <sect1 id="multimedia-applets">
+  <title>Multimedia Applets</title>
+
+  &CDPLAYER;
+  &MIXER;
+  &SOUNDMONITOR;
+
+ </sect1>
+
+
+ <!-- ############### Network Applets #################### -->
+ <sect1 id="network-applets">
+  <title>Network Applets</title>
+
+  &MAILCHECK;
+  &MODEMLIGHTS;
+  &WEBCONTROL;
+ </sect1>
+
+
+
+ <!-- ############### Utility Applets ################## -->
+
+ <sect1 id="utility-applets">
+  <title>Utility Applets</title>
+
+  &CHARPICK;
+  &DESKGUIDE;
+  &DRIVEMOUNT;
+  &GKB;
+  &GNOTES;
+  &GWEATHER;
+  &MINICOMMAND;
+  &PRINTER;
+  &QUICKLAUNCH;
+  &SCREENSHOOTER;
+  &TASKLIST;
+  &TICKASTAT;
+  &WHEREAMI;
+
+
+ </sect1>  
+
+
+ <!-- ############### Clock Applets #################### -->
+ <sect1 id="clock-applets">
+  <title>Clock Applets</title>
+
+  &ANOTHERCLOCK;
+  &ASCLOCK;
+  &CLOCK;
+  &CLOCKMAIL;
+  &JBC;
+
+ </sect1>
+
+</chapter>
+
+
