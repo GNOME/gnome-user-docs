@@ -1,0 +1,54 @@
+%define version	@VERSION@
+%define RELEASE	1
+%define rel	%{?CUSTOM_RELEASE} %{!?CUSTOM_RELEASE:%RELEASE}
+%define prefix	/usr
+
+Summary: General GNOME User Documentation
+Name: gnome-user-docs
+Version: %{version}
+Release: %{rel}
+Copyright: FDL
+Distribution: GNOME RPMS
+Source: %{name}-%{version}.tar.gz
+Group: Documentation
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-buildroot
+Prefix: %{prefix}
+
+Requires:   scrollkeeper >= @SCROLLKEEPER_REQUIRED@
+
+%description
+This package contains general GNOME user documentation which is not 
+directly associated with any particular GNOME application or package.
+
+%prep
+%setup
+%build
+./configure --prefix %{prefix}
+make 
+
+%install
+make prefix=$RPM_BUILD_ROOT/%{prefix} install
+
+%clean 
+rm -rf $RPM_BUILD_ROOT
+
+%post
+which scrollkeeper-update>/dev/null 2>&1 && scrollkeeper-update
+exit 0
+
+%postun
+which scrollkeeper-update>/dev/null 2>&1 && scrollkeeper-update
+exit 0
+
+%files
+%defattr(-, root, root)
+%{prefix}/share/gnome/help
+%{prefix}/share/omf/%{name}
+
+%changelog 
+* Sun Mar 11 2001 Dan Mueth <dan@eazel.com>
+- Update as we move to its own module
+* Mon Nov 27 2000 Kenny Graunke <kwg@teleport.com>
+- Initial cut
+
