@@ -1,0 +1,782 @@
+
+
+
+<chapter id="gosgetstarted-1">
+<title
+>A rendszer munkamenetei</title>
+<highlights
+><para
+>Ez a fejezet a munkamenet elindításához, kezeléséhez és bezárásához szükséges információkat tartalma.</para
+></highlights>
+<sect1 id="gosgetstarted-69">
+<title
+>Munkaasztali munkamenet indítása</title>
+<indexterm
+><primary
+>sessions</primary
+><secondary
+>starting</secondary
+></indexterm>
+<para
+>	A munkaasztali munkamenet a rendszerbe belépéstől az abból kilépésig tart. A belépőképernyő, amit a <application
+>Belépéskezelő</application
+> jelenít meg, a kapu a munkaasztalhoz. A belépőképernyő mezőket biztosít a felhasználónév és jelszó megadásához. A <guimenu
+> Beállítások</guimenu
+> menü a belépési beállításokat tartalmazza, például kiválaszthatjuk a munkamenet nyelvét. </para>
+<para
+>A munkamenetet belépéssel indíthatjuk el. A munkamenet kezelő elindul, miután a <application
+>Belépés kezelő</application
+> leellenőrzi a felhasználónevet és jelszót. A munkamenet-kezelő a munkamenet kezelésében segít. Például elmenthetjuk a jelenlegi munkamenet állapotát, és egy későbbi belépéskor visszaállíthatjuk azt. A munkamenet-kezelő a következőket menti és tölti vissza: </para>
+<itemizedlist
+> <listitem
+><para
+>A megjelenési és viselkedési beállítások, például betűtípusok, színek és egérbeállítások. </para
+></listitem
+> <listitem
+><para
+>A futtatott alkalmazásokat, például a fájlkezelő és szövegszerkesztő. Nem menthetők el és tölthetőek vissza azok az alkalmazások, melyeket a munkamenet-kezelő nem támogat. Ha például elindítjuk a <application
+>vi</application
+> alkalmazást egy terminálablak parancssorából, a munkamenet-kezelő nem tudja visszaállítani a szerkesztést. </para
+></listitem
+> </itemizedlist
+></sect1>
+<sect1 id="gosstartsession-1">
+<title
+>A képernyő zárolása</title>
+<para
+>Ez a bekezdés a képernyő zárolásával és a képernyővédő beállításával kapcsolatban ad információt.</para>
+<sect2 id="gosstartsession-4">
+<title
+>A képernyő zárolása</title>
+<screenshot
+> <mediaobject
+> <imageobject
+> <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>A zárolás ikonja.</phrase
+> </textobject
+> </mediaobject
+> </screenshot>
+<indexterm
+><primary
+>sessions</primary
+><secondary
+>locking screen</secondary>
+</indexterm
+><indexterm
+><primary
+>locking screen</primary
+></indexterm
+><indexterm>
+<primary
+>Lock button</primary
+></indexterm
+><para
+>A képernyő zárolásához végezzük el a következő műveleteket:</para>
+<itemizedlist
+> <listitem
+><para
+>Válasszuk a <menuchoice
+><guimenu
+>Műveletek</guimenu
+><guimenuitem
+>Képernyőzár</guimenuitem
+></menuchoice
+> menüpontot.</para
+></listitem
+> <listitem
+><para
+>Ha a <guibutton
+>Képernyőzár</guibutton
+> gomb valamelyik panelen létezik, kattintsunk a <guibutton
+>Képernyőzár</guibutton
+> gombra. </para
+> <para
+>A <guibutton
+>Képernyőzár</guibutton
+> gomb panelre helyezéséhez kattintsunk jobb gombbal a panelre. Válasszuk a <menuchoice
+><guimenu
+>Panelre helyezés</guimenu
+><guimenuitem
+> Képernyőzár gomb</guimenuitem
+></menuchoice
+> menüpontot.</para
+></listitem
+> </itemizedlist>
+<para
+>A képernyő zárolásakor elindul a képernyővédő. A képernyő kinyitásához mozgassuk az egeret az ablak megnyitásához. Adjuk meg a felhasználónevünket, majd a jelszavunkat, majd nyomjuk le az <keycap
+>Enter</keycap
+> billentyűt. </para>
+<note
+><para
+>A képernyőzár rendes működéséhez szükség van egy engedélyezett képernyővédőre. </para
+> </note>
+</sect2>
+<sect2 id="gosstartsession-3">
+<title
+>A képernyővédő beállítása</title>
+<indexterm
+><primary
+>sessions</primary
+><secondary
+>configuring screensaver</secondary>
+</indexterm
+><indexterm
+><primary
+>screensaver, configuring</primary
+></indexterm>
+<indexterm
+><primary
+>XScreenSaver</primary
+><see
+>screensaver</see
+></indexterm>
+<para
+>A képernyővédő olyan alkalmazás, amit a képernyő képének változtatására használhatunk, amikor a képernyő nincs használatban. A következőképpen használhatjuk a képernyővédőket:</para>
+<itemizedlist
+> <listitem
+><para
+>Indíthatjuk egy bizonyos üres idő után.</para
+></listitem
+> <listitem
+><para
+>Indíthatjuk a képernyő zárolásakor.</para
+></listitem
+> <listitem
+><para
+>Kezelhetjük a monitor áramellátását, amikor a rendszer tétlen. </para
+></listitem
+> </itemizedlist>
+<para
+>A képernyővédő alkalmazás beállításához végezzük el a következő műveleteket: </para>
+<orderedlist
+> <listitem
+><para
+>Kattintsunk jobb gombbal a <guibutton
+>Képernyőzár</guibutton
+> gombra, majd válasszuk a <guimenuitem
+> Tulajdonságok</guimenuitem
+>at a felugró menüből. Egy <guilabel
+>XScreenSaver</guilabel
+> ablak jelenik meg.</para
+> <para
+>Ha a <guibutton
+>Képernyőzár</guibutton
+> gomb nincs rajta valamelyik panelen, hozzáadhatjuk a gombot a panelhez. A <guibutton
+>Képernyőzár</guibutton
+> gomb panelre helyezéséhez kattintsunk jobb gombbal a panelre. Válasszuk a <menuchoice
+><guimenu
+>Panelre helyezés</guimenu
+><guimenuitem
+>Képernyőzár gomb</guimenuitem
+></menuchoice
+>ot. </para
+></listitem
+> <listitem
+><para
+>A képernyővédő alkalmazás beállításához használjuk a <guilabel
+>Megjelenítési módok</guilabel
+> fül elemeit. A következő tábla a <guilabel
+>Megjelenítési módok</guilabel
+> fül elemeit tartalmazza: </para
+> <informaltable frame="topbot"
+> <tgroup cols="2" colsep="0" rowsep="0"
+><colspec colname="COLSPEC2" colwidth="40.38*"/> <colspec colname="COLSPEC3" colwidth="59.62*"/> <thead
+> <row rowsep="1"
+><entry valign="top"
+><para
+>Beállítás</para
+></entry
+><entry valign="top"
+><para
+> Művelet</para
+></entry
+></row
+> </thead
+> <tbody
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Mód</guilabel
+></para
+></entry
+> <entry colname="COLSPEC3" valign="top"
+><para
+>A lenyíló lista alkalmazásával határozzuk meg a képernyővédő alkalmazás viselkedését. Válasszuk a következő beállításokból:</para
+><itemizedlist
+> <listitem
+><para
+><guilabel
+>Képernyővédő tiltása</guilabel
+>: válasszuk ezt a beállítást, ha nem akarjuk használni a képernyővédőt.</para
+></listitem
+> <listitem
+><para
+><guilabel
+>Képernyő elsötétítése</guilabel
+>: válasszuk ezt a beállítást, ha csak el szeretnénk sötétíteni a képernyőt.</para
+></listitem
+> <listitem
+><para
+><guilabel
+>Csak egy képernyővédő</guilabel
+>: Válasszuk ezt a beállítást, ha csak egy fajta képernyővédőt szeretnénk használni. válasszuk a listából egy képernyővédőt.</para
+></listitem
+> <listitem
+><para
+><guilabel
+>Véletlen képernyővédő</guilabel
+>: válasszuk ezt a beállítást, ha egy véletlenszerűen kiválasztott képernyővédőt szeretnénk használni a képernyő zárolásakor. </para
+></listitem
+> </itemizedlist
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+>Listamegjelenítő doboz</para
+></entry
+> <entry colname="COLSPEC3" valign="top"
+><para
+>Válasszuk ki a listából a kívánt képernyővédőt.</para
+></entry
+></row
+> <row
+><entry valign="top"
+><para
+><guilabel
+>Sötétítés ezután</guilabel
+></para
+></entry
+> <entry valign="top"
+><para
+>Megadhatjuk, hogy mennyi időt várjon az utolsó egér- vagy billentyűzethasználat után a képernyővédő indításáig.</para
+></entry
+></row
+> <row
+> <entry valign="top"
+><para
+><guilabel
+>Váltás ezután</guilabel
+></para
+></entry
+> <entry valign="top"
+><para
+>Megadhatjuk, hogy egy képernyővédő mennyi ideig fusson a következőre váltás előtt.</para
+></entry
+></row
+> <row
+><entry valign="top"
+><para
+><guilabel
+>Képernyő zárolása ezután</guilabel
+></para
+></entry
+> <entry valign="top"
+><para
+>Válasszuk ezt a beállítást a képernyőzár bekacsolásához a képernyővédő bekapcsolása után. Beállíthatjuk a képernyővédő és a képernyőzár bekapcsolása közötti időt.</para
+></entry
+> </row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guibutton
+>Előnézet</guibutton
+></para
+></entry
+> <entry colname="COLSPEC3" valign="top"
+><para
+>Kattintsunk erre a gombra a beállított képernyővédő előnézetéhez. Az előnézett leállításához kattintsunk valamelyik egérgombbal, vagy nyomjuk le bármelyik gombot.</para
+></entry
+> </row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guibutton
+>Beállítások</guibutton
+></para
+></entry
+> <entry colname="COLSPEC3" valign="top"
+><para
+>Kattintsunk erre a gombra a kiválasztott képernyővédő beállításainak megjelenítéséhez. </para
+></entry
+></row
+> </tbody
+> </tgroup
+> </informaltable
+> </listitem
+> <listitem
+><para
+>A haladó beállításokhoz kattintsunk a <guilabel
+>Haladó </guilabel
+> fülre. A következő tábla a <guilabel
+>Haladó</guilabel
+> fül elemeit tartalmazza: </para
+> <informaltable frame="topbot"
+> <tgroup cols="2" colsep="0" rowsep="0"
+><colspec colname="COLSPEC2" colwidth="40.38*"/> <colspec colname="COLSPEC3" colwidth="59.62*"/> <thead
+> <row rowsep="1"
+><entry valign="top"
+><para
+>Beállítás</para
+></entry
+><entry valign="top"
+><para
+> Művelet</para
+></entry
+></row
+> </thead
+> <tbody
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Munkaasztal lefényképezése </guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+>Néhány képernyővédő képernyőképet vesz a munkaasztalról, majd azt a képet manipulálva jeleníti meg a képernyővédő képét. Ezt a beállítást választva a képernyővédők készíthetnek képernyőképet a munkaasztalról.</para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Videokép használata </guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+>Néhány képernyővédő le tud menteni képkockákat egy videoeszközről, majd azt a képet manipulálva megjeleníteni a képernyővédő képét. Ha a rendszerben van egy video capture kártya, ezt a beállítást használva a képernyővédők használhatják azt egy képkocka ellopásához.</para
+></entry
+> </row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Véletlen kép használata</guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+> Ezt a beállítást használva a képernyővédők használhatnak egy megadott könyvtárban levő képeket. Adjunk meg a mezőbe egy könyvtárat. Esetleg, a <guibutton
+>Tallózás</guibutton
+> gombra kattintva az ablakból kiválaszthatunk egy könyvtárat. </para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Bővített diagnosztika </guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+>Ezt a beállítást választva megjeleníthetjük a képernyővédő diagnosztikai információit.</para
+></entry
+> </row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Alfolyamatok hibáinak megjelenítése</guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+> Ezt a beállítást választva megjeleníthetjük a képernyővédő alfolyamataival kapcsolatos hibákat a képernyőn.</para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Üdvözlőképernyő megjelenítése indításkor</guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+> Ezt a beállítást kiválasztva megjeleníthetjük az <application
+>Xscreensaver</application
+> üdvözlőképernyőjét az <application
+>Xscreensaver</application
+> indulásakor. </para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Energiatakarékos mód engedélyezése</guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+> Válasszuk ki ezt a beállítást a monitor energiatakarékos módjának beállításához. Az energiatakarékos mód csökkentheti a monitor energiafogyasztását, amikor a monitor nincs használatban. </para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Tartaléküzemmód ez után </guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+>A monitor tartalék módba kapcsolásához szükséges idő beállítása. Ha a monitor tartalék üzemmódban van, a képernyő fekete.</para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Felfüggesztés ez után </guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+>Az energiatakarékos módba kapcsoláshoz szükséges idő beállítása. </para
+></entry
+> </row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Kikapcsolás ez után</guilabel
+></para
+></entry
+> <entry colname="COLSPEC3" valign="top"
+><para
+>A monitor kikapcsolásához szükséges idő beállítása </para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Színtérkép telepítése </guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+>Ezt a beállítást választva egy saját színtérképet használ a képernyővédő, ha aktív. A saját színtérkép használata sok esetben javítja a színek minőségét néhány képernyővédőnél.</para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Fokozatos sötétítés feketébe </guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+> Ezt a beállítást kiválasztva a képernyővédő indításakor a képernyő fokozatosan elsötétül.</para
+></entry
+></row
+> <row
+><entry colname="COLSPEC2" valign="top"
+><para
+><guilabel
+>Fokozatos világosítás feketéből</guilabel
+></para
+></entry
+><entry colname="COLSPEC3" valign="top"
+><para
+> Ezt a beállítást kiválasztva a képernyővédő megállításakor a képernyő fokozatosan kivilágosodik.</para
+></entry
+></row
+> <row
+><entry valign="top"
+><para
+><guilabel
+>Sötétítés/világosítás időtartama</guilabel
+></para
+></entry
+> <entry valign="top"
+><para
+>Megadhatjuk, hogy mennyi ideig tartson a fokozatos sötétítés.</para
+></entry
+></row
+> </tbody
+> </tgroup
+> </informaltable
+> </listitem
+> <listitem
+><para
+>Kattintsunk az <guibutton
+>Ablak bezárása</guibutton
+> gombra az <guilabel
+>XScreenSaver</guilabel
+> bezárásához.</para
+></listitem
+> </orderedlist>
+</sect2>
+</sect1>
+<sect1 id="gosstartsession-2">
+<title
+>A munkamenet kezelése</title>
+<indexterm
+><primary
+>preference tools</primary
+><secondary
+>Sessions</secondary>
+</indexterm
+><indexterm
+><primary
+>sessions</primary
+><secondary
+>managing</secondary>
+</indexterm
+><para
+>A munkaasztal munkamenet-kezelésének beállításához válasszuk az <menuchoice
+> <guimenu
+>Alkalmazások</guimenu
+><guisubmenu
+>Munkaasztal beállításai</guisubmenu
+> <guisubmenu
+>Haladó</guisubmenu
+><guimenuitem
+>Munkamenetek</guimenuitem
+></menuchoice
+> elemet.A <application
+>Munkamenetek</application
+> eszköz a következő típusú alkalmazásokat ismeri fel: </para>
+<itemizedlist
+> <listitem
+><indexterm
+><primary
+>indító alkalmazások</primary
+><secondary
+>munkamenet-vezérelt </secondary
+></indexterm
+><para
+>A munkamenet-vezérelt alkalmazások. Ha a munkamenet beállításait elmentjük, a munkamenet-kezelő elmenti az összes munkamenet-vezérelt alkalmazást. Ha kilépünk, majd újra belépünk, a munkamenet-kezelő automatikusan elindítja a munkamenet-vezérelt alkalmazásokat. </para
+></listitem
+> <listitem
+><para
+>A nem munkamenet-vezérelt alkalmazások. Ha elmentjük a munkamenet beállításait, a munkamenet-kezelő nem ment el nem munkamenet-vezérelt alkalmazásokat. Ha kilépünk, majd belépünk, a munkamenet-kezelő nem indítja el a nem munkamenet-vezérelt alkalmazásokat. Az alkalmazást kézzel kell elindítani. Esetleg használhatjuk a <application
+>munkamenetek</application
+> eszközt az automatikusan elindítandó, de nem munkamenet-vezérelt alkalmazások megadásához. </para
+></listitem
+> </itemizedlist>
+<sect2 id="gosstartsession-9">
+<title
+>munkamenet viselkedésének megadása be- és kilépéskor</title>
+<indexterm
+><primary
+>sessions</primary
+><secondary
+>login behavior</secondary>
+</indexterm
+><indexterm
+><primary
+>sessions</primary
+><secondary
+>logout behavior
+</secondary
+></indexterm
+><para
+>A munkamenet belépéskori és kilépéskori viselkedésének meghatározásához válasszuk az <menuchoice
+> <guimenu
+>Alkalmazások</guimenu
+><guisubmenu
+>Munkaasztal beállításai</guisubmenu
+> <guisubmenu
+>Haladó</guisubmenu
+><guimenuitem
+>Munkamenetek</guimenuitem
+></menuchoice
+> elemet. Végezzük el a kívánt változtatásokat a <guilabel
+> munkamenet beállításai</guilabel
+> fülön. Például, beállíthatjuk a belépéskor megjelenő üdvözlőképernyőt. </para>
+</sect2>
+<sect2 id="gosstartsession-6">
+<title
+>Az indítási alkalmazások használata</title>
+<indexterm
+><primary
+>startup programs</primary
+><see
+>startup applications</see>
+</indexterm
+><indexterm
+><primary
+>sessions</primary
+><secondary
+>using startup
+applications</secondary
+></indexterm
+><indexterm
+><primary
+>startup applications
+</primary
+><secondary
+>non-session-managed</secondary
+></indexterm
+><para
+>Beállíthatunk indításkor automatikusan elinduló nem munkamenet-vezérelt alkalmazásokat., A nem munkamenet-vezérelt indítási alkalmazások beállításához válasszuk az <menuchoice
+> <guimenu
+>Alkalmazások</guimenu
+><guisubmenu
+>Munkaasztal beállításai</guisubmenu
+> <guisubmenu
+>Haladó</guisubmenu
+><guimenuitem
+>Munkamenetek</guimenuitem
+></menuchoice
+> elemet.Használjuk az <guilabel
+>Automatikusan elinduló programok</guilabel
+> fület az alkalmazások hozzáadásához, szerkesztéséhez és törléséhez. Ha elmentjük a beállításokat és kilépünk, a következő belépésnél az automatikusan elinduló alkalmazások elindulnak. </para>
+</sect2>
+<sect2 id="gosstartsession-10">
+<title
+>A jelenleg futó alkalmazások böngészése</title>
+<indexterm
+><primary
+>sessions</primary
+><secondary
+>browsing applications</secondary>
+</indexterm
+><para
+>A jelenlegi munkamenetben futó alkalmazások böngészéséhez válasszuk az <menuchoice
+> <guimenu
+>Alkalmazások</guimenu
+><guisubmenu
+>Munkaasztal beállításai</guisubmenu
+> <guisubmenu
+>Haladó</guisubmenu
+><guimenuitem
+>Munkamenetek</guimenuitem
+></menuchoice
+> elemet. A <guilabel
+>Jelenlegi munkamenet</guilabel
+> fül a következőket jeleníti meg:</para>
+<itemizedlist
+> <listitem
+><para
+>Minden GNOME alkalmazás, ami jelenleg is fut, amelyek a munkamenet-kezelőhöz tudnak kapcsolódni, és amelyeket el tudják menteni az alkalmazás állapotát. </para
+></listitem
+> <listitem
+><para
+>Minden munkaasztali eszköz, ami tud kapcsolódni a munkamenet-kezelőhöz, és az el tudja menteni az eszköz állapotát.</para
+></listitem
+> </itemizedlist>
+<para
+>Használhatjuk a <guilabel
+>Jelenlegi munkamenet</guilabel
+> fület egy alkalmazás vagy eszköz munkamenettel kapcsolatos tulajdonságain elvégzendő néhány művelet elvégzéséhez. Például szerkeszthetjük az indítási sorrendet, vagy a listában szereplő bármely GNOME-alkalmazás vagy eszköz újraindítási stílusát. </para>
+</sect2>
+<sect2 id="gosgetstarted-74">
+<title
+>A munkamenetek beállításainak mentése</title>
+<indexterm
+><primary
+>sessions</primary
+><secondary
+>saving settings</secondary>
+</indexterm
+><para
+>A munkamenet beállításainak elmentéséhez végezzük el a következő műveleteket: </para>
+<orderedlist
+> <listitem
+><para
+>Beállíthatjuk a munkamenet befejezésénél a beállítások automatikus mentését. A munkamenet beállításához válasszuk az <menuchoice
+> <guimenu
+>Alkalmazások</guimenu
+><guisubmenu
+>Munkaasztal beállításai</guisubmenu
+> <guisubmenu
+>Haladó</guisubmenu
+><guimenuitem
+>Munkamenetek</guimenuitem
+></menuchoice
+> elemet. A <application
+>munkamenetek</application
+> eszköz elindul. Válasszuk ki a <guilabel
+>munkamenet változásainak automatikus mentése</guilabel
+> beállítást a <guilabel
+>munkamenet beállításai</guilabel
+> fülön.</para
+></listitem
+> <listitem
+><para
+>A munkamenet befejezése. </para
+></listitem
+> </orderedlist>
+<para
+>Ha nem választottuk ki a <guilabel
+>munkamenet változásainak automatikus mentése</guilabel
+> beállítást, kilépéskor egy ablak megkérdezi, hogy szeretnénk-e elmenteni a jelenlegi beállításokat. A beállítások mentéséhez válasszuk ki az opciót, majd folytassuk a kilépést.</para>
+</sect2>
+</sect1>
+<sect1 id="gosgetstarted-73">
+<title
+>A munkamenet befejezése</title>
+<indexterm
+><primary
+>sessions</primary
+><secondary
+>ending</secondary
+></indexterm>
+<indexterm
+><primary
+>sessions</primary
+><secondary
+>logging out</secondary
+></indexterm>
+<indexterm
+><primary
+>logging out</primary
+></indexterm>
+<screenshot
+> <mediaobject
+> <imageobject
+> <imagedata fileref="figures/logout_icon.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Kilépés ikon.</phrase
+> </textobject
+> </mediaobject
+> </screenshot>
+<para
+>A munkamenet befejezéséhez zárjuk be az összes jelenleg futó alkalmazást, majd végezzük el a következő műveletek egyikét:</para>
+<itemizedlist
+> <listitem
+><para
+>Kattintsunk a <guibutton
+>Kilépés</guibutton
+> gombra.</para
+> </listitem
+> <listitem
+><para
+>Válasszuk a <menuchoice
+><guimenu
+>Műveletek</guimenu
+><guimenuitem
+>Kilépés</guimenuitem
+></menuchoice
+> menüpontot.</para
+></listitem
+> <listitem
+><para
+>Nyissuk meg a <guimenu
+>GNOME menüt</guimenu
+>, majd válasszuk a <guimenuitem
+>Kilépés</guimenuitem
+> menüpontot.</para
+></listitem
+> </itemizedlist>
+<para
+>A munkamenet bezárása előtt előfordulhat, hogy el szeretnénk menteni a beállításokat, a munkamenet későbbi visszaállításához. A kilépés alatt egy ablak megkérdezi, hogy szeretnénk-e elmenteni a jelenlegi beállításokat. A <application
+>Munkamenetek</application
+> beállítóeszközben kiválaszthatjuk a Jelenlegi beállítások automatikus mentése beállítást.</para>
+</sect1>
+</chapter>
+
+
