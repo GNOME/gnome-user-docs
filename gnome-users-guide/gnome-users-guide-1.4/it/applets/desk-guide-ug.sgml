@@ -1,0 +1,594 @@
+<!-- ###############   Desk Guide Applet   ############### -->
+<sect2 id="deskguide-applet">
+  <title>Desk Guide Applet</title> 
+  
+  <para> 
+    L'applet <application>Desk Guide</application>, mostrata in <xref
+    linkend="deskguide-applet-fig">, vi permette di scorrere i vostri desktop
+    virtuali in modo grafico. Per aggiungere questa applet ad un
+    <interface>Pannello</interface> cliccate con il tasto destro del mouse sul
+    <interface>Pannello</interface> e selezionare
+      <menuchoice>
+	<guimenu>Applet</guimenu>
+	<guisubmenu>Utilità</guisubmenu>
+	<guimenuitem>Desk Guide</guimenuitem>
+      </menuchoice>. 
+  </para>
+
+  <figure id="deskguide-applet-fig">
+    <title>Desk Guide</title>
+    <screenshot>
+      <screeninfo>Desk Guide</screeninfo>
+      <graphic format="png" fileref="figures/deskguide-fig" srccredit="John Fleck">
+      </graphic>
+    </screenshot>
+  </figure>
+  <sect3 id="deskguide-applet-usage">
+    <title>Uso</title>
+
+
+    <para>
+      L'applet <application>Desk Guide</application> vi aiuta a scorrere i
+      desktop virtuali disponibili nel vostro sistema. Il sistema <application>X
+      Window</application> funziona utilizzando un programma chiamato "gestore
+      di finestre", il quale vi permette di creare più scrivanie virtuali (dette anche
+      workspace) per organizzare il lavoro dividendo la varie applicazioni fra le
+      varie scrivanie; ognuna di queste scrivanie può ancora essere divisa
+      ulteriormente in spazi di lavoro, detti "desk areas". Questa applet è
+      un'applicazione che vi permette di scorrere le varie scrivanie e desk areas
+      visualizzandoli in una piccola mappa nel Pannello di GNOME e di cambiare
+      quello attuale facilmente.
+    </para>
+
+    <para>
+      L'applet <application>Desk Guide</application> funziona insieme al gestore
+      di finestre, il programma (come ad esempio Sawfish, Enlightenment) che
+      controlla l'aspetto e le funzioni delle finestre; il gestore di finestre
+      disegna i bordi, vi permette di ridimensionare le finestre, di piazzarle e
+      di muoverle sullo schermo e gestisce inoltre le varie scrivanie. L'applet
+      <application>Desk Guide</application> gestisce la "navigazione" fra le varie
+      scrivanie.
+    </para>
+
+    <para>
+      L'applet <application>Desk Guide</application> mostra una versione
+      miniaturizzata delle scrivanie disponibili, oltre ad una finestra evidenziata
+      che rappresenta le applicazioni che stanno girando in ogni scrivania,
+      delle quali quella attiva viene evidenziata. Cliccando sulla
+      rappresentazione di una scrivania vi permette di cambiare quella attiva
+      sul vostro monitor.
+    </para>
+    <note>
+      <title>Nota</title>
+      <para>
+	I vari gestori di finestre usano termini diversi per descrivere i desktop
+	virtuali e gli ulteriori workspace al loro
+	interno. <application>Enlightenment</application> divide il vostro
+	spazio di lavoro in "desktops", a loro volta divisi in
+	"screens". <application>Sawfish</application>, già conosciuto come
+	<application>Sawmill</application>, la divide invece in "workspaces"
+	divisi a loro volta in colonne e righe. Questa applet usa il termine
+	"scrivanie" per i workspace e "viste" per le aree interne. Leggete la
+	documentazione del vostro gestore di finestre per maggiori informazioni su
+	come impostare e gestire i vostri workspace virtuali.
+      </para>
+    </note>
+
+    <para>
+      Cliccando sulla freccia sul lato sinistro dell'applet <application>Desk
+	Guide</application> mostra la finestra <interface>Lista
+	Task</interface>, mostrata in <xref
+	linkend="deskguide-tasklist-applet-fig">.
+    </para>
+
+    <figure id="deskguide-tasklist-applet-fig">
+      <title>Vista a task del Desk Guide</title>
+      <screenshot>
+	<screeninfo>Vista a task del Desk Guide</screeninfo>
+	<graphic format="png" fileref="figures/deskguide-tasklist-fig" srccredit="John Fleck">
+	</graphic>
+      </screenshot>
+    </figure>
+
+    <para>
+      La lista delle finestre mostra le varie applicazioni in funzione sul
+      vostro computer: cliccando con il tasto sinistro su una di queste elencate
+      nella <interface>Lista Task</interface> sposta il focus sull'applicazione
+      relativa, cioè la finestra diventa in primo piano e l'input dalla tastiera
+      viene indirizzato all'applicazione che sta girando in quella finestra.
+    </para>
+    
+  </sect3>
+
+  <sect3 id="deskguide-right-click">
+    <title>Voci del menù del tasto destro</title>
+    <para> 
+      Oltre alle voci del menù normale (vedi <xref
+    linkend="deskguide-standard-right-click-items">), il menù del tasto destro
+	contiene anche le seguenti voci:
+	<itemizedlist> 	
+	  <listitem>
+	    <para>
+	      <guimenuitem>Proprietà...</guimenuitem> &mdash; Questa voce apre
+	      la finestra di dialogo <interface>Proprietà</interface> (vedi
+	      <xref linkend="deskguide-properties">) dalla quale è possibile
+	      modificare l'aspetto e il comportamento dell'applet.
+	    </para>
+	  </listitem>
+	</itemizedlist>
+    </para>
+  </sect3>
+
+  <sect3 id="deskguide-properties">
+    <title>Proprietà</title>
+    <para>
+       È possibile personalizzare l'applet <application>Desk Guide</application>
+       cliccando con il tasto destro del mouse e selezionando
+       <guimenuitem>Proprietà...</guimenuitem>. Apparirà così la finestra di
+       dialogo <interface>Proprietà</interface> con quattro pagine evidenziate
+       dalle quali potete configurare le varie opzioni - <link
+       linkend="deskguide-properties-display">visualizzazione</link>, <link
+       linkend="deskguide-properties-tasks">task</link>, <link
+       linkend="deskguide-properties-geometry">geometria</link>, <link
+       linkend="deskguide-properties-advanced">avanzate</link>.
+    </para>
+    
+    <sect4 id="deskguide-properties-display">
+      <title>Properties - Display</title>
+      <para>
+	La prima finestra di <interface>Proprietà</interface>, mostrata in <xref
+	linkend="deskguide-properties-fig">, vi permette di controllare
+	l'aspetto dell'applet.
+      </para>
+ 
+      <figure id="deskguide-properties-fig">
+	<title>Finestra di dialogo Proprietà</title>
+	<screenshot>
+	  <screeninfo>Finestra di dialogo Proprietà</screeninfo> 
+	  <graphic format="png" fileref="figures/deskguide-properties"
+		   srccredit="John Fleck">
+	  </graphic>
+	</screenshot>
+      </figure>
+    
+      <para>Le opzioni disponibili sono:
+	<itemizedlist>
+	  <listitem>
+	    <para>
+	      <guilabel>Scambia la freccia</guilabel> &mdash; scambia il lato
+	      sul quale viene mostrata la freccia usata per aprire la finestra
+	      della lista dei task.
+	    </para>
+	  </listitem>
+
+	  <listitem>
+	    <para>
+	      <guilabel>Mostra unicamente la scrivania corrente nel
+		pager</guilabel> &mdash; permette di visualizzare solo la
+		scrivania attiva, comprese le varie viste.
+	    </para>
+	  </listitem>
+
+	  <listitem>
+	    <para>
+	      <guilabel>Mostra la griglia sopra i tasks</guilabel> &mdash; Se
+	      usate varie viste (non solo scrivanie multiple) nel vostro gestore
+	      di finestre, <application>Desk Guide</application> disegna una griglia
+	      delle viste nella scrivania attiva. È possibile far disegnare la
+	      griglia sia sopra che sotto le finestre.
+	    </para>
+	  </listitem>
+      
+	  <listitem>
+	    <para>
+	      <guilabel>Mostra i suggerimenti di Desk Guide</guilabel> &mdash;
+	      Mostra i suggerimenti relativi ai vari componenti
+	      dell'applet. La freccia è il solo componente che mostra un
+	      suggerimento.
+	    </para>
+	  </listitem>
+
+	  <listitem>
+	    <para>
+	      <guilabel>Ritardo dei suggerimenti [ms]</guilabel> &mdash; il
+	      ritardo, in millisecondi, prima che il suggerimento venga
+	      mostrato. È possibile digitare direttamente il numero oppure usare
+	      la freccia per modificarlo.
+	    </para>
+	  </listitem>
+
+	  <listitem>
+	    <para>
+	      <guilabel>Mostra i nomi delle scrivanie come
+		suggerimenti</guilabel> &mdash; Alcuni window manager, come ad
+		esempio <application>Enlightenment</application>, permettono di
+		dare un nome alle vostre scrivanie; quest'opzione permette a
+		<application>Desk guide</application> di mostrare dei
+		suggerimenti contenenti questi nomi.
+	    </para>
+	  </listitem>
+
+	  <listitem>
+	    <para>
+	      <guilabel>Ritardo per i suggerimenti dei nomi delle scrivanie
+	      [ms]</guilabel> &mdash; il ritardo, in millisecondi, prima che il
+	      suggerimento venga mostrato. È possibile digitare direttamente il
+	      numero oppure usare la freccia per modificarlo.
+	    </para>
+	  </listitem>
+	  
+	</itemizedlist>
+      </para>
+    </sect4>
+    <sect4 id="deskguide-properties-tasks">
+      <title>Proprietà - Lista task</title>
+
+ 
+      <figure id="deskguide-properties-tasks-fig">
+	<title>Finestra di dialogo Proprietà - Lista task</title>
+	<screenshot>
+	  <screeninfo>Finestra di dialogo Proprietà - Lista task</screeninfo>
+	  <graphic format="png" fileref="figures/deskguide-properties-tasks-fig"
+		   srccredit="John Fleck">
+	  </graphic>
+	</screenshot>
+      </figure>
+
+      <para>Le opzioni disponibili sono:</para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    <guilabel>Mostra applicazioni nascoste</guilabel>, <guilabel>Mostra
+	      le applicazioni non visibili nella lista</guilabel>,
+	    <guilabel>Mostra le applicazioni non mostrate nella
+	      taskbar</guilabel> &mdash; Queste quattro voci permettono a
+	      <application>Deskguide</application> di mostrare le applicazioni
+	      che stanno girando con delle opzioni impostate perché non vengano
+	      mostrate da programmi come quest'applet. Per esempio il
+	      <application>Pannello</application> è impostato come nascosto
+	      (HIDDEN), non visibile nella lista delle finestre
+	      (HIDE_FROM_WINLIST) né dalle taskbar
+	      (HIDE_FROM_TASKBAR). Selezionando queste opzioni si permette a
+	      <application>Deskguide</application> di rendere lo stesso visibili
+	      queste applicazioni.
+	  </para>
+	</listitem>
+      </itemizedlist>
+
+    </sect4>
+
+    <sect4 id="deskguide-properties-geometry">
+      <title>Proprietà - Geometria</title>
+      <figure id="deskguide-properties-geometry-fig">
+     <title>Finestra di dialogo Proprietà - Geometria</title>
+	<screenshot>
+	  <screeninfo>Finestra di dialogo Proprietà - Geometria</screeninfo>
+	  <graphic format="png" fileref="figures/deskguide-properties-geometry-fig"
+		   srccredit="John Fleck">
+	  </graphic>
+	</screenshot>
+      </figure>
+      <para>Le opzioni dispononibili sono:</para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    <guilabel>Altezza della scrivania (in pixels)</guilabel> &mdash;
+	    imposta l'altezza delle scrivanie; di default questa opzione non è
+	    modificabile perché il <interface>Pannello</interface> la imposta
+	    automaticamente. Per modificarla direttamente deselezionate la
+	    casella <guilabel>Ignora l'altezza della scrivania con la dimensione
+	    del pannello</guilabel>.
+	  </para>
+	</listitem>
+
+	<listitem>
+	  <para>
+	    <guilabel>Ignora l'altezza della scrivania con la dimensione del
+	      pannello</guilabel> &mdash; forza <application>Desk
+	      Guide</application> a seguire la dimensione del
+	      <interface>Pannello</interface>. Deselezionandola vi permette di
+	      impostare manualmente l'altezza usando l'impostazione
+	      <guilabel>Altezza della scrivania</guilabel> di cui sopra.
+	  </para>
+	</listitem>
+
+	<listitem>
+	 <para>
+	    <guilabel>Dividi l'altezza per il numero di aree
+	      verticali</guilabel> &mdash; divide l'altezza totale dell'applet
+	    per il numero di colonne delle desktop areas visibili.
+	  </para>
+	</listitem>
+
+	<listitem>
+	 <para>
+	    <guilabel>Righe di desktop</guilabel> &mdash; imposta il numero di
+	    righe create da <application>Desk Guide</application> nella mappa
+	    disegnata nel <interface>Pannello</interface> per rappresentare
+	    tutte le vostre scrivanie.
+	    <note>
+	      <para>
+		È il vostro gestore di finestre, non l'applet <application>Desk
+		  Guide</application>, a controllare il numero di scrivanie
+		disponibili nel vostro sistema: questa opzione imposta solo la
+		modalità con la quale <application>Desk Guide</application> li
+		mostra.
+	      </para>
+	    </note>
+	  </para>
+	</listitem>
+
+	<listitem>
+	  <para>
+	    <guilabel>Dividi l'altezza per il numero di righe</guilabel> &mdash;
+	    forza <application>Desk Guide</application> a disegnare tutte le
+	    colonne di scrivanie nell'altezza specificata sopra, sia che venga
+	    specificata manualmente sia che venga determinata automaticamente
+	    per rispettare l'altezza del <interface>Pannello</interface>). Non
+	    selezionando questa casella, se avete più di una colonna di scrivanie,
+	    l'applet può assumere l'altezza doppia e anche maggiore.
+	  </para> 
+	</listitem>
+      </itemizedlist>
+
+      <para>
+	Le opzioni per <interface>Aspetto Verticale</interface> sono identiche a
+	quelle per l'aspetto orizzontale già viste, ma hanno effetto sulla
+	larghezza invece che sull'altezza e sulle colonne invece che sulle
+	righe.
+      </para>
+    </sect4>
+
+    <sect4 id="deskguide-properties-advanced">
+      <title>Proprietà - Avanzate</title>
+      <figure id="deskguide-properties-advanced-fig">
+	<title>Finestra di dialogo Proprietà - Avanzate</title>
+	<screenshot>
+	  <screeninfo>Finestra di dialogo Proprietà - Avanzate</screeninfo>
+	  <graphic format="png" fileref="figures/deskguide-properties-advanced-fig"
+		   srccredit="John Fleck">
+	  </graphic>
+	</screenshot>
+      </figure>
+
+      <para>
+	Le Opzioni Avanzate vi permettono di controllare il comportamento di
+	<application>Desk Guide</application> quando si usano specifici gestori
+	di finestre, oltre ad altre cose.
+      </para>
+      <itemizedlist>
+	
+	<listitem>
+	  <para>
+	    <guilabel>Disegna i desktop con un doppio buffer
+	      (raccomandato)</guilabel> &mdash; controlla il modo con cui
+	    <application>Desk Guide</application> disegna le scrivanie. Senza
+	    questa opzione è probabile che il disegno venga tremolante su
+	    computer più lenti, ma con questa opzione le performance sono più
+	    basse su connessioni di rete.
+	  </para>
+	</listitem>
+
+	<listitem>
+	  <para>
+	    <guilabel>Il gestore di finestre sposta le decorazioni</guilabel>
+	    &mdash; Selezionate questa casella se quando muovete una finestra
+	    con il tasto centrale del mouse questa poi rimane ferma. Se avete
+	    dei dubbi selezionate quest'opzione nel caso stiate usando uno di
+	    questi gestori di finestre:
+	    (<application>AfterStep</application>,
+	    <application>Enlightenment</application>,
+	    <application>FVWM</application>, <application>IceWM</application>, o
+	    <application>Sawmill</application>, ora conosciuto come
+	    <application>Sawfish</application>).
+	  </para>
+	</listitem>
+
+	<listitem>
+	  <para>
+	    <guilabel>Il gestore di finestre cambia l'area attiva su tutte le
+	      scrivanie</guilabel> &mdash; Se avete più di una scrivania, con
+	    dentro ognuna diverse aree di lavoro, potete usare quest'opzione per
+	    forzare il gestore di finestre a cambiare l'area attiva all'interno
+	    di tutte le scrivanie contemporaneamente se cambiate l'area di
+	    lavoro su una sola.
+	  </para>
+	</listitem>
+
+	<listitem>
+	  <para>
+	    <guilabel>Il gestore di finestre si aspetta che il modifichi le
+	      proprietà della scrivania e dell'area</guilabel> &mdash; Ancora
+	      non ha alcun effetto.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    <guilabel>Visualizza automaticamente i processi nel menu a
+	      tendina</guilabel> &mdash; Fa apparire automaticamente la vista
+	    dei task dopo che avete cliccato su un'applicazione sull'elenco dei
+	    task. Se non viene selezionata dovete cliccare due volte per vedere
+	    la finestra.
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </sect4>
+
+    <sect4 id="moreInformation">
+      <title>Maggiori Informazioni</title>
+      <para>Tutte le finestre di dialogo <interface>Proprietà</interface> hanno
+      questi tre bottoni nel parte inferiore della finestra:
+	<itemizedlist>
+	  <listitem>
+	    <para>
+	      <guibutton>OK</guibutton> &mdash; Premendo
+	      <guibutton>OK</guibutton> renderete attivi tutti i cambiamenti
+	      nelle proprietà che avete scelto e chiuderete la finestra di
+	      dialogo.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      <guibutton>Applica</guibutton> &mdash; Premendo
+	      <guibutton>Applica</guibutton> in qualsiasi momento renderete
+	      attivi tutti i cambiamenti senza chiudere la finestra di
+	      dialogo. Questo risulta comodo per provare gli effetti dei
+	      cambiamenti richiesti senza però dover smettere di continuare a
+	      cambiarli.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      <guibutton>Chiudi</guibutton> &mdash; Premendo
+	      <guibutton>Chiudi</guibutton> chiuderete la finestra di dialogo;
+	      solo i cambiamenti già applicati con il bottone
+	      <guibutton>Applica</guibutton> verranno salvati, mentre gli altri
+	      saranno persi.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      <guibutton>Aiuto</guibutton> &mdash; Premendo
+	      <guibutton>Aiuto</guibutton> appare il manuale per l'applicazione
+	      alla pagina dove viene spiegata la finestra di dialogo
+	      <interface>Proprietà</interface>.
+	    </para>
+	  </listitem>
+	</itemizedlist>
+      </para>
+    </sect4>
+
+    <sect4 id="deskguide-standard-right-click-items"> 
+      <title>Voci Standard del menù Pop-Up</title>
+      <para>
+	Tutte le applet dovrebbero avere le seguenti voci nel menù che appare
+	cliccandoci sopra con il tasto destro:
+	<variablelist>
+	  <varlistentry>
+	    <term>Rimuovi dal pannello</term>
+	    <listitem>
+	      <para>
+		La voce <guimenuitem>Rimuovi dal pannello</guimenuitem> serve
+		per rimuovere l'applet dal <interface>Pannello</interface>.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+
+	  <varlistentry>
+	    <term>Sposta</term>
+	    <listitem>
+	      <para>
+		Dopo aver selezionato <guimenuitem>Sposta</guimenuitem>, il
+		puntatore del vostro mouse cambierà aspetto (diventando
+		normalmente una croce); come muoverete il mouse l'applet lo
+		seguirà fino a quando non premerete un altro tasto qualsiasi,
+		posizione nella quale l'applet si fermerà. Nota bene che in
+		questo modo è possibile spostare le applet fra differenti
+		<interface>Pannelli</interface>.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	  
+	  <varlistentry>
+	    <term>Informazioni su...</term>
+	    <listitem>
+	      <para>
+		La voce <guisubmenu>Informazioni su...</guisubmenu> fa apparire
+		una finestra di dialogo contenente svariate informazioni
+		sull'applet, come il nome, la versione, l'autore, il copyright,
+		la licenza e la descrizione.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+      </para>
+    </sect4>
+  </sect3>
+  
+  <sect3 id="deskguide-applet-bugs">
+    <title>Bug conosciuti e limitazioni</title>
+    
+    <para>L'opzione <guilabel>Il gestore di finestre si aspetta che il modifichi le
+	proprietà della scrivania e dell'area</guilabel> nelle
+      <interface>proprietà avanzate</interface> non ha ancora alcun effetto.
+      
+    </para>
+  </sect3>
+  <!-- ============= Authors ================================ -->
+
+  <sect3 id="deskguide-applet-authors">
+   <title>Autori</title>
+    <para>
+      L'applet <application>Desk Guide</application> è stata scritta da Tim
+      Janik (<email>timj@gtk.org</email>). Inviate tutti i commenti e le
+      segnalazioni di bug al <ulink url="http://bugs.gnome.org/"
+      type="http">GNOME bug tracking database</ulink>. (Le istruzioni per
+      inviare le notizie dei bug possono essere trovate <ulink
+      url="http://bugs.gnome.org/Reporting.html" type="http">
+      on-line</ulink>. Se state usando GNOME 1.1 o più nuovo potete usare anche
+      <application>Bug Report Tool</application> (<command>bug-buddy</command>),
+      disponibile nel sottomenù <guisubmenu>Utilità</guisubmenu> del menù
+      <guimenu>Programmi</guimenu>, per inviare le segnalazioni dei bug.
+    </para>
+
+    <para>
+      Questo manuale è stato scritto da John Fleck
+    (<email>jfleck@inkstain.net</email>). Inviate tutti i commenti e i
+    suggerimenti a proposito di questo manuale al <ulink type="http"
+    url="http://developer.gnome.org/projects/gdp/">GNOME Documentation
+    Project</ulink> inviando un messaggio di posta elettronica a
+    <email>docs@gnome.org</email>. Potete inviare i vostri commenti anche usando
+    il <ulink type="http"
+    url="http://developer.gnome.org/projects/gdp/doctable/">GNOME Documentation
+    Status Table</ulink>.
+    </para>
+
+    <para>
+      Traduzione italiana a cura di Leandro Noferini
+      (<email>lnoferin@cybervalley.org</email>. Inviate tutti i commenti e i
+      suggerimenti a <email>webmaster@it.gnome.org</email>.
+    </para>
+
+  </sect3>
+
+
+  <!-- ============= Application License ============================= -->
+
+  <sect3 id="deskguide-applet-license">
+    <title>Licenza</title>
+    <para>
+      This program is free software; you can redistribute it and/or
+      modify it under the terms of the <ulink type="help"
+      url="gnome-help:gpl"><citetitle>GNU General Public
+      License</citetitle></ulink> as published by the Free Software Foundation;
+      either version 2 of the License, or (at your option) any later version.
+    </para>
+    <para>
+      This program is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      <ulink type="help" url="gnome-help:gpl"><citetitle>GNU General
+	  Public License</citetitle></ulink> for more details.
+    </para>
+    <para>
+      A copy of the <ulink type="heep" url="gnome-help:gpl"><citetitle>GNU
+     General Public License</citetitle></ulink> is included with the GNOME
+     documentation.  You also may obtain a copy from the Free Software
+     Foundation by visiting <ulink type="http" url="http://www.fsf.org">their
+     Web site</ulink> or by writing to
+      <address> 
+	Free Software Foundation, Inc.
+	<street>59 Temple Place</street> - Suite 330
+	<city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+	<country>USA</country>
+      </address>
+    </para>
+  </sect3>
+
+--> 
+ </sect2>
+
+
+
+
+
