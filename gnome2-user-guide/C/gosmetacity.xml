@@ -1,0 +1,2862 @@
+<chapter id="gossawfish-1">
+  <title>Working With Windows</title>
+  <highlights>
+	 <para>The information in this chapter describes how to use windows in the
+		GNOME desktop. This chapter describes the functions that are associated with
+		the <application>Sawfish</application> window manager. </para>
+  </highlights>
+  <sect1 id="gossawfish-712">
+	 <title>Windows, Workspaces, and Viewports</title>
+	 <indexterm>
+		<primary>windows</primary>
+		<secondary>introduction</secondary>
+	 </indexterm>
+	 <indexterm>
+		<primary>workspaces</primary>
+		<secondary>introduction</secondary>
+	 </indexterm>
+	 <indexterm>
+		<primary>viewports</primary>
+		<secondary>introduction</secondary>
+	 </indexterm>
+	 <para>You can display many windows at the same time on your desktop. You
+		can run different applications in each window in the following desktop areas:
+		</para>
+	 <itemizedlist>
+		<listitem>
+		  <para>Workspaces</para>
+		</listitem>
+		<listitem>
+		  <para>Viewports</para>
+		</listitem>
+	 </itemizedlist>
+	 <para>You can subdivide your desktop into separate workspaces. You can
+		display only one workspace at a time, but you can have windows open in all your
+		other workspaces. You can divide your workspaces into subdivisions that are
+		called viewports. You can display only one viewport at a time, but you can have
+		windows open in all of your other viewports.</para>
+	 <para>The <application>Desk Guide</application> applet displays a visual
+		representation of your windows, workspaces, and viewports.
+		<xref linkend="gossawfish-FIG-717"/> shows the <application>Desk
+		Guide</application> applet when your desktop has four workspaces with four
+		viewports in each workspace.</para>
+	 <figure id="gossawfish-FIG-717">
+		<title>Desk Guide Applet</title>
+		<screenshot> 
+		  <mediaobject> 
+			 <imageobject>
+				<imagedata fileref="figures/dguide_vports_applet.png" format="PNG"/> 
+			 </imageobject> 
+			 <textobject> 
+				<phrase>Screenshot of Desk Guide applet</phrase> 
+			 </textobject> 
+		  </mediaobject> 
+		</screenshot>
+	 </figure>
+	 <para>In the first workspace, the four viewports contain one window each.
+		Windows can straddle viewports. That is, part of a window can appear in one
+		viewport, and the other part of the window can appear in an adjacent viewport.
+		In the second workspace in <xref linkend="gossawfish-FIG-717"/>, a window
+		straddles the first two viewports.</para>
+	 <para>Each workspace and viewport has the same panels, desktop background
+		objects, and background as all other workspaces and viewports. Your workspaces
+		are arranged in a list. You can view the workspace list in the 
+		<guimenu>Root </guimenu> menu. By default, your workspace list contains
+		four workspaces, with one viewport in each workspace.</para>
+	 <para>You can use the <application>Sawfish window manager</application>
+		capplet to specify the default number of workspaces. You can also add more
+		workspaces at any time. When you add a workspace, the new workspace is inserted
+		immediately next to the current workspace.</para>
+	 <para>You can move your workspaces to rearrange the order of workspaces in
+		the workspace list. The order of the workspace list affects where the
+		workspaces are located in the <application>Desk Guide</application> applet. The
+		order of the workspace list also affects the list order in the 
+		<guimenu>Root</guimenu> menu. You can also move or copy windows to other
+		workspaces.</para>
+	 <sect2 id="gossawfish-15">
+		<title>Window Manager Behavior</title>
+		<para>A window manager controls how windows appear and behave on your
+		  desktop. The window manager manages where your windows are located, which
+		  window has focus, and the style of the frame on the windows. The window frame
+		  contains buttons that enable you to perform standard actions such as moving,
+		  closing, and resizing windows.</para>
+		<para>You can work with many different window managers in your desktop.
+		  You can choose which window manager to use in the <application>Window Manager
+		  </application> capplet. You must use a GNOME-compliant window manager, such as
+		  <application>Sawfish</application>, for all GNOME features to function
+		  correctly.</para>
+		<para>You can configure many window management settings in the
+		  <application> Sawfish</application> window manager. This manual describes the
+		  functions that are associated with the default configuration of the
+		  <application>Sawfish </application> window manager. The default configuration
+		  is specified in the <application> Sawfish window manager</application> capplet.
+		  This manual also describes the default functions of the Crux frame
+		  style.</para>
+	 </sect2>
+  </sect1>
+  <sect1 id="gossawfish-713">
+	 <title>Types of Window</title>
+	 <indexterm>
+		<primary>windows</primary>
+		<secondary>types of</secondary>
+	 </indexterm>
+	 <para>The desktop features the following types of windows: </para>
+	 <itemizedlist>
+		<listitem>
+		  <para>Application windows </para>
+		  <para>When you start an application, an application window opens. The
+			 window manager applies a frame to the application window.</para>
+		  <para>The titlebar along the top edge of the window frame contains
+			 buttons that you can use to work with the window. The titlebar contains one
+			 button on the left side and three on the right side. </para>
+		  <para>The following figure shows a typical application window. </para>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/gedit_window.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of a typical application window</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		</listitem>
+		<listitem>
+		  <para>Dialog windows</para>
+		  <para>A dialog window is a popup window in which you enter information
+			 or commands. The dialog appears within a window frame.</para>
+		  <para>You can use the titlebar along the top edge of the dialog window
+			 frame to work with the window. You can use the titlebar to move the dialog
+			 around the desktop. The titlebar also contains a button that enables you to do
+			 the following:</para>
+		  <itemizedlist>
+			 <listitem>
+				<para>Close the dialog window</para>
+			 </listitem>
+			 <listitem>
+				<para>Open the 
+				  <guimenu>Window</guimenu> menu </para>
+			 </listitem>
+		  </itemizedlist>
+		  <para>Typically you open a dialog window from an application window.
+			 When you open a dialog window, the window is usually raised and has focus. Some
+			 dialog windows do not allow you to use the application until you close the
+			 dialog. Both of these behaviors are options that you can select in the
+			 <application> Sawfish window manager</application> capplet. </para>
+		  <para>The following figure shows a typical dialog window. </para>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/gedit_pref_dialog.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of a typical dialog window</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		</listitem>
+	 </itemizedlist>
+	 <sect2 id="gossawfish-16">
+		<title>Window Frames</title>
+		<para>A window frame is a border around a window. The window frame
+		  contains a titlebar. The titlebar normally contains buttons that you can use to
+		  work with the window.</para>
+		<para>You can apply several styles of window frame to your windows. The
+		  style of a window frame determines how the frame looks and which buttons are on
+		  the frame. You can choose a default frame style for all your windows in the
+		  <application> Sawfish window manager</application> capplet. You can also choose
+		  a different frame style for each individual window. </para>
+		<para>The default frame style is Crux. This manual describes the
+		  functions that are associated with the Crux frame style. </para>
+		<para>Other frame styles have a different visual design to the Crux frame
+		  style. For example, <xref linkend="gossawfish-FIG-4"/> shows an application
+		  window in the MicroGUI frame style.</para>
+		<figure id="gossawfish-FIG-4">
+		  <title>Application Window in MicroGUI Frame Style</title>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/gedit2_window.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of an application window in MicroGUI frame
+					 style</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		</figure>
+		<para><xref linkend="gossawfish-FIG-5"/> shows a dialog window in the
+		  MicroGUI frame style. </para>
+		<figure id="gossawfish-FIG-5">
+		  <title>Dialog Window in MicroGUI Frame Style </title>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/gedit_pref2_dialog.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of a dialog window in MicroGUI frame
+					 style</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		</figure>
+		<para>Application windows in the Crux and MicroGUI frame styles have four
+		  buttons in the titlebar. Other frame styles can have a different number of
+		  buttons in the titlebar. For example, application windows in the smaker frame
+		  style have only two buttons.</para>
+		<para>Other frame styles can assign different functions to the buttons in
+		  the titlebar. For example, in the Crux frame style, if you click on the button
+		  on the left of the titlebar the window closes. In the smaker frame style, if
+		  you click on the button on the left of the titlebar the window minimizes.
+		  </para>
+		<para>You can view tooltips for the buttons and other control elements on
+		  window frames. Tooltips appear when you point to the control element. The
+		  following shows the tooltip for the 
+		  <guibutton>Maximize</guibutton> button. </para>
+		<figure id="gossawfish-FIG-703">
+		  <title>Tooltip for Maximize Button</title>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/sample_tooltip.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of tooltip for Maximize button</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		</figure>
+		<sect3 id="gossawfish-17">
+		  <title>Window Frame Control Elements</title>
+		  <para>You can use the window frame to perform various actions with the
+			 window. In particular, the titlebar contains various active control elements.
+			 The following figure shows the titlebar of an application window in the Crux
+			 frame style.</para>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Annotated screenshot of an application window</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		  <para>Dialog windows also contain some of the window frame control
+			 elements. <xref linkend="gossawfish-TBL-1"/> describes the active control
+			 elements on window frames in the Crux frame style, from left to right.</para>
+		  <table frame="topbot" id="gossawfish-TBL-1">
+		  <title>Window Frame Control Elements</title>
+		  <tgroup cols="2" colsep="0" rowsep="0"><colspec
+			 colwidth="41.65*"/><colspec colwidth="58.35*"/>
+			 <thead>
+				<row rowsep="1">
+				  <entry>
+					 <para>Control Element</para></entry>
+				  <entry>
+					 <para>Description </para></entry>
+				</row>
+			 </thead>
+			 <tbody>
+				<row>
+				  <entry>
+					 <para>
+						<guibutton>Close Window</guibutton> button</para></entry>
+				  <entry>
+					 <para>The button on the left of the titlebar. Click on the
+						button to close the window. If the window is in a window group, press 
+						<keycap>Shift </keycap> then click on the 
+						<guibutton>Close Window</guibutton> button to close all
+						windows in the group. </para>
+					 <para>You can also right-click on the
+						<guibutton> Close Window</guibutton> button to open the 
+						<guimenu>Window</guimenu> menu. </para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>Titlebar</para></entry>
+				  <entry>
+					 <para>You can use the titlebar to perform the following
+						actions: </para>
+					 <itemizedlist>
+						<listitem>
+						  <para>To give focus to the window click on the
+							 titlebar.</para>
+						</listitem>
+						<listitem>
+						  <para>To move the window grab the titlebar and drag the
+							 window to the new location. </para>
+						</listitem>
+						<listitem>
+						  <para>To shade the window, double-click on the titlebar. To
+							 unshade the window, double-click on the titlebar again.</para>
+						</listitem>
+						<listitem>
+						  <para>To resize the window vertically middle-click and hold
+							 the titlebar, then drag up or drag down. </para>
+						</listitem>
+						<listitem>
+						  <para>If the window is at the top of the 
+							 <glossterm>stacking order </glossterm>, right-click on
+							 the titlebar to lower the window to the bottom. If the window is not at the top
+							 of the stacking order, right-click on the titlebar to raise the window to the
+							 top. The raise and lower operations work within 
+							 <glossterm>layers</glossterm>. </para>
+						</listitem>
+					 </itemizedlist></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guibutton>Minimize</guibutton> button </para></entry>
+				  <entry>
+					 <para> The first button in the group of three buttons on the
+						right side of the titlebar. Click on the 
+						<guibutton>Minimize</guibutton> button to minimize the
+						window. You can also right-click on the 
+						<guibutton>Minimize</guibutton> button to open the 
+						<guimenu>Window</guimenu> menu.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guibutton>Maximize</guibutton> button </para></entry>
+				  <entry>
+					 <para> The second button in the group of three buttons on the
+						right side of the titlebar. Use the 
+						<guibutton>Maximize</guibutton> button to perform the
+						following actions: </para>
+					 <itemizedlist>
+						<listitem>
+						  <para>To maximize the window click on the 
+							 <guibutton>Maximize</guibutton> button. To restore the
+							 window click on the 
+							 <guibutton>Maximize</guibutton> button again. </para>
+						</listitem>
+						<listitem>
+						  <para>To maximize the window vertically, middle-click on
+							 the 
+							 <guibutton> Maximize</guibutton> button. To restore the
+							 window click on the 
+							 <guibutton> Maximize</guibutton> button again.</para>
+						</listitem>
+						<listitem>
+						  <para>To maximize the window horizontally, right-click on
+							 the 
+							 <guibutton> Maximize</guibutton> button. To restore the
+							 window click on the 
+							 <guibutton> Maximize</guibutton> button again. </para>
+						</listitem>
+					 </itemizedlist></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guibutton>Shade</guibutton> button </para></entry>
+				  <entry>
+					 <para> The third button in the group of three buttons on the
+						right side of the titlebar. Click on the button to shade the window. To unshade
+						the window click on the button again.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>Border</para></entry>
+				  <entry>
+					 <para>The border around the window. Use the border to perform
+						the following actions: </para>
+					 <itemizedlist>
+						<listitem>
+						  <para>To resize the window grab the border and drag the
+							 border to the new size. </para>
+						</listitem>
+						<listitem>
+						  <para>To move the window middle-click and hold the border
+							 and drag the window to the new location. </para>
+						</listitem>
+						<listitem>
+						  <para>If the window is at the top of the stacking order,
+							 right-click on the border to lower the window to the bottom. If the window is
+							 not at the top of the stacking order, right-click on the border to raise the
+							 window to the top. The raise and lower operations work within layers. </para>
+						</listitem>
+					 </itemizedlist></entry>
+				</row>
+			 </tbody>
+		  </tgroup>
+		  </table>
+		</sect3>
+	 </sect2>
+  </sect1>
+  <sect1 id="gossawfish-714">
+	 <title>Applets and Menus for Working With Windows, Workspaces, and
+		Viewports </title>
+	 <indexterm>
+		<primary>windows</primary>
+		<secondary>applets and menus for working with</secondary>
+	 </indexterm>
+	 <para>This section describes the applets and menus that you can use to work
+		with windows, workspaces, and viewports.</para>
+	 <sect2 id="gossawfish-18">
+		<title>Tasklist Applet</title>
+		<para>The <application>Tasklist</application> applet displays a button
+		  for each window that is open. The <application>Tasklist</application> applet
+		  enables you to perform the following tasks:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Minimize and restore windows.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Give focus to windows.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Shade and unshade windows.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Stick and unstick windows.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Close and kill windows.</para>
+		  </listitem>
+		</itemizedlist>
+		<para>When you open a window, the <application>Tasklist</application>
+		  applet displays a button that represents the window. The tasklist buttons show
+		  which windows are open. You can view which windows are open, even if some
+		  windows are minimized, or other windows overlap a window. The
+		  <application>Tasklist </application> applet can display buttons for the windows
+		  in your current workspace and viewport, or in all workspaces and viewports. To
+		  select this option, you must change the properties of the
+		  <application>Tasklist</application> applet.</para>
+		<para><xref linkend="gossawfish-FIG-8"/> shows the
+		  <application>Tasklist</application> applet when the following windows are
+		  open:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para><application>gedit</application></para>
+		  </listitem>
+		  <listitem>
+			 <para><application>GHex</application></para>
+		  </listitem>
+		  <listitem>
+			 <para><application>Netscape Navigator</application></para>
+		  </listitem>
+		  <listitem>
+			 <para><application>Netscape Messenger</application></para>
+		  </listitem>
+		  <listitem>
+			 <para><application>Netscape Composer</application></para>
+		  </listitem>
+		  <listitem>
+			 <para><application>GNOME Terminal</application></para>
+		  </listitem>
+		</itemizedlist>
+		<figure id="gossawfish-FIG-8">
+		  <title>Tasklist Applet</title>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/tasklist_group_applet.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of Tasklist applet</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		</figure>
+		<para>The buttons in the applet show the status of your windows.
+		  <xref linkend="gossawfish-TBL-3"/> explains the information that the tasklist
+		  buttons provide about the window. The examples in
+		  <xref linkend="gossawfish-TBL-3"/> refer to <xref linkend="gossawfish-FIG-8"/>.
+		  </para>
+		<table frame="topbot" id="gossawfish-TBL-3">
+		<title>Window Status Information on Tasklist Buttons</title>
+		<tgroup cols="3" colsep="0" rowsep="0"><colspec colwidth="33*"/><colspec
+		  colwidth="33*"/>
+		  <colspec colwidth="33*"/>
+		  <thead>
+			 <row rowsep="1">
+				<entry>
+				  <para>State</para></entry>
+				<entry>
+				  <para>Description </para></entry>
+				<entry>
+				  <para>Example</para></entry>
+			 </row>
+		  </thead>
+		  <tbody>
+			 <row>
+				<entry>
+				  <para>Tasklist button is pressed in</para></entry>
+				<entry>
+				  <para> Indicates that the window has focus.</para></entry>
+				<entry>
+				  <para><application> GHex</application></para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>No square brackets around window title </para></entry>
+				<entry>
+				  <para> Indicates that the window is on the desktop and is not
+					 minimized. </para></entry>
+				<entry>
+				  <para><application>gedit</application></para>
+				  <para><application>GHex </application></para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>Square brackets around window title </para></entry>
+				<entry>
+				  <para> Indicates that the window is minimized.</para></entry>
+				<entry>
+				  <para><application> [Terminal]</application></para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>Number in parentheses before window title </para></entry>
+				<entry>
+				  <para>Indicates that the button represents a group of windows
+					 that have the same name. The number in parentheses indicates the number of
+					 windows in the task group.</para></entry>
+				<entry>
+				  <para><application>(3) Netscape</application></para></entry>
+			 </row>
+		  </tbody>
+		</tgroup>
+		</table>
+		<para>You can use the <application>Tasklist</application> applet to
+		  perform the following actions on windows:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>If the window has focus, click on the button that represents
+				the window to minimize the window.</para>
+		  </listitem>
+		  <listitem>
+			 <para>If the window is minimized, click on the button that represents
+				the window to restore the window.</para>
+		  </listitem>
+		  <listitem>
+			 <para>If the window is not minimized and not in focus, click on the
+				button that represents the window to give focus to the window.</para>
+		  </listitem>
+		</itemizedlist>
+		<sect3 id="gossawfish-19">
+		  <title>Task Menu</title>
+		  <para>A task menu contains menu items that enable you to perform
+			 various tasks on windows. For example, task menu items enable you to minimize
+			 and restore a window. To open a task menu, right-click on the button that
+			 represents the window with which you want to work.</para>
+		  <para>The items that appear on the menu depend on the state of the
+			 window that the tasklist button represents. For example, if the window is not
+			 shaded, the popup menu contains a 
+			 <guimenuitem>Shade</guimenuitem> item. If the window is shaded, the
+			 popup menu contains an 
+			 <guimenuitem>Unshade</guimenuitem> item. </para>
+		  <para><xref linkend="gossawfish-TBL-4"/> lists the items that you can
+			 choose from a task menu.</para>
+		  <table frame="topbot" id="gossawfish-TBL-4">
+		  <title>Task Menu</title>
+		  <tgroup cols="2" colsep="0" rowsep="0"><colspec
+			 colwidth="32.98*"/><colspec colwidth="67.02*"/>
+			 <thead>
+				<row rowsep="1">
+				  <entry>
+					 <para>Menu Item</para></entry>
+				  <entry>
+					 <para>Description </para></entry>
+				</row>
+			 </thead>
+			 <tbody>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Iconify</guimenuitem> or 
+						<guimenuitem>Restore </guimenuitem></para></entry>
+				  <entry>
+					 <para>To minimize the window to the <application>
+						Tasklist</application> applet, choose 
+						<guimenuitem>Iconify</guimenuitem>. If the window is already
+						minimized, choose 
+						<guimenuitem>Restore</guimenuitem> to restore the
+						window.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Shade</guimenuitem> or 
+						<guimenuitem>Unshade </guimenuitem></para></entry>
+				  <entry>
+					 <para>To reduce the window so that only the titlebar is
+						visible, choose 
+						<guimenuitem>Shade</guimenuitem>. If the window is already
+						shaded, choose 
+						<guimenuitem>Unshade</guimenuitem> to display the full
+						window.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Stick</guimenuitem> or 
+						<guimenuitem>Unstick </guimenuitem></para></entry>
+				  <entry>
+					 <para>To set the window to display in any workspace or viewport
+						that you view, choose 
+						<guimenuitem>Stick</guimenuitem>. If the window is already
+						set to stick, choose 
+						<guimenuitem>Unstick</guimenuitem> to set the window to
+						display only in the current workspace or current viewport. </para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Close window</guimenuitem></para></entry>
+				  <entry>
+					 <para> To close the window choose 
+						<guimenuitem>Close window</guimenuitem>.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Kill app</guimenuitem></para></entry>
+				  <entry>
+					 <para> To close all windows that are open for the application,
+						choose 
+						<guimenuitem> Kill app</guimenuitem>.</para>
+					 <note>
+						<para>If you choose 
+						  <guimenuitem>Kill app</guimenuitem> on a dialog window, any
+						  other windows that were opened by the application are closed.</para>
+					 </note></entry>
+				</row>
+			 </tbody>
+		  </tgroup>
+		  </table>
+		</sect3>
+		<sect3 id="gossawfish-708">
+		  <title>Task Groups</title>
+		  <para>The <application>Tasklist</application> applet allows you to
+			 group tasks of the same name into a single tasklist button. You click on the
+			 button to display a list of the tasks in the task group. The following figure
+			 shows a task group list.</para>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/tasklist_group2_applet.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of a task group list</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		  <para>The task group list uses the same notation as the tasklist
+			 buttons. </para>
+		  <para>You can use a task group list to perform the following actions on
+			 windows: </para>
+		  <itemizedlist>
+			 <listitem>
+				<para>Restore the window if the window is minimized. Click on the
+				  tasklist button to display the task group list. Click on the item that
+				  represents the window to restore the window.</para>
+			 </listitem>
+			 <listitem>
+				<para>Give focus to the window, if the window is not minimized and
+				  not in focus. Click on the tasklist button to display the task group list.
+				  Click on the item that represents the window to give focus to the window.
+				  </para>
+			 </listitem>
+		  </itemizedlist>
+		  <para>You can also use the task menu to perform actions on windows in
+			 task groups. You can open a task menu in the following ways:</para>
+		  <itemizedlist>
+			 <listitem>
+				<para>Click on the tasklist button to display the task group list,
+				  then right-click on an item in the task group list.</para>
+			 </listitem>
+			 <listitem>
+				<para>Right-click on the button that represents the task group.
+				  When you open the task menu from a task group, the menu items apply to all
+				  windows in the task group. For example, you can choose 
+				  <guimenuitem>Shade All</guimenuitem> to shade all windows in the
+				  task group.</para>
+			 </listitem>
+		  </itemizedlist>
+		</sect3>
+	 </sect2>
+	 <sect2 id="gossawfish-20">
+		<title>Desk Guide Applet</title>
+		<para>The <application>Desk Guide</application> applet displays a visual
+		  representation of your workspace list and your viewports. Your workspaces
+		  appear as buttons on the applet. Your viewports appear as subdivisions of the
+		  workspace buttons on the applet. To switch to another workspace or viewport,
+		  click on the workspace or viewport.</para>
+		<sect3 id="gossawfish-21">
+		  <title>Desk Guide Applet and Workspaces</title>
+		  <para><xref linkend="gossawfish-FIG-12"/> shows the <application>Desk
+			 Guide </application> applet when your desktop has four workspaces.</para>
+		  <figure id="gossawfish-FIG-12">
+			 <title>Desk Guide Applet With Workspaces</title>
+			 <screenshot> 
+				<mediaobject> 
+				  <imageobject>
+					 <imagedata fileref="figures/dguide_wspaces_anno_applet.png" format="PNG"/> 
+				  </imageobject> 
+				  <textobject> 
+					 <phrase>Annotated screenshot of Desk Guide with
+						workspaces</phrase> 
+				  </textobject> 
+				</mediaobject> 
+			 </screenshot>
+		  </figure>
+		  <para>The button that represents the current workspace is pressed in.
+			 The current workspace in <xref linkend="gossawfish-FIG-12"/> is the workspace
+			 at the left. To switch to another workspace click on the workspace. </para>
+		  <para>The position of workspaces in the <application>Desk
+			 Guide</application> applet follows a table structure. The workspace at the top
+			 left of the following figure corresponds to the workspace at the top of the
+			 workspace list.</para>
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/dguide_wspaces_applet.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of Desk Guide</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		  <para>The workspace at the top right corresponds to the second
+			 workspace. The workspace at the bottom left corresponds to the third workspace,
+			 and so on. The <application>Desk Guide</application> applet places workspaces
+			 from left to right across the <application>Desk Guide</application> rows. When
+			 the applet reaches the end of a row, the next workspace is placed at the
+			 beginning of the next row.</para>
+		  <para>To specify the table structure for the applet you change the
+			 properties for the applet. For example <xref linkend="gossawfish-FIG-12"/>
+			 shows the <application> Desk Guide</application> applet when the table
+			 structure is two rows and two columns of workspaces. </para>
+		  <para>The table structure of the <application>Desk Guide</application>
+			 applet determines the position of workspaces when you add, move, or copy
+			 workspaces. </para>
+		</sect3>
+		<sect3 id="gossawfish-22">
+		  <title>Desk Guide Applet and Viewports</title>
+		  <para><xref linkend="gossawfish-FIG-13"/> shows the <application>Desk
+			 Guide </application> applet when your desktop has four workspaces with four
+			 viewports in each workspace.</para>
+		  <figure id="gossawfish-FIG-13">
+			 <title>Desk Guide Applet With Viewports</title>
+			 <screenshot> 
+				<mediaobject> 
+				  <imageobject>
+					 <imagedata fileref="figures/dguide_vports_anno_applet.png" format="PNG"/> 
+				  </imageobject> 
+				  <textobject> 
+					 <phrase>Annotated screenshot of Desk Guide with
+						viewports</phrase> 
+				  </textobject> 
+				</mediaobject> 
+			 </screenshot>
+		  </figure>
+		  <para>The current viewport is highlighted with a checked background.
+			 The current viewport in <xref linkend="gossawfish-FIG-13"/> is the viewport in
+			 the top left of the current workspace. To switch to another viewport click on
+			 the viewport.</para>
+		</sect3>
+		<sect3 id="gossawfish-23">
+		  <title>Desk Guide Tasklist</title>
+		  <para>The <application>Desk Guide</application> tasklist lists the
+			 tasks currently running in your session. To open the <application>Desk
+			 Guide</application> tasklist click on the tasklist arrow button. To switch to a
+			 task click on the task in the tasklist.</para>
+		</sect3>
+	 </sect2>
+	 <sect2 id="gossawfish-24">
+		<title>Window Menu</title>
+		<para>The 
+		  <guimenu>Window</guimenu> menu is a menu of commands and submenus that
+		  you can use to perform actions on your windows. To open the 
+		  <guimenu> Window</guimenu> menu perform one of the following
+		  actions:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Right-click on the 
+				<guibutton>Close Window</guibutton> button on the window that you
+				want to work with.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Press-and-hold the modifier key then middle-click on any part
+				of the window that you want to work with. The default modifier key is the meta
+				key.</para>
+		  </listitem>
+		</itemizedlist>
+		<para><xref linkend="gossawfish-TBL-25"/> describes the commands and
+		  submenus in the 
+		  <guimenu>Window</guimenu> menu.</para>
+		<table frame="topbot" id="gossawfish-TBL-25">
+		<title>Window Menu Commands and Submenus</title>
+		<tgroup cols="2" colsep="0" rowsep="0"><colspec
+		  colwidth="32.34*"/><colspec colwidth="67.66*"/>
+		  <thead>
+			 <row rowsep="1">
+				<entry>
+				  <para>Menu Item</para></entry>
+				<entry>
+				  <para>Function </para></entry>
+			 </row>
+		  </thead>
+		  <tbody>
+			 <row>
+				<entry>
+				  <para>
+					 <guimenuitem>Minimize</guimenuitem></para></entry>
+				<entry>
+				  <para> Minimizes the window.</para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guimenuitem>Maximize</guimenuitem> or 
+					 <guimenuitem>Unmaximize </guimenuitem></para></entry>
+				<entry>
+				  <para>Maximizes the window horizontally and vertically. If the
+					 window is already maximized, choose 
+					 <guimenuitem>Unmaximize </guimenuitem> to restore the window to
+					 its previous horizontal and vertical size. </para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guimenuitem>Close</guimenuitem></para></entry>
+				<entry>
+				  <para> Closes the window.</para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Toggle</guisubmenu></para></entry>
+				<entry>
+				  <para> Opens a submenu of various states that you can switch on
+					 and switch off for the window. </para>
+				  <para>The submenu contains the following items: </para>
+				  <itemizedlist>
+					 <listitem>
+						<para>
+						  <guimenuitem>Sticky</guimenuitem>: Select this option to
+						  set the window to stick. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Shaded</guimenuitem>: Select this option to
+						  shade the window. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Ignored</guimenuitem>: Select this option if
+						  you want the window manager to ignore the window.</para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Focusable</guimenuitem>: Deselect this option
+						  if you do not want the window to be able to receive focus. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Cyclable</guimenuitem>: Deselect this option
+						  if you do not want the window to appear when you cycle through your windows.
+						  </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>In window list</guimenuitem>: Deselect this
+						  option if you do not want the window to appear in the 
+						  <guimenu>Root</guimenu> menu or on the <application>Desk
+						  Guide</application> display.</para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>In GNOME task list</guimenuitem>: Deselect
+						  this option if you do not want the window to appear in either the <application>
+						  Tasklist</application> applet or the <application>Desk Guide</application>
+						  applet.</para>
+					 </listitem>
+				  </itemizedlist></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>In Group</guisubmenu></para></entry>
+				<entry>
+				  <para> Opens a submenu of the window groups on your desktop. A
+					 radio button indicates which group the window belongs to.</para>
+				  <para>To add the window to another window group choose the other
+					 window group from the submenu. </para>
+				  <para> To remove the window from the window group choose 
+					 <guimenuitem>New group</guimenuitem>. </para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Send Window To</guisubmenu></para></entry>
+				<entry>
+				  <para> Opens a submenu that contains items that you can use to
+					 send the window to another workspace.</para>
+				  <para>The submenu contains the following items: </para>
+				  <itemizedlist>
+					 <listitem>
+						<para>
+						  <guimenuitem>Previous workspace</guimenuitem>: Choose this
+						  item to send the window to the workspace before the current workspace. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Next workspace</guimenuitem>: Choose this item
+						  to send the window to the workspace after the current workspace. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Copy to previous</guimenuitem>: Choose this
+						  item to create a copy of the window in the workspace before the current
+						  workspace, and switch to that workspace. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Copy to next</guimenuitem>: Choose this item
+						  to create a copy of the window in the workspace after the current workspace,
+						  and switch to that workspace. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Left</guimenuitem>: </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Right</guimenuitem>: </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Up</guimenuitem>: </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Down</guimenuitem>: </para>
+					 </listitem>
+				  </itemizedlist>
+                                </entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Stacking</guisubmenu></para></entry>
+				<entry>
+				  <para> Opens a submenu that contains items that you can use to
+					 change the position of the window in the stacking order. </para>
+				  <para>The submenu contains the following items: </para>
+				  <itemizedlist>
+					 <listitem>
+						<para>
+						  <guimenuitem>Raise</guimenuitem>: Choose this item to move
+						  the window to the top of the stacking order within the layer. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Lower</guimenuitem>: Choose this item to move
+						  the window to the bottom of the stacking order within the layer. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Upper layer</guimenuitem>: Choose this item to
+						  increment the layer that the window is in by one.</para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Lower layer</guimenuitem>: Choose this item to
+						  decrement the layer that the window is in by one.</para>
+					 </listitem>
+				  </itemizedlist></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Frame Type</guisubmenu></para></entry>
+				<entry>
+				  <para> Opens a submenu that contains items that you can use to
+					 change the window type. The window type determines what frame appears on the
+					 window. </para>
+				  <para> The submenu contains the following items: </para>
+				  <itemizedlist>
+					 <listitem>
+						<para>
+						  <guimenuitem>Normal</guimenuitem>: Choose this item if you
+						  want the window to have an application window titlebar and borders.</para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Title-only</guimenuitem>: Choose this item if
+						  you want the window to have an application window titlebar and no borders.
+						  </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Border-only</guimenuitem>: Choose this item if
+						  you want the window to have a dialog window titlebar and borders. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Top-border</guimenuitem>: Choose this item if
+						  you want the window to have a dialog window titlebar and no borders. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>None</guimenuitem>: Choose this item if you
+						  want the window to have no titlebar and no borders. </para>
+					 </listitem>
+				  </itemizedlist></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Frame style</guisubmenu></para></entry>
+				<entry>
+				  <para> Opens a submenu of frame styles. Choose the style that you
+					 want from the submenu. To return to the default frame style choose 
+					 <guimenuitem>Default</guimenuitem>. </para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>History</guisubmenu></para></entry>
+				<entry>
+				  <para> Opens a submenu that contains items that you can use to
+					 save the current settings of the window. The next time that you open the
+					 application, the window uses these settings. The items in the 
+					 <guisubmenu>History</guisubmenu> submenu are useful if, for
+					 example, you want an application window to open as follows: 
+					 <itemizedlist>
+						<listitem>
+						  <para>The window is in a specified location.</para>
+						</listitem>
+						<listitem>
+						  <para>The window is a specified size.</para>
+						</listitem>
+						<listitem>
+						  <para>The window has particular attributes selected.</para>
+						</listitem>
+					 </itemizedlist></para>
+				  <para>The submenu contains the following items: </para>
+				  <itemizedlist>
+					 <listitem>
+						<para>
+						  <guimenuitem>Remember position</guimenuitem>: Choose this
+						  item to save the location of the window on the desktop. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Remember dimensions</guimenuitem>: Choose this
+						  item to save the dimensions of the window. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Remember attributes</guimenuitem>: Choose this
+						  item to save the attributes that are set in the 
+						  <guisubmenu>Toggle</guisubmenu>, 
+						  <guisubmenu> Frame type</guisubmenu>, and 
+						  <guisubmenu>Frame style</guisubmenu> submenus. </para>
+					 </listitem>
+					 <listitem>
+						<para>
+						  <guimenuitem>Forget saved state</guimenuitem>: Choose this
+						  item to discard all saved settings. The settings of the window are reset to the
+						  default location, dimensions, and attributes.</para>
+					 </listitem>
+				  </itemizedlist></entry>
+			 </row>
+		  </tbody>
+		</tgroup>
+		</table>
+	 </sect2>
+	 <sect2 id="gossawfish-26">
+		<title>Root Menu</title>
+		<para>You can use the 
+		  <guimenu>Root</guimenu> menu to navigate between windows and
+		  workspaces. To open the 
+		  <guimenu>Root</guimenu> menu middle-click on the desktop background.
+		  The following figure shows the 
+		  <guimenu>Root</guimenu> menu.</para>
+		<screenshot> 
+		  <mediaobject> 
+			 <imageobject>
+				<imagedata fileref="figures/root_windows_submenu.png" format="PNG"/> 
+			 </imageobject> 
+			 <textobject> 
+				<phrase>Screenshot of Root menu</phrase> 
+			 </textobject> 
+		  </mediaobject> 
+		</screenshot>
+		<para><xref linkend="gossawfish-TBL-702"/> describes the items that the 
+		  <guimenu> Root</guimenu> menu contains.</para>
+		<table frame="topbot" id="gossawfish-TBL-702">
+		<title>Root Menu</title>
+		<tgroup cols="2" colsep="0" rowsep="0"><colspec
+		  colwidth="32.32*"/><colspec colwidth="67.68*"/>
+		  <thead>
+			 <row rowsep="1">
+				<entry>
+				  <para>Item</para></entry>
+				<entry>
+				  <para>Function</para></entry>
+			 </row>
+		  </thead>
+		  <tbody>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Windows</guisubmenu></para></entry>
+				<entry>
+				  <para> Enables you to view a list of open windows, and to switch
+					 between windows. For more information on the window list, see
+					 <xref linkend="gossawfish-718"/>. </para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Workspaces</guisubmenu></para></entry>
+				<entry>
+				  <para> Enables you to perform workspace-related tasks. For
+					 example the workspace list enables you to switch to another workspace. For more
+					 information on the workspace list, see <xref linkend="gossawfish-719"/>.
+					 </para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Programs</guisubmenu></para></entry>
+				<entry>
+				  <para> Identical to the 
+					 <guimenu>Programs</guimenu> menu.</para></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Customize</guisubmenu></para></entry>
+				<entry>
+				  <para> Provides access to the configuration functions for the
+					 <application>Sawfish </application> window manager. </para>
+				  <note>
+					 <para>The <application>Sawfish window manager</application>
+						capplet includes an option that enables you to select whether the 
+						<guisubmenu>Customize</guisubmenu> menu items open the 
+						<guilabel> Sawfish configurator</guilabel> dialog or the
+						<application>Control Center </application><application>Sawfish window
+						manager</application> capplet.</para>
+				  </note></entry>
+			 </row>
+			 <row>
+				<entry>
+				  <para>
+					 <guisubmenu>Help</guisubmenu></para></entry>
+				<entry>
+				  <para> Provides links to help on the
+					 <application>Sawfish</application> window manager and help on GNOME. The 
+					 <guisubmenu>Help</guisubmenu> submenu also provides links to
+					 the websites for <application>Sawfish</application> and GNOME.</para></entry>
+			 </row>
+		  </tbody>
+		</tgroup>
+		</table>
+		<sect3 id="gossawfish-718">
+		  <title>Using the Root Menu to Work With Windows</title>
+		  <para>From the 
+			 <guimenu>Root</guimenu> menu, you can view a list of all windows that
+			 are currently open. You can also choose a window to give focus to. To view the
+			 window list, middle-click on the desktop background to open the 
+			 <guimenu> Root</guimenu> menu, then choose 
+			 <guimenuitem>Windows</guimenuitem>.
+			 <xref linkend="gossawfish-FIG-10"/> shows an example of the window list that is
+			 displayed from the 
+			 <guimenu>Root</guimenu> menu:</para>
+		  <figure id="gossawfish-FIG-10">
+			 <title>Window List</title>
+			 <screenshot> 
+				<mediaobject> 
+				  <imageobject>
+					 <imagedata fileref="figures/root_windows2_submenu.png" format="PNG"/> 
+				  </imageobject> 
+				  <textobject> 
+					 <phrase>Screenshot of window list</phrase> 
+				  </textobject> 
+				</mediaobject> 
+			 </screenshot>
+		  </figure>
+		  <para>The window list enables you to give focus to windows that are
+			 open in all workspaces and viewports. </para>
+		  <para>A radio button that is selected indicates which window has focus.
+			 For example, in <xref linkend="gossawfish-FIG-10"/>
+			 <application>gedit</application> has focus. If an application has more than one
+			 window open, the application name appears as a submenu in the window list. For
+			 example, in <xref linkend="gossawfish-FIG-10"/> the
+			 <application>Netscape</application> application is a submenu from which you can
+			 choose one of the <application>Netscape</application> application windows. That
+			 is, you can choose to give focus to the browser, Composer, or Mail &amp;
+			 Newsgroup windows. </para>
+		  <para>The window list also uses a system of notation to indicate the
+			 status of windows. <xref linkend="gossawfish-TBL-720"/> describes this
+			 notation. The examples in <xref linkend="gossawfish-TBL-720"/> refer to
+			 <xref linkend="gossawfish-FIG-10"/>. </para>
+		  <table frame="topbot" id="gossawfish-TBL-720">
+		  <title>Notation on Window List</title>
+		  <tgroup cols="3" colsep="0" rowsep="0"><colspec colname="COLSPEC0"
+			 colwidth="33.70*"/>
+			 <colspec colname="COLSPEC1" colwidth="37.87*"/><colspec
+			 colname="COLSPEC2" colwidth="27.43*"/>
+			 <thead>
+				<row rowsep="1">
+				  <entry>
+					 <para>Notation</para></entry>
+				  <entry>
+					 <para>Description </para></entry>
+				  <entry>
+					 <para>Example</para></entry>
+				</row>
+			 </thead>
+			 <tbody>
+				<row>
+				  <entry>
+					 <para>No notation</para></entry>
+				  <entry>
+					 <para>Indicates that the window is not minimized and does not
+						have focus.</para></entry>
+				  <entry>
+					 <para>
+						<guilabel> The GIMP</guilabel></para></entry>
+				</row>
+				<row>
+				  <entry colname="COLSPEC0">
+					 <para>At the left of the window title, a radio button that is
+						selected</para></entry>
+				  <entry colname="COLSPEC1">
+					 <para>Indicates that the window has focus.</para></entry>
+				  <entry colname="COLSPEC2">
+					 <para>
+						<guilabel> gedit</guilabel></para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>Brackets around window title</para></entry>
+				  <entry>
+					 <para> Indicates that the window is minimized.</para></entry>
+				  <entry>
+					 <para>
+						<guilabel> [Terminal]</guilabel></para></entry>
+				</row>
+				<row>
+				  <entry colname="COLSPEC0">
+					 <para>Parentheses around window title</para></entry>
+				  <entry colname="COLSPEC1">
+					 <para>Indicates that the window is in another workspace and is
+						not minimized.</para></entry>
+				  <entry colname="COLSPEC2">
+					 <para>
+						<guilabel> (Control Center)</guilabel></para></entry>
+				</row>
+			 </tbody>
+		  </tgroup>
+		  </table>
+		</sect3>
+		<sect3 id="gossawfish-719">
+		  <title>Using the Root Menu to Work With Workspaces</title>
+		  <para>The workspace list enables you to do the following: </para>
+		  <itemizedlist>
+			 <listitem>
+				<para>View the list of workspaces.</para>
+			 </listitem>
+			 <listitem>
+				<para>Switch between workspaces.</para>
+			 </listitem>
+			 <listitem>
+				<para>Perform other workspace-related tasks, such as inserting
+				  workspaces. </para>
+			 </listitem>
+		  </itemizedlist>
+		  <para>The following figure shows the default workspace list.</para> 
+		  <screenshot> 
+			 <mediaobject> 
+				<imageobject>
+				  <imagedata fileref="figures/root_workspaces_submenu.png" format="PNG"/> 
+				</imageobject> 
+				<textobject> 
+				  <phrase>Screenshot of workspace list</phrase> 
+				</textobject> 
+			 </mediaobject> 
+		  </screenshot>
+		  <para><xref linkend="gossawfish-TBL-721"/> describes the items on the
+			 workspace list.</para>
+		  <table frame="topbot" id="gossawfish-TBL-721">
+		  <title>Workspace List</title>
+		  <tgroup cols="2" colsep="0" rowsep="0"><colspec
+			 colwidth="50*"/><colspec colwidth="50*"/>
+			 <thead>
+				<row rowsep="1">
+				  <entry>
+					 <para>Item</para></entry>
+				  <entry>
+					 <para>Description </para></entry>
+				</row>
+			 </thead>
+			 <tbody>
+				<row>
+				  <entry>
+					 <para>Workspace List</para></entry>
+				  <entry>
+					 <para>A list of the workspaces on your desktop. Choose a
+						workspace from this list to switch to that workspace. You can use the
+						<application>Sawfish window manager</application> capplet to change the names
+						of the workspaces.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Insert workspace</guimenuitem></para></entry>
+				  <entry>
+					 <para>Choose this item to insert a workspace after the current
+						workspace. </para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Select next
+						  workspace</guimenuitem></para></entry>
+				  <entry>
+					 <para>Choose this item to switch to the next workspace.
+						</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Select previous
+						  workspace</guimenuitem></para></entry>
+				  <entry>
+					 <para>Choose this item to switch to the previous
+						workspace.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Merge with next</guimenuitem></para></entry>
+				  <entry>
+					 <para>Choose this item to copy the windows from the current
+						workspace to the next workspace. If the number of workspaces on your desktop is
+						greater than the minimum number of workspaces, the current workspace is
+						deleted.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Merge with previous</guimenuitem></para></entry>
+				  <entry>
+					 <para>Choose this item to copy the windows from the current
+						workspace to the previous workspace. If the number of workspaces on your
+						desktop is greater than the minimum number of workspaces, then the current
+						workspace is deleted. </para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Move workspace
+						  right</guimenuitem></para></entry>
+				  <entry>
+					 <para>Choose this item to swap the position of the current
+						workspace with the position of the next workspace. </para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>
+						<guimenuitem>Move workspace left</guimenuitem></para></entry>
+				  <entry>
+					 <para>Choose this item to swap the position of the current
+						workspace with the position of the previous workspace.</para></entry>
+				</row>
+			 </tbody>
+		  </tgroup>
+		  </table>
+		</sect3>
+	 </sect2>
+	 <sect2 id="gossawfish-27">
+		<title>Using the Menu Panel to Work With Windows</title>
+		<para>From the Menu Panel, you can view a list of all windows that are
+		  currently open. You can also choose a window to give focus to. To view the
+		  window list, click on the icon at the extreme right of the Menu Panel. The
+		  following figure shows an example of the window list that is displayed from the
+		  Menu Panel: </para>
+		<screenshot> 
+		  <mediaobject> 
+			 <imageobject>
+				<imagedata fileref="figures/openwindows_menu.png" format="PNG"/> 
+			 </imageobject> 
+			 <textobject> 
+				<phrase>Screenshot of Menu Panel window list</phrase> 
+			 </textobject> 
+		  </mediaobject> 
+		</screenshot>
+		<para>The icon that you click on to display the window list changes when
+		  you change focus. The icon represents the window that currently has focus. To
+		  give focus to a window, choose that window from the window list.</para>
+		<para>The window list lists the windows in all workspaces. The windows in
+		  all workspaces other than the current workspace, are listed below a separator
+		  line.</para>
+		<para>You cannot move the icon that you click on to display the window
+		  list. </para>
+		<para>You can also use the 
+		  <guimenu>Root</guimenu> menu to display a window list, and give focus
+		  to windows.</para>
+	 </sect2>
+  </sect1>
+  <sect1 id="gossawfish-715">
+	 <title>Manipulating Windows</title>
+	 <indexterm>
+		<primary>windows</primary>
+		<secondary>manipulating</secondary>
+	 </indexterm>
+	 <para>This section describes how to manipulate windows.</para>
+	 <sect2 id="gossawfish-28">
+		<title>To Give Focus to a Window</title>
+		<para>A window that has focus can receive input from the mouse and the
+		  keyboard. Only one window can have focus at a time. The window that has focus
+		  has a different appearance than other windows. </para>
+		<para>You can give focus to a window in any of the following ways:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Use the mouse </para>
+			 <para>Click on the window to which you want to give focus, if the
+				window is visible. </para>
+		  </listitem>
+		  <listitem>
+			 <para>Use a shortcut key</para>
+			 <para>You can use a shortcut key to switch between the windows that
+				are open in the current workspace or viewport. The default shortcut key to
+				switch between windows is 
+				<keycombo><keycap>Modifier</keycap><keycap>Tab</keycap></keycombo>. To give focus to a window, release the
+				keys.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Use the window list from the Menu Panel</para>
+			 <para>Click on the icon at the extreme right of the Menu Panel to
+				open a window list. Choose the window that you want to give focus to from the
+				menu.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Use the window list from the 
+				<guimenu>Root</guimenu> menu </para>
+			 <para>Middle-click on the desktop background to open the 
+				<guimenu>Root</guimenu> menu, then choose 
+				<guimenuitem>Windows</guimenuitem>. A list of your windows is
+				displayed. Choose the window that you want to give focus to from the list.
+				</para>
+		  </listitem>
+		  <listitem>
+			 <para>Use the <application>Tasklist</application> applet </para>
+			 <para>Double-click on the button that represents the window in the
+				<application> Tasklist</application> applet.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Use the <application>Desk Guide</application> applet</para>
+			 <para>Open the <application>Desk Guide</application> tasklist, then
+				choose the window that you want to give focus to from the <application>Desk
+				Guide </application> tasklist.</para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-29">
+		<title>To Minimize a Window</title>
+		<para>To minimize a window perform one of the following actions: </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Click on the 
+				<guibutton>Minimize</guibutton> button on the window frame.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Open the 
+				<guimenu>Window</guimenu> menu, then choose 
+				<guimenuitem> Minimize</guimenuitem>. </para>
+		  </listitem>
+		  <listitem>
+			 <para>If the window has focus, click on the button that represents
+				the window in the <application>Tasklist</application> applet. If the window
+				does not have focus, double-click on the button that represents the window.
+				</para>
+		  </listitem>
+		  <listitem>
+			 <para>Right-click on the button that represents the window in the
+				<application> Tasklist</application> applet. Choose 
+				<guimenuitem>Iconify</guimenuitem>. </para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-30">
+		<title>To Maximize a Window</title>
+		<para>When you maximize a window, the window expands as much as possible.
+		  If the maximize mode of a panel specifies that windows can cover the panel, the
+		  maximized window can cover the panel.</para>
+		<para>To maximize a window perform one of the following actions: </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>To maximize the window vertically and horizontally, click on
+				the 
+				<guibutton>Maximize</guibutton> button on the window frame. </para>
+		  </listitem>
+		  <listitem>
+			 <para>To maximize the window vertically only, middle-click on the 
+				<guibutton> Maximize</guibutton> button on the window frame.</para>
+		  </listitem>
+		  <listitem>
+			 <para>To maximize the window horizontally only, right-click on the 
+				<guibutton> Maximize</guibutton> button on the window frame.</para>
+		  </listitem>
+		  <listitem>
+			 <para>To maximize the window vertically and horizontally, open the 
+				<guimenu> Window</guimenu> menu. Choose 
+				<guimenuitem>Maximize</guimenuitem>.</para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-31">
+		<title>To Restore a Window</title>
+		<para>To restore a window perform one of the following actions: </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>If the window is maximized, click on the 
+				<guibutton>Maximize </guibutton> button on the window frame.</para>
+		  </listitem>
+		  <listitem>
+			 <para>If the window is maximized, open the 
+				<guimenu>Window</guimenu> menu. Choose 
+				<guimenuitem>Unmaximize</guimenuitem>. </para>
+		  </listitem>
+		  <listitem>
+			 <para>If the window is minimized, click on the button that represents
+				the window in the <application>Tasklist</application> applet.</para>
+		  </listitem>
+		  <listitem>
+			 <para>If the window is minimized, right-click on the button that
+				represents the window in the <application>Tasklist</application> applet. Choose
+				
+				<guimenuitem> Restore</guimenuitem>. </para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-32">
+		<title>To Close a Window</title>
+		<para>To close a window perform one of the following actions: </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Click on the 
+				<guibutton>Close Window</guibutton> button on the window
+				frame.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Open the 
+				<guimenu>Window</guimenu> menu. Choose 
+				<guimenuitem> Close</guimenuitem>.</para>
+		  </listitem>
+		  <listitem>
+			 <para>In the <application>Tasklist</application> applet, right-click
+				on the button that represents the window. A popup menu opens. Choose 
+				<guimenuitem> Close Window</guimenuitem>.</para>
+		  </listitem>
+		</itemizedlist>
+		<para>If you have unsaved data in the window, you are prompted to save
+		  your data.</para>
+	 </sect2>
+	 <sect2 id="gossawfish-33">
+		<title>To Kill a Window</title>
+		<para>To send a kill signal to a window, right-click on the button that
+		  represents the window in the <application>Tasklist</application> applet. A
+		  popup menu opens. Choose 
+		  <guimenuitem>Kill app</guimenuitem>.</para>
+		<note>
+		  <para>If you choose 
+			 <guimenuitem>Kill app</guimenuitem> on a dialog window, any other
+			 windows opened by the application close also. </para>
+		</note>
+	 </sect2>
+	 <sect2 id="gossawfish-34">
+		<title>To Resize a Window</title>
+		<para>To resize a window perform one of the following actions:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>To resize a window vertically and horizontally point to a
+				corner of the window. The mouse pointer changes to indicate that you can resize
+				the window. Grab the corner and drag the window to the new size.</para>
+		  </listitem>
+		  <listitem>
+			 <para>To resize a window horizontally point to one of the horizontal
+				borders of the window. The mouse pointer changes to indicate that you can
+				resize the window. Grab the corner and drag the window to the new size.</para>
+		  </listitem>
+		  <listitem>
+			 <para>To resize a window vertically perform one of the following
+				actions: 
+				<itemizedlist>
+				  <listitem>
+					 <para>Point to one of the vertical borders of the window. The
+						mouse pointer changes to indicate that you can resize the window. Grab the
+						corner and drag the window to the new size.</para>
+				  </listitem>
+				  <listitem>
+					 <para>Middle-click and hold on the titlebar, then drag the
+						window to the new size.</para>
+				  </listitem>
+				</itemizedlist></para>
+		  </listitem>
+		</itemizedlist>
+		<note>
+		  <para>You cannot resize some dialog windows. Also, some application
+			 windows have a minimum size below which you cannot reduce the window.</para>
+		</note>
+	 </sect2>
+	 <sect2 id="gossawfish-35">
+		<title>To Move a Window</title>
+		<para>To move a window perform one of the following actions: </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Grab the titlebar of the window and drag the window to the new
+				location. </para>
+		  </listitem>
+		  <listitem>
+			 <para>Point to a corner or an edge of the window. The mouse pointer
+				changes to indicate that you can resize the window. Middle-click and hold to
+				grab the window, move the window to the new location.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Press-and-hold the modifier key then grab any part of the
+				window that you want to move. Drag the window to the new location. The default
+				modifier key is the meta key.</para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-36">
+		<title>To Shade a Window</title>
+		<para>You can shade and unshade windows as follows:</para>
+		<informaltable frame="topbot">
+		  <tgroup cols="2" colsep="0" rowsep="0"><colspec
+			 colwidth="24.94*"/><colspec colwidth="75.06*"/>
+			 <tbody>
+				<row>
+				  <entry>
+					 <para>Shade</para></entry>
+				  <entry>
+					 <para>Reduce the window so that only the titlebar is
+						visible.</para></entry>
+				</row>
+				<row>
+				  <entry>
+					 <para>Unshade</para></entry>
+				  <entry>
+					 <para>Switch a window from a shaded state so that the full
+						window is displayed.</para></entry>
+				</row>
+			 </tbody>
+		  </tgroup>
+		</informaltable>
+		<para>To shade a window perform one of the following actions: </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Click on the 
+				<guibutton>Shade</guibutton> button. To unshade the window, click
+				on the 
+				<guibutton>Shade</guibutton> button again. </para>
+		  </listitem>
+		  <listitem>
+			 <para>Double-click on the titlebar of the window. To unshade the
+				window, double-click on the titlebar again.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Open the 
+				<guimenu>Window</guimenu> menu. Choose 
+				<menuchoice>
+				  <guimenu>Toggle</guimenu>
+				  <guimenuitem>Shaded</guimenuitem>
+				</menuchoice>. To unshade the window, choose 
+				<menuchoice>
+				  <guimenu>Toggle</guimenu>
+				  <guimenuitem>Shaded</guimenuitem>
+				</menuchoice> again.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Right-click on the button that represents the window in the
+				<application> Tasklist</application> applet. A popup menu opens. Choose 
+				<guimenuitem>Shade </guimenuitem>. To unshade the window,
+				right-click on the button that represents the window, then choose 
+				<guimenuitem>Unshade </guimenuitem>. </para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-14">
+		<title>To Change the Layer of a Window</title>
+		<para>Your desktop is structured as a sequence of layers. Each user
+		  interface item, such as a window or a panel, is a member of a layer. Each layer
+		  has a layer number. A layer number is an integer that represents the position
+		  of a layer in the stacking order. Items with a higher layer number always
+		  appear above items with a lower layer number. For example, a panel in layer
+		  four always appears above a window in layer zero.</para>
+		<para>The stacking order is the order in which windows are stacked on top
+		  of one another on your screen. The position of a window in the stacking order
+		  depends on the following:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>The layer of which the window is a member.</para>
+		  </listitem>
+		  <listitem>
+			 <para>The position of the window in the order of windows within the
+				layer.</para>
+		  </listitem>
+		</itemizedlist>
+		<para>The window manager controls the sequence of windows on the desktop.
+		  When you open a window, the window manager assigns the window to a layer. The
+		  window manager usually assigns new windows to layer four.</para>
+		<para>The raise and lower operations work within layers. You can raise
+		  windows to the top of the stacking order within a layer. You can lower windows
+		  to the bottom of the stacking order within a layer. You can not raise a window
+		  above a window in a higher layer. Similarly, you can not lower a window below a
+		  window in a lower layer. </para>
+		<para>Panels and desktop background objects are also members of layers.
+		  You can change the layer or level that a panel resides in. In this way, you can
+		  specify whether you want the panel to be above or below windows.</para>
+		<para>Use the <application>Desk Guide</application> tasklist to view
+		  which layer your windows, panels, and desktop icons are in.</para>
+		<para>To change the layer that a window is in perform the following
+		  steps: </para>
+		<orderedlist>
+		  <listitem>
+			 <para>Open the 
+				<guimenu>Window</guimenu> menu. </para>
+		  </listitem>
+		  <listitem>
+			 <para>To increment the layer that the window is in by one, choose 
+				<menuchoice>
+				  <guimenu>Stacking</guimenu>
+				  <guimenuitem>Upper layer</guimenuitem>
+				</menuchoice>.</para>
+			 <para>To decrement the layer that the window is in by one, choose 
+				<menuchoice>
+				  <guimenu>Stacking</guimenu>
+				  <guimenuitem>Lower layer</guimenuitem>
+				</menuchoice>.</para>
+			 <note>
+				<para>The desktop is in layer zero. If you decrease the layer that
+				  a window is in to below zero, the window is no longer visible on the desktop.
+				  However, a button that represents the window appears on the <application>
+				  Tasklist</application> and <application>Desk Guide</application> applets. You
+				  can use the <application>Tasklist</application> applet to close the window.
+				  </para>
+			 </note>
+		  </listitem>
+		</orderedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-37">
+		<title>To Raise and Lower a Window</title>
+		<para>The raise and lower operations work within layers. You can raise
+		  windows to the top of the stacking order within a layer. You can lower windows
+		  to the bottom of the stacking order within a layer. You can not raise a window
+		  above a window in a higher layer. Similarly, you can not lower a window below a
+		  window in a lower layer. </para>
+		<para>To raise a window to the top of the stacking order perform one of
+		  the following actions:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Right-click on the titlebar or the border of the window.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Open the 
+				<guimenu>Window</guimenu> menu, then choose 
+				<menuchoice>
+				  <guimenu>Stacking</guimenu>
+				  <guimenuitem>Raise</guimenuitem>
+				</menuchoice>. </para>
+		  </listitem>
+		</itemizedlist>
+		<para>To lower a window to the bottom of the stacking order perform one
+		  of the following actions:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>If the window is at the top of the stacking order, right-click
+				on the titlebar or the border of the window.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Open the 
+				<guimenu>Window</guimenu> menu, then choose 
+				<menuchoice>
+				  <guimenu>Stacking</guimenu>
+				  <guimenuitem>Lower</guimenuitem>
+				</menuchoice>. </para>
+		  </listitem>
+		</itemizedlist>
+		<para>If you want your windows to rise when they receive focus, configure
+		  your desktop in the <application>Sawfish window manager</application> capplet
+		  as follows:</para>
+		<informaltable frame="topbot">
+		  <tgroup cols="4" colsep="0" rowsep="0"><colspec
+			 colwidth="25*"/><colspec colwidth="25*"/>
+			 <colspec colwidth="25*"/><colspec colwidth="25*"/>
+			 <thead>
+				<row rowsep="1">
+				  <entry>
+					 <para>Dialog</para></entry>
+				  <entry>
+					 <para>Tabbed Section </para></entry>
+				  <entry>
+					 <para>Option</para></entry>
+				  <entry>
+					 <para>Set To</para></entry>
+				</row>
+			 </thead>
+			 <tbody>
+				<row>
+				  <entry>
+					 <para>
+						<guilabel>Focus behavior</guilabel></para></entry>
+				  <entry>
+					 <para>
+						<guilabel> Focus</guilabel></para></entry>
+				  <entry>
+					 <para>
+						<guilabel>Raise windows when they are focused
+						  </guilabel></para></entry>
+				  <entry>
+					 <para>Selected</para></entry>
+				</row>
+			 </tbody>
+		  </tgroup>
+		</informaltable>
+	 </sect2>
+	 <sect2 id="gossawfish-704">
+		<title>To Ignore a Window</title>
+		<para>You can configure a window so that the window manager ignores the
+		  window. When the window manager ignores a window, the window does not have a
+		  frame. </para>
+		<para>To configure a window so that the window manager ignores the
+		  window, open the 
+		  <guimenu>Window</guimenu> menu. Choose 
+		  <menuchoice>
+			 <guimenu>Toggle</guimenu>
+			 <guimenuitem>Ignored</guimenuitem>
+		  </menuchoice>.</para>
+		<para>To reconfigure a window so that the window manager does not ignore
+		  the window, open the 
+		  <guimenu>Window</guimenu> menu. To open the 
+		  <guimenu>Window </guimenu> menu, press-and-hold the modifier key then
+		  middle-click on any part of the window. The default modifier key is the meta
+		  key.</para>
+	 </sect2>
+	 <sect2 id="gossawfish-38">
+		<title>To Set a Window to Stick</title>
+		<para>When a window is set to stick, the window appears in any workspace
+		  or viewport that you view. </para>
+		<para>To set a window to stick, perform one of the following
+		  actions:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Open the 
+				<guimenu>Window</guimenu> menu. Choose 
+				<menuchoice>
+				  <guimenu>Toggle</guimenu>
+				  <guimenuitem>Sticky</guimenuitem>
+				</menuchoice>. To set the window to appear only in the current
+				workspace or viewport, choose 
+				<menuchoice>
+				  <guimenu>Toggle</guimenu>
+				  <guimenuitem>Sticky</guimenuitem>
+				</menuchoice> again.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Right-click on the button that represents the window in the
+				<application> Tasklist</application> applet, then choose 
+				<guimenuitem>Stick</guimenuitem>. To set the window to appear only
+				in the current workspace or viewport, right-click on the button that represents
+				the window, then choose 
+				<guimenuitem>Unstick </guimenuitem>.</para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-39">
+		<title>To Group Windows</title>
+		<para>You can group windows so that you can minimize and restore several
+		  windows at one time. You can use window groups to group windows in different
+		  applications. You work with window groups from any 
+		  <guimenu>Window</guimenu> menu. To display a list of your window
+		  groups, open a 
+		  <guimenu>Window</guimenu> menu then choose 
+		  <guimenuitem> In group</guimenuitem>.</para>
+		<para>When you open a window on the desktop, a window group is created
+		  for the window. The window is the sole member of this window group. You can add
+		  the window to another group. You can also remove a window from a group.</para>
+		<para>You can use the <application>Sawfish window manager</application>
+		  capplet to create a 
+		  <glossterm>persistent window group</glossterm>. A persistent window
+		  group remains in your window group list even after you end and restart a
+		  session. </para>
+		<sect3 id="gossawfish-40">
+		  <title>To Create a Persistent Window Group</title>
+		  <para>A persistent window group remains in your window group list even
+			 after you end and restart a session. You can create a persistent window group,
+			 and then assign windows to be part of the group. You can also configure your
+			 desktop to apply certain actions that you perform on one window to all windows
+			 in the group.</para>
+		  <para>To create a persistent window group perform the following
+			 steps:</para>
+		  <orderedlist>
+			 <listitem>
+				<para>To start the <application>Control Center</application> open
+				  the 
+				  <guimenu>Global Menu</guimenu>, then choose 
+				  <menuchoice>
+					 <guimenu>Programs</guimenu>
+					 <guisubmenu>Settings</guisubmenu>
+					 <guisubmenu>Sawfish window manager</guisubmenu>
+					 <guimenuitem>Miscellaneous</guimenuitem>
+				  </menuchoice>. You use the 
+				  <guilabel>Persistent group ids</guilabel> list box to create
+				  persistent window groups.</para>
+			 </listitem>
+			 <listitem>
+				<para>To create a persistent window group, click on the 
+				  <guibutton> Add</guibutton> button to display the 
+				  <guilabel>Add</guilabel> dialog. Use the 
+				  <guilabel>Add</guilabel> drop-down combination box to specify a
+				  name for the group. Click 
+				  <guibutton>OK</guibutton>.</para>
+				<para>To edit the name of a persistent window group, click on the 
+				  <guibutton> Edit</guibutton> button to display the 
+				  <guilabel>Edit</guilabel> dialog. Use the 
+				  <guilabel>Edit</guilabel> drop-down combination box to specify a
+				  name for the group. Click 
+				  <guibutton>OK</guibutton>.</para>
+				<para>To delete a persistent window group, select the group in the 
+				  <guilabel> Persistent group ids</guilabel> list box. Click on the
+				  
+				  <guilabel>Delete</guilabel> option to delete the selected
+				  group.</para>
+			 </listitem>
+			 <listitem>
+				<para>Click 
+				  <guibutton>OK</guibutton> to save your changes. </para>
+			 </listitem>
+		  </orderedlist>
+		</sect3>
+		<sect3 id="gossawfish-41">
+		  <title>To Add a Window to a Window Group</title>
+		  <para>To add a window to another window group open the 
+			 <guimenu>Window</guimenu> menu for the window. Choose 
+			 <guimenuitem>In group</guimenuitem>. A list of all the available
+			 window groups is displayed. Choose the window group to which you want to add
+			 the window.</para>
+		  <note>
+			 <para>A window can only be in one window group at a time.</para>
+		  </note>
+		</sect3>
+		<sect3 id="gossawfish-42">
+		  <title>To Remove a Window From a Window Group</title>
+		  <para>To remove a window from a window group open the 
+			 <guimenu>Window</guimenu> menu for the window. Choose 
+			 <menuchoice>
+				<guimenu>In group</guimenu>
+				<guimenuitem>New group</guimenuitem>
+			 </menuchoice>. A new window group is created for the window. The
+			 window is the sole member of this window group. The new window group has the
+			 same name as the window that you remove from the window group.</para>
+		</sect3>
+		<sect3 id="gossawfish-43">
+		  <title>To Minimize a Window Group</title>
+		  <para>You can configure your desktop so that when you minimize one
+			 window in a window group, all windows are minimized. Configure your desktop in
+			 the <application> Sawfish window manager</application> capplet as
+			 follows:</para>
+		  <informaltable frame="topbot">
+			 <tgroup cols="4" colsep="0" rowsep="0"><colspec
+				colwidth="25*"/><colspec colwidth="25*"/>
+				<colspec colwidth="25*"/><colspec colwidth="25*"/>
+				<thead>
+				  <row rowsep="1">
+					 <entry>
+						<para>Dialog</para></entry>
+					 <entry>
+						<para>Tabbed Section </para></entry>
+					 <entry>
+						<para>Option</para></entry>
+					 <entry>
+						<para>Set To</para></entry>
+				  </row>
+				</thead>
+				<tbody>
+				  <row>
+					 <entry>
+						<para>
+						  <guilabel>Minimizing and
+							 Maximizing</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel>Minimizing</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> Iconifying a window also iconifies the
+							 </guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> Group</guilabel></para></entry>
+				  </row>
+				</tbody>
+			 </tgroup>
+		  </informaltable>
+		  <para>To minimize all windows in the window group, minimize one of the
+			 windows. </para>
+		</sect3>
+		<sect3 id="gossawfish-44">
+		  <title>To Restore a Minimized Window Group</title>
+		  <para>You can configure your desktop so that when you restore one
+			 window in a window group, all windows are restored. Configure your desktop in
+			 the <application> Sawfish window manager</application> capplet as
+			 follows:</para>
+		  <informaltable frame="topbot">
+			 <tgroup cols="4" colsep="0" rowsep="0"><colspec
+				colwidth="25*"/><colspec colwidth="25*"/>
+				<colspec colwidth="25*"/><colspec colwidth="25*"/>
+				<thead>
+				  <row rowsep="1">
+					 <entry>
+						<para>Dialog</para></entry>
+					 <entry>
+						<para>Tabbed Section </para></entry>
+					 <entry>
+						<para>Option</para></entry>
+					 <entry>
+						<para>Set To</para></entry>
+				  </row>
+				</thead>
+				<tbody>
+				  <row>
+					 <entry>
+						<para>
+						  <guilabel>Minimizing and
+							 Maximizing</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel>Minimizing</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> Uniconifying a window also uniconifies
+							 the</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> Group</guilabel></para></entry>
+				  </row>
+				</tbody>
+			 </tgroup>
+		  </informaltable>
+		  <para>To restore all windows in the window group, restore one of the
+			 windows. </para>
+		</sect3>
+		<sect3 id="gossawfish-45">
+		  <title>To Close a Window Group</title>
+		  <para>To close all windows in a window group press 
+			 <keycap>Shift</keycap> then click on the 
+			 <guibutton>Close Window</guibutton> button on the window
+			 frame.</para>
+		</sect3>
+	 </sect2>
+	 <sect2 id="gossawfish-705">
+		<title>Creating a Matched Window</title>
+		<para>You can configure a window to have particular characteristics when
+		  you open the window. For example, you can configure a window to open maximized,
+		  in a particular workspace, with a particular frame style. To configure a window
+		  that opens with particular characteristics, you must create a matched window.
+		  </para>
+		<para>To create a matched window, you use the 
+		  <guilabel>Matched Windows</guilabel> dialog in the <application>Sawfish
+		  window manager</application> capplet. In the dialog, you specify the name of
+		  the window to match, and characteristics to assign to that window. When a
+		  window opens, <application>Sawfish</application> checks whether the window
+		  corresponds to a matched window in the 
+		  <guilabel> Matched Windows</guilabel> dialog. If the window does
+		  correspond to a matched window, the window opens with the characteristics
+		  assigned to the matched window.</para>
+		<para>You can also create a matched window to match properties of the
+		  window other than the name. For example, you can create a matched window to
+		  match the class of the window or the name of the window icon.</para>
+		<para>You can assign many characteristics to the matched window. You can
+		  assign characteristics such as placement behavior, focus behavior, frame style,
+		  and other miscellaneous characteristics.</para>
+	 </sect2>
+	 <sect2 id="gossawfish-46">
+		<title>To Move a Window to Another Workspace</title>
+		<para>You can move a window to another workspace in either of the
+		  following ways:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Use the 
+				<guimenu>Window</guimenu> menu </para>
+			 <para>Open the 
+				<guimenu>Window</guimenu> menu. To move the window to the next
+				workspace choose 
+				<menuchoice>
+				  <guimenu>Send window to</guimenu>
+				  <guimenuitem> Next workspace</guimenuitem>
+				</menuchoice>. To move the window to the previous workspace choose 
+				<menuchoice>
+				  <guimenu>Send window to</guimenu>
+				  <guimenuitem> Previous workspace</guimenuitem>
+				</menuchoice>. </para>
+		  </listitem>
+		  <listitem>
+			 <para>Drag the window to another workspace</para>
+			 <para>You can drag a window to another workspace if you configure the
+				edge flip feature appropriately. The edge flip feature enables you to select
+				another workspace when you point to the edge of the screen. To use the edge
+				flip feature you must configure your desktop in the <application>Sawfish window
+				manager </application> capplet as follows:</para>
+			 <informaltable frame="topbot">
+				<tgroup cols="4" colsep="0" rowsep="0"><colspec colname="COLSPEC0"
+				  colwidth="25*"/>
+				  <colspec colname="COLSPEC1" colwidth="25*"/><colspec
+				  colname="COLSPEC2" colwidth="25*"/>
+				  <colspec colname="COLSPEC3" colwidth="25*"/>
+				  <thead>
+					 <row rowsep="1">
+						<entry>
+						  <para>Dialog</para></entry>
+						<entry>
+						  <para>Tabbed Section </para></entry>
+						<entry>
+						  <para>Option</para></entry>
+						<entry>
+						  <para>Set To</para></entry>
+					 </row>
+				  </thead>
+				  <tbody>
+					 <row>
+						<entry colname="COLSPEC0">
+						  <para>
+							 <guilabel>Workspaces </guilabel></para></entry>
+						<entry colname="COLSPEC1">
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry colname="COLSPEC2">
+						  <para>
+							 <guilabel>Select the next desktop when the pointer hits
+								the screen edge</guilabel></para></entry>
+						<entry colname="COLSPEC3">
+						  <para> Selected</para></entry>
+					 </row>
+					 <row>
+						<entry>
+						  <para>
+							 <guilabel>Workspaces</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel>Hitting the screen edge selects the
+								next</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel> workspace</guilabel></para></entry>
+					 </row>
+				  </tbody>
+				</tgroup>
+			 </informaltable>
+		  </listitem>
+		</itemizedlist>
+		<para>The configuration of your desktop can mean that when you move a
+		  window to another workspace, a workspace is added.</para>
+	 </sect2>
+	 <sect2 id="gossawfish-47">
+		<title>To Copy a Window to Another Workspace</title>
+		<para>You can use the 
+		  <guimenu>Window</guimenu> menu to copy a window to another workspace.
+		  When you copy a window to another workspace, the window appears in the
+		  workspace when you switch to the workspace. The window sticks to the workspace
+		  that you copy the window to, and the workspace that you copy the window
+		  from.</para>
+		<para>To copy a window to the next workspace, open the 
+		  <guimenu>Window</guimenu> menu, then choose 
+		  <menuchoice>
+			 <guimenu>Send window to</guimenu>
+			 <guimenuitem> Copy to next</guimenuitem>
+		  </menuchoice>. </para>
+		<para>To copy a window to the previous workspace, open the 
+		  <guimenu>Window </guimenu> menu, then choose 
+		  <menuchoice>
+			 <guimenu>Send window to</guimenu>
+			 <guimenuitem>Copy to previous</guimenuitem>
+		  </menuchoice>. </para>
+		<para>To remove all copies of a window except one, open the 
+		  <guimenu>Window </guimenu> menu from the window that you want to
+		  retain. Choose 
+		  <menuchoice>
+			 <guimenu>Toggle</guimenu>
+			 <guimenuitem>Sticky</guimenuitem>
+		  </menuchoice>, then choose 
+		  <menuchoice>
+			 <guimenu>Toggle</guimenu>
+			 <guimenuitem>Sticky </guimenuitem>
+		  </menuchoice> again.</para>
+		<para>The configuration of your desktop can mean that when you copy a
+		  window to another workspace, a workspace is added. For more information, see
+		  <xref linkend="gossawfish-710"/>.</para>
+		<note>
+		  <para>When you copy a window to another workspace, only the window in
+			 the current workspace is represented in the <application>Desk
+			 Guide</application> applet.</para>
+		</note>
+	 </sect2>
+	 <sect2 id="gossawfish-48">
+		<title>To Move a Window Between Viewports</title>
+		<para>You can move a window between viewports in the same workspace. You
+		  can move a window between viewports in the following ways: </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Drag the window to the viewport</para>
+			 <para>Drag the window to the edge of the screen next to the viewport
+				to which you want to move the window. Drag the window past the edge of the
+				screen so that the window straddles the current viewport and the next viewport.
+				Click on the viewport to which you want to move the window. Drag the window the
+				rest of the way into the viewport.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Use the edge flip feature</para>
+			 <para>You can drag a window to another viewport if you configure the
+				edge flip feature appropriately. The edge flip feature enables you to select
+				another viewport when you point to the edge of the screen. To use this edge
+				flip feature you must configure your desktop in the <application>Sawfish window
+				manager </application> capplet as follows:</para>
+			 <informaltable frame="topbot">
+				<tgroup cols="4" colsep="0" rowsep="0"><colspec colname="COLSPEC4"
+				  colwidth="25*"/>
+				  <colspec colname="COLSPEC5" colwidth="25*"/><colspec
+				  colname="COLSPEC6" colwidth="25*"/>
+				  <colspec colname="COLSPEC7" colwidth="25*"/>
+				  <thead>
+					 <row rowsep="1">
+						<entry>
+						  <para>Dialog</para></entry>
+						<entry>
+						  <para>Tabbed Section </para></entry>
+						<entry>
+						  <para>Option</para></entry>
+						<entry>
+						  <para>Set To</para></entry>
+					 </row>
+				  </thead>
+				  <tbody>
+					 <row>
+						<entry colname="COLSPEC4">
+						  <para>
+							 <guilabel>Workspaces </guilabel></para></entry>
+						<entry colname="COLSPEC5">
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry colname="COLSPEC6">
+						  <para>
+							 <guilabel>Select the next desktop when the pointer hits
+								the screen edge</guilabel></para></entry>
+						<entry colname="COLSPEC7">
+						  <para> Selected</para></entry>
+					 </row>
+					 <row>
+						<entry>
+						  <para>
+							 <guilabel>Workspaces</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel>Hitting the screen edge selects the
+								next</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel> viewport</guilabel></para></entry>
+					 </row>
+				  </tbody>
+				</tgroup>
+			 </informaltable>
+		  </listitem>
+		  <listitem>
+			 <para>Drag the window in the <application>Desk Guide</application>
+				applet: </para>
+			 <para>Find the button that represents the window that you want to
+				move in the <application>Desk Guide</application> applet. Middle-click and hold
+				on the button and drag the button to the new location. </para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+  </sect1>
+  <sect1 id="gossawfish-716">
+	 <title>Manipulating Workspaces and Viewports</title>
+	 <indexterm>
+		<primary>workspaces</primary>
+		<secondary>manipulating</secondary>
+	 </indexterm>
+	 <indexterm>
+		<primary>viewports</primary>
+		<secondary>manipulating</secondary>
+	 </indexterm>
+	 <para>This section describes how to manipulate workspaces and
+		viewports.</para>
+	 <sect2 id="gossawfish-49">
+		<title>To Switch Between Workspaces</title>
+		<para>You can switch between workspaces in any of the following ways:
+		  </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Use the <application>Desk Guide</application> applet: Click on
+				the workspace that you want to switch to in the <application>Desk Guide
+				</application> applet.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Use the 
+				<guimenu>Root</guimenu> menu: Middle-click on the desktop
+				background to open the 
+				<guimenu>Root</guimenu> menu, then choose 
+				<guimenuitem> Workspaces</guimenuitem>. This action opens a list of
+				your workspaces and workspace-related menu items. Choose the workspace that you
+				want to switch to from the list. </para>
+		  </listitem>
+		  <listitem>
+			 <para>Use a shortcut key: The default shortcut keys to switch between
+				the workspaces are: 
+				<itemizedlist>
+				  <listitem>
+					 <para>
+						<keycombo><keycap>Modifier</keycap><keycap>Right arrow key</keycap></keycombo>: Select the next
+						workspace. </para>
+				  </listitem>
+				  <listitem>
+					 <para>
+						<keycombo><keycap>Modifier</keycap><keycap>Left arrow key</keycap></keycombo>: Select the
+						previous workspace. </para>
+				  </listitem>
+				</itemizedlist></para>
+			 <para>The default modifier key is the meta key.</para>
+			 <note>
+				<para>The configuration of your desktop can mean that when you use
+				  a shortcut key to select a workspace, another workspace is added. For more
+				  information, see <xref linkend="gossawfish-710"/>.</para>
+			 </note>
+		  </listitem>
+		  <listitem>
+			 <para>Use the edge flip feature: Move the mouse pointer to the edge
+				of the screen. To use this edge flip feature you must configure your desktop in
+				the <application>Sawfish window manager</application> capplet as follows:
+				</para>
+			 <informaltable frame="topbot">
+				<tgroup cols="4" colsep="0" rowsep="0"><colspec colname="COLSPEC8"
+				  colwidth="25*"/>
+				  <colspec colname="COLSPEC9" colwidth="25*"/><colspec
+				  colname="COLSPEC10" colwidth="25*"/>
+				  <colspec colname="COLSPEC11" colwidth="25*"/>
+				  <thead>
+					 <row rowsep="1">
+						<entry>
+						  <para>Dialog</para></entry>
+						<entry>
+						  <para>Tabbed Section </para></entry>
+						<entry>
+						  <para>Option</para></entry>
+						<entry>
+						  <para>Set To</para></entry>
+					 </row>
+				  </thead>
+				  <tbody>
+					 <row>
+						<entry colname="COLSPEC8">
+						  <para>
+							 <guilabel>Workspaces </guilabel></para></entry>
+						<entry colname="COLSPEC9">
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry colname="COLSPEC10">
+						  <para>
+							 <guilabel>Select the next desktop when the pointer hits
+								the screen edge</guilabel></para></entry>
+						<entry colname="COLSPEC11">
+						  <para> Selected </para></entry>
+					 </row>
+					 <row>
+						<entry>
+						  <para>
+							 <guilabel>Workspaces</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel>Hitting the screen edge selects the
+								next</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel> workspace</guilabel></para></entry>
+					 </row>
+					 <row>
+						<entry colname="COLSPEC8">
+						  <para>
+							 <guilabel>Workspaces </guilabel></para></entry>
+						<entry colname="COLSPEC9">
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry colname="COLSPEC10">
+						  <para>
+							 <guilabel>Only flip when interactively moving a
+								window</guilabel></para></entry>
+						<entry colname="COLSPEC11">
+						  <para>Unselected </para></entry>
+					 </row>
+				  </tbody>
+				</tgroup>
+			 </informaltable>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-50">
+		<title>To Add Workspaces</title>
+		<para>You can add workspaces to your desktop in the following ways:
+		  </para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Use the 
+				<guimenu>Root</guimenu> menu: For more information see
+				<xref linkend="gossawfish-709"/>.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Specify a minimum number of workspaces for your desktop: For
+				more information see <xref linkend="gossawfish-710"/>. </para>
+		  </listitem>
+		  <listitem>
+			 <para>Configure your desktop to add workspaces automatically when you
+				perform particular actions: For more information see
+				<xref linkend="gossawfish-711"/>. </para>
+		  </listitem>
+		</itemizedlist>
+		<sect3 id="gossawfish-709">
+		  <title>To Add a Workspace Using the Root Menu</title>
+		  <para>To add a workspace to your workspace list middle-click on the
+			 desktop background to open the 
+			 <guimenu>Root</guimenu> menu. Choose 
+			 <menuchoice>
+				<guimenu> Workspaces</guimenu>
+				<guimenuitem>Insert workspace</guimenuitem>
+			 </menuchoice>. The new workspace is inserted to the right of the
+			 current workspace.</para>
+		</sect3>
+		<sect3 id="gossawfish-710">
+		  <title>To Specify a Minimum Number of Workspaces</title>
+		  <para>You can use the <application>Sawfish window manager</application>
+			 capplet to specify the minimum number of workspaces that appear on your desktop
+			 when you start a session. To specify a minimum number of workspaces, configure
+			 your desktop in the <application>Sawfish window manager</application> as
+			 follows: </para>
+		  <informaltable frame="topbot">
+			 <tgroup cols="4" colsep="0" rowsep="0"><colspec
+				colwidth="25*"/><colspec colwidth="25*"/>
+				<colspec colwidth="25*"/><colspec colwidth="25*"/>
+				<thead>
+				  <row rowsep="1">
+					 <entry>
+						<para>Dialog</para></entry>
+					 <entry>
+						<para>Tabbed Section </para></entry>
+					 <entry>
+						<para>Option</para></entry>
+					 <entry>
+						<para>Set To</para></entry>
+				  </row>
+				</thead>
+				<tbody>
+				  <row>
+					 <entry>
+						<para>
+						  <guilabel>Workspaces</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> Workspaces</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel>Workspaces</guilabel></para></entry>
+					 <entry>
+						<para>Required number of workspaces</para></entry>
+				  </row>
+				</tbody>
+			 </tgroup>
+		  </informaltable>
+		  <para>If the number of workspaces you specify is greater than the
+			 current number of workspaces, the extra workspaces are added to the desktop. If
+			 the number of workspaces you specify is less than the current number of
+			 workspaces, the extra workspaces remain on the desktop.</para>
+		</sect3>
+		<sect3 id="gossawfish-711">
+		  <title>To Add Workspaces Automatically</title>
+		  <para>You can configure the <application>Sawfish window
+			 manager</application> capplet to add a workspace automatically in particular
+			 situations. A workspace can be added automatically when the current workspace
+			 is first or last in your workspace list, and you perform particular
+			 actions.</para>
+		  <para>A workspace is added if you perform one of the following
+			 actions:</para>
+		  <itemizedlist>
+			 <listitem>
+				<para>If the workspace is first, and you perform one of the
+				  following actions: 
+				  <itemizedlist>
+					 <listitem>
+						<para>Move the workspace to the left.</para>
+					 </listitem>
+					 <listitem>
+						<para>Send or copy a window to the previous workspace with
+						  the 
+						  <guimenu> Window</guimenu> menu.</para>
+					 </listitem>
+				  </itemizedlist></para>
+			 </listitem>
+			 <listitem>
+				<para>If the workspace is last, and you perform one of the
+				  following actions: 
+				  <itemizedlist>
+					 <listitem>
+						<para>Move the workspace to the right.</para>
+					 </listitem>
+					 <listitem>
+						<para>Send or copy a window to the next workspace with the 
+						  <guimenu> Window</guimenu> menu.</para>
+					 </listitem>
+				  </itemizedlist></para>
+			 </listitem>
+		  </itemizedlist>
+		  <para>To add workspaces when you select or move workspaces, configure
+			 your desktop in the <application>Sawfish window manager</application> capplet
+			 as follows:</para>
+		  <informaltable frame="topbot">
+			 <tgroup cols="4" colsep="0" rowsep="0"><colspec
+				colwidth="25*"/><colspec colwidth="25*"/>
+				<colspec colwidth="25*"/><colspec colwidth="25*"/>
+				<thead>
+				  <row rowsep="1">
+					 <entry>
+						<para>Dialog</para></entry>
+					 <entry>
+						<para>Tabbed Section </para></entry>
+					 <entry>
+						<para>Option</para></entry>
+					 <entry>
+						<para>Set To</para></entry>
+				  </row>
+				</thead>
+				<tbody>
+				  <row>
+					 <entry>
+						<para>
+						  <guilabel>Workspaces</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> Workspaces</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel>When passing the first or last workspace
+							 </guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> keep-going </guilabel></para></entry>
+				  </row>
+				</tbody>
+			 </tgroup>
+		  </informaltable>
+		  <para>In this configuration, a workspace is added if you perform one of
+			 the following actions:</para>
+		  <itemizedlist>
+			 <listitem>
+				<para>If the workspace is first, and you select the previous
+				  workspace or move the workspace to the left.</para>
+			 </listitem>
+			 <listitem>
+				<para>If the workspace is last, and you select the next workspace
+				  or move the workspace to the right.</para>
+			 </listitem>
+		  </itemizedlist>
+		  <para>To add a workspace when you point to the edge of the screen,
+			 configure your desktop in the <application>Sawfish window manager</application>
+			 capplet as follows:</para>
+		  <informaltable frame="topbot">
+			 <tgroup cols="4" colsep="0" rowsep="0"><colspec colname="COLSPEC0"
+				colwidth="25*"/>
+				<colspec colname="COLSPEC1" colwidth="25*"/><colspec
+				colname="COLSPEC2" colwidth="25*"/>
+				<colspec colname="COLSPEC3" colwidth="25*"/>
+				<thead>
+				  <row rowsep="1">
+					 <entry>
+						<para>Dialog</para></entry>
+					 <entry>
+						<para>Tabbed Section </para></entry>
+					 <entry>
+						<para>Option</para></entry>
+					 <entry>
+						<para>Set To</para></entry>
+				  </row>
+				</thead>
+				<tbody>
+				  <row>
+					 <entry>
+						<para>
+						  <guilabel>Workspaces</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> Workspaces</guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel>When passing the first or last workspace
+							 </guilabel></para></entry>
+					 <entry>
+						<para>
+						  <guilabel> keep-going </guilabel></para></entry>
+				  </row>
+				  <row>
+					 <entry colname="COLSPEC0">
+						<para>
+						  <guilabel>Workspaces </guilabel></para></entry>
+					 <entry colname="COLSPEC1">
+						<para>
+						  <guilabel> Edge Flipping</guilabel></para></entry>
+					 <entry colname="COLSPEC2">
+						<para>
+						  <guilabel>Select the next desktop when the pointer hits
+							 screen edge </guilabel></para></entry>
+					 <entry colname="COLSPEC3">
+						<para> Selected</para></entry>
+				  </row>
+				  <row>
+					 <entry colname="COLSPEC0">
+						<para>
+						  <guilabel>Workspaces </guilabel></para></entry>
+					 <entry colname="COLSPEC1">
+						<para>
+						  <guilabel> Edge Flipping</guilabel></para></entry>
+					 <entry colname="COLSPEC2">
+						<para>
+						  <guilabel>Hitting the screen edge selects the
+							 next</guilabel></para></entry>
+					 <entry colname="COLSPEC3">
+						<para>
+						  <guilabel> workspace</guilabel></para></entry>
+				  </row>
+				</tbody>
+			 </tgroup>
+		  </informaltable>
+		  <para>In this configuration, a workspace is added if you perform one of
+			 the following actions:
+			 <itemizedlist>
+				<listitem>
+				  <para>If the workspace is first, and you point to the left edge
+					 of the screen.</para>
+				</listitem>
+				<listitem>
+				  <para>If the workspace is last, and you point to the right edge
+					 of the screen.</para>
+				</listitem>
+			 </itemizedlist></para>
+		</sect3>
+	 </sect2>
+	 <sect2 id="gossawfish-51">
+		<title>To Name Workspaces</title>
+		<para>The default names of your workspaces are <literal>space
+		  1</literal>, <literal> space 2</literal>, <literal>space 3</literal>, and so
+		  on. You can assign names to your workspaces in the <application>Sawfish window
+		  manager</application> capplet. </para>
+	 </sect2>
+	 <sect2 id="gossawfish-52">
+		<title>To Merge Workspaces</title>
+		<para>When you merge a workspace the windows in the workspace are moved
+		  to another workspace, and the empty workspace is deleted.</para>
+		<para>To merge a workspace, middle-click on the desktop background to
+		  open the 
+		  <guimenu>Root</guimenu> menu. Choose 
+		  <guimenu>Workspaces</guimenu>, then perform one of the following
+		  actions: 
+		  <itemizedlist>
+			 <listitem>
+				<para>To merge the workspace with the next workspace choose 
+				  <guimenuitem> Merge with next</guimenuitem>. The empty workspace
+				  is deleted. </para>
+			 </listitem>
+			 <listitem>
+				<para>To merge the workspace with the previous workspace choose 
+				  <guimenuitem> Merge with previous</guimenuitem>. The empty
+				  workspace is deleted.</para>
+			 </listitem>
+		  </itemizedlist></para>
+		<note>
+		  <para>The number of workspaces on your desktop is never less than the
+			 minimum number of workspaces that is specified in the <application>Sawfish
+			 window manager</application> capplet. If you merge workspaces, the empty
+			 workspace might not be deleted because your desktop must always have the
+			 minimum number of workspaces.</para>
+		</note>
+	 </sect2>
+	 <sect2 id="gossawfish-53">
+		<title>To Move a Workspace</title>
+		<para>To move a workspace middle-click on the desktop background to open
+		  the 
+		  <guimenu> Root</guimenu> menu. Choose 
+		  <guimenu>Workspaces</guimenu>, then perform one of the following
+		  actions:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>To move the workspace to the right of the current workspace
+				choose 
+				<guimenuitem>Move workspace right</guimenuitem>. The workspace
+				swaps position with the next workspace. </para>
+		  </listitem>
+		  <listitem>
+			 <para>To move the workspace to the left of the current workspace
+				choose 
+				<guimenuitem>Move workspace left</guimenuitem>. The workspace swaps
+				position with the previous workspace. </para>
+		  </listitem>
+		</itemizedlist>
+		<para>When you move a workspace, all the windows in the workspace are
+		  moved. The name of the workspace does not move. For example, if you move
+		  <literal> space 1</literal> to the right, the windows move to the next
+		  workspace. The workspace takes the name of the next workspace, <literal>space
+		  2</literal>. In summary, when you move <literal>space 1</literal> to the right,
+		  all the windows in <literal>space 1</literal> move to <literal>space
+		  2</literal>. </para>
+		<para>The configuration of your desktop can mean that when you move a
+		  workspace, another workspace is added.</para>
+	 </sect2>
+	 <sect2 id="gossawfish-54">
+		<title>To Switch Between Viewports</title>
+		<para>You can switch between viewports in either of the following
+		  ways:</para>
+		<itemizedlist>
+		  <listitem>
+			 <para>Click on the viewport in the <application>Desk
+				Guide</application> applet.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Move the mouse pointer to the edge of the screen. To use this
+				edge flip feature you must configure your desktop in the <application>Sawfish
+				window manager</application> capplet as follows:</para>
+			 <informaltable frame="topbot">
+				<tgroup cols="4" colsep="0" rowsep="0"><colspec colname="COLSPEC8"
+				  colwidth="25*"/>
+				  <colspec colname="COLSPEC9" colwidth="25*"/><colspec
+				  colname="COLSPEC10" colwidth="25*"/>
+				  <colspec colname="COLSPEC11" colwidth="25*"/>
+				  <thead>
+					 <row rowsep="1">
+						<entry>
+						  <para>Dialog</para></entry>
+						<entry>
+						  <para>Tabbed Section </para></entry>
+						<entry>
+						  <para>Option</para></entry>
+						<entry>
+						  <para>Set To</para></entry>
+					 </row>
+				  </thead>
+				  <tbody>
+					 <row>
+						<entry colname="COLSPEC8">
+						  <para>
+							 <guilabel>Workspaces </guilabel></para></entry>
+						<entry colname="COLSPEC9">
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry colname="COLSPEC10">
+						  <para>
+							 <guilabel>Select the next desktop when the pointer hits
+								the screen edge</guilabel></para></entry>
+						<entry colname="COLSPEC11">
+						  <para> Selected </para></entry>
+					 </row>
+					 <row>
+						<entry>
+						  <para>
+							 <guilabel>Workspaces</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel>Hitting the screen edge selects the
+								next</guilabel></para></entry>
+						<entry>
+						  <para>
+							 <guilabel> viewport</guilabel></para></entry>
+					 </row>
+					 <row>
+						<entry colname="COLSPEC8">
+						  <para>
+							 <guilabel>Workspaces </guilabel></para></entry>
+						<entry colname="COLSPEC9">
+						  <para>
+							 <guilabel> Edge Flipping</guilabel></para></entry>
+						<entry colname="COLSPEC10">
+						  <para>
+							 <guilabel>Only flip when interactively moving a
+								window</guilabel></para></entry>
+						<entry colname="COLSPEC11">
+						  <para>Unselected </para></entry>
+					 </row>
+				  </tbody>
+				</tgroup>
+			 </informaltable>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+	 <sect2 id="gossawfish-55">
+		<title>To Add Viewports</title>
+		<para>To add viewports to your workspaces follow these steps: </para>
+		<orderedlist>
+		  <listitem>
+			 <para>To start the <application>Control Center</application> open the
+				
+				<guimenu>Global Menu</guimenu>, then choose 
+				<menuchoice>
+				  <guimenu>Programs</guimenu>
+				  <guisubmenu>Settings</guisubmenu>
+				  <guisubmenu>Sawfish window manager</guisubmenu>
+				  <guimenuitem>Workspaces</guimenuitem>
+				</menuchoice>. </para>
+		  </listitem>
+		  <listitem>
+			 <para>On the 
+				<guilabel>Workspaces</guilabel> tabbed section, use the 
+				<guilabel>Columns</guilabel> and 
+				<guilabel>Rows</guilabel> spin boxes to specify the following:
+				<itemizedlist>
+				  <listitem>
+					 <para>The number of viewports in each workspace.</para>
+				  </listitem>
+				  <listitem>
+					 <para>The structure of the viewports in each workspace in the
+						<application> Desk Guide</application> applet.</para>
+				  </listitem>
+				</itemizedlist></para>
+			 <para>For example, if you want four viewports in your workspaces, and
+				you want the <application>Desk Guide</application> to display the viewports as
+				two columns and two rows. To specify this configuration, enter <literal>2
+				</literal> in both the 
+				<guilabel>Columns</guilabel> and 
+				<guilabel>Rows</guilabel> spin boxes.</para>
+		  </listitem>
+		  <listitem>
+			 <para>Click 
+				<guibutton>OK</guibutton> to save your changes. </para>
+		  </listitem>
+		</orderedlist>
+		<note>
+		  <para>If you do not want any viewports, specify <literal>1</literal> in
+			 both the 
+			 <guilabel>Columns</guilabel> and 
+			 <guilabel>Rows</guilabel> spin boxes.</para>
+		</note>
+	 </sect2>
+  </sect1>
+</chapter> 
