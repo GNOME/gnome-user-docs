@@ -1,8 +1,70 @@
-__________________________________________
+________________________________________________________________________________
 GNOME 2.2 Desktop User Guide - L10N Readme
 Written by: Eugene O'Connor (eugene.oconnor@sun.com)
+Revision number: 2.5
+Date: 07 March 2003
+
+For instructions on how to take screenshots for the UG, see the Screenshot Instructions section in this file. 
+
+Changes between Version 2.4 and 2.5
+===================================
+Title: Changed title of book
+All: Various changes from bug 107840.
+All: s/drop-down list box/drop-down list
+All: s/GNOME Menu/Main Menu
+gosoverview: reorganised button stuff to reflect new organization in Add to Panel menu
+gospanel: reorganised button stuff to reflect new organization in Add to Panel menu
+gospanel: transparent option
+gospanel: new section - Launcher Commands
+goseditmainmenu: minor changes from button reorganisation
+gosmetacity: minow theme-related changes
+gosnautilus: Updated By Type table row in To Arrange Your Files in Icon View.
+gosnautilus: minor changes to To Format a Floppy
+goscustdesk: Added font rendering and details information
+goscustdesk: Updated themes information.
+And various other minor changes throughout.
+
+New screenshots:
+cc_theme_tool 
+run_button
+screenshot_button
+searchtool_button
+
+Updated screenshots:
+cc_windows
+cc_network
+cc_apps_tab
+launcherprop1_dialog
+cc_filesprograms_tab
+cc_font_tab
+cc_accessx_filters_tab
+cc_accessx_mouse_tab
+cc_windows
+rmedia_floppy_format_dialog
+naut_viewpane_text_window
+naut_tree_tab
+naut_pref_speed_dialog
+naut_pref_view_dialog
+naut_pref_iconcaptions_dialog
+naut_notes_tab
+naut_pref_icon_dialog
+naut_listview_window
+naut_home_launcher
+naut_iconview_window
+naut_file_navigation_pane
+naut_history_tab
+launcher_popup
+cc_accessx_keyboard_tab
+cc_theme_tab 
+panelprop_dialog 
+rmedia_floppy_format_dialog
+launcherprop1_dialog 
+cc_panel
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Manual revision: 2.4
-Date: 24 January 2003
+Date: 14 January 2003
 
 For instructions on how to take screenshots for the UG, see the Screenshot Instructions section in this file. 
 
@@ -11,14 +73,12 @@ Changes between Version 2.3 and 2.4
 Title: Changed title of book
 Updated preface: Added more information
 gospanel: Added "Launchers from menus" to first bulleted list in "To Add an Object to a Panel"
-gosnautilus: Updated preferences. Removed tabbed pane term, due to new design. Added To Format Floppy.
-goscustdesk: Background preferencet tool. Updated Select picture description in table.
-goscustdesk: Replaced "Priority Text Beside Icons" with "Text Beside Icons"
-goscustaccess: Split AccessX into three.
+goscustdesk.sgm: Background preferencet tool. Updated Select picture description in table.
+goscustdesk.sgm: Replaced "Priority Text Beside Icons" with "Text Beside Icons"
+All chapters: Replace "PrintOnly" marked section in highlights section with "Highlights" marked section.
 
-And other minor changes.
-
-Updated screenshots - see Screenshot Instructions section
+Updated screenshots:
+None.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Manual revision: 2.3
@@ -33,48 +93,26 @@ Updated section: 9.10 Setting Themes in the Desktop
 All chapters: Removed the word "Shows" from graphic text equivalents.
 
 Updated screenshots:
-typical_anno_desktop - Updated screenshot, no change to Screenshot Instructions required
-menu_panel - Updated screenshot, no change to Screenshot Instructions required
-naut_prop_emblem_window - Updated screenshot, no change to Screenshot Instructions required
-cc_theme_window_tab - New screenshot, Screenshot Instructions updated
-cc_theme_tab - Updated screenshot, no change to Screenshot Instructions required
-cc_metacity - Updated screenshot, no change to Screenshot Instructions required
-cc_basic_keyboardshortcuts - Updated screenshot, no change to Screenshot Instructions required
+typical_anno_desktop.tiff - Updated screenshot, no change to Screenshot Instructions required
+menu_panel.tiff - Updated screenshot, no change to Screenshot Instructions required
+naut_prop_emblem_window.png - Updated screenshot, no change to Screenshot Instructions required
+cc_theme_window_tab.tiff - New screenshot, Screenshot Instructions updated
+cc_theme_tab.tiff - Updated screenshot, no change to Screenshot Instructions required
+cc_metacity.tiff - Updated screenshot, no change to Screenshot Instructions required
+cc_basic_keyboardshortcuts.tiff - Updated screenshot, no change to Screenshot Instructions required
 
 
 
 ____________________________________________________________________________________________
-GNOME 2.2 Desktop User Guide - Screenshot Instructions
+GNOME 2.0 Desktop for the Solaris Operating Environment User Guide - Screenshot Instructions
 Written by: Eugene O'Connor (eugene.oconnor@sun.com)
 Manual revision: 2.4
-Date: 24 January 2003
+Date: 14 January 2003
 
 Screenshot Changes between Version 2.3 and 2.4
 ==============================================
-launcher_popup.png - Updated screenshot, no change to Screenshot Instructions required
-naut_iconview_window.png - Updated screenshot, no change to Screenshot Instructions required
-cc_accessx_mouse_tab.png - New screenshot, instructions pending
-cc_accessx_filters_tab.png - New screenshot, instructions pending
-cc_accessx_keyboard_tab.png - Updated screenshot, no change to Screenshot Instructions required
-cc_filesprograms_tab.png - Updated screenshot, no change to Screenshot Instructions required
-cc_windows.png - New screenshot, instructions pending
-cc_network.png - Updated screenshot, no change to Screenshot Instructions required
-cc_font_tab.png - Updated screenshot, no change to Screenshot Instructions required
-run_button.png - New screenshot, instructions pending
-screenshot_button.png - New screenshot, instructions pending
-searchtool_button.png - New screenshot, instructions pending
-naut_file_navigation_pane.png - Updated screenshot, no change to Screenshot Instructions required
-naut_home_launcher.png - Updated screenshot, no change to Screenshot Instructions required
-naut_tree_tab.png - Updated screenshot, no change to Screenshot Instructions required
-naut_notes_tab.png - Updated screenshot, no change to Screenshot Instructions required
-naut_listview_window.png - Updated screenshot, no change to Screenshot Instructions required
-naut_viewpane_text_window.png - Updated screenshot, no change to Screenshot Instructions required
-naut_history_tab.png - Updated screenshot, no change to Screenshot Instructions required
-rmedia_floppy_format_dialog.png - New screenshot, instructions pending
-naut_pref_speed_dialog.png - Updated screenshot, no change to Screenshot Instructions required
-naut_pref_iconcaptions_dialog.png - Updated screenshot, no change to Screenshot Instructions required
-naut_pref_icon_dialog.png - Updated screenshot, no change to Screenshot Instructions required
-naut_pref_view_dialog.png - Updated screenshot, no change to Screenshot Instructions required
+None.
+
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Manual revision: 2.3
@@ -283,6 +321,15 @@ launcherprop2_dialog.tiff
 3. Ensure that the window has focus. If it does not, click on the window to give it focus.
 4. Take a screenshot of the window. Ensure that the window has focus.
 5. In your image editor, save the file in the appropriate formats. Set the DPI of the TIFF to 150.
+
+run_button.tiff
+No localisation required.
+
+screenshot_button.tiff
+No localisation required.
+
+searchtool_button.tiff
+No localisation required.
 
 footprint_icon.tiff
 No localisation required.
@@ -870,11 +917,18 @@ cc_sound_events.tiff
 4. Take a screenshot of the window. 
 5. In your image editor, save the file in the appropriate formats. Set the DPI of the TIFF to 150.
 
-cc_theme_tab.tiff
+cc_theme_tool.tiff
 1. From the Menu Panel, choose Applications > Desktop Preferences > Theme.
 2. Ensure that the window has focus. If it does not, click on the window to give it focus.
 3. Take a screenshot of the window. 
 4. In your image editor, save the file in the appropriate formats. Set the DPI of the TIFF to 150.
+
+cc_theme_tab.tiff
+1. From the Menu Panel, choose Applications > Desktop Preferences > Theme.
+2. Click on the Details button.
+3. Ensure that the window has focus. If it does not, click on the window to give it focus.
+4. Take a screenshot of the window. 
+5. In your image editor, save the file in the appropriate formats. Set the DPI of the TIFF to 150.
 
 cc_theme_window_tab.tiff
 1. From the Menu Panel, choose Applications > Desktop Preferences > Theme.
