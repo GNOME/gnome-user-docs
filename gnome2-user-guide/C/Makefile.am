@@ -1,0 +1,7 @@
+figdir = figures
+docname = user-guide
+lang = C
+omffile = user-guide-C.omf
+entities = legal.xml front.xml gosbasic.xml goscustaccess.xml goscustdesk.xml goscustlookandfeel.xml gosdeskback.xml goseditmainmenu.xml gosmetacity.xml gosnautilus.xml gosoverview.xml gospanel.xml gosstartsession.xml part1.xml part2.xml wgoscustdesk.xml wgoscustlookandfeel.xml wgosnautilus.xml wgospanel.xml
+include $(top_srcdir)/xmldocs.make
+dist-hook: app-dist-hook
