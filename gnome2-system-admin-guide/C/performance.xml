@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
 <chapter id="performance-0">
   <title>Improving Performance</title>
   <highlights>
     <para>This chapter describes how to improve the performance of
-the GNOME desktop.  </para>
+the GNOME Desktop.</para>
   </highlights>
   <sect1 id="performance-1">
-    <title>Introduction</title>
+    <title>Introduction to Improving Performance</title>
     <indexterm>
       <primary>performance, improving</primary>
       <secondary>introduction</secondary>
     </indexterm>
     <para>This chapter lists several preferences whose
-settings you can change to improve the performance of the GNOME desktop. You
-can use the <command>gconftool-2</command> command to set values for preferences
+settings you can change to improve the performance of the desktop environment.
+You can use the <command>gconftool-2</command> command to set values for preferences
 for users. The example commands in this chapter show how to set values in
 the user configuration source.  </para>
     <para>You can also use the <literal>--direct</literal> and <literal>--config-source</literal> options to set mandatory values or default values for preferences.
@@ -37,18 +36,24 @@ usage</secondary>
       <secondary>reducing</secondary>
     </indexterm>
     <para>This section describes preferences that
-you can set to reduce CPU usage by the GNOME desktop. </para>
+you can set to reduce CPU usage by the desktop environment. </para>
     <sect2 id="performance-3">
-      <title>To Use Themes Which Require Less CPU Resources</title>
+      <title>To Use Theme Options Which Require Less CPU Resources</title>
+      <indexterm>
+        <primary>themes</primary>
+        <secondary>window frame options</secondary>
+        <tertiary>and CPU usage</tertiary>
+      </indexterm>
       <indexterm>
         <primary>themes</primary>
         <secondary>and CPU usage</secondary>
       </indexterm>
-      <para>Some window frame themes load image files to draw the window frame.
-Other themes use simpler techniques to draw the window frame.</para>
-      <para>The default theme is Crux. Crux loads image files, and can be slow on
-systems with limited CPU resources. To reduce CPU usage, use one of the following
-window frame themes: </para>
+      <para>Some window frame theme
+options load image files to draw the window frame. Other options use simpler
+techniques to draw the window frame.</para>
+      <para>The default window frame option is Crux. Crux loads image files, and
+can be slow on systems with limited CPU resources. To reduce CPU usage, use
+one of the following window frame options: </para>
       <itemizedlist>
         <listitem>
           <para>Atlanta</para>
@@ -57,7 +62,8 @@ window frame themes: </para>
           <para>Esco</para>
         </listitem>
       </itemizedlist>
-      <para>The following window frame themes also use less CPU resources than Crux:</para>
+      <para>The following window frame options also use less CPU resources than
+Crux:</para>
       <itemizedlist>
         <listitem>
           <para>AgingGorilla</para>
@@ -70,30 +76,39 @@ window frame themes: </para>
         </listitem>
       </itemizedlist>
       <note>
-        <para>Metabox does not work well with inverse desktop themes such as
-HighContrastInverse. Use Atlanta with inverse desktop themes.</para>
+        <para>Metabox does not work well with inverse controls options such
+as HighContrastInverse. Use Atlanta with inverse controls options.</para>
       </note>
-      <indexterm>
-        <primary>themes</primary>
-        <secondary>changing</secondary>
-      </indexterm>
-      <para>To change the window frame theme, run the following command: </para>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string
---set /apps/metacity/general/theme <replaceable>theme_name</replaceable></userinput></para>
+      <para><indexterm><primary>themes</primary><secondary>window frame options</secondary><tertiary>changing</tertiary></indexterm>To change the window
+frame theme option, run the following command: </para>
+      <para>
+        <computeroutput>#</computeroutput>
+        <userinput>gconftool-2 --type string
+--set /apps/metacity/general/theme <replaceable>option-name</replaceable></userinput>
+      </para>
       <para>For example, to use Atlanta, run the following command:</para>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string
---set /apps/metacity/general/theme Atlanta</userinput></para>
-      <para>Alternatively, users can choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guimenuitem>Themes</guimenuitem></menuchoice>, then select the appropriate theme.</para>
+      <para>
+        <computeroutput>#</computeroutput>
+        <userinput>gconftool-2 --type string
+--set /apps/metacity/general/theme Atlanta</userinput>
+      </para>
+      <para>Alternatively, users can choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guimenuitem>Theme</guimenuitem></menuchoice>, then select the appropriate option.</para>
       <tip>
         <para>You can use the <application>Metacity Theme Viewer</application>
-to measure the performance of a window frame theme, and to preview the theme.
+to measure the performance of a window frame option, and to preview the option.
 To start <application>Metacity Theme Viewer</application>, use the following
 command:</para>
-        <para><computeroutput>#</computeroutput> <userinput>metacity-theme-viewer <replaceable>theme_name</replaceable></userinput></para>
+        <para>
+          <computeroutput>#</computeroutput>
+          <userinput>metacity-theme-viewer <replaceable>option-name</replaceable></userinput>
+        </para>
         <para>For example, to measure the performance of Atlanta and preview Atlanta,
 run the following command: </para>
-        <para><computeroutput>#</computeroutput> <userinput>metacity-theme-viewer
-Atlanta</userinput></para>
+        <para>
+          <computeroutput>#</computeroutput>
+          <userinput>metacity-theme-viewer
+Atlanta</userinput>
+        </para>
       </tip>
     </sect2>
     <sect2 id="performance-2">
@@ -106,34 +121,18 @@ Atlanta</userinput></para>
         <primary>menu icons</primary>
         <secondary>and CPU usage</secondary>
       </indexterm>
-      <para>Some items in menus display an icon beside the item. To
-turn off this feature, run the following command: </para>
       <indexterm>
         <primary>menu icons</primary>
         <secondary>turning off</secondary>
       </indexterm>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2
---type bool --set /desktop/gnome/interface/menus_have_icons false</userinput></para>
+      <para>Some items in menus display an icon beside the
+item. To turn off this feature, run the following command: </para>
+      <para>
+        <computeroutput>#</computeroutput>
+        <userinput>gconftool-2 --type bool
+--set /desktop/gnome/interface/menus_have_icons false</userinput>
+      </para>
       <para>Alternatively, users can choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guimenuitem>Menus &amp; Toolbars</guimenuitem></menuchoice>, then deselect the <guilabel>Show icons in menus</guilabel> option.</para>
-    </sect2>
-    <sect2 id="performance-5">
-      <title>To Reduce CPU Usage by Turning On Wireframe Mode</title>
-      <indexterm>
-        <primary>wireframe mode</primary>
-        <secondary>and CPU usage</secondary>
-      </indexterm>
-      <para>The Metacity window manager has a wireframe mode for when
-you move and resize windows. When wireframe mode is turned on, only the outline
-of windows is displayed when you move and resize windows. The contents of
-the window do not need to be updated during the move or resize. The contents
-of the window are displayed when the move or resize is complete.</para>
-      <indexterm>
-        <primary>wireframe mode</primary>
-        <secondary>turning on</secondary>
-      </indexterm>
-      <para>To turn on wireframe mode, run the following command:</para>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type bool
---set /apps/metacity/general/wireframe_move_resize true</userinput></para>
     </sect2>
     <sect2 id="performance-6">
       <title>To Reduce CPU Usage by Turning Off the Splash Screen</title>
@@ -141,16 +140,16 @@ of the window are displayed when the move or resize is complete.</para>
         <primary>splash screen</primary>
         <secondary>and CPU usage</secondary>
       </indexterm>
-      <para>By default, when users log in to the GNOME desktop, a splash
-screen is displayed. Icons are displayed on the splash screen while the user
-logs in. You can turn off the splash screen to reduce CPU usage during login. </para>
-      <indexterm>
-        <primary>splash screen</primary>
-        <secondary>turning off</secondary>
-      </indexterm>
-      <para>To turn off the splash screen, run the following command:</para>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type bool
---set /apps/gnome-session/options/show_splash_screen false</userinput></para>
+      <para>By default, when users log in to the desktop environment,
+a splash screen is displayed. Icons are displayed on the splash screen while
+the user logs in. You can turn off the splash screen to reduce CPU usage during
+login. </para>
+      <para><indexterm><primary>splash screen</primary><secondary>turning off</secondary></indexterm>To turn off the splash screen, run the following command:</para>
+      <para>
+        <computeroutput>#</computeroutput>
+        <userinput>gconftool-2 --type bool
+--set /apps/gnome-session/options/show_splash_screen false</userinput>
+      </para>
       <para>Alternatively, users can choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Advanced</guisubmenu><guimenuitem>Sessions</guimenuitem></menuchoice>,
 then deselect the <guilabel>Show splash screen on login</guilabel> option.</para>
     </sect2>
@@ -162,9 +161,12 @@ then deselect the <guilabel>Show splash screen on login</guilabel> option.</para
       </indexterm>
       <para>When users show or hide panels, the panels can show or hide
 in an animated style. To turn off panel animation, run the following command: </para>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type bool
---set /apps/panel/global/enable_animations false</userinput></para>
-      <para>Alternatively, users can choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Advanced</guisubmenu><guimenuitem>Themes</guimenuitem></menuchoice>,
+      <para>
+        <computeroutput>#</computeroutput>
+        <userinput>gconftool-2 --type bool
+--set /apps/panel/global/enable_animations false</userinput>
+      </para>
+      <para>Alternatively, users can choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Advanced</guisubmenu><guimenuitem>Panel</guimenuitem></menuchoice>,
 then deselect the <guilabel>Animation</guilabel> option.</para>
     </sect2>
     <sect2 id="performance-7">
@@ -238,7 +240,7 @@ to never, the CPU usage and the network traffic are reduced.</para>
           </tgroup>
         </informaltable>
         <para>The following table describes the performance preferences for the file
-manager.  For the fastest performance, set the value of the preferences to <literal>never</literal>.</para>
+manager. For the fastest performance, set the value of the preferences to <literal>never</literal>.</para>
         <informaltable frame="topbot">
           <tgroup cols="2" colsep="0" rowsep="0">
             <colspec colwidth="43.34*"/>
@@ -264,10 +266,13 @@ manager.  For the fastest performance, set the value of the preferences to <lite
                   <para>Specifies when to preview the content of text files
 in the icon that represents the file. To never preview the content of text
 files, run the following command: </para>
-                  <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/show_icon_text
-never</userinput></para>
-                  <para>Alternatively, users can perform the following
-steps:</para>
+                  <para>
+                    <computeroutput>#</computeroutput>
+                    <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/</userinput>
+                    <userinput>show_icon_text never</userinput>
+                  </para>
+                  <para>Alternatively, users can perform
+the following steps:</para>
                   <orderedlist>
                     <listitem>
                       <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from a file manager window, then choose <guilabel>Performance</guilabel>.</para>
@@ -288,10 +293,12 @@ preference.</para>
                 <entry valign="top">
                   <para>Specifies when to show the number of items in folders.
 To never show the number of items in folders, run the following command:</para>
-                  <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/show_directory_item_counts
-never </userinput></para>
-                  <para>Alternatively, users can perform the following
-steps:</para>
+                  <para>
+                    <computeroutput>#</computeroutput>
+                    <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/</userinput>
+                    <userinput>show_directory_item_counts never</userinput>
+                  </para>
+                  <para>Alternatively, users can perform the following steps:</para>
                   <orderedlist>
                     <listitem>
                       <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from a file manager window, then choose <guilabel>Performance</guilabel>.</para>
@@ -312,10 +319,12 @@ Folders</guilabel> preference.</para>
                 <entry valign="top">
                   <para>Specifies when to show thumbnails of image files.
 To never show thumbnails, run the following command:</para>
-                  <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/show_image_thumbnails
-never </userinput></para>
-                  <para>Alternatively, users can perform the following
-steps:</para>
+                  <para>
+                    <computeroutput>#</computeroutput>
+                    <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/</userinput>
+                    <userinput>show_image_thumbnails never</userinput>
+                  </para>
+                  <para>Alternatively, users can perform the following steps:</para>
                   <orderedlist>
                     <listitem>
                       <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from a file manager window, then choose <guilabel>Performance</guilabel>.</para>
@@ -336,8 +345,11 @@ Files</guilabel> preference.</para>
                 <entry valign="top">
                   <para>Specifies when to preview the content of sound files.
 To never preview the content of sound files, run the following command:</para>
-                  <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/preview_sound
-never </userinput></para>
+                  <para>
+                    <computeroutput>#</computeroutput>
+                    <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/preview_sound
+never </userinput>
+                  </para>
                   <para>Alternatively, users can perform the following
 steps:</para>
                   <orderedlist>
@@ -365,55 +377,56 @@ preference.</para>
 you to turn off the side pane and the toolbar. To improve file manager performance,
 turn off the side pane and the toolbar.</para>
         <para>To turn off the side pane, run the following command: </para>
-        <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type bool
---set /apps/nautilus/preferences/start_with_sidebar false</userinput></para>
+        <para>
+          <computeroutput>#</computeroutput>
+          <userinput>gconftool-2 --type bool
+--set /apps/nautilus/preferences/start_with_sidebar false</userinput>
+        </para>
         <para>Alternatively, users can choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from a file manager window,
 then choose <guilabel>Windows</guilabel>, and then deselect the <guilabel>Display side pane</guilabel> option. The next time that users open a file
 manager window, the window does not display a side pane. </para>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>toolbar, turning off</secondary>
-        </indexterm>
-        <para>To turn off the toolbar, run the following command: </para>
-        <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type bool
---set /apps/nautilus/preferences/start_with_toolbar false</userinput></para>
+        <para><indexterm><primary>file manager</primary><secondary>toolbar, turning
+off</secondary></indexterm>To turn off the toolbar, run the following command: </para>
+        <para>
+          <computeroutput>#</computeroutput>
+          <userinput>gconftool-2 --type bool
+--set /apps/nautilus/preferences/start_with_toolbar false</userinput>
+        </para>
         <para>Alternatively, users can choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from a file manager window,
 then choose <guilabel>Windows</guilabel>, and then deselect the <guilabel>Display toolbar</guilabel> option. The next time that users open a file manager
 window, the window does not display a toolbar. </para>
         <para>You can also turn off the location bar. Users can use the <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> keyboard shortcut to display a location bar
 when required.  </para>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>location bar, turning
-off</secondary>
-        </indexterm>
-        <para>To turn off the location bar, run the following
+        <para><indexterm><primary>file manager</primary><secondary>location bar, turning
+off</secondary></indexterm>To turn off the location bar, run the following
 command:</para>
-        <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type bool
---set /apps/nautilus/preferences/start_with_location_bar false</userinput></para>
+        <para>
+          <computeroutput>#</computeroutput>
+          <userinput>gconftool-2 --type bool
+--set /apps/nautilus/preferences/start_with_location_bar false</userinput>
+        </para>
         <para>Alternatively, users can choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from a file manager window,
 then choose <guilabel>Windows</guilabel>, and then deselect the <guilabel>Display location bar</guilabel> option. The next time that users open a file
 manager window, the window does not display a location bar.</para>
       </sect3>
       <sect3 id="performance-11">
-        <title>To Turn Off the Desktop Background</title>
+        <title>To Turn Off the Desktop</title>
         <indexterm>
           <primary>file manager</primary>
-          <secondary>desktop background, turning
-off</secondary>
+          <secondary>desktop, turning off</secondary>
         </indexterm>
         <indexterm>
-          <primary>desktop background</primary>
-          <secondary>turning off</secondary>
+          <primary>desktop</primary>
+          <secondary>turning
+off</secondary>
         </indexterm>
-        <para>The file manager contains
-a preference that enables users to use <application>Nautilus</application>
-to manage the desktop background. Users can disable the desktop background
-to improve performance. However, if users disable the desktop background,
-users cannot do the following:</para>
+        <para>The file manager contains a preference that
+enables users to use <application>Nautilus</application> to manage the desktop.
+Users can disable the desktop to improve performance. However, if users disable
+the desktop, users cannot do the following:</para>
         <itemizedlist>
           <listitem>
-            <para>Use the <guimenu>Desktop Background</guimenu> menu.</para>
+            <para>Use the <guimenu>Desktop</guimenu> menu.</para>
           </listitem>
           <listitem>
             <para>Use the file manager to change the pattern or color of the
@@ -423,9 +436,12 @@ desktop background. </para>
             <para>Use the <guilabel>Home</guilabel> object and the <guilabel>Trash</guilabel> object. The <guilabel>Home</guilabel> object and the <guilabel>Trash</guilabel> object are not displayed on the desktop. </para>
           </listitem>
         </itemizedlist>
-        <para>To disable the desktop background, run the following command: </para>
-        <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type bool
---set /apps/nautilus/preferences/show_desktop false</userinput></para>
+        <para>To disable the desktop, run the following command: </para>
+        <para>
+          <computeroutput>#</computeroutput>
+          <userinput>gconftool-2 --type bool
+--set /apps/nautilus/preferences/show_desktop false</userinput>
+        </para>
         <para>Alternatively, users can choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from a file manager window.
 Users can then choose <guilabel>Desktop &amp; Trash</guilabel>, and then deselect
 the <guilabel>Use Nautilus to draw the desktop</guilabel> option. </para>
@@ -433,29 +449,37 @@ the <guilabel>Use Nautilus to draw the desktop</guilabel> option. </para>
     </sect2>
   </sect1>
   <sect1 id="performance-12">
-    <title>Reducing X11 Network Traffic</title>
+    <title>Reducing X Window System Network Traffic</title>
     <indexterm>
       <primary>reducing</primary>
-      <secondary>X11 network traffic</secondary>
+      <secondary>X Window System network traffic</secondary>
     </indexterm>
     <indexterm>
-      <primary>X11 network traffic, reducing</primary>
+      <primary>X Window System network traffic,
+reducing</primary>
     </indexterm>
     <indexterm>
       <primary>network traffic, reducing</primary>
     </indexterm>
-    <para>This section describes preferences that you can set to reduce X11 network
-traffic on the GNOME desktop. </para>
+    <para>This section describes preferences that you can
+set to reduce X Window System network traffic on the desktop environment. </para>
     <sect2 id="performance-14">
-      <title>To Use Themes Which Create Less Network Traffic</title>
+      <title>To Use Theme Options Which Create Less Network Traffic</title>
+      <indexterm>
+        <primary>themes</primary>
+        <secondary>window frame options</secondary>
+        <tertiary>and network traffic</tertiary>
+      </indexterm>
       <indexterm>
         <primary>themes</primary>
         <secondary>and network traffic</secondary>
       </indexterm>
-      <para>Remote display protocols do not transfer every pixel in
-a block of pixels if all pixels in the block are the same color.</para>
-      <para>To reduce X11 network traffic, use a window frame theme that uses solid
-colors. That is, use one of the following window frame themes:</para>
+      <para>Remote
+display protocols do not transfer every pixel in a block of pixels if all
+pixels in the block are the same color.</para>
+      <para>To reduce X Window System network traffic, use a window frame theme
+option that uses solid colors. That is, use one of the following window frame
+options:</para>
       <itemizedlist>
         <listitem>
           <para>Atlanta</para>
@@ -464,7 +488,7 @@ colors. That is, use one of the following window frame themes:</para>
           <para>Esco</para>
         </listitem>
       </itemizedlist>
-      <para>For information on how to change the theme, see <xref linkend="performance-3"/>.</para>
+      <para>For information on how to change theme options, see <xref linkend="performance-3"/>.</para>
     </sect2>
     <sect2 id="performance-15">
       <title>To Reduce Network Traffic by Turning Off Display of Icons in Menus</title>
@@ -473,20 +497,10 @@ colors. That is, use one of the following window frame themes:</para>
         <secondary>and network traffic</secondary>
       </indexterm>
       <para>Some items in menus display an icon beside the item. If
-the icon is located on another file system, this feature can increase X11
-network traffic. This feature can also increase X11 network traffic if the
-panels are displayed on a remote host. </para>
+the icon is located on another file system, this feature can increase X Window
+System network traffic. This feature can also increase X Window System network
+traffic if the panels are displayed on a remote host. </para>
       <para>For information on how to turn off this feature, see <xref linkend="performance-2"/>.</para>
-    </sect2>
-    <sect2 id="performance-13">
-      <title>To Reduce Network Traffic by Turning On Wireframe Mode</title>
-      <indexterm>
-        <primary>wireframe mode</primary>
-        <secondary>and network traffic</secondary>
-      </indexterm>
-      <para>If the application that displays the window
-is running on a remote host, wireframe mode reduces X11 network traffic.</para>
-      <para>For more information on wireframe mode, see <xref linkend="performance-5"/>.</para>
     </sect2>
   </sect1>
   <sect1 id="performance-17">
@@ -505,48 +519,54 @@ is running on a remote host, wireframe mode reduces X11 network traffic.</para>
     <para>Many modern computer systems support 24-bit color, that is, 16,777,216 colors.
 However, many users still use systems that support 8-bit color, that is, 256
 colors. </para>
-    <para>The GNOME desktop uses the <firstterm>Netscape color palette</firstterm>.
+    <para>The desktop environment uses the <firstterm>websafe color palette</firstterm>.
 This palette is a general-purpose palette of 216 colors, which is designed
 to optimize the use of color on systems that support 8-bit color. However,
-some visual components of the GNOME desktop are designed for systems that
-support 24-bit color.</para>
+some visual components of the desktop environment are designed for systems
+that support 24-bit color.</para>
     <para>The following display problems might occur on systems that support 8-bit
 color:</para>
     <itemizedlist>
       <listitem>
         <para>Windows, icons, and background images might appear grainy.
- Many themes, background images, and icons use colors that are not in the <application>Netscape</application> color palette. The colors that are not in the palette
-are replaced with the nearest equivalent or a dithered approximation. This
-use of replacement colors causes the grainy appearance.</para>
+ Many themes, background images, and icons use colors that are not in the
+websafe color palette. The colors that are not in the palette are replaced
+with the nearest equivalent or a dithered approximation. This use of replacement
+colors causes the grainy appearance.</para>
       </listitem>
       <listitem>
-        <para>Applications that do not use the <application>Netscape</application>
-color palette have less colors available. Color errors might occur. Some colors
-might not appear in the user interface of the application. Some applications
-might crash if the application cannot allocate colors.</para>
+        <para>Applications that do not use the websafe color palette have
+less colors available. Color errors might occur. Some colors might not appear
+in the user interface of the application. Some applications might crash if
+the application cannot allocate colors.</para>
       </listitem>
       <listitem>
         <para>Color flashing might occur when users switch between applications
-that use the <application>Netscape</application> color palette, and applications
-that do not use this palette. The applications that do not use the <application>Netscape</application> color palette might use a custom colormap. When the
-custom colormap is used, other visual components might lose colors, then become
-unviewable.</para>
+that use the websafe color palette, and applications that do not use this
+palette. The applications that do not use the websafe color palette might
+use a custom colormap. When the custom colormap is used, other visual components
+might lose colors, then become unviewable.</para>
       </listitem>
     </itemizedlist>
     <para>The following sections describe how to optimize the appearance of the
-GNOME desktop for systems that support 8-bit color. </para>
+desktop environment for systems that support 8-bit color. </para>
     <sect2 id="performance-20">
-      <title>To Use Themes That Use the Netscape Color Palette</title>
+      <title>To Use Theme Options That Use the Websafe Color Palette</title>
+      <indexterm>
+        <primary>themes</primary>
+        <secondary>window frame options</secondary>
+        <tertiary>and color usage</tertiary>
+      </indexterm>
       <indexterm>
         <primary>themes</primary>
         <secondary>and color usage</secondary>
       </indexterm>
-      <para>Some window frame themes use colors that are in the Netscape
-color palette. Bright and Esco use colors from the Netscape color palette.
-Bright and Esco do not have the grainy appearance of other themes on 8-bit
-color displays. Use Bright or Esco for the best color display on 8-bit visual
-modes. </para>
-      <para>For information on how to change the theme, see <xref linkend="performance-3"/>.</para>
+      <para>Some window
+frame theme options use colors that are in the websafe color palette. Bright
+and Esco use colors from the websafe color palette. Bright and Esco do not
+have the grainy appearance of other window frame options on 8-bit color displays.
+Use Bright or Esco for the best color display on 8-bit visual modes. </para>
+      <para>For information on how to change theme options, see <xref linkend="performance-3"/>.</para>
     </sect2>
     <sect2 id="performance-21">
       <title>To Reduce Color Usage by Turning Off Display of Icons in Menus</title>
@@ -555,8 +575,8 @@ modes. </para>
         <secondary>and color usage</secondary>
       </indexterm>
       <para>Some items in menus display an icon beside the item. If
-the icon contains colors that are not in the <application>Netscape</application>
-color palette, this feature can increase the number of colors used.</para>
+the icon contains colors that are not in the websafe color palette, this feature
+can increase the number of colors used.</para>
       <para>For information on how to turn off this feature, see <xref linkend="performance-2"/>.</para>
     </sect2>
     <sect2 id="performance-18">
@@ -566,7 +586,7 @@ color palette, this feature can increase the number of colors used.</para>
         <secondary>and color usage</secondary>
       </indexterm>
       <para>You can turn off the splash screen to make more colors available
-for the GNOME desktop and applications.</para>
+for the desktop environment and for applications.</para>
       <para>For information on how to turn off the splash screen, see <xref linkend="performance-6"/>.</para>
     </sect2>
     <sect2 id="performance-19">
@@ -576,16 +596,171 @@ for the GNOME desktop and applications.</para>
         <secondary>using solid color</secondary>
       </indexterm>
       <para>Use a solid color for the desktop background.
-Use of a solid color reduces the number of colors used by the GNOME desktop. </para>
+Use of a solid color reduces the number of colors used by the desktop environment. </para>
       <para>To set a solid color for the desktop background, run the following commands: </para>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string
---set /desktop/gnome/background/picture_options none</userinput></para>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string
---set /desktop/gnome/background/color_shading_type solid</userinput></para>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --type string
---set /desktop/gnome/background/primary_color \#<replaceable>hexadecimal_color</replaceable></userinput></para>
+      <para>
+        <computeroutput>#</computeroutput>
+        <userinput>gconftool-2 --type string
+--set /desktop/gnome/background/picture_options none</userinput>
+      </para>
+      <para>
+        <computeroutput>#</computeroutput>
+        <userinput>gconftool-2 --type string
+--set /desktop/gnome/background/color_shading_type solid</userinput>
+      </para>
+      <para>
+        <computeroutput>#</computeroutput>
+        <userinput>gconftool-2 --type string
+--set /desktop/gnome/background/primary_color \#<replaceable>hexadecimal-color</replaceable></userinput>
+      </para>
       <para>Alternatively, users can choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guimenuitem>Background</guimenuitem></menuchoice>, then choose a solid color for the desktop
 background.</para>
     </sect2>
+  </sect1>
+  <sect1 id="performance-23">
+    <title>Improving Performance of Help</title>
+    <indexterm>
+      <primary>improving</primary>
+      <secondary>Help performance</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>Help</primary>
+      <secondary>improving performance</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>performance, improving</primary>
+      <secondary>Help</secondary>
+    </indexterm>
+    <para>The source documents for the
+Help are XML files. The XML files are converted to HTML, and the <application>Yelp</application> Help browser displays the HTML. The HTML can be <firstterm>pregenerated</firstterm>, that is, the XML can be converted to HTML before
+the Help is used.</para>
+    <para>Alternatively, the conversion can be performed automatically when a
+user calls a Help file. If the conversion is performed when the user calls
+the Help file, the conversion has a significant impact on the speed with which
+Help documents are displayed.</para>
+    <para>To avoid performance problems with the Help, pregenerate the HTML so
+that the Help browser does not need to do the conversion. Use the <command>yelp-pregenerate</command> command to pregenerate a Help document. The syntax
+of the <command>yelp-pregenerate</command> command is as follows: </para>
+    <cmdsynopsis>
+      <command>yelp-pregenerate</command>
+      <group>
+        <arg choice="plain">
+          <option>a</option>
+        </arg>
+        <arg choice="opt">
+          <option>f</option>
+          <replaceable>filename</replaceable>
+        </arg>
+      </group>
+      <arg choice="opt">
+        <option role="nodash">
+          <replaceable>locale</replaceable>
+        </option>
+      </arg>
+    </cmdsynopsis>
+    <para>The following table describes the options and arguments
+for the <command>yelp-pregenerate</command> command:</para>
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="33.33*"/>
+        <colspec colwidth="66.67*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Option or Argument</para>
+            </entry>
+            <entry>
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>
+              <para>
+                <literal>-a</literal>
+              </para>
+            </entry>
+            <entry>
+              <para>Pregenerates
+all XML files that are registered in the <application>ScrollKeeper</application>
+database. This option is the default option.</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <literal>-f</literal>
+              </para>
+            </entry>
+            <entry>
+              <para>Pregenerates
+only the XML files that you specify in the command.</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <literal>filename</literal>
+              </para>
+            </entry>
+            <entry>
+              <para>The name of the XML file or XML files that you want to pregenerate.</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <literal>locale</literal>
+              </para>
+            </entry>
+            <entry>
+              <para>The
+locale for which you want to pregenerate the XML files. The default locale
+is C, or English.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <para>For example, to pregenerate the English version of all XML files in
+the file system, run the following command:</para>
+    <para>
+      <computeroutput>#</computeroutput>
+      <userinput>yelp-pregenerate -a</userinput>
+    </para>
+    <para>You do not need to specify the locale in this example, as the default
+locale is <literal>C</literal>. To pregenerate the Spanish version of the <application>gedit</application> manual, run the following command: </para>
+    <para>
+      <computeroutput>#</computeroutput>
+      <userinput>yelp-pregenerate -f gedit.xml
+es</userinput>
+    </para>
+    <para>When a user opens a Help file, the Help browser does the following: </para>
+    <orderedlist>
+      <listitem>
+        <para>The Help browser searches for the appropriate HTML file. If
+the Help browser finds the HTML file, the Help browser compares the modification
+dates of the HTML file and the corresponding XML file. If the HTML file is
+more recent than the XML file, the HTML file is displayed.</para>
+      </listitem>
+      <listitem>
+        <para>If the HTML file is older than the XML file, the XML file
+is converted to HTML.</para>
+      </listitem>
+      <listitem>
+        <para>If the Help browser does not find a HTML file for a Help document,
+the XML file is converted to HTML.</para>
+      </listitem>
+    </orderedlist>
+    <para>In other words, the Help browser displays pregenerated HTML if the pregenerated
+HTML file is present. If the pregenerated HTML file is not present, the Help
+browser converts the XML file to HTML.</para>
+    <note>
+      <para>You might want to pregenerate the Help for any new applications
+that you want to add to your desktop environment. If there are severe space
+restrictions in your environment, you might choose not to pregenerate the
+Help.</para>
+    </note>
   </sect1>
 </chapter>

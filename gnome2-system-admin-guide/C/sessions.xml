@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <chapter id="sessions-0">
   <title>Session Management</title>
   <highlights>
@@ -7,17 +6,17 @@ how to set session defaults. The chapter also contains information on sessions
 and login scripts.</para>
   </highlights>
   <sect1 id="sessions-1">
-    <title>Introduction</title>
+    <title>Introduction to Sessions</title>
     <indexterm>
       <primary>sessions</primary>
       <secondary>introduction</secondary>
     </indexterm>
-    <para>A GNOME desktop session occurs between the time that a user
-logs in to the GNOME desktop and the time that the user logs out. The session
-manager starts after the <application>Login Manager</application> authenticates
-the user. The session manager enables the user to manage the session. For
-example, a user can save the state of a session and return to that session
-the next time that the user logs in. </para>
+    <para>A session occurs between the time that a user logs in to
+the desktop environment and the time that the user logs out. The session manager
+starts after the <application>Login Manager</application> authenticates the
+user. The session manager enables the user to manage the session. For example,
+a user can save the state of a session and return to that session the next
+time that the user logs in. </para>
     <para>At a minimum, the following applications run in a session:</para>
     <itemizedlist>
       <listitem>
@@ -28,7 +27,7 @@ the next time that the user logs in. </para>
       </listitem>
       <listitem>
         <para>The <application>gnome-panel</application> application, which
-runs the panels on the GNOME desktop.</para>
+runs the panels in the desktop environment.</para>
       </listitem>
       <listitem>
         <para>The <application>Metacity</application> window manager.</para>
@@ -90,25 +89,5 @@ file from the home directory of the user. If no user session file is present,
 the default settings in <filename>/usr/share/gnome/default.session</filename>
 are used. </para>
     <para>To save the current session as the default session, users can run the <command>gnome-session-save</command> command. </para>
-  </sect1>
-  <sect1 id="sessions-2">
-    <title>Login Scripts</title>
-    <indexterm>
-      <primary>sessions</primary>
-      <secondary>login scripts</secondary>
-    </indexterm>
-    <para>The GNOME desktop does not support system-wide login scripts
-or logout scripts. The session manager only allows users to configure user
-sessions. Users can configure non-session-managed startup applications with
-the <application>Sessions</application> preference tool.</para>
-    <tip>
-      <para>You can work around the lack of support for system-wide login scripts.
-To create a system-wide login script, create the script in the <filename>/usr/dt/config/Xsession.d</filename> directory. Name the script as follows:</para>
-      <para>
-        <filename><replaceable>number_greater_than_1000</replaceable>.<replaceable>name</replaceable></filename>
-      </para>
-      <para>For example, name the script <filename>1050.login</filename>. For more
-information on the <filename>/usr/dt/config/Xsession.d</filename> file, see <citetitle>The XSession File</citetitle> in the <citerefentry><refentrytitle>dtlogin</refentrytitle><manvolnum>1</manvolnum></citerefentry> man page.</para>
-    </tip>
   </sect1>
 </chapter>

@@ -1,138 +1,300 @@
-<?xml version="1.0" encoding="utf-8"?>
 <chapter id="themes-0">
   <title>Installing Themes</title>
   <highlights>
-    <para>This chapter describes the types of theme that are available
-in the GNOME desktop, how to install themes, and how to create a custom theme.</para>
+    <para>This chapter describes themes, the theme settings that are
+available in the GNOME Desktop, how to install options for theme settings,
+and how to create a custom option.</para>
   </highlights>
   <sect1 id="themes-1">
-    <title>Introduction</title>
+    <title>Introduction to Themes</title>
     <indexterm>
       <primary>themes</primary>
       <secondary>introduction</secondary>
     </indexterm>
     <para>A theme is a group of coordinated settings that specifies the visual
-appearance of a part of the GNOME desktop. Users can choose themes to change
-the appearance of the desktop. </para>
-    <para>The following types of theme affect different parts of the GNOME desktop:</para>
+appearance of a part of the desktop environment. Users can choose themes to
+change the appearance of the desktop.</para>
+    <para>A theme contains settings that affect different parts of the GNOME desktop,
+as follows:</para>
     <variablelist>
       <varlistentry>
-        <term>Desktop themes</term>
+        <term>Controls</term>
         <listitem>
-          <indexterm>
-            <primary>desktop
-themes</primary>
-            <see>themes</see>
-          </indexterm>
-          <para>Desktop themes determine
-the visual appearance of windows, panels, and applets. Desktop themes also
-determine the visual appearance of the GNOME-compliant interface items that
-appear on windows, panels, and applets, such as menus, icons, and buttons.
-Some of the desktop themes that are available in GNOME are designed for special
-accessibility needs. Users can choose a desktop theme from the <guilabel>Widget Theme</guilabel> tabbed section in the <application>Theme</application>
+          <para><indexterm><primary>themes</primary><secondary>controls options</secondary><tertiary>introduction</tertiary></indexterm><indexterm><primary>GTK+ themes</primary><see>themes, controls options</see></indexterm>The controls setting for a theme determines the visual
+appearance of windows, panels, and applets. The controls setting also determines
+the visual appearance of the GNOME-compliant interface items that appear on
+windows, panels, and applets, such as menus, icons, and buttons. Some of the
+controls setting options that are available are designed for special accessibility
+needs. Users can choose an option for the controls setting from the <guilabel>Controls</guilabel> tabbed section in the <application>Theme</application>
 preference tool.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>Window frame themes</term>
+        <term>Window frame</term>
         <listitem>
           <indexterm>
-            <primary>window frame themes</primary>
-            <see>themes</see>
+            <primary>themes</primary>
+            <secondary>window frame options</secondary>
+            <tertiary>introduction</tertiary>
           </indexterm>
-          <para>Window frame
-themes determine the appearance of the frames around windows only. Users can
-choose a window frame theme from the <guilabel>Window Frames</guilabel> tabbed
-section in the <application>Theme</application> preference tool.</para>
+          <indexterm>
+            <primary>Metacity themes</primary>
+            <see>themes, window frame options</see>
+          </indexterm>
+          <para>The window frame setting
+for a theme determines the appearance of the frames around windows only. Users
+can choose an option for the window frame setting from the <guilabel>Window
+Border</guilabel> tabbed section in the <application>Theme</application> preference
+tool.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Icon</term>
+        <listitem>
+          <indexterm>
+            <primary>themes</primary>
+            <secondary>icons options</secondary>
+            <tertiary>introduction</tertiary>
+          </indexterm>
+          <indexterm>
+            <primary>icon themes</primary>
+            <see>themes, icons options</see>
+          </indexterm>
+          <para>The icon setting for a theme determines the appearance of
+the icons on panels and the desktop background. Users can choose an option
+for the icon setting from the <guilabel>Icons</guilabel> tabbed section in
+the <application>Theme</application> preference tool.</para>
         </listitem>
       </varlistentry>
     </variablelist>
   </sect1>
-  <sect1 id="themes-3">
-    <title>To Install a Desktop Theme</title>
-    <indexterm>
-      <primary>themes</primary>
-      <secondary>desktop theme, installing</secondary>
-    </indexterm>
-    <para>Desktop themes reside in the <filename>/usr/share/themes</filename> directory. The typical structure of a desktop theme in the file
-system is as follows:</para>
-    <informaltable frame="none">
+  <sect1 id="themes-17">
+    <title>Theme Index File</title>
+    <para>Each theme has an index file which defines the characteristics of the
+theme. The name of the index file is <filename>/usr/share/theme/<replaceable>theme-name</replaceable>/index.theme</filename>. </para>
+    <para>The following is a sample theme index file:</para>
+    <literallayout>[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=High Contrast Large
+Name[es]=Alto contraste grande
+Comment=Large black-on-white text and icons
+Comment[es]=Textos e iconos grandes en negro sobre blanco
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=HighContrastLargePrint
+IconTheme=HighContrast
+MetacityTheme=Atlanta
+ApplicationFont=sans 18
+</literallayout>
+    <para>The following table describes the keys in theme index files:</para>
+    <table frame="topbot" id="themes-TBL-18">
+      <title>Keys in Theme Index Files</title>
       <tgroup cols="2" colsep="0" rowsep="0">
-        <colspec colwidth="19.19*"/>
-        <colspec colwidth="80.81*"/>
+        <colspec colname="colspec0" colwidth="45.25*"/>
+        <colspec colname="colspec1" colwidth="54.75*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Index File Key</para>
+            </entry>
+            <entry>
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
         <tbody>
           <row>
-            <entry valign="top">
-              <para>Theme file</para>
-            </entry>
-            <entry valign="top">
+            <entry colname="colspec0">
               <para>
-                <filename>/usr/share/themes/<replaceable>theme_name</replaceable>/gtk-2.0/gtkrc</filename>
+                <literal>Type</literal>
               </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Specifies that this theme determines the appearance
+of several theme options, such as controls, window frames, and icons.</para>
             </entry>
           </row>
           <row>
-            <entry valign="top">
-              <para>Image files</para>
-            </entry>
-            <entry valign="top">
+            <entry colname="colspec0">
               <para>
-                <filename>/usr/share/themes/<replaceable>theme_name</replaceable>/pixmaps/*.*</filename>
+                <literal>Name</literal>
               </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>The name of the theme. This is the name of
+the theme that is displayed in the <application>Theme</application> preference
+tool.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <literal>Comment</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>A brief description of the theme. This is
+the text that is displayed under the name of the theme in the <application>Theme</application> preference tool.</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <literal>GtkTheme</literal>
+              </para>
+            </entry>
+            <entry>
+              <para>Corresponds to the controls setting in the <application>Theme</application>
+preference tool. Specifies which controls setting option to apply to windows,
+panels, and applets.</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <literal>IconTheme</literal>
+              </para>
+            </entry>
+            <entry>
+              <para>Corresponds to the icons setting in the <application>Theme</application> preference
+tool. Specifies which icons setting option to apply to panels and the desktop
+background.</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <literal>MetacityTheme</literal>
+              </para>
+            </entry>
+            <entry>
+              <para>Corresponds to the window frame setting in the <application>Theme</application>
+preference tool. Specifies which window frame setting option to apply to windows.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <literal>ApplicationFont</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Corresponds to the application font setting
+in the <application>Font</application> preference tool.</para>
             </entry>
           </row>
         </tbody>
       </tgroup>
-    </informaltable>
-    <para>Typically, a new desktop theme is supplied as a <filename>.tar.gz</filename>
-file. To install the new desktop theme, unzip the <filename>.tar.gz</filename>
-file, then untar the <filename>.tar</filename> file into the <filename>/usr/share/themes</filename> directory.</para>
-    <para>If a user adds a desktop theme, the theme is stored in the <filename>$HOME/.themes</filename> directory.</para>
-    <para>Users can install their own desktop themes. If a user installs a desktop
-theme, the theme is stored in the <filename>$HOME/.themes</filename> directory.</para>
+    </table>
+  </sect1>
+  <sect1 id="themes-3">
+    <title>To Install a New Controls Option</title>
+    <indexterm>
+      <primary>themes</primary>
+      <secondary>controls options</secondary>
+      <tertiary>installing</tertiary>
+    </indexterm>
+    <para>You can add a new option
+for the controls setting in the <application>Theme</application> preference
+tool. Controls options reside in the <filename>/usr/share/themes</filename>
+directory. The typical structure of a controls option in the file system is
+as follows:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Option file</term>
+        <listitem>
+          <para>
+            <filename>/usr/share/themes/<replaceable>option-name</replaceable>/gtk-2.0/gtkrc</filename>
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Image files</term>
+        <listitem>
+          <para>
+            <filename>/usr/share/themes/<replaceable>option-name</replaceable>/pixmaps/*.*</filename>
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para>Typically, a new option for the controls setting is supplied
+as a <filename>.tar.gz</filename> file. To install the new controls option,
+unzip the <filename>.tar.gz</filename> file, then untar the <filename>.tar</filename> file into the <filename>/usr/share/themes</filename> directory.</para>
+    <para>Users can install their own options for the controls setting. If a user
+installs an option for the controls setting, the option is stored in the <filename>$HOME/.themes</filename> directory.</para>
   </sect1>
   <sect1 id="themes-5">
-    <title>To Install a Window Frame Theme</title>
+    <title>To Install a New Window Frame Option</title>
     <indexterm>
       <primary>themes</primary>
-      <secondary>window frame theme, installing</secondary>
+      <secondary>window frame options</secondary>
+      <tertiary>installing</tertiary>
     </indexterm>
-    <para>Window frame themes reside in the <filename>/usr/share/themes/<replaceable>theme_name</replaceable>/metacity-1</filename>
-directory. The typical structure of a window frame theme in the file system
-is as follows:</para>
-    <informaltable frame="none">
-      <tgroup cols="2" colsep="0" rowsep="0">
-        <colspec colwidth="19.19*"/>
-        <colspec colwidth="80.81*"/>
-        <tbody>
-          <row>
-            <entry valign="top">
-              <para>Theme file</para>
-            </entry>
-            <entry valign="top">
-              <para>
-                <filename>/usr/share/themes/<replaceable>theme_name</replaceable>/metacity-1/metacity-theme-1.xml</filename>
-              </para>
-            </entry>
-          </row>
-          <row>
-            <entry valign="top">
-              <para>Image files</para>
-            </entry>
-            <entry valign="top">
-              <para>
-                <filename>/usr/share/themes/<replaceable>theme_name</replaceable>/metacity-1/*.*</filename>
-              </para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </informaltable>
-    <para>Typically, a new window frame theme is supplied as a <filename>.tar.gz</filename> file. To install the new window frame theme, unzip the <filename>.tar.gz</filename> file, then untar the <filename>.tar</filename> file into
-the <filename>/usr/share/themes</filename> directory.</para>
-    <para>Users can install their own window frame themes. If a user installs
-a window frame theme, the theme is stored in the <filename>$HOME/.themes</filename>
-directory.</para>
+    <para>You can add a new option
+for the window frame setting in the <application>Theme</application> preference
+tool. Window frame options reside in the <filename>/usr/share/themes/<replaceable>option-name</replaceable>/metacity-1</filename> directory. The typical structure
+of a window frame option in the file system is as follows:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Option file</term>
+        <listitem>
+          <para>
+            <filename>/usr/share/themes/<replaceable>option-name</replaceable>/metacity-1/metacity-theme-1.xml</filename>
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Image files</term>
+        <listitem>
+          <para>
+            <filename>/usr/share/themes/<replaceable>option-name</replaceable>/metacity-1/*.*</filename>
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para>Typically, a new option for the window frame setting
+is supplied as a <filename>.tar.gz</filename> file. To install the new window
+frame option, unzip the <filename>.tar.gz</filename> file, then untar the <filename>.tar</filename> file into the <filename>/usr/share/themes</filename> directory.</para>
+    <para>Users can install their own options for the window frame setting. If
+a user installs an option for the window frame setting, the option is stored
+in the <filename>$HOME/.themes</filename> directory.</para>
+  </sect1>
+  <sect1 id="themes-16">
+    <title>To Install a New Icons Option</title>
+    <indexterm>
+      <primary>themes</primary>
+      <secondary>icons options</secondary>
+      <tertiary>installing</tertiary>
+    </indexterm>
+    <para>You can add a new option for the icons
+setting in the <application>Theme</application> preference tool. Icons options
+reside in the <filename>/usr/share/icons/<replaceable>option-name</replaceable></filename>
+directory. The typical structure of an icons option in the file system is
+as follows:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Option file</term>
+        <listitem>
+          <para>
+            <filename>/usr/share/icons/<replaceable>option-name</replaceable></filename>
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Image files</term>
+        <listitem>
+          <para>
+            <filename>/usr/share/icons/<replaceable>option-name</replaceable>/icons/*.*</filename>
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para>Typically, a new option for the icons setting
+is supplied as a <filename>.tar.gz</filename> file. To install the new icons
+option, unzip the <filename>.tar.gz</filename> file, then untar the <filename>.tar</filename> file into the <filename>/usr/share/icons</filename> directory.</para>
+    <para>Users can install their own options for the icons setting. If a user
+installs an option for the icons setting, the option is stored in the <filename>$HOME/.icons/<replaceable>option-name</replaceable></filename> directory.</para>
   </sect1>
   <sect1 id="themes-11">
     <title>Installing Icons for Themes</title>
@@ -140,16 +302,28 @@ directory.</para>
       <primary>themes</primary>
       <secondary>installing icons</secondary>
     </indexterm>
-    <para>The GNOME desktop provides several themes that are designed
-for users with special visual needs. For example, some of the themes are designed
-for users with low vision. The themes contain several versions of each icon
-so that the icon can be displayed in each theme.</para>
+    <para>The desktop environment provides several themes that are
+designed for users with special visual needs. For example, some of the themes
+are designed for users with low vision. Several versions of icons might be
+required so that the icon can be displayed properly in each theme.</para>
     <para>You might need to install a new icon for an application. When you install
 a new icon, you must create several versions of the icon, so that the icon
-displays correctly in the themes. You can create the icons in several formats,
-for example Portable Network Graphic (PNG) format. The suggested size of icons
-for the GNOME desktop is 48 pixels by 48 pixels. At this size, most themes
-can rescale the icons.</para>
+displays correctly in the themes. You must create several versions of the
+following types of icon:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Icons that are used within applications in the desktop environment.</para>
+      </listitem>
+      <listitem>
+        <para>Icons that are used internally by GTK+ applications, or GTK+
+stock icons.</para>
+      </listitem>
+    </itemizedlist>
+    <para>When you install a new icon, you must create several versions of the
+icon, so that the icon displays correctly in the themes. You can create the
+icons in several formats, for example Portable Network Graphic (PNG) format.
+The suggested size of icons for the desktop environment is 48 pixels by 48
+pixels. At this size, most themes can rescale the icons.</para>
     <para>When you install a new icon, create the following 48 &times; 48 pixel
 versions of the icon:</para>
     <itemizedlist>
@@ -174,32 +348,24 @@ to add icons to the HighContrast theme, add the icons to the <filename>/usr/shar
 For example, to add icons to the HighContrast theme, add references to the
 icons to the <filename>/usr/share/themes/HighContrast/gtk-2.0/gtkrc</filename>
 file. </para>
-    <para>The instructions above apply only to the following types of icon:</para>
-    <itemizedlist>
-      <listitem>
-        <para>Icons that are used within applications in the GNOME desktop.</para>
-      </listitem>
-      <listitem>
-        <para>Icons that are used internally by GTK+ applications, or GTK+
-stock icons.</para>
-      </listitem>
-    </itemizedlist>
     <para>For more information on how to create icons for application launchers
 and for panels, see <ulink url="http://www.freedesktop.org/standards/icon-theme-spec.html">http://www.freedesktop.org/standards/icon-theme-spec.html</ulink>.</para>
   </sect1>
   <sect1 id="themes-15">
-    <title>To Create a Custom Desktop Theme</title>
+    <title>To Create a Custom Controls Option</title>
     <indexterm>
       <primary>themes</primary>
-      <secondary>creating custom desktop</secondary>
+      <secondary>controls options</secondary>
+      <tertiary>creating custom</tertiary>
     </indexterm>
-    <para>If the desktop themes that the GNOME desktop provides are
-not suitable for the needs of your users, you can create a custom desktop
-theme. To create a custom desktop theme, perform the following steps:</para>
+    <para>If the options for the
+controls setting are not suitable for the needs of your users, you can create
+a custom controls option. To create a custom controls option, perform the
+following steps:</para>
     <orderedlist>
       <listitem>
-        <para>Create a directory structure for the theme in the <filename>/usr/share/themes</filename> directory. Use the same directory structure that
-other themes use. For example, to create a theme that is called SmallPrint,
+        <para>Create a directory structure for the option in the <filename>/usr/share/themes</filename> directory. Use the same directory structure that
+other options use. For example, to create an option that is called SmallPrint,
 create the following directories:</para>
         <itemizedlist>
           <listitem>
@@ -215,22 +381,22 @@ create the following directories:</para>
         </itemizedlist>
       </listitem>
       <listitem>
-        <para>Locate the <filename>gtkrc</filename> theme file that is closest
-to meeting the needs of your users. Copy the file to the <filename>gtk-2.0</filename> directory of your new theme.</para>
+        <para>Locate the <filename>gtkrc</filename> file that is closest
+to meeting the needs of your users. Copy the file to the <filename>gtk-2.0</filename> directory of your new option.</para>
       </listitem>
       <listitem>
         <para>Open the <filename>gtkrc</filename> file in a text editor,
  and modify the attributes of the interface elements as required. </para>
       </listitem>
       <listitem>
-        <para>If the new theme includes images, install the images for the
-new theme in the <filename>pixmaps</filename> directory of your new theme.
-If the new theme uses images from another theme, you do not need to create
-copies of the images for the new theme. Instead, ensure that the reference
+        <para>If the new option includes images, install the images for
+the new option in the <filename>pixmaps</filename> directory of your new option.
+If the new option uses images from another option, you do not need to create
+copies of the images for the new option. Instead, ensure that the reference
 to the images in the <literal>pixmap_path</literal> entry in the <filename>gtkrc</filename> file is correct.</para>
       </listitem>
     </orderedlist>
-    <para>Users can now choose the new theme.</para>
+    <para>Users can now choose the new option for the controls setting.</para>
     <para>For more information on <filename>gtkrc</filename> files, see <ulink url="http://developer.gnome.org/doc/API/2.0/gtk/index.html">http://developer.gnome.org/doc/API/2.0/gtk/index.html</ulink>.</para>
   </sect1>
 </chapter>
