@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosmetacity-1">
+  <title>Arbeiten mit Fenstern</title>
+  <highlights>
+    <para>In diesem Kapitel erhalten Sie Informationen zur Verwendung der Fenster auf dem Desktop. Sie k&ouml;nnen verschiedene Arten von Fenster-Managern wie zum Beispiel <application>Metacity</application> und <application> Sawfish</application> auf dem GNOME-Desktop verwenden. Viele der Funktionen in <application>Metacity</application> stehen auch in <application>Sawfish</application> zur Verf&uuml;gung. Dieses Kapitel bezieht sich auf die Funktionen des <application>Metacity</application>-Fenster-Managers.</para>
+  </highlights>
+  <sect1 id="gosmetacity-712">
+    <title>Fenster und Arbeitsfl&auml;chen</title>
+    <indexterm>
+      <primary>Fenster</primary>
+      <secondary>Einf&uuml;hrung</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>Arbeitsfl&auml;chen</primary>
+      <secondary>Einf&uuml;hrung</secondary>
+    </indexterm>
+    <para>Sie k&ouml;nnen viele Fenster gleichzeitig auf dem Desktop anzeigen. Sie erscheinen in Unterbereichen des Desktops, die als Arbeitsfl&auml;chen bezeichnet werden. Eine Arbeitsfl&auml;che ist ein abgegrenzter Arbeitsbereich. Alle Arbeitsfl&auml;chen auf dem Desktop enthalten denselben Desktop-Hintergrund, dieselben Panels und dieselben Men&uuml;s. Sie k&ouml;nnen jedoch auf jeder Arbeitsfl&auml;che verschiedene Anwendungen ausf&uuml;hren und verschiedene Fenster &ouml;ffnen. Es kann zwar nur eine Arbeitsfl&auml;che auf dem Desktop angezeigt werden, doch Sie k&ouml;nnen Fenster auf anderen Arbeitsfl&auml;chen ge&ouml;ffnet haben. </para>
+    <para>Das Applet <application>Arbeitsfl&auml;chen-Umschalter</application> zeigt eine visuelle Darstellung der Fenster und Arbeitsfl&auml;chen an (siehe <xref linkend="gosmetacity-FIG-717"/>). </para>
+    <figure id="gosmetacity-FIG-717">
+      <title>Das Applet &quot;Arbeitsfl&auml;chen-Umschalter&quot;</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Applet &quot;Arbeitsfl�chen-Umschalter&quot;. Die Grafik ist selbsterkl�rend.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>Dem Desktop k&ouml;nnen jederzeit Arbeitsfl&auml;chen hinzuf&uuml;gt werden. Dazu klicken Sie mit der rechten Maustaste auf das Applet <application>Arbeitsfl&auml;chen-Umschalter</application> und w&auml;hlen dann <guimenuitem>Einstellungen</guimenuitem>. Es erscheint das Dialogfeld <guilabel>Einstellungen des Arbeitsfl&auml;chen-Umschalters</guilabel>. Verwenden Sie das Drehfeld <guilabel>Anzahl der Arbeitsfl&auml;chen</guilabel>, um die Anzahl der gew&uuml;nschten Arbeitsfl&auml;chen anzugeben.</para>
+    <sect2 id="gosmetacity-15">
+      <title>Verhalten des Fenster-Managers</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Fenster-Manager</secondary>
+      </indexterm>
+      <para>Ein Fenster-Manager steuert das Erscheinungsbild und Verhalten von Fenstern. Er verwaltet die Position der Fenster, bestimmt, welches Fenster aktiv ist, und legt das Thema f&uuml;r den Rahmen der Fenster fest. Der Fensterrahmen enth&auml;lt Schaltfl&auml;chen, mit denen Sie Standardaktionen wie das Verschieben, Schlie&szlig;en und &Auml;ndern der Gr&ouml;&szlig;e von Fenstern ausf&uuml;hren k&ouml;nnen.</para>
+      <para>Einige Fenster-Manager-Einstellungen k&ouml;nnen Sie im Einstellungstool <application>Fenster-Fokus</application> festlegen. In diesem Handbuch werden die mit der Standardkonfiguration des <application>Metacity</application>-Fenster-Managers verbundenen Funktionen beschrieben. Die Standardkonfiguration wird im Einstellungstool <application>Fensterfokus</application> festgelegt. Des Weiteren werden in diesem Handbuch die Standardfunktionen des Themas &quot;Crux&quot; beschrieben.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-713">
+    <title>Fensterarten</title>
+    <indexterm>
+      <primary>Fenster</primary>
+      <secondary>Arten von</secondary>
+    </indexterm>
+    <para>Es gibt folgende Arten von Fenstern auf dem Desktop: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Anwendungsfenster </para>
+        <para>Wenn Sie eine Anwendung starten, wird ein Anwendungsfenster ge&ouml;ffnet. Der Fenster-Manager weist demAnwendungsfenster einen Rahmen zu. Am oberen Rand des Anwendungsfensters befindet sich standardm&auml;&szlig;ig eine Titelleiste. Sie enth&auml;lt Schaltfl&auml;chen f&uuml;r die Handhabung des Fensters. Mit den Schaltfl&auml;chen im Rahmen des Anwendungsfensters k&ouml;nnen Sie Aktionen wie das &Ouml;ffnen des <guimenu>Fenstermen&uuml;s</guimenu> oder das Schlie&szlig;en des Fensters ausf&uuml;hren. Das <guimenu>Fenstermen&uuml;</guimenu> enth&auml;lt eine Reihe von Funktionen, die Sie am Fenster ausf&uuml;hren k&ouml;nnen. </para>
+      </listitem>
+      <listitem>
+        <para>Dialogfenster</para>
+        <para>Ein Dialogfenster ist ein eingeblendetes Fenster, in dem Sie Informationen oder Befehle eingeben k&ouml;nnen. Es erscheint in einem Fensterrahmen. </para>
+        <para>Am oberen Rand des Rahmens befinden sich die Komponenten f&uuml;r die Arbeit mit dem Fenster. Mithilfe der Titelleiste k&ouml;nnen Sie beispielsweise das Dialogfeld verschieben. Der Rahmen enth&auml;lt au&szlig;erdem Schaltfl&auml;chen f&uuml;r folgende Aufgaben:</para>
+        <itemizedlist>
+          <listitem>
+            <para>&Ouml;ffnen des <guimenu>Fenstermen&uuml;s</guimenu></para>
+          </listitem>
+          <listitem>
+            <para>Schlie&szlig;en des Dialogfensters</para>
+          </listitem>
+        </itemizedlist>
+        <para>In der Regel &ouml;ffnen Sie ein Dialogfenster aus einem Anwendungsfenster heraus. Beim &Ouml;ffnen wird das Dialogfeld meist als aktives Fenster vor allen anderen Fenstern platziert. Einige Dialogfenster gestatten die weitere Arbeit in der Anwendung erst wieder, nachdem sie geschlossen wurden. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosmetacity-16">
+      <title>Fensterrahmen</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Rahmen</secondary>
+      </indexterm>
+      <para>Der Fensterrahmen bildet den Rand des Fensters. Er enth&auml;lt eine Titelleiste. Die Titelleiste enth&auml;lt Schaltfl&auml;chen f&uuml;r die Arbeit mit dem Fenster.</para>
+      <sect3 id="gosmetacity-10">
+        <title>Themen</title>
+        <indexterm>
+          <primary>Fenster</primary>
+          <secondary>Themen</secondary>
+        </indexterm>
+        <para>Sie k&ouml;nnen den Fensterrahmen verschiedene Themen zuweisen. Das Thema bestimmt das Aussehen des Rahmens. Zum Festlegen eines Themas f&uuml;r alle Fensterrahmen w&auml;hlen Sie <menuchoice><guimenu>Anwendungen</guimenu><guisubmenu>Desktop-Einstellungen</guisubmenu><guimenuitem>Thema</guimenuitem></menuchoice>. </para>
+        <para>Das Standardthema hei&szlig;t Crux. Dieses Handbuch nimmt Bezug auf die mit dem Crux-Thema verbundenen Funktionen. </para>
+      </sect3>
+      <sect3 id="gosmetacity-17">
+        <title>Steuerelemente</title>
+        <indexterm>
+          <primary>Fenster</primary>
+          <secondary>Rahmensteuerelemente</secondary>
+        </indexterm>
+        <para>Mit dem Fensterrahmen k&ouml;nnen Sie verschiedene Funktionen am Fenster ausf&uuml;hren. Speziell die Titelleiste enth&auml;lt verschiedene Schaltfl&auml;chen. Die folgende Abbildung zeigt die Titelleiste eines Anwendungsfensters. </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Titelleiste eines Fensters. Grafiktext: Fenstermen�-Schaltfl�che, Titelleiste, Auf Symbolgr��e verkleinern, Maximieren, Schaltfl�che &quot;Fenster schlie�en&quot;.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Auch Dialogfenster enthalten einige Fensterrahmen-Steuerelemente. <xref linkend="gosmetacity-TBL-1"/> beschreibt die aktiven Steuerelemente in den Fensterrahmen (v.l.n.r.).</para>
+        <table frame="topbot" id="gosmetacity-TBL-1">
+          <title>Fensterrahmen-Steuerelemente</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="41.65*"/>
+            <colspec colname="colspec1" colwidth="58.35*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>Steuerelement</para>
+                </entry>
+                <entry valign="top">
+                  <para>Beschreibung </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Schaltfl&auml;che <guibutton>Fenstermen&uuml;</guibutton></para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Klicken Sie auf die Schaltfl&auml;che, um das <guimenu>Fenstermen&uuml;</guimenu> zu &ouml;ffnen. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Titelleiste</para>
+                </entry>
+                <entry valign="top">
+                  <para>Mit der Titelleiste k&ouml;nnen Sie folgende Schritte ausf&uuml;hren: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Um ein Fenster als aktives Fenster auszuw&auml;hlen, klicken Sie auf die Titelleiste.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Um das Fenster zu verschieben, greifen Sie die Titelleiste mit der Maus und ziehen das Fenster an die neue Position. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Um das Fenster zu schattieren, doppelklicken Sie auf die Titelleiste. Um die Schattierung des Fensters aufzuheben, doppelklicken Sie erneut auf das Fenster.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Schaltfl&auml;che <guibutton>Auf Symbolgr&ouml;&szlig;e verkleinern</guibutton></para>
+                </entry>
+                <entry valign="top">
+                  <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Auf Symbolgr&ouml;&szlig;e verkleinern</guibutton>, um das Fenster auf Symbolgr&ouml;&szlig;e zu verkleinern. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Schaltfl&auml;che <guibutton>Maximieren</guibutton></para>
+                </entry>
+                <entry valign="top">
+                  <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Maximieren</guibutton>, um das Fenster zu maximieren. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>Schaltfl&auml;che <guibutton>Fenster schlie&szlig;en</guibutton></para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Fenster schie&szlig;en</guibutton>, um das Fenster zu schlie&szlig;en. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Rand</para>
+                </entry>
+                <entry valign="top">
+                  <para>Der Rand um das Fenster. Mit dem Rand k&ouml;nnen Sie die folgenden Schritte ausf&uuml;hren: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Um die Fenstergr&ouml;&szlig;e zu &auml;ndern, greifen Sie den Rand mit der Maus und ziehen ihn auf die neue Gr&ouml;&szlig;e. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Zum &Ouml;ffnen des <guimenu>Fenstermen&uuml;s</guimenu> klicken Sie mit der rechten Maustaste auf den Rand.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Fensterinhalt</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Der Bereich innerhalb des Fensterrahmens. Mit dem Fensterinhalt k&ouml;nnen Sie die folgenden Schritte ausf&uuml;hren:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Zum Verschieben eines Fensters halten Sie die Taste <keycap>Alt</keycap> gedr&uuml;ckt, klicken auf den Fensterinhalt und ziehen das Fenster dann an die neue Position.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Wenn Sie die Gr&ouml;&szlig;e eines Fensters &auml;ndern m&ouml;chten, halten Sie die Taste <keycap>Alt</keycap> gedr&uuml;ckt und klicken dann mit der mittleren Maustaste in die N&auml;he der entsprechenden Ecke. Ziehen Sie die Ecke dann in die gew&uuml;nschte Richtung.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Zum &Ouml;ffnen des <guimenu>Fenstermen&uuml;s</guimenu> halten Sie die Taste <keycap>Alt</keycap> gedr&uuml;ckt und klicken dann mit der rechten Maustaste auf den Fensterinhalt.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-714">
+    <title>Men&uuml;s und Applets f&uuml;r die Arbeit mit Fenstern und Arbeitsfl&auml;chen</title>
+    <indexterm>
+      <primary>Fenster</primary>
+      <secondary>Applets und Men&uuml;s f&uuml;r die Arbeit mit</secondary>
+    </indexterm>
+    <para>In diesem Abschnitt werden die Men&uuml;s und Applets beschrieben, die Sie f&uuml;r die Arbeit mit den Fenstern und Arbeitsfl&auml;chen verwenden k&ouml;nnen.</para>
+    <sect2 id="gosmetacity-24">
+      <title>Fenstermen&uuml;</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/window_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Fenstermen�. Men�punkte: Auf Symbolgr��e verkleinern, Maximieren, Schattieren, Verschieben, Gr��e �ndern, Schlie�en, Auf allen Arbeitsfl�chen platzieren, Auf Arbeitsfl�chen Name verschieben.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Fenstermen&uuml;</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Men&uuml;s</primary>
+        <secondary>Fenstermen&uuml;</secondary>
+      </indexterm>
+      <para>Das <guimenu>Fenstermen&uuml;</guimenu> enth&auml;lt Befehle, mit denen Sie Funktionen f&uuml;r die Fenster ausf&uuml;hren k&ouml;nnen. Zum &Ouml;ffnen des <guimenu>Fenstermen&uuml;s</guimenu> f&uuml;hren Sie einen der folgenden Schritte aus:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Fenstermen&uuml;</guibutton> des Fensters, mit dem Sie arbeiten m&ouml;chten.</para>
+        </listitem>
+        <listitem>
+          <para>Dr&uuml;cken Sie <keycombo><keycap>Alt</keycap><keycap>Leertaste</keycap></keycombo>.</para>
+        </listitem>
+        <listitem>
+          <para>Halten Sie die Taste <keycap>Alt</keycap> gedr&uuml;ckt, und klicken Sie dann mit der rechten Maustaste auf eine beliebige Stelle des Fensters, mit dem Sie arbeiten m&ouml;chten. </para>
+        </listitem>
+      </itemizedlist>
+      <para><xref linkend="gosmetacity-TBL-25"/> beschreibt die Befehle und Untermen&uuml;s des <guimenu>Fenstermen&uuml;s</guimenu>.</para>
+      <table frame="topbot" id="gosmetacity-TBL-25">
+        <title>Befehle und Untermen&uuml;s des Fenstermen&uuml;s</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="32.34*"/>
+          <colspec colname="colspec3" colwidth="67.66*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Men&uuml;punkt</para>
+              </entry>
+              <entry valign="top">
+                <para>Funktion </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Auf Symbolgr&ouml;&szlig;e verkleinern</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Reduziert das Fenster auf Symbolgr&ouml;&szlig;e.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>Maximieren</guimenuitem> oder <guimenuitem>Wiederherstellen</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>Maximiert das Fenster. Wenn das Fenster bereits maximiert ist, w&auml;hlen Sie <guimenuitem>Wiederherstellen</guimenuitem>, um zur vorherigen Gr&ouml;&szlig;e des Fensters zur&uuml;ckzukehren. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>Schattieren</guimenuitem> oder <guimenuitem>Schattierung aufheben</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>Schattiert das Fenster. Wenn das Fenster bereits schattiert ist, w&auml;hlen Sie <guimenuitem>Schattierung aufheben</guimenuitem>, um zur vorherigen Gr&ouml;&szlig;e des Fensters zur&uuml;ckzukehren. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Verschieben</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Erm&ouml;glicht das Verwenden der Pfeiltasten zum Verschieben des Fensters.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Gr&ouml;&szlig;e &auml;ndern</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Erm&ouml;glicht das Verwenden der Pfeiltasten, um die Gr&ouml;&szlig;e des Fensters zu &auml;ndern.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Schlie&szlig;en</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Schlie&szlig;t das Fenster.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>Auf allen Arbeitsfl&auml;chen platzieren</guimenuitem> oder <guimenuitem>Nur auf dieser Arbeitsfl&auml;che</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Platziert das Fenster auf allen Arbeitsfl&auml;chen. Wenn sich das Fenster bereits auf allen Arbeitsfl&auml;chen befindet, w&auml;hlen Sie <guimenuitem>Nur auf dieser Arbeitsfl&auml;che</guimenuitem>, um das Fenster ausschlie&szlig;lich auf der aktuellen Arbeitsfl&auml;che zu platzieren. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>Auf <replaceable>Arbeitsfl&auml;chenname</replaceable> verschieben</guimenuitem> oder <guimenuitem>Nur auf <replaceable>Arbeitsfl&auml;chenname</replaceable></guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Verschiebt das Fenster auf die gew&auml;hlte Arbeitsfl&auml;che. Wenn sich das Fenster auf allen Arbeitsfl&auml;chen befindet, w&auml;hlen Sie <guimenuitem>Nur auf <replaceable>Arbeitsfl&auml;chenname</replaceable></guimenuitem>, um das Fenster auf der gew&uuml;nschten Arbeitsfl&auml;che zu platzieren. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosmetacity-18">
+      <title>Applet &quot;Fensterliste&quot;</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Fensterliste (Applet)</secondary>
+        <see>Fensterliste (Applet)</see>
+      </indexterm>
+      <indexterm>
+        <primary>Fensterliste (Applet) </primary>
+        <secondary>Einf&uuml;hrung</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Fensterlisten</primary>
+        <secondary>Fensterliste (Applet)</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Applets</primary>
+        <secondary>Fensterliste</secondary>
+      </indexterm>
+      <para>Die <application>Fensterliste</application> enth&auml;lt eine Schaltfl&auml;che f&uuml;r jedes ge&ouml;ffnete Fenster. Mit der <application>Fensterliste</application> k&ouml;nnen Sie:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Ein Fenster auf Symbolgr&ouml;&szlig;e reduzieren</para>
+          <para>Klicken Sie auf die Schaltfl&auml;che f&uuml;r das Fenster.</para>
+        </listitem>
+        <listitem>
+          <para>Ein reduziertes Fenster wiederherstellen</para>
+          <para>Klicken Sie auf die Schaltfl&auml;che f&uuml;r das Fenster.</para>
+        </listitem>
+        <listitem>
+          <para>Ein Fenster als aktives Fenster ausw&auml;hlen</para>
+          <para>Klicken Sie auf die Schaltfl&auml;che f&uuml;r das Fenster.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Wenn Sie ein Fenster &ouml;ffnen, zeigt die <application>Fensterliste</application> eine Schaltfl&auml;che f&uuml;r das Fenster an. Die Fensterlistenschaltfl&auml;chen zeigen, welche Fenster ge&ouml;ffnet sind. Die ge&ouml;ffneten Fenster k&ouml;nnen Sie auch anzeigen, wenn einige Fenster auf Symbolgr&ouml;&szlig;e reduziert sind oder andere Fenster ein Fenster &uuml;berlappen. Die <application>Fensterliste</application> kann Schaltfl&auml;chen f&uuml;r die Fenster der aktuellen Arbeitsfl&auml;che oder aller Arbeitsfl&auml;chen anzeigen. Zum Ausw&auml;hlen dieser Option m&uuml;ssen Sie die Einstellungen der <application>Fensterliste</application> &auml;ndern.</para>
+      <para>Sie k&ouml;nnen auch mit der rechten Maustaste auf eine Fensterlistenschaltfl&auml;che klicken, um das <guimenu>Fenstermen&uuml;</guimenu> f&uuml;r das Fenster zu &ouml;ffnen, das diese Schaltfl&auml;che repr&auml;sentiert. Wenn Sie das <guimenu>Fenstermen&uuml;</guimenu> &uuml;ber die <application>Fensterliste</application> &ouml;ffnen, enth&auml;lt das <guimenu>Fenstermen&uuml;</guimenu> keine Arbeitsfl&auml;chenbefehle. Weitere Informationen zum <guimenu>Fenstermen&uuml;</guimenu> finden Sie im Abschnitt <xref linkend="gosmetacity-24"/>.</para>
+      <para><xref linkend="gosmetacity-FIG-8"/> zeigt die <application>Fensterliste</application>, wenn die folgenden Fenster ge&ouml;ffnet sind:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <application>gedit</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>W&ouml;rterbuch</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GHex</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GNOME-Terminal</application>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <figure id="gosmetacity-FIG-8">
+        <title>Applet &quot;Fensterliste&quot;</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Applet &quot;Fensterliste&quot;. Die Grafik ist selbsterkl�rend.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Die Schaltfl&auml;chen im Applet zeigen den Status der Fenster. <xref linkend="gosmetacity-TBL-3"/> erl&auml;utert die Informationen, die die Fensterlistenschaltfl&auml;chen &uuml;ber das Fenster liefern. Die Beispiele in <xref linkend="gosmetacity-TBL-3"/> beziehen sich auf die <xref linkend="gosmetacity-FIG-8"/>. </para>
+      <indexterm>
+        <primary>Fensterliste (Applet)</primary>
+        <secondary>Fensterstatusinformationen </secondary>
+      </indexterm>
+      <table frame="topbot" id="gosmetacity-TBL-3">
+        <title>Fensterstatusinformation auf Fensterlistenschaltfl&auml;chen</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33*"/>
+          <colspec colname="colspec1" colwidth="33*"/>
+          <colspec colname="colspec2" colwidth="33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Status</para>
+              </entry>
+              <entry valign="top">
+                <para>Bedeutung</para>
+              </entry>
+              <entry valign="top">
+                <para>Beispiel </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Schaltfl&auml;che ist hineingedr&uuml;ckt.</para>
+              </entry>
+              <entry valign="top">
+                <para>Dieses Fenster ist das aktive Fenster.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel> gedit</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Fenstertitel steht in eckigen Klammern.</para>
+              </entry>
+              <entry valign="top">
+                <para>Das Fenster ist auf Symbolgr&ouml;&szlig;e reduziert.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>[W&ouml;rterbuch]</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Schaltfl&auml;che ist nicht hineingedr&uuml;ckt, Titel steht nicht in eckigen Klammern.</para>
+              </entry>
+              <entry valign="top">
+                <para>Das Fenster wird angezeigt und nicht auf Symbolgr&ouml;&szlig;e verkleinert.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>ghex </guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Zahl auf Schaltfl&auml;che, in Klammern. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Die Schaltfl&auml;che repr&auml;sentiert eine Gruppe von Schaltfl&auml;chen. </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guilabel>Gnome-terminal (3)</guilabel>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="gosmetacity-708">
+        <title>Gruppieren von Schaltfl&auml;chen</title>
+        <indexterm>
+          <primary>Fensterliste (Applet)</primary>
+          <secondary>Gruppieren von Schaltfl&auml;chen</secondary>
+        </indexterm>
+        <para>Die <application>Fensterliste</application> kann Schaltfl&auml;chen, die Fenster derselben Klasse repr&auml;sentieren, unter einer Fensterlistenschaltfl&auml;che gruppieren. Die Schaltfl&auml;che <guibutton>Gnome-terminal</guibutton> in <xref linkend="gosmetacity-FIG-8"/> ist ein Beispiel f&uuml;r eine Schaltfl&auml;che, die eine Gruppe von Schaltfl&auml;chen repr&auml;sentiert. Die folgende Abbildung zeigt ein Beispiel f&uuml;r eine <application>Fensterliste</application> mit ge&ouml;ffneter Schaltfl&auml;chengruppe:</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Applet &quot;Fensterliste&quot; mit ge�ffneter Schaltfl�chengruppe.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Um eine Liste der Fenster in einer Gruppe zu &ouml;ffnen, klicken Sie auf die Fensterlistenschaltfl&auml;che, die die Gruppe repr&auml;sentiert. Sie k&ouml;nnen auf die Objekte in der Liste klicken, um Fenster zu aktivieren, auf Symbolgr&ouml;&szlig;e zu reduzieren und wiederherzustellen.</para>
+        <para>Zum &Ouml;ffnen des <guimenu>Fenstermen&uuml;s</guimenu> f&uuml;r ein Fenster in einer Schaltfl&auml;chengruppe klicken Sie mit der rechten Maustaste auf die Fensterlistenschaltfl&auml;che, die die Gruppe repr&auml;sentiert. Es erscheint eine Liste der Fenster in der Gruppe. Zum &Ouml;ffnen des <guimenu>Fenstermen&uuml;s</guimenu> f&uuml;r ein Fenster in der Gruppe klicken Sie auf das entsprechende Objekt in der Liste. Wenn Sie das <guimenu>Fenstermen&uuml;</guimenu> &uuml;ber die <application>Fensterliste</application> &ouml;ffnen, enth&auml;lt das <guimenu>Fenstermen&uuml;</guimenu> keine Arbeitsfl&auml;chenbefehle. Weitere Informationen zum <guimenu>Fenstermen&uuml;</guimenu> finden Sie im Abschnitt <xref linkend="gosmetacity-24"/>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosmetacity-20">
+      <title>Das Applet &quot;Arbeitsfl&auml;chen-Umschalter&quot;</title>
+      <indexterm>
+        <primary>Arbeitsfl&auml;chen</primary>
+        <secondary>Arbeitsfl&auml;chen-Umschalter (Applet) </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Applets</primary>
+        <secondary>Arbeitsfl&auml;chen-Umschalter</secondary>
+      </indexterm>
+      <para>Der <application>Arbeitsfl&auml;chen-Umschalter</application> zeigt eine visuelle Darstellung der Arbeitsfl&auml;chen (siehe <xref linkend="gosmetacity-FIG-722"/>). <xref linkend="gosmetacity-FIG-722"/> zeigt das Applet, wenn die GNOME-Sitzung vier Arbeitsfl&auml;chen enth&auml;lt. Die Arbeitsfl&auml;chen erscheinen als Schaltfl&auml;chen im Applet. Der Hintergrund der Schaltfl&auml;che im Applet, die die aktuelle Arbeitsfl&auml;che repr&auml;sentiert, ist hervorgehoben. Die aktuelle Arbeitsfl&auml;che in <xref linkend="gosmetacity-FIG-722"/> ist die Arbeitsfl&auml;che links im Applet. Um zu einer anderen Arbeitsfl&auml;che zu wechseln, klicken Sie auf die Arbeitsfl&auml;che im Applet.</para>
+      <figure id="gosmetacity-FIG-722">
+        <title>Das Applet &quot;Arbeitsfl&auml;chen-Umschalter&quot;</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Applet &quot;Arbeitsfl�chen-Umschalter&quot;. Die Grafik ist selbsterkl�rend.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Der <application>Arbeitsfl&auml;chen-Umschalter</application> zeigt auch die auf den Arbeitsfl&auml;chen ge&ouml;ffneten Anwendungs- und Dialogfenster an. </para>
+      <para>Die Anzeige der Arbeitsfl&auml;chen in den Applet-Reihen erfolgt von links nach rechts. In <xref linkend="gosmetacity-FIG-722"/> ist das Applet so eingerichtet, dass die Arbeitsfl&auml;chen in einer Reihe angezeigt werden. Sie k&ouml;nnen die Anzahl der Zeilen festlegen, in denen die Arbeitsfl&auml;chen im <application>Arbeitsfl&auml;chen-Umschalter</application> angezeigt werden. Au&szlig;erdem k&ouml;nnen Sie das Standardverhalten des Applets so &auml;ndern, dass die Namen der Arbeitsfl&auml;chen im Applet angezeigt werden.</para>
+    </sect2>
+    <sect2 id="gosmetacity-27">
+      <title>Verwenden des Men&uuml;-Panels f&uuml;r die Arbeit mit Fenstern</title>
+      <indexterm>
+        <primary>Men&uuml;-Panel</primary>
+        <secondary>Fensterlistensymbol</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Fensterlisten</primary>
+        <secondary>Men&uuml;-Panel </secondary>
+      </indexterm>
+      <para>&Uuml;ber den Men&uuml;-Panel k&ouml;nnen Sie eine Liste aller momentan ge&ouml;ffneten Fenster anzeigen. Au&szlig;erdem k&ouml;nnen Sie dort das aktive Fenster ausw&auml;hlen. Zum Anzeigen der Fensterliste klicken Sie auf das Symbol ganz rechts im Men&uuml;-Panel. Die folgende Abbildung zeigt das Beispiel einer Fensterliste, die &uuml;ber den Men&uuml;-Panel aufgerufen wird:</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>�ber das Men�-Panel aufgerufene Fensterliste.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Wenn sich das aktive Fenster &auml;ndert, &auml;ndert sich auch das Symbol, auf das Sie klicken, um die Fensterliste anzuzeigen. Das Symbol repr&auml;sentiert das momentan aktive Fenster. Das aktive Fenster w&auml;hlen Sie in der Fensterliste aus.</para>
+      <para>Die Fensterliste enth&auml;lt die Fenster aller Arbeitsfl&auml;chen. Die Fenster in allen nicht aktiven Arbeitsfl&auml;chen stehen in der Liste unterhalb einer Trennlinie.</para>
+      <para>Das Symbol ganz rechts im Men&uuml;-Panel kann nicht verschoben werden.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-715">
+    <title>Bearbeiten von Fenstern</title>
+    <indexterm>
+      <primary>Fenster</primary>
+      <secondary>Bearbeiten</secondary>
+    </indexterm>
+    <para>In diesem Abschnitt wird beschrieben, wie Sie Fenster bearbeiten k&ouml;nnen.</para>
+    <sect2 id="gosmetacity-28">
+      <title>So w&auml;hlen Sie ein Fenster als aktives Fenster aus</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Ausw&auml;hlen des aktiven Fensters</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Aktives Fenster, Ausw&auml;hlen</primary>
+      </indexterm>
+      <para>Ein aktives Fenster kann Eingaben &uuml;ber die Maus oder die Tastatur entgegennehmen. Es kann jeweils nur ein Fenster aktiv sein. Das aktive Fenster unterscheidet sich von den anderen Fenstern. </para>
+      <para>Sie k&ouml;nnen es &uuml;ber folgende Elemente ausw&auml;hlen:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Element</para>
+              </entry>
+              <entry valign="top">
+                <para>Aktion</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Maus</para>
+              </entry>
+              <entry valign="top">
+                <para>Klicken Sie auf das Fenster, wenn es sichtbar ist. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Tastenkombinationen</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Verwenden Sie Tastenkombinationen, um zwischen den ge&ouml;ffneten Fenstern zu wechseln. Um ein Fenster als aktives Fenster auszuw&auml;hlen, lassen Sie die Tasten los. Die Standardtastenkombination f&uuml;r den Wechsel zwischen Fenstern ist <keycombo><keycap>Alt</keycap><keycap> Tab</keycap></keycombo>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Fensterliste</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Klicken Sie auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Arbeitsfl&auml;chen-Umschalter </application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Klicken Sie in der <application>Arbeitsfl&auml;chen-Umschalter</application>-Anzeige auf das Fenster, das Sie als aktives Fenster ausw&auml;hlen m&ouml;chten. Wenn Sie auf ein Fenster in einer anderen Arbeitsfl&auml;che klicken, wechselt der <application>Arbeitsfl&auml;chen-Umschalter</application> zu der neuen Arbeitsfl&auml;che und w&auml;hlt das Fenster als aktives Fenster aus. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Men&uuml;-Panel</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Klicken Sie auf das Symbol ganz rechts im Men&uuml;-Panel. Es erscheint eine Liste der ge&ouml;ffneten Fenster. W&auml;hlen Sie das Fenster in der Liste aus.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosmetacity-29">
+      <title>So reduzieren Sie ein Fenster auf Symbolgr&ouml;&szlig;e</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Auf Symbolgr&ouml;&szlig;e verkleinern</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Auf Symbolgr&ouml;&szlig;e verkleinern</primary>
+        <secondary>Fenster</secondary>
+      </indexterm>
+      <para>Wenn Sie ein Fenster auf Symbolgr&ouml;&szlig;e reduzieren m&ouml;chten, f&uuml;hren Sie einen der folgenden Schritte aus: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Klicken Sie im Fensterrahmen auf die Schaltfl&auml;che <guibutton>Minimieren</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>&Ouml;ffnen Sie das <guimenu>Fenstermen&uuml;</guimenu>, und w&auml;hlen Sie dann <guimenuitem>Minimieren</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Wenn dies das aktive Fenster ist, klicken Sie auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert. Bei einem anderen Fenster klicken Sie zweimal auf die Schaltfl&auml;che f&uuml;r das Fenster. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert, und w&auml;hlen Sie dann <guimenuitem>Minimieren</guimenuitem> im Kontextmen&uuml;.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-30">
+      <title>So maximieren Sie ein Fenster</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Maximieren</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Maximieren von Fenstern</primary>
+      </indexterm>
+      <para>Wenn Sie ein Fenster maximieren, wird es auf die maximale Gr&ouml;&szlig;e erweitert. F&uuml;hren Sie dazu einen der folgenden Schritte aus: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Maximieren</guibutton> im Fensterrahmen. Alternativ k&ouml;nnen Sie das <guimenu>Fenstermen&uuml;</guimenu> &ouml;ffnen und dann <guimenuitem>Maximieren</guimenuitem> w&auml;hlen.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert, und w&auml;hlen Sie dann <guimenuitem>Maximieren</guimenuitem> im <guimenu>Fenstermen&uuml;</guimenu>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-31">
+      <title>So stellen Sie ein Fenster wieder her</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Wiederherstellen</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Wiederherstellen</primary>
+        <secondary>Fenster</secondary>
+      </indexterm>
+      <para>Wenn Sie ein maximiertes Fenster wiederherstellen m&ouml;chten, f&uuml;hren Sie einen der folgenden Schritte aus: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Klicken Sie im Fensterrahmen auf die Schaltfl&auml;che <guibutton>Maximieren</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>&Ouml;ffnen Sie das <guimenu>Fenstermen&uuml;</guimenu>. W&auml;hlen Sie <guimenuitem>Wiederherstellen</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert, um das <guimenu>Fenstermen&uuml;</guimenu> zu &ouml;ffnen. W&auml;hlen Sie <guimenuitem>Wiederherstellen</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Um ein auf Symbolgr&ouml;&szlig;e reduziertes Fenster wiederherzustellen, klicken Sie auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert. </para>
+    </sect2>
+    <sect2 id="gosmetacity-32">
+      <title>So schlie&szlig;en Sie ein Fenster</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Schlie&szlig;en</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Schlie&szlig;en von Fenstern</primary>
+      </indexterm>
+      <para>Zum Schlie&szlig;en eines Fensters f&uuml;hren Sie einen der folgenden Schritte aus: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Klicken Sie im Fensterrahmen auf die Schaltfl&auml;che <guibutton>Fenster schlie&szlig;en</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>&Ouml;ffnen Sie das <guimenu>Fenstermen&uuml;</guimenu>. W&auml;hlen Sie <guimenuitem>Schlie&szlig;en</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert, und w&auml;hlen Sie dann <guimenuitem>Schlie&szlig;en</guimenuitem> im <guimenu>Fenstermen&uuml;</guimenu>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Wenn sich noch nicht gespeicherte Daten im Fenster befinden, werden Sie zum Speichern dieser Daten aufgefordert.</para>
+    </sect2>
+    <sect2 id="gosmetacity-34">
+      <title>So &auml;ndern Sie die Gr&ouml;&szlig;e eines Fensters</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>&Auml;ndern der Gr&ouml;&szlig;e</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&Auml;ndern der Fenstergr&ouml;&szlig;e</primary>
+      </indexterm>
+      <para>Zum &Auml;ndern der Gr&ouml;&szlig;e eines Fensters f&uuml;hren Sie einen der folgenden Schritte aus:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Zeigen Sie mit der Maus auf eine Ecke des Fensters. Die Form des Mauszeigers &auml;ndert sich, wenn Sie die Gr&ouml;&szlig;e des Fensters &auml;ndern k&ouml;nnen. Greifen Sie die Ecke mit der Maus, und ziehen Sie das Fenster auf die neue Gr&ouml;&szlig;e.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert. W&auml;hlen Sie <guimenuitem>Gr&ouml;&szlig;e &auml;ndern</guimenuitem> im <guimenu> Fenstermen&uuml;</guimenu>. Verwenden Sie die Pfeiltasten, um die Gr&ouml;&szlig;e des Fensters zu &auml;ndern.</para>
+        </listitem>
+        <listitem>
+          <para>Halten Sie die Taste <keycap>Alt</keycap> gedr&uuml;ckt, und klicken Sie mit der mittleren Maustaste in die N&auml;he der entsprechenden Ecke. Die Form des Mauszeigers &auml;ndert sich, wenn Sie die Gr&ouml;&szlig;e des Fensters &auml;ndern k&ouml;nnen. Ziehen Sie die Ecke dann in die gew&uuml;nschte Richtung.</para>
+        </listitem>
+        <listitem>
+          <para>Um die Gr&ouml;&szlig;e eines Fensters horizontal zu &auml;ndern, zeigen Sie mit dem Mauszeiger auf einen der vertikalen R&auml;nder des Fensters. Die Form des Mauszeigers &auml;ndert sich, wenn Sie die Gr&ouml;&szlig;e des Fensters &auml;ndern k&ouml;nnen. Greifen Sie den Rand mit der Maus, und ziehen Sie das Fenster auf die neue Gr&ouml;&szlig;e.</para>
+        </listitem>
+        <listitem>
+          <para>Um die Gr&ouml;&szlig;e eines Fensters vertikal zu &auml;ndern, zeigen Sie mit dem Mauszeiger auf den unteren Rand des Fensters. Die Form des Mauszeigers &auml;ndert sich, wenn Sie die Gr&ouml;&szlig;e des Fensters &auml;ndern k&ouml;nnen. Greifen Sie den Rand mit der Maus, und ziehen Sie das Fenster auf die neue Gr&ouml;&szlig;e.</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para>Die Gr&ouml;&szlig;e einiger Dialogfenster kann nicht ge&auml;ndert werden. Au&szlig;erdem gibt es bei einigen Anwendungsfenstern eine Mindestgr&ouml;&szlig;e, die nicht unterschritten werden kann.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosmetacity-35">
+      <title>So verschieben Sie ein Fenster</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Verschieben</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Verschieben von Fenstern</primary>
+      </indexterm>
+      <para>Zum Verschieben eines Fensters f&uuml;hren Sie einen der folgenden Schritte aus: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Greifen Sie die Titelleiste des Fensters mit der Maus, und ziehen Sie das Fenster an die neue Position. </para>
+        </listitem>
+        <listitem>
+          <para>Halten Sie die Taste <keycap>Alt</keycap> gedr&uuml;ckt, und ziehen Sie das Fenster an die neue Position. </para>
+        </listitem>
+        <listitem>
+          <para>&Ouml;ffnen Sie das <guimenu>Fenstermen&uuml;</guimenu>, und w&auml;hlen Sie <guimenuitem>Verschieben</guimenuitem>. Verwenden Sie die Pfeiltasten, um das Fenster an die neue Position zu verschieben. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert, und w&auml;hlen Sie dann <guimenuitem>Verschieben</guimenuitem> im <guimenu>Fenstermen&uuml;</guimenu>. Verwenden Sie die Pfeiltasten, um das Fenster an die neue Position zu verschieben. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-36">
+      <title>So schattieren Sie ein Fenster</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Schattieren</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Schattieren von Fenstern</primary>
+      </indexterm>
+      <para>Sie k&ouml;nnen Fenster wie folgt schattieren und die Schattierung wieder entfernen:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="24.94*"/>
+          <colspec colwidth="75.06*"/>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Schattieren</para>
+              </entry>
+              <entry valign="top">
+                <para>Verkleinern Sie das Fenster soweit, dass nur die Titelleiste zu sehen ist.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Schattierung aufheben</para>
+              </entry>
+              <entry valign="top">
+                <para>Beenden Sie den schattierten Status eines Fensters, sodass das gesamte Fenster angezeigt wird. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Zum Schattieren eines Fensters f&uuml;hren Sie einen der folgenden Schritte aus: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Doppelklicken Sie auf die Titelleiste des Fensters. Um die Schattierung des Fensters aufzuheben, doppelklicken Sie erneut auf das Fenster.</para>
+        </listitem>
+        <listitem>
+          <para>&Ouml;ffnen Sie das <guimenu>Fenstermen&uuml;</guimenu>. W&auml;hlen Sie <guimenuitem>Schattieren</guimenuitem>. Um die Schattierung des Fensters aufzuheben, w&auml;hlen Sie <guimenuitem>Schattierung aufheben</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf die Schaltfl&auml;che, die das Fenster in der <application>Fensterliste</application> repr&auml;sentiert, und w&auml;hlen Sie dann <guimenuitem>Schattieren</guimenuitem> im <guimenu>Fenstermen&uuml;</guimenu>. Um die Schattierung des Fensters aufzuheben, w&auml;hlen Sie <guimenuitem>Schattierung aufheben</guimenuitem>. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-38">
+      <title>So platzieren Sie ein Fenster auf allen Arbeitsfl&auml;chen</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Platzieren auf allen Arbeitsfl&auml;chen</secondary>
+      </indexterm>
+      <para>Wenn Sie ein Fenster auf allen Arbeitsfl&auml;chen platzieren m&ouml;chten, &ouml;ffnen Sie das <guimenu>Fenstermen&uuml;</guimenu>. W&auml;hlen Sie <guimenuitem>Auf allen Arbeitsfl&auml;chen platzieren</guimenuitem>. Wenn das Fenster nur auf der aktuellen Arbeitsfl&auml;che erscheinen soll, w&auml;hlen Sie <guimenuitem>Nur auf dieser Arbeitsfl&auml;che</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-46">
+      <title>So verschieben Sie ein Fenster auf eine andere Arbeitsfl&auml;che</title>
+      <indexterm>
+        <primary>Fenster</primary>
+        <secondary>Verschieben auf eine andere Arbeitsfl&auml;che</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Arbeitsfl&auml;chen</primary>
+        <secondary>Verschieben von Fenstern auf</secondary>
+      </indexterm>
+      <para>Sie haben zwei M&ouml;glichkeiten, ein Fenster auf eine andere Arbeitsfl&auml;che zu verschieben:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Mit dem <application>Arbeitsfl&auml;chen-Umschalter</application></para>
+          <para>Ziehen Sie das Fenster in der <application>Arbeitsfl&auml;chen-Umschalter</application>-Anzeige auf die gew&uuml;nschte Arbeitsfl&auml;che.</para>
+        </listitem>
+        <listitem>
+          <para>Mit dem <guimenu>Fenstermen&uuml;</guimenu></para>
+          <para>&Ouml;ffnen Sie das <guimenu>Fenstermen&uuml;</guimenu>. Um das Fenster auf die n&auml;chste Arbeitsfl&auml;che zu verschieben, w&auml;hlen Sie <guimenuitem>Auf <replaceable>Arbeitsfl&auml;chenname</replaceable> verschieben</guimenuitem>. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-716">
+    <title>Bearbeiten von Arbeitsfl&auml;chen</title>
+    <indexterm>
+      <primary>Arbeitsfl&auml;chen</primary>
+      <secondary>Bearbeiten</secondary>
+    </indexterm>
+    <para>In diesem Abschnitt wird beschrieben, wie Sie Arbeitsfl&auml;chen bearbeiten k&ouml;nnen.</para>
+    <sect2 id="gosmetacity-49">
+      <title>So wechseln Sie zwischen Arbeitsfl&auml;chen</title>
+      <indexterm>
+        <primary>Arbeitsfl&auml;chen</primary>
+        <secondary>Wechseln zwischen</secondary>
+      </indexterm>
+      <para>Sie haben folgende M&ouml;glichkeiten, zwischen Arbeitsfl&auml;chen zu wechseln: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Mit dem <application>Arbeitsfl&auml;chen-Umschalter</application></para>
+          <para>Klicken Sie im <application>Arbeitsfl&auml;chen-Umschalter</application> auf die Arbeitsfl&auml;che, zu der Sie wechseln m&ouml;chten.</para>
+        </listitem>
+        <listitem>
+          <para>Verwenden von Tastenkombinationen</para>
+          <para>Die Standardtastenkombinationen f&uuml;r das Wechseln zwischen Arbeitsfl&auml;chen lauten: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="50*"/>
+              <colspec colwidth="50*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Standard-Tastenkombinationen</para>
+                  </entry>
+                  <entry>
+                    <para>Funktion</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>
+                    <para><keycombo><keycap>Strg</keycap><keycap>Alt</keycap><keycap>Nach rechts</keycap></keycombo></para>
+                  </entry>
+                  <entry>
+                    <para>W&auml;hlt die n&auml;chste Arbeitsfl&auml;che rechts aus. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry>
+                    <para><keycombo><keycap>Strg</keycap><keycap>Alt</keycap><keycap>Nach links</keycap></keycombo></para>
+                  </entry>
+                  <entry>
+                    <para>W&auml;hlt die n&auml;chste Arbeitsfl&auml;che links aus. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-50">
+      <title>So f&uuml;gen Sie eine Arbeitsfl&auml;che hinzu</title>
+      <indexterm>
+        <primary>Arbeitsfl&auml;chen</primary>
+        <secondary>Hinzuf&uuml;gen</secondary>
+      </indexterm>
+      <para>Wenn Sie dem Desktop Arbeitsfl&auml;chen hinzuf&uuml;gen m&ouml;chten, klicken Sie mit der rechten Maustaste auf den <application>Arbeitsfl&auml;chen-Umschalter</application> und w&auml;hlen dann <guimenuitem>Einstellungen</guimenuitem>. Es erscheint das Dialogfeld <guilabel>Einstellungen des Arbeitsfl&auml;chen-Umschalters</guilabel>. Verwenden Sie das Drehfeld <guilabel>Anzahl der Arbeitsfl&auml;chen</guilabel>, um die gew&uuml;nschte Anzahl der Arbeitsfl&auml;chen anzugeben. Der <application>Arbeitsfl&auml;chen-Umschalter</application> f&uuml;gt am Ende der Arbeitsfl&auml;chenliste neue Arbeitsfl&auml;chen hinzu.</para>
+    </sect2>
+    <sect2 id="gosmetacity-51">
+      <title>So benennen Sie Arbeitsfl&auml;chen</title>
+      <indexterm>
+        <primary>Arbeitsfl&auml;chen</primary>
+        <secondary>Benennen</secondary>
+      </indexterm>
+      <para>Die Standardnamen der Arbeitsfl&auml;chen lauten <literal>Workspace 1</literal>, <literal> Workspace 2</literal>, <literal>Workspace 3</literal> usw. Um den Arbeitsfl&auml;chen Namen zuzuweisen, klicken Sie mit der rechten Maustaste auf den <application>Arbeitsfl&auml;chen-Umschalter</application> und w&auml;hlen dann <guimenuitem>Einstellungen</guimenuitem>. Es erscheint das Dialogfeld <guilabel>Einstellungen des Arbeitsfl&auml;chen-Umschalters</guilabel>. Verwenden Sie das Listenfeld <guilabel>Arbeitsfl&auml;chen</guilabel>, um die Namen der Arbeitsfl&auml;chen anzugeben. W&auml;hlen Sie eine Arbeitsfl&auml;che aus, und geben Sie dann den neuen Namen f&uuml;r die Arbeitsfl&auml;che ein.</para>
+    </sect2>
+    <sect2 id="gosmetacity-52">
+      <title>So l&ouml;schen Sie Arbeitsfl&auml;chen</title>
+      <indexterm>
+        <primary>Arbeitsfl&auml;chen</primary>
+        <secondary>L&ouml;schen</secondary>
+      </indexterm>
+      <para>Wenn Sie eine Arbeitsfl&auml;che l&ouml;schen, werden die Fenster vorher auf eine andere Arbeitsfl&auml;che verschoben. </para>
+      <para>Wenn Sie Arbeitsfl&auml;chen vom Desktop l&ouml;schen m&ouml;chten, klicken Sie mit der rechten Maustaste auf den <application>Arbeitsfl&auml;chen-Umschalter</application> und w&auml;hlen dann <guimenuitem>Einstellungen</guimenuitem>. Es erscheint das Dialogfeld <guilabel>Einstellungen des Arbeitsfl&auml;chen-Umschalters</guilabel>. Verwenden Sie das Drehfeld <guilabel>Anzahl der Arbeitsfl&auml;chen</guilabel>, um die gew&uuml;nschte Anzahl der Arbeitsfl&auml;chen anzugeben. Der <application>Arbeitsfl&auml;chen-Umschalter</application> l&ouml;scht Arbeitsfl&auml;chen am Ende der Arbeitsfl&auml;chenliste.</para>
+    </sect2>
+  </sect1>
+</chapter>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosgetstarted-1">
+  <title>Desktop-Sitzungen</title>
+  <highlights>
+    <para>In diesem Kapitel erhalten Sie Informationen, die Sie zum Starten, Verwalten und Beenden einer Desktop-Sitzung ben&ouml;tigen.</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>Starten einer Desktop-Sitzung</title>
+    <indexterm>
+      <primary>Sitzungen</primary>
+      <secondary>Starten</secondary>
+    </indexterm>
+    <para>Ein Desktop-Sitzung dauert von der Anmeldung bis zur Abmeldung beim Desktop. Das Anmeldefenster, das durch den Anmeldemanager angezeigt wird, ist Ihr Zugang zum Desktop. Der Anmeldebildschirm enth&auml;lt Felder, in die Sie Ihren Benutzernamen und das Passwort eingeben. Das Men&uuml; <guimenu>Optionen</guimenu> im Anmeldebildschirm enth&auml;lt die Liste Ihrer Anmeldeoptionen. Dort k&ouml;nnen Sie beispielsweise die Sprache f&uuml;r die Sitzung ausw&auml;hlen. </para>
+    <para>Die Sitzung wird gestartet, wenn Sie sich anmelden. Der Sitzungsmanager wird gestartet, nachdem der <application>Anmelde-Manager</application> Ihren Benutzernamen und das Passwort beglaubigt hat. &Uuml;ber den Sitzungsmanager k&ouml;nnen Sie die Sitzung verwalten. So k&ouml;nnen Sie beispielsweise den Status der letzten Sitzung speichern und zu dieser Sitzung zur&uuml;ckkehren, wenn Sie sich das n&auml;chste Mal anmelden. Der Sitzungsmanager speichert folgende Parameter und stellt sie nach der n&auml;chsten Anmeldung wieder her: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Die Einstellungen f&uuml;r das Aussehen und das Verhalten, zum Beispiel Schrift-, Farb- und Mauseinstellungen. </para>
+      </listitem>
+      <listitem>
+        <para>Die von Ihnen ausgef&uuml;hrten Anwendungen, zum Beispiel das Datei-Manager- und das Texteditorfenster. Vom Sitzungsmanager nicht verwaltete Anwendungen k&ouml;nnen nicht gespeichert und wiederhergestellt werden. Wenn Sie beispielsweise den Editor <application>vi</application> von der Befehlszeile in einem Terminal-Fenster aus starten, kann der Sitzungsmanager die Editorsitzung nicht wiederherstellen. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosgetstarted-65">
+      <title>So melden Sie sich bei einer Desktop-Sitzung an</title>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Anmelden</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Anmelden</primary>
+      </indexterm>
+      <para>Zum Anmelden bei einer Sitzung f&uuml;hren Sie die folgenden Aktionen aus.</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Options</guimenu><guimenuitem>Session</guimenuitem></menuchoice>. W&auml;hlen Sie den GNOME-Desktop in der Liste der verf&uuml;gbaren Desktop-Umgebungen.</para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie im Dialogfeld <guilabel>Anmelde-Manager</guilabel> Ihren Benutzernamen ein und klicken Sie auf <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie im Dialogfeld <guilabel>Anmelde-Manager</guilabel> Ihr Passwort ein, und klicken Sie auf <guibutton>OK</guibutton>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Bei erfolgreicher Anmeldung startet der Sitzungsmanager eine Sitzung. Wenn Sie sich zum ersten Mal anmelden, startet der Sitzungsmanager eine neue Sitzung. Hatten Sie sich schon vorher einmal angemeldet, stellt der Sitzungsmanager die letzte Sitzung wieder her.</para>
+    </sect2>
+    <sect2 id="gosgetstarted-66">
+      <title>So starten Sie eine Sitzung in einer anderen Sprache</title>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Andere Sprache, Starten in</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Sprache, Starten einer Sitzung in anderer</primary>
+      </indexterm>
+      <para>Um eine Sitzung in einer anderen Sprache zu starten, f&uuml;hren Sie die folgenden Schritte aus.</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie im Anmeldedialogfeld <menuchoice><guimenu>Options</guimenu><guimenuitem>Session</guimenuitem></menuchoice>. W&auml;hlen Sie den GNOME-Desktop in der Liste der verf&uuml;gbaren Desktop-Umgebungen.</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie im Anmeldedialogfeld <menuchoice><guimenu>Options</guimenu><guimenuitem>Language</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie die Sprachgruppe, die die gew&uuml;nschte Sprache enth&auml;lt.</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie eine Sprache.</para>
+        </listitem>
+        <listitem>
+          <para>Melden Sie sich an.</para>
+        </listitem>
+      </orderedlist>
+      <para>Die Standardsprache f&uuml;r Ihr System wird vom Systemadministrator eingestellt. &Uuml;ber das Men&uuml; <guimenu>Optionen</guimenu> im <guilabel>Anmelde-Manager</guilabel> haben Sie Zugriff auf andere Sprachen. Wenn Sie eine Sprache im Men&uuml; <guimenu>Optionen</guimenu> ausw&auml;hlen, stellt das System die Variable LANG f&uuml;r Ihre Sitzung ein. Das System kehrt am Ende der Sitzung dann zur Standardsprache zur&uuml;ck. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>Sperren des Bildschirms</title>
+    <para>In diesem Abschnitt erfahren Sie, wie Sie den Bildschirm sperren und den Bildschirmschoner konfigurieren.</para>
+    <sect2 id="gosstartsession-4">
+      <title>So sperren Sie den Bildschirm</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Schloss-Symbol, das die Funktion &quot;Bildschirm sperren&quot; darstellt.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Sperren des Bildschirms</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Sperren des Bildschirms</primary>
+      </indexterm>
+      <indexterm>
+        <primary>Sperren (Schaltfl&auml;che)</primary>
+      </indexterm>
+      <para>Zum Sperren des Bildschirms f&uuml;hren Sie eine der folgenden Aktionen aus:</para>
+      <itemizedlist>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Actions</guimenu><guimenuitem>Lock Screen</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>Wenn die Schaltfl&auml;che <guibutton>Sperren</guibutton> im Panel angezeigt wird, klicken Sie darauf<guibutton/>. </para>
+          <para>Wenn Sie einem Panel die Schaltfl&auml;che <guibutton>Sperren</guibutton> hinzuf&uuml;gen m&ouml;chten, klicken Sie mit der rechten Maustaste auf den Panel. W&auml;hlen Sie <menuchoice><guimenu>Zum Panel hinzuf&uuml;gen</guimenu><guimenuitem>Sperren-Schaltfl&auml;che</guimenuitem></menuchoice>. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Wenn Sie den Bildschirm sperren, wird der Bildschirmschoner gestartet. Zum Entsperren des Bildschirms bewegen Sie die Maus, um das Dialogfeld f&uuml;r die Bildschirmsperre aufzurufen. Geben Sie dort Ihren Benutzernamen und das Passwort ein, und dr&uuml;cken Sie die <keycap>Return</keycap>-Taste. </para>
+      <note>
+        <para>Um den Bildschirm ordnungsgem&auml;&szlig; sperren zu k&ouml;nnen, muss ein Bildschirmschoner aktiviert sein. </para>
+      </note>
+    </sect2>
+    <sect2 id="gosstartsession-3">
+      <title>So konfigurieren Sie den Bildschirmschoner</title>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Konfigurieren des Bildschirmschoners</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Bildschirmschoner, Konfigurieren</primary>
+      </indexterm>
+      <indexterm>
+        <primary>XScreenSaver</primary>
+        <see>Bildschirmschoner</see>
+      </indexterm>
+      <para>Ein Bildschirmschoner ist eine Anwendung, die den Bildschirm belegt, wenn dieser nicht genutzt wird. Sie haben folgende M&ouml;glichkeiten, Bildschirmschoner zu nutzen:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Aktivieren Sie ihn nach Ablauf einer bestimmten Zeit.</para>
+        </listitem>
+        <listitem>
+          <para>Aktivieren Sie ihn beim Sperren des Bildschirms.</para>
+        </listitem>
+        <listitem>
+          <para>Sparen Sie Strom mit Ihrem Monitor, wenn das System nicht genutzt wird. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Zum Konfigurieren der Bildschirmschoner-Anwendung f&uuml;hren Sie die folgenden Schritte aus: </para>
+      <orderedlist>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf die Schaltfl&auml;che <guibutton>Sperren</guibutton>, und w&auml;hlen Sie dann <guimenuitem>Eigenschaften</guimenuitem> im Kontextmen&uuml;. Es erscheint das Dialogfeld <guilabel>XScreenSaver</guilabel>.</para>
+          <para>Wenn die Schaltfl&auml;che <guibutton>Sperren</guibutton> in einem Panel nicht angezeigt wird, k&ouml;nnen Sie sie hinzuf&uuml;gen. Wenn Sie einem Panel die Schaltfl&auml;che <guibutton>Sperren</guibutton> hinzuf&uuml;gen m&ouml;chten, klicken Sie mit der rechten Maustaste auf den Panel. W&auml;hlen Sie <menuchoice><guimenu>Zum Panel hinzuf&uuml;gen</guimenu><guimenuitem>Sperren-Schaltfl&auml;che</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Zum Konfigurieren der Bildschirmschoner-Anwendung verwenden Sie die Elemente des Registers <guilabel>Anzeigemodi</guilabel>. In der folgenden Tabelle werden die Dialogfeldelemente des Registerabschnitts <guilabel>Anzeigemodi</guilabel> beschrieben: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>Einstellung</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Funktion</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Modus</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Verwenden Sie das Dropdown-Listenfeld, um das Verhalten der Bildschirmschoner-Anwendung festzulegen. Folgende Optionen stehen zur Auswahl: </para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><guilabel>Bildschirmschoner deaktivieren</guilabel>:W&auml;hlen Sie diese Option aus, wenn Sie die Bildschirmschoner-Anwendung nicht nutzen m&ouml;chten.</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>Nur schwarzer Bildschirm</guilabel>:W&auml;hlen Sie diese Option aus, wenn der Bildschirm beim Sperren einfach leer sein soll.</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>Nur einen Bildschirmschoner</guilabel>:W&auml;hlen Sie diese Option aus, wenn beim Sperren des Bildschirms nur ein Bildschirmschoner-Motiv in der Motivliste angezeigt werden soll. </para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>Bildschirmschoner zuf&auml;llig ausw&auml;hlen</guilabel>:W&auml;hlen Sie diese Option aus, wenn beim Sperren des Bildschirms eine zuf&auml;llige Auswahl von Bildschirmschoner-Motiven in der Motivliste angezeigt werden soll. </para>
+                      </listitem>
+                    </itemizedlist>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>Anzeigeliste</para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie das gew&uuml;nschte Bildschirmschoner-Motiv in der Liste aus.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Schwarzer Bildschirm nach</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Legen Sie fest, wie lange das System nach der letzten Maus- oder Tastaturbet&auml;tigung warten soll, bevor der Bildschirmschoner aktiviert wird.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Schleife nach</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Legen Sie fest, wie lange ein bestimmtes Bildschirmschoner-Motiv angezeigt werden soll, bevor das System zum n&auml;chsten Motiv wechselt.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Bildschirmanzeige sperren nach</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, wenn der Bildschirm nach dem Aktivieren des Bildschirmschoners gesperrt werden soll. Verwenden Sie das Drehfeld, um die Verz&ouml;gerung zwischen der Aktivierung des Bildschirmschoners und dem Sperren des Bildschirms festzulegen.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>Vorschau</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Klicken Sie auf diese Schaltfl&auml;che, um eine Vorschau des in der Motivliste ausgew&auml;hlten Bildschirmschoners anzuzeigen. Zum Anhalten der Vorschau dr&uuml;cken Sie eine beliebige Taste oder klicken mit einer Maustaste.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>Einstellungen</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Klicken Sie auf diese Schaltfl&auml;che, um die Optionen des in der Motivliste ausgew&auml;hlten Bildschirmschoners anzuzeigen. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Zum Konfigurieren erweiterter Optionen klicken Sie auf das Register <guilabel>Erweitert</guilabel>. In der folgenden Tabelle werden die Dialogfeldelemente des Registerabschnitts <guilabel>Erweitert</guilabel> beschrieben: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>Einstellung</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Funktion</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Grab Desktop Images </guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Einige Bildschirmschoner k&ouml;nnen ein Bildschirmfoto vom Desktop machen und daraus Ihr Bildschirmschoner-Motiv erstellen. W&auml;hlen Sie diese Option aus, um den Bildschirmschonern das Fotografieren des Desktops zu erm&ouml;glichen. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Grab Video Frames</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Einige Bildschirmschoner k&ouml;nnen ein Bild aus Videos erfassen und daraus Ihr Bildschirmschoner-Motiv erstellen. Wenn Ihr System eine Karte f&uuml;r die Videobearbeitung besitzt, k&ouml;nnen Sie diese Option ausw&auml;hlen, um Bildschirmschonern das Erfassen eines Videobildes zu erm&ouml;glichen.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Zuf&auml;lliges Bild ausw&auml;hlen</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, damit Bildschirmschoner Bilder aus einem von Ihnen ausgew&auml;hlten Verzeichnis verwenden k&ouml;nnen. Geben Sie den Pfad f&uuml;r das Verzeichnis in das Feld ein. Alternativ k&ouml;nnen Sie auf die Schaltfl&auml;che <guibutton>Durchsuchen</guibutton> klicken, um ein Dialogfeld aufzurufen, in dem Sie ein Verzeichnis ausw&auml;hlen k&ouml;nnen. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Verbose Dialognostics</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie diese Option, wenn Sie Diagnoseinformationen zum Bildschirmschoner anzeigen m&ouml;chten.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Fehler der untergeordneten Prozesse anzeigen</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, wenn Sie Fehlermeldungen in Bezug auf Bildschirmschoner-Unterprozesse auf dem Bildschirm anzeigen m&ouml;chten. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Begr&uuml;&szlig;ungsbildschirm beim Start anzeigen</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, wenn beim Start von <application>Xscreensaver</application> ein Begr&uuml;&szlig;ungsbildschirm angezeigt werden soll<application/>. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Energieverwaltung aktiviert</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie diese Option, um den Stromsparmodus Ihres Monitors zu aktivieren. Damit l&auml;sst sich der Stromverbrauch des Monitors reduzieren, wenn er nicht ben&ouml;tigt wird. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Standby-Modus nach</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Geben Sie an, wie lange das System warten soll, bevor der Monitor in den Standby-Modus versetzt wird. Im Standby-Modus ist der Bildschirm des Monitors schwarz. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Suspend After</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Geben Sie an, wie lange das System warten soll, bevor der Monitor in den Stromsparmodus versetzt wird. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Ausschalten nach</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Geben Sie an, wie lange das System warten soll, bevor der Monitor ausgeschaltet wird. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Colormap installieren</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, um eine private Colormap zu installieren, wenn der Bildschirmschoner aktiv ist. Durch die Verwendung einer privaten Colormap l&auml;sst sich unter Umst&auml;nden die Farbqualit&auml;t in bestimmten Bildschirmschoner-Motiven verbessern.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Fade to Black When Blanking </guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, wenn die Anzeige beim Aktivieren des Bildschirmschoners langsam schwarz werden soll. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Fade from Black When Unblanking </guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, wenn die Anzeige beim Anhalten des Bildschirmschoners langsam von Schwarz zum Bildschirminhalt &uuml;bergehen soll.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Dauer des Ein-/Ausblendens</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Geben Sie an, wie lange der allm&auml;hliche &Uuml;bergang beim Aktivieren des Bildschirmschoners dauern soll.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf die Fensterrahmen-Schaltfl&auml;che <guibutton>Fenster schlie&szlig;en</guibutton>, um das Dialogfeld <guilabel>XScreenSaver</guilabel> zu schlie&szlig;en.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>Verwalten der Sitzung</title>
+    <indexterm>
+      <primary>Einstellungstools</primary>
+      <secondary>Sitzungen</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>Sitzungen</primary>
+      <secondary>Verwalten</secondary>
+    </indexterm>
+    <para>Zum Konfigurieren der Sitzungsverwaltung des GNOME-Desktops w&auml;hlen Sie <menuchoice><guimenu>Anwendungen</guimenu><guisubmenu>Desktop-Einstellungen</guisubmenu><guisubmenu>Erweitert</guisubmenu><guimenuitem>Sitzungen</guimenuitem></menuchoice>. Das Einstellungstool <application>Sitzungen</application> erkennt die folgenden Anwendungsarten: </para>
+    <itemizedlist>
+      <listitem>
+        <indexterm>
+          <primary>Startanwendungen</primary>
+          <secondary>Sitzungsverwaltete</secondary>
+        </indexterm>
+        <para>Von der Sitzung verwaltete Anwendungen. Wenn Sie die Einstellungen f&uuml;r Ihre Sitzung speichern, sichert der Sitzungsmanager alle von der Sitzung verwalteten Anwendungen. Wenn Sie sich ab- und sp&auml;ter wieder anmelden, startet der Sitzungsmanager die von der Sitzung verwalteten Anwendungen automatisch. </para>
+      </listitem>
+      <listitem>
+        <para>Nicht von der Sitzung verwaltete Anwendungen. Wenn Sie die Einstellungen f&uuml;r Ihre Sitzung speichern, sichert der Sitzungsmanager Anwendungen, die nicht von der Sitzung verwaltet werden, nicht. Wenn Sie sich ab- und sp&auml;ter wieder anmelden, startet der Sitzungsmanager Anwendungen, die nicht von der Sitzung verwaltet werden, nicht. Sie m&uuml;ssen die Anwendung manuell starten. Alternativ k&ouml;nnen Sie im Einstellungstool <application>Sitzungen</application> die nicht von der Sitzung verwalteten Anwendungen angeben, die automatisch gestartet werden sollen. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>Definieren des Sitzungsverhaltens beim An- und Abmelden</title>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Anmeldeverhalten</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Abmeldeverhalten</secondary>
+      </indexterm>
+      <para>Um einzustellen, wie sich eine Sitzung beim An- und Abmelden verh&auml;lt, w&auml;hlen Sie <menuchoice><guimenu>Anwendungen</guimenu><guisubmenu>Desktop-Einstellungen</guisubmenu><guisubmenu>Erweitert</guisubmenu><guimenuitem>Sitzungen</guimenuitem></menuchoice>. Nehmen Sie die gew&uuml;nschten &Auml;nderungen im  Registerabschnitt <guilabel>Sitzungsoptionen</guilabel> vor. Zum Beispiel k&ouml;nnen Sie festlegen, dass beim Anmelden ein Begr&uuml;&szlig;ungsbildschirm angezeigt wird. </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>So verwenden Sie Startanwendungen</title>
+      <indexterm>
+        <primary>Startprogramme</primary>
+        <see>Startanwendungen</see>
+      </indexterm>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Verwenden von Startanwendungen</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Startanwendungen</primary>
+        <secondary>Nicht sitzungsverwaltete</secondary>
+      </indexterm>
+      <para>Sie k&ouml;nnen Ihre Sitzungen so konfigurieren, dass sie mit nicht von der Sitzung verwalteten Anwendungen starten. Zum Konfigurieren von Startanwendungen, die nicht von der Sitzung verwaltet werden, w&auml;hlen Sie <menuchoice><guimenu>Anwendungen</guimenu><guisubmenu>Desktop-Einstellungen</guisubmenu><guisubmenu>Erweitert</guisubmenu><guimenuitem>Sitzungen</guimenuitem></menuchoice>. Verwenden Sie den Registerabschnitt <guilabel>Startprogramme</guilabel>, um Anwendungen hinzuzuf&uuml;gen, zu bearbeiten und zu l&ouml;schen. Wenn Sie die Einstellungen speichern und sich abmelden, werden die Startanwendungen bei der n&auml;chsten Anmeldung automatisch gestartet. </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>So listen Sie die in der aktuellen Sitzung ge&ouml;ffneten Anwendungen auf</title>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Auflisten der ge&ouml;ffneten Anwendungen</secondary>
+      </indexterm>
+      <para>Zum Auflisten der in der aktuellen Sitzung ge&ouml;ffneten Anwendungen w&auml;hlen Sie <menuchoice><guimenu>Anwendungen</guimenu><guisubmenu>Desktop-Einstellungen</guisubmenu><guisubmenu>Erweitert</guisubmenu><guimenuitem>Sitzungen</guimenuitem></menuchoice>. Im Registerabschnitt <guilabel>Aktuelle Sitzung</guilabel> werden die folgenden Anwendungen aufgelistet:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Alle momentan ausgef&uuml;hrten GNOME-Anwendungen, die sich mit dem Sitzungsmanager verbinden lassen und ihren Anwendungsstatus speichern k&ouml;nnen. </para>
+        </listitem>
+        <listitem>
+          <para>Alle Desktop-Einstellungstools, die sich mit dem Sitzungsmanager verbinden lassen und ihren Anwendungsstatus speichern k&ouml;nnen. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Mit dem Registerabschnitt <guilabel>Aktuelle Sitzung</guilabel> k&ouml;nnen Sie eine begrenzte Zahl von Aktionen an den Sitzungseigenschaften einer Anwendung oder eines Einstellungstools ausf&uuml;hren. So k&ouml;nnen Sie beispielsweise die Startreihenfolge und die Neustartmethode aller in der Liste genannten GNOME-Anwendungen oder Desktop-Einstellungstools bearbeiten. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>So speichern Sie Sitzungseinstellungen</title>
+      <indexterm>
+        <primary>Sitzungen</primary>
+        <secondary>Speichern von Einstellungen</secondary>
+      </indexterm>
+      <para>Zum Speichern der Sitzungseinstellungen f&uuml;hren Sie die folgenden Schritte aus: </para>
+      <orderedlist>
+        <listitem>
+          <para>Konfigurieren Sie die Sitzung so, dass die Einstellungen am Ende der Sitzung automatisch gespeichert werden. Zum Konfigurieren der Sitzung w&auml;hlen Sie <menuchoice><guimenu>Anwendungen</guimenu><guisubmenu>Desktop-Einstellungen</guisubmenu><guisubmenu>Erweitert</guisubmenu><guimenuitem>Sitzungen</guimenuitem></menuchoice>. Das Einstellungstool <application>Sitzungen</application> wird gestartet. W&auml;hlen Sie die Option <guilabel>&Auml;nderungen der Sitzung automatisch speichern</guilabel> im Registerabschnitt <guilabel>Sitzungsoptionen</guilabel> aus.</para>
+        </listitem>
+        <listitem>
+          <para>Beenden Sie die Sitzung. </para>
+        </listitem>
+      </orderedlist>
+      <para>Wenn Sie Option <guilabel>&Auml;nderungen der Sitzung automatisch speichern</guilabel> nicht ausw&auml;hlen, werden Sie beim Abmelden in einem Dialogfeld gefragt, ob Sie die aktuellen Einstellungen speichern m&ouml;chten. Zum Speichern der Einstellungen w&auml;hlen Sie die entsprechende Option aus und setzen den Abmeldevorgang dann fort.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>Beenden einer Sitzung</title>
+    <indexterm>
+      <primary>Sitzungen</primary>
+      <secondary>Beenden</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>Sitzungen</primary>
+      <secondary>Abmelden</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>Abmelden</primary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Symbol &quot;Log Out&quot;.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>Zum Beenden der Sitzung schlie&szlig;en Sie alle momentan aktiven Prozesse und f&uuml;hren eine der folgenden Aktionen aus:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Abmelden</guibutton>.</para>
+      </listitem>
+      <listitem>
+        <para>W&auml;hlen Sie <menuchoice><guimenu>Aktionen</guimenu><guimenuitem>Abmelden</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>&Ouml;ffnen Sie das <guimenu>GNOME-Men&uuml;</guimenu>, und w&auml;hlen Sie <guimenuitem>Abmelden</guimenuitem>.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Bevor Sie eine Desktop-Sitzung beenden, k&ouml;nnen Sie die aktuellen Einstellungen speichern, um die Sitzung zu einem sp&auml;teren Zeitpunkt wiederherzustellen. W&auml;hrend des Abmeldevorgangs werden Sie in einem Dialogfeld gefragt, ob Sie die aktuellen Einstellungen speichern m&ouml;chten. Im Einstellungstool <application>Sitzungen</application> k&ouml;nnen Sie eine Option ausw&auml;hlen, mit der die aktuellen Einstellungen automatisch gespeichert werden.</para>
+  </sect1>
+</chapter>
