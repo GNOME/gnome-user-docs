@@ -1,768 +1,714 @@
-
-
-
+<!-- converted from Solbook 2.2 SGML to Docbook 4.2 XML
+# Generator: s2d v1.4 2002-09-19
+#   Jay Han (jhan@acm.org)/Lightsaber Computing (http://www.lightsaber.com)
+-->
 <chapter id="gosoverview-1">
-<title>Overview of the Desktop</title>
-<highlights><para>This chapter introduces you to the features and main components
-of the GNOME desktop. Before you start to use the desktop read this chapter
-to familiarize yourself with the various features, and how the main components
-work. The desktop is very configurable, so this chapter describes the typical
-default configuration, covering the following topics.</para></highlights>
-<sect1 id="gosoverview-5">
-<title>Introducing Desktop Components</title>
-<indexterm><primary>desktop components, introducing</primary></indexterm>
-<para>When you start a desktop session for the first time, you should see
-a default startup screen, with panels, windows, and various icons. <xref linkend="gosoverview-FIG-1"/>
-shows a typical desktop. </para>
-<figure id="gosoverview-FIG-1">
-<title>A Typical Desktop</title>
-<screenshot>
-<mediaobject>
-  <imageobject>
-    <imagedata fileref="figures/typical_anno_desktop.png" format="PNG"/>
-  </imageobject>
-  <textobject>
-	<phrase>Shows a typical desktop. Callouts: Menu, Menu Panel, Desktop background, Windows, Window List applet, Bottom edge panel, Workspace Switcher applet.
-</phrase>
-  </textobject>
-</mediaobject>
-</screenshot>
-</figure>
-<para>The major components of the desktop are as follows: <itemizedlist>
-<listitem><para>Panels</para>
-<para>Panels are areas on your desktop from which you can access all of your
-system applications and menus. Panels are very configurable.  A particularly
-important panel in <xref linkend="gosoverview-FIG-1"/> is the Menu Panel. The
-Menu Panel stretches the full width of the top edge of the desktop. The Menu
-Panel includes two special menus, as follows:</para>
-<itemizedlist>
-<listitem><para><guimenu>Applications</guimenu> menu: Contains all applications
-and configuration tools. This menu also includes the file manager and the
-help browser.</para></listitem>
-<listitem><para><guimenu>Actions</guimenu> menu: Contains various commands
-that perform desktop functions, for example <guimenuitem>Search for Files
-</guimenuitem> and <guimenuitem>Log Out</guimenuitem>. </para></listitem>
-</itemizedlist>
-<para>Click on the icon at the extreme right of the Menu Panel to display
-a list of all open windows.</para></listitem>
-<listitem><para>Menus</para>
-<para>You can access all desktop functions through menus. The Menu Panel contains
-menus, so you can use a combination of menus and panels to perform your tasks.
-You can use the <guimenu>Applications</guimenu> menu and the <guimenu>Actions
-</guimenu> menu to access almost all of the standard applications, commands,
-and configuration options. </para>
-<para>You can also access the items in the <guimenu>Applications</guimenu>
-and <guimenu>Actions</guimenu> menus from the <guimenu>GNOME Menu</guimenu>.
-The items in the <guimenu>Actions</guimenu> menu are at the top level of the <guimenu>
-GNOME Menu</guimenu>. </para></listitem>
-<listitem><para>Windows</para>
-<para>You can display many windows at the same time. You can run different
-applications in each window. The window manager provides frames and buttons
-for windows. The window manager enables you to perform standard actions such
-as move, close, and resize windows. </para></listitem>
-<listitem><para>Workspaces</para>
-<para>You can subdivide your desktop into separate <firstterm>workspaces</firstterm>.
-A workspace is a discrete area on the desktop in which you can work. You can
-specify the number of workspaces on your desktop. You can switch to a different
-workspace, but you can only display one workspace at a time.</para></listitem>
-<listitem><para><application>Nautilus</application> file manager</para>
-<para>The <application>Nautilus</application> file manager provides an integrated
-access point to your files and applications. You can display the contents
-of your files within a <application>Nautilus</application> window, or open
-the files in the appropriate application from <application>Nautilus</application>.
-You can use the <application>Nautilus</application> file manager to manage
-your files and folders. </para></listitem>
-<listitem><para>Desktop background</para>
-<para>The desktop background lies behind all of the other components on the
-desktop. The desktop background is an active component of the user interface.
-You can place objects on the desktop background to quickly access  your files
-and directories, or to start applications that you use often. You can also
-right-click on the background to open a menu.</para></listitem>
-<listitem><para><guilabel>Start Here</guilabel> location</para>
-<para>The <guilabel>Start Here</guilabel> location provides an access point
-to some of the key features of the GNOME desktop. You can access your GNOME
-applications and configuration tools from the <guilabel>Start Here</guilabel>
-location. You can also access programs that enable you to configure your system
-as a server, and to choose other system settings.</para></listitem>
-<listitem><para>Desktop preferences</para>
-<para>The GNOME desktop contains dedicated <firstterm>preference tools</firstterm>.
-Each tool controls a particular part of the behavior of the desktop. To start
-a preference tool, choose <menuchoice><guimenu>Applications</guimenu>
-<guimenuitem>Desktop Preferences</guimenuitem></menuchoice>. Choose the item
-that you want to configure from the submenus.</para></listitem>
-</itemizedlist></para>
-<para>The most powerful features of the desktop are the high degree of configurability
-and the multiple ways that you can perform tasks.</para>
-<para>The desktop provides interoperability of the desktop components. Usually,
-you can perform the same action in several different ways. For example, you
-can start applications from panels, from menus, or from the desktop background.
-</para>
-<para>Your system administrator can make configuration changes to suit your
-needs, so that the desktop might not be exactly the same as described in this
-chapter. Nevertheless, this chapter provides a useful quick guide to how to
-work with the desktop. </para>
-</sect1>
-<sect1 id="gosoverview-502">
-<title>Panels</title>
-<indexterm><primary>panels</primary><secondary>overview</secondary></indexterm>
-<para>You can add or delete panels at any time. When you start a session for
-the first time, the desktop usually contains at least two panels, as follows:
-</para>
-<itemizedlist>
-<listitem><para>Menu Panel</para></listitem>
-<listitem><para>Edge panel at the bottom of the desktop</para></listitem>
-</itemizedlist>
-<para>You can perform the following actions with panels:</para>
-<itemizedlist>
-<listitem><para>Create panels.</para></listitem>
-<listitem><para>Delete panels.</para></listitem>
-<listitem><para>Hide panels.</para></listitem>
-<listitem><para>Add objects to panels.</para></listitem>
-<listitem><para>Manipulate panel objects.</para></listitem>
-</itemizedlist>
-<sect2 id="gosoverview-26">
-<title>To Create Panels</title>
-<para>To create a panel follow these steps: </para>
-<orderedlist>
-<listitem><para>Right-click on a vacant space on any panel, then choose <guimenuitem>
-New Panel</guimenuitem>.</para></listitem>
-<listitem><para>Choose the type of panel that you want to create from the
-submenu. The panel is added to the desktop.</para></listitem>
-</orderedlist>
-<para>You can create as many panels as you want. However, you can only create
-one Menu Panel. You can create different types of panel to fit your own requirements.
-You can customize the behavior and appearance of your panels. For example,
-you can change the background of your panels.</para>
-</sect2>
-<sect2 id="gosoverview-508">
-<title>To Delete Panels</title>
-<para>To delete a panel, right-click on the panel then choose <guimenuitem>
-Delete This Panel</guimenuitem>.</para>
-</sect2>
-<sect2 id="gosoverview-24">
-<title>To Hide Panels</title>
-<para>Except for the Menu Panel, panels can have hide buttons at each end
-of the panel. You click on the hide buttons to hide or show the panel.</para>
-</sect2>
-<sect2 id="gosoverview-4">
-<title>To Add Objects to Panels</title>
-<para>A panel can hold several types of objects. The panel in <xref linkend="gosoverview-FIG-28"/>
-contains each type of panel object. </para>
-<figure id="gosoverview-FIG-28">
-<title>A Panel With Various Panel Objects</title>
-<screenshot>
-<mediaobject>
-  <imageobject>
-    <imagedata fileref="figures/sample_anno_panel.png" format="PNG"/>
-  </imageobject>
-  <textobject>
-	<phrase>Shows a panel with various panel objects. Callouts: Calculator launcher, Menu, CD Player applet, Drawer, Lock button.
-</phrase>
-  </textobject>
-</mediaobject>
-</screenshot>
-</figure>
-<para>You can add any of the following objects to all types of panels:</para>
-<itemizedlist>
-<listitem><para>Applets</para><indexterm><primary>applets</primary><secondary>
-overview</secondary></indexterm>
-<para><firstterm>Applets</firstterm> are small, interactive applications that
-reside within a panel, for example <application>CD Player</application> in <xref
-linkend="gosoverview-FIG-28"/>. Each applet has a simple user interface that
-you can operate with the mouse or keyboard. The following applets appear in
-your panels by default:</para>
-<itemizedlist>
-<listitem><para><application>Window List</application>: Displays a button
-for each window that is open. You can click on a window list button to minimize
-and restore windows. By default, <application>Window List</application> appears
-in the edge panel at the bottom of the desktop.</para></listitem>
-<listitem><para><application>Workspace Switcher</application>: Displays a
-visual representation of your workspaces. You can use <application>Workspace
-Switcher</application> to switch between workspaces. By default, <application>
-Workspace Switcher</application> appears in the edge panel at the bottom of
-the desktop.</para></listitem>
-</itemizedlist>
-<para>To add an applet to a panel, right-click on a vacant space on the panel,
-then choose <guimenuitem>Add to Panel</guimenuitem>. Choose the applet that
-you require from one of the following submenus:</para>
-<itemizedlist>
-<listitem><para>Accessories</para></listitem>
-<listitem><para>Amusements</para></listitem>
-<listitem><para>Internet</para></listitem>
-<listitem><para>Multimedia</para></listitem>
-<listitem><para>Utility</para></listitem>
-</itemizedlist>
-</listitem>
-<listitem><para>Launchers</para>
-<para>A <firstterm>launcher</firstterm> starts a particular application, executes
-a command, or opens a file. The calculator icon in <xref linkend="gosoverview-FIG-28"/>
-is a launcher for the <application>Calculator</application> application. A
-launcher can reside in a panel or in a menu. Click on the launcher to perform
-the action that is associated with the launcher.</para>
-<para>You can create your own launchers for applications. For example, you
-can create a launcher for a word processor application that you use frequently,
-and place the launcher in a panel for convenient access. To add a new launcher
-to a panel, right-click on a vacant space on the panel, then choose <menuchoice>
-<guimenu>Add to Panel</guimenu><guimenuitem>Launcher</guimenuitem>
-</menuchoice>. </para>
-<para>Alternatively, to add a launcher from a menu, right-click on a vacant
-space on the panel, then choose <menuchoice><guimenu>Add to Panel
-</guimenu><guimenuitem>Launcher from menu</guimenuitem></menuchoice>. Choose
-the launcher to add from the submenus.</para></listitem>
-<listitem><para>Menus</para>
-<para>You can access all desktop functions through menus. The default panels
-contain menus, so you can use a combination of menus and panels to perform
-your tasks. To open a menu from a panel, click on the icon that represents
-the menu. To open a menu from the Menu Panel, click on the text that represents
-the menu. </para>
-<para>Menus that you add to your panels are represented by an icon with an
-arrow. The arrow indicates that the icon represents a menu. The icon in <xref
-linkend="gosoverview-FIG-28"/> is the icon that is displayed when you add the <guimenuitem>
-Desktop Preferences</guimenuitem> menu to a panel.</para>
-<para>You can also add the <guimenu>GNOME Menu</guimenu> to any of your panels.
-To add the <guimenu>GNOME Menu</guimenu> to a panel, right-click on a vacant
-space on the panel, then choose <menuchoice><guimenu>Add to Panel
-</guimenu><guimenuitem>GNOME Menu</guimenuitem></menuchoice>.</para></listitem>
-<listitem><para>Drawers</para>
-<para><firstterm>Drawers</firstterm> are sliding extensions to a panel that
-you can open or close from a drawer icon, as shown in <xref linkend="gosoverview-FIG-28"/>.
- Drawers can help you to organize your work when you run a lot of applications
-simultaneously. You can place all the same functional elements in a drawer
-that you can put in any other type of panel. </para>
-<para>To add a drawer to a panel, right-click on a vacant space on the panel,
-then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>
-Drawer</guimenuitem></menuchoice>. </para>
-<para>To open a drawer click on the drawer. To close a drawer click on the
-drawer again.</para></listitem>
-<listitem><para><guibutton>Lock</guibutton> button and <guibutton>Log Out
-</guibutton> button</para>
-<para>The <guibutton>Lock</guibutton> button enables you to lock your screen.
-The lock icon in <xref linkend="gosoverview-FIG-28"/> is the <guibutton>Lock
-</guibutton> button. The <guibutton>Lock</guibutton> button enables you to
-end your session. </para>
-<para>To add the buttons to a panel, right-click on a vacant space on the
-panel, then choose <guimenuitem>Add to Panel</guimenuitem>. You can then choose
-the button you require. </para></listitem>
-</itemizedlist>
-</sect2>
-<sect2 id="gosoverview-21">
-<title>To Manipulate Panel Objects</title>
-<para>You can manipulate panel objects in the following ways:</para>
-<itemizedlist>
-<listitem><para>Move objects within a panel, or to another panel.</para>
-<para>You can move any object to another location in the panel. You can also
-move an object from one panel to another panel. Use the middle mouse button
-to drag the panel object to the new location.</para></listitem>
-<listitem><para>Copy menu items to a panel.</para>
-<para>Drag the item from the menu to the panel. Alternatively, if the menu
-item is a launcher right-click on the menu item, then choose <guimenuitem>
-Add this launcher to panel</guimenuitem>.</para></listitem>
-</itemizedlist>
-</sect2>
-</sect1>
-<sect1 id="gosoverview-42">
-<title>Menus</title>
-<indexterm><primary>menus</primary><secondary>overview</secondary></indexterm>
-<para>You can access all desktop functions through menus. Your default panels
-contain menus, so you can use a combination of menus and panels to perform
-your tasks. The Menu Panel contains <guimenu>Applications</guimenu> and <guimenu>
-Actions</guimenu> menus. You can also add the <guimenu>GNOME Menu</guimenu>
-to your panels. </para>
-<para>You can use the <guimenu>Applications</guimenu> menu and the <guimenu>
-Actions</guimenu> menu to access almost all of the standard applications,
-commands, and configuration options. You can also access the items in the <guimenu>
-Applications</guimenu> and <guimenu>Actions</guimenu> menus from the <guimenu>
-GNOME Menu</guimenu>.</para>
-<para>To add a <guimenu>GNOME Menu</guimenu> to a panel, right-click on the
-panel then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>
-GNOME Menu</guimenuitem></menuchoice>. The <guimenu>GNOME Menu</guimenu> is
-represented by a stylized footprint, as follows:</para>
-<screenshot>
-<mediaobject>
-  <imageobject>
-    <imagedata fileref="figures/footprint_icon.png" format="PNG"/>
-  </imageobject>
-  <textobject>
-	<phrase>Shows GNOME Menu icon.</phrase>
-  </textobject>
-</mediaobject>
-</screenshot>
-<para>Click on the <guibutton>GNOME Menu</guibutton> button on a panel to
-open the <guimenu>GNOME Menu</guimenu>. </para>
-<para>You can add as many additional menus as you want to any of your panels.
-To open a menu that you add to a panel, click on the menu icon on the panel.
-You can perform other actions on your menus, such as copy menu items to panels.
-</para>
-</sect1>
-<sect1 id="gosoverview-18">
-<title>Windows in the Desktop</title>
-<indexterm><primary>windows</primary><secondary>overview</secondary></indexterm>
-<para>You can display many windows at the same time on your desktop. Each
-window has a frame. The window frame contains active control elements that
-you can use to work with the window.</para>
-<sect2 id="gosoverview-16">
-<title>Types of Windows</title>
-<para>The desktop features the following types of window:</para>
-<itemizedlist>
-<listitem><para>Application windows</para>
-<para>When you run an application, a frame usually borders the window. The
-top edge of the application window contains a titlebar. The titlebar contains
-buttons that you can use to work with the window. The buttons in an application
-window frame enable you to perform actions such as open the <guimenu>Window
-Menu</guimenu>, or close the window. The <guimenu>Window Menu</guimenu> provides
-commands that you can perform on the window.</para></listitem>
-<listitem><para>Dialog windows</para>
-<para>Dialog windows are associated with interactive processes. A dialog window
-consists of the window frame, and a single interactive pane that provides
-information and controls for the user. This manual refers to the interactive
-part of a dialog window as a dialog. The frame of a dialog window contains
-buttons that enable you to open the <guimenu>Window Menu</guimenu>, or to
-close the dialog window.</para></listitem>
-</itemizedlist>
-
-</sect2>
-<sect2 id="gosoverview-32">
-<title>To Manipulate Windows</title>
-<para>You use the frame of an application window or dialog window to perform
-various actions with the window. Most of the control elements are located
-on the top edge of the window frame. <xref linkend="gosoverview-FIG-33"/> shows
-the top edge of a frame for a typical application window.</para>
-<figure id="gosoverview-FIG-33">
-<title>Top Edge of Frame for a Typical Application Window</title>
-<screenshot>
-<mediaobject>
-  <imageobject>
-    <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
-  </imageobject>
-  <textobject>
-	<phrase>Shows top edge of application window frame. Callouts: Window Menu button, Titlebar, Minimize, Maximize, Close Window buttons.
-</phrase>
-  </textobject>
-</mediaobject>
-</screenshot>
-</figure>
-<para>The active control elements of the window frame are as follows: </para>
-<informaltable frame="topbot">
-<tgroup cols="2" colsep="0" rowsep="0"><colspec colname="COLSPEC0" colwidth="41.65*"/>
-<colspec colname="COLSPEC1" colwidth="58.35*"/>
-<thead>
-<row rowsep="1"><entry valign="top"><para>Control Element</para></entry><entry
-valign="top"><para>Description </para></entry></row>
-</thead>
-<tbody>
-<row><entry colname="COLSPEC0" valign="top"><para><guibutton>Window Menu</guibutton>
-button</para></entry><entry colname="COLSPEC1" valign="top"><para>Click on
-the <guibutton>Window Menu</guibutton> button to open the <guimenu>Window
-Menu</guimenu>. </para></entry></row>
-<row><entry valign="top"><para>Titlebar</para></entry><entry valign="top"><para>
-You can use the titlebar to move and shade the window. </para></entry></row>
-<row><entry valign="top"><para><guibutton>Minimize</guibutton> button</para></entry>
-<entry valign="top"><para>Click on the <guibutton>Minimize</guibutton> button
-to minimize the window. </para></entry></row>
-<row><entry valign="top"><para><guibutton>Maximize</guibutton> button</para></entry>
-<entry valign="top"><para>You can use the <guibutton>Maximize</guibutton>
-button to maximize and restore the window.</para><para>To maximize a window
-click on the <guibutton>Maximize</guibutton> button. To restore the window
-click on the <guibutton>Maximize</guibutton> button again. </para></entry>
-</row>
-<row><entry valign="top"><para><guibutton>Close Window</guibutton> button
-</para></entry><entry valign="top"><para>Click on the <guibutton>Close Window
-</guibutton> button to close the window. </para></entry></row>
-<row><entry colname="COLSPEC0"><para>Border</para></entry><entry colname="COLSPEC1"><para>
-Right-click on the border to open the <guimenu>Window Menu</guimenu>.</para></entry>
-</row>
-</tbody>
-</tgroup>
-</informaltable>
-<para>To change the size of windows grab the border of the window, but not
-the titlebar. Drag the border until the window is the size that you require.
-</para>
-</sect2>
-<sect2 id="gosoverview-20">
-<title>To Give Focus to a Window</title>
-<para>A window that has focus can receive input from the mouse and the keyboard.
-Only one window can have focus at a time. The window that has focus has a
-different appearance than other windows. </para>
-<para>You can use the following elements to give focus to a window:</para>
-<informaltable frame="topbot">
-<tgroup cols="2" colsep="0" rowsep="0"><colspec colname="COLSPEC0" colwidth="33.62*"/>
-<colspec colname="COLSPEC1" colwidth="66.38*"/>
-<thead>
-<row rowsep="1"><entry valign="top"><para>Element</para></entry><entry valign="top"><para>
-Action</para></entry></row>
-</thead>
-<tbody>
-<row><entry valign="top"><para>Mouse</para></entry><entry valign="top"><para>
-Click on the window, if the window is visible. </para></entry></row>
-<row><entry colname="COLSPEC0" valign="top"><para>Shortcut keys</para></entry>
-<entry colname="COLSPEC1" valign="top"><para>Use shortcut keys to switch between
-the windows that are open. To give focus to a window, release the keys. The
-default shortcut keys to switch between windows are <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>. </para></entry></row>
-<row><entry colname="COLSPEC0" valign="top"><para><application>Window List
-</application></para></entry><entry colname="COLSPEC1" valign="top"><para>
-Click on the button that represents the window in <application>Window List
-</application>. </para></entry></row>
-<row><entry colname="COLSPEC0" valign="top"><para><application>Workspace Switcher
-</application></para></entry><entry colname="COLSPEC1" valign="top"><para>
-Click on the window that you want to give focus to in the <application>Workspace
-Switcher</application> display.</para></entry></row>
-</tbody>
-</tgroup>
-</informaltable>
-</sect2>
-</sect1>
-<sect1 id="gosoverview-39">
-<title>Workspaces</title>
-<indexterm><primary>workspaces</primary><secondary>overview</secondary></indexterm>
-<para>You can display many windows at the same time on your desktop. Your
-windows are displayed in subdivisions of your desktop that are called workspaces.
-A workspace is a discrete area on the desktop in which you can work. </para>
-<para>Every workspace on the desktop contains the same desktop background,
-the same panels, and the same menus. However, you can run different applications,
-and open different windows in each workspace. You can display only one workspace
-at a time on your desktop but you can have windows open in other workspaces.
- </para>
-<para>Workspaces enable you to organize the desktop when you run many applications
-at the same time. When your current workspace becomes crowded with windows,
-you can move your work to another workspace. You can also switch to another
-workspace then start more applications.</para>
-<para>Workspaces are displayed in the <application>Workspace Switcher</application>
-applet. In <xref linkend="gosoverview-FIG-42"/>, <application>Workspace Switcher
-</application> contains four workspaces. The first three workspaces contain
-open windows. The last workspace does not contain currently active windows.
-</para>
-<figure id="gosoverview-FIG-42">
-<title>Workspaces Displayed in Workspace Switcher</title>
-<screenshot>
-<mediaobject>
-  <imageobject>
-    <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
-  </imageobject>
-  <textobject>
-	<phrase>Shows Workspace Switcher. The context describes the graphic.
-</phrase>
-  </textobject>
-</mediaobject>
-</screenshot>
-</figure>
-<sect2 id="gosoverview-41">
-<title>To Switch Between Workspaces</title>
-<indexterm><primary>workspaces</primary><secondary>switching between</secondary>
-</indexterm><para>You can switch between workspaces in the following ways:
-</para>
-<itemizedlist>
-<listitem><para>In <application>Workspace Switcher</application>, click on
-the workspace where you want to work.</para></listitem>
-<listitem><para>Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>
-right arrow</keycap></keycombo> to switch to the workspace on the right of the current
-workspace.</para></listitem>
-<listitem><para>Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>
-left arrow</keycap></keycombo> to switch to the workspace on the left of the current
-workspace.</para></listitem>
-</itemizedlist>
-</sect2>
-<sect2 id="gosoverview-40">
-<title>To Add Workspaces</title>
-<indexterm><primary>workspaces</primary><secondary>specifying number of</secondary>
-</indexterm><para>To add workspaces to your desktop, right-click on the <application>
-Workspace Switcher</application> applet, then choose <guimenuitem>Preferences
-</guimenuitem>. The <guilabel>Workspace Switcher Preferences</guilabel> dialog
-is displayed. Use the <guilabel>Number of workspaces</guilabel> spin box to
-specify the number of workspaces that you require.</para>
-</sect2>
-</sect1>
-<sect1 id="gosoverview-56">
-<title>Nautilus File Manager</title>
-<indexterm><primary>Nautilus file manager</primary><see>file manager</see>
-</indexterm><indexterm><primary>file manager</primary><secondary>overview
-</secondary></indexterm><para>The <application>Nautilus</application> file
-manager provides an integrated access point to your files, applications, and
-FTP sites. To open a <application>Nautilus</application> window, choose <menuchoice>
-<guimenu>Applications</guimenu><guimenuitem>Home Folder</guimenuitem>
-</menuchoice>. The following figure shows a <application>Nautilus</application>
-window that displays the contents of a folder.</para>
-<screenshot>
-<mediaobject>
-  <imageobject>
-    <imagedata fileref="figures/naut_iconview_window.png" format="PNG"/>
-  </imageobject>
-  <textobject>
-	<phrase>Shows a sample Nautilus window. The context describes the graphic.
-</phrase>
-  </textobject>
-</mediaobject>
-</screenshot>
-<para>A <application>Nautilus</application> window contains the following
-panes:</para>
-<itemizedlist>
-<listitem><para>Side pane</para>
-<para>Enables you to navigate through your files. This pane also displays
-information about the current file or folder. The side pane is on the left
-side of the window.</para></listitem>
-<listitem><para>View pane</para>
-<para>Displays the contents of files and folders. The view pane is on the
-right side of the window.</para></listitem>
-</itemizedlist>
-<para><application>Nautilus</application> enables you to do the following:
-</para>
-<itemizedlist>
-<listitem><para>View files and folders</para>
-<para>You can view your files and folders as icons or as a list. You can view
-the contents of some types of file within a <application>Nautilus</application>
-window. Alternatively, you can open the files in the appropriate application
-from <application>Nautilus</application>. </para></listitem>
-<listitem><para>Manage your files and folders</para>
-<para>You can use <application>Nautilus</application> to create, move, copy,
-rename, and remove files and folders.</para></listitem>
-<listitem><para>Run scripts</para>
-<para>You can run scripts from <application>Nautilus</application>, and you
-can select files and folders on which to run your scripts.</para></listitem>
-<listitem><para>Customize your files and folders</para>
-<para>You can add emblems to your files and folders to indicate particular
-states. For example, you can add an Important emblem to a file to indicate
-that the file is important. You can also customize folders in the following
-ways: <itemizedlist>
-<listitem><para>Add a note to a folder.</para></listitem>
-<listitem><para>Specify a custom background pattern for a folder.</para></listitem>
-<listitem><para>Specify a zoom setting for a folder.</para></listitem>
-</itemizedlist></para></listitem>
-</itemizedlist>
-<para><application>Nautilus</application> also creates the desktop background.
-</para>
-<sect2 id="gosoverview-58">
-<title>To Open Files From the Nautilus File Manager</title>
-<para>To navigate to the folder where the file that you want to open resides,
-double-click on the folder icons in the view pane. When the file that you
-want to open is displayed, double-click on the file icon to open the file.
-</para>
-</sect2>
-<sect2 id="gosoverview-57">
-<title>To Move Files Between Folders</title>
-<para>You can move files between folders by opening two or more <application>
-Nautilus</application> windows. Open a different folder in each window, then
-drag the files from one window to the other. </para>
-</sect2>
-</sect1>
-<sect1 id="gosgetstarted-11">
-<title>Desktop Background</title>
-<indexterm><primary>Nautilus desktop background</primary><see>desktop background
-</see></indexterm><indexterm><primary>desktop background</primary><secondary>
-overview</secondary></indexterm><para>The desktop background is an active
-component of the desktop. You can use the desktop background to perform the
-following actions:</para>
-<itemizedlist>
-<listitem><para>Start your applications, and open your files and folders. 
-</para>
-<para>You can add <firstterm>desktop background objects</firstterm> for convenient
-access to the files, folders, and applications that you use frequently. For
-example, you add a launcher for an application that you use often.</para>
-</listitem>
-<listitem><para>Open the <guimenu>Desktop Background</guimenu> menu.</para>
-<para>Right-click on the desktop background to open the <guimenu>Desktop Background
-</guimenu> menu. You can use the <guimenu>Desktop Background</guimenu> menu
-to perform actions on the desktop background.</para></listitem>
-</itemizedlist>
-<para>The <application>Nautilus</application> file manager manages the desktop
-background.</para>
-<sect2 id="gosoverview-29">
-<title>To Open Desktop Background Objects</title>
-<para>To open an object from the desktop background, double-click on the object.
-You can set your preferences in a <application>Nautilus</application> window
-so that you click once on an object to execute the default action.</para>
-</sect2>
-<sect2 id="gosoverview-19">
-<title>To Add Objects to the Desktop Background</title>
-<para>You can add desktop background objects for convenient access to files,
-folders, and applications that you use frequently. You can add objects to
-your desktop background in the following ways:</para>
-<itemizedlist>
-<listitem><para>Use the <guimenu>Desktop Background</guimenu> menu to add
-a launcher to the desktop background.</para></listitem>
-<listitem><para>Drag an object from a file manager window to the desktop background.
-For example, you can create a symbolic link to a file that you use often,
-then drag the link to your desktop background. The icon for the link is moved
-to the desktop background. To open the file, double-click on the icon. You
-can also drag files and folders to the desktop background. </para></listitem>
-<listitem><para>Drag an application launcher from a menu to the desktop background.
-For example, you can open a menu that contains a launcher for an application
-that you use often, then drag the launcher to your desktop background. </para>
-</listitem>
-</itemizedlist>
-</sect2>
-</sect1>
-<sect1 id="gosoverview-509">
-<title>Start Here Location</title>
-<screenshot>
-<mediaobject>
-  <imageobject>
-    <imagedata fileref="figures/naut_starthere_launcher.png" format="PNG"/>
-  </imageobject>
-  <textobject>
-	<phrase>Shows the Start Here icon.</phrase>
-  </textobject>
-</mediaobject>
-</screenshot>
-<indexterm><primary>Start Here location</primary><secondary>overview</secondary>
-</indexterm><indexterm><primary>file manager</primary><secondary>Start Here
-location</secondary><see>Start Here location</see></indexterm><para>The <guilabel>
-Start Here</guilabel> location enables you to access the following functions:
-</para>
-<itemizedlist>
-<listitem><para><guilabel>Applications</guilabel></para>
-<para>Double-click on <guilabel>Applications</guilabel> to access your key
-GNOME applications. You can also access the <guimenu>Applications</guimenu>
-menu through the <guimenu>GNOME Menu</guimenu> and the Menu Panel.</para>
-</listitem>
-<listitem><para><guilabel>Desktop Preferences</guilabel></para>
-<para>Double-click on <guilabel>Desktop Preferences</guilabel> to customize
-your desktop. </para></listitem>
-<listitem><para>Programs that enable you to configure your system as a server,
-and to choose other system settings.</para></listitem>
-</itemizedlist>
-<para>You can access the <guilabel>Start Here</guilabel> location in the following
-ways:</para>
-<itemizedlist>
-<listitem><para>From a <application>Nautilus</application> window</para>
-<para>Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Start Here
-</guimenuitem></menuchoice>. The contents of the <guilabel>Start Here</guilabel>
-location are displayed in the window.</para></listitem>
-<listitem><para>From the desktop background</para>
-<para>Double-click on the <guilabel>Start Here</guilabel> object on the desktop
-background. The contents of the <guilabel>Start Here</guilabel> location are
-displayed in a <application>Nautilus</application> window.</para></listitem>
-</itemizedlist>
-</sect1>
-<sect1 id="gosoverview-55">
-<title>Desktop Preferences</title>
-<indexterm><primary>preference tools</primary><secondary>overview</secondary>
-</indexterm><para>You can use desktop preference tools to configure almost
-every feature of the desktop. Each tool controls a particular part of the
-behavior of the desktop. For example, you can use a preference tool to select
-a theme for your desktop. A <firstterm>theme</firstterm> is a group of coordinated
-settings that specify the visual appearance of a part of your interface. 
-</para>
-<para>For convenience, the tools are grouped under the following headings:
-</para>
-<itemizedlist>
-<listitem><para>Basic</para></listitem>
-<listitem><para><guilabel>Accessibility</guilabel></para></listitem>
-<listitem><para><guilabel>Advanced</guilabel></para></listitem>
-</itemizedlist>
-<para>You can open your desktop preference tools in either of the following
-ways:</para>
-<itemizedlist>
-<listitem><para>Choose <menuchoice><guimenu>Applications</guimenu>
-<guimenuitem>Desktop Preferences</guimenuitem></menuchoice>. Choose the item
-that you require from the submenus. </para></listitem>
-<listitem><para>Double-click on the <guilabel>Start Here</guilabel> object
-on the desktop background. A <application>Nautilus</application> window opens
-at the <guilabel>Start Here</guilabel> location. Double-click on the <guilabel>
-Desktop Preferences</guilabel> object in the <application>Nautilus</application>
-window to display the desktop preference tools. Double-click on the item that
-you require.</para></listitem>
-</itemizedlist>
-</sect1>
-<sect1 id="gosoverview-54">
-<title>Applications</title>
-<indexterm><primary>applications</primary><secondary>overview</secondary>
-</indexterm><para>The applications that are provided with the GNOME desktop
-share several characteristics. For example, the applications have a consistent
-look-and-feel. The applications share characteristics because the applications
-use the same programming libraries. An application that uses the standard
-GNOME programming libraries is called a <firstterm>GNOME-compliant application
-</firstterm>. For example, <application>Nautilus</application> and the <application>
-gedit</application> text editor are GNOME-compliant applications.</para>
-<para>GNOME provides libraries in addition to the libraries provided by your
-operating system. The libraries enable GNOME to run your existing applications
-as well as GNOME-compliant applications. For example, if your operating system
-is UNIX-based, you can run your current X11 applications and Motif applications
-from the GNOME desktop.</para>
-<para>Some of the features of GNOME-compliant applications are as follows:
-</para>
-<itemizedlist>
-<listitem><para>Consistent look-and-feel</para>
-<para>GNOME-compliant applications have a consistent look-and-feel. GNOME-compliant
-applications use the look-and-feel settings that you specify in the desktop
-preference tools. You can use the following tools to change the look-and-feel
-of your GNOME-compliant applications:<itemizedlist>
-<listitem><para><menuchoice><guimenu>Applications</guimenu><guisubmenu>
-Desktop Preferences</guisubmenu><guimenuitem>Menus &amp; Toolbars
-</guimenuitem></menuchoice></para></listitem>
-<listitem><para><menuchoice><guimenu>Applications</guimenu><guisubmenu>
-Desktop Preferences</guisubmenu><guimenuitem>Theme</guimenuitem></menuchoice></para>
-</listitem>
-</itemizedlist></para></listitem>
-<listitem><para>Menubars, toolbars, and statusbars</para>
-<para>Most GNOME-compliant applications have a menubar, a toolbar, and a statusbar.
-The menubar always contains a <guimenu>File</guimenu> menu and a <guimenu>
-Help</guimenu> menu. The <guimenu>File</guimenu> menu always contains an <guimenuitem>
-Quit</guimenuitem> menu item, and the <guimenu>Help</guimenu> menu always
-contains an <guimenuitem>About</guimenuitem> menu item.</para>
-<para>A <firstterm>toolbar</firstterm> is a bar that appears under the menubar.
-A toolbar contains buttons for the most commonly-used commands. A <firstterm>
-statusbar</firstterm> is a bar at the bottom of a window that provides information
-about the current state of what you are viewing in the window. GNOME-compliant
-applications might also contains other bars. For example, <application>Nautilus
-</application> contains a location bar.</para>
-<para>Some of the bars in GNOME-compliant applications are detachable. That
-is, the bar has a handle that you can grab then drag the bar to another location.
-You can drag the bar to snap to another side of the window, or to another
-part of the desktop. For example, you can detach the menubar, toolbar, and
-location bar in the <application>Nautilus</application> file manager. </para>
-</listitem>
-<listitem><para>Default shortcut keys</para>
-<para>GNOME-compliant applications use the same shortcut keys to perform the
-same actions. For example, to quit a GNOME-compliant application, press <keycombo><keycap>
-Ctrl</keycap><keycap>Q</keycap></keycombo>. To undo an action in a GNOME-compliant
-application, press <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>. </para></listitem>
-<listitem><para>Drag-and-drop</para>
-<para>GNOME-compliant applications use the same protocol to implement drag-and-drop
-operations. Therefore, GNOME-compliant applications provide consistent feedback
-when you drag-and-drop items.</para>
-<para>The use of the same protocol also enables GNOME-compliant applications
-to interoperate in a sophisticated manner. For example, GNOME-compliant applications
-recognize the format of the items that you drag. When you drag a HTML file
-from a <application>Nautilus</application> window to a web browser, the file
-is displayed in HTML format in the browser. However, when you drag the HTML
-file to a text editor, the file is displayed in plain text format in the text
-editor. </para></listitem>
-</itemizedlist>
-</sect1>
-<sect1 id="gosoverview-12">
-<title>To Find Out More</title>
-<indexterm><primary>help</primary><secondary>how to find</secondary></indexterm>
-<para>The desktop provides help if you want to find out more about the following
-areas: </para>
-<itemizedlist>
-<listitem><para>Desktop topics</para></listitem>
-<listitem><para>Applets</para></listitem>
-<listitem><para>Applications</para></listitem>
-</itemizedlist>
-<sect2 id="gosoverview-31">
-<title>To Find Out More About Desktop Topics</title>
-<indexterm><primary>help</primary><secondary>starting help system</secondary>
-</indexterm><indexterm><primary>help</primary><secondary>desktop topics</secondary>
-</indexterm><para>You can find out more about particular desktop topics in
-the integrated <application>Yelp</application> help system. To start the <application>
-Yelp</application> help system, choose <menuchoice><guimenu>Applications
-</guimenu><guimenuitem>Help</guimenuitem></menuchoice>. </para>
-</sect2>
-<sect2 id="gosgetstarted-33">
-<title>To Find Out More About Applets</title>
-<indexterm><primary>applets</primary><secondary>getting help</secondary></indexterm>
-<indexterm><primary>help</primary><secondary>applets</secondary></indexterm>
-<para>To find out more about a specific applet, right-click on the applet,
-then choose <guimenuitem>Help</guimenuitem>. </para>
-</sect2>
-<sect2 id="gosgetstarted-35">
-<title>To Find Out More About Applications</title>
-<indexterm><primary>applications</primary><secondary>help</secondary></indexterm>
-<indexterm><primary>help</primary><secondary>applications</secondary></indexterm>
-<para>To find out more about a specific application, start the application,
-then choose <menuchoice><guimenu>Help</guimenu><guimenuitem>Contents
-</guimenuitem></menuchoice>. Alternatively, start the application
-then press <keycap>F1</keycap>.</para>
-</sect2>
-</sect1>
+  <title>Prezentarea desktopului</title>
+  <highlights>
+    <para>Acest capitol vă prezintă caracteristicile şi componentele principale ale desktopului GNOME. Inainte de a incepe să utilizaţi desktopul citiţi acest capitol pentru a vă familiariza cu diversele caracteristici şi cu modul în care lucrează componentele lui principale. Desktopul se poate configura în foarte multe moduri, de aceea capitolul de faţă descrie configuraţia implicită tipică, acoperind topicurile care urmează.</para>
+  </highlights>
+  <sect1 id="gosoverview-5">
+    <title>Introducerea componentelor desktopului</title>
+    <indexterm>
+      <primary>componente desktop, introducere</primary>
+    </indexterm>
+    <para>Atunci când lansaţi pentru prima dată o sesiune desktop, trebuie să vedeţi un ecran de pornire implicit, care să conţină panouri, ferestre şi diferite iconiţe. <xref linkend="gosoverview-FIG-1"/>
+arată un desktop tipic. </para>
+    <figure id="gosoverview-FIG-1">
+      <title>Un desktop tipic</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/typical_anno_desktop.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Un desktop tipic. Callouts: Meniu, Panou meniu, Fundal desktop, Ferestre, Aplet listă ferestre, Panou margine inferioară, Aplet comutare spaţiu de lucru.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>Componentele majore ale desktopului sunt următoarele: <itemizedlist><listitem><para>Panouri</para>
+<para>Panourile sunt porţiuni din desktop de unde puteţi accesa toate meniurile şi aplicaţiile sistemului. Panourile sunt foarte configurabile.  Un panou deosebit de important în <xref linkend="gosoverview-FIG-1"/> este panoul Meniu. Panoul Meniu se întinde pe toata marginea superioară a desktopului. Panoul Meniu include următoarele două meniuri speciale: </para><itemizedlist><listitem><para> Meniul <guimenu>Aplicaţii</guimenu>: conţine toate aplicaţiile şi uneltele de configurare. Conţine, de asemenea, şi administratorul de fişiere şi navigatorul de ajutor.</para></listitem><listitem><para> Meniul <guimenu>Acţiuni</guimenu>: conţine diverse comenzi pentru realizarea funcţiilor desktopului, cum ar fi <guimenuitem>Căutare fişiere</guimenuitem> şi <guimenuitem>Ieşire</guimenuitem>. </para></listitem></itemizedlist><para>Faceţi clic pe iconiţa aflată in extremitatea dreaptă a panoului Meniu (în colţul dreapta sus al ecranului) pentru a afişa lista tuturor aplicaţiilor deschise.</para></listitem><listitem><para>Meniuri</para>
+<para>Puteţi accesa toate funcţiile desktopului prin intermediul meniurilor. Panoul Meniu conţine meniuri, astfel încât puteţi utiliza o combinaţie de meniuri şi panouri pentru a realiza ceea ce v-aţi propus.
+Puteţi utiliza meniul <guimenu>Aplicaţii</guimenu> şi meniul <guimenu>Acţiuni</guimenu> pentru a accesa aproape toate aplicaţiile standard, comenzile şi opţiunile de configurare. </para>
+<para>De asemenea, puteţi accesa elementele meniurilor <guimenu>Aplicaţii</guimenu> şi <guimenu>Acţiuni</guimenu> din <guimenu>Meniul GNOME</guimenu>.
+Elementele din meniul <guimenu>Acţiuni</guimenu> sunt la nivelul superior al <guimenu>meniului GNOME</guimenu>. </para></listitem><listitem><para>Ferestre</para>
+<para>Puteţi afişa mai multe ferestre simultan. Puteţi executa aplicaţii diferite în fiecare fereastră. Administratorul de ferestre oferă chenare şi butoane pentru ferestre. Administratorul de ferestre vă permite să realizaţi acţiuni standard precum mutarea, închiderea şi redimensionarea ferestrelor. </para></listitem><listitem><para>Spaţii de lucru</para>
+<para>Vă puteţi împărţi desktopul în <firstterm>spaţii de lucru</firstterm> diferite. Un spaţiu de lucru este o zonă a desktopului în care puteţi lucra. Puteţi specifica numărul spaţiilor de lucru din cadrul desktopului dvs. Puteţi comuta într-un spaţiu de lucru diferit, dar puteţi afişa un singur spaţiu de lucru la un moment dat.</para></listitem><listitem><para>Administratorul de fişiere <application>Nautilus</application></para>
+<para>Administratorul de fişiere <application>Nautilus</application> vă oferă un punct de acces integrat către fişiere şi aplicaţii. Puteţi afişa conţinutul fişierelor într-o fereastră <application>Nautilus</application> sau puteţi deschide fişierele cu aplicaţia necesară din <application>Nautilus</application>.
+Puteţi utiliza administratorul de fişiere <application>Nautilus</application> pentru a vă gestiona fişierele şi dosarele. </para></listitem><listitem><para>Fundalul desktopului</para>
+<para>Fundalul desktopului se află în spatele tuturor componentelor desktopului, fiind un element activ al interfeţei utilizator. Puteţi pune obiecte pe fundalul desktopului pentru a vă accesa mai repede directoarele şi fişierele sau pentru a lansa aplicaţiile pe care le utilizaţi frecvent. De asemenea, puteţi face clic dreapta pe fundal pentru a deschide un meniu.</para></listitem><listitem><para>Locaţia <guilabel>Începeţi aici</guilabel></para>
+<para>Locaţia <guilabel>Începeţi aici</guilabel> oferă un punct de acces la unele din caracteristicile cheie ale desktopului GNOME. Vă puteţi accesa aplicaţiile şi uneltele de configurare de la locaţia <guilabel>Începeţi aici</guilabel>. De asemenea, puteţi accesa programe care vă permit configurarea sistemului dvs. ca server şi să alegeţi alte setări ale sistemului.</para></listitem><listitem><para>Preferinţe desktop</para>
+<para>Desktopul GNOME conţine <firstterm>Unelte pentru preferinţe</firstterm> dedicate.
+Fiecare unealtă controlează un anumit aspect al comportamentului desktopului. Pentru a lansa o unealtă pentru preferinţe, alegeţi <menuchoice><guimenu>Aplicaţii</guimenu><guimenuitem>Preferinţe desktop</guimenuitem></menuchoice>. Alegeţi din submeniuri elementul pe care doriţi să-l configuraţi.</para></listitem></itemizedlist></para>
+    <para>Cele mai importante caracteristici ale desktopului sunt gradul ridicat de configurabilitate şi numeroasele modalităţi prin care puteţi să vă realizaţi sarcinile.</para>
+    <para>Desktopul oferă interoperabilitate componentelor desktopului. De obicei, puteţi să efectuaţi aceeaşi acţiune în mai multe moduri diferite. De exemplu, puteţi lansa aplicaţiile din panouri, din meniuri sau de pe fundalul desktopului.</para>
+    <para>Administratorul dumneavostră de sistem poate să facă modificari ale configuraţiei conform cu necesităţile dumneavoastre, astfel încât e posibil ca desktopul dumneavoastră să difere de cel descris în acest capitol. Cu toate acestea, acest capitol oferă un ghid rapid pentru lucrul cu desktopul. </para>
+  </sect1>
+  <sect1 id="gosoverview-502">
+    <title>Panouri</title>
+    <indexterm>
+      <primary>panouri</primary>
+      <secondary>trecere in revistă</secondary>
+    </indexterm>
+    <para>Puteţi adăuga sau şterge panouri în orice moment. Când lansaţi o sesiune pentru prima dată, desktopul conţine, în mod uzual, următoarele două panouri: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Panoul Meniu</para>
+      </listitem>
+      <listitem>
+        <para>Panoul margine în partea de jos a desktopului</para>
+      </listitem>
+    </itemizedlist>
+    <para>Puteţi realiza următoarele acţiuni asupra panourilor:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Creare panouri.</para>
+      </listitem>
+      <listitem>
+        <para>Ştergere panouri.</para>
+      </listitem>
+      <listitem>
+        <para>Ascundere panouri.</para>
+      </listitem>
+      <listitem>
+        <para>Adăugare obiecte la panouri.</para>
+      </listitem>
+      <listitem>
+        <para>Manipulare obiecte panou.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosoverview-26">
+      <title>Creare panouri</title>
+      <para>Pentru a crea un panou, realizaţi paşii următori: </para>
+      <orderedlist>
+        <listitem>
+          <para>Faceţi clic dreapta pe un spaţiu gol de pe orice panou şi alegeţi <guimenuitem>Panou nou</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Alegeţi tipul panoului pe care vreţi să-l creaţi din submeniu. Panoul este adăugat desktopului.</para>
+        </listitem>
+      </orderedlist>
+      <para>Puteţi crea cât de multe panouri doriţi. Totuşi, nu puteţi crea decât un panou Meniu. Puteţi crea diferite tipuri de panouri corespunzătoare necesităţilor dumneavoastră. Puteţi să vă personalizaţi comportamentul şi aspectul panourilor. De exemplu, puteţi schimba fundalul panourilor.</para>
+    </sect2>
+    <sect2 id="gosoverview-508">
+      <title>Ştergere panouri</title>
+      <para>Pentru a şterge un panou, faceţi clic dreapta pe panou şi alegeţi <guimenuitem>Şterge acest panou</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosoverview-24">
+      <title>Ascundere panou</title>
+      <para>Cu excepţia panoului Meniu, panourile pot avea butoane de ascundere. Faceţi clic pe butoanele de ascundere pentru a ascunde/ afişa panoul.</para>
+    </sect2>
+    <sect2 id="gosoverview-4">
+      <title>Adăugare obiecte în panouri</title>
+      <para>Un panou poate conţine diferite tipuri de obiecte. Panoul din <xref linkend="gosoverview-FIG-28"/>
+conţine toate tipurile de obiecte. </para>
+      <figure id="gosoverview-FIG-28">
+        <title>Un panou cu diverse obiecte panou</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/sample_anno_panel.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Un panou cu diverse obiecte panou. Callouts: Lansator calculator, Meniu, Aplet CD Player, Sertar, Buton blocare.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Puteţi adăuga oricărui tip de panouri oricare din următoarele obiecte:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Apleturi</para>
+          <indexterm>
+            <primary>apleturi</primary>
+            <secondary>trecere în revistă</secondary>
+          </indexterm>
+          <para><firstterm>Apleturile</firstterm> sunt aplicaţii mici, interactive, care se află în panouri.Un exemplu de aplet este <application>CD Player</application> în <xref linkend="gosoverview-FIG-28"/>. Fiecare aplet are o interfaţă utilizator simplă, care poate fi operată cu ajutorul mausului sau tastaturii. Următoarele apleturi apar în mod implicit în panouri:</para>
+          <itemizedlist>
+            <listitem>
+              <para><application>Listă ferestre</application>: Afişează un buton pentru fiecare fereastra care este deschisă. Puteţi face clic pe butonul unei ferestre din lista pentru a micşora sau restaura fereastra. Implicit,  <application>Listă ferestre</application> apare în panoul margine, în partea de jos a ecranului.</para>
+            </listitem>
+            <listitem>
+              <para><application>Comutator spaţii de lucru</application>: Afişează o reprezentare a spaţiului dumneavoastră de lucru. Puteţi utiliza <application>Comutator spaţii de lucru</application> pentru a schimba spaţiile de lucru. Implicit, <application>Comutator spaţii de lucru</application> apare în panoul margine, în partea de jos a ecranului.</para>
+            </listitem>
+          </itemizedlist>
+          <para>Pentru a adăuga un aplet unui panou, faceţi clic dreapta de maus pe un spaţiu liber din cadrul panoului şi alegeţi <guimenuitem>Adaugă în panou</guimenuitem>. Alegeţi apletul care vă trebuie din următoarele submeniuri:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Acesorii</para>
+            </listitem>
+            <listitem>
+              <para>Amuzament</para>
+            </listitem>
+            <listitem>
+              <para>Internet</para>
+            </listitem>
+            <listitem>
+              <para>Multimedia</para>
+            </listitem>
+            <listitem>
+              <para>Utilitare</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Lansatoare</para>
+          <para>Un <firstterm>lansator</firstterm> pornşte o anumită aplicaţie, execută o comandă sau deschide un fişier. Iconiţa calculator <xref linkend="gosoverview-FIG-28"/> este un lansator pentru aplicaţia <application>Calculator</application>. Un lansator se poate afla într-un panou sau într-un meniu. Faceţi clic pe lansator pentru a realiza acţinea care-i este asociată.</para>
+          <para>Vă puteţi crea propriile lansatoare pentru aplicaţii. De exemplu, puteţi crea un lansator pentru procesorul de texte pe care-l utilizaţi în mod curent şi puteţi amplasa acest lansator într-un panou, pentru acces uşor la el. Pentru a adăuga un lansator unui panou, faceţi clic dreapta pe un spaţiu liber al panoului; după accea selectaţi <menuchoice><guimenu>Adaugă în panou</guimenu><guimenuitem>Lansator</guimenuitem></menuchoice>. </para>
+          <para>O alta metodă pentru adăugarea unui lansator dintr-un meniu este următoarea: faceţi clic dreapta pe un spaţiu liber al panoului şi selectaţi <menuchoice><guimenu>Adaugă în panou</guimenu><guimenuitem>Lansator din meniu</guimenuitem></menuchoice>. Selectaţi din submeniuri lansatorul pe care doriţi sa-l adaugaţi panoului.</para>
+        </listitem>
+        <listitem>
+          <para>Meniuri</para>
+          <para>Toate funcţiile desktopului pot fi accesate prin intermediul meniurilor. Panourile implicite conţin meniuri, astfel încât puteţi utiliza combinaţii de meniuri şi panouri pentru a vă îndeplini sarcinile. Pentru a deschide un meniu dintr-un panou, faceţi clic pe iconiţa care reprezintă meniul. Pentru a deschide un meniu din cadrul panoului Meniu, faceţi clic pe textul care reprezintă meniul. </para>
+          <para>Meniurile pe care le adăugaţi la panouri sunt reprezentate printr-o iconiţă cu o săgeată. Săgeata indică faptul că iconiţa reprezintă un meniu. Iconiţa din <xref linkend="gosoverview-FIG-28"/> este iconiţa care e afişat atunci când adăugaţi meniul <guimenuitem>Preferinţe desktop</guimenuitem> la panou.</para>
+          <para>De asemenea, puteţi adăuga <guimenu>Meniul GNOME</guimenu> oricăruia din panourile dvs.
+Pentru a adăuga <guimenu>Meniul GNOME</guimenu> unui panou, faceţi clic dreapta pe un spaţiu liber al panoului după care selectaţi <menuchoice><guimenu>Adaugă în panou</guimenu><guimenuitem>Meniu GNOME</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>Sertare</para>
+          <para><firstterm>Sertarele</firstterm> sunt extensii ale panourilor şi pot fi deschise prin intermediul iconiţei sertar, dupa cum se poate vedea în <xref linkend="gosoverview-FIG-28"/>.
+ Sertarele pot să vă ajute la organizarea muncii atunci când rulaţi mai multe aplicaţii simultan. Puteţi plasa toate elementele asemănătoare funcţional într-un sertar pe care sa-l puneţi în orice alt tip de panou. </para>
+          <para>Pentru a adăuga un sertar unui panou, faceţi clic dreapta pe un spaţiu liber al panoului şi selectaţi <menuchoice><guimenu>Adaugă în panou</guimenu><guimenuitem>Sertar</guimenuitem></menuchoice>. </para>
+          <para>Pentru a deschide un sertar, faceţi clic pe sertar. Pentru a închide un sertar, faceţi încă un clic pe el.</para>
+        </listitem>
+        <listitem>
+          <para>Butonul <guibutton>Închide ecran</guibutton> şi butonul <guibutton>Ieşire</guibutton></para>
+          <para>Butonul <guibutton>Închide ecran</guibutton> vă permite să vă "încuiaţi" ecranul. Iconiţa Închide ecran din <xref linkend="gosoverview-FIG-28"/> este butonul <guibutton>Închide ecran</guibutton>. Butonul <guibutton>Ieşire</guibutton> vă permite să vă încheiaţi sesiunea.</para>
+          <para>Pentru a adăuga butoanele unui panou, faceţi clic dreapta pe un spaţiu liber al panoului, după care alegeţi <guimenuitem>Adaugă în panou</guimenuitem>. Din acest moment puteţi alege butonul de care aveţi nevoie.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosoverview-21">
+      <title>Manipularea obiectelor panoului</title>
+      <para>Puteţi manipula obiectele panoului în următoarele moduri:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Mutarea obiectelor în cadrul aceluiaşi panou sau în alt panou.</para>
+          <para>Puteţi muta orice obiect într-o altă poziţie din panou. De asemenea, puteţi muta un obiect dintr-un panou în altul. Folosiţi butonul din mijloc al mausului pentru a trage obiectul în noua locaţie. </para>
+        </listitem>
+        <listitem>
+          <para>Copierea elementelor meniului într-un panou.</para>
+          <para>Trageţi elementul din meniu în panou. In cazul în care elementul este un lansator, faceţi clic dreapta pe element şi alegeţi <guimenuitem>Adaugă acest lansat în panou</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-42">
+    <title>Meniuri</title>
+    <indexterm>
+      <primary>meniuri</primary>
+      <secondary>trecere în revistă</secondary>
+    </indexterm>
+    <para>Puteţi accesa toate funcţiile desktopului prin intermediul meniurilor. Panourile dumneavoastră implicite conţin meniuri, astfel încât puteţi utiliza combinaţii de meniuri şi panouri pentru a vă îndeplini sarcinile. Panoul Meniu conţine meniurile <guimenu>Aplicaţii</guimenu> şi <guimenu>Acţiuni</guimenu>. De asemenea, puteţi adăuga <guimenu>meniul GNOME</guimenu> panourilor dumneavoastră.</para>
+    <para>Puteţi utiliza meniurile <guimenu>Aplicaţii</guimenu> şi <guimenu>Acţiuni</guimenu> pentru a accesa aproape toate aplicaţiile, comenzile şi opţiunile de configurare standard. De asemena, puteţi accesa elementele meniurilor <guimenu>Aplicaţii</guimenu> şi <guimenu>Acţiuni</guimenu> din <guimenu>meniul GNOME</guimenu>.</para>
+    <para>Pentru a adăuga <guimenu>meniul GNOME</guimenu> unui panou, faceţi clic dreapta pe panou şi selectaţi <menuchoice><guimenu>Adaugă la panou</guimenu><guimenuitem>Meniu GNOME</guimenuitem></menuchoice>. <guimenu>Meniul GNOME</guimenu> este reprezentat de o talpă stilizată, ca în poza următoare:</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/footprint_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>iconiţa meniu GNOME.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>Pentru a lansa <guimenu>Meniul GNOME</guimenu> dintr-un panou, faceţi clic pe butonul <guibutton>Meniu GNOME</guibutton> în panoul respectiv.</para>
+    <para>Puteţi adăuga panourilor cât de multe meniuri suplimentare doriţi. Pentru a deschide un meniu pe care l-aţi adăugat unui panou, faceţi clic, în cadrul panoului, pe iconiţa meniului. Asupra meniurilor puteţi realiza şi alte acţiuni, precum copierea elementelor meniurilor la panouri.</para>
+  </sect1>
+  <sect1 id="gosoverview-18">
+    <title>Ferestre în cadrul desktopului</title>
+    <indexterm>
+      <primary>ferestre</primary>
+      <secondary>trecere în revistă</secondary>
+    </indexterm>
+    <para>Puteţi afişa pe desktop mai multe ferestre în acelaşi timp. Fiecare fereastră are un cadru. Cadrul ferestrei conţine elemente active de control pe care le puteţi utiliza pentru a lucra cu ferestrele.</para>
+    <sect2 id="gosoverview-16">
+      <title>Tipuri de ferestre</title>
+      <para>Desktopul prezintă următoarele tipuri de ferestre:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Ferestre de aplicaţii</para>
+          <para>Ferestrele în care funcţionează aplicaţiile au, în general, chenare care le încadrează. Marginea de sus a chenarului ferestrei aplicaţiei conţine o bară de titlu. Bara de titlu conţine butoane pe care le puteţi utiliza pentru a lucra cu fereastra. Butoanele din chenarul ferestrei aplicaţiei vă permit realizarea de acţiuni precum deschiderea <guimenu>Meniului fereastră</guimenu> sau închiderea ferestrei. <guimenu>Meniul fereastră </guimenu> oferă comenzi cu care puteţi acţiona asupra ferestrei. </para>
+        </listitem>
+        <listitem>
+          <para>Ferestre de dialog</para>
+          <para>Ferestrele de dialog sunt asociate cu procesele interactive. O fereastră de dialog consistă într-un chenar şi un panou interactiv care oferă utilizatorului informaţie şi control. In acest manual, partea interactivă a ferestrelor de dialog este numită dialog. Chenarul unei ferestre de dialog conţine butoane care vă permit deschiderea <guimenu>Meniului ferestre</guimenu> sau închiderea ferestrei de dialog</para>
+        </listitem>
+      </itemizedlist>
+<!--<para>Pentru a schimba temele chenarelor ferestrelor dvs., selectaţi <menuchoice><guimenu>Aplicaţii</guimenu><guisubmenu>Preferinţe desktop</guisubmenu><guisubmenu>Avansat</guisubmenu><guimenuitem>FIXME</guimenuitem></menuchoice>, apoi selectaţi tema dorită.</para>-->
+    </sect2>
+    <sect2 id="gosoverview-32">
+      <title>Manipularea ferestrelor</title>
+      <para>Utilizaţi chenarul ferestei unei apliaţii sau al unei ferestre de dialog pentru a efectua diferite acţiuni asupra ferestrei. Cea mai mare parte a elementelor de control sunt localizate pe margine de sus a chenarului. <xref linkend="gosoverview-FIG-33"/> arată marginea de sus a chenarului unei ferestre de aplicaţie tipice.</para>
+      <figure id="gosoverview-FIG-33">
+        <title>Marginea superioară a chenarului unei ferestre de aplicaţie tipice</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Marginea superioară a unei ferestre de aplicaţie. Callouts: Buton meniu fereastră, butoane Bară de titlu, Minimizare, Tot ecranul (Maximizare), Inchidere fereastră.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Elementrle active de control ale chenarului ferestrei sunt următoarele: </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="41.65*"/>
+          <colspec colname="colspec1" colwidth="58.35*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Element de control</para>
+              </entry>
+              <entry valign="top">
+                <para>Descriere </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Butonul <guibutton>Meniu fereastră</guibutton></para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Faceţi clic pe butonul <guibutton>Meniu fereastră</guibutton> pentru a deschide <guimenu>Meniul fereastră</guimenu>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Bară de titlu</para>
+              </entry>
+              <entry valign="top">
+                <para>Puteţi utiliza bara de titlu pentru a muta şi umbri fereastra. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Butonul <guibutton>Minimizare</guibutton></para>
+              </entry>
+              <entry valign="top">
+                <para>Faceţi clic pe butonul <guibutton>Minimizare</guibutton> pentru a minimiza fereastra. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Butonul <guibutton>Maximizare</guibutton></para>
+              </entry>
+              <entry valign="top">
+                <para>Puteţi utiliza butonul <guibutton>Maximizare</guibutton> pentru a face ca fereastra să ocupe tot ecranul sau să revină la dimensiunea iniţială.</para>
+                <para>Pentru a afişa fereastra pe tot ecranul, faceţi clic pe butonul <guibutton>Maximizare</guibutton>. Pentru a reveni la dimensiunea anterioară, faceţi încă un clic pe butonul <guibutton>Maximizare</guibutton>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Butonul <guibutton>Inchidere fereastră</guibutton></para>
+              </entry>
+              <entry valign="top">
+                <para>Faceţi clic pe butonul <guibutton>Inchidere fereastră</guibutton> pentru a închide fereastra. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>Chenar</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Faceţi clic dreapta pe chenar pentru a deschide <guimenu>Meniul fereastră</guimenu>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Pentru a modifica dimensiunea unei ferestre, se "prinde" chenarul ferestrei (se asează cursorul mausului pe chenar, astfel încât să se transforme într-o săgeată dublă), dar nu în zona barei de titlu. Se trage chenarul până când fereastra ajunge la dimensiunea dorită.</para>
+    </sect2>
+    <sect2 id="gosoverview-20">
+      <title>Activarea unei ferestre</title>
+      <para>Fereastra activă este fereastra care recepţionează semnalele de la tastatură sau maus. O singură fereastră poate fi activă la un moment dat. Aspectul ferestrei active diferă de al celorlalte ferestre. </para>
+      <para>Puteţi utiliza următoarele elemente pentru a activa o fereastră:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Element</para>
+              </entry>
+              <entry valign="top">
+                <para>Acţiune</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Maus</para>
+              </entry>
+              <entry valign="top">
+                <para>Dacă fereastra este vizibilă, faceţi clic pe ea. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Taste rapide</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Utilizaţi taste rapide pentru a comuta între ferestrele deschise. Pentru a activa o fereastră, eliberaţi tastele. Tastele rapide implicite pentru comutarea între ferestre sunt <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Listă ferestre</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Faceţi clic pe butonul care reprezintă fereastra în <application>Listă ferestre</application>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Comutator spaţii de lucru</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Faceţi clic pe fereastra pe care vreţi să o activaţi în ecranul <application>Comutator spaţii de lucru</application>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-39">
+    <title>Spaţii de lucru</title>
+    <indexterm>
+      <primary>spaţii de lucru</primary>
+      <secondary>trecere în revistă</secondary>
+    </indexterm>
+    <para>Puteţi afişa pe desktop mai multe ferestre simultan. Ferestrele sunt afişate în subdiviziuni ale desktopului, numite spaţii de lucru. Un spaţiu de lucru este o zonă distinctă a desktopului, în care puteţi lucra. </para>
+    <para>Fiecare spaţiu de lucru al desktopului conţine acelaşi fundal al desktopului, aceleaşi panouri şi aceleaşi meniuri. Totuşi, puteţi  lansa aplicaţii şi deschide ferestre diferite în fiecare spaţiu de lucru. Puteţi afişa pe desktop un singur spaţiu de lucru la un moment dat, dar puteţi avea ferestre deschise în celelalte spaţii de lucru. </para>
+    <para>Spaţiile de lucru vă permit o mai bună organizare a desktopului în cazul în care lansaţi mai multe aplicaţii simultan. Când spaţiul de lucru curent se umple cu ferestre, puteţi sa vă continuaţi munca într-un alt spaţiu de lucru. Puteţi comuta în alt spaţiu de lucru şi pentru a lansa noi aplicaţii.</para>
+    <para>Spaţiile de lucru sunt afişate în apletul <application>Comutator spaţii de lucru</application>. In <xref linkend="gosoverview-FIG-42"/>, <application>Comutatorul spaţii de lucru </application> conţine patru spaţii de lucru. Prime trei spaţii de lucru conţin ferestre deschise, în timp ce în ultimul nu este deschisă nici o fereastră.</para>
+    <figure id="gosoverview-FIG-42">
+      <title>Spaţii de lucru afişate în comutatorul spaţii de lucru</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Comutator spaţii de lucru. Contextul descrie grafica.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <sect2 id="gosoverview-41">
+      <title>Comutarea între spaţiile de lucru</title>
+      <indexterm>
+        <primary>spaţii de lucru</primary>
+        <secondary>comutarea între</secondary>
+      </indexterm>
+      <para>Puteţi comuta între spaţiile de lucru în următoarele moduri:</para>
+      <itemizedlist>
+        <listitem>
+          <para>In <application>Comutator spaţii de lucru</application>, faceţi clic pe spaţiul de lucru în care vreţi să lucraţi.</para>
+        </listitem>
+        <listitem>
+          <para>Apăsaţi <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>săgeată dreapta</keycap></keycombo> pentru a comuta în spaţiul de lucru aflat în dreapta spaţiului curent.</para>
+        </listitem>
+        <listitem>
+          <para>Apăsaţi <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>săgeată stânga</keycap></keycombo> pentru a comuta în spaţiul de lucru aflat în stânga spaţiului curent.
+workspace.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosoverview-40">
+      <title>Adăugare spaţiu de lucru</title>
+      <indexterm>
+        <primary>spaţii de lucru</primary>
+        <secondary>specificare număr</secondary>
+      </indexterm>
+      <para>Pentru a adăuga spaţii de lucru desktopului dumneavoastră, faceţi clic dreapta pe apletul <application>Comutator spaţii de lucru</application> şi selectaţi <guimenuitem>Preferinţe</guimenuitem>. Va fi afişat dialogul <guilabel>Preferiţe comutator spaţii de lucru</guilabel>. Utilizaţi caseta <guilabel>Numărul spaţiilor de lucru</guilabel> pentru a specifica numărul dorit de spaţii de lucru.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-56">
+    <title>Administratorul de fişiere Nautilus</title>
+    <indexterm>
+      <primary>Administratorul de fişiere Nautilus</primary>
+      <see>administrator de fişiere</see>
+    </indexterm>
+    <indexterm>
+      <primary>administrator de fişiere</primary>
+      <secondary>trecere în revistă</secondary>
+    </indexterm>
+    <para>Administratorul de fişiere <application>Nautilus</application> oferă un punct integrat de acces către fişierele dvs., aplicaţii şi situri FTP. Pentru a deschide o fereastră <application>Nautilus</application>, selectaţi <menuchoice><guimenu>Aplicaţii</guimenu><guimenuitem>Acasă</guimenuitem></menuchoice>. Următoarea figură arată o fereastră <application>Nautilus</application> care afişează conţinutul unui dosar.</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/naut_iconview_window.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Un exemplu de fereastră Nautilus. Contextul descrie grafica.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>O fereastră <application>Nautilus</application> conţine următoarele panouri:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Panou lateral</para>
+        <para>Vă permite navigarea printre fişiere. De asemenea, acest panou afişează informaţii despre fişierul sau dosarul curent. Panoul lateral este localizat în partea stângă a ferestrei.</para>
+      </listitem>
+      <listitem>
+        <para>Panoul de vizualizare</para>
+        <para>Afişează conţinutul fişierelor şi dosarelor. Panoul de vizualizare se află în partea dreaptă a ferestrei.</para>
+      </listitem>
+    </itemizedlist>
+    <para><application>Nautilus</application> vă permite realizarea următoarelor:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Vizualizarea fişierelor şi dosarelor</para>
+        <para>Puteţi vizualiza fişierele sau dosarele sub formă de iconiţe sau de listă. In cadrul unei ferestre <application>Nautilus</application> puteţi vedea conţinutul anumitor tipuri de fişiere . De asemenea, din <application>Nautilus</application> puteţi deschide fişierele cu aplicaţii dedicate. </para>
+      </listitem>
+      <listitem>
+        <para>Gestionarea fişierelor şi dosarelor</para>
+        <para>Puteţi utiliza <application>Nautilus</application> pentru a crea, muta, copia, redenumi sau şterge fişiere şi dosare.</para>
+      </listitem>
+      <listitem>
+        <para>Executare scripturi (Run scripts)</para>
+        <para>Din <application>Nautilus</application> puteţi lansa scripturi în execuţie şi puteţi selecta fişierele sau dosarele asupra cărora să acţioneze scripturile lansate.</para>
+      </listitem>
+      <listitem>
+        <para>Personalizarea fişierelor şi dosarelor</para>
+        <para>Puteţi adauga fişierelor şi dosarelor dvs. simboluri care să indice condiţii particulare ale acestora. De exemplu, puteţi adăuga unui fişier simbolul Important pentru a indica importanţa deosebită a acelui fişier. Vă puteţi personaliza dosarele într-unul din următoarele moduri: <itemizedlist><listitem><para>Adăugaţi o notă unui dosar.</para></listitem><listitem><para>Specificaţi un fundal dedicat pentru un dosar.</para></listitem><listitem><para>Specificaţi dimensiunile unui dosar.</para></listitem></itemizedlist></para>
+      </listitem>
+    </itemizedlist>
+    <para><application>Nautilus</application> creează, de asemenea, fundalul desktopului.</para>
+    <sect2 id="gosoverview-58">
+      <title>Deschiderea fişierelor din administratorul de fişiere al Nautilus</title>
+      <para>Pentru a naviga prin dosarul în care se află fişierul pe care doriţi să-l deschideţi, faceţi dublu clic pe iconiţa dosarului aflată în panoul de vizualizare. Când fişierul care vă interesează este afişat, faceţi dublu clic pe iconiţa fişierului pentru a-l deschide.</para>
+    </sect2>
+    <sect2 id="gosoverview-57">
+      <title>Mutarea fişierelor dintr-un dosar în altul</title>
+      <para>Prin deschiderea a două sau mai multe ferestre <application>Nautilus</application>, puteţi muta fişiere dintr-un dosar în altul. Deschideţi câte un dosar diferit în fiecare fereastră, după care trageţi fişierele dintr-o fereastră în alta.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-11">
+    <title>Fundal pentru desktop</title>
+    <indexterm>
+      <primary>Fundalul pentru desktop Nautilus</primary>
+      <see>fundal pentru desktop</see>
+    </indexterm>
+    <indexterm>
+      <primary>fundal pentru desktop</primary>
+      <secondary>trecere în revistă</secondary>
+    </indexterm>
+    <para>Fundalul pentru desktop este o componentă activă a desktopului. Puteţi folosi fundalul desktopului pentru a realiza următoarele acţiuni:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Lansarea aplicaţiilor şi deschiderea fişierelor şi dosarelor. </para>
+        <para>Puteţi adăuga <firstterm>obiecte fundal desktop</firstterm> pentru accesul convenabil la fişierele, dosarele şi aplicaţiile pe care le folosiţi frecvent. De exemplu, puteţi adăuga un lansator pentru o aplicaţie pe care o utilizaţi des.</para>
+      </listitem>
+      <listitem>
+        <para>Deschideţi meniul <guimenu>Fundal desktop</guimenu>.</para>
+        <para>Faceţi dublu clic pe fundalul desktopului pentru a deschide meniul <guimenu>Fundal desktop</guimenu>. Puteţi utiliza meniul <guimenu>Fundal desktop</guimenu> pentru a efectua diverse acţiuni asupra fundalului desktopului.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Administratorul de fişiere <application>Nautilus</application> gestionează fundalul desktopului.</para>
+    <sect2 id="gosoverview-29">
+      <title>Deschiderea obiectelor fundal desktop</title>
+      <para>Pentru a deschide un obiect aflat pe fundalul desktopului, faceţi dublu clic pe obiect.
+Puteţi folosi o fereastră <application>Nautilus</application>, pentru a vă configura preferinţele astfel încât să lansaţi aplicaţia asociată unui obiect printr-un singur clic pe obiectul respectiv.</para>
+    </sect2>
+    <sect2 id="gosoverview-19">
+      <title>Adăugarea de obiecte fundalului desktopului</title>
+      <para>Puteţi adăuga obiecte fundal desktop pentru acces rapid şi uşor la fişierele, dosarele şi aplicatiile utilizate frecvent. Puteţi adăuga obiecte fundalului desktopului dvs. în următoarele moduri:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Utilizaţi meniul <guimenu>Fundal desktop</guimenu> pentru a adăuga fundalului pentru desktop un lansator.</para>
+        </listitem>
+        <listitem>
+          <para>Trageţi un obiect dintr-o fereastră administrator de fişiere pe fundalul pentru desktop. De exemplu, puteţi crea o legătură simbolică unui fişier utilizat în mod frecvent şi puteţi trage legătura pe fundalul desktopului. În acest mod, iconiţa legăturii simbolice este mutată pe fundalul desktopului. Pentru a deschide fişierul, faceţi dublu clic pe iconiţă. De asemenea, puteţi trage pe fundalul desktopului şi fişiere sau dosare. </para>
+        </listitem>
+        <listitem>
+          <para>Trageţi lansatorul unei aplicaţii dintr-un meniu pe fundalul desktopului. De exemplu, puteţi deschide un meniu care conţine lansatorul unei aplicaţii utilizate în mod frecvent; după aceea, trageţi lansatorul pe fundalul desktopului.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-509">
+    <title>Locaţia Începeţi aici</title>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/naut_starthere_launcher.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Iconiţa Începeţi aici.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>Locaţia Începeţi aici</primary>
+      <secondary>trecere în revistă</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>administrator de fişiere</primary>
+      <secondary>Locaţia Începeţi aici</secondary>
+      <see>Locaţia Începeţi aici</see>
+    </indexterm>
+    <para>Locaţia <guilabel>Începeţi aici</guilabel> vă permite accesul la următoarele funcţii: </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <guilabel>Aplicaţii</guilabel>
+        </para>
+        <para>Faceţi dublu clic pe <guilabel>Aplicaţii</guilabel> pentru a accesa aplicaţiile GNOME cheie. De asemenea, puteţi accesa meniul <guimenu>Aplicaţii</guimenu> prin intermediul <guimenu>Meniului GNOME</guimenu> şi a panoului Meniu.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>Preferinţe desktop</guilabel>
+        </para>
+        <para>Faceţi dublu clic pe <guilabel>Preferinţe desktop</guilabel> pentru a vă personaliza desktopul. </para>
+      </listitem>
+      <listitem>
+        <para>Programe care vă permit configurarea sistemului ca server şi alegerea altor setări ale sistemului.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Puteţi accesa locaţia <guilabel>Începeţi aici</guilabel> în următoarele moduri:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Dintr-o fereastră <application>Nautilus</application></para>
+        <para>Alegeţi <menuchoice><guimenu>Du-te</guimenu><guimenuitem>Începeţi aici</guimenuitem></menuchoice>. Conţinutul locaţiei <guilabel>Începeţi aici</guilabel> este afişat în fereastră.</para>
+      </listitem>
+      <listitem>
+        <para>Din fundalul desktopului</para>
+        <para>Faceţi dublu clic pe obiectul <guilabel>Începeţi aici</guilabel> de pe fundalul desktopului. Conţinutul locaţiei <guilabel>Începeţi aici</guilabel> este afişat într-o fereastră <application>Nautilus</application>.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-55">
+    <title>Preferinţe desktop</title>
+    <indexterm>
+      <primary>unelte pentru preferinţe</primary>
+      <secondary>trecere în revistă</secondary>
+    </indexterm>
+    <para>Puteţi folosi uneltele pentru preferinţe desktop pentru a configura aproape orice caracteristică a desktopului. Fiecare unealtă controlează o anumită parte a comportamentului desktopului. De examplu, puteţi utiliza o unealtă pentru preferinţe pentru a selecta o temă pentru desktopul dvs. O <firstterm>temă</firstterm> reprezintă un grup de setări coordonate care specifică aspectul vizual al interfeţei dvs. </para>
+    <para>Pentru comoditate, uneltele sunt grupate sub următoarele titluri:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Bază</para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>Accesibilitate</guilabel>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>Avansat</guilabel>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>Puteţi deschide uneltele pentru preferinţe desktop în unul din următoarele moduri:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Alegeţi <menuchoice><guimenu>Aplicaţii</guimenu><guimenuitem>Preferinţe desktop</guimenuitem></menuchoice>. Alegeţi elementul necesar din submeniuri.</para>
+      </listitem>
+      <listitem>
+        <para>Faceţi dublu clic pe obiectul <guilabel>Începeţi aici</guilabel> pe fundalul desktopului; se va deschide o fereastră <application>Nautilus</application> la locaţia <guilabel>Începeţi aici</guilabel>. Faceţi dublu clic pe obiectul <guilabel>Preferinţe desktop</guilabel> în fereastra <application>Nautilus</application> pentru a afişa uneltele pentru preferinţe desktop. Faceţi dublu clic pe elementul dorit.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-54">
+    <title>Aplicaţii</title>
+    <indexterm>
+      <primary>aplicaţii</primary>
+      <secondary>trecere în revistă</secondary>
+    </indexterm>
+    <para>Aplicaţiile care sunt oferite cu desktopul GNOME au o serie de caracteristici comune. De exemplu, aplicaţiile au un look-and-feel consistent. Aplicaţiile au caracteristici comune pentru că folosesc aceleaşi biblioteci de programare. O aplicaţie care foloseşte bibliotecile GNOME standard se numeşte <firstterm>aplicaţie conformă GNOME</firstterm>. De exemplu <application>Nautilus</application> şi editorul de text <application>gedit</application> sunt aplicaţii conforme GNOME.</para>
+    <para>GNOME oferă biblioteci suplimentare bibliotecilor oferite de sistemul de operare. Bibliotecile permit GNOME executarea aplicaţiilor existente înainte de instalarea GNOME, precum şi a aplicaţiilor conforme GNOME. De exemplu, dacă sistemul dumneavoastră de operare este de tip UNIX, puteţi executa aplicaţiile existente X11 şi aplicaţiile Motif în desktopul GNOME.</para>
+    <para>Următoarele caracteristici fac parte din caracteristicile aplicaţiilor conforme GNOME:</para>
+    <itemizedlist>
+      <listitem>
+        <para>look-and-feel consistent</para>
+        <para>Aplicaţiile conforme GNOME au un look-and-feel consistent. Toate aplicaţiile conforme GNOME utilizează aceleaşi setări look-and-feel, setări specificaţe de dvs. prin uneltele pentru preferinţe desktop. Puteţi utiliza următoarele unelte pentru a schimba look-and-feel pentru aplicaţiile conforme GNOME :<itemizedlist><listitem><para><menuchoice><guimenu>Aplicaţii</guimenu><guisubmenu>Preferinţe desktop</guisubmenu><guimenuitem>Meniuri şi bare de unelte</guimenuitem></menuchoice></para></listitem>
+<listitem><para><menuchoice><guimenu>Aplicaţii</guimenu><guisubmenu>Preferinţe desktop</guisubmenu><guimenuitem>Teme</guimenuitem></menuchoice></para></listitem></itemizedlist></para>
+      </listitem>
+      <listitem>
+        <para>Bare de meniu, bare de unelte şi bare de stare</para>
+        <para>Majoritatea aplicaţiilor conforme GNOME au o bară de meniu, o bară de unelte şi o bară de stare. Bara de meniu conţine întotdeauna un meniu <guimenu>Fişier</guimenu> şi un meniu <guimenu>Ajutor</guimenu>. Meniul <guimenu>Fişier</guimenu> conţine întotdeauna un element <guimenuitem>Ieşire</guimenuitem>, iar meniul <guimenu>Ajutor</guimenu> conţine întotdeauna un element <guimenuitem>Despre</guimenuitem>.</para>
+        <para>O <firstterm>bară de unelte</firstterm> este o bară care apare sub bara de meniu. O bară de unelte conţine butoane pentru comenzile frecvent utilizate. O <firstterm>bară de stare</firstterm> este o bară în partea inferioară a ferestrei şi oferă informaţii despre starea curentă a ceea ce vizualizaţi în fereastra respectivă. De asemenea aplicaţiile conforme GNOME pot conţine alte bare. De exemplu, <application>Nautilus</application> conţine o bară de locaţie.</para>
+        <para>Unele din barele aplicaţiilor conforme GNOME sunt detaşabile. Chiar aşa, aplicaţiile au un "mâner" pe care îl puteţi folosi pentru a prinde şi trage bara în alt loc. In acest mod, bara pentru a ocupa orice latură a ferestrei sau orice parte a desktopului. De examplu, puteţi detaşa bara de meniu, bara de unelte şi bara de localizare a administratorului de fişiere <application>Nautilus</application>. </para>
+      </listitem>
+      <listitem>
+        <para>Taste rapide implicite</para>
+        <para>Aplicaţiile conforme GNOME utilizează toate aceleaşi taste rapide pentru a efectua aceleaşi acţiuni. De exemplu, pentru a ieşi dintr-o aplicaţie conformă GNOME, tastaţi <keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo>. Pentru a anula ultima operaţie efectuată într-o aplicaţie conformă GNOME, tastaţi  <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>. </para>
+      </listitem>
+      <listitem>
+        <para>Tragere-şi-plasare</para>
+        <para>Aplicaţiile conforme GNOME utilizează acelaşi protocol pentru a implementa operaţiile tragere-şi-plasare. Astfel, aplicaţiile conforme GNOME  oferă o reacţie consitentă atunci când trageţi-şi-plasaţi elemente.</para>
+        <para>Utilizarea aceluiaşi protocol permite aplicaţiilor conforme GNOME să conlucreze într-o manieră sofisticată. De exemplu, aplicaţiile conforme GNOME recunosc formatul elementelor pe care le trageţi. Când trageţi un fişier HTML dintr-o fereastră <application>Nautilus</application> într-un navigator web, fişierul este afişat în navigator în format HTML. Totuşi, când trageţi fişierul HTML într-un editor de texte, fişierul este afişat în editorul de texte în format text simplu.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-12">
+    <title>Pentru a afla mai multe</title>
+    <indexterm>
+      <primary>ajutor</primary>
+      <secondary>cum să afli</secondary>
+    </indexterm>
+    <para>Dacă doriţi, desktopul vă ajută să aflaţi mai multe despre următoarele domenii: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Topicuri desktop</para>
+      </listitem>
+      <listitem>
+        <para>Apleturi</para>
+      </listitem>
+      <listitem>
+        <para>Aplicaţii</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosoverview-31">
+      <title>Pentru a afla mai multe despre topicurile desktopului</title>
+      <indexterm>
+        <primary>ajutor</primary>
+        <secondary>lansare sistem de ajutor</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>ajutor</primary>
+        <secondary>topicuri desktop</secondary>
+      </indexterm>
+      <para>Puteţi afla mai multe despre topicurile desktopului prin intermediul sistemului integrat de ajutor <application>Yelp</application>. Pentru a lansa sistemul de ajutor <application>Yelp</application>, selectaţi <menuchoice><guimenu>Aplicaţii</guimenu><guimenuitem>Ajutor</guimenuitem></menuchoice>. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-33">
+      <title>Pentru a afla mai multe despre apleturi</title>
+      <indexterm>
+        <primary>apleturi</primary>
+        <secondary>getting help</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>ajutor</primary>
+        <secondary>apleturi</secondary>
+      </indexterm>
+      <para>Pentru a afla mai multe despre un anumit aplet, faceţi clic dreapta pe apletul respectiv şi alegeţi <guimenuitem>Ajutor</guimenuitem>. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-35">
+      <title>Pentru a afla mai multe despre aplicaţii</title>
+      <indexterm>
+        <primary>aplicaţii</primary>
+        <secondary>ajutor</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>ajutor</primary>
+        <secondary>aplicaţii</secondary>
+      </indexterm>
+      <para>Pentru a afla mai multe despre o anumită aplicaţie, lansaţi aplicaţia şi alegeţi <menuchoice><guimenu>Ajutor</guimenu><guimenuitem>Conţinut</guimenuitem></menuchoice>. O altă metodă este folosirea tastei <keycap>F1</keycap> în timpul execuţiei aplicaţiei.</para>
+    </sect2>
+  </sect1>
 </chapter>
-
