@@ -1,21 +1,29 @@
-%define version	@VERSION@
-%define RELEASE	1
-%define rel	%{?CUSTOM_RELEASE} %{!?CUSTOM_RELEASE:%RELEASE}
-%define prefix	/usr
+# Note that this is NOT a relocateable package
 
-Summary: General GNOME User Documentation
-Name: gnome-user-docs
-Version: %{version}
-Release: %{rel}
-Copyright: FDL
-Distribution: GNOME RPMS
-Source: %{name}-%{version}.tar.gz
-Group: Documentation
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-buildroot
-Prefix: %{prefix}
+%define name            gnome-user-docs
+%define ver             @VERSION@
+%define RELEASE         1
+%define rel             %{?CUSTOM_RELEASE} %{!?CUSTOM_RELEASE:%RELEASE}
+%define prefix          /usr
+%define mandir          /usr/man
+%define datadir         /usr/share
+%define sysconfdir      /etc
+%define localstatedir   /var/lib
+%define skreq           @SCROLLKEEPER_REQUIRED@
 
-Requires:   scrollkeeper >= @SCROLLKEEPER_REQUIRED@
+
+Summary: 	General GNOME User Documentation
+Name:		%name
+Version: 	%ver
+Release: 	%RELEASE
+Copyright: 	FDL
+Distribution: 	GNOME RPMS
+Source: 	%{name}-%{version}.tar.gz
+Group: 		Documentation
+BuildArch: 	noarch
+BuildRoot: 	/var/tmp/%{name}-%{ver}-root
+
+Requires:   	scrollkeeper >= %skreq
 
 %description
 This package contains general GNOME user documentation which is not 
@@ -28,27 +36,31 @@ directly associated with any particular GNOME application or package.
 make 
 
 %install
-make prefix=$RPM_BUILD_ROOT/%{prefix} install
+rm -rf $RPM_BUILD_ROOT
+make prefix=$RPM_BUILD_ROOT%{prefix} \
+	datadir=$RPM_BUILD_ROOT%{datadir} \
+	mandir=$RPM_BUILD_ROOT%{mandir} \
+	sysconfdir=$RPM_BUILD_ROOT%{sysconfdir} \
+	localstatedir=$RPM_BUILD_ROOT%{localstatedir} install
+
 
 %clean 
 rm -rf $RPM_BUILD_ROOT
 
 %post
-which scrollkeeper-update>/dev/null 2>&1 && scrollkeeper-update
-exit 0
+scrollkeeper-update
 
 %postun
-which scrollkeeper-update>/dev/null 2>&1 && scrollkeeper-update
-exit 0
+scrollkeeper-update
 
 %files
 %defattr(-, root, root)
+%doc COPYING COPYING-DOCS AUTHORS README ChangeLog NEWS INSTALL
 %{prefix}/share/gnome/help
-%{prefix}/share/omf/%{name}
+%{datadir}/omf/%{name}
 
 %changelog 
 * Sun Mar 11 2001 Dan Mueth <dan@eazel.com>
 - Update as we move to its own module
 * Mon Nov 27 2000 Kenny Graunke <kwg@teleport.com>
 - Initial cut
-
