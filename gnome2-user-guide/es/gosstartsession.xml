@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosgetstarted-1">
+  <title>Sesiones de escritorio</title>
+  <highlights>
+    <para>Este cap&iacute;tulo contiene informaci&oacute;n acerca de c&oacute;mo empezar, gestionar y finalizar sesiones de escritorio. </para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>Inicio de una sesi&oacute;n de escritorio</title>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary>iniciar</secondary>
+    </indexterm>
+    <para>La sesi&oacute;n de escritorio es el per&iacute;odo de tiempo entre el inicio y el final de sesi&oacute;n en el escritorio. La pantalla de entrada al sistema, que muestra el <application>Gestor de inicio</application>, es la puerta de acceso del usuario al escritorio. La pantalla de entrada al sistema dispone de unos campos para introducir el nombre de usuario y la contrase&ntilde;a. El men&uacute; <guimenu>Opciones</guimenu> en la pantalla de entrada sirve para especificar opciones de sesi&oacute;n como, por ejemplo, el idioma de la sesi&oacute;n. </para>
+    <para>Un sesi&oacute;n se inicia cuando se entra en el sistema. El gestor de sesi&oacute;n se inicia despu&eacute;s de que el <application>Gestor de inicio</application> autentique el usuario y la contrase&ntilde;a. El administrador de sesiones permite gestionar la sesi&oacute;n. Por ejemplo, se puede guardar el estado de la sesi&oacute;n m&aacute;s reciente y recuperarlo la pr&oacute;xima vez que se vuelva a iniciar. El gestor de sesi&oacute;n guarda y permite restaurar: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Los valores de aspecto y funcionamiento, por ejemplo, valores de fuentes, colores y del rat&oacute;n. </para>
+      </listitem>
+      <listitem>
+        <para>Las aplicaciones que se estaban ejecutando como, por ejemplo, las ventanas del gestor de archivos y del editor de texto. No obstante, no se pueden guardar ni restaurar aplicaciones no gestionadas por el gestor de sesi&oacute;n. Por ejemplo, si inicia el editor <application>vi</application> desde una l&iacute;nea de comandos en una ventana Terminal, el Administrador de sesiones no podr&aacute; restaurar la sesi&oacute;n de edici&oacute;n. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosgetstarted-65">
+      <title>Para iniciar una sesi&oacute;n de escritorio</title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>iniciar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>iniciar</primary>
+      </indexterm>
+      <para>Para iniciar una sesi&oacute;n de escritorio:</para>
+      <orderedlist>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Opciones</guimenu><guimenuitem> Sesi&oacute;n</guimenuitem></menuchoice>. Elija el escritorio de GNOME en la lista de entornos de escritorio disponibles.</para>
+        </listitem>
+        <listitem>
+          <para>Introduzca su nombre de usuario en el campo del di&aacute;logo <guilabel>Gestor de inicio</guilabel> y, a continuaci&oacute;n, haga clic en  <guibutton>Aceptar</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Introduzca la contrase&ntilde;a en el campo del di&aacute;logo <guilabel>Gestor de inicio</guilabel> y, a continuaci&oacute;n, haga clic en  <guibutton>Aceptar</guibutton>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Si el usuario y la contrase&ntilde;a son v&aacute;lidos, el gestor iniciar&aacute; la sesi&oacute;n. Si &eacute;sta fuera la primera vez que se inicia sesi&oacute;n, se iniciar&aacute; una sesi&oacute;n nueva. Si ya se inici&oacute; una sesi&oacute;n con anterioridad, el administrador de sesiones restaurar&aacute; a la sesi&oacute;n anterior.</para>
+    </sect2>
+    <sect2 id="gosgetstarted-66">
+      <title>Para iniciar una sesi&oacute;n de trabajo en un idioma diferente</title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>diferente, iniciar sesi&oacute;n en idioma</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>idioma diferente, iniciar sesi&oacute;n en </primary>
+      </indexterm>
+      <para>Para iniciar sesi&oacute;n en un idioma diferente:</para>
+      <orderedlist>
+        <listitem>
+          <para>En el cuadro de di&aacute;logo de entrada, elija <menuchoice><guimenu>Opciones</guimenu><guimenuitem>Sesi&oacute;n</guimenuitem></menuchoice>. Elija el escritorio de GNOME en la lista de entornos de escritorio disponibles.</para>
+        </listitem>
+        <listitem>
+          <para>En el cuadro de di&aacute;logo de entrada, elija <menuchoice><guimenu>Opciones</guimenu><guimenuitem>Idioma</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Elija el grupo de idiomas que incluye el idioma que necesita.</para>
+        </listitem>
+        <listitem>
+          <para>Elija un idioma.</para>
+        </listitem>
+        <listitem>
+          <para>Inicie la sesi&oacute;n.</para>
+        </listitem>
+      </orderedlist>
+      <para>El administrador del sistema configura el idioma predeterminado del sistema. El men&uacute; <guimenu>Opciones</guimenu> del cuadro de di&aacute;logo <guilabel>Gestor de inicio</guilabel> permite seleccionar otros idiomas. Al elegir un idioma en el men&uacute; <guimenu>Opciones</guimenu>, el sistema configura la variable LANG para la sesi&oacute;n. El sistema volver&aacute; al idioma predeterminado al final de la sesi&oacute;n. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>Bloqueo de la pantalla</title>
+    <para>Esta secci&oacute;n contiene informaci&oacute;n sobre c&oacute;mo bloquear la pantalla y configurar el salvapantallas.</para>
+    <sect2 id="gosstartsession-4">
+      <title>Para bloquear la pantalla</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>La imagen muestra el icono de un candado que representa la función Bloquear la pantalla.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>bloquear pantalla</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bloquear pantalla</primary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&oacute;n Bloquear</primary>
+      </indexterm>
+      <para>Para bloquear la pantalla:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Acciones</guimenu><guimenuitem> Bloquear la pantalla</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Bloquear</guibutton> si aparece en un panel. </para>
+          <para>Para agregar el bot&oacute;n <guibutton>Bloquear</guibutton>, haga clic con el bot&oacute;n derecho en el panel. Elija <menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem>Bot&oacute;n para bloquear pantalla</guimenuitem></menuchoice>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Al bloquear la pantalla, se inicia el salvapantallas. Para desbloquear la pantalla, mueva el rat&oacute;n y se mostrar&aacute; el cuadro de di&aacute;logo de pantalla bloqueada. Introduzca el nombre de usuario y la contrase&ntilde;a en este cuadro de di&aacute;logo y presione <keycap>Intro</keycap>. </para>
+      <note>
+        <para>Para bloquear la pantalla correctamente, el salvapantallas tiene que estar habilitado. </para>
+      </note>
+    </sect2>
+    <sect2 id="gosstartsession-3">
+      <title>Para configurar el salvapantallas</title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>configurar salvapantallas</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>salvapantallas, configurar</primary>
+      </indexterm>
+      <indexterm>
+        <primary>XScreenSaver</primary>
+        <see>salvapantallas</see>
+      </indexterm>
+      <para>El salvapantallas es una aplicaci&oacute;n que se utiliza para reemplazar la imagen de la pantalla, cuando &eacute;sta no est&aacute; en uso. C&oacute;mo utilizar los salvapantallas:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Activar despu&eacute;s de un determinado per&iacute;odo de inactividad.</para>
+        </listitem>
+        <listitem>
+          <para>Activar al bloquear la pantalla.</para>
+        </listitem>
+        <listitem>
+          <para>Gestionar la energ&iacute;a que el monitor utiliza cuando el sistema est&aacute; inactivo. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Para configurar la aplicaci&oacute;n del salvapantallas: </para>
+      <orderedlist>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el bot&oacute;n <guibutton>Bloquear</guibutton> y, a continuaci&oacute;n, elija <guimenuitem>Propiedades</guimenuitem> en el men&uacute; emergente. Se mostrar&aacute; el cuadro de di&aacute;logo <guilabel>XScreenSaver</guilabel>.</para>
+          <para>Si el bot&oacute;n <guibutton>Bloquear</guibutton> no est&aacute; en un panel, se puede a&ntilde;adir. Para agregar el bot&oacute;n <guibutton>Bloquear</guibutton>, haga clic con el bot&oacute;n derecho en el panel. Escoja <menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem> Bot&oacute;n para bloquear pantalla</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Para configurar la aplicaci&oacute;n del salvapantallas, utilice los elementos de la secci&oacute;n <guilabel>Modos de visualizaci&oacute;n</guilabel>. La siguiente tabla describe los elementos del cuadro de di&aacute;logo de la pesta&ntilde;a <guilabel>Modos de visualizaci&oacute;n</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>Valor</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Funci&oacute;n</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Modo</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Utilice la lista desplegable para especificar el comportamiento del salvapantallas. Seleccione entre las siguientes opciones: </para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><guilabel>Inhabilitar salvapantallas</guilabel>: seleccione esta opci&oacute;n si no se desea utilizar el salvapantallas.</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>Activar s&oacute;lo protector de pantalla</guilabel>: seleccione esta opci&oacute;n para utilizar una pantalla en blanco al bloquearse.</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>S&oacute;lo un salvapantallas</guilabel>: seleccione esta opci&oacute;n si desea mostrar un solo salvapantallas de los de la lista cuando la pantalla se bloquee.</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>Salvapantallas al azar</guilabel>: seleccione esta opci&oacute;n para mostrar un salvapantallas aleatorio de los de la lista cuando la pantalla se bloquee. </para>
+                      </listitem>
+                    </itemizedlist>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>Mostrar lista</para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Seleccione el salvapantallas que prefiera en la lista. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Activar protector despu&eacute;s de</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Indique cu&aacute;nto tiempo se ha de esperar despu&eacute;s del &uacute;ltimo uso de rat&oacute;n o teclado para activar el salvapantallas.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Establecer un ciclo despu&eacute;s de</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Indique cu&aacute;nto tiempo mostrar un salvapantallas antes de cambiar al siguiente.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Bloquear pantalla despu&eacute;s de</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para que la pantalla se bloquee al activarse el salvapantallas. Utilice el cuadro de desplazamiento para indicar el tiempo que transcurrir&aacute; entre la activaci&oacute;n del salvapantallas y el bloqueo de pantalla.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>Vista preliminar</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Haga clic en este bot&oacute;n para ver la vista preliminar del salvapantallas seleccionado. Para pararla, basta con pulsar cualquier tecla o hacer clic con alg&uacute;n bot&oacute;n del rat&oacute;n.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>Configuraci&oacute;n</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Haga clic en este bot&oacute;n para configurar las opciones del salvapantallas seleccionado. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Para configurar las opciones avanzadas, haga clic en la etiqueta <guilabel>Avanzadas </guilabel> . En la siguiente tabla se muestran los elementos de di&aacute;logo de la pesta&ntilde;a <guilabel> Avanzadas</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>Valor</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Funci&oacute;n</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Capturar im&aacute;genes del escritorio</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Algunos salvapantallas capturan el escritorio y lo manipulan para crear la imagen. Seleccione esta opci&oacute;n para permitir al salvapantallas tomar una captura del escritorio. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Capturar im&aacute;genes de v&iacute;deo</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Algunos salvapantallas puede capturar una imagen de un v&iacute;deo y manipularla para crear la imagen. Si el sistema dispone de una tarjeta de captura de v&iacute;deo, seleccione esta opci&oacute;n para permitir capturar una imagen.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Seleccionar imagen al azar</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Seleccione esta opci&oacute;n para que el salvapantallas utilice im&aacute;genes de un directorio. Escriba la ruta de acceso del directorio en el campo. Tambi&eacute;n, haga clic en  <guibutton>Buscar</guibutton> para mostrar un cuadro de di&aacute;logo desde el cual puede seleccionar un directorio. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Diagn&oacute;sticos detallados</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para> Seleccione esta opci&oacute;n para mostrar informaci&oacute;n de diagn&oacute;stico del salvapantallas.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Mostrar errores de subprocesos</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Seleccione esta opci&oacute;n para mostrar los errores relacionados con los subprocesos del salvapantallas.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Mostrar pantalla de presentaci&oacute;n en el arranque</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Seleccione esta opci&oacute;n si desea que <application>Xscreensaver</application> muestre un di&aacute;logo de presentaci&oacute;n al iniciar <application>Xscreensaver</application>. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Gestor de energ&iacute;a habilitado</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Seleccione esta opci&oacute;n para habilitar la gesti&oacute;n de energ&iacute;a del monitor. La gesti&oacute;n de energ&iacute;a reduce el consumo del monitor cuando &eacute;ste no se utiliza. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Pausa despu&eacute;s de</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Indique cu&aacute;nto tiempo esperar para que el monitor se quede en modo de pausa. En este modo, la pantalla del monitor queda en negro. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Suspender despu&eacute;s de</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Indique cu&aacute;nto tiempo esperar para que el monitor se quede en estado de suspendido. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Apagar despu&eacute;s de</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Indique cu&aacute;nto tiempo esperar antes de apagar el monitor. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Instalar mapa de color</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Seleccione esta opci&oacute;n para instalar un mapa de colores privado al activar el salvapantallas. El uso del mapa de colores puede mejorar la calidad del color a la hora de ejecutarse el salvapantallas.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Fundir en negro al activarse</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Seleccione esta opci&oacute;n para realizar un fundido en negro al activarse el salvapantallas. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Iluminar lentamente al desactivar el salvapantallas</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para> Seleccione esta opci&oacute;n para que la pantalla pase gradualmente a los contenidos desde la pantalla en blanco cuando se para el salvapantallas.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Duraci&oacute;n</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Indique la duraci&oacute;n del fundido a negro cuando se activa el salvapantallas.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Haga clic en la bot&oacute;n del marco  <guibutton>Cerrar ventana</guibutton> para cerrar el di&aacute;logo <guilabel>XScreenSaver</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>Gesti&oacute;n de la sesi&oacute;n</title>
+    <indexterm>
+      <primary>herramientas de preferencias</primary>
+      <secondary>Sesiones</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary>gestionar</secondary>
+    </indexterm>
+    <para>Para configurar la gesti&oacute;n de la sesi&oacute;n del escritorio de GNOME, elija <menuchoice><guimenu>Aplicaciones</guimenu><guisubmenu>Preferencias</guisubmenu><guisubmenu>Avanzadas</guisubmenu><guimenuitem>Sesiones</guimenuitem></menuchoice>. La herramienta de preferencias <application>Sesiones </application> reconoce los siguientes tipos de aplicaciones: </para>
+    <itemizedlist>
+      <listitem>
+        <indexterm>
+          <primary>aplicaciones de inicio</primary>
+          <secondary>gestionadas por sesi&oacute;n</secondary>
+        </indexterm>
+        <para>Aplicaciones gestionadas por sesi&oacute;n. Al guardar los valores de configuraci&oacute;n de sesi&oacute;n, el administrador de sesiones guarda los de las aplicaciones gestionadas por sesi&oacute;n. Al cerrar la sesi&oacute;n y volver a iniciarla, el administrador de sesiones autom&aacute;ticamente inicia de nuevo las aplicaciones gestionadas por sesi&oacute;n. </para>
+      </listitem>
+      <listitem>
+        <para>Aplicaciones que no se gestionan por la sesi&oacute;n. Al guardar los valores de configuraci&oacute;n de sesi&oacute;n, el administrador de sesiones no guarda los de las aplicaciones no gestionadas por sesi&oacute;n. Al cerrar la sesi&oacute;n y volver a iniciarla, el administrador de sesiones autom&aacute;ticamente no inicia de nuevo las aplicaciones no gestionadas por sesi&oacute;n. Estas aplicaciones deben iniciarse manualmente. Tambi&eacute;n, se puede utilizar la herramienta de preferencias <application>Sesiones</application> para especificar las aplicaciones no gestionadas por sesi&oacute;n que se desean iniciar autom&aacute;ticamente. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>Definici&oacute;n del comportamiento de la sesi&oacute;n al iniciar y cerrarla.</title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>comportamiento al iniciar sesi&oacute;n</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>comportamiento al cerrar sesi&oacute;n </secondary>
+      </indexterm>
+      <para>Para configurar el comportamiento de la sesi&oacute;n al iniciarla y cerrarla, elija  <menuchoice><guimenu>Aplicaciones</guimenu><guisubmenu> Preferencias</guisubmenu><guisubmenu>Avanzadas</guisubmenu><guimenuitem>Sesiones</guimenuitem></menuchoice>. Haga los cambios necesarios en la pesta&ntilde;a <guilabel>Propiedades de la sesi&oacute;n</guilabel>. Por ejemplo, se puede mostrar una pantalla de presentaci&oacute;n al iniciar la sesi&oacute;n. </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>Para usar aplicaciones de inicio</title>
+      <indexterm>
+        <primary>programas de inicio</primary>
+        <see>aplicaciones de inicio</see>
+      </indexterm>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>usar aplicaciones de inicio</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aplicaciones de inicio</primary>
+        <secondary>no gestionadas por sesi&oacute;n</secondary>
+      </indexterm>
+      <para>Se pueden configurar las sesiones de manera que inicien aplicaciones no gestionadas por sesi&oacute;n. Para configurar las aplicaciones de inicio no gestionadas por sesi&oacute;n, escoja <menuchoice><guimenu>Aplicaciones</guimenu><guisubmenu>Preferencias</guisubmenu><guisubmenu>Avanzadas</guisubmenu><guimenuitem>Sesiones</guimenuitem></menuchoice>. Utilice la pesta&ntilde;a <guilabel>Programas de inicio</guilabel> para agregar, editar y eliminar aplicaciones. Si se guardan los nuevos valores y se cierra sesi&oacute;n, la pr&oacute;xima vez que &eacute;sta se inicie las aplicaciones indicadas se ejecutar&aacute;n autom&aacute;ticamente. </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>Para buscar aplicaciones en la sesi&oacute;n actual</title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>buscar aplicaciones</secondary>
+      </indexterm>
+      <para>Para buscar las aplicaciones en la sesi&oacute;n actual, escoja <menuchoice><guimenu>Aplicaciones</guimenu><guisubmenu>Preferencias</guisubmenu><guisubmenu>Avanzadas</guisubmenu><guimenuitem>Sesiones</guimenuitem></menuchoice>. En la pesta&ntilde;a <guilabel>Sesi&oacute;n actual</guilabel> se listan:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Todas las aplicaciones de GNOME que est&aacute;n funcionando actualmente, que pueden conectarse al administrador de sesiones y que pueden guardar su estado. </para>
+        </listitem>
+        <listitem>
+          <para>Todas herramientas de preferencias del escritorio que se pueden conectar al administrador de sesiones y que pueden guardar su estado.</para>
+        </listitem>
+      </itemizedlist>
+      <para>La pesta&ntilde;a <guilabel>Sesi&oacute;n actual</guilabel> permite realizar un n&uacute;mero limitado de acciones sobre las propiedades de sesi&oacute;n de una aplicaci&oacute;n o herramienta de preferencia. Por ejemplo, se puede editar el orden de inicio y el estilo de cualquier aplicaci&oacute;n de GNOME o herramienta de preferencias de la lista. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>Para guardar los valores de configuraci&oacute;n de la sesi&oacute;n</title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>guardar valores</secondary>
+      </indexterm>
+      <para>Para guardar los valores de configuraci&oacute;n: </para>
+      <orderedlist>
+        <listitem>
+          <para>Configure la sesi&oacute;n para grabar autom&aacute;ticamente la configuraci&oacute;n al terminar la sesi&oacute;n. Para configurar la sesi&oacute;n, elija <menuchoice><guimenu> Aplicaciones</guimenu><guisubmenu>Preferencias</guisubmenu><guisubmenu>Avanzadas</guisubmenu><guimenuitem>Sesiones</guimenuitem></menuchoice>. Se iniciar&aacute; la herramienta de preferencias <application>Sesiones</application>. Seleccione la opci&oacute;n <guilabel>Guardar autom&aacute;ticamente los cambios efectuados en la sesi&oacute;n</guilabel> en la pesta&ntilde;a <guilabel>Propiedades de la sesi&oacute;n</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Cierre la sesi&oacute;n. </para>
+        </listitem>
+      </orderedlist>
+      <para>Si no se selecciona la opci&oacute;n <guilabel>Guardar autom&aacute;ticamente los cambios efectuados en la sesi&oacute;n</guilabel> un di&aacute;logo preguntar&aacute; si desea guardar la configuraci&oacute;n actual al cerrar la sesi&oacute;n. Para guardar la sesi&oacute;n, seleccione la opci&oacute;n y, a continuaci&oacute;n, prosiga con el cierre de sesi&oacute;n.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>Cerrar sesi&oacute;n</title>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary>finalizar</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary>cerrar sesi&oacute;n</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>cerrar sesi&oacute;n</primary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Icono de Terminar sesión.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>Para finalizar la sesi&oacute;n, cierre todos los procesos activos y, a continuaci&oacute;n, elija una de las siguientes acciones:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Hacer clic en el bot&oacute;n <guibutton>Terminar sesi&oacute;n</guibutton> .</para>
+      </listitem>
+      <listitem>
+        <para>Elegir <menuchoice><guimenu>Acciones</guimenu><guimenuitem>Terminar sesi&oacute;n</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>Abrir <guimenu>Men&uacute; de GNOME</guimenu> y, a continuaci&oacute;n, elegir <guimenuitem>Terminar sesi&oacute;n</guimenuitem>.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Antes de finalizar una sesi&oacute;n de escritorio, puede ser necesario guardar los valores actuales de configuraci&oacute;n para restaurar la sesi&oacute;n despu&eacute;s. Durante el proceso de cierre de sesi&oacute;n, un di&aacute;logo pregunta si se desea guardar la configuraci&oacute;n actual. En la herramienta de preferencias <application>Sesiones</application> se puede seleccionar una opci&oacute;n para guardar la configuraci&oacute;n autom&aacute;ticamente.</para>
+  </sect1>
+</chapter>
