@@ -1,0 +1,483 @@
+
+  <!-- ###############  Tasklist   ############### -->
+<sect2 id="tasklist-applet">
+   <title>Tasklist Applet</title> 
+
+   <para> 
+    <application>Tasklist</application> applet, shown in <xref
+    linkend="tasklist-applet-fig">, displays a table showing windowed
+    applications running on your computer. Depending on the options
+    chosen, you can display either those on the desktop currently in
+    use, or on all virtual desktops. To add this applet to a
+    <interface>Panel</interface>, right-click on the panel and choose
+         <menuchoice>
+               <guimenu>Applets</guimenu>
+               <guisubmenu>Utility</guisubmenu>
+	       <guimenuitem>Tasklist</guimenuitem>
+	</menuchoice>. 
+   </para>
+  
+ 
+   <figure id="tasklist-applet-fig">
+   <title>Tasklist</title>
+   <screenshot>
+    <screeninfo>Tasklist</screeninfo>
+    <graphic format="png" fileref="figures/tasklist-fig" srccredit="John Fleck">
+    </graphic>
+   </screenshot>
+   </figure>
+
+   <sect3 id="tasklist-applet-usage">
+    <title>Usage</title>
+    <para><application>Tasklist</application> allows you to quickly
+    navigate the applications running on your computer, displaying
+    icons and application names for each application that meets the
+    criteria you've set in the <link
+    linkend="tasklist-applet-properties">properties window</link>. Clicking
+    on an icon or application name gives focus to that application,
+    bringing it to the foreground so it accepts your keyboard input.</para>
+
+    <para>Right-clicking with the mouse on an application's icon or
+    text in the applet brings up the following menu:</para>
+
+    <figure id="tasklist-rightclick-fig">
+      <title>Tasklist Right-Click Options</title>
+      <screenshot>
+	<screeninfo>Tasklist Right-Click Options</screeninfo>
+	<graphic format="png" fileref="figures/tasklist-rightclick-fig"
+		 srccredit="John Fleck">
+    </graphic>
+   </screenshot>
+   </figure>
+    <para>
+    <itemizedlist>
+	<listitem>
+	  <para><guilabel>Iconify</guilabel>  &mdash; reduce the
+	  selected application to a panel icon. When an application
+	  already has been iconified, the menu item changes to
+	  <guilabel>Restore</guilabel>. Clicking on it restores the
+	  application to your desktop.</para>
+	</listitem>
+
+	<listitem>
+	  <para><guilabel>Shade</guilabel> &mdash; minimize the
+	  application to a single window bar. When an application
+	  has been Shaded, the menu item changes to
+	  <guilabel>Unshade</guilabel>. Clicking on
+	  <guilabel>Unshade</guilabel> restores the application to
+	  full size.</para>
+	</listitem>
+
+	<listitem>
+	  <para><guilabel>Stick</guilabel> &mdash; make application
+	  "sticky", which means it remains in your field of view when
+	  you change virtual desktops, following you as you go. When
+	  an application is sticky, the menu option
+	  <guilabel>Unstick</guilabel> is displayed, allowing you to
+	  leave an application behind as you continue your virtual
+	  desktop travels.</para>
+	</listitem>
+
+	<listitem>
+	  <para><guilabel>Kill</guilabel> &mdash; kills the
+	  application. The <link
+	  linkend="tasklist-applet-properties">properties
+	  dialog</link> allows you to
+	  have <application>Tasklist</application> prompt you for
+	  confirmation before causing an application's untimely death.</para>
+	</listitem>
+
+      </itemizedlist>
+      </para>
+   </sect3>
+
+    <sect3 id="tasklist-task-grouping">
+      <title>Task Grouping</title>
+      <para><application>Tasklist</application> can group icons together when
+      multiple instances of a program are running. A number in parentheses
+      appears to next to the application. Clicking on the icon brings up a menu
+      listing all of the running instances.</para>
+ <figure id="tasklist-applet-grouping-fig">
+     <title>Task Grouping</title>
+  <!--
+   <screenshot>
+      <screeninfo>Task Grouping</screeninfo> 
+      <graphic format="png" fileref="figures/tasklist-grouping"
+	       srccredit="John Fleck">
+      </graphic>
+     </screenshot>
+  -->
+    </figure>
+      <para>Clicking on an item in the list brings that window to the foreground
+      and gives it focus.</para>
+      <para>By default, <application>Tasklist</application> groups four or more
+      applications. You can change this in the <link
+    linkend="tasklist-applet-properties">properties window</link>.</para>
+    </sect3>
+
+   <sect3 id="tasklist-applet-right-click">
+    <title>Right-Click Pop-Up Menu Items</title>
+    <para> 
+     In addition to the standard menu items (see <xref
+    linkend="tasklist-standard-right-click-items">), the
+    right-click pop-up menu has
+    <guimenuitem>Properties...</guimenuitem> item &mdash; This menu
+    item opens the <interface>Properties</interface> dialog (see <xref
+    linkend="tasklist-applet-properties">) which allows you to
+    customize the appearance and behavior of this applet.
+    </para>
+ 
+   </sect3>
+
+   <sect3 id="tasklist-applet-properties">
+    <title>Properties</title>
+    <para>
+     You can configure <application>Tasklist</application> applet by
+     right-clicking on the applet and choosing the
+     <guimenuitem>Properties...</guimenuitem> menu item. This will open the
+     <interface>Properties</interface> dialog, shown in <xref
+     linkend="tasklist-applet-properties-fig">.
+    </para>
+    <figure id="tasklist-applet-properties-fig">
+     <title>Properties Dialog</title>
+     <screenshot>
+      <screeninfo>Properties Dialog</screeninfo> 
+      <graphic format="png" fileref="figures/tasklist-properties"
+	       srccredit="John Fleck">
+      </graphic>
+     </screenshot>
+    </figure>
+    <para>The <interface>Properties dialog</interface> allows to you
+    control which tasks are displayed:
+<itemizedlist>
+
+	<listitem>
+	  <para><guilabel>Show normal applications</guilabel> &mdash;
+	  display, in the applet, all applications on the current
+	  desktop that have not been minimized.</para>
+	</listitem>
+	<listitem>
+	  <para><guilabel>Show iconified (minimized) applications
+	  </guilabel> &mdash; show all applications on the current
+	  desktop that have been minimized</para>
+	</listitem>
+	<listitem>
+	  <para><guilabel>Show normal applications on all
+	  desktops</guilabel> &mdash; show all full-sized,
+	  non-minimized applications on all desktops. For this to
+	  work, you must also have checked the <guilabel>Show normal
+	  applications</guilabel> checkbox above.</para>
+	</listitem>
+	<listitem>
+	  <para><guilabel>Show iconified (minimized) applications on
+	  all desktops</guilabel> &mdash; show all applications that
+	  have been minimized on all desktops. For this to work, you
+	  must also have checked <guilabel>Show iconified (minimized)
+	  applications</guilabel> above.</para>
+	</listitem>
+</itemizedlist>
+</para>
+   
+<para>
+<itemizedlist>
+	<listitem>
+	  <para><guilabel>Show mini icons</guilabel> &mdash; Some
+	  applications support a miniature icon. This option displays
+	  it on the <application>Tasklist</application> panel.</para>
+	</listitem>
+	<listitem>
+	  <para><guilabel>Confirm before killing windows</guilabel>
+	  &mdash; have the applet prompt you before you're permitted
+	  to <link linkend="tasklist-rightclick-fig">kill an
+	  application</link>.</para>
+	</listitem>
+	  <listitem>
+	    <para><guilabel>Move iconified tasks to current workspace
+	    when restoring</guilabel> &mdash; automatically switches
+	    the desktop work area on your screen to the one containing
+	    the application you click on in the
+	    <application>Tasklist</application> panel.</para>
+	  </listitem>
+	  <listitem>
+	    <para><guilabel>Enable task grouping</guilabel> &mdash; Turns on
+	      <application>Tasklist's</application> <ulink
+							   url="tasklist-task-grouping">grouping feature</ulink> and controls the number of instances of an application that must be running before they are grouped.</para>
+	  </listitem>
+
+
+      </itemizedlist>
+
+</para>
+  <figure id="tasklist-applet-size-fig">
+     <title>Properties Dialog - Size</title>
+     <screenshot>
+      <screeninfo>Properties Dialog - Size</screeninfo> 
+      <graphic format="png" fileref="figures/tasklist-properties-size"
+	       srccredit="John Fleck">
+      </graphic>
+     </screenshot>
+    </figure>
+    
+    <para>The <interface>size properties dialog</interface> controls
+    how much space <application>Tasklist</application> takes up on
+    your panel:
+<itemizedlist>
+	<listitem>
+	  <para><guilabel>Follow panel size</guilabel>
+	  &mdash; have <application>Tasklist</application> size
+	  determined automatically based on panel size. This overrides
+	  other size options.</para>
+	</listitem>
+	<listitem>
+	  <para><guilabel>Tasklist width (height)</guilabel>
+	  &mdash; width (or height in vertical panel) of
+	  <application>Tasklist</application> in pixels.</para>
+	</listitem>
+	<listitem>
+	  <para><guilabel>Rows of tasks</guilabel>
+	  &mdash; determines how many rows of task icons
+	  <application>Tasklist</application> displays.</para>
+	</listitem>
+	<listitem>
+	  <para><guilabel>Default task size</guilabel>
+	  &mdash; set the default size for display of a task
+	  item. (This only has effect if <guilabel>Tasklist width is
+	  dynamic</guilabel> is checked below.)</para>
+	</listitem>
+	<listitem>
+	  <para><guilabel>Tasklist width (height) is fixed
+	  (dynamic)</guilabel> &mdash; Have the size of the tasklist
+	  fixed or established by the applet dynamically. Setting it
+	  to "fixed" means that the applet will always take the amount
+	  of space set in "tasklist width", even if there are no
+	  tasks. Setting it to <guilabel>dynamic</guilabel> means that
+	  the applet will take as much space as needed to show all tasks (zero if
+	  there are no tasks), but not more than the value set in
+	  <guilabel>Tasklist width</guilabel>.</para>
+	</listitem>
+	  <listitem>
+	    <para><guilabel>Only use empty space</guilabel> &mdash; If width or
+	    height is set to be dynamic, this option forces 
+	    <application>Tasklist</application> to use only the available space
+	    on your screen, preventing it from pushing other applets out
+	    of the way and off of your screen.</para>
+	  </listitem>
+      </itemizedlist>
+
+</para>
+   
+   </sect3>
+  
+
+<sect3 id="basicPropertiesOptions">
+      <title>Basic Properties Options</title>
+    <para>All <interface>Properties</interface> dialogs have the following
+     buttons at the bottom of the dialog:
+     <itemizedlist>
+      <listitem>
+       <para>
+        <guibutton>OK</guibutton> &mdash;
+        Pressing <guibutton>OK</guibutton> will activate any changes
+        in the properties you have made and close the
+        <interface>Properties</interface> dialog.
+       </para>
+      </listitem>
+      <listitem>
+       <para>
+        <guibutton>Apply</guibutton> &mdash;
+        Pressing <guibutton>Apply</guibutton> at any time will
+        make your changes active without closing the
+        <interface>Properties</interface> dialog.  This is helpful if
+        you would like to test the effects of the changes you have
+        made but may want to continue changing the properties.
+       </para>
+      </listitem>
+      <listitem>
+       <para>
+        <guibutton>Close</guibutton> &mdash;
+        Pressing <guibutton>Close</guibutton> will close the
+        <interface>Properties</interface> dialog.  Only changes in the
+        configuration which were previously applied with the
+        <guibutton>Apply</guibutton> button will persist.  Other
+        changes will be discarded.
+       </para>
+      </listitem>
+      <listitem>
+       <para>
+        <guibutton>Help</guibutton> &mdash;
+        Pressing <guibutton>Help</guibutton> brings up the manual for
+        the application, opening it to the page describing the
+        <interface>Properties</interface> dialog.
+
+
+    
+    </para>
+</listitem>
+</itemizedlist>
+</para>
+</sect3>
+
+ <sect3 id="tasklist-standard-right-click-items"> 
+    <title>Standard Pop-Up Items</title>
+    <para>
+     All applets should have the following items in their right-click
+     <guimenu>pop-up menu</guimenu>:
+     <variablelist>
+      <varlistentry>
+       <term>Remove from panel</term>
+       <listitem>
+        <para>
+         The <guimenuitem>Remove from panel</guimenuitem> menu item
+         removes the applet from the <interface>Panel</interface>. 
+        </para>
+       </listitem>
+      </varlistentry>
+
+      <varlistentry>
+       <term>Move</term>
+       <listitem>
+        <para>
+         After selecting <guimenuitem>Move</guimenuitem>, your mouse
+         pointer will change appearance (typically to a cross with
+         arrows in each direction). As you move your mouse, the applet
+         will move with it.  When you have finished moving the applet,
+         click any mouse button and the applet will anchor in its
+         current position.  Note that applets can be moved between two
+         <interface>Panels</interface> this way.
+        </para>
+       </listitem>
+      </varlistentry>
+
+      <varlistentry>
+       <term>Panel</term>
+       <listitem>
+        <para>
+         The <guisubmenu>Panel</guisubmenu> submenu contains various
+         items and submenus for adding and removing
+         <interface>Panels</interface> and applets and for changing
+         the configuration.
+        </para>
+       </listitem>
+      </varlistentry>
+
+      <varlistentry>
+       <term>About</term>
+       <listitem>
+        <para>
+         The <guimenuitem>About...</guimenuitem> menu item brings up a 
+         dialogue box containing various information about the applet,
+         typically including the applet's  name, version, author,
+         copyright, license and description. 
+        </para>
+       </listitem>
+      </varlistentry>
+
+      <varlistentry>
+       <term>Help</term>
+       <listitem>
+        <para>
+         The <guimenuitem>Help</guimenuitem> menu item brings up the help
+         manual for the applet. 
+        </para>
+       </listitem>
+      </varlistentry>
+     </variablelist>
+    </para>
+   </sect3>
+
+
+   <sect3 id="tasklist-applet-bugs">
+    <title> Known Bugs and Limitations</title>
+    <para>
+     There are no known bugs in the
+     <application>Tasklist</application> applet. 
+    </para>
+   </sect3>
+
+  <!-- ============= Authors ================================ -->
+
+  <sect3 id="tasklist-authors">
+   <title>Authors</title>
+   <para>
+    The <application>Tasklist</application> applet was written by Anders Carlsson
+    (<email>andersca@gnu.org</email>).  Please send all comments,
+    suggestions, and bug 
+    reports to the <ulink url="http://bugs.gnome.org/" type="http">GNOME
+    bug tracking database</ulink>. (Instructions for submitting bug
+    reports can be found <ulink
+    url="http://bugs.gnome.org/Reporting.html" type="http">
+    on-line</ulink>. If you are using
+    GNOME 1.1 or later, you can also use <application>Bug Report
+    Tool</application> (<command>bug-buddy</command>), available in the
+    <guisubmenu>Utilities</guisubmenu> submenu of <guimenu>Main
+    Menu</guimenu>, for submitting bug reports.
+   </para>
+
+   <para>
+    This manual was written by John Fleck
+    (<email>jfleck@inkstain.net</email>). Please send all comments and
+    suggestions regarding this manual to the <ulink type="http"
+    url="http://developer.gnome.org/projects/gdp/">GNOME Documentation Project</ulink> 
+    by sending an email to <email>docs@gnome.org</email>. You can also
+    submit comments online by using the <ulink type="http"
+    url="http://developer.gnome.org/projects/gdp/doctable/">GNOME Documentation Status
+    Table</ulink>.
+   </para>
+
+   <!-- For translations: uncomment this:
+
+   <para>
+    Latin translation was done by ME
+    (<email>MYNAME@MYADDRESS</email>). Please send all  comments  and
+    suggestions regarding this translation to SOMEWHERE.
+   </para>
+
+   -->
+
+  </sect3>
+
+
+  <!-- ============= Application License ============================= -->
+
+  <!-- 
+   <sect3 id="license">
+   <title>License</title>
+   <para>
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the <ulink type="help"
+    url="gnome-help:gpl"><citetitle>GNU General Public
+    License</citetitle></ulink> as published by the Free Software
+    Foundation; either version 2 of the License, or (at your option)
+    any later version.
+   </para>
+   <para>
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    <ulink type="help" url="gnome-help:gpl"><citetitle>GNU General
+    Public License</citetitle></ulink> for more details.
+   </para>
+   <para>
+    A copy of the <ulink type="help"
+    url="gnome-help:gpl"><citetitle>GNU General Public
+    License</citetitle></ulink> is included with the GNOME documentation.  You
+    may also obtain a
+    copy of the <ulink type="help" url="gnome-help:gpl"><citetitle>GNU
+    General Public License</citetitle></ulink> from the Free Software
+    Foundation by visiting <ulink type="http"
+    url="http://www.fsf.org/">their Web site</ulink> or by writing to
+    <address>
+     Free Software Foundation, Inc.
+     <street>59 Temple Place</street> - Suite 330
+     <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+     <country>USA</country>
+    </address>
+   </para>
+  </sect3>
+--> 
+ </sect2>
+
+
+
+
+

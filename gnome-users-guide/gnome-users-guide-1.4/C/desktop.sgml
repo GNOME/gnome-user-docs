@@ -1,0 +1,205 @@
+<!-- #################### THE GNOME DESKTOP - CHAPTER ###################### -->
+
+ <chapter id="desk">
+  <title>The GNOME Desktop</title>
+  <sect1>
+   <title>Introduction</title> 
+   <para>  
+   <indexterm id="idx-a27">
+    <primary>GNOME Desktop</primary>
+   </indexterm>
+    The GNOME Desktop provides the functionality of any traditional operating
+    system desktop. You can drag files, programs and directory folders to the
+    desktop; you can also drag those items back into GNOME-compliant
+    applications, allowing you to quickly access any items you select.
+   </para>
+   <important>
+    <title>IMPORTANT</title>
+    <para>
+     The GNOME Desktop is actually provided by a backend process in the GNOME
+     File Manager. If, for any reason, that backend process has stopped running
+     you may start the Nautilus File Manager again and your desktop will be
+     restored.  Even if you do have to do this you do not need to keep the 
+     Nautilus File Manager window open to enable the desktop.
+    </para>
+   </important>
+  </sect1>
+  <sect1 id="deskuse">
+   <title>Using the Desktop</title>
+   <para>
+    Using the Desktop is as simple as dragging items you wish to use
+    routinely to the desktop. The default desktop includes a
+    folder of your home directory (usually <filename>/home/[user
+    name]</filename>).  By default the Nautilus File Manager window will
+    also appear so you can quickly access other areas of your system.
+   </para>
+    <para>
+      Once an item is on the desktop you can double-click on it to perform its
+      default action or right-click on it (click on it using the mouse's right
+      button) to see a menu of actions that can be performed on it.  The default
+      action depends on the kind of item it is; if it's a program, that program
+      will start, if it's data, the appropriate program will be started with
+      that data loaded, and if it's a directory, a file manager window will be
+      opened showing that directory's contents.
+    </para>
+   <para>
+    To use drag and drop you need to be using either a GNOME compliant
+    application or a Motif application.  GNOME is compliant with Motif drag and
+    drop so you will find it works with many applications you already have
+    installed.
+   </para>
+   <para>
+    All items that are stored on your desktop are located in the following
+    directory:
+    <programlisting>
+     <prompt>$</prompt>/home/[user name]/.nautilus/desktop/  
+    </programlisting>
+    This is helpful to remember when you want your desktop to contain an item
+    for which you cannot use drag and drop.
+   </para>
+    <para>
+    <indexterm id="idx-a28">
+     <primary>GNOME Desktop</primary>
+     <secondary>Hardware Devices</secondary>
+    </indexterm>
+    Once you have started GNOME you can mount CDROM or floppy drives you have
+    connected to your system by right clicking on the desktop and selecting the
+    disks menu. This will show an icon on your desktop that you can use to
+    access these drives.
+   </para>
+   <important>
+    <title>IMPORTANT</title>
+    <para>
+     You must have permission to mount the device shown on your desktop before
+     you can use these icons. If you do not have mount permission someone
+     with root access such as your system administrator can give it as
+     follows. You can read more about this and other items of system knowledge
+     in <xref linkend="newbies">. 
+    </para>
+    <para>
+     <indexterm id="idx-a29">
+      <primary>Mounting Drives</primary>
+     </indexterm>
+      Giving mount access to ordinary users can be done quite easily if you have
+      <application><emphasis>linuxconf</emphasis></application> installed on
+      your machine.  Just select the drive you want to access in the
+      <guilabel>Access local drive</guilabel> section.  In the
+      <guilabel>Options</guilabel> tab select the <guilabel>User
+      Mountable</guilabel> option.  Your drive will now be mountable by users.
+     </para>
+     <para>
+      If <application><emphasis>linuxconf</emphasis></application> is not
+      available someone with root access must edit the
+      <emphasis>/etc/fstab</emphasis> file to include user access. This is done
+      by adding the user attribute to the drive. For example:
+     </para>
+     <para>
+      If your fstab file contains a line like this:
+      <programlisting>
+       /dev/cdrom /mnt/cdrom iso9660 exec,dev,ro,noauto 0 0
+      </programlisting>
+      Add "user" to the fourth column:
+     <programlisting>
+      /dev/cdrom /mnt/cdrom iso9660 user,exec,dev,ro,noauto 0 0
+     </programlisting>
+     </para>
+     <para>
+      Depending on your system and work environment, there could be some
+      security risks in permitting users to mount disks. Please consult your
+      system administrator before taking this action.
+     </para>
+    </important>
+   </sect1>
+  <sect1 id="deskareas">
+   <title>Desktop Areas</title>
+   <para>
+   <indexterm id="idx-a30">
+    <primary>Desktop Areas</primary>
+   </indexterm>
+   <indexterm id="idx-a31">
+    <primary>Multiple Desktops</primary>
+   </indexterm>
+    Desktop areas allow you to keep a well organized system when you have many
+    tasks to perform at one time. Just like adding a new desk when you have too
+    much material to fit on one, desktop areas allow you to move to another area
+    to launch more programs.
+   </para>
+   <para>
+    GNOME is aware of desktop areas even though they are controlled by another
+    software program called the 'window manager'. You can set the number of
+    desktop areas within the configuration of the window manager you are
+    using. If you are using the default window manager or your window manager
+    has a graphical configuration tool you may be able to launch it from the
+    Window Manager Capplet. You may read more about this Capplet in <xref
+    linkend="gccwm">
+   </para>
+   <important>
+    <title>IMPORTANT</title>
+    <para>
+     Most window managers will give you the option of having multiple desktops,
+     which are different from desktop areas.  Desktop areas are virtual
+     extensions of one desktop whereas multiple desktops are actually separate.
+    </para>
+    <para>
+     The default setup of GNOME is to use desktop areas with only one
+     desktop. The reason for this is with some applications, such as those which
+     use Motif, users can experience problems with some drag and drop
+     functionality across desktops.
+    </para>
+   </important>
+  </sect1>
+  <sect1 id="deskmenus"
+   <title>Other Desktop Menus</title>
+   <para>
+    <indexterm id="idx-a32">
+     <primary>GNOME Desktop</primary>
+     <secondary>Desktop menus</secondary>
+    </indexterm>
+    There are a few desktop menus you may use in GNOME. These menus are accessed
+    by making a right-button mouse click on any clean space on the desktop. This
+    will bring up a <guimenu>pop-up</guimenu> menu which contains a few items:
+   </para>
+   <ITEMIZEDLIST mark="bullet">
+    <listitem>
+     <para>
+      <guimenuitem>New Window</guimenuitem> - This launches a new Nautilus
+      File Manager window displaying your Home directory.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <guimenuitem>New Folder</guimenuitem> - This creates a new folder
+      on your desktop into which you can place files: a convenient way to clean
+      up your desktop.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <guimenuitem>New Terminal</guimenuitem> - This launches a new GNOME
+      Terminal window that will automatically navigate to the
+      <filename>/home/[username]</filename> 
+      directory.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <guimenuitem>Clean Up by Name</guimenuitem> - This automatically arranges
+      your desktop icons.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <guimenuitem>Disks</guimenuitem> - This accesses the submenu to mount 
+      removable drives
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <guimenuitem>Change Desktop Background</guimenuitem> - This opens the
+      GNOME Control-center at the Background Capplet to allow you to reconfigure
+      the background of your desktop.
+    </para>
+   </listitem>
+  </itemizedlist>
+ </sect1>
+</chapter>
