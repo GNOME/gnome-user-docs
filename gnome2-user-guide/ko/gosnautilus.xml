@@ -1,0 +1,3637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosnautilus-1">
+  <title>노틸러스 파일 관리자</title>
+  <highlights>
+    <para>이 장에서는 <application>노틸러스 </application> 파일 관리자를 사용하는 방법에 대해 설명합니다. </para>
+  </highlights>
+  <sect1 id="gosnautilus-21">
+    <title>노틸러스 파일 관리자 소개</title>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>소개</secondary>
+    </indexterm>
+    <para><application>노틸러스</application> 파일 관리자를 사용하면 통합된 위치에서 파일 및 응용프로그램에 액세스할 수 있습니다. <application>노틸러스</application>에서 다음 작업을 수행할 수 있습니다. </para>
+    <itemizedlist>
+      <listitem>
+        <para>파일 및 폴더 표시 </para>
+      </listitem>
+      <listitem>
+        <para>파일 및 폴더 관리 </para>
+      </listitem>
+      <listitem>
+        <para>스크립트 실행 </para>
+      </listitem>
+      <listitem>
+        <para>파일 및 폴더 사용자 정의 </para>
+      </listitem>
+    </itemizedlist>
+    <para>또한 <application>노틸러스</application>에서는 데스크탑 배경을 관리합니다. 데스크탑 배경은 시각적인 데스크탑의 다른 모든 컴포넌트 뒤에 있습니다. 데스크탑 배경은 사용자 인터페이스의 활성 컴포넌트입니다. </para>
+    <para><application>노틸러스</application> 창을 사용하여 파일 및 폴더를 표시하고 관리할 수 있습니다. 다음 방법으로 <application>노틸러스</application> 창을 열 수 있습니다. </para>
+    <itemizedlist>
+      <listitem>
+        <para>데스크탑 배경에서 <guilabel>홈</guilabel> 객체를 두 번 클릭합니다. </para>
+      </listitem>
+      <listitem>
+        <para><menuchoice><guimenu>응용프로그램</guimenu><guimenuitem>홈 폴더</guimenuitem></menuchoice>를 선택합니다. </para>
+      </listitem>
+      <listitem>
+        <para>데스크탑 배경을 마우스 오른쪽 버튼으로 클릭하여 <guimenu>데스크탑 배경</guimenu> 메뉴를 엽니다. <guimenuitem>새 창</guimenuitem>을 선택합니다. </para>
+      </listitem>
+    </itemizedlist>
+    <para><application>노틸러스</application> 창에는 보기 창에 있는 홈 위치의 내용이 표시됩니다. </para>
+  </sect1>
+  <sect1 id="gosnautilus-210">
+    <title>노틸러스 창</title>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>창</secondary>
+    </indexterm>
+    <para><application>노틸러스</application> 창을 사용하여 파일 및 폴더를 표시하고 관리할 수 있습니다. <xref linkend="gosnautilus-FIG-1"/>에서는 폴더의 내용을 표시하는 <application>노틸러스</application> 창을 보여줍니다. </para>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>아이콘 보기</secondary>
+      <tertiary>그림</tertiary>
+    </indexterm>
+    <figure id="gosnautilus-FIG-1">
+      <title>노틸러스 창에 표시된 폴더의 내용</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_iconview_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>노틸러스 창의 폴더. 설명선: 메뉴 모음, 도구 모음, 위치 표시줄, 확대/축소 버튼, 사이드 창, 보기 창, 탭</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para><xref linkend="gosnautilus-TBL-83"/>에서는 <application>노틸러스</application> 창의 컴포넌트에 대해 설명합니다. </para>
+    <table frame="topbot" id="gosnautilus-TBL-83">
+      <title>노틸러스 창 컴포넌트</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="29.39*"/>
+        <colspec colname="colspec1" colwidth="70.61*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>컴포넌트</para>
+            </entry>
+            <entry valign="top">
+              <para>설명 </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>메뉴 모음 </para>
+            </entry>
+            <entry valign="top">
+              <para><application>노틸러스</application>에서 작업을 수행하는 데 사용하는 메뉴가 들어 있습니다. </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>도구 모음 </para>
+            </entry>
+            <entry valign="top">
+              <para><application>노틸러스</application>에서 작업을 수행하는 데 사용하는 버튼이 들어 있습니다. </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>위치 표시줄 </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>다음과 같은 요소가 들어 있습니다.  </para>
+              <itemizedlist>
+                <listitem>
+                  <para><guilabel>위치</guilabel> 필드 또는 <guilabel>이동</guilabel> 필드:  표시할 파일, 폴더 또는 URL을 지정할 수 있습니다. </para>
+                </listitem>
+                <listitem>
+                  <para><guimenu>확대/축소</guimenu> 버튼:  보기 창에서 항목의 크기를 변경할 수 있습니다. </para>
+                </listitem>
+                <listitem>
+                  <para><guilabel>다음으로 보기</guilabel> 드롭다운 상자:  보기 창에 항목을 표시할 방법을 선택할 수 있습니다. </para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>사이드 창 </para>
+            </entry>
+            <entry valign="top">
+              <para> 다음 기능을 수행합니다. </para>
+              <itemizedlist>
+                <listitem>
+                  <para>파일을 탐색하는 데 사용할 수 있습니다. </para>
+                </listitem>
+                <listitem>
+                  <para>현재 파일 또는 폴더에 대한 정보를 표시합니다. </para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>탭 </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>탭 창을 열려면 탭을 클릭합니다. 사이드 창에는 다음과 같은 탭 섹션이 들어 있습니다. </para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <guilabel>내역</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>노트</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>트리</guilabel>
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>보기 창 </para>
+            </entry>
+            <entry valign="top">
+              <para>다음 내용이 표시됩니다. </para>
+              <itemizedlist>
+                <listitem>
+                  <para>특정 파일 형식 </para>
+                </listitem>
+                <listitem>
+                  <para>폴더 </para>
+                </listitem>
+                <listitem>
+                  <para>FTP 사이트 </para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>크기 조정 핸들 </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>사이드 창 및 보기 창의 크기를 조정하려면 이 핸들을 클릭한 상태에서 끕니다. </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>상태 표시줄 </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>상태 정보를 표시합니다. </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>또한 <application>노틸러스</application> 창에서 팝업 메뉴를 열 수 있습니다. 이 팝업 메뉴를 열려면 <application>노틸러스</application> 창을 마우스 오른쪽 버튼으로 클릭합니다. 이 메뉴의 항목은 마우스 오른쪽 버튼을 클릭하는 위치에 따라 달라집니다. 예를 들어, 파일 또는 폴더를 마우스 오른쪽 버튼으로 클릭하면 해당 파일 또는 폴더와 관련된 항목을 선택할 수 있습니다. 보기 창의 배경을 마우스 오른쪽 버튼으로 클릭하면 보기 창에서의 항목 표시와 관련된 항목을 선택할 수 있습니다. </para>
+    <sect2 id="gosnautilus-53">
+      <title>보기 창</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>보기 창</secondary>
+        <see>보기 창</see>
+      </indexterm>
+      <indexterm>
+        <primary>보기 창</primary>
+        <secondary>소개</secondary>
+      </indexterm>
+      <para>보기 창에는 다음 내용이 표시될 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>특정 파일 형식 </para>
+        </listitem>
+        <listitem>
+          <para>폴더 </para>
+        </listitem>
+        <listitem>
+          <para>FTP 사이트 </para>
+        </listitem>
+      </itemizedlist>
+      <para><indexterm><primary>뷰어 컴포넌트</primary></indexterm><application> 노틸러스</application>에는 특정 파일 형식을 보기 창에 표시할 수 있는 <firstterm>뷰어 컴포넌트</firstterm>가 있습니다. 예를 들어, 이미지 뷰어를 사용하면 보기 창에 PNG(이동식 네트워크 그래픽) 파일을 표시할 수 있습니다. 다음 그림에서는 보기 창에 표시된 PNG 파일을 보여줍니다. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_viewpane_text_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>보기 창에 일반 텍스트 문서가 표시된 노틸러스 창</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>보기 창에 파일을 표시하면 다음과 같은 장점이 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>응용프로그램을 실행할 때보다 시스템 자원을 적게 사용합니다. </para>
+        </listitem>
+        <listitem>
+          <para>응용프로그램을 실행할 때보다 시간이 짧게 걸립니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para>그러나 보기 창에서 파일은 편집할 수 없습니다. </para>
+      <para>또한 <application>노틸러스</application>에는 폴더의 내용을 여러 방식으로 표시할 수 있는 여러 개의 <firstterm>보기</firstterm>가 포함되어 있습니다. 예를 들어, 다음과 같은 보기 형식에서 폴더 내용을 표시할 수 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>아이콘 보기: 폴더의 항목을 아이콘으로 표시합니다. </para>
+        </listitem>
+        <listitem>
+          <para>목록 보기: 폴더의 항목을 목록으로 표시합니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para>폴더를 표시하는 방법을 선택하려면 <guimenu>보기</guimenu> 메뉴를 사용합니다. 자세한 내용은 <xref linkend="gosnautilus-7"/>을(를) 참조하십시오. </para>
+    </sect2>
+    <sect2 id="gosnautilus-540">
+      <title>사이드 창</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>사이드 창</secondary>
+        <tertiary>소개</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>사이드 창</primary>
+        <see>파일 관리자</see>
+      </indexterm>
+      <para>사이드 창에는 다음과 같은 요소가 포함될 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>현재 파일 또는 폴더를 나타내는 아이콘. 사이드 창에는 현재 파일 또는 폴더에 대한 정보도 포함됩니다. </para>
+        </listitem>
+        <listitem>
+          <para>파일을 탐색하는 데 사용할 수 있는 탭 창. </para>
+        </listitem>
+        <listitem>
+          <para>파일이 보기 창에 표시된 경우 사이드 창에는 버튼이 나타납니다. 이 버튼을 사용하여 기본 작업 이외의 파일 작업을 수행할 수 있습니다. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosnautilus-2">
+      <title>탭 창</title>
+      <indexterm>
+        <primary>탭 창</primary>
+        <see>파일 관리자</see>
+      </indexterm>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>탭 창</secondary>
+        <tertiary>소개</tertiary>
+      </indexterm>
+      <para>사이드 창에는 다음과 같은 탭 창이 포함될 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>내역</guilabel>
+          </para>
+          <para>최근에 사용한 파일, 폴더 및 FTP 사이트의 내역 목록이 들어 있습니다. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>노트</guilabel>
+          </para>
+          <para>폴더에 노트를 추가할 수 있습니다. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>트리</guilabel>
+          </para>
+          <para>파일 시스템을 계층 구조로 표시합니다. <guilabel>트리</guilabel> 탭 창을 사용하여 파일을 탐색할 수 있습니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para><xref linkend="gosnautilus-TBL-9"/>에서는 탭 창을 사용하는 방법에 대해 설명합니다. </para>
+      <table frame="topbot" id="gosnautilus-TBL-9">
+        <title>탭 창 작업</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>작업</para>
+              </entry>
+              <entry valign="top">
+                <para>동작</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>탭 창을 엽니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>탭을 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>탭 창을 닫습니다. </para>
+              </entry>
+              <entry valign="top">
+                <para>탭을 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>사이드 창에서 탭을 제거합니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>사이드 창을 마우스 오른쪽 버튼으로 클릭한 다음 메뉴에서 제거할 탭을 선택합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>사이드 창에 탭을 추가합니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>사이드 창을 마우스 오른쪽 버튼으로 클릭한 다음 메뉴에서 추가할 탭을 선택합니다. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-550">
+      <title>아이콘 및 상징</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>아이콘</secondary>
+        <tertiary>소개</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>상징</secondary>
+        <tertiary>소개</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>상징</primary>
+        <see>파일 관리자</see>
+      </indexterm>
+      <para>아이콘 보기에서 <application>노틸러스</application>는 파일 및 폴더를 아이콘으로 표시합니다. 파일 아이콘 및 폴더 아이콘에 상징을 추가할 수 있습니다. 상징은 항목을 시각적으로 표시하기 위해 항목에 추가할 수 있는 작은 아이콘입니다. 예를 들어, 파일을 중요한 것으로 표시하기 위해 파일 아이콘에 <guilabel>중요</guilabel> 상징을 추가하면 다음과 같이 표시됩니다.  </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sampleemblem_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>중요 상징이 있는 파일 아이콘</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>아이콘에 상징을 추가하는 방법에 대한 자세한 내용은 <xref linkend="gosnautilus-112"/>을(를) 참조하십시오. </para>
+      <para>다음 표에서는 파일 아이콘의 구조에 대해 설명합니다. </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>컴포넌트</para>
+              </entry>
+              <entry valign="top">
+                <para>설명</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem1_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>중요 상징</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>상징. 이 상징은 <guilabel>중요</guilabel> 상징입니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem2_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>파일 아이콘</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>파일을 나타내는 아이콘. 이 아이콘에는 파일 내용의 미리 보기가 들어 있습니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem3_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>아이콘 설명</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>아이콘 설명. 아이콘 설명에 표시되는 정보 항목을 수정할 수 있습니다. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><application>노틸러스</application>에는 다음 항목 유형에 대한 기본 상징이 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>심볼릭 링크 </para>
+        </listitem>
+        <listitem>
+          <para>다음과 같은 권한이 있는 항목: </para>
+          <itemizedlist>
+            <listitem>
+              <para>읽기 권한만 </para>
+            </listitem>
+            <listitem>
+              <para>읽기 권한 및 쓰기 권한 없음 </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+      <para>기본 상징은 테마에 따라 변경됩니다. 다음 표에서는 기본 테마의 기본 상징을 보여줍니다. </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>기본 상징 </para>
+              </entry>
+              <entry valign="top">
+                <para>설명 </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>심볼릭 링크 상징</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>심볼릭 링크</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>읽기 권한만 상징</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>읽기 권한만</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>읽기 권한 및 쓰기 권한 없음 상징</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>읽기 권한 및 쓰기 권한 없음 </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-24">
+    <title>컴퓨터 탐색</title>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>탐색</secondary>
+    </indexterm>
+    <para>각 <application>노틸러스</application> 창에는 하나의 파일, 폴더 또는 FTP 사이트 내용이 표시됩니다. 여기에서는 다음에 대해 설명합니다. </para>
+    <itemizedlist>
+      <listitem>
+        <para><application>노틸러스</application> 창에 항목을 표시하는 방법 </para>
+      </listitem>
+      <listitem>
+        <para><application>노틸러스</application> 창에서 파일을 여는 방법 </para>
+      </listitem>
+      <listitem>
+        <para>파일 시스템에서 파일 및 폴더를 탐색하는 방법 </para>
+      </listitem>
+      <listitem>
+        <para>FTP 사이트를 탐색하는 방법 </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-4">
+      <title>홈 위치를 표시하려면</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_home_launcher.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>노틸러스 홈 위치 아이콘</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>홈 위치</secondary>
+        <see>홈 위치</see>
+      </indexterm>
+      <indexterm>
+        <primary>홈 위치</primary>
+        <secondary>표시</secondary>
+      </indexterm>
+      <para>홈 위치를 표시하려면 다음 중 하나를 수행합니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>데스크탑 배경에서 <guilabel>홈</guilabel> 객체를 두 번 클릭합니다. </para>
+        </listitem>
+        <listitem>
+          <para><application>노틸러스</application> 창에서 <menuchoice><guimenu>이동</guimenu><guimenuitem>홈</guimenuitem></menuchoice>을 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><application>노틸러스</application> 창에서 <guibutton>홈</guibutton> 도구 모음 버튼을 클릭합니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para><application>노틸러스</application> 창에 홈 위치의 내용이 표시됩니다. 표시 내용을 다시 로드하려면 <guibutton>다시 로드</guibutton> 버튼을 클릭합니다. </para>
+    </sect2>
+    <sect2 id="gosnautilus-25">
+      <title>폴더를 표시하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>폴더 표시</secondary>
+      </indexterm>
+      <para>다음 방법으로 폴더의 내용을 표시할 수 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>보기 창에서 폴더를 두 번 클릭합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>위치</guilabel> 필드에 표시할 폴더의 경로를 입력한 다음 <keycap>Return</keycap> 키를 누릅니다. <guilabel>위치</guilabel> 필드에는 자동 완성 기능이 있습니다. 경로를 입력하면 <application>노틸러스</application>에서 파일 시스템을 읽습니다. 디렉토리를 고유하게 식별할 수 있을 만큼 문자를 충분히 입력하면 <application> 노틸러스</application>가 <guilabel>위치</guilabel> 필드에 디렉토리 이름을 자동으로 완성합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>트리</guilabel> 탭 창을 사용합니다. 자세한 내용은 <xref linkend="gosnautilus-27"/>을(를) 참조하십시오. </para>
+        </listitem>
+        <listitem>
+          <para><guibutton>뒤로</guibutton> 및 <guibutton>앞으로</guibutton> 도구 모음 버튼을 사용하여 탐색 내역을 찾아봅니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para>현재 폴더보다 한 수준 위의 폴더로 변경하려면 <menuchoice><guimenu>이동</guimenu><guimenuitem>위로</guimenuitem></menuchoice>를 선택합니다. 또는 <guibutton>위로</guibutton> 도구 모음 버튼을 클릭합니다. </para>
+      <para>표시 내용을 다시 로드하려면 <guibutton>다시 로드</guibutton> 버튼을 클릭합니다. </para>
+      <para>표시할 폴더를 찾을 수 없는 경우 <application>찾기 도구</application>를 사용할 수 있습니다. <application>찾기 도구</application>를 시작하려면 <menuchoice><guimenu>작업</guimenu><guimenuitem>파일 찾기</guimenuitem></menuchoice>를 선택합니다. </para>
+    </sect2>
+    <sect2 id="gosnautilus-27">
+      <title>트리 탭 창 사용</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>탭 창</secondary>
+        <tertiary>트리</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>트리 탭 창, 사용</primary>
+      </indexterm>
+      <para><guilabel>트리</guilabel> 탭 창에는 파일 시스템이 계층 구조로 표시됩니다. <guilabel>트리</guilabel> 탭 창을 사용하여 파일 시스템을 쉽게 탐색할 수 있습니다. 기본적으로 사이드 창에는 <guilabel>트리</guilabel> 탭 창이 표시되지 않습니다. 사이드 창에 <guilabel>트리</guilabel> 탭 창을 추가하려면 사이드 창을 마우스 오른쪽 버튼으로 클릭한 다음 팝업 메뉴에서 <guimenuitem>트리</guimenuitem>를 선택합니다. </para>
+      <para><guilabel>트리</guilabel> 탭 창에서 폴더는 다음과 같이 표시됩니다. </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="42.60*"/>
+          <colspec colwidth="57.40*"/>
+          <thead>
+            <row>
+              <entry valign="top">
+                <para>폴더 상태 </para>
+              </entry>
+              <entry valign="top">
+                <para>그래픽 표시 </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>닫힌 폴더 </para>
+              </entry>
+              <entry valign="top">
+                <para>오른쪽 화살표 </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>열린 폴더 </para>
+              </entry>
+              <entry valign="top">
+                <para>아래 화살표 </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><xref linkend="gosnautilus-TBL-34"/>에서는 <guilabel>트리</guilabel> 탭 창을 사용하여 수행할 수 있는 작업과 해당 작업을 수행하는 방법에 대해 설명합니다. </para>
+      <table frame="topbot" id="gosnautilus-TBL-34">
+        <title>트리 탭 창 작업</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="50*"/>
+          <colspec colname="colspec1" colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>작업</para>
+              </entry>
+              <entry valign="top">
+                <para>동작 </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para><guilabel>트리</guilabel> 탭 창을 엽니다. </para>
+              </entry>
+              <entry valign="top">
+                <para><guilabel>트리</guilabel> 탭을 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guilabel>트리</guilabel> 탭 창을 닫습니다. </para>
+              </entry>
+              <entry valign="top">
+                <para><guilabel>트리</guilabel> 탭을 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><guilabel>트리</guilabel> 탭 창의 폴더를 엽니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guilabel>트리</guilabel> 탭 창에서 해당 폴더 옆에 있는 화살표를 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><guilabel>트리</guilabel> 탭 창의 폴더를 닫습니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guilabel>트리</guilabel> 탭 창에서 해당 폴더 옆에 있는 화살표를 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>보기 창에 폴더 내용을 표시합니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guilabel>트리</guilabel> 탭 창에서 폴더를 선택합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>보기 창에 파일 내용을 표시합니다. </para>
+              </entry>
+              <entry valign="top">
+                <para><guilabel>트리</guilabel> 탭 창에서 파일을 선택합니다. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para><guilabel>트리</guilabel> 탭 창에 파일이 표시되지 않도록 환경 설정을 설정할 수 있습니다. 자세한 내용은 <xref linkend="gosnautilus-57"/>을(를) 참조하십시오. </para>
+    </sect2>
+    <sect2 id="gosnautilus-28">
+      <title>파일 열기</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>파일 열기</secondary>
+      </indexterm>
+      <para>파일을 열면 <application>노틸러스</application>는 해당 파일 형식에 대한 기본 작업을 수행합니다. 기본 작업은 다음 중 하나일 수 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>뷰어 컴포넌트를 사용하여 보기 창에 파일을 표시합니다. </para>
+        </listitem>
+        <listitem>
+          <para>파일을 여는 응용프로그램을 실행합니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para><application>노틸러스</application>는 파일 내용을 확인하여 파일 형식을 결정합니다. 첫 번째 줄에서 파일 형식을 결정하지 못한 경우 <application>노틸러스</application>는 파일 확장자를 확인합니다. </para>
+      <para>열려는 파일을 찾을 수 없는 경우 <application>찾기 도구</application>를 사용할 수 있습니다. <application>찾기 도구</application>를 시작하려면 <menuchoice><guimenu>작업</guimenu><guimenuitem>파일 찾기</guimenuitem></menuchoice>를 선택합니다. </para>
+      <sect3 id="gosnautilus-447">
+        <title>보기 창에서 파일 보기</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>보기 창에서 파일 보기</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>보기 창</primary>
+          <secondary>파일 보기</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>뷰어 컴포넌트</primary>
+        </indexterm>
+        <para><application>노틸러스</application>에는 보기 창에 특정 파일 형식을 표시할 수 있는 뷰어 컴포넌트가 있습니다. 예를 들어, 다음과 같은 형식의 파일을 보기 창에 표시할 수 있습니다. </para>
+        <itemizedlist>
+          <listitem>
+            <para>일반 텍스트 파일 </para>
+          </listitem>
+          <listitem>
+            <para>PNG(Portable Network Graphics) 파일</para>
+          </listitem>
+          <listitem>
+            <para>JPEG(Joint Photographic Experts Group) 파일</para>
+          </listitem>
+        </itemizedlist>
+        <para>보기 창의 내용을 다시 로드하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>다시 로드</guimenuitem></menuchoice>를 선택합니다. 보기 창에서 항목을 로드하는 것을 중지하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>중지</guimenuitem></menuchoice>를 선택합니다. </para>
+        <para>보기 창에 파일을 표시할 때 뷰어 컴포넌트가 <application>노틸러스</application> 메뉴에 메뉴 항목을 추가할 수 있습니다. 메뉴 항목은 표시되는 파일 형식과 관련되어 있습니다. 예를 들어, PNG 파일을 표시하는 경우에는 <guimenu>보기</guimenu> 메뉴에 <guisubmenu>인터폴레이션</guisubmenu>, <guisubmenu>디더링</guisubmenu> 및 기타 부속 메뉴가 표시됩니다. </para>
+        <para>또한 일부 파일 형식을 보기 창에 표시할 때는 <application>노틸러스</application> 확대/축소 버튼을 사용하여 항목의 크기를 변경할 수 있습니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-29">
+        <title>기본 작업을 실행하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>파일의 기본 작업 실행</secondary>
+        </indexterm>
+        <para>파일에 대한 기본 작업을 실행하려면 파일을 두 번 클릭합니다. 예를 들어, 일반 텍스트 문서에 대한 기본 작업은 파일을 텍스트 뷰어에 표시하는 것입니다. 이 경우 파일을 두 번 클릭하면 파일이 텍스트 뷰어에 표시됩니다. </para>
+        <para><application>노틸러스</application> 환경 설정에서 파일을 한 번만 클릭해도 기본 작업이 실행되도록 설정할 수 있습니다. 자세한 내용은 <xref linkend="gosnautilus-56"/>을(를) 참조하십시오. </para>
+      </sect3>
+      <sect3 id="gosnautilus-30">
+        <title>다른 프로그램으로 열기 부속 메뉴를 사용하여 기본 작업 이외의 작업을 실행하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>파일에 대한 기본 작업 이외의 작업 실행</secondary>
+        </indexterm>
+        <para>파일에 대해 기본 작업 이외의 작업을 실행하려면 다음 단계를 수행합니다. </para>
+        <orderedlist>
+          <listitem>
+            <para>보기 창에서 작업을 수행할 파일을 선택합니다. <menuchoice><guimenu>파일</guimenu><guimenuitem>다른 프로그램으로 열기</guimenuitem></menuchoice>를 선택합니다. <guisubmenu>다른 프로그램으로 열기</guisubmenu> 부속 메뉴를 엽니다. 이 부속 메뉴의 항목은 <application>파일 형식과 프로그램</application> 환경 설정 도구의 다음 부분에 해당합니다. <itemizedlist><listitem><para><guilabel>파일 형식 편집</guilabel> 대화 상자의 <guilabel>기본 작업</guilabel> 드롭다운 목록 상자 </para></listitem><listitem><para><guilabel>파일 형식 편집</guilabel> 대화 상자의 <guilabel>뷰어 컴포넌트</guilabel> 드롭다운 목록 상자 </para></listitem></itemizedlist></para>
+          </listitem>
+          <listitem>
+            <para><guisubmenu>다른 프로그램으로 열기</guisubmenu> 부속 메뉴에서 작업을 선택합니다. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gosnautilus-73">
+        <title>파일을 표시할 때 다른 작업을 실행하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>파일에 대해 다른 작업 실행</secondary>
+        </indexterm>
+        <para>보기 창에 파일을 표시할 때 사이드 창에 버튼이 표시될 수 있습니다. <xref linkend="gosnautilus-FIG-4"/>에서는 보기 창에 텍스트 파일이 표시되는 경우의 사이드 창을 보여줍니다. </para>
+        <figure id="gosnautilus-FIG-4">
+          <title>보기 창에 파일이 표시되는 경우의 사이드 창</title>
+          <screenshot>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="figures/naut_file_navigation_pane.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>사이드 창. 파일 아이콘, 파일 정보, 파일 상징, gedit로 열기, 다른 프로그램으로 열기 버튼, 탭이 있습니다.</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </figure>
+        <para>이 버튼은 <application>파일 형식과 프로그램</application> 환경 설정 도구에 정의된 작업을 나타냅니다. 작업은 <application>파일 형식과 프로그램</application> 환경 설정 도구의 <guilabel>파일 형식 편집</guilabel> 대화 상자에 있는 <guilabel>기본 작업</guilabel> 드롭다운 목록 상자에 정의되어 있습니다. 작업을 실행하려면 버튼을 클릭합니다. 예를 들어, 일반 텍스트 문서에 대해 정의된 작업은 파일을 <application>gedit</application>에서 여는 것입니다. 이 작업이 정의되어 있으면 사이드 창에 <guibutton>gedit로 열기</guibutton> 버튼이 표시됩니다. 파일을 <application>gedit</application> 응용프로그램에서 열려면 <guibutton>gedit로 열기</guibutton> 버튼을 클릭합니다. </para>
+        <note>
+          <para>다음 대화 상자에서 작업이 제외되어 있는 경우 해당 작업을 나타내는 버튼은 사이드 창에 표시되지 않습니다. <itemizedlist><listitem><para><guilabel>다른 응용프로그램으로 열기</guilabel></para></listitem><listitem><para><guilabel>다른 뷰어로 열기</guilabel></para></listitem></itemizedlist></para>
+        </note>
+      </sect3>
+    </sect2>
+<!--<sect2 id="gosnautilus-32"><title>To Display and Play MP3 Files</title><para>TBD.</para><para><emphasis>Question:</emphasis> Where can we get the information for this section?</para></sect2>-->
+    <sect2 id="gosnautilus-445">
+      <title>여기에서 시작 위치 사용</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_starthere_launcher.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>노틸러스 여기에서 시작 아이콘</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>여기에서 시작 위치</secondary>
+        <see>여기에서 시작 위치</see>
+      </indexterm>
+      <indexterm>
+        <primary>여기에서 시작 위치</primary>
+        <secondary>사용</secondary>
+      </indexterm>
+      <para><guilabel>여기에서 시작</guilabel> 위치를 사용하여 다음 기능에 액세스할 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>응용프로그램</guilabel>
+          </para>
+          <para>주요 그놈 응용프로그램에 액세스하려면 <guilabel>응용프로그램</guilabel>을 두 번 클릭합니다. 또한 <guimenu>그놈 메뉴</guimenu> 및 메뉴 패널에서 <guimenu>응용프로그램</guimenu> 메뉴에 액세스할 수 있습니다. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>데스크탑 환경 설정</guilabel>
+          </para>
+          <para>데스크탑을 사용자 정의하려면 <guilabel>데스크탑 환경 설정</guilabel>을 두 번 클릭합니다. 또한 <guimenu>응용프로그램</guimenu> 메뉴에서 데스크탑 환경 설정에 액세스할 수 있습니다. </para>
+        </listitem>
+        <listitem>
+          <para>시스템을 서버로 구성하고 다른 시스템 설정을 선택할 수 있는 프로그램 </para>
+        </listitem>
+      </itemizedlist>
+      <para>다음 방법으로 <guilabel>여기에서 시작</guilabel> 위치에 액세스할 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para><application>노틸러스</application> 창에서 </para>
+          <para><menuchoice><guimenu>이동</guimenu><guimenuitem>여기에서 시작</guimenuitem></menuchoice>을 선택합니다. <guilabel>여기에서 시작</guilabel> 위치의 내용이 창에 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para>데스크탑 배경에서 </para>
+          <para>데스크탑 배경에서 <guilabel>여기에서 시작</guilabel> 객체를 두 번 클릭합니다. <guilabel>여기에서 시작</guilabel> 위치의 내용이 <application>노틸러스</application> 창에 표시됩니다. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosnautilus-37">
+      <title>FTP 사이트에 액세스하려면</title>
+      <indexterm>
+        <primary>FTP 사이트</primary>
+        <secondary>액세스</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>FTP 사이트</secondary>
+        <see>FTP 사이트</see>
+      </indexterm>
+      <para><application>노틸러스</application>를 사용하여 FTP 사이트에 액세스할 수 있습니다. FTP 사이트에 액세스하려면 해당 사이트의 URL을 위치 표시줄의 필드에 입력한 다음 <keycap>Return</keycap> 키를 누릅니다. 사이트 내용이 보기 창에 표시됩니다. FTP 사이트에서 파일을 복사하려면 파일을 원하는 위치로 끕니다. </para>
+      <para>사용자 이름과 암호가 필요한 FTP 사이트에 액세스하려면 다음 형식으로 URL을 입력합니다.  </para>
+      <para>
+        <command>ftp://<replaceable>username</replaceable>:<replaceable>password </replaceable>@<replaceable>hostname</replaceable>.<replaceable>domain</replaceable></command>
+      </para>
+      <para>보기 창에 FTP 사이트를 다시 로드하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>다시 로드</guimenuitem></menuchoice>를 선택합니다. FTP 사이트를 로드하는 것을 중지하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>중지</guimenuitem></menuchoice>를 선택합니다. </para>
+    </sect2>
+    <sect2 id="gosnautilus-5">
+      <title>탐색 내역 사용</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>탐색 내역 목록</secondary>
+      </indexterm>
+      <para><application>노틸러스</application>에서는 파일, 폴더 및 FTP 사이트의 내역 목록을 관리합니다. 이 내역 목록을 사용하여 최근에 사용한 파일, 폴더 및 FTP 사이트를 탐색할 수 있습니다. 다음에서는 내역 목록의 탐색 방법에 대해 설명합니다. </para>
+      <para>내역 목록을 지우려면 <menuchoice><guimenu>이동</guimenu><guimenuitem>내역 지우기</guimenuitem></menuchoice>를 선택합니다. </para>
+      <sect3 id="gosnautilus-77">
+        <title>이동 메뉴를 사용하여 내역 목록을 탐색하려면</title>
+        <para>이전에 본 항목의 목록을 표시하려면 <guimenu>이동</guimenu> 메뉴를 선택합니다. 내역 목록은 <guimenu>이동</guimenu> 메뉴의 아래쪽에 표시됩니다. 내역 목록의 항목을 열려면 <guimenu>이동</guimenu> 메뉴에서 항목을 선택합니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-78">
+        <title>도구 모음을 사용하여 내역 목록을 탐색하려면</title>
+        <para>도구 모음을 사용하여 내역 목록을 탐색하려면 다음 중 하나를 수행합니다. </para>
+        <itemizedlist>
+          <listitem>
+            <para>내역 목록에서 이전 파일, 폴더 또는 URL을 열려면 <guibutton>뒤로</guibutton> 도구 모음 버튼을 클릭합니다. </para>
+          </listitem>
+          <listitem>
+            <para>내역 목록에서 다음 파일, 폴더 또는 URL을 열려면 <guibutton>앞으로</guibutton> 도구 모음 버튼을 클릭합니다. </para>
+          </listitem>
+          <listitem>
+            <para>이전에 본 항목 목록을 표시하려면 <guibutton>뒤로</guibutton> 도구 모음 버튼의 오른쪽에 있는 아래 화살표를 클릭합니다. 이 목록에서 항목을 열려면 해당 항목을 클릭합니다. </para>
+          </listitem>
+          <listitem>
+            <para>현재 항목 이후에 본 항목의 목록을 표시하려면 <guibutton>앞으로</guibutton> 도구 모음 버튼의 오른쪽에 있는 아래 화살표를 클릭합니다. 이 목록에서 항목을 열려면 해당 항목을 클릭합니다. </para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-80">
+        <title>내역 탭 창을 사용하여 내역 목록을 탐색하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>탭 창</secondary>
+          <tertiary>내역</tertiary>
+        </indexterm>
+        <para><guilabel>내역</guilabel> 탭 창을 표시하려면 사이드 창에서 <guilabel>내역</guilabel> 탭을 클릭합니다. <guilabel>내역</guilabel> 탭 창에는 이전에 본 항목 목록이 표시됩니다. </para>
+        <para>내역 목록의 항목을 보기 창에 표시하려면 <guilabel>내역</guilabel> 탭 창에서 항목을 클릭합니다. </para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-36">
+      <title>즐겨찾는 위치에 책갈피를 설정하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>책갈피</secondary>
+      </indexterm>
+      <para>책갈피 항목에 액세스하려면 <guimenu>책갈피</guimenu> 메뉴에서 항목을 선택합니다. <guimenu>책갈피</guimenu> 메뉴에 즐겨찾는 위치를 추가할 수 있습니다. 파일 시스템의 파일 및 폴더 또는 FTP 사이트에 대한 책갈피를 추가할 수 있습니다. </para>
+      <sect3 id="gosnautilus-40">
+        <title>책갈피를 추가하려면</title>
+        <para>책갈피를 추가하려면 책갈피를 설정할 항목을 보기 창에 표시합니다. <menuchoice><guimenu>책갈피</guimenu><guimenuitem>책갈피 추가</guimenuitem></menuchoice>를 선택합니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-41">
+        <title>책갈피를 편집하려면</title>
+        <para>책갈피를 편집하려면 다음 단계를 수행합니다. </para>
+        <orderedlist>
+          <listitem>
+            <para><menuchoice><guimenu>책갈피</guimenu><guimenuitem>책갈피 편집</guimenuitem></menuchoice>을 선택합니다. <guilabel>책갈피 편집</guilabel> 대화 상자가 표시됩니다. </para>
+          </listitem>
+          <listitem>
+            <para>책갈피를 편집하려면 <guilabel>책갈피 편집</guilabel> 대화 상자의 왼쪽에서 책갈피를 선택합니다. 다음과 같이 <guilabel>책갈피 편집</guilabel> 대화 상자의 오른쪽에서 책갈피 세부 사항을 편집합니다.  </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="27.27*"/>
+                <colspec colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry valign="top">
+                      <para>대화 상자 요소</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>설명 </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>이름</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para><guimenu>책갈피</guimenu> 메뉴에서 책갈피를 식별할 이름을 지정하려면 이 텍스트 상자를 사용합니다. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>위치</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>책갈피의 위치를 지정하려면 이 필드를 사용합니다. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>책갈피를 삭제하려면 대화 상자의 왼쪽에서 책갈피를 선택합니다. <guilabel>삭제</guilabel>를 클릭합니다. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-8">
+    <title>파일 및 폴더 관리</title>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>파일 및 폴더 관리</secondary>
+    </indexterm>
+    <para>여기에서는 파일 및 폴더를 사용하는 방법에 대해 설명합니다. </para>
+    <sect2 id="gosnautilus-201">
+      <title>노틸러스에서 끌어서 놓기</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>끌어서 놓기</secondary>
+      </indexterm>
+      <para><application>노틸러스</application>에서 끌어서 놓기를 사용하여 몇 가지 작업을 수행할 수 있습니다. 끌어서 놓을 때 마우스 포인터는 수행하는 작업에 대한 피드백을 제공합니다. <xref linkend="gosnautilus-TBL-11"/>에서는 끌어서 놓기로 수행할 수 있는 작업에 대해 설명합니다. 이 표에서는 끌어서 놓을 때 나타나는 마우스 포인터도 보여줍니다. </para>
+      <table frame="topbot" id="gosnautilus-TBL-11">
+        <title>노틸러스에서 끌어서 놓기</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="98.56*"/>
+          <colspec colname="colspec1" colwidth="28.70*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>작업</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>동작</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>마우스 포인터 </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>항목 이동 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>항목을 새 위치로 끕니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/move_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>포인터 이동</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>항목 복사 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>항목을 잡은 다음 <keycap>Ctrl</keycap> 키를 누른 채 있습니다. 항목을 새 위치로 끕니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>복사 포인터</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>항목에 대한 링크 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>항목을 잡은 다음 <keycombo><keycap> Ctrl</keycap><keycap>Shift</keycap></keycombo>를 누른 채 있습니다. 링크를 설정할 위치로 항목을 끕니다. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/link_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>링크 포인터</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>끄는 항목으로 수행할 작업 요청 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>항목을 잡은 다음 <keycap>Alt</keycap> 키를 누른 채 있습니다. 항목을 배치할 위치로 항목을 끕니다. 마우스 버튼을 놓습니다. 팝업 메뉴가 나타납니다. 팝업 메뉴에서 다음 항목 중 하나를 선택합니다.  </para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <guimenuitem>이동</guimenuitem>
+                    </para>
+                    <para>항목을 해당 위치로 이동합니다. </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>복사</guimenuitem>
+                    </para>
+                    <para>항목을 해당 위치에 복사합니다. </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>링크</guimenuitem>
+                    </para>
+                    <para>해당 위치에 항목에 대한 심볼릭 링크를 만듭니다. </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>배경으로 설정</guimenuitem>
+                    </para>
+                    <para>항목이 이미지인 경우 해당 이미지를 배경 그림으로 설정합니다. 이 명령을 사용하여 데스크탑 배경 및 보기 창 배경을 설정할 수 있습니다. </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>취소</guimenuitem>
+                    </para>
+                    <para>끌어서 놓기 작업을 취소합니다. </para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>요청 포인터</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-202">
+      <title>파일 및 폴더를 선택하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>파일 및 폴더 선택</secondary>
+      </indexterm>
+      <para><application>노틸러스</application>에서 몇 가지 방법으로 파일 및 폴더를 선택할 수 있습니다. <xref linkend="gosnautilus-TBL-10"/>에서는 <application> 노틸러스</application> 데스크탑 배경과 <application>노틸러스</application> 창에서 항목을 선택하는 방법에 대해 설명합니다. </para>
+      <table frame="topbot" id="gosnautilus-TBL-10">
+        <title>노틸러스에서 항목 선택</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>작업</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>동작</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>항목 선택 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>항목을 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>인접한 항목 그룹 선택 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>아이콘 보기에서 선택할 파일의 주위를 끕니다. </para>
+                <para>목록 보기에서 <keycap>Shift</keycap> 키를 누른 채 있습니다. 그룹의 첫 번째 항목을 클릭한 다음 그룹의 마지막 항목을 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>여러 항목 선택 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Ctrl</keycap> 키를 누른 상태에서 선택할 항목을 클릭합니다. </para>
+                <para>또는 <keycap>Ctrl</keycap> 키를 누른 상태에서 선택할 파일의 주위를 끕니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>폴더의 모든 항목 선택 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para><menuchoice><guimenu>편집</guimenu><guimenuitem>모든 파일 선택</guimenuitem></menuchoice>을 선택합니다. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>항목에 대한 기본 작업을 수행하려면 해당 항목을 두 번 클릭합니다. <application>노틸러스</application> 환경 설정에서 다음과 같이 <application>노틸러스</application>를 사용하도록 설정할 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>파일을 한 번 클릭하여 기본 작업을 실행합니다. </para>
+        </listitem>
+        <listitem>
+          <para>항목을 가리켜 선택합니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para>자세한 내용은 <xref linkend="gosnautilus-56"/>을(를) 참조하십시오. </para>
+    </sect2>
+    <sect2 id="gosnautilus-9">
+      <title>파일 또는 폴더를 이동하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>파일 및 폴더 이동</secondary>
+      </indexterm>
+      <para>다음에서는 파일 또는 폴더를 이동하는 방법에 대해 설명합니다. </para>
+      <sect3 id="gosnautilus-537">
+        <title>보기 창에서 새 위치로 끌기</title>
+        <para>보기 창에서 파일 또는 폴더를 새 위치로 끌려면 다음 단계를 수행합니다. </para>
+        <orderedlist>
+          <listitem>
+            <para><application>노틸러스</application> 창을 엽니다. <menuchoice><guimenu>파일</guimenu><guimenuitem>새 창</guimenuitem></menuchoice>을 선택하여 두 번째 <application>노틸러스</application> 창을 엽니다. </para>
+          </listitem>
+          <listitem>
+            <para>한 창에서 이동할 파일 또는 폴더가 있는 폴더를 선택합니다. 다른 창에서 파일 또는 폴더를 이동할 대상 폴더를 선택합니다. </para>
+          </listitem>
+          <listitem>
+            <para>이동할 파일 또는 폴더를 다른 창의 새 위치로 끕니다. </para>
+          </listitem>
+        </orderedlist>
+        <para>현재 위치보다 한 수준 아래에 있는 폴더로 파일 또는 폴더를 이동하려면 새 창을 열지 마십시오. 대신 동일한 창의 새 위치로 파일 또는 폴더를 끕니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-538">
+        <title>새 위치로 잘라내어 붙여넣기</title>
+        <para>다음과 같이 파일 또는 폴더를 잘라낸 다음 다른 폴더에 붙여넣을 수 있습니다. </para>
+        <orderedlist>
+          <listitem>
+            <para>이동할 파일 또는 폴더를 선택한 다음 <menuchoice><guimenu>편집</guimenu><guimenuitem>파일 잘라내기</guimenuitem></menuchoice>를 선택합니다. </para>
+          </listitem>
+          <listitem>
+            <para>파일 또는 폴더를 이동할 대상 폴더를 연 다음 <menuchoice><guimenu>편집</guimenu><guimenuitem>파일 붙여넣기</guimenuitem></menuchoice>를 선택합니다. </para>
+          </listitem>
+        </orderedlist>
+<!--<para><emphasis>Question</emphasis>: What is the purpose of the Clear Text command?</para>-->
+      </sect3>
+      <sect3 id="gosnautilus-539">
+        <title>트리 탭 창에서 새 위치로 끌기</title>
+        <para>파일 또는 폴더를 보기 창에서 <guilabel>트리</guilabel> 탭 창의 위치로 끌 수 있습니다. 또는 <guilabel>트리</guilabel> 탭 창 내의 파일 또는 폴더를 <guilabel>트리</guilabel> 탭 창의 다른 위치로 끌 수 있습니다. </para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-10">
+      <title>파일 또는 폴더를 복사하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>파일 및 폴더 복사</secondary>
+      </indexterm>
+      <para>다음에서는 파일 또는 폴더를 복사하는 방법에 대해 설명합니다. </para>
+      <sect3 id="gosnautilus-640">
+        <title>보기 창에서 새 위치로 끌기</title>
+        <para>파일 또는 폴더를 복사하려면 다음 단계를 수행합니다. </para>
+        <orderedlist>
+          <listitem>
+            <para><application>노틸러스</application> 창을 엽니다. <menuchoice><guimenu>파일</guimenu><guimenuitem>새 창</guimenuitem></menuchoice>을 선택하여 두 번째 <application>노틸러스</application> 창을 엽니다. </para>
+          </listitem>
+          <listitem>
+            <para>한 창에서 복사할 파일 또는 폴더가 있는 폴더를 선택합니다. 다른 창에서 파일 또는 폴더를 복사할 대상 폴더를 선택합니다. </para>
+          </listitem>
+          <listitem>
+            <para>파일 또는 폴더를 잡은 다음 <keycap>Ctrl</keycap> 키를 누른 상태에서 다른 창의 새 위치로 파일 또는 폴더를 끕니다. </para>
+          </listitem>
+        </orderedlist>
+        <para>현재 위치보다 한 수준 아래에 있는 폴더로 파일 또는 폴더를 복사하려면 새 창을 열지 마십시오. 대신 파일 또는 폴더를 잡은 다음 <keycap>Ctrl</keycap> 키를 누른 상태에서 같은 창의 새 위치로 파일 또는 폴더를 끕니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-441">
+        <title>새 위치로 잘라내어 붙여넣기</title>
+        <para>다음과 같이 파일 또는 폴더를 복사한 다음 다른 폴더에 붙여넣을 수 있습니다. </para>
+        <orderedlist>
+          <listitem>
+            <para>복사할 파일 또는 폴더를 선택한 다음 <menuchoice><guimenu>편집</guimenu><guimenuitem>파일 복사</guimenuitem></menuchoice>를 선택합니다. </para>
+          </listitem>
+          <listitem>
+            <para>파일 또는 폴더를 복사할 대상 폴더를 연 다음 <menuchoice><guimenu>편집</guimenu><guimenuitem>파일 붙여넣기</guimenuitem></menuchoice>를 선택합니다. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-82">
+      <title>파일 또는 폴더를 복제하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>파일 및 폴더 복제</secondary>
+      </indexterm>
+      <para>현재 폴더에 파일 또는 폴더의 복사본을 만들려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>보기 창에서 복제할 파일 또는 폴더를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>편집</guimenu><guimenuitem> 복제</guimenuitem></menuchoice>를 선택합니다. 또는 보기 창에서 파일 또는 폴더를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>복제</guimenuitem>를 선택합니다. </para>
+          <para>파일 또는 폴더의 복사본이 현재 폴더에 나타납니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-11">
+      <title>폴더를 만들려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>폴더 만들기</secondary>
+      </indexterm>
+      <para>폴더를 만들려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>새 폴더를 만들 폴더를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>파일</guimenu><guimenuitem>새 폴더</guimenuitem></menuchoice>를 선택합니다. 또는 보기 창의 배경을 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>새 폴더</guimenuitem>를 선택합니다. </para>
+          <para><guilabel>제목 없음</guilabel> 폴더가 보기 창에 추가됩니다. 폴더의 이름은 선택됩니다. </para>
+        </listitem>
+        <listitem>
+          <para>폴더의 이름을 입력한 다음 <keycap>Return</keycap> 키를 누릅니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-12">
+      <title>파일 또는 폴더의 이름을 바꾸려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>폴더 이름 바꾸기</secondary>
+      </indexterm>
+      <para>파일 또는 폴더의 이름을 바꾸려면 다음 단계를 수행합니다.  </para>
+      <orderedlist>
+        <listitem>
+          <para>보기 창에서 이름을 바꿀 파일 또는 폴더를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>편집</guimenu><guimenuitem> 이름 바꾸기</guimenuitem></menuchoice>를 선택합니다. 또는 보기 창에서 파일 또는 폴더를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>이름 바꾸기</guimenuitem>를 선택합니다. </para>
+          <para>파일 또는 폴더의 이름이 선택됩니다. </para>
+        </listitem>
+        <listitem>
+          <para>파일 또는 폴더의 새 이름을 입력한 다음 <keycap>Return</keycap> 키를 누릅니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-13">
+      <title>파일 또는 폴더를 휴지통으로 이동하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>휴지통</secondary>
+        <see>휴지통</see>
+      </indexterm>
+      <indexterm>
+        <primary>휴지통</primary>
+        <secondary>파일 또는 폴더 이동</secondary>
+      </indexterm>
+      <para>파일 또는 폴더를 <guilabel>휴지통</guilabel>으로 이동하려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>보기 창에서 <guilabel>휴지통</guilabel>으로 이동할 파일 또는 폴더를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>편집</guimenu><guimenuitem>휴지통으로 이동</guimenuitem></menuchoice>을 선택합니다. 또는 보기 창에서 파일 또는 폴더를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>휴지통으로 이동</guimenuitem>을 선택합니다. </para>
+        </listitem>
+      </orderedlist>
+      <para>보기 창에서 파일 또는 폴더를 데스크탑 배경의 <guilabel>휴지통</guilabel> 객체로 끌 수도 있습니다. </para>
+    </sect2>
+    <sect2 id="gosnautilus-443">
+      <title>파일 또는 폴더를 삭제하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>파일 또는 폴더 삭제</secondary>
+      </indexterm>
+      <para>파일 또는 폴더를 삭제하는 경우 파일 또는 폴더가 <guilabel>휴지통</guilabel>으로 이동되지 않고 파일 시스템에서 즉시 삭제됩니다. <guimenuitem>삭제</guimenuitem> 메뉴 항목은 <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>휴지통을 거치지 않는 삭제 명령 포함</guilabel> 옵션을 선택하는 경우에만 사용할 수 있습니다. </para>
+      <para>파일 또는 폴더를 삭제하려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>보기 창에서 삭제할 파일 또는 폴더를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>편집</guimenu><guimenuitem> 삭제</guimenuitem></menuchoice>를 선택합니다. 또는 보기 창에서 파일 또는 폴더를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>삭제</guimenuitem>를 선택합니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-14">
+      <title>파일 또는 폴더에 대한 심볼릭 링크를 만들려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>심볼릭 링크 만들기</secondary>
+      </indexterm>
+      <para>심볼릭 링크는 다른 파일 또는 폴더를 가리키는 특수한 형식의 파일입니다. 심볼릭 링크에 대해 작업을 수행하면 심볼릭 링크가 가리키는 파일 또는 폴더에 대해 작업이 수행됩니다. 그러나 심볼릭 링크를 삭제하면 심볼릭 링크가 가리키는 파일이 아닌 링크 파일이 삭제됩니다. </para>
+      <para>파일 또는 폴더에 대한 심볼릭 링크를 만들려면 링크를 만들 파일 또는 폴더를 선택합니다. <menuchoice><guimenu>편집</guimenu><guimenuitem>링크 생성</guimenuitem></menuchoice>을 선택합니다. 파일 또는 폴더에 대한 링크가 현재 폴더에 추가됩니다. </para>
+      <para>또는 링크를 만들 항목을 잡은 다음 <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap></keycombo>를 누른 상태에서 링크를 설정할 위치로 항목을 끕니다. </para>
+      <para>기본적으로 <application>노틸러스</application>는 심볼릭 링크에 상징을 추가합니다. </para>
+    </sect2>
+    <sect2 id="gosnautilus-430">
+      <title>권한을 변경하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>권한 변경</secondary>
+      </indexterm>
+      <para>파일 또는 폴더에 대한 권한을 변경하려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>변경할 파일 또는 폴더를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>파일</guimenu><guimenuitem>등록 정보</guimenuitem></menuchoice>를 선택합니다. 등록 정보 대화 상자가 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>권한</guilabel> 탭을 클릭합니다. <guilabel>권한</guilabel> 탭 섹션에서 드롭다운 목록 상자와 확인란을 사용하여 파일 또는 폴더에 대한 권한을 변경합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guibutton>닫기</guibutton>를 클릭하여 등록 정보 대화 상자를 닫습니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-44">
+      <title>휴지통 사용</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_trash_launcher.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>노틸러스 휴지통 아이콘</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>휴지통</primary>
+        <secondary>소개</secondary>
+      </indexterm>
+      <para>다음 항목을 <guilabel>휴지통</guilabel>으로 이동할 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>파일 </para>
+        </listitem>
+        <listitem>
+          <para>폴더 </para>
+        </listitem>
+        <listitem>
+          <para>데스크탑 배경 객체 </para>
+        </listitem>
+      </itemizedlist>
+      <para>항목을 <guilabel>휴지통</guilabel>으로 이동하면 해당 항목이 <filename>/.Trash</filename> 디렉토리에 저장됩니다. <guilabel>휴지통</guilabel>에서 파일을 가져오려면 <guilabel>휴지통</guilabel>을 표시하고 해당 파일을 <guilabel>휴지통</guilabel> 밖으로 이동합니다. </para>
+      <para><guilabel>휴지통</guilabel>을 비우면 <guilabel>휴지통</guilabel>의 내용이 영구적으로 삭제됩니다. </para>
+      <sect3 id="gosnautilus-107">
+        <title>휴지통을 표시하려면</title>
+        <indexterm>
+          <primary>휴지통</primary>
+          <secondary>표시</secondary>
+        </indexterm>
+        <para>다음 방법으로 <guilabel>휴지통</guilabel>의 내용을 표시할 수 있습니다. </para>
+        <itemizedlist>
+          <listitem>
+            <para><application>노틸러스</application> 창에서 </para>
+            <para><menuchoice><guimenu>이동</guimenu><guimenuitem>휴지통</guimenuitem></menuchoice>을 선택합니다. <guilabel>휴지통</guilabel>의 내용이 창에 표시됩니다. </para>
+          </listitem>
+          <listitem>
+            <para>데스크탑 배경에서 </para>
+            <para>데스크탑 배경에서 <guilabel>휴지통</guilabel> 객체를 두 번 클릭합니다. </para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-108">
+        <title>휴지통을 비우려면</title>
+        <indexterm>
+          <primary>휴지통</primary>
+          <secondary>비우기</secondary>
+        </indexterm>
+        <para>다음 방법으로 <guilabel>휴지통</guilabel>의 내용을 비울 수 있습니다. </para>
+        <itemizedlist>
+          <listitem>
+            <para><application>노틸러스</application> 창에서 </para>
+            <para><menuchoice><guimenu>파일</guimenu><guimenuitem>휴지통 비우기</guimenuitem></menuchoice>를 선택합니다. </para>
+          </listitem>
+          <listitem>
+            <para>데스크탑 배경에서 </para>
+            <para><guilabel>휴지통</guilabel> 객체를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>휴지통 비우기</guimenuitem>를 선택합니다. </para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-200">
+      <title>폴더에 노트 추가</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>탭 창</secondary>
+        <tertiary>노트</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>노트, 폴더에 추가</primary>
+      </indexterm>
+      <para><guilabel>노트</guilabel> 탭을 사용하여 폴더에 노트를 추가할 수 있습니다. 폴더에 노트를 추가하려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>보기 창에 폴더를 표시합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>노트</guilabel> 탭을 클릭하여 <guilabel>노트</guilabel> 탭 창을 엽니다. <guilabel>노트</guilabel> 탭 창이 열립니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>노트</guilabel> 탭 창에 노트를 입력합니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-440">
+    <title>노틸러스에서 스크립트 실행</title>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>스크립트 실행</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>스크립트, 파일 관리자에서 실행</primary>
+    </indexterm>
+    <para><application>노틸러스</application>에는 스크립트를 저장할 수 있는 특수 폴더가 있습니다. 이 폴더에 실행 가능 파일을 추가하면 파일이 <guisubmenu>스크립트</guisubmenu> 부속 메뉴에 추가됩니다. 스크립트를 실행하려면 <menuchoice><guimenu>파일</guimenu><guimenuitem>스크립트</guimenuitem></menuchoice>를 선택한 다음 부속 메뉴에서 실행할 스크립트를 선택합니다. </para>
+    <para>특정 파일에 대한 스크립트를 실행하려면 보기 창에서 파일을 선택합니다. <menuchoice><guimenu>파일</guimenu><guimenuitem>스크립트</guimenuitem></menuchoice>를 선택한 다음 부속 메뉴에서 파일에 대해 실행할 스크립트를 선택합니다. 스크립트를 실행할 파일을 여러 개 선택할 수도 있습니다. </para>
+    <para>스크립트 폴더의 내용을 보려면 <menuchoice><guimenu>파일</guimenu><guisubmenu>스크립트</guisubmenu><guimenuitem>스크립트 폴더 열기</guimenuitem></menuchoice>를 선택합니다. </para>
+  </sect1>
+  <sect1 id="gosnautilus-203">
+    <title>파일 및 폴더의 모양 수정</title>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>파일 및 폴더의 모양 수정</secondary>
+    </indexterm>
+    <para><application>노틸러스</application>를 사용하여 다음 절에서 설명하는 몇 가지 방법으로 파일 및 폴더의 모양을 수정할 수 있습니다. </para>
+    <sect2 id="gosnautilus-112">
+      <title>파일 또는 폴더에 상징을 추가하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>상징</secondary>
+        <tertiary>추가</tertiary>
+      </indexterm>
+      <para>항목에 상징을 추가하려면 다음 단계를 수행합니다.  </para>
+      <orderedlist>
+        <listitem>
+          <para>상징을 추가할 항목을 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para>항목을 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>등록 정보</guimenuitem>를 선택합니다. 등록 정보 대화 상자가 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>상징</guilabel> 탭을 클릭하여 <guilabel>상징</guilabel> 탭 섹션을 표시합니다. </para>
+        </listitem>
+        <listitem>
+          <para>항목에 추가할 상징을 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guibutton>닫기</guibutton>를 클릭하여 등록 정보 대화 상자를 닫습니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-51">
+      <title>파일 또는 폴더의 아이콘을 수정하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>아이콘</secondary>
+        <tertiary>수정</tertiary>
+      </indexterm>
+      <para>개별 파일 또는 폴더를 나타내는 아이콘을 변경하려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>변경할 파일 또는 폴더를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>파일</guimenu><guimenuitem>등록 정보</guimenuitem></menuchoice>를 선택합니다. 등록 정보 대화 상자가 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>기본</guilabel> 탭 섹션에서 <guibutton>사용자 아이콘 선택</guibutton> 버튼을 클릭합니다. <guilabel>아이콘 선택</guilabel> 대화 상자가 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>아이콘 선택</guilabel> 대화 상자를 사용하여 파일 또는 폴더를 나타낼 아이콘을 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guibutton>닫기</guibutton>를 클릭하여 등록 정보 대화 상자를 닫습니다. </para>
+        </listitem>
+      </orderedlist>
+      <para>파일 형식을 나타내는 아이콘을 변경하려면 <application>파일 형식과 프로그램</application> 환경 설정 도구를 사용합니다. <application>파일 형식과 프로그램</application> 환경 설정 도구를 열려면 <menuchoice><guimenu>응용프로그램</guimenu><guisubmenu>데스크탑 환경 설정</guisubmenu><guisubmenu>고급</guisubmenu><guimenuitem>파일 형식과 프로그램</guimenuitem></menuchoice>을 선택합니다. </para>
+      <para>사용자 아이콘을 <application>파일 형식과 프로그램</application> 환경 설정 도구에 지정된 기본 아이콘으로 복원하려면 아이콘을 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>사용자 아이콘 제거</guimenuitem>를 선택합니다. 또는 <guilabel>등록 정보</guilabel> 대화 상자에서 <guilabel>사용자 아이콘 제거</guilabel> 버튼을 클릭합니다. </para>
+    </sect2>
+    <sect2 id="gosnautilus-102">
+      <title>보기에서 항목 크기를 변경하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>확대/축소</secondary>
+      </indexterm>
+      <para>보기에서 항목의 크기를 변경할 수 있습니다. 보기에 파일 또는 폴더가 표시되는 경우 크기를 변경할 수 있습니다. 다음 방법으로 보기에서 항목의 크기를 변경할 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>보기에서 항목의 크기를 늘리려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>확대</guimenuitem></menuchoice>를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para>보기에서 항목의 크기를 줄이려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>축소</guimenuitem></menuchoice>를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para>보기의 항목을 보통 크기로 되돌리려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>보통 크기</guimenuitem></menuchoice>를 선택합니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para>또한 위치 표시줄에 있는 확대/축소 버튼을 사용하여 보기의 항목 크기를 변경할 수 있습니다. <xref linkend="gosnautilus-TBL-42"/>에서는 확대/축소 버튼을 사용하는 방법에 대해 설명합니다. </para>
+      <table frame="topbot" id="gosnautilus-TBL-42">
+        <title>확대/축소 버튼</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="21.98*"/>
+          <colspec colname="colspec1" colwidth="32.86*"/>
+          <colspec colname="colspec2" colwidth="44.17*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>버튼</para>
+              </entry>
+              <entry valign="top">
+                <para>버튼 이름 </para>
+              </entry>
+              <entry valign="top">
+                <para>설명</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>확대 버튼</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guibutton>축소</guibutton> 버튼 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>보기의 항목 크기를 줄이려면 이 버튼을 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>보통 크기 버튼</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para><guibutton>보통 크기</guibutton> 버튼 </para>
+              </entry>
+              <entry valign="top">
+                <para>보기의 항목을 보통 크기로 되돌리려면 이 버튼을 클릭합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>확대 버튼</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guibutton>확대</guibutton> 버튼 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>보기의 항목 크기를 늘리려면 이 버튼을 클릭합니다. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para><application>노틸러스</application>에서는 특정 폴더의 항목 크기를 기억합니다. 따라서 다음에 해당 폴더를 표시할 때 선택한 크기로 항목이 표시됩니다. 즉, 폴더의 항목 크기를 변경하면 항목이 해당 크기로 표시되도록 폴더를 사용자 정의합니다. 항목 크기를 환경 설정에 지정된 기본 크기로 되돌리려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>보기를 기본값으로 재설정</guimenuitem></menuchoice>을 선택합니다. </para>
+    </sect2>
+    <sect2 id="gosnautilus-7">
+      <title>보기를 사용하여 파일 및 폴더 표시</title>
+      <indexterm>
+        <primary>뷰어 컴포넌트</primary>
+      </indexterm>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>보기</secondary>
+        <tertiary>소개</tertiary>
+      </indexterm>
+      <para><application>노틸러스</application>를 사용하여 몇 가지 방법으로 파일의 내용을 표시할 수 있습니다. <application>노틸러스</application>에는 보기 창에 특정 파일 형식을 표시할 수 있는 뷰어 컴포넌트가 있습니다. 예를 들어, 웹 페이지 뷰어를 사용하여 HTML 파일을 보기 창에 표시할 수 있습니다. 텍스트 뷰어를 사용하여 일반 텍스트 파일을 보기 창에 표시할 수 있습니다. </para>
+      <para>또한 <application>노틸러스</application>를 사용하여 해당 응용프로그램에서 파일을 열 수 있습니다. 자세한 내용은 <xref linkend="gosnautilus-28"/>을(를) 참조하십시오. </para>
+      <para><application>노틸러스</application>에는 폴더의 내용을 여러 방식으로 표시할 수 있는 여러 개의 보기가 있습니다. 예를 들어, 다음과 같은 보기 형식으로 폴더의 내용을 표시할 수 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>아이콘 보기 </para>
+          <para>폴더의 항목을 아이콘으로 표시합니다. <xref linkend="gosnautilus-FIG-1"/>에서는 아이콘 보기에 표시된 폴더를 보여줍니다. </para>
+        </listitem>
+        <listitem>
+          <para>목록 보기 </para>
+          <para>폴더의 항목을 목록으로 표시합니다. <xref linkend="gosnautilus-FIG-3"/>에서는 목록 보기에 표시된 폴더를 보여줍니다. </para>
+          <indexterm>
+            <primary>파일 관리자 </primary>
+            <secondary>목록 보기</secondary>
+            <tertiary>그림</tertiary>
+          </indexterm>
+          <figure id="gosnautilus-FIG-3">
+            <title>목록 보기의 노틸러스 창</title>
+            <screenshot>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/naut_listview_window.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>노틸러스 창의 폴더, 목록 보기에 표시된 내용</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </listitem>
+      </itemizedlist>
+      <para>파일 또는 폴더를 표시하는 방법을 선택하려면 <guimenu>보기</guimenu> 메뉴를 사용합니다. 또한 <guilabel>다른 프로그램으로 보기</guilabel> 드롭다운 목록 상자를 사용하여 파일 또는 폴더를 표시하는 방법을 선택할 수 있습니다. 폴더를 표시할 때 폴더에 있는 항목의 정렬 방식을 지정할 수 있습니다. 보기 창에서 항목의 크기를 수정할 수 있습니다. 다음에서는 아이콘 보기, 목록 보기 및 파일 보기를 사용하는 방법에 대해 설명합니다. </para>
+      <sect3 id="gosnautilus-100">
+        <title>파일 또는 폴더를 표시할 보기를 선택하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>보기</secondary>
+          <tertiary>선택</tertiary>
+        </indexterm>
+        <para><guilabel>보기</guilabel> 메뉴에서 파일 또는 폴더의 내용을 표시할 보기 유형을 선택합니다. </para>
+        <para>보기를 선택하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>다른 프로그램으로 보기</guimenuitem></menuchoice>를 선택합니다. <guilabel>다른 뷰어로 열기</guilabel> 대화 상자에서 사용할 보기를 선택한 다음 <guibutton>선택</guibutton> 버튼을 클릭합니다. </para>
+        <para>또한 <guilabel>다른 프로그램으로 보기</guilabel> 드롭다운 목록 상자에서 보기 유형을 선택할 수 있습니다. <guilabel>다른 프로그램으로 보기</guilabel> 드롭다운 목록 상자는 위치 표시줄의 오른쪽에 있습니다. </para>
+        <para>여러 폴더를 서로 다른 보기에 표시할 수 있습니다. <application>노틸러스</application>에서는 특정 폴더에 대해 선택한 보기를 기억합니다. 따라서 다음에 해당 폴더를 표시할 때 <application>노틸러스</application>는 폴더를 이전에 선택한 보기에 표시합니다. 폴더의 보기를 환경 설정에 지정된 기본 보기로 되돌리려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>보기를 기본값으로 재설정</guimenuitem></menuchoice>을 선택합니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-101">
+        <title>아이콘 보기에서 파일을 정렬하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>아이콘 보기</secondary>
+          <tertiary>파일 정렬</tertiary>
+        </indexterm>
+        <para>아이콘 보기에서 폴더 내용을 표시할 때 폴더의 항목이 정렬되는 방식을 지정할 수 있습니다. 아이콘 보기에서 항목을 정렬하는 방식을 지정하려면 <menuchoice><guimenu>보기</guimenu><guisubmenu>항목 정렬</guisubmenu></menuchoice>을 선택합니다. <guisubmenu>항목 정렬</guisubmenu> 부속 메뉴에는 다음 섹션이 포함되어 있습니다. </para>
+        <itemizedlist>
+          <listitem>
+            <para>맨 위 섹션에는 파일을 수동으로 정렬할 수 있는 옵션이 있습니다. </para>
+          </listitem>
+          <listitem>
+            <para>가운데 섹션에는 파일을 자동으로 정렬할 수 있는 옵션이 있습니다. </para>
+          </listitem>
+          <listitem>
+            <para>맨 아래 섹션에는 파일의 정렬 방식을 수정할 수 있는 옵션이 있습니다. </para>
+          </listitem>
+        </itemizedlist>
+        <para>다음 표에서 설명된 대로 부속 메뉴에서 옵션을 적절하게 선택합니다.  </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec6" colwidth="28.75*"/>
+            <colspec colname="colspec7" colwidth="71.25*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>옵션</para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>수동</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>항목을 수동으로 정렬하려면 이 옵션을 선택합니다. 항목을 수동으로 정렬하려면 보기 창 내에서 원하는 위치로 항목을 끕니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>이름순</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>항목을 알파벳 이름순으로 정렬하려면 이 옵션을 선택합니다. 항목 순서는 대소문자를 구분하지 않습니다. <application>노틸러스</application>가 숨겨진 파일을 표시하도록 설정되어 있는 경우 숨겨진 파일은 마지막에 표시됩니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>크기순</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>가장 큰 항목부터 크기순으로 정렬하려면 이 옵션을 선택합니다. 항목을 크기순으로 정렬하면 폴더는 폴더에 포함된 항목 수를 기준으로 정렬됩니다. 폴더는 폴더에 포함된 항목의 전체 크기를 기준으로 정렬되지 않습니다.  </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>형식순</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>항목을 객체 형식에 따라 사전순으로 정렬하려면 이 옵션을 선택합니다. 이 경우 항목은 <application>파일 형식과 프로그램</application> 환경 설정 도구에 있는 MIME(<firstterm>Multipurpose Internet Mail Extension</firstterm>) 형식의 설명에 따라 사전순으로 정렬됩니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>변경 날짜순</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>항목을 마지막으로 변경한 날짜순으로 정렬하려면 이 옵션을 선택합니다. 가장 최근에 변경한 항목이 가장 먼저 표시됩니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>상징순</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>항목에 추가된 상징순으로 항목을 정렬하려면 이 옵션을 선택합니다. 항목은 상징 이름에 따라 사전순으로 정렬됩니다. 상징이 없는 항목은 마지막에 표시됩니다.  </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>압축 배치</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>항목 간의 간격을 줄여 항목을 정렬하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>역순</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>항목 정렬 기준 옵션의 순서를 반대로 하려면 이 옵션을 선택합니다. 예를 들어, 항목을 이름순으로 정렬하는 경우 알파벳 역순으로 항목을 정렬하려면 <guilabel>역순</guilabel> 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para><application>노틸러스</application>에서는 특정 폴더의 항목 정렬 방식을 기억합니다. 따라서 다음에 해당 폴더를 표시할 때 선택한 방식으로 항목이 정렬됩니다. 즉, 폴더의 항목 정렬 방식을 지정하면 항목이 해당 방식으로 표시되도록 폴더를 사용자 정의합니다. 폴더의 정렬 설정을 환경 설정에 지정된 기본 정렬 설정으로 되돌리려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>보기를 기본값으로 재설정</guimenuitem></menuchoice>을 선택합니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-103">
+        <title>아이콘 보기에서 아이콘을 확대하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>아이콘</secondary>
+          <tertiary>확대</tertiary>
+        </indexterm>
+        <para>아이콘 보기에서 표시된 항목을 나타내는 아이콘의 크기를 변경할 수 있습니다. 아이콘 보기에서 항목의 크기를 변경하려면 다음 단계를 수행합니다. </para>
+        <orderedlist>
+          <listitem>
+            <para>크기를 조정할 항목을 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>아이콘 확대</guimenuitem>를 선택합니다. 각 모서리에 핸들이 있는 사각형이 항목 주위에 나타납니다. </para>
+          </listitem>
+          <listitem>
+            <para>핸들 중 하나를 잡은 다음 원하는 크기까지 아이콘을 끕니다. </para>
+            <para>아이콘을 원래 크기로 되돌리려면 아이콘을 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>아이콘을 원래 크기로 되돌림</guimenuitem>을 선택합니다. </para>
+          </listitem>
+        </orderedlist>
+        <para>또한 데스크탑 배경에서 아이콘을 확대할 수 있습니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-111">
+        <title>보기 동작을 수정하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>보기</secondary>
+          <tertiary>동작 수정</tertiary>
+        </indexterm>
+        <para>다음 방법으로 보기의 동작을 수정할 수 있습니다. </para>
+        <itemizedlist>
+          <listitem>
+            <para>특정 파일 또는 폴더의 기본 보기로 지정합니다. </para>
+          </listitem>
+          <listitem>
+            <para>한 파일 형식 또는 모든 폴더의 기본 보기로 지정합니다. </para>
+          </listitem>
+          <listitem>
+            <para>특정 파일 또는 폴더의 <guisubmenu>다른 프로그램으로 보기</guisubmenu> 부속 메뉴에 표시되는 항목으로 지정합니다. </para>
+          </listitem>
+          <listitem>
+            <para>모든 특정 파일 형식 또는 모든 폴더의 <guisubmenu>다른 프로그램으로 보기</guisubmenu> 부속 메뉴에 표시되는 항목으로 지정합니다. </para>
+          </listitem>
+          <listitem>
+            <para>특정 파일 또는 폴더의 <guisubmenu>다른 프로그램으로 보기</guisubmenu> 부속 메뉴에 표시되지 않는 항목으로 지정합니다. </para>
+          </listitem>
+        </itemizedlist>
+        <para>보기 동작을 수정하려면 다음 단계를 수행합니다. </para>
+        <orderedlist>
+          <listitem>
+            <para><menuchoice><guimenu>보기</guimenu><guimenuitem>다른 프로그램으로 보기</guimenuitem></menuchoice>를 선택합니다. <guilabel>다른 뷰어로 열기</guilabel> 대화 상자가 표시됩니다. </para>
+          </listitem>
+          <listitem>
+            <para>대화 상자의 테이블에서 수정할 보기를 선택합니다. </para>
+          </listitem>
+          <listitem>
+            <para><guibutton>수정</guibutton> 버튼을 클릭합니다. <guilabel>수정</guilabel> 대화 상자가 표시됩니다. 다음 표에서는 <guilabel>수정</guilabel> 대화 상자의 옵션에 대해 설명합니다. </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="35.09*"/>
+                <colspec colwidth="64.91*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry valign="top">
+                      <para>옵션</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>설명 </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel><replaceable>item_name</replaceable> 항목을 위한 메뉴에 포함</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>이 항목 형식의 <guisubmenu>다른 프로그램으로 보기</guisubmenu> 부속 메뉴에 해당 보기를 포함하려면 이 옵션을 선택합니다. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel><replaceable>item_name</replaceable> 항목의 기본 프로그램으로 사용</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>해당 보기를 이 항목 형식의 기본 프로그램으로 사용하려면 이 옵션을 선택합니다. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel><replaceable>item_name</replaceable> 용으로만 메뉴에 포함</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>이 항목에 대해서만 <guisubmenu>다른 프로그램으로 보기</guisubmenu> 부속 메뉴에 해당 보기를 포함하려면 이 옵션을 선택합니다. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel><replaceable>item_name</replaceable>에 대해서만 기본값으로 사용</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>해당 보기를 이 항목에 대해서만 기본값으로 사용하려면 이 옵션을 선택합니다. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel><replaceable> item_name</replaceable> 항목에 메뉴로 포함하지 않음</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>이 항목 형식의 <guisubmenu>다른 프로그램으로 보기</guisubmenu> 부속 메뉴에 해당 보기를 포함하지 않으려면 이 옵션을 선택합니다. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para><guibutton>확인</guibutton>을 클릭한 다음 <guibutton>취소</guibutton>를 클릭하여 <guilabel>다른 뷰어로 열기</guilabel> 대화 상자를 닫습니다. </para>
+          </listitem>
+        </orderedlist>
+        <note>
+          <para>또한 <application>파일 형식과 프로그램</application> 환경 설정 도구에서 파일 형식과 연결된 작업을 수정할 수 있습니다. <application>파일 형식과 프로그램</application> 환경 설정 도구를 열려면 <guibutton>가기</guibutton> 버튼을 클릭합니다. </para>
+        </note>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-204">
+    <title>파일에 작업 지정</title>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>파일에 작업 지정</secondary>
+    </indexterm>
+    <para>파일을 열면 <application>노틸러스</application>에서 해당 파일 형식에 대한 기본 작업을 수행합니다. <application>파일 형식과 프로그램</application> 환경 설정 도구에는 파일 형식, 관련 파일 확장자 및 기본 작업이 나열된 테이블이 포함되어 있습니다. 이 테이블에서는 <application>노틸러스</application>에서 파일을 두 번 클릭할 때 발생하는 사항을 지정합니다. </para>
+    <para><application>노틸러스</application>를 사용하여 특정 파일 또는 파일 형식과 연결된 작업을 수정할 수도 있습니다. </para>
+    <para><application>파일 형식과 프로그램</application> 환경 설정 도구를 사용하여 다음과 같은 작업을 수행할 수 있습니다. </para>
+    <itemizedlist>
+      <listitem>
+        <para>파일 형식에 대한 기본 작업을 지정합니다. <application>노틸러스</application>에서 파일 형식에 대한 기본 작업을 변경할 수도 있습니다. </para>
+      </listitem>
+      <listitem>
+        <para>파일 형식을 하나 이상의 응용프로그램과 연결합니다. 기본 작업은 파일을 해당 파일 형식과 연결된 응용프로그램에서 열도록 지정합니다. </para>
+      </listitem>
+      <listitem>
+        <para>파일 형식을 하나 이상의 뷰어와 연결합니다. 기본 작업은 파일을 해당 파일 형식과 연결된 뷰어에서 열도록 지정합니다. </para>
+      </listitem>
+      <listitem>
+        <para>파일 확장자를 MIME 형식과 연결합니다. MIME 형식은 인터넷 브라우저와 전자 메일 응용프로그램에서 파일을 읽을 수 있도록 파일 형식을 지정합니다. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-75">
+      <title>작업을 수정하려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>작업 수정</secondary>
+      </indexterm>
+      <para>파일 또는 파일 형식과 연결된 작업을 수정할 수 있습니다. 다음을 수행할 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>해당 작업을 특정 파일의 기본 작업으로 지정합니다. </para>
+        </listitem>
+        <listitem>
+          <para>해당 작업을 특정 파일 형식의 기본 작업으로 지정합니다. </para>
+        </listitem>
+        <listitem>
+          <para>해당 작업을 특정 파일의 <guisubmenu>다른 프로그램으로 열기</guisubmenu> 부속 메뉴에 표시되는 항목으로 지정합니다. </para>
+        </listitem>
+        <listitem>
+          <para>해당 작업을 특정 파일 형식의 <guisubmenu>다른 프로그램으로 열기</guisubmenu> 부속 메뉴에 표시되는 항목으로 지정합니다. </para>
+        </listitem>
+        <listitem>
+          <para>해당 작업을 특정 파일 형식의 <guisubmenu>다른 프로그램으로 열기</guisubmenu> 부속 메뉴에 표시되지 않는 항목으로 지정합니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para>파일 또는 파일 형식과 연결된 작업을 수정하려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>보기 창에서 작업을 수정할 파일을 선택합니다. 파일 형식과 연결된 작업을 수정하려면 해당 형식의 파일을 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>파일</guimenu><guimenuitem>다른 프로그램으로 열기</guimenuitem></menuchoice>를 선택합니다. 다음 단계 중 하나를 수행합니다.  </para>
+          <itemizedlist>
+            <listitem>
+              <para><guimenuitem>다른 응용프로그램</guimenuitem>을 선택합니다. <guilabel>다른 응용프로그램으로 열기</guilabel> 대화 상자가 표시됩니다. </para>
+            </listitem>
+            <listitem>
+              <para><guimenuitem>다른 뷰어</guimenuitem>를 선택합니다. <guilabel>다른 뷰어로 열기</guilabel> 대화 상자가 표시됩니다. </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>대화 상자의 테이블에서 동작을 수정할 응용프로그램 또는 뷰어를 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guibutton>수정</guibutton> 버튼을 클릭합니다. <guilabel>수정</guilabel> 대화 상자가 표시됩니다. 다음 표에서는 <guilabel>수정</guilabel> 대화 상자의 옵션에 대해 설명합니다. </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="35.09*"/>
+              <colspec colwidth="64.91*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>옵션</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>설명 </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel><replaceable>filetype</replaceable> 항목을 위한 메뉴에 포함</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>이 파일 형식에 대한 <guisubmenu>다른 프로그램으로 열기</guisubmenu> 부속 메뉴에 해당 응용프로그램 또는 뷰어를 포함하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel><replaceable>filetype</replaceable> 항목의 기본 프로그램으로 사용</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>해당 응용프로그램 또는 뷰어를 이 파일 형식의 기본 작업으로 사용하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel><replaceable>filetype</replaceable> 용으로만 메뉴에 포함</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>해당 응용프로그램 또는 뷰어를 이 형식의 다른 파일이 아닌 이 파일에 대한 <guisubmenu>다른 프로그램으로 열기</guisubmenu> 부속 메뉴에 포함하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel><replaceable>filetype</replaceable>에 대해서만 기본값으로 사용</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>해당 응용프로그램 또는 뷰어를 이 형식의 다른 파일이 아닌 이 파일에 대한 기본 작업으로 사용하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel><replaceable>filetype</replaceable> 항목에 메뉴로 포함하지 않음</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>이 파일 형식에 대한 <guisubmenu>다른 프로그램으로 열기</guisubmenu> 부속 메뉴에 해당 응용프로그램 또는 뷰어를 포함하지 않으려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guibutton>확인</guibutton>을 클릭한 다음 <guibutton>취소</guibutton>를 클릭하여 대화 상자를 닫습니다. </para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>또한 <application>파일 형식과 프로그램</application> 환경 설정 도구에서 파일 형식과 연결된 작업을 수정할 수 있습니다. <application>파일 형식과 프로그램</application> 환경 설정 도구를 열려면 <guibutton>가기</guibutton> 버튼을 클릭합니다. </para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-15">
+    <title>노틸러스 사용자 정의</title>
+    <indexterm>
+      <primary>파일 관리자</primary>
+      <secondary>사용자 정의</secondary>
+    </indexterm>
+    <para>사용자의 필요와 환경 설정에 맞게 <application>노틸러스</application>를 사용자 정의할 수 있습니다. 여기에서는 <application>노틸러스</application>를 사용자 정의하는 방법에 대해 설명합니다. </para>
+    <sect2 id="gosnautilus-17">
+      <title>환경 설정</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>환경 설정</secondary>
+        <tertiary>소개</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>환경 설정, 파일 관리자</primary>
+        <see>파일 관리자 환경 설정</see>
+      </indexterm>
+      <para><guilabel>환경 설정</guilabel> 대화 상자를 사용하여 <application>노틸러스</application> 창 및 데스크탑 배경의 환경을 설정할 수 있습니다. <guilabel>환경 설정</guilabel> 대화 상자를 표시하려면 <menuchoice><guimenu>편집</guimenu><guimenuitem>환경 설정</guimenuitem></menuchoice>을 선택합니다. </para>
+      <para>다음 범주로 환경 설정을 설정할 수 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>보기에 대한 기본 설정 </para>
+        </listitem>
+        <listitem>
+          <para><application>노틸러스</application> 창 및 데스크탑 배경의 모양 </para>
+        </listitem>
+        <listitem>
+          <para>새 <application>노틸러스 </application> 창의 동작 및 시각적 컴포넌트 </para>
+        </listitem>
+        <listitem>
+          <para>데스크탑 배경 및 <guilabel>휴지통</guilabel>의 동작 </para>
+        </listitem>
+        <listitem>
+          <para>아이콘 보기 및 목록 보기의 항목 동작 </para>
+        </listitem>
+        <listitem>
+          <para>아이콘 설명에 표시되는 정보 </para>
+        </listitem>
+        <listitem>
+          <para>사이드 창에 표시되는 항목 </para>
+        </listitem>
+        <listitem>
+          <para><application>노틸러스</application>의 성능을 향상시키기 위한 성능 옵션 </para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gosnautilus-438">
+        <title>보기 환경 설정을 설정하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>보기</tertiary>
+        </indexterm>
+        <para>아이콘 보기와 목록 보기의 기본 보기 및 기본 설정을 지정할 수 있습니다. <application>노틸러스</application> 창의 기본 보기 설정을 지정하려면 <menuchoice><guimenu>편집</guimenu><guimenuitem>환경 설정</guimenuitem></menuchoice>을 선택합니다. <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>보기</guilabel>를 선택합니다. </para>
+        <para><xref linkend="gosnautilus-TBL-30"/>에서는 수정할 수 있는 보기 설정 목록을 보여줍니다. <guilabel>환경 설정</guilabel> 대화 상자에는 <guilabel>아이콘 보기 기본값</guilabel> 그룹 상자와 <guilabel>목록 보기 기본값</guilabel> 그룹 상자가 포함되어 있습니다. 두 그룹 상자의 대화 상자 요소는 거의 동일합니다. 각 대화 상자 요소는 <xref linkend="gosnautilus-TBL-30"/>에 설명되어 있습니다. </para>
+        <table frame="topbot" id="gosnautilus-TBL-30">
+          <title>보기 환경 설정</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="35.09*"/>
+            <colspec colname="colspec1" colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>대화 상자 요소 </para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>다음을 사용하여 새 폴더 보기</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>폴더의 기본 보기를 선택합니다. 폴더를 열면 선택한 보기에 폴더가 표시됩니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>항목 정렬</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>해당 보기에 표시되는 폴더의 항목을 정렬할 때 사용할 기준을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>기본 확대/축소 수준</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>해당 보기에 표시되는 폴더의 기본 확대/축소 수준을 선택합니다. 확대/축소 수준은 보기에 표시되는 항목의 크기를 지정합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>역순으로 정렬</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>해당 보기에 표시되는 항목을 역순으로 정렬하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 <guilabel>항목 정렬</guilabel>에서 선택한 기준의 역순으로 정렬됩니다. 예를 들어, <guilabel>항목 정렬</guilabel> 드롭다운 목록 상자에서 <guilabel>이름순</guilabel>을 선택한 경우 <guilabel>역순으로 정렬</guilabel> 옵션을 선택하면 항목이 알파벳 역순으로 정렬됩니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>압축 배치 사용</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>아이콘 보기에만 적용됩니다. 폴더의 항목간 간격을 줄여서 항목을 정렬하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+      <sect3 id="gosnautilus-54">
+        <title>노틸러스 테마를 선택하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>테마</tertiary>
+        </indexterm>
+        <indexterm>
+          <primary>테마</primary>
+          <secondary>노틸러스</secondary>
+        </indexterm>
+        <para><application>노틸러스</application>에는 <application>노틸러스</application> 창과 데스크탑 배경의 모양과 느낌을 변경하는 데 사용할 수 있는 테마가 포함되어 있습니다. <application>노틸러스</application> 창과 데스크탑 배경의 글꼴 및 테마에 대한 환경을 설정하려면 <menuchoice><guimenu>편집</guimenu><guimenuitem>환경 설정</guimenuitem></menuchoice>을 선택합니다. <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>모양</guilabel>을 선택합니다. </para>
+        <para><xref linkend="gosnautilus-TBL-35"/>에서는 수정할 수 있는 글꼴 및 테마 설정 목록을 보여줍니다. </para>
+        <table frame="topbot" id="gosnautilus-TBL-35">
+          <title>모양 환경 설정</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="35.09*"/>
+            <colspec colname="colspec1" colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>대화 상자 요소 </para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>노틸러스 테마</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para><application>노틸러스</application> 테마를 변경하려면 목록에서 테마를 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guibutton>테마 추가</guibutton>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>새 <application>노틸러스 </application> 테마를 추가하려면 <guibutton>새 테마 추가</guibutton> 버튼을 클릭합니다. 대화 상자가 표시됩니다. 이 대화 상자를 사용하여 새 테마를 찾습니다. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+      <sect3 id="gosnautilus-55">
+        <title>새 창의 환경을 설정하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>새 창</tertiary>
+        </indexterm>
+        <para>새 <application>노틸러스</application> 창의 환경을 설정하려면  <menuchoice><guimenu>편집</guimenu><guimenuitem>환경 설정</guimenuitem></menuchoice>을 선택합니다. <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>창</guilabel>을 선택합니다. </para>
+        <para><xref linkend="gosnautilus-TBL-36"/>에서는 수정할 수 있는 창 설정 목록을 보여줍니다. </para>
+        <table frame="topbot" id="gosnautilus-TBL-36">
+          <title>새 창 환경 설정</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec8" colwidth="35.09*"/>
+            <colspec colname="colspec9" colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>옵션 </para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec8" valign="top">
+                  <para>
+                    <guilabel>각 파일이나 폴더를 새 창에서 열기</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec9" valign="top">
+                  <para>파일 또는 폴더를 열 때 새 창에서 열려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec8">
+                  <para>
+                    <guilabel>사이드 창 표시</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec9">
+                  <para>새 창에 사이드 창을 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec8" valign="top">
+                  <para>
+                    <guilabel>도구 모음 표시</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec9" valign="top">
+                  <para>새 창에 도구 모음을 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec8" valign="top">
+                  <para>
+                    <guilabel>위치 표시줄 표시</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec9" valign="top">
+                  <para>새 창에 위치 표시줄을 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec8" valign="top">
+                  <para>
+                    <guilabel>상태 표시줄 표시</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec9" valign="top">
+                  <para>새 창에 상태 표시줄을 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+      <sect3 id="gosnautilus-448">
+        <title>데스크탑 배경 및 휴지통에 대한 환경을 설정하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>휴지통</tertiary>
+        </indexterm>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>데스크탑 배경</tertiary>
+        </indexterm>
+        <indexterm>
+          <primary>데스크탑 배경</primary>
+          <secondary>환경 설정 </secondary>
+        </indexterm>
+        <indexterm>
+          <primary>휴지통</primary>
+          <secondary>환경 설정</secondary>
+        </indexterm>
+        <para><application>노틸러스</application> 데스크탑 배경 및 <guilabel>휴지통</guilabel>에 대한 환경을 설정하려면 <menuchoice><guimenu>편집</guimenu><guimenuitem>환경 설정 </guimenuitem></menuchoice>을 선택합니다. <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>데스크탑 &amp; 휴지통</guilabel>을 선택합니다. </para>
+        <para><xref linkend="gosnautilus-TBL-43"/>에서는 수정할 수 있는 데스크탑 배경 및 <guilabel>휴지통</guilabel> 설정 목록을 보여줍니다. </para>
+        <table frame="topbot" id="gosnautilus-TBL-43">
+          <title>창 및 데스크탑 배경 환경 설정</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec8" colwidth="35.09*"/>
+            <colspec colname="colspec9" colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>옵션 </para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>노틸러스를 사용하여 바탕 화면 그리기</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para><application>노틸러스</application>를 사용하여 데스크탑 배경을 관리하려면 이 옵션을 선택합니다. 데스크탑 배경을 관리하는 데 <application>노틸러스</application>를 사용하지 않는 경우 다음을 수행할 수 없습니다.  </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para><guimenu>데스크탑 배경</guimenu> 메뉴를 사용할 수 없습니다. </para>
+                    </listitem>
+                    <listitem>
+                      <para><application>노틸러스</application>를 사용하여 데스크탑 배경의 패턴 또는 색상을 변경할 수 없습니다. </para>
+                    </listitem>
+                    <listitem>
+                      <para><application>노틸러스</application><guilabel>홈</guilabel> 실행기 및  <guilabel>휴지통</guilabel> 실행기를 사용할 수 없습니다. <guilabel>홈</guilabel> 실행기 및 <guilabel>휴지통</guilabel> 실행기는 데스크탑 배경에 표시되지 않습니다. </para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec8" valign="top">
+                  <para>
+                    <guilabel>홈 폴더를 바탕 화면으로 사용</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec9" valign="top">
+                  <para>기본 디렉토리 대신 홈 디렉토리를 데스크탑 배경 디렉토리로 사용하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 홈 디렉토리의 내용이 데스크탑 배경 객체로 표시됩니다. <!--<emphasis>Question</emphasis>: This is not your home location (specified in Preferences dialog)nor the value of the $HOME variable. So what is it?--></para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>휴지통을 비우거나 파일을 삭제하기 전에 묻기</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para><guilabel>휴지통</guilabel>을 비우거나 파일을 삭제하기 전에 확인 메시지를 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec8" valign="top">
+                  <para>
+                    <guilabel>휴지통을 거치지 않는 삭제 명령 포함</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec9" valign="top">
+                  <para>다음 메뉴에 <guimenuitem>삭제</guimenuitem> 메뉴 항목을 추가하려면 이 옵션을 선택합니다.</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para><guimenu>편집</guimenu> 메뉴</para>
+                    </listitem>
+                    <listitem>
+                      <para>파일, 폴더 또는 데스크탑 배경 객체를 마우스 오른쪽 버튼으로 클릭할 때 표시되는 팝업 메뉴</para>
+                    </listitem>
+                  </itemizedlist>
+                  <para>항목을 선택한 다음 <guimenuitem>삭제</guimenuitem> 메뉴 항목을 선택하면 해당 항목이 파일 시스템에서 즉시 삭제됩니다.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+      <sect3 id="gosnautilus-56">
+        <title>아이콘 보기 및 목록 보기에 대한 환경을 설정하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>아이콘 보기 및 목록 보기</tertiary>
+        </indexterm>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>보기</secondary>
+          <tertiary>환경 설정</tertiary>
+        </indexterm>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>아이콘 보기</secondary>
+          <tertiary>환경 설정</tertiary>
+        </indexterm>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>목록 보기</secondary>
+          <tertiary>환경 설정</tertiary>
+        </indexterm>
+        <para>아이콘 보기 및 목록 보기의 항목에 대한 환경을 설정하려면 <menuchoice><guimenu>편집 → </guimenu><guimenuitem>환경 설정</guimenuitem></menuchoice>을 선택합니다. <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>아이콘 &amp; 목록 보기</guilabel>를 선택합니다.</para>
+        <para><xref linkend="gosnautilus-TBL-37"/>에서는 수정할 수 있는 아이콘 보기 및 목록 보기의 항목 설정을 보여줍니다.</para>
+        <table frame="topbot" id="gosnautilus-TBL-37">
+          <title>아이콘 보기 및 목록 보기 환경 설정</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec6" colwidth="35.09*"/>
+            <colspec colname="colspec7" colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>옵션</para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>한 번 클릭하여 항목 활성화</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>항목을 클릭할 때 해당 항목에 대한 기본 작업을 수행하려면 이 옵션을 선택합니다. 이 옵션을 선택하고 항목을 가리키면 해당 항목의 제목에 밑줄이 표시됩니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>두 번 클릭하여 항목 활성화</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>항목을 두 번 클릭할 때 해당 항목에 대한 기본 작업을 수행하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>클릭할 때 파일 실행</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>실행 가능한 파일을 선택할 때 해당 파일을 실행하려면 이 옵션을 선택합니다. 실행 가능한 파일은 실행할 수 있는 텍스트 파일로, 쉘 스크립트입니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>클릭할 때 파일 표시</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>실행 가능한 파일을 선택할 때 해당 파일의 내용을 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>매번 묻기</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>실행 가능한 파일을 선택할 때 대화 상자를 표시하려면 이 옵션을 선택합니다. 대화 상자에는 파일을 실행할지 또는 표시할지 여부를 묻는 메시지가 표시됩니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>숨겨진 파일</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>보기 창에 숨겨진 파일을 표시하려면 이 옵션을 선택합니다. 숨겨진 파일 이름의 첫 문자는 점(.)입니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>백업 파일</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>보기 창에 백업 파일을 표시하려면 이 옵션을 선택합니다. 백업 파일 이름의 마지막 문자는 틸드(~)입니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>등록 정보 대화 상자의 특수 플래그</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>등록 정보 대화 상자의 <guilabel>권한</guilabel> 탭에 다음과 같은 특수 플래그를 표시하려면 이 옵션을 선택합니다.</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>
+                        <guilabel>사용자 ID 설정</guilabel>
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        <guilabel>그룹 ID 설정</guilabel>
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                        <guilabel>고정</guilabel>
+                      </para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>파일보다 폴더 먼저</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>폴더를 정렬할 때 파일보다 폴더 목록을 먼저 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+      <sect3 id="gosnautilus-439">
+        <title>아이콘 설명의 환경을 설정하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>아이콘</secondary>
+          <tertiary>설명 환경 설정</tertiary>
+        </indexterm>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>아이콘 설명</tertiary>
+        </indexterm>
+        <para>아이콘 설명에는 아이콘 보기에 있는 파일 또는 폴더의 이름이 표시됩니다. 또한 아이콘 설명에는 파일 또는 폴더에 대한 세 가지 추가 정보 항목이 포함됩니다. 추가 정보는 파일 이름 뒤에 표시됩니다. 일반적으로 하나의 정보 항목만 표시되며 아이콘을 확대하면 나머지 항목이 표시됩니다. 아이콘 설명에 표시되는 추가 정보는 수정할 수 있습니다.</para>
+        <para>아이콘 설명의 환경을 설정하려면 <menuchoice><guimenu>편집 → </guimenu><guimenuitem>환경 설정</guimenuitem></menuchoice>을 선택합니다.
+그런 다음 <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>아이콘 설명</guilabel>을 선택합니다.</para>
+        <para>세 개의 드롭다운 목록 상자에서 아이콘 설명에 표시할 정보 항목을 선택합니다. 첫 번째 드롭다운 목록 상자에서 첫 번째 항목을 선택합니다. 이와 같은 방식으로 세 번째 드롭다운 목록 상자까지 선택합니다. 다음 표에서는 선택할 수 있는 정보 항목에 대해 설명합니다.</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="35.09*"/>
+            <colspec colname="colspec1" colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>정보</para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>크기</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목의 크기를 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>형식</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para><application>파일 형식과 프로그램</application> 환경 설정 도구에서 항목의 MIME 형식에 대한 설명을 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>수정 시간</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목을 마지막으로 수정한 날짜를 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>변경 시간</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목의 <firstterm>inode</firstterm>를 마지막으로 수정한 날짜를 표시하려면 이 옵션을 선택합니다. inode는 UNIX 파일 시스템의 개별 파일에 대한 정보가 들어 있는 데이터 구조입니다. 파일마다 하나의 inode가 있습니다. inode에는 노드,  형식, 소유자 및 파일 위치가 포함됩니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>접근 날짜</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목에 마지막으로 접근한 날짜를 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>소유자</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목의 소유자를 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>그룹</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목의 소유자가 속한 그룹을 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>권한</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목 권한을 세 문자로 된 세 개의 집합으로 표시하려면 이 옵션을 선택합니다(예: <computeroutput>-rwxrw-r--</computeroutput>).</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>8진수 권한</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>8진수 표기법으로 권한을 표시하려면 이 옵션을 선택합니다(예: <computeroutput>764</computeroutput>). </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>MIME 형식</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목의 MIME 형식을 표시하려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>없음</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>항목에 대해 아무 정보도 표시하지 않으려면 이 옵션을 선택합니다.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+<!--<para><emphasis>Comment:</emphasis> IEL Item: Permissions and Octal permissions above do not match the terms used on the Properties dialog Permissions tab (it uses Text View/Number View).</para>-->
+      </sect3>
+      <sect3 id="gosnautilus-57">
+        <title>사이드 창의 환경을 설정하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>사이드 창</tertiary>
+        </indexterm>
+        <indexterm>
+          <primary>파일 관리자 </primary>
+          <secondary>사이드 창</secondary>
+          <tertiary>환경 설정</tertiary>
+        </indexterm>
+        <para>사이드 창의 환경을 설정하려면 <menuchoice><guimenu>편집</guimenu><guimenuitem>환경 설정</guimenuitem></menuchoice>을 선택합니다. <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>사이드 창</guilabel>을 선택합니다. </para>
+        <para><xref linkend="gosnautilus-TBL-38"/>에서는 수정할 수 있는 사이드 창 설정 목록을 보여줍니다. </para>
+        <table frame="topbot" id="gosnautilus-TBL-38">
+          <title>사이드 창 환경 설정</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec4" colwidth="35.09*"/>
+            <colspec colname="colspec5" colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>옵션 </para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec4" valign="top">
+                  <para>
+                    <guilabel>내역</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec5" valign="top">
+                  <para>사이드 창에 <guilabel>내역</guilabel> 탭을 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec4" valign="top">
+                  <para>
+                    <guilabel>노트</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec5" valign="top">
+                  <para>사이드 창에 <guilabel>노트</guilabel> 탭을 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec4" valign="top">
+                  <para>
+                    <guilabel>트리</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec5" valign="top">
+                  <para>사이드 창에 <guilabel>트리</guilabel> 탭을 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>폴더만 표시</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para><guilabel>트리</guilabel> 탭 창에 폴더만 표시하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+      <sect3 id="gosnautilus-60">
+        <title>성능의 환경을 설정하려면</title>
+        <indexterm>
+          <primary>파일 관리자</primary>
+          <secondary>환경 설정</secondary>
+          <tertiary>성능</tertiary>
+        </indexterm>
+        <para>일부 <application>노틸러스</application> 기능은 <application>노틸러스</application>가 요청에 응답하는 속도에 영향을 줄 수 있습니다. 이러한 일부 기능의 동작을 수정하여 <application>노틸러스</application>의 속도를 향상시킬 수 있습니다. 각 성능 환경 설정에 대해 다음 표에 설명된 옵션 중 하나를 선택할 수 있습니다. </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="35.09*"/>
+            <colspec colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>옵션 </para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>항상</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>로컬 파일과 다른 파일 시스템에 있는 파일 모두에 대해 작업을 수행합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>로컬 파일만</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>로컬 파일에만 작업을 수행합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>안함</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>작업을 수행하지 않습니다. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>성능의 환경을 설정하려면 <menuchoice><guimenu>편집</guimenu><guimenuitem>환경 설정</guimenuitem></menuchoice>을 선택합니다. <guilabel>환경 설정</guilabel> 대화 상자에서 <guilabel>성능</guilabel>을 선택합니다. </para>
+        <para><xref linkend="gosnautilus-TBL-41"/>에서는 수정할 수 있는 성능 설정 목록을 보여줍니다. </para>
+        <table frame="topbot" id="gosnautilus-TBL-41">
+          <title>성능 환경 설정</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="35.09*"/>
+            <colspec colname="colspec1" colwidth="64.91*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>대화 상자 요소 </para>
+                </entry>
+                <entry valign="top">
+                  <para>설명 </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>아이콘에 텍스트 표시</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>파일을 나타내는 아이콘에서 텍스트 파일의 내용을 미리 볼 시기를 지정하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>폴더의 항목 수 표시</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>폴더의 항목 수를 표시할 시기를 지정하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>이미지 파일의 미리 보기 표시</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>이미지 파일의 미리 보기를 표시할 시기를 지정하려면 이 옵션을 선택합니다. <application>노틸러스</application>에서는 각 폴더의 미리 보기 파일을 해당 폴더의 한 수준 아래에 있는 <filename>.thumbnails</filename> 디렉토리에 저장합니다. </para>
+                  <para><guilabel>다음보다 큰 파일의 미리 보기를 만들지 않음</guilabel>: <application>노틸러스</application>가 미리 보기를 만드는 파일의 최대 파일 크기를 지정합니다. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <guilabel>사운드 파일 미리 보기</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>사운드 파일을 미리 볼 시기를 지정하려면 이 옵션을 선택합니다. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-50">
+      <title>배경 변경</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>배경 변경</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>배경</primary>
+        <secondary>화면 컴포넌트 변경</secondary>
+      </indexterm>
+      <para><application>노틸러스</application>에는 다음 화면 컴포넌트의 모양과 느낌을 변경하는 데 사용할 수 있는 배경이 포함되어 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para><application>노틸러스</application> 데스크탑 배경 </para>
+        </listitem>
+        <listitem>
+          <para>사이드 창 </para>
+        </listitem>
+        <listitem>
+          <para>보기 창 </para>
+        </listitem>
+        <listitem>
+          <para>패널(메뉴 패널 제외) </para>
+        </listitem>
+      </itemizedlist>
+      <para>화면 컴포넌트의 배경을 변경하려면 다음 단계를 수행합니다.  </para>
+      <orderedlist>
+        <listitem>
+          <para><menuchoice><guimenu>편집</guimenu><guimenuitem>배경 및 상징</guimenuitem></menuchoice>을 선택합니다. <guilabel>배경 및 상징</guilabel> 대화 상자가 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para>배경에 사용할 수 있는 패턴 목록을 표시하려면 <guibutton>패턴</guibutton> 버튼을 클릭합니다. 배경에 사용할 수 있는 색상 목록을 표시하려면 <guibutton>색상</guibutton> 버튼을 클릭합니다. </para>
+        </listitem>
+        <listitem>
+          <para>배경을 패턴으로 변경하려면 패턴을 화면 컴포넌트로 끕니다. 배경을 색상으로 변경하려면 색상을 화면 컴포넌트로 끕니다. </para>
+        </listitem>
+        <listitem>
+          <para><guibutton>닫기</guibutton>를 눌러 대화 상자를 닫습니다. </para>
+        </listitem>
+      </orderedlist>
+      <para>또는 사이드 창 및 보기 창의 배경을 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>배경 변경</guimenuitem>을 선택합니다. <guilabel>배경 및 상징</guilabel> 대화 상자가 표시됩니다. 창 배경을 기본 배경으로 재설정하려면 창 배경을 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>기본 배경 사용</guimenuitem>을 선택합니다. </para>
+      <para>특정 폴더의 사이드 창 또는 보기 창 배경을 변경하는 경우 <application>노틸러스</application>는 선택한 배경을 기억합니다. 따라서 다음에 해당 폴더를 표시할 때 선택한 배경이 표시됩니다. 즉, 폴더의 배경을 변경하면 해당 배경이 표시되도록 폴더를 사용자 정의합니다. </para>
+      <sect3 id="gosnautilus-63">
+        <title>패턴을 추가하려면</title>
+        <indexterm>
+          <primary>배경</primary>
+          <secondary>패턴 추가</secondary>
+        </indexterm>
+        <para>화면 컴포넌트에 사용할 수 있는 패턴에 패턴을 추가하려면 <menuchoice><guimenu>편집</guimenu><guimenuitem> 배경 및 상징</guimenuitem></menuchoice>을 선택합니다. <guibutton>패턴</guibutton> 버튼을 클릭한 다음 <guibutton>새 패턴 추가</guibutton> 버튼을 클릭합니다. 대화 상자가 표시됩니다. 이 대화 상자를 사용하여 새 패턴을 찾습니다. <guibutton>확인</guibutton>을 클릭하여 새 패턴을 <guilabel>배경 및 상징</guilabel> 대화 상자에 추가합니다. </para>
+      </sect3>
+      <sect3 id="gosnautilus-64">
+        <title>색상을 추가하려면</title>
+        <indexterm>
+          <primary>배경</primary>
+          <secondary>색상 추가</secondary>
+        </indexterm>
+        <para>화면 컴포넌트에 사용할 수 있는 색상에 색상을 추가하려면 <menuchoice><guimenu>편집</guimenu><guimenuitem> 배경 및 상징</guimenuitem></menuchoice>을 선택합니다. <guibutton>색상</guibutton> 버튼을 클릭한 다음 <guibutton>새 색상 추가</guibutton> 버튼을 클릭합니다. 색상 선택기 대화 상자가 표시됩니다. 색상환 또는 슬라이더를 사용하여 색상을 선택합니다. <guibutton>확인</guibutton>을 클릭하여 새 색상을 <guilabel>배경 및 상징</guilabel> 대화 상자에 추가합니다. </para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-18">
+      <title>창 컴포넌트를 표시하거나 숨기려면</title>
+      <indexterm>
+        <primary>파일 관리자</primary>
+        <secondary>창 컴포넌트, 표시 및 숨기기</secondary>
+      </indexterm>
+      <para>다음과 같이 <application>노틸러스</application> 창 컴포넌트를 표시하거나 숨길 수 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>사이드 창을 숨기려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>사이드 창</guimenuitem></menuchoice>을 선택합니다. 사이드 창을 다시 표시하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>사이드 창</guimenuitem></menuchoice>을 다시 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para>도구 모음을 숨기려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>도구 모음</guimenuitem></menuchoice>을 선택합니다. 도구 모음을 다시 표시하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>도구 모음</guimenuitem></menuchoice>을 다시 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para>위치 표시줄을 숨기려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>위치 표시줄</guimenuitem></menuchoice>을 선택합니다. 위치 표시줄을 다시 표시하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>위치 표시줄</guimenuitem></menuchoice>을 다시 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para>상태 표시줄을 숨기려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>상태 표시줄</guimenuitem></menuchoice>을 선택합니다. 상태 표시줄을 다시 표시하려면 <menuchoice><guimenu>보기</guimenu><guimenuitem>상태 표시줄</guimenuitem></menuchoice>을 다시 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para>사이드 창에서 탭을 제거하려면 사이드 창을 마우스 오른쪽 버튼으로 클릭합니다. 그런 다음 팝업 메뉴에서 제거할 탭을 선택합니다. 사이드 창에 탭을 다시 추가하려면 팝업 메뉴에서 해당 탭을 다시 선택합니다. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-450">
+    <title>이동식 미디어 사용</title>
+    <indexterm>
+      <primary>이동식 미디어</primary>
+      <secondary>소개</secondary>
+    </indexterm>
+    <para><application>노틸러스</application>에서는 다음 이동식 미디어를 지원합니다. </para>
+    <itemizedlist>
+      <listitem>
+        <para>플로피 디스켓 </para>
+      </listitem>
+      <listitem>
+        <para>CD-ROM </para>
+      </listitem>
+      <listitem>
+        <para>Iomega Zip 디스크 </para>
+      </listitem>
+      <listitem>
+        <para>Iomega Jaz 디스크 </para>
+      </listitem>
+      <listitem>
+        <para>DVD(디지털 비디오 디스크) </para>
+      </listitem>
+    </itemizedlist>
+    <para><application>노틸러스</application>가 새 미디어를 발견하면 해당 미디어의 객체가 데스크탑 배경에 추가됩니다. 미디어의 내용을 <application>노틸러스</application> 창에 표시할 수 있습니다. 이동식 미디어 간에 파일 및 폴더를 끌어서 놓을 수 있습니다. </para>
+    <para>미디어를 보호하고 포맷할 수 있습니다. 또한 Zip 및 Jaz 미디어에 슬라이스를 만들 수 있습니다. <firstterm>슬라이스</firstterm>는 디스크 파티션을 의미합니다. 데스크탑 배경에는 각 슬라이스의 객체가 나타납니다. </para>
+    <note>
+      <para>이동식 미디어는 Solaris 9에서만 작동합니다. </para>
+    </note>
+    <sect2 id="gosnautilus-454">
+      <title>미디어 내용을 표시하려면</title>
+      <indexterm>
+        <primary>이동식 미디어</primary>
+        <secondary>내용 표시</secondary>
+      </indexterm>
+      <para>다음 방법으로 미디어 내용을 표시할 수 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>데스크탑 배경에서 미디어를 나타내는 객체를 두 번 클릭합니다. </para>
+        </listitem>
+        <listitem>
+          <para>데스크탑 배경에서 미디어를 나타내는 객체를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>열기</guimenuitem>를 선택합니다. </para>
+        </listitem>
+      </itemizedlist>
+      <para><application>노틸러스</application> 창에 미디어 내용이 표시됩니다. 표시 내용을 다시 로드하려면 <guibutton>다시 로드</guibutton> 버튼을 클릭합니다. </para>
+    </sect2>
+    <sect2 id="gosnautilus-455">
+      <title>미디어 등록 정보를 표시하려면</title>
+      <indexterm>
+        <primary>이동식 미디어</primary>
+        <secondary>등록 정보 표시</secondary>
+      </indexterm>
+      <para>이동식 미디어의 등록 정보를 표시하려면 데스크탑 배경에서 미디어를 나타내는 객체를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>미디어 등록 정보</guimenuitem>를 선택합니다. <guilabel>미디어 등록 정보</guilabel> 대화 상자가 표시됩니다. </para>
+      <para>미디어에 대한 일반 정보를 보려면 <guilabel>정보</guilabel> 옵션을 선택합니다. 다음 표에서는 <guilabel>미디어 등록 정보</guilabel> 대화 상자의 정보 대화 상자 요소에 대해 설명합니다. </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="34.54*"/>
+          <colspec colname="colspec1" colwidth="65.46*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>대화 상자 요소 </para>
+              </entry>
+              <entry valign="top">
+                <para>설명 </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>별명</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>미디어의 이름을 표시합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>제품 ID</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>미디어 유형을 표시합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>쓰기 방지</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>미디어가 쓰기 방지되어 있는지 여부를 나타냅니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>암호 보호</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>미디어가 암호로 보호되어 있는지 여부를 나타냅니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>파일 시스템</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>미디어 포맷에 사용된 파일 시스템을 표시합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>마운트 위치</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>장치가 연결된 파일 시스템 위치를 표시합니다. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>총 용량</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>미디어의 전체 저장 공간을 표시합니다. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>미디어의 사용된 저장 공간과 사용 가능한 저장 공간을 보려면  <guilabel>부동 용량</guilabel> 옵션을 선택합니다. <guilabel>미디어 등록 정보</guilabel> 대화 상자에는 저장 공간에 대한 상세 정보가 표시됩니다. </para>
+    </sect2>
+<!--
+<sect2 id="gosnautilus-459">
+<title>To Rename Media</title>
+<indexterm><primary>removable media</primary><secondary>renaming</secondary>
+</indexterm><para>To rename media, right-click on the desktop background object
+for the media, then choose <guimenuitem>Rename</guimenuitem>. The media name
+appears highlighted. Type the new name for the media, then press <guibutton>
+Return</guibutton>.</para>
+</sect2>
+-->
+    <sect2 id="gosnautilus-451">
+      <title>미디어를 포맷하려면</title>
+      <indexterm>
+        <primary>이동식 미디어</primary>
+        <secondary>포맷</secondary>
+      </indexterm>
+      <para>미디어를 <firstterm>포맷</firstterm>하는 것은 특정 파일 시스템에서 사용할 수 있도록 준비하는 것입니다. 미디어를 포맷하면 미디어의 기존 정보를 겹쳐쓰게 됩니다. 다음 미디어를 포맷할 수 있습니다.  </para>
+      <itemizedlist>
+        <listitem>
+          <para>플로피 디스켓 </para>
+        </listitem>
+        <listitem>
+          <para>Zip 디스크 </para>
+        </listitem>
+        <listitem>
+          <para>Jaz 디스크 </para>
+        </listitem>
+      </itemizedlist>
+      <para>미디어를 포맷하려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>데스크탑 배경에서 미디어를 나타내는 객체를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>포맷</guimenuitem>을 선택합니다. <guilabel>미디어 포맷</guilabel> 대화 상자가 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>미디어 포맷</guilabel> 대화 상자에서 포맷 옵션을 선택합니다. 다음 표에서는 이 대화 상자의 요소에 대해 설명합니다. </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="34.54*"/>
+              <colspec colname="colspec1" colwidth="65.46*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>대화 상자 요소 </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>설명 </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>빠른 포맷</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>미디어의 특정 트랙에 대해 인증을 사용하지 않거나 제한된 인증을 사용하여 포맷하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>완전 포맷</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>완전 포맷을 수행하려면 이 옵션을 선택합니다. 일부 장치의 경우 드라이브에 의한 전체 미디어 인증이 포함될 수 있습니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>파일 시스템 형식</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>미디어 포맷에 사용할 파일 시스템 형식을 선택합니다. 다음 옵션 중에서 선택합니다. </para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><guilabel>PCFS(DOS)</guilabel>: MS-DOS 운영 체제에서 미디어를 사용하려면 이 옵션을 선택합니다. </para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>UFS(UNIX)</guilabel>: UNIX 운영 체제에서 미디어를 사용하려면 이 옵션을 선택합니다. </para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>UDFS(UNIX)</guilabel>: UDFS(Universal Disk File System)에서 미디어를 포맷하려면 이 옵션을 선택합니다. </para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>NEC(DOS)</guilabel>: NEC 파일 시스템에서 미디어를 포맷하려면 이 옵션을 선택합니다. </para>
+                      </listitem>
+                    </itemizedlist>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>볼륨 레이블</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>텍스트 상자에 미디어 이름을 입력합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guibutton>슬라이스 편집기</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Zip 디스크 또는 Jaz 디스크를 슬라이스로 분할하려면 이 버튼을 클릭합니다. 이 버튼은 <guilabel>파일 시스템 형식</guilabel> 드롭다운 목록 상자에서 <guilabel>UFS</guilabel>를 선택하는 경우에만 사용할 수 있습니다. 자세한 내용은 다음 절을 참조하십시오. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guibutton>적용</guibutton>을 클릭하여 미디어를 포맷합니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-456">
+      <title>슬라이스를 만들려면</title>
+      <indexterm>
+        <primary>이동식 미디어</primary>
+        <secondary>슬라이스 만들기</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>슬라이스, 이동식 미디어</primary>
+      </indexterm>
+      <indexterm>
+        <primary>파티션</primary>
+        <see>슬라이스</see>
+      </indexterm>
+      <para>슬라이스는 포맷 프로세스의 일부로만 수정하거나 삭제할 수 있습니다. 다음 미디어를 슬라이스로 분할할 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>Zip 디스크 </para>
+        </listitem>
+        <listitem>
+          <para>Jaz 디스크 </para>
+        </listitem>
+      </itemizedlist>
+      <para>한 미디어에 슬라이스는 최대 7개까지 만들 수 있습니다. 슬라이스 만들기 프로세스에서는 추가 백업 슬라이스가 만들어집니다. 추가 슬라이스는 항상 숫자 식별자 <literal>2</literal>를 갖습니다. 슬라이스 <literal>2</literal>는 시스템 전용입니다. 슬라이스 <literal>0</literal>은 항상 UFS 파일 시스템을 사용해야 합니다. </para>
+      <para>Zip 디스크 또는 Jaz 디스크를 수동으로 슬라이스로 분할하려면 다음 단계를 수행합니다.  </para>
+      <orderedlist>
+        <listitem>
+          <para>데스크탑 배경에서 미디어를 나타내는 객체를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>포맷</guimenuitem>을 선택합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guilabel>미디어 포맷</guilabel> 대화 상자에서 포맷 옵션을 선택합니다. <guilabel>파일 시스템 형식</guilabel> 드롭다운 목록 상자에서 <guilabel>UFS</guilabel>를 선택하는 경우에만 미디어에 슬라이스를 만들 수 있습니다. 포맷 옵션에 대한 자세한 내용은 이전 절을 참조하십시오. </para>
+        </listitem>
+        <listitem>
+          <para><guibutton>슬라이스 편집기</guibutton> 버튼을 클릭합니다. <guilabel>슬라이스 편집기</guilabel> 대화 상자가 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para>슬라이스를 자동으로 만들려면 <guibutton>자동 슬라이스</guibutton> 버튼을 클릭합니다. 대화 상자가 표시됩니다. 미디어에 만들 슬라이스 수를 입력합니다. <guibutton>확인</guibutton>을 클릭합니다. 미디어의 슬라이스는 거의 같은 크기로 만들어집니다. </para>
+        </listitem>
+        <listitem>
+          <para>슬라이스를 수동으로 만들려면 <guilabel>슬라이스 편집기</guilabel> 대화 상자에서 슬라이스 옵션을 입력한 다음 <guibutton>새로 만들기</guibutton> 버튼을 클릭합니다. 다음 표에서는 이 대화 상자의 요소에 대해 설명합니다. </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="34.54*"/>
+              <colspec colname="colspec1" colwidth="65.46*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>대화 상자 요소 </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>설명 </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>슬라이스</guilabel> 테이블 </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>현재 미디어에 있는 슬라이스를 표시합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guibutton>삭제</guibutton>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>슬라이스를 삭제하려면 <guilabel>슬라이스</guilabel> 테이블에서 슬라이스를 선택한 다음 <guibutton>삭제</guibutton>를 클릭합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>크기</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>슬라이스에 필요한 크기를 입력합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>크기 단위 드롭다운 목록 상자 </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>슬라이스의 크기를 표시할 단위를 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>시작</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>슬라이스를 편집하려면 이 텍스트 상자에 슬라이스의 숫자 식별자를 입력합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>겹치기 방지</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>슬라이스가 서로 겹치지 않도록 하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>태그</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>슬라이스의 태그를 선택합니다. 드롭다운 목록 상자의 태그는 슬라이스의 일반적인 용도를 설명하는 레이블입니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>파일 시스템</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>슬라이스의 파일 시스템을 선택합니다. UFS 또는 UDFS 파일 시스템을 선택할 수 있습니다. 슬라이스 <literal>0</literal>은 UFS 파일 시스템에 있어야 합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>플래그</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>슬라이스에 적용할 플래그를 선택합니다. 다음 옵션 중에서 선택합니다. </para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><guilabel>읽기</guilabel>: 슬라이스를 읽을 수 있도록 하려면 이 옵션을 선택합니다. </para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>쓰기</guilabel>: 슬라이스를 쓸 수 있도록 하려면 이 옵션을 선택합니다. </para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>마운트 가능</guilabel>: 슬라이스를 마운트할 수 있도록 하려면 이 옵션을 선택합니다. 미디어를 <firstterm>마운트</firstterm>하는 것은 미디어의 파일 시스템에 액세스할 수 있도록 하는 것입니다. 미디어를 마운트하면 해당 미디어의 파일 시스템은 사용자의 파일 시스템에 대해 하위 디렉토리로 연결됩니다. </para>
+                      </listitem>
+                    </itemizedlist>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>슬라이스를 편집하려면 <guilabel>슬라이스 편집기</guilabel> 대화 상자에서 슬라이스 옵션을 입력한 다음 <guibutton>변경</guibutton> 버튼을 클릭합니다. </para>
+        </listitem>
+        <listitem>
+          <para><guibutton>확인</guibutton>을 클릭하여 <guilabel>슬라이스 편집기</guilabel> 대화 상자를 닫습니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-453">
+      <title>미디어를 보호하려면</title>
+      <indexterm>
+        <primary>이동식 미디어</primary>
+        <secondary>보호</secondary>
+      </indexterm>
+      <para>이동식 미디어를 쓰기 작업으로부터 보호하거나 읽기 작업과 쓰기 작업 모두로부터 보호할 수 있습니다. 또한 암호를 사용하거나 암호를 사용하지 않고 보호할 수 있습니다. 다음 유형의 미디어를 보호할 수 있습니다. </para>
+      <itemizedlist>
+        <listitem>
+          <para>Jaz 디스크 </para>
+        </listitem>
+        <listitem>
+          <para>Zip 디스크 </para>
+        </listitem>
+      </itemizedlist>
+      <para>미디어의 보호 여부를 확인하려면 데스크탑 배경에서 미디어를 나타내는 객체를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>미디어 등록 정보</guimenuitem>를 선택합니다. </para>
+      <para><application>노틸러스</application>에서는 미디어의 보호 여부를 인식합니다. <application>노틸러스</application>는 데스크탑 배경에서 미디어를 나타내는 객체에 상징을 표시하여 적용되는 보호 유형을 나타냅니다. <application>노틸러스</application>에서는 플로피 디스켓이 쓰기 방지되어 있는지 여부도 인식합니다. </para>
+      <para>미디어를 보호하려면 다음 단계를 수행합니다. </para>
+      <orderedlist>
+        <listitem>
+          <para>데스크탑 배경에서 미디어를 나타내는 객체를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>보호</guimenuitem>를 선택합니다. 보호 대화 상자가 표시됩니다. </para>
+        </listitem>
+        <listitem>
+          <para>대화 상자에서 다음 옵션 중 하나를 선택합니다. </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="34.54*"/>
+              <colspec colname="colspec1" colwidth="65.46*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>대화 상자 요소 </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>설명 </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>보호 안함</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>미디어의 보호 기능을 제거하려면 이 옵션을 선택합니다. 미디어가 암호로 보호되어 있으면 <guilabel>암호</guilabel> 대화 상자가 표시됩니다. <guilabel>암호</guilabel> 필드에 암호를 입력한 다음 <guibutton>확인</guibutton>을 클릭합니다. </para>
+                    <para>이 옵션은 미디어가 보호되는 경우에만 사용할 수 있습니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>쓰기 방지(암호 사용 안함)</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>암호를 사용하지 않고 미디어를 쓰기 작업으로부터 보호하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>쓰기 방지(암호 사용)</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>암호를 사용하여 미디어를 쓰기 작업으로부터 보호하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <guilabel>읽기 쓰기 방지(암호 사용)</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>암호를 사용하여 미디어를 읽기 작업과 쓰기 작업으로부터 보호하려면 이 옵션을 선택합니다. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guibutton>확인</guibutton>을 클릭합니다. </para>
+          <para><guilabel>쓰기 방지(암호 사용)</guilabel> 옵션 또는 <guilabel>읽기 쓰기 방지(암호 사용)</guilabel> 옵션을 선택한 경우 <guilabel>미디어 암호 입력</guilabel> 대화 상자가 표시됩니다. 미디어의 암호를 입력한 다음 확인을 위해 암호를 한 번 더 입력합니다. <guibutton>확인</guibutton>을 클릭하여 암호를 설정합니다. </para>
+          <para>미디어의 암호를 변경하려면 먼저 미디어의 보호 기능을 해제한 다음 미디어에 새 암호 보호를 적용해야 합니다. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-457">
+      <title>미디어를 꺼내려면</title>
+      <indexterm>
+        <primary>이동식 미디어</primary>
+        <secondary>꺼내기</secondary>
+      </indexterm>
+      <para>미디어를 꺼내려면 데스크탑 배경에서 미디어 객체를 마우스 오른쪽 버튼으로 클릭한 다음 <guimenuitem>꺼내기</guimenuitem>를 선택합니다. 미디어 드라이브가 자동 드라이브인 경우에는 미디어가 자동으로 드라이브에서 나옵니다. 미디어 드라이브가 자동 드라이브가 아닌 경우에는 미디어를 수동으로 꺼내라는 메시지가 표시됩니다. </para>
+      <para><guimenuitem>꺼내기</guimenuitem> 명령을 사용하여 미디어를 꺼내면 해당 미디어가 자동으로 마운트 해제됩니다. </para>
+    </sect2>
+  </sect1>
+</chapter>
