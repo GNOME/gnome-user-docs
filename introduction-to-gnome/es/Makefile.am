@@ -3,7 +3,7 @@ figs = \
 	figures/microguiborder.png
 docname = introduction-to-gnome
 lang = es
-omffile = introduction-to-gnome-C.omf
+omffile = introduction-to-gnome-es.omf
 sgml_ents =
 include $(top_srcdir)/sgmldocs.make
 dist-hook: app-dist-hook
