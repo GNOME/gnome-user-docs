@@ -1,0 +1,1077 @@
+<chapter id="gosmetacity-1">
+  <title>Робота з вікнами</title>
+  <highlights>
+    <para>Інформація в цій главі описує використання вікон в середовищі GNOME.
+В середовищі GNOME ви можете використовувати декілька типів менеджерів вікон, наприклад, <application>Metacity</application> та <application>Sawfish</application>.  Багато з функцій в <application>Metacity</application>
+є також і в <application>Sawfish</application>. Ця глава описує функції менеджера вікон <application>Metacity</application>.</para>
+  </highlights>
+  <sect1 id="gosmetacity-712">
+    <title>Вікна та робочі області</title>
+    <indexterm>
+      <primary>windows</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>workspaces</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <para>Середовище GNOME може відображати декілька вікон одночасно.
+Вікна відображаються в підрозділах середовища GNOME які мають назву робочі області.
+Робочі області є окремим простором, в якому можна працювати.
+Кожна робоча область має однакову стільницю, панелі та меню.
+Не зважаючи на це, ви можете запускати різні програми та відкривати різні вікна
+в кожній з робочих областей. Водночас може відображатися тільки одна робоча область, але
+при цьому ви можете мати відкриті вікна в інших робочих областях.  </para>
+    <para>Аплет <application>Перемикач робочих областей</application> відображає
+візуальне представлення вікон в робочих областях, як продемонстровано на <xref linkend="gosmetacity-FIG-717"/>.</para>
+    <figure id="gosmetacity-FIG-717">
+      <title>Аплет Перемикач робочих областей</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Аплет Перемикач робочих областей.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>В будь який час ви можете додати робочу область. Для цього клацніть правою кнопкою миші
+на аплеті <application>Перемикач робочих областей</application> та виберіть <guimenuitem>Настройка</guimenuitem>. Буде
+відкрито <guilabel>Властивості перемикача робочих областей</guilabel>. Використовуйте поле <guilabel>Кількість робочих областей</guilabel>, щоб вказати потрібну кількість робочих областей.</para>
+    <sect2 id="gosmetacity-15">
+      <title>Поведінка менеджера вікон</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>window managers</secondary>
+      </indexterm>
+      <para>Менеджер вікон відповідає за вигляд та поведінку вікон.
+Він слідкує за положенням вікон за тим, яке з вікон має фокус.
+Обрамлення вікна містить кнопки, за допомогою яких можна виконувати стандартні дії, такі як
+переміщення, закривання та зміна розміру вікна. </para>
+      <para>Деякі з властивостей менеджера вікон можна змінити за допомогою утиліти настройки <application>Вікна</application>.
+Довідка описує функції, які стосуються стандартної конфігурації менеджера вікон <application>Metacity</application>.
+В утиліті настройки <application>Вікна</application> вказано стандартну конфігурацію менеджера вікон.</para>
+<!--Is this preference tool called Window Beahvior in the community?-->
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-713">
+    <title>Тип вікон</title>
+    <indexterm>
+      <primary>windows</primary>
+      <secondary>types of</secondary>
+    </indexterm>
+    <para>Середовище GNOME має такі типи вікон: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Вікна програми </para>
+        <para>Після запуску програми відкривається вікно програми. Менеджер вікна застосовує
+обрамлення до вікна програми. Типово, верхня межа вікна містить панель заголовку.
+Панель заголовку має кнопки, які можна використовувати для керування вікном. Кнопки на вікні
+програми дозволяють виконувати такі дії, як відкривання <guimenu>Меню вікна</guimenu> чи
+закривання вікна. <guimenu>Меню вікна</guimenu> надає можливість виконувати деякі дії над вікном. </para>
+        <para>Наступний малюнок демонструє стандартне вікно програми. </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gedit_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Вікно програми з простою темою.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+      <listitem>
+        <para>Діалогові вікна</para>
+        <para>Діалогове вікно - це спливаюче вікно, в яке можна вводити інформацію
+або команди. Діалог з'являється всередині обрамлення вікна. </para>
+        <para>Верхню межу обрамлення можна використовувати для роботи з вікном.
+Наприклад, використовувати смугу заголовку для переміщення вікна. Крім того обрамлення містить
+кнопки, які дозволяють робити наступне:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Відкрити <guimenu>Меню вікна</guimenu></para>
+          </listitem>
+          <listitem>
+            <para>Закрити діалогове вікно</para>
+          </listitem>
+        </itemizedlist>
+        <para>Зазвичай ви відкриваєте діалогові вікна з вікна програми. Коли відкриваєте діалогове
+вікно, воно зазвичай спливає та має фокус. Деякі діалогові вікна не дозволяють використовувати вікно програми
+доки ви не закриєте діалогове вікно. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosmetacity-16">
+      <title>Обрамлення вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>frames</secondary>
+      </indexterm>
+      <para>Обрамлення вікна - це межа навколо вікна. Обрамлення вікна містить смугу заголовку.
+Смуга заголовку має кнопки, які дозволяють взаємодіяти з вікном.</para>
+      <sect3 id="gosmetacity-10">
+        <title>Теми</title>
+        <indexterm>
+          <primary>windows</primary>
+          <secondary>themes</secondary>
+        </indexterm>
+        <para>До обрамлення вікна можна застосовувати теми. Теми визначають вигляд вікна.
+Щоб вибрати тему до всіх вікон, використовуйте утиліту настройки <application>Тема</application>. </para>
+      </sect3>
+      <sect3 id="gosmetacity-17">
+        <title>Елементи керування</title>
+        <indexterm>
+          <primary>windows</primary>
+          <secondary>frame control elements</secondary>
+        </indexterm>
+        <para>Обрамлення вікна можна використовувати для виконання різноманітних
+операцій з вікном. Смуга заголовку містить набір кнопок. Наступний малюнок демонструє
+смугу заголовку вікна програми:</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Смуга заголовку вікна. Містить: Кнопка меню вікна, Смуга заголовку, кнопки максимізації, згортання та закривання вікна.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Діалогові вікна також містять деякі з елементів керування обрамленням вікна. <xref linkend="gosmetacity-TBL-1"/> описує активні елементи керування обрамленням вікна, з ліва направо.</para>
+        <table frame="topbot" id="gosmetacity-TBL-1">
+          <title>Елементи керування обрамленням вікна</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="41.65*"/>
+            <colspec colname="colspec1" colwidth="58.35*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Елемент керування</para>
+                </entry>
+                <entry>
+                  <para>Опис </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Кнопка <guibutton>Меню вікна</guibutton></para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Клацніть, щоб відкрити <guimenu>Меню вікна</guimenu>. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Смуга заголовку</para>
+                </entry>
+                <entry valign="top">
+                  <para>Смугу заголовку можна використовувати для таких операцій: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Щоб передати фокус вікну, клацніть на смузі заголовку.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Щоб перемістити вікно, захопіть смугу заголовку та перетягніть вікно на нове місце. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Щоб максимізувати вікно, зробіть подвійне клацання на смузі заголовку. Щоб відновити первинні розміри вікна, зробіть подвійне клацання на смузі заголовку знову. </para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Кнопка <guibutton>Згорнути</guibutton></para>
+                </entry>
+                <entry valign="top">
+                  <para>Клацніть кнопку <guibutton>Згорнути</guibutton>, щоб згорнути вікно. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Кнопка <guibutton>Максимізувати</guibutton></para>
+                </entry>
+                <entry valign="top">
+                  <para>Клацніть кнопку <guibutton>Максимізувати</guibutton>, щоб максимізувати вікно. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>Кнопка <guibutton>Закрити вікно</guibutton></para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Клацніть кнопку <guibutton>Закрити вікно</guibutton>, щоб закрити вікно. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Межа</para>
+                </entry>
+                <entry valign="top">
+                  <para>Межа навколо вікна. Використовуйте межу для виконання таких дій: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Щоб змінити розмір вікна, захопіть та перетягніть межу до потрібного стану. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Щоб відкрити <guimenu>Меню вікна</guimenu>, клацніть правою кнопкою на межі.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Вміст вікна</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Область всередині обрамлення вікна. Використовуйте вміст вікна для наступних дій:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Щоб перемістити вікно, натисніть та утримайте клавішу <keycap>Alt</keycap>,  клацніть на
+вмісті вікна та перетягніть вікно на нове місце.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Щоб змінити розмір вікна, натисніть та утримуйте клавішу <keycap>Alt</keycap>, потім
+клацніть середньою кнопкою біля кута, який хочете перемістити. Щоб змінити розмір вікна, перетягніть кут, на якому ви клацнули середньою кнопкою.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Щоб відкрити <guimenu>Меню вікна</guimenu>, натисніть та утримуйте <keycap>Alt</keycap>, потім клацніть правою кнопкою на вмісті вікна.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-714">
+    <title>Меню і аплети для роботи з вікнами і робочими областями</title>
+    <indexterm>
+      <primary>windows</primary>
+      <secondary>applets and menus for working with</secondary>
+    </indexterm>
+    <para>Глава описує меню та аплети, які можна використовувати при роботі з вікнами та робочими областями.</para>
+    <sect2 id="gosmetacity-24">
+      <title>Меню вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>Window Menu</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>Window Menu</secondary>
+      </indexterm>
+      <para><guimenu>Меню вікна</guimenu> це меню вікна, які можна використовувати для виконання операцій з вікнами.
+Щоб відкрити <guimenu>Меню вікна</guimenu> виконайте одну з наступних дій:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Клацніть кнопку <guibutton>Меню вікна</guibutton> на вікні, з яким бажаєте працювати.</para>
+        </listitem>
+        <listitem>
+          <para>Натисніть <keycombo><keycap>Alt</keycap><keycap>пробіл</keycap></keycombo>.</para>
+        </listitem>
+        <listitem>
+          <para>Натисніть та утримуйте <keycap>Alt</keycap>, потім клацніть правою кнопкою на
+будь якій частині вікна, з яким бажаєте працювати. </para>
+        </listitem>
+      </itemizedlist>
+      <para><xref linkend="gosmetacity-TBL-25"/> описуйте команди і підменю <guimenu>Меню вікна</guimenu>.</para>
+      <table frame="topbot" id="gosmetacity-TBL-25">
+        <title>Команди меню вікна та підменю вікна</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="32.34*"/>
+          <colspec colname="colspec3" colwidth="67.66*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Елемент меню</para>
+              </entry>
+              <entry>
+                <para>Функція</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Мінімізувати</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Мінімізує вікно.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>Максимізувати</guimenuitem> чи <guimenuitem>Демаксимізувати</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>Максимізує вікно. Якщо вікно вже максимізовано, виберіть <guimenuitem>Демаксимізувати</guimenuitem>, щоб відновити попереднє положення вікна. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2">
+                <para>
+                  <guimenuitem>На верху</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Переміщає вікно понад усіх інших відкритих вікон на стільниці.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Перенести</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Дозволяє переміщати вікно за допомогою клавіш зі стрілками.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Змінити розмір</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Дозволяє змінити розмір вікна за допомогою клавіш зі стрілками.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Закрити</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Закрити вікно</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>Помістити на всі робочі області</guimenuitem> або <guimenuitem>Лишити на цій робочий області</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Поміщає вікно на всі робочі області. Якщо вікно вже на всіх робочих областях, виберіть <guimenuitem>Лишити на цій робочій області</guimenuitem> , щоб лишити вікно тільки на поточній області.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2">
+                <para><guimenuitem>Перенести у робочу область праворуч</guimenuitem>  або <guimenuitem>Перенести у робочу область ліворуч</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Переносить вікно на одну робочу область праворуч відносно поточної. Якщо вікно вже на самій крайній правій робочій області, виберіть <guimenuitem>Перемістити у робочу область ліворуч</guimenuitem> , щоб перемістити вікно на одну робочу область ліворуч відносно поточної.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2">
+                <para>
+                  <guimenuitem>Перенести на іншу робочу область</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Переносить вікно в іншу робочу область. Виберіть з підменю область в яку хочете перенести вікно.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosmetacity-18">
+      <title>Аплет Список вікон</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>Window List applet</secondary>
+        <see>Window List applet</see>
+      </indexterm>
+      <indexterm>
+        <primary>Window List applet</primary>
+        <secondary>introduction</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>window lists</primary>
+        <secondary>Window List applet</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>applets</primary>
+        <secondary>Window List</secondary>
+      </indexterm>
+      <para><application>Список вікон</application> відображає кнопки для кожного відкритого вікна програми.<application>Список вікон</application> можна використовувати для виконання таких операцій:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Мінімізація вікна</para>
+          <para>Клацніть на кнопці, що представляє вікно.</para>
+        </listitem>
+        <listitem>
+          <para>Відновлення мінімізованого вікна</para>
+          <para>Клацніть на кнопці, що представляє вікно.</para>
+        </listitem>
+        <listitem>
+          <para>Передача фокусу вікну</para>
+          <para>Клацніть на кнопці, що представляє вікно.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Коли ви відкриваєте вікно програми, в аплеті <application>Список вікон</application>
+з'являється нова кнопка, яка представляє вікно. Кнопки списку вікон показують які вікна програм
+відкриті. В цьому списку будуть також і мінімізовані вікна, яких не видно на стільниці, або
+вікна, які закриті іншими вікнами. <application>Список вікон</application> може показувати кнопки
+для вікон в поточній робочій області чи у всіх робочих областях. Щоб включити цю функцію, потрібно
+змінити властивості <application>Списку вікон</application>.</para>
+      <para>Також можна клацнути правою кнопкою миші на кнопці в списку вікон, щоб
+відкрити <guimenu>Меню вікна</guimenu> для вікна, яке представляє кнопка.
+Більш докладно про команди <guimenu>Меню вікна</guimenu> дивіться <xref linkend="gosmetacity-24"/>.</para>
+      <para><xref linkend="gosmetacity-FIG-8"/> демонструє <application>Список вікон</application>
+коли відкриті такі вікна:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <application>gedit</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>Словник</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GHex</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>Термінал</application>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <figure id="gosmetacity-FIG-8">
+        <title>Аплет Список вікон</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Аплет Список вікон.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Кнопки в аплеті показують стан вікон. <xref linkend="gosmetacity-TBL-3"/>
+пояснює інформацію про вікна, яку надають кнопки списку вікон.
+Приклад <xref linkend="gosmetacity-TBL-3"/> посилається на <xref linkend="gosmetacity-FIG-8"/>. </para>
+      <table frame="topbot" id="gosmetacity-TBL-3">
+        <title>Інформація про стан вікон на кнопках списку вікон<indexterm><primary>Window List applet</primary><secondary>window status information</secondary></indexterm></title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33*"/>
+          <colspec colname="colspec1" colwidth="33*"/>
+          <colspec colname="colspec2" colwidth="33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Стан</para>
+              </entry>
+              <entry>
+                <para>Сигналізує</para>
+              </entry>
+              <entry>
+                <para>Приклад</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Кнопка в натиснутому стані.</para>
+              </entry>
+              <entry valign="top">
+                <para>Вікно має фокус.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>gedit</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Квадратні дужки навколо заголовку вікна.</para>
+              </entry>
+              <entry valign="top">
+                <para>Вікно мінімізовано.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>[Словник]</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Кнопка на натиснута, немає квадратних дужок навколо заголовку.</para>
+              </entry>
+              <entry valign="top">
+                <para>Вікно відображено та не мінімізовано.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>ghex</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>На кнопці відображено номер в дужках.</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Кнопка представляє групу кнопок. </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guilabel>Термінал (3)</guilabel>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="gosmetacity-708">
+        <title>Групування кнопок</title>
+        <indexterm>
+          <primary>Window List applet</primary>
+          <secondary>grouping buttons</secondary>
+        </indexterm>
+        <para><application>Список вікон</application> може групувати кнопки, які
+представляють вікна того самого класу в одну кнопку. Кнопка <guibutton>Термінал</guibutton> на <xref linkend="gosmetacity-FIG-8"/> - це приклад кнопки, що представляє групу кнопок. Наступний малюнок демонструє
+приклад <application>Список вікон</application> з відкритою групою кнопок:</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Аплет Список вікон з відкритою групою кнопок.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Щоб відкрити список вікон групи, клацніть в списку вікон на кнопці, що
+представляє групу. Далі можна клацнути на елементі в списку, щоб передати фокус вікнам, мінімізувати
+чи відновити вікна.</para>
+        <para>Щоб відкрити <guimenu>Меню вікна</guimenu> для вікна через кнопку групи, клацніть
+правою кнопкою миші в вікні списку на кнопці, що представляє групу. Буде показано список
+вікон групи. Щоб відкрити <guimenu>Меню вікна</guimenu> для вікна групи, наведіть
+вказівник миші на елемент списку.
+Більш докладно про команди <guimenu>Меню вікна</guimenu> дивіться <xref linkend="gosmetacity-24"/>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosmetacity-20">
+      <title>Аплет перемикання робочих областей</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>Workspace Switcher applet</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>applets</primary>
+        <secondary>Workspace
+Switcher</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Workspace Switcher applet</primary>
+      </indexterm>
+      <para><application>Перемикач робочих областей</application>
+відображає візуальне представлення робочих місць, як показано на малюнку <xref linkend="gosmetacity-FIG-722"/>. <xref linkend="gosmetacity-FIG-722"/> демонструє аплет коли сеанс GNOME містить чотири
+робочі місця. Робочі місця виглядають як кнопки аплету. Тло кнопки, яка представляє поточне робоче місце
+підсвічено. Поточне робоче місце на <xref linkend="gosmetacity-FIG-722"/> знаходиться
+в аплеті ліворуч. Щоб переключитися на іншу робочу область, клацніть на потрібній
+кнопці аплету.</para>
+      <figure id="gosmetacity-FIG-722">
+        <title>Аплет Перемикач робочих областей.</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Аплет перемикач робочих областей.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Крім того <application>Перемикач робочих областей</application> показує вікна програм
+і діалогів, що відкриті в кожній робочій області.</para>
+      <para>Аплет відображає робочі області в порядку з ліва направо.
+На <xref linkend="gosmetacity-FIG-722"/>, аплет налаштовано для відображення
+робочих місць в один рядок. Можна вказати кількість рядків для відображення робочих
+областей в аплеті. До того можна змінити типову поведінку аплету - показувати
+назви робочих місць.</para>
+    </sect2>
+    <sect2 id="gosmetacity-27">
+      <title>Аплет вибір вікон</title>
+      <indexterm>
+        <primary>top edge panel</primary>
+        <secondary>window selector icon</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>window selector</primary>
+        <secondary>top edge panel</secondary>
+      </indexterm>
+      <para>Тут ви можете побачити список усіх вікон, що відкриті на поточний момент.
+Звідси можна також вибрати вікно для надання йому фокусу. Щоб побачити список вікон, клацніть
+на аплеті <application>Вибір вікон</application>. Наступний малюнок демонструє приклад вигляду
+аплету <application>Вибір вікон</application> :</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Аплет Вибір вікон в верхній панелі.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Щоб передати фокус до вікна, виберіть його зі списку аплету <application>Вибір вікна</application>.</para>
+      <para>Аплет <application>Вибір вікна</application> показує вікна на всіх робочих областях. Усі вікна, що розташовані на робочих областях відмінним від поточної показані нижче і відокремлені лінією.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-715">
+    <title>Операції з вікнами</title>
+    <indexterm>
+      <primary>windows</primary>
+      <secondary>manipulating</secondary>
+    </indexterm>
+    <para>Цей розділ описує операції з вікнами.</para>
+    <sect2 id="gosmetacity-28">
+      <title>Передавання фокусу до вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>giving focus to</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>focus, giving to a window</primary>
+      </indexterm>
+      <para>Вікно, що має фокус може приймати ввід з миші й клавіатури.
+В один і той же момент тільки одне вікно може мати фокус. Вікно, що має фокус, має дещо інший вигляд ніж інші вікна. </para>
+      <para>Щоб передати фокус вікну можна використовувати такі елементи:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Елемент</para>
+              </entry>
+              <entry>
+                <para>Дія</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Миша</para>
+              </entry>
+              <entry valign="top">
+                <para>Клацніть на вікні, якщо воно видиме. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Комбінації клавіш</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Використовуйте комбінації клавіш для перемикання між відкритими вікнами.
+Щоб передати фокус до вікна, відпустіть клавіші. Типова комбінація для перемикання між
+вікнами <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Список вікон</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Клацніть на кнопці, що представляє вікно в аплеті <application>Список вікон</application>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <application>Вибір вікна</application>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Клацніть на значку <application>Вибір вікна</application>. Буде показано список
+відкритих вікон. Виберіть вікно зі списку.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Перемикач робочих областей</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Клацніть на вікні, якому хочете передати фокус в аплеті <application>Перемикач
+робочих областей</application>. Якщо ви клацнете на вікні в іншій робочій області, <application>Перемикач
+робочих областей</application> переключить на іншу робочу область та надасть фокус вікну. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosmetacity-29">
+      <title>Мінімізація вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>minimizing</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>minimizing</primary>
+        <secondary>windows</secondary>
+      </indexterm>
+      <para>Щоб мінімізувати вікно, виконайте одну з наступних дій: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Клацніть на обрамленні вікна кнопку <guibutton>Мінімізувати</guibutton> .</para>
+        </listitem>
+        <listitem>
+          <para>Відкрийте <guimenu>Меню вікна</guimenu>, виберіть <guimenuitem>Мінімізувати</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Якщо вікно має фокус, клацніть на кнопці, що представляє вікно в <application>Списку
+вікон</application>. Якщо вікно не має фокусу, клацніть два рази на кнопці, що представляє вікно. </para>
+        </listitem>
+        <listitem>
+          <para>Клацніть правою кнопкою на кнопці, що представляє вікно в <application>Списку
+вікон</application>, потім виберіть з контекстного вікна <guimenuitem>Мінімізувати</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-30">
+      <title>Максимізація вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>maximizing</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>maximizing windows</primary>
+      </indexterm>
+      <para>Коли максимізуєте вікно, воно розширюється до ширини стільниці. Щоб максимізувати вікно, виконайте
+одну з наступних дій: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Клацніть на обрамленні вікна кнопку <guibutton>Максимізувати</guibutton>.
+Або відкрийте <guimenu>Меню вікна</guimenu>, потім виберіть <guimenuitem>Максимізувати</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Клацніть правою кнопкою на кнопці, що представляє вікно в <application>Списку
+вікон</application>, потім виберіть <guimenuitem>Максимізувати</guimenuitem> з <guimenu>Меню вікна</guimenu>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-31">
+      <title>Відновлення розмірів вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>restoring</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>restoring</primary>
+        <secondary>windows</secondary>
+      </indexterm>
+      <para>Щоб відновити максимізоване вікно, виконайте одну з наступних дій: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Клацніть на обрамленні вікна кнопку <guibutton>Максимізувати</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>Відкрийте <guimenu>Меню вікна</guimenu>. Виберіть <guimenuitem>Демаксимізувати</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Клацніть правою кнопкою миші на кнопці, що представляє вікно в <application>Списку
+вікон</application> , потім з <guimenu>Меню вікна</guimenu> виберіть <guimenuitem>Демаксимізувати</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Клацніть на кнопці, що представляє вікно в <application>Списку вікон</application>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-2">
+      <title>Розташовування вікна поверх інших</title>
+      <para>Щоб розташувати вікно поверх всіх інших вікон, відкрийте <guimenu>Меню вікна</guimenu> та виберіть <guimenuitem>На верху</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-32">
+      <title>Закривання вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>closing</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>closing windows</primary>
+      </indexterm>
+      <para>Щоб закрити вікно, виконайте одну з наступних дій: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Клацніть в обрамленні вікна на кнопці <guibutton>Закрити вікно</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>Відкрийте <guimenu>Меню вікна</guimenu>. Виберіть <guimenuitem>Закрити</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Клацніть правою кнопкою миші на кнопці, що представляє вікно в <application>Списку вікон</application>, потім виберіть <guimenuitem>Закрити</guimenuitem> з контекстного меню.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Якщо вікно має не збережені дані вам буде запропоновано зберегти дані.</para>
+    </sect2>
+    <sect2 id="gosmetacity-34">
+      <title>Зміна розміру вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>resizing</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>resizing windows</primary>
+      </indexterm>
+      <para>Щоб змінити розмір вікна, виконайте одну з наступних дій:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Наведіть вказівник миші на кут вікна. Вказівник змінить вигляд, що сигналізує
+про можливість зміни вікна. Захопіть кут вікна та перетягуйте його, змінюючи розмір вікна до потрібного.</para>
+        </listitem>
+        <listitem>
+          <para>Клацніть правою кнопкою миші на кнопці, що представляє вікно в <application>Списку
+вікон</application>. Виберіть <guimenuitem>Змінити розмір</guimenuitem> з <guimenu>Меню вікна</guimenu>.
+Використовуйте клавіші зі стрілками для зміни розміру вікна.</para>
+        </listitem>
+        <listitem>
+          <para>Натисніть та утримуйте <keycap>Alt</keycap>, потім клацніть середньою кнопкою
+біля кута, який бажаєте перетягнути. Вказівник миші змінить вигляд, сигналізуючи
+про те, що розмір вікна можна змінити. Щоб змінити розмір, перетягніть кут вікна.</para>
+        </listitem>
+        <listitem>
+          <para>Щоб змінити розмір вікна по горизонталі, наведіть вказівник на одну з вертикальних меж
+вікна. Вказівник миші змінить вигляд, сигналізуючи про те, що розмір вікна можна змінювати.
+Захопіть межу та перетягуйте її, змінюючи розмір вікна до потрібного.</para>
+        </listitem>
+        <listitem>
+          <para>Щоб змінити розмір вікна по вертикалі, наведіть вказівник на одну з горизонтальних меж
+вікна. Вказівник миші змінить вигляд, сигналізуючи про те, що розмір вікна можна змінювати.
+Захопіть межу та перетягуйте її, змінюючи розмір вікна до потрібного.</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para>Можна змінювати розмір деяких діалогових вікон. Крим того деякі з вікон програм
+мають мінімальній розмір, менше якого вікно зробити не можливо.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosmetacity-35">
+      <title>Переміщення вікна</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>moving</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>moving windows</primary>
+      </indexterm>
+      <para>Щоб перемістити вікно, виконайте оду з наступних дій: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Захопіть смугу заголовку та перетягніть вікно на нове місце. </para>
+        </listitem>
+        <listitem>
+          <para>Натисніть та утримуйте клавішу <keycap>Alt</keycap>, потім перетягніть вікно на нове місце. </para>
+        </listitem>
+        <listitem>
+          <para>Відкрийте <guimenu>Меню вікна</guimenu>, виберіть <guimenuitem>Перенести</guimenuitem>. Використовуйте
+клавіші зі стрілками, щоб перемістити вікно на нове місце.</para>
+        </listitem>
+        <listitem>
+          <para>Клацніть правою кнопкою миші на кнопці, що представляє вікно в <application>Списку вікон</application>, потім виберіть <guimenuitem>Перенести</guimenuitem> з <guimenu>Меню вікна</guimenu>. Використовуйте клавіші зі
+стрілками, щоб перемістити вікно на нове місце.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-36">
+      <title>Згортання вікон</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>rolling up</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>rolling up windows</primary>
+      </indexterm>
+      <indexterm>
+        <primary>shading windows</primary>
+        <see>rolling up windows</see>
+      </indexterm>
+      <para>Вікно можна згорнути чи розгорнути наступним чином:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Згорнути</term>
+          <listitem>
+            <para>Зменшує вікно так, що видимим залишається лише заголовок.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Розгорнути</term>
+          <listitem>
+            <para>Повернути вікно зі згорнутого стану до попереднього, коли вікно повністю видиме.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Щоб розгорнути вікно, виконайте одну з наступних дій: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Зробіть подвійне клацання на смузі заголовку вікна. Щоб згорнути вікно, зробіть подвійне клацання
+на смузі заголовку знову. Щоб виконати цю дію, потрібно вибрати <guilabel>Згортати</guilabel> в параметрах утиліти
+настройки <application>Вікна</application>.</para>
+        </listitem>
+        <listitem>
+          <para>Клацніть правою кнопкою на кнопці, що представляє вікно в <application>Списку
+вікон</application>, потім виберіть <guimenuitem>Згорнути</guimenuitem> з <guimenu>Меню вікна</guimenu>. Щоб розгорнути вікно, виберіть <guimenuitem>Розгорнути</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-38">
+      <title>Розміщення вікон на всіх робочих областях</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>putting on all workspaces</secondary>
+      </indexterm>
+      <para>Щоб помістити вікно на всі робочі області, відкрийте <guimenu>Меню вікна</guimenu>. Виберіть
+<guimenuitem>Помістити на всі робочі області</guimenuitem>.
+Щоб розмістити вікно лише на поточній робочій області, виберіть <guimenuitem>Лише на цій робочій області</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-46">
+      <title>Переміщення вікна в іншу робочу область</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>moving to another workspace</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>moving windows to </secondary>
+      </indexterm>
+      <para>Вікно можна перенести в інші робочі області наступними шляхами:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Використати <application>Перемикач робочих областей</application></para>
+          <para>В області <application>Перемикача робочих областей</application>, перетягніть
+вікно на потрібну робочу область.</para>
+        </listitem>
+        <listitem>
+          <para>Використати <guimenu>Меню вікна</guimenu></para>
+          <para>Відкрийте <guimenu>Меню вікна</guimenu>. Щоб перемістити вікно в іншу робочу
+область, виберіть <guimenuitem>Перемістити у робочу область праворуч</guimenuitem> чи <guimenuitem>Перемістити у робочу область ліворуч</guimenuitem>. Або <guimenuitem>Перемістити у іншу робочу область<replaceable>ім'я робочої області</replaceable></guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-716">
+    <title>Маніпуляції з вікнами</title>
+    <indexterm>
+      <primary>workspaces</primary>
+      <secondary>manipulating</secondary>
+    </indexterm>
+    <para>Цей роздій описує як маніпулювати вікнами.</para>
+    <sect2 id="gosmetacity-49">
+      <title>Перемикання між робочими областями</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>switching between</secondary>
+      </indexterm>
+      <para>Ви можете перемикатися між робочими областями будь-яким з наступних способів: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Використовуйте <application>Перемикач робочих областей</application></para>
+          <para>Клацніть в <application>Перемикачі робочих областей</application> на робочій області, в яку бажаєте перемикнутися.</para>
+        </listitem>
+        <listitem>
+          <para>Використовуючи комбінації клавіш</para>
+          <para>Типові комбінації клавіш для перемикання між робочими областями: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="50*"/>
+              <colspec colwidth="50*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Типова комбінація клавіш</para>
+                  </entry>
+                  <entry>
+                    <para>Функція</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>
+                    <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>стрілка в право</keycap></keycombo></para>
+                  </entry>
+                  <entry>
+                    <para>Переключитися на робочу область праворуч</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry>
+                    <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>стрілка вліво</keycap></keycombo></para>
+                  </entry>
+                  <entry>
+                    <para>Переключитися на робочу область праворуч</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-50">
+      <title>Додавання робочої області</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>adding</secondary>
+      </indexterm>
+      <para>Щоб додати робочу область до стільниці середовища GNOME, клацніть правою кнопкою
+на аплеті <application>Перемикач робочих областей</application> та виберіть <guimenuitem>Настройка</guimenuitem>.
+Буде відкрито діалог <guilabel>Властивості перемикача робочих областей</guilabel>. Використовуйте
+поле <guilabel>Кількість робочих областей</guilabel> , щоб вказати потрібну кількість робочих областей. <application>Перемикач робочих областей</application> додасть нові робочі області в кінець списку робочих областей.</para>
+    </sect2>
+    <sect2 id="gosmetacity-51">
+      <title>Привласнення назві робочим областям</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>naming</secondary>
+      </indexterm>
+      <para>Робочі області мають такі типові назви <literal>Робоча область 1</literal>, <literal>Робоча область 2</literal>, <literal>Робоча область 3</literal> і так далі. Щоб привласнити ім'я робочій області, клацніть правою кнопкою
+миші на <application>Перемикачі робочих областей</application>, потім виберіть <guimenuitem>Властивості</guimenuitem>.
+Буде відкрито діалог <guilabel>Властивості перемикача робочих областей</guilabel>. Використовуйте список
+<guilabel>Назви робочих областей</guilabel>, щоб змінити імена робочих місць. Виберіть робоче місце в списку, потім
+введіть нове ім'я для робочої області.</para>
+    </sect2>
+    <sect2 id="gosmetacity-52">
+      <title>Видалення робочої області</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>deleting</secondary>
+      </indexterm>
+      <para>Коли ви видаляєте робочу область, вікна з цієї робочої області переносяться
+до іншої робочої області а порожня робоча область видаляється. </para>
+      <para>Щоб видалити робочу область зі стільниці середовища GNOME, клацніть правою кнопкою миші на
+<application>Перемикачі робочих областей</application> та виберіть <guimenuitem>Властивості</guimenuitem>.
+Буде відкрито діалог <guilabel>Властивості перемикача робочих областей</guilabel>.
+Використовуйте поле <guilabel>Кількість робочих областей</guilabel>, щоб вказати потрібну кількість робочих
+областей. <application>Перемикач робочих областей</application> видалить робочі області з кінця списку.</para>
+    </sect2>
+  </sect1>
+</chapter>

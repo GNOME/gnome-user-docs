@@ -1,0 +1,872 @@
+<chapter id="gosoverview-1">
+  <title>Огляд середовища GNOME</title>
+  <highlights>
+    <para>Глава розповідає про основні можливості та головні компоненти середовища.
+Перш ніж почати використовувати середовище GNOME, прочитайте цю главу, щоб ознайомитись
+з можливостями середовища та дізнатись як працюють основні компоненти.
+Середовище GNOME має дуже багато параметрів настройки, ця глава описує лише
+типову конфігурацію.</para>
+  </highlights>
+  <sect1 id="gosoverview-5">
+    <title>Вступ до компонентів середовища GNOME</title>
+    <indexterm>
+      <primary>GNOME Desktop components, introducing</primary>
+    </indexterm>
+    <para>При першому запуску сеансу середовища GNOME ви побачите типовий екран
+з панелями, вікнами та різними значками. </para>
+    <para>Далі перелічені основні елементи середовища GNOME: <itemizedlist><listitem><para>Панелі</para><para>Панель - це область середовища GNOME з якої ви можете отримати доступ до всіх системних програм і меню. Панелі дуже гнучкі в настройці. </para><para>Особливо важливою є верхня панель. Вона включає <application>Панель меню</application>. <application>Панель меню</application>
+містить два спеціальні меню:</para><itemizedlist><listitem><para>Меню <guimenu>Програми</guimenu>: Містить всі програми та утиліти настройки. Також включає файловий менеджер та переглядач довідки. Для запуску файлового менеджера, виберіть <guimenuitem>Домашня тека</guimenuitem> з меню <guimenu>Програми</guimenu>.
+</para></listitem><listitem><para>Меню <guimenu>Дії</guimenu>: Містить різні команди, що
+виконують різноманітні функції, наприклад <guimenuitem>Пошук файлів</guimenuitem>
+та <guimenuitem>Завершення роботи</guimenuitem>.</para></listitem></itemizedlist><para>Щоб подивитись список усіх відкритих
+вікон, клацніть на значку <guibutton>Вибір вікна</guibutton> в правій частині верхньої панелі.</para></listitem><listitem><para>Меню</para><para>Через меню можна отримати доступ до всіх функцій середовища GNOME. За допомогою меню
+<guimenu>Програми</guimenu> ви можете запускати майже всі стандартні програми, команди та утиліти настройки.
+Доступ до меню <guimenu>Програми</guimenu> можна отримати через <guimenu>Головне меню</guimenu> та з аплету
+<application>Панель меню</application>. <guimenu>Головне меню</guimenu> та аплет <application>Панель меню</application> можна
+додавати до панелей.</para><para>Аплет <application>Панель меню</application> містить меню <guimenu>Дії</guimenu>. Це меню містить команди
+за допомогою яких можна виконувати різні функції, наприклад <guimenuitem>Пошук файлів</guimenuitem>
+та <guimenuitem>Завершення роботи</guimenuitem>. Елементи меню <guimenu>Дії</guimenu> знаходяться на верхньому рівні
+<guimenu>Головного меню</guimenu>.</para></listitem><listitem><para>Вікна</para><para>В той самий час може бути показано декілька вікон одночасно. Ви можете запускати різні програми і кожному вікні. Менеджер вікон забезпечує вікна кадрами та кнопками. Менеджер вікон дозволяє виконувати стандартні дії над вікнами, такі як переміщення, закривання, зміна розміру. </para></listitem><listitem><para>Робочі області</para><para>Стільницю можна поділити на окремі <firstterm>робочі області</firstterm>. Робоча область - це окремий область, на якій ви можете працювати. Ви можете встановити бажану кількість робочих областей стільниці. Між робочими областями можна перемикатись, але водночас може бути показана тільки одна область.</para></listitem><listitem><para>Файловий менеджер <application>Наутілус</application></para><para>Файловий менеджер <application>Наутілус</application> є інтегрованим середовищем для доступу до файлів та програм системи.
+За допомогою файлового менеджера можна переглядати вміст файлів всередині самого файлового менеджера чи відкривати файли в відповідній програмі. </para><para>Доступ до файлів і тек системи можна отримати наступними шляхами: </para><itemizedlist><listitem><para>Переглядати файли чи теки</para></listitem><listitem><para>Переглядати файли чи теки як об'єкти</para></listitem></itemizedlist></listitem><listitem><para>Стільниця</para><para>Стільниця - це частина середовища GNOME, що знаходиться позаду всіх інших компонентів середовища. Вона є активним елементом інтерфейсу користувача. На стільницю можна помістити об'єкти
+для швидкого доступу до файлів і тек або для запуску програм, що ви часто використовуєте.
+Можна відкрити меню стільниці, клацнувши на ній правою кнопкою миші.</para></listitem><listitem><para>Положення <guilabel>Починати тут</guilabel></para><para>Положення <guilabel>Починати тут</guilabel> надає доступ до
+деяких ключових функцій середовища GNOME. За допомогою положення <guilabel>Починати тут</guilabel>
+можна отримати доступ до програм та утиліт конфігурації. А також до програм настройки системи як сервера та зміни інших параметрів конфігурації.</para></listitem><listitem><para>Параметри</para><para>Середовище GNOME має набір спеціальних <firstterm>утиліт настройки</firstterm>. Кожна утиліта відповідає за налаштовування специфічного компонента середовища GNOME. Для запуску утиліт
+виберіть меню <menuchoice><guimenu>Програми</guimenu><guimenuitem>Властивості</guimenuitem></menuchoice>. Виберіть з підменю компонент, який хочете налаштувати.</para></listitem></itemizedlist></para>
+    <para>Найбільш сильною рисою середовища GNOME є висока гнучкість в настройці та
+велика кількість шляхів для виконання дій.</para>
+    <para>Компоненти середовища GNOME є багатофункціональними. Часто є можливість
+виконувати ту ж саму дію у декілька різних способів. Наприклад, можна запустити програму
+як з панелі так і з меню чи стільниці.</para>
+    <para>Системний адміністратор може настроїти вигляд стільниці в відповідності до ваших
+потреб, тобто стільниця, яку ви використовуєте може дещо відрізнятися від той, що описується
+в цій главі. Незважаючи на це глава надає корисну інформацію та є швидким провідником
+щоб дізнатися про роботу середовища GNOME. </para>
+  </sect1>
+  <sect1 id="gosoverview-502">
+    <title>Панелі</title>
+    <indexterm>
+      <primary>panels</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>Панелі можна додавати чи видаляти в будь який час. Після першого запуску сеансу
+GNOME, стільниця містить принаймні одну панель. </para>
+    <para>З панелями можна виконувати такі дії:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Створювати панелі.</para>
+      </listitem>
+      <listitem>
+        <para>Видаляти панелі.</para>
+      </listitem>
+      <listitem>
+        <para>Ховати панелі.</para>
+      </listitem>
+      <listitem>
+        <para>Додавати об'єкти до панелей.</para>
+      </listitem>
+      <listitem>
+        <para>Маніпулювати з об'єктами панелей.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosoverview-26">
+      <title>Створювання панелей</title>
+      <para>Щоб додати панель, клацніть правою кнопкою миші на вільному місці будь-якої панелі, потім виберіть з меню <guimenuitem>Створити панель</guimenuitem>. На стільниці буде створено нову панель, яка початково не містить жодного об'єкту.
+Ви можете налаштувати нову панель в відповідності до своїх вподобань.
+Можете додавати до панелі об'єкти, змінювати тло панелі.
+Немає обмежень на кількість панелей, які ви можете створити.</para>
+    </sect2>
+    <sect2 id="gosoverview-508">
+      <title>Видалення панелей</title>
+      <para>Щоб видалити панель, клацніть на ній правою кнопкою миші та виберіть <guimenuitem>Видалити панель</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosoverview-24">
+      <title>Приховування панелей</title>
+      <para>Панелі можуть мати кнопки приховування на кожному кінці панелі. Коли клацаєте на
+кнопку приховування, панель ховається чи показується знову.</para>
+    </sect2>
+    <sect2 id="gosoverview-4">
+      <title>Додавання об'єктів до панелі</title>
+      <para>Панель може містити декілька типів об'єктів. Панель <xref linkend="gosoverview-FIG-28"/>
+містить кожний з цих типів. </para>
+      <figure id="gosoverview-FIG-28">
+        <title>Панель з різними типами об'єктів</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/sample_anno_panel.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Панель з різними типами об'єктів. Кнопка запуску калькулятора, Меню, аплет Програвач CD, Шухляда, Кнопка замикання екрану.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>До панелей можна додавати будь-які з наступних типів об'єктів:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Аплети</para>
+          <indexterm>
+            <primary>applets</primary>
+            <secondary>overview</secondary>
+          </indexterm>
+          <para><firstterm>Аплети</firstterm> - це маленькі інтерактивні програми, які містяться всередині панелі, наприклад
+<application>Програвач CD</application> на <xref linkend="gosoverview-FIG-28"/>. Кожний аплет має прости інтерфейс користувача
+через який можна керувати аплетом за допомогою миші чи клавіатури. Наступні аплети типово знаходяться на вашій панелі:</para>
+          <itemizedlist>
+            <listitem>
+              <para><application>Панель меню</application>:
+Надає доступ до меню <guimenu>Програми</guimenu> та меню <guimenu>Дії</guimenu>. Ці меню можна використовувати для доступу до
+програм, утиліт настройки та інших завдань.</para>
+            </listitem>
+            <listitem>
+              <para><application>Годинник</application>: Показує час. Крім того, можна настроїти
+<application>Годинник</application> для відображення часу.</para>
+            </listitem>
+            <listitem>
+              <para><application>Вибір вікон</application>: Показує список всіх
+відкритих вікон. Щоб передати фокус вікну, клацніть на значку аплету Вибір вікна та
+виберіть зі списку потрібний елемент.</para>
+            </listitem>
+            <listitem>
+              <para><application>Список вікон</application>: Показує кнопку
+для кожного відкритого вікна. Можна використовувати ці кнопки для згортання та відновлення вікон.
+Типово аплет розташований в нижній панелі.</para>
+            </listitem>
+            <listitem>
+              <para><application>Перемикач робочих областей</application>: Показує віртуальне
+представлення робочих місць. <application>Перемикач робочих областей</application> можна використовувати 
+для перемикання між робочими областями. Типово аплет розташований в нижній панелі.</para>
+            </listitem>
+          </itemizedlist>
+          <para>Щоб додати до панелі аплет, клацніть правою кнопкою миші на вільному місці панелі
+та виберіть <guimenuitem>Додати до панелі</guimenuitem>. Виберіть потрібний аплет, з таких підменю:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Допоміжні</para>
+            </listitem>
+            <listitem>
+              <para>Розваги</para>
+            </listitem>
+            <listitem>
+              <para>Інтернет</para>
+            </listitem>
+            <listitem>
+              <para>Мультимедія</para>
+            </listitem>
+            <listitem>
+              <para>Утиліти</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Кнопки запуску</para>
+          <para><firstterm>Кнопка запуску</firstterm> запускає специфічну програму, виконує команду чи відкриває файл.
+Значок калькулятора <xref linkend="gosoverview-FIG-28"/>
+є кнопкою запуску для програми <application>Калькулятор</application>.
+Кнопка запуску може знаходитись на панелі чи меню. Клацніть на кнопці, щоб виконати дію, яку асоційовано з
+кнопкою запуску.</para>
+          <para>Ви можете створювати власні кнопки запуску. Наприклад, створити кнопку запуску для
+програми текстового процесора, яку ви часто використовуєте, та розмістити її на панелі для зручності.
+Щоб додати нову кнопку до панелі, клацніть правою кнопкою миші на вільному місці панелі та виберіть
+<menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Кнопка запуску</guimenuitem></menuchoice>. </para>
+          <para>Або, щоб додати кнопку за меню, клацніть на вільному місці панелі та виберіть
+<menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Кнопка запуску за меню</guimenuitem></menuchoice>. Далі виберіть
+кнопку потрібну кнопку запуску за підменю.</para>
+        </listitem>
+        <listitem>
+          <para>Кнопки дій</para>
+          <para>Можна додати до панелі кнопки, щоб забезпечити швидкий доступ до
+поширених дій. Є такі кнопки:</para>
+          <itemizedlist>
+            <listitem>
+              <para><guibutton>Примусове завершення</guibutton>: Використовуйте, щоб знищити програму, яка
+не відповідає на ваші команди.</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Замкнути</guibutton>: Клацніть, щоб заблокувати екран.
+Значок кнопки <guibutton>Замкнути</guibutton> показано на  <xref linkend="gosoverview-FIG-28"/>. </para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Завершити роботу</guibutton>: Клацніть, щоб завершити поточний сеанс.</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Виконати</guibutton>: Відкриває діалог <guilabel>Виконати програму</guilabel>, з якого можна запускати програми.</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Знімок</guibutton>: Клацніть на кнопці, щоб зробити знімок екрану.</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Пошук</guibutton>: Відкриває програму <application>Інструмент пошуку</application>, з
+якої можна шукати файли. </para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Кнопка розчистки робочої стільниці</guibutton>: Клацніть, щоб згорнути
+всі вікна та показати стільницю.</para>
+            </listitem>
+          </itemizedlist>
+          <para>Щоб додати до панелі кнопку, клацніть правою кнопкою миші на вільному місці панелі та виберіть
+<menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Дії</guimenuitem></menuchoice>. Після цього виберіть бажану кнопку. </para>
+        </listitem>
+        <listitem>
+          <para>Меню</para>
+          <para>Всі функції середовища GNOME можна виконувати через меню. Щоб відкрити меню з
+панелі, клацніть на кнопці, що його представляє. Щоб відкрити меню з
+<application>Панелі меню</application>, клацніть на текст, що представляє меню. </para>
+          <para>Меню в панелі представлені в вигляді значка зі стрілкою.
+Стрілка вказує на те, що значок відкриває меню. Як приклад, дивіться значок
+меню на малюнку <xref linkend="gosoverview-FIG-28"/>.</para>
+          <para><guimenu>Головне меню</guimenu> можна додати до будь-якої панелі.
+Для цього клацніть правою кнопкою миші на вільному місці панелі та виберіть
+<menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Головне меню</guimenuitem></menuchoice>.</para>
+          <para>Також, можна додати до будь-якої панелі <application>Панель меню</application>
+Для цього клацніть правою кнопкою миші на вільному місці панелі та виберіть
+<menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Панель меню</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>Шухляди</para>
+          <para><firstterm>Шухляди</firstterm> - це додатки до панелей, які
+можна відкривати та ховати за допомогою значка шухляди, дивіться <xref linkend="gosoverview-FIG-28"/>.
+Шухляди можуть допомогти в організації роботи коли потрібно одночасно запускати велику кількість.
+На шухляду можна помістити такий самий набір функціональних елементів, що
+й на панель. </para>
+          <para>Щоб додати шухляду до панелі, клацніть правою кнопкою на вільному місці панелі та виберіть
+<menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Шухляда</guimenuitem></menuchoice>. </para>
+          <para>Щоб відкрити шухляду, клацніть на ній. Щоб закрити - клацніть на ній знову.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosoverview-21">
+      <title>Маніпуляції з об'єктами панелей.</title>
+      <para>Над об'єктами панелі можна виконувати такі дії:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Переміщати об'єкти всередині панелі чи на іншу панель.</para>
+          <para>Будь-який об'єкт панелі можна перемістити на інше положення. Крім того можна
+переміщати об'єкти з однієї панелі на іншу. Для перетягування об'єктів панелі використовуйте середню кнопку миші .</para>
+        </listitem>
+        <listitem>
+          <para>Копіювання елементів меню до панелі.</para>
+          <para>Перетягніть елемент з меню до панелі. Або, якщо елемент меню - кнопка запуску, клацніть
+на ній правою кнопкою та виберіть <guimenuitem>Додати цю кнопку запуску до панелі</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-42">
+    <title>Меню</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>Через меню можна отримати доступ до всіх функцій середовища GNOME.
+Меню можна відкрити з наступних компонентів середовища:</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <guimenu>Головне меню</guimenu>
+        </para>
+        <para><guimenu>Головне меню</guimenu> містить меню <guimenu>Програми</guimenu> та інші різноманітні функції.
+Меню <guimenu>Програми</guimenu> можна використовувати для доступу до стандартних програм, команд
+та параметрів конфігурації. </para>
+        <para>Щоб додати <guimenu>Головне меню</guimenu> до панелі, клацніть правою кнопкою миші на панелі та виберіть
+<menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Головне меню</guimenuitem></menuchoice>.
+Щоб відкрити <guimenu>Головне меню</guimenu>, клацніть на кнопці <guibutton>Головне меню</guibutton>. </para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>Панель меню</application>
+        </para>
+        <para><application>Панель меню</application> містить меню <guimenu>Програми</guimenu>
+та <guimenu>Дії</guimenu>. Використовуйте меню <guimenu>Дії</guimenu> та <guimenu>Програми</guimenu> для
+доступу до майже всіх стандартних програм, команд чи параметрів конфігурації. </para>
+        <para>Щоб додати <application>Панель меню</application> до панелі, клацніть правою кнопкою на панелі
+та виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Панель меню</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>Панелі</para>
+        <para>Ви можете додати до будь-якої панелі будь яку кількість міню .
+Щоб відкрити меню, клацніть на його значку в панелі.
+Ви також можете виконувати інші операції з меню, такі як копіювання елементів меню до панелі. </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-18">
+    <title>Вікна</title>
+    <indexterm>
+      <primary>windows</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>В середовищі GNOME можна відображати декілька вікон одночасно.
+Кожне вікно має своє обрамлення. В середині містяться активні елементи керування, які
+можна використовувати для взаємодії з вікнами.</para> GNOME
+    <sect2 id="gosoverview-16">
+      <title>Типи вікон</title>
+      <para>Середовище GNOME має такі типи вікон:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Вікна програм</para>
+          <para>Зазвичай при виконанні програми вікно має обрамлення.
+Верхня грань вікна програми має смугу заголовку. Вона містить кнопки, які можна
+використовувати для роботи з вікном. Кнопки на обрамленні вікна програми
+дозволяють виконувати такі дії, як відкривання <guimenu>Віконного
+маню</guimenu> або закривання вікна. <guimenu>Віконне меню</guimenu> дозволяє виконувати
+команди керування вікном.</para>
+        </listitem>
+        <listitem>
+          <para>Діалогові вікна</para>
+          <para>Діалогові вікно пов'язані з інтерактивними процесами. Вони містіть
+обрамлення вікна та одну інтерактивну панель, яка надає інформацію та містить
+елементи керування. В цій довідці діалогові вікна називаються просто діалогами.
+Обрамлення діалогового вікна містить кнопки, що дозволяють відкривати <guimenu>Віконне меню</guimenu> чи
+закрити діалогове вікно.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosoverview-32">
+      <title>Операції з вікнами</title>
+      <para>Обрамлення вікна програми чи діалогу використовують для виконання різноманітних операцій з вікнами.
+Більшість елементів керування розташовано на верхній частині обрамлення вікна.
+<xref linkend="gosoverview-FIG-33"/> демонструє верхню частину обрамлення звичайного вікна прграми.</para>
+      <figure id="gosoverview-FIG-33">
+        <title>Верхня частина обрамлення звичайного вікна програми</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Верхня частина обрамлення вікна програми. Містить: Кнопка меню вікна, Смуга заголовку, кнопки Згортання, Максимізації, Закривання вікна.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Активні елементи обрамлення вікна : </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="41.65*"/>
+          <colspec colname="colspec1" colwidth="58.35*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Елемент керування</para>
+              </entry>
+              <entry valign="top">
+                <para>Опис </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Кнопка <guibutton>Меню вікна</guibutton></para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Клацніть на кнопці <guibutton>Меню вікна</guibutton>, щоб відкрити <guimenu>Меню вікна</guimenu>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Смуга заголовку</para>
+              </entry>
+              <entry valign="top">
+                <para>Смугу заголовку можна використовувати для переміщення та затінення вікна. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Кнопка <guibutton>Згорнути</guibutton></para>
+              </entry>
+              <entry valign="top">
+                <para>Клацніть кнопку <guibutton>Згорнути</guibutton>, щоб
+згорнути вікно. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Кнопка <guibutton>Максимізувати</guibutton></para>
+              </entry>
+              <entry valign="top">
+                <para>Кнопку <guibutton>Максимізувати</guibutton> можна
+використовувати для максимізації та відновлення вікна.</para>
+                <para>Щоб максимізувати вікно, клацніть
+кнопку <guibutton>Максимізувати</guibutton>. Щоб відновити вікно, клацніть кнопку
+<guibutton>Максимізувати</guibutton> ще раз. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Кнопка <guibutton>Закрити вікно</guibutton></para>
+              </entry>
+              <entry valign="top">
+                <para>Клацніть на кнопці <guibutton>Закрити вікно</guibutton>, щоб закрити вікно. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>Межа</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Клацніть на межі, щоб відкрити <guimenu>Меню вікна</guimenu>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Щоб змінити розмір вікна, захопіть границю вікна, але не смугу заголовку.
+Перетягайте межу, доки вікно не отримає бажаний розмір.</para>
+    </sect2>
+    <sect2 id="gosoverview-20">
+      <title>Передавання фокусу вікну</title>
+      <para>Вікно, що має фокус, може приймати ввід з клавіатури та миші.
+В один і той же момент тільки одне вікно може мати фокус.
+Вікно, що має фокус відрізняється виглядом від інших вікон. </para>
+      <para>Щоб передати фокус до вікна можна використовувати такі елементи:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Елемент</para>
+              </entry>
+              <entry valign="top">
+                <para>Дія</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Миша</para>
+              </entry>
+              <entry valign="top">
+                <para>Клацнути на вікні, якщо воно видиме. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Комбінації клавіш</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Використовуйте комбінації клавіш, щоб переключатися між відкритими вікнами.
+Щоб передати фокус вікну, відпустіть клавіші. Типова комбінація клавіш для перемиканні
+між вікнами <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Список вікон</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Клацніть на кнопці, що представляє вікно в <application>Списку вікон</application>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <application>Вибір вікон</application>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Клацніть на значку аплету Вибір вікон та виберіть зі списку вікно, до якого
+хочете передати фокус.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Перемикач робочих областей</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Клацніть на вікні, якому хочете передати фокус в області аплету <application>Перемикач робочих
+областей</application>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-39">
+    <title>Робочі області</title>
+    <indexterm>
+      <primary>workspaces</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>В середовищі GNOME можливо відображення декількох вікон одночасно.
+Вікна відображуються в підрозділі середовища GNOME, яке має назву робочі області.
+Робочі області - це окремі області в яких можна працювати. </para>
+    <para>Кожна робоча область містить однакові стільниці, панелі та меню.
+Не заважаючи на це ви можете запускати різні програми та відкривати різні вікна в кожній
+робочій області. Одночасно можна відображати тільки одну робочу область середовища, але
+ви можете мати відриті вікна в інших областях. </para>
+    <para>Робочі області допомагають організовувати роботу в середовищі GNOME
+коли вам потрібно запускати багато програм водночас.
+Коли на поточній робочій області стане важко працювати з-за великої кількості відкритих вікон, ви
+можете перемістити частину з них в іншу робочу область.
+Крім того можна переходити в інші робочі області для запуску в них нових програм.</para>
+    <para>Робочі області відображуються в аплеті <application>Перемикач робочих областей</application>. На малюнку <xref linkend="gosoverview-FIG-42"/>, <application>Перемикач робочих областей</application> містить чотири робочі області.
+Перші три містять відкриті вікна. Останнє вікно не має жодного активного вікна.</para>
+    <figure id="gosoverview-FIG-42">
+      <title>Робочі області в аплеті Перемикач робочих областей.</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Перемикач робочих областей.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <sect2 id="gosoverview-41">
+      <title>Перемикання між робочими областями</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>switching between</secondary>
+      </indexterm>
+      <para>Перемикатися між робочими областями можна такими шляхами:</para>
+      <itemizedlist>
+        <listitem>
+          <para>В аплеті <application>Перемикач робочих областей</application>, клацніть на
+робочій області, в якій хочете працювати..</para>
+        </listitem>
+        <listitem>
+          <para>Натисніть <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>стрілка вправо</keycap></keycombo>, щоб переключитися в робочу область вправо відносно поточної.</para>
+        </listitem>
+        <listitem>
+          <para>Натисніть <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>стрілка вліво</keycap></keycombo>, щоб переключитися в робочу область вліво відносно поточної.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosoverview-40">
+      <title>Додавання робочих областей</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>specifying number of</secondary>
+      </indexterm>
+      <para>Щоб додати робочі області до середовища GNOME, клацніть правою кнопкою миші на аплеті <application>Перемикач
+робочих областей</application>, виберіть <guimenuitem>Настройка</guimenuitem>. Буде відкрито діалог властивостей <guilabel>Перемикача робочих областей</guilabel>. Використовуйте параметр <guilabel>Кількість робочих областей</guilabel>, щоб змінити кількість робочих областей.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-56">
+    <title>Файловий менеджер Наутілус</title>
+    <indexterm>
+      <primary>Nautilus file manager</primary>
+      <see>file manager</see>
+    </indexterm>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>Файловий менеджер <application>Наутілус</application> є інтегрованим засобом
+доступу до файлів, програм, FTP сайтів та URI. </para>
+    <para>Отримати доступ до файлів та тек на вашому диску можна такими шляхами:<itemizedlist><listitem><para>Переглянути файли чи теки</para><para>За допомогою вікна переглядача файлів можна переглядати файли і теки на вашій системі. Коли відкриваєте файл чи теку в вікні переглядача файлів, файл чи тека відкривається в новому вікні.
+</para><para>Вікно переглядача файлі містить такі панелі:<variablelist><varlistentry><term>Бічна панель</term><listitem><para>Дозволяє переміщатися по файлах системи.
+Панель також містить інформацію про поточний файл чи теку. Бічна панель знаходиться зліва від вікна переглядача файлів.</para></listitem></varlistentry><varlistentry><term>Панель перегляду</term><listitem><para>Показує вміст файла чи теки.
+Панель перегляду знаходиться справа від вікна переглядача файлів.</para></listitem></varlistentry></variablelist></para></listitem><listitem><para>Переглядати файли чи теки як об'єкти.</para><para>Файловий менеджер може представляти файли чи
+теки в вигляді індивідуальних файлових об'єктів.
+Коли відкриваєте файл чи теку з вікна файлових об'єктів, кожний файл відкривається в новому вікні.</para></listitem></itemizedlist></para>
+    <para>Файловий менеджер дозволяє:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Переглядати файли чи теки</para>
+        <para>Ви можете переглядати файли чи теки як значки чи як список.
+деякі типи файлів можна відображувати в вікні переглядача файлів.
+Також можна відкривати файли з вікна менеджера файлових об'єктів в відповідних програмах. </para>
+      </listitem>
+      <listitem>
+        <para>Керувати файлами чи теками.</para>
+        <para>За допомогою файлового менеджера можна керувати файлами й теками, тобто копіювати, переміщувати, перейменовувати та видаляти.</para>
+      </listitem>
+      <listitem>
+        <para>Виконувати скрипти</para>
+        <para>Можна виконувати скрипти з вікна файлового менеджера та вибирати файли й теки з якими потрібно виконувати скрипт.</para>
+      </listitem>
+      <listitem>
+        <para>Настроювати файли й теки</para>
+        <para>Можна додавати до файлів й тек емблеми для індикації певного стану. Наприклад, можна додати
+емблему <guilabel>Важливий</guilabel> до файлу, щоб позначити його як важливий. Крім того можна настроїти теки наступним чином: <itemizedlist><listitem><para>Додати примітку до теки.</para></listitem><listitem><para>Вказати власний малюнок чи візерунок до тла теки.</para></listitem><listitem><para>Вказати масштаб відображення елементів теки.</para></listitem></itemizedlist></para>
+      </listitem>
+      <listitem>
+        <para>Відкривати спеціальні<firstterm>Uniform Resource Identifiers</firstterm>
+(URIs)</para>
+        <para>Середовище містить спеціальні URI, що дозволяють отримувати доступ до спеціальних функцій файлового
+менеджера. Наприклад, щоб отримати доступ до утиліт настройки можна відкрити в вікні файлового менеджера
+URI <command>preferences:///</command>.</para>
+      </listitem>
+      <listitem>
+        <para>Запис компакт-дисків</para>
+        <para>Файловий менеджер має спеціальне положення, куди можна копіювати файли для подальшого запису на
+компакт-диск. Це робить запис компакт-дисків дуже легкою справою.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosoverview-511">
+      <title>Перегляд файлів з файлового менеджера</title>
+      <para>Щоб переглянути файлову систему, виберіть <menuchoice><guimenu>Програми</guimenu><guimenuitem>Перегляд файлової системи</guimenuitem></menuchoice>. Буде відкрито вікно файлового менеджера. Щоб знайти потрібний файл, використовуйте
+панель перегляду, робіть подвійне клацання на теці, щоб переглянути її вміст.
+Коли знайдете потрібний файл, зробіть на ньому подвійне клацання, щоб відкрити файл в вікні переглядача файлів.</para>
+    </sect2>
+    <sect2 id="gosoverview-58">
+      <title>Відкривання файлів з файлового менеджера.</title>
+      <para>Щоб знайти файл, який хочете відкрити, зробіть подвійне клацання на об'єкті стільниці <guilabel>Домашня тека</guilabel>. Буде відкрито вікно файлового об'єкту. Далі переміщуйтесь по файловій системі за допомогою файлового
+менеджера, коли відкриєте теку з потрібним файлом, зробіть на ньому подвійне клацання, щоб відкрити файл в відповідній програмі.</para>
+    </sect2>
+    <sect2 id="gosoverview-57">
+      <title>Переміщення файлів між теками</title>
+      <para>Можна переміщати файли між теками відкривши два або більше вікна файлового менеджера.
+Відкрийте в кожному з них різні теки та перетягайте файли з одного вікна в інше. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-11">
+    <title>Стільниця й об'єкти стільниці</title>
+    <indexterm>
+      <primary>Nautilus desktop</primary>
+      <see>desktop</see>
+    </indexterm>
+    <indexterm>
+      <primary>desktop</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>Стільниця - це активний компонент інтерфейсу користувача. Стільницю можна використовувати для виконання
+наступних дій:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Запуск програм, відкривання файлів чи тек. </para>
+        <para>Можна створювати <firstterm>об'єкти стільниці</firstterm> для зручного доступу до файлів, тек та програм, які
+ви часто використовуєте. Наприклад, додати кнопку запуску до програми, яку ви часто використовуєте.</para>
+      </listitem>
+      <listitem>
+        <para>Відкривання меню <guimenu>Стільниці</guimenu>menu.</para>
+        <para>Клацніть правою кнопкою миші на стільниці, щоб відкрити меню <guimenu>Стільниці</guimenu>.
+За допомогою цього меню можна виконувати різні операції зі стільницею.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Файловий менеджер керує стільницею.</para>
+    <sect2 id="gosoverview-29">
+      <title>Відкривання об'єктів стільниці.</title>
+      <para>Щоб відкрити об'єкт стільниці, зробіть на ньому подвійне клацання. У властивостях
+<application>Наутілусу</application> можна настроїти його поведінку таким чином, щоб типова дія
+виконувалась одним клацанням миші замість подвійного клацання.</para>
+    </sect2>
+    <sect2 id="gosoverview-19">
+      <title>Додавання об'єктів до стільниці</title>
+      <para>Можна додавати об'єкти до стільниці для зручного доступу до файлів і тек, які ви часто використовуєте.
+Це можна зробити наступними шляхами:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Використати меню <guimenu>Стільниці</guimenu>, щоб додати кнопку запуску до стільниці.</para>
+        </listitem>
+        <listitem>
+          <para>Перетягнути об'єкт в вікна файлового менеджера до стільниці.
+Наприклад, можна створити символічне посилання на файл, який ви часто використовуєте, потім
+перетягнути це посилання на стільницю. Значок посилання буде перенесено на стільницю.
+Щоб відкрити файл, зробіть подвійне клацання на цьому значку. Крім того можна перетягувати на стільницю
+файли й теки. </para>
+        </listitem>
+        <listitem>
+          <para>Перетягнути кнопку запуску програми з меню на стільницю. Наприклад, можна
+відкрити меню що містить кнопку запуску програми, яку ви часто використовуєте та перетягнути
+кнопку запуску на стільницю. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-509">
+    <title>Положення Починати тут</title>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/naut_starthere_launcher.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase> Значок Починати тут.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>Start Here location</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>Start Here
+location</secondary>
+      <see>Start Here location</see>
+    </indexterm>
+    <para>Місце <guilabel>Починати тут</guilabel> надає доступ до таких функцій:</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <guilabel>Прикладні програми</guilabel>
+        </para>
+        <para>Зробіть подвійне клацання на об'єкті <guilabel>Прикладні програми</guilabel> для доступу до
+програм GNOME. Крім того можна отримати доступ од меню <guimenu>Програми</guimenu> через
+<application>Панель меню</application> та <guimenu>Головне меню</guimenu>.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>Властивості середовища</guilabel>
+        </para>
+        <para>Щоб змінити властивості середовища GNOME, зробіть подвійне клацання на
+об'єкті <guilabel>Параметри</guilabel>. </para>
+      </listitem>
+      <listitem>
+        <para>Програми, що дозволяють настроїти вашу систему як сервер та змінити
+інші деталі конфігурації системи.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Місце <guilabel>Починати тут</guilabel> можна відкрити наступними шляхами:</para>
+    <itemizedlist>
+      <listitem>
+        <para>З вікна файлового менеджера</para>
+        <para>Відкрити URI <command>start-here:///</command> в вікні файлового менеджера.
+В вікні буде відображено вміст місця <guilabel>Починати тут</guilabel>.</para>
+      </listitem>
+      <listitem>
+        <para>Зі стільниці</para>
+        <para>Зробіть подвійне клацання на об'єкті стільниці <guilabel>Починати тут</guilabel>.
+В вікні буде відображено вміст місця <guilabel>Починати тут</guilabel>.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-55">
+    <title>Параметри середовища GNOME</title>
+    <indexterm>
+      <primary>preference tools</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>За допомогою утиліт настройки можна настроїти майже будь яку
+функцію середовища GNOME. Кожна утиліта керує певною частиною середовища GNOME.
+Наприклад, можна використати утиліту щоб вибрати тему середовища GNOME. <firstterm>Тема</firstterm> - це група
+пов'язаних настройок, що відповідає за візуальні властивості інтерфейсу середовища. </para>
+    <para>Запустити утиліту настройки можна одним з наступних шляхів:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Виберіть меню <menuchoice><guimenu>Програми</guimenu><guimenuitem>Параметри</guimenuitem></menuchoice>.
+Виберіть з підменю потрібний елемент. </para>
+      </listitem>
+      <listitem>
+        <para>Зробіть подвійне клацання на об'єкті стільниці <guilabel>Починати тут</guilabel>.
+В вікні <application>Наутілусу</application> буде відображено вміст місця <guilabel>Починати тут</guilabel>.
+Зробіть подвійне клацання на об'єкті <guilabel>Параметри</guilabel>, щоб відобразити в вікні <application>Наутілусу</application> утиліти настройки. Далі запустіть потрібну утиліту подвійним клацанням.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-54">
+    <title>Прикладні програми</title>
+    <indexterm>
+      <primary>applications</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>Програми, що йдуть разом з середовищем GNOME мають декілька загальних характеристик.
+Наприклад, програми мають багато однакових елементів. Причиною цього є те, що програми використовують
+однакові бібліотеки. Програми, які використовують стандартні бібліотеки GNOME мають
+назву <firstterm>GNOME-сумісними програмами</firstterm>. Наприклад, <application>Наутілус</application> 
+та текстовий редактор <application>gedit</application> є GNOME-сумісними програмами.</para>
+    <para>Середовище GNOME надає додаткові бібліотеки до бібліотек операційної системи.
+Ці бібліотеки дозволяють GNOME виконувати існуючі програми так само як і GNOME-сумісні програми.
+Наприклад, якщо операційна система на базі UNIX, ви можете запускати програми написані для X11 та
+Motif-програми з середовища GNOME.</para>
+    <para>GNOME-сумісні програми мають наступні риси:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Consistent look-and-feel</para>
+        <para>GNOME-compliant applications have a consistent look-and-feel. GNOME-compliant
+applications use the look-and-feel settings that you specify in the preference
+tools. You can use the following tools to change the look-and-feel of your
+GNOME-compliant applications:<itemizedlist><listitem><para><application>Menus &amp; Toolbars</application> preference
+tool</para></listitem><listitem><para><application>Theme</application> preference tool</para></listitem></itemizedlist></para>
+      </listitem>
+      <listitem>
+        <para>Панелі меню, панелі інструментів рядок стану</para>
+        <para>Більшість GNOME-сумісних програм має панель меню, панель інструментів та рядок стану.
+Панель меню завжди містить маню <guimenu>Файл</guimenu> та меню <guimenu>Довідка</guimenu>. Меню <guimenu>Файл</guimenu> завжди містить елемент <guimenuitem>Вийти</guimenuitem>, меню <guimenu>Довідка</guimenu> завжди містить елемент меню
+<guimenuitem>Про програму</guimenuitem>.</para>
+        <para><firstterm>Панель інструментів</firstterm> - це смуга, яка розташована під панеллю меню.
+Панель інструментів містить кнопки для виконання найбільш поширених команд. <firstterm>Рядок стану</firstterm> - це смуга
+в нижній частині вікна, вона надає інформацію про поточний стан того, що відбувається в вікні.
+GNOME-сумісні програми можуть також містити інші панелі. Наприклад, <application>Наутілус</application> містить <firstterm>панель положення</firstterm>.</para>
+        <para>Деякі з панелей GNOME-сумісних програм можна переміщати. Тобто панель має область, за яку можна
+схопити панель та перетягнути в інше положення. Панель можна перемістити на іншу частину вікна, чи пристикувати вздовж іншої межі. Наприклад, можна перемістити панель меню, панель інструментів та панель положення в файловому менеджері. </para>
+      </listitem>
+      <listitem>
+        <para>Стандартні комбінації клавіш</para>
+        <para>GNOME-сумісні програми використовують однакові комбінації клавіш для виконання подібних дій.
+Наприклад, щоб війти з GNOME-сумісної програми, натисніть <keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo>. Щоб скасувати дію в GNOME-сумісній програмі, натисніть <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>. </para>
+      </listitem>
+      <listitem>
+        <para>Механізм перетягування</para>
+        <para>GNOME-сумісні програми використовують однаковий протокол для реалізації механізму перетягування.
+Таким чином, GNOME-сумісні програми мають тісний зворотній зв'язок при перетягування елементів.</para>
+        <para>Використання однакового протоколу дозволяє GNOME-сумісним програмам
+взаємодіяти в витонченій манері. Наприклад, GNOME-сумісні програми розпізнають формат елементів, які
+ви перетягуєте. Якщо перетягуєте файл HTML за вікна <application>Наутілусу</application> до вікна переглядача веб-сторінок, файл буде показано в переглядачі в форматі HTML. Але якщо ви перетягнете файл HTML
+до текстового редактору, файл буде показано в текстовому редакторі в вигляді звичайного тексту. </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-12">
+    <title>Щоб дізнатися більше</title>
+    <indexterm>
+      <primary>help</primary>
+      <secondary>how to find</secondary>
+    </indexterm>
+    <para>Середовище GNOME має систему довідки, якщо бажаєте дізнатися більше про такі області: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Елементи середовища GNOME</para>
+      </listitem>
+      <listitem>
+        <para>Аплети</para>
+      </listitem>
+      <listitem>
+        <para>Програми</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosoverview-31">
+      <title>Щоб дізнатися більше про елементи середовища GNOME</title>
+      <indexterm>
+        <primary>help</primary>
+        <secondary>starting help system</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>help</primary>
+        <secondary>GNOME Desktop topics</secondary>
+      </indexterm>
+      <para>Ви можете дізнатися більше про певний елемент середовища GNOME
+скориставшись інтегрованою системою довідки. Щоб запустити систему довідки, виберіть<menuchoice><guimenu>Програми</guimenu><guimenuitem>Довідка</guimenuitem></menuchoice>. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-33">
+      <title>Щоб дізнатися більше про аплети</title>
+      <indexterm>
+        <primary>applets</primary>
+        <secondary>getting help</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>help</primary>
+        <secondary>applets</secondary>
+      </indexterm>
+      <para>Щоб отримати більше інформації про аплети, клацніть правою кнопкою на аплеті на виберіть <guimenuitem>Довідка</guimenuitem>. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-35">
+      <title>Щоб дізнатися більше про програми</title>
+      <indexterm>
+        <primary>applications</primary>
+        <secondary>help</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>help</primary>
+        <secondary>applications</secondary>
+      </indexterm>
+      <para>Щоб отримати більше інформації про програми, запустіть програму, потім виберіть меню <menuchoice><guimenu>Довідка</guimenu><guimenuitem>Зміст</guimenuitem></menuchoice>. Або запустіть
+програму та натисніть клавішу <keycap>F1</keycap>.</para>
+    </sect2>
+  </sect1>
+</chapter>

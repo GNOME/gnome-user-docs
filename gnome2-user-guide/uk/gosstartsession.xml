@@ -1,0 +1,291 @@
+<chapter id="gosgetstarted-1">
+  <title>Сеанси середовища GNOME</title>
+  <highlights>
+    <para>Глава розповідає про те, як запускати, керувати та завершувати
+сеанси середовища GNOME.</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>Запуск сеансу</title>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>starting</secondary>
+    </indexterm>
+    <para>Сеанс виконується поміж моментом коли ви реєструєтесь в системі та моментом коли ви виходите
+з середовища GNOME. Екран реєстрації - це брама до середовища GNOME.
+Екран реєстрації має поля для вводу імені користувача та паролю, дозволяє також
+вибрати параметри входу, наприклад мову сеансу. </para>
+    <para>Сеанс починається після вашої реєстрації в системі, тобто після того як ваші
+ім'я користувача та пароль будуть автентифіковані. Менеджер сеансів дозволяє керувати сеансами.
+Наприклад, ви можете зберегти стан вашого звичайного сеансу щоб повернутися до нього
+коли увійдете в систему наступного разу. Менеджер сеансів зберігає та відновлює наступне: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Вигляд та настройки поведінки, наприклад шрифти, кольори та настройки миші. </para>
+      </listitem>
+      <listitem>
+        <para>Запущені програми, наприклад вікна файлового менеджера та текстового редактора.
+Неможливо зберегти та відновити програми, які менеджер сеансів на підтримує.
+Наприклад, якщо ви запустите в командному рядку терміналу редактор <application>vi</application>, менеджер
+сеансів не зможе відновити стан редактора. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-85">
+      <title>Початок сеансу</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>logging in</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>logging in</primary>
+        <secondary>to session</secondary>
+      </indexterm>
+      <para>Щоб почати сеанс, виконайте такі дії:</para>
+      <orderedlist>
+        <listitem>
+          <para>В екрані реєстрації, клацніть на значку <guilabel>Сеанс</guilabel>.
+Виберіть середовище GNOME зі списку доступних.</para>
+        </listitem>
+        <listitem>
+          <para>Введіть ім'я користувача в полі <guilabel>Користувач</guilabel>
+та натисніть <keycap>Return</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Введіть пароль в полі <guilabel>Пароль</guilabel>
+та натисніть <keycap>Return</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <para>Якщо вам вдалось успішно зареєструватися, менеджер сеансів почне сеанс.
+Якщо ви увійшли до середовища перший раз, менеджер сеансів почне новий сеанс.
+Якщо ви вже входили до цього, менеджер сеансів відновить попередній сеанс, якщо ви
+її зберегли коли виходили з попередніх сеансів.</para>
+      <para>Якщо хочете вимкнути комп'ютер або перезапустити систему перед реєстрацією, клацніть
+на значку <guilabel>Система</guilabel> на екрані реєстрації. Буде відкрито діалог, виберіть
+потрібний параметр та клацніть <guibutton>Гаразд</guibutton>.</para>
+<!--What about failsafe gnome?-->
+    </sect2>
+    <sect2 id="gosstartsession-86">
+      <title>Запуск сеансів на різних мовах</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>different language, logging
+in</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>language, logging in in different</primary>
+      </indexterm>
+      <indexterm>
+        <primary>logging in</primary>
+        <secondary>to session in different language</secondary>
+      </indexterm>
+      <para>Щоб почати сеанс з мовою, відмінною від типової, виконайте такі дії.</para>
+      <orderedlist>
+        <listitem>
+          <para>На екрані реєстрації клацніть на значку <guilabel>Мова</guilabel>.
+Виберіть потрібну мову зі списку доступних.</para>
+        </listitem>
+        <listitem>
+          <para>Введіть ім'я користувача в полі <guilabel>Користувач</guilabel> та натисніть <keycap>Return</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Введіть пароль в полі <guilabel>Пароль</guilabel> та натисніть <keycap>Return</keycap>.</para>        
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>Запускаючи сеанс на іншій мові, ви тим самим вибираєте
+інтерфейс користувача сеансу. При цьому розкладка клавіатури не змінюється.
+Щоб її змінити використовуйте аплет <application>Перемикач розкладок клавіатури</application>.</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>Блокування екрану</title>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Значок блокування екрану.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>locking screen</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>locking screen</primary>
+    </indexterm>
+    <indexterm>
+      <primary>Lock button</primary>
+    </indexterm>
+    <para>Щоб заблокувати екран виконайте такі дії:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Виберіть <menuchoice><guimenu>Дії</guimenu><guimenuitem>Замкнути екран</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>Якщо на панелі присутня кнопка <guibutton>Замкнути</guibutton> клацніть на ній. </para>
+        <para>Щоб додати до панелі кнопку <guibutton>Замкнути</guibutton>, клацніть правою кнопкою миші на панелі.
+Виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guisubmenu>Дії</guisubmenu><guimenuitem>Замкнути</guimenuitem></menuchoice>.</para>
+      </listitem>
+    </itemizedlist>
+    <para>При блокуванні екрану запускається зберігач екрану. Щоб розблокувати екран,
+перемістіть мишу - буде показано діалог розблокування. Введіть ім'я користувача і пароль
+та натисніть <keycap>Return</keycap>.</para>
+    <para>Про настройку зберігача екрану дивіться <citetitle>Використання утиліт настройки</citetitle>.</para>
+    <note>
+      <para>Щоб коректно заблокувати екран, зберігач екрану повинен буде увімкнений.</para>
+    </note>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>Керування сеансами</title>
+    <indexterm>
+      <primary>preference tools</primary>
+      <secondary>Sessions</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>managing</secondary>
+    </indexterm>
+    <para>Для керування сеансами середовище GNOME, використовуйте утиліту настройки
+<application>Сеанси</application>. Утиліта <application>Сеанси</application> розпізнає такі типи програм: </para>
+    <itemizedlist>
+      <listitem>
+        <indexterm>
+          <primary>startup applications</primary>
+          <secondary>session-managed</secondary>
+        </indexterm>
+        <para>Програми, що підтримують сеанси. Коли зберігаєте сеанс, менеджер
+сеансів зберігає параметри всіх програм що підтримують сеанси. Коли ви увійдете
+в систему наступного разу, менеджер сеансів автоматично запустить усі ці програми. </para>
+      </listitem>
+      <listitem>
+        <para>Програми, які на підтримують сеанси. Коли зберігаєте сеанс, менеджер
+сеансів не зберігає програми, які не підтримують сеанси. Коли ви увійдете
+в систему наступного разу, менеджер сеансів не запустить програми, що не підтримують сеанси.
+Такі програми ви маєте запускати самостійно. Крім того можна використовувати утиліту
+<application>Сеанси</application> для запуску програм, що не підтримують сеанси автоматично. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>Визначення поведінки менеджера сеансі при вході та виході з системи</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>login behavior</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>logout behavior</secondary>
+      </indexterm>
+      <para>Використовуйте утиліту <application>Сеанси</application>, щоб настроїти поведінку
+менеджера сеансів. Встановіть потрібні параметри на вкладці <guilabel>Параметри сеансу</guilabel>.
+Наприклад, можна вибрати чи показувати малюнок заставки при вході в систему. </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>Використання початкових програм</title>
+      <indexterm>
+        <primary>startup programs</primary>
+        <see>startup applications</see>
+      </indexterm>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>using startup
+applications</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>startup applications</primary>
+        <secondary>non-session-managed</secondary>
+      </indexterm>
+      <para>Можна настроїти менеджер сеансів, щоб запускати програми що не підтримують сеанси
+автоматично при вході в систему. Для цього використовуйте утиліту настройки <application>Сеанси</application>.
+На вкладці <guilabel>Початкові програми</guilabel> можна додавати, редагувати та видаляти програми.
+Якщо зберегти настройки та вийти з системи, то наступного разу коли ви увійдете програми що вказані на 
+вкладці <guilabel>Початкові програми</guilabel> будуть запущені автоматично. </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>Перегляд програм поточного сеансу</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>browsing applications</secondary>
+      </indexterm>
+      <para>Щоб переглянути список програм поточного сеансу, використовуйте утиліту настройки
+<application>Сеанси</application>, вкладку <guilabel>Поточний сеанс</guilabel>.
+Тут можна побачити наступне:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Усі програми GNOME, що виконуються на поточний момент, які можуть з'єднатися з
+менеджером сеансів та зберегти стан програми.</para>
+        </listitem>
+        <listitem>
+          <para>Усі утиліти настройки, що можуть з'єднатися з менеджером сеансів та можуть
+зберегти стан утиліти.</para>
+        </listitem>
+      </itemizedlist>
+      <para>На вкладці <guilabel>Поточний сеанс</guilabel> можна використовувати
+обмежений набір функцій для виконання дій над програмами та утилітами.
+Наприклад, можна редагувати порядок запуску та стиль перезапуску для всіх програм
+в цьому списку. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>Зберігання параметрів сеансу</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>saving settings</secondary>
+      </indexterm>
+      <para>Щоб зберегти параметри сеансу, виконайте такі дії: </para>
+      <orderedlist>
+        <listitem>
+          <para>Настройте сеанс на автоматичне зберігання параметрів при завершенні сеансу.
+Для цього використовуйте утиліту <application>Сеанси</application>. На вкладці <guilabel>Параметри сеансу</guilabel>
+встановіть прапорець <guilabel>Автоматично зберігати зміни в сеансі</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Завершіть сеанс. </para>
+        </listitem>
+      </orderedlist>
+      <para>Якщо ви не вибрали параметр <guilabel>Автоматично зберігати зміни в сеансі</guilabel>, це можна зробити в діалозі
+завершення сеансу. Для цього виберіть параметр та продовжуйте вихід з системи.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>Завершення сеансу</title>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>ending</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>logging out</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>logging out</primary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Значок завершення сеансу.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>Щоб завершити сеанс, завершіть всі активні процеси, потім виконайте одну з наступних дій:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Клацніть на кнопці <guibutton>Завершити роботу</guibutton>.</para>
+      </listitem>
+      <listitem>
+        <para>Відкрийте <guimenu>Головне меню</guimenu> та виберіть <guimenuitem>Завершити роботу</guimenuitem><replaceable> ім'я користувача</replaceable>.</para>
+      </listitem>
+      <listitem>
+        <para>Виберіть <menuchoice><guimenu>Дії</guimenu><guimenuitem>Завершити роботу</guimenuitem></menuchoice>.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Перед завершенням сеансу ви, можливо, захочете зберегти поточні настройки, щоб відновити
+їх пізніше. Під час процесу виходу вам буде запропоновано діалог в якому можна вказати параметр щоб
+зберегти поточні настройки. Цю опцію можна увімкнути для автоматичного збереження настройок при завершенні сеансу в утиліті
+<application>Сеанси</application>.</para>
+  </sect1>
+</chapter>

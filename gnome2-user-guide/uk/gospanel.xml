@@ -1,0 +1,1747 @@
+<chapter id="gospanel-1">
+  <title>Робота з панелями</title>
+  <highlights>
+    <para>Ця глава описує використання панелей. </para>
+  </highlights>
+  <sect1 id="gospanel-2">
+    <title>Вступ</title>
+    <indexterm>
+      <primary>panels</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <para>Панель - це область середовища GNOME, з якої можна запускати програми, аплети
+та виконувати інші завдання. При першому запуску сеансу GNOME, стільниця містить
+принаймні одну панель. Системний адміністратор може встановити типовий вигляд панелі
+в відповідності до ваших локальних потреб, таким чином у вас може бути
+інший типовий набір панелей.</para>
+    <para>Вигляд та поведінку панелей можна змінювати в відповідності до ваших потреб.
+Крім того можна додавати чи видаляти об'єкти з панелей. Можна створити декілька панелей
+та вибрати для кожної з них різні властивості, об'єкти, тло. Панелі можна ховати.</para>
+    <para>Типово стільниця GNOME містить дві панелі, одна вздовж верхньої границі екрану, інша вздовж
+нижньої границі. Ці панелі описані в наступній главі.</para>
+    <sect2 id="gospanel-6">
+      <title>Верхня панель</title>
+      <para><indexterm><primary>panels</primary><secondary>top edge panel</secondary><see>top edge panel</see></indexterm><indexterm><primary>top edge panel</primary><secondary>introduction</secondary></indexterm><xref linkend="gospanel-FIG-60"/>
+демонструє приклад панелі вздовж верхньої границі екрану. Можливо ваш адміністратор встановив інший типовий
+вигляд цієї панелі в відповідності до локальних потреб, тобто ви можете побачити в себе панель що дещо
+відрізняється від наведеної. </para>
+      <figure id="gospanel-FIG-60">
+        <title>Приклад верхньої панелі</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/menu_panel.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Приклад верхньої панелі.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Верхня панель може містити такі об'єкти: <indexterm><primary>top edge panel</primary><secondary>default contents</secondary></indexterm></para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec3" colwidth="30.95*"/>
+          <colspec colname="colspec4" colwidth="69.05*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Об'єкт</para>
+              </entry>
+              <entry>
+                <para>Опис</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec3">
+                <para>Аплет <application>Меню</application></para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Містить меню <guimenu>Програми</guimenu> та <guimenu>Дії</guimenu>. Меню <guimenu>Програми</guimenu> пропонує стандартні програми GNOME. Меню <guimenu>Дії</guimenu> забезпечує команди для виконання різних задач.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Кнопка запуску переглядача файлів</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Клацніть цю кнопку, щоб відкрити домашню теку в вікні переглядача файлів <application>Наутілус</application>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>Кнопка запуску <application>Термінал</application></para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Клацніть цю кнопку щоб запустити програму <application>Термінал</application>. <application>Термінал</application> забезпечує доступ до командного рядка UNIX.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Аплет <application>Годинник</application></para>
+              </entry>
+              <entry valign="top">
+                <para><application>Годинник</application> показує поточний час. Клацніть на ньому, щоб відкрити
+меню команд годинника.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>Аплет <application>Регулятор гучності</application></para>
+              </entry>
+              <entry colname="colspec4">
+                <para><application>Регулятор гучності</application> дозволяє регулювати гучність вашої аудіо системи.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3" valign="top">
+                <indexterm>
+                  <primary>top edge panel</primary>
+                  <secondary>window list icon</secondary>
+                </indexterm>
+                <para>Значок <application>Вибір вікна</application></para>
+              </entry>
+              <entry colname="colspec4" valign="top">
+                <para><application>Вибір вікна</application> показує список всіх відкритих вікон.
+Щоб передати вікну фокус, клацніть на значку вибору вікна в правій частині верхньої панелі та виберіть вікно.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gospanel-3">
+      <title>Нижня панель</title>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>bottom edge panel</secondary>
+        <see>bottom edge panel</see>
+      </indexterm>
+      <indexterm>
+        <primary>bottom edge panel</primary>
+        <secondary>introduction</secondary>
+      </indexterm>
+      <para><xref linkend="gospanel-FIG-58"/>
+демонструє типовий вигляд нижньої панелі. Можливо ваш адміністратор встановив інший типовий
+вигляд цієї панелі в відповідності до локальних потреб, тобто ви можете побачити в себе панель що дещо
+відрізняється від наведеної. </para>
+      <figure id="gospanel-FIG-58">
+        <title>Типовий вигляд нижньої панелі</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome_panel.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Типовий вигляд нижньої панелі.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <indexterm>
+        <primary>bottom edge panel</primary>
+        <secondary>default contents</secondary>
+      </indexterm>
+      <para>Нижня панель містить такі елементи:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Кнопка <guibutton>Показати стільницю</guibutton>: Клацніть, щоб згорнути
+всі вікна та показати стільницю.</para>
+        </listitem>
+        <listitem>
+          <para>Аплет <application>Список вікон</application>: Показує кнопку для кожного відкритого
+вікна. За допомогою аплету <application>Список вікон</application> можна згортати та відновлювати вікна.</para>
+        </listitem>
+        <listitem>
+          <para>Аплет <application>Перемикач робочих областей</application>: Дозволяє перемикатися між робочими
+областями.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-5">
+    <title>Керування панелями</title>
+    <indexterm>
+      <primary>panels</primary>
+      <secondary>managing</secondary>
+    </indexterm>
+    <para>Наступні глави описують як керувати панелями.</para>
+    <sect2 id="gospanel-10">
+      <title>Додавання нової панелі</title>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>adding new</secondary>
+      </indexterm>
+      <para>Щоб додати панель, клацніть правою кнопкою на вільному місці будь-якої панелі та виберіть <guimenuitem>Нова панель</guimenuitem>.
+На стільниці з'явиться нова панель. Ця панель не містить жодного об'єкту, можете настроїти її в відповідності до ваших потреб.</para>
+    </sect2>
+    <sect2 id="gospanel-11">
+      <title>Взаємодія з панелями</title>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>interacting with</secondary>
+      </indexterm>
+      <para>Для взаємодії з панеллю, клацніть лівою, середньою чи правою кнопкою на вільному місці панелі.
+Крім того можна клацнути на одній з кнопок приховування, щоб показати панель, якщо вона схована.
+Якщо кнопки приховування невидимі, змініть властивості панелі щоб зробити їх видимими. </para>
+      <para>Взаємодіяти з панелями за допомогою миші можна таким чином:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Клацання середньої кнопки</term>
+          <listitem>
+            <para>Дозволяє захопити панель та перемістити її на нове положення.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Клацання правою кнопкою</term>
+          <listitem>
+            <para>Відкриває контекстне меню панелі.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="gospanel-12">
+      <title>Переміщення панелей</title>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>moving</secondary>
+      </indexterm>
+      <para>Панель можна переміщати на інше місце. Для цього клацніть та утримайте середньою кнопкою миші на вільному місці панелі та перетягніть її на нове положення.</para>
+    </sect2>
+    <sect2 id="gospanel-7">
+      <title>Приховування панелей</title>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>hiding</secondary>
+      </indexterm>
+      <para>Панелі можна ховати та показувати. Щоб сховати панель, використовуйте кнопку сховати. Якщо ці кнопки невидимі, їх можна
+зробити видимими змінивши властивості панелі. </para>
+      <para>Кнопки сховати розташовані на обох кінцях панелі і можуть містити значки стрілок. На наступному малюнку показані кнопки приховування. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/four_hide_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Горизонтальна та вертикальна панелі, обидві з кнопками приховування.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Щоб сховати панель, клацніть на одній з кнопок приховування. Панель зменшується в
+напрямку стрілок на кнопках приховування. Кнопка приховування на іншій стороні панелі залишається видимою.</para>
+      <para>Щоб показати сховану панель, клацніть на видимій кнопці приховування. Панель буде розширено в напрямку
+стрілки на кнопці приховування. Після цього обидві кнопки приховування будуть видимі.</para>
+      <para>Для панелі можна встановити режим автоматичного приховування. Коли встановлений цей режим, панель буде приховуватись
+автоматично коли миша не вказує на панель. Панель з'являється знову коли вказівник миші буде знаходитись в області екрану де перебуває панель. Для встановлення режиму автоматичного приховування, змініть властивості панелі. </para>
+    </sect2>
+    <sect2 id="gospanel-28">
+      <title>Зміна властивостей панелі</title>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>modifying properties</secondary>
+      </indexterm>
+      <para>Щоб змінити властивості всіх панелей, використовуйте утиліту настройки <guilabel>Панель</guilabel>. Наприклад, можна
+змінити властивості анімації панелей. </para>
+      <para>Крім того можна змінювати властивості для кожної панелі індивідуально. Можна змінити такі риси, як
+положення, поведінка приховування, візуальні властивості. </para>
+      <para>Щоб змінити властивості панелі, виконайте такі дії: </para>
+      <orderedlist>
+        <listitem>
+          <para>Клацніть правою кнопкою миші на вільному місті панелі, потім виберіть <guimenuitem>Властивості</guimenuitem>, щоб відкрити діалог <guilabel>Властивості панелі</guilabel>. Діалог <guilabel>Властивості панелі</guilabel> містить такі вкладки: </para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>Загальне</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>Тло</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Виберіть вкладку <guilabel>Загальне</guilabel>, щоб змінити розмір панелі, положення та властивості приховування. В наступній таблиці описані елементи вкладки <guilabel>Загальне</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Елементи діалогу</para>
+                  </entry>
+                  <entry>
+                    <para>Опис </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Назва</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Вказує назву панелі. Якщо ви використовуєте комбінації клавіш для перемикання між панелями
+стільниці, то при перемиканні буде показано цю назву.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Орієнтація</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Виберіть з розкривного списку бажане положення панелі.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Розмір</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Вкажіть в цьому полі розмір панелі.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Розширювати</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Виберіть цей параметр, якщо хочете щоб панель займала весь простір вздовж краю екрана.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Автоматичне приховування</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть параметр, щоб увімкнути автоматичне приховування. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Показувати кнопки приховування</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть параметр, щоб показувати кнопки приховування на краях панелі.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Стрілки на кнопках приховування</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть параметри, щоб показати стрілки на кнопках приховування, якщо увімкнено
+відображення кнопок приховування.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Щоб змінити тло панелі, клацніть на вкладці <guilabel>Тло</guilabel>. Виберіть тип тла панелі. Є такі варіанти:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="32.32*"/>
+              <colspec colwidth="67.68*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Елемент діалогу</para>
+                  </entry>
+                  <entry>
+                    <para>Опис</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Немає (Системна тема)</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть, щоб використовувати для панелі типове тло.
+Вигляд типового тла залежить від параметрів утиліти настройки <application>Тема</application>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Суцільний колір</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть параметр, щоб застосувати до тла панелі суцільний колір. Клацніть на кнопці <guibutton>Колір</guibutton> щоб відкрити діалог вибору кольору. Виберіть з цього діалогу потрібний колір. </para>
+                    <para>Використовуйте повзунок <guilabel>Стиль</guilabel>, щоб вказати 
+ступень прозорості чи непрозорості кольору. Наприклад, щоб зробити панель прозорою, перемістіть повзунок в напрямку <guilabel>Прозорий</guilabel>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Зображення тла</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть цей параметр щоб вказати зображення для тла панелі.
+Введіть ім'я файлу з зображенням в текстовому полі або клацніть кнопку <guibutton>Огляд</guibutton>.
+Коли виберете файл, клацніть <guibutton>Гаразд</guibutton>. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>Крім того можна перетягнути колір або зображення на панель, щоб встановити цей колір або зображення в якості
+тла панелі. Більш детально дивіться <xref linkend="gospanel-61"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Клацніть <guibutton>Закрити</guibutton>, щоб закрити діалог <guilabel>Властивості панелі</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+      <sect3 id="gospanel-61">
+        <title>Перетягування кольору чи зображення на тло панелі</title>
+        <indexterm>
+          <primary>panels</primary>
+          <secondary>changing background</secondary>
+        </indexterm>
+        <para>Можна перетягнути колір чи зображення на панель, щоб встановити цей колір чи зображення в
+якості тла панелі. Колір чи зображення можна перетягувати з багатьох програм.
+Наприклад, з файлового менеджера <application>Наутілус</application>. Крім того можна перетягувати колір з діалогу
+вибору кольору.</para>
+        <para>Також можна перетягнути зображення на панель і встановити його в якості тла панелі.
+Крім того можна перетягнути зображення шаблонів з файлового менеджера. </para>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-31">
+      <title>Видалення панелей</title>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>deleting</secondary>
+      </indexterm>
+      <para>Щоб видалити панель зі стільниці GNOME, клацніть на панелі яку хочете видалити правою кнопкою миші та виберіть
+<menuchoice><guimenuitem>Видалити цю панель</guimenuitem></menuchoice>.</para>
+      <note>
+        <para>На стільниці завжди повинна залишатися хоча б одна панель.
+Якщо у вас залишилась тільки одна панель, ви не зможете її видалити.</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-8">
+    <title>Об'єкти панелі</title>
+    <indexterm>
+      <primary>panels</primary>
+      <secondary>panel objects</secondary>
+      <see>panel objects</see>
+    </indexterm>
+    <para>Глава описує об'єкти, які ви можете додати до вашої панелі для подальшого використання.</para>
+    <sect2 id="gospanel-100">
+      <title>Взаємодія з об'єктами панелей</title>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>interacting with</secondary>
+      </indexterm>
+      <para>Взаємодію з панелями можна здійснювати за допомогою миші таким чином:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Клацання лівою кнопкою</term>
+          <listitem>
+            <para>Запускає об'єкти панелі.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Клацання правою кнопкою</term>
+          <listitem>
+            <para>Дозволяє захопити об'єкт з метою перетягування на інше місце.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Клацання правою кнопкою</term>
+          <listitem>
+            <para>Відкриває контекстне меню об'єкту панелі.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Взаємодіяти з об'єктами панелей можна різними способами. Детальніше дивіться <xref linkend="gospanel-39"/>.</para>
+    </sect2>
+    <sect2 id="gospanel-15">
+      <title>Додавання об'єкту до панелі</title>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>adding</secondary>
+      </indexterm>
+      <para>Можна додати об'єкт до панелі наступними шляхами: </para>
+      <itemizedlist>
+        <listitem>
+          <para>З контекстного меню панелі</para>
+          <para>Клацніть правою кнопкою миші на вільному просторі панелі, щоб відкрити контекстне меню.
+Це меню містить підменю <guisubmenu>Додати до панелі</guisubmenu>.
+За допомогою підменю <guisubmenu>Додати до панелі</guisubmenu> можна додати до панелі такі об'єкти:
+<itemizedlist><listitem><para>Аплети в таких категоріях: <guilabel>Допоміжні</guilabel>, <guilabel>Розваги</guilabel>, <guilabel>Інтернет</guilabel>, <guilabel>Мультимедія</guilabel>, <guilabel>Утиліти</guilabel>.</para></listitem><listitem><para>Кнопки для швидкого доступу до розповсюджених дій: Кнопка <guibutton>Примусове завершення</guibutton>, кнопка <guibutton>Замкнути</guibutton>, кнопка <guibutton>Завершити роботу</guibutton>, кнопка <guibutton>Виконати</guibutton>, кнопка <guibutton>Знімок</guibutton>, кнопка <guibutton>Пошук</guibutton>, кнопка <guibutton>Розчистка робочої стільниці</guibutton>.</para></listitem><listitem><para>Кнопка запуску</para></listitem><listitem><para>Кнопка запуску з меню</para></listitem><listitem><para><guimenu>Головне меню</guimenu></para></listitem><listitem><para><application>Панель меню</application></para></listitem><listitem><para>Шухляда</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>З будь-якого меню</para>
+          <para>Клацніть правою кнопкою на елементі запуску меню, щоб відкрити контекстне меню елемента.
+Можна використовувати це меню щоб додати кнопку запуску до панелі. </para>
+          <para>Крім того можна перетягувати меню, кнопки запуску та аплети з меню до панелей. </para>
+        </listitem>
+        <listitem>
+          <para>З файлового менеджера</para>
+          <para>Кожній кнопці запуску відповідає файл <filename>.desktop</filename>. Можна перетягнути файл
+<filename>.desktop</filename> на панель, щоб додати кнопку запуску до панелі. </para>
+<!--Each menu corresponds to a directory. You can drag the directory on to your panels to add the directory to the panel as a menu object. Is this still true?-->
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-9">
+      <title>Зміна властивостей об'єктів</title>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>modifying properties</secondary>
+      </indexterm>
+      <para>Деякі з об'єктів панелей, такі як кнопки запуску та шухляди, мають набір властивостей. Властивості різні для елементів різних типів. Об'єкти можуть, наприклад, мати такі параметри: <itemizedlist><listitem><para>Команда, яку виконує кнопка запуску.</para></listitem><listitem><para>Положення вихідного файлу меню.</para></listitem><listitem><para>Значок, що представляє об'єкт.</para></listitem></itemizedlist></para>
+      <para>Щоб змінити властивості об'єкту, виконайте такі дії: </para>
+      <orderedlist>
+        <listitem>
+          <indexterm>
+            <primary>panel object popup menu, illustration</primary>
+          </indexterm>
+          <para>Клацніть правою кнопкою на об'єкті, щоб відкрити контекстне меню об'єкту панелі, як показано на малюнку <xref linkend="gospanel-FIG-54"/>.</para>
+          <figure id="gospanel-FIG-54">
+            <title>Контекстне меню об'єкту панелі</title>
+            <screenshot>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/panel_object_popup_menu.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Контекстне меню об'єкту панелі. Елементи меню: Властивості, Видалити з панелі, Заблокувати, Перенести.</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </listitem>
+        <listitem>
+          <para>Виберіть <guimenuitem>Властивості</guimenuitem>. Використовуйте діалог <guilabel>Властивості</guilabel> для внесення змін до властивостей об'єкту. Параметри діалогу <guilabel>Властивості</guilabel> залежать від вибраного об'єкту. </para>
+        </listitem>
+        <listitem>
+          <para>Щоб застосувати зміни, клацніть на кнопці <guibutton>Гаразд</guibutton> та закрийте діалог <guilabel>Властивості</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gospanel-32">
+      <title>Переміщення елементів панелі</title>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>moving</secondary>
+      </indexterm>
+      <para>Ви можете переміщати об'єкти панелі всередині панелі та з однієї панелі на іншу.
+Крім того можна переміщати об'єкти між панелями та шухлядами.</para>
+      <para>Щоб перемістити об'єкт, клацніть на ньому середньою кнопкою та утримуючи кнопку
+натиснутою перетягніть на нове місце. Коли відпустите кнопку об'єкт з'явиться в
+новому місці.</para>
+      <para>Або використовуйте контекстне меню об'єкту: </para>
+      <orderedlist>
+        <listitem>
+          <para>Клацніть правою кнопкою на об'єкті та виберіть <guimenuitem>Перемістити</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Направте вказівник на нове місце та клацніть будь-яку кнопку миші. Це місце може бути будь-якою
+панеллю стільниці GNOME. </para>
+        </listitem>
+      </orderedlist>
+      <para>Переміщення об'єктів панелі впливає на розташування інших об'єктів панелі.
+Для керування переміщенням цих об'єктів ви можете вказати режим переміщення.
+Щоб вказати режим переміщення, натисніть під час переміщення об'єкту одну з таких кнопок:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="15.00*"/>
+          <colspec colname="colspec1" colwidth="30.00*"/>
+          <colspec colname="colspec3" colwidth="54.00*"/>
+          <thead>
+            <row rowsep="1">
+              <entry colname="colspec2">
+                <para>Клавіша</para>
+              </entry>
+              <entry>
+                <para>Режим переміщення</para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Опис</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Немає</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Переміщення з перемиканням</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Об'єкт обмінюється місцем з іншими об'єктами панелі. Цей режим є типовим.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>клавіша <keycap>Alt</keycap></para>
+              </entry>
+              <entry valign="top">
+                <para>Вільне переміщення</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Об'єкт перестрибує через інші об'єкти панелі на наступне порожнє місце.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Клавіша <keycap>Shift</keycap></para>
+              </entry>
+              <entry valign="top">
+                <para>Переміщення з виштовхуванням</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Об'єкт виштовхує інші об'єкти далі вздовж панелі. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gospanel-566">
+      <title>Блокування об'єктів панелі</title>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>locking</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>locking panel objects</primary>
+      </indexterm>
+      <para>Об'єкти панелі можна блокувати так, щоб вони постійно залишались на тих самих позиціях.
+Ця можливість корисна коли ви не хочете, щоб деякі з об'єктів панелі змінювали положення при переміщенні інших об'єктів.</para>
+      <para>Щоб заблокувати об'єкт на поточному місці панелі, клацніть правою кнопкою на об'єкті та виберіть з контекстного
+меню <guimenuitem>Заблокувати</guimenuitem>. Щоб розблокувати об'єкт виберіть, клацніть на ньому правою кнопкою та виберіть <guimenuitem>Розблокувати</guimenuitem>. </para>
+    </sect2>
+    <sect2 id="gospanel-33">
+      <title>Видалення об'єктів панелі</title>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>removing</secondary>
+      </indexterm>
+      <para>Щоб видалити об'єкт з панелі, клацніть на ньому правою кнопкою та виберіть з контекстного меню
+<guimenuitem>Видалити з панелі</guimenuitem>. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-17">
+    <title>Аплети</title>
+    <indexterm>
+      <primary>applets</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>panel objects</primary>
+      <secondary>applets</secondary>
+      <see>applets</see>
+    </indexterm>
+    <para>Аплет - це невелика програма яка має користувацький інтерфейс всередині панелі.
+Цей об'єкт панелі використовують для взаємодії з аплетом. Наприклад, наступний малюнок демонструє
+такі аплети, з ліва направо: </para>
+    <itemizedlist>
+      <listitem>
+        <para><application>Список вікон</application>: Показує відкриті на поточний момент вікна вашої системи.</para>
+      </listitem>
+      <listitem>
+        <para><application>Програвач CD</application>: Дозволяє керувати програвачем компакт-дисків.</para>
+      </listitem>
+      <listitem>
+        <para><application>Регулятор гучності</application>: Дозволяє керувати гучністю відтворення звуку в вашій системі.</para>
+      </listitem>
+    </itemizedlist>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/sample_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Приклади аплетів.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <sect2 id="gospanel-40">
+      <title>Додавання аплетів до панелі</title>
+      <indexterm>
+        <primary>applets</primary>
+        <secondary>adding to panel</secondary>
+      </indexterm>
+      <para>Можна додати аплет до панелі, використовуючи контекстне меню панелі.
+Клацніть правою кнопкою на вільному місці панелі, щоб відкрити контекстне меню.
+Виберіть <guimenu>Додати до панелі</guimenu>, потім виберіть з перерахованих підменю аплет, який хочете додати:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guimenu>Допоміжні</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Розваги</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Інтернет</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Мультимедія</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Утиліти</guimenu>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>Або перетягніть аплет з підменю на панель. </para>
+    </sect2>
+    <sect2 id="gospanel-39">
+      <title>Вибір аплету</title>
+      <indexterm>
+        <primary>applets</primary>
+        <secondary>selecting</secondary>
+      </indexterm>
+      <para>Щоб змінити властивості аплету потрібно клацнути на ньому правою
+кнопкою та вибрати потрібну дію з контекстного меню об'єкта. Для переміщення об'єкту
+використовуйте середню кнопку миші. </para>
+      <para>Є деякі обмеження щодо місця на якому ви клацаєте на аплеті: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Деякі аплети можуть мати специфічні контекстні меню в залежності від
+того на якому саме місці аплету ви клацаєте. Наприклад, аплет
+<application>Список вікон</application> має вертикальну смужку з лівого боку та кнопки, що
+представляють вікна з правого боку.
+Щоб відкрити контекстне меню об'єкта <application>Список вікон</application> потрібно клацнути
+правою кнопкою на смужці. Якщо клацнути правою кнопкою на кнопці в правій частині аплету, буде відкрито
+контекстне меню для кнопки.</para>
+        </listitem>
+        <listitem>
+          <para>Деякі аплети мають місце, яке ви не можете використовувати для вибору аплету.
+Наприклад, аплет <application>Командний рядок</application> має поле в якому можна вводити команди.
+Ви не можете керувати об'єктом клацнувши на цьому полі правою чи середньою кнопкою.
+Замість цього слід клацати на іншій частині аплету. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-41">
+      <title>Зміна властивостей об'єкту</title>
+      <indexterm>
+        <primary>applets</primary>
+        <secondary>modifying preferences</secondary>
+      </indexterm>
+      <para>Щоб змінити властивості аплету, виконайте такі дії: </para>
+      <orderedlist>
+        <listitem>
+          <para>Клацніть правою кнопкою миші на аплеті, виберіть <guimenuitem>Властивості</guimenuitem>. Використовуйте
+діалог <guilabel>Властивості</guilabel>, щоб змінити властивості аплету. Властивості аплетів відрізняються в залежності
+від аплету.</para>
+        </listitem>
+        <listitem>
+          <para>Клацніть <guibutton>Закрити</guibutton>, щоб закрити діалог <guilabel>Властивості</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-16">
+    <title>Кнопки запуску</title>
+    <indexterm>
+      <primary>panel objects</primary>
+      <secondary>launchers</secondary>
+      <see>launchers</see>
+    </indexterm>
+    <para>Клацнувши на кнопці запуску ви ініціюєте одну з таких дій: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Запуск специфічної програми.</para>
+      </listitem>
+      <listitem>
+        <para>Виконання команди.</para>
+      </listitem>
+      <listitem>
+        <para>Відкриття теки в вікні файлового менеджера.</para>
+      </listitem>
+      <listitem>
+        <para>Відкриття специфічного <firstterm>Uniform Resource
+Locator</firstterm> (URL) в вікні Веб-переглядача. URL - це адреса специфічного місця в Веб.</para>
+      </listitem>
+      <listitem>
+        <para>Відкриття спеціальних <firstterm>Uniform Resource Identifiers</firstterm>
+(URIs). Середовище GNOME має спеціальні ідентифікатори URI, які дозволяють отримувати доступ до
+особливих функцій файлового менеджера. <indexterm><primary>special URI
+locations</primary><secondary>and launchers</secondary></indexterm></para>
+      </listitem>
+    </itemizedlist>
+    <para>Кнопки запуску можна знайти на таких місцях стільниці:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Панелях: Кнопки запуску на панелях представлені в вигляді значків.</para>
+      </listitem>
+      <listitem>
+        <para>Меню: В меню, кнопки запуску представлені в вигляді елементів меню.
+Зазвичай елементи меню мають значок поруч з елементом меню.</para>
+      </listitem>
+      <listitem>
+        <para>Стільниця: На стільниці кнопки запуску представлені в вигляді значків.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Властивості кнопок запуску можна змінювати. Наприклад, властивості кнопки запуску
+включають ім'я кнопки запуску, значок, який її представляє та спосіб запуску. </para>
+    <sect2 id="gospanel-34">
+      <title>Додавання кнопки запуску до панелі</title>
+      <indexterm>
+        <primary>launchers</primary>
+        <secondary>adding to panel</secondary>
+      </indexterm>
+      <para>Кнопку запуску можна додавати до панелі такими шляхами:</para>
+      <itemizedlist>
+        <listitem>
+          <para>З контекстного меню панелі</para>
+          <para>Щоб створити нову кнопку запуску, клацніть правою кнопкою на порожньому місці панелі та виберіть
+<menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Кнопка запуску</guimenuitem></menuchoice>. Буде відкрито діалог <guilabel>Створити кнопку запуску</guilabel>. Більш детально про те, як завершити цей діалог, дивіться <xref linkend="gospanel-52"/>.</para>
+          <para>Або, щоб додати існуючу кнопку запуску до панелі, виберіть з контекстного меню панелі <menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Кнопка запуску з меню</guimenuitem></menuchoice>. З цього меню виберіть бажану кнопку запуску.</para>
+        </listitem>
+        <listitem>
+          <para>З будь-якого меню</para>
+          <para>Щоб додати кнопку запуску до панелі з меню, виконайте одну з таких
+дії:<itemizedlist><listitem><para>Відкрийте меню, що містить кнопку запуску. Перетягніть кнопку запуску на панель. </para></listitem><listitem><para>Відкрийте меню, що містить кнопку запуску з панелі, в якій хочете помістити кнопку запуску. Клацніть правою кнопкою миші на заголовку кнопки запуску. Виберіть <guimenuitem>Додати цю кнопку до панелі</guimenuitem>. </para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>З файлового менеджера</para>
+          <para>Знайдіть в вашій файловій системі файл <filename>.desktop</filename>, що представляє об'єкт. Щоб додати кнопку запуску, перетягніть файл <filename>.desktop</filename> до панелі. </para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gospanel-52">
+        <title>Створення кнопки запуску з діалогу Створити кнопку запуску</title>
+        <para>Щоб створити кнопку запуску з діалогу <guilabel>Створити кнопку запуску</guilabel> виконайте наступні дії: </para>
+        <orderedlist>
+          <listitem>
+            <para>Клацніть правою кнопкою на будь-якій частині панелі, з контекстного меню виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Кнопка запуску</guimenuitem></menuchoice>. Буде відкрито діалог <guilabel>Створити кнопку запуску</guilabel>. Діалог покаже вкладку <guilabel>Головне</guilabel>.</para>
+          </listitem>
+          <listitem>
+            <para>В цьому діалозі заповніть параметри кнопки запуску. Таблиця нижче описує
+елементи вкладки <guilabel>Головне</guilabel>: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="26.19*"/>
+                <colspec colname="colspec1" colwidth="73.81*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Елемент діалогу</para>
+                    </entry>
+                    <entry>
+                      <para>Опис </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Назва</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>В цьому текстовому полі введіть назву кнопки.
+На вкладці <guilabel>Додаткові</guilabel> можна додати переклади назви.
+Назва - це назва, що з'явиться коли додасте кнопку запуску до меню чи стільниці. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0" valign="top">
+                      <para>
+                        <guilabel>Загальна назва</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>В цьому текстовому полі вкажіть клас, до якого належить програма. Наприклад, ви можете написати <userinput>Текстовий редактор</userinput> для кнопки запуску <application>gedit</application>. На вкладці <guilabel>Додаткові</guilabel> можна додати переклади до загальної назви.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Коментар</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>В цьому текстовому полі введіть короткий опис для кнопки запуску.
+Коментар показується в вигляді підказки, коли ви наводите вказівник миші на кнопку запуску.
+На вкладці <guilabel>Додаткові</guilabel> можна додати переклади для коментарю. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Команда</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>В цьому полі введіть команду запуску, яку буде виконано коли клацаєте на кнопці запуску. Приклади команд дивіться в наступному розділі.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Тип</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Виберіть тип кнопки запуску з розкривного списку. Можливі такі варіанти: </para>
+                      <itemizedlist>
+                        <listitem>
+                          <para><guilabel>Програма</guilabel>: Виберіть цей тип, якщо кнопка запуску запускає програму.</para>
+                        </listitem>
+                        <listitem>
+                          <para><guilabel>Посилання</guilabel>: Виберіть цей тип, якщо створюєте посилання на URI.</para>
+                        </listitem>
+                      </itemizedlist>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Значок</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Виберіть значок для представлення кнопки запуску. Для цього клацніть кнопку
+<guibutton>Немає значка</guibutton>. З діалогу вибору значка виберіть бажаний значок. Щоб вибрати значок з
+іншого каталогу, клацніть <guibutton>Огляд</guibutton>. Коли виберете значок, клацніть
+<guibutton>Гаразд</guibutton>. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Запустити в терміналі</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Виберіть цей параметр, щоб запустити програму чи команду в вікні терміналу.
+Виберіть параметр для програми чи команди, яка не створює вікна при запуску.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Клацніть на вкладці <guilabel>Додаткові</guilabel>, щоб змінити додаткові параметри кнопки.</para>
+          </listitem>
+          <listitem>
+            <para>Введіть додаткові властивості кнопки.
+В таблиці нижче описані елементи верхньої частини вкладки <guilabel>Додаткові</guilabel>: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="32.03*"/>
+                <colspec colwidth="67.97*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Елемент діалогу</para>
+                    </entry>
+                    <entry>
+                      <para>Опис </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Спробуйте перед використанням</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Введіть команду в цьому полі для перевірки перед запуском кнопки. Якщо команда виконувана і має вірний шлях, кнопка запуску з'явиться на панелі.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Документація</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Введіть шлях до файлу довідки кнопки запуску.
+Якщо в цьому полі ввести шлях, в контекстному меню з'явиться елемент <guimenuitem>Довідка</guimenuitem>.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Крім того можна додати переклад до полів <guilabel>Назва</guilabel>, <guilabel>Загальна назва</guilabel> та <guilabel>Коментар</guilabel> з вкладки <guilabel>Загальне</guilabel>. Щоб додати переклад, введіть переклад в таблицю <guilabel>Назва/Коментар</guilabel> таким чином: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="20.78*"/>
+                <colspec colname="colspec1" colwidth="79.22*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Поле</para>
+                    </entry>
+                    <entry>
+                      <para>Опис </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>Перше поле</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Введіть дві літери коду для мови, до якої хочете додати переклад.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>Друге поле</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Введіть переклад поля <guilabel>Назва</guilabel>.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>Третє поле</para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Введіть переклад поля <guilabel>Загальна назва</guilabel>.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>Четверте поле</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Введіть переклад поля <guilabel>Коментар</guilabel>.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+            <para>Після цього клацніть кнопку <guibutton>Додати/Встановити</guibutton>. </para>
+            <para>Щоб змінити переклад, виберіть його. Текст перекладу з'явиться і нижній частині діалогу.
+Змініть текст на потрібний та клацніть кнопку <guibutton>Додати/Встановити</guibutton>.</para>
+            <para>Щоб видалити переклад, виберіть його та клацніть кнопку <guibutton>Видалити</guibutton>.</para>
+          </listitem>
+          <listitem>
+            <para>Щоб створити кнопку запуску та закрити діалог <guilabel>Властивості кнопки запуску</guilabel>, клацніть <guibutton>Гаразд</guibutton>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gospanel-556">
+        <title>Команди кнопки запуску</title>
+        <para>Тип команди, що можна вказати в полі <guilabel>Команда</guilabel>
+залежить від параметру, який ви вибрали з розкривного списку <guilabel>Тип</guilabel>.
+Якщо вибрати тип <guilabel>Програма</guilabel>, в цьому полі можна буде вводити нормальні команди.
+Наступна таблиця демонструє приклади команд та дії, які ці команди виконують:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Приклад команди</para>
+                </entry>
+                <entry>
+                  <para>Дія</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>gedit</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Запускає текстовий редактор <application>gedit</application>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>gedit /user123/loremipsum.txt</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Відкриває файл <filename>/user123/loremipsum.txt</filename> в текстовому редакторі <application>gedit</application>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>nautilus /user123/Projects</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Відкриває в вікні файлових об'єктів
+теку <filename>/user123/Projects</filename>.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Якщо вибрати з розкривного списку <guilabel>Тип</guilabel> елемент <guilabel>Посилання</guilabel>, зможете
+вводити команди посилання. Наступна таблиця демонструє деякі приклади посилань та дії, які виконують ці команди:
+<indexterm><primary>special URIs</primary><secondary>launchers</secondary></indexterm></para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Приклад команди посилання</para>
+                </entry>
+                <entry>
+                  <para>Дія</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>http://www.gnome.org</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Відкриває
+сторінку GNOME в типовому веб-переглядачі.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>ftp://ftp.gnome.org</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Відкриває в типовому веб-переглядачі FTP сайт GNOME. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>applications:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Відкриває положення <guilabel>Програми</guilabel>
+в вікні файлового менеджера. Зробіть подвійне клацання на програмі щоб запустити її.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>preferences:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Відкриває положення <guilabel>Властивості стільниці</guilabel> в вікні файлового менеджера.
+Зробіть подвійне клацання на потрібній утиліті настройки для її запуску.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-36">
+      <title>Зміна властивостей кнопки запуску</title>
+      <indexterm>
+        <primary>launchers</primary>
+        <secondary>modifying properties</secondary>
+      </indexterm>
+      <para>Щоб змінити властивості кнопки запуску, виконайте такі дії: </para>
+      <orderedlist>
+        <listitem>
+          <para>Клацніть правою кнопкою на кнопці запуску, щоб відкрити контекстне меню об'єкта панелі.</para>
+        </listitem>
+        <listitem>
+          <para>Виберіть <guimenuitem>Властивості</guimenuitem>. Використовуйте діалог <guilabel>Властивості кнопки запуску</guilabel>, 
+щоб змінити властивості.
+Докладніше про діалог <guilabel>Властивості кнопки запуску</guilabel> дивіться в <xref linkend="gospanel-52"/>. </para>
+        </listitem>
+        <listitem>
+          <para>Щоб закрити діалог, клацніть <guibutton>Закрити</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-557">
+    <title>Кнопки</title>
+    <indexterm>
+      <primary>buttons</primary>
+      <secondary>adding to panel</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>action buttons</primary>
+      <see>buttons</see>
+    </indexterm>
+    <para>Можна додати кнопки до панелі, щоб забезпечити швидкий доступ до поширених функцій. </para>
+    <sect2 id="gospanel-563">
+      <title>Кнопка Примусове завершення</title>
+      <indexterm>
+        <primary>buttons</primary>
+        <secondary>Force Quit</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Force Quit button</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Force Quit button</primary>
+      </indexterm>
+      <indexterm>
+        <primary>terminating applications</primary>
+      </indexterm>
+      <indexterm>
+        <primary>applications</primary>
+        <secondary>terminating</secondary>
+      </indexterm>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/force_quit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Значок примусового завершення.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Кнопка <guibutton>Примусове завершення</guibutton> дозволяє вибрати вікно для примусового завершення програми.
+Ця кнопка може бути корисною для завершення програми, яка не відповідає на ваші команди. </para>
+      <para>Щоб завершити таку програму, клацніть кнопку <guibutton>Примусове завершення</guibutton>, потім
+клацніть на вікні програми, яку хочете завершити.
+Якщо ви не хочете примусово звершити програму після того, як клацнули <guibutton>Примусове завершення</guibutton> , натисніть клавішу <keycap>Esc</keycap>.</para>
+    </sect2>
+    <sect2 id="gospanel-21">
+      <title>Кнопка Замкнути</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Значок замикання екрану.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>buttons</primary>
+        <secondary>Lock</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Lock button</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Lock button</primary>
+      </indexterm>
+      <indexterm>
+        <primary>locking screen</primary>
+      </indexterm>
+      <para>Кнопка <guibutton>Замкнути</guibutton>
+блокує екран і активізує зберігач екрану. Щоб знову отримати доступ до вашого сеансу, потрібно ввести пароль.
+Щоб заблокувати екран коректно, повинен бути увімкнений зберігач екрану.</para>
+      <para>Щоб додати кнопку замикання екрану до панелі, клацніть правою кнопкою на вільному місці панелі.
+Виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guisubmenu>Дії</guisubmenu><guimenuitem>Замкнути</guimenuitem></menuchoice>. </para>
+      <para>Клацніть правою кнопкою миші на кнопці <guibutton>Замкнути</guibutton>, щоб відкрити меню команд, пов'язаних зі зберігачем екрану. <xref linkend="gosstartsession-TBL-83"/> описує
+команди, що доступні з цього меню.</para>
+      <table frame="topbot" id="gosstartsession-TBL-83">
+        <title>Елементи меню замикання екрану</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="43.55*"/>
+          <colspec colname="colspec1" colwidth="56.45*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Елемент меню</para>
+              </entry>
+              <entry>
+                <para>Функція</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Активувати зберігач екрану</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Негайно активізує зберігач екрану, але не замикає екран.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Замкнути екран</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Замикає екран негайно. Ця команда виконує такі ж функції, що й клацання на кнопці
+<guibutton>Замкнути</guibutton>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Знищити демон зберігача екрану</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Знищує процес зберігача екрану. Після знищення процесу зберігача екрану ви не зможете замикати екран.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Перезапустити демон зберігача екрану</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Знищує та запускає знову процес зберігача екрану.
+Використовуйте цю команду після зміни паролю. Коли процес зберігача екрану буду запущено знову, ви зможете
+використовувати в ньому новий пароль.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Властивості</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Запускає утиліту настройки <guilabel>Зберігача екрану</guilabel>. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gospanel-20">
+      <title>Кнопка завершення роботи</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Значок завершення роботи.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>buttons</primary>
+        <secondary>Log Out</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Log Out button</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Log Out button</primary>
+      </indexterm>
+      <para>Кнопка <guibutton>Завершити роботу</guibutton> запускає процес завершення сеансу GNOME. </para>
+      <para>Щоб додати кнопку <guibutton>Завершити роботу</guibutton> до панелі, клацніть правою кнопкою на вільному
+місці панелі. Виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guisubmenu>Дії</guisubmenu><guimenuitem>Завершити роботу</guimenuitem></menuchoice>. Щоб завершити роботу чи вимкнути систему клацніть на кнопці <guibutton>Завершити роботу</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-555">
+      <title>Кнопка Виконати</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/run_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Значок виконати програму.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>buttons</primary>
+        <secondary>Run</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Run button</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Run button</primary>
+      </indexterm>
+      <para>Кнопку
+<guibutton>Виконати</guibutton> можна використовувати для відкриття діалогу <guilabel>Виконати програму</guilabel>. </para>
+      <para>Щоб додати кнопку <guibutton>Виконати</guibutton> до панелі, клацніть правою кнопкою миші на вільному місці панелі.
+Виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guisubmenu>Дії</guisubmenu><guimenuitem>Виконати</guimenuitem></menuchoice>. Щоб відкрити діалог <guilabel>Виконати програму</guilabel>, клацніть кнопку <guibutton>Виконати</guibutton>. </para>
+      <para>Докладніше про діалог <guilabel>Виконати програму</guilabel> дивіться в розділі <citetitle>Робота з меню</citetitle>.</para>
+    </sect2>
+    <sect2 id="gospanel-553">
+      <title>Кнопка знімок</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/screenshot_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Значок кнопки знімок.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>buttons</primary>
+        <secondary>Screenshot</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Screenshot button</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Screenshot button</primary>
+      </indexterm>
+      <para>Кнопку <guibutton>Знімок</guibutton> можна використовувати щоб зняти знімок екрану. </para>
+      <para>Щоб додати кнопку <guibutton>Знімок</guibutton> до панелі, клацніть правою кнопкою миші на
+порожньому місці панелі. Виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guisubmenu>Дії</guisubmenu><guimenuitem>Знімок</guimenuitem></menuchoice>. Щоб зняти знімок екрану, клацніть кнопку <guibutton>Знімок</guibutton>.</para>
+      <para>Більш докладно про те, як робити знімки, дивіться в розділі <citetitle>Робота з меню</citetitle>.</para>
+    </sect2>
+    <sect2 id="gospanel-554">
+      <title>Кнопка Пошук</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/searchtool_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Значок утиліти пошук.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>buttons</primary>
+        <secondary>Search</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Search button</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Search button</primary>
+      </indexterm>
+      <para>Кнопку <guibutton>Пошук</guibutton> можна використовувати для відкриття діалогу <application>Пошук файлів</application>. </para>
+      <para>Щоб додати кнопку <guibutton>Пошук</guibutton> до панелі, клацніть правою кнопкою миші на вільному місці панелі.
+Виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guisubmenu>Дії</guisubmenu><guimenuitem>Пошук</guimenuitem></menuchoice>. Щоб відкрити діалог <application>Пошук файлів</application>, клацніть кнопку <guibutton>Пошук</guibutton>. </para>
+      <para>Докладніше про <application>Пошук файлів</application> дивіться в розділі <citetitle>Довідка утиліти пошуку</citetitle>.</para>
+    </sect2>
+    <sect2 id="gospanel-564">
+      <title>Кнопка очистки робочої стільниці</title>
+      <indexterm>
+        <primary>buttons</primary>
+        <secondary>Minimise Windows</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Minimise Windows button</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Minimise Windows button</primary>
+      </indexterm>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/show_desktop_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Значок очистки робочої стільниці.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Кнопку <guibutton>Розчистка робочої стільниці</guibutton> можна використовувати для згортання всіх відкритих вікон та розчистки стільниці.</para>
+      <para>Щоб додати до панелі кнопку <guibutton>Розчистка робочої стільниці</guibutton>, клацніть правою кнопкою на вільному місці панелі. Виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guisubmenu>Дії</guisubmenu><guimenuitem>Кнопка розчистки робочої стільниці</guimenuitem></menuchoice>. Щоб згорнути всі вікна та показати стільницю, клацніть кнопку <guibutton>Розчистка робочої стільниці</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-567">
+      <title>Аплет зона сповіщення</title>
+      <indexterm>
+        <primary>applets</primary>
+        <secondary>Notification Area</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Notification
+Area applet</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Notification Area applet</primary>
+      </indexterm>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/notification_area_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Notification Area icon.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Аплет <application>Зона сповіщення</application> показує значки різних програм для індикації активності цих програм.
+Наприклад, якщо ви використовуєте програму <application>Програвач компакт-дисків</application> для прослуховування CD, значок програми
+буде показано в аплеті <application>Зона сповіщення</application>. На малюнку вище продемонстрований значок програвача компакт-дисків в аплеті <application>Зона сповіщення</application>. </para>
+      <para>Щоб додати до панелі аплет <application>Зона сповіщення</application>, клацніть правою кнопкою миші на вільному місці панелі.
+Виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guisubmenu>Утиліта</guisubmenu><guimenuitem>Зона сповіщення</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-37">
+    <title>Меню</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>adding to panel</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>panel objects</primary>
+      <secondary>menus</secondary>
+    </indexterm>
+    <para>До панелі можна додати такі типи меню: </para>
+    <itemizedlist>
+      <listitem>
+        <para><guimenu>Головне меню</guimenu>: З <guimenu>Головного меню</guimenu> можна отримати доступ майже до всіх стандартних програм, команд, параметрів конфігурації. Щоб додати до панелі <guimenu>Головне меню</guimenu>, клацніть правою кнопкою на вільному місці панелі, потім виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Головне меню</guimenuitem></menuchoice>.
+Можна додати до панелі будь-яку кількість об'єктів <guimenu>Головне меню</guimenu>. </para>
+      </listitem>
+      <listitem>
+        <para><application>Панель меню</application>: З об'єкту <application>Панель меню</application>
+можна отримати доступ майже до всіх програм, команд та параметрів конфігурації.
+<application>Панель меню</application> містить меню <guimenu>Програми</guimenu> та меню <guimenu>Дії</guimenu>. Щоб додати <application>Панель меню</application> до панелі, клацніть правою кнопкою миші на вільному місці панелі та
+виберіть <menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Панель меню</guimenuitem></menuchoice>. Можна додавати
+до панелей будь-яку кількість об'єктів <application>Панель меню</application>. </para>
+      </listitem>
+      <listitem>
+        <para>Системні меню: Системні меню містять стандартні програми та утиліти. Меню <guimenu>Програми</guimenu> та <guimenu>Дії</guimenu> є системними. Щоб додати до панелі системне меню, клацніть правою кнопкою на кнопці запуску в меню, виберіть <menuchoice><guimenu>Все меню</guimenu><guimenuitem>Додати до панелі як меню</guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Додані меню представлені на панелі значком зі стрілкою. Стрілка вказує на те, що значок є шухлядою. <xref linkend="gospanel-FIG-68"/> показує як меню зазвичай з'являється з панелі. </para>
+    <figure id="gospanel-FIG-68">
+      <title>Звичайні об'єкти меню панелі</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/typical_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Звичайні об'єкти меню панелі.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+  <sect1 id="gospanel-18">
+    <title>Шухляди</title>
+    <indexterm>
+      <primary>panel objects</primary>
+      <secondary>drawers</secondary>
+      <see>drawers</see>
+    </indexterm>
+    <para>Шухляда - це продовження панелі. Шухляду можна відкривати та закривати таким самим чином, як
+ховати чи показувати панелі.
+Шухляда може містити весь набір об'єктів панелі, включаючи кнопки запуску, меню, аплети, об'єкти панелей та інші шухляди.
+Коли відкриваєте шухляду, її об'єкти можна використовувати таким самим чином, як і об'єкти панелі. </para>
+    <para>Наступний малюнок демонструє відкриту шухляду, що містить два об'єкти панелі. </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/open_drawer.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Відкрита шухляда.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>Стрілка на шухляді говорить про те, що значок представляє шухляду чи меню.</para>
+    <para>Можна додавати, переносити та видаляти об'єкти з шухляди таким самим чином, як об'єкти панелі. </para>
+    <sect2 id="gospanel-42">
+      <title>Відкривання та закривання шухляди</title>
+      <indexterm>
+        <primary>drawers</primary>
+        <secondary>opening</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>drawers</primary>
+        <secondary>closing</secondary>
+      </indexterm>
+      <para>Щоб відкрити шухляду, клацніть на об'єкті шухляди в панелі. Закрити шухляду можна такими шляхами: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Клацнути на шухляді.</para>
+        </listitem>
+        <listitem>
+          <para>Клацнути на кнопці приховування шухляди.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-420">
+      <title>Додавання шухляди до панелі</title>
+      <indexterm>
+        <primary>drawers</primary>
+        <secondary>adding to panel</secondary>
+      </indexterm>
+      <para>Можна додати шухляду до панелі такими шляхами: </para>
+      <itemizedlist>
+        <listitem>
+          <para>З контекстного меню панелі</para>
+          <para>Клацнути правою кнопкою миші на вільному місці панелі та вибрати <menuchoice><guimenu>Додати до панелі</guimenu><guimenuitem>Шухляда</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>З будь якого меню</para>
+          <para>Можна додати меню до панелі як об'єкт шухляди.</para>
+          <para>Для цього відкрийте меню з панелі, клацніть правою кнопкою миші на кнопці запуску
+та виберіть <menuchoice><guimenu>Все меню</guimenu><guimenuitem>Додати до панелі як шухляду</guimenuitem></menuchoice>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-54">
+      <title>Додавання об'єктів до шухляди</title>
+      <indexterm>
+        <primary>drawers</primary>
+        <secondary>adding objects to</secondary>
+      </indexterm>
+      <para>Додати об'єкт до шухляди можна таким самим шляхом, як додати об'єкти до панелі. Докладніше дивіться <xref linkend="gospanel-15"/>.</para>
+    </sect2>
+    <sect2 id="gospanel-550">
+      <title>Зміна властивостей шухляди</title>
+      <indexterm>
+        <primary>drawers</primary>
+        <secondary>modifying properties</secondary>
+      </indexterm>
+      <para>Щоб змінити властивості всіх панелей та шухляд, використовуйте утиліту <application>Панель</application>.
+Наприклад, можна вибрати різноманітні параметри, пов'язані з виглядом, поведінкою об'єктів панелей та шухляд.
+Крім того можна вибрати параметри, що пов'язані тільки з шухлядами. Наприклад, вибрати параметр
+закривати шухляду коли ви клацнули на кнопці запуску з шухляди.</para>
+      <para>Крім того можна змінити інші властивості кожної окремої шухляди.
+Наприклад можна змінити вигляд шухляди та вказати чи потрібно шухляда мати кнопку приховування.</para>
+      <para>Щоб змінити властивості шухляди, виконайте такі дії: </para>
+      <orderedlist>
+        <listitem>
+          <para>Клацніть правою кнопкою миші на шухляді та виберіть <guimenuitem>Властивості</guimenuitem>. Буде відкрито діалог <guilabel>Властивості панелі</guilabel>, вкладка <guilabel>Загальне</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Встановіть потрібні параметри в цьому діалозі. Наступна таблиця описує елементи вкладки <guilabel>Загальне</guilabel>:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Елемент діалогу</para>
+                  </entry>
+                  <entry>
+                    <para>Опис </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Назва</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Назва панелі. Коли використовуєте комбінації кнопок для перемикання між панелями стільниці, буде показана ця назва.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Розмір</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть розмір панелі.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Значок</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Виберіть значок для представлення шухляди. Щоб відкрити діалог вибору значка, клацніть на <guibutton>Значку</guibutton>. Виберіть значок з діалогу, або клацніть <guibutton>Огляд</guibutton> та виберіть значок з іншого каталогу. Після вибору значка клацніть <guibutton>Гаразд</guibutton>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Показувати кнопки приховування</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть параметр, щоб показати кнопку приховування на шухляді</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Стрілки на кнопках приховування</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Виберіть параметр, щоб показати стрілку на кнопці приховування.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Вкладка <guilabel>Тло</guilabel> містіть параметри для зміни тла шухляди.
+Про те, як використовувати секцію <guilabel>Тло</guilabel> дивіться <xref linkend="gospanel-28"/>.
+Крім того можна перетягнути колір чи малюнок на шухляду, тим самим встановивши його в якості тла шухляди.
+Докладніше дивіться в <xref linkend="gospanel-61"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Щоб закрити діалог <guilabel>Властивості панелі</guilabel>, клацніть <guibutton>Закрити</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>
