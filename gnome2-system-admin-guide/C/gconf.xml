@@ -1,6 +1,4 @@
-<!-- converted from Solbook 2.2 SGML to Docbook 4.2 XML
-# Generator: s2d v1.4 2002-09-19
--->
+<?xml version="1.0" encoding="utf-8"?>
 <chapter id="gconf-0">
   <title>Using GConf</title>
   <highlights>
@@ -209,9 +207,22 @@ source in the home directory, in a file that is called <filename>.gconf.path</fi
         <primary>GConf</primary>
         <secondary>schema objects</secondary>
       </indexterm>
-      <para>A <firstterm>GConf schema</firstterm> is a collective term for a <firstterm>GConf schema key</firstterm> and a <firstterm>GConf schema object</firstterm>.
-The following table describes schema keys and schema objects and the relationship
-of these items to preference keys:</para>
+      <indexterm>
+        <primary>schemas</primary>
+        <secondary>description</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>schemas</primary>
+        <secondary>schema keys</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>schemas</primary>
+        <secondary>schema objects</secondary>
+      </indexterm>
+      <para>A <firstterm>GConf schema</firstterm> is a collective term
+for a <firstterm>GConf schema key</firstterm> and a <firstterm>GConf schema
+object</firstterm>. The following table describes schema keys and schema objects
+and the relationship of these items to preference keys:</para>
       <informaltable frame="topbot">
         <tgroup cols="2" colsep="0" rowsep="0">
           <colspec colname="colspec0" colwidth="24.31*"/>
@@ -347,9 +358,15 @@ configuration source are associated with schema keys.</para>
         <secondary>schema definition files</secondary>
         <tertiary>introduction</tertiary>
       </indexterm>
-      <para>Schemas are generated from <firstterm>schema definition files</firstterm>. A schema definition file defines the
-characteristics of all of the keys in a particular application. Schema definition
-files have a <filename>.schemas</filename> extension.</para>
+      <indexterm>
+        <primary>schemas</primary>
+        <secondary>schema definition files</secondary>
+        <tertiary>introduction</tertiary>
+      </indexterm>
+      <para>Schemas are generated from <firstterm>schema definition
+files</firstterm>. A schema definition file defines the characteristics of
+all of the keys in a particular application. Schema definition files have
+a <filename>.schemas</filename> extension.</para>
       <para>The schema definition files are included in the <filename>/etc/gconf/schemas</filename> directory. You can use the schema definition files to create a
 new configuration source.</para>
       <para>Some schema definition files correspond closely to a part of the GNOME
@@ -415,11 +432,15 @@ command:</para>
   <sect1 id="gconf-6">
     <title>GConf Command Line Tool</title>
     <indexterm>
+      <primary>gconftool-2</primary>
+      <see>GConf command line tool</see>
+    </indexterm>
+    <indexterm>
       <primary>GConf</primary>
       <secondary>command line tool</secondary>
     </indexterm>
-    <para><application>GConf</application> includes a command line
-tool, <command>gconftool-2</command>. You can use the <command>gconftool&ndash;2</command> command to perform the following tasks: </para>
+    <para><application>GConf</application> includes a
+command line tool, <command>gconftool-2</command>. You can use the <command>gconftool&ndash;2</command> command to perform the following tasks: </para>
     <itemizedlist>
       <listitem>
         <para>Set the values of keys.</para>
@@ -733,13 +754,17 @@ can use with the <command>gconftool-2</command> command.</para>
     <title>To Set Preference Values</title>
     <indexterm>
       <primary>GConf</primary>
-      <secondary>setting preference values</secondary>
+      <secondary>preference values, setting</secondary>
     </indexterm>
-    <para>You can set a mandatory value or a default value for a preference
-key. Before you change mandatory preference values or default preference values
-for users, you must ensure that the <application>GConf</application> daemon
-is not running for any user. Ensure that all users are logged out before you
-change preference values for users.</para>
+    <indexterm>
+      <primary>preference values</primary>
+      <secondary>setting
+with GConf</secondary>
+    </indexterm>
+    <para>You can set a mandatory value or a
+default value for a preference key. Before you change mandatory preference
+values or default preference values for users, you must ensure that the <application>GConf</application> daemon is not running for any user. Ensure that all users
+are logged out before you change preference values for users.</para>
     <para>To set a mandatory value or a default value for a preference key, use
 the <command>gconftool-2</command> command, as follows:</para>
     <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source <replaceable>configuration_source</replaceable> --type <replaceable>data_type</replaceable>
@@ -770,12 +795,17 @@ to general preferences.</para>
       <title>To Set HTTP Proxy Preferences</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting HTTP proxy</secondary>
+        <secondary>HTTP proxy, setting</secondary>
       </indexterm>
-      <para>To set HTTP proxy preferences, you modify the values of
-the preference keys in the <filename>/system/http_proxy/</filename> location.
-For example, to set a mandatory value for the HTTP proxy host, run the following
-command:</para>
+      <indexterm>
+        <primary>HTTP proxy</primary>
+        <secondary>setting with
+GConf</secondary>
+      </indexterm>
+      <para>To set HTTP proxy preferences, you modify
+the values of the preference keys in the <filename>/system/http_proxy/</filename>
+location. For example, to set a mandatory value for the HTTP proxy host, run
+the following command:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /system/http_proxy/host <replaceable>proxy_name</replaceable></userinput></para>
       <para>To set a default value for the HTTP proxy host, run the following command: </para>
@@ -792,11 +822,15 @@ if you do not want users to view the print jobs of other users, set a mandatory
 value as follows: </para>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting print manager</secondary>
+        <secondary>print manager, setting</secondary>
       </indexterm>
-      <para><computeroutput>#</computeroutput> <userinput>gconftool-2
---direct --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory --type
-bool --set /apps/gnome-print-manager/show_all_jobs false</userinput></para>
+      <indexterm>
+        <primary>print manager</primary>
+        <secondary>setting
+with GConf</secondary>
+      </indexterm>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory
+--type bool --set /apps/gnome-print-manager/show_all_jobs false</userinput></para>
       <para>To set a default value for this preference, run the following command:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /apps/gnome-print-manager/show_all_jobs
@@ -808,10 +842,14 @@ the other print manager preferences, see the <filename>gnome-print-manager.schem
       <title>To Set the Number of Workspaces</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting number of workspaces</secondary>
+        <secondary>number of workspaces, setting</secondary>
       </indexterm>
-      <para>To set a mandatory number of workspaces, use
-the following command:</para>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>setting number with GConf</secondary>
+      </indexterm>
+      <para>To set a mandatory
+number of workspaces, use the following command:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.mandatory --type int --set /apps/metacity/general/num_workspaces <replaceable>integer</replaceable></userinput></para>
       <para>To set a default number of workspaces, use the following command:</para>
@@ -825,11 +863,16 @@ schema definition file.</para>
       <title>To Set Keyboard Accessibility Preferences</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting keyboard accessibility</secondary>
+        <secondary>keyboard accessibility, setting</secondary>
       </indexterm>
-      <para>To set keyboard accessibility preferences, you
-modify the values of the preference keys in the <filename>/desktop/gnome/accessibility/keyboard</filename> location. For example, if you want to set a mandatory value so
-that keyboard accessibility features are enabled, run the following command:</para>
+      <indexterm>
+        <primary>keyboard</primary>
+        <secondary>setting accessibility preferences with GConf</secondary>
+      </indexterm>
+      <para>To set keyboard accessibility preferences, you modify the values of the preference
+keys in the <filename>/desktop/gnome/accessibility/keyboard</filename> location.
+For example, if you want to set a mandatory value so that keyboard accessibility
+features are enabled, run the following command:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.mandatory --type bool --set /desktop/gnome/accessibility/keyboard/enable
 true</userinput></para>
@@ -844,11 +887,16 @@ on the other keyboard accessibility preferences, see the <filename>desktop_gnome
       <title>To Set Keyboard Shortcut Preferences</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting keyboard shortcuts</secondary>
+        <secondary>keyboard shortcuts, setting</secondary>
       </indexterm>
-      <para>To set keyboard shortcut preferences, you modify the values
-of preference keys in two locations. The following table shows the locations
-to modify, and the part of the user interface to which the locations correspond:</para>
+      <indexterm>
+        <primary>keyboard</primary>
+        <secondary>setting shortcut preferences with GConf</secondary>
+      </indexterm>
+      <para>To set
+keyboard shortcut preferences, you modify the values of preference keys in
+two locations. The following table shows the locations to modify, and the
+part of the user interface to which the locations correspond:</para>
       <informaltable frame="topbot">
         <tgroup cols="2" colsep="0" rowsep="0">
           <colspec colwidth="50*"/>
@@ -907,12 +955,16 @@ on the other keyboard shortcut preferences, see the <filename>panel-global-confi
       <title>To Set Global Panel Preferences</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting global panel preferences</secondary>
+        <secondary>global panel preferences, setting</secondary>
       </indexterm>
-      <para>To set global preferences for panels, you modify
-the values of the preference keys in the <filename>/apps/panel/global</filename>
-location. For example, if you do not want users to ever use panel animation,
-set a mandatory value as follows:</para>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>setting
+global preferences with GConf</secondary>
+      </indexterm>
+      <para>To set global preferences
+for panels, you modify the values of the preference keys in the <filename>/apps/panel/global</filename> location. For example, if you do not want users
+to ever use panel animation, set a mandatory value as follows:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.mandatory --type bool --set /apps/panel/global/enable_animations
 false</userinput></para>
@@ -927,15 +979,20 @@ the other global panel preferences, see the <filename>panel-global-config.schema
       <title>To Set Preferences for Individual Panels and Panel Objects</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting panel object preferences</secondary>
+        <secondary>panel object preferences, setting</secondary>
       </indexterm>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting
-individual panel preferences</secondary>
+        <secondary>panel
+preferences, setting individual </secondary>
       </indexterm>
-      <para>The <filename>panel-per-panel-config.schemas</filename> schema definition file specifies the following details of the
-panels on the desktop:</para>
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>preferences, individual, setting with GConf</secondary>
+      </indexterm>
+      <para>The <filename>panel-per-panel-config.schemas</filename>
+schema definition file specifies the following details of the panels on the
+desktop:</para>
       <itemizedlist>
         <listitem>
           <para>Number of panels.</para>
@@ -965,12 +1022,16 @@ script that sets preferences for a panel and objects on the panel, see <xref lin
           <secondary>schema definition files</secondary>
           <tertiary>panel and panel object</tertiary>
         </indexterm>
-        <para>The schema definition
-file <filename>panel-per-panel-config.schemas</filename> contains sections
-that specify panels and panel contents for small, medium, and large screens.
-The section for small screens and the section for large screens are not functional
-at the time of publication of this guide. To learn about preference keys for
-panels or panel objects, read the section for medium screens only. </para>
+        <indexterm>
+          <primary>schemas</primary>
+          <secondary>schema definition files</secondary>
+          <tertiary>panel and panel object</tertiary>
+        </indexterm>
+        <para>The schema definition file <filename>panel-per-panel-config.schemas</filename> contains sections that specify panels
+and panel contents for small, medium, and large screens. The section for small
+screens and the section for large screens are not functional at the time of
+publication of this guide. To learn about preference keys for panels or panel
+objects, read the section for medium screens only. </para>
         <para>The medium section of the file <filename>panel-per-panel-config.schemas</filename> is structured as follows:</para>
         <orderedlist>
           <listitem>
@@ -1178,11 +1239,15 @@ to look-and-feel preferences.</para>
       <title>To Set Font Preferences</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting fonts</secondary>
+        <secondary>fonts, setting</secondary>
       </indexterm>
-      <para>To set font preferences, you modify the values of two preference keys.
-The following table shows the keys to modify, and the part of the user interface
-to which the keys correspond:</para>
+      <indexterm>
+        <primary>fonts</primary>
+        <secondary>setting with GConf</secondary>
+      </indexterm>
+      <para>To set font preferences, you modify the values of two preference
+keys. The following table shows the keys to modify, and the part of the user
+interface to which the keys correspond:</para>
       <informaltable frame="topbot">
         <tgroup cols="2" colsep="0" rowsep="0">
           <colspec colwidth="50*"/>
@@ -1222,8 +1287,13 @@ font, run the following command:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /desktop/gnome/interface/font_name &ldquo;Sans
 12&rdquo;</userinput></para>
-      <para>To set <literal>palatino 12</literal> as the default desktop background
-object font, run the following command:</para>
+      <indexterm>
+        <primary>desktop background</primary>
+        <secondary>font preferences,
+setting with GConf</secondary>
+      </indexterm>
+      <para>To set <literal>palatino 12</literal> as the default desktop background object font, run the following
+command:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/nautilus/preferences/desktop_font &ldquo;palatino
 12&rdquo;</userinput></para>
@@ -1232,12 +1302,15 @@ xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/nautilus/p
       <title>To Set Desktop Background Preferences</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting desktop background</secondary>
+        <secondary>desktop background, setting</secondary>
       </indexterm>
-      <para>To set desktop background preferences, you modify the values
-of the preference keys in the <filename>/desktop/gnome/background</filename>
-location. For example, to set a mandatory image for the desktop background,
-run the following command:</para>
+      <indexterm>
+        <primary>desktop background</primary>
+        <secondary>preferences, setting with GConf</secondary>
+      </indexterm>
+      <para>To set desktop
+background preferences, you modify the values of the preference keys in the <filename>/desktop/gnome/background</filename> location. For example, to set a mandatory
+image for the desktop background, run the following command:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /desktop/gnome/background/picture_filename <replaceable>filename.png</replaceable></userinput></para>
       <para>To set a default value for this preference, run the following command:</para>
@@ -1250,12 +1323,16 @@ on the other desktop background preferences, see the <filename>desktop_gnome_bac
       <title>To Set Splash Image Preferences</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>setting splash image</secondary>
+        <secondary>splash image, setting</secondary>
       </indexterm>
-      <para>To set splash image preferences, you modify the value of
-the preference keys in the <filename>/apps/gnome-session/options/</filename>
-location. For example, if you do not want users ever to see a splash image,
-set a mandatory value as follows:</para>
+      <indexterm>
+        <primary>splash screen</primary>
+        <secondary>image, setting
+with GConf</secondary>
+      </indexterm>
+      <para>To set splash image preferences, you
+modify the value of the preference keys in the <filename>/apps/gnome-session/options/</filename> location. For example, if you do not want users ever to see a
+splash image, set a mandatory value as follows:</para>
       <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.mandatory --type bool --set /apps/gnome-session/options/show_splash_screen
 false</userinput></para>
@@ -1274,24 +1351,17 @@ the other splash image preferences, see the <filename>gnome-session.schemas</fil
       <secondary>restoring default preference
 values</secondary>
     </indexterm>
-    <para>To restore the default preference values
-for a user, perform the following steps:</para>
-    <orderedlist>
-      <listitem>
-        <para>Log in as the user whose default preference values you want
-to restore.</para>
-      </listitem>
-      <listitem>
-        <para>Run the following command:</para>
-        <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --recursive-unset</userinput></para>
-        <para>This command resets the values of all preference keys, in all subdirectories,
+    <indexterm>
+      <primary>preference values</primary>
+      <secondary>restoring to default with GConf</secondary>
+    </indexterm>
+    <para>To
+restore the default preference values for a user, run the following command:</para>
+    <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source <replaceable>user_configuration_source</replaceable> --recursive-unset</userinput></para>
+    <para>Replace <replaceable>user_configuration_source</replaceable> with the
+configuration source in the <filename>.gconf</filename> directory in the home
+directory of the user. </para>
+    <para>This command resets the values of all preference keys, in all subdirectories,
 from the user setting to the setting in the default configuration source.</para>
-      </listitem>
-      <listitem>
-        <para>Log out from the user account.</para>
-      </listitem>
-    </orderedlist>
   </sect1>
 </chapter>
-
-
