@@ -1,0 +1,727 @@
+
+
+
+<chapter id="gosmetacity-1">
+<title>Working With Windows</title>
+<highlights><para>The information in this chapter describes how to use windows
+in the desktop. You can use several types of window manager with the GNOME
+desktop, for example, <application>Metacity</application> and <application>
+Sawfish</application>.  Many of the functions in <application>Metacity</application>
+are also available in <application>Sawfish</application>. This chapter describes
+the functions that are associated with the <application>Metacity</application>
+window manager.</para>
+</highlights>
+<sect1 id="gosmetacity-712">
+<title>Windows and Workspaces</title>
+<indexterm><primary>windows</primary><secondary>introduction</secondary></indexterm>
+<indexterm><primary>workspaces</primary><secondary>introduction</secondary>
+</indexterm><para>You can display many windows at the same time on your desktop.
+Your windows are displayed in subdivisions of your desktop that are called
+workspaces. A workspace is a discrete area on the desktop in which you can
+work. Every workspace on the desktop contains the same desktop background,
+the same panels, and the same menus. However, you can run different applications,
+and open different windows in each workspace. You can display only one workspace
+at a time on your desktop but you can have windows open in other workspaces.
+ </para>
+<para>The <application>Workspace Switcher</application> applet displays a
+visual representation of your windows and workspaces, as show in <xref linkend="gosmetacity-FIG-717"/>.
+</para>
+<figure id="gosmetacity-FIG-717">
+<title>Workspace Switcher Applet</title>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows Workspace Switcher applet. The context describes the graphic.
+</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+</figure>
+<para>You can add workspaces at any time. To add workspaces to your desktop,
+right-click on the <application>Workspace Switcher</application> applet, then
+choose <guimenuitem>Preferences</guimenuitem>. The <guilabel>Workspace Switcher
+Preferences</guilabel> dialog is displayed. Use the <guilabel>Number of workspaces
+</guilabel> spin box to specify the number of workspaces you require.</para>
+<sect2 id="gosmetacity-15">
+<title>Window Manager Behavior</title>
+<indexterm><primary>windows</primary><secondary>window managers</secondary>
+</indexterm><para>A window manager controls how windows appear and behave.
+The window manager manages where your windows are located, which window has
+focus, and the theme of the frame on the windows. The window frame contains
+buttons that enable you to perform standard actions such as moving, closing,
+and resizing windows.</para>
+<para>You can configure some window manager settings in the <application>
+Window Focus</application> preference tool. This manual describes the functions
+that are associated with the default configuration of the <application>Metacity
+</application> window manager. The default configuration is specified in the <application>
+Window Focus</application> preference tool. This manual also describes the
+default functions of the Crux theme.</para>
+</sect2>
+</sect1>
+<sect1 id="gosmetacity-713">
+<title>Types of Window</title>
+<indexterm><primary>windows</primary><secondary>types of</secondary></indexterm>
+<para>The desktop features the following types of windows: </para>
+<itemizedlist>
+<listitem><para>Application windows </para>
+<para>When you start an application, an application window opens. The window
+manager applies a frame to the application window. By default, the top edge
+of the application window contains a titlebar. The titlebar contains buttons
+that you can use to work with the window. The buttons in an application window
+frame enable you to perform actions such as open the <guimenu>Window Menu
+</guimenu>, or close the window. The <guimenu>Window Menu</guimenu> provides
+a number of actions that you can perform on the window. </para>
+</listitem>
+<listitem><para>Dialog windows</para>
+<para>A dialog window is a popup window in which you enter information or
+commands. The dialog appears within a window frame. </para>
+<para>You can use the top edge of the frame to work with the window. For example,
+you can use the titlebar to move the dialog. The frame also contains buttons
+that enable you to do the following:</para>
+<itemizedlist>
+<listitem><para>Open the <guimenu>Window Menu</guimenu> </para></listitem>
+<listitem><para>Close the dialog window</para></listitem>
+</itemizedlist>
+<para>Typically, you open a dialog window from an application window. When
+you open a dialog window, the window is usually raised and has focus. Some
+dialog windows do not allow you to use the application until you close the
+dialog. </para>
+</listitem>
+</itemizedlist>
+<sect2 id="gosmetacity-16">
+<title>Window Frames</title>
+<indexterm><primary>windows</primary><secondary>frames</secondary></indexterm>
+<para>A window frame is a border around a window. The window frame contains
+a titlebar. The titlebar contains buttons that you can use to work with the
+window.</para>
+<sect3 id="gosmetacity-10">
+<title>Themes</title>
+<indexterm><primary>windows</primary><secondary>themes</secondary></indexterm>
+<para>You can apply several themes to your window frames. The theme determines
+how the frame looks. To choose a theme for all your window frames, choose <menuchoice>
+<guimenu>Applications</guimenu><guisubmenu>Desktop Preferences
+</guisubmenu><guimenuitem>Theme</guimenuitem></menuchoice>. </para>
+<para>The default theme is Crux. This manual describes the functions that
+are associated with the Crux theme. </para>
+</sect3>
+<sect3 id="gosmetacity-17">
+<title>Control Elements</title>
+<indexterm><primary>windows</primary><secondary>frame control elements</secondary>
+</indexterm><para>You can use the window frame to perform various actions
+with the window. In particular, the titlebar contains various buttons. The
+following figure shows the titlebar of an application window:</para>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows window titlebar. Callouts: Window Menu button, Titlebar, Minimize, Maximize, Close Window buttons.
+</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+<para>Dialog windows also contain some of the window frame control elements. <xref
+linkend="gosmetacity-TBL-1"/> describes the active control elements on window
+frames, from left to right.</para>
+<table frame="topbot" id="gosmetacity-TBL-1">
+<title>Window Frame Control Elements</title>
+<tgroup cols="2" colsep="0" rowsep="0"><colspec colname="COLSPEC0" colwidth="41.65*"/>
+<colspec colname="COLSPEC1" colwidth="58.35*"/>
+<thead>
+<row rowsep="1"><entry valign="top"><para>Control Element</para></entry><entry
+valign="top"><para>Description </para></entry></row>
+</thead>
+<tbody>
+<row><entry colname="COLSPEC0" valign="top"><para><guibutton>Window Menu</guibutton>
+button</para></entry><entry colname="COLSPEC1" valign="top"><para>Click on
+the button to open the <guimenu>Window Menu</guimenu>. </para></entry></row>
+<row><entry valign="top"><para>Titlebar</para></entry><entry valign="top"><para>
+You can use the titlebar to perform the following actions: </para><itemizedlist>
+<listitem><para>To give focus to the window click on the titlebar.</para>
+</listitem>
+<listitem><para>To move the window grab the titlebar and drag the window to
+the new location. </para></listitem>
+<listitem><para>To shade the window, double-click on the titlebar. To unshade
+the window, double-click on the titlebar again.</para></listitem>
+</itemizedlist></entry></row>
+<row><entry valign="top"><para><guibutton>Minimize</guibutton> button </para></entry>
+<entry valign="top"><para>Click on the <guibutton>Minimize</guibutton> button
+to minimize the window. </para></entry></row>
+<row><entry valign="top"><para><guibutton>Maximize</guibutton> button </para></entry>
+<entry valign="top"><para>Click on the <guibutton>Maximize</guibutton> button
+to maximize the window. </para></entry></row>
+<row><entry colname="COLSPEC0"><para><guibutton>Close Window</guibutton> button
+</para></entry><entry colname="COLSPEC1"><para>Click on the <guibutton>Close
+Window</guibutton> button to close the window. </para></entry></row>
+<row><entry valign="top"><para>Border</para></entry><entry valign="top"><para>
+The border around the window. Use the border to perform the following actions: 
+</para><itemizedlist>
+<listitem><para>To resize the window grab the border and drag the border to
+the new size. </para></listitem>
+<listitem><para>To open the <guimenu>Window Menu</guimenu>, right-click on
+the border.</para></listitem>
+</itemizedlist></entry></row>
+<row><entry colname="COLSPEC0" valign="top"><para>Window contents</para></entry><entry
+colname="COLSPEC1"><para>The area inside the window frame. Use the window
+contents to perform the following actions:</para><itemizedlist>
+<listitem><para>To move a window, press-and-hold <keycap>Alt</keycap>,  click
+in the window contents, then drag the window to the new location.</para></listitem>
+<listitem><para>To resize a window, press-and-hold <keycap>Alt</keycap>, 
+then middle-click near the corner you want to resize. To resize the window,
+drag from the corner on which you middle-clicked.</para></listitem>
+<listitem><para>To open the <guimenu>Window Menu</guimenu>, press-and-hold <keycap>
+Alt</keycap>, then right-click in the window contents.</para></listitem>
+</itemizedlist></entry></row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="gosmetacity-714">
+<title>Menus and Applets for Working With Windows and Workspaces</title>
+<indexterm><primary>windows</primary><secondary>applets and menus for working
+with</secondary></indexterm><para>This section describes the menus and applets
+that you can use to work with windows and workspaces.</para>
+<sect2 id="gosmetacity-24">
+<title>Window Menu</title>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/window_menu.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows Window Menu. Menu items: Minimize, Maximize, Shade, Move, Resize, Close, Put on All Workspaces, Move to workspace_name.
+</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+<indexterm><primary>windows</primary><secondary>Window Menu</secondary></indexterm>
+<indexterm><primary>menus</primary><secondary>Window Menu</secondary></indexterm>
+<para>The <guimenu>Window Menu</guimenu> is a menu of commands that you can
+use to perform actions on your windows. To open the <guimenu>Window Menu</guimenu>
+perform one of the following actions:</para>
+<itemizedlist>
+<listitem><para>Click on the <guibutton>Window Menu</guibutton> button on
+the window that you want to work with.</para></listitem>
+<listitem><para>Press <keycombo><keycap>Alt</keycap><keycap>spacebar</keycap></keycombo>.</para>
+</listitem>
+<listitem><para>Press-and-hold <keycap>Alt</keycap>, then right-click on any
+part of the window that you want to work with. </para></listitem>
+</itemizedlist>
+<para><xref linkend="gosmetacity-TBL-25"/> describes the commands and submenus
+in the <guimenu>Window Menu</guimenu>.</para>
+<table frame="topbot" id="gosmetacity-TBL-25">
+<title>Window Menu Commands and Submenus</title>
+<tgroup cols="2" colsep="0" rowsep="0"><colspec colname="COLSPEC2" colwidth="32.34*"/>
+<colspec colname="COLSPEC3" colwidth="67.66*"/>
+<thead>
+<row rowsep="1"><entry valign="top"><para>Menu Item</para></entry><entry valign="top"><para>
+Function </para></entry></row>
+</thead>
+<tbody>
+<row><entry valign="top"><para><guimenuitem>Minimize</guimenuitem></para></entry>
+<entry valign="top"><para>Minimizes the window.</para></entry></row>
+<row><entry valign="top"><para><guimenuitem>Maximize</guimenuitem> or <guimenuitem>
+Unmaximize</guimenuitem></para></entry><entry valign="top"><para>Maximizes
+the window. If the window is already maximized, choose <guimenuitem>Unmaximize
+</guimenuitem> to restore the window to its previous size. </para></entry>
+</row>
+<row><entry valign="top"><para><guimenuitem>Shade</guimenuitem> or <guimenuitem>
+Unshade</guimenuitem></para></entry><entry valign="top"><para>Shades the window.
+If the window is already shaded, choose <guimenuitem>Unshade</guimenuitem>
+to restore the window to its previous size. </para></entry></row>
+<row><entry colname="COLSPEC2"><para><guimenuitem>Move</guimenuitem></para></entry>
+<entry colname="COLSPEC3"><para>Enables you to use the arrow keys to move
+the window.</para></entry></row>
+<row><entry colname="COLSPEC2"><para><guimenuitem>Resize</guimenuitem></para></entry>
+<entry colname="COLSPEC3"><para>Enables you to use the arrow keys to resize
+the window.</para></entry></row>
+<row><entry colname="COLSPEC2"><para><guimenuitem>Close</guimenuitem></para></entry>
+<entry colname="COLSPEC3"><para>Closes the window.</para></entry></row>
+<row><entry colname="COLSPEC2"><para><guimenuitem>Put on All Workspaces</guimenuitem>
+or <guimenuitem>Only on This Workspace</guimenuitem></para></entry><entry
+colname="COLSPEC3"><para>Puts the window on all of your workspaces. If the
+window is already on all of your workspaces, choose <guimenuitem>Only on This
+Workspace</guimenuitem>  to put the window on the current workspace only.
+</para></entry></row>
+<row><entry colname="COLSPEC2"><para><guimenuitem>Move to <replaceable>workspace_name
+</replaceable></guimenuitem> or <guimenuitem>Only on <replaceable>workspace_name
+</replaceable></guimenuitem></para></entry><entry colname="COLSPEC3"><para>
+Moves the window to the workspace that you choose.  If the window is on all
+of your workspaces, choose <guimenuitem>Only on <replaceable>workspace_name
+</replaceable></guimenuitem> to put the window on the workspace that you want.
+</para></entry></row>
+</tbody>
+</tgroup>
+</table>
+</sect2>
+<sect2 id="gosmetacity-18">
+<title>Window List Applet</title>
+<indexterm><primary>windows</primary><secondary>Window List applet</secondary>
+<see>Window List applet</see></indexterm><indexterm><primary>Window List applet
+</primary><secondary>introduction</secondary></indexterm><indexterm><primary>
+window lists</primary><secondary>Window List applet</secondary></indexterm>
+<indexterm><primary>applets</primary><secondary>Window List</secondary></indexterm>
+<para><application>Window List</application> displays a button for each application
+window that is open. You can use the <application>Window List</application>
+to perform the following tasks:</para>
+<itemizedlist>
+<listitem><para>To minimize a window</para>
+<para>Click on the button that represents the window.</para></listitem>
+<listitem><para>To restore a minimized window</para>
+<para>Click on the button that represents the window.</para></listitem>
+<listitem><para>To give focus to a window</para>
+<para>Click on the button that represents the window.</para></listitem>
+</itemizedlist>
+<para>When you open an application window, <application>Window List</application>
+displays a button that represents the window. The window list buttons show
+which application windows are open. You can view which windows
+are open even if some windows are minimized, or other windows overlap a window. <application>
+Window List</application> can display buttons for the windows in your current
+workspace, or in all workspaces. To select this option, you must change the
+preferences of <application>Window List</application>.</para>
+<para>You can also right-click on a window list button to open the <guimenu>
+Window Menu</guimenu> for the window that the button represents. When you
+open the <guimenu>Window Menu</guimenu> from <application>Window List</application>,
+the <guimenu>Window Menu</guimenu> does not contain the workspace commands.
+For more information on the <guimenu>Window Menu</guimenu> commands, see <xref
+linkend="gosmetacity-24"/>.</para>
+<para><xref linkend="gosmetacity-FIG-8"/> shows <application>Window List</application>
+when the following windows are open:</para>
+<itemizedlist>
+<listitem><para><application>gedit</application></para></listitem>
+<listitem><para><application>Dictionary</application></para></listitem>
+<listitem><para><application>GHex</application></para></listitem>
+<listitem><para><application>GNOME Terminal</application></para></listitem>
+</itemizedlist>
+<figure id="gosmetacity-FIG-8">
+<title>Window List Applet</title>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows Window List applet. The context describes the graphic.
+</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+</figure>
+<para>The buttons in the applet show the status of your windows. <xref linkend="gosmetacity-TBL-3"/>
+explains the information that the window list buttons provide about the window.
+The examples in <xref linkend="gosmetacity-TBL-3"/> refer to <xref linkend="gosmetacity-FIG-8"/>. 
+</para>
+<indexterm><primary>Window List applet</primary><secondary>window status information
+</secondary></indexterm>
+<table frame="topbot" id="gosmetacity-TBL-3">
+<title>Window Status Information on Window List Buttons</title>
+<tgroup cols="3" colsep="0" rowsep="0"><colspec colname="COLSPEC0" colwidth="33*"/>
+<colspec colname="COLSPEC1" colwidth="33*"/><colspec colname="COLSPEC2" colwidth="33*"/>
+<thead>
+<row rowsep="1"><entry valign="top"><para>State</para></entry><entry valign="top"><para>
+Indicates</para></entry><entry valign="top"><para>Example</para></entry></row>
+</thead>
+<tbody>
+<row><entry valign="top"><para>Button is pressed in.</para></entry><entry
+valign="top"><para>The window has focus.</para></entry><entry valign="top"><para><guilabel>
+gedit</guilabel></para></entry></row>
+<row><entry valign="top"><para>Square brackets around window title.</para></entry>
+<entry valign="top"><para>The window is minimized.</para></entry><entry valign="top"><para><guilabel>
+[Dictionary]</guilabel></para></entry></row>
+<row><entry valign="top"><para>Button is not pressed in, no square brackets
+around title.</para></entry><entry valign="top"><para>The window is displayed,
+and is not minimized.</para></entry><entry valign="top"><para><guilabel>ghex
+</guilabel></para></entry></row>
+<row><entry colname="COLSPEC0" valign="top"><para>Numeral on button, in parentheses.
+</para></entry><entry colname="COLSPEC1" valign="top"><para>The button represents
+a group of buttons. </para></entry><entry colname="COLSPEC2" valign="top"><para><guilabel>
+Gnome-terminal (3)</guilabel></para></entry></row>
+</tbody>
+</tgroup>
+</table>
+<sect3 id="gosmetacity-708">
+<title>Grouping Buttons</title>
+<indexterm><primary>Window List applet</primary><secondary>grouping buttons
+</secondary></indexterm><para><application>Window List</application> can group
+the buttons that represent windows in the same class under one window list
+button. The <guibutton>Gnome-terminal</guibutton> button in <xref linkend="gosmetacity-FIG-8"/>
+is an example of a button that represents a group of buttons. The following
+figure shows an example of <application>Window List</application> with a button
+group open:</para>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows Window List applet with button group open.
+</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+<para>To open a list of the windows in a group, click on the window list button
+that represents the group. You can click on the items in the list to give
+focus to windows, minimize windows, and restore windows.</para>
+<para>To open the <guimenu>Window Menu</guimenu> for a window in a button
+group, right-click on the window list button that represents the group. A
+list of the windows in the group is displayed. To open the <guimenu>Window
+Menu</guimenu> for a window in the group, click on the item in the list. When
+you open the <guimenu>Window Menu</guimenu> from the <application>Window List
+</application>, the <guimenu>Window Menu</guimenu> does not contain the workspace
+commands. For more information on the <guimenu>Window Menu</guimenu> commands,
+see <xref linkend="gosmetacity-24"/>.</para>
+</sect3>
+</sect2>
+<sect2 id="gosmetacity-20">
+<title>Workspace Switcher Applet</title>
+<indexterm><primary>workspaces</primary><secondary>Workspace Switcher applet
+</secondary></indexterm><indexterm><primary>applets</primary><secondary>Workspace
+Switcher</secondary></indexterm><para><application>Workspace Switcher</application>
+displays a visual representation of your workspaces, as shown in <xref linkend="gosmetacity-FIG-722"/>. <xref
+linkend="gosmetacity-FIG-722"/> shows the applet when the GNOME session contains
+four workspaces. Your workspaces appear as buttons on the applet. The background
+of the button in the applet that represents the current workspace is highlighted.
+The current workspace in <xref linkend="gosmetacity-FIG-722"/> is the workspace
+at the left of the applet. To switch to another workspace, click on the workspace
+in the applet.</para>
+<figure id="gosmetacity-FIG-722">
+<title>Workspace Switcher Applet</title>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows Workspace Switcher applet. The context describes the graphic.
+</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+</figure>
+<para><application>Workspace Switcher</application> also displays the application
+windows and dialogs that are open in your workspaces.</para>
+<para>The applet displays the workspaces in order from left to right across
+the rows of the applet. In <xref linkend="gosmetacity-FIG-722"/>, the applet
+is set up to display the workspaces in one row. You can specify the number
+of rows in which your workspaces are displayed in <application>Workspace Switcher
+</application>. You can also change the default behavior of the applet to
+display the names of your workspaces in the applet.</para>
+</sect2>
+<sect2 id="gosmetacity-27">
+<title>Using the Menu Panel to Work With Windows</title>
+<indexterm><primary>Menu Panel</primary><secondary>window list icon</secondary>
+</indexterm><indexterm><primary>window lists</primary><secondary>Menu Panel
+</secondary></indexterm><para>From the Menu Panel, you can view a list of
+all windows that are currently open. You can also choose a window to give
+focus to. To view the window list, click on the icon at the extreme right
+of the Menu Panel. The following figure shows an example of the window list
+that is displayed from the Menu Panel:</para>
+<screenshot>
+<mediaobject>
+  <imageobject>
+    <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+	<phrase>Shows window list displayed from Menu Panel.
+</phrase>
+  </textobject>
+</mediaobject>
+</screenshot>
+<para>When the focus changes, the icon that you click on to display the window
+list changes. The icon represents the window that currently has focus. To
+give focus to a window, choose that window from the window list.</para>
+<para>The window list lists the windows in all workspaces. The windows in
+all workspaces other than the current workspace, are listed under a separator
+line.</para>
+<para>You cannot move the icon at the extreme right of the Menu Panel.</para>
+</sect2>
+</sect1>
+<sect1 id="gosmetacity-715">
+<title>Manipulating Windows</title>
+<indexterm><primary>windows</primary><secondary>manipulating</secondary></indexterm>
+<para>This section describes how to manipulate windows.</para>
+<sect2 id="gosmetacity-28">
+<title>To Give Focus to a Window</title>
+<indexterm><primary>windows</primary><secondary>giving focus to</secondary>
+</indexterm><indexterm><primary>focus, giving to a window</primary></indexterm>
+<para>A window that has focus can receive input from the mouse and the keyboard.
+Only one window can have focus at a time. The window that has focus has a
+different appearance than other windows. </para>
+<para>You can use the following elements to give focus to a window:</para>
+<informaltable frame="topbot">
+<tgroup cols="2" colsep="0" rowsep="0"><colspec colname="COLSPEC0" colwidth="33.62*"/>
+<colspec colname="COLSPEC1" colwidth="66.38*"/>
+<thead>
+<row rowsep="1"><entry valign="top"><para>Element</para></entry><entry valign="top"><para>
+Action</para></entry></row>
+</thead>
+<tbody>
+<row><entry valign="top"><para>Mouse</para></entry><entry valign="top"><para>
+Click on the window, if the window is visible. </para></entry></row>
+<row><entry colname="COLSPEC0" valign="top"><para>Shortcut keys</para></entry>
+<entry colname="COLSPEC1" valign="top"><para>Use shortcut keys to switch between
+the windows that are open. To give focus to a window, release the keys. The
+default shortcut keys to switch between windows are <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>. </para></entry></row>
+<row><entry colname="COLSPEC0" valign="top"><para><application>Window List
+</application></para></entry><entry colname="COLSPEC1" valign="top"><para>
+Click on the button that represents the window in <application>Window List
+</application>.</para></entry></row>
+<row><entry colname="COLSPEC0" valign="top"><para><application>Workspace Switcher
+</application></para></entry><entry colname="COLSPEC1" valign="top"><para>
+Click on the window that you want to give focus to in the <application>Workspace
+Switcher</application> display. If you click on a window in another workspace, <application>
+Workspace Switcher</application> switches to the new workspace, and gives
+focus to the window. </para></entry></row>
+<row><entry colname="COLSPEC0" valign="top"><para>Menu Panel</para></entry>
+<entry colname="COLSPEC1" valign="top"><para>Click on the icon at the extreme
+right of the Menu Panel. A list of your open windows is displayed. Choose
+the window from the list.</para></entry></row>
+</tbody>
+</tgroup>
+</informaltable>
+</sect2>
+<sect2 id="gosmetacity-29">
+<title>To Minimize a Window</title>
+<indexterm><primary>windows</primary><secondary>minimizing</secondary></indexterm>
+<indexterm><primary>minimizing</primary><secondary>windows</secondary></indexterm>
+<para>To minimize a window perform one of the following actions: </para>
+<itemizedlist>
+<listitem><para>Click on the <guibutton>Minimize</guibutton> button on the
+window frame.</para></listitem>
+<listitem><para>Open the <guimenu>Window Menu</guimenu>, then choose <guimenuitem>
+Minimize</guimenuitem>. </para></listitem>
+<listitem><para>If the window has focus, click on the button that represents
+the window in <application>Window List</application>. If the window does not
+have focus, click twice on the button that represents the window. </para>
+</listitem>
+<listitem><para>Right-click on the button that represents the window in <application>
+Window List</application>, then choose <guimenuitem>Minimize</guimenuitem>
+from the popup menu.</para></listitem>
+</itemizedlist>
+</sect2>
+<sect2 id="gosmetacity-30">
+<title>To Maximize a Window</title>
+<indexterm><primary>windows</primary><secondary>maximizing</secondary></indexterm>
+<indexterm><primary>maximizing windows</primary></indexterm><para>When you
+maximize a window, the window expands as much as possible. To maximize a window
+perform one of the following actions: </para>
+<itemizedlist>
+<listitem><para>To maximize the window, click on the <guibutton>Maximize</guibutton>
+button on the window frame. Alternatively, open the <guimenu>Window Menu</guimenu>,
+then choose <guimenuitem>Maximize</guimenuitem>.</para></listitem>
+<listitem><para>Right-click on the button that represents the window in <application>
+Window List</application>, then choose <guimenuitem>Maximize</guimenuitem>
+from the <guimenu>Window Menu</guimenu>.</para></listitem>
+</itemizedlist>
+</sect2>
+<sect2 id="gosmetacity-31">
+<title>To Restore a Window</title>
+<indexterm><primary>windows</primary><secondary>restoring</secondary></indexterm>
+<indexterm><primary>restoring</primary><secondary>windows</secondary></indexterm>
+<para>To restore a maximized window perform one of the following actions: 
+</para>
+<itemizedlist>
+<listitem><para>Click on the <guibutton>Maximize</guibutton> button on the
+window frame.</para></listitem>
+<listitem><para>Open the <guimenu>Window Menu</guimenu>. Choose <guimenuitem>
+Unmaximize</guimenuitem>. </para></listitem>
+<listitem><para>Right-click on the button that represents the window in <application>
+Window List</application> to open the <guimenu>Window Menu</guimenu>. Choose <guimenuitem>
+Unmaximize</guimenuitem>.</para></listitem>
+</itemizedlist>
+<para>To restore a minimized window, click on the button that represents the
+window in <application>Window List</application>.</para>
+</sect2>
+<sect2 id="gosmetacity-32">
+<title>To Close a Window</title>
+<indexterm><primary>windows</primary><secondary>closing</secondary></indexterm>
+<indexterm><primary>closing windows</primary></indexterm><para>To close a
+window perform one of the following actions: </para>
+<itemizedlist>
+<listitem><para>Click on the <guibutton>Close Window</guibutton> button on
+the window frame.</para></listitem>
+<listitem><para>Open the <guimenu>Window Menu</guimenu>. Choose <guimenuitem>
+Close</guimenuitem>.</para></listitem>
+<listitem><para>Right-click on the button that represents the window in <application>
+Window List</application>, then choose <guimenuitem>Close</guimenuitem> from
+the <guimenu>Window Menu</guimenu>.</para></listitem>
+</itemizedlist>
+<para>If you have unsaved data in the window, you are prompted to save your
+data.</para>
+</sect2>
+<sect2 id="gosmetacity-34">
+<title>To Resize a Window</title>
+<indexterm><primary>windows</primary><secondary>resizing</secondary></indexterm>
+<indexterm><primary>resizing windows</primary></indexterm><para>To resize
+a window perform one of the following actions:</para>
+<itemizedlist>
+<listitem><para>Point to a corner of the window. The mouse pointer changes
+to indicate that you can resize the window. Grab the corner and drag the window
+to the new size.</para></listitem>
+<listitem><para>Right-click on the button that represents the window in <application>
+Window List</application>. Choose <guimenuitem>Resize</guimenuitem> from the <guimenu>
+Window Menu</guimenu>. Use the arrow keys to resize the window.</para></listitem>
+<listitem><para>Press-and-hold <keycap>Alt</keycap>, then middle-click near
+the corner that you want to resize. The mouse pointer changes to indicate
+that you can resize from the corner. To resize the window, drag from the corner
+on which you middle-clicked.</para></listitem>
+<listitem><para>To resize a window horizontally point to one of the vertical
+edges of the window. The mouse pointer changes to indicate that you can resize
+the window. Grab the edge and drag the window to the new size.</para></listitem>
+<listitem><para>To resize a window vertically point to the bottom edge of
+the window. The mouse pointer changes to indicate that you can resize the
+window. Grab the edge and drag the window to the new size.</para></listitem>
+</itemizedlist>
+<note><para>You cannot resize some dialog windows. Also, some application
+windows have a minimum size below which you cannot reduce the window.</para>
+</note>
+</sect2>
+<sect2 id="gosmetacity-35">
+<title>To Move a Window</title>
+<indexterm><primary>windows</primary><secondary>moving</secondary></indexterm>
+<indexterm><primary>moving windows</primary></indexterm><para>To move a window
+perform one of the following actions: </para>
+<itemizedlist>
+<listitem><para>Grab the titlebar of the window and drag the window to the
+new location. </para></listitem>
+<listitem><para>Press-and-hold <keycap>Alt</keycap>, then drag the window
+to the new location. </para></listitem>
+<listitem><para>Open the <guimenu>Window Menu</guimenu>, then choose <guimenuitem>
+Move</guimenuitem>. Use the arrow keys to move the window to the new location.
+</para></listitem>
+<listitem><para>Right-click on the button that represents the window in <application>
+Window List</application>, then choose <guimenuitem>Move</guimenuitem> from
+the <guimenu>Window Menu</guimenu>. Use the arrow keys to move the window
+to the new location.</para></listitem>
+</itemizedlist>
+</sect2>
+<sect2 id="gosmetacity-36">
+<title>To Shade a Window</title>
+<indexterm><primary>windows</primary><secondary>shading</secondary></indexterm>
+<indexterm><primary>shading windows</primary></indexterm><para>You can shade
+and unshade windows, as follows:</para>
+<informaltable frame="topbot">
+<tgroup cols="2" colsep="0" rowsep="0"><colspec colwidth="24.94*"/><colspec
+colwidth="75.06*"/>
+<tbody>
+<row><entry valign="top"><para>Shade</para></entry><entry valign="top"><para>
+Reduce the window so that only the titlebar is visible.</para></entry></row>
+<row><entry valign="top"><para>Unshade</para></entry><entry valign="top"><para>
+Switch a window from a shaded state so that the full window is displayed.
+</para></entry></row>
+</tbody>
+</tgroup>
+</informaltable>
+<para>To shade a window perform one of the following actions: </para>
+<itemizedlist>
+<listitem><para>Double-click on the titlebar of the window. To unshade the
+window, double-click on the titlebar again.</para></listitem>
+<listitem><para>Open the <guimenu>Window Menu</guimenu>. Choose <guimenuitem>
+Shade</guimenuitem>. To unshade the window, choose <guimenuitem>Unshade</guimenuitem>.
+</para></listitem>
+<listitem><para>Right-click on the button that represents the window in <application>
+Window List</application>, then choose <guimenuitem>Shade</guimenuitem> from
+the <guimenu>Window Menu</guimenu>. To unshade the window, choose <guimenuitem>
+Unshade</guimenuitem>.</para></listitem>
+</itemizedlist>
+</sect2>
+<sect2 id="gosmetacity-38">
+<title>To Put a Window on All Workspaces</title>
+<indexterm><primary>windows</primary><secondary>putting on all workspaces
+</secondary></indexterm><para>To put a window in all workspaces, open the <guimenu>
+Window Menu</guimenu>. Choose <guimenuitem>Put on All Workspaces</guimenuitem>.
+To set the window to appear only in the current workspace, choose <guimenuitem>
+Only on This Workspace</guimenuitem>.</para>
+</sect2>
+<sect2 id="gosmetacity-46">
+<title>To Move a Window to Another Workspace</title>
+<indexterm><primary>windows</primary><secondary>moving to another workspace
+</secondary></indexterm><indexterm><primary>workspaces</primary><secondary>
+moving windows to </secondary></indexterm><para>You can move a window to another
+workspace in either of the following ways:</para>
+<itemizedlist>
+<listitem><para>Use <application>Workspace Switcher</application></para>
+<para>In the <application>Workspace Switcher</application> display, drag the
+window to the workspace you require.</para></listitem>
+<listitem><para>Use the <guimenu>Window Menu</guimenu></para>
+<para>Open the <guimenu>Window Menu</guimenu>. To move the window to the next
+workspace choose <guimenuitem>Move to <replaceable>workspace_name</replaceable></guimenuitem>.
+</para></listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+<sect1 id="gosmetacity-716">
+<title>Manipulating Workspaces</title>
+<indexterm><primary>workspaces</primary><secondary>manipulating</secondary>
+</indexterm><para>This section describes how to manipulate workspaces.</para>
+<sect2 id="gosmetacity-49">
+<title>To Switch Between Workspaces</title>
+<indexterm><primary>workspaces</primary><secondary>switching between</secondary>
+</indexterm><para>You can switch between workspaces in any of the following
+ways: </para>
+<itemizedlist>
+<listitem><para>Use <application>Workspace Switcher</application></para>
+<para>Click on the workspace that you want to switch to in <application>Workspace
+Switcher</application>.</para></listitem>
+<listitem><para>Use shortcut keys</para>
+<para>The default shortcut keys to switch between the workspaces are as follows: 
+</para>
+<informaltable frame="topbot">
+<tgroup cols="2" colsep="0" rowsep="0"><colspec colwidth="50*"/><colspec colwidth="50*"/>
+<thead>
+<row><entry valign="top"><para>Default Shortcut Keys</para></entry><entry
+valign="top"><para>Function</para></entry></row>
+</thead>
+<tbody>
+<row><entry valign="top"><para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>right arrow</keycap></keycombo></para></entry><entry valign="top"><para>Selects
+the workspace to the right. </para></entry></row>
+<row><entry valign="top"><para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>left arrow</keycap></keycombo></para></entry><entry valign="top"><para>Selects
+the workspace to the left. </para></entry></row>
+</tbody>
+</tgroup>
+</informaltable>
+</listitem>
+</itemizedlist>
+</sect2>
+<sect2 id="gosmetacity-50">
+<title>To Add Workspaces</title>
+<indexterm><primary>workspaces</primary><secondary>adding</secondary></indexterm>
+<para>To add workspaces to your desktop, right-click on <application>Workspace
+Switcher</application>, then choose <guimenuitem>Preferences</guimenuitem>.
+The <guilabel>Workspace Switcher Preferences</guilabel> dialog is displayed.
+Use the <guilabel>Number of workspaces</guilabel> spin box to specify the
+number of workspaces you require. <application>Workspace Switcher</application>
+adds new workspaces at the end of the workspace list.</para>
+</sect2>
+<sect2 id="gosmetacity-51">
+<title>To Name Workspaces</title>
+<indexterm><primary>workspaces</primary><secondary>naming</secondary></indexterm>
+<para>The default names of your workspaces are <literal>Workspace 1</literal>, <literal>
+Workspace 2</literal>, <literal>Workspace 3</literal>, and so on. To assign
+names to your workspaces, right-click on <application>Workspace Switcher</application>,
+then choose <guimenuitem>Preferences</guimenuitem>. The <guilabel>Workspace
+Switcher Preferences</guilabel> dialog is displayed. Use the <guilabel>Workspaces
+</guilabel> list box to specify the names of your workspaces. Select a workspace,
+then type the new name for the workspace.</para>
+</sect2>
+<sect2 id="gosmetacity-52">
+<title>To Delete Workspaces</title>
+<indexterm><primary>workspaces</primary><secondary>deleting</secondary></indexterm>
+<para>When you delete a workspace the windows in the workspace are moved to
+another workspace, and the empty workspace is deleted. </para>
+<para>To delete workspaces from your desktop, right-click on <application>
+Workspace Switcher</application>, then choose <guimenuitem>Preferences</guimenuitem>.
+The <guilabel>Workspace Switcher Preferences</guilabel> dialog is displayed.
+Use the <guilabel>Number of workspaces</guilabel> spin box to specify the
+number of workspaces you require. <application>Workspace Switcher</application>
+deletes workspaces from the end of the workspace list.</para>
+</sect2>
+</sect1>
+</chapter>
+
