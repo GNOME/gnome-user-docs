@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosmetacity-1">
+  <title>Uso delle finestre</title>
+  <highlights>
+    <para>Questo capitolo spiega come usare le finestre nel desktop.
+Il desktop di GNOME permette di usare diversi sistemi di gestione delle finestre,
+ad esempio <application>Metacity</application> e <application> Sawfish</application>.
+Molte delle funzioni di <application>Metacity</application> sono disponibili
+anche in <application>Sawfish</application>. Questo capitolo spiega le funzioni
+associate al gestore di finestre  <application>Metacity</application>.</para>
+  </highlights>
+  <sect1 id="gosmetacity-712">
+    <title>Finestre e aree di lavoro</title>
+    <indexterm>
+      <primary>finestre</primary>
+      <secondary>introduzione</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>aree di lavoro</primary>
+      <secondary>introduzione</secondary>
+    </indexterm>
+    <para>Il desktop consente la visualizzazione contemporanea
+di pi&ugrave; finestre. Le finestre vengono visualizzate in speciali spazi
+del desktop denominati aree di lavoro. Le aree di lavoro sono spazi delimitati
+in cui &egrave; possibile eseguire vari tipi di operazioni. Ogni area di lavoro
+sul desktop presenta lo stesso sfondo, gli stessi pannelli e gli stessi menu.
+Tuttavia, in ognuna &egrave; possibile eseguire applicazioni differenti e
+aprire finestre differenti. Sul desktop &egrave; possibile visualizzare una
+sola area di lavoro alla volta, ma &egrave; possibile avere finestre aperte
+in altre aree di lavoro. </para>
+    <para>L'applet <application>Selettore aree di lavoro</application> presenta
+una rappresentazione visiva delle finestre e delle aree di lavoro, come appare
+dalla <xref linkend="gosmetacity-FIG-717"/>. </para>
+    <figure id="gosmetacity-FIG-717">
+      <title>L'applet Selettore aree di lavoro</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Applet Selettore aree di lavoro. Il contesto descrive l'immagine.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>Se le aree di lavoro correnti non sono sufficienti, &egrave; possibile
+aggiungerne di nuove. Per aggiungere un'area di lavoro al desktop, fare clic
+con il pulsante destro del mouse sull'applet <application>Selettore aree di
+lavoro</application> e scegliere  <guimenuitem>Preferenze</guimenuitem>. Viene
+aperta la finestra di dialogo <guilabel>Preferenze del selettore aree di lavoro</guilabel>. Usare la casella di riepilogo <guilabel>Numero di aree di lavoro</guilabel> per specificare il numero di aree di lavoro necessarie.</para>
+    <sect2 id="gosmetacity-15">
+      <title>Comportamento della gestione finestre</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>gestione finestre</secondary>
+      </indexterm>
+      <para>La gestione finestre controlla l'aspetto e il comportamento
+delle finestre sullo schermo. In particolare, gestisce la posizione delle
+finestre, le modalit&agrave; di attivazione e il tema della cornice. La cornice
+contiene i pulsanti per le operazioni pi&ugrave; comuni, ad esempio lo spostamento,
+la chiusura e il ridimensionamento delle finestre.</para>
+      <para>Alcune impostazioni possono essere configurate nella finestra di preferenze <application> Attivazione finestre</application>. Questo manuale descrive le funzioni associate
+alla configurazione predefinita della gestione finestre <application>Metacity</application>. La configurazione predefinita &egrave; specificata nella finestra
+di preferenze <application> Attivazione finestre</application>. Questo manuale
+descrive inoltre le funzioni predefinite del tema Crux.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-713">
+    <title>Tipi di finestre</title>
+    <indexterm>
+      <primary>finestre</primary>
+      <secondary>tipi</secondary>
+    </indexterm>
+    <para>Il desktop utilizza i seguenti tipi di finestre: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Finestre delle applicazioni </para>
+        <para>Quando si avvia un'applicazione, viene aperta un'apposita finestra.
+La gestione finestre applica una cornice alla finestra dell'applicazione.
+Nella configurazione predefinita, il bordo superiore della finestra contiene
+la barra del titolo. La barra del titolo contiene alcuni pulsanti che possono
+essere utilizzati con le finestre. I pulsanti situati nella cornice della
+finestra dell'applicazione permettono ad esempio di aprire il <guimenu>Menu
+della finestra</guimenu> o di chiudere la finestra. Il <guimenu>Menu della
+finestra</guimenu> contiene una serie di opzioni utilizzabili per la gestione
+della finestra. </para>
+      </listitem>
+      <listitem>
+        <para>Finestre di dialogo </para>
+        <para>Una finestra di dialogo &egrave; una finestra popup in cui &egrave;
+possibile inserire informazioni o comandi. Le finestre di dialogo appaiono
+all'interno della cornice della finestra da cui sono state richiamate. </para>
+        <para>Il bordo superiore della cornice pu&ograve; essere usato per eseguire
+varie operazioni sulla finestra. Ad esempio, &egrave; possibile usare la barra
+del titolo per spostare la finestra di dialogo. La cornice contiene inoltre
+i pulsanti che consentono di eseguire le seguenti operazioni:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Aprire il <guimenu>Menu della finestra</guimenu></para>
+          </listitem>
+          <listitem>
+            <para>Chiudere la finestra di dialogo</para>
+          </listitem>
+        </itemizedlist>
+        <para>In genere, le finestre di dialogo vengono aperte dalle finestre delle
+applicazioni. All'apertura, le finestre di dialogo vengono solitamente visualizzate
+in primo piano e vengono rese attive. Alcune finestre di dialogo non consentono
+di usare l'applicazione finch&eacute; non vengono chiuse. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosmetacity-16">
+      <title>Cornici delle finestre</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>cornici</secondary>
+      </indexterm>
+      <para>La cornice &egrave; il bordo che circonda una finestra. La parte superiore
+della cornice &egrave; occupata dalla barra del titolo. La barra del titolo
+contiene alcuni pulsanti che possono essere utilizzati con le finestre. </para>
+      <sect3 id="gosmetacity-10">
+        <title>Temi</title>
+        <indexterm>
+          <primary>finestre</primary>
+          <secondary>temi</secondary>
+        </indexterm>
+        <para>&Egrave; possibile applicare vari temi alle cornici delle finestre.
+Il tema &egrave; l'elemento che determina l'aspetto della cornice. Per scegliere
+un tema da applicare a tutte le cornici, scegliere <menuchoice><guimenu>Applicazioni</guimenu><guisubmenu>Preferenze del desktop</guisubmenu><guimenuitem>Tema</guimenuitem></menuchoice>. </para>
+        <para>Il tema predefinito &egrave; Crux. Questo manuale descrive le funzioni
+associate al tema Crux. </para>
+      </sect3>
+      <sect3 id="gosmetacity-17">
+        <title>Elementi di controllo</title>
+        <indexterm>
+          <primary>finestre</primary>
+          <secondary>elementi di controllo della
+cornice</secondary>
+        </indexterm>
+        <para>La cornice delle finestre permette di
+eseguire diverse operazioni. In particolare, la barra del titolo contiene
+una serie di pulsanti. La figura seguente mostra la barra del titolo della
+finestra di un'applicazione:</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Barra del titolo di una finestra. Didascalie: pulsante Menu della finestra, barra del titolo, pulsanti Riduci a icona, Ingrandisci, Chiudi finestra.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Anche le finestre di dialogo contengono alcuni elementi di controllo.
+La <xref linkend="gosmetacity-TBL-1"/> descrive gli elementi di controllo attivi
+situati nelle cornici delle finestre, da sinistra a destra.</para>
+        <table frame="topbot" id="gosmetacity-TBL-1">
+          <title>Elementi di controllo delle cornici delle finestre</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="41.65*"/>
+            <colspec colname="colspec1" colwidth="58.35*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>Elemento di controllo</para>
+                </entry>
+                <entry valign="top">
+                  <para>Descrizione </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Pulsante <guibutton>Menu
+della finestra</guibutton></para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Fare clic su questo pulsante per aprire il <guimenu>Menu della finestra</guimenu>. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Barra del titolo</para>
+                </entry>
+                <entry valign="top">
+                  <para> La barra del titolo permette di eseguire le seguenti operazioni: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Per attivare la finestra, fare clic sulla barra del titolo.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Per spostare la finestra, agganciare la barra del titolo e
+trascinarla nella nuova posizione desiderata. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Per arrotolare la finestra, fare doppio clic sulla barra del
+titolo. Per srotolare la finestra, fare nuovamente doppio clic sulla barra
+del titolo.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Pulsante <guibutton>Riduci a icona</guibutton></para>
+                </entry>
+                <entry valign="top">
+                  <para>Fare clic sul pulsante <guibutton>Riduci a icona</guibutton> per ridurre a icona la finestra. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Pulsante <guibutton>Ingrandisci</guibutton></para>
+                </entry>
+                <entry valign="top">
+                  <para>Fare clic sul pulsante <guibutton>Ingrandisci</guibutton> per ingrandire la finestra alla dimensione originale. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>Pulsante <guibutton>Chiudi finestra</guibutton></para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Fare clic sul pulsante <guibutton>Chiudi finestra</guibutton> per chiudere la finestra. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Bordo</para>
+                </entry>
+                <entry valign="top">
+                  <para> Il bordo &egrave; la parte esterna della cornice. Con il bordo &egrave; possibile
+eseguire le seguenti operazioni: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Per ridimensionare la finestra, agganciare il bordo e trascinarlo
+fino a raggiungere la dimensione desiderata. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Per aprire il <guimenu>Menu della finestra</guimenu>, fare
+clic con il pulsante destro del mouse sul bordo.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Contenuto della finestra</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Il contenuto occupa l'area
+della finestra all'interno della cornice. Il contenuto della finestra permette
+di eseguire le seguenti operazioni:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Per spostare una finestra, premere <keycap>Alt</keycap>, fare
+clic nell'area del contenuto e trascinare la finestra nella nuova posizione.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Per ridimensionare una finestra, premere <keycap>Alt</keycap>
+e fare clic con il pulsante centrale in un punto vicino all'angolo da usare
+per il ridimensionamento. Per ridimensionare la finestra, trascinare il puntatore
+dall'angolo su cui si &egrave; fatto clic.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Per aprire il <guimenu>Menu della finestra</guimenu>, premere <keycap> Alt</keycap> e fare clic con il pulsante destro del mouse nell'area del contenuto.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-714">
+    <title>Menu e applet per operare con finestre e aree di lavoro</title>
+    <indexterm>
+      <primary>finestre</primary>
+      <secondary>applet e menu</secondary>
+    </indexterm>
+    <para>Questa sezione descrive i menu e le applet che permettono
+di operare con le finestre e le aree di lavoro.</para>
+    <sect2 id="gosmetacity-24">
+      <title>Menu di controllo della finestra</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/window_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Menu della finestra. Opzioni: Chiudi, Riduci a icona, Ingrandisci, Arrotola, Sposta, Ridimensiona, Sopra a tutte le aree di lavoro, Sposta in area_di_lavoro.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>Menu della finestra</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>menu</primary>
+        <secondary>Menu della finestra</secondary>
+      </indexterm>
+      <para>Il <guimenu>Menu della finestra</guimenu> contiene
+i comandi che &egrave; possibile usare per operare con le finestre. Per aprire
+il <guimenu>Menu della finestra</guimenu>, procedere in uno dei modi seguenti:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Fare clic sul pulsante <guibutton>Menu della finestra</guibutton>
+della finestra su cui si desidera operare.</para>
+        </listitem>
+        <listitem>
+          <para>Premere <keycombo><keycap>Alt</keycap><keycap>barra spaziatrice</keycap></keycombo>.</para>
+        </listitem>
+        <listitem>
+          <para>Premere <keycap>Alt</keycap> e fare clic con il pulsante destro
+del mouse nel punto della finestra su cui si desidera operare. </para>
+        </listitem>
+      </itemizedlist>
+      <para>La <xref linkend="gosmetacity-TBL-25"/> descrive i comandi e i sottomenu
+disponibili nel <guimenu>Menu della finestra</guimenu>.</para>
+      <table frame="topbot" id="gosmetacity-TBL-25">
+        <title>Comandi e sottomenu del Menu della finestra</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="32.34*"/>
+          <colspec colname="colspec3" colwidth="67.66*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Opzione</para>
+              </entry>
+              <entry valign="top">
+                <para> Funzione </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Riduci a icona</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Riduce la finestra a icona.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>Ingrandisci</guimenuitem> o <guimenuitem> Ripristina</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>Ingrandisce
+la finestra. Se la finestra &egrave; gi&agrave; alla dimensione massima, scegliere <guimenuitem>Ripristina</guimenuitem> per riportarla alla dimensione precedente. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>Arrotola</guimenuitem> o <guimenuitem> Srotola</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>Arrotola la
+finestra. Se la finestra &egrave; gi&agrave; stata arrotolata, scegliere <guimenuitem>Srotola</guimenuitem> per riportarla alla dimensione precedente. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Sposta</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Permette di usare i tasti freccia
+per spostare la finestra.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Ridimensiona</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Permette di usare i tasti freccia per ridimensionare la finestra.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Chiudi</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Chiude la finestra.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>Sopra a tutte
+le aree di lavoro</guimenuitem> o <guimenuitem>Solo in questa area di lavoro</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Colloca la finestra in tutte le aree di lavoro. Se la finestra si trova gi&agrave;
+in tutte le aree di lavoro, scegliere <guimenuitem>Solo in questa area di
+lavoro</guimenuitem> per includerla solo nell'area di lavoro corrente. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>Sposta in <replaceable>area_di_lavoro</replaceable></guimenuitem> o <guimenuitem>Solo su <replaceable>area_di_lavoro </replaceable></guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para> Sposta la finestra nell'area di lavoro selezionata. Se
+la finestra si trova gi&agrave; in tutte le aree di lavoro, scegliere <guimenuitem>Solo su <replaceable>area_di_lavoro </replaceable></guimenuitem> per includerla
+solo nelle aree di lavoro desiderate. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosmetacity-18">
+      <title>L'applet Elenco finestre</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>applet Elenco finestre</secondary>
+        <see>Elenco finestre</see>
+      </indexterm>
+      <indexterm>
+        <primary>Elenco finestre </primary>
+        <secondary>introduzione</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>elenco finestre</primary>
+        <secondary>Elenco finestre</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>applet</primary>
+        <secondary>Elenco finestre</secondary>
+      </indexterm>
+      <para>L'applet <application>Elenco finestre</application> visualizza
+un pulsante per ogni finestra aperta. Questa applet permette di eseguire le
+seguenti operazioni:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Ridurre a icona una finestra</para>
+          <para>Fare clic sul pulsante che rappresenta la finestra.</para>
+        </listitem>
+        <listitem>
+          <para>Ripristinare una finestra ridotta a icona</para>
+          <para>Fare clic sul pulsante che rappresenta la finestra.</para>
+        </listitem>
+        <listitem>
+          <para>Attivare una finestra</para>
+          <para>Fare clic sul pulsante che rappresenta la finestra.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Quando si apre la finestra di un'applicazione, l'applet <application>Elenco finestre</application> visualizza un pulsante che la rappresenta. I
+pulsanti mostrano quali finestre sono aperte. In questo modo &egrave; possibile
+sapere quali finestre sono aperte anche se alcune sono ridotte a icona o nascoste
+da altre sovrapposte. I pulsanti dell'applet <application>Elenco finestre</application> possono riferirsi solo alle finestre dell'area di lavoro corrente
+o a quelle di tutte le aree di lavoro. Per selezionare questa opzione, &egrave;
+necessario modificare le preferenze relative a <application>Elenco finestre</application>.</para>
+      <para>&Egrave; anche possibile fare clic con il pulsante destro del mouse
+su uno dei pulsanti dell'elenco delle finestre per aprire il <guimenu>Menu
+della finestra</guimenu> della finestra rappresentata. Quando si apre il <guimenu>Menu della finestra</guimenu> dall'applet  <application>Elenco finestre</application>,
+il menu non contiene i comandi relativi alle aree di lavoro. Per maggiori
+informazioni sui comandi del <guimenu>Menu della finestra</guimenu>, vedere <xref linkend="gosmetacity-24"/>.</para>
+      <para>La <xref linkend="gosmetacity-FIG-8"/> mostra l'applet <application>Elenco finestre</application> con le seguenti finestre aperte:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <application>gedit</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>Dizionario</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GHex</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>Terminale GNOME</application>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <figure id="gosmetacity-FIG-8">
+        <title>L'applet Elenco finestre</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Applet Elenco finestre. Il contesto descrive l'immagine.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>I pulsanti dell'applet permettono di identificare lo stato delle finestre.
+La <xref linkend="gosmetacity-TBL-3"/> descrive le informazioni fornite dai
+pulsanti riguardo alle finestre aperte. Gli esempi della <xref linkend="gosmetacity-TBL-3"/>
+fanno riferimento alla <xref linkend="gosmetacity-FIG-8"/>. </para>
+      <indexterm>
+        <primary>Elenco finestre</primary>
+        <secondary>informazioni sullo
+stato delle finestre</secondary>
+      </indexterm>
+      <table frame="topbot" id="gosmetacity-TBL-3">
+        <title>Informazioni sullo stato delle finestre fornite dai pulsanti di Elenco
+finestre</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33*"/>
+          <colspec colname="colspec1" colwidth="33*"/>
+          <colspec colname="colspec2" colwidth="33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Stato</para>
+              </entry>
+              <entry valign="top">
+                <para> Significato</para>
+              </entry>
+              <entry valign="top">
+                <para>Esempio</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Il pulsante &egrave; premuto.</para>
+              </entry>
+              <entry valign="top">
+                <para>La finestra &egrave; in stato attivo.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>gedit</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Parentesi quadre intorno al titolo della finestra.</para>
+              </entry>
+              <entry valign="top">
+                <para>La finestra &egrave; ridotta a icona.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>[GHex]</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Il pulsante non &egrave; premuto, il titolo
+non &egrave; racchiuso tra parentesi quadre.</para>
+              </entry>
+              <entry valign="top">
+                <para>La finestra &egrave; aperta e non &egrave; ridotta a icona.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>Calcolatrice</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Il pulsante presenta un
+numero tra parentesi. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Il pulsante rappresenta un gruppo di pulsanti. </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guilabel>Gnome-terminal (3)</guilabel>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="gosmetacity-708">
+        <title>Pulsanti di raggruppamento</title>
+        <indexterm>
+          <primary>Elenco finestre</primary>
+          <secondary>pulsanti di raggruppamento</secondary>
+        </indexterm>
+        <para>L'applet <application>Elenco finestre</application>
+pu&ograve; raggruppare i pulsanti che rappresentano finestre della stessa
+classe in un unico pulsante. Il pulsante <guibutton>Gnome-terminal</guibutton>
+nella <xref linkend="gosmetacity-FIG-8"/> &egrave; un esempio di pulsante che
+rappresenta un gruppo di pulsanti. La figura seguente mostra un esempio dell'applet <application>Elenco finestre</application> con un gruppo di pulsanti aperto:</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Applet Elenco finestre con un gruppo di pulsanti aperto.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Per aprire le finestre racchiuse in un gruppo, fare clic sul pulsante
+che rappresenta il gruppo. Facendo clic sugli elementi della lista &egrave;
+possibile attivare le finestre, ridurle a icona e ripristinarle alla dimensione
+originaria.</para>
+        <para>Per aprire l'elenco delle finestre per una finestra appartenente a un
+gruppo, fare clic con il pulsante destro del mouse sul pulsante che rappresenta
+il gruppo. Viene visualizzato l'elenco delle finestre incluse nel gruppo.
+Per aprire il <guimenu>Menu della finestra</guimenu> per una finestra appartenente
+al gruppo, fare clic sulla voce corrispondente nell'elenco. Quando si apre
+il <guimenu>Menu della finestra</guimenu> dall'applet  <application>Elenco
+finestre</application>, il menu non contiene i comandi relativi alle aree
+di lavoro. Per maggiori informazioni sui comandi del <guimenu>Menu della finestra</guimenu>, vedere <xref linkend="gosmetacity-24"/>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosmetacity-20">
+      <title>L'applet Selettore aree di lavoro</title>
+      <indexterm>
+        <primary>aree di lavoro</primary>
+        <secondary>applet Selettore aree
+di lavoro</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>applet</primary>
+        <secondary>Selettore aree di lavoro</secondary>
+      </indexterm>
+      <para>L'applet <application>Selettore aree di lavoro</application> mostra una rappresentazione visiva
+delle aree di lavoro, come appare nella <xref linkend="gosmetacity-FIG-722"/>.
+La <xref linkend="gosmetacity-FIG-722"/> mostra l'aspetto dell'applet in una
+sessione di GNOME con quattro aree di lavoro. Le aree di lavoro vengono rappresentate
+come pulsanti. Lo sfondo del pulsante dell'applet che rappresenta lo spazio
+di lavoro corrente appare evidenziato. Nella <xref linkend="gosmetacity-FIG-722"/>,
+l'area di lavoro corrente &egrave; la prima a sinistra. Per passare a un'altra
+area di lavoro, fare clic sul pulsante corrispondente nell'applet.</para>
+      <figure id="gosmetacity-FIG-722">
+        <title>L'applet Selettore aree di lavoro</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Applet Selettore aree di lavoro. Il contesto descrive l'immagine.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>L'applet <application>Selettore aree di lavoro</application> visualizza
+anche le finestre delle applicazioni e le finestre di dialogo aperte nelle
+aree di lavoro.</para>
+      <para>Le aree di lavoro vengono presentate da sinistra a destra lungo le righe
+dell'applet. Nella <xref linkend="gosmetacity-FIG-722"/>, l'applet &egrave;
+configurata per visualizzare le aree di lavoro in un'unica riga. &Egrave;
+possibile specificare il numero di righe in cui devono essere visualizzate
+le aree di lavoro. &Egrave; possibile cambiare il comportamento predefinito
+dell'applet in modo da visualizzare i nomi delle aree di lavoro. </para>
+    </sect2>
+    <sect2 id="gosmetacity-27">
+      <title>Uso del Pannello dei menu per la gestione delle finestre</title>
+      <indexterm>
+        <primary>Pannello dei menu</primary>
+        <secondary>icona dell'elenco
+finestre</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>elenchi di finestre</primary>
+        <secondary>Pannello dei menu</secondary>
+      </indexterm>
+      <para>Dal Pannello dei
+menu &egrave; possibile visualizzare l'elenco delle finestre correntemente
+aperte. &Egrave; anche possibile scegliere una finestra da attivare. Per visualizzare
+l'elenco delle finestre, fare clic sull'icona all'estrema destra del Pannello
+dei menu. La figura seguente mostra un esempio dell'elenco delle finestre
+visualizzato dal Pannello dei menu:</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Elenco delle finestre visualizzato dal Pannello dei menu.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Quando si sposta l'attivazione su un'altra finestra, l'icona su cui
+si &egrave; fatto clic per visualizzare l'elenco delle finestre cambia aspetto.
+La nuova icona rappresenta la finestra correntemente attiva. Per attivare
+una finestra, scegliere la finestra desiderata dall'elenco.</para>
+      <para>L'elenco delle finestre si riferisce a tutte le aree di lavoro. Le finestre
+contenute in aree di lavoro diverse da quella corrente vengono elencate in
+una riga separata.</para>
+      <para>Non &egrave; possibile spostare l'icona all'estrema destra del Pannello
+dei menu.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-715">
+    <title>Operazioni generali sulle finestre</title>
+    <indexterm>
+      <primary>finestre</primary>
+      <secondary>operazioni generali</secondary>
+    </indexterm>
+    <para>Questa sezione descrive le operazioni di carattere generale
+che &egrave; possibile eseguire sulle finestre.</para>
+    <sect2 id="gosmetacity-28">
+      <title>Attivare una finestra</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>attivazione</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>attivazione di una finestra</primary>
+      </indexterm>
+      <para>Le finestre attive possono ricevere l'input del mouse e della tastiera. Solo
+una finestra per volta pu&ograve; essere attiva. La finestra attiva ha un
+aspetto differente dalle altre. </para>
+      <para>Sono disponibili i seguenti metodi per attivare una finestra:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Elemento</para>
+              </entry>
+              <entry valign="top">
+                <para>Azione</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Con il mouse</para>
+              </entry>
+              <entry valign="top">
+                <para> Fare clic sulla finestra, se &egrave; visibile. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Scelte rapide</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Usare le scelte rapide per passare
+da una finestra aperta all'altra. Per attivare una finestra, rilasciare i
+tasti. La scelta rapida predefinita per passare da una finestra all'altra
+&egrave; <keycombo><keycap>Alt</keycap><keycap> Tab</keycap></keycombo>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Elenco finestre </application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para> Fare clic sul pulsante che rappresenta la finestra desiderata nell'applet <application>Elenco finestre </application>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Con l'applet <application>Selettore aree di lavoro</application></para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para> Fare clic sulla finestra che si desidera attivare nell'applet <application>Selettore aree di lavoro</application>. Se la finestra risiede in un'altra
+area di lavoro, l'applet <application> Selettore aree di lavoro</application>
+passa alla nuova area di lavoro e attiva la finestra. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Pannello dei menu</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Fare clic sull'icona all'estrema
+destra del Pannello dei menu. Viene visualizzato un elenco delle finestre
+aperte. Scegliere la finestra desiderata dall'elenco.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosmetacity-29">
+      <title>Ridurre a icona una finestra</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>riduzione a icona</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>riduzione a icona</primary>
+        <secondary>finestre</secondary>
+      </indexterm>
+      <para>Per ridurre a icona una finestra, procedere
+in uno dei modi seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Fare clic sul pulsante <guibutton>Riduci a icona</guibutton>
+nella cornice della finestra. </para>
+        </listitem>
+        <listitem>
+          <para>Aprire il <guimenu>Menu della finestra</guimenu> e scegliere
+ <guimenuitem>Riduci a icona</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Se la finestra &egrave; attiva, fare clic sul pulsante che
+la rappresenta nell'applet <application>Elenco finestre</application>. Se
+la finestra non &egrave; attiva, fare clic due volte sul pulsante che la rappresenta. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sul pulsante che
+rappresenta la finestra nell'applet <application> Elenco finestre</application>
+e scegliere <guimenuitem>Riduci a icona</guimenuitem> dal menu popup.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-30">
+      <title>Ingrandire una finestra</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>ingrandimento</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>ingrandimento delle finestre</primary>
+      </indexterm>
+      <para>Quando si ingrandisce una finestra, questa assume la massima dimensione
+possibile. Per ingrandire una finestra, procedere in uno dei modi seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Fare clic sul pulsante <guibutton>Ingrandisci</guibutton>
+nella cornice della finestra. In alternativa, aprire il <guimenu>Menu della
+finestra</guimenu> e scegliere <guimenuitem>Ingrandisci</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sul pulsante che
+rappresenta la finestra nell'applet <application> Elenco finestre</application>
+e scegliere <guimenuitem>Ingrandisci</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-31">
+      <title>Ripristinare una finestra</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>ripristino</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>ripristino</primary>
+        <secondary>finestre</secondary>
+      </indexterm>
+      <para>Per ripristinare una finestra ingrandita alla dimensione massima, procedere
+in uno dei modi seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Fare clic sul pulsante <guibutton>Ingrandisci</guibutton>
+nella cornice della finestra. </para>
+        </listitem>
+        <listitem>
+          <para>Aprire il <guimenu>Menu della finestra</guimenu>. Scegliere <guimenuitem>Ripristina</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sul pulsante che
+rappresenta la finestra nell'applet <application>Elenco finestre</application>
+per aprire il <guimenu>Menu della finestra</guimenu>. Scegliere <guimenuitem>Ripristina</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Per ripristinare una finestra ridotta a icona, fare clic sul pulsante
+che la rappresenta nell'applet <application>Elenco finestre</application>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-32">
+      <title>Chiudere una finestra</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>chiusura</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>chiusura delle finestre</primary>
+      </indexterm>
+      <para>Per
+chiudere una finestra, procedere in uno dei modi seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Fare clic sul pulsante <guibutton>Chiudi finestra</guibutton>
+nella cornice della finestra. </para>
+        </listitem>
+        <listitem>
+          <para>Aprire il <guimenu>Menu della finestra</guimenu>. Scegliere <guimenuitem>Chiudi</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sul pulsante che
+rappresenta la finestra nell'applet <application> Elenco finestre</application>
+e scegliere <guimenuitem>Chiudi</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Se la finestra contiene dati non salvati, viene richiesto di salvarli.</para>
+    </sect2>
+    <sect2 id="gosmetacity-34">
+      <title>Ridimensionare una finestra</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>ridimensionamento</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>ridimensionamento delle finestre</primary>
+      </indexterm>
+      <para>Per ridimensionare una finestra, procedere in uno dei modi
+seguenti:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Spostare il puntatore su un angolo della finestra. Il puntatore
+del mouse cambia aspetto per indicare che &egrave; possibile ridimensionare
+la finestra. Agganciare l'angolo e trascinare la finestra nella nuova posizione.</para>
+        </listitem>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sul pulsante che
+rappresenta la finestra nell'applet <application>Elenco finestre</application>.
+Scegliere <guimenuitem>Ridimensiona</guimenuitem> dal <guimenu>Menu della
+finestra</guimenu>. Usare i tasti freccia per ridimensionare la finestra.</para>
+        </listitem>
+        <listitem>
+          <para>Premere <keycap>Alt</keycap> e quindi fare clic con il pulsante
+centrale del mouse vicino all'angolo da usare per il ridimensionamento. Il
+puntatore del mouse cambia aspetto per indicare che &egrave; possibile ridimensionare
+la finestra dall'angolo. Per ridimensionare la finestra, trascinare il puntatore
+dall'angolo su cui si &egrave; fatto clic.</para>
+        </listitem>
+        <listitem>
+          <para>Per ridimensionare la finestra in senso orizzontale, spostare
+il puntatore su uno dei bordi verticali della finestra. Il puntatore del mouse
+cambia aspetto per indicare che &egrave; possibile ridimensionare la finestra.
+Agganciare il bordo e trascinare fino alla dimensione desiderata.</para>
+        </listitem>
+        <listitem>
+          <para>Per ridimensionare la finestra in senso verticale, spostare
+il puntatore sul bordo inferiore della finestra. Il puntatore del mouse cambia
+aspetto per indicare che &egrave; possibile ridimensionare la finestra. Agganciare
+il bordo e trascinare fino alla dimensione desiderata.</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para>Alcune finestre di dialogo non possono essere ridimensionate.
+Inoltre, alcune finestre delle applicazioni non possono essere ridotte oltre
+una certa dimensione minima.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosmetacity-35">
+      <title>Spostare una finestra</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>spostamento</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>spostamento delle finestre</primary>
+      </indexterm>
+      <para>Per spostare una finestra, procedere in uno dei modi seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Agganciare la barra del titolo e trascinare la finestra nella
+nuova posizione desiderata. </para>
+        </listitem>
+        <listitem>
+          <para>Premere <keycap>Alt</keycap> e trascinare la finestra nella
+nuova posizione. </para>
+        </listitem>
+        <listitem>
+          <para>Aprire il <guimenu>Menu della finestra</guimenu> e scegliere
+ <guimenuitem>Sposta</guimenuitem>. Usare i tasti freccia per spostare la
+finestra nella nuova posizione. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sul pulsante che
+rappresenta la finestra nell'applet <application>Elenco finestre</application>
+e scegliere <guimenuitem>Sposta</guimenuitem>. Usare i tasti freccia per spostare
+la finestra nella nuova posizione. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-36">
+      <title>Arrotolare una finestra</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>arrotolamento</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>arrotolamento delle finestre</primary>
+      </indexterm>
+      <para>Le operazioni di arrotolamento e srotolamento delle finestre hanno i
+seguenti effetti:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="24.94*"/>
+          <colspec colwidth="75.06*"/>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Arrotolamento</para>
+              </entry>
+              <entry valign="top">
+                <para> La finestra viene ridotta in modo da lasciare visibile solo la barra del
+titolo.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Srotolamento</para>
+              </entry>
+              <entry valign="top">
+                <para> La finestra arrotolata viene riportata alla dimensione originaria. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Per arrotolare una finestra, procedere in uno dei modi seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Fare doppio clic sulla barra del titolo. Per srotolare la
+finestra, fare nuovamente doppio clic sulla barra del titolo.</para>
+        </listitem>
+        <listitem>
+          <para>Aprire il <guimenu>Menu della finestra</guimenu>. Scegliere <guimenuitem>Arrotola</guimenuitem>. Per srotolare la finestra, scegliere <guimenuitem>Srotola</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sul pulsante che
+rappresenta la finestra nell'applet <application>Elenco finestre</application>
+e scegliere <guimenuitem>Arrotola</guimenuitem>. Per srotolare la finestra,
+scegliere <guimenuitem>Srotola</guimenuitem>. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-38">
+      <title>Collocare una finestra in tutte le aree di lavoro</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>collocamento in tutte le
+aree di lavoro</secondary>
+      </indexterm>
+      <para>Per collocare una finestra in
+tutte le aree di lavoro, aprire il <guimenu> Menu della finestra</guimenu>.
+Scegliere <guimenuitem>Sopra a tutte le aree di lavoro</guimenuitem>. Per
+collocare la finestra solo nell'area di lavoro corrente, scegliere <guimenuitem>Solo in questa area di lavoro</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-46">
+      <title>Spostare una finestra in un'area di lavoro differente</title>
+      <indexterm>
+        <primary>finestre</primary>
+        <secondary>spostamento in un'altra area
+di lavoro</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aree di lavoro</primary>
+        <secondary>spostamento delle finestre tra </secondary>
+      </indexterm>
+      <para>Per
+spostare una finestra in un'altra area di lavoro, procedere in uno dei modi
+seguenti:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Usare l'applet <application>Selettore aree di lavoro</application></para>
+          <para>Nell'applet <application>Selettore aree di lavoro</application>, trascinare
+la finestra nell'area di lavoro desiderata.</para>
+        </listitem>
+        <listitem>
+          <para>Usare il <guimenu>Menu della finestra</guimenu></para>
+          <para>Aprire il <guimenu>Menu della finestra</guimenu>. Per spostare la finestra
+nell'area di lavoro successiva, scegliere <guimenuitem>Sposta in  <replaceable>area_di_lavoro</replaceable></guimenuitem>. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-716">
+    <title>Operazioni generali sulle aree di lavoro</title>
+    <indexterm>
+      <primary>aree di lavoro</primary>
+      <secondary>operazioni generali</secondary>
+    </indexterm>
+    <para>Questa sezione descrive le operazioni di carattere
+generale che &egrave; possibile eseguire sulle aree di lavoro.</para>
+    <sect2 id="gosmetacity-49">
+      <title>Passare da un'area di lavoro all'altra</title>
+      <indexterm>
+        <primary>aree di lavoro</primary>
+        <secondary>commutazione</secondary>
+      </indexterm>
+      <para>Per spostarsi tra le aree di lavoro &egrave; possibile procedere
+nei modi seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Usare l'applet <application>Selettore aree di lavoro</application></para>
+          <para>Fare clic sull'area di lavoro in cui spostarsi nell'applet <application>Selettore aree di lavoro</application>.</para>
+        </listitem>
+        <listitem>
+          <para>Usare le scelte rapide appropriate</para>
+          <para>Le scelte rapide predefinite per lo spostamento tra le aree di lavoro
+sono le seguenti: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="50*"/>
+              <colspec colwidth="50*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Scelte rapide predefinite</para>
+                  </entry>
+                  <entry>
+                    <para> Funzione</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>
+                    <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>freccia a destra</keycap></keycombo></para>
+                  </entry>
+                  <entry>
+                    <para>Seleziona l'area di lavoro
+a destra di quella corrente. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry>
+                    <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>freccia a sinistra</keycap></keycombo></para>
+                  </entry>
+                  <entry>
+                    <para>Seleziona l'area di
+lavoro a sinistra di quella corrente. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-50">
+      <title>Aggiungere uno spazio di lavoro</title>
+      <indexterm>
+        <primary>aree di lavoro</primary>
+        <secondary>aggiunta</secondary>
+      </indexterm>
+      <para>Per aggiungere nuove aree di lavoro al desktop, fare clic
+con il pulsante destro del mouse sull'applet <application>Selettore aree di
+lavoro</application> e scegliere  <guimenuitem>Preferenze</guimenuitem>. Viene
+aperta la finestra di dialogo <guilabel>Preferenze del selettore aree di lavoro</guilabel>. Usare la casella di riepilogo <guilabel>Numero di aree di lavoro</guilabel> per specificare il numero di aree di lavoro necessarie. Le nuove
+aree di lavoro vengono aggiunte dopo quelle gi&agrave; esistenti.</para>
+    </sect2>
+    <sect2 id="gosmetacity-51">
+      <title>Assegnare un nome alle aree di lavoro</title>
+      <indexterm>
+        <primary>aree di lavoro</primary>
+        <secondary>assegnazione di un
+nome</secondary>
+      </indexterm>
+      <para>I nomi predefiniti per le aree di lavoro
+sono <literal>Area di lavoro 1</literal>, <literal>Area di lavoro 2</literal>, <literal>Area di lavoro 3</literal>, ecc. Per assegnare nomi di propria scelta alle
+aree di lavoro, fare clic con il pulsante destro del mouse sull'applet <application>Selettore aree di lavoro</application> e scegliere  <guimenuitem>Preferenze</guimenuitem>. Viene aperta la finestra di dialogo <guilabel>Preferenze del
+selettore aree di lavoro</guilabel>. Usare la casella di riepilogo <guilabel>Aree di lavoro</guilabel> per specificare i nomi delle aree di lavoro. Selezionare
+un'area di lavoro e digitare il nuovo nome desiderato.</para>
+    </sect2>
+    <sect2 id="gosmetacity-52">
+      <title>Eliminare un'area di lavoro</title>
+      <indexterm>
+        <primary>aree di lavoro</primary>
+        <secondary>eliminazione</secondary>
+      </indexterm>
+      <para>Quando si elimina un'area di lavoro, le finestre che vi
+erano contenute vengono spostate in un'altra area di lavoro. </para>
+      <para>Per eliminare un'area di lavoro dal desktop, fare clic con il pulsante
+destro del mouse sull'applet <application>Selettore aree di lavoro</application>
+e scegliere  <guimenuitem>Preferenze</guimenuitem>. Viene aperta la finestra
+di dialogo <guilabel>Preferenze del selettore aree di lavoro</guilabel>. Usare
+la casella di riepilogo <guilabel>Numero di aree di lavoro</guilabel> per
+specificare il numero di aree di lavoro necessarie. L'applet <application>Selettore aree di lavoro</application> elimina le aree di lavoro necessarie
+per raggiungere il valore specificato, partendo dal fondo dell'elenco.</para>
+    </sect2>
+  </sect1>
+</chapter>

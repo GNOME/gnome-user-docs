@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosgetstarted-1">
+  <title>Sessioni desktop</title>
+  <highlights>
+    <para>Questo capitolo contiene le informazioni necessarie per avviare, amministrare e terminare una sessione del desktop.</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>Avvio di una sessione del desktop</title>
+    <indexterm>
+      <primary>sessioni</primary>
+      <secondary>avvio</secondary>
+    </indexterm>
+    <para>Per sessione del desktop si intende il periodo di tempo e le attivit&agrave; che intercorrono tra il login e la chiusura della sessione (logout) nel desktop. La schermata di login, visualizzata dalla <application>Gestione del login</application>, rappresenta la &ldquo;porta&rdquo; per l'accesso al desktop. Questa schermata include i campi per l'inserimento del nome utente e della password. Il menu <guimenu>Opzioni</guimenu> presente in questa schermata include tutte le opzioni personalizzabili, ad esempio permette di scegliere la lingua della sessione. </para>
+    <para>Al momento del login si avvia la sessione. La gestione delle sessioni viene avviata dopo che la <application>Gestione del login</application> autentica con successo il nome utente e la password. La gestione delle sessioni consente l'amministrazione della sessione. Consente ad esempio di salvare lo stato della sessione pi&ugrave; recente e di ripresentarla al successivo login. La gestione delle sessioni memorizza e ripristina i seguenti elementi: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Le impostazioni relative all'aspetto e al comportamento del desktop, ad esempio i tipi di carattere, i colori e le impostazioni del mouse. </para>
+      </listitem>
+      <listitem>
+        <para>Le applicazioni in esecuzione: ad esempio, le applicazioni di gestione dei file e gli editor di testo. Non &egrave; possibile salvare e ripristinare le impostazioni delle applicazioni che non sono amministrate dalla gestione delle sessioni. Ad esempio, l'editor <application>vi</application> eseguito in una finestra di terminale non potr&agrave; essere ripristinato nella sessione successiva. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosgetstarted-65">
+      <title>Avviare una sessione del desktop</title>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>login</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>login</primary>
+      </indexterm>
+      <para>Per effettuare il login in una sessione, procedere come segue.</para>
+      <orderedlist>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>Opzioni</guimenu><guimenuitem> Sessione</guimenuitem></menuchoice>. Scegliere il desktop GNOME dall'elenco dei desktop disponibili.</para>
+        </listitem>
+        <listitem>
+          <para>Inserire il nome di login nel campo appropriato della finestra di dialogo della <guilabel>Gestione del login</guilabel>, quindi fare clic su <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Inserire la password nel campo appropriato della finestra di dialogo della <guilabel>Gestione del login</guilabel>, quindi fare clic su <guibutton>OK</guibutton>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Se il login riesce correttamente, la gestione delle sessioni avvia una sessione. Se si tratta del primo login, la gestione delle sessioni avvia una nuova sessione. Se il login &egrave; gi&agrave; stato effettuato in precedenza, la gestione delle sessioni ripresenta la sessione precedente.</para>
+    </sect2>
+    <sect2 id="gosgetstarted-66">
+      <title>Avviare una sessione in una lingua diversa</title>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>avvio in diverse lingue</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>lingua, avvio di una sessione</primary>
+      </indexterm>
+      <para>Per avviare una sessione in una lingua differente, procedere come segue.</para>
+      <orderedlist>
+        <listitem>
+          <para>Sempre nella finestra di dialogo di login, scegliere <menuchoice><guimenu>Opzioni</guimenu><guimenuitem>Sessione</guimenuitem></menuchoice>. Scegliere il desktop GNOME dall'elenco dei desktop disponibili.</para>
+        </listitem>
+        <listitem>
+          <para>Nella finestra di dialogo di login, scegliere <menuchoice><guimenu>Opzioni</guimenu><guimenuitem>Sessione</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Scegliere il gruppo che include la lingua desiderata.</para>
+        </listitem>
+        <listitem>
+          <para>Scegliere una lingua.</para>
+        </listitem>
+        <listitem>
+          <para>Eseguire il login.</para>
+        </listitem>
+      </orderedlist>
+      <para>La lingua predefinita del sistema viene impostata dall'amministratore di sistema. Il menu <guimenu>Opzioni</guimenu> nella finestra della <guilabel>Gestione del login</guilabel> consente di selezionare una lingua differente. Quando viene selezionata una lingua in questo modo dal menu <guimenu>Opzioni</guimenu>, il sistema imposta la variabile d'ambiente LANG per la sessione. La lingua predefinita viene ripristinata al termine della sessione. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>Blocco dello schermo</title>
+    <para>Questa sezione fornisce informazioni sul blocco dello schermo e  sulle modalit&agrave; di configurazione del salvaschermo.</para>
+    <sect2 id="gosstartsession-4">
+      <title>Bloccare lo schermo</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>L'immagine mostra un'icona a forma di lucchetto che rappresenta la funzione Blocca schermo.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>blocco dello schermo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>blocco dello schermo</primary>
+      </indexterm>
+      <indexterm>
+        <primary>pulsante di blocco</primary>
+      </indexterm>
+      <para>Per bloccare lo schermo, procedere come segue:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>Azioni</guimenu><guimenuitem>Blocca schermo</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>Se il pulsante <guibutton>Blocca</guibutton> &egrave; presente in un pannello, fare clic sul pulsante. </para>
+          <para>Per aggiungere il pulsante <guibutton>Blocca</guibutton> a un pannello, fare clic con il pulsante destro del mouse sul pannello. Scegliere <menuchoice><guimenu>Aggiungi al pannello</guimenu><guimenuitem> Blocco schermo</guimenuitem></menuchoice>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Quando lo schermo viene bloccato viene avviato il salvaschermo. Per sbloccare lo schermo, spostare il mouse in modo da visualizzare la finestra di dialogo dello schermo bloccato. Inserire il nome utente e la password nella finestra di dialogo, quindi premere <keycap>Return</keycap>. </para>
+      <note>
+        <para>Per bloccare lo schermo in modo corretto deve essere  abilitato un salvaschermo. </para>
+      </note>
+    </sect2>
+    <sect2 id="gosstartsession-3">
+      <title>Configurare il salvaschermo</title>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>configurazione del salvaschermo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>salvaschermo, configurazione</primary>
+      </indexterm>
+      <indexterm>
+        <primary>XScreenSaver</primary>
+        <see>salvaschermo</see>
+      </indexterm>
+      <para>I salvaschermo sono applicazioni che &egrave; possibile utilizzare per sostituire le immagini sullo schermo quando il sistema &egrave; inutilizzato. I salvaschermo possono operare nei seguenti modi:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Si attivano dopo un determinato periodo di tempo.</para>
+        </listitem>
+        <listitem>
+          <para>Si attivano al blocco dello schermo.</para>
+        </listitem>
+        <listitem>
+          <para>Gestiscono i consumi del monitor quando il sistema &egrave; in pausa. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Per configurare il salvaschermo, procedere come segue: </para>
+      <orderedlist>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sul pulsante <guibutton>Blocca</guibutton>, quindi scegliere <guimenuitem>Propriet&agrave;</guimenuitem> dal menu popup. Viene visualizzata la finestra di dialogo di <guilabel>XScreenSaver</guilabel>.</para>
+          <para>Se il pulsante <guibutton>Blocca</guibutton> non &egrave; presente nel pannello, &egrave; possibile aggiungerlo. Per aggiungere il pulsante <guibutton>Blocca</guibutton> a un pannello, fare clic con il pulsante destro del mouse sul pannello. Scegliere <menuchoice><guimenu> Aggiungi al pannello</guimenu><guimenuitem>Blocco schermo</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Per configurare il salvaschermo, usare gli elementi della scheda <guilabel>Modalit&agrave; di visualizzazione</guilabel>. La tabella seguente descrive gli elementi della scheda in oggetto: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>Impostazione</para>
+                  </entry>
+                  <entry valign="top">
+                    <para> Funzione</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Modo</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Usare la casella di riepilogo a discesa per specificare il comportamento del salvaschermo. Selezionare una delle seguenti opzioni: </para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><guilabel>Disabilita salvaschermo</guilabel>: Selezionare questa opzione per disabilitare il salvaschermo.</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>Schermo vuoto</guilabel>: Selezionare questa opzione per impostare l'oscuramento dello schermo quando si attiva il blocco dello schermo.</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>Salvaschermo singolo</guilabel>: Selezionare questa opzione per visualizzare un singolo salvaschermo tra quelli inclusi nella casella di riepilogo durante il blocco dello schermo.</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>Salvaschermo casuale</guilabel>: Selezionare questa opzione per visualizzare una scelta casuale di salvaschermo inclusi nella casella di riepilogo durante il blocco dello schermo. </para>
+                      </listitem>
+                    </itemizedlist>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>Elenco dei salvaschermo</para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Selezionare il salvaschermo desiderato dall'elenco.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Attiva salvaschermo dopo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Specificare la durata del periodo di inattivit&agrave; dopo il quale il salvaschermo viene attivato.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Passa al successivo dopo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Specificare la durata di utilizzo di un singolo salvaschermo prima di passare al successivo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Blocca schermo dopo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare questa opzione per impostare il blocco dello schermo all'avvio del salvaschermo. Usare la casella di selezione per specificare il ritardo che deve intercorrere tra l'attivazione del salvaschermo e il blocco dello schermo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>Anteprima</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Fare clic su questo pulsante per visualizzare un'anteprima del salvaschermo selezionato nell'elenco. Per arrestare l'anteprima, premere un tasto o fare clic con il mouse.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>Impostazioni</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Fare clic su questo pulsante per visualizzare le opzioni per il salvaschermo selezionato nell'elenco. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Per configurare le opzioni avanzate, fare clic sulla scheda <guilabel>Avanzate</guilabel>. La tabella seguente descrive gli elementi contenuti nella scheda <guilabel>Avanzate</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>Impostazione</para>
+                  </entry>
+                  <entry valign="top">
+                    <para> Funzione</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Cattura immagini del desktop</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Alcuni salvaschermo permettono di scattare un'istantanea del desktop e quindi di rielaborarla per creare il salvaschermo. Selezionare questa opzione per consentire ai salvaschermo di scattare un'istantanea del desktop. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Cattura fotogrammi video</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Alcuni salvaschermo possono catturare un fotogramma video e quindi rielaborarlo per creare il salvaschermo vero e proprio. Se il sistema &egrave; dotato di una scheda di acquisizione video, selezionare questa opzione per consentire ai salvaschermo di catturare un fotogramma video.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Scegli immagine casuale</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para> Selezionare questa opzione per consentire al salvaschermo di utilizzare le immagini situate nella directory selezionata. Digitare il percorso della directory nel campo di testo.  In alternativa, fare clic su <guibutton>Sfoglia</guibutton> per visualizzare una finestra di dialogo dalla quale &egrave; possibile selezionare una directory. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Diagnostica completa</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Selezionare questa opzione per visualizzare informazioni diagnostiche sul salvaschermo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Visualizza errori del sottoprocesso</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Selezionare questa opzione per visualizzare sullo schermo gli errori prodotti dai sottoprocessi del salvaschermo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Mostra schermata di avvio al login</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Selezionare questa opzione per impostare <application>Xscreensaver</application> in modo da visualizzare una schermata iniziale all'avvio. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Gestione consumi abilitata</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Selezionare questa opzione per abilitare la gestione dei consumi del monitor. La gestione dei consumi pu&ograve; ridurre l'utilizzo di energia elettrica del monitor quando non &egrave; in uso. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Standby dopo</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Specificare dopo quanto tempo il monitor deve entrare in modalit&agrave; di standby. In questa modalit&agrave;, lo schermo viene oscurato. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Sospensione dopo</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Specificare dopo quanto tempo il monitor deve entrare in modalit&agrave; di risparmio energetico. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Spegnimento dopo</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Specificare dopo quanto tempo il monitor viene spento. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Installa mappa colori</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Selezionare questa opzione per installare una mappa di colori privata quando il salvaschermo &egrave; in funzione. L'utilizzo di una mappa di colori privata pu&ograve; migliorare la qualit&agrave; dei colori con determinati salvaschermo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Sfumatura verso il nero</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Selezionare questa opzione per fare in modo che lo schermo sfumi gradatamente all'immagine nera quando si attiva il salvaschermo. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>Sfumatura dal nero</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>Selezionare questa opzione per fare in modo che il salvaschermo passi gradatamente dallo schermo nero alla visualizzazione normale quando si arresta il salvaschermo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Durata sfumatura</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Specificare il tempo richiesto per il passaggio allo schermo nero quando si attiva il salvaschermo.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Fare clic sul pulsante della cornice <guibutton>Chiudi finestra</guibutton> per chiudere la finestra di dialogo di <guilabel>XScreenSaver</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>Gestione delle sessioni</title>
+    <indexterm>
+      <primary>preferenze</primary>
+      <secondary>sessioni</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessioni</primary>
+      <secondary>gestione</secondary>
+    </indexterm>
+    <para>Per configurare la gestione delle sessioni nel desktop GNOME, scegliere <menuchoice><guimenu>Applicazioni</guimenu><guisubmenu>Preferenze del desktop</guisubmenu><guisubmenu>Avanzate</guisubmenu><guimenuitem>Sessioni</guimenuitem></menuchoice>. La finestra di preferenze <application>Sessioni</application> riconosce i seguenti tipi di applicazioni: </para>
+    <itemizedlist>
+      <listitem>
+        <indexterm>
+          <primary>applicazioni ad avvio automatico</primary>
+          <secondary>gestite dalla sessione</secondary>
+        </indexterm>
+        <para>Applicazioni gestite dalla sessione. Quando si salvano le impostazioni di una sessione, la gestione delle sessioni memorizza tutte le applicazioni gestite della sessione. Se si chiude e quindi si riavvia una sessione, la gestione delle sessioni avvia automaticamente tutte le applicazioni gestite dalla sessione. </para>
+      </listitem>
+      <listitem>
+        <para>Applicazioni non gestite dalla sessione. Quando si salvano le impostazioni di una sessione, la gestione delle sessioni non salva le applicazioni non gestite dalla sessione. Se si chiude e quindi si riavvia una sessione, la gestione delle sessioni non riavvia automaticamente le applicazioni non gestite dalla sessione. Queste applicazioni devono essere riavviate manualmente. In alternativa, &egrave; possibile usare la finestra di preferenze <application>Sessioni</application> per specificare le applicazioni non gestite dalla sessione che si intende avviare automaticamente. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>Definizione del comportamento della sessione all'avvio e alla chiusura</title>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>comportamento all'avvio</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>comportamento alla chiusura</secondary>
+      </indexterm>
+      <para>Per impostare il comportamento di una sessione all'avvio e alla chiusura, scegliere <menuchoice><guimenu>Applicazioni</guimenu><guisubmenu>Preferenze del desktop</guisubmenu><guisubmenu>Avanzate</guisubmenu><guimenuitem>Sessioni</guimenuitem></menuchoice>. Apportare le modifiche richieste nella scheda <guilabel>Opzioni sessione</guilabel>. Ad esempio, &egrave; possibile selezionare una schermata iniziale da visualizzare all'avvio. </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>Impostare l'avvio automatico delle applicazioni</title>
+      <indexterm>
+        <primary>programmi avviati automaticamente</primary>
+        <see>applicazioni ad avvio automatico</see>
+      </indexterm>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>uso delle applicazioni ad avvio automatico</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>applicazioni ad avvio automatico</primary>
+        <secondary>non gestite dalla sessione</secondary>
+      </indexterm>
+      <para>&Egrave; possibile configurare le sessioni in modo che alcune applicazioni non gestite dalla sessione vengano avviate automaticamente. Per configurare le applicazioni non gestite da avviare, scegliere <menuchoice><guimenu>Applicazioni</guimenu><guisubmenu>Preferenze del desktop</guisubmenu><guisubmenu>Avanzate</guisubmenu><guimenuitem>Sessioni </guimenuitem></menuchoice>. Usare la scheda <guilabel>Programmi all'avvio</guilabel> per aggiungere, modificare ed eliminare le applicazioni. Se si salvano le impostazioni e si chiude la sessione, al successivo avvio della sessione tutte le applicazioni specificate verranno avviate automaticamente. </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>Visualizzare le applicazioni della sessione corrente</title>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>visualizzazione delle applicazioni</secondary>
+      </indexterm>
+      <para>Per visualizzare le applicazioni presenti nella sessione corrente, scegliere <menuchoice><guimenu>Applicazioni</guimenu><guisubmenu>Preferenze del desktop</guisubmenu><guisubmenu>Avanzate</guisubmenu><guimenuitem>Sessioni </guimenuitem></menuchoice>. La scheda <guilabel>Sessione corrente</guilabel> contiene le seguenti voci:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Tutte le applicazioni GNOME in esecuzione in quel momento, in grado di connettersi alla gestione delle sessioni e di salvare lo stato dell'applicazione. </para>
+        </listitem>
+        <listitem>
+          <para>Tutte le finestre di preferenze in grado di connettersi alla gestione delle sessioni e di salvare il proprio stato.</para>
+        </listitem>
+      </itemizedlist>
+      <para>&Egrave; possibile utilizzare la scheda <guilabel>Sessione corrente</guilabel> per eseguire alcune azioni sulle propriet&agrave; della sessione di un'applicazione o di una finestra di preferenze. Ad esempio, &egrave; possibile modificare l'ordine di avvio e lo stile di riavvio di tutte le applicazioni GNOME o delle finestre di preferenze comprese nell'elenco. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>Salvare le impostazioni della sessione</title>
+      <indexterm>
+        <primary>sessioni</primary>
+        <secondary>salvataggio delle impostazioni</secondary>
+      </indexterm>
+      <para>Per salvare le impostazioni di una sessione, procedere come segue: </para>
+      <orderedlist>
+        <listitem>
+          <para>Configurare la sessione in modo che memorizzi automaticamente le impostazioni all'uscita. Per configurare la sessione, scegliere <menuchoice><guimenu> Applicazioni</guimenu><guisubmenu>Preferenze del desktop</guisubmenu><guisubmenu>Avanzate</guisubmenu><guimenuitem>Sessioni</guimenuitem></menuchoice>. Viene avviata la finestra di preferenze <application>Sessioni</application>. Selezionare l'opzione <guilabel>Salva automaticamente le modifiche alla sessione</guilabel> nella scheda <guilabel>Opzioni sessione</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Terminare la sessione. </para>
+        </listitem>
+      </orderedlist>
+      <para>Se l'opzione <guilabel>Salva automaticamente le modifiche alla sessione</guilabel> non &egrave; selezionata, alla chiusura della sessione una finestra di dialogo chiede se si intende memorizzare le impostazioni. Per salvare le impostazioni, selezionare l'opzione appropriata e proseguire la chiusura della sessione.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>Termine di una sessione</title>
+    <indexterm>
+      <primary>sessioni</primary>
+      <secondary>fine</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessioni</primary>
+      <secondary>chiusura</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>chiusura delle sessioni</primary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Icona di chiusura della sessione.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>Per terminare la sessione, chiudere tutti i processi attivi ed eseguire una delle azioni seguenti:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Fare clic sul pulsante <guibutton>Chiudi sessione</guibutton>.</para>
+      </listitem>
+      <listitem>
+        <para>Scegliere <menuchoice><guimenu>Azioni</guimenu><guimenuitem>Chiudi sessione</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>Aprire il <guimenu>Menu GNOME</guimenu>, quindi scegliere <guimenuitem>Chiudi sessione</guimenuitem>.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Prima di terminare una sessione pu&ograve; essere opportuno memorizzare le impostazioni in modo che possano essere ripristinate in un secondo momento. Al momento della chiusura, una finestra di dialogo richiede il salvataggio delle impostazioni. Nella finestra di preferenze <application>Sessioni</application>, &egrave; possibile impostare il salvataggio automatico delle impostazioni correnti.</para>
+  </sect1>
+</chapter>
