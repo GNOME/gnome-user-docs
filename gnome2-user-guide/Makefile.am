@@ -1,2 +1,2 @@
-SUBDIRS = C ro
+SUBDIRS = C ro hu
 
