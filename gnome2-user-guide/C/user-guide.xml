@@ -1,141 +1,170 @@
-<?xml version="1.0"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
-"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
-  <!ENTITY gnomeversion "2.8">
-  <!ENTITY manrevision "2.8.1">
-  <!ENTITY date "September 2004">
+<?xml version="1.0"?><!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY gnomeversion "2.10">
+  <!ENTITY manrevision "2.10.0">
   <!ENTITY LEGAL SYSTEM "legal.xml">
-  <!ENTITY PART1 SYSTEM "part1.xml">
   <!ENTITY gosbasic SYSTEM "gosbasic.xml">  
   <!ENTITY gosoverview SYSTEM "gosoverview.xml">  
   <!ENTITY gosstartsession SYSTEM "gosstartsession.xml">  
   <!ENTITY gospanel SYSTEM "gospanel.xml">  
   <!ENTITY goseditmainmenu SYSTEM "goseditmainmenu.xml">  
-  <!ENTITY gosmetacity SYSTEM "gosmetacity.xml">  
   <!ENTITY gosnautilus SYSTEM "gosnautilus.xml">  
-  <!ENTITY gosdeskback SYSTEM "gosdeskback.xml">  
-  <!ENTITY PART2 SYSTEM "part2.xml">
-  <!ENTITY plaingnomestartpreftools SYSTEM "plaingnomestartpreftools.xml">
+  <!ENTITY gosremotedesktop SYSTEM "goscustdesk-remotedesktop.xml">
+  <!ENTITY gostools SYSTEM "gostools.xml">
   <!ENTITY goscustdesk SYSTEM "goscustdesk.xml">
   <!ENTITY gloss SYSTEM "glossary.xml">
-  <!ENTITY gosremotedesktop SYSTEM "goscustdesk-remotedesktop.xml">
 ]>
+<?db.chunk.max_depth 3?>
 <?yelp:chunk-depth 3?>
 <book id="index"> 
-  <title>GNOME &gnomeversion; Desktop User Guide</title> 
-  <bookinfo> 
-	 <copyright> 
-		<year>2004</year> 
-		<holder>Sun Microsystems</holder> 
-	 </copyright>
-	 <copyright> 
-      	<year>2003</year> 
-         <holder>Sun Microsystems</holder> 
- 	 </copyright>
-<!-- translators: uncomment this:
-  <copyright>
-   <year>2002</year>
-   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
-  </copyright>
--->
-	 <publisher> 
-		<publishername> GNOME Documentation Project </publishername> 
-	 </publisher> &LEGAL; 
+  <title>Desktop User Guide</title> 
+  <bookinfo>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2004</year>
+      <holder>Sun Microsystems</holder>
+    </copyright>
+    <copyright>
+      <year>2003</year>
+      <holder>Sun Microsystems</holder>
+    </copyright>
+    <!-- translators: uncomment this:
+    <copyright>
+      <year>2002</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+    -->
+    <publisher>
+      <publishername>GNOME Documentation Project</publishername>
+    </publisher>
 
-	 <authorgroup> 
-		<author> 
-		  <firstname>Sun</firstname> 
-		  <surname>GNOME Documentation Team</surname> 
-		  <affiliation> 
-			 <orgname>Sun Microsystems</orgname> 
-		  </affiliation> 
-		</author> 
-	 </authorgroup>
+    &LEGAL;
 
-	 <revhistory>
-		<revision> 
-		  <revnumber>GNOME &gnomeversion; Desktop User Guide V&manrevision;</revnumber> 
-		  <date>&date;</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-		<revision> 
-		  <revnumber>GNOME 2.4 Desktop User Guide V2.7</revnumber> 
-		  <date>September 2003</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-		<revision> 
-		  <revnumber>GNOME 2.4 Desktop User Guide V2.6</revnumber> 
-		  <date>August 2003</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-		<revision> 
-		  <revnumber>GNOME 2.2.1 Desktop User Guide V2.5</revnumber> 
-		  <date>March 2003</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-		<revision> 
-		  <revnumber>GNOME 2.2 Desktop User Guide V2.4</revnumber> 
-		  <date>January 2003</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-		<revision> 
-		  <revnumber>GNOME 2.0 Desktop User Guide V2.3</revnumber> 
-		  <date>October 2002</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-		<revision> 
-		  <revnumber>GNOME 2.0 Desktop User Guide V2.2</revnumber> 
-		  <date>August 2002</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-		<revision> 
-		  <revnumber>GNOME 2.0 Desktop User Guide V2.1</revnumber> 
-		  <date>August 2002</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-		<revision> 
-		  <revnumber>GNOME 2.0 Desktop User Guide V1.0</revnumber> 
-		  <date>May 2002</date> 
-		  <revdescription> 
-			 <para role="author">Sun Microsystems</para> 
-			 <para role="publisher">GNOME Documentation Project</para> 
-		  </revdescription> 
-		</revision> 
-	 </revhistory> 
-	 <releaseinfo> This manual describes version &gnomeversion; of the GNOME desktop.
-		</releaseinfo> 
-	 <legalnotice> 
-		<title>Feedback</title> 
-		<para> To report a bug or make a suggestion regarding the GNOME desktop or this
-		  manual, follow the directions in the <ulink url="ghelp:gnome-feedback"
-	  type="help">GNOME Feedback Page</ulink>. </para>
-	 </legalnotice> 
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>GNOME Documentation Team</surname>
+        <affiliation>
+          <orgname>Sun Microsystems</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>GNOME Documentation Project</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>2005-03-08</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.8 Desktop User Guide V2.8</revnumber>
+        <date>September 2004</date>
+        <revdescription>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.4 Desktop User Guide V2.7</revnumber>
+        <date>September 2003</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.4 Desktop User Guide V2.6</revnumber>
+        <date>August 2003</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.2.1 Desktop User Guide V2.5</revnumber>
+        <date>March 2003</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.2 Desktop User Guide V2.4</revnumber>
+        <date>January 2003</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.0 Desktop User Guide V2.3</revnumber>
+        <date>October 2002</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.0 Desktop User Guide V2.2</revnumber>
+        <date>August 2002</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.0 Desktop User Guide V2.1</revnumber>
+        <date>August 2002</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>GNOME 2.0 Desktop User Guide V1.0</revnumber>
+        <date>May 2002</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>This manual describes version &gnomeversion; of the
+    GNOME desktop.</releaseinfo>
+
+    <legalnotice>
+      <title>Feedback</title>
+      <para>To report a bug or make a suggestion regarding the GNOME
+      desktop or this manual, follow the directions in the <ulink
+      url="ghelp:gnome-feedback" type="help">GNOME Feedback
+      Page</ulink>.</para>
+    </legalnotice>
   </bookinfo>
-&PART1;
-&PART2;
+
+&gosbasic;
+&gosoverview;
+&gosstartsession;
+&gospanel;
+&goseditmainmenu;
+&gosnautilus;
+&gosremotedesktop;
+&gostools;
+&goscustdesk;
 &gloss;
-</book> 
+
+</book>

@@ -1,1240 +1,968 @@
-<chapter id="gosbasic-1">
-  <title>Basic Skills</title>
-  <highlights>
-    <para>This chapter introduces you to the basic skills that you
-need to work with the GNOME Desktop.</para>
-  </highlights>
-  <sect1 id="gosbasic-2">
-    <title>Mouse Skills</title>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<chapter id="basic-skills">
+<title>Basic Skills</title>
+
+<!-- Maintained for 2.8 compatibility -->
+<anchor id="part1-1"/>
+<anchor id="gosbasic-1"/>
+<anchor id="gosbasic-46"/> <!-- was Using Windows -->
+
+<highlights>
+  <para>This chapter introduces you to the basic skills that you
+  need to work with the GNOME Desktop.</para>
+</highlights>
+
+<section id="mouse-skills">
+  <title>Mouse Skills</title>
+
+  <!-- Maintained for 2.8 compatibility -->
+  <anchor id="gosbasic-2"/>
+
+  <indexterm>
+    <primary>basic skills</primary>
+    <secondary>mouse skills</secondary>
+  </indexterm>
+  <indexterm>
+    <primary>mouse</primary>
+    <secondary>basic skills</secondary>
+  </indexterm>
+
+  <para>Even if you are very familiar with mouse devices, you should
+  still familiarize yourself with the button conventions and action
+  terminology used in this manual. This section also describes the
+  mouse pointers used throughout the desktop and applications.</para>
+
+  <section id="mouse-conventions">
+    <title>Mouse Button Conventions</title>
+    <titleabbrev>Conventions</titleabbrev>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosgetstarted-44"/>
+
     <indexterm>
-      <primary>basic skills</primary>
-      <secondary>mouse skills</secondary>
+      <primary>mouse</primary>
+      <secondary>button conventions</secondary>
+    </indexterm>
+
+    <para>All the instructions in this manual are for the following
+    types of mouse devices:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Devices that are configured for right-hand users.</para>
+      </listitem>
+      <listitem>
+        <para>Three button devices. If you have a two-button mouse device,
+        then your system may be configured to allow you to press the left
+        and right mouse buttons simultaneously to simulate the effect of
+        a middle mouse button press.</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>The mouse button conventions used in this manual are as
+    follows:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Left mouse button</term>
+        <listitem><para>The button on the left side of a mouse device
+        configured for normal right-hand use.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Middle mouse button</term>
+        <listitem><para>The middle button of a mouse device configured
+        for normal right-hand use.  On many mice with a scroll wheel,
+        the scroll wheel can be pushed directly down for a middle mouse
+        button click.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Right mouse button</term>
+        <listitem><para>The button on the right side of a mouse device
+        configured for normal right-hand use.</para></listitem>
+      </varlistentry>
+    </variablelist>
+    <para>To reverse the handedness of your mouse device, start the
+    <application>Mouse Preferences</application>, then select the options
+    that you require.  If you do reverse the handedness of your mouse device,
+    then you must reverse the mouse button conventions used in this manual.
+    See <xref linkend="prefs-mouse"/> for more information about setting
+    your mouse preferences.</para>
+  </section>
+
+  <section id="mouse-actions">
+    <title>Mouse Actions</title>
+    <titleabbrev>Actions</titleabbrev>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosgetstarted-45"/>
+    <anchor id="gosbasic-6"/>
+
+    <indexterm>
+      <primary>mouse</primary>
+      <secondary>actions</secondary>
     </indexterm>
     <indexterm>
       <primary>mouse</primary>
-      <secondary>basic skills</secondary>
+      <secondary>action terminology</secondary>
     </indexterm>
-    <para>Even if you are very familiar with mouse devices, you should
-still familiarize yourself with the button conventions and action terminology
-used in this manual. This section also describes the mouse pointers.</para>
-    <sect2 id="gosgetstarted-44">
-      <title>Mouse Button Conventions</title>
-      <indexterm>
-        <primary>mouse</primary>
-        <secondary>button conventions</secondary>
-      </indexterm>
-      <para>All the instructions in this manual are for the following
-types of mouse devices:</para>
-      <itemizedlist>
+
+    <para>The following list describes the actions that you can perform
+    with the mouse:</para>
+
+    <variablelist>
+      <varlistentry>
+        <term>Left mouse button</term>
         <listitem>
-          <para>Devices that are configured for right-hand users.</para>
+          <para>Use the left mouse button to perform the following
+          actions:</para>
+          <itemizedlist>
+            <listitem><para>Select text.</para></listitem>
+            <listitem><para>Choose items.</para></listitem>
+            <listitem><para>Drag items.</para></listitem>
+            <listitem><para>Activate items.</para></listitem>
+          </itemizedlist>
+          <para>When selecting items from a list, you can hold the
+          <keycap>Ctrl</keycap> key to select multiple items, or
+          hold the <keycap>Shift</keycap> key to select a contiguous
+          range of items.</para>
         </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Middle mouse button</term>
         <listitem>
-          <para>Three button devices. If you have a two-button mouse device,
-	  then your system may be configured to allow you to press the left
-	  and right mouse buttons simultaneously to simulate the effect of
-	  a middle mouse button press.</para>
+          <para>Use the middle mouse button to perform the following
+          actions:</para>
+          <itemizedlist>
+            <listitem><para>Paste text.</para></listitem>
+            <listitem><para>Move items.</para></listitem>
+            <listitem><para>Move windows to the back.</para></listitem>
+          </itemizedlist>
         </listitem>
-      </itemizedlist>
-      <para>The mouse button conventions used in this manual are as follows:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="36.36*"/>
-          <colspec colname="colspec1" colwidth="63.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Mouse Button</para>
-              </entry>
-              <entry>
-                <para>Definition </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>Left mouse button</para>
-              </entry>
-              <entry valign="top">
-                <para>The button on the left side of a mouse device configured for normal right-hand
-use. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Middle mouse button</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>The middle button of a mouse
-device configured for normal right-hand use. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Right mouse button</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>The button on the right side
-of a mouse device configured for normal right-hand use. </para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para>To reverse the handedness of your mouse device, start the <application>Mouse</application> preference tool, then select the options that you require.
-If you do reverse the handedness of your mouse device, then you must reverse
-the mouse button conventions used in this manual.</para>
-    </sect2>
-    <sect2 id="gosgetstarted-45">
-      <title>Mouse Actions</title>
-      <indexterm>
-        <primary>mouse</primary>
-        <secondary>actions</secondary>
-      </indexterm>
-      <para>The following table describes the actions that you can perform with
-the mouse:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="36.36*"/>
-          <colspec colname="colspec1" colwidth="63.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Mouse Button</para>
-              </entry>
-              <entry>
-                <para>Usage</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>Left mouse button</para>
-              </entry>
-              <entry valign="top">
-                <para>Use to perform the following actions: <itemizedlist><listitem><para>Select text. </para></listitem><listitem><para>Choose items. </para></listitem><listitem><para>Drag items. </para></listitem></itemizedlist></para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Middle mouse button</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Use to perform the following
-actions: <itemizedlist><listitem><para>Paste text. </para></listitem><listitem><para>Move items.</para></listitem></itemizedlist></para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Right mouse button</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Opens a menu for the selected
-object, if a menu applies. </para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para>For example, if you want to copy text then perform the following steps: </para>
-      <orderedlist>
-        <listitem>
-          <para>Select the text with the left mouse button.</para>
-        </listitem>
-        <listitem>
-          <para>Move the mouse pointer to the location where you want to copy
-the text.</para>
-        </listitem>
-        <listitem>
-          <para>Click on the middle mouse button. </para>
-        </listitem>
-      </orderedlist>
-      <para>You can also right-click on the desktop to open the <guimenu>Desktop</guimenu> menu.</para>
-    </sect2>
-    <sect2 id="gosbasic-6">
-      <title>Mouse Action Terminology</title>
-      <indexterm>
-        <primary>mouse</primary>
-        <secondary>action terminology</secondary>
-      </indexterm>
-      <para>The conventions used in this manual to describe actions
-that you take with the mouse are as follows: </para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="36.36*"/>
-          <colspec colname="colspec1" colwidth="63.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Action</para>
-              </entry>
-              <entry>
-                <para>Definition </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Click</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Press and release the left mouse button,
-without moving the mouse. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Click-and-hold</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Press and do not release the
-left mouse button.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Left-click</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Same as <emphasis>click</emphasis>.
-Left-click clarifies the action when there might be confusion with <emphasis>right-click</emphasis>. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Middle-click</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Press and release the middle
-mouse button, without moving the mouse. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Right-click</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Press and release the right mouse
-button, without moving the mouse. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Double-click</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Press and release the left mouse
-button twice in rapid succession without moving the mouse. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Drag</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Click-and-hold a mouse button, then
-move an object. For example, you can drag a window or an icon. The left and
-middle mouse buttons can perform drag actions. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Drag-and-drop</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Click-and-hold a mouse button,
-then move an object. For example, you can drag-and-drop a window or an icon.
-Release the mouse button to place the object in a new location. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Grab</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Point to an item that you can move,
-and click-and-hold on the mouse button. For example, you can grab the titlebar
-of a window, then drag the window to a new location.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-    </sect2>
-    <sect2 id="gosbasic-7">
-      <title>Mouse Pointers</title>
-      <indexterm>
-        <primary>mouse</primary>
-        <secondary>pointers</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>pointers</primary>
-        <see>mouse pointers</see>
-      </indexterm>
-      <para>As you use the mouse, the appearance of the mouse pointer can change.
-The appearance of the pointer can provide feedback about a particular operation,
-location, or state. The following table lists and describes some of the mouse
-pointers.</para>
-      <informaltable frame="topbot">
-        <tgroup cols="3" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="36.36*"/>
-          <colspec colname="colspec2" colwidth="63.64*"/>
-          <colspec colname="colspec1" colwidth="63.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Pointer</para>
-              </entry>
-              <entry colname="colspec2">
-                <para>Associated Action</para>
-              </entry>
-              <entry>
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/normal_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Normal pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Point to an item, choose a menu item</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Normal pointer. The pointer that appears during normal
-use of the mouse.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/move_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Move pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Drag-and-drop</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Move pointer. Indicates that when you drop the object, the object is moved
-from the old location to the new location.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Copy pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Drag-and-drop</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Copy pointer. Indicates that when you drop the object, a copy of the object
-is created where you drop the object.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/link_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Symbolic link pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Drag-and-drop</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Symbolic link pointer. Indicates that when you drop the object, a <firstterm>symbolic link</firstterm> to the object is created where you drop the object.
-A symbolic link is a special type of file that points to another file or folder.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Ask pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Drag-and-drop</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Ask pointer. Indicates that when you drop the object, a menu opens. You can
-choose to move or copy the object, or to create a symbolic link to the object.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/not_available_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Not available pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Drag-and-drop</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Not available pointer. Indicates that you cannot drop the object at the current
-location.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/move_panel_object_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Move panel object pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Move panel object</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Move panel object pointer. Indicates that you have selected a panel object
-to move. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/horiz_resize_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Horizontal resize pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Resize window horizontally</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Horizontal resize pointer. Indicates that you have selected a vertical window
-border to resize the window horizontally.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/vert_resize_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Vertical resize pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Resize window vertically</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Vertical resize pointer. Indicates that you have selected a horizontal window
-border to resize the window vertically.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/corner_resize_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Corner resize pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Resize window horizontally and vertically</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Corner resize pointer. Indicates that you have selected
-a corner of a window border to resize the window horizontally and vertically.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/column_resize_pointer.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Window pane or table column resize pointer.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Resize window pane or resize table column</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Window pane or table column resize
-pointer. Indicates that you have selected a column in a table to resize.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-    </sect2>
-  </sect1>
-  <sect1 id="gosbasic-51">
-    <title>Keyboard Skills</title>
+      </varlistentry>
+      <varlistentry>
+        <term>Right mouse button</term>
+        <listitem><para>Use the right mouse button to open a context menu for
+        an item, if a menu applies.  For most items, you can also use the
+        <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo>
+        keyboard shortcut to open the context menu once the item has been
+        selected.</para></listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>For example, when viewing files in the file manager, you select
+    a file by clicking with the left mouse button and open a file by
+    double-clicking with the left mouse button.  Clicking with the right
+    mouse button will bring up a context menu for that file.</para>
+
+    <tip><para>In most applications, you can select text with your left
+    mouse button and paste it in another application using the middle
+    mouse button.  This is called primary selection paste, and works
+    seperately from your normal clipboard operations.</para></tip>
+
+    <para>The conventions used in this manual to describe actions
+    that you take with the mouse are as follows: </para>
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="36.36*"/>
+        <colspec colname="colspec1" colwidth="63.64*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Action</para>
+            </entry>
+            <entry>
+              <para>Definition</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Click</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Press and release the left mouse button,
+              without moving the mouse.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Click-and-hold</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Press and do not release the
+              left mouse button.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Left-click</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Same as <emphasis>click</emphasis>.
+              Left-click clarifies the action when there might be
+              confusion with <emphasis>right-click</emphasis>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Middle-click</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Press and release the middle mouse button,
+              without moving the mouse.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Right-click</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Press and release the right mouse button,
+              without moving the mouse.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Double-click</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Press and release the left mouse button twice
+              in rapid succession without moving the mouse.  You
+              can configure the double-click timeout using the
+              <application>Mouse Preferences</application>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Drag</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Click-and-hold a mouse button, then move an object.
+              For example, you can drag a window or an icon. The left
+              mouse buttons is usually used to perform drag actions,
+              although the middle mouse button is sometimes used for
+              an alternate drag action.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Drag-and-drop</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Click-and-hold a mouse button, then move an object.
+              For example, you can drag-and-drop a window or an icon.
+              Release the mouse button to place the object in a new
+              location.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Grab</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Point to an item that you can move, and click-and-hold
+              on the mouse button. For example, you can grab the titlebar
+              of a window, then drag the window to a new location.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section id="mouse-pointers">
+    <title>Mouse Pointers</title>
+    <titleabbrev>Pointers</titleabbrev>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosbasic-7"/>
+
     <indexterm>
-      <primary>basic skills</primary>
-      <secondary>keyboard skills</secondary>
+      <primary>mouse</primary>
+      <secondary>pointers</secondary>
     </indexterm>
     <indexterm>
-      <primary>keyboard</primary>
-      <secondary>basic skills</secondary>
+      <primary>pointers</primary>
+      <see>mouse pointers</see>
     </indexterm>
-    <para>For almost every task that you can perform with
-the mouse, you can use the keyboard to perform the same task. <firstterm>Shortcut keys</firstterm> are keys that provide you with a quick way to perform
-a task. </para>
-    <para>You can use shortcut keys to perform general GNOME Desktop tasks and
-to work with interface items such as panels and windows. You can also use
-shortcut keys in applications. To customize your shortcut keys, use the <application>Keyboard Shortcuts</application> preference tool.</para>
-    <para>You can also modify the GNOME Desktop preferences to use keyboard accessibility
-features. </para>
-    <para>The following sections describe the shortcut keys that you can use.</para>
-    <sect2 id="gosbasic-62">
-      <title>General Shortcut Keys</title>
-      <indexterm>
-        <primary>shortcut keys</primary>
-        <secondary>general</secondary>
-      </indexterm>
-      <para>General shortcut keys enable you to use the keyboard to
-perform general GNOME Desktop tasks. The following table lists some general
-shortcut keys:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="35.67*"/>
-          <colspec colname="colspec1" colwidth="64.33*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Default Shortcut Keys</para>
-              </entry>
-              <entry>
-                <para>Function</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Opens the <guimenu>Applicantions Menu</guimenu>.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays the <guilabel>Run Application</guilabel> dialog.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>Print Screen</keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Takes a screenshot. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Alt</keycap><keycap>Print Screen</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Takes a screenshot of the window that has focus. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>right arrow</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Switches to the workspace to the right of the current workspace.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>left arrow</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Switches to the workspace to the left of the current workspace.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>up arrow</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Switches to the workspace above the current workspace.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>down arrow</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Switches to the workspace below the current workspace.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>d</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Minimizes all windows, and gives focus to the desktop.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>F1</keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Starts the online help browser,
-and displays appropriate online Help.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-    </sect2>
-    <sect2 id="gosbasic-58">
-      <title>Window Shortcut Keys</title>
-      <indexterm>
-        <primary>shortcut keys</primary>
-        <secondary>window</secondary>
-      </indexterm>
-      <para>Window shortcut keys enable you to use the keyboard to perform window
-tasks. The following table lists some window shortcut keys:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="35.67*"/>
-          <colspec colname="colspec1" colwidth="64.33*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Default Shortcut Keys</para>
-              </entry>
-              <entry>
-                <para>Function</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Switches
-between windows. When you use these shortcut keys, a list of windows that
-you can select is displayed. Release the keys to select a window.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Shift</keycap><keycap>Alt</keycap>
-		<keycap>Tab</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Switches
-between windows in reverse order. Release the keys to select a window.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>F10</keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Opens the first menu on the left
-side of the menubar. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Alt</keycap><keycap>spacebar</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Opens the <guilabel>Window Menu</guilabel>. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Arrow keys</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Moves the focus between items
-in a menu.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>Return</keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Chooses a menu item. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>Esc</keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Closes an open menu.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap>
-		<keycap>Alt</keycap><keycap>right arrow</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Moves the current window to the workspace to the right of
-		the current workspace.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap>
-		<keycap>Alt</keycap><keycap>left arrow</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Moves the current window to the workspace to the left of
-		the current workspace.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap>
-		<keycap>Alt</keycap><keycap>up arrow</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Moves the current window to the workspace above the
-		current workspace.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap>
-		<keycap>Alt</keycap><keycap>down arrow</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Moves the current window to the workspace below the
-		current workspace.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>d</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Minimizes all windows, and gives focus to the desktop.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-    </sect2>
-    <sect2 id="gosbasic-61">
-      <title>Panel Shortcut Keys</title>
-      <indexterm>
-        <primary>shortcut keys</primary>
-        <secondary>panel</secondary>
-      </indexterm>
-      <para>Panel shortcut keys enable you to use the keyboard to perform panel
-tasks. The following table lists panel shortcut keys:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="31.36*"/>
-          <colspec colname="colspec1" colwidth="68.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Default Shortcut Keys</para>
-              </entry>
-              <entry>
-                <para>Function</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Tab</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Switches the focus between the panels and the desktop.
-When you use these shortcut keys, a list of items that you can select is displayed.
-Release the keys to select an item.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap>
-		<keycap>F10</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Opens the popup menu for the selected panel.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>Tab</keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Switches the focus between objects
-on a panel.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>Return </keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Chooses the selected panel object
-or menu item.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Opens
-the popup menu for the selected panel object.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Arrow keys</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Moves the focus between items
-in a menu. Moves the focus between interface items in an applet also.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>Esc</keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Closes an open menu.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <keycap>F10</keycap>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Opens the <guimenu>Applications</guimenu> menu from the <application>Menu Bar</application>, if the <application>Menu Bar</application> is in a panel. </para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-    </sect2>
-    <sect2 id="gosbasic-59">
-      <title>Application Shortcut Keys</title>
-      <indexterm>
-        <primary>shortcut keys</primary>
-        <secondary>application</secondary>
-      </indexterm>
-      <para>Application shortcut keys enable you to perform application
-tasks. You can use shortcut keys to perform application tasks more quickly
-than if you use a mouse. The following table lists some application shortcut
-keys:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="45.00*"/>
-          <colspec colname="colspec1" colwidth="55.00*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Shortcut Keys</para>
-              </entry>
-              <entry>
-                <para>Command</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>New</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Cut</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Copy</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Paste</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1">
-                <para>Undo</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1">
-                <para>Save</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0">
-                <para><keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo></para>
-              </entry>
-              <entry colname="colspec1">
-                <para>Quit</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-    </sect2>
-    <sect2 id="gosbasic-63">
-      <title>Access Keys</title>
-      <indexterm>
-        <primary>access keys</primary>
-      </indexterm>
-      <para>A <firstterm>menubar</firstterm> is a bar at the top of a window that contains the menus for the
-application. An <firstterm>access key</firstterm> is an underlined letter
-in a menubar, menu, or dialog that you can use to perform an action. On a
-menubar, the access key for each menu is underlined. </para>
-      <para>To open a menu, press <keycap>Alt</keycap>, then press the access key.
-In the menu, the access key for each menu item is underlined. To choose a
-menu item, press the access key for the menu item. The following table shows
-example access keys from the <application>Text Editor</application> application:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colwidth="41.44*"/>
-          <colspec colwidth="58.56*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Access Keys</para>
-              </entry>
-              <entry>
-                <para>Function</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para><keycombo><keycap>Alt</keycap><keycap>F</keycap></keycombo></para>
-              </entry>
-              <entry valign="top">
-                <para>Opens the <guimenu>File</guimenu> menu.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>
-                  <keycap>N</keycap>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Chooses the <guimenuitem>New</guimenuitem> item on the <guimenu>File</guimenu>
-menu.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para>You can also use access keys to access elements in a dialog. In a dialog,
-one letter in most dialog elements is underlined. To access a particular dialog
-element, press <keycap>Alt</keycap>, then press the access key. The following
-table shows an example access key from the <guilabel>Preferences</guilabel>
-dialog in the <application>Text Editor</application> application:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colwidth="41.41*"/>
-          <colspec colwidth="58.59*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Access Key</para>
-              </entry>
-              <entry>
-                <para>Function</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para><keycombo><keycap>Alt</keycap><keycap>U</keycap></keycombo></para>
-              </entry>
-              <entry valign="top">
-                <para>Gives focus to the <guilabel>Use default theme font</guilabel> check box.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para>You can use also other keys to navigate within a window or dialog.</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colwidth="36.36*"/>
-          <colspec colwidth="63.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Key</para>
-              </entry>
-              <entry>
-                <para>Function</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>
-                  <keycap>Tab</keycap>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Moves the focus from element to element in a window or dialog.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Arrow keys</para>
-              </entry>
-              <entry valign="top">
-                <para>Use the arrow keys to perform the following actions:</para>
-                <itemizedlist>
-                  <listitem>
-                    <para>In a menubar, move the focus from one menu to the next menu.
-In an open menu, move the focus from one menu item to the next menu item. </para>
-                  </listitem>
-                  <listitem>
-                    <para>Move the focus from one option to the next option to make
-your selection, for example, within a group of radio buttons in a dialog.</para>
-                  </listitem>
-                  <listitem>
-                    <para>Change the value that a spin box displays.</para>
-                  </listitem>
-                </itemizedlist>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-    </sect2>
-  </sect1>
-  <sect1 id="gosbasic-46">
-    <title>Using Windows</title>
+
+    <para>As you use the mouse, the appearance of the mouse pointer can
+    change.  The appearance of the pointer can provide feedback about a
+    particular operation, location, or state. The following list describes
+    some of the mouse pointers.</para>
+
+    <variablelist>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/normal_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Normal pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Normal pointer
+        </term>
+        <listitem><para>This pointer appears during normal use of
+        the mouse.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/move_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Move pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Move pointer
+        </term>
+        <listitem><para>This pointer appears during a drag operation.  It
+        indicates that when you drop the object, the object is moved from
+        the old location to the new location.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/copy_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Copy pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Copy pointer
+        </term>
+        <listitem><para>This pointer appears during a drag operation.  It
+        indicates that when you drop the object, a copy of the object is
+        created where you drop it.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/link_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Symbolic link pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Symbolic link pointer
+        </term>
+        <listitem><para>This pointer appears during a drag operation.  It
+        indicates that when you drop the object, a <firstterm>symbolic
+        link</firstterm> to the object is created where you drop the object.
+        A symbolic link is a special type of file that points to another file
+        or folder.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/ask_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Ask pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Ask pointer
+        </term>
+        <listitem><para>This pointer appears during a drag operation.  It
+        indicates that when you drop the object, a menu opens.  The menu
+        allows you to choose which drag operation you would like to perform.
+        For instance, you may be able to select among moving, copying, and
+        creating a symbolic link.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/not_available_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Not available pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Not available pointer
+        </term>
+        <listitem><para>This pointer appears during a drag operation.
+        It indicates that you cannot drop the object at the current
+        location.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/move_panel_object_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Move panel object pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Move panel object pointer
+        </term>
+        <listitem><para>This pointer appears when you drag a panel object
+        with the middle mouse button.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/resize_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Resize pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Resize pointer
+        </term>
+        <listitem><para>This pointer indicates that you can grab the control to
+        resize parts of the interface.  This appears over the sides of windows
+        and over resize handles between panes.  The direction of the arrows
+        indicates in which direction you can resize.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/hand_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Hand pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Hand pointer
+        </term>
+        <listitem><para>This pointer appears when you hover over a hypertext
+        link.  This pointer indicates that you can click on the link to load
+        a new document or perform an action.</para></listitem>
+      </varlistentry>
+    </variablelist>
+  </section>
+</section>
+
+<section id="keyboard-skills">
+  <title>Keyboard Skills</title>
+
+  <!-- Maintained for 2.8 compatibility -->
+  <anchor id="gosbasic-51"/>
+
+  <indexterm>
+    <primary>basic skills</primary>
+    <secondary>keyboard skills</secondary>
+  </indexterm>
+  <indexterm>
+    <primary>keyboard</primary>
+    <secondary>basic skills</secondary>
+  </indexterm>
+
+  <para>For almost every task that you can perform with the mouse, you can use
+  the keyboard to perform the same task.  <firstterm>Shortcut keys</firstterm>
+  are keys that provide you with a quick way to perform a task.</para>
+
+  <para>You can use shortcut keys to perform general GNOME Desktop tasks and
+  to work with interface items such as panels and windows. You can also use
+  shortcut keys in applications. To customize your shortcut keys, use the
+  <application>Keyboard Shortcuts</application> preference tool.  See
+  <xref linkend="prefs-keyboard-shortcuts"/> for more information about
+  configuring keyboard shortcuts.</para>
+
+  <note><para>Many PC keyboars come two keys with a <trademark>Microsoft
+  Windows</trademark> logo and one key for accessing context menus.  The
+  Windows key is often configured to act as an additional modifier key,
+  called the <firstterm>Super key</firstterm>.  The context menu key can
+  be used to access the context menu of the selected item, just as the
+  <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo>
+  keyboard shortcut can.</para></note>
+
+  <para>You can also modify the GNOME Desktop preferences to use keyboard
+  accessibility features.  See <xref linkend="prefs-keyboard-a11y"/> for
+  more information about the keyboard accessibility features.</para>
+
+  <para>The following sections describe the shortcut keys that you can use
+  throughout the desktop and applications.</para>
+
+  <section id="shortcuts-global">
+    <title>Global Shortcut Keys</title>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosbasic-62"/>
+
     <indexterm>
-      <primary>basic skills</primary>
-      <secondary>using windows</secondary>
+      <primary>shortcut keys</primary>
+      <secondary>global</secondary>
     </indexterm>
-    <para>This section provides information on how to use windows.</para>
-    <sect2 id="gosbasic-48">
-      <title>To Resize Panes</title>
-      <indexterm>
-        <primary>windows</primary>
-        <secondary>resizing panes</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>panes</primary>
-        <secondary>resizing</secondary>
-      </indexterm>
-      <para>Some windows contain more than one <firstterm>pane</firstterm>.
-      A pane is a subdivision of a window.  For instance, the
-      <application>Help</application> window contains a side pane with a list
-      of sections and a pane for viewing help.  A window that contains panes
-      has a resize handle on the edge between the panes.  To resize the pane,
-      grab the resize handle, then drag the edge to the size you require.</para>
-    </sect2>
-    <sect2 id="gosbasic-49">
-      <title>Using Tables</title>
-      <indexterm>
-        <primary>windows</primary>
-        <secondary>using tables</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>tables</primary>
-        <secondary>using</secondary>
-      </indexterm>
-      <para>Some windows contain information that is organized in a table. This
-section describes how to work with tables.</para>
-      <para>To change the width of a column, drag one of the vertical edges of the
-column.</para>
-      <para>In some tables, you can sort the information by a particular column.
-To sort information in a table, click on the heading on top of the column
-by which you want to sort the information. An up arrow is displayed in the
-column heading by which the table is sorted. The following figure shows the
-up arrow.</para>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="figures/naut_sort_arrow_icon.png" format="PNG"/>
-          </imageobject>
-          <textobject>
-            <phrase>Up arrow in a column heading.</phrase>
-          </textobject>
-        </mediaobject>
-      </screenshot>
-      <para>To reverse the sort order, click on the column heading again. The up
-arrow changes to a down arrow. The down arrow indicates that the information
-in the column is sorted in reverse order.</para>
-      <para>In some tables, you can select multiple items. The following table describes
-how to select items in tables.</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="36.36*"/>
-          <colspec colname="colspec2" colwidth="63.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Task</para>
-              </entry>
-              <entry colname="colspec2">
-                <para>Action</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Select an item</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Click on the item.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Select a group of contiguous
-items</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Press-and-hold <keycap>Shift</keycap>. Click on the first item in the group, then click on the last
-item in the group.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Select multiple items</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Press-and-hold <keycap>Ctrl</keycap>.
-Click on the items that you want to select.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-    </sect2>
-  </sect1>
+
+    <para>Global shortcut keys enable you to use the keyboard to perform tasks
+    related to your desktop, rather than tasks on the currently selected window
+    or application.  The following table lists some global shortcut keys:</para>
+
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="35.67*"/>
+        <colspec colname="colspec1" colwidth="64.33*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Shortcut Key</para>
+            </entry>
+            <entry>
+              <para>Function</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>F1</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Opens the <guimenu>Applicantions Menu</guimenu>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>F2</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Displays the <guilabel>Run Application</guilabel>
+              dialog.  See <xref linkend="tools-run-app"/> for more
+              information.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <keycap>Print Screen</keycap>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Takes a screenshot of the entire desktop.  See
+              <xref linkend="tools-screenshot"/> for more information.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>Print Screen</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Takes a screenshot of the currently focused window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>Alt</keycap>
+                <keycap>Arrow keys</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Switches to the workspace to the specified direction of the
+              current workspace.  See <xref linkend="overview-workspaces"/> for
+              more information on working with multiple workspaces.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>Alt</keycap>
+                <keycap>D</keycap></keycombo>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Minimizes all windows, and gives focus to the desktop.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>Tab</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Switches between windows.  A list of windows that you can
+              select is displayed. Release the keys to select a window.  You
+              can press the <keycap>Shift</keycap> key to cycle through the
+              windows in reverse order.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>Alt</keycap>
+                <keycap>Tab</keycap></keycombo>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Switches the focus between the panels and the desktop.
+              A list of items that you can select is displayed.  Release the
+              keys to select an item.  You can press the <keycap>Shift</keycap>
+              key to cycle through the windows in reverse order.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section id="shortcuts-window">
+    <title>Window Shortcut Keys</title>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosbasic-58"/>
+
+    <indexterm>
+      <primary>shortcut keys</primary>
+      <secondary>window</secondary>
+    </indexterm>
+
+    <para>Window shortcut keys allow you to use the keyboard to perform
+    tasks on the currently focused window.  The following table lists
+    some window shortcut keys:</para>
+
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="35.67*"/>
+        <colspec colname="colspec1" colwidth="64.33*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Shortcut Key</para>
+            </entry>
+            <entry>
+              <para>Function</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>Tab</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Switches between windows.  A list of windows that you can
+              select is displayed. Release the keys to select a window.  You
+              can press the <keycap>Shift</keycap> key to cycle through the
+              windows in reverse order.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>F4</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Closes the currently focused window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>F5</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Unmaximize the current window, if it is maximized.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>F7</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Move the currently focused window.  After pressing this
+              shortcut, you can move the window using either the mouse or
+              the arrow keys.  To finish the move, click the mouse or press
+              any key on the keyboard.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>F8</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Resize the currently focused window.  After pressing this
+              shortcut, you can resize the window using either the mouse or
+              the arrow keys.  To finish the resize, click the mouse or press
+              any key on the keyboard.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>F9</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Minimize the current window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>F10</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Maximize the current window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Alt</keycap><keycap>spacebar</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Opens the <guilabel>Window Menu</guilabel> for the
+              currently selected window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>Alt</keycap>
+                <keycap>Arrow keys</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Moves the current window to another workspace in the
+              specified direction.  See <xref linkend="overview-workspaces"/>
+              for more information on working with multiple workspaces.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section id="shortcuts-apps">
+    <title>Application Keys</title>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosbasic-59"/>
+    <anchor id="gosbasic-61"/> <!-- was Panel Shortcut Keys -->
+
+    <indexterm>
+      <primary>shortcut keys</primary>
+      <secondary>application</secondary>
+    </indexterm>
+
+    <para>Application shortcut keys enable you to perform application
+    tasks. You can use shortcut keys to perform application tasks more
+    quickly than if you use a mouse. The following table lists some
+    common application shortcut keys:</para>
+
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="45.00*"/>
+        <colspec colname="colspec1" colwidth="55.00*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Shortcut Key</para>
+            </entry>
+            <entry>
+              <para>Command</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>N</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Create a new document or window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>X</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Cut the selected text or region and place it on
+              the clipboard.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>C</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Copy the selected text or region onto the clipboard.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>V</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Paste the contents of the clipboard.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>Z</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Undo the last action.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para><keycombo>
+                <keycap>Ctrl</keycap><keycap>S</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Save the current document to disk.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para><keycap>F1</keycap></para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Load the online help document for the application.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+
+    <para>In addition to these shortcut keys, all applications support a set
+    of keys to navigate and work with the user interface.  These keys allow
+    you to perform operations that you might normally perform with a mouse.
+    The following table describes some interface control keys:</para>
+
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="45.00*"/>
+        <colspec colname="colspec1" colwidth="55.00*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Keys</para>
+            </entry>
+            <entry>
+              <para>Command</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Arrow keys or <keycap>Tab</keycap></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Move between controls in the interface or items
+              in a list.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycap>Enter</keycap> or <keycap>spacebar</keycap></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Activate or choose the selected item.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycap>F10</keycap></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Activate the left-most menu of the application window.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycombo>
+                <keycap>Shift</keycap><keycap>F10</keycap>
+              </keycombo></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Activate the context menu for the selected item.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para><keycap>Esc</keycap></para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Close a menu without selecting a menu item,
+              or cancel a drag operation.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section id="shortcuts-access">
+    <title>Access Keys</title>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="gosbasic-63"/>
+
+    <indexterm>
+      <primary>access keys</primary>
+    </indexterm>
+
+    <para>A <firstterm>menubar</firstterm> is a bar at the top of a window that
+    contains the menus for the application.  An <firstterm>access key</firstterm>
+    is an underlined letter in a menubar, menu, or dialog that you can use to
+    perform an action.  On a menubar, the access key for each menu is
+    underlined.</para>
+
+    <para>To open a menu, hold the <keycap>Alt</keycap> key, then press the
+    access key.  In the menu, the access key for each menu item is underlined.
+    To choose a menu item when a menu is displayed, you can simply press the
+    access key for the menu item.</para>
+
+    <para>For example, to open a new window in the <application>Help</application>
+    application, press <keycombo><keycap>Alt</keycap><keycap>F</keycap></keycombo>
+    to open the <guimenu>File</guimenu> menu, then press <keycap>N</keycap> to
+    activate the <guimenuitem>New Window</guimenuitem> menu item.</para>
+
+    <para>You can also use access keys to access elements in a dialog.  In a dialog,
+    one letter in most dialog elements is underlined. To access a particular dialog
+    element, hold <keycap>Alt</keycap>, then press the access key.</para>
+  </section>
+</section>
+
 </chapter>
