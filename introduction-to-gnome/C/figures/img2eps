@@ -1,0 +1,58 @@
+#!/usr/bin/perl
+#
+#
+# convert image to Encapsulated Postscript, with possible scaling of width
+#
+
+$width = "";
+
+if ($ARGV[0] =~ /^--width=(.+)$/) {
+       $width = $1;
+       shift (@ARGV);
+}
+
+#print "width =",$width,"\n";
+
+#print "argv =",$ARGV[0],"\n";
+
+$infile = $ARGV[0];
+
+if (!(-e $infile)) {
+print "File doesn't exist\n";
+exit 1;
+}
+
+$imagesz = `identify $ARGV[0]`;
+
+($name, $size, $rest) =  split / /, $imagesz, 3;
+#print $name, " ", $size, " ", $rest, "\n";
+#print "imagesz = ",$size,"\n";
+
+($x, $y) = split /x/, $size, 2;
+($y, $rest) = split /\+/, $y, 2;
+
+#print $x," by ",$y, "\n";
+
+#
+# if width set, we need to scale
+#
+
+if ($width != "") {
+  $scale = $width * (72.0/$x);
+} else {
+  $scale = 1;
+}
+
+$scale = 72.0/$scale;
+#print "scale = ",$scale,"\n";
+
+$outfile = $infile;
+$outfile =~ s/\.png/\.eps/;
+
+#print $infile," ",$outfile,"\n";
+system("convert $infile tmpimage.pgm");
+#system("giftopnm $infile | ppmtopgm > tmpimage.pgm");
+system("convert -density $scale tmpimage.pgm $outfile");
+system("rm tmpimage.pgm");
+
+
