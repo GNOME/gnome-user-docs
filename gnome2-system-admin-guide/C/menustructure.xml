@@ -1,0 +1,736 @@
+<!-- converted from Solbook 2.2 SGML to Docbook 4.2 XML
+# Generator: s2d v1.4 2002-09-19
+-->
+<chapter id="menustructure-0">
+  <title>Customizing Menus</title>
+  <highlights>
+    <para>The information in this chapter describes how GNOME implements
+menus and how you can customize menus.</para>
+  </highlights>
+  <sect1 id="menustructure-1">
+    <title>Introduction to Menus</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <para>The way in which GNOME implements menus in the desktop enables you to
+do the following:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Customize the menu hierarchy easily. The menu hierarchy is
+not based on the file system hierarchy. You can edit a small number of files
+to customize the menu hierarchy. You do not need to modify your applications
+or move files.</para>
+      </listitem>
+      <listitem>
+        <para>Install applications easily. You do not need to provide information
+about the menu hierarchy to applications when you install the applications.</para>
+      </listitem>
+      <listitem>
+        <para>Configure menus so that users cannot modify the menus.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Menus in the GNOME desktop use the following components:</para>
+    <itemizedlist>
+      <listitem>
+        <para>File abstraction layer</para>
+      </listitem>
+      <listitem>
+        <para>Vfolders</para>
+      </listitem>
+      <listitem>
+        <para>Desktop entry files</para>
+      </listitem>
+      <listitem>
+        <para>Directory entry files</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="menustructure-22">
+    <title>File Abstraction Layer</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>file abstraction layer</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>file abstraction layer, and menus</primary>
+    </indexterm>
+    <para>The <literal>gnome-vfs</literal> file abstraction layer
+provides a simplified and generalized way for applications to interact with
+files. The file abstraction layer also provides <firstterm>Uniform Resource
+Identifier</firstterm> (URI) locations that map to particular menu configuration
+files. To add a menu or a menu item for all users, you must add the menu or
+menu item to one of the URI locations. <xref linkend="menustructure-TBL-12"/>
+lists the menus to which you can add items, and the URI locations that correspond
+to the menus.</para>
+    <table frame="topbot" id="menustructure-TBL-12">
+      <title>Menus and URI Locations</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="50*"/>
+        <colspec colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Menu</para>
+            </entry>
+            <entry valign="top">
+              <para>URI Locations</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><guimenu>Applications</guimenu> menu for all
+users</para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <literal>applications-all-users:///</literal>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><guimenu>Desktop Preferences</guimenu> menu
+for all users</para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <literal>preferences-all-users:///</literal>
+              </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="menustructure-13">
+    <title>Vfolders</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>vfolders</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>vfolders</primary>
+      <see>menus, vfolders</see>
+    </indexterm>
+    <para>In general terms, a <firstterm>vfolder</firstterm> is a virtual representation
+of items that reside in a physical location or physical locations on your
+system. For example, a vfolder might represent the contents of several directories.
+A vfolder is an abstraction from one or more physical locations. In terms
+of menus in the GNOME desktop, a vfolder is a representation in a menu of
+items that might be physically located in several directories. </para>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>vfolder information files</secondary>
+    </indexterm>
+    <para>A <firstterm>vfolder information file</firstterm> is an
+XML file that describes a vfolder. Vfolder information files specify the structure
+of your menus. Vfolder information files specify the names of your menus,
+and the order in which applications appear in your menus. Vfolder information
+files have a <filename>.vfolder-info</filename> file extension. </para>
+    <para>The following is an excerpt from a vfolder information file:</para>
+    <literallayout>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;VFolderInfo&gt;
+.
+.
+.
+  &lt;Folder&gt;
+    &lt;Name&gt;Applications&lt;/Name&gt;
+    &lt;Desktop&gt;Applications.directory&lt;/Desktop&gt;
+    &lt;Folder&gt;
+      &lt;Name&gt;Accessories&lt;/Name&gt;
+      &lt;DontShowIfEmpty/&gt;
+      &lt;Desktop&gt;Accessories.directory&lt;/Desktop&gt;
+      &lt;Query&gt;
+        &lt;And&gt;
+          &lt;Keyword&gt;Application&lt;/Keyword&gt;
+          &lt;Keyword&gt;Utility&lt;/Keyword&gt;
+        &lt;/And&gt;
+      &lt;/Query&gt;
+    &lt;/Folder&gt;
+.
+.
+.
+  &lt;/Folder&gt;
+&lt;/VFolderInfo&gt;</literallayout>
+    <para><xref linkend="menustructure-TBL-17"/> describes some of the elements
+in vfolder information files.</para>
+    <table frame="topbot" id="menustructure-TBL-17">
+      <title>Vfolder Information File Elements</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec2" colwidth="33.83*"/>
+        <colspec colname="colspec3" colwidth="66.17*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Element</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <literal>&lt;Folder&gt;</literal>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>Contains the elements that define
+the name, content, and structure of the menu.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <literal>&lt;Name&gt;</literal>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>The name of the menu.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <literal>&lt;Desktop&gt;</literal>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>The name of the directory entry
+file that specifies the name, comment, and icon for the menu.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <literal>&lt;Query&gt;</literal>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>A query to run on desktop entry
+files. If a desktop entry file matches the requirements in the query, the
+menu item is displayed in the menu. </para>
+              <para>The query in the excerpt
+searches for desktop entry files that contain the keywords <literal>Application</literal> and <literal>Utility</literal> in the <literal>Categories</literal>
+key. Desktop entry files that match are displayed in the <guimenu>Applications</guimenu> menu.</para>
+              <para>This element is optional.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <literal>&lt;DontShowIfEmpty/&gt;</literal>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>If this
+element is present, the menu is not displayed if the menu does not contain
+any items.</para>
+              <para>This element is optional.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="menustructure-6">
+    <title>Desktop Entry Files</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>desktop entry files</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>desktop entry files</primary>
+      <see>menus, desktop
+entry files</see>
+    </indexterm>
+    <indexterm>
+      <primary>.desktop files</primary>
+      <see>menus, desktop entry files</see>
+    </indexterm>
+    <para>A <firstterm>desktop
+entry file</firstterm> is a data file that provides information about an item
+in a menu. The desktop entry file specifies the details for the item such
+as a name, a command to run, an icon, and so on. The desktop entry file also
+contains keywords which determine the location of the item in the menu hierarchy.
+Desktop entry files have a <filename>.desktop</filename> file extension.</para>
+    <para>The following is a sample desktop entry file:</para>
+    <literallayout>[Desktop Entry]
+Encoding=UTF-8
+Name=Calculator
+Comment=Perform simple calculations
+Exec=gnome-calculator
+Icon=gnome-calc3.png
+Terminal=false
+Type=Application
+X-GNOME-DocPath=gnome-calculator/gnome-calculator.xml
+Categories=GNOME;Application;Utility;</literallayout>
+    <para><xref linkend="menustructure-TBL-7"/> describes the most important keys
+in desktop entry files.</para>
+    <table frame="topbot" id="menustructure-TBL-7">
+      <title>Desktop Entry Keys</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="25.25*"/>
+        <colspec colname="colspec1" colwidth="74.75*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Desktop Entry Key</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>Encoding</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Enter the encoding of the desktop entry file. </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>Name</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Enter the name of the item. This name is displayed on the
+item in the menu. </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>Comment</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Enter a short description of the item. The comment is displayed
+as a tooltip when you point to the item in the menu. </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>Exec</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Enter a command to execute when you choose the item from
+the menu. </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>Icon</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enter a path to an icon that
+represents the item.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>Terminal</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enter <literal>true</literal>
+if you want the command in the <literal>Exec</literal> key to run in a terminal
+window. Enter <literal>true</literal> in this key if the command does not
+create a window in which to run.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>Type</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enter the type of item. Enter
+one of the following: </para>
+              <itemizedlist>
+                <listitem>
+                  <para><literal>Application</literal>: Enter this option for  an
+item that starts an application.</para>
+                </listitem>
+                <listitem>
+                  <para><literal>Link</literal>:  Enter this option for an  item that
+links to a file, folder, or FTP site.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>X-GNOME-DocPath</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enter
+the help file to display when you choose <guimenuitem>Help on <replaceable>application_name</replaceable></guimenuitem> from the menu item popup menu.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>Categories</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enter the keywords that describe
+the item. Separate the keywords with semicolons (;). To see a list of the
+standard category keywords, see the following URL: </para>
+              <literallayout>
+                <ulink url="http://www.freedesktop.org/standards/VFolderDesktops.txt">http://www.freedesktop.org/standards/VFolderDesktops.txt</ulink>
+              </literallayout>
+              <para>The vfolder information files map the keywords
+that you enter to menus.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>For more information on the keys in desktop entry files, see the following
+URL: </para>
+    <literallayout>
+      <ulink url="http://www.freedesktop.org/standards/desktop-entry-spec/desktop-entry-spec.html">http://www.freedesktop.org/standards/desktop-entry-spec/desktop-entry-spec.html</ulink>
+    </literallayout>
+    <note>
+      <para>Panel launchers and desktop background objects also use desktop
+entry files. The desktop entry files for launchers and desktop background
+objects provide the same information as for items in a menu. For example,
+the desktop entry files provide the command to run when a user chooses the
+launcher or object.</para>
+    </note>
+  </sect1>
+  <sect1 id="menustructure-14">
+    <title>Directory Entry Files</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>directory entry files</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>directory entry files</primary>
+      <see>menus,
+directory entry files</see>
+    </indexterm>
+    <indexterm>
+      <primary>.directory files</primary>
+      <see>menus, directory entry files</see>
+    </indexterm>
+    <para>A <firstterm>directory entry file</firstterm> is a data file that provides information
+about a menu. The directory entry file specifies the details for the menu
+such as a name, a tooltip, and an icon. Directory entry files have a <filename>.directory</filename> file extension.</para>
+    <para>The following is a sample directory entry file:</para>
+    <literallayout>[Desktop Entry]
+Name=Accessories
+Comment=Accessories menu
+Icon=gnome-util.png
+Type=Directory</literallayout>
+    <para><xref linkend="menustructure-TBL-15"/> describes the most important keys
+in directory entry files.</para>
+    <table frame="topbot" id="menustructure-TBL-15">
+      <title>Directory Entry Keys</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="27.07*"/>
+        <colspec colname="colspec1" colwidth="72.93*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Directory Entry Key</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>Name</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enter the name of the menu. This
+name is displayed on the menu. </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>Comment</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enter a short description of
+the menu. The comment is displayed as a tooltip when you point to the menu. </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>Icon</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enter a path to an icon that
+represents the menu.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>Type</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>The type of menu. The value of this key is always <literal>Directory</literal>.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="menustructure-2">
+    <title>Editing Menus</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>editing</secondary>
+    </indexterm>
+    <para>You use the following desktop components to edit menus:</para>
+    <itemizedlist>
+      <listitem>
+        <para><application>Nautilus</application> file manager</para>
+      </listitem>
+      <listitem>
+        <para>Menus on panels</para>
+      </listitem>
+    </itemizedlist>
+    <para>When you use the file manager to add menus or menu items for all users,
+you must add the menu or menu item to a URI location. <xref linkend="menustructure-TBL-12"/>
+lists the menus to which you can add items, and the URI locations that correspond
+to the menus.</para>
+    <para>When you use panels to customize menus for all users, you use the menu
+item popup menu. For more information, see <citetitle>Working With Menus</citetitle>
+in the <citetitle>GNOME 2.0 Desktop User Guide</citetitle>.</para>
+    <para>You can also use menu configuration files and menu data files to customize
+menus.</para>
+    <sect2 id="menustructure-3">
+      <title>Adding Menus</title>
+      <para>You can add menus for all users in the following ways: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Use the file manager.</para>
+        </listitem>
+        <listitem>
+          <para>Modify the menu configuration files and menu data files.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="menustructure-19">
+        <title>To Add a Menu Using the File Manager</title>
+        <indexterm>
+          <primary>menus</primary>
+          <secondary>adding using file manager</secondary>
+        </indexterm>
+        <para>To add a menu for all users, perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>In a file manager window, access the location where you want
+to add the menu. For example, to add a menu to the <guimenu>Applications</guimenu>
+menu, type <literal>applications-all-users:///</literal> in the <guilabel>Location</guilabel> field, then press <keycap>Return</keycap>.</para>
+          </listitem>
+          <listitem>
+            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>New Folder</guimenuitem></menuchoice>. An untitled folder is added to the
+view pane. The name of the folder is selected.</para>
+          </listitem>
+          <listitem>
+            <para>Type a name for the folder, then press <keycap>Return</keycap>.
+The vfolder information file for the location that you accessed in step 1
+is automatically updated with the details of the new menu. The name of the
+folder is displayed as the name of the menu.</para>
+          </listitem>
+        </orderedlist>
+        <note>
+          <para>You might need to reload the display of the file manager window
+before you can type the name for the folder.</para>
+        </note>
+        <para>The next time that users log in, the menu is in the assigned location.</para>
+      </sect3>
+      <sect3 id="menustructure-20">
+        <title>To Add a Menu Using Menu Files</title>
+        <indexterm>
+          <primary>menus</primary>
+          <secondary>adding using menu files</secondary>
+        </indexterm>
+        <para>To add a menu for all users, perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Create a directory entry file for the item that you want to
+add. Create the directory entry file in the <filename>/usr/gnome/share/gnome/vfolders</filename> directory. For more information on directory entry files, see <xref linkend="menustructure-14"/>. </para>
+          </listitem>
+          <listitem>
+            <para>Locate the vfolder information file for the location where
+you want to add the menu. For example, to add a menu to the <guimenu>Applications</guimenu> menu, locate the file <filename>/usr/gnome/etc/gnome-vfs-2.0/vfolders/applications-all-users.vfolder-info</filename>. </para>
+          </listitem>
+          <listitem>
+            <para>In the vfolder information file, add a <literal>&lt;Folder&gt;</literal> element for the new menu. For more information on vfolder information
+files, see <xref linkend="menustructure-13"/>.</para>
+          </listitem>
+        </orderedlist>
+        <para>The next time that users log in, the menu is in the assigned location.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="menustructure-4">
+      <title>To Add an Item to a Menu</title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>adding items to</secondary>
+      </indexterm>
+      <para>To add an item to a menu for all users, perform the following
+steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>Create a desktop entry file for the item that you want to
+add. For more information on desktop entry files, see <xref linkend="menustructure-6"/>. </para>
+        </listitem>
+        <listitem>
+          <para>Open a file manager window. Choose <menuchoice><guimenu>File</guimenu><guimenuitem>New Window</guimenuitem></menuchoice> to open a second
+file manager window.</para>
+        </listitem>
+        <listitem>
+          <para>In one window, access the location where you want to add the
+menu item. For example, to add a menu item to the <guimenu>Preferences</guimenu>
+menu, type <literal>preferences-all-users:///</literal> in the <guilabel>Location</guilabel> field, then press <keycap>Return</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>In the other window, select the desktop entry file that you
+created for the menu item. Drag the desktop entry file to the location where
+you want to add the menu item.</para>
+          <para>Alternatively, you can copy the desktop entry file, then paste the file
+into the location where you want to add the menu item.</para>
+        </listitem>
+      </orderedlist>
+      <para>The next time that users log in, the menu item is in the assigned location.</para>
+    </sect2>
+    <sect2 id="menustructure-9">
+      <title>To Edit the Properties of a Menu</title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>editing properties of</secondary>
+      </indexterm>
+      <para>To edit the properties of a menu for all users, perform
+the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>From a panel, open the menu that you want to edit. Right-click
+on any item in the menu.</para>
+        </listitem>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>Entire menu</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. A <guilabel>Launcher Properties</guilabel> dialog is displayed.</para>
+        </listitem>
+        <listitem>
+          <para>Modify the properties of the menu in the <guilabel>Launcher Properties</guilabel> dialog. For more information on the elements in the <guilabel>Launcher Properties</guilabel> dialog, see <citetitle>Working With Panels</citetitle> in the <citetitle>GNOME 2.0 Desktop User Guide</citetitle>.</para>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>OK</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="menustructure-10">
+      <title>To Edit a Menu Item</title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>editing menu items</secondary>
+      </indexterm>
+      <para>To edit a menu item, perform the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>From a panel, open the menu that contains the item that you
+want to edit. Right-click on the item that you want to edit.</para>
+        </listitem>
+        <listitem>
+          <para>Choose <guimenuitem>Properties</guimenuitem>. A <guilabel>Launcher Properties</guilabel> dialog is displayed.</para>
+        </listitem>
+        <listitem>
+          <para>Modify the properties of the menu item in the <guilabel>Launcher Properties</guilabel> dialog. For more information on the elements in the <guilabel>Launcher Properties</guilabel> dialog, see <citetitle>Working With Panels</citetitle> in the <citetitle>GNOME 2.0 Desktop User Guide</citetitle>.</para>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>OK</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="menustructure-11">
+      <title>To Delete an Item from a Menu</title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>deleting menu items</secondary>
+      </indexterm>
+      <para>To delete an item from a menu, from a panel, open the menu
+that contains the item that you want to delete. Right-click on the item that
+you want to delete. Choose <guimenuitem>Remove this item</guimenuitem>. </para>
+      <para>The next time that users log in, the menu item is not displayed in the
+menu.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="menustructure-23">
+    <title>To Configure Menus That Users Cannot Modify</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>configuring menus that users
+cannot modify</secondary>
+    </indexterm>
+    <para>Users cannot modify a menu if the
+following conditions are true:</para>
+    <itemizedlist>
+      <listitem>
+        <para>A vfolder information file that corresponds to the menu is
+present in the <filename>/etc/gnome-vfs-2.0/vfolder</filename> directory.</para>
+      </listitem>
+      <listitem>
+        <para>The vfolder information file has the same name as the URI
+location that corresponds to the menu.</para>
+      </listitem>
+      <listitem>
+        <para>The user permissions for the vfolder information file are
+set to read only. </para>
+      </listitem>
+    </itemizedlist>
+    <para>To configure a menu so that users cannot modify the menu, perform the
+following steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Create a vfolder information file for the menu that you want
+to configure in the <filename>/etc/gnome-vfs-2.0/vfolder</filename> directory.</para>
+      </listitem>
+      <listitem>
+        <para>Give the vfolder information file the name of the URI location
+that corresponds to the menu that you want to configure. For example, to configure
+the <guimenu>Applications</guimenu> menu, create a vfolder information called <filename>applications.vfolder-info</filename> in the <filename>/etc/gnome-vfs-2.0/vfolder</filename> directory.</para>
+      </listitem>
+      <listitem>
+        <para>Set the permissions on the vfolder information
+file to read only.</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+</chapter>
+
+

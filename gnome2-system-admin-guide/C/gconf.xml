@@ -1,0 +1,1297 @@
+<!-- converted from Solbook 2.2 SGML to Docbook 4.2 XML
+# Generator: s2d v1.4 2002-09-19
+-->
+<chapter id="gconf-0">
+  <title>Using GConf</title>
+  <highlights>
+    <para>The information in this chapter describes how to use <application>GConf</application> to manage user preferences.</para>
+  </highlights>
+  <sect1 id="gconf-1">
+    <title>Introducing GConf</title>
+    <indexterm>
+      <primary>GConf</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <para><application>GConf</application> simplifies the administration of preferences
+for users in the GNOME desktop environment. <application>GConf</application>
+enables system administrators to do the following:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Set mandatory values for particular preferences for all users.
+In this way, system administrators can control whether users can update particular
+preferences.</para>
+      </listitem>
+      <listitem>
+        <para>Set default values for particular preferences for all users. </para>
+      </listitem>
+      <listitem>
+        <para>Use suggested values for preferences that are specified in
+definition files for the preferences.</para>
+      </listitem>
+      <listitem>
+        <para>Read documentation on each preference. </para>
+      </listitem>
+    </itemizedlist>
+    <para><application>GConf</application> also notifies applications when a preference
+value changes, locally or across a network. In this way, when you change a
+preference, all applications that use the preference are immediately updated.</para>
+    <para><application>GConf</application> has the following components: </para>
+    <itemizedlist>
+      <listitem>
+        <para>A repository of user preferences. </para>
+      </listitem>
+      <listitem>
+        <para>A daemon, <command>gconfd-2</command>.</para>
+      </listitem>
+      <listitem>
+        <para>A command line tool, <command>gconftool-2</command>.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gconf-24">
+    <title>GConf Repository</title>
+    <indexterm>
+      <primary>GConf</primary>
+      <secondary>repository</secondary>
+    </indexterm>
+    <para>Each preference in the <application>GConf</application> repository is
+expressed as a key-value pair. A <firstterm>GConf preference key</firstterm>
+is an element in the repository that corresponds to an application preference.
+For example, the <literal>/apps/gnome-session/options/show_splash_screen</literal>
+preference key corresponds to the <guilabel>Show splash screen on login</guilabel>
+option in the <application>Sessions</application> preference tool.  The GNOME
+user interface does not contain all of the preference keys in the <application>GConf</application> repository. For example, the <application>Sessions</application>
+preference tool does not contain an option that corresponds to the <literal>/apps/gnome-session/options/splash_screen_text</literal> key.</para>
+    <para>The repository is structured like a simple hierarchical file system.
+The repository contains the following:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Directories that correspond to applications that use the <application>GConf</application> repository. For example, the file system contains the
+directory <filename>/apps/metacity</filename>. </para>
+      </listitem>
+      <listitem>
+        <para>Subdirectories that correspond to categories of preferences.
+For example, the file system contains the directory <filename>/apps/metacity/general</filename>.</para>
+      </listitem>
+      <listitem>
+        <para>Special files that list the preference keys in the directory,
+and contain information about the keys. For example, a file that contains
+information about the keys that relate to the HTTP proxy preferences is in
+the directory <filename>/system/http_proxy</filename>. </para>
+      </listitem>
+      <listitem>
+        <para>A <filename>/schemas</filename> directory that contains files
+that describe all of the preference keys.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Preference keys typically have simple values such as strings, integers,
+or lists of strings and integers. The format of the preference key in the
+repository depends on the backend module that is used to read the repository.
+The following is an example of the <literal>/desktop/gnome/interface/font_name</literal> preference key when an Extensible Markup Language (XML) backend
+module is used to read the repository:</para>
+    <literallayout>&lt;entry name=&quot;font_name&quot; mtime=&quot;1038323555&quot; muser=&quot;user123&quot; type=&quot;string&quot;&gt;
+&lt;stringvalue&gt;avantgarde 10&lt;/stringvalue&gt;&lt;/entry&gt;</literallayout>
+    <note>
+      <para>When this guide refers to a preference key, the path to the key
+is added to the name of the key. For example, the <literal>font_name</literal>
+preference key in the <filename>/desktop/gnome/interface</filename> subdirectory
+is referred to as <literal>/desktop/gnome/interface/font_name</literal>.</para>
+    </note>
+    <sect2 id="gconf-26">
+      <title>GConf Configuration Sources</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>configuration sources</secondary>
+      </indexterm>
+      <para>The <application>GConf</application> repository contains
+a series of storage locations that are called <firstterm>configuration sources</firstterm>. The configuration sources are listed in the <firstterm>GConf
+path file</firstterm>. The location of the <application>GConf</application>
+path file is <filename>/etc/gconf/<replaceable>version_number</replaceable>/path</filename>. Each user has a path file. Each line in the path file specifies
+the following information:</para>
+      <itemizedlist>
+        <listitem>
+          <para>The backend module to use to read the repository. </para>
+        </listitem>
+        <listitem>
+          <para>The permissions on the repository.</para>
+        </listitem>
+        <listitem>
+          <para>The location of the repository.</para>
+        </listitem>
+      </itemizedlist>
+      <para>By default, the contents of the <application>GConf</application> path
+file are as follows: </para>
+      <literallayout>xml:readonly:/etc/gconf/gconf.xml.mandatory
+include &quot;$(HOME)/.gconf.path&quot;
+xml:readwrite:$(HOME)/.gconf
+xml:readonly:/etc/gconf/gconf.xml.defaults</literallayout>
+      <para>When <application>GConf</application> searches for a preference value, <application>GConf</application> reads the configuration sources in the order specified
+in the path file. The following table describes the configuration sources
+in the path file:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="31.29*"/>
+          <colspec colwidth="68.71*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Configuration Source</para>
+              </entry>
+              <entry valign="top">
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Mandatory</para>
+              </entry>
+              <entry valign="top">
+                <para>The permissions on this configuration source are set to read only. Users cannot
+overwrite the values in this source, so the preferences in the source are
+mandatory.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>User</para>
+              </entry>
+              <entry valign="top">
+                <para>This configuration source is stored in the <filename>.gconf</filename> directory
+in the home directory of the user. When the user sets a preference, the new
+preference information is added to this location. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Default</para>
+              </entry>
+              <entry valign="top">
+                <para>This configuration source contains the default preference settings.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>The sequence of the configuration sources in the path file ensures that
+mandatory preference settings override user preference settings. The sequence
+also ensures that user preference settings override default preference settings.
+That is, <application>GConf</application> applies preferences in the following
+order of priority:</para>
+      <orderedlist>
+        <listitem>
+          <para>Mandatory preferences </para>
+        </listitem>
+        <listitem>
+          <para>User-specified preferences </para>
+        </listitem>
+        <listitem>
+          <para>Default preferences</para>
+        </listitem>
+      </orderedlist>
+      <para>The <literal>include</literal> instruction in the <application>GConf</application> path file enables users to use another configuration source.
+To use another configuration source, the user must specify the location of
+the configuration source. The user specifies the location of the configuration
+source in the home directory, in a file that is called <filename>.gconf.path</filename>.</para>
+    </sect2>
+    <sect2 id="gconf-27">
+      <title>GConf Schemas</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>schemas</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>schema keys</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>schema objects</secondary>
+      </indexterm>
+      <para>A <firstterm>GConf schema</firstterm> is a collective term for a <firstterm>GConf schema key</firstterm> and a <firstterm>GConf schema object</firstterm>.
+The following table describes schema keys and schema objects and the relationship
+of these items to preference keys:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="24.31*"/>
+          <colspec colname="colspec1" colwidth="75.69*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Item</para>
+              </entry>
+              <entry valign="top">
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Preference key</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>An element in the <application>GConf</application> repository that corresponds to an application preference.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Schema key</para>
+              </entry>
+              <entry valign="top">
+                <para>A key that stores a schema object for a preference key. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Schema object</para>
+              </entry>
+              <entry valign="top">
+                <para>An element in a configuration source that contains information for a preference
+key, such as the following:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>The name of the application that uses the preference key.</para>
+                  </listitem>
+                  <listitem>
+                    <para>The type of value required for the preference key, for example
+integer, boolean, and so on.</para>
+                  </listitem>
+                  <listitem>
+                    <para>A default value for the preference key. </para>
+                  </listitem>
+                  <listitem>
+                    <para>Brief documentation on the preference key.</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>The following table gives examples of a preference key, a schema key,
+and a schema object:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="24.31*"/>
+          <colspec colname="colspec1" colwidth="75.69*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Item</para>
+              </entry>
+              <entry valign="top">
+                <para>Example</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Preference key</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>
+                  <literal>/desktop/gnome/interface/font_name</literal>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Schema key</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>
+                  <literal>/schemas/desktop/gnome/interface/font_name</literal>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Schema object</para>
+              </entry>
+              <entry valign="top">
+                <literallayout>&lt;schema&gt;
+  &lt;applyto&gt;/desktop/gnome/interface/font_name&lt;/applyto&gt;
+  &lt;key&gt;/schemas/desktop/gnome/interface/font_name&lt;/key&gt;
+  &lt;owner&gt;gnome&lt;/owner&gt;
+  &lt;type&gt;string&lt;/type&gt;
+  &lt;default&gt;Sans 10&lt;/default&gt;
+  &lt;locale name=&quot;C&quot;&gt;
+    &lt;short&gt;Default font&lt;/short&gt;
+      &lt;long&gt;Name of the default font used by gtk+.&lt;/long&gt;
+  &lt;/locale&gt;
+&lt;/schema&gt;</literallayout>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>You can associate a schema key with a preference key. For example, the
+following <literal>/desktop/gnome/interface/font_name</literal> key includes
+a schema key:</para>
+      <literallayout>&lt;entry name=&quot;font_name&quot; mtime=&quot;1034873859&quot; 
+schema=&quot;/schemas/desktop/gnome/interface/font_name&quot;/&gt;</literallayout>
+      <para>When you associate a schema key with a preference key, the preference
+uses the suggested value that is specified in the schema object of the schema
+key. The suggested value is contained in the <literal>&lt;default&gt;</literal>
+element in the schema object. By default, all the preference keys in the default
+configuration source are associated with schema keys.</para>
+      <para>Typically, schemas are stored in the default configuration source. </para>
+    </sect2>
+    <sect2 id="gconf-2">
+      <title>GConf Schema Definition Files</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>schema definition files</secondary>
+        <tertiary>introduction</tertiary>
+      </indexterm>
+      <para>Schemas are generated from <firstterm>schema definition files</firstterm>. A schema definition file defines the
+characteristics of all of the keys in a particular application. Schema definition
+files have a <filename>.schemas</filename> extension.</para>
+      <para>The schema definition files are included in the <filename>/etc/gconf/schemas</filename> directory. You can use the schema definition files to create a
+new configuration source.</para>
+      <para>Some schema definition files correspond closely to a part of the GNOME
+user interface. For example, <filename>system_http_proxy.schemas</filename>
+corresponds to the <application>Network Proxy</application> preference tool.
+Other schema definition files contain preference keys that are not present
+in the GNOME user interface. For example, the <literal>/apps/gnome-session/options/splash_screen_text</literal> key is not present in the user interface. </para>
+      <para>Some parts of the GNOME user interface contain preferences that represent
+preference keys from more than one schema definition file. For example, the <application>Keyboard Shortcuts</application> preference tool contains preferences that
+represent keys from the <filename>panel-global-config.schemas</filename> and <filename>metacity.schemas</filename> files.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gconf-25">
+    <title>GConf Daemon</title>
+    <indexterm>
+      <primary>gconfd</primary>
+      <see>GConf daemon</see>
+    </indexterm>
+    <indexterm>
+      <primary>GConf</primary>
+      <secondary>daemon</secondary>
+    </indexterm>
+    <para>The <application>GConf</application> daemon is called <command>gconfd-2</command>. The <application>GConf</application> daemon notifies applications when a preference value changes.
+For example, you might select to show only icons in toolbars in the <application>Menus &amp; Toolbars</application> preference tool. When you select this option
+in the preference tool, the toolbars on all open applications are updated
+instantly. The <application>GConf</application> daemon can operate locally,
+or across a network.</para>
+    <para>An instance of the <application>GConf</application> daemon is started
+for each user. The <application>GConf</application> daemon does not have to
+deal with complex problems such as authentication and data security. When
+the <application>GConf</application> daemon starts, the daemon loads the <application>GConf</application> path file. The <application>GConf</application> daemon
+manages all access between applications and the configuration sources.</para>
+    <para>When an application requests the value of a preference key, the daemon
+searches the configuration sources as follows:</para>
+    <orderedlist>
+      <listitem>
+        <para>Search for the value of the preference key in each configuration
+source, in the order specified in the path file. If the value is found, return
+the value.</para>
+      </listitem>
+      <listitem>
+        <para>If a value is not found, search for the schema key that corresponds
+to the preference key in each configuration source, in the order specified
+in the path file.</para>
+      </listitem>
+      <listitem>
+        <para>If the schema key is found, check the value of the schema
+key.</para>
+      </listitem>
+      <listitem>
+        <para>If the value of the schema key is a schema object, return
+the suggested value in the <literal>&lt;default&gt;</literal> element of the
+schema object.</para>
+      </listitem>
+    </orderedlist>
+    <para>The <application>GConf</application> daemon also caches preference key
+values. All applications use this cache, so applications only need to access
+the configuration sources once.</para>
+    <para>To terminate the <application>GConf</application> daemon, run the following
+command:</para>
+    <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --shutdown</userinput></para>
+  </sect1>
+  <sect1 id="gconf-6">
+    <title>GConf Command Line Tool</title>
+    <indexterm>
+      <primary>GConf</primary>
+      <secondary>command line tool</secondary>
+    </indexterm>
+    <para><application>GConf</application> includes a command line
+tool, <command>gconftool-2</command>. You can use the <command>gconftool&ndash;2</command> command to perform the following tasks: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Set the values of keys.</para>
+      </listitem>
+      <listitem>
+        <para>Display the values of keys.</para>
+      </listitem>
+      <listitem>
+        <para>Install schemas from schema definition files when you install
+an application.</para>
+      </listitem>
+    </itemizedlist>
+    <para>For example, use the following command to display the values of all
+keys in the <filename>/desktop/gnome</filename> directory and subdirectories.</para>
+    <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --recursive-list
+/desktop/gnome</userinput></para>
+    <para><xref linkend="gconf-TBL-7"/> lists some of the options that you can
+use with the <command>gconftool-2</command> command.</para>
+    <table frame="topbot" id="gconf-TBL-7">
+      <title>gconftool-2 Command Options</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="35.52*"/>
+        <colspec colname="colspec1" colwidth="64.48*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>Option</para>
+            </entry>
+            <entry valign="top">
+              <para>Function</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--all-dirs</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Lists all subdirectories in a
+directory that you specify.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--all-entries</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Displays the values of all keys
+in a directory that you specify.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--config-source=<replaceable>configuration_source</replaceable></literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Use this option with the <literal>--direct</literal> option
+to specify a configuration source to use. If you do not specify a configuration
+source with this option, the command runs on all configuration sources in
+the path file.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--direct</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Use this option with the <literal>--config-source</literal> option to access a configuration source directly.
+When you use this option, <application>GConf</application> bypasses the server.
+Ensure that the <application>GConf</application> daemon, <command>gconfd-2</command>, is not running before you use this option.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>--get</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Displays the value of a preference key that you specify.
+Also displays the values of the elements in the schema object for a schema
+key that you specify.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>--help</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Displays a help message about the <command>gconftool-2</command> command, and the options that you can use with the <command>gconftool-2</command> command.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--long-desc=<replaceable>description</replaceable></literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Use this option with the <literal>--set-schema</literal>
+option to specify a long description for a schema key. </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>--makefile-install-rule</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Installs schema definition files to applications.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--owner=<replaceable>owner</replaceable></literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Use this option with the <literal>--set-schema</literal> option to specify
+an owner for a schema key. </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>--recursive-list</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Displays the value of all preference keys in all
+subdirectories in a directory that you specify.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--recursive-unset</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Resets
+the values of all preference keys, in all subdirectories in a directory, from
+the user setting to the setting in the default configuration source.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <literal>--set</literal>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the value of a preference key, and writes the value
+to the user configuration source. Use the <literal>--type</literal> option
+with the <literal>--set</literal> option to specify the data type of the value
+that you want to set. For example, the following command sets the value of
+the <literal>/apps/gnome-terminal/profiles/Default/background_color</literal>
+key in the user configuration source:</para>
+              <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --set  &quot;/apps/gnome-terminal/profiles/Default/background_color&quot;
+--type string &quot;#000000&quot;</userinput></para>
+              <para>You can also use the <literal>--direct</literal> option and the <literal>--config-source</literal> option
+with the <literal>--set</literal> option to write a value to another configuration
+source.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--set-schema</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Sets the value of an attribute
+in a schema key, and writes the value to the default configuration source.</para>
+              <para>Use the following options with the <literal>--set-schema</literal>
+option to specify the attribute that you want to update:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <literal>--type</literal>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <literal>--short-desc</literal>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <literal>--long-desc</literal>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <literal>--owner</literal>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para>For example, the following command sets the short description
+in the schema key for the <literal>/apps/gnome-terminal/profiles/Default/background_color</literal> key:</para>
+              <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --set-schema  &quot;/schemas/apps/gnome-terminal/profiles/Default/background_color&quot;
+--short-desc &quot;Default  background color of terminal&quot;</userinput></para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--short-desc=<replaceable>description</replaceable></literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Use this option with the <literal>--set-schema</literal>
+option to specify a short description for a schema key. </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--shutdown</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Terminates the <application>GConf</application> daemon.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--type=<replaceable>data_type</replaceable></literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Use this option to specify the data type when you set a
+value of a preference key. You can also use this option when you set the value
+of an attribute in a schema key. The following is a list of valid data types:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <literal>bool</literal>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <literal>float</literal>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <literal>int</literal>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <literal>list</literal>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <literal>pair</literal>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <literal>string</literal>
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--unset</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Resets the value of a preference
+key from the user setting to the setting in the default configuration source.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <literal>--usage</literal>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Displays a brief help message
+about the <command>gconftool-2</command> command, and the options that you
+can use with the <command>gconftool-2</command> command.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="gconf-7">
+    <title>To Set Preference Values</title>
+    <indexterm>
+      <primary>GConf</primary>
+      <secondary>setting preference values</secondary>
+    </indexterm>
+    <para>You can set a mandatory value or a default value for a preference
+key. Before you change mandatory preference values or default preference values
+for users, you must ensure that the <application>GConf</application> daemon
+is not running for any user. Ensure that all users are logged out before you
+change preference values for users.</para>
+    <para>To set a mandatory value or a default value for a preference key, use
+the <command>gconftool-2</command> command, as follows:</para>
+    <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source <replaceable>configuration_source</replaceable> --type <replaceable>data_type</replaceable>
+--set <replaceable>preference_key</replaceable> <replaceable>value</replaceable></userinput></para>
+    <para>For example, to set <literal>wwwproxy.xyz.com</literal> as the mandatory
+HTTP proxy host, run the following command:</para>
+    <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /system/http_proxy/host
+wwwproxy.xyz.com</userinput></para>
+    <para>The user cannot override this preference value.</para>
+    <para>You can also use the <command>gconftool-2</command> command to set default
+values. For example, to set the default number of workspaces to five, run
+the following command:</para>
+    <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type int --set /apps/metacity/general/num_workspaces
+5</userinput></para>
+    <para>The user can override this preference value.</para>
+    <caution>
+      <para>Before you change mandatory preference values or default preference
+values for users, you must ensure that all users are logged out.</para>
+    </caution>
+  </sect1>
+  <sect1 id="gconf-8">
+    <title>Setting General Preferences</title>
+    <para>The following sections describe how to assign mandatory or default values
+to general preferences.</para>
+    <sect2 id="gconf-10">
+      <title>To Set HTTP Proxy Preferences</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting HTTP proxy</secondary>
+      </indexterm>
+      <para>To set HTTP proxy preferences, you modify the values of
+the preference keys in the <filename>/system/http_proxy/</filename> location.
+For example, to set a mandatory value for the HTTP proxy host, run the following
+command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /system/http_proxy/host <replaceable>proxy_name</replaceable></userinput></para>
+      <para>To set a default value for the HTTP proxy host, run the following command: </para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /system/http_proxy/host <replaceable>proxy_name</replaceable></userinput></para>
+      <para>You can also set other HTTP proxy-related preferences. For information
+on the other HTTP proxy preferences, see the <filename>system_http_proxy.schemas</filename> schema definition file.</para>
+    </sect2>
+    <sect2 id="gconf-11">
+      <title>To Set Print Manager Preferences</title>
+      <para>To set print manager preferences, you modify the values of the preference
+keys in the <filename>/apps/gnome-print-manager</filename> location. For example,
+if you do not want users to view the print jobs of other users, set a mandatory
+value as follows: </para>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting print manager</secondary>
+      </indexterm>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2
+--direct --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory --type
+bool --set /apps/gnome-print-manager/show_all_jobs false</userinput></para>
+      <para>To set a default value for this preference, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /apps/gnome-print-manager/show_all_jobs
+false</userinput></para>
+      <para>You can also set other print manager preferences. For information on
+the other print manager preferences, see the <filename>gnome-print-manager.schemas</filename> schema definition file.</para>
+    </sect2>
+    <sect2 id="gconf-12">
+      <title>To Set the Number of Workspaces</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting number of workspaces</secondary>
+      </indexterm>
+      <para>To set a mandatory number of workspaces, use
+the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type int --set /apps/metacity/general/num_workspaces <replaceable>integer</replaceable></userinput></para>
+      <para>To set a default number of workspaces, use the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type int --set /apps/metacity/general/num_workspaces <replaceable>integer</replaceable></userinput></para>
+      <para>You can also set other window manager preferences. For information on
+the other window manager preferences, see the <filename>metacity.schemas</filename>
+schema definition file.</para>
+    </sect2>
+    <sect2 id="gconf-16">
+      <title>To Set Keyboard Accessibility Preferences</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting keyboard accessibility</secondary>
+      </indexterm>
+      <para>To set keyboard accessibility preferences, you
+modify the values of the preference keys in the <filename>/desktop/gnome/accessibility/keyboard</filename> location. For example, if you want to set a mandatory value so
+that keyboard accessibility features are enabled, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type bool --set /desktop/gnome/accessibility/keyboard/enable
+true</userinput></para>
+      <para>To set a default value for this preference, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set desktop/gnome/accessibility/keyboard/enable
+false</userinput></para>
+      <para>You can also set other keyboard accessibility preferences. For information
+on the other keyboard accessibility preferences, see the <filename>desktop_gnome_accessibility_keyboard.schemas</filename> schema definition file.</para>
+    </sect2>
+    <sect2 id="gconf-18">
+      <title>To Set Keyboard Shortcut Preferences</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting keyboard shortcuts</secondary>
+      </indexterm>
+      <para>To set keyboard shortcut preferences, you modify the values
+of preference keys in two locations. The following table shows the locations
+to modify, and the part of the user interface to which the locations correspond:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>GConf Location</para>
+              </entry>
+              <entry valign="top">
+                <para>User Interface Component</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <filename>/apps/panel/global</filename>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para><application>Keyboard Shortcuts</application> preference
+tool, <guilabel>Desktop</guilabel> section</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <filename>/apps/metacity/general</filename>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para><application>Keyboard Shortcuts</application> preference
+tool, <guilabel>Window Management</guilabel> section</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>For example, you might want users to use only the <keycombo><keycap>Alt</keycap><keycap>F3</keycap></keycombo>
+ keyboard shortcut to open the <guilabel>Run Program</guilabel> dialog. To set this mandatory value, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /apps/panel/global/run_key
+'&lt;Alt&gt;F3'</userinput></para>
+      <para>You might want users to use <keycombo><keycap>Alt</keycap><keycap>F11</keycap></keycombo>
+to maximize windows, by default. To set this default value, run the following
+command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/metacity/window_keybindings/maximize
+'&lt;Alt&gt;F11'</userinput></para>
+      <para>You can also set other keyboard shortcut preferences. For information
+on the other keyboard shortcut preferences, see the <filename>panel-global-config.schemas</filename> and <filename>metacity.schemas</filename> schema definition files.</para>
+    </sect2>
+    <sect2 id="gconf-13">
+      <title>To Set Global Panel Preferences</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting global panel preferences</secondary>
+      </indexterm>
+      <para>To set global preferences for panels, you modify
+the values of the preference keys in the <filename>/apps/panel/global</filename>
+location. For example, if you do not want users to ever use panel animation,
+set a mandatory value as follows:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type bool --set /apps/panel/global/enable_animations
+false</userinput></para>
+      <para>To set a default value for this preference, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /apps/panel/global/enable_animations
+false</userinput></para>
+      <para>You can also set other global panel preferences. For information on
+the other global panel preferences, see the <filename>panel-global-config.schemas</filename> schema definition file.</para>
+    </sect2>
+    <sect2 id="gconf-14">
+      <title>To Set Preferences for Individual Panels and Panel Objects</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting panel object preferences</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting
+individual panel preferences</secondary>
+      </indexterm>
+      <para>The <filename>panel-per-panel-config.schemas</filename> schema definition file specifies the following details of the
+panels on the desktop:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Number of panels.</para>
+        </listitem>
+        <listitem>
+          <para>Types of the panels.</para>
+        </listitem>
+        <listitem>
+          <para>Properties of the panels.</para>
+        </listitem>
+        <listitem>
+          <para>Contents of the panels.</para>
+        </listitem>
+      </itemizedlist>
+      <para>The configuration of individual panels and of panel objects is a complex
+task. To configure individual panels and panel objects, you must first understand
+the structure of the <filename>panel-per-panel-config.schemas</filename> schema
+definition file. For more information on the <filename>panel-per-panel-config.schemas</filename> schema definition file, see the next section.</para>
+      <para>To set preferences for individual panels and panel objects, you must
+set the values of many preferences in a configuration source. The easiest
+way to set the values of many preferences is to use a script. For a sample
+script that sets preferences for a panel and objects on the panel, see <xref linkend="gconf-3"/>.</para>
+      <sect3 id="gconf-23">
+        <title>Schema Definition File for Individual Panels and Panel Objects</title>
+        <indexterm>
+          <primary>GConf</primary>
+          <secondary>schema definition files</secondary>
+          <tertiary>panel and panel object</tertiary>
+        </indexterm>
+        <para>The schema definition
+file <filename>panel-per-panel-config.schemas</filename> contains sections
+that specify panels and panel contents for small, medium, and large screens.
+The section for small screens and the section for large screens are not functional
+at the time of publication of this guide. To learn about preference keys for
+panels or panel objects, read the section for medium screens only. </para>
+        <para>The medium section of the file <filename>panel-per-panel-config.schemas</filename> is structured as follows:</para>
+        <orderedlist>
+          <listitem>
+            <para>Preference keys that specify the general structure of panels,
+applets, and other panel objects on the desktop. The following keys specify
+the number of panels, applets, and other panel objects that appear on the
+desktop:</para>
+            <itemizedlist>
+              <listitem>
+                <para>
+                  <literal>/apps/panel/default_profiles/medium/general/panel_id_list</literal>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <literal>/apps/panel/default_profiles/medium/general/applet_id_list</literal>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <literal>/apps/panel/default_profiles/medium/general/object_id_list</literal>
+                </para>
+              </listitem>
+            </itemizedlist>
+            <para>The keys also assign identifiers to each panel, applet, and panel object.
+For example, the following excerpt from <filename>panel-per-panel-config.schemas</filename> specifies that two panels appear on the desktop:</para>
+            <literallayout>&lt;key&gt;/schemas/apps/panel/default_profiles/medium/
+general/panel_id_list&lt;/key&gt;
+.
+.
+.
+&lt;default&gt;[00000001,00000002]&lt;/default&gt;</literallayout>
+            <para>In <filename>panel-per-panel-config.schemas</filename>, the identifier
+00000001 identifies the bottom edge panel, and the identifier 00000002 identifies
+the Menu Panel.</para>
+          </listitem>
+          <listitem>
+            <para>Preference keys that specify the properties of the panels.
+The panel property keys are structured as follows:</para>
+            <literallayout>/apps/panel/default_profiles/medium/panels/<replaceable>panel_number</replaceable>/<replaceable>panel_property_key</replaceable></literallayout>
+            <para>For example, the key <literal>/apps/panel/default_profiles/medium/panels/00000001/screen_edge</literal> specifies the edge of the display on which the bottom edge panel
+resides. </para>
+            <para>The keys that specify the properties of the bottom edge panel are listed
+first. The keys that specify the properties of the Menu Panel are listed at
+the end of the medium section in <filename>panel-per-panel-config.schemas</filename>. </para>
+          </listitem>
+          <listitem>
+            <para>Preference keys that list the panel objects, the panel object
+properties, and the panels in which the objects reside. For example, the following
+excerpt from <filename>panel-per-panel-config.schemas</filename> specifies
+object 00000001:</para>
+            <literallayout>&lt;key&gt;/schemas/apps/panel/default_profiles/medium/
+objects/00000001/object_type&lt;/key&gt;
+.
+.
+.
+&lt;default&gt;launcher-object&lt;/default&gt;
+.
+.
+.
+&lt;key&gt;/schemas/apps/panel/default_profiles/medium/
+objects/00000001/launcher_location&lt;/key&gt;
+.
+.
+.
+&lt;default&gt;applications:///nautilus.desktop&lt;/default&gt;
+.
+.
+.
+&lt;key&gt;/schemas/apps/panel/default_profiles/medium/
+objects/00000001/panel_id&lt;/key&gt;
+.
+.
+.
+&lt;default&gt;00000002&lt;/default&gt;</literallayout>
+            <para>The object is a launcher that starts <application>Nautilus</application>
+file manager. The launcher resides in the Menu Panel.</para>
+          </listitem>
+          <listitem>
+            <para>Preference keys that list the applets, the applet preferences,
+and the panels in which the applets reside. For example, the following excerpt
+from <filename>panel-per-panel-config.schemas</filename> specifies applet
+00000001:</para>
+            <literallayout>&lt;key&gt;/schemas/apps/panel/default_profiles/medium/
+applets/00000001/object_type&lt;/key&gt;
+.
+.
+.
+&lt;default&gt;bonobo-applet&lt;/default&gt;
+.
+.
+.
+&lt;key&gt;/schemas/apps/panel/default_profiles/medium/
+applets/00000001/panel_id&lt;/key&gt;
+.
+.
+.
+&lt;default&gt;00000001&lt;/default&gt;
+.
+.
+.
+&lt;key&gt;/schemas/apps/panel/default_profiles/medium/
+applets/00000001/bonobo_iid&lt;/key&gt;
+.
+.
+.
+&lt;default&gt;OAFIID:GNOME_TasklistApplet&lt;/default&gt;</literallayout>
+            <para>The applet is the <application>Window List</application> applet. The
+applet resides in the bottom edge panel.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gconf-3">
+        <title>Sample Script for Setting Individual Panel Preferences</title>
+        <para>This section contains a sample script that sets the preferences for
+a panel that has the following major characteristics:</para>
+        <itemizedlist>
+          <listitem>
+            <para>The panel is an edge panel, and resides at the bottom edge
+of the screen.</para>
+          </listitem>
+          <listitem>
+            <para>The panel contains a file manager launcher and a <application>Terminal</application> launcher.</para>
+          </listitem>
+          <listitem>
+            <para>The panel contains a <application>Window List</application>
+applet.</para>
+          </listitem>
+        </itemizedlist>
+        <para>The sample script also sets other minor preferences. All of the preferences
+have default values, not mandatory values.</para>
+        <para>The sample script follows:</para>
+        <literallayout># Usage is: set_key &lt;type&gt; &lt;key&gt; &lt;value&gt; &lt;extra options if any&gt;
+
+function set_key() 
+{
+  TYPE=&quot;$1&quot;
+  shift
+  KEY=&quot;$1&quot;
+  shift
+  VALUE=&quot;$1&quot;
+  shift
+  OTHER_ARGS=&quot;$*&quot;
+  gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults 
+--owner=panel $OTHER_ARGS --type &quot;$TYPE&quot; --set &quot;$KEY&quot; &quot;$VALUE&quot;
+}
+
+# Define the number of panels, the number of launchers, and the number of applets 
+set_key list /apps/panel/default_profiles/medium/general
+/panel_id_list [00000001] --list-type string
+set_key list /apps/panel/default_profiles/medium/general
+/object_id_list [00000001,00000002] --list-type string
+set_key list /apps/panel/default_profiles/medium/general
+/applet_id_list [00000001] --list-type string
+
+# Define the characteristics of the panel 
+set_key string /apps/panel/default_profiles/medium/panels
+/00000001/panel_type edge-panel
+set_key string /apps/panel/default_profiles/medium/panels
+/00000001/panel_size panel-size-x-small
+set_key string /apps/panel/default_profiles/medium/panels
+/00000001/screen_edge panel-edge-bottom
+set_key bool /apps/panel/default_profiles/medium/panels
+/00000001/hide_buttons_enabled false
+set_key string /apps/panel/default_profiles/medium/panels
+/00000001/panel_background_type no-background
+
+# Define the first launcher
+set_key string /apps/panel/default_profiles/medium/objects
+/00000001/object_type launcher-object
+set_key string /apps/panel/default_profiles/medium/objects
+/00000001/launcher_location 'applications:///nautilus.desktop'
+set_key string /apps/panel/default_profiles/medium/objects
+/00000001/panel_id 00000001
+set_key int /apps/panel/default_profiles/medium/objects
+/00000001/position 20
+
+# Define the second launcher
+set_key string /apps/panel/default_profiles/medium/objects
+/00000002/object_type launcher-object
+set_key string /apps/panel/default_profiles/medium/objects
+/00000002/launcher_location 'applications:///System/gnome-terminal.desktop'
+set_key string /apps/panel/default_profiles/medium/objects
+/00000002/panel_id 00000001
+set_key int /apps/panel/default_profiles/medium/objects
+/00000002/position 25
+
+# Define the applet
+set_key string /apps/panel/default_profiles/medium/applets
+/00000001/object_type bonobo-applet
+set_key string /apps/panel/default_profiles/medium/applets
+/00000001/bonobo_iid OAFIID:GNOME_TasklistApplet
+set_key string /apps/panel/default_profiles/medium/applets
+/00000001/panel_id 00000001
+set_key int /apps/panel/default_profiles/medium/applets
+/00000001/position 25</literallayout>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gconf-9">
+    <title>Setting Look-and-Feel Preferences</title>
+    <para>The following sections describe how to assign mandatory or default values
+to look-and-feel preferences.</para>
+    <sect2 id="gconf-19">
+      <title>To Set Font Preferences</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting fonts</secondary>
+      </indexterm>
+      <para>To set font preferences, you modify the values of two preference keys.
+The following table shows the keys to modify, and the part of the user interface
+to which the keys correspond:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>GConf Location</para>
+              </entry>
+              <entry valign="top">
+                <para>User Interface Component</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>/desktop/gnome/interface/font_name</para>
+              </entry>
+              <entry valign="top">
+                <para><application>Font</application> preference tool, <guilabel>Application font</guilabel> section</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>/apps/nautilus/preferences/desktop_font</para>
+              </entry>
+              <entry valign="top">
+                <para><application>Font</application> preference tool, <guilabel>Desktop font</guilabel> section</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>For example, to set <literal>Sans 12</literal> as the mandatory application
+font, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /desktop/gnome/interface/font_name &ldquo;Sans
+12&rdquo;</userinput></para>
+      <para>To set <literal>palatino 12</literal> as the default desktop background
+object font, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/nautilus/preferences/desktop_font &ldquo;palatino
+12&rdquo;</userinput></para>
+    </sect2>
+    <sect2 id="gconf-20">
+      <title>To Set Desktop Background Preferences</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting desktop background</secondary>
+      </indexterm>
+      <para>To set desktop background preferences, you modify the values
+of the preference keys in the <filename>/desktop/gnome/background</filename>
+location. For example, to set a mandatory image for the desktop background,
+run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /desktop/gnome/background/picture_filename <replaceable>filename.png</replaceable></userinput></para>
+      <para>To set a default value for this preference, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /desktop/gnome/background/picture_filename <replaceable>filename.png</replaceable></userinput></para>
+      <para>You can also set other desktop background preferences. For information
+on the other desktop background preferences, see the <filename>desktop_gnome_background.schemas</filename> schema definition file.</para>
+    </sect2>
+    <sect2 id="gconf-21">
+      <title>To Set Splash Image Preferences</title>
+      <indexterm>
+        <primary>GConf</primary>
+        <secondary>setting splash image</secondary>
+      </indexterm>
+      <para>To set splash image preferences, you modify the value of
+the preference keys in the <filename>/apps/gnome-session/options/</filename>
+location. For example, if you do not want users ever to see a splash image,
+set a mandatory value as follows:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.mandatory --type bool --set /apps/gnome-session/options/show_splash_screen
+false</userinput></para>
+      <para>To set a default value for this preference, run the following command:</para>
+      <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --direct --config-source
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /apps/gnome-session/options/show_splash_screen
+false</userinput></para>
+      <para>You can also set other splash image preferences. For information on
+the other splash image preferences, see the <filename>gnome-session.schemas</filename> schema definition file.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gconf-28">
+    <title>To Restore Default Preference Values</title>
+    <indexterm>
+      <primary>GConf</primary>
+      <secondary>restoring default preference
+values</secondary>
+    </indexterm>
+    <para>To restore the default preference values
+for a user, perform the following steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Log in as the user whose default preference values you want
+to restore.</para>
+      </listitem>
+      <listitem>
+        <para>Run the following command:</para>
+        <para><computeroutput>#</computeroutput> <userinput>gconftool-2 --recursive-unset</userinput></para>
+        <para>This command resets the values of all preference keys, in all subdirectories,
+from the user setting to the setting in the default configuration source.</para>
+      </listitem>
+      <listitem>
+        <para>Log out from the user account.</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+</chapter>
+
+
