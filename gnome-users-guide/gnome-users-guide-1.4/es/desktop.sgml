@@ -36,9 +36,9 @@ Importante
 <para>
 
 El escritorio GNOME actualmente viene proporcionado por un
-proceso en segundo plano del Administrador de ficheros de GNOME. Si, por
+proceso en segundo plano del Administrador de ficheros Nautilus. Si, por
 cualquier razón, el proceso en segundo plano ha dejado de ejecutarse, puede
-volver a ejecutar el Administrador de ficheros de GNOME y el
+volver a ejecutar el Administrador de ficheros Nautilus y el
 escritorio volverá a funcionar. Incluso si tiene que hacer esto recuerde que
 no hay necesidad de mantener la ventana del administrador de ficheros
 abierta para que el escritorio funcione. 
@@ -58,8 +58,8 @@ Utilizar el escritorio es algo tan sencillo como arrastrar todo
 aquello que desee utilizar rutinariamente al escritorio. El escritorio
 de forma predeterminada incluye una carpeta con su directorio hogar
 (<filename>/home/[nombre usuario]</filename>). De forma predeterminada
-aparecerá también la ventana del administrador de ficheros de GNOME para
-permitirle acceder de formoa rápida a otras zonas de su sistema. 
+aparecerá también la ventana del administrador de ficheros Nautilus para
+permitirle acceder de forma rápida a otras zonas de su sistema. 
 
 </para>
     <para>
@@ -71,9 +71,7 @@ sea; si es un programa, el programa se iniciara, si se trata de datos, el
 programa apropiado arrancara con esos datos cargados, y si es un directorio,
 se abrirá una ventana del gestor de ficheros mostrando su contenido. 
     </para>
-
 <para>
-
 Para utilizar arrastrar y soltar necesita utilizar una
 aplicación compatible GNOME o una aplicación Motif. GNOME es compatible 
 con arrastrar y soltar de Motif, por lo que verá que funciona con muchas
@@ -91,7 +89,7 @@ $
 
 </prompt>
 
-/home/[nombre usuario]/.gnome-desktop/
+/home/[nombre usuario]/.nautilus/desktop/
 
 </programlisting>
 
@@ -113,11 +111,12 @@ Dispositivos hardware
 
 </secondary>
 </indexterm>
-
-Una vez haya arrancado GNOME podrá observar que todos los
-dispositivos que tenga conectados a su sistema aparecen en su
-escritorio con los iconos apropiados. Puede montar y acceder a estos
-dispositivos utilizando estos iconos.
+Una vez haya arrancado Gnome podrá montar los dispositivos Cdrom o 
+disquete que tenga conectados a su sistema, pulsando con el botón
+derecho sobre el escritorio y seleccionando la opción
+del menú actualizar dispositivos. 
+Puede montar y acceder a estos
+dispositivos utilizando los iconos que apareceran en su escritorio.
 
 </para>
 <important>
@@ -421,13 +420,13 @@ con las siguientes opciones:
 <para>
 <guimenuitem>
 
-Nuevo | Terminal
+Nueva ventana
 
 </guimenuitem>
 
 - Esta opción
-lanzará una ventana del Terminal de GNOME utilizando el
-directorio <filename>~/.gnome-desktop</filename>.
+lanzará una nueva ventana  del gestor de ficheros nautilus mostrando
+su directorio personal.
 
 </para>
 </listitem>
@@ -435,7 +434,7 @@ directorio <filename>~/.gnome-desktop</filename>.
 <para>
 <guimenuitem>
 
-Nuevo | Directorio
+Nuevo directorio
 
 </guimenuitem>
 
@@ -445,63 +444,16 @@ una manera eficaz de mantener ordenado el escritorio.
 
 </para>
 </listitem>
-<listitem>
-<para>
-<guimenuitem>
+    <listitem>
+     <para>
+      <guimenuitem>Nuevo terminal</guimenuitem> - Esta opción lanza una nueva
+ventana de tipo terminal, situandose de froma automatica en el directorio 
+      <filename>/home/[nombre de usuario]</filename> 
+      directory.
+     </para>
+    </listitem>
 
-Nuevo | Lanzador
 
-</guimenuitem>
-
-- Esta opción le
-permite colocar un nuevo lanzador de aplicaciones en el
-escritorio. Cuando seleccione esta opción aparecerá el
-cuadro de diálogo 
-
-<guimenuitem>
-
-Lanzador de
-aplicaciones
-
-</guimenuitem>
-
-que le permitirá especificar la
-aplicación y sus propiedades.
-
-</para>
-</listitem>
-<listitem>
-<para>
-<guimenuitem>
-
-Nuevo | [aplicación]
-
-</guimenuitem>
-
-- Algunas
-aplicaciones pueden incluir aquí algunas opciones. Por
-ejemplo, la hoja de cálculo Gnumeric pondrá una opción
-
-<guimenuitem>
-
-Nueva hoja de cálculo Gnumeric
-
-</guimenuitem>
-
-dentro del menú 
-
-<guimenu>
-
-Nuevo
-
-</guimenu>
-
-para que así
-puede comenzar rápidamente la creación de una nueva hoja
-de cálculo.
-
-</para>
-</listitem>
 <listitem>
 <para>
 <guimenuitem>
@@ -515,54 +467,27 @@ alineará automáticamente los iconos de su escritorio.
 
 </para>
 </listitem>
-<listitem>
-<para>
-<guimenuitem>
 
-Crear nueva ventana
+    <listitem>
+     <para>
+      <guimenuitem>Discos</guimenuitem> - Mediante esta opción se accede al submenú de 
+dispositivos extraibles.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <guimenuitem>Cambiar el fondo del escritorio</guimenuitem> - Esta opción
+abre el centro de control Gnome en el aplique C propiedades del tapiz, permitiendo
+cambiar la configuración del fondo del escritorio.
+    </para>
+   </listitem>
 
-</guimenuitem>
 
-- Esta opción
-lanzará una nueva ventana del administrador de ficheros GNOME
-mostrando su directorio hogar.
-
-</para>
-</listitem>
-<listitem>
-<para>
-<guimenuitem>
-
-Actualizar dispositivos del sistema
-
-</guimenuitem>
-
--
-Esta opción buscara los dispositivos montables de sus sistema y mostrará un 
-icono por 
-cada uno de los nuevos dispositivos que encuentre. Actualiza
-también cualquier elemento del escritorio que su distribución coloque
-predeterminadamente en él.
-
-</para>
-</listitem>
-<listitem>
-<para>
-<guimenuitem>
-
-Actualizar escritorio
-
-</guimenuitem>
-
-- Esta
-opción actualizará los ficheros contenidos en el
-directorio <filename>~/.gnome-desktop</filename>. Se colocarán los iconos correspondientes a 
-cualquier nuevo fichero.
-
-</para>
-</listitem>
 </itemizedlist>
 </sect1>
 </chapter>
+
+
+
 
 
