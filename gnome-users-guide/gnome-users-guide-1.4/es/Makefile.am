@@ -16,7 +16,11 @@ sgml_ents = \
 	panel.sgml		\
 	ug-applets.sgml		\
 	wheeler.sgml		\
-	wms.sgml
+	wms.sgml		\
+	fdl-es.sgml		\
+	gpl-es.sgml		\
+	licencias.sgml		\
+	traduccion.sgml
 figs = \
 figures/anotherclock-applet.png			\
 figures/anotherclock-properties.png		\
