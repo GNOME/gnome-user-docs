@@ -28,7 +28,7 @@
 #   lang = C
 #   omffile=scrollkeeper-manual-C.omf
 #   sgml_ents = fdl.sgml
-#   include $(top_srcdir)/doc/sgmldocs.make
+#   include $(top_srcdir)/help/sgmldocs.make
 #   dist-hook: app-dist-hook
 #
 
@@ -78,6 +78,9 @@ app-dist-hook: index.html
 		$(distdir)/$(docname)/stylesheet-images
 	-cp $(srcdir)/figures/*.png \
 		$(distdir)/figures
+	-if [ -e topic.dat ]; then \
+		cp $(srcdir)/topic.dat $(distdir); \
+	 fi
 
 install-data-am: index.html omf
 	-$(mkinstalldirs) $(DESTDIR)$(docdir)/stylesheet-images
@@ -95,6 +98,9 @@ install-data-am: index.html omf
 	  basefile=`echo $$file | sed -e  's,^.*/,,'`; \
 	  $(INSTALL_DATA) $$file $(DESTDIR)$(docdir)/stylesheet-images/$$basefile; \
 	done
+	-if [ -e $(srcdir)/topic.dat ]; then \
+		$(INSTALL_DATA) $(srcdir)/topic.dat $(DESTDIR)$(docdir); \
+	 fi
 
 $(docname).ps: $(srcdir)/$(docname).sgml
 	-srcdir=`cd $(srcdir) && pwd`; \
