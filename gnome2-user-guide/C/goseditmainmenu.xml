@@ -106,20 +106,6 @@ as a drawer object. </para>
           <para>Change the properties of submenus and menu items.</para>
         </listitem>
       </itemizedlist>
-      <para><xref linkend="goseditmainmenu-FIG-39"/> shows the popup menu.</para>
-      <figure id="goseditmainmenu-FIG-39">
-        <title>Menu Item Popup Menu<indexterm><primary>menu item popup menu</primary><secondary>illustration</secondary></indexterm></title>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/launcher_popup.png" format="PNG"/>
-            </imageobject>
-            <textobject>
-              <phrase>Menu item popup menu. The context describes the graphic.</phrase>
-            </textobject>
-          </mediaobject>
-        </screenshot>
-      </figure>
       <para><xref linkend="goseditmainmenu-TBL-30"/> describes menu item popup menus. <indexterm><primary>launchers</primary><secondary>adding to panel</secondary></indexterm><indexterm><primary>menus</primary><secondary>adding to panel</secondary></indexterm></para>
       <table frame="topbot" id="goseditmainmenu-TBL-30">
         <title>Menu Item Popup Menus</title>
@@ -169,16 +155,6 @@ the menu.</para>
 dialog with  the command from the <guilabel>Command</guilabel> field of the
 launcher in  the command field on the <guilabel>Run Application</guilabel>
 dialog. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0">
-                <para>
-                  <guimenuitem>Help on <replaceable>application-name</replaceable></guimenuitem>
-                </para>
-              </entry>
-              <entry colname="colspec1">
-                <para>Opens the online help for the application.</para>
               </entry>
             </row>
             <row>
@@ -353,13 +329,25 @@ dialog to save the screenshot.</para>
             </entry>
           </row>
           <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>Lock Screen</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Lock Screen locks your screen.</para>
+            </entry>
+          </row>
+          <row>
             <entry valign="top">
               <para>
                 <guimenuitem>Log Out</guimenuitem>
+                <emphasis>username</emphasis>
               </para>
             </entry>
             <entry valign="top">
-              <para>Logs you out of the current session. </para>
+              <para>Logs you out of
+the current session. </para>
             </entry>
           </row>
         </tbody>
@@ -392,7 +380,7 @@ following ways:<itemizedlist><listitem><para>From any panel</para><para>Add the 
 the panel, then choose <menuchoice><guimenu>Add to Panel</guimenu><guisubmenu>Actions</guisubmenu><guimenuitem>Run</guimenuitem></menuchoice>.
 Click on the <guibutton>Run</guibutton> button.</para></listitem><listitem><para>From the <guimenu>Main Menu</guimenu></para><para>Open the <guimenu>Main Menu</guimenu>, then choose <guimenuitem>Run
 Application</guimenuitem>.</para></listitem><listitem><para>From the <application>Menu Bar</application></para><para>Choose <menuchoice><guimenu>Actions</guimenu><guimenuitem>Run
-Application</guimenuitem></menuchoice>.</para></listitem><listitem><para>Use shortcut keys</para><para>The default shortcut keys to display the <guilabel>Run Application</guilabel> dialog are <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>.You can change
+Application</guimenuitem></menuchoice>.</para></listitem><listitem><para>Use shortcut keys</para><para>The default shortcut keys to display the <guilabel>Run Application</guilabel> dialog are <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>. You can change
 the shortcut keys that display the <guilabel>Run Application</guilabel> dialog
 in the <application>Keyboard Shortcuts</application> preference tool.</para></listitem><listitem><para>From a menu item popup menu</para><para>Right-click on an item in a menu, then choose <guilabel>Put into run
 dialog</guilabel> from the popup menu. The <guilabel>Run Application</guilabel>
@@ -400,10 +388,10 @@ dialog opens with the command from the menu in the command field.</para></listit
           <para>The <guilabel>Run Application</guilabel> dialog is displayed.</para>
         </listitem>
         <listitem>
-          <para>Enter the command that you want to run in the blank field.
-Alternatively, to choose  a command that you ran previously, click the down
-arrow button beside the command field, then choose the command to run.</para>
-          <para>Alternatively, select the <guibutton>Show list of known applications</guibutton> option to display a list of available applications.</para>
+          <para>Enter the command that you want to run in the blank field. </para>
+          <para>Alternatively, to choose  a command that you ran previously, click the
+down arrow button beside the command field, then choose the command to run.</para>
+          <para>Alternatively, select the <guilabel>Show list of known applications</guilabel> option to display a list of available applications.</para>
           <para>You can also use the <guibutton>Run with file</guibutton> button to
 choose a file to append to the command line. For example, you can enter <application>emacs</application> as the command, then choose a file to edit.</para>
           <para>Select the <guilabel>Run in terminal</guilabel> option to run the application
@@ -486,6 +474,9 @@ When you select a directory, click <guibutton>OK</guibutton>. </para>
           <para>You can also save the screenshot to the desktop. To save the screenshot
 to the desktop, select the <guilabel>Save screenshot to desktop</guilabel>
 option. </para>
+          <para>You can also save the screenshot to a web page. To save the screenshot
+to a web page, select the <guilabel>Save screenshot to web page</guilabel>
+option. </para>
         </listitem>
         <listitem>
           <para>Use a command</para>
@@ -566,28 +557,8 @@ Menu</see>
     <para>The <guimenu>Main Menu</guimenu> provides access to
 the <guimenu>Applications</guimenu> menu and many of the items in the <guimenu>Actions</guimenu> menu. You can access almost all of the standard applications,
 commands, and configuration options from the <guimenu>Main Menu</guimenu>. </para>
-    <para>You can add <guimenu>Main Menu</guimenu> buttons to your panels.</para>
-    <sect2 id="goseditmainmenu-15">
-      <title>To Open the Main Menu</title>
-      <indexterm>
-        <primary>Main Menu</primary>
-        <secondary>opening</secondary>
-      </indexterm>
-      <para>You can open the <guimenu>Main Menu</guimenu> in the following ways: </para>
-      <itemizedlist>
-        <listitem>
-          <para>From a panel with a <guimenu>Main Menu</guimenu></para>
-          <para>Click on the <guimenu>Main Menu</guimenu>. </para>
-        </listitem>
-        <listitem>
-          <para>Use shortcut keys</para>
-          <para>You can use shortcut keys to open the <guimenu>Main Menu</guimenu>.
-When you use shortcut keys to open the <guimenu>Main Menu</guimenu>, the <guimenu>Main Menu</guimenu> appears at the mouse pointer. </para>
-          <para>The default shortcut keys to open the <guimenu>Main Menu</guimenu> are <keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo>. To change the shortcut keys that
-open the <guimenu>Main Menu</guimenu>, use the <application>Keyboard Shortcuts</application> preference tool.</para>
-        </listitem>
-      </itemizedlist>
-    </sect2>
+    <para>You can add <guimenu>Main Menu</guimenu> buttons to your panels. Click
+on the <guimenu>Main Menu</guimenu> button to open the <guimenu>Main Menu</guimenu>.</para>
     <sect2 id="goseditmainmenu-29">
       <title>To Add a Main Menu to a Panel</title>
       <indexterm>
@@ -666,8 +637,7 @@ menu from within the file manager. To access the <guimenu>Applications</guimenu>
 menu or the <guimenu>Desktop Preferences</guimenu> menu, open a file manager
 window. </para>
     <para>To access menus
-in the file browser manager, enter one of the following URIs in the field
-on the location bar:</para>
+in the file manager, access one of the following URIs in the file manager:</para>
     <informaltable frame="topbot">
       <tgroup cols="2" colsep="0" rowsep="0">
         <colspec colwidth="50*"/>
@@ -706,8 +676,8 @@ on the location bar:</para>
         </tbody>
       </tgroup>
     </informaltable>
-    <para>To access menus in the file object manager, double-click on the <guilabel>Start Here</guilabel> object on the desktop. The contents of the <guilabel>Start Here</guilabel> location are displayed in a file object manager window.</para>
-    <para>For more information on the file manager, see <citetitle>Nautilus File Manager</citetitle>.</para>
+    <para>For more information on the file manager, see <citetitle>Nautilus File
+Manager</citetitle>.</para>
     <sect2 id="goseditmainmenu-61">
       <title>To Add a Menu</title>
       <indexterm>
@@ -718,12 +688,11 @@ on the location bar:</para>
       <orderedlist>
         <listitem>
           <para>In a file manager window, access the location where you want
-to add the menu. For example, if you want to add a menu to the <guimenu>Applications</guimenu> menu, enter <command>applications:///</command> in the field on
-the location bar from a file browser manager window.</para>
+to add the menu. For example, if you want to add a menu to the <guimenu>Applications</guimenu> menu, enter <command>applications:///</command> URI.</para>
         </listitem>
         <listitem>
           <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Create Folder</guimenuitem></menuchoice>. An untitled folder
-is added to the view pane. The name of the folder is selected.</para>
+is added to the menu. The name of the folder is selected.</para>
         </listitem>
         <listitem>
           <para>Type a name for the folder, then press <keycap>Return</keycap>. </para>
@@ -789,7 +758,7 @@ steps:</para>
         <listitem>
           <para>In a file manager window, access the location from which you
 want to copy the launcher.  For example, if you want to copy a launcher from
-the <guimenu>Applications</guimenu> menu, enter <command>applications:///</command> in the field on the location bar from a file browser manager window.</para>
+the <guimenu>Applications</guimenu> menu, enter <command>applications:///</command> URI.</para>
         </listitem>
         <listitem>
           <para>Select the launcher that you want to copy, then choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy File</guimenuitem></menuchoice>.</para>
