@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosmetacity-1">
+  <title>使用視窗</title>
+  <highlights>
+    <para>本章會說明如何在桌面中使用視窗。 您可以在 GNOME 桌面上，使用多種類型的視窗管理員，例如，<application>Metacity</application> 與 <application> Sawfish</application>。 許多 <application>Metacity</application> 的功能， <application>Sawfish</application> 也有。 本章所說明的功能，是與 <application>Metacity</application> 視窗管理員相關的。</para>
+  </highlights>
+  <sect1 id="gosmetacity-712">
+    <title>視窗與工作區</title>
+    <indexterm>
+      <primary>視窗</primary>
+      <secondary>介紹</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>工作區</primary>
+      <secondary>介紹</secondary>
+    </indexterm>
+    <para>您可以在桌面上同時顯示多個視窗。 桌面可分為許多區域，稱為工作區，視窗便是顯示在其中。工作區是桌面上的不同區域，您可以在其中工作。 桌面上的每一個工作區都有相同的桌面背景、相同的面板以及相同的功能表。 然而，您可以在每一個工作區中，執行不同的應用程式，開啟不同的視窗。 您一次只能在桌面上顯示一個工作區，但是在其他工作區中則可以有視窗開啟。 </para>
+    <para>在<application>工作區切換器</application> Applet 的顯示中，會將視窗與工作區以幾何圖案的方式表現，如 <xref linkend="gosmetacity-FIG-717"/> 所示。 </para>
+    <figure id="gosmetacity-FIG-717">
+      <title>工作區切換程式 Applet</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>工作區切換程式 Applet。此處的內容會說明此圖。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>您隨時可以新增工作區。 如果要將工作區新增至桌面，請在<application>工作區切換器</application> Applet 上按滑鼠右鍵，然後選擇<guimenuitem>個人喜好</guimenuitem>。 接著會顯示<guilabel>工作區切換器個人喜好</guilabel>對話方塊。 請使用<guilabel>工作區數目</guilabel>旋轉方塊，指定所需的工作區數目。</para>
+    <sect2 id="gosmetacity-15">
+      <title>Window Manager Behavior</title>
+      <indexterm>
+        <primary>windows</primary>
+        <secondary>window managers</secondary>
+      </indexterm>
+      <para>視窗管理員控制了視窗的顯示及運作方式。 視窗管理員會管理視窗的位置、哪個視窗含有焦點，以及視窗框架的主題。 視窗框架含有按鈕，可以讓您執行標準動作，例如移動、關閉或調整視窗大小。</para>
+      <para>您可以在<application>視窗焦點</application>個人喜好工具中，配置部分的視窗管理員設定。 本手冊說明的功能，會和 <application>Metacity </application> 視窗管理員的預設配置有關。 預設配置是由<application>視窗焦點</application>個人喜好工具所指定。 本手冊也會說明 Crux 主題的預設功能。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-713">
+    <title>視窗類型</title>
+    <indexterm>
+      <primary>視窗</primary>
+      <secondary>類型</secondary>
+    </indexterm>
+    <para>桌面上可以有下列類型的視窗：</para>
+    <itemizedlist>
+      <listitem>
+        <para>應用程式視窗 </para>
+        <para>當您啟動應用程式時，就會開啟應用程式視窗。 視窗管理員會將框架套用至應用程式視窗。 依預設值，應用程式視窗的頂端邊緣會包含標題列。 標題列上含有按鈕，可以用來操作視窗。 使用應用程式視窗框架中的按鈕，您可以執行像是開啟<guimenu>視窗功能表</guimenu>，或關閉視窗這樣的動作。 <guimenu>視窗功能表</guimenu>提供了許多可以在視窗上執行的動作。 </para>
+      </listitem>
+      <listitem>
+        <para>對話方塊視窗</para>
+        <para>對話方塊視窗是一種即現式視窗，您可以在其中輸入資訊或指令。 對話方塊是顯示在視窗框架中， </para>
+        <para>您可以使用框架的頂端邊緣來操作視窗。 例如，您可以使用標題列來移動對話方塊。 框架也含有按鈕，可以讓您執行下列動作：</para>
+        <itemizedlist>
+          <listitem>
+            <para>開啟<guimenu>視窗功能表</guimenu></para>
+          </listitem>
+          <listitem>
+            <para>關閉對話方塊視窗</para>
+          </listitem>
+        </itemizedlist>
+        <para>一般而言，您是從應用程式視窗開啟對話方塊視窗。 當您開啟對話方塊視窗時，此視窗通常是位於上層並且含有焦點。 有些對話方塊視窗必須要等對話方塊關閉後，才能讓您繼續使用應用程式。 </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosmetacity-16">
+      <title>視窗框架</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>框架</secondary>
+      </indexterm>
+      <para>視窗框架是視窗周圍的邊框。 視窗框架包含標題列。 標題列含有可以用來操作視窗的按鈕。</para>
+      <sect3 id="gosmetacity-10">
+        <title>主題</title>
+        <indexterm>
+          <primary>視窗</primary>
+          <secondary>主題</secondary>
+        </indexterm>
+        <para>您可以在視窗框架上套用數種主題。 主題會決定框架的外觀。 如果要替所有的視窗框架選擇一個主題，請選擇<menuchoice><guimenu>應用程式</guimenu><guisubmenu>桌面個人喜好</guisubmenu><guimenuitem>主題</guimenuitem></menuchoice>。 </para>
+        <para>預設的主題是 Crux。 本手冊說明的功能是與 Crux 主題相關的。</para>
+      </sect3>
+      <sect3 id="gosmetacity-17">
+        <title>控制元素</title>
+        <indexterm>
+          <primary>視窗</primary>
+          <secondary>框架控制元素</secondary>
+        </indexterm>
+        <para>您可以使用視窗框架，在視窗上執行不同的動作。 標題列上更是包含了不同的按鈕。 下圖顯示的便是一個應用程式視窗的標題列：</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>視窗標題列，包括：視窗功能表按鈕、標題列、最小化、最大化、關閉視窗按鈕。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>在對話方塊視窗中，也含有一些視窗框架的控制元素。 <xref linkend="gosmetacity-TBL-1"/> 說明視窗框架上作用中的控制元素，從左到右。</para>
+        <table frame="topbot" id="gosmetacity-TBL-1">
+          <title>視窗框架控制元素</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="41.65*"/>
+            <colspec colname="colspec1" colwidth="58.35*"/>
+            <thead>
+              <row rowsep="1">
+                <entry valign="top">
+                  <para>控制元素</para>
+                </entry>
+                <entry valign="top">
+                  <para>說明</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para><guibutton>視窗功能表</guibutton>按鈕</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>按一下這個按鈕，可以開啟<guimenu>視窗功能表</guimenu>。 </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>標題列</para>
+                </entry>
+                <entry valign="top">
+                  <para> 您可以使用標題列執行下列動作：</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>如果要給予視窗焦點，請按一下標題列。</para>
+                    </listitem>
+                    <listitem>
+                      <para>如果要移動視窗，請先抓取標題列，再將視窗拖曳至新的位置。 </para>
+                    </listitem>
+                    <listitem>
+                      <para>如果要簡化視窗，請在標題列上連按兩下。 如果要還原簡化視窗，請再次按兩下標題列。</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><guibutton>最小化</guibutton>按鈕 </para>
+                </entry>
+                <entry valign="top">
+                  <para>按一下<guibutton>最小化</guibutton>按鈕，將視窗最小化。 </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><guibutton>最大化</guibutton>按鈕 </para>
+                </entry>
+                <entry valign="top">
+                  <para>按一下<guibutton>最大化</guibutton>按鈕，將視窗最大化。 </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para><guibutton>關閉視窗</guibutton>按鈕 </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>按一下<guibutton>關閉視窗</guibutton>按鈕，將視窗關閉。 </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>邊框</para>
+                </entry>
+                <entry valign="top">
+                  <para> 視窗周圍的邊框。 請使用邊框執行下列動作：</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>如果要調整視窗的大小，請先抓取邊框，再將邊框拖曳至新的大小。 </para>
+                    </listitem>
+                    <listitem>
+                      <para>如果要開啟<guimenu>視窗功能表</guimenu>，請在邊框上按滑鼠右鍵。</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>視窗內容</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>視窗框架內的區域。 請使用視窗內容執行下列動作：</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>如果要移動視窗，請按住 <keycap>Alt</keycap> 鍵，再在視窗內容中按一下滑鼠，然後將視窗拖曳至新的位置。</para>
+                    </listitem>
+                    <listitem>
+                      <para>如果要調整視窗的大小，請按住 <keycap>Alt</keycap> 鍵，然後在想要調整大小的邊角附近，按一下滑鼠中鍵。 如果要調整視窗的大小，請從已按住滑鼠中鍵的邊角拖曳視窗。</para>
+                    </listitem>
+                    <listitem>
+                      <para>如果要開啟<guimenu>視窗功能表</guimenu>，請按住 <keycap> Alt</keycap> 鍵，然後在視窗內容上按一下滑鼠右鍵。</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-714">
+    <title>用於操作視窗與工作區的功能表和 Applet</title>
+    <indexterm>
+      <primary>視窗</primary>
+      <secondary>用於操作的 Applet 和功能表</secondary>
+    </indexterm>
+    <para>這一部分將說明操作視窗與工作區的功能表和 Applet。</para>
+    <sect2 id="gosmetacity-24">
+      <title>視窗功能表</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/window_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>視窗功能表。功能表項目包括：最小化、最大化、簡化視窗、移動、調整大小、關閉、放在所有工作區上、移動到 workspace_name。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>視窗功能表</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>功能表</primary>
+        <secondary>視窗功能表</secondary>
+      </indexterm>
+      <para><guimenu>視窗功能表</guimenu>是一個指令功能表，其內的指令可以在視窗上執行動作。 如果要開啟<guimenu>視窗功能表</guimenu>，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>在要使用的視窗上按一下<guibutton>視窗功能表</guibutton>按鈕。</para>
+        </listitem>
+        <listitem>
+          <para>按一下 <keycombo><keycap>Alt</keycap><keycap>空白鍵</keycap></keycombo>。</para>
+        </listitem>
+        <listitem>
+          <para>按住 <keycap>Alt</keycap> 鍵，然後在要使用之視窗的任何部位，按一下滑鼠右鍵。 </para>
+        </listitem>
+      </itemizedlist>
+      <para><xref linkend="gosmetacity-TBL-25"/> 說明了<guimenu>視窗功能表</guimenu>中的指令及子功能表。</para>
+      <table frame="topbot" id="gosmetacity-TBL-25">
+        <title>視窗功能表指令及子功能表</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="32.34*"/>
+          <colspec colname="colspec3" colwidth="67.66*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>功能表項目 </para>
+              </entry>
+              <entry valign="top">
+                <para>功能 </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>最小化</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>將視窗最小化。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>最大化</guimenuitem>或<guimenuitem>取消最大化</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>將視窗最大化。 如果視窗已經最大化，請選擇<guimenuitem>取消最大化 </guimenuitem>，將視窗還原成先前的大小。 </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>簡化視窗</guimenuitem>或<guimenuitem>還原簡化視窗</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>將視窗簡化。 如果視窗已簡化，請選擇<guimenuitem>還原簡化視窗</guimenuitem>，將視窗還原成先前的大小。 </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>移動</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>啟用箭號鍵來移動視窗。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>調整大小</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>啟用箭號鍵來調整視窗大小。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>關閉</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>關閉視窗。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>放在所有工作區上</guimenuitem>或 <guimenuitem>僅在此工作區上</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>將視窗放在所有的工作區上。 如果視窗已經位於所有的工作區上，請選擇<guimenuitem>僅在此工作區上</guimenuitem>，將視窗放在目前的工作區上就好。 </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>移動到 <replaceable> workspace_name</replaceable></guimenuitem> 或 <guimenuitem>僅在 <replaceable>workspace_name 上</replaceable></guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para> 將視窗移動到所選的工作區。 如果視窗是位於所有的工作區上，請選擇<guimenuitem>僅在 <replaceable>workspace_name </replaceable></guimenuitem>，將視窗放在所選的工作區上。 </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosmetacity-18">
+      <title>視窗清單 Applet</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>視窗清單 Applet</secondary>
+        <see>視窗清單 applet </see>
+      </indexterm>
+      <indexterm>
+        <primary>視窗清單 Applet </primary>
+        <secondary>介紹</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>視窗清單</primary>
+        <secondary>視窗清單 applet</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Applet </primary>
+        <secondary>視窗清單</secondary>
+      </indexterm>
+      <para><application>視窗清單</application>會替每一個開啟的應用程式視窗顯示一個按鈕。 您可以使用<application>視窗清單</application>執行下列工作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>將視窗最小化</para>
+          <para>按一下代表該視窗的按鈕。</para>
+        </listitem>
+        <listitem>
+          <para>還原最小化的視窗</para>
+          <para>按一下代表該視窗的按鈕。</para>
+        </listitem>
+        <listitem>
+          <para>給予視窗焦點</para>
+          <para>按一下代表該視窗的按鈕。</para>
+        </listitem>
+      </itemizedlist>
+      <para>開啟應用程式視窗時，<application>視窗清單</application>會顯示一個按鈕來代表該視窗。 由視窗清單按鈕可以看出哪些應用程式視窗是開啟的。 即使視窗已經被最小化，或是有其他視窗覆蓋在其上，您還是可以檢視哪些視窗是開啟的。 <application>視窗清單</application>可以顯示目前工作區中，或所有工作區中視窗的按鈕。 如果要選取這個選項，您必須變更<application>視窗清單</application>的個人喜好。</para>
+      <para>您也可以在視窗清單按鈕上按滑鼠右鍵，開啟此按鈕所代表視窗的<guimenu>視窗功能表</guimenu>。 當您從<application>視窗清單</application>開啟<guimenu>視窗功能表</guimenu>時，<guimenu>視窗功能表</guimenu>中並不會包含工作區指令。 如需有關<guimenu>視窗功能表</guimenu>指令的進一步資訊，請參閱<xref linkend="gosmetacity-24"/>。</para>
+      <para><xref linkend="gosmetacity-FIG-8"/>顯示當下列視窗開啟時的 <application>視窗清單</application>：</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <application>gedit</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>字典</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GHex</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GNOME 終端機</application>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <figure id="gosmetacity-FIG-8">
+        <title>視窗清單 Applet</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>視窗清單 Applet。此處的內容會說明此圖。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Applet 中的按鈕顯示了視窗的狀態。 <xref linkend="gosmetacity-TBL-3"/> 說明了視窗清單按鈕所提供的視窗資訊。 <xref linkend="gosmetacity-TBL-3"/> 中的範例是來自 <xref linkend="gosmetacity-FIG-8"/>。 </para>
+      <indexterm>
+        <primary>視窗清單 Applet</primary>
+        <secondary>視窗狀態資訊</secondary>
+      </indexterm>
+      <table frame="topbot" id="gosmetacity-TBL-3">
+        <title>視窗清單按鈕上的視窗狀態資訊</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33*"/>
+          <colspec colname="colspec1" colwidth="33*"/>
+          <colspec colname="colspec2" colwidth="33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>狀態</para>
+              </entry>
+              <entry valign="top">
+                <para> 表示</para>
+              </entry>
+              <entry valign="top">
+                <para>範例</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>按鈕呈按下狀態。</para>
+              </entry>
+              <entry valign="top">
+                <para>視窗為焦點視窗。</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel> gedit</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>視窗標題旁有方括號。</para>
+              </entry>
+              <entry valign="top">
+                <para>視窗為最小化狀態。</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel> [字典]</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>按鈕不是按下狀態，視窗標題旁也沒有方括號。</para>
+              </entry>
+              <entry valign="top">
+                <para>視窗已顯示，而且沒有最小化。</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>ghex </guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>按鈕上有加上括號的數字。 </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>這個按鈕代表了一個群組的按鈕。 </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guilabel> Gnome-終端機 (3)</guilabel>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="gosmetacity-708">
+        <title>將按鈕組成群組</title>
+        <indexterm>
+          <primary>視窗清單 Applet</primary>
+          <secondary>將按鈕組成群組 </secondary>
+        </indexterm>
+        <para>如果視窗的類別相同，<application>視窗清單</application>可以將其代表的按鈕變成群組，組成一個視窗清單按鈕。 <xref linkend="gosmetacity-FIG-8"/> 中的 <guibutton>Gnome-終端機</guibutton>按鈕，就是由一個按鈕代表一群按鈕的範例。 下圖顯示的範例，是將<application>視窗清單</application>群組按鈕開啟的樣子：</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>按鈕群組為已開啟的視窗清單 Applet。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>如果要開啟群組視窗的清單，請按一下代表該群組的視窗清單按鈕。 按一下清單中的項目，您可以給予視窗焦點、將視窗最小化，或是還原視窗。</para>
+        <para>如果要開啟按鈕群組中，某個視窗的<guimenu>視窗功能表</guimenu>，請在代表該群組的視窗清單按鈕上，按滑鼠右鍵。 接著就會顯示群組中視窗的清單。 如果要開啟群組中某個視窗的<guimenu>視窗功能表</guimenu>，請按一下清單中的項目。 當您從<application>視窗清單</application>中，開啟<guimenu>視窗功能表</guimenu>時，<guimenu>視窗功能表</guimenu>中並不包含工作區指令。 如需有關<guimenu>視窗功能表</guimenu>指令的進一步資訊，請參閱<xref linkend="gosmetacity-24"/>。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosmetacity-20">
+      <title>工作區切換程式 Applet</title>
+      <indexterm>
+        <primary>工作區</primary>
+        <secondary>工作區切換程式 Applet </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Applet</primary>
+        <secondary>工作區切換程式</secondary>
+      </indexterm>
+      <para><application>工作區切換程式</application>會以幾何圖案的方式顯示工作區，如<xref linkend="gosmetacity-FIG-722"/> 中所示。 <xref linkend="gosmetacity-FIG-722"/> 顯示當 GNOME 階段作業包含四個工作區時，Applet 中表示的方式。 工作區會以按鈕方式顯示在 Applet 上。 在 Applet 中，代表目前工作區的按鈕，其背景會以反白顯示。 在<xref linkend="gosmetacity-FIG-722"/> 中，目前的工作區是位於 Applet 中左邊的工作區。 如果要切換至另一個工作區，請在 Applet 中按一下該工作區。</para>
+      <figure id="gosmetacity-FIG-722">
+        <title>工作區切換程式  Applet</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>工作區切換程式 Applet。此處的內容會說明此圖。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>在<application>工作區切換程式</application>中，也會顯示工作區內所開啟的應用程式視窗與對話方塊。</para>
+      <para>這個 Applet 會以從左到右的順序，在顯示列中顯示工作區。 在<xref linkend="gosmetacity-FIG-722"/> 中，Applet 是設定將工作區顯示在一列中。 您可以指定在<application>工作區切換程式</application>中，顯示工作區的顯示列數。 您也可以變更 Applet 的預設行為，在 Applet 中顯示工作區的名稱。</para>
+    </sect2>
+    <sect2 id="gosmetacity-27">
+      <title>使用功能表面板操作視窗</title>
+      <indexterm>
+        <primary>功能表面板</primary>
+        <secondary>視窗清單圖示</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>視窗
+清單</primary>
+        <secondary>功能表面板</secondary>
+      </indexterm>
+      <para>您可以從功能表面板中，檢視目前所有開啟視窗的清單。 您也可以選擇某個視窗，並給予焦點。 如果要檢視視窗清單，請按一下功能表面板最右邊的圖示。 下圖顯示的，便是功能表面板所顯示的視窗清單範例：</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>功能表面板所顯示的視窗清單。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>當焦點變更時，顯示視窗清單用的按鈕圖示也會隨之變更。 這個圖示代表的是目前有焦點的視窗。 如果要給予視窗焦點，請從視窗清單選擇該視窗。</para>
+      <para>視窗清單會列出所有工作區中的視窗。 除了目前的工作區以外，其他工作區的視窗，則會列在分隔符號線的下面。</para>
+      <para>您無法移動功能表面板最右邊的圖示。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-715">
+    <title>處理視窗</title>
+    <indexterm>
+      <primary>視窗</primary>
+      <secondary>處理</secondary>
+    </indexterm>
+    <para>這一部分會說明如何處理視窗。</para>
+    <sect2 id="gosmetacity-28">
+      <title>給予視窗焦點</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>給予焦點</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>焦點，給予視窗</primary>
+      </indexterm>
+      <para>有焦點的視窗，可以接收來自滑鼠和鍵盤的輸入。 一次只能有一個視窗含有焦點。 有焦點視窗的外觀和其他視窗不同。 </para>
+      <para>您可以使用下列元素，給予視窗焦點：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>元素</para>
+              </entry>
+              <entry valign="top">
+                <para> 動作</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>滑鼠</para>
+              </entry>
+              <entry valign="top">
+                <para> 如果可以看見視窗，請按一下該視窗。 </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>捷徑鍵</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>使用捷徑鍵在開啟的視窗間進行切換。 如果要給予視窗焦點，請放開按鍵。 在視窗之間進行切換的預設捷徑鍵，是 <keycombo><keycap>Alt</keycap><keycap> Tab</keycap></keycombo>。 </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>視窗清單</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para> 按一下<application>視窗清單</application>中，代表該視窗的按鈕。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>工作區切換程式</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para> 在<application>工作區切換程式</application>顯示畫面中，按一下要給予焦點的視窗。 如果您按一下其他工作區中的視窗，<application>工作區切換程式</application>會切換至新的工作區，並給予該視窗焦點。 </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>功能表面板</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>按一下功能表面板最右邊的圖示。 接著會顯示開啟視窗的清單。 請從清單中選擇視窗。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosmetacity-29">
+      <title>將視窗最小化</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>最小化</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>最小化</primary>
+        <secondary>視窗</secondary>
+      </indexterm>
+      <para>如果要將視窗最小化，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>按一下視窗框架上的<guibutton>最小化</guibutton>按鈕。</para>
+        </listitem>
+        <listitem>
+          <para>開啟<guimenu>視窗功能表</guimenu>，然後選擇<guimenuitem>最小化</guimenuitem>。 </para>
+        </listitem>
+        <listitem>
+          <para>如果焦點在這個視窗，則請按一下<application>視窗清單</application>中，代表該視窗的按鈕。 如果視窗沒有焦點，請按兩下代表該視窗的按鈕。 </para>
+        </listitem>
+        <listitem>
+          <para>在<application>視窗清單</application>中代表該視窗的按鈕上按滑鼠右鍵，然後從即現式功能表中，選擇<guimenuitem>最小化</guimenuitem>。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-30">
+      <title>將視窗最大化</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>最大化</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>最大化視窗</primary>
+      </indexterm>
+      <para>當您將視窗最大化時，視窗會盡可能地變大。 如果要將視窗最大化，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>如果要將視窗最大化，請按一下視窗框架的<guibutton>最大化</guibutton>按鈕。 或者，您可以開啟<guimenu>視窗功能表</guimenu>，然後選擇<guimenuitem>最大化</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>在<application>視窗清單</application>中代表該視窗的按鈕上按滑鼠右鍵，然後從<guimenu>視窗功能表</guimenu>中選擇<guimenuitem>最大化</guimenuitem></para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-31">
+      <title>還原視窗</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>還原</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>還原</primary>
+        <secondary>視窗</secondary>
+      </indexterm>
+      <para>如果要還原已最大化的視窗，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>按一下視窗框架上的<guibutton>最大化</guibutton>按鈕。</para>
+        </listitem>
+        <listitem>
+          <para>開啟<guimenu>視窗功能表</guimenu>。 選擇<guimenuitem>取消最大化</guimenuitem>。 </para>
+        </listitem>
+        <listitem>
+          <para>在<application>視窗清單</application> 中代表該視窗的按鈕上按滑鼠右鍵，開啟<guimenu>視窗功能表</guimenu>。 選擇<guimenuitem>取消最大化</guimenuitem>。 </para>
+        </listitem>
+      </itemizedlist>
+      <para>如果要還原已最小化的視窗，請按一下<application>視窗清單</application>中代表該視窗的按鈕。</para>
+    </sect2>
+    <sect2 id="gosmetacity-32">
+      <title>關閉視窗</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>關閉</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>關閉視窗</primary>
+      </indexterm>
+      <para>如果要關閉視窗，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>按一下視窗框架上的<guibutton>關閉視窗</guibutton> 按鈕。</para>
+        </listitem>
+        <listitem>
+          <para>開啟<guimenu>視窗功能表</guimenu>。 選擇<guimenuitem>關閉</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>在<application>視窗清單</application>中代表該視窗的按鈕上按滑鼠右鍵，然後從<guimenu>視窗功能表</guimenu>中，選擇<guimenuitem>關閉</guimenuitem>。</para>
+        </listitem>
+      </itemizedlist>
+      <para>如果視窗中有尚未儲存的資料，便會出現儲存資料的提示訊息。</para>
+    </sect2>
+    <sect2 id="gosmetacity-34">
+      <title>調整視窗大小</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>調整大小</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>調整視窗大小</primary>
+      </indexterm>
+      <para>如果要調整視窗大小，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>指向視窗的邊角。 此時滑鼠指標會變更，指示您可以調整視窗大小。 抓住邊角，然後將視窗拖曳成新的大小。</para>
+        </listitem>
+        <listitem>
+          <para>在<application>視窗清單</application>中，代表該視窗的按鈕上按一下滑鼠右鍵。從<guimenu>視窗功能表</guimenu>中，選擇<guimenuitem>調整大小</guimenuitem>。使用箭號鍵調整視窗大小。</para>
+        </listitem>
+        <listitem>
+          <para>按住 <keycap>Alt</keycap> 鍵，然後在要調整大小的邊角附近，按一下滑鼠中鍵。 此時滑鼠指標會變更，指示您可以從該邊角調整視窗大小。 如果要調整視窗的大小，請從已按住滑鼠中鍵的邊角拖曳視窗。</para>
+        </listitem>
+        <listitem>
+          <para>如果要調整視窗的水平大小，請指向視窗的任一個垂直邊緣。 此時滑鼠指標會變更，指示您可以調整視窗大小。 抓住邊緣，然後將視窗拖曳成新的大小。</para>
+        </listitem>
+        <listitem>
+          <para>如果要調整視窗的垂直大小，請指向視窗的底部邊緣。 此時滑鼠指標會變更，指示您可以調整視窗大小。 抓住邊緣，然後將視窗拖曳成新的大小。</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para>有一些對話方塊視窗的大小是無法調整的。 此外，有些應用程式的視窗有固定的最小尺寸，您無法再將該視窗縮減。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosmetacity-35">
+      <title>移動視窗</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>移動</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>移動視窗</primary>
+      </indexterm>
+      <para>如果要移動視窗，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>抓住視窗的標題列，然後將視窗拖曳至新的位置。 </para>
+        </listitem>
+        <listitem>
+          <para>按住 <keycap>Alt</keycap> 鍵，然後將視窗拖曳至新的位置。 </para>
+        </listitem>
+        <listitem>
+          <para>開啟<guimenu>視窗功能表</guimenu>，然後選擇<guimenuitem>移動</guimenuitem>。請使用箭號鍵，將視窗移至新的位置。</para>
+        </listitem>
+        <listitem>
+          <para>在<application>視窗清單</application>中代表該視窗的按鈕上按滑鼠右鍵，然後從<guimenu>視窗功能表</guimenu>中，選擇<guimenuitem>移動</guimenuitem>。請使用箭號鍵，將視窗移至新的位置。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-36">
+      <title>簡化視窗</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>簡化視窗</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>簡化視窗</primary>
+      </indexterm>
+      <para>您可以使用下列方式，簡化或還原簡化視窗：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="24.94*"/>
+          <colspec colwidth="75.06*"/>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>簡化視窗</para>
+              </entry>
+              <entry valign="top">
+                <para> 縮減視窗，只顯示出視窗的標題列。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>還原簡化視窗</para>
+              </entry>
+              <entry valign="top">
+                <para> 將視窗從簡化狀態切換回來，顯示整個視窗。 </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>如果要簡化視窗，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>連按兩下視窗的標題列。 如果要還原簡化視窗，請再次按兩下標題列。</para>
+        </listitem>
+        <listitem>
+          <para>開啟<guimenu>視窗功能表</guimenu>。 選擇<guimenuitem>簡化視窗</guimenuitem>。 如果要還原簡化視窗，請選擇 <guimenuitem>還原簡化視窗</guimenuitem>。 </para>
+        </listitem>
+        <listitem>
+          <para>在<application>視窗清單</application>中代表該視窗的按鈕上按滑鼠右鍵，然後從<guimenu>視窗功能表</guimenu>中，選擇<guimenuitem>簡化視窗</guimenuitem>。如果要還原簡化視窗，請選擇<guimenuitem>還原簡化視窗</guimenuitem>。 </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-38">
+      <title>將視窗放在所有工作區上</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>放在所有工作區上</secondary>
+      </indexterm>
+      <para>如果要將視窗放在所有工作區中，請開啟<guimenu>視窗功能表</guimenu>。 選擇<guimenuitem>放在所有工作區上</guimenuitem>。 如果要設定視窗，讓它只出現在目前的工作區中，請選擇 <guimenuitem>僅在此工作區上</guimenuitem>。</para>
+    </sect2>
+    <sect2 id="gosmetacity-46">
+      <title>將視窗移動至其他工作區</title>
+      <indexterm>
+        <primary>視窗</primary>
+        <secondary>移動至其他工作區</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>工作區</primary>
+        <secondary>將視窗移動至 </secondary>
+      </indexterm>
+      <para>您可以使用下列任一種方式，將視窗移動至其他工作區：</para>
+      <itemizedlist>
+        <listitem>
+          <para>使用<application>工作區切換程式</application></para>
+          <para> 在<application>工作區切換程式</application>顯示畫面中，將視窗拖曳至所需的工作區內。 </para>
+        </listitem>
+        <listitem>
+          <para>使用<guimenu>視窗功能表</guimenu></para>
+          <para>開啟<guimenu>視窗功能表</guimenu>。 如果要將視窗移動至下一個工作區，請選擇<guimenuitem>移動到 <replaceable>workspace_name</replaceable></guimenuitem>。 </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-716">
+    <title>處理工作區</title>
+    <indexterm>
+      <primary>工作區</primary>
+      <secondary>處理</secondary>
+    </indexterm>
+    <para>這一部分會說明如何處理工作區。</para>
+    <sect2 id="gosmetacity-49">
+      <title>在工作區之間切換</title>
+      <indexterm>
+        <primary>工作區</primary>
+        <secondary>在之間切換</secondary>
+      </indexterm>
+      <para>您可以使用下列任一種方式，在工作區之間切換：</para>
+      <itemizedlist>
+        <listitem>
+          <para>使用<application>工作區切換程式</application></para>
+          <para>在<application>工作區切換程式</application>中，按一下想要切換到其中的工作區。</para>
+        </listitem>
+        <listitem>
+          <para>使用捷徑鍵</para>
+          <para>用來切換工作區的捷徑鍵如下：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="50*"/>
+              <colspec colwidth="50*"/>
+              <thead>
+                <row>
+                  <entry valign="top">
+                    <para>預設的捷徑鍵</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>功能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>右箭頭鍵</keycap></keycombo></para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取右邊的工作區。 </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>左箭頭鍵</keycap></keycombo></para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取左邊的工作區。 </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-50">
+      <title>新增工作區</title>
+      <indexterm>
+        <primary>工作區</primary>
+        <secondary>新增</secondary>
+      </indexterm>
+      <para>如果要將工作區新增至桌面，請在<application>工作區切換程式</application>上按滑鼠右鍵，然後選擇<guimenuitem>個人喜好</guimenuitem>。 接著會顯示<guilabel>工作區切換程式個人喜好</guilabel>對話方塊。 請使用<guilabel>工作區數目</guilabel>旋轉方塊，指定所需的工作區數目。<application>工作區切換程式</application>會將新的工作區，加入到工作區清單的最後面。</para>
+    </sect2>
+    <sect2 id="gosmetacity-51">
+      <title>命名工作區</title>
+      <indexterm>
+        <primary>工作區</primary>
+        <secondary>命名</secondary>
+      </indexterm>
+      <para>工作區的預設名稱是<literal>Workspace 1</literal>、<literal>Workspace 2</literal>、<literal>Workspace 3</literal>，依此類推。 如果要為工作區指派名稱，請在<application>工作區切換程式</application>上按滑鼠右鍵，然後選擇<guimenuitem>個人喜好</guimenuitem>。 接著會顯示<guilabel>工作區切換程式個人喜好</guilabel>對話方塊。 請使用<guilabel>工作區</guilabel>清單方塊，指定工作區的名稱。 選取工作區，然後鍵入該工作區的新名稱。</para>
+    </sect2>
+    <sect2 id="gosmetacity-52">
+      <title>刪除工作區</title>
+      <indexterm>
+        <primary>工作區</primary>
+        <secondary>刪除</secondary>
+      </indexterm>
+      <para>當您刪除某個工作區時，此工作區中的視窗會先移動至另一個工作區，然後再刪除這個空白的工作區。 </para>
+      <para>如果要從桌面刪除工作區，請在<application>工作區切換器</application>上按滑鼠右鍵，然後選擇<guimenuitem>個人喜好</guimenuitem>。 接著會顯示<guilabel>工作區切換程式個人喜好</guilabel>對話方塊。 請使用<guilabel>工作區數目</guilabel>旋轉方塊，指定所需的工作區數目。<application>工作區切換器</application>會從工作區清單的最後面開始刪除工作區。</para>
+    </sect2>
+  </sect1>
+</chapter>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosgetstarted-1">
+  <title>桌面階段作業</title>
+  <highlights>
+    <para>本章提供了關於啟動、管理與結束桌階段作業的資訊。</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>啟動桌面階段作業</title>
+    <indexterm>
+      <primary>階段作業</primary>
+      <secondary>啟動</secondary>
+    </indexterm>
+    <para>您登入桌面與登出桌面之間的這段時間，就是所謂的桌面階段作業。 您可以使用<application>登入管理員</application>所顯示的登入螢幕，開始使用桌面。 登入螢幕會顯示欄位，讓您輸入使用者名稱與密碼。 登入螢幕上的<guimenu>選項</guimenu>功能表，則會列出登入選項，例如，您可以選取階段作業的語言環境。 </para>
+    <para>當您登入後，就會啟動階段作業。 在<application>登入管理員</application>後啟動的階段作業管理員，會負責驗證使用者的名稱與密碼。您可以使用階段作業管理員，管理階段作業。 例如，您可以將最近一次階段作業的狀態儲存下來，下一次登入時便可以直接返回該階段作業。階段作業管理員可以儲存與還原下列項目：</para>
+    <itemizedlist>
+      <listitem>
+        <para>外觀及行為設定，例如字型、色彩及滑鼠設定。</para>
+      </listitem>
+      <listitem>
+        <para>原來正在執行的應用程式，例如，檔案管理員和文字編輯程式視窗。階段作業管理員沒有管理的應用程式，您無法將其儲存或還原。 例如，如果您是在終端機視窗中，從指令行啟動 <application>vi</application> 編輯程式，階段作業管理員便無法還原您的編輯階段作業。</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosgetstarted-65">
+      <title>登入桌面階段作業</title>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>登入</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>登入</primary>
+      </indexterm>
+      <para>如果要登入階段作業，請執行下列動作。</para>
+      <orderedlist>
+        <listitem>
+          <para>選擇<menuchoice><guimenu>選項</guimenu><guimenuitem>階段作業</guimenuitem></menuchoice>。 從可用的桌面環境清單中，選擇 GNOME 桌面。</para>
+        </listitem>
+        <listitem>
+          <para>請在<guilabel>登入管理員</guilabel>對話方塊的欄位中，輸入登入名稱，然後按一下<guibutton>確定</guibutton>。</para>
+        </listitem>
+        <listitem>
+          <para>請在<guilabel>登入管理員</guilabel>對話方塊的欄位中，輸入密碼，然後按一下<guibutton>確定</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+      <para>順利登入後，階段作業管理員會啟動一個階段作業。如果這是您第一次登入，那麼階段作業管理員就會啟動新的階段作業。如果您先前曾經登入過，那麼階段作業管理員就會還原您先前的階段作業。</para>
+    </sect2>
+    <sect2 id="gosgetstarted-66">
+      <title>啟動不同語言環境的階段作業</title>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>不同語言環境，啟動</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>語言，啟動不同的階段作業</primary>
+      </indexterm>
+      <para>如果要啟動不同語言環境的階段作業，請執行下列動作。</para>
+      <orderedlist>
+        <listitem>
+          <para>在登入對話方塊中，選擇<menuchoice><guimenu>選項</guimenu><guimenuitem>階段作業</guimenuitem></menuchoice>。從可用的桌面環境清單中，選擇 GNOME 桌面。</para>
+        </listitem>
+        <listitem>
+          <para>在登入對話方塊中，選擇<menuchoice><guimenu>選項</guimenu><guimenuitem>語言</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>選擇包含您所需要語言的語言群組。</para>
+        </listitem>
+        <listitem>
+          <para>選擇一種語言。</para>
+        </listitem>
+        <listitem>
+          <para>登入。</para>
+        </listitem>
+      </orderedlist>
+      <para>您的系統管理員會將該語言預設為系統設定語言。 使用<guilabel>登入管理員</guilabel>對話方塊的<guimenu>選項</guimenu>功能表，您可以存取其他語言。 當您在<guimenu>選項</guimenu>功能表中選擇語言時，系統會以 LANG 變數設定階段作業。 在階段作業結束時，系統會還原為預設語言。 </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>鎖定螢幕</title>
+    <para>這一節會提供您關於鎖定螢幕以及設定螢幕保護配置的相關資訊。</para>
+    <sect2 id="gosstartsession-4">
+      <title>鎖定螢幕</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>鎖定圖示。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>鎖定螢幕</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>鎖定螢幕</primary>
+      </indexterm>
+      <indexterm>
+        <primary>鎖定按鈕</primary>
+      </indexterm>
+      <para>如果要鎖定螢幕，請執行下列任一項動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>選擇<menuchoice><guimenu>動作</guimenu><guimenuitem>鎖定螢幕</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>如果面板上有<guibutton>鎖定</guibutton> 按鈕，請按一下 <guibutton>鎖定</guibutton> 按鈕。 </para>
+          <para>如果要將<guibutton>鎖定</guibutton>按鈕加入面板，請在面板上按一下滑鼠右鍵。 選擇<menuchoice><guimenu>加入面板</guimenu><guimenuitem>鎖定按鈕</guimenuitem></menuchoice>。</para>
+        </listitem>
+      </itemizedlist>
+      <para>當您鎖定螢幕時，就會啟動螢幕保護程式。 如果要取消鎖定螢幕，請移動滑鼠，顯示鎖定螢幕對話方塊。 在鎖定螢幕對話方塊中，輸入使用者名稱與密碼，然後按一下 <keycap>Return</keycap> 鍵。</para>
+      <note>
+        <para>如果要能正常地鎖定螢幕，您必須要有可用的螢幕保護程式。 </para>
+      </note>
+    </sect2>
+    <sect2 id="gosstartsession-3">
+      <title>配置螢幕保護程式</title>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>配置螢幕保護程式</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>螢幕保護程式，配置</primary>
+      </indexterm>
+      <indexterm>
+        <primary>XScreenSaver</primary>
+        <see>螢幕保護程式</see>
+      </indexterm>
+      <para>螢幕保護程式是一種應用程式，在沒有使用螢幕時，它會取代螢幕上原有之影像。 您可以用下列方式，使用螢幕保護程式：</para>
+      <itemizedlist>
+        <listitem>
+          <para>在超過指定的閒置時間後，啟動螢幕保護程式。</para>
+        </listitem>
+        <listitem>
+          <para>在鎖定螢幕時，啟動螢幕保護程式。</para>
+        </listitem>
+        <listitem>
+          <para>當系統閒置時，管理監視器所用的電源。 </para>
+        </listitem>
+      </itemizedlist>
+      <para>如果要配置螢幕保護應用程式，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>在<guibutton>鎖定</guibutton>按鈕上按滑鼠右鍵，然後從即現式功能表中，選擇<guimenuitem>屬性</guimenuitem>。 接著會顯示 <guilabel> XScreenSaver</guilabel> 對話方塊。</para>
+          <para>如果面板上沒有顯示出<guibutton>鎖定</guibutton>按鈕，您可以將此按鈕加入面板。 如果要將<guibutton>鎖定</guibutton>按鈕加入面板，請在面板上按一下滑鼠右鍵。 選擇<menuchoice><guimenu>加入面板</guimenu><guimenuitem>鎖定按鈕</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>如果要設定配置螢幕保護應用程式，請使用<guilabel>顯示模式</guilabel>標籤中的元素。下表所說明的，便是<guilabel>顯示模式</guilabel>標籤區段上，對話方塊中的元素：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>設定</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>功能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>模式</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>請使用下拉式清單方塊，指定螢幕保護應用程式的行為。 請選取下列任一項選項：</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><guilabel>停用螢幕保護程式</guilabel>： 如果不想使用螢幕保護應用程式，請選取這個選項。</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>只顯示空白螢幕</guilabel>： 如果想讓螢幕在鎖定時變成空白螢幕，請選取這個選項。</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>只顯示一個螢幕保護程式</guilabel>： 如果在螢幕鎖定時，只想顯示一個由顯示清單方塊中選取的螢幕保護程式，請選取這個選項。</para>
+                      </listitem>
+                      <listitem>
+                        <para><guilabel>隨機顯示螢幕保護程式</guilabel>： 如果想要在螢幕鎖定時，顯示由螢幕保護程式顯示清單方塊中，隨機選取的螢幕保護程式，請選取這個選項。 </para>
+                      </listitem>
+                    </itemizedlist>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>顯示清單方塊</para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>請從這個清單方塊中，選取所需的螢幕保護程式顯示。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>等候閒置時間</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>指定自上一次使用滑鼠或鍵盤後，要等候多久才啟動螢幕保護程式。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>循環顯示時間</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>指定在顯示下一個畫面之前，要顯示多久某個特定的螢幕保護程式。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>鎖定螢幕等候時間</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>如果想在啟動螢幕保護程式後鎖定螢幕，請選取這個選項。 請使用旋轉方塊，指定螢幕保護程式啟動與螢幕鎖定間的延遲時間。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>預覽</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>按一下這個按鈕，可以預覽在螢幕保護程式顯示清單方塊中，所選取螢幕保護程式的顯示方式。 如果要停止預覽，請按任何按鍵，或是按一下滑鼠按鈕。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guibutton>設定</guibutton>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>按一下這個按鈕，可以顯示在螢幕保護程式顯示清單方塊中，所選取的螢幕保護程式顯示選項。 </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>如果要配置進階選項，請按一下<guilabel>進階</guilabel>標籤。下表說明的，便是<guilabel>進階</guilabel>標籤區段上的對話方塊元素：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="40.38*"/>
+              <colspec colname="colspec3" colwidth="59.62*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>設定</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>功能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>抓取桌面影像</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>有些螢幕保護程式可以抓取桌面的螢幕快照，然後以所抓取的影像，作為您自訂的螢幕保護顯示畫面。 選取這個選項，便可以用螢幕保護程式，抓取桌面的螢幕快照。 </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>抓取視訊影格</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>有些螢幕保護程式可以抓取視訊影格，然後以所抓取的影像，作為您自訂的螢幕保護顯示畫面。 如果系統有影像擷取卡，請選取這個選項，便可以用螢幕保護程式抓取視訊影格。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>隨機選擇影像</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>選取這個選項，便可以讓螢幕保護程式使用所選取目錄中的影像。 在欄位中輸入目錄的路徑。 或者，按一下<guibutton>瀏覽</guibutton>，顯示對話方塊，並從中選取目錄。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>詳細診斷資訊</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>如果想要顯示螢幕保護程式的診斷資訊，請選取這個選項。 </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>顯示子程序錯誤</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>如果想在螢幕上顯示與螢幕保護程式子程序有關的錯誤，請選取這個選項。 </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>啟動時顯示起始畫面</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>選取這個選項，在 <application>Xscreensaver</application> 啟動時，便會顯示 <application>Xscreensaver</application> 的起始對話方塊。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>啟用電源管理</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>選取這個選項，便可以啟用監視器的電源管理。 當您沒有使用監視器時，電源管理會將監視器所耗用的電源降低。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>待命等候時間 </guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>指定等候多久後，便將監視器變為待命模式。 當監視器處於待命模式時，螢幕會是一片漆黑。 </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>暫停等候時間 </guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>指定等候多久後，便將監視器變為省電模式。 </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>關閉等候時間</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>指定等候多久後，變將監視器關閉。 </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>安裝色彩對照表 </guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>選取這個選項，在螢幕保護程式為作用中時，可以安裝特殊的色彩對照表。 使用特殊的色彩對照表，也許可以改善某些螢幕保護程式顯示畫面的色彩品質。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>空白時逐漸轉為黑色</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>選取這個選項，螢幕保護程式啟動時，螢幕顯示會逐漸轉為黑色。 </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2" valign="top">
+                    <para>
+                      <guilabel>取消空白時由黑色轉為螢幕</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec3" valign="top">
+                    <para>選取這個選項，在螢幕保護程式停止時，螢幕顯示會逐漸由黑色轉為螢幕內容。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>淡出持續時間</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>指定螢幕保護程式啟動時，逐漸轉為黑色需要多久時間。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>按一下<guibutton>關閉視窗</guibutton>視窗外框按鈕，關閉 <guilabel>XScreenSaver</guilabel> 對話方塊。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>管理階段作業</title>
+    <indexterm>
+      <primary>個人喜好工具</primary>
+      <secondary>階段作業</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>階段作業</primary>
+      <secondary>管理</secondary>
+    </indexterm>
+    <para>如果要配置桌面階段作業的管理方式，請選擇 <menuchoice><guimenu>應用程式</guimenu><guisubmenu>桌面個人喜好</guisubmenu><guisubmenu>進階</guisubmenu><guimenuitem>階段作業</guimenuitem></menuchoice>。 <application>階段作業</application>個人喜好工具，可以辨識下列的應用程式類型：</para>
+    <itemizedlist>
+      <listitem>
+        <indexterm>
+          <primary>啟動應用程式</primary>
+          <secondary>階段作業管理 </secondary>
+        </indexterm>
+        <para>有階段作業管理的應用程式。 在儲存階段作業設定時，階段作業管理員會儲存所有含階段作業管理的應用程式。 如果您登出後再次登入，階段作業管理員會自動啟動這些含階段作業管理的應用程式。 </para>
+      </listitem>
+      <listitem>
+        <para>沒有階段作業管理的應用程式。 在儲存階段作業設定時，任何沒有階段作業管理的應用程式，階段作業管理員皆不會加以儲存。 如果您登出後再次登入，階段作業管理員不會啟動這些無階段作業管理的應用程式。 您必須以手動方式，啟動這類應用程式。 或者，您可以使用 <application>階段作業</application>個人喜好工具，指定所要自動啟動的無階段作業管理應用程式。 </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>定義登入與登出時階段作業的行為</title>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>登入行為</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>登出行為 </secondary>
+      </indexterm>
+      <para>如果要設定登入與登出時，階段作業的行為方式，請選擇 <menuchoice><guimenu>應用程式</guimenu><guisubmenu>桌面個人喜好</guisubmenu><guisubmenu>進階</guisubmenu><guimenuitem>階段作業</guimenuitem></menuchoice>。 請在<guilabel>階段作業選項</guilabel>標籤區段中，進行所需的變更。 例如，您可以選取在登入時顯示起始畫面。 </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>使用啟動應用程式</title>
+      <indexterm>
+        <primary>啟動程式</primary>
+        <see>啟動應用程式</see>
+      </indexterm>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>使用啟動應用程式</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>啟動應用程式 </primary>
+        <secondary>無階段作業管理</secondary>
+      </indexterm>
+      <para>您可以配置階段作業，使得在啟動後，可以使用無階段作業管理的應用程式開始工作。 如果要配置無階段作業管理的啟動應用程式，請選擇 <menuchoice><guimenu>應用程式</guimenu><guisubmenu>桌面個人喜好</guisubmenu><guisubmenu>進階</guisubmenu><guimenuitem>階段作業</guimenuitem></menuchoice>。 請使用<guilabel>啟動程式</guilabel>標籤區段，新增、編輯或刪除應用程式。 如果您將設定儲存後再登出，下一次登入時，這些啟動應用程式就會自動啟動。 </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>在目前的階段作業中瀏覽應用程式</title>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>瀏覽應用程式</secondary>
+      </indexterm>
+      <para>如果要瀏覽目前階段作業中的應用程式，請選擇 <menuchoice><guimenu>應用程式</guimenu><guisubmenu>桌面個人喜好</guisubmenu><guisubmenu>進階</guisubmenu><guimenuitem>階段作業 </guimenuitem></menuchoice>。 在<guilabel>目前的階段作業</guilabel>標籤區段中，會列出下列項目：</para>
+      <itemizedlist>
+        <listitem>
+          <para>GNOME 應用程式，包括：目前正在執行的程式、與階段作業管理員有連接的程式，以及可以儲存應用程式狀態的程式。 </para>
+        </listitem>
+        <listitem>
+          <para>桌面個人喜好工具，包括：可以連接到階段作業管理員的工具，以及可以儲存工具狀態的工具。</para>
+        </listitem>
+      </itemizedlist>
+      <para>您可以使用<guilabel>目前的階段作業</guilabel>標籤區段，在應用程式或個人喜好工具的階段作業屬性上，執行有限的動作。 例如，清單中任何 GNOME 應用程式或桌面個人喜好工具，您可以編輯其啟動的順序與重新啟動時樣式。 </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>儲存階段作業的設定</title>
+      <indexterm>
+        <primary>階段作業</primary>
+        <secondary>儲存設定</secondary>
+      </indexterm>
+      <para>如果要儲存階段作業的設定，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>將階段作業配置為在結束時自動儲存設定。 如果要配置階段作業，請選擇<menuchoice><guimenu> 應用程式</guimenu><guisubmenu>桌面個人喜好</guisubmenu><guisubmenu>進階</guisubmenu><guimenuitem>階段作業</guimenuitem></menuchoice>。 接著便會啟動<application>階段作業</application>個人喜好工具。 在<guilabel>階段作業選項</guilabel>標籤區段上，選取 <guilabel>自動儲存階段作業的變更</guilabel>選項。</para>
+        </listitem>
+        <listitem>
+          <para>結束階段作業。 </para>
+        </listitem>
+      </orderedlist>
+      <para>如果您沒有選取<guilabel>自動儲存階段作業的變更</guilabel> 選項，登出時便會出現一個對話方塊，詢問您是否要儲存目前的設定。 如果要儲存設定，請選取這個選項，然後繼續登出動作。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>結束階段作業</title>
+    <indexterm>
+      <primary>階段作業</primary>
+      <secondary>結束</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>階段作業</primary>
+      <secondary>登出</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>登出</primary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>登出圖示。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>如果要結束階段作業，請先關閉所有目前作用中程序，然後執行任一項下列動作：</para>
+    <itemizedlist>
+      <listitem>
+        <para>按一下<guibutton>登出</guibutton>按鈕。</para>
+      </listitem>
+      <listitem>
+        <para>選擇<menuchoice><guimenu>動作</guimenu><guimenuitem>登出</guimenuitem></menuchoice>。</para>
+      </listitem>
+      <listitem>
+        <para>開啟 <guimenu>GNOME 功能表</guimenu>，然後選擇<guimenuitem>登出</guimenuitem>。</para>
+      </listitem>
+    </itemizedlist>
+    <para>在結束階段作業之前，您可能需要先儲存目前的設定，以便稍後可以還原此階段作業。 在登出過程中，會出現一個對話方塊，詢問您是否要儲存目前的設定。 在<application>階段作業</application>個人喜好工具中，您可以選取自動儲存目前設定的選項。</para>
+  </sect1>
+</chapter>

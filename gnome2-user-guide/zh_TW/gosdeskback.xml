@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosdeskback-1">
+  <title>使用桌面背景</title>
+  <highlights>
+    <para>依預設值，是由 <application>Nautilus</application> 檔案管理員管理桌面背景。如果您沒有使用 <application>Nautilus </application> 管理桌面背景，請略過本章。本章將說明如何使用 <application>Nautilus</application> 桌面
+背景。</para>
+  </highlights>
+  <sect1 id="gosdeskback-21">
+    <title>桌面背景介紹</title>
+    <indexterm>
+      <primary>桌面背景</primary>
+      <secondary>介紹</secondary>
+    </indexterm>
+    <para>桌面背景位於可見桌面的所有其他元件之後。桌面背景是使用者介面的有效元件之一。 您可以從桌面背景執行下列工作：</para>
+    <itemizedlist>
+      <listitem>
+        <para>啟動應用程式，開啟檔案及資料夾。</para>
+        <para>您可以增加桌面背景物件，以便存取常用的檔案、資料夾和應用程式。例如，您可以將應用程式啟動器加入桌面背景。您可以建立常用檔案的符號連結，然後將這個連結加入桌面背景。
+您也可以將檔案和資料夾儲存在桌面背景上。</para>
+      </listitem>
+      <listitem>
+        <para>開啟<guimenu>桌面背景</guimenu>功能表。</para>
+        <para>在桌面背景上按滑鼠右鍵，開啟<guimenu>桌面背景</guimenu>功能表。您可以使用<guimenu>桌面背景</guimenu>功能表，在桌面背景上執行動作。</para>
+      </listitem>
+      <listitem>
+        <para>使用<guilabel>垃圾箱</guilabel>。</para>
+        <para>您可以將物件移至<guilabel>垃圾箱</guilabel>，然後再清理<guilabel>垃圾箱</guilabel>。</para>
+      </listitem>
+      <listitem>
+        <para>自訂桌面背景。</para>
+        <para>您可以自訂桌面背景的型樣或色彩。</para>
+      </listitem>
+    </itemizedlist>
+    <para>依預設值，桌面背景包含三個物件。</para>
+    <para><xref linkend="gosdeskback-TBL-84"/> 說明了桌面背景上預設物件的功能。</para>
+    <table frame="topbot" id="gosdeskback-TBL-84">
+      <title>預設桌面背景物件的功能</title>
+      <tgroup cols="3" colsep="0" rowsep="0">
+        <colspec colname="colspec2" colwidth="35.94*"/>
+        <colspec colname="colspec0" colwidth="35.94*"/>
+        <colspec colname="colspec1" colwidth="64.06*"/>
+        <thead>
+          <row rowsep="1">
+            <entry colname="colspec2" valign="top">
+              <para>物件</para>
+            </entry>
+            <entry valign="top">
+              <para>元件</para>
+            </entry>
+            <entry valign="top">
+              <para>功能 </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <screenshot>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/naut_home_launcher.png" format="PNG"/>
+                  </imageobject>
+                  <textobject>
+                    <phrase>Nautilus 首頁位置圖示。</phrase>
+                  </textobject>
+                </mediaobject>
+              </screenshot>
+            </entry>
+            <entry valign="top">
+              <para>
+                <guilabel>首頁</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>開啟 <application>Nautilus</application> 視窗，並在檢視窗格中顯示首頁位置。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <screenshot>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/naut_starthere_launcher.png" format="PNG"/>
+                  </imageobject>
+                  <textobject>
+                    <phrase>Nautilus 在此處啟動圖示。</phrase>
+                  </textobject>
+                </mediaobject>
+              </screenshot>
+            </entry>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <guilabel>在此處啟動</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>提供一些 GNOME 桌面主要功能的存取點。 </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <screenshot>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/naut_trash_launcher.png" format="PNG"/>
+                  </imageobject>
+                  <textobject>
+                    <phrase>Nautilus 垃圾箱圖示。</phrase>
+                  </textobject>
+                </mediaobject>
+              </screenshot>
+            </entry>
+            <entry valign="top">
+              <para>
+                <guilabel>垃圾箱</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>開啟 <application>Nautilus</application> 視窗，並在檢視窗格中顯示<guilabel>垃圾箱</guilabel>
+。</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="gosdeskback-22">
+    <title>啟動桌面背景</title>
+    <indexterm>
+      <primary>桌面背景</primary>
+      <secondary>啟動</secondary>
+    </indexterm>
+    <para>如果 <application>Nautilus</application> 目前不負責管理桌面背景，預設物件便不會顯示在桌面背景上。 在這種情況下，您可能需要重新啟動桌面背景。
+如果預設物件沒有顯示在桌面背景上，可能是因為下列某一項原因：</para>
+    <itemizedlist>
+      <listitem>
+        <para>在 <application>Nautilus</application> 個人喜好設定中，
+已經設定不使用 <application>Nautilus</application> 管理桌面背景。
+如果要重新啟動桌面背景，責必須設定 <application>Nautilus</application> 個人喜好，使用<application>Nautilus</application> 管理桌面背景。</para>
+      </listitem>
+      <listitem>
+        <para>您不小心取消了桌面背景處理。 
+如果要重新啟動桌面背景，則必須設定 <application>Nautilus</application> 個人喜好，使用<application>Nautilus</application> 管理桌面背景。</para>
+      </listitem>
+      <listitem>
+        <para>您把 <filename>/.nautilus</filename> 目錄刪除了。
+如果要重新啟動桌面背景，則必須設定 <application>Nautilus</application>，使用<application>Nautilus</application> 管理桌面背景。</para>
+      </listitem>
+    </itemizedlist>
+    <para>如果要設定個人喜好，使用 <application>Nautilus</application>
+管理桌面背景，請執行下列步驟：</para>
+    <orderedlist>
+      <listitem>
+        <para>選擇<menuchoice><guimenu>應用程式</guimenu><guimenuitem>主要資料夾</guimenuitem></menuchoice>。 便會顯示 <application>Nautilus</application> 視窗。 </para>
+      </listitem>
+      <listitem>
+        <para>選擇<menuchoice><guimenu>編輯</guimenu><guimenuitem>個人喜好</guimenuitem></menuchoice>。 便會顯示<guilabel>個人喜好</guilabel>對話方塊。 從<guilabel>個人喜好</guilabel>對話方塊中，選擇<guilabel>桌面 &amp; 垃圾箱</guilabel>。</para>
+      </listitem>
+      <listitem>
+        <para>選取<guilabel>使用 Nautilus 繪製桌面</guilabel>選項。</para>
+      </listitem>
+      <listitem>
+        <para>按一下<guibutton>關閉</guibutton>，關閉對話方塊。</para>
+      </listitem>
+    </orderedlist>
+    <para>如果要設定 <application>Nautilus</application>，使用<application>Nautilus</application> 管理桌面背景，請執行下列
+步驟：</para>
+    <orderedlist>
+      <listitem>
+        <para>選擇<menuchoice><guimenu>應用程式</guimenu><guimenuitem>主要資料夾</guimenuitem></menuchoice>。 便會顯示<guilabel>第一次設定 Nautilus </guilabel> 對話方塊。</para>
+      </listitem>
+      <listitem>
+        <para>使用<guilabel>第一次設定 Nautilus </guilabel> 對話方塊，可以自訂 <application>Nautilus</application> 環境。
+請遵照 <guilabel>第一次設定 Nautilus </guilabel>對話方塊中的指示進行。 在 <guilabel>從 GMC 轉換成 Nautilus</guilabel> 螢幕中，選取
+<guilabel>使用 Nautilus 繪製桌面</guilabel>選項。</para>
+      </listitem>
+      <listitem>
+        <para>等到出現<guilabel>結束</guilabel>螢幕時，請按一下<guibutton>結束</guibutton>按鈕。</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+  <sect1 id="gosdeskback-2">
+    <title>桌面背景物件</title>
+    <indexterm>
+      <primary>桌面背景</primary>
+      <secondary>桌面背景物件</secondary>
+    </indexterm>
+    <para>桌面背景物件是桌面背景上的圖示，可以用來開啟檔案、資料夾和應用程式。桌面背景上的所有物件，都位於桌面背景目錄中。當您將物件移至桌面背景時，物件便會移至這個目錄中。您也可以使用主目錄當作桌面背景目錄。</para>
+    <para>依預設值，桌面背景包含三個物件。您也可以在桌面背景中加入物件，以便存取常用的檔案、資料夾和應用程式。例如，可以在桌面背景中加入啟動器，以用來開啟常用的特定應用程式。</para>
+    <para><xref linkend="gosdeskback-TBL-86"/> 說明了您可以在桌面背景中增加的物件的類型。</para>
+    <table frame="topbot" id="gosdeskback-TBL-86">
+      <title>桌面背景物件類型</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="30.23*"/>
+        <colspec colname="colspec1" colwidth="69.77*"/>
+        <thead>
+          <row rowsep="1">
+            <entry colname="colspec0" valign="top">
+              <para>物件類型</para>
+            </entry>
+            <entry valign="top">
+              <para>說明</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>符號連結</para>
+            </entry>
+            <entry valign="top">
+              <para>符號連結是一個可以指向其他檔案或資料夾的物件。 從桌面背景選擇符號連結時，會開啟該符號連結所指向的檔案或資料夾。您可以將符號連結移動或複製到桌面背景中。</para>
+              <para>您可以根據顯示在所有符號連結上的預設箭號標識，分辨符號連結。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>啟動器</para>
+            </entry>
+            <entry valign="top">
+              <para>您可以將下列類型的啟動器加入桌面背景：</para>
+              <itemizedlist>
+                <listitem>
+                  <para>應用程式： 啟動特定的應用程式。</para>
+                </listitem>
+                <listitem>
+                  <para>連結：指向特定檔案、資料夾或 URL 的連結。</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>檔案</para>
+            </entry>
+            <entry valign="top">
+              <para>您可以將檔案加入桌面背景。桌面背景上的檔案，都位於桌面背景目錄中。 </para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>資料夾</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>您可以將資料夾移動到桌面背景上，也可以在桌面背景上建立
+資料夾。 桌面背景上的資料夾，都位於在桌面背景目錄中。</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>您可以用下列方式修改桌面背景物件：</para>
+    <itemizedlist>
+      <listitem>
+        <para>檢視物件的屬性。</para>
+      </listitem>
+      <listitem>
+        <para>重新命名物件。</para>
+      </listitem>
+      <listitem>
+        <para>變更物件的許可權。</para>
+      </listitem>
+      <listitem>
+        <para>變更代表物件的圖示。</para>
+      </listitem>
+      <listitem>
+        <para>調整代表物件圖示的大小。</para>
+      </listitem>
+      <listitem>
+        <para>加入標識到物件上。</para>
+      </listitem>
+    </itemizedlist>
+    <para>下列各節會說明如何在桌面背景上使用物件。</para>
+    <sect2 id="gosdeskback-30">
+      <title>選取桌面背景上的物件</title>
+      <indexterm>
+        <primary>桌面背景</primary>
+        <secondary>選取物件</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>桌面背景物件</primary>
+        <secondary>選取</secondary>
+      </indexterm>
+      <para>如果要選取桌面背景上的物件，請按一下該物件。 如果要選取多個物件，請按住 <keycap>Ctrl</keycap>，然後在要選取的物件上按一下。</para>
+      <para>您也可以選取桌面背景上的區域，以便選取該區域內的所有物件。請在桌面背景上按住滑鼠鍵，然後將其拖曳過含有要選取物件的區域。在您按住並拖曳滑鼠時，會顯示一個灰色的矩形，標示選取的區域。</para>
+      <para>如果要選擇多個區域，請按住 <keycap>Ctrl</keycap>，然後拖曳過您想要選擇的區域。 </para>
+    </sect2>
+    <sect2 id="gosdeskback-29">
+      <title>從桌面背景開啟物件</title>
+      <indexterm>
+        <primary>桌面背景</primary>
+        <secondary>開啟物件</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>桌面背景物件</primary>
+        <secondary>開啟</secondary>
+      </indexterm>
+      <para>如果要從桌面背景開啟物件，請在物件上連按兩下。 或者，請在物件上按滑鼠右鍵，然後選擇<guimenuitem>開啟</guimenuitem>。 開啟物件時，會執行該物件預設的動作。 例如，如果物件是文字檔案，檔案便會在 <application>Nautilus</application> 視窗中開啟。檔案類型的預設動作，是在<application>檔案類型和程式</application>桌面個人喜好工具中所指定。</para>
+      <para>如果要執行預設物件動作以外的動作，請在物件上按滑鼠右鍵，然後選擇<guimenuitem>開啟時使用</guimenuitem>。 請從<guisubmenu>開啟時使用</guisubmenu>子功能表選擇動作。</para>
+      <para><guimenuitem>開啟時使用</guimenuitem>子功能表中的項目，與<application>檔案類型和程式</application>桌面個人喜好工具的下列部分內容相關：</para>
+      <itemizedlist>
+        <listitem>
+          <para><guilabel>編輯檔案類型</guilabel>對話方塊中，<guilabel>預設動作</guilabel>下拉式清單方塊</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>編輯檔案類型</guilabel>對話方塊中，<guilabel>檢視器元件</guilabel>下拉式清單方塊</para>
+        </listitem>
+      </itemizedlist>
+      <para>您可以在 <application>Nautilus</application> 視窗中設定個人喜好，以便按一下檔案就可以執行預設的動作。</para>
+    </sect2>
+    <sect2 id="gosdeskback-3">
+      <title>在桌面背景中加入啟動器</title>
+      <indexterm>
+        <primary>桌面背景</primary>
+        <secondary>增加啟動器</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>桌面背景物件</primary>
+        <secondary>啟動器</secondary>
+      </indexterm>
+      <para>桌面背景啟動器啟動應用程式，或連結到特定的檔案、資料夾或 FTP 網站。 </para>
+      <para>如果要將啟動器加入桌面背景，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>在桌面背景上按滑鼠右鍵，然後選擇<guimenuitem>新增啟動器</guimenuitem>。 此時會顯示<guilabel>建立啟動器</guilabel>對話方塊。</para>
+        </listitem>
+        <listitem>
+          <para>關於如何在<guilabel>建立啟動器</guilabel>對話中輸入啟動器的屬性，如需進一步的資訊，請參閱<emphasis>使用面板</emphasis>。</para>
+          <para>您為啟動器所輸入的指令，便是使用桌面背景物件時所執行的指令。 下表顯示的，便是一些範例指令，以及這些指令所執行的動作。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="47.36*"/>
+              <colspec colname="colspec1" colwidth="52.64*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry valign="top">
+                    <para>範例指令</para>
+                  </entry>
+                  <entry valign="top">
+                    <para>動作</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>gedit</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>啟動 <application>gedit</application> 應用程式。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <command>gedit /user123/loremipsum.txt</command>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>在 <application>gedit</application> 應用程式中，開啟<filename>/user123/loremipsum.txt </filename> 檔案。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>nautilus /user123/Projects</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>在 <application>Nautilus</application> 視窗中，開啟<filename>/user123/Projects</filename> 資料夾。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosdeskback-20">
+      <title>在桌面背景中加入符號連結</title>
+      <indexterm>
+        <primary>桌面背景</primary>
+        <secondary>增加符號連結</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>桌面背景物件</primary>
+        <secondary>符號連結</secondary>
+      </indexterm>
+      <para>您可以在桌面背景上建立符號連結，執行下列動作：</para>
+      <itemizedlist>
+        <listitem>
+          <para>在特定應用程式中，開啟特定檔案。</para>
+        </listitem>
+        <listitem>
+          <para>在 <application>Nautilus</application>視窗中，開啟特定的資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>執行二進制檔案或程序檔。</para>
+        </listitem>
+      </itemizedlist>
+      <para>如果要在桌面背景中建立符號連結，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>在 <application>Nautilus</application> 視窗中，顯示要為其建立符號連結的檔案或資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>建立指向檔案或資料夾的符號連結。如果要建立指向檔案或資料夾的符號連結，請選取要為其建立連結的檔案或資料夾。 選擇<menuchoice><guimenu>編輯</guimenu><guimenuitem>建立連結</guimenuitem></menuchoice>。 在目前的資料夾中，便會加入指向檔案或資料夾的連結。您可以根據顯示在所有符號連結上的預設箭號標識，分辨符號連結。下圖顯示的，便是指向檔案的符號連結：</para>
+          <screenshot>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="figures/naut_samplesymlink_icon.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>具有符號連結標識的檔案圖示。</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+        <listitem>
+          <para>將符號連結拖曳到桌面背景上。該物件的圖示便會移動到桌面背景上。 </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosdeskback-16">
+      <title>在桌面背景中加入檔案或資料夾</title>
+      <indexterm>
+        <primary>桌面背景</primary>
+        <secondary>將檔案或資料夾加入至</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>桌面背景物件</primary>
+        <secondary>檔案和資料夾</secondary>
+      </indexterm>
+      <para>以下各節說明了要如何在桌面背景中增加檔案物件及資料夾
+物件。</para>
+      <sect3 id="gosdeskback-18">
+        <title>將檔案或資料夾移動到桌面背景</title>
+        <indexterm>
+          <primary>桌面背景</primary>
+          <secondary>將檔案或資料夾移動到</secondary>
+        </indexterm>
+        <para>您可以將檔案或資料夾從<application>Nautilus</application> 視窗移動到桌面背景。 如果要將檔案或資料夾移動到桌面背景，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>開啟 <application>Nautilus</application> 視窗。 </para>
+          </listitem>
+          <listitem>
+            <para>在檢視窗格中，顯示要移動的檔案或資料夾。</para>
+          </listitem>
+          <listitem>
+            <para>將檔案或資料夾拖曳到桌面背景上。檔案或資料夾的圖示便會移動到桌面背景上。 檔案或資料夾也會移動到您的桌面背景目錄中。</para>
+            <para>或者，請選取檔案或資料夾，然後選擇<menuchoice><guimenu>編輯</guimenu><guimenuitem>剪下檔案</guimenuitem></menuchoice>。 在任何桌面背景物件上按滑鼠右鍵，然後選擇<guimenuitem>貼上檔案</guimenuitem>。 </para>
+          </listitem>
+        </orderedlist>
+<!--<para><emphasis>Question</emphasis>: Do we need to document To Move a File or Folder>>From&lt;&lt; the Desktop Background? (with cut file and paste file)</para>
+<para>What about Cut, Copy and Paste solely in reference to the desktop background.
+Eg, to create a copy of a file by copying it from the desktop background,
+then pasting it?</para>-->
+      </sect3>
+      <sect3 id="gosdeskback-17">
+        <title>將檔案或資料夾複製到桌面背景</title>
+        <indexterm>
+          <primary>桌面背景</primary>
+          <secondary>將檔案
+或資料夾複製到</secondary>
+        </indexterm>
+        <para>您可以將檔案或資料夾，從<application>Nautilus</application> 視窗複製到桌面背景上。 如果要將檔案或資料夾複製到桌面背景，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>開啟 <application>Nautilus</application> 視窗。 </para>
+          </listitem>
+          <listitem>
+            <para>在檢視窗格中，顯示要移動的檔案或資料夾。</para>
+          </listitem>
+          <listitem>
+            <para>按住 <keycap>Ctrl</keycap>，然後將檔案或資料夾拖曳到桌面背景上。 桌面背景中便會加入檔案或資料夾的圖示。檔案或資料夾也會複製到桌面背景目錄中。</para>
+            <para>或者，請選取檔案或資料夾，然後選擇<menuchoice><guimenu>編輯</guimenu><guimenuitem>複製檔案</guimenuitem></menuchoice>。
+在任何的桌面背景物件上按滑鼠右鍵，然後選擇<guimenuitem>貼上檔案</guimenuitem>。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gosdeskback-19">
+        <title>在桌面背景上建立資料夾物件</title>
+        <indexterm>
+          <primary>桌面背景</primary>
+          <secondary>建立資料夾於</secondary>
+        </indexterm>
+        <para>如果要建立資料夾物件，請在桌面背景上按滑鼠右鍵，開啟
+<guimenu>桌面背景</guimenu>功能表。
+選擇<guimenuitem>新資料夾</guimenuitem>。桌面背景中便會加入<guilabel>無標題</guilabel>資料夾。請鍵入新資料夾的名稱，然後按一下<keycap>Return</keycap>。 資料夾便會以新名稱顯示。
+新資料夾會位於桌面背景目錄中。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosdeskback-25">
+      <title>從桌面背景中移除物件</title>
+      <indexterm>
+        <primary>桌面背景</primary>
+        <secondary>移除物件自</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>桌面背景物件</primary>
+        <secondary>移除</secondary>
+      </indexterm>
+      <para>如果要從桌面背景移除物件，請在物件上按滑鼠右鍵，然後選擇<guimenuitem>移動到垃圾箱</guimenuitem>。 或者，也可以將物件拖曳到<guilabel>垃圾箱</guilabel>。</para>
+    </sect2>
+    <sect2 id="gosdeskback-86">
+      <title>從桌面背景刪除物件</title>
+      <indexterm>
+        <primary>桌面背景</primary>
+        <secondary>刪除物件，從</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>桌面背景物件</primary>
+        <secondary>刪除</secondary>
+      </indexterm>
+      <para>從桌面背景刪除物件時，並不會將該物件移動到 <guilabel>垃圾箱</guilabel>，而是會立刻從桌面背景
+只有當 <application>Nautilus</application><guilabel>個人喜好</guilabel>對話方塊中，已選取了<guilabel>包含略過垃圾箱的刪除指令</guilabel>選項時，才可以使用<guimenuitem>刪除</guimenuitem>功能表項目。</para>
+      <para>如果要從桌面背景刪除物件，請在物件上按滑鼠右鍵，然後選擇<guimenuitem>刪除</guimenuitem>。 </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosdeskback-8">
+    <title>在桌面背景上使用垃圾箱</title>
+    <indexterm>
+      <primary>桌面背景</primary>
+      <secondary>使用垃圾箱</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>垃圾箱</primary>
+      <secondary>在桌面背景上使用</secondary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/naut_trash_launcher.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Nautilus 垃圾箱圖示。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>您可以將下列項目移動到<guilabel>垃圾箱</guilabel>：</para>
+    <itemizedlist>
+      <listitem>
+        <para>檔案</para>
+      </listitem>
+      <listitem>
+        <para>資料夾</para>
+      </listitem>
+      <listitem>
+        <para>桌面背景物件</para>
+      </listitem>
+    </itemizedlist>
+    <para>當您將項目移動到<guilabel>垃圾箱</guilabel>時，該項目會暫時儲存在 <filename>/.Trash</filename> 資料夾中。 如果您需要從<guilabel>垃圾箱</guilabel>取回檔案， 可以先檢<guilabel>垃圾箱</guilabel>，然後將檔案移出<guilabel>垃圾箱</guilabel>。</para>
+    <para>清理<guilabel>垃圾箱</guilabel>時，會永遠刪除<guilabel>垃圾箱</guilabel> 中的項目。 </para>
+    <sect2 id="gosdeskback-44">
+      <title>顯示垃圾箱</title>
+      <indexterm>
+        <primary>垃圾箱</primary>
+        <secondary>顯示</secondary>
+      </indexterm>
+      <para>您可以使用下列方式，顯示<guilabel>垃圾箱</guilabel>的內容：</para>
+      <itemizedlist>
+        <listitem>
+          <para>從桌面背景</para>
+          <para>在桌面背景的<guilabel>垃圾箱</guilabel>物件上連按兩下。<guilabel>垃圾箱</guilabel>的內容便會顯示在 <application> Nautilus</application> 視窗中。</para>
+        </listitem>
+        <listitem>
+          <para>從 <application>Nautilus</application> 視窗</para>
+          <para>選擇<menuchoice><guimenu>移至</guimenu><guimenuitem>垃圾箱</guimenuitem></menuchoice>。<guilabel>垃圾箱</guilabel>的內容便會顯示在視窗中。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosdeskback-10">
+      <title>清理垃圾箱</title>
+      <indexterm>
+        <primary>垃圾箱</primary>
+        <secondary>清理</secondary>
+      </indexterm>
+      <para>您可以使用下列方式，清理<guilabel>垃圾箱</guilabel>的
+內容：</para>
+      <itemizedlist>
+        <listitem>
+          <para>從桌面背景</para>
+          <para>在<guilabel>垃圾箱</guilabel>物件上按滑鼠右鍵，然後選擇<guimenuitem>清理垃圾箱</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>從 <application>Nautilus</application> 視窗</para>
+          <para>選擇<menuchoice><guimenu>檔案</guimenu><guimenuitem>清理垃圾箱</guimenuitem></menuchoice>。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosdeskback-9">
+    <title>使用桌面背景功能表</title>
+    <indexterm>
+      <primary>桌面背景</primary>
+      <secondary>使用桌面背景功能表</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>桌面背景功能表</primary>
+      <secondary>說明</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>功能表</primary>
+      <secondary>桌面背景功能表</secondary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/file_manager_menu.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>桌面背景功能表。此處的內容會說明此圖。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>桌面背景功能表</primary>
+      <secondary>圖例</secondary>
+    </indexterm>
+    <para>如果要開啟<guimenu>桌面背景</guimenu>功能表，請在桌面背景的空白區域上按滑鼠右鍵。  您可以使用<guimenu>桌面背景</guimenu>功能表，在桌面背景上執行
+動作。</para>
+    <para><xref linkend="gosdeskback-TBL-85"/> 說明了<guimenu>桌面背景</guimenu>功能表中的項目。</para>
+    <table frame="topbot" id="gosdeskback-TBL-85">
+      <title>桌面背景功能表上的項目</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="35.94*"/>
+        <colspec colname="colspec1" colwidth="64.06*"/>
+        <thead>
+          <row rowsep="1">
+            <entry valign="top">
+              <para>功能表項目 </para>
+            </entry>
+            <entry valign="top">
+              <para>功能 </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>新視窗</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>開啟新的<application>Nautilus</application> 視窗，顯示主要位置。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <guimenuitem>新資料夾</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>在桌面背景上建立新的資料夾物件。 在您的桌面背景目錄中，亦會建立資料夾。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <guimenuitem>新終端機</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>啟動 <application>GNOME 終端機</application>。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>新啟動器</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>在桌面背景上建立啟動器。
+如需進一步的資訊，請參閱<xref linkend="gosdeskback-3"/>。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guisubmenu>程序檔</guisubmenu>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>開啟子功能表，內含可執行的程序檔。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <guimenuitem>按名稱排序</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para> 按照名稱的字母順序，排列桌面背景上的物件。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>剪下檔案</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>從資料夾或桌面背景中，刪除選取的一個或多個檔案，並將這 (些) 檔案放在緩衝區中。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>複製檔案</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>從資料夾或桌面背景中，複製選取的一個或多個檔案，並將這 (些) 檔案放在緩衝區中。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>貼上檔案</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>將緩衝區中的一個或多個檔案，放入選取的資料夾或桌面背景上。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <guimenuitem>磁碟</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>可以讓您裝載磁片、CD-ROM 及其他的可移除式媒體。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>變更桌面背景</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>啟動<application>背景</application>個人喜好工具，以便您變更桌面背景。</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>使用預設背景</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>將桌面背景重設為上一次自<guilabel>背景和標識</guilabel>對話中所選擇的型樣。
+您可以從 <application>Nautilus</application> 視窗，存取<guilabel>背景和標識</guilabel>對話方塊。</para>
+<!--<para><emphasis>註釋：</emphasis>如此並無法重設您上一次由<guilabel>背景和標識</guilabel>對話方塊所選擇的顏色。</para>-->
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>
+  <sect1 id="gosdeskback-12">
+    <title>變更桌面背景的型樣與顏色</title>
+    <indexterm>
+      <primary>桌面背景</primary>
+      <secondary>變更型樣
+或顏色</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>背景</primary>
+      <secondary>變更桌面背景</secondary>
+    </indexterm>
+    <para>您可以
+以個人的偏好變更桌面背景的型樣或顏色。<application>Nautilus</application> 包括您可以用來變更
+桌面背景外視部件的背景型樣與顏色。</para>
+    <para>您可以用任何下列的方式
+變更桌面的型樣與顏色：</para>
+    <itemizedlist>
+      <listitem>
+        <para>將型樣或顏色由另外一個視窗
+或對話方塊拖曳過來。 </para>
+        <para>如果您的桌面背景為某色彩，您可以由此色彩創造出漸層效果
+至桌面背景色彩中。漸層效果是一種視覺效果，可以
+使一種色彩與另一種色彩混和，而逐漸的變成另一種色彩。如果要在您的桌面
+背景上創造漸層效果，請將一種色彩拖曳至
+畫面的邊緣。桌面色彩會在畫面的邊緣與您拖曳的色彩混合，
+直至畫面的相對的另一邊。</para>
+        <para>在您拖曳色彩至畫面的邊緣之前，請先確認螢幕的邊緣
+是否有邊緣面板。如果有的話，在拖曳色彩之前，
+您必須先隱藏面板。</para>
+      </listitem>
+      <listitem>
+        <para>使用<application>背景</application>偏好工具。 </para>
+      </listitem>
+      <listitem>
+        <para>由<guilabel>背景和標識</guilabel>對話方塊選擇型樣或色彩。如果要變更桌面背景的
+型樣或色彩，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>開啟<application>Nautilus</application>視窗。</para>
+          </listitem>
+          <listitem>
+            <para>選擇<menuchoice><guimenu>編輯</guimenu><guimenuitem>背景和標識</guimenuitem></menuchoice>。<guilabel>背景
+和標識</guilabel>對話方塊便會出現。</para>
+          </listitem>
+          <listitem>
+            <para>如果要顯示您所能使用的型樣清單，請按一下<guibutton>型樣</guibutton>按鈕。如果要顯示您所能使用的顏色清單
+，請按一下<guibutton>色彩</guibutton>按鈕。</para>
+          </listitem>
+          <listitem>
+            <para>如果要變更桌面背景的型樣，請拖曳該型樣
+至桌面背景。如果要變更桌面背景的顏色，請拖曳
+該色彩至桌面背景。</para>
+          </listitem>
+          <listitem>
+            <para>按一下<guibutton>關閉</guibutton>來關閉對話方塊。</para>
+          </listitem>
+        </orderedlist>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+</chapter>
