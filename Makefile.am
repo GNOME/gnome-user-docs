@@ -1,9 +1,5 @@
 SUBDIRS = \
-	introduction-to-gnome 	\
-	unix-primer		\
-	glossary		\
-	gnome-users-guide	\
-	omf-install
+	gnome2-user-guide
 
-EXTRA_DIST = gnome-user-docs.spec COPYING-DOCS sgmldocs-ug.make sgmldocs.make
+EXTRA_DIST = gnome-user-docs.spec COPYING-DOCS xmldocs.make omf.make
 
