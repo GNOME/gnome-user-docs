@@ -1,26 +1,26 @@
  <sect2 id="jbc">
-  <title>Jon's Binary Clock Applet</title>
+  <title>El Applet de Reloj Binario de Jon</title>
 
   <para>
-   <application>Jon's Binary Clock</application> applet, shown in <xref
-   linkend="jbcapplet-fig">, shows the time in an unusual form: binary
-   coded decimal. It has twenty-four LEDs which represent the hours,
-   minutes and seconds by illuminating the appropriate LED.  To add this
-   applet to a <interface>Panel</interface>, 
-   right-click on the <interface>Panel</interface> and choose
+   <application>El Reloj Binario de Jon</application> que se muestra aqui <xref
+   linkend="jbcapplet-fig">, muestra la hora de una manera especial: decimal
+   codificado en binario. Tiene veinticuatro LEDs que representan las horas,
+   minutos y segundos según se iluminan.  Para añadir este applet a un 
+   <interface>Panel</interface>, pulse con el botón derecho en el 
+   <interface>Panel</interface> y escoja
    <menuchoice>
     <guimenu>Panel</guimenu>
-    <guisubmenu>Add to panel</guisubmenu>
+    <guisubmenu>Añadir al panel</guisubmenu>
     <guisubmenu>Applet</guisubmenu>
-    <guisubmenu>Clocks</guisubmenu>
+    <guisubmenu>Relojes</guisubmenu>
     <guimenuitem>JBC Binary Clock</guimenuitem>
    </menuchoice>.
   </para>
 
   <figure id="jbcapplet-fig">
-   <title>Jon's Binary Clock Applet</title>
+   <title>Applet del Reloj Binario de Jon</title>
    <screenshot>
-    <screeninfo>Jon's Binary Clock Applet</screeninfo>
+    <screeninfo>Applet del Reloj binario de Jon</screeninfo>
     <graphic format="png" fileref="figures/jbc_applet" 
     srccredit="muet">
     </graphic>
@@ -29,30 +29,30 @@
 
   <!-- ============= Usage  ================================ -->
   <sect3 id="APPLET-usage">
-   <title>Usage</title>
+   <title>Uso</title>
    <para>
-    You don't need to do anything special to this clock. It just
-    sits there and flashes lights at you.
+   No hay que hacer nada con este reloj.  Tan sólo se pone ahí y
+   te parpadea las lucecitas. 
    </para>
 
    <para>
-    Right-clicking on the applet brings up a menu containing the
-    following items:
+    Si se pulsa con el botón derecho en el applet aparece un menú
+    que contiene los siguientes elementos:
     <itemizedlist>
 
      <listitem>
       <para>
        <guimenuitem>Help</guimenuitem> &mdash;
-       displays this document.
+         Muestra este documento.
       </para>
      </listitem>
 
      <listitem>
       <para>
        <guimenuitem>About&hellip;</guimenuitem> &mdash;
-       shows basic information about <application>Jon's Binary Clock
-       Applet</application>, inluding the applet's version and the
-       author's name.
+        Muestra una breve descripción acerca del <application>Reloj 
+        Binario de Jon</application>, incluyendo la versión del applet
+        y el nombre del autor.
       </para>
      </listitem>
 
@@ -63,78 +63,76 @@
 
   <!-- ============= Deciphering the Lights =========================== -->
   <sect3 id="jbc-deciphering">
-   <title>Deciphering the Lights</title>
+   <title>Descripción de las luces</title>
     <para>
-      BCD stands for binary-coded decimal, a way of representing 
-      normal denary (0,1,2,3,4,5,6,7,8,9) numbers as what programmers
-      call &quot;a set of binary numbers in four bits, thus removing the
-      numbers A to F&quot;. If this doesn't make sense, just be aware
-      that this clock is an amusement for programmers, and serves
-      no really useful purpose.
+      BCD significa "binary-coded-decimal", que es una manera de representar
+      los números decimales (0,1,2,3,4,5,6,7,8,9) como lo que los programadores
+      denominan &quot;un conjunto de números binarios de 4 bits, de forma que se eliminan los números de la A  la F&quot;.  Si esto no tiene ningún sentido, tenga en cuenta que 
+      este reloj es un pasatiempo para los programadores y realmente
+      no tiene ningún propósito útil.
     </para>
     <para>
-      It helps to read this clock upside-down! Start at the bottom and 
-      read up to the top.
+      ¡Es más fácil leer el reloj al revés!  Empiece en el fondo y lea hasta
+      la parte de arriba.
     </para>
     <para>
-      The right-hand pair of columns shows the two digits of the seconds:
-      the units on the right, the tens on the left. The centre pair of
-      columns shows the two digits of the minutes. The left hand pair of
-      columns shows the two digits of the hours.
+      El par de columnas de la derecha muestra los dos dígitos de los 
+      segundos: las unidades en la columna más a la derecha y las decenas
+      en la más a la izquierda. El par de columnas centrales muestra los
+      dos dígitos de los minutos, mientras que el par izquierdo de columnas
+      muestra los dos dígitos de las horas.
     </para>
     <para>
-      You add up the values of the illuminated LEDs in each column.
-      You should get a number between zero to nine for each. That's
-      the time.
+      Se suman los valores de los LEDs iluminados de cada columna. 
+      Debería salir un número entre cero y nueve para cada uno. Esa es la hora.
     </para>
     <orderedlist>
      <listitem>
       <para>
-         The bottom LED represents 1 when it is illuminated.
+         El LED del fondo representa un 1 cuando está iluminado.
       </para>
      </listitem>
 
      <listitem>
       <para>
-         The next LED represents 2 when it is illuminated.
+         El siguiente LED representa un 2 cuando está iluminado.
       </para>
      </listitem>
 
      <listitem>
       <para>
-         The next LED represents 4 when it is illuminated.
+         El siguiente LED representa un 4 cuando está iluminado.
       </para>
      </listitem>
 
      <listitem>
       <para>
-         The top LED represents 8 when it is illuminated.
+         El siguiente LED representa un 8 cuando está iluminado.
       </para>
      </listitem>
     </orderedlist>
 
     <para>
-      It is probably simplest to decipher the hours and minutes
-      first before trying to follow the seconds, which are always 
-      changing.
+      Probablemente le resulte más fácil descifrar las horas y minutos
+      antes que intentar seguir los segundos, que siempre están cambiando.
     </para>
 
     <para>
-     As an example, we can read the time in <xref
-     linkend="jbcapplet-fig">. Let's start with the hour.  The first
-     column has only 1 LED on, in the second lowest position, so this
-     gives us <quote>2</quote> for the first digit of the hour.  The
-     second column has no LEDs on, so we have a <quote>0</quote> for
-     the second digit of the hour.  So the hour is <quote>20</quote>,
-     or 8PM for people who like AM/PM notation.  Looking at the
-     minutes, we have <quote>0</quote> for the first digit, and
-     <quote>1</quote> for the second digit since only the bottom LED
-     is lit.  This gives us "20:01" so far.  Lastly, we have the
-     seconds.  For the first digit, we have the lowest two LED's
-     lit. These have value 1 (for the lowest) and 2 (second lowest)
-     for a total of <quote>3</quote>.  And the second column of the
-     seconds has the top LED lit, with a value of
-     <quote>8</quote>. Thus, the time is <quote>20:01:38</quote>, or
+     Como ejemplo, podemos leer la hora en <xref
+     linkend="jbcapplet-fig">. Empecemos con las horas. La primera columna
+     sólo tiene 1 LED encendido, en la segunda posición más baja, así que
+     esto da <quote>2</quote> para el primer dígito de lahora.  La segunda
+     columan no tiene LEDs encendidos, así que tenemos un <quote>0</quote> 
+     para el segundo dígito de la hora. Así que la hora es las <quote>20</quote>,
+     o las 8PM para los que les guste la notación AM/PM.  Fijándonos en los
+     minutos, tenemos un <quote>0</quote> para el primer dígito, y 
+     <quote>1</quote> para el segundo dígitos dado que sólo el LED del fondo
+     está encendido.   Esto nos dá las "20:01" de momento. Por último, 
+     tenemos los segundos. Para el primer dígito, tenemos los dos LEDs del
+     fondo encendidos.  Éstos tienen los valores 1 (para el de más abajo)
+     y 2 (para el otro) para sumar un total de <quote>3</quote>.  Y la segunda
+     columna de los segundos tiene el LED de más arriba encendido, que vale
+     <quote>8</quote>. Así, son las  <quote>20:01:38</quote>, o
      <quote>8:01:38PM</quote>.
     </para>
 
@@ -145,96 +143,23 @@
   program if there are any - please be frank and list all problems you
   know of -->
   <sect3 id="jbc-bugs">
-   <title>Known Bugs and Limitations</title>
+   <title>Fallos conocidos y limitaciones</title>
    <para>
-    If you add it to a vertical panel, it is a nice size. If you then
-    move it to a horizonal panel, it changes size in the  horizontal
-    panel. If you move it back to a vertical panel, it doesn't change
-    size back, and forces the panel to widen itself.
+    Si se le añade a un panel vertical, se ajusta bien a su tamaño. 
+    Si luego se mueve a un panel horizontal, cambia de tamaño en el panel 
+    horizontal.  Pero si se mueve de nuevo a un panel vertical no cambia
+    de tamaño y obliga al panel a ensancharse.
    </para>
   </sect3>
 
 
-  <!-- ============= Authors ================================ -->
 
-  <sect3 id="jbc-authors">
-   <title>Authors</title>
-   <para>
-    <application>Jon's Binary Clock</application> was written by Jon
-    Anhold (<email>jon@snoopy.net</email>.  Please send all comments,
-    suggestions, and bug  reports to the <ulink
-    url="http://bugs.gnome.org" type="http">GNOME bug tracking
-    database</ulink>. (Instructions for submitting bug reports can be
-    found <ulink url="http://bugs.gnome.org/Reporting.html"
-    type="http"> on-line</ulink>. If you are using GNOME 1.1 or later,
-    you can also use <application>Bug Report Tool</application>
-    (<command>bug-buddy</command>), available in the
-    <guisubmenu>Utilities</guisubmenu> submenu of <guimenu>Main
-    Menu</guimenu>, for submitting bug reports.
-   </para>
-
-   <para>
-    This manual was written by Telsa Gwynne
-    (<email>hobbit@aloss.ukuu.org.uk</email>).  Please send all
-    comments and suggestions regarding this manual to the <ulink
-    type="http" url="http://www.gnome.org/gdp">GNOME Documentation
-    Project</ulink> by sending an email to
-    <email>docs@gnome.org</email>. You can also submit comments online
-    by using the <ulink type="http"
-    url="http://www.gnome.org/gdp/doctable/">GNOME Documentation
-    Status Table</ulink>.
-   </para>
-
-   <!-- For translations: uncomment this:
-
-   <para>
-    Latin translation was done by ME
-    (<email>MYNAME@MYADDRESS</email>). Please send all  comments  and
-    suggestions regarding this translation to SOMEWHERE.
-   </para>
-
-   -->
-
-  </sect3>
+<!-- Comentado para la guía de usuario
+&authors;
+&license;
+&license-es;
+-->
 
 
-  <!-- ============= Application License ============================= -->
-
-  <!-- 
-   <sect3 id="license">
-   <title>License</title>
-   <para>
-    This program is free software; you can redistribute it and/or
-    modify it under the terms of the <citetitle>GNU General Public
-    License</citetitle> as published by the Free Software Foundation;
-    either version 2 of the License, or (at your option) any later
-    version.
-   </para>
-   <para>
-    This program is distributed in the hope that it will be useful, but
-    WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    <citetitle>GNU General Public License</citetitle> for more details.
-   </para>
-   <para>
-    A copy of the <citetitle>GNU General Public License</citetitle> is
-    included as an appendix to the <citetitle>GNOME Users
-    Guide</citetitle>.  You may also obtain a copy of the
-    <citetitle>GNU General Public License</citetitle> from the Free
-    Software Foundation by visiting <ulink type="http"
-    url="http://www.fsf.org">their Web site</ulink> or by writing to
-    <address>
-     Free Software Foundation, Inc.
-     <street>59 Temple Place</street> - Suite 330
-     <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
-     <country>USA</country>
-    </address>
-   </para>
-  </sect3>
-
- --> 
- </sect2>
-
-
-
+</sect2>
 

@@ -1,25 +1,23 @@
 <sect2 id="modemlights">
-  <title>Modem Lights Applet</title> 
+  <title>Aplique del Monitor de Modem</title> 
 
-  <para> <application>Modem Lights Applet</application>, shown in <xref
-  linkend="modemlights-fig1">, monitors your modem while it is
-  working. To add this applet to a <interface>Panel</interface>,
-  right-click on the panel
-  and choose
+  <para> <application>El Aplique del Monitor de Modem</application>, mostrado en <xref
+  linkend="modemlights-fig1">, monitoriza su modem mientras esté funcionando. Para añadir este aplique al <interface>Panel</interface>,
+  pulse el botón derecho del ratón sobre el panel y seleccione 
          <menuchoice>
                <guimenu>Panel</guimenu>
-               <guisubmenu>Add to panel</guisubmenu>
-               <guisubmenu>Applet</guisubmenu>
-               <guisubmenu>Network</guisubmenu>
-	       <guimenuitem>Modem Lights</guimenuitem>
+               <guisubmenu>Añadir al panel</guisubmenu>
+               <guisubmenu>Aplique</guisubmenu>
+               <guisubmenu>Red</guisubmenu>
+	       <guimenuitem>Monitor de modem</guimenuitem>
 	</menuchoice>
   </para>
   
  
     <figure id="modemlights-fig1">
-     <title>Modem Lights Applet</title>
+     <title>Aplique del Monitor de Modem</title>
      <screenshot>
-      <screeninfo>Modem Lights Applet</screeninfo>
+      <screeninfo>Aplique del Monitor de Modem</screeninfo>
       <graphic format="png" fileref="figures/modemlights" srccredit="John Fleck">
       </graphic>
     </screenshot>
@@ -28,38 +26,30 @@
  
 
   <sect3 id="modemlights-usage">
-    <title>Usage</title>
-    <para>This applet can be used to tell if your modem is working,
-    and to track its behavior and performance. It can also be
-    configured to call a separate script or program to have your modem
-    connect and disconnect when you click on the <guibutton>button
-    with the single green light</guibutton>.
+    <title>Utilización</title>
+    <para>Este aplique se usa para ver si su modem está funcionando,
+    y seguir su funcionamiento. También se puede configurar para que ejecute un "script" externo o programa para conectar y desconectar su modem cuando pulse en el <guibutton>boton con una sola bombilla verde</guibutton>.
     </para>
-    <para>Right-clicking on the applet brings up a menu containing the
-    following items:
+    <para>Pulsando el botón derecho del ratón sobre el aplique aparecerá un menú desplegable que contiene los siguientes elementos:
 <itemizedlist>
 	<listitem>
 	  <para>
-	    <guimenuitem>Properties</guimenuitem>&mdash; brings up
+	    <guimenuitem>Propiedades</guimenuitem>&mdash; aparece el diálogo de 
 	    <link linkend="modemlights-prefs">
-                <guilabel>Properties</guilabel>
-            </link> dialog
+                <guilabel>Propiedades</guilabel>
+            </link>
 	    </para>
 	</listitem>
 
         <listitem>
 	  <para>
-	    <guimenuitem>Help</guimenuitem> &mdash; brings up this
-            document. 
+	    <guimenuitem>Ayuda</guimenuitem> &mdash; enseña este documento. 
 	    </para>
 	</listitem>
 	
 	<listitem>
 	  <para>
-	    <guimenuitem>About</guimenuitem> &mdash; shows basic
-            information about the <application>Modem Lights
-            Applet</application>, including the applet's version and
-            author's name.
+	    <guimenuitem>Acerca </guimenuitem> &mdash; muestra información básica acerca del <application>Aplique del Monitor de Modem</application>, incluyendo la versión del aplique y el nombre del autor.
          </para>
 	</listitem>
 	
@@ -68,250 +58,137 @@
   </sect3>
   <!-- ============= Customization ============================= -->
   <sect3 id="modemlights-prefs">
-    <title>Customization</title>
+    <title>Configuración</title>
     <para>
-      You can customize <application>Modem Lights Applet</application> by
-      right-clicking on it and choosing
-      <guimenuitem>Properties&hellip;</guimenuitem>. This will open the
-      <interface>Modem Lights Settings</interface> dialog (shown in <xref
-      linkend="modemlights-fig2">, which allows you to
-      change various settings.
+      Puede configurar el <application>Aplique del Monitor de Modem</application> pulsando con el botón derecho del ratón sobre el aplique y seleccionando
+      <guimenuitem>Propiedades&hellip;</guimenuitem>. Esto abrirá el diálogo de
+      <interface>Configuración del Monitor de Modem</interface> (que se muestra en <xref
+      linkend="modemlights-fig2">, que le permite cambiar los parámetros de la configuración.
     </para>
     <figure id="modemlights-fig2">
-     <title>Preferences dialog</title>
+     <title>Diálogo de preferencias</title>
      <screenshot>
-      <screeninfo>Preferences dialog</screeninfo>
+      <screeninfo>Diálogo de preferencias</screeninfo>
       <graphic format="png" fileref="figures/modemlights-prefs"
 	       srccredit="John Fleck">
       </graphic>
     </screenshot>
    </figure>
  <para>
-     The properties are:
+     Las propiedades son:
      <itemizedlist>
 
       <listitem>
-	    <para><guilabel>Show connect time and
-    throughput</guilabel> &mdash have <application>Modem
-    Lights Applet's</application> graphic display expand to include
-    two small text boxes showing the current data transfer rate (top)
-    and connect time (bottom).</para>
+	    <para><guilabel>Mostrar tiempo de conexión y caudal</guilabel> &mdash el gráfico del <application>Aplique del Monitor de Modem</application> se modifica para incluir dos pequeñas cajas de texto que muestran el ratio de transferencia de datos en curso (el de arriba) y el tiempo transcurrido desde la conexión (el de abajo).</para>
 
-	    <para><guilabel>Connect command:</guilabel> and
-        <guilabel>Disconnect command: </guilabel> &mdash;  To use
-    <application>Modem Lights Applet</application> to initiate a
-    connection, place the name of the startup command in the
-    <guilabel>Connect command</guilabel> text box, and the disconnect
-    command in the box beneath it labeled <guilabel>Disconnect
-    command</guilabel>. When you click on the single button on the
-    applet, it will connect or disconnect your modem.</para>
+	    <para><guilabel>Comando de conexión:</guilabel> y
+        <guilabel>Comando de desconexión: </guilabel> &mdash;  Para usar el 
+    <application>Aplique del Monitor de Modem</application> para inicializar una
+    conexión, ponga el nombre de la orden de inicio en la caja de texto 
+    <guilabel>Comando de conexión</guilabel> , y la orden para desconectarse en la caja debajo de ésta etiquetada como <guilabel>Comando de desconexión</guilabel>. Cuando pulse el único botón del aplique, se conectará o desconectará su modem.</para>
 </listitem>
       <listitem>
-	    <para><guilabel>Confirm connection</guilabel> &mdash;
-        Display a dialog box confirming your connection.</para>
+	    <para><guilabel>Confirmar conexión</guilabel> &mdash;
+        Muestra un diálogo pidiendo confirmación para la conexión.</para>
       </listitem>
 
       <listitem>
        <para>
-        <guilabel>Updates per second</guilabel> &mdash; Set the update
-        rate of <application>Modem Lights
-        Applet's</application> display.</para>
+        <guilabel>Tiempo de actualización (s)</guilabel> &mdash; Indica el tiempo que tarda en actualizar el <application>Aplique del Monitor de Modem</application> con los datos actuales.</para>
       </listitem>
  <listitem>
-	    <para><guilabel>Show connect time and
-        throughput</guilabel> &mdash; add two text windows to the
-        applet showing the time you have been connected at the data
-        transfer rate. This is a good way to monitor your modem's
-        performance.</para>
+	    <para><guilabel>Mostrar tiempo de conexión y caudal</guilabel> &mdash; añade dos cajas de texto en el aplique mostrando el tiempo que lleva conectado y el ratio de
+       transferencia de datos. Esto es útil para monitorizar el funcionamiento de su modem.</para>
       </listitem>
      </itemizedlist>
 
     </para>
 
     <para> 
-      After you have made all the changes you want, click on
-      <guibutton>OK</guibutton> to apply the changes and close the
-      <interface>Properties</interface> dialog. To cancel the changes
-      and return to previous values, click the
-      <guibutton>Cancel</guibutton> button.
+      Después de haber hecho todos los cambios que desee, pulse en el botón 
+      <guibutton>Aceptar</guibutton> para aplicar los cambios y cerrar el diálogo 
+      <interface>Propiedades</interface>. Para
+cancelar los cambios y restaurar los valores anteriores, pulse el botón <guibutton>Cancelar</guibutton>.
     </para>
  
     <figure id="modemlights-fig3">
-     <title>Advanced preferences dialog</title>
+     <title>Diálogo de propiedades avanzadas</title>
      <screenshot>
-      <screeninfo>Advanced preferences dialog</screeninfo>
+      <screeninfo>Diálogo de propiedades avanzadas</screeninfo>
       <graphic format="png" fileref="figures/modemlights-advpref"
 	       srccredit="John Fleck">
       </graphic>
     </screenshot>
    </figure>
-    <para><application>Modem Lights Applet's</application>
-    <interface>Advanced preferences window</interface> allows you to
-    control advanced features of the applet.</para>
+    <para>
+    <interface>Ventana de propiedades avanzadas</interface> del <application>Aplique del monitor de modem</application> le permite controlar las características avanzadas del aplica.</para>
    
  <para>
-     The properties are:
+     Las propiedades son:
      <itemizedlist>
 
       <listitem>
-	    <para><guilabel>Modem lock file:</guilabel> &mdash;
-    specifies the file created by the computer when the modem is
-    working, allowing other programs to know it is in
-    operation. <filename>/var/lock/LCK..modem</filename>, the default
-    setting, is the most common, if your computer uses a symbolic link
-    from <filename>/dev/modem</filename> to the actual modem
-    device. Check with your system administrator to see if a different
-    device name and therefore lock file is in use. <application>Modem
-    Lights Applet</application> needs this information to find and
-    monitor your modem.</para>
+	    <para><guilabel>Archivo de bloqueo del modem:</guilabel> &mdash;
+especifica el archivo que el ordenador crea cuando el modem está en funcionamiento, permitiendo que otros programas sepan que está en marcha. El archivo <filename>/var/lock/LCK..modem</filename> es el valor por defecto, es el más común, si su ordenador usa un enlace simbólico desde <filename>/dev/modem</filename> al dispositivo ("device")de modem actual . Consulte con el administrador de su sistema para ver si usa un nombre
+       de dispositivo diferente y por tanto que archivo de bloqueo utiliza. El <application>Aplique de Monitor de Modem</application>necesita conocer esta información
+       para encontrar y monitorizar su modem.</para>
       </listitem>
 
       <listitem>
-	    <para><guilabel>Verify owner of lock file</guilabel>
-        &mdash;  verify that the lockfile really belongs to the
-        currently running PPP daemon and is not left over from an
-        older one. This is checked by default and shouldn't be changed.</para>
+	    <para><guilabel>Verificar el dueño del fichero de bloqueo</guilabel>
+        &mdash; verifica que el archivo de bloqueo pertenezca al demonio PPP que esté actualmente funcionando y no es un archivo creado con anterioridad. Esta opción está habilitada por defecto y no debería cambiarse.</para>
 
 
 
       </listitem>
 
       <listitem>
-	    <para><guilabel>Device</guilabel> &mdash; Device, typically
-    <filename>ppp0</filename> on a Linux machine, is the name of the
-    network interface being used by the modem. If
-    <filename>ppp0</filename> is not correct for your machine, check
-    your system documentation for the correct designation.</para>
+	    <para><guilabel>Dispositivo</guilabel> &mdash; El dispositivo, normalmente <filename>ppp0</filename> en un equipo Linux, es el nombre del interfaz de red que el modem usa. Si el dispositivo
+    <filename>ppp0</filename> no es el que usa su equipo, consulte la documentación de su sistema para saber el nombre del dispositivo.</para>
 
-    <para>Other possible network interface names commonly used include
-    <filename>ippp0</filename> for Linux ISDN;
-    <filename>isp0</filename> for NetBSD ISDN and
-    <filename>ipdptp0</filename> for Solaris PPP.</para>
+    <para>Otros nombres de interfaz de red comúnmente usados son
+    <filename>ippp0</filename> para Linux RDSI;
+    <filename>isp0</filename> para NetBSD RDSI y
+    <filename>ipdptp0</filename> para Solaris PPP.</para>
 
 
 
   </listitem>
 <listitem>
-	<para><guilabel>Use ISDN</guilabel> &mdash; If you use
-    an ISDN modem, check the <guilabel>Use ISDN</guilabel>
-    checkbox. <application>Modem Lights Applet</application> will then
-    ignore all the settings above related to standard modems.</para>
+	<para><guilabel>Usar RDSI</guilabel> &mdash; Si utiliza un modem RDSI, habilite la casilla <guilabel>Usar RDSI</guilabel>. El <application>Aplique del Monitor de Modem</application> entonces ignorará todos los
+       parámetros de configuración anteriores relacionados con los modems estándar.</para>
       </listitem>
      </itemizedlist>
     </para>
 
     <para> 
-      After you have made all the changes you want, click on
-      <guibutton>OK</guibutton> to apply the changes and close the
-      <interface>Properties</interface> dialog. To cancel the changes
-      and return to previous values, click the
-      <guibutton>Cancel</guibutton> button.
+      Después de que haya hecho todos los cambios que desee, pulse en el botón 
+      <guibutton>Aceptar</guibutton> para aplicar los cambios y cerrar el diálogo <interface>Propiedades</interface>. Para
+cancelar los cambios y restaurar los valores anteriores, apriete el botón <guibutton>Cancelar</guibutton>.
     </para>
 
 
 
-  
-  
-
-    <para> After you made all the choices you want, click on
-      <guibutton>OK</guibutton> to make the changes and close the
-      <interface>Properties</interface> dialog. To cancel the changes
-      and return to previous values, click on
-      <guibutton>Cancel</guibutton> button.
+   <para> 
+      Después de que haya hecho todos los cambios que desee, pulse en el botón 
+      <guibutton>Aceptar</guibutton> para aplicar los cambios y cerrar el diálogo <interface>Propiedades</interface>. Para
+cancelar los cambios y restaurar los valores anteriores, apriete el botón <guibutton>Cancelar</guibutton>.
     </para>
   </sect3>
   
   <sect3 id="modemlights-bugs">
-    <title> Known bugs and limitations</title>
+    <title> Problemas conocidos y limitaciones</title>
     <para>
-    The <guilabel>Verify lock file</guilabel> check box on the
-    advanced preferences window should always be left true. It is
-    likely to be removed from future versions of <application>Modem
-    Lights Applet.</application>
+    La casilla de <guilabel>Verificar el dueño del fichero de bloqueo</guilabel> en la ventana de propiedades avanzadas debería estar siempre activada. Esto se
+corregirá en próximas versiones del <application>Aplique del Monitor de Modem</application>.
     </para>
   </sect3>
 
 
-
-  <!-- ============= Authors ================================ -->
-
-  <sect3 id="modemlights-authors">
-   <title>Authors</title>
-   <para>
-    <application>Modem Lights Applet</application> was written by 
-    John Ellis (<email>johne@bellatlantic.net</email>) and Martin
-    Baulig (<email>martin@home-of-linux.org</email>). Please send all comments,
-    suggestions, and bug 
-    reports to the <ulink url="http://bugs.gnome.org" type="http">GNOME
-    bug tracking database</ulink>. (Instructions for submitting bug
-    reports can be found <ulink
-    url="http://bugs.gnome.org/Reporting.html" type="http">
-    on-line</ulink>. If you are using
-    GNOME 1.1 or later, you can also use <application>Bug Report
-    Tool</application> (<command>bug-buddy</command>), available in the
-    <guisubmenu>Utilities</guisubmenu> submenu of <guimenu>Main
-    Menu</guimenu>, for submitting bug reports.
-   </para>
-
-   <para>
-    This manual was written by John Fleck
-    (<email>jfleck@inkstain.net</email>). Please send all comments and
-    suggestions regarding this manual to the <ulink type="http"
-    url="http://www.gnome.org/gdp">GNOME Documentation Project</ulink> 
-    by sending an email to <email>docs@gnome.org</email>. You can also
-    submit comments online by using the <ulink type="http"
-    url="http://www.gnome.org/gdp/doctable/">GNOME Documentation Status
-    Table</ulink>.
-   </para>
-
-   <!-- For translations: uncomment this:
-
-   <para>
-    Latin translation was done by ME
-    (<email>MYNAME@MYADDRESS</email>). Please send all  comments  and
-    suggestions regarding this translation to SOMEWHERE.
-   </para>
-
-   -->
-
-  </sect3>
-
-
-  <!-- ============= Application License ============================= -->
-
-  <!-- 
-   <sect3 id="license">
-   <title>License</title>
-   <para>
-    This program is free software; you can redistribute it and/or
-    modify it under the terms of the <citetitle>GNU General Public
-    License</citetitle> as published by the Free Software Foundation;
-    either version 2 of the License, or (at your option) any later
-    version.
-   </para>
-   <para>
-    This program is distributed in the hope that it will be useful, but
-    WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    <citetitle>GNU General Public License</citetitle> for more details.
-   </para>
-   <para>
-    A copy of the <citetitle>GNU General Public License</citetitle> is
-    included as an appendix to the <citetitle>GNOME Users
-    Guide</citetitle>.  You may also obtain a copy of the
-    <citetitle>GNU General Public License</citetitle> from the Free
-    Software Foundation by visiting <ulink type="http"
-    url="http://www.fsf.org">their Web site</ulink> or by writing to
-    <address>
-     Free Software Foundation, Inc.
-     <street>59 Temple Place</street> - Suite 330
-     <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
-     <country>USA</country>
-    </address>
-   </para>
-  </sect3>
-
-
---> 
- </sect2>
+<!-- Comentado para la guía de usuario
+&authors;
+&license;
+&license-es;
+-->
+</sect2>
 

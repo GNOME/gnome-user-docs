@@ -12,7 +12,7 @@ sgml_ents = \
 	gnomecc.sgml		\
 	gpl-appendix.sgml	\
 	nautilus-user-manual.sgml	\
-	newbies.sgml		\
+	unix-primer.sgml	\
 	panel.sgml		\
 	ug-applets.sgml		\
 	wheeler.sgml		\
