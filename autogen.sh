@@ -7,7 +7,7 @@ test -z "$srcdir" && srcdir=.
 ORIGDIR=`pwd`
 cd $srcdir
 
-PROJECT=gdp-example1
+PROJECT=gnome-user-docs
 TEST_TYPE=-f
 FILE=Makefile.am
 

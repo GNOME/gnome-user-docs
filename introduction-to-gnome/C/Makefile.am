@@ -1,10 +1,8 @@
-figs = \
-	figures/desktop.png	\
-	figures/microguiborder.png
+figdir = figures
 docname = introduction-to-gnome
 lang = C
 omffile = introduction-to-gnome-C.omf
-sgml_ents =
-include $(top_srcdir)/sgmldocs.make
+include $(top_srcdir)/xmldocs.make
 dist-hook: app-dist-hook
-
+entities = \
+	legal.xml
