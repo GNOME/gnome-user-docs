@@ -8,11 +8,9 @@ sgml_ents = \
 	desktop.sgml		\
 	fdl.sgml		\
 	gmenu.sgml		\
-	gnome-users-guide.sgml	\
 	gnomecc.sgml		\
 	gpl-appendix.sgml	\
 	nautilus-user-manual.sgml	\
-	unix-primer.sgml	\
 	panel.sgml		\
 	ug-applets.sgml		\
 	wheeler.sgml		\
