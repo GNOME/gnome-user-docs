@@ -3,4 +3,3 @@ SUBDIRS = \
 	introduction-to-gnome
 
 EXTRA_DIST = gnome-user-docs.spec COPYING-DOCS xmldocs.make omf.make
-
