@@ -1,0 +1,191 @@
+docname = gnome-users-guide
+lang = it
+omffile = gnome-users-guide-it.omf
+include $(top_srcdir)/sgmldocs.make
+dist-hook: app-dist-hook
+sgml_ents = \
+	authors.sgml		\
+	desktop.sgml		\
+	fdl.sgml		\
+	gmenu.sgml		\
+	gnome-users-guide.sgml	\
+	gnomecc.sgml		\
+	gpl-appendix.sgml	\
+	nautilus-user-manual.sgml	\
+	newbies.sgml		\
+	panel.sgml		\
+	ug-applets.sgml		\
+	wheeler.sgml		\
+	wms.sgml
+figs = \
+figures/anotherclock-applet.png			\
+figures/anotherclock-properties.png		\
+figures/applet_props_dialog.png			\
+figures/asclock_applet.png			\
+figures/asclock_settings.png			\
+figures/battery-applet-ac-offline-25-20.png	\
+figures/battery-applet-ac-online-25-20.png	\
+figures/battery-applet-graph.png		\
+figures/battery-applet-properties-general.png	\
+figures/battery-applet-properties-graph.png	\
+figures/battery-applet-properties-messages.png	\
+figures/battery-applet-properties-readout.png	\
+figures/bg-capplet.png				\
+figures/border1.png				\
+figures/cdplayer_applet.png			\
+figures/charpick_applet.png			\
+figures/charpick_applet_settings.png		\
+figures/charpick_characters.png			\
+figures/clock_applet.png			\
+figures/clock_settings.png			\
+figures/clockmail-prefs-general.png		\
+figures/clockmail-prefs-theme.png		\
+figures/clockmail_applet.png			\
+figures/cpuload-applet-default.png		\
+figures/cpuload-applet-greyed.png		\
+figures/cpuload-applet-properties.png		\
+figures/cpuload-applet.png			\
+figures/cpumemusage-applet.png			\
+figures/create_launcher.png			\
+figures/custicon.png				\
+figures/deskguide-fig.png			\
+figures/deskguide-properties-advanced-fig.png	\
+figures/deskguide-properties-geometry-fig.png	\
+figures/deskguide-properties-tasks-fig.png	\
+figures/deskguide-properties.png		\
+figures/deskguide-tasklist-fig.png		\
+figures/diskusage-applet-prefs.png		\
+figures/diskusage-applet.png			\
+figures/drawer_open.png				\
+figures/drawer_properties.png			\
+figures/drivemount_applet_all.png		\
+figures/drivemount_applet_floppy.png		\
+figures/drivemount_applet_settings.png		\
+figures/drivemount_applet_tooltip.png		\
+figures/example_applets.png			\
+figures/example_menu.png			\
+figures/example_panel.png			\
+figures/fifteen_applet.png			\
+figures/fish_applet.png				\
+figures/fish_settings.png			\
+figures/full-1.png				\
+figures/full-2.png				\
+figures/full-3.png				\
+figures/full-4.png				\
+figures/full-5.png				\
+figures/full-6.png				\
+figures/full-desk.png				\
+figures/full.png				\
+figures/gccalf.png				\
+figures/gccappdef.png				\
+figures/gccdialog.png				\
+figures/gccedit.png				\
+figures/gcchints.png				\
+figures/gccmdi.png				\
+figures/gccmime.png				\
+figures/gccsession-props.png			\
+figures/gccsessopt.png				\
+figures/gccsound1.png				\
+figures/gccsound2.png				\
+figures/gccstartup.png				\
+figures/gccurl.png				\
+figures/geyes_applet.png			\
+figures/geyes_settings.png			\
+figures/gkb_add_list.png			\
+figures/gkb_applet.png				\
+figures/gkb_applet_settings.png			\
+figures/gkb_edit_keymap.png			\
+figures/glob_pref_anim.png			\
+figures/gnome-logo-large.png			\
+figures/gnotes-fig.png				\
+figures/gnotes-properties.png			\
+figures/gweather_applet.png			\
+figures/gweather_settings.png			\
+figures/gweather_weather.png			\
+figures/hide-button.png				\
+figures/jbc_applet.png				\
+figures/keyboard-capplet.png			\
+figures/launcher_properties_advanced.png	\
+figures/launcher_properties_basic.png		\
+figures/life-applet.png				\
+figures/link.png				\
+figures/loadavg-applet-default.png		\
+figures/loadavg-applet-greyed.png		\
+figures/loadavg-applet-properties.png		\
+figures/loadavg-applet.png			\
+figures/locbar.png				\
+figures/logout-screen.png			\
+figures/mailcheck-applet.png			\
+figures/mailcheck-properties-mailbox.png	\
+figures/mailcheck-properties-mailcheck.png	\
+figures/mainmenu_properties.png			\
+figures/memload-applet-default.png		\
+figures/memload-applet-greyed.png		\
+figures/memload-applet-properties.png		\
+figures/memload-applet.png			\
+figures/menueditor.png				\
+figures/mini-commander_applet.png		\
+figures/mini-commander_settings_general.png	\
+figures/mixer_applet.png			\
+figures/mm-button.png				\
+figures/modemlights-advpref.png			\
+figures/modemlights-prefs.png			\
+figures/modemlights.png				\
+figures/mouse-capplet.png			\
+figures/netload-applet-default.png		\
+figures/netload-applet-greyed.png		\
+figures/netload-applet-properties.png		\
+figures/netload-applet.png			\
+figures/noread.png				\
+figures/nowrite.png				\
+figures/odometer_applet.png			\
+figures/odometer_settings.png			\
+figures/odometer_themes.png			\
+figures/panel_applets.png			\
+figures/panel_lockbut.png			\
+figures/panel_logoutbut.png			\
+figures/panel_props_back.png			\
+figures/panel_props_edge.png			\
+figures/panel_runbutton.png			\
+figures/panel_runprogram.png			\
+figures/panel_swallow.png			\
+figures/part-1.png				\
+figures/part-2.png				\
+figures/part-3.png				\
+figures/part.png				\
+figures/player-1.png				\
+figures/player-2.png				\
+figures/player-3.png				\
+figures/player-4.png				\
+figures/player.png				\
+figures/prefmenu.png				\
+figures/printer-fig.png				\
+figures/printer-properties.png			\
+figures/quicklaunch_applet.png			\
+figures/screensave-capplet.png			\
+figures/sidebar.png				\
+figures/soundmonitor_applet.png			\
+figures/soundmonitor_applet_settings.png	\
+figures/soundmonitor_applet_themes.png		\
+figures/soundmonitor_manager_server.png		\
+figures/status_dock.png				\
+figures/swapload-applet-default.png		\
+figures/swapload-applet-greyed.png		\
+figures/swapload-applet-properties.png		\
+figures/swapload-applet.png			\
+figures/tasklist-fig.png			\
+figures/tasklist-properties-size.png		\
+figures/tasklist-properties.png			\
+figures/tasklist-rightclick-fig.png		\
+figures/theme-select.png			\
+figures/tickastat_applet.png			\
+figures/tickastat_coredump.png			\
+figures/tickastat_loadaverage.png		\
+figures/tickastat_settings.png			\
+figures/viewmenu.png				\
+figures/viewmusic.png				\
+figures/webcontrol-applet-prefs.png		\
+figures/webcontrol-applet.png			\
+figures/whereami_applet.png			\
+figures/wm-add.png				\
+figures/wm-main.png
