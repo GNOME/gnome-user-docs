@@ -1,11 +1,8 @@
-# Note that this is NOT a relocateable package
-
 %define name            gnome-user-docs
 %define ver             @VERSION@
 %define RELEASE         1
 %define rel             %{?CUSTOM_RELEASE} %{!?CUSTOM_RELEASE:%RELEASE}
 %define localstatedir   /var/lib
-
 
 Summary: 	General GNOME User Documentation
 Name:		%name
@@ -18,7 +15,7 @@ URL:		http://developer.gnome.org/projects/gdp/
 Group: 		Documentation
 BuildArch: 	noarch
 BuildRoot: 	/var/tmp/%{name}-%{ver}-root
-BuildRequires:  scrollkeeper
+BuildRequires:  scrollkeeper >= @SCROLLKEEPER_REQUIRED@
 Obsoletes:	gnome-users-guide
 
 %description
@@ -29,9 +26,8 @@ directly associated with any particular GNOME application or package.
 %setup
 %build
 ./configure --prefix %{_prefix}	--datadir=%{_datadir} \
-    --mandir=$RPM_BUILD_ROOT%{_mandir} \
-    --sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
-    --localstatedir=$RPM_BUILD_ROOT%{localstatedir}
+    --mandir=%{_mandir} --sysconfdir=%{_sysconfdir} \
+    --localstatedir=%{localstatedir}
 make 
 
 %install
@@ -55,10 +51,15 @@ if which scrollkeeper-update>/dev/null 2>&1; then scrollkeeper-update; fi
 %files
 %defattr(-, root, root)
 %doc COPYING COPYING-DOCS AUTHORS README ChangeLog NEWS INSTALL
-%{_datadir}/gnome/help
+%{_datadir}/gnome/help/*
 %{_datadir}/omf/%{name}
 
 %changelog
+* Mon Apr 16 2001 Gregory Leblanc <gleblanc@grego1.cu-portland.edu>
+- fixed ./configure section
+- cleaned up whitespace
+- fixed %files section
+
 * Tue Mar 20 2001 Gregory Leblanc <gleblanc@cu-portland.edu>
 - use RPM defined macros, remove hard-coded paths, add build
   requirement for scrollkeeper
@@ -68,3 +69,4 @@ if which scrollkeeper-update>/dev/null 2>&1; then scrollkeeper-update; fi
 
 * Mon Nov 27 2000 Kenny Graunke <kwg@teleport.com>
 - Initial cut
+
