@@ -9,7 +9,6 @@
 %define datadir         /usr/share
 %define sysconfdir      /etc
 %define localstatedir   /var/lib
-%define skreq           @SCROLLKEEPER_REQUIRED@
 
 
 Summary: 	General GNOME User Documentation
@@ -22,8 +21,6 @@ Source: 	%{name}-%{version}.tar.gz
 Group: 		Documentation
 BuildArch: 	noarch
 BuildRoot: 	/var/tmp/%{name}-%{ver}-root
-
-Requires:   	scrollkeeper >= %skreq
 
 %description
 This package contains general GNOME user documentation which is not 
@@ -48,10 +45,10 @@ make prefix=$RPM_BUILD_ROOT%{prefix} \
 rm -rf $RPM_BUILD_ROOT
 
 %post
-scrollkeeper-update
+if which scrollkeeper-udpate>/dev/null 2>&1; then scrollkeeper-udpate; fi
 
 %postun
-scrollkeeper-update
+if which scrollkeeper-udpate>/dev/null 2>&1; then scrollkeeper-udpate; fi
 
 %files
 %defattr(-, root, root)
