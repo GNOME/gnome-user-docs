@@ -12,15 +12,16 @@ and how to create a custom option.</para>
       <secondary>introduction</secondary>
     </indexterm>
     <para>A theme is a group of coordinated settings that specifies the visual
-appearance of a part of the desktop environment. Users can choose themes to
-change the appearance of the desktop.</para>
-    <para>A theme contains settings that affect different parts of the GNOME desktop,
+appearance of a part of the GNOME Desktop. Users can choose themes to change
+the appearance of the GNOME Desktop.</para>
+    <para>A theme contains settings that affect different parts of the GNOME Desktop,
 as follows:</para>
     <variablelist>
       <varlistentry>
         <term>Controls</term>
         <listitem>
-          <para><indexterm><primary>themes</primary><secondary>controls options</secondary><tertiary>introduction</tertiary></indexterm><indexterm><primary>GTK+ themes</primary><see>themes, controls options</see></indexterm>The controls setting for a theme determines the visual
+          <para><indexterm><primary>themes</primary><secondary>controls options</secondary><tertiary>introduction</tertiary></indexterm><indexterm><primary>GTK+ themes</primary><see>themes, controls
+options</see></indexterm>The controls setting for a theme determines the visual
 appearance of windows, panels, and applets. The controls setting also determines
 the visual appearance of the GNOME-compliant interface items that appear on
 windows, panels, and applets, such as menus, icons, and buttons. Some of the
@@ -32,17 +33,8 @@ preference tool.</para>
       <varlistentry>
         <term>Window frame</term>
         <listitem>
-          <indexterm>
-            <primary>themes</primary>
-            <secondary>window frame options</secondary>
-            <tertiary>introduction</tertiary>
-          </indexterm>
-          <indexterm>
-            <primary>Metacity themes</primary>
-            <see>themes, window frame options</see>
-          </indexterm>
-          <para>The window frame setting
-for a theme determines the appearance of the frames around windows only. Users
+          <para><indexterm><primary>themes</primary><secondary>window frame options</secondary><tertiary>introduction</tertiary></indexterm><indexterm><primary>Metacity themes</primary><see>themes, window frame options</see></indexterm>The window frame setting for
+a theme determines the appearance of the frames around windows only. Users
 can choose an option for the window frame setting from the <guilabel>Window
 Border</guilabel> tabbed section in the <application>Theme</application> preference
 tool.</para>
@@ -51,16 +43,7 @@ tool.</para>
       <varlistentry>
         <term>Icon</term>
         <listitem>
-          <indexterm>
-            <primary>themes</primary>
-            <secondary>icons options</secondary>
-            <tertiary>introduction</tertiary>
-          </indexterm>
-          <indexterm>
-            <primary>icon themes</primary>
-            <see>themes, icons options</see>
-          </indexterm>
-          <para>The icon setting for a theme determines the appearance of
+          <para><indexterm><primary>themes</primary><secondary>icons options</secondary><tertiary>introduction</tertiary></indexterm><indexterm><primary>icon themes</primary><see>themes, icons options</see></indexterm>The icon setting for a theme determines the appearance of
 the icons on panels and the desktop background. Users can choose an option
 for the icon setting from the <guilabel>Icons</guilabel> tabbed section in
 the <application>Theme</application> preference tool.</para>
@@ -71,7 +54,7 @@ the <application>Theme</application> preference tool.</para>
   <sect1 id="themes-17">
     <title>Theme Index File</title>
     <para>Each theme has an index file which defines the characteristics of the
-theme. The name of the index file is <filename>/usr/share/theme/<replaceable>theme-name</replaceable>/index.theme</filename>. </para>
+theme. The name of the index file is <filename>/usr/share/themes/<replaceable>theme-name</replaceable>/index.theme</filename>. </para>
     <para>The following is a sample theme index file:</para>
     <literallayout>[Desktop Entry]
 Type=X-GNOME-Metatheme
@@ -105,83 +88,82 @@ ApplicationFont=sans 18
         </thead>
         <tbody>
           <row>
-            <entry colname="colspec0">
+            <entry colname="colspec0" valign="top">
               <para>
                 <literal>Type</literal>
               </para>
             </entry>
-            <entry colname="colspec1">
-              <para>Specifies that this theme determines the appearance
-of several theme options, such as controls, window frames, and icons.</para>
+            <entry colname="colspec1" valign="top">
+              <para>Specifies that this theme determines
+the appearance of several theme options, such as controls, window frames,
+and icons.</para>
             </entry>
           </row>
           <row>
-            <entry colname="colspec0">
+            <entry colname="colspec0" valign="top">
               <para>
                 <literal>Name</literal>
               </para>
             </entry>
-            <entry colname="colspec1">
-              <para>The name of the theme. This is the name of
-the theme that is displayed in the <application>Theme</application> preference
-tool.</para>
+            <entry colname="colspec1" valign="top">
+              <para>The name of the theme. This is
+the name of the theme that is displayed in the <application>Theme</application>
+preference tool.</para>
             </entry>
           </row>
           <row>
-            <entry colname="colspec0">
+            <entry colname="colspec0" valign="top">
               <para>
                 <literal>Comment</literal>
               </para>
             </entry>
-            <entry colname="colspec1">
-              <para>A brief description of the theme. This is
-the text that is displayed under the name of the theme in the <application>Theme</application> preference tool.</para>
+            <entry colname="colspec1" valign="top">
+              <para>A brief description of the theme.
+This is the text that is displayed under the name of the theme in the <application>Theme</application> preference tool.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para>
                 <literal>GtkTheme</literal>
               </para>
             </entry>
-            <entry>
-              <para>Corresponds to the controls setting in the <application>Theme</application>
-preference tool. Specifies which controls setting option to apply to windows,
-panels, and applets.</para>
+            <entry valign="top">
+              <para>Corresponds to the controls setting in the <application>Theme</application> preference tool. Specifies which controls setting option
+to apply to windows, panels, and applets.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para>
                 <literal>IconTheme</literal>
               </para>
             </entry>
-            <entry>
-              <para>Corresponds to the icons setting in the <application>Theme</application> preference
-tool. Specifies which icons setting option to apply to panels and the desktop
-background.</para>
+            <entry valign="top">
+              <para>Corresponds to the icons setting in the <application>Theme</application> preference tool. Specifies which icons setting option
+to apply to panels and the desktop background.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para>
                 <literal>MetacityTheme</literal>
               </para>
             </entry>
-            <entry>
-              <para>Corresponds to the window frame setting in the <application>Theme</application>
-preference tool. Specifies which window frame setting option to apply to windows.</para>
+            <entry valign="top">
+              <para>Corresponds to the window frame setting in the <application>Theme</application> preference tool. Specifies which window frame setting
+option to apply to windows.</para>
             </entry>
           </row>
           <row>
-            <entry colname="colspec0">
+            <entry colname="colspec0" valign="top">
               <para>
                 <literal>ApplicationFont</literal>
               </para>
             </entry>
-            <entry colname="colspec1">
-              <para>Corresponds to the application font setting
-in the <application>Font</application> preference tool.</para>
+            <entry colname="colspec1" valign="top">
+              <para>Corresponds to the application font setting in the <application>Font</application>
+preference tool.</para>
             </entry>
           </row>
         </tbody>
@@ -290,9 +272,10 @@ as follows:</para>
         </listitem>
       </varlistentry>
     </variablelist>
-    <para>Typically, a new option for the icons setting
-is supplied as a <filename>.tar.gz</filename> file. To install the new icons
-option, unzip the <filename>.tar.gz</filename> file, then untar the <filename>.tar</filename> file into the <filename>/usr/share/icons</filename> directory.</para>
+    <para>Typically, a new option for the icons setting is supplied
+as a <filename>.tar.gz</filename> file. To install the new icons option, unzip
+the <filename>.tar.gz</filename> file, then untar the <filename>.tar</filename>
+file into the <filename>/usr/share/icons</filename> directory.</para>
     <para>Users can install their own options for the icons setting. If a user
 installs an option for the icons setting, the option is stored in the <filename>$HOME/.icons/<replaceable>option-name</replaceable></filename> directory.</para>
   </sect1>
@@ -302,17 +285,17 @@ installs an option for the icons setting, the option is stored in the <filename>
       <primary>themes</primary>
       <secondary>installing icons</secondary>
     </indexterm>
-    <para>The desktop environment provides several themes that are
-designed for users with special visual needs. For example, some of the themes
-are designed for users with low vision. Several versions of icons might be
-required so that the icon can be displayed properly in each theme.</para>
+    <para>The GNOME Desktop provides several themes that are designed
+for users with special visual needs. For example, some of the themes are designed
+for users with low vision. Several versions of icons might be required so
+that the icon can be displayed properly in each theme.</para>
     <para>You might need to install a new icon for an application. When you install
 a new icon, you must create several versions of the icon, so that the icon
 displays correctly in the themes. You must create several versions of the
 following types of icon:</para>
     <itemizedlist>
       <listitem>
-        <para>Icons that are used within applications in the desktop environment.</para>
+        <para>Icons that are used within applications in the GNOME Desktop.</para>
       </listitem>
       <listitem>
         <para>Icons that are used internally by GTK+ applications, or GTK+
@@ -344,12 +327,13 @@ versions of the icon:</para>
 icons above also, for themes that do not require large print.</para>
     <para>Install the icons to the image files location that is specified for
 the theme in <xref linkend="themes-3"/> or <xref linkend="themes-5"/>. For example,
-to add icons to the HighContrast theme, add the icons to the <filename>/usr/share/themes/HighContrast/pixmaps</filename> directory. Add references to the icons to the relevant theme files.
-For example, to add icons to the HighContrast theme, add references to the
-icons to the <filename>/usr/share/themes/HighContrast/gtk-2.0/gtkrc</filename>
-file. </para>
+to add icons to the HighContrastLargePrint theme, add the icons to the <filename>/usr/share/themes/HighContrastLargePrint/pixmaps</filename> directory. Add
+references to the icons to the relevant theme files. For example, to add icons
+to the HighContrastLargePrint theme, add references to the icons to the <filename>/usr/share/themes/HighContrastLargePrint/gtk-2.0/gtkrc</filename> file. Modify
+the <filename>gtkrc</filename> file for the theme to associate the icon with
+a GTK stock icon identifier.<!--More info required from Calum.--></para>
     <para>For more information on how to create icons for application launchers
-and for panels, see <ulink url="http://www.freedesktop.org/standards/icon-theme-spec.html">http://www.freedesktop.org/standards/icon-theme-spec.html</ulink>.</para>
+and for panels, see <ulink url="http://www.freedesktop.org/Standards/icon-theme-spec">http://www.freedesktop.org/Standards/icon-theme-spec</ulink>.</para>
   </sect1>
   <sect1 id="themes-15">
     <title>To Create a Custom Controls Option</title>
@@ -370,12 +354,12 @@ create the following directories:</para>
         <itemizedlist>
           <listitem>
             <para>
-              <filename>/usr/share/themes/SmallPrint/gtk-2.0</filename>
+              <filename>/usr/share/themes/SmallPrint</filename>
             </para>
           </listitem>
           <listitem>
             <para>
-              <filename>/usr/share/themes/SmallPrint/pixmaps</filename>
+              <filename>/usr/share/themes/SmallPrint/gtk-2.0</filename>
             </para>
           </listitem>
         </itemizedlist>

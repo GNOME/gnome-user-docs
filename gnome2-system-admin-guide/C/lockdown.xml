@@ -1,0 +1,202 @@
+<chapter id="lockdown-0">
+  <title>Disabling GNOME Desktop Features</title>
+  <highlights>
+    <para>This chapter describes how to disable particular features
+of the GNOME Desktop.</para>
+  </highlights>
+  <sect1 id="lockdown-1">
+    <title>Introduction to Disabling GNOME Desktop Features</title>
+    <indexterm>
+      <primary>disabling features</primary>
+      <secondary>introduction</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>lockdown</primary>
+      <see>disabling features</see>
+    </indexterm>
+    <para>The GNOME Desktop includes features that you can use
+to restrict access to certain functions in the GNOME Desktop. The disable
+features are useful in various situations where you want to restrict the actions
+that users can perform on a computer. For example, you might want to prevent
+command line operations on a computer that is for public use at a trade show.
+The disable features are also known as <emphasis>lockdown</emphasis> features.</para>
+    <para>You set <application>GConf</application> keys to disable features. For
+information about how to set <application>GConf</application> keys, see <xref linkend="gconf-0"/>. You can also use the <application>Configuration Editor</application> application to set <application>GConf</application> keys in
+a user configuration source. For more information about the <application>Configuration Editor</application> application, see the <citetitle>GConf Editor
+Manual</citetitle>.</para>
+  </sect1>
+  <sect1 id="lockdown-2">
+    <title>To Disable Lock Screen and Log Out</title>
+    <indexterm>
+      <primary>disabling features</primary>
+      <secondary>lock screen</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>disabling features</primary>
+      <secondary>log
+out</secondary>
+    </indexterm>
+    <para>To disable the lock screen and log out functions, set the <literal>/apps/panel/global/disable_lock_screen</literal> key and the <literal>/apps/panel/global/disable_log_out</literal> key to <literal>true</literal>.</para>
+    <para>When you disable
+the lock screen and log out functions, the following items are removed from
+the panels:</para>
+    <itemizedlist>
+      <listitem>
+        <para><guimenuitem>Lock Screen</guimenuitem> and <guimenuitem>Log
+Out <replaceable>user</replaceable></guimenuitem> menu items from the <guimenu>Main Menu</guimenu>.</para>
+      </listitem>
+      <listitem>
+        <para><guimenuitem>Lock</guimenuitem> and <guimenuitem>Log Out</guimenuitem>
+menu items from the <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Actions</guimenuitem></menuchoice> menu. To open this menu, right-click on
+a vacant space on a panel, then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Actions</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para><guimenuitem>Lock Screen</guimenuitem> and <guimenuitem>Log
+Out <replaceable>user</replaceable></guimenuitem> menu items from the <guimenu>Actions</guimenu> menu in the <application>Menu Bar</application> applet.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Also, any <guibutton>Lock Screen</guibutton> buttons and <guibutton>Log Out</guibutton> buttons on panels are disabled.</para>
+  </sect1>
+  <sect1 id="lockdown-12">
+    <title>To Disable Command Line Operations</title>
+    <indexterm>
+      <primary>disabling features</primary>
+      <secondary>command line</secondary>
+    </indexterm>
+    <para>To disable operations from a command line, set the <literal>/desktop/gnome/lockdown/disable_command_line</literal> key to <literal>true</literal>.</para>
+    <para>When you disable command line operations, the following
+changes occur in the user interface:</para>
+    <itemizedlist>
+      <listitem>
+        <para>The <guimenuitem>Run Application</guimenuitem> menu item is
+removed from the following menus:</para>
+        <itemizedlist>
+          <listitem>
+            <para>
+              <guimenu>Main Menu</guimenu>
+            </para>
+          </listitem>
+          <listitem>
+            <para><guimenu>Actions</guimenu> submenu in the <guimenu>Add to
+Panel</guimenu> menu</para>
+          </listitem>
+          <listitem>
+            <para><guimenu>Actions</guimenu> menu in the <application>Menu Bar</application> applet</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>Any <guibutton>Run</guibutton> buttons on panels are disabled.</para>
+      </listitem>
+    </itemizedlist>
+    <para>To disable command line operations, you must also remove menu items
+that start terminal applications. For example, you might want to remove menu
+items that contain the following commands from the menus:</para>
+    <itemizedlist>
+      <listitem>
+        <para><application>GNOME Terminal</application> command, that is <command>/usr/bin/gnome-terminal</command></para>
+      </listitem>
+      <listitem>
+        <para>
+          <command>/usr/bin/xterm</command>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <command>/usr/bin/setterm</command>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>The items are removed from the following menus:</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <guimenu>Main Menu</guimenu>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <menuchoice>
+            <guimenu>Add to Panel</guimenu>
+            <guimenuitem>Launcher from menu</guimenuitem>
+          </menuchoice>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>To disable command line operations, you must also disable the <application>Command Line</application> applet. To disable the <application>Command Line</application> applet, add the applet to the <literal>/apps/panel/global/disabled_applets</literal> key. When you disable the <application>Command Line</application>
+applet, the <application>Command Line</application> applet is removed from
+the <guimenu>Main Menu</guimenu> and the <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Utility</guimenuitem></menuchoice> menu. </para>
+  </sect1>
+  <sect1 id="lockdown-11">
+    <title>To Disable Panel Configuration</title>
+    <indexterm>
+      <primary>disabling features</primary>
+      <secondary>panel configuration</secondary>
+    </indexterm>
+    <para>To disable panel configuration, set the <literal>/apps/panel/global/locked_down</literal> key to <literal>true</literal>.</para>
+    <para>When you disable
+panel configuration, the following changes occur in the user interface:</para>
+    <itemizedlist>
+      <listitem>
+        <para>The following items are removed from the panel popup menu,
+and from the drawer popup menu:</para>
+        <itemizedlist>
+          <listitem>
+            <para>
+              <guimenuitem>Add to Panel</guimenuitem>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <guimenuitem>Delete This Panel</guimenuitem>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <guimenuitem>Properties</guimenuitem>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <guimenuitem>New Panel</guimenuitem>
+            </para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>The launcher popup menu is disabled.</para>
+      </listitem>
+      <listitem>
+        <para>The following items are removed from the applet popup menu:</para>
+        <itemizedlist>
+          <listitem>
+            <para>
+              <guimenuitem>Remove From Panel</guimenuitem>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <guimenuitem>Lock</guimenuitem>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <guimenuitem>Move</guimenuitem>
+            </para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>The <guimenu>Main Menu</guimenu> popup menu is disabled. </para>
+      </listitem>
+      <listitem>
+        <para>The launcher drag feature is disabled, so that users cannot
+drag launchers to, or from, panels.</para>
+      </listitem>
+      <listitem>
+        <para>The panel drag feature is disabled, so that users cannot drag
+panels to new locations.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+</chapter>

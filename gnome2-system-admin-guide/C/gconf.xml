@@ -1,20 +1,18 @@
 <chapter id="gconf-0">
   <title>Using GConf</title>
   <highlights>
-    <para>The information in this chapter describes how to use <application>GConf</application> to manage user preferences.</para>
-    <para>
-      <application>Configuration Editor</application>
-    </para>
+    <para>The information in this chapter describes how to use <application>GConf</application> to manage user preferences. This chapter also describes
+how to use <application>Configuration Editor</application>.</para>
   </highlights>
   <sect1 id="gconf-1">
-    <title>Introducing GConf</title>
+    <title>Introducion to GConf</title>
     <indexterm>
       <primary>GConf</primary>
       <secondary>introduction</secondary>
     </indexterm>
     <para><application>GConf</application> simplifies the administration of preferences
-for users in the desktop environment. <application>GConf</application> enables
-system administrators to do the following:</para>
+for GNOME Desktop users. <application>GConf</application> enables system administrators
+to do the following:</para>
     <itemizedlist>
       <listitem>
         <para>Set mandatory values for particular preferences for all users.
@@ -47,9 +45,6 @@ preference, all applications that use the preference are immediately updated.</p
         <para>A command line tool, <command>gconftool-2</command>.</para>
       </listitem>
     </itemizedlist>
-    <para>
-      <application>Configuration Editor</application>
-    </para>
   </sect1>
   <sect1 id="gconf-24">
     <title>GConf Repository</title>
@@ -63,8 +58,8 @@ is an element in the repository that corresponds to an application preference.
 For example, the <literal>/apps/gnome-session/options/show_splash_screen</literal>
 preference key corresponds to the <guilabel>Show splash screen on login</guilabel>
 option in the <application>Sessions</application> preference tool.  The GNOME
-Desktop user interface does not contain all of the preference keys in the <application>GConf</application> repository. For example, the <application>Sessions</application>
-preference tool does not contain an option that corresponds to the <literal>/apps/gnome-session/options/allow_tcp_connections</literal> key.</para>
+Desktop user interface does not contain all of the preference keys in the <application>GConf</application> repository. For example, the <application>Panel</application>
+preference tool does not contain an option that corresponds to the <literal>/apps/panel/global/tooltips_enabled</literal> key.</para>
     <para>The repository is structured like a simple hierarchical file system.
 The repository contains the following:</para>
     <itemizedlist>
@@ -109,8 +104,8 @@ is referred to as <literal>/desktop/gnome/interface/font_name</literal>.</para>
       <para>The <application>GConf</application> repository contains
 a series of storage locations that are called <firstterm>configuration sources</firstterm>. The configuration sources are listed in the <firstterm>GConf
 path file</firstterm>. The location of the <application>GConf</application>
-path file is <filename>/etc/gconf/<replaceable>version-number</replaceable>/path</filename>. Each user has a path file. Each line in the path file specifies
-the following information:</para>
+path file is <filename>/etc/gconf/<replaceable>gconf-version-number</replaceable>/path</filename>. Each user has a path file. The path file specifies the following
+information for each configuration source:</para>
       <itemizedlist>
         <listitem>
           <para>The backend module to use to read the repository. </para>
@@ -122,10 +117,11 @@ the following information:</para>
           <para>The location of the repository.</para>
         </listitem>
       </itemizedlist>
-      <para>By default, the contents of the <application>GConf</application> path
-file are as follows: </para>
+      <para>The <application>GConf</application> path file also contains <literal>include</literal> instructions. By default, the contents of the <application>GConf</application> path file are as follows: </para>
       <literallayout>xml:readonly:/etc/gconf/gconf.xml.mandatory
+include /etc/gconf/2/local-mandatory.path
 include &quot;$(HOME)/.gconf.path&quot;
+include /etc/gconf/2/local-defaults.path
 xml:readwrite:$(HOME)/.gconf
 xml:readonly:/etc/gconf/gconf.xml.defaults</literallayout>
       <para>When <application>GConf</application> searches for a preference value, <application>GConf</application> reads the configuration sources in the order specified
@@ -137,10 +133,10 @@ in the path file:</para>
           <colspec colwidth="68.71*"/>
           <thead>
             <row rowsep="1">
-              <entry valign="top">
+              <entry>
                 <para>Configuration Source</para>
               </entry>
-              <entry valign="top">
+              <entry>
                 <para>Description</para>
               </entry>
             </row>
@@ -164,6 +160,9 @@ mandatory.</para>
                 <para>This configuration source is stored in the <filename>.gconf</filename> directory
 in the home directory of the user. When the user sets a preference, the new
 preference information is added to this location. </para>
+                <para>You can use
+the <application>Configuration Editor</application> to modify the user configuration
+source.</para>
               </entry>
             </row>
             <row>
@@ -193,10 +192,59 @@ order of priority:</para>
           <para>Default preferences</para>
         </listitem>
       </orderedlist>
-      <para>The <literal>include</literal> instruction in the <application>GConf</application> path file enables users to use another configuration source.
-To use another configuration source, the user must specify the location of
-the configuration source. The user specifies the location of the configuration
+      <para>The <literal>include</literal> instructions in the <application>GConf</application> path file enable system administrators to specify other configuration
+sources. </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Included Configuration Source</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <filename>/etc/gconf/2/local-mandatory.path</filename>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Use this configuration
+source to store mandatory preference values for a particular system.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <filename>$(HOME)/.gconf.path</filename>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>The user specifies the location of  the configuration
 source in the home directory, in a file that is called <filename>.gconf.path</filename>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <filename>/etc/gconf/2/local-defaults.path</filename>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Use this configuration
+source to store default preference values for a particular system.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
     </sect2>
     <sect2 id="gconf-27">
       <title>GConf Schemas</title>
@@ -234,10 +282,10 @@ and the relationship of these items to preference keys:</para>
           <colspec colname="colspec1" colwidth="75.69*"/>
           <thead>
             <row rowsep="1">
-              <entry valign="top">
+              <entry>
                 <para>Item</para>
               </entry>
-              <entry valign="top">
+              <entry>
                 <para>Description</para>
               </entry>
             </row>
@@ -294,10 +342,10 @@ and a schema object:</para>
           <colspec colname="colspec1" colwidth="75.69*"/>
           <thead>
             <row rowsep="1">
-              <entry valign="top">
+              <entry>
                 <para>Item</para>
               </entry>
-              <entry valign="top">
+              <entry>
                 <para>Example</para>
               </entry>
             </row>
@@ -376,13 +424,14 @@ a <filename>.schemas</filename> extension.</para>
 new configuration source.</para>
       <para>Some schema definition files correspond closely to a part of the GNOME
 Desktop user interface. For example, <filename>system_http_proxy.schemas</filename>
-corresponds to the <application>Network Proxy</application> preference tool.
-Other schema definition files contain preference keys that are not present
-in the GNOME Desktop user interface. For example, the <literal>/apps/gnome-session/options/splash_screen_text</literal> key is not present in the user interface. </para>
+corresponds to the <application>Network Proxy</application> preference tool. Other schema definition files contain
+preference keys that are not present in the GNOME Desktop user interface.
+For example, the <literal>/apps/panel/global/tooltips_enabled</literal> key
+is not present in the user interface. </para>
       <para>Some parts of the GNOME Desktop user interface contain preferences that
 represent preference keys from more than one schema definition file. For example,
-the <application>Keyboard Shortcuts</application> preference tool contains
-preferences that represent keys from the <filename>panel-global-config.schemas</filename> and <filename>metacity.schemas</filename> files.</para>
+the <application>Keyboard Shortcuts</application> preference tool contains preferences that represent
+keys from the <filename>panel-global-config.schemas</filename> and <filename>metacity.schemas</filename> files.</para>
     </sect2>
   </sect1>
   <sect1 id="gconf-25">
@@ -478,10 +527,10 @@ use with the <command>gconftool-2</command> command.</para>
         <colspec colname="colspec1" colwidth="64.48*"/>
         <thead>
           <row rowsep="1">
-            <entry valign="top">
+            <entry>
               <para>Option</para>
             </entry>
-            <entry valign="top">
+            <entry>
               <para>Function</para>
             </entry>
           </row>
@@ -535,7 +584,7 @@ Ensure that the <application>GConf</application> daemon, <command>gconfd-2</comm
             </entry>
           </row>
           <row>
-            <entry colname="colspec0">
+            <entry colname="colspec0" valign="top">
               <para>
                 <literal>--dump</literal>
               </para>
@@ -573,14 +622,13 @@ key that you specify.</para>
             </entry>
           </row>
           <row>
-            <entry colname="colspec0">
+            <entry colname="colspec0" valign="top">
               <para>
                 <literal>--load=<replaceable>filename</replaceable></literal>
               </para>
             </entry>
             <entry colname="colspec1">
-              <para>Use
-this option to sets the values of preference keys in the current directory
+              <para>Use this option to sets the values of preference keys in the current directory
 in a configuration source to the values in the file that you specify. The
 file that you specify must contain XML descriptions of the keys, in a <literal>&lt;gconfentryfile&gt;</literal> element.</para>
             </entry>
@@ -905,6 +953,7 @@ false</userinput>
       </para>
       <para>You can also set other print manager preferences. For information on
 the other print manager preferences, see the <filename>gnome-print-manager.schemas</filename> schema definition file.</para>
+<!--gnome-print-manager isn't in Mercury. Is there a replacement?-->
     </sect2>
     <sect2 id="gconf-12">
       <title>To Set the Number of Workspaces</title>
@@ -957,7 +1006,7 @@ true</userinput>
       <para>
         <computeroutput>#</computeroutput>
         <userinput>gconftool-2 --direct --config-source
-xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set desktop/gnome/accessibility/keyboard/enable
+xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /desktop/gnome/accessibility/keyboard/enable
 false</userinput>
       </para>
       <para>You can also set other keyboard accessibility preferences. For information
@@ -976,7 +1025,7 @@ on the other keyboard accessibility preferences, see the <filename>desktop_gnome
       <para>To set
 keyboard shortcut preferences, you modify the values of preference keys in <filename>/apps/metacity/global_keybindings</filename> location. For example, you might
 want users to use only the <keycombo><keycap>Alt</keycap><keycap>F3</keycap></keycombo> keyboard
-shortcut to open the <guilabel>Run Program</guilabel> dialog. To set this
+shortcut to open the <guilabel>Run Application</guilabel> dialog. To set this
 mandatory value, run the following command:</para>
       <para>
         <computeroutput>#</computeroutput>
@@ -1002,9 +1051,8 @@ preferences, setting individual </secondary>
         <primary>panels</primary>
         <secondary>preferences, individual, setting with GConf</secondary>
       </indexterm>
-      <para>The <filename>panel-default-setup.entries</filename> schema
-definition file specifies the following details of the panels in the desktop
-environment:</para>
+      <para>The <filename>panel-default-setup.entries</filename> file
+specifies the following details of the panels in the GNOME Desktop:</para>
       <itemizedlist>
         <listitem>
           <para>Number of panels.</para>
@@ -1021,14 +1069,15 @@ environment:</para>
       </itemizedlist>
       <para>The configuration of individual panels and of panel objects is a complex
 task. To configure individual panels and panel objects, you must first understand
-the structure of the <filename>panel-default-setup.entries</filename> schema
-definition file. For more information on the <filename>panel-default-setup.entries</filename> schema definition file, see the next section.</para>
+the structure of the <filename>panel-default-setup.entries</filename> file.
+For more information on the <filename>panel-default-setup.entries</filename>
+file, see the next section.</para>
       <para>To set preferences for individual panels and panel objects, you must
 set the values of many preferences in a configuration source. The easiest
 way to set the values of panel preferences is to use the <literal>gconftool-2</literal> command with the <literal>--dump</literal> and <literal>--load</literal> options. For more information on how to set preferences for panels
 and objects on panels, see <xref linkend="gconf-3"/>.</para>
       <sect3 id="gconf-23">
-        <title>Schema Definition File for Individual Panels and Panel Objects</title>
+        <title>Specifying Individual Panels and Panel Objects</title>
         <indexterm>
           <primary>GConf</primary>
           <secondary>schema definition files</secondary>
@@ -1039,15 +1088,15 @@ and objects on panels, see <xref linkend="gconf-3"/>.</para>
           <secondary>schema definition files</secondary>
           <tertiary>panel and panel object</tertiary>
         </indexterm>
-        <para>The schema definition file <filename>panel-default-setup.entries</filename> contains sections that specify panels
-and panel contents. The <filename>panel-default-setup.entries</filename> file
-is structured as follows:</para>
+        <para>The file <filename>panel-default-setup.entries</filename> contains sections that specify panels and panel contents. The <filename>panel-default-setup.entries</filename> file specifies values for schema keys.
+The <filename>panel-default-setup.entries</filename> file resides in the <filename>/etc/gconf/schemas</filename> directory. </para>
+        <para>The <filename>panel-default-setup.entries</filename> file is structured
+as follows:</para>
         <orderedlist>
           <listitem>
-            <para>Preference keys that specify the general structure of panels,
-applets, and other panel objects in the desktop environment. The following
-keys specify the number of panels, applets, and other panel objects that appear
-in the desktop environment:</para>
+            <para>Keys that specify the general structure of panels, applets,
+and other panel objects in the GNOME Desktop. The following keys specify the
+number of panels, panel objects, and applets that appear in the GNOME Desktop:</para>
             <itemizedlist>
               <listitem>
                 <para>
@@ -1056,17 +1105,17 @@ in the desktop environment:</para>
               </listitem>
               <listitem>
                 <para>
-                  <literal>/apps/panel/default_setup/general/applet_id_list</literal>
+                  <literal>/apps/panel/default_setup/general/object_id_list</literal>
                 </para>
               </listitem>
               <listitem>
                 <para>
-                  <literal>/apps/panel/default_setup/general/object_id_list</literal>
+                  <literal>/apps/panel/default_setup/general/applet_id_list</literal>
                 </para>
               </listitem>
             </itemizedlist>
-            <para>The keys also assign identifiers to each panel, applet, and panel object.
-For example, the following sample from <filename>panel-default-setup.entries</filename> specifies that one panel appears in the desktop environment:</para>
+            <para>The keys also assign identifiers to each panel, panel object, and applet.
+For example, the following sample from <filename>panel-default-setup.entries</filename> specifies that one panel appears in the GNOME Desktop:</para>
             <literallayout>&lt;entry&gt;
       &lt;key&gt;toplevel_id_list&lt;/key&gt;
       &lt;schema_key&gt;/schemas/apps/panel/general/toplevel_id_list&lt;/schema_key&gt;
@@ -1078,18 +1127,18 @@ For example, the following sample from <filename>panel-default-setup.entries</fi
         &lt;/list&gt;
       &lt;/value&gt;
     &lt;/entry&gt;</literallayout>
-            <para>In <filename>panel-default-setup.entries</filename>, the identifier <literal>bottom_panel</literal> identifies the bottom edge panel.</para>
+            <para>In the <filename>panel-default-setup.entries</filename> file, the identifier <literal>bottom_panel</literal> identifies the bottom edge panel.</para>
           </listitem>
           <listitem>
-            <para>Preference keys that specify the properties of the panels.
-The panel property keys are structured as follows:</para>
+            <para>Keys that specify the properties of the panels. The panel
+property keys are structured as follows:</para>
             <literallayout>/apps/panel/default_setup/toplevels/<replaceable>panel-name</replaceable>/<replaceable>panel-property-key</replaceable></literallayout>
             <para>For example, the key <literal>/apps/panel/default_setup/toplevels/bottom_panel/size</literal> specifies the size of the bottom panel. </para>
           </listitem>
           <listitem>
-            <para>Preference keys that list the panel objects, the panel object
-properties, and the panels in which the objects reside. For example, the following
-sample from <filename>panel-default-setup.entries</filename> specifies a <guimenu>Main Menu</guimenu> object at the left side of the bottom panel:</para>
+            <para>Keys that specify the panel objects, the panel object properties,
+and the panels in which the objects reside. For example, the following sample
+from <filename>panel-default-setup.entries</filename> specifies a <guimenu>Main Menu</guimenu> object at the left side of the bottom panel:</para>
             <literallayout>&lt;entrylist base=&quot;/apps/panel/default_setup/objects/main_menu&quot;&gt;
    &lt;entry&gt;
       &lt;key&gt;object_type&lt;/key&gt;
@@ -1118,8 +1167,8 @@ sample from <filename>panel-default-setup.entries</filename> specifies a <guimen
   &lt;/entrylist&gt;</literallayout>
           </listitem>
           <listitem>
-            <para>Preference keys that list the applets, the applet preferences,
-and the panels in which the applets reside. For example, the following sample
+            <para>Keys that specify the applets, the applet preferences, and
+the panels in which the applets reside. For example, the following sample
 from <filename>panel-default-setup.entries</filename> specifies the <application>Window List</application> applet, in the bottom panel:</para>
             <literallayout>&lt;entrylist base=&quot;/apps/panel/default_setup/applets/window_list&quot;&gt;
     &lt;entry&gt;
@@ -1154,6 +1203,13 @@ from <filename>panel-default-setup.entries</filename> specifies the <application
       &lt;/value&gt;
     &lt;/entry&gt;
   &lt;/entrylist&gt;</literallayout>
+            <para>The OAFIID is a unique identifier for an applet. To find the OAFIID
+for a particular applet, see the <filename>.server</filename> file for the
+applet in the <filename>/usr/lib/bonobo/servers</filename> directory. For
+example, the following excerpt from <filename>GNOME_Wncklet_Factory.server</filename> shows the OAFIID for the <application>Window List</application>
+applet:</para>
+            <literallayout>&lt;oaf_server iid=&quot;OAFIID:GNOME_WindowListApplet&quot; 
+type=&quot;factory&quot; location=&quot;OAFIID:GNOME_Wncklet_Factory&quot;&gt;</literallayout>
           </listitem>
         </orderedlist>
       </sect3>
@@ -1180,6 +1236,24 @@ default panel configuration in a file called <filename>my-panel-setup.entries</f
           <listitem>
             <para>Open the <filename>my-panel-setup.entries</filename> file
 in a text editor, and modify the file as required.</para>
+            <para>For example, you might want to change the location of the desktop entry
+files. The following is an excerpt from a file generated with the <literal>--dump</literal> option:</para>
+            <literallayout>&lt;entry&gt;
+      &lt;key&gt;objects/object_16/launcher_location&lt;/key&gt;
+      &lt;schema_key&gt;/schemas/apps/panel/objects/launcher_location&lt;/schema_key&gt;
+      &lt;value&gt;
+        &lt;string&gt;hadjaha-00adce02f7.desktop&lt;/string&gt;
+      &lt;/value&gt;
+    &lt;/entry&gt;</literallayout>
+            <para>In the sample above, you might want to change the reference to <literal>hadjaha-00adce02f7.desktop</literal> to another desktop entry file that is
+available globally.</para>
+            <para>When you generate a panel configuration with the <literal>--dump</literal>
+option, the positions of the panel objects are absolute positions. You might
+want to change the positions of panel objects from absolute positions to relative
+positions. The object at the extreme left of a panel has a <literal>position</literal> value of <literal>0</literal>. The next object has a <literal>position</literal> value of <literal>1</literal>, and so on. If you want object
+positions to be relative to the right side of the panel, set the value of
+the <literal>right_stick</literal> key to <literal>true</literal>. </para>
+<!--Give full key name for position.-->
           </listitem>
           <listitem>
             <para>Use the <literal>--load</literal> option with the <literal>gconftool-2</literal> command line tool to set the values of the default configuration
@@ -1219,11 +1293,12 @@ interface to which the keys correspond:</para>
           <colspec colwidth="50*"/>
           <thead>
             <row rowsep="1">
-              <entry valign="top">
+              <entry>
                 <para>GConf Location</para>
               </entry>
-              <entry valign="top">
-                <para>User Interface Component</para>
+              <entry>
+                <para>User
+Interface Component</para>
               </entry>
             </row>
           </thead>
@@ -1233,7 +1308,7 @@ interface to which the keys correspond:</para>
                 <para>/desktop/gnome/interface/font_name</para>
               </entry>
               <entry valign="top">
-                <para><application>Font</application> preference tool, <guilabel>Application font</guilabel> section</para>
+                <para><application>Font</application> preference tool, <guilabel>Application font</guilabel> option</para>
               </entry>
             </row>
             <row>
@@ -1241,7 +1316,7 @@ interface to which the keys correspond:</para>
                 <para>/apps/nautilus/preferences/desktop_font</para>
               </entry>
               <entry valign="top">
-                <para><application>Font</application> preference tool, <guilabel>Desktop font</guilabel> section</para>
+                <para><application>Font</application> preference tool, <guilabel>Desktop font</guilabel> option</para>
               </entry>
             </row>
           </tbody>
@@ -1255,13 +1330,9 @@ font, run the following command:</para>
 xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /desktop/gnome/interface/font_name &ldquo;Sans
 12&rdquo;</userinput>
       </para>
-      <indexterm>
-        <primary>desktop</primary>
-        <secondary>font preferences, setting
-with GConf</secondary>
-      </indexterm>
-      <para>To set <literal>palatino 12</literal>
-as the default desktop object font, run the following command:</para>
+      <para><indexterm><primary>desktop</primary><secondary>font preferences, setting
+with GConf</secondary></indexterm>To set <literal>palatino 12</literal> as
+the default desktop object font, run the following command:</para>
       <para>
         <computeroutput>#</computeroutput>
         <userinput>gconftool-2 --direct --config-source
@@ -1270,18 +1341,19 @@ xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/nautilus/p
       </para>
     </sect2>
     <sect2 id="gconf-20">
-      <title>To Set Desktop Background Preferences</title>
+      <title>To Set Background Preferences</title>
       <indexterm>
         <primary>GConf</primary>
-        <secondary>desktop background, setting</secondary>
+        <secondary>background, setting</secondary>
       </indexterm>
       <indexterm>
-        <primary>desktop background</primary>
-        <secondary>preferences, setting with GConf</secondary>
+        <primary>background</primary>
+        <secondary>preferences,
+setting with GConf</secondary>
       </indexterm>
-      <para>To set desktop
-background preferences, you modify the values of the preference keys in the <filename>/desktop/gnome/background</filename> location. For example, to set a mandatory
-image for the desktop background, run the following command:</para>
+      <para>To set preferences for the
+desktop background, you modify the values of the preference keys in the <filename>/desktop/gnome/background</filename> location. For example, to set a mandatory
+image for the background, run the following command:</para>
       <para>
         <computeroutput>#</computeroutput>
         <userinput>gconftool-2 --direct --config-source
@@ -1293,8 +1365,8 @@ xml:readwrite:/etc/gconf/gconf.xml.mandatory --type string --set /desktop/gnome/
         <userinput>gconftool-2 --direct --config-source
 xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /desktop/gnome/background/picture_filename <replaceable>filename.png</replaceable></userinput>
       </para>
-      <para>You can also set other desktop background preferences. For information
-on the other desktop background preferences, see the <filename>desktop_gnome_background.schemas</filename> schema definition file.</para>
+      <para>You can also set other background preferences. For information on the
+other background preferences, see the <filename>desktop_gnome_background.schemas</filename> schema definition file.</para>
     </sect2>
     <sect2 id="gconf-21">
       <title>To Set Splash Image Preferences</title>
@@ -1349,146 +1421,5 @@ configuration source in the <filename>.gconf</filename> directory in the home
 directory of the user. </para>
     <para>This command resets the values of all preference keys, in all subdirectories,
 from the user setting to the setting in the default configuration source.</para>
-  </sect1>
-  <sect1 id="gconf-4">
-    <title>Using Configuration Editor</title>
-    <indexterm>
-      <primary>GConf</primary>
-      <see>Configuration Editor</see>
-    </indexterm>
-    <indexterm>
-      <primary>Configuration Editor</primary>
-      <secondary>overview</secondary>
-    </indexterm>
-    <para><application>Configuration Editor</application> enables
-you to do the following:</para>
-    <itemizedlist>
-      <listitem>
-        <para>Modify the values of the keys in the <application>GConf</application>
-repository.</para>
-      </listitem>
-      <listitem>
-        <para>View documentation on the keys in the <application>GConf</application>
-repository.</para>
-      </listitem>
-    </itemizedlist>
-    <para>To open <application>Configuration Editor</application>, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>System Tools</guisubmenu><guimenuitem>Configuration Editor</guimenuitem></menuchoice>. <xref linkend="gconf-FIG-31"/>
-shows the <application>Configuration Editor</application> window.</para>
-    <figure id="gconf-FIG-31">
-      <title>Configuration Editor Window</title>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="figures/gconf_editor_anno_window.png" format="PNG"/>
-          </imageobject>
-          <textobject>
-            <phrase>Configuration Editor window. Callouts: Tree pane, Modification pane, Documentation pane.</phrase>
-          </textobject>
-        </mediaobject>
-      </screenshot>
-    </figure>
-    <para>The <application>Configuration Editor</application> window contains
-the following panes:</para>
-    <variablelist>
-      <varlistentry>
-        <term>Tree pane</term>
-        <listitem>
-          <para>Enables you to navigate
-the directories and subdirectories in the <application>GConf</application>
-repository. Use this pane to display the keys that you want to modify in the
-modification pane. The tree pane is on the left side of the window.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Modification pane</term>
-        <listitem>
-          <para>Displays the keys
-in the selected <application>GConf</application> repository directory. Use
-this pane to select keys that you want to modify, and to modify the values
-of keys. The modification pane is in the upper part of the right side of the
-window.</para>
-          <para>The icons beside the keys in the modification pane indicate what type
-of value you can enter for the key. For example, the check mark icon beside
-the <literal>/system/http_proxy/use_http_proxy</literal> key indicates that
-you can enter a boolean value for the key. </para>
-          <para>The icons also indicate if you cannot edit the value of a key. For example,
-a key icon beside a schema key indicates that you cannot modify the value
-of the key. </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Documentation pane</term>
-        <listitem>
-          <para>Displays documentation
-for the currently selected key. Use this pane to read more information on
-the <application>GConf</application> preference keys.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
-    <indexterm>
-      <primary>GConf</primary>
-      <secondary>GConf editor,
-using</secondary>
-    </indexterm>
-    <para>You can copy the names of keys so that
-you can paste the name of the key into another application. You can also add
-bookmarks to keys.</para>
-    <para>The following sections describe how to use the <application>Configuration
-Editor</application>.</para>
-    <sect2 id="gconf-32">
-      <title>To Modify the Value of a Key</title>
-      <indexterm>
-        <primary>Configuration Editor</primary>
-        <secondary>modifying key
-values</secondary>
-      </indexterm>
-      <para>To modify the value of a key, perform
-the following steps:</para>
-      <orderedlist>
-        <listitem>
-          <para>Use the tree pane to display the key that you want to modify
-in the modification pane. </para>
-        </listitem>
-        <listitem>
-          <para>Select the key to modify.</para>
-        </listitem>
-        <listitem>
-          <para>To change the value of an integer key or a string key, click
-in the <guilabel>Value</guilabel> column of the key. Type the new value for
-the key.</para>
-          <para>To change the value of a boolean key, click in the <guilabel>Value</guilabel>
-column of the key.</para>
-        </listitem>
-      </orderedlist>
-    </sect2>
-    <sect2 id="gconf-33">
-      <title>To Copy a Key Name</title>
-      <indexterm>
-        <primary>Configuration Editor</primary>
-        <secondary>copying key names</secondary>
-      </indexterm>
-      <para>To copy a key name, select the key whose name
-you want to copy in the modification pane. Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy key name</guimenuitem></menuchoice>. If required,
-you can paste the name of the key into another application.</para>
-    </sect2>
-    <sect2 id="gconf-5">
-      <title>Using Bookmarks With Keys</title>
-      <indexterm>
-        <primary>Configuration Editor</primary>
-        <secondary>bookmarks</secondary>
-      </indexterm>
-      <para>To access a key in your bookmarks, choose the key from the <guimenu>Bookmarks</guimenu> menu. You can add keys to your <guimenu>Bookmarks</guimenu>
-menu. </para>
-      <sect3 id="gconf-29">
-        <title>To Add a Bookmark</title>
-        <para>To add a bookmark, select the key that you want to bookmark in the modification
-pane. Choose <menuchoice><guimenu>Bookmarks</guimenu><guimenuitem>Add bookmark</guimenuitem></menuchoice>.</para>
-      </sect3>
-      <sect3 id="gconf-30">
-        <title>To Delete a Bookmark</title>
-        <para>To delete a bookmark, choose <menuchoice><guimenu>Bookmarks</guimenu><guimenuitem>Edit bookmarks</guimenuitem></menuchoice>. An <guilabel>Edit bookmarks</guilabel> dialog is displayed. Select the bookmark in the
-dialog, then click <guilabel>Delete</guilabel>. </para>
-      </sect3>
-    </sect2>
   </sect1>
 </chapter>

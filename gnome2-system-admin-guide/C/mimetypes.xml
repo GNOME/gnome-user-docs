@@ -2,7 +2,7 @@
   <title>MIME Types</title>
   <highlights>
     <para>This chapter describes how applications detect MIME types,
-how to register MIME types, and how to add applications to the desktop environment.</para>
+how to register MIME types, and how to add applications to the GNOME Desktop.</para>
   </highlights>
   <sect1 id="mimetypes-1">
     <title>Introduction to MIME Types</title>
@@ -64,7 +64,7 @@ type of the file.</para>
         <para>If file content sniffers do not identify the MIME type, then
 the application can check the filename. The application checks the filename
 against the <firstterm>MIME type registry</firstterm>. The MIME type registry
-associates particular filename extensions and filename patterns, with particular
+associates particular file extensions and filename patterns, with particular
 MIME types. If a match for the filename is found, the MIME type associated
 with the extension or pattern is the MIME type of the file.</para>
       </listitem>
@@ -80,7 +80,7 @@ and the MIME type registry.</para>
       <indexterm>
         <primary>file content sniffers</primary>
       </indexterm>
-      <para>File content sniffers are specified in the file <filename>/usr/gnome/etc/gnome-vfs-mime-magic</filename>. The following is an example of a file content sniffer:</para>
+      <para>File content sniffers are specified in the file <filename>/etc/gnome-vfs-mime-magic</filename>. The following is an example of a file content sniffer:</para>
       <literallayout>0	string		\x89PNG					image/png</literallayout>
       <para>The syntax for file content sniffers is as follows:</para>
       <literallayout>offset_start[:offset_end] pattern_type pattern [&amp;pattern_mask] type</literallayout>
@@ -93,10 +93,10 @@ sniffer.</para>
           <colspec colwidth="70.10*"/>
           <thead>
             <row rowsep="1">
-              <entry valign="top">
+              <entry>
                 <para>Field</para>
               </entry>
-              <entry valign="top">
+              <entry>
                 <para>Description</para>
               </entry>
             </row>
@@ -304,18 +304,18 @@ match the pattern and mask is <literal>image/bmp</literal>.</para>
         <primary>MIME types</primary>
         <secondary>MIME type registry</secondary>
       </indexterm>
-      <para>The MIME type registry is located in <filename>/usr/gnome/share/mime-info</filename>. The MIME type registry contains the following files:</para>
+      <para>The MIME type registry is located in <filename>/usr/share/mime-info</filename>. The MIME type registry contains the following files:</para>
       <informaltable frame="topbot">
         <tgroup cols="2" colsep="0" rowsep="0">
           <colspec colwidth="50*"/>
           <colspec colwidth="50*"/>
           <thead>
             <row rowsep="1">
-              <entry valign="top">
+              <entry>
                 <para>File</para>
               </entry>
-              <entry valign="top">
-                <para>Filename Extension</para>
+              <entry>
+                <para>File Extension</para>
               </entry>
             </row>
           </thead>
@@ -355,7 +355,7 @@ files.</para>
 associate MIME types with one or both of the following:</para>
         <itemizedlist>
           <listitem>
-            <para>Filename extensions</para>
+            <para>File extensions</para>
           </listitem>
           <listitem>
             <para>Filename patterns</para>
@@ -371,11 +371,10 @@ as a regular expression.</para>
         <literallayout><replaceable>MIME-type</replaceable>
 		ext[,priority]: <replaceable>list-of-extensions</replaceable>
 		regex[,priority]: <replaceable>list-of-regular-expressions</replaceable></literallayout>
-        <para>You can specify a priority value for the filename extension and the
-regular expression. You can use the priority value to differentiate composite
-filenames. For example, you can assign a priority of <literal>1</literal>
-to the <filename>.gz</filename> extension, and assign a higher priority of <literal>2</literal> to the <filename>.tar.gz</filename> extension. In this case, the
-file <filename>abc.tar.gz</filename> takes the MIME type for <filename>.tar.gz</filename>.</para>
+        <para>You can specify a priority value for the file extension and the regular
+expression. You can use the priority value to differentiate composite filenames.
+For example, you can assign a priority of <literal>1</literal> to the <filename>.gz</filename> extension, and assign a higher priority of <literal>2</literal>
+to the <filename>.tar.gz</filename> extension. In this case, the file <filename>abc.tar.gz</filename> takes the MIME type for <filename>.tar.gz</filename>.</para>
         <note>
           <para>You must indent the <literal>ext</literal> field and the <literal>regex</literal> field with a tab character (<literal>\t</literal>).</para>
         </note>
@@ -398,8 +397,10 @@ text/x-readme
         <note>
           <para>The file manager reads the MIME information files alphabetically.
 The alphabetical order determines the order in which MIME types are assigned
-to filename extensions or regular expressions. For example, if the same file
-extension is assigned to different MIME types in the files <filename>abc.mime</filename> and <filename>def.mime</filename>, the MIME type in <filename>abc.mime</filename> is used.</para>
+to file extensions or regular expressions. For example, if the same file extension
+is assigned to different MIME types in the files <filename>abc.mime</filename>
+and <filename>def.mime</filename>, the MIME type in <filename>abc.mime</filename>
+is used.</para>
         </note>
       </sect3>
       <sect3 id="mimetypes-11">
@@ -432,24 +433,24 @@ MIME keys files. Typically, the <literal>description</literal> key and the <lite
             <colspec colname="colspec1" colwidth="50*"/>
             <thead>
               <row rowsep="1">
-                <entry valign="top">
+                <entry>
                   <para>Key</para>
                 </entry>
-                <entry valign="top">
+                <entry>
                   <para>Description</para>
                 </entry>
               </row>
             </thead>
             <tbody>
               <row>
-                <entry colname="colspec0">
+                <entry colname="colspec0" valign="top">
                   <para>
                     <literal>can_be_executable</literal>
                   </para>
                 </entry>
-                <entry colname="colspec1">
-                  <para>Specifies whether files of this MIME type
-can be executed.</para>
+                <entry colname="colspec1" valign="top">
+                  <para>Specifies
+whether files of this MIME type can be executed.</para>
                 </entry>
               </row>
               <row>
@@ -471,7 +472,7 @@ displayed in the file manager and other applications.</para>
                 </entry>
                 <entry valign="top">
                   <para>Specifies the filename of an icon to represent the
-MIME type. Does not specify the path to the filename, or the filename extension. </para>
+MIME type. Does not specify the path to the filename, or the file extension. </para>
                   <para>This icon can be displayed in the file manager and other applications.</para>
                 </entry>
               </row>
@@ -490,8 +491,8 @@ for this MIME type for most applications.</para>
               <row>
                 <entry valign="top">
                   <para>
-                    <literal>short_list_application_ids</literal>
-                    <literal>_for_novice_user_level</literal>
+                    <literallayout>short_list_application_ids
+_for_novice_user_level</literallayout>
                   </para>
                 </entry>
                 <entry valign="top">
@@ -542,7 +543,7 @@ the following information:</para>
     </itemizedlist>
     <para>An application registration file can contain one or more application
 registrations. Application registration files have a <filename>.applications</filename> extension.</para>
-    <para>The location of the application registry is <filename>/usr/share/gnome/application-registry</filename>. This directory contains a default application registration file
+    <para>The location of the application registry is <filename>/usr/share/application-registry</filename>. This directory contains a default application registration file
 that is  called <filename>gnome-vfs.applications</filename>.</para>
     <para>To register an application, add a registration file for the application
 to the application registry. </para>
@@ -566,10 +567,10 @@ files.</para>
         <colspec colname="colspec1" colwidth="50*"/>
         <thead>
           <row rowsep="1">
-            <entry valign="top">
+            <entry>
               <para>Key</para>
             </entry>
-            <entry valign="top">
+            <entry>
               <para>Description</para>
             </entry>
           </row>
@@ -670,7 +671,7 @@ use.</para>
     </table>
   </sect1>
   <sect1 id="mimetypes-9">
-    <title>Adding an Application to the Desktop Environment</title>
+    <title>Adding an Application to the GNOME Desktop</title>
     <indexterm>
       <primary>MIME types</primary>
       <secondary>adding applications</secondary>
@@ -679,16 +680,16 @@ use.</para>
       <primary>applications</primary>
       <secondary>adding</secondary>
     </indexterm>
-    <para>To add an application to the desktop environment, perform
-the following steps:</para>
+    <para>To add an application to the GNOME Desktop, perform the
+following steps:</para>
     <orderedlist>
       <listitem>
         <para>Add a menu item for the application. For more information
 on how to add an item to a menu, see <xref linkend="menustructure-0"/>.</para>
       </listitem>
       <listitem>
-        <para>Add an icon for the application to <filename>/usr/gnome/share/icons/<replaceable>theme-name</replaceable>/<replaceable>icon-size</replaceable>/apps</filename>.
-For more information on icons and themes, see <citetitle>Installing Themes</citetitle>. </para>
+        <para>Add an icon for the application to <filename>/usr/share/icons/<replaceable>theme-name</replaceable>/<replaceable>icon-size</replaceable>/apps</filename>.
+For more information on icons and themes, see <xref linkend="themes-0"/>. </para>
       </listitem>
       <listitem>
         <para>If the application uses a new MIME type, add a file content
@@ -706,8 +707,8 @@ registry. For more information on MIME keys files, see <xref linkend="mimetypes-
       </listitem>
       <listitem>
         <para>If the application uses a new MIME type, add an icon for the
-MIME type to <filename>/usr/gnome/share/icons/<replaceable>theme-name</replaceable>/<replaceable>icon-size</replaceable>/mimetypes</filename>. For more information on icons
-and themes, see <citetitle>Installing Themes</citetitle>. </para>
+MIME type to <filename>/usr/share/icons/<replaceable>theme-name</replaceable>/<replaceable>icon-size</replaceable>/mimetypes</filename>. For more information on icons
+and themes, see <xref linkend="themes-0"/>. </para>
       </listitem>
       <listitem>
         <para>To associate the application with a MIME type, add an application
