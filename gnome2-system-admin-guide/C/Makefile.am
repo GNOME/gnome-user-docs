@@ -13,6 +13,7 @@ entities = appendixa.xml \
 	   screensavers.xml \
 	   gdm.xml \
 	   sessions.xml \
+	   help.xml \
 	   themes.xml
 
 include $(top_srcdir)/xmldocs.make
