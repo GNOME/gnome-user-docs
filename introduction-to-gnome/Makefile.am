@@ -46,6 +46,7 @@ clean:
 	rm -f *.log *.aux *.dvi *.tex
 	rm -rf DB2*OUTPUT*
 	rm -rf DBTO*OUTPUT*
+	rm -f index.html
 
 cvsclean: clean
 	[ -f Makefile.am ] && rm Makefile.in Makefile
