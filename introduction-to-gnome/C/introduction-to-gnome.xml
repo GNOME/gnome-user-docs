@@ -84,7 +84,7 @@
 	  <para>Updated for GNOME 2.0. Some descriptions and
 	  screenshots are borrowed from <citetitle>GNOME Desktop 2.0
 	  User Guide</citetitle> (May 2002), by Sun GNOME
-	  Documentation Team <email>gdocteam@sun.com></email>,
+	  Documentation Team <email>gdocteam@sun.com</email>,
 	  published by GNOME Documentation Project</para>
 	</revdescription> 
       </revision> 
@@ -1267,9 +1267,14 @@
 	  <term><guimenuitem>Run Program</guimenuitem>
 	  </term>     
 	  <listitem>
-	    <para> 
-	      This allows you to manually enter a command to run,
-	      saving you from starting full-blown terminal emulator.  
+	    <para> This allows you to manually enter a command to run,
+	      saving you from starting full-blown terminal emulator.
+	      This dialog can also be used for quick access to files:
+	      enter a filename (without any command), and this file
+	      will be opened using the default application for this
+	      file type. Finally, you can also use this dialog to
+	      quickly access documentation such as manpages (see <xref
+	      linkend="not-Gnome-docs"/> for details).
 	    </para>
 	    <tip>
 	      <title>TIP</title>
@@ -1830,7 +1835,7 @@
 	</varlistentry>
 	<varlistentry>
 	  <term>
-	    <ulink type="help" url="ghelp:user-guide">
+	    <ulink type="help" url="ghelp:system-admin-guide">
 	    <citetitle>GNOME 2.2 System Administrator Guide</citetitle>
 	     </ulink>
           </term>     
@@ -1914,10 +1919,30 @@
         very detailed and more technical than most users would like.
         Another documentation format used by utilities from the
 	GNU project is called <quote>info pages</quote>. They, too,
-	can be viewed using <application>Yelp</application>. Many
-	applications also have documentation in other formats. Sometimes
-        it is not easy to find documentation for a given application &mdash;
-        try looking in the directories  <filename>/usr/share/doc</filename>
+	can be viewed using <application>Yelp</application>.
+      </para>
+      <tip>
+	<title>TIP</title>
+	<para>
+	  A quick way to acces manual pages and info pages is to open
+	  <link linkend="actions"><guilabel>Run Program</guilabel>
+	  dialog</link>
+	  (<keycombo><keycap>Ctrl</keycap><keycap>F2</keycap> </keycombo>)
+	  and enter in it
+	  <command>man:<replaceable>commandname</replaceable></command>
+	  (without spaces) or
+	  <command>info:<replaceable>commandname</replaceable></command>.
+	  The corresponding manpage or info page will be opened in
+	  GNOME Help browser, <application>Yelp</application>.
+	</para>
+      </tip>
+
+
+
+      <para> Many third-party applications also have documentation in
+	other formats, such as plain text or HTML. Sometimes it is not
+	easy to find documentation for a given application &mdash; try
+	looking in the directories <filename>/usr/share/doc</filename>
 	and <filename>/usr/doc</filename>.
       </para>
       <para> Documentation for the operating system itself varies from one
