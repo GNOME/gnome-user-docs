@@ -1,8 +1,10 @@
 
 <appendix id="sysadmin-0">
 <title>System Administration</title>
-<para>This appendix contains some tips for the system administrator about
-how to use the assistive technologies of the GNOME Desktop.</para>
+<para>This appendix
+describes some tasks that a system administrator needs to perform to enable
+accessible login and to facilitate the use of the assistive technologies that
+are available in the GNOME Desktop.</para>
 <sect1 id="sysadmin-27">
 <title>Configuring the Desktop for Accessible Login</title>
 <indexterm>
@@ -16,9 +18,11 @@ Login feature. The Accessible Login feature enables users to: </para>
 screen, mouse, or keyboard in the usual way.</para>
 </listitem>
 <listitem>
-<para>Launch assistive technologies at login time by using special
-gestures from the standard keyboard, or from a keyboard, pointing device,
-or switch device that is attached to the USB or PS/2 mouse port.</para>
+<para>Launch assistive technologies at login time by associating
+a user action with an assistive technology application. The user can perform
+the user action from the standard keyboard, or from a keyboard, pointing device,
+or switch device that is attached to the USB or PS/2 mouse port. These user
+actions are called gestures.</para>
 </listitem>
 <listitem>
 <para>Change the visual appearance of the login dialog before the
@@ -31,12 +35,11 @@ user logs in, for example, to use a high contrast theme for better visibility. <
 <primary>GDM</primary>
 </indexterm>
 <para>To enable the Accessible
-Login feature for the GNOME Desktop,
-you must configure the desktop to use the GNOME Display Manager (GDM) as the
-login manager. Since GDM is the default login manager on Linux systems but
-not on Solaris systems, the instructions to enable Accessible Login differ
-depending on the platform you are using. See the following sections for more
-information.</para>
+Login feature for the GNOME
+Desktop, you must configure the desktop to use the GNOME Display Manager
+(GDM) as the login manager. GDM is the default login manager on Linux systems
+but not on Solaris systems, therefore the instructions to enable Accessible
+Login differ depending on the platform you are using. </para>
 <sect3 id="sysadmin-38">
 <title>To Enable and Configure GDM on Solaris Systems</title>
 <para>To enable and configure GDM as the login manager on Solaris systems,
@@ -46,7 +49,7 @@ perform the following steps:</para>
 <para>Log in as the <literal>root</literal> user.</para>
 </listitem>
 <listitem>
-<para>Edit the file <filename>/etc/X11/gdm/gdm.conf</filename>.</para>
+<para>Open the file <filename>/etc/X11/gdm/gdm.conf</filename>.</para>
 </listitem>
 <listitem>
 <para>Search the file for the following line: </para>
@@ -79,11 +82,11 @@ Reader and Magnifier</application>. You can edit the line above further to
 load only the GtkModules that you require to support the user base. For example: </para>
 <itemizedlist>
 <listitem>
-<para>If you need to use the Screen Reader and Magnifier, include <literal>gail</literal> and <literal>atk-bridge</literal>.</para>
+<para>If you need to use the <application>Screen Reader and Magnifier</application>, include <literal>gail</literal> and <literal>atk-bridge</literal>.</para>
 </listitem>
 <listitem>
 <para>If you need to use a pointing device without buttons or switches,
-also include <literal>dwellmouselistener</literal>. </para>
+include <literal>gail</literal>, <literal>atk-bridge</literal>, and<literal>dwellmouselistener</literal>. </para>
 </listitem>
 <listitem>
 <para>If you use pointing devices with switches, alternative physical
@@ -147,7 +150,7 @@ and assign ownership of the directory to the <literal>gdm</literal> user.</para>
 <para>Log in as the <literal>root</literal> user.</para>
 </listitem>
 <listitem>
-<para>Edit the file <filename>/etc/X11/gdm/gdm.conf</filename>.</para>
+<para>Open the file <filename>/etc/X11/gdm/gdm.conf</filename>.</para>
 </listitem>
 <listitem>
 <para>Search the file for the following line: </para>
@@ -184,7 +187,7 @@ load only the GtkModules that you require to support the user base. For example:
 </listitem>
 <listitem>
 <para>If you need to use a pointing device without buttons or switches,
-also include <literal>dwellmouselistener</literal>. </para>
+include <literal>gail</literal>, <literal>atk-bridge</literal>, and <literal>dwellmouselistener</literal>. </para>
 </listitem>
 <listitem>
 <para>If you use pointing devices with switches, alternative physical
@@ -262,7 +265,17 @@ line enables you to press-and-hold <keycombo><keycap>Ctrl</keycap><keycap>S</key
 for one second to start <application>Screen Reader and Magnifier</application>
 in speech and Braille mode:</para>
 <para>
+<emphasis>Solaris:</emphasis>
+</para>
+<para>
 <literal>&lt;Control&gt;s 1 1000 10000 /usr/sfw/bin/srcore --login --disable-magnifier
+--enable-speech --enable-braille</literal>
+</para>
+<para>
+<emphasis>Linux:</emphasis>
+</para>
+<para>
+<literal>&lt;Control&gt;s 1 1000 10000 srcore --login --disable-magnifier
 --enable-speech --enable-braille</literal>
 </para>
 </sect3>
@@ -274,8 +287,18 @@ line enables you to press-and-hold <keycombo><keycap>Ctrl</keycap><keycap>M</key
 for one second to start <application>Screen Reader and Magnifier</application>
 in magnifier mode:</para>
 <para>
+<emphasis>Solaris:</emphasis>
+</para>
+<para>
 <literal>&lt;Control&gt;m 1 1000 10000 /usr/sfw/bin/srcore --login --enable-magnifier
---magnification-horizontal-split --disable-speech</literal>
+--disable-speech</literal>
+</para>
+<para>
+<emphasis>Linux:</emphasis>
+</para>
+<para>
+<literal>&lt;Control&gt;m 1 1000 10000 srcore --login --enable-magnifier
+--disable-speech</literal>
 </para>
 </sect3>
 <sect3 id="sysadmin-31">
@@ -284,21 +307,41 @@ in magnifier mode:</para>
 switch, key, or button gestures with assistive technologies. Since the primary
 input device for many <application>On-Screen Keyboard</application> users
 is a switch or button, this is a good way to enable users to start <application>On-Screen Keyboard</application> at login time. </para>
-<para>To reduce the likelihood of starting an application unintentionally,
+<para>If there is a tendency for a user to start an application unintentionally,
 you can associate the gestures with multiple switch presses or minimum durations.
 For example, the following line starts <application>On-Screen Keyboard</application>
 in inverse scanning mode when the user presses the switch that is defined
 as Switch 2 three times within two seconds, for a minimum of 100 milliseconds
 for each press:</para>
 <para>
+<emphasis>Solaris:</emphasis>
+</para>
+<para>
 <literal>&lt;Switch2&gt;3 100 2000 /usr/sfw/bin/gok --login --accessmethod=inversescanning
+--scan-action=switch1 --select-action=switch2</literal>
+</para>
+<para>
+<emphasis>Linux:</emphasis>
+</para>
+<para>
+<literal>&lt;Switch2&gt;3 100 2000 gok --login --accessmethod=inversescanning
 --scan-action=switch1 --select-action=switch2</literal>
 </para>
 <para>Users who use single switches may prefer to start <application>On-Screen
 Keyboard</application> in automatic scanning mode. The following line starts <application>On-Screen Keyboard</application> in automatic scanning mode when the user
 presses the switch on an alternative access device for more than four seconds:</para>
 <para>
+<emphasis>Solaris:</emphasis>
+</para>
+<para>
 <literal>&lt;Switch&gt;1 4000 5000 /usr/sfw/bin/gok --login --accessmethod=automaticscanning
+--scan-action=switch1 --select-action=switch1</literal>
+</para>
+<para>
+<emphasis>Linux:</emphasis>
+</para>
+<para>
+<literal>&lt;Switch&gt;1 4000 5000 gok --login --accessmethod=automaticscanning
 --scan-action=switch1 --select-action=switch1</literal>
 </para>
 <para>For information about the <application>On-Screen Keyboard</application>
@@ -320,11 +363,22 @@ the top edge, out of the dialog through the left edge, back into the dialog
 through the left edge, and similarly through the bottom and right edges of
 the dialog in a cross pattern:</para>
 <para>
+<emphasis>Solaris:</emphasis>
+</para>
+<para>
 <literal>TTLLBBRR O 10000 /usr/sfw/bin/gok --login --access-method=dwellselection
 --input-device=MOUSE[3]</literal>
 </para>
+<para>
+<emphasis>Linux:</emphasis>
+</para>
+<para>
+<literal>TTLLBBRR O 10000 gok --login --access-method=dwellselection
+--input-device=MOUSE[3]</literal>
+</para>
 <para>Note that the <literal>--input-device</literal> parameter specified
-in the gesture must match the name of the user input device as specified in <filename>/etc/X11/XF86Config</filename>.</para>
+in the gesture must match the name of the extended user input device, such
+as a head pointer or trackball, as specified in <filename>/etc/X11/XF86Config</filename>.</para>
 </sect3>
 </sect2>
 <sect2 id="sysadmin-33">
@@ -339,7 +393,10 @@ including USB single switches and mouse-like pointing devices.</para>
 <para>You should not configure an alternative input device to control
 the primary onscreen pointer. This might result in undesirable behavior or
 cause situations from which the user of the alternate input device cannot
-recover without using the primary keyboard or mouse.</para>
+recover without using the primary keyboard or mouse. To prevent this problem,
+please remove any occurrences of the attributes <literal>SendCore</literal>
+or <literal>AlwaysCore</literal> from any of <literal>InputDevice</literal>
+lines in the X Server configuration file.</para>
 </note>
 </sect2>
 </sect1>
@@ -348,15 +405,15 @@ recover without using the primary keyboard or mouse.</para>
 <indexterm>
 <primary>Java environment, configuring</primary>
 </indexterm>
-<para>To configure the Java Environment for accessibility, perform the following
-steps:</para>
+<para>To configure the Java environment on Solaris systems for accessibility, perform
+the following steps:</para>
 <orderedlist>
 <listitem>
 <para>Log in as the <literal>root</literal> user to the base directory
 of the Java SDK installation. </para>
 </listitem>
 <listitem>
-<para>Enter the following command to change to the <filename>jre/lib</filename> directory:</para>
+<para>Enter the following command:</para>
 <para>
 <command>cd jre/lib</command>
 </para>
@@ -368,31 +425,117 @@ of the Java SDK installation. </para>
 </para>
 </listitem>
 <listitem>
-<para>Enter the following command to change to the <filename>ext</filename> directory:</para>
+<para>Enter the following command:</para>
 <para>
 <command>cd ext</command>
 </para>
 </listitem>
 <listitem>
-<para>Execute the following command: </para>
+<para>Enter the following command: </para>
 <para>
 <command>ln -s /usr/share/jar/gnome-java-bridge.jar</command>
 </para>
 </listitem>
 </orderedlist>
 </sect1>
+<sect1 id="sysadmin-55">
+<title>Enabling XKB on Solaris Systems</title>
+<indexterm>
+<primary>XKB</primary>
+</indexterm>
+<para>If you are using the desktop
+for the Solaris operating system on a SPARC platform, you must enable XKB
+on your system before you can use the <application>AccessX</application> preference
+tool, <application>Screen Reader and Magnifier</application>, or <application>On-Screen Keyboard</application>. </para>
+<note>
+<para>XKB is not currently supported on Sun Ray systems.</para>
+</note>
+<para>To enable XKB on a non-Sun Ray Solaris system, perform the following
+steps:</para>
+<orderedlist>
+<listitem>
+<para>Log in as the <literal>root</literal> user.</para>
+</listitem>
+<listitem>
+<para>Check if the path and file <filename>/etc/dt/config/Xservers</filename> exists on your system.</para>
+</listitem>
+<listitem>
+<para>If the <filename>/etc/dt/config</filename> directory does
+not exist, enter the following command:</para>
+<screen>
+<command>mkdir -p /etc/dt/config</command>
+</screen>
+</listitem>
+<listitem>
+<para>If the <filename>Xservers</filename> file is not present,
+enter the following command:</para>
+<screen>
+<command>cp /usr/dt/config/Xservers /etc/dt/config/Xservers</command>
+</screen>
+</listitem>
+<listitem>
+<para>Open the <filename>Xservers</filename> file in a text editor
+and scroll to the end of the file. </para>
+</listitem>
+<listitem>
+<para>Append the following to the command line at the end of the
+file:</para>
+<screen>
+<userinput>+kb</userinput>
+</screen>
+</listitem>
+<listitem>
+<para>Save and close the <filename>Xservers</filename> file.</para>
+</listitem>
+<listitem>
+<para>Enter the following command at a command line:</para>
+<screen>
+<command>pkill -HUP dtlogin</command>
+</screen>
+</listitem>
+<listitem>
+<para>Open the <filename>/etc/X11/gdm/gdm.conf</filename> file in
+a text editor.</para>
+</listitem>
+<listitem>
+<para>Scroll towards the end of the file until you see the line <literal>[server - standard]</literal>.</para>
+</listitem>
+<listitem>
+<para>Edit the <literal>command</literal> line in this section to
+append the following to the end of the line:</para>
+<para>
+<command>+accessx +kb</command>
+</para>
+</listitem>
+<listitem>
+<para>Save and close the <filename>gdm.conf</filename> file.</para>
+</listitem>
+<listitem>
+<para>Log out of your session and log in again.</para>
+</listitem>
+<listitem>
+<para>To verify if XKB is running, execute the following command: </para>
+<para>
+<command>xdpyinfo</command>
+</para>
+<para>then search for XKEYBOARD in the extensions list.</para>
+</listitem>
+</orderedlist>
+</sect1>
 <sect1 id="sysadmin-6">
 <title>Enabling Full Screen Magnification</title>
-<para>The following sections describe two ways to enable full screen magnification.</para>
 <indexterm>
 <primary>Screen Reader and Magnifier</primary>
 <secondary>enabling
 full screen magnification</secondary>
 </indexterm>
+<para>The following sections
+describe the methods to enable full screen magnification.</para>
 <sect2 id="sysadmin-48">
-<title>To Enable Full Screen Magnification Using Two Framebuffers</title>
+<title>To Enable Full Screen Magnification Using Two Video Cards</title>
 <para>To enable full screen magnification in <application>Screen Reader and
-Magnifier</application> using two framebuffers, perform the following steps:</para>
+Magnifier</application> using two physical video cards, perform the following
+steps:</para>
 <orderedlist>
 <listitem>
 <para>Configure two video cards as :0.0 and :0.1.</para>
@@ -404,40 +547,41 @@ magnification factor.</para>
 </note>
 </listitem>
 <listitem>
-<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Screen Reader and Magnifier</guimenuitem></menuchoice> to start <application>Gnopernicus</application>.</para>
+<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Screen Reader and Magnifier</guimenuitem></menuchoice>.</para>
 </listitem>
 <listitem>
-<para>Click on <guibutton>Preferences</guibutton>.</para>
+<para>Click on <guilabel>Preferences</guilabel> in the <guilabel>Gnopernicus</guilabel> menu window.</para>
 </listitem>
 <listitem>
-<para>Click on <guibutton>Magnifier</guibutton>.</para>
+<para>Click on <guilabel>Magnifier</guilabel> to open the <guilabel>Magnifier Preferences</guilabel> dialog.</para>
 </listitem>
 <listitem>
-<para>Click on <guibutton>Add/Modify</guibutton>.</para>
+<para>Click on the <guibutton>Add/Modify</guibutton> button to display
+the <guilabel>Zoomer Options</guilabel> dialog.</para>
 </listitem>
 <listitem>
-<para>Specify :0.0 as the Source for magnification.</para>
+<para>In the <guilabel>Display Screen</guilabel> section, type <userinput>:0.0</userinput> in the <guilabel>Source</guilabel> text box. </para>
 </listitem>
 <listitem>
-<para>Specify :0.1 as the Target for magnification.</para>
+<para>In the <guilabel>Display Screen</guilabel> section, type <userinput>:0.1</userinput> in the <guilabel>Target</guilabel> text box. </para>
 </listitem>
 <listitem>
-<para>Set the Zoomer Placement to be <literal>[0,0,1023,767]</literal>.</para>
+<para>Set the Zoomer Placement values to be <literal>[0,0,1023,767]</literal>.</para>
 <note>
 <para>These instructions assume a video resolution of 1024x768. </para>
 </note>
 </listitem>
 <listitem>
-<para>Restart <application>Screen Reader and Magnifier</application>.
-The magnified view is displayed on the second display 0.1.</para>
+<para>Click <guibutton>Apply</guibutton> and <guibutton>Close</guibutton>
+to close the <guilabel>Zoomer Options</guilabel> dialog. </para>
+<para>The magnified view is displayed on the second display 0.1.</para>
 </listitem>
 </orderedlist>
 </sect2>
 <sect2 id="sysadmin-49">
-<title>To Enable Full Screen Magnification on Linux Systems Using a Dummy
-Driver</title>
-<para>To enable full screen magnification on Linux systems by configuring
-a dummy driver, perform the following steps:</para>
+<title>To Enable Full Screen Magnification Using One Video Card on Linux Systems</title>
+<para>To enable full screen magnification on Linux systems using one physical
+video card and one virtual video card, perform the following steps:</para>
 <orderedlist>
 <listitem>
 <para>Open the file <filename>/etc/X11/XF86Config</filename>.</para>
@@ -518,50 +662,125 @@ the <guilabel>Zoomer Options</guilabel> dialog.</para>
 <para>In the <guilabel>Display Screen</guilabel> section, type <userinput>:0.1</userinput> in the <guilabel>Source</guilabel> text box. </para>
 </listitem>
 <listitem>
-<para>Click <guibutton>Apply</guibutton>.</para>
-</listitem>
-<listitem>
 <para>In the <guilabel>Zoomer Placement</guilabel> section, set
 the value of the <guilabel>Left</guilabel> spin box to <userinput>0</userinput>.</para>
 </listitem>
 <listitem>
-<para>Click <guibutton>Close</guibutton> to close the <guilabel>Zoomer Options</guilabel> dialog.</para>
+<para>Click <guibutton>Apply</guibutton>.</para>
+<para>The <application>Screen Reader and Magnifier</application> user interface
+is no longer visible.</para>
 </listitem>
 <listitem>
-<para>Click <guibutton>Close</guibutton> to close the <guilabel>Magnifier Preferences</guilabel> dialog.</para>
+<para>Log out of your session.</para>
+</listitem>
+<listitem>
+<para>Log in to a new session.</para>
+</listitem>
+<listitem>
+<para>Enter the following command to start <application>Screen Reader
+and Magnifier</application> in full screen magnification mode:</para>
+<para>
+<command>gnopernicus -display :0.1</command>
+</para>
+</listitem>
+<listitem>
+<para>When you log out of your session, select the <guilabel>Save
+current setup</guilabel> option. </para>
+</listitem>
+</orderedlist>
+</sect2>
+</sect1>
+<sect1 id="sysadmin-52">
+<title>Enabling Braille</title>
+<indexterm>
+<primary>Braille, enabling</primary>
+</indexterm>
+<para>To enable
+your system to support Braille output, you must configure the access rights
+to the serial port to which the Braille device is connected. The following
+sections describe the steps that you need to perform depending on your operating
+system.</para>
+<sect2 id="sysadmin-53">
+<title>To Enable Braille on Solaris Systems</title>
+<para>To configure the serial port to which the Braille device is connected
+on Solaris systems, perform the following steps:</para>
+<orderedlist>
+<listitem>
+<para>Log in as the <literal>root</literal> user.</para>
+</listitem>
+<listitem>
+<para>Enter the following command:</para>
+<para>
+<command>chmod 777 /dev/cua/a</command>
+</para>
+</listitem>
+<listitem>
+<para>Enter the following command:</para>
+<para>
+<command>chmod 777 /dev/cua/b</command>
+</para>
+</listitem>
+<listitem>
+<para>Change the permissions to <literal>777</literal> on the devices
+to which the symbolic links <literal>/dev/cua/a</literal> and <literal>/dev/cua/b</literal> point. </para>
+</listitem>
+</orderedlist>
+<note>
+<para>If your system uses <command>/dev/cua/a</command> for system log
+messages, Braille will not work on that serial port. Use <command>/dev/cua/b</command> instead.</para>
+</note>
+</sect2>
+<sect2 id="sysadmin-54">
+<title>To Enable Braille on Linux Systems</title>
+<para>To configure the serial port to which the Braille device is connected
+on Linux systems, perform the following steps:</para>
+<orderedlist>
+<listitem>
+<para>Log in as the <literal>root</literal> user.</para>
+</listitem>
+<listitem>
+<para>Enter the following command:</para>
+<para>
+<command>chmod 777 /dev/ttyS0</command>
+</para>
+</listitem>
+<listitem>
+<para>Enter the following command:</para>
+<para>
+<command>chmod 777 /dev/ttyS1</command>
+</para>
 </listitem>
 </orderedlist>
 </sect2>
 </sect1>
 <sect1 id="sysadmin-37">
-<title>Configuring Multiple Pointer Devices</title>
+<title>Configuring Alternative Pointer Devices</title>
 <para>The following sections describe how to configure your system to use
 a standard physical mouse and another pointer device such as a single switch
 device or head tracker device, and how to configure <application>On-Screen
 Keyboard</application> to use the second pointer device.</para>
 <sect2 id="sysadmin-45">
-<title>To Configure Two Pointer Devices on Solaris Systems</title>
+<title>To Configure Alternative Pointer Devices on Solaris Systems</title>
 <indexterm>
 <primary>configuring two pointer devices</primary>
 <secondary>on
 Solaris systems</secondary>
 </indexterm>
-<para><application>Screen Reader and
-Magnifier</application>To configure two pointer devices on a Solaris system,
-perform the following steps:</para>
+<para>To configure an alternative pointer
+device on a Solaris system, perform the following steps:</para>
 <note>
-<para>This procedure does not work for all Solaris platforms.</para>
+<para>This procedure does not work on all Solaris platforms.</para>
 </note>
 <orderedlist>
 <listitem>
-<para>Before you connect the auxiliary pointer device to your system,
-enter the following command to list the existing devices:</para>
+<para>Before you connect the alternative pointer device to your
+system, enter the following command to list the existing devices:</para>
 <para>
 <command>ls -l /dev/usb/hid*</command>
 </para>
 </listitem>
 <listitem>
-<para>Connect the auxiliary device to your system.</para>
+<para>Connect the alternative pointer device to your system.</para>
 </listitem>
 <listitem>
 <para>Enter the following command again to list the new device:</para>
@@ -614,24 +833,24 @@ file.</para>
 </orderedlist>
 </sect2>
 <sect2 id="sysadmin-46">
-<title>To Configure Two Pointer Devices on Linux Systems</title>
+<title>To Configure Alternative Pointer Devices on Linux Systems</title>
 <indexterm>
 <primary>configuring two pointer devices</primary>
 <secondary>on
 Linux systems</secondary>
 </indexterm>
-<para>To configure two pointer devices
-on a Linux system, perform the following steps:</para>
+<para>To configure an alternative pointer
+device on a Linux system, perform the following steps:</para>
 <orderedlist>
 <listitem>
-<para>Before you connect the auxiliary pointer device to your system,
-enter the following command to list the existing devices:</para>
+<para>Before you connect the alternative pointer device to your
+system, enter the following command to list the existing devices:</para>
 <para>
 <command>ls -l /dev/usb/hid*</command>
 </para>
 </listitem>
 <listitem>
-<para>Connect the auxiliary device to your system.</para>
+<para>Connect the alternative pointer device to your system.</para>
 </listitem>
 <listitem>
 <para>Enter the following command again to list the new device:</para>
@@ -646,7 +865,7 @@ enter the following command to list the existing devices:</para>
 <para>Edit the <literal>InputDevice</literal> section where the <literal>Driver</literal> value is set to <literal>mouse</literal> as follows:</para>
 <itemizedlist>
 <listitem>
-<para>Change the <literal>Option Device</literal> line as follows:</para>
+<para>Change the <literal>Option Device</literal> line to the following:</para>
 <para>
 <literallayout>Option &quot;Device&quot; &quot;/dev/input/mouse0&quot;</literallayout>
 </para>
@@ -685,7 +904,7 @@ and other pointer device, you do not need to carry out this step.</para>
 <itemizedlist>
 <listitem>
 <para>Change the <literal>InputDevice &quot;Mouse[1]&quot;</literal> line
-as follows:</para>
+to the following:</para>
 <para>
 <literallayout>InputDevice &quot;Mouse[1]&quot; &quot;CorePointer&quot;</literallayout>
 </para>
@@ -702,9 +921,10 @@ as follows:</para>
 </listitem>
 </itemizedlist>
 <note>
-<para>If you are not using USB connections for your primary mouse device
-and other pointer device, ensure that only the device that you are using as
-the primary mouse device has the <literal>&quot;CorePointer&quot;</literal> attribute.</para>
+<para>Ensure that only the device that you are using as the primary
+mouse device has the <literal>&quot;CorePointer&quot;</literal> attribute and ensure
+that the alternate input devices do not have the <literal>SendCore</literal>
+or <literal>AlwaysCore</literal> attributes.</para>
 </note>
 </listitem>
 <listitem>
@@ -716,17 +936,17 @@ the primary mouse device has the <literal>&quot;CorePointer&quot;</literal> attr
 </orderedlist>
 </sect2>
 <sect2 id="sysadmin-47">
-<title>To Configure On-Screen Keyboard to Use the Second Pointer Device</title>
+<title>To Configure On-Screen Keyboard to Use an Alternative Pointer Device</title>
 <indexterm>
 <primary>On-Screen Keyboard</primary>
 <secondary>configuring for
 two pointer devices</secondary>
 </indexterm>
-<para>To configure the <application>On-Screen Keyboard</application> application to use a second pointer device,
-perform the following steps.</para>
+<para>To configure the <application>On-Screen Keyboard</application> application to use an alternative pointer
+device, perform the following steps.</para>
 <orderedlist>
 <listitem>
-<para>Start the <application>On-Screen Reader</application> application.</para>
+<para>Start the <application>On-Screen Keyboard</application> application.</para>
 </listitem>
 <listitem>
 <para>Click on <guilabel>GOK</guilabel> in the <guilabel>GOK - main</guilabel> window.</para>

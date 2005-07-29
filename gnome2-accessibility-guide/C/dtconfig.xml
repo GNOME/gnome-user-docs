@@ -193,6 +193,10 @@ information.</para>
 <para>Use the <application>Keyboard Accessibility</application> preference
 tool, also known as <application>AccessX</application>, to configure the keyboard
 accessibility options. To start <application>AccessX</application>, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Keyboard</guimenuitem></menuchoice>.</para>
+<note>
+<para>Before you can use the <application>Keyboard Accessibility</application>
+preference tool on Solaris systems, you must follow the steps outlined in <xref linkend="sysadmin-55"/> of this guide.</para>
+</note>
 <para>The <guilabel>Keyboard Accessibility Preferences (AccessX)</guilabel>
 dialog enables you to customize your keyboard in the following ways:</para>
 <itemizedlist>
@@ -219,73 +223,6 @@ a toggle key. See <xref linkend="dtconfig-18"/>.</para>
 repeat rate of a keypress. See <xref linkend="dtconfig-19"/>.</para>
 </listitem>
 </itemizedlist>
-<sect2 id="dtconfig-12">
-<title>Before You Can Use AccessX on Solaris Systems</title>
-<indexterm>
-<primary>XKB</primary>
-</indexterm>
-<para>If you are using the desktop
-for the Solaris 8 or Solaris 9 operating system, you must enable XKB on your
-system before you can use the <application>AccessX</application> preference
-tool. </para>
-<note>
-<para>XKB is not currently supported on Sun Ray systems.</para>
-</note>
-<para>To enable XKB on a non-Sun Ray Solaris system, perform the following
-steps:</para>
-<orderedlist>
-<listitem>
-<para>Log in as root.</para>
-</listitem>
-<listitem>
-<para>Check if the path and file <filename>/etc/dt/config/Xservers</filename> exists on your system.</para>
-</listitem>
-<listitem>
-<para>If the <filename>/etc/dt/config</filename> directory does
-not exist, enter the following command:</para>
-<screen>
-<command>mkdir -p /etc/dt/config</command>
-</screen>
-</listitem>
-<listitem>
-<para>If the <filename>Xservers</filename> file is not present,
-enter the following command:</para>
-<screen>
-<command>cp /usr/dt/config/Xservers /etc/dt/config/Xservers</command>
-</screen>
-</listitem>
-<listitem>
-<para>Open the <filename>Xservers</filename> file in a text editor
-and scroll to the end of the file. </para>
-</listitem>
-<listitem>
-<para>Append the following to the command line at the end of the
-file:</para>
-<screen>
-<userinput>+kb</userinput>
-</screen>
-</listitem>
-<listitem>
-<para>Save and close the file.</para>
-</listitem>
-<listitem>
-<para>Enter the following command at a command line:</para>
-<screen>
-<command>pkill -HUP dtlogin</command>
-</screen>
-</listitem>
-<listitem>
-<para>Log out of your session and log in again.</para>
-</listitem>
-<listitem>
-<para>To verify if XKB is running, execute the following command: </para>
-<para>
-<command>xdpyinfo</command>
-</para>
-<para>then search for XKEYBOARD in the extensions list.</para>
-</listitem>
-</orderedlist>
-</sect2>
 <sect2 id="dtconfig-13">
 <title>To Activate the Keyboard Accessibility Options</title>
 <indexterm>
@@ -293,6 +230,9 @@ file:</para>
 </indexterm>
 <para>To activate the keyboard accessibility options, perform the following steps: </para>
 <orderedlist>
+<listitem>
+<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Keyboard</guimenuitem></menuchoice>.</para>
+</listitem>
 <listitem>
 <para>Select the <guilabel>Enable keyboard accessibility features</guilabel> option.</para>
 </listitem>
@@ -324,8 +264,8 @@ the keyboard accessibility options. </para>
 different users, some of whom require the keyboard accessibility options. </para>
 </listitem>
 <listitem>
-<para>If you are a Linux user, you must log out and log in again
-before the accessibility settings take effect.</para>
+<para>If you are a Linux user, log out and log in again before the
+accessibility settings take effect.</para>
 </listitem>
 </orderedlist>
 </sect2>
@@ -340,6 +280,9 @@ This feature benefits users who have difficulty using a mouse or other pointing
 device. To enable and configure the mouse keys feature, perform the following
 steps:</para>
 <orderedlist>
+<listitem>
+<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Keyboard</guimenuitem></menuchoice>.</para>
+</listitem>
 <listitem>
 <para>Click on the <guilabel>Mouse Keys</guilabel> tab.</para>
 </listitem>
@@ -384,7 +327,7 @@ move. </para>
 <para>When you enable mouse keys, the keys on the numeric keypad have the
 following functions:</para>
 <table frame="topbot" id="dtconfig-TBL-1">
-<title>Numeric Keypad to Mouse Functions Mapping on Solaris Systems</title>
+<title>Numeric Keypad to Mouse Function Mapping on Solaris Systems</title>
 <tgroup cols="2" colsep="0" rowsep="0">
 <colspec colname="colspec0" colwidth="52.78*"/>
 <colspec colname="colspec1" colwidth="47.22*"/>
@@ -449,7 +392,7 @@ following functions:</para>
 </row>
 <row>
 <entry colname="colspec0" valign="top">
-<para>-</para>
+<para>&minus;</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>Mouse button 3</para>
@@ -459,7 +402,7 @@ following functions:</para>
 </tgroup>
 </table>
 <table frame="topbot" id="dtconfig-TBL-4">
-<title>Numeric Keypad to Mouse Functions Mapping on Linux Systems</title>
+<title>Numeric Keypad to Mouse Function Mapping on Linux Systems</title>
 <tgroup cols="2" colsep="0" rowsep="0">
 <colspec colname="colspec0" colwidth="50*"/>
 <colspec colname="colspec1" colwidth="50*"/>
@@ -514,7 +457,7 @@ mouse pointer around the screen</para>
 buttons. The common function key to mouse button mappings are described in
 the following table.</para>
 <table frame="topbot" id="dtconfig-TBL-2">
-<title>Function Keys to Mouse Functions Mapping on Solaris Systems</title>
+<title>Function Key to Mouse Function Mapping on Solaris Systems</title>
 <tgroup cols="2" colsep="0" rowsep="0">
 <colspec colname="colspec0" colwidth="52.78*"/>
 <colspec colname="colspec1" colwidth="47.22*"/>
@@ -580,18 +523,20 @@ This aspect of the feature benefits users who cannot see the result of a keypres
 steps:</para>
 <orderedlist>
 <listitem>
+<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Keyboard</guimenuitem></menuchoice>.</para>
+</listitem>
+<listitem>
 <para>Click on the <guilabel>Filters</guilabel> tab.</para>
 </listitem>
 <listitem>
 <para>Select the <guilabel>Enable Slow Keys</guilabel> option. </para>
 <tip>
-<para>To select or deselect this feature from the keyboard, press-and-hold <keycap>Shift</keycap> for eight seconds. This keyboard shortcut automatically selects
-all of the slow keys options. If you selected the <guilabel>Beep when features
-turned on or off from the keyboard</guilabel> option, after four seconds the
-system beeps three times to indicate that the system is about to select or
-deselect the feature. If you enable this feature from the keyboard, you must
-press-and-hold <keycap>Shift</keycap> for eight seconds again to disable the
-feature.</para>
+<para>To select or deselect the slow keys feature from the keyboard,
+press-and-hold <keycap>Shift</keycap> for eight seconds. The <keycap>Shift</keycap> keyboard shortcut automatically selects all of the slow keys options.
+If you selected the <guilabel>Beep when features turned on or off from the
+keyboard</guilabel> option, after four seconds the system beeps three times
+to indicate that the system is about to select or deselect the feature. If
+you enable this feature from the keyboard, you must press-and-hold <keycap>Shift</keycap> for eight seconds again to disable the feature.</para>
 </tip>
 </listitem>
 <listitem>
@@ -651,6 +596,9 @@ enables you to customize the keyboard to ignore repeated keypresses. </para>
 steps:</para>
 <orderedlist>
 <listitem>
+<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Keyboard</guimenuitem></menuchoice>.</para>
+</listitem>
+<listitem>
 <para>Click on the <guilabel>Filters</guilabel> tab.</para>
 </listitem>
 <listitem>
@@ -658,10 +606,11 @@ steps:</para>
 </listitem>
 <listitem>
 <para>Use the <guilabel>Ignore duplicate keypresses within</guilabel>
-slider or spin box to specify the duration in milliseconds after the first
-keypress for which the system ignores repeated keypresses of the same key.
-For example, if you select a duration of 500 ms, the system ignores all repeated
-keypresses of the same key that occur within 500 ms of the first keypress.</para>
+slider or spin box to specify the duration in milliseconds (ms) after the
+first keypress for which the system ignores repeated keypresses of the same
+key. For example, if you select a duration of 500 ms, the system ignores all
+repeated keypresses of the same key that occur within 500 ms of the first
+keypress.</para>
 </listitem>
 <listitem>
 <para>Select the <guilabel>Beep if key is rejected</guilabel> option
@@ -669,13 +618,11 @@ to hear an audible indication when the system ignores a key.</para>
 </listitem>
 </orderedlist>
 <note>
-<para>If you wish to enable the bounce keys feature, please ensure that
-the <guilabel>Enable Slow Keys</guilabel> option is deselected. The slow keys
-feature requires you to press a key for a specified duration before the system
-accepts the keypress as a valid keypress. If you cannot press the key for
-the duration that is specified by the slow keys setting, the system does not
-accept your input unless you deselect the <guilabel>Enable Slow Keys</guilabel>
-option.</para>
+<para>If you want to enable the bounce keys feature, ensure that the <guilabel>Enable Slow Keys</guilabel> option is deselected. The slow keys feature requires
+you to press a key for a specified duration before the system accepts the
+keypress as a valid keypress. If you cannot press the key for the duration
+that is specified by the slow keys setting, deselect the <guilabel>Enable
+Slow Keys</guilabel> option to enable the system to accept your input.</para>
 </note>
 </sect2>
 <sect2 id="dtconfig-17">
@@ -691,17 +638,20 @@ press two or more keys simultaneously. </para>
 steps:</para>
 <orderedlist>
 <listitem>
+<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Keyboard</guimenuitem></menuchoice>.</para>
+</listitem>
+<listitem>
 <para>Click on the <guilabel>Basic</guilabel> tab.</para>
 </listitem>
 <listitem>
 <para>Select the <guilabel>Enable Sticky Keys</guilabel> option.</para>
 <tip>
-<para>To enable the sticky keys feature from the keyboard, press <keycap>Shift</keycap> five times. This keyboard shortcut automatically selects all
-of the sticky keys options. If you selected the <guilabel>Beep when features
-turned on or off from the keyboard</guilabel> option, the system beeps to
-indicate that the system is about to select or deselect the feature. If you
-enable this feature from the keyboard, press <keycap>Shift</keycap> five times
-again to disable the feature.</para>
+<para>To enable the sticky keys feature from the keyboard, press <keycap>Shift</keycap> five times. The <keycap>Shift</keycap> keyboard shortcut automatically
+selects all of the sticky keys options. If you selected the <guilabel>Beep
+when features turned on or off from the keyboard</guilabel> option, the system
+beeps to indicate that the system is about to select or deselect the feature.
+If you enable this feature from the keyboard, press <keycap>Shift</keycap>
+five times again to disable the feature.</para>
 </tip>
 </listitem>
 <listitem>
@@ -711,9 +661,9 @@ such as <keycap>Ctrl</keycap>, <keycap>Alt</keycap>, or <keycap>Shift</keycap>.
 This option is useful to remind you whether a modifier key is active or inactive. </para>
 </listitem>
 <listitem>
-<para>To automatically disable the sticky keys feature when a user
-presses two keys simultaneously, select the <guilabel>Disable if two keys
-pressed together</guilabel> option.</para>
+<para>To automatically disable the sticky keys feature when you
+press two keys simultaneously, select the <guilabel>Disable if two keys pressed
+together</guilabel> option.</para>
 </listitem>
 </orderedlist>
 <para>You can use the sticky keys feature in latch or lock mode. The following
@@ -733,7 +683,7 @@ table describes how to choose a mode and the difference between the two modes.</
 <para>Press the modifier key...</para>
 </entry>
 <entry colname="colspec2" valign="top">
-<para>The modifier key stays active
+<para>The modifier key remains active
 until...</para>
 </entry>
 </row>
@@ -765,7 +715,8 @@ a non-modifier key.</para>
 </tbody>
 </tgroup>
 </table>
-<para>For example, if you want to press <keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo>, do the following:</para>
+<para>Example 1: If you want to press <keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo>,
+do the following:</para>
 <orderedlist>
 <listitem>
 <para>Press <keycap>Alt</keycap> to latch the modifier key. The <keycap>Alt</keycap> key remains active.</para>
@@ -776,7 +727,7 @@ After you press <keycap>F1</keycap>, the <keycap>Alt</keycap> modifier key
 is no longer active.</para>
 </listitem>
 </orderedlist>
-<para>As another example, if you want to press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>, do the following:</para>
+<para>Example 2: If you want to press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>, do the following:</para>
 <orderedlist>
 <listitem>
 <para>Press <keycap>Ctrl</keycap> twice to lock the modifier key.
@@ -806,10 +757,21 @@ toggle keys have an associated light emitting diode (LED) on the keyboard
 that lights when the toggle key is active. To assist users with visual impairments,
 you can customize the keyboard to emit an audible notification when a user
 presses a toggle key. For example, when you press <keycap>Num Lock</keycap>,
-you can determine whether the key is toggled or not toggled by the sound. </para>
-<para>To enable accessible toggle keys, select the <guilabel>Enable Toggle
-Keys</guilabel> option in the <guilabel>Filters</guilabel> tabbed section.
-When you activate the <keycap>Num Lock</keycap>, <keycap>Caps Lock</keycap>,
+you can determine whether the key is toggled or not toggled by the sound that
+the keyboard emits. </para>
+<para>To enable accessible toggle keys, perform the following steps: </para>
+<orderedlist>
+<listitem>
+<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Keyboard</guimenuitem></menuchoice>.</para>
+</listitem>
+<listitem>
+<para>Click on the <guilabel>Filters</guilabel> tab.</para>
+</listitem>
+<listitem>
+<para>Select the <guilabel>Enable Toggle Keys</guilabel> option.</para>
+</listitem>
+</orderedlist>
+<para>When you activate the <keycap>Num Lock</keycap>, <keycap>Caps Lock</keycap>,
 or <keycap>Scroll Lock</keycap> keys, the system beeps once. When you deactivate
 a toggle key, the system beeps twice.</para>
 </sect2>
@@ -827,6 +789,9 @@ the key starts to repeat.</para>
 <para>To enable and configure the repeat keys feature, perform the following
 steps: </para>
 <orderedlist>
+<listitem>
+<para>Choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guisubmenu>Accessibility</guisubmenu><guimenuitem>Keyboard</guimenuitem></menuchoice>.</para>
+</listitem>
 <listitem>
 <para>Click on the <guilabel>Basic</guilabel> tab.</para>
 </listitem>
@@ -852,8 +817,8 @@ the speed at which the keyboard repeats the keypress as input.</para>
 <primary>Keyboard Accessibility Status panel application</primary>
 </indexterm>
 <para>The <application>Keyboard Accessibility Status</application>
-panel application shows the status of the keyboard accessibility features.
-The panel application displays icons to indicate which keyboard accessibility
+panel application shows you the status of the keyboard accessibility features.
+This panel application displays icons to indicate which keyboard accessibility
 features are enabled in the <application>Keyboard Accessibility</application>
 preference tool.</para>
 <para>To add the <application>Keyboard Accessibility Status</application>
@@ -1088,7 +1053,9 @@ key is latched.</para>
 </screenshot>
 </entry>
 <entry colname="colspec1" valign="middle">
-<para>The sticky keys feature is enabled and the <keycap>Super</keycap>/<keycap>Windows</keycap> key is locked.</para>
+<para>The sticky
+keys feature is enabled and the <keycap>Super</keycap>/<keycap>Windows</keycap>
+key is locked.</para>
 </entry>
 </row>
 </tbody>
