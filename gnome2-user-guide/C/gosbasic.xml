@@ -26,15 +26,23 @@
     <primary>mouse</primary>
     <secondary>basic skills</secondary>
   </indexterm>
+  
+  <!-- Notes for future development of the mouse section
+  Contents list:
+  * buttons
+  * click, drag, etc
+  * what you actually do with those: the concept of focus, selection, etc. 
+    basically, an introduction to the 'noun, verb' grammar of GUIs
+  * pointers
+  -->
 
-  <para>Even if you are very familiar with mouse devices, you should
-  still familiarize yourself with the button conventions and action
-  terminology used in this manual. This section also describes the
+  <para>This section describes the button conventions and action
+  terminology used in this manual, and also the
   mouse pointers used throughout the desktop and applications.</para>
 
   <section id="mouse-conventions">
     <title>Mouse Button Conventions</title>
-    <titleabbrev>Conventions</titleabbrev>
+    <titleabbrev>Buttons</titleabbrev>
 
     <!-- Maintained for 2.8 compatibility -->
     <anchor id="gosgetstarted-44"/>
@@ -51,10 +59,7 @@
         <para>Devices that are configured for right-hand users.</para>
       </listitem>
       <listitem>
-        <para>Three button devices. If you have a two-button mouse device,
-        then your system may be configured to allow you to press the left
-        and right mouse buttons simultaneously to simulate the effect of
-        a middle mouse button press.</para>
+        <para>Three button devices.</para>
       </listitem>
     </itemizedlist>
 
@@ -85,6 +90,12 @@
     then you must reverse the mouse button conventions used in this manual.
     See <xref linkend="prefs-mouse"/> for more information about setting
     your mouse preferences.</para>
+    
+    <para>If you have a two-button mouse device,
+    then your system may be configured to allow you to press the left
+    and right mouse buttons simultaneously to simulate the effect of
+    a middle mouse button press.</para>
+
   </section>
 
   <section id="mouse-actions">
@@ -94,71 +105,20 @@
     <!-- Maintained for 2.8 compatibility -->
     <anchor id="gosgetstarted-45"/>
     <anchor id="gosbasic-6"/>
-
+    
     <indexterm>
       <primary>mouse</primary>
-      <secondary>actions</secondary>
+      <secondary>action conventions</secondary>
     </indexterm>
     <indexterm>
       <primary>mouse</primary>
       <secondary>action terminology</secondary>
     </indexterm>
-
-    <para>The following list describes the actions that you can perform
-    with the mouse:</para>
-
-    <variablelist>
-      <varlistentry>
-        <term>Left mouse button</term>
-        <listitem>
-          <para>Use the left mouse button to perform the following
-          actions:</para>
-          <itemizedlist>
-            <listitem><para>Select text.</para></listitem>
-            <listitem><para>Choose items.</para></listitem>
-            <listitem><para>Drag items.</para></listitem>
-            <listitem><para>Activate items.</para></listitem>
-          </itemizedlist>
-          <para>When selecting items from a list, you can hold the
-          <keycap>Ctrl</keycap> key to select multiple items, or
-          hold the <keycap>Shift</keycap> key to select a contiguous
-          range of items.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Middle mouse button</term>
-        <listitem>
-          <para>Use the middle mouse button to perform the following
-          actions:</para>
-          <itemizedlist>
-            <listitem><para>Paste text.</para></listitem>
-            <listitem><para>Move items.</para></listitem>
-            <listitem><para>Move windows to the back.</para></listitem>
-          </itemizedlist>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>Right mouse button</term>
-        <listitem><para>Use the right mouse button to open a context menu for
-        an item, if a menu applies.  For most items, you can also use the
-        <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo>
-        keyboard shortcut to open the context menu once the item has been
-        selected.</para></listitem>
-      </varlistentry>
-    </variablelist>
-
-    <para>For example, when viewing files in the file manager, you select
-    a file by clicking with the left mouse button and open a file by
-    double-clicking with the left mouse button.  Clicking with the right
-    mouse button will bring up a context menu for that file.</para>
-
-    <tip><para>In most applications, you can select text with your left
-    mouse button and paste it in another application using the middle
-    mouse button.  This is called primary selection paste, and works
-    seperately from your normal clipboard operations.</para></tip>
-
-    <para>The conventions used in this manual to describe actions
-    that you take with the mouse are as follows: </para>
+    
+    <para>The following conventions are used in this manual to describe actions
+    that you take with the mouse: </para>
+    
+    <!-- convert to variablelist -->
     <informaltable frame="topbot">
       <tgroup cols="2" colsep="0" rowsep="0">
         <colspec colname="colspec0" colwidth="36.36*"/>
@@ -185,20 +145,11 @@
           </row>
           <row>
             <entry colname="colspec0" valign="top">
-              <para>Click-and-hold</para>
-            </entry>
-            <entry colname="colspec1" valign="top">
-              <para>Press and do not release the
-              left mouse button.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" valign="top">
               <para>Left-click</para>
             </entry>
             <entry colname="colspec1" valign="top">
               <para>Same as <emphasis>click</emphasis>.
-              Left-click clarifies the action when there might be
+              The term 'left-click' is used where there might be
               confusion with <emphasis>right-click</emphasis>.</para>
             </entry>
           </row>
@@ -227,8 +178,9 @@
             <entry colname="colspec1" valign="top">
               <para>Press and release the left mouse button twice
               in rapid succession without moving the mouse.  You
-              can configure the double-click timeout using the
-              <application>Mouse Preferences</application>.</para>
+              can configure the sensitivity to double-clicks by changing the
+              <emphasis>Double-click Timeout</emphasis> setting: 
+              see <xref linkend="prefs-mouse"/> for more information.</para>
             </entry>
           </row>
           <row>
@@ -236,8 +188,26 @@
               <para>Drag</para>
             </entry>
             <entry colname="colspec1" valign="top">
-              <para>Click-and-hold a mouse button, then move an object.
-              For example, you can drag a window or an icon. The left
+              <para>Press and do not release the
+              left mouse button, 
+              and then move the mouse with the button still held down,
+              and finally release the button.</para>
+                            
+              <para>Dragging with the mouse is used in many different contexts.
+              
+              
+              This moves an object around the screen with the mouse. The 
+              object is <emphasis>dropped</emphasis> at the 
+              location where the mouse button 
+              is released. This action is also called 
+              <emphasis>drag-and-drop</emphasis>. Clicking on an element of the interface to
+              move it is sometimes called a <emphasis>grab</emphasis>. Click and drag</para>
+                            
+              <para>For example, you can change the position of a window by 
+              dragging on its title bar, or move a file by dragging its icon 
+              from one window and dropping it on another.</para>           
+              
+              <para>The left
               mouse buttons is usually used to perform drag actions,
               although the middle mouse button is sometimes used for
               an alternate drag action.</para>
@@ -245,28 +215,79 @@
           </row>
           <row>
             <entry colname="colspec0" valign="top">
-              <para>Drag-and-drop</para>
+              <para>Click-and-hold</para>
             </entry>
             <entry colname="colspec1" valign="top">
-              <para>Click-and-hold a mouse button, then move an object.
-              For example, you can drag-and-drop a window or an icon.
-              Release the mouse button to place the object in a new
-              location.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" valign="top">
-              <para>Grab</para>
-            </entry>
-            <entry colname="colspec1" valign="top">
-              <para>Point to an item that you can move, and click-and-hold
-              on the mouse button. For example, you can grab the titlebar
-              of a window, then drag the window to a new location.</para>
+              <para>Press and do not release the
+              left mouse button.</para>
             </entry>
           </row>
         </tbody>
       </tgroup>
     </informaltable>
+    
+    <indexterm>
+      <primary>mouse</primary>
+      <secondary>actions</secondary>
+    </indexterm>
+
+    <para>You can perform the following actions with the mouse:</para>
+    
+    <!--
+    Problem with the word 'action' here, since it's already used
+    to describe things like click, drag, etc. Suggestion: tasks?
+    -->
+
+    <variablelist>
+      <varlistentry>
+        <term>Left mouse button</term>
+        <listitem>
+          <itemizedlist>
+            <listitem><para>Select text.</para></listitem>
+            <listitem><para>Select items.</para></listitem>
+            <listitem><para>Drag items.</para></listitem>
+            <listitem><para>Activate items.</para></listitem>
+          </itemizedlist>        
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Middle mouse button</term>
+        <listitem>
+          <itemizedlist>
+            <listitem><para>Paste text.</para></listitem>
+            <listitem><para>Move items.</para></listitem>
+            <listitem><para>Move windows to the back.</para></listitem>
+          </itemizedlist>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Right mouse button</term>
+        <listitem><para>Use the right mouse button to open a context menu for
+        an item, if a menu applies.  For most items, you can also use the
+        <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo>
+        keyboard shortcut to open the context menu once the item has been
+        selected.</para></listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>For example, when viewing files in the file manager, you select
+    a file by clicking with the left mouse button and open a file by
+    double-clicking with the left mouse button.  Clicking with the right
+    mouse button will bring up a context menu for that file.</para>
+
+    <tip><para>In most applications, you can select text with your left
+    mouse button and paste it in another application using the middle
+    mouse button.  This is called primary selection paste, and works
+    separately from your normal clipboard operations.</para></tip>
+
+    <tip><para>To select more than one item, you can hold the
+    <keycap>Ctrl</keycap> key to select multiple items, or
+    hold the <keycap>Shift</keycap> key to select a contiguous
+    range of items. You can also drag a <firstterm>bounding box</firstterm>
+    to select several items by starting the drag in the empty space around items
+    and dragging out a rectangle.
+    <!-- yeah, this is a rubbish explanation. --></para></tip>
+
   </section>
 
   <section id="mouse-pointers">
@@ -286,11 +307,21 @@
     </indexterm>
 
     <para>As you use the mouse, the appearance of the mouse pointer can
-    change.  The appearance of the pointer can provide feedback about a
-    particular operation, location, or state. The following list describes
-    some of the mouse pointers.</para>
+    change. The appearance of the pointer provides feedback about a
+    particular operation, location, or state.</para>
 
-    <variablelist>
+   <para>The following mouse pointers are shown as your mouse passes over 
+   different elements of the screen.</para>   
+   
+   <!-- need the following pointer images:
+   * hand pointer (panels)
+   * hand pointer (links)
+   * text entry I-beam
+   * background-busy
+   * main busy  
+   * drag window (the little + pointer)
+   -->
+   <variablelist>
       <varlistentry>
         <term>
           <inlinemediaobject>
@@ -306,111 +337,6 @@
         </term>
         <listitem><para>This pointer appears during normal use of
         the mouse.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <inlinemediaobject>
-            <imageobject>
-              <imagedata format="PNG"
-                         fileref="figures/move_pointer.png"/>
-            </imageobject>
-            <textobject>
-              <phrase>Move pointer.</phrase>
-            </textobject>
-          </inlinemediaobject>
-          Move pointer
-        </term>
-        <listitem><para>This pointer appears during a drag operation.  It
-        indicates that when you drop the object, the object is moved from
-        the old location to the new location.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <inlinemediaobject>
-            <imageobject>
-              <imagedata format="PNG"
-                         fileref="figures/copy_pointer.png"/>
-            </imageobject>
-            <textobject>
-              <phrase>Copy pointer.</phrase>
-            </textobject>
-          </inlinemediaobject>
-          Copy pointer
-        </term>
-        <listitem><para>This pointer appears during a drag operation.  It
-        indicates that when you drop the object, a copy of the object is
-        created where you drop it.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <inlinemediaobject>
-            <imageobject>
-              <imagedata format="PNG"
-                         fileref="figures/link_pointer.png"/>
-            </imageobject>
-            <textobject>
-              <phrase>Symbolic link pointer.</phrase>
-            </textobject>
-          </inlinemediaobject>
-          Symbolic link pointer
-        </term>
-        <listitem><para>This pointer appears during a drag operation.  It
-        indicates that when you drop the object, a <firstterm>symbolic
-        link</firstterm> to the object is created where you drop the object.
-        A symbolic link is a special type of file that points to another file
-        or folder.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <inlinemediaobject>
-            <imageobject>
-              <imagedata format="PNG"
-                         fileref="figures/ask_pointer.png"/>
-            </imageobject>
-            <textobject>
-              <phrase>Ask pointer.</phrase>
-            </textobject>
-          </inlinemediaobject>
-          Ask pointer
-        </term>
-        <listitem><para>This pointer appears during a drag operation.  It
-        indicates that when you drop the object, a menu opens.  The menu
-        allows you to choose which drag operation you would like to perform.
-        For instance, you may be able to select among moving, copying, and
-        creating a symbolic link.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <inlinemediaobject>
-            <imageobject>
-              <imagedata format="PNG"
-                         fileref="figures/not_available_pointer.png"/>
-            </imageobject>
-            <textobject>
-              <phrase>Not available pointer.</phrase>
-            </textobject>
-          </inlinemediaobject>
-          Not available pointer
-        </term>
-        <listitem><para>This pointer appears during a drag operation.
-        It indicates that you cannot drop the object at the current
-        location.</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <inlinemediaobject>
-            <imageobject>
-              <imagedata format="PNG"
-                         fileref="figures/move_panel_object_pointer.png"/>
-            </imageobject>
-            <textobject>
-              <phrase>Move panel object pointer.</phrase>
-            </textobject>
-          </inlinemediaobject>
-          Move panel object pointer
-        </term>
-        <listitem><para>This pointer appears when you drag a panel object
-        with the middle mouse button.</para></listitem>
       </varlistentry>
       <varlistentry>
         <term>
@@ -438,15 +364,161 @@
                          fileref="figures/hand_pointer.png"/>
             </imageobject>
             <textobject>
-              <phrase>Hand pointer.</phrase>
+              <phrase>Hand pointer</phrase>
             </textobject>
           </inlinemediaobject>
           Hand pointer
         </term>
-        <listitem><para>This pointer appears when you hover over a hypertext
-        link.  This pointer indicates that you can click on the link to load
+        <listitem><para>This pointer appears when you hover over a
+        <glossterm>hypertext link</glossterm>.
+        This pointer indicates that you can click on the link to load
         a new document or perform an action.</para></listitem>
+      </varlistentry>      
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/missing.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>I-beam pointer</phrase>
+            </textobject>
+          </inlinemediaobject>
+          I-beam pointer
+        </term>
+        <listitem><para>This pointer is shown when the mouse is over text that you can
+        select or edit. Click to place the cursor, or drag to select text.</para></listitem>
+      </varlistentry>      
+    </variablelist>      
+      
+   <para>The following mouse pointers are shown when dragging an item such as a file icon. 
+   They indicate the result of releasing the mouse button to drop the 
+   object being moved.</para>      
+      
+    <variablelist>      
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/move_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Move pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Move pointer
+        </term>
+        <listitem><para>This pointer indicates that when you drop the object,
+        the object is moved from
+        the old location to the new location.</para></listitem>
       </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/copy_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Copy pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Copy pointer
+        </term>
+        <listitem><para>This pointer indicates that when you drop the object, 
+        a copy of the object is
+        created where you drop it.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/link_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Symbolic link pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Symbolic link pointer
+        </term>
+        <listitem><para>This pointer 
+        indicates that when you drop the object, a <firstterm>symbolic
+        link</firstterm> to the object is created where you drop the object.
+        A symbolic link is a special type of file that points to another file
+        or folder.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/ask_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Ask pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Ask pointer
+        </term>
+        <listitem><para>This pointer 
+        indicates that when you drop the object, a menu will open.        
+        The menu allows you to choose which operation you would like to perform.
+        For instance, you may be able to move, copy, or
+        create a symbolic link.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/not_available_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Not available pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Not available pointer
+        </term>
+        <listitem><para>This pointer indicates that you cannot 
+        drop the object at the current location.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/move_panel_object_pointer.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Move panel object pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Move panel object pointer
+        </term>
+        <listitem><para>This pointer appears when you drag a panel object
+        with the middle mouse button.
+        See <xref linkend="panels"/> for more information on panels.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata format="PNG"
+                         fileref="figures/missing.png"/>
+            </imageobject>
+            <textobject>
+              <phrase>Move window pointer.</phrase>
+            </textobject>
+          </inlinemediaobject>
+          Move window pointer
+        </term>
+        <listitem><para>This pointer appears when you drag a window to move it.
+        See <xref linkend="windows-manipulating"/> for more information on moving windows.</para></listitem>
+      </varlistentry>
+
     </variablelist>
   </section>
 </section>
