@@ -21,6 +21,16 @@
   <anchor id="gosoverview-29"/>
   <!-- Desktop Overview / Desktop / To Add Objects-->
   <anchor id="gosoverview-19"/>
+  <!-- Using the Start Here Location -->
+  <anchor id="gosnautilus-445"/>
+  <!-- To Choose a View in Which to Display a File or Folder - (image/text view) -->
+  <anchor id="gosnautilus-100"/>
+  <!-- To Modify the Behavior of a View -->
+  <anchor id="gosnautilus-111"/>
+  <!-- To Resize an Icon in Icon View - (This can only be done on desktop now) -->
+  <anchor id="gosnautilus-103"/>
+  <!-- To Execute Other Actions When Displaying a File -->
+  <anchor id="gosnautilus-73"/>
 
   <highlights>
     <para>This chapter describes how to use the <application>Nautilus</application> file manager.</para>
@@ -54,6 +64,9 @@ is an active component of the user interface. </para>
   </sect1>
   <sect1 id="gosnautilus-210">
     <title>Browsing Your Files</title>
+    <!-- Viewing Files in a File Browser Window -->
+    <anchor id="nautilus-desktop"/>
+    <anchor id="gosnautilus-447"/>
     <indexterm>
       <primary>file manager</primary>
       <secondary>windows</secondary>
@@ -61,9 +74,13 @@ is an active component of the user interface. </para>
     <para>You can use file browser windows to browse your file system.</para>
     <sect2 id="gosnautilus-492">
       <title>File Browser Windows</title>
-      <para>You can access file browser windows in the following ways:<itemizedlist><listitem><para>Click on the the file browser window launcher on the top edge
-panel. </para></listitem><listitem><para>Choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>Browse Filesystem</guimenuitem></menuchoice>. </para></listitem><listitem><para>Select a folder from a file object window, then choose <menuchoice><guimenu>File</guimenu><guimenuitem>Browse Folder</guimenuitem></menuchoice>.
-A file browser window displays the contents of your folder in the view pane.</para></listitem></itemizedlist></para>
+      <para>You can access file browser windows in the following ways:
+<itemizedlist>
+<listitem><para>Choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>System Tools</guimenuitem><guimenuitem>File Browser</guimenuitem></menuchoice>.</para></listitem>
+<listitem><para>Select a folder from a file object window, then choose <menuchoice><guimenu>File</guimenu><guimenuitem>Browse Folder</guimenuitem></menuchoice>.
+A file browser window displays the contents of your folder in the view pane.</para></listitem>
+<listitem><para>If nautilus is set to always open browser windows, double clicking any folder will open a browser window, see <xref linkend="gosnautilus-56"/>.</para></listitem>
+</itemizedlist></para>
       <para><xref linkend="gosnautilus-FIG-505"/> shows a sample file browser window
 that displays the contents of the Home folder.</para>
       <figure id="gosnautilus-FIG-505">
@@ -82,8 +99,7 @@ that displays the contents of the Home folder.</para>
       <note>
         <para>In other distributions of the GNOME Desktop, the <guibutton>Home</guibutton> toolbar button might have another designation, for example, <guibutton>Documents</guibutton>.</para>
       </note>
-    </sect2>
-    <sect2 id="gosnautilus-493">
+    <sect3 id="gosnautilus-493">
       <title>File Browser Window Components</title>
       <para><xref linkend="gosnautilus-TBL-83"/> describes the components of file
 browser windows.</para>
@@ -109,6 +125,12 @@ browser windows.</para>
               </entry>
               <entry valign="top">
                 <para>Contains menus that you use to perform tasks in the file manager.</para>
+		<para>You can also open a popup menu from file manager windows. To open this
+popup menu right-click in a file manager window. The items in this menu depend
+on where you right-click. For example, when you right-click on a file or folder,
+you can choose items related to the file or folder. When you right-click on
+the background of a view pane, you can choose items related to the display
+of items in the view pane.</para>
               </entry>
             </row>
             <row>
@@ -127,8 +149,8 @@ browser windows.</para>
                 <para>Contains the following elements:</para>
                 <itemizedlist>
                   <listitem>
-                    <para><guilabel>Location</guilabel> field: Enables you to specify
-a file, folder, or URI that you want to view.</para>
+                    <para><guilabel>Location</guilabel> : Shows your current location. Each button represents a folder, by clicking on them you can change your location.
+You can also drag buttons, for example to another location, in order to copy a folder.</para>
                   </listitem>
                   <listitem>
                     <para><guimenu>Zoom</guimenu> buttons: Enable you to change the
@@ -143,6 +165,7 @@ choose how to show items in your view pane.</para>
             </row>
             <row>
               <entry valign="top">
+		<anchor id="gosnautilus-540"/>
                 <para>Side pane</para>
               </entry>
               <entry valign="top">
@@ -155,54 +178,73 @@ choose how to show items in your view pane.</para>
                     <para>Enables you to navigate through your files. </para>
                   </listitem>
                 </itemizedlist>
-                <para>The side pane contains a drop-down list that enables
+                <para>To display the side pane, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice>. The side pane contains a drop-down list that enables
 you to choose what to show in the side pane. You can choose from the following
-options:</para>
-                <itemizedlist>
-                  <listitem>
-                    <para>
-                      <guilabel>Information</guilabel>
-                    </para>
-                  </listitem>
-                  <listitem>
-                    <para>
-                      <guilabel>Emblems</guilabel>
-                    </para>
-                  </listitem>
-                  <listitem>
-                    <para>
-                      <guilabel>History</guilabel>
-                    </para>
-                  </listitem>
-                  <listitem>
-                    <para>
-                      <guilabel>Notes</guilabel>
-                    </para>
-                  </listitem>
-                  <listitem>
-                    <para>
-                      <guilabel>Tree</guilabel>
-                    </para>
-                  </listitem>
-                </itemizedlist>
-                <para>To display the side pane, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice>.</para>
-              </entry>
+options:</para>                
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Places</guilabel>
+          </para>
+          <para>Displays places of particular interest.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Information</guilabel>
+          </para>
+          <para>Displays the icon and information about the current folder. Buttons may appear in the side pane, these buttons
+enable you to perform actions on the current folder, other than the default action.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Tree</guilabel>
+          </para>
+          <para>Displays a hierarchical representation of your file system. You can
+use the <guilabel>Tree</guilabel> to navigate through your files.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>History</guilabel>
+          </para>
+          <para>Contains a history list of files, folders, FTP sites, and URIs that
+you have recently visited.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Notes</guilabel>
+          </para>
+          <para>Enables you to add notes to your files and folders.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Emblems</guilabel>
+          </para>
+          <para>Contains emblems that you can add to a file or folder.</para>
+        </listitem>
+      </itemizedlist>
+      <para>To close the side pane, click on the <guibutton>X</guibutton> button
+at the top right of the side pane.</para>
+                </entry>
             </row>
             <row>
               <entry valign="top">
+		<anchor id="gosnautilus-53"/>
                 <para>View pane</para>
               </entry>
               <entry valign="top">
                 <para>Shows the contents of the following:</para>
                 <itemizedlist>
                   <listitem>
-                    <para>Particular types of files</para>
-                  </listitem>
-                  <listitem>
                     <para>Folders</para>
                   </listitem>
                   <listitem>
                     <para>FTP sites</para>
+                  </listitem>
+                  <listitem>
+                    <para>Windows shares</para>
+                  </listitem>
+                  <listitem>
+                    <para>WebDAV servers</para>
                   </listitem>
                   <listitem>
                     <para>Locations that correspond to special URIs</para>
@@ -221,128 +263,7 @@ options:</para>
           </tbody>
         </tgroup>
       </table>
-      <para>You can access files and folders from a file browser window in the following
-ways:<itemizedlist><listitem><para>Enter a path to the file or folder in the <guilabel>Location</guilabel> field.</para></listitem><listitem><para>Click on an item in the tree view.</para></listitem><listitem><para>Double-click on a folder or a file in the view pane. </para></listitem></itemizedlist></para>
-      <para>You can also open a popup menu from file manager windows. To open this
-popup menu right-click in a file manager window. The items in this menu depend
-on where you right-click. For example, when you right-click on a file or folder,
-you can choose items related to the file or folder. When you right-click on
-the background of a view pane, you can choose items related to the display
-of items in the view pane.</para>
-    </sect2>
-    <sect2 id="gosnautilus-53">
-      <title>View Pane</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>view pane</secondary>
-        <see>view pane</see>
-      </indexterm>
-      <indexterm>
-        <primary>view pane</primary>
-        <secondary>introduction</secondary>
-      </indexterm>
-      <para>The view pane can display the contents
-of the following:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Particular types of files</para>
-        </listitem>
-        <listitem>
-          <para>Folders</para>
-        </listitem>
-        <listitem>
-          <para>FTP sites</para>
-        </listitem>
-        <listitem>
-          <para>Locations that correspond to special URIs</para>
-        </listitem>
-      </itemizedlist>
-      <para><indexterm><primary>viewer components</primary></indexterm>File browser
-windows contain <firstterm>viewer components</firstterm> that enable you to
-display particular types of file in the view pane. For example,  you can use
-a text viewer to display text files in the view pane.</para>
-      <para>Displaying a file in the view pane provides the following benefits:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Uses less system resources than when you launch an application.</para>
-        </listitem>
-        <listitem>
-          <para>Takes less time than when you launch an application.</para>
-        </listitem>
-      </itemizedlist>
-      <para>However, you cannot edit a file in the view pane.</para>
-      <para>File browser windows also include <firstterm>views</firstterm> that
-enable you to display the contents of your folders in different ways. For
-example, you can display the contents of a folder in the following types of
-view: </para>
-      <itemizedlist>
-        <listitem>
-          <para>Icon view: Shows the items in the folder as icons. </para>
-        </listitem>
-        <listitem>
-          <para>List view: Shows the items in the folder as a list. </para>
-        </listitem>
-        <listitem>
-          <para>Audio view: Shows only the audio items in the folder.</para>
-        </listitem>
-      </itemizedlist>
-      <para>Use the <guimenu>View</guimenu> menu to choose how to display a folder.
-For more information on views, see <xref linkend="gosnautilus-7"/>.</para>
-    </sect2>
-    <sect2 id="gosnautilus-540">
-      <title>Side Pane</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>side pane</secondary>
-        <tertiary>introduction</tertiary>
-      </indexterm>
-      <indexterm>
-        <primary>side pane</primary>
-        <see>file manager</see>
-      </indexterm>
-      <para>To display the side pane,
-choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice>. You can choose what information you want to view in the side
-pane. You can choose to display one of the following:</para>
-      <itemizedlist>
-        <listitem>
-          <para>
-            <guilabel>Information</guilabel>
-          </para>
-          <para>Displays an icon that represents the current file or current folder.
-Also displays information about the current file or current folder. If a file
-is displayed in the view pane, buttons appear in the side pane. The buttons
-enable you to perform actions on a file, other than the default action.</para>
-        </listitem>
-        <listitem>
-          <para>
-            <guilabel>Emblems</guilabel>
-          </para>
-          <para>Contains emblems that you can add to a file or folder. For more information
-on emblems, see the next section.</para>
-        </listitem>
-        <listitem>
-          <para>
-            <guilabel>History</guilabel>
-          </para>
-          <para>Contains a history list of files, folders, FTP sites, and URIs that
-you have recently visited.</para>
-        </listitem>
-        <listitem>
-          <para>
-            <guilabel>Notes</guilabel>
-          </para>
-          <para>Enables you to add notes to your files and folders.</para>
-        </listitem>
-        <listitem>
-          <para>
-            <guilabel>Tree</guilabel>
-          </para>
-          <para>Displays a hierarchical representation of your file system. You can
-use the <guilabel>Tree</guilabel> to navigate through your files.</para>
-        </listitem>
-      </itemizedlist>
-      <para>To close the side pane, click on the <guibutton>X</guibutton> button
-at the top right of the side pane.</para>
+    </sect3>
     </sect2>
     <sect2 id="gosnautilus-18">
       <title>To Show and Hide File Browser Window Components</title>
@@ -359,7 +280,7 @@ window components as follows: </para>
 side pane again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice> again. </para>
         </listitem>
         <listitem>
-          <para>To hide the toolbar, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Toolbar</guimenuitem></menuchoice>. To display the
+          <para>To hide the toolbar, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Main Toolbar</guimenuitem></menuchoice>. To display the
 toolbar again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Toolbar</guimenuitem></menuchoice> again. </para>
         </listitem>
         <listitem>
@@ -387,17 +308,16 @@ statusbar again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Statusba
 perform one of the following actions from file browser windows:</para>
       <itemizedlist>
         <listitem>
-          <para>Enter the home path in the <guilabel>Location</guilabel> field.</para>
-        </listitem>
-        <listitem>
           <para>Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Home</guimenuitem></menuchoice>. </para>
         </listitem>
         <listitem>
           <para>Click on the <guibutton>Home</guibutton> toolbar button. </para>
         </listitem>
+        <listitem>
+          <para>Click on the <guibutton>Home</guibutton> button in the Places side pane. </para>
+        </listitem>
       </itemizedlist>
-      <para>The file browser window displays the contents of your home location.
-To reload the display,  click on the <guibutton>Reload</guibutton> button.</para>
+      <para>The file browser window displays the contents of your home location.</para>
     </sect2>
     <sect2 id="gosnautilus-500">
       <title>To Display a Folder</title>
@@ -407,16 +327,20 @@ To reload the display,  click on the <guibutton>Reload</guibutton> button.</para
           <para>Double-click on the folder in the view pane.</para>
         </listitem>
         <listitem>
-          <para>In the <guilabel>Location</guilabel> field, type the path
+          <para>Use the <guilabel>Tree</guilabel> in the side pane. For more
+information, see <xref linkend="gosnautilus-27"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Click on the <guilabel>Location</guilabel> buttons in the location bar.
+</para>
+        </listitem>
+        <listitem>
+          <para>Press <keycap>Ctrl+L</keycap> to show the text <guilabel>Location</guilabel> field, type the path
 of the folder that you want to display, then press <keycap>Return</keycap>.
 The <guilabel>Location</guilabel> field includes an autocomplete feature.
 As you type a path, the file manager reads your file system. When you type
 enough characters to uniquely identify a directory, the file manager completes
 the name of the directory in the <guilabel>Location</guilabel> field.</para>
-        </listitem>
-        <listitem>
-          <para>Use the <guilabel>Tree</guilabel> in the side pane. For more
-information, see <xref linkend="gosnautilus-27"/>.</para>
         </listitem>
         <listitem>
           <para>Use the <guibutton>Back</guibutton> toolbar button and the <guibutton>Forward</guibutton> toolbar button to browse through your navigation history.</para>
@@ -425,10 +349,6 @@ information, see <xref linkend="gosnautilus-27"/>.</para>
       <para>To change to the folder that is one level above the current folder,
 choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Up</guimenuitem></menuchoice>. Alternatively, click on the <guibutton>Up</guibutton> toolbar
 button.</para>
-      <para>To reload the display, click on the <guibutton>Reload</guibutton> button.</para>
-      <para>If you cannot find the folder that you want to display, you can use <application>Search Tool</application>. To start <application>Search Tool</application>,
-choose <menuchoice><guimenu>Actions</guimenu><guimenuitem>Search for
-Files</guimenuitem></menuchoice>. </para>
     </sect2>
     <sect2 id="gosnautilus-27">
       <title>Using the Tree From the Side Pane</title>
@@ -518,7 +438,7 @@ top of the side pane.</para>
             </row>
             <row>
               <entry colname="colspec0" valign="top">
-                <para>Open a folder in the <guilabel>Tree</guilabel>.</para>
+                <para>Expand a folder in the <guilabel>Tree</guilabel>.</para>
               </entry>
               <entry colname="colspec1" valign="top">
                 <para>Click on the arrow next to the folder in the <guilabel>Tree</guilabel>. </para>
@@ -526,7 +446,7 @@ top of the side pane.</para>
             </row>
             <row>
               <entry colname="colspec0" valign="top">
-                <para>Close a folder in the <guilabel> Tree</guilabel>.</para>
+                <para>Collapse a folder in the <guilabel> Tree</guilabel>.</para>
               </entry>
               <entry colname="colspec1" valign="top">
                 <para>Click on the arrow next to the folder in the <guilabel>Tree</guilabel>.</para>
@@ -543,8 +463,7 @@ a folder in the view pane.</para>
             </row>
             <row>
               <entry valign="top">
-                <para>Display the contents of a file in the view
-pane.</para>
+                <para>Open a file.</para>
               </entry>
               <entry valign="top">
                 <para>Select the file in the <guilabel>Tree</guilabel>.</para>
@@ -566,7 +485,7 @@ not display files. For more information, see <xref linkend="gosnautilus-438"/>. 
 list of files, folders, FTP sites, and URI locations. You can use the history
 list to navigate to files, folders, FTP sites, and URI locations that you
 have recently visited. Your history list contains the last ten items that
-you viewed. The following sections describe how to navigate your history list.</para>
+you viewed.</para>
       <para>To clear your history list choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Clear History</guimenuitem></menuchoice>.</para>
       <sect3 id="gosnautilus-77">
         <title>To Navigate Your History List Using the Go Menu</title>
@@ -579,11 +498,11 @@ the <guimenu>Go</guimenu> menu.</para>
 following actions:</para>
         <itemizedlist>
           <listitem>
-            <para>To open the previous file, folder, or URI in your history
+            <para>To open the folder or URI in your history
 list, click on the <guibutton>Back</guibutton> toolbar button.</para>
           </listitem>
           <listitem>
-            <para>To open the next file, folder, or URI in your history list,
+            <para>To open the folder or URI in your history list,
 click on the <guibutton>Forward</guibutton> toolbar button.</para>
           </listitem>
           <listitem>
@@ -606,188 +525,11 @@ on the item.</para>
         </indexterm>
         <para>To display the <guilabel>History</guilabel> list in the side pane, choose <guilabel>History</guilabel> from the drop-down list at the top of the side pane. The <guilabel>History</guilabel> list in the side pane displays a list of your previously-viewed
 items.</para>
-        <para>To display an item from your history list in the view pane, click on
+        <para>To display an item from your history list in the view pane, double-click on
 the item in the <guilabel>History</guilabel> list.</para>
       </sect3>
     </sect2>
-    <sect2 id="gosnautilus-447">
-      <title>Viewing Files in a File Browser Window</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>viewing files in view
-pane</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>view pane</primary>
-        <secondary>viewing files in</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>viewer components</primary>
-      </indexterm>
-      <para>The file manager contains viewer components that
-enable you to display particular types of file in a file browser window. For
-example, you can display the following types of files in a file browser window:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Plain text files</para>
-        </listitem>
-        <listitem>
-          <para>PNG files</para>
-        </listitem>
-        <listitem>
-          <para>Joint Photographic Experts Group (JPEG) files</para>
-        </listitem>
-      </itemizedlist>
-      <para>To reload the contents of a file browser window, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reload</guimenuitem></menuchoice>.
-To stop loading an item, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Stop</guimenuitem></menuchoice>.</para>
-      <para>When you display a file in a file browser window, the viewer component
-might add menu items to the file manager menus. The menu items relate to the
-file type that is displayed. For example, when you display a PNG file, the <guimenu>Edit</guimenu> menu contains flip and rotate menu items. </para>
-      <para>Also, when you display some types of file in a file browser window,
-you can use the file manager zoom buttons to change the size of the item.</para>
-    </sect2>
-    <sect2 id="gosnautilus-36">
-      <title>To Bookmark Your Favorite Locations</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>bookmarks</secondary>
-      </indexterm>
-      <para>To access an item in your bookmarks, choose the item from
-the <guimenu>Bookmarks</guimenu> menu. You can add your favorite locations
-to your <guimenu>Bookmarks</guimenu> menu. You can add bookmarks to files
-and folders in your file system, to FTP sites, or to URI locations.</para>
-      <sect3 id="gosnautilus-40">
-        <title>To Add a Bookmark</title>
-        <para>To add a bookmark, display the item that you want to bookmark in the
-view pane. Choose <menuchoice><guimenu>Bookmarks</guimenu><guimenuitem>Add Bookmark</guimenuitem></menuchoice>.</para>
-      </sect3>
-      <sect3 id="gosnautilus-41">
-        <title>To Edit a Bookmark</title>
-        <para>To edit your bookmarks perform the following steps:</para>
-        <orderedlist>
-          <listitem>
-            <para>Choose <menuchoice><guimenu>Bookmarks</guimenu><guimenuitem>Edit Bookmarks</guimenuitem></menuchoice>. An <guilabel>Edit Bookmarks</guilabel>
-dialog is displayed. </para>
-          </listitem>
-          <listitem>
-            <para>To edit a bookmark, select the bookmark on the left side of
-the <guilabel>Edit Bookmarks</guilabel> dialog. Edit the details for the bookmark
-on the right side of the <guilabel>Edit Bookmarks</guilabel> dialog, as follows:</para>
-            <informaltable frame="topbot">
-              <tgroup cols="2" colsep="0" rowsep="0">
-                <colspec colwidth="27.27*"/>
-                <colspec colwidth="72.73*"/>
-                <thead>
-                  <row rowsep="1">
-                    <entry>
-                      <para>Dialog Element</para>
-                    </entry>
-                    <entry>
-                      <para>Description </para>
-                    </entry>
-                  </row>
-                </thead>
-                <tbody>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Name</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Use this text box to specify the name that identifies the
-bookmark in the <guimenu>Bookmarks</guimenu> menu.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Location</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Use this field to specify the location of the bookmark.</para>
-                    </entry>
-                  </row>
-                </tbody>
-              </tgroup>
-            </informaltable>
-          </listitem>
-          <listitem>
-            <para>To delete a bookmark, select the bookmark on the left side
-of the dialog. Click <guilabel>Delete</guilabel>. </para>
-          </listitem>
-        </orderedlist>
-      </sect3>
-    </sect2>
-    <sect2 id="gosnautilus-200">
-      <title>Adding Notes to Files and Folders</title>
-      <para>You can add notes to files or folders. You can add notes to files or
-folders in the following ways:</para>
-      <itemizedlist>
-        <listitem>
-          <para>From the properties dialog</para>
-        </listitem>
-        <listitem>
-          <para>From <guilabel>Notes</guilabel> in the side pane</para>
-        </listitem>
-      </itemizedlist>
-      <sect3 id="gosnautilus-472">
-        <title>To Add a Note Using the Properties Dialog</title>
-        <indexterm>
-          <primary>notes</primary>
-          <secondary>adding to files and folders</secondary>
-        </indexterm>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>notes</secondary>
-          <tertiary>adding</tertiary>
-        </indexterm>
-        <para>To add a note
-to a file or folder, perform the following steps:</para>
-        <orderedlist>
-          <listitem>
-            <para>Select the file or folder to which you want to add a note. </para>
-          </listitem>
-          <listitem>
-            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. A properties dialog is displayed.</para>
-          </listitem>
-          <listitem>
-            <para>Click on the <guilabel>Notes</guilabel> tab. In the <guilabel>Notes</guilabel> tabbed section, type the note.</para>
-          </listitem>
-          <listitem>
-            <para>Click <guibutton>Close</guibutton> to close the properties
-dialog. A note emblem is added to the file or folder.</para>
-          </listitem>
-        </orderedlist>
-        <para><indexterm><primary>notes</primary><secondary>deleting</secondary></indexterm><indexterm><primary>file manager</primary><secondary>notes</secondary><tertiary>deleting</tertiary></indexterm>To delete a note, delete the note text from the <guilabel>Notes</guilabel> tabbed section.</para>
-      </sect3>
-      <sect3 id="gosnautilus-473">
-        <title>To Add a Note Using Notes in the Side Pane</title>
-        <para>To add a note to a file or folder, perform the following steps:</para>
-        <orderedlist>
-          <listitem>
-            <para>Open the file or folder to which you want to add a note in
-the view pane.</para>
-          </listitem>
-          <listitem>
-            <para>Choose <guilabel>Notes</guilabel> from the drop-down list
-at the top of the side pane. To display the side pane, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice>. </para>
-          </listitem>
-          <listitem>
-            <para>Type the note in the side pane. A note emblem is added to
-the file or folder in the view pane, and a note icon is added to the side
-pane. You can click on this icon to display the note.</para>
-          </listitem>
-        </orderedlist>
-        <para>To delete a note, delete the note text from <guilabel>Notes</guilabel>
-in the side pane.</para>
-      </sect3>
-    </sect2>
   </sect1>
-  <section id="nautilus-desktop">
-    <title>Using the Desktop</title>
-  </section>
   <sect1 id="gosnautilus-24">
     <title>Navigating Your Files and Folders as Objects</title>
     <indexterm>
@@ -861,8 +603,7 @@ desktop.</para>
           <para>On a file object window, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Home</guimenuitem></menuchoice>. </para>
         </listitem>
       </itemizedlist>
-      <para>The file object window displays the contents of your home location.
-To reload the display,  choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reload</guimenuitem></menuchoice>.</para>
+      <para>The file object window displays the contents of your home location.</para>
     </sect2>
     <sect2 id="gosnautilus-25">
       <title>To Display a Folder</title>
@@ -894,7 +635,14 @@ following steps:</para>
           <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open Parent</guimenuitem></menuchoice>. </para>
         </listitem>
       </orderedlist>
+      <para>You may also use the list at the bottom left of each folder to open any folder hierarchicaly beneath the current folder.</para>
     </sect2>
+    <sect2 id="gosnautilus-closefolders">
+      <title>To Close Folders</title>
+      <para>To close folders you may simply click on the close window button, this however may not be the most efficiant way to close many windows.
+If you would like to view only the current folder, and not the folders you opend to reach the current folder, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close Parent Folders</guimenuitem></menuchoice>.
+If want to close all folders on the screen, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close All Folders</guimenuitem></menuchoice>.</para>
+      </sect2>
     <sect2 id="gosnautilus-501">
       <title>To Display a Folder in a File Browser Window</title>
       <para>To display the contents of a folder in a file browser window, perform
@@ -907,64 +655,6 @@ the following steps:</para>
           <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Browse Folder</guimenuitem></menuchoice>. </para>
         </listitem>
       </orderedlist>
-    </sect2>
-    <sect2 id="gosnautilus-445">
-      <title>Using the Start Here Location</title>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="figures/naut_starthere_launcher.png" format="PNG"/>
-          </imageobject>
-          <textobject>
-            <phrase>Start Here icon.</phrase>
-          </textobject>
-        </mediaobject>
-      </screenshot>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>Start Here location</secondary>
-        <see>Start Here location</see>
-      </indexterm>
-      <indexterm>
-        <primary>Start Here location</primary>
-        <secondary>using</secondary>
-      </indexterm>
-      <para>The <guilabel>Start
-Here</guilabel> location enables you to access the following functions:</para>
-      <itemizedlist>
-        <listitem>
-          <para>
-            <guilabel>Applications</guilabel>
-          </para>
-          <para>Double-click on <guilabel>Applications</guilabel> to access your key
-GNOME applications. You can also access the <guimenu>Applications</guimenu>
-menu through the <guimenu>Main Menu</guimenu> and the <application>Menu Bar</application>.</para>
-        </listitem>
-        <listitem>
-          <para>
-            <guilabel>Desktop Preferences</guilabel>
-          </para>
-          <para>Double-click on <guilabel>Desktop Preferences</guilabel> to customize
-the GNOME Desktop. You can also access the preference tools through the <guimenu>Applications</guimenu> menu. </para>
-        </listitem>
-        <listitem>
-          <para>Applications that enable you to configure your system as a
-server, and to modify other system configuration details.</para>
-        </listitem>
-      </itemizedlist>
-      <para>You can access the <guilabel>Start Here</guilabel> location in the following
-ways:</para>
-      <itemizedlist>
-        <listitem>
-          <para>From a file manager window, access the <command>start-here:///</command> URI.</para>
-        </listitem>
-        <listitem>
-          <para>From the desktop</para>
-          <para>Double-click on the <guilabel>Start Here</guilabel> object on the desktop.
-The contents of the <guilabel>Start Here</guilabel> location are displayed
-in a file object window.</para>
-        </listitem>
-      </itemizedlist>
     </sect2>
   </sect1>
   <sect1 id="gosnautilus-203">
@@ -993,8 +683,7 @@ described in the following sections.</para>
         <primary>emblems</primary>
         <secondary>introduction</secondary>
       </indexterm>
-      <para>In icon
-view, the file manager displays your files and folders as icons. You can add
+      <para>The file manager displays your files and folders as icons. You can add
 emblems to your file icons and folder icons. An emblem is a small icon that
 you can add to an item to visually mark the item. For example, to mark a file
 as important, you can add an <guilabel>Important</guilabel> emblem to the
@@ -1076,7 +765,7 @@ This icon might contain a preview of the contents of the file.</para>
               </entry>
               <entry colname="colspec1" valign="top">
                 <para>Icon caption. You can modify what items of information are displayed in the
-icon caption.</para>
+icon caption, see <xref linkend="gosnautilus-439"/>.</para>
               </entry>
             </row>
           </tbody>
@@ -1092,10 +781,10 @@ item:</para>
           <para>Items for which you have the following permissions:<indexterm><primary>permissions</primary><secondary>and emblems</secondary></indexterm></para>
           <itemizedlist>
             <listitem>
-              <para>Read permission only </para>
+              <para>No read permission</para>
             </listitem>
             <listitem>
-              <para>No read permission and no write permission</para>
+              <para>No write permission</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -1142,13 +831,13 @@ link</para>
                       <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
                     </imageobject>
                     <textobject>
-                      <phrase>Read permission only emblem.</phrase>
+                      <phrase>No write permission emblem.</phrase>
                     </textobject>
                   </mediaobject>
                 </screenshot>
               </entry>
               <entry valign="top">
-                <para>Read permission only</para>
+                <para>No write permission</para>
               </entry>
             </row>
             <row>
@@ -1159,13 +848,13 @@ link</para>
                       <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
                     </imageobject>
                     <textobject>
-                      <phrase>No read permission and no write permission emblem.</phrase>
+                      <phrase>No read permission emblem.</phrase>
                     </textobject>
                   </mediaobject>
                 </screenshot>
               </entry>
               <entry colname="colspec1" valign="top">
-                <para>No read permission and no write permission</para>
+                <para>No read permission</para>
               </entry>
             </row>
           </tbody>
@@ -1202,6 +891,7 @@ steps: </para>
 dialog.</para>
         </listitem>
       </orderedlist>
+      <para>In browser windows you may also add emblems to items by dragging them from the emblem side pane.</para>
     </sect2>
     <sect2 id="gosnautilus-471">
       <title>To Add a New Emblem</title>
@@ -1225,7 +915,7 @@ text box.</para>
         </listitem>
         <listitem>
           <para>Click on the <guilabel>Image</guilabel> button. A dialog is
-displayed. , click <guibutton>Browse</guibutton>. When you choose an emblem,
+displayed, click <guibutton>Browse</guibutton>. When you choose an emblem,
 click <guibutton>OK</guibutton>. </para>
         </listitem>
         <listitem>
@@ -1252,11 +942,11 @@ individual file or folder, perform the following steps:</para>
         </listitem>
         <listitem>
           <para>On the <guilabel>Basic</guilabel> tabbed section, click on
-the <guibutton>Select Custom Icon</guibutton> button. A <guilabel>Select an
+the <guibutton>Icon</guibutton> button. A <guilabel>Select custom 
 icon</guilabel> dialog is displayed. </para>
         </listitem>
         <listitem>
-          <para>Use the <guilabel>Select an icon</guilabel> dialog to choose
+          <para>Use the <guilabel>Select custom icon</guilabel> dialog to choose
 the icon to represent the file or folder. </para>
         </listitem>
         <listitem>
@@ -1264,12 +954,10 @@ the icon to represent the file or folder. </para>
 dialog.</para>
         </listitem>
       </orderedlist>
-      <para>To restore an icon from a custom icon to the default icon specified
-in the <application>File Types and Programs</application>  preference tool,
-right-click on the icon then choose <guimenuitem>Remove Custom Icon</guimenuitem>.
-Alternatively, click on the <guilabel>Remove Custom Icon</guilabel> button
-on the <guilabel>Properties</guilabel> dialog.</para>
-      <para>To change the icon that represents a file type, use the <application>File Types and Programs</application> preference tool. </para>
+      <para>To restore an icon from a custom icon to the default icon,
+Select the file or folder that you want to change, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.
+click on the <guibutton>Icon</guibutton> button, in the <guilabel>Select custom 
+icon</guilabel> dialog click <guibutton>Revert</guibutton>.</para>
     </sect2>
     <sect2 id="gosnautilus-102">
       <title>To Change the Size of Items in a View</title>
@@ -1291,7 +979,7 @@ of items in a view in the following ways:</para>
           <para>To return items in a view to the normal size, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Normal Size</guimenuitem></menuchoice>.</para>
         </listitem>
       </itemizedlist>
-      <para>You can also use the zoom buttons on the location bar to change the
+      <para>You can also use the zoom buttons on the location bar in a browser window to change the
 size of items in a view. <xref linkend="gosnautilus-TBL-42"/> describes how
 to use the zoom buttons.</para>
       <table frame="topbot" id="gosnautilus-TBL-42">
@@ -1397,12 +1085,7 @@ to Defaults</guimenuitem></menuchoice>.</para>
         <secondary>views</secondary>
         <tertiary>introduction</tertiary>
       </indexterm>
-      <para>The file manager provides several ways to display the contents
-of your files. The file manager includes viewer components that enable you
-to display particular types of file in the view pane. For example, you can
-use a web page viewer to display HTML files in the view pane. You can use
-a text viewer to view plain text files in the view pane.</para>
-      <para>You can also use the file manager to open a file in an appropriate application.
+      <para>You can use the file manager to open a file in an appropriate application.
 For more information, see <xref linkend="gosnautilus-28"/>.</para>
       <para>The file manager includes views that enable you to show the contents
 of your folders in different ways. For example, you can show the contents
@@ -1422,28 +1105,7 @@ or folder. You can also use the <guilabel>View as</guilabel> drop-down list
 to choose how to display a file or folder. When you display a folder, you
 can specify how you want to arrange or sort items in the folder. You can modify
 the size of the items in the view pane. The following sections describe how
-to work with icon view, list view, and views of files.</para>
-      <sect3 id="gosnautilus-100">
-        <title>To Choose a View in Which to Display a File or Folder</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>views</secondary>
-          <tertiary>choosing</tertiary>
-        </indexterm>
-        <para>Choose the type of view in which to display
-the contents of a file or folder from the <guilabel>View</guilabel> menu. </para>
-        <para>Alternatively, to choose a view, choose <menuchoice><guimenu>View</guimenu><guimenuitem>View as</guimenuitem></menuchoice>. Select the view
-that you want to use from the <guilabel>Open with Other Viewer</guilabel>
-dialog, then click on the <guibutton>Choose</guibutton> button. </para>
-        <para>You can also choose the type of view from the <guilabel>View as</guilabel>
-drop-down list. The <guilabel>View as</guilabel> drop-down list is located
-at the right side of the location bar.</para>
-        <para>You can display different folders in different views. The file manager
-remembers the view that you choose for a particular folder. The next time
-that you display the folder, the file manager displays the folder in that
-view. To return the view for the folder to the default view specified in your
-preferences, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reset View to Defaults</guimenuitem></menuchoice>.</para>
-      </sect3>
+to work with icon view and list view.</para>
       <sect3 id="gosnautilus-101">
         <title>To Arrange Your Files in Icon View</title>
         <indexterm>
@@ -1458,7 +1120,7 @@ The <guisubmenu>Arrange Items</guisubmenu> submenu contains the following
 sections:</para>
         <itemizedlist>
           <listitem>
-            <para>The top section contains an option that enables you to arrange
+            <para>At the top is an option that enables you to arrange
 your files manually.</para>
           </listitem>
           <listitem>
@@ -1534,7 +1196,7 @@ sorted by the total size of the items in the folder.</para>
                 <entry colname="colspec7" valign="top">
                   <para>Select this option to sort the
 items alphabetically by object type. The items are sorted alphabetically by
-the description of their <firstterm>MIME type</firstterm> in the <application>File Types and Programs</application>  preference tool. The MIME type identifies
+the description of their <firstterm>MIME type</firstterm>. The MIME type identifies
 the format of a file, and enables applications to read the file. For example,
 an email application can use the <literal>image/png</literal> MIME type to
 detect that a PNG file is attached to an email.</para>
@@ -1591,160 +1253,24 @@ alphabetical order.</para>
             </tbody>
           </tgroup>
         </informaltable>
+      </sect3>
+      <sect3 id="gosnautilus-listview">
+        <title>To Arrange Your Files in List View</title>
+        <indexterm>
+          <primary>file manager</primary>
+          <secondary>list view</secondary>
+          <tertiary>arranging files in</tertiary>
+        </indexterm>
+        <para>When you display the contents of a folder in list view, you can specify how to arrange the
+items in the folder. To specify how to arrange items in list view, click on the header of the column specifying the property
+by which you wish to arrange the items. To inverse the sorting order cick on the same colum header again.</para>
+        <para>To add or remove colums from the list view choose <menuchoice><guimenu>View</guimenu><guisubmenu>Visible Columns</guisubmenu></menuchoice></para>
         <para>The file manager remembers how you arrange the items in a particular
 folder. The next time that you display the folder, the items are arranged
 in the way that you selected.  In other words, when you specify how to arrange
 the items in a folder, you customize the folder to display the items in that
 way. To return the arrangement settings of the folder to the default arrangement
 settings specified in your preferences, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reset View to Defaults</guimenuitem></menuchoice>.</para>
-      </sect3>
-      <sect3 id="gosnautilus-103">
-        <title>To Resize an Icon in Icon View</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>icons</secondary>
-          <tertiary>resizing</tertiary>
-        </indexterm>
-        <para>In icon view, you can change the size
-of the icon that represents an item that is displayed. To change the size
-of an item in icon view, perform the following steps:</para>
-        <orderedlist>
-          <listitem>
-            <para>Right-click on the item that you want to resize, then choose <guimenuitem>Stretch Icon</guimenuitem>. A rectangle appears around the item, with a handle
-at each corner.</para>
-          </listitem>
-          <listitem>
-            <para>Grab one of the handles, then drag the icon to the size that
-you want.</para>
-            <para>To return the icon to the original size, right-click on the icon, then
-choose <guimenuitem>Restore Icon's Original Size</guimenuitem>. </para>
-          </listitem>
-        </orderedlist>
-        <para>You can also resize objects on the desktop.</para>
-      </sect3>
-      <sect3 id="gosnautilus-111">
-        <title>To Modify the Behavior of a View</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>views</secondary>
-          <tertiary>modifying behavior</tertiary>
-        </indexterm>
-        <para>You can modify the behavior
-of a view in the following ways:</para>
-        <itemizedlist>
-          <listitem>
-            <para>Specify that the view is the default view for a particular
-file or folder.</para>
-          </listitem>
-          <listitem>
-            <para>Specify that the view is the default view for a file type
-or all folders.</para>
-          </listitem>
-          <listitem>
-            <para>Specify that the view is an item in the <guisubmenu>View as</guisubmenu> submenu for a particular file or folder.</para>
-          </listitem>
-          <listitem>
-            <para>Specify that the view is an item in the <guisubmenu>View as</guisubmenu> submenu for all of a particular file type or for all folders.</para>
-          </listitem>
-          <listitem>
-            <para>Specify that the view is not an item in the <guisubmenu>View
-as</guisubmenu> submenu for a particular file or folder.</para>
-          </listitem>
-        </itemizedlist>
-        <para>To modify the behavior of a view perform the following steps:</para>
-        <orderedlist>
-          <listitem>
-            <para>Choose <menuchoice><guimenu>View</guimenu><guimenuitem>View as</guimenuitem></menuchoice>. An <guilabel>Open with Other Viewer</guilabel>
-dialog is displayed.</para>
-          </listitem>
-          <listitem>
-            <para>Select the view that you want to modify from the table in
-the dialog.</para>
-          </listitem>
-          <listitem>
-            <para>Click on the <guibutton>Modify</guibutton> button. A <guilabel>Modify</guilabel> dialog is displayed. The following table describes the options
-on the <guilabel>Modify</guilabel> dialog:</para>
-            <informaltable frame="topbot">
-              <tgroup cols="2" colsep="0" rowsep="0">
-                <colspec colwidth="35.09*"/>
-                <colspec colwidth="64.91*"/>
-                <thead>
-                  <row rowsep="1">
-                    <entry>
-                      <para>Option</para>
-                    </entry>
-                    <entry>
-                      <para>Description </para>
-                    </entry>
-                  </row>
-                </thead>
-                <tbody>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Include in the menu for <replaceable>item-name</replaceable> items</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Select this option to include the view in the <guisubmenu>View as</guisubmenu>
-submenu for this type of item.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Use as default for <replaceable>item-name</replaceable> items</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Select this option to use the view as the default for this type of item.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Include in the menu for <replaceable>item-name</replaceable> only</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Select this option to include the view in the <guisubmenu>View as</guisubmenu>
-submenu for this item only.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Use as default for <replaceable>item-name</replaceable> only</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Select this option to use the view as the default for this item only.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Don't include in the menu for <replaceable>item-name</replaceable> items</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Select this option to exclude the view from the <guisubmenu>View as</guisubmenu>
-submenu for this type of item.</para>
-                    </entry>
-                  </row>
-                </tbody>
-              </tgroup>
-            </informaltable>
-          </listitem>
-          <listitem>
-            <para>Click <guibutton>OK</guibutton>, then click <guibutton>Cancel</guibutton> to close the <guilabel>Open with Other Viewer</guilabel> dialog.</para>
-          </listitem>
-        </orderedlist>
-        <note>
-          <para>You can also modify the actions that are associated with a file
-type in the <guilabel>Edit file type</guilabel> dialog in the <application>File Types and Programs</application> preference tool. To open the <guilabel>Edit file type</guilabel> dialog, click on the <guibutton>Go There</guibutton>
-button. </para>
-        </note>
       </sect3>
     </sect2>
   </sect1>
@@ -1756,171 +1282,57 @@ button. </para>
 files</secondary>
     </indexterm>
     <para>When you open a file, the file manager
-performs the default action for that file type. The <application>File Types
-and Programs</application> preference tool contains a table of file types,
-their associated file extensions, and their default actions. This table specifies
-what happens when you double-click on a file in the file manager. </para>
-    <para>You can also use the file manager to modify the actions that are  associated
+performs the default action for that file type. By right-clicking on a file you may perform actions other than the default. You can use the file manager to modify the actions that are  associated
 with a particular file or file type. </para>
-    <para>You can use the <application>File Types and Programs</application> 
-preference tool to perform the following tasks:</para>
-    <itemizedlist>
-      <listitem>
-        <para>Specify the default action for a file type. You can also change
-the default action for a file type in the file manager. </para>
-      </listitem>
-      <listitem>
-        <para>Associate a file type with one or more applications. The default
-action might specify to open the file in an application that is associated
-with the file type.</para>
-      </listitem>
-      <listitem>
-        <para>Associate a file type with one or more viewers. The default
-action might specify to open the file in a viewer that is associated with
-the file type.</para>
-      </listitem>
-      <listitem>
-        <para>Associate a file extension with a MIME type. The MIME type
-specifies the format of the file so that Internet browsers and email applications
-can read the file.</para>
-      </listitem>
-    </itemizedlist>
+    <sect2 id="gosnautilus-add-actions">
+      <title>To Add Actions</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>adding actions</secondary>
+      </indexterm>
+      <para>To add actions associated with a file type, perform the
+following steps:</para>
+      <orderedlist>
+        <listitem>
+         <para>In the view pane, select
+a file of the type to which you want to add an action.</para>
+        </listitem>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open with Other Application</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+        <para>Either choose an application in the open with dialog or browse to the program with 
+which you wish to open this type.</para>
+        </listitem>
+      </orderedlist>
+       <para>The action you have chosen is now added to the list of actions for that particular file type. If ther was 
+no prior action associated with the type, the newly added action is the default.</para>
+       <para>You may alo add actions in the <guilabel>Open With</guilabel> tabbed section under <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
+   </sect2>
     <sect2 id="gosnautilus-75">
       <title>To Modify Actions</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>modifying actions</secondary>
       </indexterm>
-      <para>You can modify the actions associated with a file or file
-type. You can do the following:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Specify that the action is the default action for a particular
-file. </para>
-        </listitem>
-        <listitem>
-          <para>Specify that the action is the default action for a particular
-file type.</para>
-        </listitem>
-        <listitem>
-          <para>Specify that the action is an item in the <guisubmenu>Open
-With</guisubmenu> submenu for a particular file.</para>
-        </listitem>
-        <listitem>
-          <para>Specify that the action is an item in the <guisubmenu>Open
-With</guisubmenu> submenu for a particular file type.</para>
-        </listitem>
-        <listitem>
-          <para>Specify that the action is not an item in the <guisubmenu>Open With</guisubmenu> submenu for a particular file type. </para>
-        </listitem>
-      </itemizedlist>
-      <para>To modify the actions associated with a file or file type, perform the
-following steps:</para>
+      <para>To modify the actions associated with a file or file
+type, perform the following steps:</para>
       <orderedlist>
         <listitem>
-          <para>In the view pane, select the file for which you want to modify
-an action. If you want to modify an action associated with a file type, select
-a file of that type.</para>
+         <para>In the view pane, select
+a file of the type to which you want to modify the action.</para>
         </listitem>
         <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open With</guimenuitem></menuchoice>. Perform either of the following steps:</para>
-          <itemizedlist>
-            <listitem>
-              <para>Choose <guimenuitem>Other Application</guimenuitem>. An <guilabel>Open with Other Application</guilabel> dialog is displayed. </para>
-            </listitem>
-            <listitem>
-              <para>Choose <guimenuitem>Other Viewer</guimenuitem>. An <guilabel>Open with Other Viewer</guilabel> dialog is displayed. </para>
-            </listitem>
-          </itemizedlist>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
+        </listitem>
+       <listitem>
+          <para>Choose <guilabel>Open With</guilabel> tabbed section.</para>
         </listitem>
         <listitem>
-          <para>From the table in the dialog, select the application or viewer
-for which you want to modify the behavior.</para>
-        </listitem>
-        <listitem>
-          <para>Click on the <guibutton>Modify</guibutton> button. A <guilabel>Modify</guilabel> dialog is displayed. The following table describes the options
-on the <guilabel>Modify</guilabel> dialog:</para>
-          <informaltable frame="topbot">
-            <tgroup cols="2" colsep="0" rowsep="0">
-              <colspec colwidth="35.09*"/>
-              <colspec colwidth="64.91*"/>
-              <thead>
-                <row rowsep="1">
-                  <entry>
-                    <para>Option</para>
-                  </entry>
-                  <entry>
-                    <para>Description </para>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Include in the menu for <replaceable>filetype</replaceable> items</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to include the application or viewer in the <guisubmenu>Open With</guisubmenu> submenu for this file type.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Use as default for <replaceable>filetype</replaceable> items</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to use the application or viewer as the default action
-for this file type.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Include in the menu for <replaceable>filename</replaceable> only</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to include the application or viewer in the <guisubmenu>Open With</guisubmenu> submenu for this file, and not for other files of this
-type.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Use as default for <replaceable>filename</replaceable> only</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to use the application or viewer as the default action
-for this file, and not for other files of this type.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Don't include in the menu for <replaceable>filetype</replaceable> items</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to exclude the application or viewer from the <guisubmenu>Open With</guisubmenu> submenu for this file type.</para>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </informaltable>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>OK</guibutton>, then click <guibutton>Cancel</guibutton> to close the dialog. </para>
+          <para>Use <guibutton>Add</guibutton> or <guibutton>Remove</guibutton> buttons to tailor the list of actions. 
+Select the default action with the option to the left of the list.</para>
         </listitem>
       </orderedlist>
-      <note>
-        <para>You can also modify the actions that are associated with a file
-type in the <guilabel>Edit file type</guilabel> dialog in the <application>File Types and Programs</application>  preference tool. To open the <guilabel>Edit file type</guilabel> dialog, click on the <guibutton>Go There</guibutton>
-button. </para>
-      </note>
     </sect2>
   </sect1>
   <sect1 id="gosnautilus-15">
@@ -1944,7 +1356,8 @@ file manager</primary>
         <see>file manager preferences</see>
       </indexterm>
       <para>Use the <guilabel>File Management Preferences</guilabel>  dialog to set preferences
-for the file manager. To display the <guilabel>File Management Preferences</guilabel> dialog, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.</para>
+for the file manager. To display the <guilabel>File Management Preferences</guilabel> dialog, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>, you can also acess this dialog directly from the <application>Menu Bar</application> 
+by choosing <menuchoice><guimenu>Desktop</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>File Management</guimenuitem></menuchoice>.</para>
       <para>You can set preferences in the following categories: </para>
       <itemizedlist>
         <listitem>
@@ -1952,10 +1365,13 @@ for the file manager. To display the <guilabel>File Management Preferences</guil
         </listitem>
         <listitem>
           <para>The behavior of files and folders, executable text files,
-and <guilabel>Trash</guilabel>.</para>
+and Trash.</para>
         </listitem>
         <listitem>
-          <para>The information that is displayed in icon captions.</para>
+          <para>The information that is displayed in icon captions and the date format.</para>
+        </listitem>
+        <listitem>
+          <para>The colums that appear in the list view and their order.</para>
         </listitem>
         <listitem>
           <para>Preview options to improve the performance of the file manager.</para>
@@ -1970,7 +1386,8 @@ and <guilabel>Trash</guilabel>.</para>
         </indexterm>
         <para>You can specify a default view,
 and select sort options and display options. You can also specify default
-settings for icon views and list views. To specify your default view settings,
+settings for icon views and list views.</para>
+        <para>To specify your default view settings,
 choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Views</guilabel> tab to
 display the <guilabel>Views</guilabel> tabbed section.</para>
         <para><xref linkend="gosnautilus-TBL-30"/> lists the views preferences that
@@ -1999,7 +1416,7 @@ you can modify. </para>
                 </entry>
                 <entry valign="top">
                   <para>Select the default view for folders. When you open
-a folder, the folder is displayed in the view that you select.</para>
+a folder, the folder is displayed in the view that you select. This can be either the icon view or the list view.</para>
                 </entry>
               </row>
               <row>
@@ -2047,8 +1464,8 @@ view pane by adding .hidden extension to the filename.</para>
                   </para>
                 </entry>
                 <entry colname="colspec1" valign="top">
-                  <para>Icon
-view and list view. Select the default zoom level for folders that are displayed
+                  <para>There are two settings, one for the icon
+view and one for the list view. Select the default zoom level for folders that are displayed
 in this view. The zoom level specifies the size of items in a view.</para>
                 </entry>
               </row>
@@ -2141,28 +1558,42 @@ activate items</guilabel>
 on the item.</para>
                 </entry>
               </row>
+
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Always open in browser
+windows</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Select this option to use nautilus in browser mode
+rather than spatial mode. Selecting this lets you browse your files and folders in the same window, otherwise you will navigate your files and folders as objects.</para>
+                </entry>
+              </row>
+
               <row>
                 <entry colname="colspec6">
                   <para>
-                    <guilabel>Run executable files when they are clicked</guilabel>
+                    <guilabel>Run executable text files when they are clicked</guilabel>
                   </para>
                 </entry>
                 <entry colname="colspec7">
-                  <para>Select this option to run an executable file when you choose
-the executable file. An executable file is a text file that can execute, that
+                  <para>Select this option to run an text executable file when you choose
+the file. An executable text file is a text file that can execute, that
 is, a shell script.</para>
                 </entry>
               </row>
               <row>
                 <entry colname="colspec6">
                   <para>
-                    <guilabel>View executable files when
+                    <guilabel>View executable text files when
 they are clicked</guilabel>
                   </para>
                 </entry>
                 <entry colname="colspec7">
-                  <para>Select this option to display the contents of an executable file when you
-choose the executable file.</para>
+                  <para>Select this option to display the contents of an executable text file when you
+choose the executable text file.</para>
                 </entry>
               </row>
               <row>
@@ -2173,7 +1604,7 @@ choose the executable file.</para>
                 </entry>
                 <entry colname="colspec7" valign="top">
                   <para>Select
-this option to display a dialog when you choose an executable file. The dialog
+this option to display a dialog when you choose an executable text file. The dialog
 asks whether you want to execute the file or display the file. </para>
                 </entry>
               </row>
@@ -2185,7 +1616,7 @@ or deleting files</guilabel>
                   </para>
                 </entry>
                 <entry colname="colspec7">
-                  <para>Select this option to display a confirmation message before <guilabel>Trash</guilabel> is emptied, or files are deleted. </para>
+                  <para>Select this option to display a confirmation message before <guilabel>Trash</guilabel> is emptied, or files are deleted. Leave this selected unless you have good reason not to.</para>
                 </entry>
               </row>
               <row>
@@ -2208,7 +1639,7 @@ file, folder, or desktop  object. </para>
                     </listitem>
                   </itemizedlist>
                   <para>When you select an item then choose the <guimenuitem>Delete</guimenuitem> menu item, the item is deleted from your file system
-immediately.</para>
+immediately. There is no way to recover a deleted file. Do not select this unless you have good reason to.</para>
                 </entry>
               </row>
             </tbody>
@@ -2216,7 +1647,7 @@ immediately.</para>
         </table>
       </sect3>
       <sect3 id="gosnautilus-439">
-        <title>To Set Icon Captions Preferences</title>
+        <title>To Set Display Preferences</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>icons</secondary>
@@ -2234,7 +1665,7 @@ name. Normally only one item of information is visible, but when you zoom
 in on an icon, more of the information is displayed. You can modify what additional
 information is displayed in icon captions. </para>
         <para>To set your preferences for icon captions, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
-Click on the <guilabel>Icon Caption</guilabel> tab to display the <guilabel>Icon Caption</guilabel> tabbed section. </para>
+Click on the <guilabel>Display</guilabel> tab to display the <guilabel>Display</guilabel> tabbed section. </para>
         <para>Select the items of information that you want to display in the icon
 caption from the three drop-down lists. Select the first item from the first
 drop-down list, select the second item from the second drop-down list, and
@@ -2274,8 +1705,7 @@ the size of the item.</para>
                 </entry>
                 <entry colname="colspec1" valign="top">
                   <para>Choose this option to display
-the description of the MIME type of the item from the <application>File Types
-and Programs</application> preference tool.</para>
+the description of the MIME type of the item.</para>
                 </entry>
               </row>
               <row>
@@ -2370,6 +1800,9 @@ no information for the item.</para>
             </tbody>
           </tgroup>
         </informaltable>
+       <para>
+        The date <guilabel>Format</guilabel> option lets you choose how the date is displayed throughout Nautilus.
+       </para>
       </sect3>
       <sect3 id="gosnautilus-490">
         <title>To Set List Columns Preferences</title>
@@ -2620,7 +2053,7 @@ content of text files in the icon that represents the file. </para>
                   <para>Select
 an option to specify when to show thumbnails of image files. The file manager
 stores the thumbnail files for each folder in a <filename>.thumbnails</filename>
-directory that is one level below the folder.</para>
+directory in the users home folder.</para>
                 </entry>
               </row>
               <row>
@@ -2653,9 +2086,8 @@ files</guilabel>
                 </entry>
                 <entry colname="colspec1">
                   <para>Select an option to specify when to show the
-number of items in folders. If you have set your view to icon view, you might
-need to increase your default zoom level in the <guilabel>Views</guilabel>
-tabbed section to see the number of items in each folder.</para>
+number of items in folders. When in icon view, you might
+need to increase your zoom level to see the number of items in each folder.</para>
                 </entry>
               </row>
             </tbody>
@@ -2744,20 +2176,12 @@ to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
       <secondary>opening files</secondary>
     </indexterm>
     <para>When you open a file, the file manager performs the default
-action for that file type. The default action can be one of the following: </para>
-    <itemizedlist>
-      <listitem>
-        <para>Use a viewer component to display the file in the view pane.</para>
-      </listitem>
-      <listitem>
-        <para>Launch an application that opens the file.</para>
-      </listitem>
-    </itemizedlist>
+action for that file type.</para>
     <para>The file manager checks the contents of a file to determine the type
 of a file. If the first lines do not determine the type of the file, then
 the file manager checks the file extension.</para>
     <para>If you cannot find the file that you want to open, you can use <application>Search Tool</application>. To start <application>Search Tool</application>,
-choose <menuchoice><guimenu>Actions</guimenu><guimenuitem>Search for
+choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Search for
 Files</guimenuitem></menuchoice>.</para>
     <sect2 id="gosnautilus-29">
       <title>To Execute the Default Action</title>
@@ -2767,7 +2191,7 @@ Files</guimenuitem></menuchoice>.</para>
 for files</secondary>
       </indexterm>
       <para>To execute the default action for a
-file, double-click on the file. For example, if the default action for plain
+file, double-click on the file. For example, the default action for plain
 text documents is to display the file in a text viewer. In this case, you
 can double-click on the file to  display the file in a text viewer.</para>
       <para>You can set your file manager preferences so that you click once on
@@ -2781,70 +2205,20 @@ a file to execute the default action. For more information, see <xref linkend="g
 actions for files</secondary>
       </indexterm>
       <para>To execute actions other than
-the default action for a file, perform the following steps:</para>
-      <orderedlist>
-        <listitem>
-          <para>In the view pane, select the file that you want to perform
-an action on. Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open With</guimenuitem></menuchoice>. The <guisubmenu>Open With</guisubmenu>
-submenu opens. The items in this submenu correspond to the contents of the
-following parts of the <application>File Types and Programs</application>
-preference tool:</para>
-          <itemizedlist>
-            <listitem>
-              <para><guilabel>Default action</guilabel> drop-down list in the <guilabel>Edit file type</guilabel> dialog</para>
-            </listitem>
-            <listitem>
-              <para><guilabel>Viewer component</guilabel> drop-down list in the <guilabel>Edit file type</guilabel> dialog</para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-        <listitem>
-          <para>Choose an action from the <guisubmenu>Open With</guisubmenu>
-submenu.</para>
-        </listitem>
-      </orderedlist>
-    </sect2>
-    <sect2 id="gosnautilus-73">
-      <title>To Execute Other Actions When Displaying a File</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>executing other actions
-for files</secondary>
-      </indexterm>
-      <para>When you display a file in the view
-pane, the side pane might contain buttons.</para>
-      <para>The buttons represent any actions that are defined in the <application>File Types and Programs</application> preference tool. The actions are defined
-in the <guilabel>Default action</guilabel> drop-down list in the <guilabel>Edit file type</guilabel> dialog in the <application>File Types and Programs</application> preference tool. Click on a button to execute an action. For
-example, if an action defined for plain text documents is to open the file
-in the <application>gedit</application> text editor. If this action is defined,
-an <guibutton>Open with gedit</guibutton> button is displayed in the side
-pane. To open the file in the <application>gedit</application> application,
-click on the <guibutton>Open with gedit</guibutton> button.</para>
-      <note>
-        <para>A button that represents the action does not appear in the side
-pane if the actions are excluded in either of the following dialogs:</para>
-        <itemizedlist>
-          <listitem>
-            <para>
-              <guilabel>Open with Other Application</guilabel>
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <guilabel>Open with Other Viewer</guilabel>
-            </para>
-          </listitem>
-        </itemizedlist>
-      </note>
+the default action for a file,  select the file that you want to perform
+an action on. In the <menuchoice><guimenu>File</guimenu></menuchoice> menu you will either have "Open with" choices, or an 
+<menuchoice><guimenuitem>Open With</guimenuitem></menuchoice> submenu, see <xref linkend="gosnautilus-204"/> for details about how to add new actions. Select the desired option from this list.</para>
     </sect2>
   </sect1>
   <sect1 id="gosnautilus-515">
     <title>Navigating Your Computer</title>
     <para>The <application>Nautilus</application> file manager provides an integrated
-access point to your files, applications, FTP sites, and URIs. </para>
-    <para>This section describes the following: <itemizedlist><listitem><para>How to access FTP sites.</para></listitem><listitem><para>How to access special URI locations.</para></listitem></itemizedlist></para>
+access point to your files, applications, FTP sites, Windows shares, WebDav servers and SSH servers.</para>  
     <sect2 id="gosnautilus-37">
-      <title>To Access an FTP Site</title>
+      <title>To Access a remote server</title>
+      <!-- MOVE THIS ANCHOR -->
+      <!-- To Add a Network Server -->
+      <anchor id="gosnautilus-466"/>
       <indexterm>
         <primary>FTP sites</primary>
         <secondary>accessing</secondary>
@@ -2855,20 +2229,103 @@ access point to your files, applications, FTP sites, and URIs. </para>
         <see>FTP sites</see>
       </indexterm>
       <para>You can use the file manager to access
-FTP sites. To access an FTP site, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Connect to Server</guimenuitem></menuchoice>. Enter
-the URL in the <guilabel>Connect to Server</guilabel> dialog, then click on
-the<guibutton>Connect</guibutton> button. The contents of the site are displayed.</para>
-      <para>To copy a file from the FTP site, drag the file to the new location.</para>
-      <para>To access an FTP site that requires a username and password, you can
-enter the URL in the following form: </para>
-      <para>
-        <command>ftp://<replaceable>username</replaceable>:<replaceable>password</replaceable>@<replaceable>hostname</replaceable>.<replaceable>domain</replaceable></command>
-      </para>
-      <para>To reload the FTP site, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reload</guimenuitem></menuchoice>. To stop loading the FTP site,
-choose <menuchoice><guimenu>View</guimenu><guimenuitem>Stop</guimenuitem></menuchoice>.</para>
+a remote server, be it an FTP site, a Windows share, a WebDav server or an SSH server.</para>
+<para>To access a remote server, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Connect to Server</guimenuitem></menuchoice>.
+You may also access this dialog from the menubar by choosing <menuchoice><guimenu>Places</guimenu><guimenuitem>Connect to Server</guimenuitem></menuchoice>.</para>
+<para>In the <guilabel>Connect to Server</guilabel> dialog, you may click on the <guibutton>Browse network</guibutton> button to close this dialog and view services available on your network in a nautilus window.</para>
+<para>To connect to a remote server, start by choosing the service type, then enter the server address.</para>
+<para>If required by your server, you may provide the following optional information : </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="27.27*"/>
+                <colspec colname="colspec1" colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Dialog Element</para>
+                    </entry>
+                    <entry>
+                      <para>Description</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Port</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Port to connect to on the server. This should only be used if it is necesary to
+change the default port, you would normally leave this blank.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Folder</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                        <para>Folder to open upon connecting to server.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>User Name</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>The user name of the account used to connect to the server.
+This should be supplied with the connexion information if needed.
+The user name information is not appropriate for a public FTP connexion.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Name to use for connection</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>The designation of the connexion as it will appear in the file manager.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Share</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Name of desired windows share. This is only applicable to Windows shares.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Domain name</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Windows domain. This is only applicable to Windows shares.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+<para>If the server information is provided in the form of a URI, or you require a specialised connection, choose <menuchoice><guimenuitem>Custom Location</guimenuitem></menuchoice> as the service type.</para>
+<para>Once you have filled in the information, click on
+the <guibutton>Connect</guibutton> button. When the connection succeeds, the contents of the site are displayed and you may drag and drop files to and from the remote server.</para>
     </sect2>
     <sect2 id="gosnautilus-465">
       <title>To Access Network Places</title>
+      <!-- MOVE THIS ANCHOR -->
+      <!-- To Add a Network Server -->
+      <anchor id="gosnautilus-508"/>
+      <anchor id="gosnautilus-509"/>
       <indexterm>
         <primary>network places</primary>
         <secondary>accessing</secondary>
@@ -2881,9 +2338,9 @@ choose <menuchoice><guimenu>View</guimenu><guimenuitem>Stop</guimenuitem></menuc
       <para>If your system is configured
 to access places on a network, you can use the file manager to access the
 network places. </para>
-      <para>To access network places, open the file manager and choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer </guimenuitem></menuchoice>.
+      <para>To access network places, open the file manager and choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></menuchoice>.
 Alternatively, double-click on the <guilabel>Computer</guilabel> object on
-the Desktop. Double-click on the <guilabel>Network</guilabel> object. A file
+the Desktop, then double-click on the <guilabel>Network</guilabel> object. A file
 manager window is displayed. The window displays the network places that you
 can access. Double-click on the network that you want to access. </para>
       <para><indexterm><primary>NFS servers</primary><see>Unix network</see></indexterm>To
@@ -2893,126 +2350,6 @@ manager window.</para>
       <para><indexterm><primary>Samba servers</primary><see>Windows network</see></indexterm>To access Windows shares, double-click on the <guilabel>Windows
 Network (SMB) </guilabel> object. A list of the Windows shares available to
 you is displayed in the file manager window.</para>
-      <sect3 id="gosnautilus-466">
-        <title>To Add a Network Place</title>
-        <para>To add a network place, perform the following steps:</para>
-        <orderedlist>
-          <listitem>
-            <para>Open the file manager and choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer </guimenuitem></menuchoice>. Alternatively,
-double-click on the <guilabel>Computer</guilabel> object on the Desktop. A
-file object window is displayed.</para>
-          </listitem>
-          <listitem>
-            <para>Double-click on the <guilabel>Add Network Place</guilabel>
-object. The <guilabel>Add Network Place</guilabel> dialog is displayed. Enter
-the details of the server in the dialog, as follows:</para>
-            <informaltable frame="topbot">
-              <tgroup cols="2" colsep="0" rowsep="0">
-                <colspec colname="colspec0" colwidth="27.27*"/>
-                <colspec colname="colspec1" colwidth="72.73*"/>
-                <thead>
-                  <row rowsep="1">
-                    <entry>
-                      <para>Dialog Element</para>
-                    </entry>
-                    <entry>
-                      <para>Description </para>
-                    </entry>
-                  </row>
-                </thead>
-                <tbody>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Location</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Use this text box to specify the location that you
-want to add. Alternatively, select one of the following locations from the
-drop-down list:<itemizedlist><listitem><para><guilabel>FTP Server</guilabel></para></listitem><listitem><para><guilabel>Web Folder</guilabel></para></listitem><listitem><para><guilabel>Windows Network (SMB)</guilabel></para></listitem><listitem><para><guilabel>Unix Network (NFS)</guilabel></para></listitem></itemizedlist></para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Shortcut name</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">Use this text box to specify a shortcut name for the network place. </entry>
-                  </row>
-                  <row>
-                    <entry colname="colspec0">
-                      <para>
-                        <guilabel>Anonymous login </guilabel>
-                      </para>
-                    </entry>
-                    <entry colname="colspec1">
-                      <para>FTP Server option only. Select this option
-to log in to the FTP server as an anonymous user.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry colname="colspec0">
-                      <para>
-                        <guilabel> No login required</guilabel>
-                      </para>
-                    </entry>
-                    <entry colname="colspec1">
-                      <para>Web Folder, Windows Network (SMB), and Unix
-Network (NFS) options only. Select this option if you do not need to log in
-to the web folder, Windows share, or UNIX share.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry colname="colspec0">
-                      <para>
-                        <guilabel>Username</guilabel>
-                      </para>
-                    </entry>
-                    <entry colname="colspec1">
-                      <para>Use this text box to specify a username  when
-you connect to the specified network place.</para>
-                      <para>When you connect to
-the network place, you must enter your password.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry colname="colspec0">
-                      <para>
-                        <guilabel>Go there now</guilabel>
-                      </para>
-                    </entry>
-                    <entry colname="colspec1">
-                      <para>Select this option if you want to access the
-network place immediately.</para>
-                    </entry>
-                  </row>
-                </tbody>
-              </tgroup>
-            </informaltable>
-          </listitem>
-          <listitem>
-            <para>Click <guibutton>OK</guibutton> to add your network place.</para>
-          </listitem>
-        </orderedlist>
-      </sect3>
-    </sect2>
-    <sect2 id="gosnautilus-508">
-      <title>To Access Network Servers</title>
-      <para>If your GNOME desktop environment is configured to access servers on
-a network, you can use the <guilabel>Applications</guilabel> menu to access
-the network servers.</para>
-      <para>To access network servers, choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>Network Servers</guimenuitem></menuchoice>. A file
-object window is displayed. The window displays the network servers that you
-can access. Double-click on the network server that you want to access.</para>
-      <sect3 id="gosnautilus-509">
-        <title>To Add a Network Server</title>
-        <para>To add a network server, choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>Network Servers</guimenuitem></menuchoice>.  A file
-object window is displayed. Double-click on the <guilabel>New Server</guilabel>
-object. A <guilabel>New Server </guilabel> dialog is displayed. Enter the
-name of the server in the dialog, then click <guibutton>OK</guibutton>.</para>
-      </sect3>
     </sect2>
     <sect2 id="gosnautilus-467">
       <title>Accessing Special URI Locations</title>
@@ -3031,8 +2368,8 @@ locations</secondary>
       </indexterm>
       <para>The GNOME Desktop contains
 special URI locations that enable you to access particular functions from
-the file manager. For example, to access the preference tools, you can access
-the <command>preferences:///</command> URI in a file manager window. <xref linkend="gosnautilus-TBL-479"/> lists the special URI locations that you can
+the file manager. For example, to access fonts, you can access
+the <command>fonts:///</command> URI in a file manager window. <xref linkend="gosnautilus-TBL-479"/> lists the special URI locations that you can
 use with the file manager.</para>
       <table frame="topbot" id="gosnautilus-TBL-479">
         <title>Special URI Locations</title>
@@ -3053,19 +2390,6 @@ use with the file manager.</para>
             <row>
               <entry colname="colspec0" valign="top">
                 <para>
-                  <command>applications:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays
-a list of the applications in the GNOME Desktop. The applications are the
-same as the applications in the <guimenu>Applications</guimenu> menu. To open
-an application, double-click on the application.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
                   <command>fonts:///</command>
                 </para>
               </entry>
@@ -3073,6 +2397,17 @@ an application, double-click on the application.</para>
                 <para>Displays all the fonts that are
 available in your system. To preview a font, double-click on the font. You
 can also use this location to add fonts to the GNOME Desktop.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>burn:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>This is a special location where you can copy files and folders that you want to write
+to a CD. From here you can write the contents of the location to a CD easily.</para>
               </entry>
             </row>
             <row>
@@ -3086,54 +2421,6 @@ can also use this location to add fonts to the GNOME Desktop.</para>
 which you can connect, if your system is configured to access locations on
 a network. To access a network location, double-click on the network location.
 You can also use this URI to add network locations to your system.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>preferences:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays
-a list of the preference tools in the GNOME Desktop. The preference tools
-are the same as the preference tools in the <guimenu>Desktop Preferences</guimenu>
-menu. To open a preference tool, double-click on the preference tool.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>server-settings:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays
-a list of applications that you can use to configure your system as a server.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>start-here:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays
-a list of applications and preference tools in the GNOME Desktop. Also displays
-applications that you can use to configure your system as a server, and to
-modify your system configuration details.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>system-settings:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays
-a list of applications that you can use to modify your system settings.</para>
               </entry>
             </row>
             <row>
@@ -3687,6 +2974,90 @@ or folder. </para>
 dialog.</para>
         </listitem>
       </orderedlist>
+
+      <para>The following table lists the properties that you can view or set for files and folders, the exact information shown depends on the object type:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="27.27*"/>
+          <colspec colwidth="72.73*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Property</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Name</para>
+              </entry>
+              <entry valign="top">
+                <para>The name of the file or folder. You can change the name here and the file or folder will be renamed when you click on <guibutton>Close</guibutton>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Type</para>
+              </entry>
+              <entry valign="top">
+                <para>The type of object, file or folder for example.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Location</para>
+              </entry>
+              <entry valign="top">
+                <para>The system path for the object. This represents where the object is situated on your computer, reletive to the system root.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Volume</para>
+              </entry>
+              <entry valign="top">
+                <para>The volume on which a folder resides. This is the phisical location of the folder, on which media it resides, for example which hard disk or CDROM drive.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Free space</para>
+              </entry>
+              <entry valign="top">
+                <para>The amount of free space on the media upon which a folder resides. This represents the maximum amount of data you can copy to this folder.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>MIME Type</para>
+              </entry>
+              <entry valign="top">
+                <para>The offical naming of the type of file.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Modified</para>
+              </entry>
+              <entry valign="top">
+                <para>The date and time at which the object was last changed.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Accesed</para>
+              </entry>
+              <entry valign="top">
+                <para>The date and time at which the object was last viewed.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
     </sect2>
     <sect2 id="gosnautilus-430">
       <title>To Change Permissions</title>
@@ -3923,6 +3294,144 @@ was last modified.</para>
 dialog.</para>
         </listitem>
       </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-200">
+      <title>Adding Notes to Files and Folders</title>
+      <para>You can add notes to files or folders. You can add notes to files or
+folders in the following ways:</para>
+      <itemizedlist>
+        <listitem>
+          <para>From the properties dialog</para>
+        </listitem>
+        <listitem>
+          <para>From <guilabel>Notes</guilabel> in the side pane</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gosnautilus-472">
+        <title>To Add a Note Using the Properties Dialog</title>
+        <indexterm>
+          <primary>notes</primary>
+          <secondary>adding to files and folders</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>file manager</primary>
+          <secondary>notes</secondary>
+          <tertiary>adding</tertiary>
+        </indexterm>
+        <para>To add a note
+to a file or folder, perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Select the file or folder to which you want to add a note. </para>
+          </listitem>
+          <listitem>
+            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. A properties dialog is displayed.</para>
+          </listitem>
+          <listitem>
+            <para>Click on the <guilabel>Notes</guilabel> tab. In the <guilabel>Notes</guilabel> tabbed section, type the note.</para>
+          </listitem>
+          <listitem>
+            <para>Click <guibutton>Close</guibutton> to close the properties
+dialog. A note emblem is added to the file or folder.</para>
+          </listitem>
+        </orderedlist>
+        <para><indexterm><primary>notes</primary><secondary>deleting</secondary></indexterm><indexterm><primary>file manager</primary><secondary>notes</secondary><tertiary>deleting</tertiary></indexterm>To delete a note, delete the note text from the <guilabel>Notes</guilabel> tabbed section.</para>
+      </sect3>
+      <sect3 id="gosnautilus-473">
+        <title>To Add a Note Using Notes in the Side Pane</title>
+        <para>To add a note to a file or folder, perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Open the file or folder to which you want to add a note in
+the view pane.</para>
+          </listitem>
+          <listitem>
+            <para>Choose <guilabel>Notes</guilabel> from the drop-down list
+at the top of the side pane. To display the side pane, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Type the note in the side pane. A note emblem is added to
+the file or folder in the view pane, and a note icon is added to the side
+pane. You can click on this icon to display the note.</para>
+          </listitem>
+        </orderedlist>
+        <para>To delete a note, delete the note text from <guilabel>Notes</guilabel>
+in the side pane.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-36">
+      <title>Using Bookmarks For Your Favorite Locations</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>bookmarks</secondary>
+      </indexterm>
+      <para>To access an item in your bookmarks, choose the item from
+the <guimenu>Bookmarks</guimenu> menu. You can add your favorite locations
+to your <guimenu>Bookmarks</guimenu> menu. You can add bookmarks to files
+and folders in your file system, to FTP sites, or to URI locations.</para>
+      <sect3 id="gosnautilus-40">
+        <title>To Add a Bookmark</title>
+        <para>To add a bookmark, display the item that you want to bookmark in the
+view pane, then choose <menuchoice><guimenu>Bookmarks</guimenu><guimenuitem>Add Bookmark</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-41">
+        <title>To Edit a Bookmark</title>
+        <para>To edit your bookmarks perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Choose <menuchoice><guimenu>Bookmarks</guimenu><guimenuitem>Edit Bookmarks</guimenuitem></menuchoice>. An <guilabel>Edit Bookmarks</guilabel>
+dialog is displayed. </para>
+          </listitem>
+          <listitem>
+            <para>To edit a bookmark, select the bookmark on the left side of
+the <guilabel>Edit Bookmarks</guilabel> dialog. Edit the details for the bookmark
+on the right side of the <guilabel>Edit Bookmarks</guilabel> dialog, as follows:</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="27.27*"/>
+                <colspec colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Dialog Element</para>
+                    </entry>
+                    <entry>
+                      <para>Description </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Name</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Use this text box to specify the name that identifies the
+bookmark in the <guimenu>Bookmarks</guimenu> menu.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Location</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Use this field to specify the location of the bookmark.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>To delete a bookmark, select the bookmark on the left side
+of the dialog. Click <guilabel>Delete</guilabel>. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
     </sect2>
     <sect2 id="gosnautilus-44">
       <title>Using Trash</title>
@@ -4272,7 +3781,7 @@ the diskette, you might lose the data on the diskette.</para>
     </indexterm>
     <para>The file manager provides
 a special location where you can copy files and folders that you want to write
-to a CD. You can write the contents of the location to a CD easily.</para>
+to a CD. From here you can write the contents of the location to a CD easily.</para>
     <para>To write a CD, perform the following steps:</para>
     <orderedlist>
       <listitem>
@@ -4369,7 +3878,7 @@ when the CD is written.</para>
                 </entry>
                 <entry valign="top">
                   <para>Select this option if
-you do not want to write the files and folders to another CD. If you select
+you want to write the files and folders to another CD. If you select
 this option, the files and folders are not removed from the <guilabel>burn:///</guilabel> location after the CD is written. </para>
                 </entry>
               </row>
