@@ -1,6 +1,7 @@
 <chapter id="nautilus">
   <title>Nautilus File Manager</title>
-  <!-- Maintained for 2.8 compatibility -->
+
+  <!-- ID tag preserved for 2.8 compatibility -->
   <anchor id="gosnautilus-1"/>
 
   <!-- Desktop Overview / File Manager -->
@@ -35,15 +36,30 @@
   <highlights>
     <para>This chapter describes how to use the <application>Nautilus</application> file manager.</para>
   </highlights>
+
   <sect1 id="gosnautilus-21">
     <title>Introduction to Nautilus File Manager</title>
     <indexterm>
       <primary>file manager</primary>
       <secondary>introduction</secondary>
     </indexterm>
+   <sect2 id="gosnautilus-22">
+    <title>File Manager Functionality</title>
     <para>The <application>Nautilus</application> file manager provides
 an integrated access point to your files and applications. You can use the
-file manager to do the following:<itemizedlist><listitem><para>Create folders and documents.</para></listitem><listitem><para>Display your files and folders.</para></listitem><listitem><para>Manage your files and folders.</para></listitem><listitem><para>Run scripts.</para></listitem><listitem><para>Customize your files and folders.</para></listitem><listitem><para>Open special URI locations.</para></listitem><listitem><para>Write data to a CD.</para></listitem></itemizedlist>You can access your files and folders in the following ways:</para>
+file manager to do the following:<itemizedlist><listitem><para>Create folders and documents.</para></listitem><listitem><para>Display your files and folders.</para></listitem><listitem><para>Manage your files and folders.</para></listitem><listitem><para>Run scripts.</para></listitem><listitem><para>Customize your files and folders.</para></listitem><listitem><para>Open special URI locations.</para></listitem><listitem><para>Write data to a CD.</para></listitem></itemizedlist></para>
+    <para><application>Nautilus</application> also manages the desktop. The desktop
+lies behind all of the other components on your visible desktop. The desktop
+is an active component of the user interface.</para>
+  </sect2>
+  <sect2 id="gosnautilus-presentation">
+   <title>File Manager Presentation</title>
+   <para>The file manager lets you organize your files into folders. Folders can contain other folders. You can use folders to nicely 
+organize your files, so you can find them easily.</para>
+   <para>Every user has a Home folder. The home folder contains all of the user's files. The desktop is also another 
+folder. The desktop contains special icons for the Computer, Home folder, Trash, and removable media such as 
+floppy disks, CDs and USB flash drives.</para>
+    <para>You can access your files and folders in the following ways:</para>
     <itemizedlist>
       <listitem>
         <para>Browse your files and folders</para>
@@ -58,9 +74,13 @@ When you open files or folders from file object windows, each file or folder
 opens a new window.</para>
       </listitem>
     </itemizedlist>
-    <para><application>Nautilus</application> also manages the desktop. The desktop
-lies behind all of the other components on your visible desktop. The desktop
-is an active component of the user interface. </para>
+   <para>To start managing your files you may double click the appropriate icon on the desktop. 
+If there are programs covering your desktop, you can go to the Places menu on the panel, 
+which has entries for your Home folder, your desktop folder, a list 
+of recently opened documents and mounted removable media.</para>
+   <para>In GNOME many things are files, such as word processor documents, spreadsheets, photos, movies, and music.
+E-mail, address books and web pages are not normal files, these are managed through e-mail programs and web browsers.</para>
+   </sect2>
   </sect1>
   <sect1 id="gosnautilus-210">
     <title>Browsing Your Files</title>
@@ -304,6 +324,16 @@ statusbar again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Statusba
         <primary>Home location</primary>
         <secondary>displaying</secondary>
       </indexterm>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_home_launcher.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Home location icon.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
       <para>To display your home location,
 perform one of the following actions from file browser windows:</para>
       <itemizedlist>
@@ -349,6 +379,20 @@ the name of the directory in the <guilabel>Location</guilabel> field.</para>
       <para>To change to the folder that is one level above the current folder,
 choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Up</guimenuitem></menuchoice>. Alternatively, click on the <guibutton>Up</guibutton> toolbar
 button.</para>
+    </sect2>
+    <sect2 id="gosnautilus-26">
+      <title>To Display a Parent Folder</title>
+      <para>A parent folder is a top level folder that depicts a hierarchical representation
+of your file system. To display the contents of a parent folder, perform one of the
+following steps:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Press the <guibutton>Up</guibutton> button on the toolbar.</para>
+        </listitem>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Open Parent</guimenuitem></menuchoice> from the menubar. </para>
+        </listitem>
+      </itemizedlist>
     </sect2>
     <sect2 id="gosnautilus-27">
       <title>Using the Tree From the Side Pane</title>
@@ -536,9 +580,10 @@ the item in the <guilabel>History</guilabel> list.</para>
       <primary>file manager</primary>
       <secondary>navigating</secondary>
     </indexterm>
-    <para>Each file object window displays the contents of a single
-file, folder, FTP site, or special URI location. This section describes the
-following:</para>
+    <para>In this mode, each file object window displays the contents of a single
+file, folder, FTP site, or special URI location. When you open an object it appears at the same place on the 
+screen as the last time you looked at it. This lets you easily recognize folders when many of them are open.</para>
+<para>This section describes the following:</para>
     <itemizedlist>
       <listitem>
         <para>How to display items in file object windows.</para>
@@ -570,6 +615,86 @@ manager</primary><secondary>icon view</secondary><tertiary>illustration</tertiar
           </mediaobject>
         </screenshot>
       </figure>
+   <sect3 id="gosnautilus-components">
+      <title>File Object Window Components</title>
+      <para><xref linkend="gosnautilus-TBL-85"/> describes the components of file
+object windows.</para>
+      <table frame="topbot" id="gosnautilus-TBL-85">
+        <title>File Object Window Components</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="29.39*"/>
+          <colspec colname="colspec1" colwidth="70.61*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Component</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Menubar</para>
+              </entry>
+              <entry valign="top">
+                <para>Contains menus that you use to perform tasks in the file manager.</para>
+		<para>You can also open a popup menu from file manager windows. To open this
+popup menu right-click in a file manager window. The items in this menu depend
+on where you right-click. For example, when you right-click on a file or folder,
+you can choose items related to the file or folder. When you right-click on
+the background of a view pane, you can choose items related to the display
+of items in the view pane.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+		<anchor id="gosnautilus-components-view"/>
+                <para>View pane</para>
+              </entry>
+              <entry valign="top">
+                <para>Shows the contents of the following:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Folders</para>
+                  </listitem>
+                  <listitem>
+                    <para>FTP sites</para>
+                  </listitem>
+                  <listitem>
+                    <para>Windows shares</para>
+                  </listitem>
+                  <listitem>
+                    <para>WebDAV servers</para>
+                  </listitem>
+                  <listitem>
+                    <para>Locations that correspond to special URIs</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Statusbar</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Displays status information.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Parent folder selector</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>With this selector, you may open directly folders that are beneath the current location.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect3>
     </sect2>
     <sect2 id="gosnautilus-4">
       <title>To Display Your Home Location in a File Object Window</title>
@@ -637,9 +762,9 @@ following steps:</para>
       </orderedlist>
       <para>You may also use the list at the bottom left of each folder to open any folder hierarchicaly beneath the current folder.</para>
     </sect2>
-    <sect2 id="gosnautilus-closefolders">
+    <sect2 id="gosnautilus-512">
       <title>To Close Folders</title>
-      <para>To close folders you may simply click on the close window button, this however may not be the most efficiant way to close many windows.
+      <para>To close folders you may simply click on the close window button, this however may not be the most efficient way to close many windows.
 If you would like to view only the current folder, and not the folders you opend to reach the current folder, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close Parent Folders</guimenuitem></menuchoice>.
 If want to close all folders on the screen, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close All Folders</guimenuitem></menuchoice>.</para>
       </sect2>
@@ -1254,7 +1379,7 @@ alphabetical order.</para>
           </tgroup>
         </informaltable>
       </sect3>
-      <sect3 id="gosnautilus-listview">
+      <sect3 id="gosnautilus-listview-arrange">
         <title>To Arrange Your Files in List View</title>
         <indexterm>
           <primary>file manager</primary>
@@ -1305,9 +1430,9 @@ a file of the type to which you want to add an action.</para>
 which you wish to open this type.</para>
         </listitem>
       </orderedlist>
-       <para>The action you have chosen is now added to the list of actions for that particular file type. If ther was 
+       <para>The action you have chosen is now added to the list of actions for that particular file type. If there was 
 no prior action associated with the type, the newly added action is the default.</para>
-       <para>You may alo add actions in the <guilabel>Open With</guilabel> tabbed section under <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
+       <para>You may also add actions in the <guilabel>Open With</guilabel> tabbed section under <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
    </sect2>
     <sect2 id="gosnautilus-75">
       <title>To Modify Actions</title>
@@ -2504,7 +2629,7 @@ mouse pointers that appear when you drag-and-drop.</para>
                 <para>Copy an item</para>
               </entry>
               <entry colname="colspec2" valign="top">
-                <para>Grab the item, then press-and-hold <keycap>Ctrl</keycap>. Drag the item to the new location.</para>
+                <para>Grab the item, then press-and-hold <keycap>Ctrl</keycap>. Drag the item to the location where you want the copy to reside.</para>
               </entry>
               <entry colname="colspec1" valign="top">
                 <screenshot>
@@ -2548,8 +2673,8 @@ Drag the item to the location where you want the symbolic link to reside.</para>
 item you drag</para>
               </entry>
               <entry colname="colspec2" valign="top">
-                <para>Grab the item, then press-and-hold <keycap>Alt</keycap>. Drag the item to
-the location where you want the item to reside. Release the mouse button.
+                <para>Grab the item, then press-and-hold <keycap>Alt</keycap>. You may also use the middle mouse button to perform the same operation.
+Drag the item to the location where you want the item to reside. Release the mouse button.
 A popup menu appears. Choose one of the following items from the popup menu:</para>
                 <itemizedlist>
                   <listitem>
@@ -2574,9 +2699,8 @@ A popup menu appears. Choose one of the following items from the popup menu:</pa
                     <para>
                       <guimenuitem>Set as Background</guimenuitem>
                     </para>
-                    <para>If the item is an image, sets the image to be the desktop background.
- You can use this command to set the desktop background and the view pane
-background.</para>
+                    <para>If the item is an image, sets the image to be the background.
+ You can use this command to set the background of the desktop, the side pane or the view pane.</para>
                   </listitem>
                   <listitem>
                     <para>
@@ -2806,7 +2930,7 @@ name of the folder is selected.</para>
         </listitem>
       </orderedlist>
     </sect2>
-    <sect2 id="gosnautilus-512">
+    <sect2 id="gosnautilus-templates-docs">
       <title>Templates and Documents</title>
       <indexterm>
         <primary>file manager</primary>
@@ -3012,7 +3136,7 @@ dialog.</para>
                 <para>Location</para>
               </entry>
               <entry valign="top">
-                <para>The system path for the object. This represents where the object is situated on your computer, reletive to the system root.</para>
+                <para>The system path for the object. This represents where the object is situated on your computer, relative to the system root.</para>
               </entry>
             </row>
             <row>
@@ -3020,7 +3144,7 @@ dialog.</para>
                 <para>Volume</para>
               </entry>
               <entry valign="top">
-                <para>The volume on which a folder resides. This is the phisical location of the folder, on which media it resides, for example which hard disk or CDROM drive.</para>
+                <para>The volume on which a folder resides. This is the physical location of the folder, on which media it resides, for example which hard disk or CDROM drive.</para>
               </entry>
             </row>
             <row>
@@ -3036,7 +3160,7 @@ dialog.</para>
                 <para>MIME Type</para>
               </entry>
               <entry valign="top">
-                <para>The offical naming of the type of file.</para>
+                <para>The official naming of the type of file.</para>
               </entry>
             </row>
             <row>
@@ -3049,7 +3173,7 @@ dialog.</para>
             </row>
             <row>
               <entry valign="top">
-                <para>Accesed</para>
+                <para>Accessed</para>
               </entry>
               <entry valign="top">
                 <para>The date and time at which the object was last viewed.</para>
@@ -3126,7 +3250,7 @@ is a program or script.</para>
         </tgroup>
       </informaltable>
       <para>You can set permissions for different types of user. The following table
-lists the types of user that you can set for which you can set permissions:</para>
+lists the types of user for which you can set permissions:</para>
       <informaltable frame="topbot">
         <tgroup cols="2" colsep="0" rowsep="0">
           <colspec colwidth="27.27*"/>
@@ -3449,6 +3573,9 @@ of the dialog. Click <guilabel>Delete</guilabel>. </para>
         <primary>Trash</primary>
         <secondary>introduction</secondary>
       </indexterm>
+      <para>Trash is a special folder that holds files that you no longer want to keep.
+Files in the Trash are not deleted permanently until you empty the trash. This two-stage process is in 
+case you change your mind, or accidentally remove the wrong file.</para>
       <para>You can move the following items to <guilabel>Trash</guilabel>:</para>
       <itemizedlist>
         <listitem>
@@ -3508,6 +3635,11 @@ Trash</guimenuitem></menuchoice>.</para>
             <para>Right-click on the <guilabel>Trash</guilabel> object, then choose <guimenuitem>Empty Trash</guimenuitem>.</para>
           </listitem>
         </itemizedlist>
+   <caution>
+    <para>When you empty trash, you destroy all files in the trash. Be sure that the trash only contains files
+you no longer need.
+    </para>
+   </caution>
       </sect3>
     </sect2>
   </sect1>
@@ -3583,151 +3715,28 @@ right-click on the object that represents the media on the desktop, then choose 
       <para>To close the properties dialog, click <guibutton>Close</guibutton>.</para>
     </sect2>
     <sect2 id="gosnautilus-469">
-      <title>To Format a Floppy Diskette</title>
+      <title>To Format a Floppy Disk</title>
       <indexterm>
         <primary>removable media</primary>
         <secondary>formatting floppy
 diskette</secondary>
       </indexterm>
       <para>To <firstterm>format</firstterm> media
-is to prepare the media for use with a particular file system. You can use
-the file manager to format floppy diskettes.</para>
-      <caution>
-        <para>When you format media, you overwrite any existing information
-on the media.</para>
-      </caution>
-      <para>To format a floppy diskette, perform the following steps:</para>
-      <orderedlist>
-        <listitem>
-          <para>Insert the diskette in the diskette drive. Mount the diskette.
-For information on how to mount media, see <xref linkend="gosnautilus-462"/>.</para>
-        </listitem>
-        <listitem>
-          <para>Right-click on the object that represents the diskette on
+is to prepare the media for use. You can use
+the file manager to format floppy disks.</para>
+
+   <warning>
+    <title>Warning</title>
+    <para>
+     When you format, you destroy all files on your floppy disk. Do not format floppies
+     containing files you wish to keep.
+    </para>
+   </warning>
+
+   <para>To format a floppy disk, right-click on the object that represents the floppy on
 the desktop, then choose <guimenuitem>Format</guimenuitem>. A <guilabel>Floppy
-formatter</guilabel> dialog is displayed.</para>
-        </listitem>
-        <listitem>
-          <para>Select your format options in the <guilabel>Floppy formatter</guilabel> dialog. The following table describes the elements on the dialog:</para>
-          <informaltable frame="topbot">
-            <tgroup cols="2" colsep="0" rowsep="0">
-              <colspec colname="colspec0" colwidth="34.54*"/>
-              <colspec colname="colspec1" colwidth="65.46*"/>
-              <thead>
-                <row rowsep="1">
-                  <entry>
-                    <para>Dialog Element</para>
-                  </entry>
-                  <entry>
-                    <para>Description</para>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry colname="colspec0" valign="top">
-                    <para>
-                      <guilabel>Floppy device</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1" valign="top">
-                    <para>Displays
-the name of the floppy device.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry colname="colspec0">
-                    <para>
-                      <guilabel>Floppy density</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1">
-                    <para>Select the density of the diskette. The density
-is the amount of data that the diskette can store.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry colname="colspec0" valign="top">
-                    <para>
-                      <guilabel>File system type</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1" valign="top">
-                    <para>Select
-the type of file system in which you want to format the diskette. Select one
-of the following options:</para>
-                    <itemizedlist>
-                      <listitem>
-                        <para><guilabel>Linux Native (ext 2)</guilabel>: Select this option
-to format a diskette for use on Linux systems. Most non-Linux systems cannot
-read diskettes with this file system type.</para>
-                      </listitem>
-                      <listitem>
-                        <para><guilabel>DOS (FAT)</guilabel>: Select this option to format
-a diskette for use on Windows  systems.  Most UNIX-based systems can read
-diskettes with this file system type.</para>
-                      </listitem>
-                    </itemizedlist>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Volume name</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Type a name for the diskette in this text box.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry colname="colspec0" valign="top">
-                    <para>
-                      <guilabel>Quick</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1" valign="top">
-                    <para>Select this option to create
-only the file system on the diskette. A quick format does not check for bad
-blocks. </para>
-                    <para>Select this option if the diskette has been formatted
-before.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry colname="colspec0">
-                    <para>
-                      <guilabel>Standard</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1">
-                    <para>Select this option to create the file system
-on the diskette and format the diskette. A standard format does not check
-for bad blocks. </para>
-                    <para>Select this option if the diskette has not been
-formatted before.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry colname="colspec0">
-                    <para>
-                      <guilabel>Thorough</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1">
-                    <para>Select this option to create the file system
-on the diskette, check for bad blocks, and format the diskette.</para>
-                    <para>Select this option if you want to verify that the diskette has not been damaged.</para>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </informaltable>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Format</guibutton> to format the diskette. </para>
-        </listitem>
-      </orderedlist>
+Formatter</guilabel> dialog is displayed. See the <ulink type="help" url="ghelp:gfloppy?usage">Floppy
+Formatter</ulink> documentation for more details.</para>
     </sect2>
     <sect2 id="gosnautilus-464">
       <title>To Eject Media</title>
@@ -3755,16 +3764,16 @@ for the diskette disappears.</para>
         </listitem>
         <listitem>
           <para>Eject the diskette from the drive.</para>
-          <caution>
-            <para>If you eject the diskette from the drive before you unmount
-the diskette, you might lose the data on the diskette.</para>
-          </caution>
         </listitem>
       </orderedlist>
+          <caution>
+            <para>You must unmount removable media before ejecting. Do not eject a diskette from the drive before you unmount
+the diskette. Do not remove a USB flash drive before you unmount the flash drive. If you do not unmount the media first you might lose data.</para>
+          </caution>
     </sect2>
   </sect1>
   <sect1 id="gosnautilus-475">
-    <title>Writing CDs</title>
+    <title>Writing CDs or DVDs</title>
     <indexterm>
       <primary>file manager</primary>
       <secondary>writing CDs</secondary>
@@ -3780,25 +3789,25 @@ the diskette, you might lose the data on the diskette.</para>
       <see>writing CDs</see>
     </indexterm>
     <para>The file manager provides
-a special location where you can copy files and folders that you want to write
-to a CD. From here you can write the contents of the location to a CD easily.</para>
-    <para>To write a CD, perform the following steps:</para>
+a special location for files and folders that you want to write
+to a CD or DVD. From here you can write the contents of the location to a CD or DVD easily.</para>
+    <para>To write a CD or DVD, perform the following steps:</para>
     <orderedlist>
       <listitem>
-        <para>Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>CD Creator</guimenuitem></menuchoice>. The file manager opens a special location, <guilabel>burn:///</guilabel>, from which you can write CDs. </para>
+        <para>Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>CD/DVD Creator</guimenuitem></menuchoice>. The file manager opens a special location, <guilabel>burn:///</guilabel>, from which you can write CDs or DVDs. </para>
       </listitem>
       <listitem>
-        <para>Copy the files and folders that you want to write to CD into
+        <para>Drag the files and folders that you want to write to CD or DVD to
 the <guilabel>burn:///</guilabel> location.</para>
       </listitem>
       <listitem>
-        <para>Insert a writable CD into the CD writer device on your system.</para>
+        <para>Insert a writable CD or DVD into the CD/DVD writer device on your system.</para>
       </listitem>
       <listitem>
-        <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Write to CD</guimenuitem></menuchoice>. A <guilabel>Write files to a CD recorder</guilabel> dialog is displayed.</para>
+        <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Write to CD/DVD</guimenuitem></menuchoice>. A <guilabel>Write to Disc</guilabel> dialog is displayed.</para>
       </listitem>
       <listitem>
-        <para>Use the <guilabel>Write files to a CD recorder</guilabel>
+        <para>Use the <guilabel>Write to Disc</guilabel>
 dialog to specify how you want to write the CD, as follows:</para>
         <informaltable frame="topbot">
           <tgroup cols="2" colsep="0" rowsep="0">
@@ -3818,13 +3827,34 @@ dialog to specify how you want to write the CD, as follows:</para>
               <row>
                 <entry valign="top">
                   <para>
-                    <guilabel>Target to write to</guilabel>
+                    <guilabel>Write disc to</guilabel>
                   </para>
                 </entry>
                 <entry valign="top">
                   <para>Select the device to which you want to write the
 CD from the drop-down list. To create an CD image file for the files and folders,
 select the <guilabel>File image</guilabel> option.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Disc name</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Type a name for the CD in the text box.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Data size</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Shows the size of the data to be written to disc.
+The blank disk must be at least this size.</para>
                 </entry>
               </row>
               <row>
@@ -3838,71 +3868,26 @@ select the <guilabel>File image</guilabel> option.</para>
 CD from the drop-down list.</para>
                 </entry>
               </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>CD name</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Type a name for the CD in the text box.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Erase CD</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select this option to erase the current contents
-of the CD.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Eject CD when done</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select this option to eject the CD from the drive
-when the CD is written.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Reuse these files for another CD</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select this option if
-you want to write the files and folders to another CD. If you select
-this option, the files and folders are not removed from the <guilabel>burn:///</guilabel> location after the CD is written. </para>
-                </entry>
-              </row>
             </tbody>
           </tgroup>
         </informaltable>
       </listitem>
       <listitem>
-        <para>Click on the <guibutton>Write files to CD</guibutton> button. </para>
+        <para>Click on the <guibutton>Write</guibutton> button. </para>
         <para>If you selected the <guilabel>File image</guilabel> option from the <guilabel>Target to write to</guilabel> drop-down list, a <guilabel>Choose a filename
-for the cdrom image</guilabel> dialog is displayed. Use the dialog to specify
-the location where you want to save the CD image file. By default, CD image
+for the disc image</guilabel> dialog is displayed. Use the dialog to specify
+the location where you want to save the disc image file. By default, disc image
 files have a <filename>.iso</filename> file extension.</para>
-        <para>A <guilabel>Writing CD</guilabel> dialog is displayed. When the CD is
-written or when the CD image file is created, a message to indicate that the
+        <para>A <guilabel>Writing disc</guilabel> dialog is displayed. When the disc is
+written or when the disc image file is created, a message to indicate that the
 process is complete is displayed in the dialog.</para>
-        <para>If you created a CD image file, you can write this file to a CD. To
-write a CD image file to CD, right-click on the CD image file, then choose <guimenuitem>Write to CD</guimenuitem> from the popup menu.</para>
-        <para>If you did not select the <guilabel>Reuse these files for another CD</guilabel> option, the files and folders are removed from the <guilabel>burn:///</guilabel> location.</para>
+        <para>If you created a disc image file, you can write this file to a blank disc. To
+write a disc image, right-click on the disc image file, then choose <guimenuitem>Write to Disc</guimenuitem> from the popup menu.</para>
       </listitem>
     </orderedlist>
   </sect1>
   <sect1 id="gosnautilus-440">
-    <title>Running Scripts From the File Manager</title>
+    <title>File Manager Scripts</title>
     <indexterm>
       <primary>file manager</primary>
       <secondary>running scripts</secondary>
@@ -3910,13 +3895,90 @@ write a CD image file to CD, right-click on the CD image file, then choose <guim
     <indexterm>
       <primary>scripts, running from file manager</primary>
     </indexterm>
-    <para>The file manager includes a special folder where you can
-store your scripts. When you add an executable file to this folder, the file
-is added to the <guisubmenu>Scripts</guisubmenu> submenu. To run a script
-choose <menuchoice><guimenu>File</guimenu><guimenuitem>Scripts</guimenuitem></menuchoice>, then choose the script that you want to run from the submenu. </para>
-    <para>To run a script on a particular file, select the file in the view pane.
+    <sect2 id="gosnautilus-444">
+      <title>Running Scripts From the File Manager</title>
+      <para>To run a script
+choose <menuchoice><guimenu>File</guimenu><guimenuitem>Scripts</guimenuitem></menuchoice>, then choose the script that you want to run from the submenu.</para>
+      <para>To run a script on a particular file, select the file in the view pane.
 Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Scripts</guimenuitem></menuchoice>, then choose the script that you want to run on the file from
 the submenu. You can also select multiple files to run your scripts on.</para>
-    <para>To view the contents of your scripts folder, choose <menuchoice><guimenu>File</guimenu><guisubmenu>Scripts</guisubmenu><guimenuitem>Open Scripts Folder</guimenuitem></menuchoice>. </para>
+      <para>You may also access scripts from the context menu.</para>
+      <note>
+        <para>If you do not have any scripts installed, the script menu will not appear.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-install-scripts">
+      <title>Installing File Manager Scripts</title>
+        <para>The file manager includes a special folder where you can
+store your scripts. All executable files in this folder will appear in the Scripts menu. The script folder 
+is located at $HOME/.gnome2/nautilus-scripts.</para>
+        <para>To install a script, simply copy the script to the script folder and give it the user executable permission.</para>
+      <para>To view the contents of your scripts folder, if you allready have scripts installed, choose <menuchoice><guimenu>File</guimenu><guisubmenu>Scripts</guisubmenu><guimenuitem>Open Scripts Folder</guimenuitem></menuchoice>.
+You will have to navigate to the scripts folder with the file manager if you do not yet have any scripts. You may need to show hidden files for this, use <menuchoice><guimenu>View</guimenu><guimenuitem>Show Hidden Files</guimenuitem></menuchoice></para>
+    </sect2>
+    <sect2 id="gosnautilus-write-scripts">
+      <title>Writing File Manager Scripts</title>
+       <para>When executed from a local folder, scripts will be passed the selected file names. When 
+executed from a remote folder (e.g. a folder showing web or ftp content), scripts will be passed no parameters.</para>
+       <para>The following table shows variables passed to the script :</para>
+       <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="50*"/>
+            <colspec colwidth="50*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Environment variable</para>
+                </entry>
+                <entry>
+                  <para>Description</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>NAUTILUS_SCRIPT_SELECTED_FILE_PATHS</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>newline-delimited paths for selected files (only if local)</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>NAUTILUS_SCRIPT_SELECTED_URIS</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>newline-delimited URIs for selected files</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>NAUTILUS_SCRIPT_CURRENT_URI</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>URI for current location</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>NAUTILUS_SCRIPT_WINDOW_GEOMETRY</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>position and size of current window</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+    </sect2>
   </sect1>
 </chapter>
