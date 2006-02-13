@@ -8,8 +8,7 @@
   <remark>This chapter needs work</remark>
 
   <highlights>
-    <para>This chapter provides the information you need to start,
-    manage, and end a desktop session.</para>
+    <para>This chapter provides the information you need to log in to and shut down GNOME, and to start, manage, and end a desktop session.</para>
   </highlights>
 
   <sect1 id="gosgetstarted-69">
@@ -18,16 +17,15 @@
       <primary>sessions</primary>
       <secondary>starting</secondary>
     </indexterm>
-    <para>A session occurs between the time that you log in to the GNOME Desktop
-and the time that you log out. The login screen is your gateway to the GNOME
-Desktop. The login screen provides fields for you to enter your username and
-password. The login screen enables you to select login options, for example
-you can select the language of your session. </para>
-    <para>You start a session when you log in. The session manager starts after
-your username and password are authenticated. The session manager enables
-you to manage the session. For example, you can save the state of your most
-recent session and return to that session the next time that you log in. The
-session manager saves and restores the following: </para>
+    <para>A <firstterm>session</firstterm> is the period of time you spend using GNOME. During a session, you use your applications, print, browse the web, and so on.</para>
+    <para>Logging in to GNOME begins your session. The login screen is your gateway to the GNOME Desktop: it is where you enter your username and password and select options such as the language you want GNOME to use for your session.</para>
+    <tip><para>
+    Normally, logging out ends the session, but you can choose to save the state of your session and restore it next time you use GNOME: see <xref linkend="prefs-sessions"/>.</para></tip>
+    
+    <!--
+    2.14 has moved all this out of the standard dialogs.
+    
+    The session manager saves and restores the following: 
     <itemizedlist>
       <listitem>
         <para>The appearance and behavior settings, for example fonts, colors,
@@ -40,8 +38,11 @@ session manager does not manage. For example, if you start the <application>vi</
 manager cannot restore your editing session. </para>
       </listitem>
     </itemizedlist>
+    -->
+    
+    
     <sect2 id="gosstartsession-85">
-      <title>To Log in to a Session</title>
+      <title>Logging in to GNOME</title>
       <indexterm>
         <primary>sessions</primary>
         <secondary>logging in</secondary>
@@ -49,6 +50,9 @@ manager cannot restore your editing session. </para>
       <indexterm>
         <primary>logging in</primary>
         <secondary>to session</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>start session</primary>
       </indexterm>
       <para>To log in to a session, perform the following steps:</para>
       <orderedlist>
@@ -65,8 +69,8 @@ on the login screen, then press <keycap>Return</keycap>.</para>
 on the login screen, then press <keycap>Return</keycap>.</para>
         </listitem>
       </orderedlist>
-      <para>When you log in successfully, the session manager starts a session.
-If this is the first time you log in, then the session manager starts a new
+      <para>When you log in successfully, you will see a splash informing you of the steps GNOME is taking to start up. When GNOME is ready, you will see the Desktop and you can begin using your computer.</para>
+      <para>The first time you log in, then the session manager starts a new
 session. If you have logged in before, then the session manager restores your
 previous session, if you saved the settings for the previous session when
 you logged out.</para>
@@ -76,7 +80,7 @@ Select the option that you require, then click <guibutton>OK</guibutton>.</para>
 <!--What about failsafe gnome?-->
     </sect2>
     <sect2 id="gosstartsession-86">
-      <title>To Log in to a Session in a Different Language</title>
+      <title>Using a Different Language</title>
       <indexterm>
         <primary>sessions</primary>
         <secondary>different language, logging
@@ -108,8 +112,7 @@ on the login screen, then press <keycap>Return</keycap>.</para>
       <note>
         <para>When you log in to a session in a different language, you choose
 the language for the user interface. You do not specify a keyboard layout
-for the session. To specify a keyboard layout, use the <application>Keyboard
-Layout Switcher</application> applet.</para>
+for the session. To choose a keyboard layout, use the <ulink type="help" url="ghelp:gswitchit"><application>Keyboard Indicator</application></ulink> applet.</para>
       </note>
     </sect2>
   </sect1>
@@ -135,27 +138,25 @@ Layout Switcher</application> applet.</para>
     <indexterm>
       <primary>Lock button</primary>
     </indexterm>
+    <para>Locking your screen allows you to leave your computer unattended and prevent access to your applications and information. While your screen is locked, the <link linkend="prefs-screensaver">screensaver</link> runs.</para>
+    
     <para>To lock the screen, perform
 one of the following actions:</para>
     <itemizedlist>
       <listitem>
-        <para>Choose <menuchoice><guimenu>Actions</guimenu><guimenuitem>Lock Screen</guimenuitem></menuchoice>.</para>
+        <para>Choose <menuchoice><guimenu>Desktop</guimenu><guimenuitem>Lock Screen</guimenuitem></menuchoice>.</para>
       </listitem>
       <listitem>
         <para>If the <guibutton>Lock</guibutton> button is present on a
-panel, click on the <guibutton>Lock</guibutton> button. </para>
-        <para>To add the <guibutton>Lock</guibutton> button to a panel, right-click
-on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guisubmenu>Actions</guisubmenu><guimenuitem>Lock</guimenuitem></menuchoice>.</para>
+panel, click on the <guibutton>Lock</guibutton> button.</para>
+        <note><para>The <guibutton>Lock</guibutton> is not present on the panels by default. To add it, see <xref linkend="panels-addobject"/>.</para></note>
       </listitem>
     </itemizedlist>
-    <para>When you lock your screen, the screensaver starts. To unlock the screen,
-move your mouse to display the locked screen dialog. Enter your username and
-password in the locked screen dialog, then press <keycap>Return</keycap>.</para>
-    <para>For information on configuring your screensaver, see <citetitle>Using
-Preference Tools</citetitle>.</para>
-    <note>
-      <para>To lock your screen correctly, you must have a screensaver enabled.</para>
-    </note>
+    <para>To unlock the screen, move your mouse or press any key, enter your password in the locked screen dialog, then press <keycap>Return</keycap>.</para>
+
+    <!--
+    <para>If you share your computer with others, the one can switch the user and start a new session; when finish and end his session, you can unlock your screen as above.</para> -->
+  
   </sect1>
   <sect1 id="gosstartsession-2">
     <title>Managing the Session</title>
@@ -285,6 +286,14 @@ to log out.</para>
     <indexterm>
       <primary>logging out</primary>
     </indexterm>
+    <indexterm>
+      <primary>quit</primary>
+    </indexterm>
+    <indexterm>
+      <primary>shutdown</primary>
+    </indexterm>  
+    <!--  
+    commenting this out for now. A shot of the shutdown button would be good too.
     <screenshot>
       <mediaobject>
         <imageobject>
@@ -295,23 +304,25 @@ to log out.</para>
         </textobject>
       </mediaobject>
     </screenshot>
-    <para>To end your session, close all your currently active processes, then
-perform one of the following actions:</para>
+    -->
+    <para>When you have finished using your computer, you can choose to do one of the following:</para>
     <itemizedlist>
       <listitem>
-        <para>Click on a <guibutton>Log Out</guibutton> button.</para>
-      </listitem>
-      <listitem>
-        <para>Open the <guimenu>Main Menu</guimenu>, then choose <guimenuitem>Log Out</guimenuitem><replaceable>username</replaceable>.</para>
-      </listitem>
-      <listitem>
-        <para>Choose <menuchoice><guimenu>Actions</guimenu><guimenuitem>Log
+        <para>Log out for another user to begin working with it. To log out of GNOME, choose <menuchoice><guimenu>Desktop</guimenu><guimenuitem>Log
 Out</guimenuitem></menuchoice>.</para>
       </listitem>
-    </itemizedlist>
+      <listitem>
+        <para>Shut down your computer and switch off the power. To shut down, choose <menuchoice><guimenu>Desktop</guimenu><guimenuitem>Shut Down</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>Depending on your computer's configuration, you can also <firstterm>Hibernate</firstterm> your computer. During hibernation, less power is used, but the state of your computer is preserved: all the applications you have running and open documents.</para>
+      </listitem>
+    </itemizedlist>    
+       
+    <para>When you end a session, applications with unsaved work will warn you. You can choose to save your work, or cancel the command to log out or shut down.</para>
+
     <para>Before you end a session, you might want to save your current
-settings so that you can restore the session later. During the logout process,
-a dialog asks if you want to save your current settings. In the <application>Sessions</application> preference tool, you can select an option to automatically
+settings so that you can restore the session later. In the <link linkend="prefs-sessions"><application>Sessions</application></link> preference tool, you can select an option to automatically
 save your current settings.</para>
   </sect1>
 </chapter>
