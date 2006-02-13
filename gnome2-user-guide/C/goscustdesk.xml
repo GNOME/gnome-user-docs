@@ -10,6 +10,9 @@
 
   <!-- Desktop Overview / Desktop Preferences -->
   <anchor id="gosoverview-55"/>
+  
+  <!-- ids of sections removed from this document for 2.14 -->
+  <anchor id="goscustdesk-10"/><!-- Customizing Your Panels -->
 
   <highlights>
     <para>This chapter describes how to use the preference tools to
@@ -93,6 +96,121 @@ keyboard</application> application automatically when you log in.</para>
       </tgroup>
     </table>
   </sect1>
+  <sect1 id="prefs-cddatabase">
+    <title>CD Database</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="goscustlookandfeel-39"/>       
+    <indexterm>
+      <primary>preference tools</primary>
+      <secondary>CD Database</secondary>
+    </indexterm>
+    <para>The <application>CD Database</application> preference tool
+enables you to configure a CD database that your system can query. A CD database
+contains information about CDs, such as the name of the artist, the title,
+and the track list. When an application plays a CD, the application can query
+the CD database about the CD, then display the information.</para>
+    <para><xref linkend="goscustlookandfeel-TBL-40"/> describes the preferences in the <application>CD Database</application> preference tool.</para>
+    <table frame="topbot" id="goscustlookandfeel-TBL-40">
+      <title>CD Database Preferences</title>
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="colspec0" colwidth="18.86*"/>
+        <colspec colname="colspec1" colwidth="47.14*"/>
+        <thead>
+          <row>
+            <entry colsep="0" rowsep="1">
+              <para>Dialog Element</para>
+            </entry>
+            <entry colsep="0" rowsep="1">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>Send no information</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>Select this option if you do not want to send
+any information to the CD database server.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>Send real information</guilabel>
+              </para>
+            </entry>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>Select this option to send your name and hostname information to the CD database
+server.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>Send other information</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>Select this option to send another
+name and hostname to the CD database server. Enter the name in the <guilabel>Name</guilabel> field. Enter the hostname in the <guilabel>Hostname</guilabel>
+field.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>FreeDB round robin server</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>FreeDB is a CD database. The FreeDB
+round robin server is a load-sharing configuration of FreeDB servers. Select
+this option to access the FreeDB CD database from this server.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>Other FreeDB server</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para> Select this option to access the FreeDB CD
+database from another server. Select the server that you require from the
+server table.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guibutton>Update Server List</guibutton>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>Click on this button to update the list of available
+FreeDB servers in the server table.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>Other server</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
+              <para>Select this option to use another CD database.
+Enter the name of the server on which the database resides in the <guilabel>Hostname</guilabel> field. Enter the port number on which you can access the
+database in the <guilabel>Port</guilabel> field.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>   
   <sect1 id="goscustdesk-7">
     <title>Desktop Background</title>
     <indexterm>
@@ -248,119 +366,6 @@ the top edge.</para>
 color that you want to appear at the bottom edge.</para>
                 </listitem>
               </itemizedlist>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
-  </sect1>
-  <sect1 id="goscustlookandfeel-39">
-    <title>Configuring a CD Database</title>
-    <indexterm>
-      <primary>preference tools</primary>
-      <secondary>CD Database</secondary>
-    </indexterm>
-    <para>The <application>CD Database</application> preference tool
-enables you to configure a CD database that your system can query. A CD database
-contains information about CDs, such as the name of the artist, the title,
-and the track list. When an application plays a CD, the application can query
-the CD database about the CD, then display the information.</para>
-    <para><xref linkend="goscustlookandfeel-TBL-40"/> describes the preferences in the <application>CD Database</application> preference tool.</para>
-    <table frame="topbot" id="goscustlookandfeel-TBL-40">
-      <title>CD Database Preferences</title>
-      <tgroup cols="2" colsep="1" rowsep="1">
-        <colspec colname="colspec0" colwidth="18.86*"/>
-        <colspec colname="colspec1" colwidth="47.14*"/>
-        <thead>
-          <row>
-            <entry colsep="0" rowsep="1">
-              <para>Dialog Element</para>
-            </entry>
-            <entry colsep="0" rowsep="1">
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Send no information</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option if you do not want to send
-any information to the CD database server.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Send real information</guilabel>
-              </para>
-            </entry>
-            <entry colsep="0" rowsep="0" valign="top">
-              <para>Select this option to send your name and hostname information to the CD database
-server.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Send other information</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option to send another
-name and hostname to the CD database server. Enter the name in the <guilabel>Name</guilabel> field. Enter the hostname in the <guilabel>Hostname</guilabel>
-field.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>FreeDB round robin server</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>FreeDB is a CD database. The FreeDB
-round robin server is a load-sharing configuration of FreeDB servers. Select
-this option to access the FreeDB CD database from this server.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Other FreeDB server</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para> Select this option to access the FreeDB CD
-database from another server. Select the server that you require from the
-server table.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guibutton>Update Server List</guibutton>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Click on this button to update the list of available
-FreeDB servers in the server table.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Other server</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option to use another CD database.
-Enter the name of the server on which the database resides in the <guilabel>Hostname</guilabel> field. Enter the port number on which you can access the
-database in the <guilabel>Port</guilabel> field.</para>
             </entry>
           </row>
         </tbody>
@@ -628,154 +633,6 @@ image to display in your login screen. Type the path for the folder from where
 you want to select your image. Alternatively, click <guibutton>Browse</guibutton>
 to display a dialog from which you can select an image to display as your
 photograph and click <guibutton>OK</guibutton>.</para>
-  </sect1>
-  <sect1 id="goscustdesk-50">
-    <title>Configuring Your Network
-Proxy Connection</title>
-    <indexterm>
-      <primary>preference
-tools</primary>
-      <secondary>Network Proxy</secondary>
-    </indexterm>
-    <indexterm>
-      <primary>network proxy</primary>
-      <secondary>setting preferences</secondary>
-    </indexterm>
-    <indexterm>
-      <primary>Internet</primary>
-      <secondary>configuring connection</secondary>
-    </indexterm>
-    <indexterm>
-      <primary>proxy</primary>
-      <secondary>setting preferences</secondary>
-    </indexterm>
-    <para>The <application>Network Proxy</application>
-preference tool enables you to configure how your system connects to the Internet.
-You can configure the GNOME Desktop to connect to a <firstterm>proxy server</firstterm>, and specify the details of the proxy server. A proxy server
-is a server that intercepts requests to another server, and fulfills the request
-itself, if it can. You can enter the Domain Name Service (DNS) name or the
-Internet Protocol (IP) address of the proxy server. A <firstterm>DNS name</firstterm> is a unique alphabetic identifier for a computer on a network.
-An <firstterm>IP address</firstterm> is a unique numeric identifier for a
-computer on a network. </para>
-    <para><xref linkend="goscustdesk-TBL-52"/> lists the Internet connection preferences
-that you can modify.</para>
-    <table frame="topbot" id="goscustdesk-TBL-52">
-      <title>Internet Connection Preferences</title>
-      <tgroup cols="2" colsep="0" rowsep="0">
-        <colspec colname="colspec2" colwidth="35.09*"/>
-        <colspec colname="colspec3" colwidth="64.91*"/>
-        <thead>
-          <row rowsep="1">
-            <entry>
-              <para>Dialog Element</para>
-            </entry>
-            <entry>
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Direct internet
-connection</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Select this option if you want to connect directly to the Internet, without
-a proxy server.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2">
-              <para>
-                <guilabel>Manual proxy configuration</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Select
-this option if you want to connect to the Internet through a proxy server,
-and you want to configure the proxy server manually.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>HTTP proxy</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the DNS name, or the IP
-address of the proxy server to use when you request a HTTP service. Enter
-the port number of the HTTP service on the proxy server in the <guilabel>Port</guilabel> spin box.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Secure HTTP proxy</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter
-the DNS name, or the IP address of the proxy server to use when you request
-a Secure HTTP service. Enter the port number of the Secure HTTP service on
-the proxy server in the <guilabel>Port</guilabel> spin box.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>FTP proxy</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the DNS name, or the IP
-address of the proxy server to use when you request a FTP service. Enter the
-port number of the FTP service on the proxy server in the <guilabel>Port</guilabel>
-spin box.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Socks host</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the DNS name, or the IP
-address of the Socks host to use. Enter the port number for the Socks protocol
-on the proxy server in the <guilabel>Port</guilabel> spin box.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Automatic proxy
-configuration</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Select this option if you want to connect to the Internet through a proxy
-server, and you want to configure the proxy server automatically.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Autoconfiguration
-URL</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the URL that contains the information required to configure the proxy
-server automatically. </para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
   </sect1>
   <sect1 id="prefs-keyboard-a11y">
     <title>Keyboard Accessibility</title>
@@ -1432,6 +1289,87 @@ Layout Switcher</citetitle> manual.</para>
 click on the <guibutton>Accessibility</guibutton> button.</para>
     </sect2>
   </sect1>
+  <sect1 id="prefs-keyboard-shortcuts">
+    <title>Keyboard Shortcuts</title>
+
+    <!-- Maintained for 2.8 compatibility -->
+    <anchor id="goscustdesk-39"/>
+    <indexterm>
+      <primary>preference tools</primary>
+      <secondary>Keyboard Shortcuts</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>shortcut
+keys</primary>
+      <secondary>configuring</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>keyboard shortcuts</primary>
+      <secondary>configuring</secondary>
+    </indexterm>
+    <para>A <firstterm>keyboard shortcut</firstterm> is a key or combination of
+keys that provides an alternative to standard ways of performing an action. </para>
+    <para>Use the <application>Keyboard Shortcuts</application> preference tool to display the default keyboard
+shortcuts. You can customize the default keyboard shortcuts to your requirements. </para>
+    <para><xref linkend="goscustdesk-TBL-5"/>
+lists the keyboard shortcut settings that you can customize.</para>
+    <table frame="topbot" id="goscustdesk-TBL-5">
+      <title>Keyboard Shortcuts Preferences</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="36.11*"/>
+        <colspec colname="colspec1" colwidth="63.89*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Dialog Element</para>
+            </entry>
+            <entry>
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <guilabel>Text editing shortcuts</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Select
+one of the following settings:</para>
+              <itemizedlist>
+                <listitem>
+                  <para><guilabel>GNOME Default</guilabel>: Use this setting for standard
+shortcut keys.</para>
+                </listitem>
+                <listitem>
+                  <para><guilabel>Emacs</guilabel>: Use this setting for <application>Emacs</application> shortcut keys.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>
+                <guilabel>Desktop shortcuts</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>This
+table lists actions and the shortcut keys that are associated with each action. </para>
+              <para>To change the shortcut keys for an action, click on the action
+to select the action, then click on the shortcut for the action. Press the
+keys that you want to associate with the action.</para>
+              <para>To disable the
+shortcut keys for an action, click on the action to select the action, then
+click on the shortcut for the action. Press the <keycap>Backspace</keycap> key.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>  
   <sect1 id="goscustuserinter-2">
     <title>Menus &amp; Toolbars</title>
     <indexterm>
@@ -1720,27 +1658,40 @@ action.</para>
       </table>
     </sect2>
   </sect1>
-  <sect1 id="goscustdesk-10">
-    <title>Customizing Your Panels</title>
+  <sect1 id="goscustdesk-50">
+    <title>Network Proxy</title>
     <indexterm>
-      <primary>preference tools</primary>
-      <secondary>Panel Preferences</secondary>
+      <primary>preference
+tools</primary>
+      <secondary>Network Proxy</secondary>
     </indexterm>
     <indexterm>
-      <primary>panels</primary>
-      <secondary>customizing
-behavior and appearance</secondary>
+      <primary>network proxy</primary>
+      <secondary>setting preferences</secondary>
     </indexterm>
-    <para>The <application>Panel
-Preferences</application> preference tool enables you to configure the behavior
-of panels. Any changes that you make with the <application>Panel Preferences</application> preference tool affect all of your panels.</para>
-    <para><xref linkend="goscustlookandfeel-TBL-22"/> lists the panel preferences
-that you can modify:</para>
-    <table frame="topbot" id="goscustlookandfeel-TBL-22">
-      <title>Panel Preferences</title>
+    <indexterm>
+      <primary>Internet</primary>
+      <secondary>configuring connection</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>proxy</primary>
+      <secondary>setting preferences</secondary>
+    </indexterm>
+    <para>The <application>Network Proxy</application>
+preference tool enables you to configure how your system connects to the Internet.
+You can configure the GNOME Desktop to connect to a <firstterm>proxy server</firstterm>, and specify the details of the proxy server. A proxy server
+is a server that intercepts requests to another server, and fulfills the request
+itself, if it can. You can enter the Domain Name Service (DNS) name or the
+Internet Protocol (IP) address of the proxy server. A <firstterm>DNS name</firstterm> is a unique alphabetic identifier for a computer on a network.
+An <firstterm>IP address</firstterm> is a unique numeric identifier for a
+computer on a network. </para>
+    <para><xref linkend="goscustdesk-TBL-52"/> lists the Internet connection preferences
+that you can modify.</para>
+    <table frame="topbot" id="goscustdesk-TBL-52">
+      <title>Internet Connection Preferences</title>
       <tgroup cols="2" colsep="0" rowsep="0">
-        <colspec colwidth="50*"/>
-        <colspec colwidth="50*"/>
+        <colspec colname="colspec2" colwidth="35.09*"/>
+        <colspec colname="colspec3" colwidth="64.91*"/>
         <thead>
           <row rowsep="1">
             <entry>
@@ -1753,36 +1704,101 @@ that you can modify:</para>
         </thead>
         <tbody>
           <row>
-            <entry valign="top">
+            <entry colname="colspec2" valign="top">
               <para>
-                <guilabel>Close drawer when launcher is clicked</guilabel>
+                <guilabel>Direct internet
+connection</guilabel>
               </para>
             </entry>
-            <entry valign="top">
-              <para>Select this option if
-you want a drawer on a panel to close when you choose a launcher in the drawer.</para>
+            <entry colname="colspec3" valign="top">
+              <para>Select this option if you want to connect directly to the Internet, without
+a proxy server.</para>
             </entry>
           </row>
           <row>
-            <entry valign="top">
+            <entry colname="colspec2">
               <para>
-                <guilabel>Drawer and panel animation</guilabel>
+                <guilabel>Manual proxy configuration</guilabel>
               </para>
             </entry>
-            <entry valign="top">
-              <para>Select this option if you want your panels and drawers
-to show and to hide in an animated style.</para>
+            <entry colname="colspec3" valign="top">
+              <para>Select
+this option if you want to connect to the Internet through a proxy server,
+and you want to configure the proxy server manually.</para>
             </entry>
           </row>
           <row>
-            <entry valign="top">
+            <entry colname="colspec2" valign="top">
               <para>
-                <guilabel>Animation speed</guilabel>
+                <guilabel>HTTP proxy</guilabel>
               </para>
             </entry>
-            <entry valign="top">
-              <para>Select the speed of the panel animation from the
-drop-down list.</para>
+            <entry colname="colspec3" valign="top">
+              <para>Enter the DNS name, or the IP
+address of the proxy server to use when you request a HTTP service. Enter
+the port number of the HTTP service on the proxy server in the <guilabel>Port</guilabel> spin box.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <guilabel>Secure HTTP proxy</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>Enter
+the DNS name, or the IP address of the proxy server to use when you request
+a Secure HTTP service. Enter the port number of the Secure HTTP service on
+the proxy server in the <guilabel>Port</guilabel> spin box.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <guilabel>FTP proxy</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>Enter the DNS name, or the IP
+address of the proxy server to use when you request a FTP service. Enter the
+port number of the FTP service on the proxy server in the <guilabel>Port</guilabel>
+spin box.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <guilabel>Socks host</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>Enter the DNS name, or the IP
+address of the Socks host to use. Enter the port number for the Socks protocol
+on the proxy server in the <guilabel>Port</guilabel> spin box.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <guilabel>Automatic proxy
+configuration</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>Select this option if you want to connect to the Internet through a proxy
+server, and you want to configure the proxy server automatically.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec2" valign="top">
+              <para>
+                <guilabel>Autoconfiguration
+URL</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec3" valign="top">
+              <para>Enter the URL that contains the information required to configure the proxy
+server automatically. </para>
             </entry>
           </row>
         </tbody>
@@ -2156,6 +2172,105 @@ command.</para>
       </table>
     </sect2>
   </sect1>
+  <sect1 id="prefs-remotedesktop">
+    <title>Remote Desktop</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="goscustdesk-90"/>
+    <indexterm>
+      <primary>setting session sharing preferences</primary>
+    </indexterm>           
+    <para>The <application>Remote Desktop</application> preference tool enables you to share a GNOME Desktop session
+between multiple users, and to set session-sharing preferences.</para>
+    <para><xref linkend="goscustdesk-TBL-91"/> lists the session-sharing preferences
+that you can set. These preferences have a direct impact on the security of
+your system.</para>
+    <table frame="topbot" id="goscustdesk-TBL-91">
+      <title>Session Sharing Preferences</title>
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="colspec18" colwidth="19.21*"/>
+        <colspec colname="colspec19" colwidth="46.79*"/>
+        <thead>
+          <row>
+            <entry colsep="0" rowsep="1">
+              <para>Dialog Element</para>
+            </entry>
+            <entry colsep="0" rowsep="1">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>Allow other
+users to view your desktop</guilabel>
+              </para>
+            </entry>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>Select this option to enable remote users to view your
+session. All keyboard, pointer, and clipboard events from the remote user
+are ignored.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>
+                <guilabel>Allow other
+users to control your desktop</guilabel>
+              </para>
+            </entry>
+            <entry colsep="0" rowsep="0" valign="top">
+              <para>Select this option to enable other to access and control
+your session from a remote location.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec18" colsep="0" rowsep="0">
+              <para>
+                <guilabel>Users
+can view your desktop using this command:</guilabel>
+                
+              </para>
+            </entry>
+            <entry colname="colspec19" colsep="0" rowsep="0">
+              <para>Click on the highlighted text to system address by email to
+a remote user.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec18" colsep="0" rowsep="0">
+              <para>
+                <guilabel>When
+a user tries to view or control your desktop</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec19" colsep="0" rowsep="0">
+              <para>Select the following security
+considerations when a user tries to view or control your session:<itemizedlist><listitem><para><guilabel>Ask you for confirmation:</guilabel> Select this
+option if you want remote users to ask you for confirmation when they want
+to share your session. This option enables you to be aware of other users
+who connect to your session. You can also decide what time is suitable for
+the remote user to connect to your session.</para></listitem><listitem><para><guilabel>Require the user to enter this password:</guilabel>
+Select this option to authenticate the remote user if authentication is used.
+This option provides an extra level of security.</para></listitem></itemizedlist></para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec18" colsep="0" rowsep="0">
+              <para>
+                <guilabel>Password</guilabel>
+              </para>
+            </entry>
+            <entry colname="colspec19" colsep="0" rowsep="0">
+              <para>Enter the password that the client who attempts to view or control your session
+must enter.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </sect1>  
   <sect1 id="goscustdesk-70">
     <title>Screen Resolution</title>
     <indexterm>
@@ -2561,87 +2676,6 @@ then click on the <guilabel>Delete</guilabel> button.</para>
         </tgroup>
       </table>
     </sect2>
-  </sect1>
-  <sect1 id="prefs-keyboard-shortcuts">
-    <title>Keyboard Shortcuts</title>
-
-    <!-- Maintained for 2.8 compatibility -->
-    <anchor id="goscustdesk-39"/>
-    <indexterm>
-      <primary>preference tools</primary>
-      <secondary>Keyboard Shortcuts</secondary>
-    </indexterm>
-    <indexterm>
-      <primary>shortcut
-keys</primary>
-      <secondary>configuring</secondary>
-    </indexterm>
-    <indexterm>
-      <primary>keyboard shortcuts</primary>
-      <secondary>configuring</secondary>
-    </indexterm>
-    <para>A <firstterm>keyboard shortcut</firstterm> is a key or combination of
-keys that provides an alternative to standard ways of performing an action. </para>
-    <para>Use the <application>Keyboard Shortcuts</application> preference tool to display the default keyboard
-shortcuts. You can customize the default keyboard shortcuts to your requirements. </para>
-    <para><xref linkend="goscustdesk-TBL-5"/>
-lists the keyboard shortcut settings that you can customize.</para>
-    <table frame="topbot" id="goscustdesk-TBL-5">
-      <title>Keyboard Shortcuts Preferences</title>
-      <tgroup cols="2" colsep="0" rowsep="0">
-        <colspec colname="colspec0" colwidth="36.11*"/>
-        <colspec colname="colspec1" colwidth="63.89*"/>
-        <thead>
-          <row rowsep="1">
-            <entry>
-              <para>Dialog Element</para>
-            </entry>
-            <entry>
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry colname="colspec0" valign="top">
-              <para>
-                <guilabel>Text editing shortcuts</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" valign="top">
-              <para>Select
-one of the following settings:</para>
-              <itemizedlist>
-                <listitem>
-                  <para><guilabel>GNOME Default</guilabel>: Use this setting for standard
-shortcut keys.</para>
-                </listitem>
-                <listitem>
-                  <para><guilabel>Emacs</guilabel>: Use this setting for <application>Emacs</application> shortcut keys.</para>
-                </listitem>
-              </itemizedlist>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" valign="top">
-              <para>
-                <guilabel>Desktop shortcuts</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" valign="top">
-              <para>This
-table lists actions and the shortcut keys that are associated with each action. </para>
-              <para>To change the shortcut keys for an action, click on the action
-to select the action, then click on the shortcut for the action. Press the
-keys that you want to associate with the action.</para>
-              <para>To disable the
-shortcut keys for an action, click on the action to select the action, then
-click on the shortcut for the action. Press the <keycap>Backspace</keycap> key.</para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
   </sect1>
   <sect1 id="goscustmulti-2">
     <title>Sound</title>
