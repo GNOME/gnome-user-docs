@@ -1,46 +1,17 @@
-AC_INIT(gnome2-user-guide)
+AC_INIT([gnome2-user-docs], [2.8.1],
+        [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-user-docs])
+AM_INIT_AUTOMAKE
 
-SCROLLKEEPER_REQUIRED=0.3.11
-AC_SUBST(SCROLLKEEPER_REQUIRED)
-
-AM_INIT_AUTOMAKE(gnome2-user-docs, 2.8.1)
+GNOME_DOC_INIT
 
 AM_MAINTAINER_MODE
 
-dnl ====================================
-dnl = Begin tests for scrollkeeper
-dnl ====================================
-AC_PATH_PROG(SCROLLKEEPER_CONFIG, scrollkeeper-config,no)
-if test x$SCROLLKEEPER_CONFIG = xno; then
-  AC_MSG_ERROR(Couldn't find scrollkeeper-config, please install the scrollkeeper packaga)
-fi
-dnl ====================================
-dnl = End tests for scrollkeeper
-dnl ====================================
-
-dnl ====================================
-dnl = Test whether jw is installed
-dnl ====================================
-AC_PATH_PROG(JW,jw,no)
-if test x$JW = xno; then
-  HAVE_JW="no"
-else
-  HAVE_JW="yes"
-fi
-AM_CONDITIONAL(HAVE_JW, test "x$HAVE_JW" = "xyes")
-AC_SUBST(HAVE_JW)
-dnl ====================================
-dnl = End tests for jw
-dnl ====================================
-
+PKG_CHECK_MODULES(GNOME2_USER_DOCS, [ gnome-doc-utils >= 0.5.6 ])
 
 AC_OUTPUT([
 Makefile
 gnome-user-docs.spec
 gnome2-user-guide/Makefile
-gnome2-user-guide/C/Makefile
 gnome2-accessibility-guide/Makefile
-gnome2-accessibility-guide/C/Makefile
 gnome2-system-admin-guide/Makefile
-gnome2-system-admin-guide/C/Makefile
 ])
