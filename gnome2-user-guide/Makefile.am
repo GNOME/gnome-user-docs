@@ -2,8 +2,8 @@ include $(top_srcdir)/gnome-doc-utils.make
 dist-hook: doc-dist-hook
 
 DOC_MODULE = user-guide
-DOC_ENTITIES =			\
-	glossary.xml		\
+DOC_ENTITIES = legal.xml
+DOC_INCLUDES =			\
 	gosbasic.xml		\
 	goscustdesk.xml		\
 	goseditmainmenu.xml	\
@@ -12,6 +12,6 @@ DOC_ENTITIES =			\
 	gospanel.xml		\
 	gosstartsession.xml	\
 	gostools.xml		\
-	legal.xml
+	glossary.xml
 
 DOC_LINGUAS =
