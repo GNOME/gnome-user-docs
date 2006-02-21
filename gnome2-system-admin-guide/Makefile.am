@@ -18,4 +18,4 @@ DOC_ENTITIES =			\
 	themes.xml		\
 	legal.xml
 
-DOC_LINGUAS =
+DOC_LINGUAS = it
