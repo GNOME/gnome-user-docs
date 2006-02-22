@@ -37,7 +37,7 @@
       </varlistentry>
 -->
   <highlights>
-    <para>The information in this chapter describes how to use panels. </para>
+    <para>This chapter describes how to use the panels at the top and bottom of the GNOME Desktop, how to customize the objects that appear on them, and how to add new panels to the desktop.</para>
   </highlights>
 
   <section id="panels-intro">
@@ -51,119 +51,72 @@
       <secondary>introduction</secondary>
     </indexterm>
 
-    <para>A panel is an area in the GNOME Desktop from which you can run applications
-and applets, and perform other tasks. When you start a session for the first
-time, the GNOME Desktop contains at least one panel. Your system administrator
-might have set your default panels according to your local requirements, so
-you might see slightly different default panels.</para>
-    <para>You can change the behavior and appearance of your panels to suit your
-requirements. You can also add or remove objects from your panels. You can
-create multiple panels, and choose different properties, objects, and backgrounds
-for each panel. You can also hide panels.</para>
-    <para>Typically, the GNOME Desktop contains a panel at the top edge of the screen,
+    <para>A panel is an area in the GNOME Desktop where you have access to certain actions and information, no matter what the state of your application windows. <!-- The HIG says 'Do not use system modal windows', so panels are always available. --> For example, in the default GNOME panels, you can launch applications, see the date and time, control the system sound volume, and more.</para> 
+    <para>You can customize panels to your liking. You can change their behavior and appearance, and you can add or remove objects from your panels. You can create multiple panels, and choose different properties, objects, and backgrounds for each panel. You can also hide panels.</para>
+    <para>By default, the GNOME Desktop contains a panel at the top edge of the screen,
 and a panel at the bottom edge of the screen. The following sections describe
 these panels.</para>
-    <section id="gospanel-6">
+
+    <section id="top-panel">
       <title>Top Edge Panel</title>
-      <para><indexterm><primary>panels</primary><secondary>top edge panel</secondary><see>top edge panel</see></indexterm><indexterm><primary>top edge panel</primary><secondary>introduction</secondary></indexterm><xref linkend="gospanel-FIG-60"/>
-shows an example panel at the top edge of the screen. Your system administrator
-might have set your default top edge panel according to your local requirements,
-so you might see a slightly different top edge panel. </para>
-      <figure id="gospanel-FIG-60">
-        <title>Sample Top Edge Panel</title>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/menu_panel.png" format="PNG"/>
-            </imageobject>
-            <textobject>
-              <phrase>Sample top edge panel. The context describes the graphic.</phrase>
-            </textobject>
-          </mediaobject>
-        </screenshot>
-      </figure>
-      <para>A top edge panel may contain the following objects: <indexterm><primary>top edge panel</primary><secondary>default contents</secondary></indexterm></para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec3" colwidth="30.95*"/>
-          <colspec colname="colspec4" colwidth="69.05*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Object</para>
-              </entry>
-              <entry>
-                <para>Description </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec3">
-                <para><application>Menu Bar</application> applet</para>
-              </entry>
-              <entry colname="colspec4">
-                <para>Contains the <guimenu>Applications</guimenu> and the <guimenu>Actions</guimenu> menu. The <guimenu>Applications</guimenu> menu contains the standard GNOME applications. The <guimenu>Actions</guimenu> menu provides commands that enable you to various tasks.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec3">
-                <para>
-                  <application>File Browser Launcher</application>
-                </para>
-              </entry>
-              <entry colname="colspec4">
-                <para>Click on this launcher to open your home folder
-in a <application>Nautilus</application> file browser window.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec3">
-                <para><application>Terminal</application> launcher</para>
-              </entry>
-              <entry colname="colspec4">
-                <para>Click on this launcher to start
-the <application>Terminal</application> application. <application>Terminal</application> provides access to a UNIX command line.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para><application>Clock</application> applet</para>
-              </entry>
-              <entry valign="top">
-                <para><application>Clock</application> shows the current
-time. Click on the time readout to display a menu of clock commands.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec3">
-                <para><application>Volume Control</application>
-applet</para>
-              </entry>
-              <entry colname="colspec4">
-                <para><application>Volume Control</application> enables you to control the volume of the speaker on your system.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec3" valign="top">
-                <indexterm>
-                  <primary>top edge panel</primary>
-                  <secondary>window list icon</secondary>
-                </indexterm>
-                <para><application>Window Selector</application> icon</para>
-              </entry>
-              <entry colname="colspec4" valign="top">
-                <para><application>Window Selector</application> lists all your
-open windows. To give focus to a window, click on the window selector icon
-at the extreme right of the top edge panel, then select the window.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gospanel-6"/>         
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>top edge panel</secondary>
+        <see>top edge panel</see>
+      </indexterm>
+      <indexterm>
+        <primary>top edge panel</primary>
+        <secondary>introduction</secondary>
+      </indexterm>
+      <para>By default, the top edge panel contains the following objects:</para>
+      <note><para>Your distribution of GNOME may have altered this default setup.</para></note>
+           
+      <variablelist>
+      	<varlistentry>
+      		<term><application>Menu Bar</application> applet</term>
+      		<listitem><para>Contains the <guimenu>Applications</guimenu>, the <guimenu>Places</guimenu>, and the <guimenu>Desktop</guimenu> menu. For more on the menu bar, see <xref linkend="menus-introduction"/>.</para></listitem>
+      	</varlistentry>
+      	<varlistentry>
+      	  <term><application>Web Browser Launcher</application></term>
+          <listitem><para>Click on this launcher to open the web browser.</para></listitem>
+        </varlistentry>
+      	<varlistentry>
+      	  <term><application>Notification Area</application> applet</term>
+          <listitem><para>Displays icons from other applications that may require your attention, or that you may want to access without switching from your current application window. For more on this, see <xref linkend="panels-notification-area"/>.</para>
+          <para>Until an application adds an icon to the notification area, only a narrow bar is visible.</para>
+          </listitem>
+        </varlistentry>
+
+         
+        <varlistentry>
+          <term><application>Clock</application> applet</term>
+          <listitem><para><application>Clock</application> shows the current
+      time. Click on the time to open a small calendar. For more on this, see the <ulink type="help" url="ghelp:clock">Clock Applet Manual</ulink>.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+          <term><application>Volume Control</application>
+      applet</term>
+          <listitem><para><application>Volume Control</application> enables you to control the volume of the speaker on your system. For more on this, see the <ulink type="help" url="ghelp:gnome-volume-control">Volume Control Manual</ulink>.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>
+          <indexterm>
+            <primary>top edge panel</primary>
+            <secondary>window list icon</secondary>
+          </indexterm>
+          <application>Window Selector</application> icon</term>
+          <listitem><para><application>Window Selector</application> lists all your
+      open windows. To give focus to a window, click on the window selector icon
+      at the extreme right of the top edge panel, then select the window. For more on this, see <xref linkend="windows-focus"/>.</para></listitem>
+        </varlistentry>
+      </variablelist>
     </section>
-    <section id="gospanel-3">
+    <section id="bottom-panel">
       <title>Bottom Edge Panel</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gospanel-3"/>        
       <indexterm>
         <primary>panels</primary>
         <secondary>bottom edge panel</secondary>
@@ -173,109 +126,240 @@ at the extreme right of the top edge panel, then select the window.</para>
         <primary>bottom edge panel</primary>
         <secondary>introduction</secondary>
       </indexterm>
-      <para><xref linkend="gospanel-FIG-58"/>
-shows a typical bottom edge panel. Your system administrator might have set
-your default bottom edge panel according to your local requirements, so you
-might see a slightly different bottom edge panel. </para>
-      <figure id="gospanel-FIG-58">
-        <title>Typical Bottom Edge Panel</title>
-	<screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/gnome_panel.png" format="PNG"/>
-            </imageobject>
-            <textobject>
-              <phrase>Typical bottom edge panel. The context describes the graphic.</phrase>
-            </textobject>
-          </mediaobject>
-        </screenshot>
-      </figure>
+      <para>By default, the bottom edge panel contains the following objects:</para>
+      <note><para>Your distribution of GNOME may have altered this default setup.</para></note>
       <indexterm>
         <primary>bottom edge panel</primary>
         <secondary>default contents</secondary>
-      </indexterm>
-      <para>The bottom edge panel contains the following
-items:</para>
-      <itemizedlist>
-        <listitem>
-          <para><guibutton>Show Desktop</guibutton> button: Click on this
-button to minimize all open windows and show the desktop.</para>
-        </listitem>
-        <listitem>
-          <para><application>Window List</application> applet: Displays a
-button for each window that is open. <application>Window List</application>
-enables you to minimize and restore windows.</para>
-        </listitem>
-        <listitem>
-          <para><application>Workspace Switcher</application> applet: Enables
-you to navigate between your workspaces.</para>
-        </listitem>
-      </itemizedlist>
+      </indexterm>            
+      <variablelist>
+      	<varlistentry>
+      		<term><guibutton>Show Desktop</guibutton> button</term>
+      		<listitem><para>Click on this button to minimize all open windows and show the desktop.</para></listitem>
+      	</varlistentry>
+      	<varlistentry>
+      		<term><application>Window List</application> applet</term>
+      		<listitem><para>Displays a button for each window that is open. <application>Window List</application> enables you to minimize and restore windows. For more on this, see the <ulink type="help" url="ghelp:window-list">Window List manual</ulink>.</para></listitem>
+      	</varlistentry>
+      	<varlistentry>
+      		<term><application>Workspace Switcher</application> applet</term>
+      		<listitem><para>Enables you to switch between your workspaces. For more on workspaces, see <xref linkend="overview-workspaces"/>.</para></listitem>
+      	</varlistentry>      	
+      </variablelist>
     </section>
   </section>
   <section id="gospanel-5">
-    <title>Managing Your Panels</title>
+    <title>Managing Panels</title>
 
     <!-- Desktop Overview / Panels / To Create Panels -->
     <anchor id="gosoverview-26"/>
-
+    <anchor id="gospanel-11"/><!-- To Interact With a Panel -->
     <indexterm>
       <primary>panels</primary>
       <secondary>managing</secondary>
     </indexterm>
     <para>The following sections describe how to manage your panels.</para>
-    <section id="gospanel-10">
-      <title>To Add a New Panel</title>
-      <indexterm>
-        <primary>panels</primary>
-        <secondary>adding new</secondary>
-      </indexterm>
-      <para>To add a panel, right-click on a vacant space on any panel, then choose <guimenuitem>New Panel</guimenuitem>. The new panel is added to the GNOME Desktop. The
-new panel contains no objects. You can customize the new panel to suit your
-preferences.</para>
-    </section>
-    <section id="gospanel-11">
-      <title>To Interact With a Panel</title>
-      <indexterm>
-        <primary>panels</primary>
-        <secondary>interacting with</secondary>
-      </indexterm>
-      <para>To interact with a panel, you must left-click, middle-click,
-or right-click on a vacant space on the panel. You can also middle-click or
+    <para>To interact with a panel, you must click on the vacant space on the panel, rather than any of the objects it holds. You can also middle-click or
 right-click on one of the hide buttons to select the panel, if the panel has
 no vacant space. If the hide buttons are not visible on a panel, modify the
 properties of the panel so that the hide buttons are visible. </para>
-      <para>You use the mouse buttons to interact with a panel in the following
-ways:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Middle-click</term>
-          <listitem>
-            <para>Enables you to grab
-a panel, then drag the panel to a new location.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Right-click</term>
-          <listitem>
-            <para>Opens the panel popup
-menu.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
     <section id="gospanel-12">
-      <title>To Move a Panel</title>
+      <title>Moving a Panel</title>
       <indexterm>
         <primary>panels</primary>
         <secondary>moving</secondary>
       </indexterm>
-      <para>You can move panels to different locations. To move a panel, middle-click
-and hold on any vacant space on the panel, then drag the panel to the new
-location.</para>
+      <para>Drag a panel to another side of the screen to move it there. Click on any vacant space on the panel to begin the drag.</para>
+      <para>A panel that is not set to expand to the full width of the screen can be dragged away from the edge of the screen and placed anywhere. See <xref linkend="panel-properties"/> for details on how to set a panel's expand property.</para>
+    </section>  
+    <section id="panel-properties">
+      <title>Panel Properties</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gospanel-28"/>         
+      <indexterm>
+        <primary>panels</primary>
+        <secondary>modifying properties</secondary>
+      </indexterm>
+      <para>You can change
+the properties of each panel, such as the position of the panel, the hide behavior,
+and the visual appearance. </para>
+      <para>To modify the properties of a panel, right-click on a vacant space on the panel, then choose <guimenuitem>Properties</guimenuitem>. The <guilabel>Panel Properties</guilabel> dialog contains two tabbed sections, <guilabel>General</guilabel> and <guilabel>Background</guilabel>.</para>
+      
+      <section id="panel-properties-general">
+        <title>General Properties Tab</title>
+        <para>In the <guilabel>General</guilabel> tab, you can modify panel size, position, and hiding properties. The following table describes the
+dialog elements on the <guilabel>General</guilabel> tabbed section: </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="28.57*"/>
+            <colspec colname="colspec1" colwidth="71.43*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Dialog Element</para>
+                </entry>
+                <entry>
+                  <para>Description </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <guilabel>Orientation</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Select the position of the panel on your screen.
+Click on the required position for the panel. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Size</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Use the spin box to specify the size of the panel.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <guilabel>Expand</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>By default, a panel expands to the full length of the edge of the screen where it is located. A panel that does not expand can be moved away from the screen edges to any part of the screen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Autohide</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Select this option if you want the panel to only be fully visible when the mouse pointer is over it. The panel hides off-screen along its principal edge, leaving a narrow part along the edge of the desktop. Move the mouse pointer over the visible part of the panel to make it move fully into the screen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Show hide buttons</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Select this option to display hide buttons at each end of your
+panel. Clicking on a hide button moves the panel lenthways, hiding it off-screen except for the hide button at the opposite end. Click this hide button to restore the panel to being fully visible.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Arrows on hide button</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Select this option to display arrows on the hide
+buttons, if the hide button is enabled.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+
+      </section>
+      <section id="panel-properties-background">
+        <title>Background Properties Tab</title>
+        <para>You can choose the type of background for the panel in the <guilabel>Background</guilabel> tab. The choices are as follows:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="32.32*"/>
+            <colspec colwidth="67.68*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Dialog Element</para>
+                </entry>
+                <entry>
+                  <para>Description</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>None (use system theme)</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Select this option to have the panel use the settings in the <link linkend="prefs-theme"><application>Theme</application> preference tool</link>. This keeps your panel's background looking the same as the rest of the desktop and applications.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Solid color</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Select this option to specify a single color for
+the panel background. Click on the <guibutton>Color</guibutton> button to
+display the color selector dialog. Choose the color that you require from
+the color selector dialog. </para>
+                  <para>Use the <guilabel>Style</guilabel>
+slider to specify the degree of transparency or opaqueness for the color.
+For example, to make the panel transparent, move the slider to the <guilabel>Transparent</guilabel> end.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Background image</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Select this option to specify an image for the panel
+background. Click on the button to browse for the file. When you have selected the file, click <guibutton>OK</guibutton>. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        
+        <!-- section folded in: preserve id for backwards compatibility: 2.12 -->
+        <anchor id="gospanel-61"/>
+        <indexterm>
+          <primary>panels</primary>
+          <secondary>changing background</secondary>
+        </indexterm>
+        <!-- Shaun, why does this bit here change the vertical space between the previous 
+        table and the following paragraph? -->
+             
+        <para>You can also  drag a color or image on to a panel to set the color
+or image as the background of the panel. You can drag a color or image from
+many applications. For example:</para>
+        <itemizedlist>
+          <listitem>
+            <para>You can drag a color from any color selector dialog.</para>     
+          </listitem>
+          <listitem>
+            <para>You can drag an image file from the <application>Nautilus</application> file manager to set it as the background of the panel.</para>     
+          </listitem>
+          <listitem>
+            <para>You can drag a color or a pattern from the <link linkend="nautilus-backgrounds-and-emblems"><guilabel>Backgrounds
+  and Emblems</guilabel> dialog</link> in <application>Nautilus</application> file manager to a panel to set it as the background.</para>         
+          </listitem>
+        </itemizedlist>
+        <para>Click <guibutton>Close</guibutton> to close the <guilabel>Panel Properties</guilabel> dialog.</para>
+      </section>
     </section>
     <section id="gospanel-7">
-      <title>To Hide a Panel</title>
+      <title>Hiding a Panel</title>
       <indexterm>
         <primary>panels</primary>
         <secondary>hiding</secondary>
@@ -305,219 +389,19 @@ buttons are now visible.</para>
 automatically when the mouse is not pointing to the panel. The panel reappears
 when you point to the part of the screen where the panel resides. To set your
 panel to autohide, modify the properties of the panel.</para>
-    </section>
-    <section id="gospanel-28">
-      <title>To Modify Panel Properties</title>
+    </section>    
+    <section id="gospanel-10">
+      <title>Adding a New Panel</title>
       <indexterm>
         <primary>panels</primary>
-        <secondary>modifying properties</secondary>
+        <secondary>adding new</secondary>
       </indexterm>
-      <para>To modify preferences for all panels, use the <guilabel>Panel</guilabel> preference tool to make the changes that you require. For
-example, you can modify animation preferences for panels. </para>
-      <para>You can also modify properties for each individual panel. You can change
-the features for each panel, such as the position of the panel, the hide behavior,
-and the visual appearance. </para>
-      <para>To modify the properties of a panel, perform the following steps: </para>
-      <orderedlist>
-        <listitem>
-          <para>Right-click on a vacant space on the panel, then choose <guimenuitem>Properties</guimenuitem> to display the <guilabel>Panel Properties</guilabel>
-dialog. The <guilabel>Panel Properties</guilabel> dialog contains the following
-tabbed sections: </para>
-          <itemizedlist>
-            <listitem>
-              <para>
-                <guilabel>General</guilabel>
-              </para>
-            </listitem>
-            <listitem>
-              <para>
-                <guilabel>Background</guilabel>
-              </para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-        <listitem>
-          <para>To modify panel size, position, and hiding properties, click
-on the <guilabel>General</guilabel> tab. The following table describes the
-dialog elements on the <guilabel>General</guilabel> tabbed section: </para>
-          <informaltable frame="topbot">
-            <tgroup cols="2" colsep="0" rowsep="0">
-              <colspec colname="colspec0" colwidth="28.57*"/>
-              <colspec colname="colspec1" colwidth="71.43*"/>
-              <thead>
-                <row rowsep="1">
-                  <entry>
-                    <para>Dialog Element</para>
-                  </entry>
-                  <entry>
-                    <para>Description </para>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry colname="colspec0">
-                    <para>
-                      <guilabel>Name</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1">
-                    <para>Type a name for the panel. When you use shortcut
-keys to switch between your panels and the desktop, this panel name is displayed.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry colname="colspec0">
-                    <para>
-                      <guilabel>Orientation</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1">
-                    <para>Select the position of the panel on your screen.
-Click on the required position for the panel. </para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Size</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Use the spin box to specify the size of the panel.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry colname="colspec0">
-                    <para>
-                      <guilabel>Expand</guilabel>
-                    </para>
-                  </entry>
-                  <entry colname="colspec1">
-                    <para>Select this option if you want the panel to
-expand to the full length of the edge of the screen where the panel is located.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Autohide</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to enable autohide. </para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Show hide buttons</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to display hide buttons on your
-panel.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Arrows on hide button</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to display arrows on the hide
-buttons, if the hide button is enabled.</para>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </informaltable>
-        </listitem>
-        <listitem>
-          <para>To modify the panel background, click on the <guilabel>Background</guilabel> tab. Choose the type of background for the panel. The choices
-are as follows:</para>
-          <informaltable frame="topbot">
-            <tgroup cols="2" colsep="0" rowsep="0">
-              <colspec colwidth="32.32*"/>
-              <colspec colwidth="67.68*"/>
-              <thead>
-                <row rowsep="1">
-                  <entry>
-                    <para>Dialog Element</para>
-                  </entry>
-                  <entry>
-                    <para>Description</para>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>None (use system theme)</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to use the default panel background.
-The default panel background depends on the settings in the <application>Theme</application> preference tool.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Solid color</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to specify a single color for
-the panel background. Click on the <guibutton>Color</guibutton> button to
-display the color selector dialog. Choose the color that you require from
-the color selector dialog. </para>
-                    <para>Use the <guilabel>Style</guilabel>
-slider to specify the degree of transparency or opaqueness for the color.
-For example, to make the panel transparent, move the slider towards the <guilabel>Transparent</guilabel> end.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Background image</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select this option to specify an image for the panel
-background. Enter the filename of the image to use in the drop-down combination
-box. Alternatively, to browse for the file, click on the <guibutton>Browse</guibutton> button. When you have selected the file, click OK. </para>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </informaltable>
-          <para>You can also drag a color or image on to a panel to set the color or
-image as the background of the panel. For more information, see <xref linkend="gospanel-61"/>.</para>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Close</guibutton> to close the <guilabel>Panel Properties</guilabel> dialog.</para>
-        </listitem>
-      </orderedlist>
-      <section id="gospanel-61">
-        <title>To Drag a Color or Image to the Background of a Panel</title>
-        <indexterm>
-          <primary>panels</primary>
-          <secondary>changing background</secondary>
-        </indexterm>
-        <para>You can drag a color or image on to a panel to set the color
-or image as the background of the panel. You can drag a color or image from
-many applications. For example, you can drag a color from the <application>Nautilus</application> file manager to a panel to set the color as the background
-of the panel. You can also drag a color from any color selector dialog.</para>
-        <para>You can drag an image to a panel to set the image as the background
-of the panel. You can also drag pattern images from the file manager to set
-the background of the panel.</para>
-      </section>
-    </section>
+      <para>To add a panel, right-click on a vacant space on any panel, then choose <guimenuitem>New Panel</guimenuitem>. The new panel is added to the GNOME Desktop. The
+new panel contains no objects. You can customize the new panel to suit your
+preferences.</para>
+    </section>    
     <section id="gospanel-31">
-      <title>To Delete a Panel</title>
+      <title>Deleting a Panel</title>
       <!-- Desktop Overview / Panels / To Delete Panels -->
       <anchor id="gosoverview-508"/>
       <indexterm>
@@ -1684,8 +1568,10 @@ button</primary>
 space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guisubmenu>Actions</guisubmenu><guimenuitem>Show Desktop</guimenuitem></menuchoice>. To minimize all windows and show the desktop,
 click on the <guibutton>Show Desktop</guibutton> button. </para>
     </section>
-    <section id="gospanel-567">
+    <section id="panels-notification-area">
       <title>Notification Area Applet</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gospanel-567"/>         
       <indexterm>
         <primary>applets</primary>
         <secondary>Notification Area</secondary>
