@@ -76,7 +76,7 @@ these panels.</para>
       <variablelist>
       	<varlistentry>
       		<term><application>Menu Bar</application> applet</term>
-      		<listitem><para>Contains the <guimenu>Applications</guimenu>, the <guimenu>Places</guimenu>, and the <guimenu>Desktop</guimenu> menu. For more on the menu bar, see <xref linkend="menus-introduction"/>.</para></listitem>
+      		<listitem><para>Contains the <guimenu>Applications</guimenu>, the <guimenu>Places</guimenu>, and the <guimenu>Desktop</guimenu> menu. For more on the menu bar, see <xref linkend="menubar"/>.</para></listitem>
       	</varlistentry>
       	<varlistentry>
       	  <term><application>Web Browser Launcher</application></term>
@@ -1604,12 +1604,12 @@ Area</application> applet. </para>
 right-click on any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guisubmenu>Utility</guisubmenu><guimenuitem>Notification Area</guimenuitem></menuchoice>.</para>
     </section>
   </section>
-  <section id="gospanel-37">
+  <section id="panel-menus">
     <title>Menus</title>
 
     <!-- Desktop Overview / Menus -->
     <anchor id="gosoverview-42"/>
-
+    <anchor id="gospanel-37"/>
     <indexterm>
       <primary>menus</primary>
       <secondary>adding to panel</secondary>
@@ -1846,6 +1846,7 @@ to set the color or image as the background of the drawer. For more information,
     </section>
   </section>
   <section id="panel-default">
+    <!-- a temporary home for things that should one day be in a greater list of panel objects -->
     <title>Default Panel Objects</title>
     
     <para>This section covers the panel objects that appear in the default GNOME desktop.</para>
@@ -1881,5 +1882,105 @@ applet. The following figure shows an example of the <application>Window Selecto
 all workspaces. The windows in all workspaces other than the current workspace,
 are listed under a separator line.</para>
     </section>  
+    
+    <section id="panel-runapplication">
+      <title>Run Application Dialog</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gospanel-23"/>
+      <indexterm>
+        <primary>Run Application dialog, using</primary>
+      </indexterm>
+      <para>The <guilabel>Run Application</guilabel> dialog gives you access to the command
+line. When you run a command in the <guilabel>Run Application</guilabel> dialog,
+you cannot receive output from the command.</para>
+      <para>To run a command from the command line perform the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>Display the <guilabel>Run Application</guilabel> dialog. You
+can display the <guilabel>Run Application</guilabel> dialog in any of the
+following ways:
+            <variablelist>
+              <varlistentry><term>From a panel</term>
+              <listitem><para>You can add the <application>Run Application</application> object to any panel. See <xref linkend="panels-addobject"/>. Click on the <guibutton>Run</guibutton> button to open the <guilabel>Run Application</guilabel> dialog.</para></listitem></varlistentry>
+              <varlistentry><term>Using shortcut keys</term>
+              <listitem><para>Press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>. You can change the shortcut keys that display the <guilabel>Run Application</guilabel> dialog
+in the <link linkend="prefs-keyboard-shortcuts"><application>Keyboard Shortcuts</application> preference tool</link>.</para></listitem></varlistentry>
+            </variablelist>
+          </para>
+          <para>The <guilabel>Run Application</guilabel> dialog is displayed.</para>
+        </listitem>
+        <listitem>
+          <para>Enter the command that you want to run in the blank field. </para>
+          <para>Alternatively, to choose  a command that you ran previously, click the
+down arrow button beside the command field, then choose the command to run.</para>
+          <para>Alternatively, select the <guilabel>Show list of known applications</guilabel> option to display a list of available applications.</para>
+          <para>You can also use the <guibutton>Run with file</guibutton> button to
+choose a file to append to the command line. For example, you can enter <application>emacs</application> as the command, then choose a file to edit.</para>
+          <para>Select the <guilabel>Run in terminal</guilabel> option to run the application
+or command in a terminal window. Choose this option for an application or
+command that does not create a window in which to run.</para>
+        </listitem>
+        <listitem>
+          <para>Click on the <guibutton>Run</guibutton> button on the <guilabel>Run Application</guilabel> dialog. </para>
+        </listitem>
+      </orderedlist>
+    </section>
+
+    
+    <section id="goseditmainmenu-7">
+      <title>Main Menu panel object</title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>Main Menu</secondary>
+        <see>Main
+  Menu</see>
+      </indexterm>
+      <indexterm>
+        <primary>Main Menu</primary>
+        <secondary>introduction</secondary>
+      </indexterm>
+      <para>The <guimenu>Main Menu</guimenu> provides access to
+  the <guimenu>Applications</guimenu> menu and many of the items in the <guimenu>Actions</guimenu> menu. You can access almost all of the standard applications,
+  commands, and configuration options from the <guimenu>Main Menu</guimenu>. </para>
+      <para>You can add <guimenu>Main Menu</guimenu> buttons to your panels. Click
+  on the <guimenu>Main Menu</guimenu> button to open the <guimenu>Main Menu</guimenu>.</para>
+      <section id="goseditmainmenu-29">
+        <title>To Add a Main Menu to a Panel</title>
+        <indexterm>
+          <primary>Main Menu</primary>
+          <secondary>adding to panel</secondary>
+        </indexterm>
+        <para>You can add as many <guimenu>Main Menu</guimenu> buttons
+  as you want to your panels. To add a <guimenu>Main Menu</guimenu> to a panel,
+  right-click on any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Main Menu</guimenuitem></menuchoice>.</para>
+      </section>
+    </section>
+    <section id="goseditmainmenu-65">
+      <title>Menu Bar panel object</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/menu_bar_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Menu Bar applet. Menus: Applications, Actions.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>The <application>Menu Bar</application> provides access to the <guimenu>Applications</guimenu> and <guimenu>Actions</guimenu> menus. You can access
+  almost all of the standard applications, commands, and configuration options
+  from the <application>Menu Bar</application>. </para>
+      <section id="goseditmainmenu-66">
+        <title>To Add a Menu Bar to a Panel</title>
+        <indexterm>
+          <primary>Menu Bar</primary>
+          <secondary>adding to panel</secondary>
+        </indexterm>
+        <para>You can add as many <application>Menu Bar</application>
+  applets as you want to your panels. To add a <application>Menu Bar</application>
+  to a panel, right-click on any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Menu Bar</guimenuitem></menuchoice>.</para>
+      </section>
+    </section>    
+    
   </section>
 </chapter>
