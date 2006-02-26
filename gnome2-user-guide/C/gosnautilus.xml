@@ -122,6 +122,204 @@ folder. The desktop contains special icons allowing easy access to the users Hom
      </variablelist>   
   </sect2>
   </sect1>
+  <!-- ====================================================== Spatial mode -->  
+  <sect1 id="nautilus-spatial-mode">
+    <title>Spatial Mode</title>
+    <anchor id="gosnautilus-24"/>       
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>navigating</secondary>
+    </indexterm>
+    <para>The following section describes how to browse your system using the <application>Nautilus</application> file manager when configured in spatial mode. In spatial mode, each <application>Nautilus</application> window corresponds to a single folder. When you open a folder its window appears at the same place on the screen as the last time you looked at it. This is the default behaviour in <application>Nautilus</application>.</para>
+    <para>For a comparison of browser mode and spatial mode, see <xref linkend="nautilus-presentation"/>.</para>    
+    <sect2 id="gosnautilus-510">
+      <title>Spatial Windows</title>
+      <para>A new spatial window opens each time you open a folder. To open a folder, do one of the following:</para>
+      <anchor id="gosnautilus-25"/><!-- removed id: Displaying Folder Contents -->
+      <itemizedlist>
+        <listitem><para>Double-click the folder's icon on the desktop or an existing window</para></listitem>
+        <listitem><para>Select the folder, and press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>.</para></listitem>
+        <listitem><para>Select the folder, and press <keycombo><keycap>Alt</keycap><keycap>down arrow</keycap></keycombo></para></listitem>
+        <listitem><para>Choose an item from the <link linkend="places-menu"><guimenuitem>Places</guimenuitem> menu</link> on the top panel. Your Home Folder and folders you have bookmarked are listed here. For more on bookmarks, see <xref linkend="nautilus-bookmarks"/>.</para></listitem>
+      </itemizedlist>
+      
+      <para>To close the current folder while opening the new one, hold down <keycap>Shift</keycap> when double-clicking, or press <keycombo><keycap>Shift</keycap><keycap>Alt</keycap><keycap>down arrow</keycap></keycombo>.</para>
+
+      <para><xref linkend="gosnautilus-FIG-504"/> shows a spatial mode window
+that displays the contents of the Computer folder.</para>
+      <figure id="gosnautilus-FIG-504">
+        <title>Contents of a folder in a spatial mode.<indexterm><primary>file
+manager</primary><secondary>icon view</secondary><tertiary>illustration</tertiary></indexterm></title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/naut_spatial_view.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Displaying a folder in spatial mode.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    <para>In spatial mode each open <application>Nautilus</application> windows shows only one location. Selecting a second location will open a second <application>Nautilus</application> window. Because each location remembers the previous position on screen in which it was opened it allows you to easily recognize folders when many of them are open at once.</para>
+    <para>Some people consider spatial mode better, particularly for moving files or folders to different location, others find the number of open windows daunting. <xref linkend="gosnautilus-FIG-naut-spatial-many-open" /> shows an example of spatial browsing with many open locations.</para>
+        <figure id="gosnautilus-FIG-naut-spatial-many-open">
+          <title>Three Folders Opened in Spatial Mode.</title>
+          <screenshot>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="figures/naut_spatial_mode.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>Three Folders Opened in Spatial Mode.</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </figure>
+<note>
+<para>Because spatial mode will fill your screen with <application>Nautilus</application> windows it is important to be able to reposition them effectively. By holding the the <keycap>ALT</keycap> and clicking anywhere within the bounds of a <application>Nautilus</application> window you may reposition it simply, instead of the requiring that you reposition it by dragging its title bar.</para>
+</note>
+  </sect2>
+   <sect2 id="nautilus-spatial-components">
+      <title>Spatial Window Components</title>
+      <para><xref linkend="gosnautilus-TBL-85"/> describes the components of file
+object windows.</para>
+      <table frame="topbot" id="gosnautilus-TBL-85">
+        <title>The Spatial Window Components</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="29.39*"/>
+          <colspec colname="colspec1" colwidth="70.61*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Component</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Menubar</para>
+              </entry>
+              <entry valign="top">
+                <para>Contains menus that you use to perform tasks in the file manager.</para>
+		<para>You can also open a popup menu from file manager windows. To open this
+popup menu right-click in a file manager window. The items in this menu depend
+on where you right-click. For example, when you right-click on a file or folder,
+you can choose items related to the file or folder. When you right-click on
+the background of a view pane, you can choose items related to the display
+of items in the view pane.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+		<anchor id="gosnautilus-components-view"/>
+                <para>View pane</para>
+              </entry>
+              <entry valign="top">
+                <para>Shows the contents of the following:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Folders</para>
+                  </listitem>
+                  <listitem>
+                    <para>FTP sites</para>
+                  </listitem>
+                  <listitem>
+                    <para>Windows shares</para>
+                  </listitem>
+                  <listitem>
+                    <para>WebDAV servers</para>
+                  </listitem>
+                  <listitem>
+                    <para>Locations that correspond to special URIs</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Statusbar</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Displays status information.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Parent folder selector</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>This drop-down list shows the hierarchy of the folder. Choose a folder from the list to open it.</para>
+                <tip><para>Hold down <keycap>Shift</keycap> while choosing from the list to close the current folder as you open the new one.</para></tip>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-4">
+      <title>Displaying Your Home Folder in a Spatial Window</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>Home location</secondary>
+        <see>Home location</see>
+      </indexterm>
+      <indexterm>
+        <primary>Home location</primary>
+        <secondary>displaying</secondary>
+      </indexterm>
+      <para>To display your Home Folder,
+perform one of the following actions:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Double-click on the <guilabel>Home</guilabel> object on the
+desktop.</para>
+        </listitem>
+        <listitem>
+          <para>From a folder window's menubar, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Home</guimenuitem></menuchoice>. </para> 
+        </listitem>
+        <listitem><para>From the top panel menubar, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Home Folder</guimenuitem></menuchoice>. </para></listitem>
+      </itemizedlist>
+      <para>The spatial window displays the contents of your Home Folder.</para>
+    </sect2>
+    <sect2 id="gosnautilus-511">
+      <title>Displaying a Parent Folder</title>
+      <para>A parent folder is the folder that contains the current folder. To display the contents of your current folder's parent, do one of the following:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open Parent</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Press <keycombo><keycap>Alt</keycap><keycap>up arrow</keycap></keycombo>. </para>
+        </listitem>
+        <listitem><para>Choose from the parent folder selector at the bottom left of the window.</para></listitem>
+      </itemizedlist>
+      <para>To close the current folder while opening the parent, hold down <keycap>Shift</keycap> while choosing from the parent folder selector, or press <keycombo><keycap>Shift</keycap><keycap>Alt</keycap><keycap>up arrow</keycap></keycombo>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-512">
+      <title>Closing Folders</title>
+      <para>To close folders you may simply click on the close window button, this however may not be the most efficient way to close many windows.
+If you would like to view only the current folder, and not the folders you opened to reach the current folder, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close Parent Folders</guimenuitem></menuchoice>.
+If want to close all folders on the screen, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close All Folders</guimenuitem></menuchoice>.</para>
+      </sect2>
+    <sect2 id="gosnautilus-501">
+      <title>Displaying a Folder in a Browser Window</title>
+      <para>If you wish to display a single folder in browser mode, while otherwise continuing to work in spatial mode, perform the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>Select a folder in while in spatial mode.</para>
+        </listitem>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Browse Folder</guimenuitem></menuchoice>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+
   <!-- ====================================================== Browser mode -->
   <sect1 id="nautilus-browser-mode">
     <title>Browser Mode</title>
@@ -651,204 +849,9 @@ the item in the <guilabel>History</guilabel> list.</para>
 
       </sect3>
     </sect2>
-  </sect1>
-  <!-- ====================================================== Spatial mode -->  
-  <sect1 id="nautilus-spatial-mode">
-    <title>Spatial Mode</title>
-    <anchor id="gosnautilus-24"/>       
-    <indexterm>
-      <primary>file manager</primary>
-      <secondary>navigating</secondary>
-    </indexterm>
-    <para>The following section describes how to browse your system using the <application>Nautilus</application> file manager when configured in spatial mode. In spatial mode, each <application>Nautilus</application> window corresponds to a single folder. When you open a folder its window appears at the same place on the screen as the last time you looked at it. This is the default behaviour in <application>Nautilus</application>.</para>
-    <para>For a comparison of browser mode and spatial mode, see <xref linkend="nautilus-presentation"/>.</para>    
-    <sect2 id="gosnautilus-510">
-      <title>Spatial Windows</title>
-      <para>A new spatial window opens each time you open a folder. To open a folder, do one of the following:</para>
-      <anchor id="gosnautilus-25"/><!-- removed id: Displaying Folder Contents -->
-      <itemizedlist>
-        <listitem><para>Double-click the folder's icon on the desktop or an existing window</para></listitem>
-        <listitem><para>Select the folder, and press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>.</para></listitem>
-        <listitem><para>Select the folder, and press <keycombo><keycap>Alt</keycap><keycap>down arrow</keycap></keycombo></para></listitem>
-        <listitem><para>Choose an item from the <link linkend="places-menu"><guimenuitem>Places</guimenuitem> menu</link> on the top panel. Your Home Folder and folders you have bookmarked are listed here. For more on bookmarks, see <xref linkend="nautilus-bookmarks"/>.</para></listitem>
-      </itemizedlist>
-      
-      <para>To close the current folder while opening the new one, hold down <keycap>Shift</keycap> when double-clicking, or press <keycombo><keycap>Shift</keycap><keycap>Alt</keycap><keycap>down arrow</keycap></keycombo>.</para>
-
-      <para><xref linkend="gosnautilus-FIG-504"/> shows a spatial mode window
-that displays the contents of the Computer folder.</para>
-      <figure id="gosnautilus-FIG-504">
-        <title>Contents of a folder in a spatial mode.<indexterm><primary>file
-manager</primary><secondary>icon view</secondary><tertiary>illustration</tertiary></indexterm></title>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/naut_spatial_view.png" format="PNG"/>
-            </imageobject>
-            <textobject>
-              <phrase>Displaying a folder in spatial mode.</phrase>
-            </textobject>
-          </mediaobject>
-        </screenshot>
-      </figure>
-    <para>In spatial mode each open <application>Nautilus</application> windows shows only one location. Selecting a second location will open a second <application>Nautilus</application> window. Because each location remembers the previous position on screen in which it was opened it allows you to easily recognize folders when many of them are open at once.</para>
-    <para>Some people consider spatial mode better, particularly for moving files or folders to different location, others find the number of open windows daunting. <xref linkend="gosnautilus-FIG-naut-spatial-many-open" /> shows an example of spatial browsing with many open locations.</para>
-        <figure id="gosnautilus-FIG-naut-spatial-many-open">
-          <title>Three Folders Opened in Spatial Mode.</title>
-          <screenshot>
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="figures/naut_spatial_mode.png" format="PNG"/>
-              </imageobject>
-              <textobject>
-                <phrase>Three Folders Opened in Spatial Mode.</phrase>
-              </textobject>
-            </mediaobject>
-          </screenshot>
-        </figure>
-<note>
-<para>Because spatial mode will fill your screen with <application>Nautilus</application> windows it is important to be able to reposition them effectively. By holding the the <keycap>ALT</keycap> and clicking anywhere within the bounds of a <application>Nautilus</application> window you may reposition it simply, instead of the requiring that you reposition it by dragging its title bar.</para>
-</note>
-  </sect2>
-   <sect2 id="nautilus-spatial-components">
-      <title>Spatial Window Components</title>
-      <para><xref linkend="gosnautilus-TBL-85"/> describes the components of file
-object windows.</para>
-      <table frame="topbot" id="gosnautilus-TBL-85">
-        <title>The Spatial Window Components</title>
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="29.39*"/>
-          <colspec colname="colspec1" colwidth="70.61*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Component</para>
-              </entry>
-              <entry>
-                <para>Description </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>Menubar</para>
-              </entry>
-              <entry valign="top">
-                <para>Contains menus that you use to perform tasks in the file manager.</para>
-		<para>You can also open a popup menu from file manager windows. To open this
-popup menu right-click in a file manager window. The items in this menu depend
-on where you right-click. For example, when you right-click on a file or folder,
-you can choose items related to the file or folder. When you right-click on
-the background of a view pane, you can choose items related to the display
-of items in the view pane.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-		<anchor id="gosnautilus-components-view"/>
-                <para>View pane</para>
-              </entry>
-              <entry valign="top">
-                <para>Shows the contents of the following:</para>
-                <itemizedlist>
-                  <listitem>
-                    <para>Folders</para>
-                  </listitem>
-                  <listitem>
-                    <para>FTP sites</para>
-                  </listitem>
-                  <listitem>
-                    <para>Windows shares</para>
-                  </listitem>
-                  <listitem>
-                    <para>WebDAV servers</para>
-                  </listitem>
-                  <listitem>
-                    <para>Locations that correspond to special URIs</para>
-                  </listitem>
-                </itemizedlist>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Statusbar</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays status information.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Parent folder selector</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>This drop-down list shows the hierarchy of the folder. Choose a folder from the list to open it.</para>
-                <tip><para>Hold down <keycap>Shift</keycap> while choosing from the list to close the current folder as you open the new one.</para></tip>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-    </sect2>
-    <sect2 id="gosnautilus-4">
-      <title>Displaying Your Home Folder in a Spatial Window</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>Home location</secondary>
-        <see>Home location</see>
-      </indexterm>
-      <indexterm>
-        <primary>Home location</primary>
-        <secondary>displaying</secondary>
-      </indexterm>
-      <para>To display your Home Folder,
-perform one of the following actions:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Double-click on the <guilabel>Home</guilabel> object on the
-desktop.</para>
-        </listitem>
-        <listitem>
-          <para>From a folder window's menubar, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Home</guimenuitem></menuchoice>. </para> 
-        </listitem>
-        <listitem><para>From the top panel menubar, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Home Folder</guimenuitem></menuchoice>. </para></listitem>
-      </itemizedlist>
-      <para>The spatial window displays the contents of your Home Folder.</para>
-    </sect2>
-    <sect2 id="gosnautilus-511">
-      <title>Displaying a Parent Folder</title>
-      <para>A parent folder is the folder that contains the current folder. To display the contents of your current folder's parent, do one of the following:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open Parent</guimenuitem></menuchoice>. </para>
-        </listitem>
-        <listitem>
-          <para>Press <keycombo><keycap>Alt</keycap><keycap>up arrow</keycap></keycombo>. </para>
-        </listitem>
-        <listitem><para>Choose from the parent folder selector at the bottom left of the window.</para></listitem>
-      </itemizedlist>
-      <para>To close the current folder while opening the parent, hold down <keycap>Shift</keycap> while choosing from the parent folder selector, or press <keycombo><keycap>Shift</keycap><keycap>Alt</keycap><keycap>up arrow</keycap></keycombo>.</para>
-    </sect2>
-    <sect2 id="gosnautilus-512">
-      <title>Closing Folders</title>
-      <para>To close folders you may simply click on the close window button, this however may not be the most efficient way to close many windows.
-If you would like to view only the current folder, and not the folders you opened to reach the current folder, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close Parent Folders</guimenuitem></menuchoice>.
-If want to close all folders on the screen, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close All Folders</guimenuitem></menuchoice>.</para>
-      </sect2>
-    <sect2 id="gosnautilus-501">
-      <title>Displaying a Folder in a Browser Window</title>
-      <para>If you wish to display a single folder in browser mode, while otherwise continuing to work in spatial mode, perform the following steps:</para>
-      <orderedlist>
-        <listitem>
-          <para>Select a folder in while in spatial mode.</para>
-        </listitem>
-        <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Browse Folder</guimenuitem></menuchoice>. </para>
-        </listitem>
-      </orderedlist>
-    </sect2>
-  </sect1>
+  </sect1>  
+  
+  <!-- ====================================================== Appearance -->  
   <sect1 id="gosnautilus-203">
     <title>Modifying the Appearance of Files and Folders</title>
     <indexterm>
@@ -1073,6 +1076,83 @@ Select the file or folder that you want to change, choose <menuchoice><guimenu>F
 click on the <guibutton>Icon</guibutton> button, in the <guilabel>Select custom 
 icon</guilabel> dialog click <guibutton>Revert</guibutton>.</para>
     </sect2>
+    
+    <sect2 id="nautilus-backgrounds-and-emblems">
+      <title>Changing Backgrounds</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosnautilus-50"/>         
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>changing backgrounds</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>backgrounds</primary>
+        <secondary>changing screen component</secondary>
+      </indexterm>
+      <para>The file manager includes
+backgrounds that you can use to change the look-and-feel of the following
+screen components: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Desktop</para>
+        </listitem>
+        <listitem>
+          <para>Side pane and view pane of a file browser window</para>
+        </listitem>
+        <listitem>
+          <para>Spatial mode windows</para>
+        </listitem>
+        <listitem>
+          <para>Panels</para>
+        </listitem>
+      </itemizedlist>
+      <para>To change the background of a screen component perform the following
+steps: </para>
+      <orderedlist>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. The <guilabel>Backgrounds
+and Emblems</guilabel> dialog is displayed. </para>
+        </listitem>
+        <listitem>
+          <para>To display a list of patterns that you can use on the background,
+click on the <guibutton>Patterns</guibutton> button. To display a list of
+the colors that you can use on the background, click on the <guibutton>Colors</guibutton> button.</para>
+        </listitem>
+        <listitem>
+          <para>To change the background to a pattern, drag the pattern to
+the screen component. To change the background to a color, drag the color
+to the screen component. </para>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>Close</guibutton> to close the dialog.</para>
+        </listitem>
+      </orderedlist>
+      <para>To reset the background of the view pane or side pane to the default
+background, right-click on the background of the pane, then choose <guimenuitem>Use Default Background</guimenuitem>.</para>
+      <sect3 id="gosnautilus-63">
+        <title>To Add a Pattern</title>
+        <indexterm>
+          <primary>backgrounds</primary>
+          <secondary>adding patterns</secondary>
+        </indexterm>
+        <para>To add a pattern to the patterns that you can use on your
+screen components, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. Click on the <guibutton>Patterns</guibutton> button, then click on the <guibutton>Add a New Pattern</guibutton> button. A dialog is displayed. Use the dialog to find the new
+pattern. Click <guibutton>OK</guibutton> to add the new pattern to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
+      </sect3>
+      <sect3 id="gosnautilus-64">
+        <title>To Add a Color</title>
+        <indexterm>
+          <primary>backgrounds</primary>
+          <secondary>adding colors</secondary>
+        </indexterm>
+        <para>To add a color to the colors that you can use on your screen
+components, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. Click on the <guibutton>Colors</guibutton> button, then click on the <guibutton>Add a New Color</guibutton>
+button. A color selector dialog is displayed. Use the color wheel or the sliders
+to choose the color. Click <guibutton>OK</guibutton> to add the new color
+to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
+      </sect3>
+    </sect2>    
+    
     <sect2 id="gosnautilus-7">
       <title>Using Views to Display Your Files and Folders</title>
       <indexterm>
@@ -1407,18 +1487,48 @@ to Defaults</guimenuitem></menuchoice>.</para>
     </sect3>
     </sect2>
   </sect1>
-  <sect1 id="gosnautilus-204">
-    <title>Assigning Actions to Files</title>
+	<!-- ======================================================== Opening -->
+  <sect1 id="gosnautilus-28">
+    <title>Opening Files</title>
     <indexterm>
       <primary>file manager</primary>
-      <secondary>assigning actions to
-files</secondary>
+      <secondary>opening files</secondary>
     </indexterm>
-    <para>When you open a file, the file manager
-performs the default action for that file type. By right-clicking on a file you may perform actions other than the default. You can use the file manager to modify the actions that are  associated
-with a particular file or file type. </para>
+    <para>When you open a file, the file manager performs the default
+action for that file type.</para>
+    <para>The file manager checks the contents of a file to determine the type
+of a file. If the first lines do not determine the type of the file, then
+the file manager checks the file extension.</para>
+    <sect2 id="gosnautilus-29">
+      <title>Executing the Default Action</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>executing default actions
+for files</secondary>
+      </indexterm>
+      <para>To execute the default action for a
+file, double-click on the file. For example, the default action for plain
+text documents is to display the file in a text viewer. In this case, you
+can double-click on the file to  display the file in a text viewer.</para>
+      <para>You can set your file manager preferences so that you click once on
+a file to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-30">
+      <title>Executing Non-Default Actions</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>executing non-default
+actions for files</secondary>
+      </indexterm>
+      <para>To execute actions other than
+the default action for a file,  select the file that you want to perform
+an action on. In the <menuchoice><guimenu>File</guimenu></menuchoice> menu you will either have "Open with" choices, or an 
+<menuchoice><guimenuitem>Open With</guimenuitem></menuchoice> submenu. Select the desired option from this list.</para>
+    </sect2>
     <sect2 id="gosnautilus-add-actions">
-      <title>To Add Actions</title>
+      <title>Adding Actions</title>
+	    <!-- preserve id for backwards compatibility: 2.12 -->
+	    <anchor id="gosnautilus-204"/><!-- Assigning Actions to Files -->
       <indexterm>
         <primary>file manager</primary>
         <secondary>adding actions</secondary>
@@ -1443,7 +1553,7 @@ no prior action associated with the type, the newly added action is the default.
        <para>You may also add actions in the <guilabel>Open With</guilabel> tabbed section under <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
    </sect2>
     <sect2 id="gosnautilus-75">
-      <title>To Modify Actions</title>
+      <title>Modifying Actions</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>modifying actions</secondary>
@@ -1466,893 +1576,9 @@ a file of the type to which you want to modify the action.</para>
 Select the default action with the option to the left of the list.</para>
         </listitem>
       </orderedlist>
-    </sect2>
-  </sect1>
-  <sect1 id="nautilus-customize">
-    <title>Customizing the File Manager</title>
-    <!-- preserve id for backwards compatibility: 2.12 -->
-    <anchor id="gosnautilus-15"/>       
-    <indexterm>
-      <primary>file manager</primary>
-      <secondary>customizing</secondary>
-    </indexterm>
-    <para>This section describes how to customize the file manager to suit your requirements
-and preferences.</para>
-    <sect2 id="nautilus-preferences">
-      <title>Nautilus Preferences</title>
-      <!-- preserve id for backwards compatibility: 2.12 -->
-      <anchor id="gosnautilus-17"/>         
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>preferences</secondary>
-        <tertiary>introduction</tertiary>
-      </indexterm>
-      <indexterm>
-        <primary>preferences,
-file manager</primary>
-        <see>file manager preferences</see>
-      </indexterm>
-      <para>Use the <guilabel>File Management Preferences</guilabel>  dialog to set preferences
-for the file manager. To display the <guilabel>File Management Preferences</guilabel> dialog, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>, you can also access this dialog directly from the <application>Menu Bar</application> 
-by choosing <menuchoice><guimenu>Desktop</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>File Management</guimenuitem></menuchoice>.</para>
-      <para>You can set preferences in the following categories: </para>
-      <itemizedlist>
-        <listitem>
-          <para>The default settings for views.</para>
-        </listitem>
-        <listitem>
-          <para>The behavior of files and folders, executable text files,
-and Trash.</para>
-        </listitem>
-        <listitem>
-          <para>The information that is displayed in icon captions and the date format.</para>
-        </listitem>
-        <listitem>
-          <para>The columns that appear in the list view and their order.</para>
-        </listitem>
-        <listitem>
-          <para>Preview options to improve the performance of the file manager.</para>
-        </listitem>
-      </itemizedlist>
-      <sect3 id="gosnautilus-438">
-        <title>Views Preferences</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>views</tertiary>
-        </indexterm>
-        <para>You can specify a default view,
-and select sort options and display options. You can also specify default
-settings for icon views and list views.</para>
-        <para>To specify your default view settings,
-choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Views</guilabel> tab to
-display the <guilabel>Views</guilabel> tabbed section.</para>
-        <para><xref linkend="gosnautilus-TBL-30"/> lists the views preferences that
-you can modify. </para>
-        <table frame="topbot" id="gosnautilus-TBL-30">
-          <title>Views Preferences</title>
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec0" colwidth="35.09*"/>
-            <colspec colname="colspec1" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry>
-                  <para>Dialog Element</para>
-                </entry>
-                <entry>
-                  <para>Description</para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>View new folders using</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select the default view for folders. When you open
-a folder, the folder is displayed in the view that you select. This can be either the icon view or the list view.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Arrange items</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select the characteristic by which you want to sort
-the items in folders that are displayed in this view.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>Sort folders before files</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Select this option to list folders before
-files when you sort a folder.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Show hidden and
-backup files</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Select this option to display files that are normally not shown in folders. For more on hidden files, see <xref linkend="nautilus-hidden-files"/>.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Icon View Default zoom level</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>There are two settings, one for the icon
-view and one for the list view. Select the default zoom level for folders that are displayed
-in this view. The zoom level specifies the size of items in a view.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Use compact layout</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Select
-this option to arrange the items in icon view so that the items in the folder
-are closer to each other.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>Text beside icons</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Select this option to place the icon captions
-for items beside the icon rather than under the icon.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>Show only folders</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Select this option to display only folders in the <guilabel>Tree</guilabel> in the side pane.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </sect3>
-      <sect3 id="gosnautilus-56">
-        <title>Behavior Preferences</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>behavior</tertiary>
-        </indexterm>
-        <para>To set your preferences for
-files and folders, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Behavior</guilabel>
-tab to display the <guilabel>Behavior</guilabel> tabbed section.</para>
-        <para><xref linkend="gosnautilus-TBL-37"/> lists the preferences that you can
-modify for files and folders. </para>
-        <table frame="topbot" id="gosnautilus-TBL-37">
-          <title>File and Folder Behavior Preferences</title>
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec6" colwidth="35.09*"/>
-            <colspec colname="colspec7" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry>
-                  <para>Option</para>
-                </entry>
-                <entry>
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Single click to activate items</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select this option to perform the default action
-for an item when you click on the item. When this option is selected, and
-you point to an item, the title of the item is underlined. </para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec6" valign="top">
-                  <para>
-                    <guilabel>Double click to
-activate items</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7" valign="top">
-                  <para>Select this option to perform the default action for an item when you double-click
-on the item.</para>
-                </entry>
-              </row>
-
-              <row>
-                <entry colname="colspec6" valign="top">
-                  <para>
-                    <guilabel>Always open in browser
-windows</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7" valign="top">
-                  <para>Select this option to use nautilus in browser mode
-rather than spatial mode. Selecting this lets you browse your files and folders in the same window, otherwise you will navigate your files and folders as objects.</para>
-                </entry>
-              </row>
-
-              <row>
-                <entry colname="colspec6" valign="top">
-                  <para>
-                    <guilabel>Always use text entry location bar.</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7" valign="top">
-                  <para>Select this option to force <application>Nautilus</application> to use the Location bar in location field mode instead of the button bar mode by default. For more on using the location bar see <xref linkend="nautilus-location-bar"/>.</para></entry>
-              </row>
-
-              <row>
-                <entry colname="colspec6">
-                  <para>
-                    <guilabel>Run executable text files when they are clicked</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7">
-                  <para>Select this option to run an text executable file when you choose
-the file. An executable text file is a text file that can execute, that
-is, a shell script.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec6">
-                  <para>
-                    <guilabel>View executable text files when
-they are clicked</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7">
-                  <para>Select this option to display the contents of an executable text file when you
-choose the executable text file.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec6" valign="top">
-                  <para>
-                    <guilabel>Ask each time</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7" valign="top">
-                  <para>Select
-this option to display a dialog when you choose an executable text file. The dialog
-asks whether you want to execute the file or display the file. </para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec6">
-                  <para>
-                    <guilabel>Ask before emptying the Trash
-or deleting files</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7">
-                  <para>Select this option to display a confirmation message before <guilabel>Trash</guilabel> is emptied, or files are deleted. Leave this selected unless you have good reason not to.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec6" valign="top">
-                  <para>
-                    <guilabel>Include a Delete
-command that bypasses Trash</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec7">
-                  <para>Select this option to add a <guimenuitem>Delete</guimenuitem> menu item to
-the following menus:</para>
-                  <itemizedlist>
-                    <listitem>
-                      <para>The <guimenu>Edit</guimenu> menu.</para>
-                    </listitem>
-                    <listitem>
-                      <para>The popup menu that is displayed when you right-click on a
-file, folder, or desktop  object. </para>
-                    </listitem>
-                  </itemizedlist>
-                  <para>When you select an item then choose the <guimenuitem>Delete</guimenuitem> menu item, the item is deleted from your file system
-immediately. There is no way to recover a deleted file. Do not select this unless you have good reason to.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </sect3>
-      <sect3 id="gosnautilus-439">
-        <title>Display Preferences</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>icons</secondary>
-          <tertiary>caption preferences</tertiary>
-        </indexterm>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>icon captions</tertiary>
-        </indexterm>
-        <para>An icon caption displays the name of a file or folder in
-an icon view. The icon caption also includes three additional items of information
-on the file or folder. The additional information is displayed after the file
-name. Normally only one item of information is visible, but when you zoom
-in on an icon, more of the information is displayed. You can modify what additional
-information is displayed in icon captions. </para>
-        <para>To set your preferences for icon captions, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
-Click on the <guilabel>Display</guilabel> tab to display the <guilabel>Display</guilabel> tabbed section. </para>
-        <para>Select the items of information that you want to display in the icon
-caption from the three drop-down lists. Select the first item from the first
-drop-down list, select the second item from the second drop-down list, and
-so on. The following table describes the items of information that you can
-select:</para>
-        <informaltable frame="topbot">
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec0" colwidth="35.09*"/>
-            <colspec colname="colspec1" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry>
-                  <para>Information</para>
-                </entry>
-                <entry>
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Size</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the size of the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Type</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the description of the MIME type of the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Date modified</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose
-this option to display the last modification date of  the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Date accessed</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose
-this option to display the date that the item was last accessed.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Owner</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the owner of the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Group</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the group to which the item belongs.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Permissions</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para><indexterm><primary>permissions</primary><secondary>displaying as characters</secondary></indexterm>Choose
-this option to display the permissions of the item as three sets of three
-characters, for example <computeroutput>-rwxrw-r--</computeroutput>.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Octal permissions</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para><indexterm><primary>permissions</primary><secondary>displaying in octal notation</secondary></indexterm>Choose this option to display the permissions of the item in octal
-notation, for example <computeroutput>764</computeroutput>. </para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>MIME type</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the MIME type of the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>None</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-no information for the item.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-       <para>
-        The date <guilabel>Format</guilabel> option lets you choose how the date is displayed throughout Nautilus.
-       </para>
-      </sect3>
-      <sect3 id="gosnautilus-490">
-        <title>List Columns Preferences</title>
-        <para>You can specify what information is displayed in list view in file manager
-windows. You can specify which columns are displayed in list view, and the
-order in which the columns are displayed.</para>
-        <para>To set your preferences for list columns, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
-Click on the <guilabel>List Columns</guilabel> tab to display the <guilabel>List Columns</guilabel> tabbed section. </para>
-        <para>To specify a column to display in list view, select the option that
-corresponds to the column, then click on the <guibutton>Show</guibutton> button.
-To remove a column from the list view, select the option that corresponds
-to the column, then click on the <guibutton>Hide</guibutton> button.</para>
-        <para>Use the <guibutton>Move Up</guibutton> and <guibutton>Move Down</guibutton>
-buttons to specify the position of columns in list view.</para>
-        <para>To use the default columns and column positions, click on the <guibutton>Use Default</guibutton> button. </para>
-        <para>The following table describes the columns that you can display:</para>
-        <informaltable frame="topbot">
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec0" colwidth="35.09*"/>
-            <colspec colname="colspec1" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry>
-                  <para>Information</para>
-                </entry>
-                <entry>
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>Name</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Choose this option to display the name of
-the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Size</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the size of the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Type</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the description of the MIME type of the item from the <application>File Types
-and Programs</application> preference tool.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Date Modified</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose
-this option to display the last modification date of the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Date Accessed</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose
-this option to display the date that the item was last accessed.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>Group</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Choose this option to display the group to
-which the item belongs.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>MIME type</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Choose this option to display the MIME type
-of the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>Octal Permissions</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para><indexterm><primary>permissions</primary><secondary>displaying in octal notation</secondary></indexterm>Choose this
-option to display the permissions of the item in octal notation, for example <computeroutput>764</computeroutput>. </para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Owner</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Choose this option to display
-the owner of the item.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Permissions</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para><indexterm><primary>permissions</primary><secondary>displaying as characters</secondary></indexterm>Choose
-this option to display the permissions of the item as three sets of three
-characters, for example <computeroutput>-rwxrw-r--</computeroutput>.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </sect3>
-      <sect3 id="gosnautilus-60">
-        <title>Preview Preferences</title>
-        <indexterm>
-          <primary>file manager</primary>
-          <secondary>preferences</secondary>
-          <tertiary>preview</tertiary>
-        </indexterm>
-        <para>The file manager include some
-file preview features. The preview features can affect the speed with which
-the file manager responds to your requests. You can modify the behavior of
-some of these features to improve the speed of the file manager. For each
-preview preference, you can select one of the options described in the following
-table:</para>
-        <informaltable frame="topbot">
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colwidth="35.09*"/>
-            <colspec colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry>
-                  <para>Option</para>
-                </entry>
-                <entry>
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Always</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Performs the action for both local files, and files
-on other file systems.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Local Files Only</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Performs the action for local files only.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Never</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Never performs the action. </para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-        <para>To set your preview preferences, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Preview</guilabel> tab dialog to display the <guilabel>Preview</guilabel>
-tabbed section. </para>
-        <para><xref linkend="gosnautilus-TBL-41"/> lists the preview preferences that
-you can modify.</para>
-        <table frame="topbot" id="gosnautilus-TBL-41">
-          <title>Preview Preferences</title>
-          <tgroup cols="2" colsep="0" rowsep="0">
-            <colspec colname="colspec0" colwidth="35.09*"/>
-            <colspec colname="colspec1" colwidth="64.91*"/>
-            <thead>
-              <row rowsep="1">
-                <entry>
-                  <para>Dialog Element</para>
-                </entry>
-                <entry>
-                  <para>Description </para>
-                </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <guilabel>Show text in icons</guilabel>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Select an option to specify when to preview the
-content of text files in the icon that represents the file. </para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Show thumbnails</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Select
-an option to specify when to show thumbnails of image files. The file manager
-stores the thumbnail files for each folder in a <filename>.thumbnails</filename>
-directory in the user's Home Folder.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>Only for files smaller than</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Specify the maximum
-file size for files for which the file manager creates a thumbnail.</para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0" valign="top">
-                  <para>
-                    <guilabel>Preview sound
-files</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1" valign="top">
-                  <para>Select an option to specify when to preview sound files. </para>
-                </entry>
-              </row>
-              <row>
-                <entry colname="colspec0">
-                  <para>
-                    <guilabel>Count number of items</guilabel>
-                  </para>
-                </entry>
-                <entry colname="colspec1">
-                  <para>Select an option to specify when to show the
-number of items in folders. When in icon view, you might
-need to increase your zoom level to see the number of items in each folder.</para>
-                </entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </sect3>
-    </sect2>
-    <sect2 id="nautilus-backgrounds-and-emblems">
-      <title>Changing Backgrounds</title>
-    <!-- preserve id for backwards compatibility: 2.12 -->
-    <anchor id="gosnautilus-50"/>         
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>changing backgrounds</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>backgrounds</primary>
-        <secondary>changing screen component</secondary>
-      </indexterm>
-      <para>The file manager includes
-backgrounds that you can use to change the look-and-feel of the following
-screen components: </para>
-      <itemizedlist>
-        <listitem>
-          <para>Desktop</para>
-        </listitem>
-        <listitem>
-          <para>Side pane and view pane of a file browser window</para>
-        </listitem>
-        <listitem>
-          <para>Spatial mode windows</para>
-        </listitem>
-        <listitem>
-          <para>Panels</para>
-        </listitem>
-      </itemizedlist>
-      <para>To change the background of a screen component perform the following
-steps: </para>
-      <orderedlist>
-        <listitem>
-          <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. The <guilabel>Backgrounds
-and Emblems</guilabel> dialog is displayed. </para>
-        </listitem>
-        <listitem>
-          <para>To display a list of patterns that you can use on the background,
-click on the <guibutton>Patterns</guibutton> button. To display a list of
-the colors that you can use on the background, click on the <guibutton>Colors</guibutton> button.</para>
-        </listitem>
-        <listitem>
-          <para>To change the background to a pattern, drag the pattern to
-the screen component. To change the background to a color, drag the color
-to the screen component. </para>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Close</guibutton> to close the dialog.</para>
-        </listitem>
-      </orderedlist>
-      <para>To reset the background of the view pane or side pane to the default
-background, right-click on the background of the pane, then choose <guimenuitem>Use Default Background</guimenuitem>.</para>
-      <sect3 id="gosnautilus-63">
-        <title>To Add a Pattern</title>
-        <indexterm>
-          <primary>backgrounds</primary>
-          <secondary>adding patterns</secondary>
-        </indexterm>
-        <para>To add a pattern to the patterns that you can use on your
-screen components, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. Click on the <guibutton>Patterns</guibutton> button, then click on the <guibutton>Add a New Pattern</guibutton> button. A dialog is displayed. Use the dialog to find the new
-pattern. Click <guibutton>OK</guibutton> to add the new pattern to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
-      </sect3>
-      <sect3 id="gosnautilus-64">
-        <title>To Add a Color</title>
-        <indexterm>
-          <primary>backgrounds</primary>
-          <secondary>adding colors</secondary>
-        </indexterm>
-        <para>To add a color to the colors that you can use on your screen
-components, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. Click on the <guibutton>Colors</guibutton> button, then click on the <guibutton>Add a New Color</guibutton>
-button. A color selector dialog is displayed. Use the color wheel or the sliders
-to choose the color. Click <guibutton>OK</guibutton> to add the new color
-to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
-      </sect3>
-    </sect2>
-  </sect1>
-  <sect1 id="gosnautilus-28">
-    <title>Opening Files</title>
-    <indexterm>
-      <primary>file manager</primary>
-      <secondary>opening files</secondary>
-    </indexterm>
-    <para>When you open a file, the file manager performs the default
-action for that file type.</para>
-    <para>The file manager checks the contents of a file to determine the type
-of a file. If the first lines do not determine the type of the file, then
-the file manager checks the file extension.</para>
-    <para>If you cannot find the file that you want to open, you can use <application>Search Tool</application>. To start <application>Search Tool</application>,
-choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Search for
-Files</guimenuitem></menuchoice>.</para>
-    <sect2 id="gosnautilus-29">
-      <title>To Execute the Default Action</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>executing default actions
-for files</secondary>
-      </indexterm>
-      <para>To execute the default action for a
-file, double-click on the file. For example, the default action for plain
-text documents is to display the file in a text viewer. In this case, you
-can double-click on the file to  display the file in a text viewer.</para>
-      <para>You can set your file manager preferences so that you click once on
-a file to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
-    </sect2>
-    <sect2 id="gosnautilus-30">
-      <title>To Execute Non-Default Actions Using the Open With Submenu</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>executing non-default
-actions for files</secondary>
-      </indexterm>
-      <para>To execute actions other than
-the default action for a file,  select the file that you want to perform
-an action on. In the <menuchoice><guimenu>File</guimenu></menuchoice> menu you will either have "Open with" choices, or an 
-<menuchoice><guimenuitem>Open With</guimenuitem></menuchoice> submenu, see <xref linkend="gosnautilus-204"/> for details about how to add new actions. Select the desired option from this list.</para>
-    </sect2>
+    </sect2>    
+    
+    
   </sect1>
   <sect1 id="nautilus-searching">
     <title>Searching For Files</title>
@@ -2426,237 +1652,8 @@ for files</secondary>
 <para>Saved searches behave exactly like regular folders, for example you can open, move or delete files from within a saved search.</para>
     </sect2>
   </sect1>
-  <sect1 id="gosnautilus-515">
-    <title>Navigating Your Computer</title>
-    <para>The <application>Nautilus</application> file manager provides an integrated
-access point to your files, applications, FTP sites, Windows shares, WebDav servers and SSH servers.</para>  
-    <sect2 id="gosnautilus-37">
-      <title>To Access a remote server</title>
-      <!-- MOVE THIS ANCHOR -->
-      <!-- To Add a Network Server -->
-      <anchor id="gosnautilus-466"/>
-      <indexterm>
-        <primary>FTP sites</primary>
-        <secondary>accessing</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>FTP sites</secondary>
-        <see>FTP sites</see>
-      </indexterm>
-      <para>You can use the file manager to access
-a remote server, be it an FTP site, a Windows share, a WebDav server or an SSH server.</para>
-<para>To access a remote server, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Connect to Server</guimenuitem></menuchoice>.
-You may also access this dialog from the menubar by choosing <menuchoice><guimenu>Places</guimenu><guimenuitem>Connect to Server</guimenuitem></menuchoice>.</para>
-<para>In the <guilabel>Connect to Server</guilabel> dialog, you may click on the <guibutton>Browse network</guibutton> button to close this dialog and view services available on your network in a nautilus window.</para>
-<para>To connect to a remote server, start by choosing the service type, then enter the server address.</para>
-<para>If required by your server, you may provide the following optional information : </para>
-            <informaltable frame="topbot">
-              <tgroup cols="2" colsep="0" rowsep="0">
-                <colspec colname="colspec0" colwidth="27.27*"/>
-                <colspec colname="colspec1" colwidth="72.73*"/>
-                <thead>
-                  <row rowsep="1">
-                    <entry>
-                      <para>Dialog Element</para>
-                    </entry>
-                    <entry>
-                      <para>Description</para>
-                    </entry>
-                  </row>
-                </thead>
-                <tbody>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Port</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                      <para>Port to connect to on the server. This should only be used if it is necessary to
-change the default port, you would normally leave this blank.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry valign="top">
-                      <para>
-                        <guilabel>Folder</guilabel>
-                      </para>
-                    </entry>
-                    <entry valign="top">
-                        <para>Folder to open upon connecting to server.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry colname="colspec0">
-                      <para>
-                        <guilabel>User Name</guilabel>
-                      </para>
-                    </entry>
-                    <entry colname="colspec1">
-                      <para>The user name of the account used to connect to the server.
-This should be supplied with the connexion information if needed.
-The user name information is not appropriate for a public FTP connexion.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry colname="colspec0">
-                      <para>
-                        <guilabel>Name to use for connection</guilabel>
-                      </para>
-                    </entry>
-                    <entry colname="colspec1">
-                      <para>The designation of the connexion as it will appear in the file manager.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry colname="colspec0">
-                      <para>
-                        <guilabel>Share</guilabel>
-                      </para>
-                    </entry>
-                    <entry colname="colspec1">
-                      <para>Name of desired windows share. This is only applicable to Windows shares.</para>
-                    </entry>
-                  </row>
-                  <row>
-                    <entry colname="colspec0">
-                      <para>
-                        <guilabel>Domain name</guilabel>
-                      </para>
-                    </entry>
-                    <entry colname="colspec1">
-                      <para>Windows domain. This is only applicable to Windows shares.</para>
-                    </entry>
-                  </row>
-                </tbody>
-              </tgroup>
-            </informaltable>
-<para>If the server information is provided in the form of a URI, or you require a specialized connection, choose <menuchoice><guimenuitem>Custom Location</guimenuitem></menuchoice> as the service type.</para>
-<para>Once you have filled in the information, click on
-the <guibutton>Connect</guibutton> button. When the connection succeeds, the contents of the site are displayed and you may drag and drop files to and from the remote server.</para>
-    </sect2>
-    <sect2 id="nautilus-accessnetwork">
-      <title>To Access Network Places</title>
-      <!-- MOVE THIS ANCHOR -->
-      <!-- To Add a Network Server -->
-      <anchor id="gosnautilus-508"/>
-      <anchor id="gosnautilus-509"/>
-      <anchor id="gosnautilus-465"/>      
-      <indexterm>
-        <primary>network places</primary>
-        <secondary>accessing</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>network places</secondary>
-        <see>network places</see>
-      </indexterm>
-      <para>If your system is configured
-to access places on a network, you can use the file manager to access the
-network places. </para>
-      <para>To access network places, open the file manager and choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></menuchoice>.
-Alternatively, double-click on the <guilabel>Computer</guilabel> object on
-the Desktop, then double-click on the <guilabel>Network</guilabel> object. A file
-manager window is displayed. The window displays the network places that you
-can access. Double-click on the network that you want to access. </para>
-      <para><indexterm><primary>NFS servers</primary><see>Unix network</see></indexterm>To
-access UNIX shares, double-click on the <guilabel>Unix Network (NFS) </guilabel>
-object. A list of the UNIX shares available to you is displayed in the file
-manager window.</para>
-      <para><indexterm><primary>Samba servers</primary><see>Windows network</see></indexterm>To access Windows shares, double-click on the <guilabel>Windows
-Network (SMB) </guilabel> object. A list of the Windows shares available to
-you is displayed in the file manager window.</para>
-    </sect2>
-    <sect2 id="gosnautilus-467">
-      <title>Accessing Special URI Locations</title>
-      <indexterm>
-        <primary>special URI locations</primary>
-        <secondary>accessing</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>special URI
-locations</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>URI, special</primary>
-        <see>special URI locations</see>
-      </indexterm>
-      <para>The GNOME Desktop contains
-special URI locations that enable you to access particular functions from
-the file manager. For example, to access fonts, you can access
-the <command>fonts:///</command> URI in a file manager window. <xref linkend="gosnautilus-TBL-479"/> lists the special URI locations that you can
-use with the file manager.</para>
-      <table frame="topbot" id="gosnautilus-TBL-479">
-        <title>Special URI Locations</title>
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="33.94*"/>
-          <colspec colname="colspec1" colwidth="66.06*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>URI Location</para>
-              </entry>
-              <entry>
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>fonts:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays all the fonts that are
-available in your system. To preview a font, double-click on the font. You
-can also use this location to add fonts to the GNOME Desktop.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>burn:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>This is a special location where you can copy files and folders that you want to write
-to a CD. From here you can write the contents of the location to a CD easily.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>network:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays network locations to
-which you can connect, if your system is configured to access locations on
-a network. To access a network location, double-click on the network location.
-You can also use this URI to add network locations to your system.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>themes:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays all the themes that
-are available in the GNOME Desktop. To preview a theme, double-click on the
-theme. You can also use this location to add themes to the GNOME Desktop.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-    </sect2>
-  </sect1>
+
+	<!-- =========================================== Managing -->
   <sect1 id="gosnautilus-8">
     <title>Managing Your Files and Folders</title>
     <indexterm>
@@ -2820,7 +1817,7 @@ A popup menu appears. Choose one of the following items from the popup menu:</pa
       </table>
     </sect2>
     <sect2 id="nautilus-select">
-      <title>To Select Files and Folders</title>
+      <title>Selecting Files and Folders</title>
       <!-- preserve id for backwards compatibility: 2.12 -->
       <anchor id="gosnautilus-202"/>         
       <indexterm>
@@ -4062,6 +3059,1010 @@ write a disc image, right-click on the disc image file, then choose <guimenuitem
       </listitem>
     </orderedlist>
   </sect1>
+
+  <sect1 id="gosnautilus-515">
+    <title>Navigating Remote Servers</title>
+    <para>The <application>Nautilus</application> file manager provides an integrated
+access point to your files, applications, FTP sites, Windows shares, WebDav servers and SSH servers.</para>  
+    <sect2 id="gosnautilus-37">
+      <title>To Access a remote server</title>
+      <!-- MOVE THIS ANCHOR -->
+      <!-- To Add a Network Server -->
+      <anchor id="gosnautilus-466"/>
+      <indexterm>
+        <primary>FTP sites</primary>
+        <secondary>accessing</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>FTP sites</secondary>
+        <see>FTP sites</see>
+      </indexterm>
+      <para>You can use the file manager to access
+a remote server, be it an FTP site, a Windows share, a WebDav server or an SSH server.</para>
+<para>To access a remote server, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Connect to Server</guimenuitem></menuchoice>.
+You may also access this dialog from the menubar by choosing <menuchoice><guimenu>Places</guimenu><guimenuitem>Connect to Server</guimenuitem></menuchoice>.</para>
+<para>In the <guilabel>Connect to Server</guilabel> dialog, you may click on the <guibutton>Browse network</guibutton> button to close this dialog and view services available on your network in a nautilus window.</para>
+<para>To connect to a remote server, start by choosing the service type, then enter the server address.</para>
+<para>If required by your server, you may provide the following optional information : </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="27.27*"/>
+                <colspec colname="colspec1" colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Dialog Element</para>
+                    </entry>
+                    <entry>
+                      <para>Description</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Port</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Port to connect to on the server. This should only be used if it is necessary to
+change the default port, you would normally leave this blank.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Folder</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                        <para>Folder to open upon connecting to server.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>User Name</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>The user name of the account used to connect to the server.
+This should be supplied with the connexion information if needed.
+The user name information is not appropriate for a public FTP connexion.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Name to use for connection</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>The designation of the connexion as it will appear in the file manager.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Share</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Name of desired windows share. This is only applicable to Windows shares.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Domain name</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Windows domain. This is only applicable to Windows shares.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+<para>If the server information is provided in the form of a URI, or you require a specialized connection, choose <menuchoice><guimenuitem>Custom Location</guimenuitem></menuchoice> as the service type.</para>
+<para>Once you have filled in the information, click on
+the <guibutton>Connect</guibutton> button. When the connection succeeds, the contents of the site are displayed and you may drag and drop files to and from the remote server.</para>
+    </sect2>
+    <sect2 id="nautilus-accessnetwork">
+      <title>To Access Network Places</title>
+      <!-- MOVE THIS ANCHOR -->
+      <!-- To Add a Network Server -->
+      <anchor id="gosnautilus-508"/>
+      <anchor id="gosnautilus-509"/>
+      <anchor id="gosnautilus-465"/>      
+      <indexterm>
+        <primary>network places</primary>
+        <secondary>accessing</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>network places</secondary>
+        <see>network places</see>
+      </indexterm>
+      <para>If your system is configured
+to access places on a network, you can use the file manager to access the
+network places. </para>
+      <para>To access network places, open the file manager and choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></menuchoice>.
+Alternatively, double-click on the <guilabel>Computer</guilabel> object on
+the Desktop, then double-click on the <guilabel>Network</guilabel> object. A file
+manager window is displayed. The window displays the network places that you
+can access. Double-click on the network that you want to access. </para>
+      <para><indexterm><primary>NFS servers</primary><see>Unix network</see></indexterm>To
+access UNIX shares, double-click on the <guilabel>Unix Network (NFS) </guilabel>
+object. A list of the UNIX shares available to you is displayed in the file
+manager window.</para>
+      <para><indexterm><primary>Samba servers</primary><see>Windows network</see></indexterm>To access Windows shares, double-click on the <guilabel>Windows
+Network (SMB) </guilabel> object. A list of the Windows shares available to
+you is displayed in the file manager window.</para>
+    </sect2>
+    <!-- special URIs by and large obsolete or at least arcane -->
+    <sect2 id="gosnautilus-467">
+      <title>Accessing Special URI Locations</title>
+      <indexterm>
+        <primary>special URI locations</primary>
+        <secondary>accessing</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>special URI
+locations</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>URI, special</primary>
+        <see>special URI locations</see>
+      </indexterm>
+      <para>The GNOME Desktop contains
+special URI locations that enable you to access particular functions from
+the file manager. For example, to access fonts, you can access
+the <command>fonts:///</command> URI in a file manager window. <xref linkend="gosnautilus-TBL-479"/> lists the special URI locations that you can
+use with the file manager.</para>
+      <table frame="topbot" id="gosnautilus-TBL-479">
+        <title>Special URI Locations</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.94*"/>
+          <colspec colname="colspec1" colwidth="66.06*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>URI Location</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>fonts:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Displays all the fonts that are
+available in your system. To preview a font, double-click on the font. You
+can also use this location to add fonts to the GNOME Desktop.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>burn:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>This is a special location where you can copy files and folders that you want to write
+to a CD. From here you can write the contents of the location to a CD easily.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>network:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Displays network locations to
+which you can connect, if your system is configured to access locations on
+a network. To access a network location, double-click on the network location.
+You can also use this URI to add network locations to your system.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>themes:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Displays all the themes that
+are available in the GNOME Desktop. To preview a theme, double-click on the
+theme. You can also use this location to add themes to the GNOME Desktop.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+  </sect1>
+
+
+	<!-- ============================================== prefs -->
+  <sect1 id="nautilus-preferences">
+
+    <title>Nautilus Preferences</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosnautilus-15"/>
+    <anchor id="gosnautilus-17"/>      
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>customizing</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>preferences</secondary>
+      <tertiary>introduction</tertiary>
+    </indexterm>
+    <indexterm>
+      <primary>preferences,
+file manager</primary>
+      <see>file manager preferences</see>
+    </indexterm>
+    <para>Use the <guilabel>File Management Preferences</guilabel> dialog to customize the file manager to suit your requirements
+and preferences.</para>
+		<para>To display the <guilabel>File Management Preferences</guilabel> dialog, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. You can also access this dialog directly from the top panel Menubar
+by choosing <menuchoice><guimenu>Desktop</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>File Management</guimenuitem></menuchoice>.</para>
+    <para>You can set preferences in the following categories: </para>
+    <itemizedlist>
+      <listitem>
+        <para>The default settings for views.</para>
+      </listitem>
+      <listitem>
+        <para>The behavior of files and folders, executable text files,
+and Trash.</para>
+      </listitem>
+      <listitem>
+        <para>The information that is displayed in icon captions and the date format.</para>
+      </listitem>
+      <listitem>
+        <para>The columns that appear in the list view and their order.</para>
+      </listitem>
+      <listitem>
+        <para>Preview options to improve the performance of the file manager.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-438">
+      <title>Views Preferences</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>preferences</secondary>
+        <tertiary>views</tertiary>
+      </indexterm>
+      <para>You can specify a default view,
+and select sort options and display options. You can also specify default
+settings for icon views and list views.</para>
+      <para>To specify your default view settings,
+choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Views</guilabel> tab to
+display the <guilabel>Views</guilabel> tabbed section.</para>
+      <para><xref linkend="gosnautilus-TBL-30"/> lists the views preferences that
+you can modify. </para>
+      <table frame="topbot" id="gosnautilus-TBL-30">
+        <title>Views Preferences</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Dialog Element</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>View new folders using</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Select the default view for folders. When you open
+a folder, the folder is displayed in the view that you select. This can be either the icon view or the list view.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Arrange items</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Select the characteristic by which you want to sort
+the items in folders that are displayed in this view.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>Sort folders before files</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Select this option to list folders before
+files when you sort a folder.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Show hidden and
+backup files</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Select this option to display files that are normally not shown in folders. For more on hidden files, see <xref linkend="nautilus-hidden-files"/>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Icon View Default zoom level</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>There are two settings, one for the icon
+view and one for the list view. Select the default zoom level for folders that are displayed
+in this view. The zoom level specifies the size of items in a view.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Use compact layout</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Select
+this option to arrange the items in icon view so that the items in the folder
+are closer to each other.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>Text beside icons</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Select this option to place the icon captions
+for items beside the icon rather than under the icon.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>Show only folders</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Select this option to display only folders in the <guilabel>Tree</guilabel> in the side pane.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-56">
+      <title>Behavior Preferences</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>preferences</secondary>
+        <tertiary>behavior</tertiary>
+      </indexterm>
+      <para>To set your preferences for
+files and folders, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Behavior</guilabel>
+tab to display the <guilabel>Behavior</guilabel> tabbed section.</para>
+      <para><xref linkend="gosnautilus-TBL-37"/> lists the preferences that you can
+modify for files and folders. </para>
+      <table frame="topbot" id="gosnautilus-TBL-37">
+        <title>File and Folder Behavior Preferences</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec6" colwidth="35.09*"/>
+          <colspec colname="colspec7" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Option</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Single click to activate items</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Select this option to perform the default action
+for an item when you click on the item. When this option is selected, and
+you point to an item, the title of the item is underlined. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec6" valign="top">
+                <para>
+                  <guilabel>Double click to
+activate items</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec7" valign="top">
+                <para>Select this option to perform the default action for an item when you double-click
+on the item.</para>
+              </entry>
+            </row>
+
+            <row>
+              <entry colname="colspec6" valign="top">
+                <para>
+                  <guilabel>Always open in browser
+windows</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec7" valign="top">
+                <para>Select this option to use nautilus in browser mode
+rather than spatial mode. Selecting this lets you browse your files and folders in the same window, otherwise you will navigate your files and folders as objects.</para>
+              </entry>
+            </row>
+
+            <row>
+              <entry colname="colspec6" valign="top">
+                <para>
+                  <guilabel>Always use text entry location bar.</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec7" valign="top">
+                <para>Select this option to force <application>Nautilus</application> to use the Location bar in location field mode instead of the button bar mode by default. For more on using the location bar see <xref linkend="nautilus-location-bar"/>.</para></entry>
+            </row>
+
+            <row>
+              <entry colname="colspec6">
+                <para>
+                  <guilabel>Run executable text files when they are clicked</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec7">
+                <para>Select this option to run an text executable file when you choose
+the file. An executable text file is a text file that can execute, that
+is, a shell script.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec6">
+                <para>
+                  <guilabel>View executable text files when
+they are clicked</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec7">
+                <para>Select this option to display the contents of an executable text file when you
+choose the executable text file.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec6" valign="top">
+                <para>
+                  <guilabel>Ask each time</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec7" valign="top">
+                <para>Select
+this option to display a dialog when you choose an executable text file. The dialog
+asks whether you want to execute the file or display the file. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec6">
+                <para>
+                  <guilabel>Ask before emptying the Trash
+or deleting files</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec7">
+                <para>Select this option to display a confirmation message before <guilabel>Trash</guilabel> is emptied, or files are deleted. Leave this selected unless you have good reason not to.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec6" valign="top">
+                <para>
+                  <guilabel>Include a Delete
+command that bypasses Trash</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec7">
+                <para>Select this option to add a <guimenuitem>Delete</guimenuitem> menu item to
+the following menus:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>The <guimenu>Edit</guimenu> menu.</para>
+                  </listitem>
+                  <listitem>
+                    <para>The popup menu that is displayed when you right-click on a
+file, folder, or desktop  object. </para>
+                  </listitem>
+                </itemizedlist>
+                <para>When you select an item then choose the <guimenuitem>Delete</guimenuitem> menu item, the item is deleted from your file system
+immediately. There is no way to recover a deleted file. Do not select this unless you have good reason to.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-439">
+      <title>Display Preferences</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>icons</secondary>
+        <tertiary>caption preferences</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>preferences</secondary>
+        <tertiary>icon captions</tertiary>
+      </indexterm>
+      <para>An icon caption displays the name of a file or folder in
+an icon view. The icon caption also includes three additional items of information
+on the file or folder. The additional information is displayed after the file
+name. Normally only one item of information is visible, but when you zoom
+in on an icon, more of the information is displayed. You can modify what additional
+information is displayed in icon captions. </para>
+      <para>To set your preferences for icon captions, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
+Click on the <guilabel>Display</guilabel> tab to display the <guilabel>Display</guilabel> tabbed section. </para>
+      <para>Select the items of information that you want to display in the icon
+caption from the three drop-down lists. Select the first item from the first
+drop-down list, select the second item from the second drop-down list, and
+so on. The following table describes the items of information that you can
+select:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Information</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Size</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+the size of the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Type</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+the description of the MIME type of the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Date modified</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose
+this option to display the last modification date of  the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Date accessed</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose
+this option to display the date that the item was last accessed.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Owner</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+the owner of the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Group</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+the group to which the item belongs.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Permissions</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>permissions</primary><secondary>displaying as characters</secondary></indexterm>Choose
+this option to display the permissions of the item as three sets of three
+characters, for example <computeroutput>-rwxrw-r--</computeroutput>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Octal permissions</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>permissions</primary><secondary>displaying in octal notation</secondary></indexterm>Choose this option to display the permissions of the item in octal
+notation, for example <computeroutput>764</computeroutput>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>MIME type</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+the MIME type of the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>None</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+no information for the item.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>
+      The date <guilabel>Format</guilabel> option lets you choose how the date is displayed throughout Nautilus.
+      </para>
+    </sect2>
+    <sect2 id="gosnautilus-490">
+      <title>List Columns Preferences</title>
+      <para>You can specify what information is displayed in list view in file manager
+windows. You can specify which columns are displayed in list view, and the
+order in which the columns are displayed.</para>
+      <para>To set your preferences for list columns, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.
+Click on the <guilabel>List Columns</guilabel> tab to display the <guilabel>List Columns</guilabel> tabbed section. </para>
+      <para>To specify a column to display in list view, select the option that
+corresponds to the column, then click on the <guibutton>Show</guibutton> button.
+To remove a column from the list view, select the option that corresponds
+to the column, then click on the <guibutton>Hide</guibutton> button.</para>
+      <para>Use the <guibutton>Move Up</guibutton> and <guibutton>Move Down</guibutton>
+buttons to specify the position of columns in list view.</para>
+      <para>To use the default columns and column positions, click on the <guibutton>Use Default</guibutton> button. </para>
+      <para>The following table describes the columns that you can display:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Information</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>Name</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Choose this option to display the name of
+the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Size</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+the size of the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Type</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+the description of the MIME type of the item from the <application>File Types
+and Programs</application> preference tool.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Date Modified</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose
+this option to display the last modification date of the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Date Accessed</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose
+this option to display the date that the item was last accessed.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>Group</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Choose this option to display the group to
+which the item belongs.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>MIME type</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Choose this option to display the MIME type
+of the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>Octal Permissions</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para><indexterm><primary>permissions</primary><secondary>displaying in octal notation</secondary></indexterm>Choose this
+option to display the permissions of the item in octal notation, for example <computeroutput>764</computeroutput>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Owner</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Choose this option to display
+the owner of the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Permissions</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>permissions</primary><secondary>displaying as characters</secondary></indexterm>Choose
+this option to display the permissions of the item as three sets of three
+characters, for example <computeroutput>-rwxrw-r--</computeroutput>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosnautilus-60">
+      <title>Preview Preferences</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>preferences</secondary>
+        <tertiary>preview</tertiary>
+      </indexterm>
+      <para>The file manager include some
+file preview features. The preview features can affect the speed with which
+the file manager responds to your requests. You can modify the behavior of
+some of these features to improve the speed of the file manager. For each
+preview preference, you can select one of the options described in the following
+table:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="35.09*"/>
+          <colspec colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Option</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Always</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Performs the action for both local files, and files
+on other file systems.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Local Files Only</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Performs the action for local files only.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Never</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Never performs the action. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>To set your preview preferences, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. Click on the <guilabel>Preview</guilabel> tab dialog to display the <guilabel>Preview</guilabel>
+tabbed section. </para>
+      <para><xref linkend="gosnautilus-TBL-41"/> lists the preview preferences that
+you can modify.</para>
+      <table frame="topbot" id="gosnautilus-TBL-41">
+        <title>Preview Preferences</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Dialog Element</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Show text in icons</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Select an option to specify when to preview the
+content of text files in the icon that represents the file. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Show thumbnails</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Select
+an option to specify when to show thumbnails of image files. The file manager
+stores the thumbnail files for each folder in a <filename>.thumbnails</filename>
+directory in the user's Home Folder.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>Only for files smaller than</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Specify the maximum
+file size for files for which the file manager creates a thumbnail.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <guilabel>Preview sound
+files</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Select an option to specify when to preview sound files. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guilabel>Count number of items</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Select an option to specify when to show the
+number of items in folders. When in icon view, you might
+need to increase your zoom level to see the number of items in each folder.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+
+  </sect1>
+  
   <sect1 id="gosnautilus-440">
     <title>Extending Nautilus</title>
     <indexterm>
