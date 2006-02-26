@@ -14,4 +14,4 @@ DOC_INCLUDES =			\
 	gostools.xml		\
 	glossary.xml
 
-DOC_LINGUAS = it
+DOC_LINGUAS = it nl
