@@ -38,77 +38,117 @@
   </highlights>
 
   <sect1 id="gosnautilus-21">
-    <title>Introduction to Nautilus File Manager</title>
+    <title>Introduction</title>
     <indexterm>
       <primary>file manager</primary>
       <secondary>introduction</secondary>
     </indexterm>
-   <sect2 id="gosnautilus-22">
+    <sect2 id="gosnautilus-22">
     <title>File Manager Functionality</title>
     <para>The <application>Nautilus</application> file manager provides
-an integrated access point to your files and applications. You can use the
-file manager to do the following:<itemizedlist><listitem><para>Create folders and documents.</para></listitem><listitem><para>Display your files and folders.</para></listitem><listitem><para>Manage your files and folders.</para></listitem><listitem><para>Run scripts.</para></listitem><listitem><para>Customize your files and folders.</para></listitem><listitem><para>Open special URI locations.</para></listitem><listitem><para>Write data to a CD.</para></listitem></itemizedlist></para>
-    <para><application>Nautilus</application> also manages the desktop. The desktop
-lies behind all of the other components on your visible desktop. The desktop
-is an active component of the user interface.</para>
-  </sect2>
-  <sect2 id="gosnautilus-presentation">
-   <title>File Manager Presentation</title>
-   <para>The file manager lets you organize your files into folders. Folders can contain other folders. You can use folders to nicely 
-organize your files, so you can find them easily.</para>
-   <para>Every user has a Home folder. The home folder contains all of the user's files. The desktop is also another 
-folder. The desktop contains special icons for the Computer, Home folder, Trash, and removable media such as 
-floppy disks, CDs and USB flash drives.</para>
-    <para>You can access your files and folders in the following ways:</para>
+a simple and integrated way to manage your files and applications. You can use the
+file manager to do the following:</para>
     <itemizedlist>
-      <listitem>
-        <para>Browse your files and folders</para>
-        <para>The file browser window enables you to navigate between folders by changing
-the current location of the file manager within a file browser window.</para>
-      </listitem>
-      <listitem>
-        <para>Navigate your files and folders as objects</para>
-        <para>The file manager can also represent your files and folders as individual
-objects. Each file or folder is displayed in an individual file object window.
-When you open files or folders from file object windows, each file or folder
-opens a new window.</para>
-      </listitem>
-    </itemizedlist>
-   <para>To start managing your files you may double click the appropriate icon on the desktop. 
-If there are programs covering your desktop, you can go to the Places menu on the panel, 
-which has entries for your Home folder, your desktop folder, a list 
-of recently opened documents and mounted removable media.</para>
-   <para>In GNOME many things are files, such as word processor documents, spreadsheets, photos, movies, and music.
-E-mail, address books and web pages are not normal files, these are managed through e-mail programs and web browsers.</para>
-   </sect2>
+       <listitem><para>Create folders and documents</para></listitem>
+       <listitem><para>Display your files and folders</para></listitem>
+       <listitem><para>Search and manage your files</para></listitem>
+       <listitem><para>Run scripts and launch applications</para></listitem>
+       <listitem><para>Customize the appearance of files and folders</para></listitem>
+       <listitem><para>Open special locations on your computer</para></listitem>
+       <listitem><para>Write data to a CD or DVD</para></listitem>
+       <listitem><para>Install and remove fonts</para></listitem>
+     </itemizedlist>
+    <para>The file manager lets you organize your files into folders. Folders can contain files and may also contain other folders. Using folders can help you find your files more easily.</para>
+    <para><application>Nautilus</application> also manages the desktop. The desktop
+lies behind all other visible items on your screen. The desktop
+is an active component of the way you use your computer.</para>
+    <para>Every user has a Home Folder. The Home Folder contains all of the user's files. The desktop is another 
+folder. The desktop contains special icons allowing easy access to the users Home Folder, Trash, and also removable media such as floppy disks, CDs and USB flashdrives.</para>
+    <para><application>Nautilus</application> is always running while you are using GNOME. To open a new <application>Nautilus</application> window, double-click on an appropriate icon on the desktop such as <guimenuitem>Home</guimenuitem> or <guimenuitem>Computer</guimenuitem>, or choose an item from <link linkend="places-menu"><guimenuitem>Places</guimenuitem> menu</link> on the top panel.</para>
+    <para>In GNOME many things are files, such as word processor documents, spreadsheets, photos, movies, and music.</para>
+
+  </sect2>
+  <sect2 id="nautilus-presentation">
+    <title>File Manager Presentation</title>
+    <para><application>Nautilus</application> provides two modes in which you can interact with your filesystem: spatial and browser mode. You may decide which method your prefer and set  <application>Nautilus</application> to always use this by selecting (or deselecting) <guilabel>Always open in browser windows</guilabel> in the <guilabel>Behavior</guilabel> tab of the <link linkend="nautilus-preferences">Nautilus preferences dialog</link>.</para>
+    <para>Spatial mode is the default in GNOME, but your distributor, vendor, or system administrator may have configured <application>Nautilus</application> to use browser mode by default.</para>   
+    <para>The following explains the difference between the two modes:</para>
+      <variablelist>
+        <varlistentry><!-- BROWSER -->
+          <term>Browser mode: browse your files and folders</term>
+          <listitem>
+            <para>The file manager window represents a browser, which can display any location. Opening a folder updates the current file manager window to show the contents of the new folder.</para>
+            <para>As well as the folder contents, the browser window displays a toolbar with common actions and locations, a location bar that shows the current location in the hierarchy of folders, and a sidebar that can hold different kinds of information.</para>
+             <para>In Browser Mode, you typically have fewer file manager windows open at a time. For more information on using browser mode see <xref linkend="nautilus-browser-mode"/>.</para>
+          <figure id="gosnautilus-FIG-naut-browser-mode">
+            <title><application>Nautilus</application> in browser mode.</title>
+            <screenshot>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/naut_browser_mode.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Nautilus in browser mode.</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+          </listitem>        
+        </varlistentry><!-- SPATIAL -->
+        <varlistentry>
+          <term>Spatial mode: navigate your files and folders as objects </term>
+          <listitem>
+            <para>The file manager window represents a particular folder. Opening a folder opens the new window for that folder. Each time you open a particular folder, you will find its window displayed in the same place on the screen and the same size as the last time you view it (this the reason for the name).</para>
+            <para>Using spatial mode may lead to more open file manager windows on the screen. On the other hand, some users find that representing files and folders as though they were real physical objects with particular locations makes it easier to work with them. For more information on using spatial mode see <xref linkend="nautilus-spatial-mode" /></para>
+        
+            <figure id="gosnautilus-FIG-naut-spatial-mode">
+              <title>Three Folders Opened in Spatial Mode.</title>
+              <screenshot>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/naut_spatial_mode.png" format="PNG"/>
+                  </imageobject>
+                  <textobject>
+                    <phrase>Three Folders Opened in Spatial Mode.</phrase>
+                  </textobject>
+                </mediaobject>
+              </screenshot>
+            </figure>
+            <note>
+              <para>Notice how, when in spatial mode, <application>Nautilus</application> indicates an open folder with a different icon.</para>
+            </note>
+          </listitem>             
+        </varlistentry>
+     </variablelist>   
+  </sect2>
   </sect1>
-  <sect1 id="gosnautilus-210">
-    <title>Browsing Your Files</title>
+  <!-- ====================================================== Browser mode -->
+  <sect1 id="nautilus-browser-mode">
+    <title>Browser Mode</title>
     <!-- Viewing Files in a File Browser Window -->
-    <anchor id="nautilus-desktop"/>
+    <anchor id="nautilus-desktop"/><!-- TODO move me to a proper section id! -->
+    <anchor id="gosnautilus-210"/>   
     <anchor id="gosnautilus-447"/>
     <indexterm>
       <primary>file manager</primary>
       <secondary>windows</secondary>
     </indexterm>
-    <para>You can use file browser windows to browse your file system.</para>
+    <para>The following section describes how to browse your system using the <application>Nautilus</application> file manager when configured in browser mode. In browser mode, opening a folder updates the current file manager to show the contents of the new folder.</para>
+    <para>For a comparison of browser mode and spatial mode, see <xref linkend="nautilus-presentation"/>.</para>
     <sect2 id="gosnautilus-492">
-      <title>File Browser Windows</title>
-      <para>You can access file browser windows in the following ways:
-<itemizedlist>
-<listitem><para>Choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>System Tools</guimenuitem><guimenuitem>File Browser</guimenuitem></menuchoice>.</para></listitem>
-<listitem><para>Select a folder from a file object window, then choose <menuchoice><guimenu>File</guimenu><guimenuitem>Browse Folder</guimenuitem></menuchoice>.
-A file browser window displays the contents of your folder in the view pane.</para></listitem>
-<listitem><para>If nautilus is set to always open browser windows, double clicking any folder will open a browser window, see <xref linkend="gosnautilus-56"/>.</para></listitem>
-</itemizedlist></para>
-      <para><xref linkend="gosnautilus-FIG-505"/> shows a sample file browser window
-that displays the contents of the Home folder.</para>
-      <figure id="gosnautilus-FIG-505">
+      <title>The File Browser Window</title>
+      <para>You can access the file browser in the following ways:
+      <itemizedlist>
+        <listitem><para>Choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>System Tools</guimenuitem><guimenuitem>File Browser</guimenuitem></menuchoice>.</para></listitem>
+        <listitem><para>While in spatial mode you may open a folder in browser mode by right clicking on that folder and selecting <guibutton>Browse Folder</guibutton>. A new file browser window will then open and display the contents of the selected folder in the view pane.</para></listitem>
+        <listitem><para>If nautilus is set to always open browser windows, double clicking any folder will open a browser window, see <xref linkend="gosnautilus-56"/>.</para></listitem>
+      </itemizedlist></para>
+      <figure id="gosnautilus-FIG-naut-home-browser-mode">
         <title>Contents of a Folder in a File Browser Window</title>
         <screenshot>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/naut_browser_window.png" format="PNG"/>
+              <imagedata fileref="figures/naut_browser_mode.png" format="PNG"/>
             </imageobject>
             <textobject>
               <phrase> A folder in a file browser window.</phrase>
@@ -119,80 +159,99 @@ that displays the contents of the Home folder.</para>
       <note>
         <para>In other distributions of the GNOME Desktop, the <guibutton>Home</guibutton> toolbar button might have another designation, for example, <guibutton>Documents</guibutton>.</para>
       </note>
-    <sect3 id="gosnautilus-493">
-      <title>File Browser Window Components</title>
-      <para><xref linkend="gosnautilus-TBL-83"/> describes the components of file
-browser windows.</para>
-      <table frame="topbot" id="gosnautilus-TBL-83">
-        <title>File Browser Window Components</title>
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="29.39*"/>
-          <colspec colname="colspec1" colwidth="70.61*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Component</para>
-              </entry>
-              <entry>
-                <para>Description </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>Menubar</para>
-              </entry>
-              <entry valign="top">
-                <para>Contains menus that you use to perform tasks in the file manager.</para>
-		<para>You can also open a popup menu from file manager windows. To open this
+      <sect3 id="gosnautilus-493">
+        <title>The File Browser Window Components</title>
+        <para><xref linkend="gosnautilus-TBL-83"/> describes the components of a file
+browser window.</para>
+        <table frame="topbot" id="gosnautilus-TBL-83">
+          <title>File Browser Window Components</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="29.39*"/>
+            <colspec colname="colspec1" colwidth="70.61*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Component</para>
+                </entry>
+                <entry>
+                  <para>Description </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>Menubar</para>
+                </entry>
+                <entry valign="top">
+                  <para>Contains menus that you use to perform tasks in the file manager.</para>
+		              <para><!-- TODO MOVE ME to a new section -->You can also open a popup menu from file manager windows. To open this
 popup menu right-click in a file manager window. The items in this menu depend
 on where you right-click. For example, when you right-click on a file or folder,
 you can choose items related to the file or folder. When you right-click on
 the background of a view pane, you can choose items related to the display
 of items in the view pane.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Toolbar</para>
-              </entry>
-              <entry valign="top">
-                <para>Contains buttons that you use to perform tasks in the file manager.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Location bar</para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Contains the following elements:</para>
-                <itemizedlist>
-                  <listitem>
-                    <para><guilabel>Location</guilabel> : Shows your current location. Each button represents a folder, by clicking on them you can change your location.
-You can also drag buttons, for example to another location, in order to copy a folder.</para>
-                  </listitem>
-                  <listitem>
-                    <para><guimenu>Zoom</guimenu> buttons: Enable you to change the
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Toolbar</para>
+                </entry>
+                <entry valign="top">
+                  <para>Contains buttons that you use to perform tasks in the file manager.</para>
+<itemizedlist>
+                    <listitem>
+                      <para><guilabel>Back</guilabel> Returns to the previously visited location. The adjacent drop down list also contains a list of the most recently visited locations to allow you to return to them faster.</para>
+                    </listitem>
+                    <listitem>
+                      <para><guimenu>Forward</guimenu> Performs the opposite function to the <guilabel>Back</guilabel> toolbar item. If you have previously navigated back in time then this button returns you to the present.</para>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Up</guilabel> Moves up one level to the parent of the current folder.</para>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Reload</guilabel> Refreshes the contents of the current folder.</para>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Home</guilabel> Opens your Home Folder.</para>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Computer</guilabel> Opens your Computer folder.</para>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Search</guilabel> Opens the search bar.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Location bar</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>The location bar is a very powerful tool for navigating your computer. It can appear in three different ways depending on your selection. For more on using the location bar see <xref linkend="nautilus-location-bar" />. In all three configurations the location bar always contains the following items.</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para><guimenu>Zoom</guimenu> buttons: Enable you to change the
 size of items in the view pane.</para>
-                  </listitem>
-                  <listitem>
-                    <para><guilabel>View as</guilabel> drop-down list: Enables you to
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>View as</guilabel> drop-down list: Enables you to
 choose how to show items in your view pane.</para>
-                  </listitem>
-                </itemizedlist>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-		<anchor id="gosnautilus-540"/>
-                <para>Side pane</para>
-              </entry>
-              <entry valign="top">
-                <para>Performs the following functions:</para>
-                <itemizedlist>
-                  <listitem>
-                    <para>Shows information about the current file or folder. </para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+              		<anchor id="gosnautilus-540"/>
+                  <para>Side pane</para>
+                </entry>
+                <entry valign="top">
+                  <para>Performs the following functions:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Shows information about the current file or folder. </para>
                   </listitem>
                   <listitem>
                     <para>Enables you to navigate through your files. </para>
@@ -286,22 +345,21 @@ at the top right of the side pane.</para>
     </sect3>
     </sect2>
     <sect2 id="gosnautilus-18">
-      <title>To Show and Hide File Browser Window Components</title>
+      <title>Showing and Hiding File Browser Window Components</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>window components, showing
 and hiding</secondary>
       </indexterm>
-      <para>You can show and hide file browser
-window components as follows: </para>
+      <para>To show or hide any of the components of the file browser described in <xref linkend="gosnautilus-TBL-83" /> select any of the following items from the menu:<!-- TODO clean this up, it's too robotic! --></para>
       <itemizedlist>
         <listitem>
           <para>To hide the side pane, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice>. To display the
-side pane again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice> again. </para>
+side pane again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Side Pane</guimenuitem></menuchoice> again. Alternatively you may press <keycap>F9</keycap> to toggle the visibility of the side pane.</para>
         </listitem>
         <listitem>
           <para>To hide the toolbar, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Main Toolbar</guimenuitem></menuchoice>. To display the
-toolbar again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Toolbar</guimenuitem></menuchoice> again. </para>
+toolbar again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Main Toolbar</guimenuitem></menuchoice> again. </para>
         </listitem>
         <listitem>
           <para>To hide the location bar, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Location Bar</guimenuitem></menuchoice>. To display
@@ -313,8 +371,74 @@ statusbar again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Statusba
         </listitem>
       </itemizedlist>
     </sect2>
+<sect2 id="nautilus-location-bar">
+      <title>Using the Location Bar</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>window components, showing
+and hiding</secondary>
+      </indexterm>
+<para>Depending on your selection, the location bar can show either a location field, a button bar, or a search field. Each is useful in different situations and as you become experienced working with the <application>Nautilus</application> file manager you will become proficient at switching between them.</para>
+<itemizedlist>
+      <listitem>
+                      <para><guilabel>Location field</guilabel></para>
+                      <para>By pressing <keycap>Ctrl+L</keycap> or <keycap>Leading Slash (/)</keycap> or <menuchoice><guimenu>Go</guimenu><guimenuitem>Location</guimenuitem></menuchoice> the <guilabel>Location :</guilabel> field will appear and allow you to type the location you wish to browse to manually. To make the location field disappear hit the <keycap>Esc</keycap> key. The location field is particularly useful for jumping to a known folder very quickly.</para>
+                    <figure id="gosnautilus-FIG-902">
+                    <title>The location bar.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_go_to_location.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>The location bar.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Button bar</guilabel></para>
+                      <para>By default the button bar is shown. Each button represents a folder, by clicking on them you can change your location. You can also drag buttons, for example to another location, in order to copy a folder. The button bar is excellent for jumping quickly between frequently accessed folders.</para>
+                    <figure id="gosnautilus-FIG-903">
+                    <title>The button bar.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_button_bar.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>The button bar.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Search bar</guilabel></para>
+                      <para>By pressing <keycap>Ctrl+F</keycap> or selecting the <guibutton>Search</guibutton> toolbar button the search bar appears. For more information on searching see <xref linkend="nautilus-searching" />. The search bar is excellent for locating files of folders when you are not sure of their exact location.</para>
+                    <figure id="gosnautilus-FIG-904">
+                    <title>The button bar.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_search_bar.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>The search bar.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+                    </listitem>
+</itemizedlist><para>If you prefer the location field over the button bar you can choose for this to be shown by default. See <xref linkend="gosnautilus-56" /> for instructions on how to do this.</para>
+    </sect2>
     <sect2 id="gosnautilus-499">
-      <title>To Display Your Home Folder</title>
+      <title>Displaying Your Home Folder</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>Home folder</secondary>
+      </indexterm>
       <indexterm>
         <primary>file manager</primary>
         <secondary>Home location</secondary>
@@ -324,18 +448,8 @@ statusbar again, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Statusba
         <primary>Home location</primary>
         <secondary>displaying</secondary>
       </indexterm>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="figures/naut_home_launcher.png" format="PNG"/>
-          </imageobject>
-          <textobject>
-            <phrase>Home location icon.</phrase>
-          </textobject>
-        </mediaobject>
-      </screenshot>
-      <para>To display your home location,
-perform one of the following actions from file browser windows:</para>
+      <para>To quickly display your Home Folder,
+perform one of the following actions from a file browser window:</para>
       <itemizedlist>
         <listitem>
           <para>Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Home</guimenuitem></menuchoice>. </para>
@@ -347,11 +461,11 @@ perform one of the following actions from file browser windows:</para>
           <para>Click on the <guibutton>Home</guibutton> button in the Places side pane. </para>
         </listitem>
       </itemizedlist>
-      <para>The file browser window displays the contents of your home location.</para>
+      <para>The file browser window displays the contents of your Home Folder.</para>
     </sect2>
     <sect2 id="gosnautilus-500">
-      <title>To Display a Folder</title>
-      <para>You can display the contents of a folder in any of the following ways: </para>
+      <title>Displaying a Folder</title>
+      <para>The contents of a folder can be displayed in either list or icon view by selecting the appropriate item in the location bar <guilabel>View as</guilabel> menu. For more information on the list and icon view see <xref linkend="gosnautilus-7" /></para>
       <itemizedlist>
         <listitem>
           <para>Double-click on the folder in the view pane.</para>
@@ -381,9 +495,8 @@ choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Up</guimenuitem></menuchoic
 button.</para>
     </sect2>
     <sect2 id="gosnautilus-26">
-      <title>To Display a Parent Folder</title>
-      <para>A parent folder is a top level folder that depicts a hierarchical representation
-of your file system. To display the contents of a parent folder, perform one of the
+      <title>Displaying a Parent Folder</title>
+      <para>The parent folder of the current folder which you are browsing is the one which exists, in a hierarchical representation, one level above the current. To display the contents of  parent folder, perform one of the
 following steps:</para>
       <itemizedlist>
         <listitem>
@@ -391,6 +504,9 @@ following steps:</para>
         </listitem>
         <listitem>
           <para>Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Open Parent</guimenuitem></menuchoice> from the menubar. </para>
+        </listitem>
+        <listitem>
+          <para>Press the <keycap>Backspace</keycap> key.</para>
         </listitem>
       </itemizedlist>
     </sect2>
@@ -403,49 +519,12 @@ following steps:</para>
       <indexterm>
         <primary>Tree, using</primary>
       </indexterm>
-      <para>The <guilabel>Tree</guilabel> displays a hierarchical representation of your file system.
-The <guilabel>Tree</guilabel> provides a convenient way to browse and to navigate
-your file system. To display the <guilabel>Tree</guilabel> in the side pane,
-choose <guimenuitem>Tree</guimenuitem> from the drop-down list at the top
-of the side pane. </para>
-      <para>In the <guilabel>Tree</guilabel>, folders are represented as follows:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colwidth="50*"/>
-          <colspec colwidth="50*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Folder State</para>
-              </entry>
-              <entry>
-                <para>Graphic
-Representation </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry>
-                <para>Closed folder</para>
-              </entry>
-              <entry>
-                <para>Right arrow</para>
-              </entry>
-            </row>
-            <row>
-              <entry>
-                <para>Open folder</para>
-              </entry>
-              <entry>
-                <para>Down arrow</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para><xref linkend="gosnautilus-TBL-34"/> describes the tasks that you can
-perform with the <guilabel>Tree</guilabel>, and how to perform the tasks.</para>
+      <para>The <guilabel>Tree</guilabel> view is one of the most useful features of the side pane. It displays a hierarchical representation of your file system and provides a convenient way to browse and to navigate
+your file system. To display the <guilabel>Tree</guilabel> in the side pane, choose <guimenuitem>Tree</guimenuitem> from the drop-down list at the top of the side pane. </para>
+<para>In the <guilabel>Tree</guilabel>view, open folders are represented as downwards facing arrows.</para>
+      
+      <para><xref linkend="gosnautilus-TBL-34"/> describes tasks you can
+perform with the <guilabel>Tree</guilabel>, and how to do so.</para>
       <table frame="topbot" id="gosnautilus-TBL-34">
         <title>Tree Tasks</title>
         <tgroup cols="2" colsep="0" rowsep="0">
@@ -526,18 +605,16 @@ not display files. For more information, see <xref linkend="gosnautilus-438"/>. 
         <secondary>navigating history list</secondary>
       </indexterm>
       <para>The file browser window maintains a history
-list of files, folders, FTP sites, and URI locations. You can use the history
-list to navigate to files, folders, FTP sites, and URI locations that you
-have recently visited. Your history list contains the last ten items that
+list of files, folders, FTP sites, and URI locations you have recently visited. You can use the history
+list to navigate to quickly return to these places. Your history list contains the last ten items that
 you viewed.</para>
       <para>To clear your history list choose <menuchoice><guimenu>Go</guimenu><guimenuitem>Clear History</guimenuitem></menuchoice>.</para>
       <sect3 id="gosnautilus-77">
-        <title>To Navigate Your History List Using the Go Menu</title>
-        <para>To display a list of previously-viewed items, choose the <guimenu>Go</guimenu> menu. Your history list is displayed in the lower part of the <guimenu>Go</guimenu> menu. To open an item in your history list, choose the item from
-the <guimenu>Go</guimenu> menu.</para>
+        <title>Navigating Your History List Using the Go Menu</title>
+        <para>To display a list of previously-viewed items, choose the <guimenu>Go</guimenu> menu. Your history list is displayed in the lower part of the <guimenu>Go</guimenu> menu. To open an item in your history list, simply click on the item.</para>
       </sect3>
       <sect3 id="gosnautilus-78">
-        <title>To Navigate Your History List Using the Toolbar</title>
+        <title>Navigating Your History List Using the Toolbar</title>
         <para>To use the toolbar to navigate your history list, perform one of the
 following actions:</para>
         <itemizedlist>
@@ -562,7 +639,7 @@ on the item.</para>
         </itemizedlist>
       </sect3>
       <sect3 id="gosnautilus-80">
-        <title>To Navigate Your History List Using History in the Side Pane</title>
+        <title>Navigating Your History List Using History in the Side Pane</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>History</secondary>
@@ -571,56 +648,74 @@ on the item.</para>
 items.</para>
         <para>To display an item from your history list in the view pane, double-click on
 the item in the <guilabel>History</guilabel> list.</para>
+
       </sect3>
     </sect2>
   </sect1>
-  <sect1 id="gosnautilus-24">
-    <title>Navigating Your Files and Folders as Objects</title>
+  <!-- ====================================================== Spatial mode -->  
+  <sect1 id="nautilus-spatial-mode">
+    <title>Spatial Mode</title>
+    <anchor id="gosnautilus-24"/>       
     <indexterm>
       <primary>file manager</primary>
       <secondary>navigating</secondary>
     </indexterm>
-    <para>In this mode, each file object window displays the contents of a single
-file, folder, FTP site, or special URI location. When you open an object it appears at the same place on the 
-screen as the last time you looked at it. This lets you easily recognize folders when many of them are open.</para>
-<para>This section describes the following:</para>
-    <itemizedlist>
-      <listitem>
-        <para>How to display items in file object windows.</para>
-      </listitem>
-      <listitem>
-        <para>How to open files from file object windows.</para>
-      </listitem>
-      <listitem>
-        <para>How to navigate the files and folders in your file system.</para>
-      </listitem>
-    </itemizedlist>
+    <para>The following section describes how to browse your system using the <application>Nautilus</application> file manager when configured in spatial mode. In spatial mode, each <application>Nautilus</application> window corresponds to a single folder. When you open a folder its window appears at the same place on the screen as the last time you looked at it. This is the default behaviour in <application>Nautilus</application>.</para>
+    <para>For a comparison of browser mode and spatial mode, see <xref linkend="nautilus-presentation"/>.</para>    
     <sect2 id="gosnautilus-510">
-      <title>File Object Windows</title>
-      <para>To access a file object window, double-click on any of the default desktop
-objects.</para>
-      <para><xref linkend="gosnautilus-FIG-504"/> shows a sample file object window
+      <title>Spatial Windows</title>
+      <para>A new spatial window opens each time you open a folder. To open a folder, do one of the following:</para>
+      <anchor id="gosnautilus-25"/><!-- removed id: Displaying Folder Contents -->
+      <itemizedlist>
+        <listitem><para>Double-click the folder's icon on the desktop or an existing window</para></listitem>
+        <listitem><para>Select the folder, and press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>.</para></listitem>
+        <listitem><para>Select the folder, and press <keycombo><keycap>Alt</keycap><keycap>down arrow</keycap></keycombo></para></listitem>
+        <listitem><para>Choose an item from the <link linkend="places-menu"><guimenuitem>Places</guimenuitem> menu</link> on the top panel. Your Home Folder and folders you have bookmarked are listed here. For more on bookmarks, see <xref linkend="nautilus-bookmarks"/>.</para></listitem>
+      </itemizedlist>
+      
+      <para>To close the current folder while opening the new one, hold down <keycap>Shift</keycap> when double-clicking, or press <keycombo><keycap>Shift</keycap><keycap>Alt</keycap><keycap>down arrow</keycap></keycombo>.</para>
+
+      <para><xref linkend="gosnautilus-FIG-504"/> shows a spatial mode window
 that displays the contents of the Computer folder.</para>
       <figure id="gosnautilus-FIG-504">
-        <title>Contents of a Folder in a File Object Window<indexterm><primary>file
+        <title>Contents of a folder in a spatial mode.<indexterm><primary>file
 manager</primary><secondary>icon view</secondary><tertiary>illustration</tertiary></indexterm></title>
         <screenshot>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/naut_computer_contents.png" format="PNG"/>
+              <imagedata fileref="figures/naut_spatial_view.png" format="PNG"/>
             </imageobject>
             <textobject>
-              <phrase> A folder in a file object window.</phrase>
+              <phrase>Displaying a folder in spatial mode.</phrase>
             </textobject>
           </mediaobject>
         </screenshot>
       </figure>
-   <sect3 id="gosnautilus-components">
-      <title>File Object Window Components</title>
+    <para>In spatial mode each open <application>Nautilus</application> windows shows only one location. Selecting a second location will open a second <application>Nautilus</application> window. Because each location remembers the previous position on screen in which it was opened it allows you to easily recognize folders when many of them are open at once.</para>
+    <para>Some people consider spatial mode better, particularly for moving files or folders to different location, others find the number of open windows daunting. <xref linkend="gosnautilus-FIG-naut-spatial-many-open" /> shows an example of spatial browsing with many open locations.</para>
+        <figure id="gosnautilus-FIG-naut-spatial-many-open">
+          <title>Three Folders Opened in Spatial Mode.</title>
+          <screenshot>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="figures/naut_spatial_mode.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>Three Folders Opened in Spatial Mode.</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </figure>
+<note>
+<para>Because spatial mode will fill your screen with <application>Nautilus</application> windows it is important to be able to reposition them effectively. By holding the the <keycap>ALT</keycap> and clicking anywhere within the bounds of a <application>Nautilus</application> window you may reposition it simply, instead of the requiring that you reposition it by dragging its title bar.</para>
+</note>
+  </sect2>
+   <sect2 id="nautilus-spatial-components">
+      <title>Spatial Window Components</title>
       <para><xref linkend="gosnautilus-TBL-85"/> describes the components of file
 object windows.</para>
       <table frame="topbot" id="gosnautilus-TBL-85">
-        <title>File Object Window Components</title>
+        <title>The Spatial Window Components</title>
         <tgroup cols="2" colsep="0" rowsep="0">
           <colspec colname="colspec0" colwidth="29.39*"/>
           <colspec colname="colspec1" colwidth="70.61*"/>
@@ -688,26 +783,16 @@ of items in the view pane.</para>
                 <para>Parent folder selector</para>
               </entry>
               <entry colname="colspec1" valign="top">
-                <para>With this selector, you may open directly folders that are beneath the current location.</para>
+                <para>This drop-down list shows the hierarchy of the folder. Choose a folder from the list to open it.</para>
+                <tip><para>Hold down <keycap>Shift</keycap> while choosing from the list to close the current folder as you open the new one.</para></tip>
               </entry>
             </row>
           </tbody>
         </tgroup>
       </table>
-    </sect3>
     </sect2>
     <sect2 id="gosnautilus-4">
-      <title>To Display Your Home Location in a File Object Window</title>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="figures/naut_home_launcher.png" format="PNG"/>
-          </imageobject>
-          <textobject>
-            <phrase>Home location icon.</phrase>
-          </textobject>
-        </mediaobject>
-      </screenshot>
+      <title>Displaying Your Home Folder in a Spatial Window</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>Home location</secondary>
@@ -717,7 +802,7 @@ of items in the view pane.</para>
         <primary>Home location</primary>
         <secondary>displaying</secondary>
       </indexterm>
-      <para>To display your home location,
+      <para>To display your Home Folder,
 perform one of the following actions:</para>
       <itemizedlist>
         <listitem>
@@ -725,56 +810,38 @@ perform one of the following actions:</para>
 desktop.</para>
         </listitem>
         <listitem>
-          <para>On a file object window, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Home</guimenuitem></menuchoice>. </para>
+          <para>From a folder window's menubar, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Home</guimenuitem></menuchoice>. </para> 
         </listitem>
+        <listitem><para>From the top panel menubar, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Home Folder</guimenuitem></menuchoice>. </para></listitem>
       </itemizedlist>
-      <para>The file object window displays the contents of your home location.</para>
-    </sect2>
-    <sect2 id="gosnautilus-25">
-      <title>To Display a Folder</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>displaying folders</secondary>
-      </indexterm>
-      <para>You can display the contents of a folder in a file object
-window in any of the following ways:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Double-click on the folder.</para>
-        </listitem>
-        <listitem>
-          <para>Highlight the folder, then choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>. </para>
-        </listitem>
-      </itemizedlist>
+      <para>The spatial window displays the contents of your Home Folder.</para>
     </sect2>
     <sect2 id="gosnautilus-511">
-      <title>To Display a Parent Folder</title>
-      <para>A parent folder is a top level folder that depicts a hierarchical representation
-of your file system. To display the contents of a parent folder, perform the
-following steps:</para>
-      <orderedlist>
-        <listitem>
-          <para>Highlight the folder whose parent folder you want to display.</para>
-        </listitem>
+      <title>Displaying a Parent Folder</title>
+      <para>A parent folder is the folder that contains the current folder. To display the contents of your current folder's parent, do one of the following:</para>
+      <itemizedlist>
         <listitem>
           <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open Parent</guimenuitem></menuchoice>. </para>
         </listitem>
-      </orderedlist>
-      <para>You may also use the list at the bottom left of each folder to open any folder hierarchicaly beneath the current folder.</para>
+        <listitem>
+          <para>Press <keycombo><keycap>Alt</keycap><keycap>up arrow</keycap></keycombo>. </para>
+        </listitem>
+        <listitem><para>Choose from the parent folder selector at the bottom left of the window.</para></listitem>
+      </itemizedlist>
+      <para>To close the current folder while opening the parent, hold down <keycap>Shift</keycap> while choosing from the parent folder selector, or press <keycombo><keycap>Shift</keycap><keycap>Alt</keycap><keycap>up arrow</keycap></keycombo>.</para>
     </sect2>
     <sect2 id="gosnautilus-512">
-      <title>To Close Folders</title>
+      <title>Closing Folders</title>
       <para>To close folders you may simply click on the close window button, this however may not be the most efficient way to close many windows.
-If you would like to view only the current folder, and not the folders you opend to reach the current folder, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close Parent Folders</guimenuitem></menuchoice>.
+If you would like to view only the current folder, and not the folders you opened to reach the current folder, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close Parent Folders</guimenuitem></menuchoice>.
 If want to close all folders on the screen, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Close All Folders</guimenuitem></menuchoice>.</para>
       </sect2>
     <sect2 id="gosnautilus-501">
-      <title>To Display a Folder in a File Browser Window</title>
-      <para>To display the contents of a folder in a file browser window, perform
-the following steps:</para>
+      <title>Displaying a Folder in a Browser Window</title>
+      <para>If you wish to display a single folder in browser mode, while otherwise continuing to work in spatial mode, perform the following steps:</para>
       <orderedlist>
         <listitem>
-          <para>Select a folder in a file object window.</para>
+          <para>Select a folder in while in spatial mode.</para>
         </listitem>
         <listitem>
           <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Browse Folder</guimenuitem></menuchoice>. </para>
@@ -789,9 +856,7 @@ the following steps:</para>
       <secondary>modifying appearance
 of files and folders</secondary>
     </indexterm>
-    <para>The file manager enables
-you to modify the appearance of your files and folders in several ways, as
-described in the following sections.</para>
+    <para>The <application>Nautilus</application> file manager enables you to modify the appearance of your files and folders in several ways. You may customize the way files or folders look by attaching emblems or backgrounds to them. You can also change format in which <application>Nautilus</application> displays these items to you. The following sections describe how to do so.</para>
     <sect2 id="gosnautilus-550">
       <title>Icons and Emblems</title>
       <indexterm>
@@ -808,96 +873,20 @@ described in the following sections.</para>
         <primary>emblems</primary>
         <secondary>introduction</secondary>
       </indexterm>
-      <para>The file manager displays your files and folders as icons. You can add
-emblems to your file icons and folder icons. An emblem is a small icon that
-you can add to an item to visually mark the item. For example, to mark a file
-as important, you can add an <guilabel>Important</guilabel> emblem to the
-file icon to create the following visual effect: </para>
-      <screenshot>
+      <para>The file manager displays your files and folders as icons. Depending on the type of the file the icon may be a image representative of the file type, a small thumbnail or preview showing the files contents. You can also add emblems to your file and folder icons. Such emblems appear in addition to the file icon and provide another means to manage your files. For example you can mark a file as important by adding an <guilabel>Important</guilabel> emblem to it, creating the following visual effect: </para>
+<screenshot>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="figures/naut_sampleemblem_icon.png" format="PNG"/>
+            <imagedata fileref="figures/naut_emblem.png" format="PNG"/>
           </imageobject>
           <textobject>
             <phrase>File icon with Important emblem.</phrase>
           </textobject>
         </mediaobject>
       </screenshot>
-      <para>For more information on how to add an emblem to an icon, see <xref linkend="gosnautilus-112"/>.</para>
-      <para>The following table describes the structure of the file icon:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="35.09*"/>
-          <colspec colname="colspec1" colwidth="64.91*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Component</para>
-              </entry>
-              <entry>
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_sampleemblem1_icon.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Important emblem.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Emblem. This emblem is the <guilabel>Important</guilabel> emblem.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_sampleemblem2_icon.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Text file icon.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry valign="top">
-                <para>Icon that represents the file.
-This icon might contain a preview of the contents of the file.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_sampleemblem3_icon.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Icon caption.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Icon caption. You can modify what items of information are displayed in the
-icon caption, see <xref linkend="gosnautilus-439"/>.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para>The file manager includes default emblems for the following types of
-item:</para>
+      
+      <para>Notice how the file on the left is distinguished from the file on the right by the addition of the <guilabel>Important (!)</guilabel> icon. See <xref linkend="gosnautilus-112"/> for more on adding emblems.</para>
+      <para>The file manager automatically applies emblems for the following types of files:</para>
       <itemizedlist>
         <listitem>
           <para>Symbolic links</para>
@@ -987,7 +976,7 @@ link</para>
       </informaltable>
     </sect2>
     <sect2 id="gosnautilus-112">
-      <title>To Add an Emblem to a File or Folder</title>
+      <title>Adding an Emblem to a File or Folder</title>
       <indexterm>
         <primary>emblems</primary>
         <secondary>adding to file</secondary>
@@ -1019,12 +1008,12 @@ dialog.</para>
       <para>In browser windows you may also add emblems to items by dragging them from the emblem side pane.</para>
     </sect2>
     <sect2 id="gosnautilus-471">
-      <title>To Add a New Emblem</title>
+      <title>Creating a New Emblem</title>
       <indexterm>
         <primary>emblems</primary>
         <secondary>adding new</secondary>
       </indexterm>
-      <para>To add a new emblem, perform the following steps:</para>
+      <para>To Create a new emblem, perform the following steps:</para>
       <orderedlist>
         <listitem>
           <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. </para>
@@ -1050,7 +1039,7 @@ New Emblem</guilabel> dialog.</para>
       </orderedlist>
     </sect2>
     <sect2 id="gosnautilus-51">
-      <title>To Change the Icon for a File or Folder</title>
+      <title>Changing the Icon for a File or Folder</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>icons</secondary>
@@ -1067,7 +1056,7 @@ individual file or folder, perform the following steps:</para>
         </listitem>
         <listitem>
           <para>On the <guilabel>Basic</guilabel> tabbed section, click on
-the <guibutton>Icon</guibutton> button. A <guilabel>Select custom 
+the current <guibutton>Icon</guibutton>. A <guilabel>Select custom 
 icon</guilabel> dialog is displayed. </para>
         </listitem>
         <listitem>
@@ -1084,122 +1073,6 @@ Select the file or folder that you want to change, choose <menuchoice><guimenu>F
 click on the <guibutton>Icon</guibutton> button, in the <guilabel>Select custom 
 icon</guilabel> dialog click <guibutton>Revert</guibutton>.</para>
     </sect2>
-    <sect2 id="gosnautilus-102">
-      <title>To Change the Size of Items in a View</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>zooming in and out</secondary>
-      </indexterm>
-      <para>You can change the size of items in a view. You can change
-the size if the view displays a file or a folder. You can change the size
-of items in a view in the following ways:</para>
-      <itemizedlist>
-        <listitem>
-          <para>To enlarge the size of items in a view, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Zoom In</guimenuitem></menuchoice>.</para>
-        </listitem>
-        <listitem>
-          <para>To reduce the size of items in a view, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Zoom Out</guimenuitem></menuchoice>.</para>
-        </listitem>
-        <listitem>
-          <para>To return items in a view to the normal size, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Normal Size</guimenuitem></menuchoice>.</para>
-        </listitem>
-      </itemizedlist>
-      <para>You can also use the zoom buttons on the location bar in a browser window to change the
-size of items in a view. <xref linkend="gosnautilus-TBL-42"/> describes how
-to use the zoom buttons.</para>
-      <table frame="topbot" id="gosnautilus-TBL-42">
-        <title>Zoom Buttons</title>
-        <tgroup cols="3" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="21.98*"/>
-          <colspec colname="colspec1" colwidth="32.86*"/>
-          <colspec colname="colspec2" colwidth="44.17*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Button</para>
-              </entry>
-              <entry>
-                <para>Button Name </para>
-              </entry>
-              <entry>
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Zoom Out button.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para><guibutton>Zoom Out</guibutton> button</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Click on this button to reduce the size of items in a view.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Normal Size button.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry valign="top">
-                <para><guibutton>Normal Size</guibutton>
-button </para>
-              </entry>
-              <entry valign="top">
-                <para>Click on this button to return
-items in a view to normal size.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Zoom In button.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para><guibutton>Zoom In</guibutton> button</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Click on this button to enlarge the size of items in a view.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-      <para>The file manager remembers the size of items in a particular folder.
-The next time that you display the folder, the items are displayed in the
-size that you selected. In other words, when you change the size of items
-in a folder, you customize the folder to display the items at that size. To
-return the size of the items to the default size specified in your preferences,
-choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reset View
-to Defaults</guimenuitem></menuchoice>.</para>
-    </sect2>
     <sect2 id="gosnautilus-7">
       <title>Using Views to Display Your Files and Folders</title>
       <indexterm>
@@ -1211,24 +1084,45 @@ to Defaults</guimenuitem></menuchoice>.</para>
         <tertiary>introduction</tertiary>
       </indexterm>
       <para>The file manager includes views that enable you to show the contents
-of your folders in different ways. For example, you can show the contents
-of a folder in the following types of view: </para>
+of your folders in different ways, icon view, and list view.</para>
       <itemizedlist>
         <listitem>
           <para>Icon view</para>
-          <para>Shows the items in the folder as icons.</para>
+          <para><xref linkend="gosnautilus-FIG-naut-icon-view"/> Shows the items in the folder as icons.
+<figure id="gosnautilus-FIG-naut-icon-view">
+                    <title>The Home Folder displayed in a icon view.</title>
+<screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_spatial_icon_view.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Your Home Folder displayed in a icon view.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+</figure></para>
         </listitem>
         <listitem>
           <para>List view</para>
-          <para>Shows the items in the folder as a list.</para>
+          <para><xref linkend="gosnautilus-FIG-naut-list-view"/> Shows the items in the folder as a list.
+<figure id="gosnautilus-FIG-naut-list-view">
+                    <title>The Home Folder displayed in a list view.</title>
+<screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_spatial_list_view.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Your Home Folder displayed in a list view.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+</figure>
+</para>
         </listitem>
       </itemizedlist>
-      <para>Use the <guilabel>View</guilabel> menu to choose how to display a file
-or folder. You can also use the <guilabel>View as</guilabel> drop-down list
-to choose how to display a file or folder. When you display a folder, you
-can specify how you want to arrange or sort items in the folder. You can modify
-the size of the items in the view pane. The following sections describe how
-to work with icon view and list view.</para>
+      <para>You may use the <guilabel>View</guilabel> menu, or the <guilabel>View as</guilabel> drop-down list to choose between icon or list view. You can specify how you want to arrange or sort items in the folder and modify the size of the items in the view pane. The following sections describe how to work with icon view and list view.</para>
       <sect3 id="gosnautilus-101">
         <title>To Arrange Your Files in Icon View</title>
         <indexterm>
@@ -1386,8 +1280,8 @@ alphabetical order.</para>
         </indexterm>
         <para>When you display the contents of a folder in list view, you can specify how to arrange the
 items in the folder. To specify how to arrange items in list view, click on the header of the column specifying the property
-by which you wish to arrange the items. To inverse the sorting order cick on the same colum header again.</para>
-        <para>To add or remove colums from the list view choose <menuchoice><guimenu>View</guimenu><guisubmenu>Visible Columns</guisubmenu></menuchoice></para>
+by which you wish to arrange the items. To inverse the sorting order click on the same column header again.</para>
+        <para>To add or remove columns from the list view choose <menuchoice><guimenu>View</guimenu><guisubmenu>Visible Columns</guisubmenu></menuchoice></para>
         <para>The file manager remembers how you arrange the items in a particular
 folder. The next time that you display the folder, the items are arranged
 in the way that you selected.  In other words, when you specify how to arrange
@@ -1395,6 +1289,122 @@ the items in a folder, you customize the folder to display the items in that
 way. To return the arrangement settings of the folder to the default arrangement
 settings specified in your preferences, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reset View to Defaults</guimenuitem></menuchoice>.</para>
       </sect3>
+<sect3 id="gosnautilus-102">
+      <title>To Change the Size of Items in a View</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>zooming in and out</secondary>
+      </indexterm>
+      <para>You can change the size of items in a view. You can change
+the size if the view displays a file or a folder. You can change the size
+of items in a view in the following ways:</para>
+      <itemizedlist>
+        <listitem>
+          <para>To enlarge the size of items in a view, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Zoom In</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>To reduce the size of items in a view, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Zoom Out</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>To return items in a view to the normal size, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Normal Size</guimenuitem></menuchoice>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>You can also use the zoom buttons on the location bar in a browser window to change the
+size of items in a view. <xref linkend="gosnautilus-TBL-42"/> describes how
+to use the zoom buttons.</para>
+      <table frame="topbot" id="gosnautilus-TBL-42">
+        <title>Zoom Buttons</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="21.98*"/>
+          <colspec colname="colspec1" colwidth="32.86*"/>
+          <colspec colname="colspec2" colwidth="44.17*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Button</para>
+              </entry>
+              <entry>
+                <para>Button Name </para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Zoom Out button.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guibutton>Zoom Out</guibutton> button</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Click on this button to reduce the size of items in a view.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Normal Size button.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para><guibutton>Normal Size</guibutton>
+button </para>
+              </entry>
+              <entry valign="top">
+                <para>Click on this button to return
+items in a view to normal size.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Zoom In button.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guibutton>Zoom In</guibutton> button</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Click on this button to enlarge the size of items in a view.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>The file manager remembers the size of items in a particular folder.
+The next time that you display the folder, the items are displayed in the
+size that you selected. In other words, when you change the size of items
+in a folder, you customize the folder to display the items at that size. To
+return the size of the items to the default size specified in your preferences,
+choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reset View
+to Defaults</guimenuitem></menuchoice>.</para>
+    </sect3>
     </sect2>
   </sect1>
   <sect1 id="gosnautilus-204">
@@ -1458,16 +1468,20 @@ Select the default action with the option to the left of the list.</para>
       </orderedlist>
     </sect2>
   </sect1>
-  <sect1 id="gosnautilus-15">
+  <sect1 id="nautilus-customize">
     <title>Customizing the File Manager</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosnautilus-15"/>       
     <indexterm>
       <primary>file manager</primary>
       <secondary>customizing</secondary>
     </indexterm>
-    <para>You can customize the file manager to suit your requirements
-and preferences. This section describes how to customize the file manager.</para>
-    <sect2 id="gosnautilus-17">
-      <title>Setting Your Preferences</title>
+    <para>This section describes how to customize the file manager to suit your requirements
+and preferences.</para>
+    <sect2 id="nautilus-preferences">
+      <title>Nautilus Preferences</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gosnautilus-17"/>         
       <indexterm>
         <primary>file manager</primary>
         <secondary>preferences</secondary>
@@ -1479,7 +1493,7 @@ file manager</primary>
         <see>file manager preferences</see>
       </indexterm>
       <para>Use the <guilabel>File Management Preferences</guilabel>  dialog to set preferences
-for the file manager. To display the <guilabel>File Management Preferences</guilabel> dialog, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>, you can also acess this dialog directly from the <application>Menu Bar</application> 
+for the file manager. To display the <guilabel>File Management Preferences</guilabel> dialog, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>, you can also access this dialog directly from the <application>Menu Bar</application> 
 by choosing <menuchoice><guimenu>Desktop</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>File Management</guimenuitem></menuchoice>.</para>
       <para>You can set preferences in the following categories: </para>
       <itemizedlist>
@@ -1494,14 +1508,14 @@ and Trash.</para>
           <para>The information that is displayed in icon captions and the date format.</para>
         </listitem>
         <listitem>
-          <para>The colums that appear in the list view and their order.</para>
+          <para>The columns that appear in the list view and their order.</para>
         </listitem>
         <listitem>
           <para>Preview options to improve the performance of the file manager.</para>
         </listitem>
       </itemizedlist>
       <sect3 id="gosnautilus-438">
-        <title>To Set Views Preferences</title>
+        <title>Views Preferences</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>preferences</secondary>
@@ -1572,18 +1586,13 @@ backup files</guilabel>
                   </para>
                 </entry>
                 <entry colname="colspec1">
-                  <para>Select
-this option to display hidden files and backup files in the view pane. The
-first character in a hidden filename is a period (.). The last character in
-a backup filename is a tilde (~).</para>
-                  <para>You can hide files from the
-view pane by adding .hidden extension to the filename.</para>
+                  <para>Select this option to display files that are normally not shown in folders. For more on hidden files, see <xref linkend="nautilus-hidden-files"/>.</para>
                 </entry>
               </row>
               <row>
                 <entry colname="colspec0" valign="top">
                   <para>
-                    <guilabel>Default zoom level</guilabel>
+                    <guilabel>Icon View Default zoom level</guilabel>
                   </para>
                 </entry>
                 <entry colname="colspec1" valign="top">
@@ -1630,7 +1639,7 @@ for items beside the icon rather than under the icon.</para>
         </table>
       </sect3>
       <sect3 id="gosnautilus-56">
-        <title>To Set Behavior Preferences</title>
+        <title>Behavior Preferences</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>preferences</secondary>
@@ -1693,6 +1702,16 @@ windows</guilabel>
                   <para>Select this option to use nautilus in browser mode
 rather than spatial mode. Selecting this lets you browse your files and folders in the same window, otherwise you will navigate your files and folders as objects.</para>
                 </entry>
+              </row>
+
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Always use text entry location bar.</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Select this option to force <application>Nautilus</application> to use the Location bar in location field mode instead of the button bar mode by default. For more on using the location bar see <xref linkend="nautilus-location-bar"/>.</para></entry>
               </row>
 
               <row>
@@ -1770,7 +1789,7 @@ immediately. There is no way to recover a deleted file. Do not select this unles
         </table>
       </sect3>
       <sect3 id="gosnautilus-439">
-        <title>To Set Display Preferences</title>
+        <title>Display Preferences</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>icons</secondary>
@@ -1928,7 +1947,7 @@ no information for the item.</para>
        </para>
       </sect3>
       <sect3 id="gosnautilus-490">
-        <title>To Set List Columns Preferences</title>
+        <title>List Columns Preferences</title>
         <para>You can specify what information is displayed in list view in file manager
 windows. You can specify which columns are displayed in list view, and the
 order in which the columns are displayed.</para>
@@ -2074,7 +2093,7 @@ characters, for example <computeroutput>-rwxrw-r--</computeroutput>.</para>
         </informaltable>
       </sect3>
       <sect3 id="gosnautilus-60">
-        <title>To Set Preview Preferences</title>
+        <title>Preview Preferences</title>
         <indexterm>
           <primary>file manager</primary>
           <secondary>preferences</secondary>
@@ -2176,7 +2195,7 @@ content of text files in the icon that represents the file. </para>
                   <para>Select
 an option to specify when to show thumbnails of image files. The file manager
 stores the thumbnail files for each folder in a <filename>.thumbnails</filename>
-directory in the users home folder.</para>
+directory in the user's Home Folder.</para>
                 </entry>
               </row>
               <row>
@@ -2238,10 +2257,10 @@ screen components: </para>
           <para>Desktop</para>
         </listitem>
         <listitem>
-          <para>Side pane and view pane of file browser windows</para>
+          <para>Side pane and view pane of a file browser window</para>
         </listitem>
         <listitem>
-          <para>File object windows</para>
+          <para>Spatial mode windows</para>
         </listitem>
         <listitem>
           <para>Panels</para>
@@ -2335,6 +2354,78 @@ an action on. In the <menuchoice><guimenu>File</guimenu></menuchoice> menu you w
 <menuchoice><guimenuitem>Open With</guimenuitem></menuchoice> submenu, see <xref linkend="gosnautilus-204"/> for details about how to add new actions. Select the desired option from this list.</para>
     </sect2>
   </sect1>
+  <sect1 id="nautilus-searching">
+    <title>Searching For Files</title>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>searching files</secondary>
+    </indexterm>
+    <para>The <application>Nautilus</application> file manager includes an easy and simple to use way search for your files and folders. To begin a search press <keycap>Ctrl+F</keycap> or select the <guibutton>Search</guibutton> toolbar button. The search bar should appear as in <xref linkend="gosnautilus-FIG-925" /></para>
+                    <figure id="gosnautilus-FIG-925">
+                    <title>The search bar.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_search_bar.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>The search bar.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+<para>Enter characters present in the name or contents of the file or folder you wish to find and press <keycap>Enter</keycap>. The results of your search should appear in the view pane as illustrated in <xref linkend="gosnautilus-FIG-926" /></para>
+                    <figure id="gosnautilus-FIG-926">
+                    <title>The result of a search.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_search_results.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>The result of a search.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+<para>If you are not happy with your search you can refine it by adding addition conditions. This allows you to restrict the search to a specific file type or location. To add search conditions click the <guibutton>+</guibutton> icon. <xref linkend="gosnautilus-FIG-927" /> shows a search which has been restricted to the users home directory and to only search for text files.</para>
+                    <figure id="gosnautilus-FIG-927">
+                    <title>Restricting a search.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_refine_search.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>Restricting a search.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+    <sect2 id="nautilus-saving-searches">
+      <title>Saving Searches</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>executing default actions
+for files</secondary>
+      </indexterm>
+      <para>Nautilus searches can also be saved for future use. Once saved, searches may be reopened later. <xref linkend="gosnautilus-FIG-935" /> shows a user with three saved searches, browsing one of them.</para>
+                    <figure id="gosnautilus-FIG-935">
+                    <title>Browsing the results of a saved search.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/nautilus_restore_saved_search.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>Browsing the results of a saved search.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+<para>Saved searches behave exactly like regular folders, for example you can open, move or delete files from within a saved search.</para>
+    </sect2>
+  </sect1>
   <sect1 id="gosnautilus-515">
     <title>Navigating Your Computer</title>
     <para>The <application>Nautilus</application> file manager provides an integrated
@@ -2382,7 +2473,7 @@ You may also access this dialog from the menubar by choosing <menuchoice><guimen
                       </para>
                     </entry>
                     <entry valign="top">
-                      <para>Port to connect to on the server. This should only be used if it is necesary to
+                      <para>Port to connect to on the server. This should only be used if it is necessary to
 change the default port, you would normally leave this blank.</para>
                     </entry>
                   </row>
@@ -2441,16 +2532,17 @@ The user name information is not appropriate for a public FTP connexion.</para>
                 </tbody>
               </tgroup>
             </informaltable>
-<para>If the server information is provided in the form of a URI, or you require a specialised connection, choose <menuchoice><guimenuitem>Custom Location</guimenuitem></menuchoice> as the service type.</para>
+<para>If the server information is provided in the form of a URI, or you require a specialized connection, choose <menuchoice><guimenuitem>Custom Location</guimenuitem></menuchoice> as the service type.</para>
 <para>Once you have filled in the information, click on
 the <guibutton>Connect</guibutton> button. When the connection succeeds, the contents of the site are displayed and you may drag and drop files to and from the remote server.</para>
     </sect2>
-    <sect2 id="gosnautilus-465">
+    <sect2 id="nautilus-accessnetwork">
       <title>To Access Network Places</title>
       <!-- MOVE THIS ANCHOR -->
       <!-- To Add a Network Server -->
       <anchor id="gosnautilus-508"/>
       <anchor id="gosnautilus-509"/>
+      <anchor id="gosnautilus-465"/>      
       <indexterm>
         <primary>network places</primary>
         <secondary>accessing</secondary>
@@ -2729,8 +2821,6 @@ A popup menu appears. Choose one of the following items from the popup menu:</pa
     </sect2>
     <sect2 id="nautilus-select">
       <title>To Select Files and Folders</title>
-      <!-- placeholder for future section -->
-      <anchor id="nautilus-select-pattern"/>         
       <!-- preserve id for backwards compatibility: 2.12 -->
       <anchor id="gosnautilus-202"/>         
       <indexterm>
@@ -2738,8 +2828,7 @@ A popup menu appears. Choose one of the following items from the popup menu:</pa
         <secondary>selecting files and folders</secondary>
       </indexterm>
       <para>You can select files and folders in several
-ways in the file manager. <xref linkend="gosnautilus-TBL-10"/> describes how
-to select items in file manager windows and on the desktop.</para>
+ways in the file manager. Typically this is achieved by clicking on the files using the mouse, as explained in <xref linkend="gosnautilus-TBL-10"/>. In addition <xref linkend="nautilus-select-pattern"/> describes how to select a group of files matching a specific pattern.</para>
       <table frame="topbot" id="gosnautilus-TBL-10">
         <title>Selecting Items in the File Manager</title>
         <tgroup cols="2" colsep="0" rowsep="0">
@@ -2801,6 +2890,54 @@ Click on the items that you want to select.</para>
       <para>To perform the default action on an item, double-click on the item.
 You can set your file manager preferences so that you click once on a file
 to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
+<sect3 id="nautilus-select-pattern">
+<title>Selecting Files Matching a Specific Pattern</title>
+<para><application>Nautilus</application> allows you to select all files matching a pattern based upon their filename and an optional number of wildcards. This can be useful if, for example, you wish to select all files which contain the phrase "memo" in their filename. <xref linkend="gosnautilus-TBL-select-pattern"/> gives some examples of possible patterns and the resulting files they would match.</para>
+<table frame="topbot" id="gosnautilus-TBL-select-pattern">
+        <title>Selecting Items in the File Manager</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Pattern</para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Files Matched</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>note.*</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>This pattern would match files called note, with any extension.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>*.ogg</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>This pattern would match all files with the .ogg extension</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>*memo*</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>This pattern would match all files or folders whose name contains the word memo.</para>
+              </entry>
+            </row>
+            </tbody>
+        </tgroup>
+      </table>
+<para>To perform the Select Pattern command Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Select Patterns</guimenuitem></menuchoice> from the menu. After entering the desired pattern you are left with those files or folders which matched the pattern selected. You may then do with the selected files or folders what you choose.</para>
+</sect3>
     </sect2>
     <sect2 id="gosnautilus-9">
       <title>To Move a File or Folder</title>
@@ -3489,8 +3626,10 @@ pane. You can click on this icon to display the note.</para>
 in the side pane.</para>
       </sect3>
     </sect2>
-    <sect2 id="gosnautilus-36">
+    <sect2 id="nautilus-bookmarks">
       <title>Using Bookmarks For Your Favorite Locations</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gosnautilus-36"/>         
       <indexterm>
         <primary>file manager</primary>
         <secondary>bookmarks</secondary>
@@ -3612,7 +3751,7 @@ ways:</para>
 the window.</para>
           </listitem>
           <listitem>
-            <para>From a file object window</para>
+            <para>From a spatial window</para>
             <para>Choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Trash</guimenuitem></menuchoice>. The contents of <guilabel>Trash</guilabel> are
 displayed in the window.</para>
           </listitem>
@@ -3648,6 +3787,35 @@ you no longer need.
    </caution>
       </sect3>
     </sect2>
+    <sect2 id="nautilus-hidden-files">
+      <title>Hidden Files</title>
+      <indexterm>
+        <primary>hidden</primary>
+        <secondary>files</secondary>
+      </indexterm>
+      <para>By default, <application>Nautilus</application> does not display certain system and backup files in folders. This prevents accidental modification or deletion of them, which  can impair the operation of your computer, and also reduces clutter in locations such as your Home Folder. Nautilus does not display:</para>
+      <itemizedlist>
+        <listitem><para>Hidden files, whose filename begins with a period (.),</para></listitem>
+        <listitem><para>Backup files, whose filename ends with a tilde (~)</para></listitem>
+        <listitem><para>Files that are listed in a particular folder's <filename>.hidden</filename> file.</para></listitem>
+      </itemizedlist>
+      
+      <para>You may hide or show hidden files in a particular folder by selecting <menuchoice><guimenu>View</guimenu><guimenuitem>Show Hidden Files</guimenuitem></menuchoice>.</para>
+      
+      <para>To set <application>Nautilus</application> to always show hidden files, see  <xref linkend="nautilus-preferences"/>.</para>
+
+      <sect3 id="nautilus-managing-hidden-files-">
+        <title>Hiding a File or Folder</title>
+        <indexterm>
+          <primary>create</primary>
+          <secondary>hidden</secondary>
+        </indexterm>
+        <para>To hide a file or folder in <application>Nautilus</application>, either rename the file so its name begins with the period (.) character, or create a text file named <filename>.hidden</filename> in the same folder, and add its name to it, as in the example below:</para>
+        <programlisting>filename
+foldername</programlisting>
+        <para>You may need to refresh the relevant <application>Nautilus</application> window to see the change: hit <keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>.</para>
+      </sect3>
+  </sect2>
   </sect1>
   <sect1 id="gosnautilus-460">
     <title>Using Removable Media</title>
@@ -3778,8 +3946,10 @@ the diskette. Do not remove a USB flash drive before you unmount the flash drive
           </caution>
     </sect2>
   </sect1>
-  <sect1 id="gosnautilus-475">
+  <sect1 id="nautilus-cdwriter">
     <title>Writing CDs or DVDs</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosnautilus-475"/>    
     <indexterm>
       <primary>file manager</primary>
       <secondary>writing CDs</secondary>
@@ -3893,7 +4063,7 @@ write a disc image, right-click on the disc image file, then choose <guimenuitem
     </orderedlist>
   </sect1>
   <sect1 id="gosnautilus-440">
-    <title>File Manager Scripts</title>
+    <title>Extending Nautilus</title>
     <indexterm>
       <primary>file manager</primary>
       <secondary>running scripts</secondary>
@@ -3901,28 +4071,28 @@ write a disc image, right-click on the disc image file, then choose <guimenuitem
     <indexterm>
       <primary>scripts, running from file manager</primary>
     </indexterm>
+<para>Nautilus can be extended in two main ways. Through nautilus extensions, and through scrips. This section explains the difference between the two and how to install.</para>
     <sect2 id="gosnautilus-444">
-      <title>Running Scripts From the File Manager</title>
-      <para>To run a script
-choose <menuchoice><guimenu>File</guimenu><guimenuitem>Scripts</guimenuitem></menuchoice>, then choose the script that you want to run from the submenu.</para>
+      <title>Nautilus Scripts</title>
+      <para>Nautilus can run scripts. Scripts are typically simpler in operation than full <application>Nautilus</application> extensions and can be written in any scripted language capable of being executed on your computer. To run a script choose <menuchoice><guimenu>File</guimenu><guimenuitem>Scripts</guimenuitem></menuchoice>, then choose the script that you want to run from the submenu.</para>
       <para>To run a script on a particular file, select the file in the view pane.
 Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Scripts</guimenuitem></menuchoice>, then choose the script that you want to run on the file from
 the submenu. You can also select multiple files to run your scripts on.</para>
-      <para>You may also access scripts from the context menu.</para>
+      <para>You may also access scripts from the <!-- TODO link --> context menu.</para>
       <note>
         <para>If you do not have any scripts installed, the script menu will not appear.</para>
       </note>
-    </sect2>
-    <sect2 id="gosnautilus-install-scripts">
+      <sect3 id="gosnautilus-install-scripts">
       <title>Installing File Manager Scripts</title>
         <para>The file manager includes a special folder where you can
 store your scripts. All executable files in this folder will appear in the Scripts menu. The script folder 
 is located at $HOME/.gnome2/nautilus-scripts.</para>
         <para>To install a script, simply copy the script to the script folder and give it the user executable permission.</para>
-      <para>To view the contents of your scripts folder, if you allready have scripts installed, choose <menuchoice><guimenu>File</guimenu><guisubmenu>Scripts</guisubmenu><guimenuitem>Open Scripts Folder</guimenuitem></menuchoice>.
+      <para>To view the contents of your scripts folder, if you already have scripts installed, choose <menuchoice><guimenu>File</guimenu><guisubmenu>Scripts</guisubmenu><guimenuitem>Open Scripts Folder</guimenuitem></menuchoice>.
 You will have to navigate to the scripts folder with the file manager if you do not yet have any scripts. You may need to show hidden files for this, use <menuchoice><guimenu>View</guimenu><guimenuitem>Show Hidden Files</guimenuitem></menuchoice></para>
-    </sect2>
-    <sect2 id="gosnautilus-write-scripts">
+<para>A good source to download <application>Nautilus</application> scripts is from the <ulink url="http://g-scripts.sourceforge.net"><citetitle>G-Scripts website</citetitle></ulink>.</para>
+    </sect3>
+    <sect3 id="gosnautilus-write-scripts">
       <title>Writing File Manager Scripts</title>
        <para>When executed from a local folder, scripts will be passed the selected file names. When 
 executed from a remote folder (e.g. a folder showing web or ftp content), scripts will be passed no parameters.</para>
@@ -3985,6 +4155,30 @@ executed from a remote folder (e.g. a folder showing web or ftp content), script
             </tbody>
           </tgroup>
         </informaltable>
-    </sect2>
+    </sect3>
+  </sect2>
+  <sect2 id="nautilus-extensions">
+    <title>Nautilus Extensions</title>
+    <para><application>Nautilus</application> extensions are far more powerful than <application>Nautilus</application> scripts, allowing more freedom where and how they extend <application>Nautilus</application>. <application>Nautilus</application> extensions are typically installed by your system administrator.</para>
+<para>Some popular <application>Nautilus</application> extensions include:
+<orderedlist>
+        <listitem>
+          <para>nautilus-actions</para>
+          <para>This extension allows you to easily assign actions based on file type</para>
+        </listitem>
+        <listitem>
+          <para>nautilus-send-to</para>
+          <para>This extension provides a simple way to send a file or folder to another using email, instant messaging, or Bluetooth.</para>
+        </listitem>
+        <listitem>
+          <para>nautilus-open-terminal.</para>
+          <para>This extension provides an easy way to open a terminal at the selected starting location.</para>
+        </listitem>
+      </orderedlist>
+</para>
+<note>
+        <para>If you are looking for the <guilabel>Open Terminal</guilabel> command which used to exist in the <application>Nautilus</application> right click menu by default then you should install the nautilus-open-terminal extension.</para>
+      </note>
+  </sect2>
   </sect1>
 </chapter>
