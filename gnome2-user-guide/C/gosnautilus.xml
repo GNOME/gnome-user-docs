@@ -2961,23 +2961,30 @@ the diskette. Do not remove a USB flash drive before you unmount the flash drive
       <primary>burning CDs</primary>
       <see>writing CDs</see>
     </indexterm>
-    <para>The file manager provides
-a special location for files and folders that you want to write
-to a CD or DVD. From here you can write the contents of the location to a CD or DVD easily.</para>
+    <para>Writing a CD or DVD is a good method of backup up your important documents. To do this, your computer must have a CD or DVD writer.    
+    </para>
+    <tip><para>A simple way to check what sort of CD or DVD drive your computer has is to choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></menuchoice> from the top panel menubar. If the icon for your CD drive has terms like "CD-RW" or "DVD(+-)R" in its label, then your computer is able to write discs.</para></tip>
+    
+    <para>You can start choosing files to burn to a disc at any time. The file manager provides
+a special folder for files and folders that you want to write to a CD or DVD. From here you can write the contents of the location to a CD or DVD easily.</para>
+
+    <sect2 id="nautilus-cdwriter-data">
+      <title>Creating Data Discs</title>
     <para>To write a CD or DVD, perform the following steps:</para>
     <orderedlist>
       <listitem>
-        <para>Choose <menuchoice><guimenu>Go</guimenu><guimenuitem>CD/DVD Creator</guimenuitem></menuchoice>. The file manager opens a special location, <guilabel>burn:///</guilabel>, from which you can write CDs or DVDs. </para>
+        <para>In a folder window menubar, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>CD/DVD Creator</guimenuitem></menuchoice>. The file manager opens the CD/DVD Creator folder.</para>
+        <note><para>In a File Browser window, this item is in the <guimenu>Go</guimenu> menu.</para></note>
       </listitem>
       <listitem>
         <para>Drag the files and folders that you want to write to CD or DVD to
-the <guilabel>burn:///</guilabel> location.</para>
+the CD/DVD Creator folder.</para>
       </listitem>
       <listitem>
         <para>Insert a writable CD or DVD into the CD/DVD writer device on your system.</para>
       </listitem>
       <listitem>
-        <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Write to CD/DVD</guimenuitem></menuchoice>. A <guilabel>Write to Disc</guilabel> dialog is displayed.</para>
+        <para>Press the <guibutton>Write to Disc</guibutton> button, or choose <menuchoice><guimenu>File</guimenu><guimenuitem>Write to CD/DVD</guimenuitem></menuchoice>. A <guilabel>Write to Disc</guilabel> dialog is displayed.</para>
       </listitem>
       <listitem>
         <para>Use the <guilabel>Write to Disc</guilabel>
@@ -3005,8 +3012,7 @@ dialog to specify how you want to write the CD, as follows:</para>
                 </entry>
                 <entry valign="top">
                   <para>Select the device to which you want to write the
-CD from the drop-down list. To create an CD image file for the files and folders,
-select the <guilabel>File image</guilabel> option.</para>
+CD from the drop-down list. To create an CD image file, select the <guilabel>File image</guilabel> option. A CD image file is a normal file that contains all of the data in the same format as a CD, that you can write to a CD later.</para>
                 </entry>
               </row>
               <row>
@@ -3051,13 +3057,31 @@ CD from the drop-down list.</para>
 for the disc image</guilabel> dialog is displayed. Use the dialog to specify
 the location where you want to save the disc image file. By default, disc image
 files have a <filename>.iso</filename> file extension.</para>
-        <para>A <guilabel>Writing disc</guilabel> dialog is displayed. When the disc is
+        <para>A <guilabel>Writing disc</guilabel> dialog is displayed. This process takes some time. When the disc is
 written or when the disc image file is created, a message to indicate that the
 process is complete is displayed in the dialog.</para>
-        <para>If you created a disc image file, you can write this file to a blank disc. To
-write a disc image, right-click on the disc image file, then choose <guimenuitem>Write to Disc</guimenuitem> from the popup menu.</para>
       </listitem>
     </orderedlist>
+    <tip><para>You can set the CD/DVD Creator folder to open automatically when you instert a blank disc. See <application>Removable Drives and Media Preferences</application>.</para></tip>
+    </sect2>
+    <sect2 id="nautilus-cdwriter-copy">
+      <title>Copying CDs or DVDs</title>
+        <para>You can create a copy of a CD or DVD, either to another disc or to an image file stored on your computer. To create a copy, perform the following steps:</para>
+        <orderedlist>
+          <listitem><para>Insert the disc you want to copy.</para></listitem>               
+          <listitem><para>Choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></menuchoice> from the top panel menubar.</para></listitem>       
+          <listitem><para>Right-click on the CD icon, and choose <guimenuitem>Copy Disc</guimenuitem>.</para></listitem>       
+          <listitem><para>The <guilabel>Write to Disc</guilabel> dialog is displayed.</para></listitem>  
+        </orderedlist>
+        <para>If you have only one drive with write capabilities, the process will first create a disc image file on your computer. It will then eject the original disk, and ask you to change it for a blank disk on which to write the copy.</para>
+        <tip><para>If you want to create more than one copy, choose the Image File option on the <guilabel>Write to Disc</guilabel> and then write the disc image: see <xref linkend="nautilus-cdwriter-writeimage"/>.</para></tip>
+
+    </sect2>    
+    <sect2 id="nautilus-cdwriter-writeimage">
+      <title>Creating a Disc from an Image File</title>
+      <para>You can write a disc image to a CD or DVD. For example, you may have downloaded a disc image from the internet, or previously created one yourself. Disc images usually have a <filename>.iso</filename> file extension and are sometimes called iso files.</para>
+        <para>To write a disc image, right-click on the disc image file, then choose <guimenuitem>Write to Disc</guimenuitem> from the popup menu.</para>      
+    </sect2>
   </sect1>
 
   <sect1 id="gosnautilus-515">
