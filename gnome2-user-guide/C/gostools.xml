@@ -175,5 +175,770 @@ command.</para>
   <para>When you take a screenshot, the <guilabel>Save Screenshot</guilabel> dialog opens. To save the screenshot as an image file, enter the filename for the screenshot and choose a location from the drop-down list.</para>
   
 </section>
+<!-- ============= Yelp ============================= -->
+<section id="yelp">
+  <title>Yelp Help Browser</title>
+  <indexterm>
+    <primary>Yelp</primary>
+  </indexterm>
+  <!-- ============= Introduction ============================== -->
+
+  <section id="yelp-introduction">
+    <title>Introduction</title>
+
+    <para>The <application>Yelp Help Browser</application> application allows you to view documentation
+    regarding GNOME and other components through a variety of formats. These
+    formats include docbook files, HTML help pages, man pages and info pages
+    (support for man pages and info pages may optionally be compiled in).
+    Despite the different formats supported, Yelp does its best to provide a
+    unified look and feel regardless of the original document format.</para>
+
+    <para><application>Yelp Help Browser</application> is internationalised, meaning that it has support
+    to view documents in different languages. The documents must be localised
+    or translated for each language and installed properly for Yelp Help
+    Browser to be able to view them.</para>
+  </section>
+
+  <!-- ============= Getting Started  ================================ -->
+
+  <section id="yelp-getting-started">
+    <title>Starting Yelp</title>
+
+    <section>
+      <title>To Start <application>Yelp Help Browser</application></title>
+
+      <para>You can start <application>Yelp Help Browser</application> in the following ways:</para>
+
+      <para><variablelist>
+          <varlistentry>
+            <term><guimenu>System</guimenu> Menu</term>
+
+            <listitem>
+              <para>Choose <application>Help</application></para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term>Command Line</term>
+
+            <listitem>
+              <para>Execute the following command:
+              <command>yelp</command></para>
+            </listitem>
+          </varlistentry>
+        </variablelist></para>
+    </section>
+
+    <section>
+      <title>Interface</title>
+
+      <para>When you start <application>Yelp Help Browser</application>, you will see the following
+      window appear.</para>
+
+      <para><figure id="fig-yelp-window">
+          <title><application>Yelp Help Browser</application> Window</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/yelp_window.png" />
+            </imageobject>
+          </mediaobject>
+        </figure><application>Yelp Help Browser</application> contains the following elements in <xref
+      linkend="fig-yelp-window" /></para>
+
+      <variablelist>
+        <varlistentry>
+          <term><interface>Menubar</interface></term>
+
+          <listitem>
+            <para><variablelist>
+                <varlistentry>
+                  <term><guimenu>File</guimenu></term>
+
+                  <listitem>
+                    <para>Use this menu to Open a New Window, view the About
+                    this Document page, Print the current document, or Close
+                    the window.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guimenu>Edit</guimenu></term>
+
+                  <listitem>
+                    <para>Use this menu to Copy, Select all, Find..., or to
+                    set your Preferences.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guimenu>Go</guimenu></term>
+
+                  <listitem>
+                    <para>Use this menu to navigate Back, Forward, to the Help
+                    Topics page. When viewing a DocBook document, use this
+                    menu to navigate to the Next Section, Previous Section or
+                    to the Contents.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guimenu>Bookmarks</guimenu></term>
+
+                  <listitem>
+                    <para>Use this menu to Add Bookmark(s), or Edit
+                    Bookmark(s).</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guimenu>Help</guimenu></term>
+
+                  <listitem>
+                    <para>View information about Yelp Help Browser and
+                    contributors to the project through the
+                    <guimenuitem>About</guimenuitem> menuitem. Open this
+                    document with the <guimenuitem>Contents</guimenuitem>
+                    menuitem or by pressing <keycap>F1</keycap>.</para>
+                  </listitem>
+                </varlistentry>
+              </variablelist></para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Toolbar</interface></term>
+
+          <listitem>
+            <para><variablelist>
+                <varlistentry>
+                  <term><guibutton>Back</guibutton></term>
+
+                  <listitem>
+                    <para>Use this button to navigate back in your document
+                    history.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guibutton>Forward</guibutton></term>
+
+                  <listitem>
+                    <para>Use this button to navigate forward in your document
+                    history.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guibutton>Help Topics</guibutton></term>
+
+                  <listitem>
+                    <para>Use this button to return to the main table of
+                    contents (shown in <xref
+                    linkend="fig-yelp-window" />)</para>
+                  </listitem>
+                </varlistentry>
+              </variablelist></para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry id="yelp-browser-pane" xreflabel="Yelp Browser Pane">
+          <term><interface>Browser Pane</interface></term>
+
+          <listitem>
+            <para>The browser pane is where you will be presented with the
+            table of contents or the documentation. Use the table of contents
+            to navigate to the documentation you need.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </section>
+  </section>
+
+  <!--===================== Usage ========================-->
+
+  <section id="yelp-usage">
+    <title>Using Yelp</title>
+
+    <section>
+      <title>Open a Document</title>
+
+      <para>To open a document in <application>Yelp Help Browser</application>, use the Table of Contents
+      to navigate to the desired document</para>
+
+      <para>Alternatively, you may view a particular document by invoking Yelp
+      Help Browser from the command line. Please see <xref
+      linkend="yelp-advanced-cmdline" />.</para>
+    </section>
+
+    <section>
+      <title>Open a New Window</title>
+
+      <para>To open a new window:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>New Window</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Ctrl</keycap>+<keycap>N</keycap></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>About This Document</title>
+
+      <para>To view information about the currently open document:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>About This Document</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available for DocBook documentation. Legal
+          notices and documentation contributors are usually listed in this
+          section.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Print a Page</title>
+
+      <para>To print any page that you are able to view in <application>Yelp Help Browser</application>:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>Print this Page</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Print a Document</title>
+
+      <para>To print an entire document:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>Print this Document</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available for DocBook
+          documentation.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Close a Window</title>
+
+      <para>To close a window in <application>Yelp Help Browser</application>, do the following:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>Close Window</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Ctrl</keycap>+<keycap>W</keycap></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Set Preferences</title>
+
+      <para>To set your preferences in <application>Yelp Help Browser</application>:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Edit</guimenu>
+
+                <guimenuitem>Preferences</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist>A window will appear that looks like <xref
+      linkend="yelp-preferences" />:</para>
+
+      <para><figure id="yelp-preferences">
+          <title><application>Yelp Help Browser</application> Preferences Window</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/yelp_preferences.png" />
+            </imageobject>
+          </mediaobject>
+        </figure>The options that are available in this dialog have the
+      following functions:</para>
+
+      <para><variablelist>
+          <varlistentry>
+            <term><guilabel>Use system fonts</guilabel></term>
+
+            <listitem>
+              <para>Check this option to display documentation using the
+              default fonts used by the GNOME Desktop.</para>
+
+              <para>To choose your own fonts to display documentation, uncheck
+              this option and click on the buttons next to the text
+              <guilabel>Variable Width</guilabel> or <guilabel>Fixed
+              Width</guilabel>.</para>
+
+              <para><variablelist>
+                  <varlistentry>
+                    <term><guilabel>Variable Width</guilabel></term>
+
+                    <listitem>
+                      <para>This is the font to use when a static or fixed
+                      width font is not required. The majority of text will be
+                      of this type.</para>
+                    </listitem>
+                  </varlistentry>
+
+                  <varlistentry>
+                    <term><guilabel>Fixed Width</guilabel></term>
+
+                    <listitem>
+                      <para>This is the font to use when all text characters
+                      need to be of the same size. This font is usually used
+                      to indicate commands, program blocks, or other text that
+                      falls under these categories.</para>
+                    </listitem>
+                  </varlistentry>
+                </variablelist></para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><guilabel>Browse with caret</guilabel></term>
+
+            <listitem>
+              <para>Click this option if you would like see a caret or cursor
+              in the <xref linkend="yelp-browser-pane" />. This allows you to
+              browse the document more easily by showing where the cursor is
+              located in the document.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist></para>
+    </section>
+
+    <section>
+      <title>Go Back in Document History</title>
+
+      <para>To go back in the document history:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Back</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Alt</keycap>+<keycap>Left</keycap></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the <guibutton>Back</guibutton> button in the
+            <interface>Toolbar</interface></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Go Forward in Document History</title>
+
+      <para>To go forward in the document history:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Forward</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Alt</keycap>+<keycap>Right</keycap></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the <guibutton>Forward</guibutton> button in the
+            <interface>Toolbar</interface></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Go to Help Topics</title>
+
+      <para>To go to the Help Topics:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Help Topics</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Alt</keycap>+<keycap>Home</keycap></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the <guibutton>Help Topics</guibutton> button in the
+            <interface>Toolbar</interface></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Go to Previous Section</title>
+
+      <para>To go to the previous section:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Previous Section</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Alt</keycap>+<keycap>Up</keycap></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available in DocBook formatted
+          documents.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Go to Next Section</title>
+
+      <para>To go to the next section:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Next Section</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Alt</keycap>+<keycap>Down</keycap></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available in DocBook formatted
+          documents.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Go to Contents</title>
+
+      <para>To go to the contents for a document:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Contents</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available in DocBook formatted
+          documents.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Add a Bookmark</title>
+
+      <para>To add a bookmark for a particular document:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Bookmarks</guimenu>
+
+                <guimenuitem>Add Bookmark</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Ctrl</keycap>+<keycap>D</keycap></para>
+          </listitem>
+        </itemizedlist>A window will appear that looks like <xref
+      linkend="yelp-add-bookmark" />.</para>
+
+      <para><figure id="yelp-add-bookmark">
+          <title>Add Bookmark Window</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/yelp_add_bookmark.png" />
+            </imageobject>
+          </mediaobject>
+        </figure>Enter your desired bookmark title in to the
+      <guilabel>Title</guilabel> text entry field. Then click
+      <guibutton>Add</guibutton> to add the bookmark, or click
+      <guibutton>Cancel</guibutton> to cancel the request.</para>
+    </section>
+
+    <section>
+      <title>Edit Bookmarks</title>
+
+      <para>To edit your collection of bookmarkst:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Bookmarks</guimenu>
+
+                <guimenuitem>Edit Bookmarks...</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycap>Ctrl</keycap>+<keycap>B</keycap></para>
+          </listitem>
+        </itemizedlist>A window will appear that looks like <xref
+      linkend="yelp-edit-bookmarks" />.</para>
+
+      <para><figure id="yelp-edit-bookmarks">
+          <title>Edit Bookmarks Window</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/yelp_edit_bookmarks.png" />
+            </imageobject>
+          </mediaobject>
+        </figure>You can manage your bookmarks using this window in the
+      following ways:</para>
+
+      <para><variablelist>
+          <varlistentry>
+            <term><guibutton>Open</guibutton></term>
+
+            <listitem>
+              <para>Use this button to open the selected bookmark in a new
+              window.</para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><guibutton>Rename</guibutton></term>
+
+            <listitem>
+              <para>Use this button to rename the title of your
+              bookmark.</para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><guibutton>Remove</guibutton></term>
+
+            <listitem>
+              <para>Use this button to delete the bookmark from your
+              collection.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>Once you are finished managing your bookmarks, click
+      the <guibutton>Close</guibutton> button to exit the <interface>Edit
+      Bookmarks Window</interface>.</para>
+    </section>
+
+    <section>
+      <title>Get Help</title>
+
+      <para>To get help using <application>Yelp Help Browser</application> (and see this
+      document):</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Help</guimenu>
+
+                <guimenuitem>Contents</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+  </section>
+
+  <!--=============== Advanced Features ====================-->
+
+  <section id="yelp-advanced">
+    <title>Advanced Features</title>
+
+    <section id="yelp-advanced-cmdline"
+           xreflabel="Using the Command Line to Open Documents">
+      <title>Using the Command Line to Open Documents</title>
+
+      <para>Yelp Help Browser supports opening documents from the command
+      line. There are a number of URIs (Uniform Resource Identifiers) that can
+      be used. These include:</para>
+
+      <variablelist>
+          <varlistentry>
+            <term><option>file:</option></term>
+
+            <listitem>
+              <para>Use this URI when you want to access a file with
+              yelp, for example:</para>
+
+              <screen><userinput>yelp file:///usr/share/gnome/help/gcalctool/C/gcalctool.xml</userinput></screen>
+
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><option>ghelp:</option> or
+            <option>gnome-help:</option></term>
+
+            <listitem>
+              <para>Use this URI when you want to access GNOME help documents,
+              which are typically written in DocBook format.</para>
+
+              <screen><userinput>yelp ghelp:gcalctool</userinput></screen>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><option>man:</option></term>
+
+            <listitem>
+              <para>Use this URI when you want to access a particular man
+              page. You can append the section of the man page you would like
+              to view if there are multiple man pages with the same
+              name.</para>
+
+              <screen><userinput>yelp man:gcalctool</userinput></screen>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><option>info:</option></term>
+
+            <listitem>
+              <para>Use this URI when you want to access a particular GNU info
+              page.</para>
+
+              <screen><userinput>yelp info:make</userinput></screen>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+    </section>
+
+    <section>
+      <title>Refreshing Content on Demand</title>
+
+      <para><application>Yelp Help Browser</application> supports the
+      <keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo> shortcut keys, which will reload the DocBook
+      document that is currently open. This allows developers to view changes
+      to documents as they are made.</para>
+    </section>
+  </section>
+
+  <section id="yelp-moreinfo">
+    <title>More Information</title>
+
+    <para>This section details some of the helper applications which 
+    <application>Yelp Help Browser</application> uses, and provides resources where you can get more information
+    about <application>Yelp Help Browser</application>.</para>
+
+    <section>
+      <title>Scrollkeeper</title>
+
+      <para><application>Yelp Help Browser</application> uses scrollkeeper to generate the table of
+      contents for DocBook and HTML documentation, and also keep track of
+      translations for each document.</para>
+    </section>
+
+    <section>
+      <title>GNOME Documentation Utilites</title>
+
+      <para>The documentation distributed with GNOME uses this set of
+      utilities for a variety of things:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Ease translation of documents to different languages.</para>
+          </listitem>
+
+          <listitem>
+            <para>Provide a set of tools to help package and install
+            documentation into the correct location and register the
+            documentation with scrollkeeper.</para>
+          </listitem>
+
+          <listitem>
+            <para>Perform conversion from DocBook format to a format suitable
+            for display.</para>
+          </listitem>
+        </itemizedlist><application>Yelp Help Browser</application> relies on GNOME Documentation
+      Utilities to perform conversion from DocBook to HTML which it uses
+      to</para>
+    </section>
+
+    <section>
+      <title>Mailing List</title>
+
+      <para>For further information on <application>Yelp Help Browser</application> please subscribe to
+      the mailing list, <ulink type="http" url="http://mail.gnome.org/mailman/listinfo/gnome-doc-list">gnome-doc-devel-list@gnome.org</ulink>.</para>
+    </section>
+  </section>
+
+  <section id="yelp-joininggdp">
+    <title>Joining the GNOME Documentation Project</title>
+
+    <para>If you are interesting in helping produce and update documentation
+    for the GNOME project, please visit the following link: <ulink
+    url="http://live.gnome.org/DocumentationProject">http://live.gnome.org/DocumentationProject</ulink></para>
+  </section>
+
+</section>
 
 </chapter>
