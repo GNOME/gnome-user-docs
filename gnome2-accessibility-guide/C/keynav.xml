@@ -148,7 +148,7 @@ can use from any part of the GNOME Desktop. </para>
 <para><keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo></para>
 </entry>
 <entry valign="top">
-<para>Open the <guimenu>Main Menu</guimenu>.</para>
+<para>Open the <guimenu>Main Applications Menu</guimenu>.</para>
 <para>You can customize this keyboard shortcut.</para>
 </entry>
 </row>
@@ -271,7 +271,7 @@ the desktop background and the panels. </para>
 keyboard shortcut.</para>
 </entry>
 </row>
-<row>
+<!--<row>
 <entry colname="colspec0" valign="top">
 <para>
 <keycap>Tab</keycap>
@@ -282,7 +282,7 @@ keyboard shortcut.</para>
 a desktop background object has focus, give focus to the next desktop background
 object in alphabetical order.</para>
 </entry>
-</row>
+</row>-->
 <row>
 <entry colname="colspec0" valign="top">
 <para>arrow keys</para>
@@ -593,7 +593,7 @@ left or right until you meet the next panel object.</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>Shows the effect
-of using the <keycap>Shift</keycap><application>Geyes</application> panel application on the panel. You can use the <keycap>Shift</keycap>+ arrow keys to push the <application>Volume Control</application>
+of using using <keycap>Shift</keycap> + arrow keys to move the <application>Geyes</application> panel application on the panel. You can use the <keycap>Shift</keycap> + arrow keys to push the <application>Volume Control</application>
 and <application>Help</application> panel objects ahead of the object that
 you are moving.</para>
 </entry>
@@ -613,13 +613,16 @@ you are moving.</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>Shows the effect
-of using the <keycap>Ctrl</keycap><application>Geyes</application> panel application on the panel. You can use the <keycap>Ctrl</keycap> + arrow keys to swap position with the <application>Volume Control</application> and <application>Help</application> panel objects as you meet
+of using <keycap>Ctrl</keycap> + arrow keys to move the <application>Geyes</application> panel application on the panel. You can use the <keycap>Ctrl</keycap> + arrow keys to swap position with the <application>Volume Control</application> and <application>Help</application> panel objects as you meet
 the objects.</para>
 </entry>
 </row>
 </tbody>
 </tgroup>
 </informaltable>
+<note>
+<para>Panel applications that are <guilabel>Locked</guilabel> cannot be moved.  To unlock a panel application, use the <guimenu>panel object</guimenu> menu and unselect <guimenuitem>Lock to Panel</guimenuitem>.</para>
+</note>
 </sect2>
 <sect2 id="keynav-7">
 <title>To Navigate Drawers</title>
@@ -677,7 +680,7 @@ has focus.</para>
 to the drawer object on the panel.</para>
 </entry>
 </row>
-<row>
+<!--<row>
 <entry colname="colspec0" valign="top">
 <para><keycombo><keycap>Shift</keycap><keycap>Esc</keycap></keycombo></para>
 </entry>
@@ -685,7 +688,7 @@ to the drawer object on the panel.</para>
 <para>Give
 focus to the drawer object on the panel and leave the drawer open.</para>
 </entry>
-</row>
+</row>-->
 </tbody>
 </tgroup>
 </informaltable>
@@ -870,7 +873,7 @@ the workspaces. </para>
 </row>
 <row>
 <entry colname="colspec0" valign="top">
-<para><keycombo><keycap>Shift</keycap><keycap>Alt</keycap></keycombo> + arrow keys</para>
+<para><keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Alt</keycap></keycombo> + arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>Move the window that has focus to the next or previous workspace.</para>
@@ -1180,8 +1183,8 @@ restore the window to the original size.</para>
 <secondary>for paned windows</secondary>
 </indexterm>
 <para>A paned window is a window that is split into
-two or more panes. The Help browser and the file manager are examples of applications
-that use paned windows. </para>
+two or more panes. The Help browser is an example of an application
+that uses paned windows. </para>
 <para>The following table describes the keyboard shortcuts that you can use
 to navigate windows with panes.</para>
 <informaltable frame="topbot">
@@ -1354,6 +1357,9 @@ that are available.</para>
 <para>This section of the manual describes the essential keyboard
 shortcuts that you can use to start using applications and dialogs. </para>
 <sect2 id="keynav-18">
+<anchor id="keynav-20"/>
+<anchor id="keynav-21"/>
+<anchor id="keynav-22"/>
 <title>Essential Keyboard Shortcuts for Navigating Applications</title>
 <para>Since there are many applications that you can use in the GNOME
 Desktop, this manual does not describe
@@ -1557,13 +1563,14 @@ dialog.</para>
 <primary>keyboard shortcuts</primary>
 <secondary>for file manager</secondary>
 </indexterm>
-<para>The file manager window contains several components
-and there are different keyboard shortcuts defined to navigate each component. </para>
-<sect2 id="keynav-21">
-<title>To Navigate the View Pane</title>
-<para>The following table describes the keyboard shortcuts that enable you
-to navigate the list and icon views in the view pane. The view pane is displayed
-in the right side of the file manager window. </para>
+<para>By default, the file manager operates in <guilabel>Spatial</guilabel> mode.  This mode uses separate windows for each folder.  A separate mode, called <guilabel>Browser</guilabel> mode, exists that uses the same window for each folder.</para>
+<note>
+<para>For more information about different modes for the file manager, see <ulink url="ghelp:user-guide?nautilus-presentation">the user guide</ulink>.</para>
+</note>
+<sect2 id="keynav-spatial">
+<title>To Navigate a Folder</title>
+<para>The following table describes the keyboard shortcuts that enable you to navigate folders in 
+the file manager.</para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
 <colspec colname="colspec0" colwidth="43.94*"/>
@@ -1580,17 +1587,6 @@ in the right side of the file manager window. </para>
 </thead>
 <tbody>
 <row>
-<entry colname="colspec0" valign="top">
-<para>
-<keycap>F6</keycap>
-</para>
-</entry>
-<entry colname="colspec1" valign="top">
-<para>Switch focus between the side
-pane and the view pane.</para>
-</entry>
-</row>
-<row>
 <entry valign="top">
 <para>arrow keys</para>
 </entry>
@@ -1605,7 +1601,7 @@ arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>Give
-focus to the next or previous file or folder but do not select the item.</para>
+focus to the next or previous file or folder but do not select the item.  This allows multiple files to be selected.</para>
 </entry>
 </row>
 <row>
@@ -1620,24 +1616,65 @@ focus to the next or previous file or folder but do not select the item.</para>
 </row>
 <row>
 <entry colname="colspec0" valign="top">
+<para><keycap>Ctrl</keycap> +
+<keycap>spacebar</keycap></para>
+</entry>
+<entry colname="colspec1" valign="top">
+<para>Select the item that currently has focus.</para>
+</entry>
+</row>
+<row>
+<entry colname="colspec0" valign="top">
 <para>A sequence of characters
 that matches the first <replaceable>n</replaceable> characters of a filename.</para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>In an icon view,
-select the first file or folder that starts with the specified sequence of
+<para>Select the first file or folder that starts with the specified sequence of
 characters.</para>
+</entry>
+</row>
+<row>
+<entry colname="colspec0" valign="top">
+<para>
+<keycap>Home</keycap>
+</para>
+</entry>
+<entry colname="colspec1" valign="top">
+<para>Select the first file or folder within the current folder.</para>
+</entry>
+</row>
+<row>
+<entry colname="colspec0" valign="top">
+<para>
+<keycap>End</keycap>
+</para>
+</entry>
+<entry colname="colspec1" valign="top">
+<para>Select the last file or folder within the current folder.</para>
+</entry>
+</row>
+<row>
+<entry colname="colspec0" valign="top">
+<para>
+<keycap>backspace</keycap>
+</para>
+</entry>
+<entry colname="colspec1" valign="top">
+<para>Open the current folder's parent folder.</para>
 </entry>
 </row>
 </tbody>
 </tgroup>
 </informaltable>
 </sect2>
-<sect2 id="keynav-22">
-<title>To Navigate the Side Pane</title>
+<sect2 id="keynav-navigational">
+<anchor id="keynav-21"/>
+<title>To Navigate Browser Window Components</title>
+<para>When operating in browser mode, the file manager window contains several components
+and there are different keyboard shortcuts defined to navigate each component. </para>
+
 <para>The following table describes the keyboard shortcuts that enable you
-to navigate the file manager side pane in general. The side pane is displayed
-on the left side of the file manager window.</para>
+to navigate between  the components.</para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
 <colspec colname="colspec0" colwidth="43.94*"/>
@@ -1790,7 +1827,7 @@ enables you to use the keyboard to select text.</para>
 </para>
 </entry>
 <entry colname="colspec1">
-<para>Move to the beginning of the current frame.</para>
+<para>Move to the beginning of the current line.</para>
 </entry>
 </row>
 <row>
@@ -1800,13 +1837,12 @@ enables you to use the keyboard to select text.</para>
 </para>
 </entry>
 <entry colname="colspec1">
-<para>Move to the end of the current frame.</para>
+<para>Move to the end of the current line.</para>
 </entry>
 </row>
 <row>
 <entry colname="colspec0">
-<para><keycap>Shift</keycap> + any of the keys
-listed above</para>
+<para><keycap>Shift</keycap> + arrow keys</para>
 </entry>
 <entry colname="colspec1">
 <para>Move from the current
@@ -2259,7 +2295,7 @@ all text to the right of the cursor.</para>
 </row>
 <row>
 <entry colname="colspec0" valign="top">
-<para><keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo> (Solaris only)</para>
+<para><keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo></para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>Select all text in the text box.</para>
@@ -3189,7 +3225,7 @@ arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>Give
-focus to the next row or column but do not extend the selection.</para>
+focus to the next row or column but do not extend the selection.  Further items can be selected by pressing the <keycap>spacebar</keycap></para>
 </entry>
 </row>
 <row>
@@ -3324,7 +3360,7 @@ item.</para>
 <para><keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo></para>
 </entry>
 <entry colname="colspec1">
-<para>Display a search dialog. You can type the
+<para>Display a search dialog if the tree supports searching. You can type the
 name of the tree item that you want to find.</para>
 </entry>
 </row>
@@ -3345,7 +3381,7 @@ Desktop. You can customize the default
 keyboard shortcuts to meet your requirements. You can also create hot keys.
 Hot keys are keyboard shortcuts that start applications. </para>
 <para>To start the <application>Keyboard Shortcuts</application> preference
-tool, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Desktop Preferences</guisubmenu><guimenuitem>Keyboard Shortcuts</guimenuitem></menuchoice>. The <guilabel>Desktop shortcuts</guilabel> table lists the keyboard shortcut that is associated
+tool, choose <menuchoice><guimenu>Desktop</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Keyboard Shortcuts</guimenuitem></menuchoice>. The <guilabel>Desktop shortcuts</guilabel> table lists the keyboard shortcut that is associated
 with each action.</para>
 <sect2 id="keynav-49">
 <title>To Customize Keyboard Shortcuts on Solaris Systems</title>
