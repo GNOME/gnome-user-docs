@@ -843,6 +843,11 @@ command.</para>
               which are typically written in DocBook format.</para>
 
               <screen><userinput>yelp ghelp:gcalctool</userinput></screen>
+
+              <para>If you want to open the help document at a particular section,
+              append a question mark to the end of the URI, followed by the section id.</para>
+              
+              <screen><userinput>yelp ghelp:user-guide?yelp-advanced-cmdline</userinput></screen>
             </listitem>
           </varlistentry>
 
@@ -853,9 +858,16 @@ command.</para>
               <para>Use this URI when you want to access a particular man
               page. You can append the section of the man page you would like
               to view if there are multiple man pages with the same
-              name.</para>
+              name.  The section number should be enclosed in parenthesis and 
+              therefore it may be necessary to escape the argument so that the
+              shell does not interpret the parenthesis.</para>
 
               <screen><userinput>yelp man:gcalctool</userinput></screen>
+              
+              <para>or</para>
+
+              <screen><userinput>yelp 'man:intro(1)'</userinput>
+<userinput>yelp 'man:intro(2)'</userinput></screen>
             </listitem>
           </varlistentry>
 
@@ -918,9 +930,9 @@ command.</para>
             <para>Perform conversion from DocBook format to a format suitable
             for display.</para>
           </listitem>
-        </itemizedlist><application>Yelp Help Browser</application> relies on GNOME Documentation
-      Utilities to perform conversion from DocBook to HTML which it uses
-      to</para>
+        </itemizedlist><application>Yelp Help Browser</application> relies on <ulink url="ghelp:gnome-doc-xslt">GNOME XSLT
+      Stylesheets</ulink> to perform conversion from DocBook to HTML.  <ulink url="ghelp:gnome-doc-make">GNOME Documentation 
+      Build Utilities</ulink> are relied upon by application authors to install and register documentation within the help system.</para>
     </section>
 
     <section>
