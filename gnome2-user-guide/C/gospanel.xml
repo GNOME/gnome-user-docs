@@ -461,7 +461,7 @@ popup menu.</para>
 way. For more information, see <xref linkend="gospanel-39"/>.</para>
     </section>
     <section id="panels-addobject">
-      <title>To Add an Object to a Panel</title>
+      <title>Adding an Object to a Panel</title>
       
       <!-- preserve for backwards compatibility: 2.12 -->
       <anchor id="gospanel-15"/>   
@@ -472,33 +472,31 @@ way. For more information, see <xref linkend="gospanel-39"/>.</para>
         <primary>panel objects</primary>
         <secondary>adding</secondary>
       </indexterm>
-      <para>You can add an object to a panel in several ways, as follows: </para>
-      <itemizedlist>
-        <listitem>
-          <para>From the panel popup menu</para>
-          <para>Right-click on a vacant space on a panel to open the panel popup menu.
-The panel popup menu contains an <guisubmenu>Add to Panel</guisubmenu> submenu.
-The <guisubmenu>Add to Panel</guisubmenu> submenu enables you to add the following
-objects to your panels: <itemizedlist><listitem><para>Applets in the following categories: <guilabel>Accessory</guilabel>, <guilabel>Amusement</guilabel>, <guilabel>Internet</guilabel>, <guilabel>Multimedia</guilabel>, <guilabel>Utility</guilabel>.</para></listitem><listitem><para>Buttons for quick access to common actions: <guibutton>Force
-Quit</guibutton> button, <guibutton>Lock</guibutton> button, <guibutton>Log
-Out</guibutton> button,  , <guibutton>Run</guibutton>
-button, <guibutton>Screenshot</guibutton> button, <guibutton>Search</guibutton>
-button, <guibutton>Show Desktop</guibutton> button.</para></listitem><listitem><para>Launchers</para></listitem><listitem><para>Launchers from menus</para></listitem><listitem><para><guimenu>Main Menu</guimenu></para></listitem><listitem><para><application>Menu Bar</application></para></listitem><listitem><para>Drawers</para></listitem></itemizedlist></para>
+      <para>To add an object to a panel, perform the following steps:</para>
+      <orderedlist>
+        <listitem><para>
+          Right-click on a vacant space on a panel to open the panel popup menu.
+        </para></listitem>
+        <listitem><para>
+          Choose <guisubmenu>Add to Panel</guisubmenu>.</para>
+          <para>The <guilabel>Add to Panel</guilabel> dialog opens.The available panel objects are listed alphabetically, with <link linkend="launchers">launchers</link> at the top.</para>
+          <tip><para>You can type a part of the name or description of an object in the <guilabel>find</guilabel> box. This will narrow the list to those objects that match what you type.</para>
+          <para>To restore the full list, delete the text in the <guilabel>find</guilabel> box.</para>
+          </tip>
         </listitem>
-        <listitem>
-          <para>From any menu</para>
-          <para>When you right-click on a launcher in any menu, a popup menu for the
-launcher opens. You can use this popup menu to add the launcher to a panel. </para>
-          <para>You can also drag menus, launchers, and applets from menus to panels. </para>
-        </listitem>
-        <listitem>
-          <para>From the file manager</para>
-          <para>Each launcher corresponds to a <filename>.desktop</filename> file. You
+        <listitem><para>
+          Either drag an object from the list to a panel, or select an object from the list and click <guibutton>Add</guibutton> to add it at the spot on the panel where you first right-clicked.
+        </para></listitem>
+      </orderedlist>
+      
+      
+      <para>You can add also add any item in the <guimenu>Applications</guimenu> menu to the panel: right-click the menu item and choose <guimenuitem>Add this launcher to panel</guimenuitem>.</para>
+
+      <para>Each launcher corresponds to a <filename>.desktop</filename> file. You
 can drag the <filename>.desktop</filename> file on to your panels to add the
 launcher to the panel. </para>
 <!--Each menu corresponds to a directory. You can drag the directory on to your panels to add the directory to the panel as a menu object. Is this still true?-->
-        </listitem>
-      </itemizedlist>
+
     </section>
     <section id="gospanel-9">
       <title>To Modify the Properties of an Object</title>
@@ -783,8 +781,10 @@ the applet.</para>
       </orderedlist>
     </section>
   </section>
-  <section id="gospanel-16">
+  <section id="launchers">
     <title>Launchers</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gospanel-16"/>      
     <indexterm>
       <primary>panel objects</primary>
       <secondary>launchers</secondary>
