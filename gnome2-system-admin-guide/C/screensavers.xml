@@ -12,13 +12,13 @@ are available for the screensaver.</para>
       <secondary>introduction</secondary>
     </indexterm>
     <indexterm>
-      <primary>XScreenSaver</primary>
+      <primary>gnome-screensaver</primary>
       <see>screensavers</see>
     </indexterm>
     <para>A <firstterm>screensaver</firstterm> is an application that
 replaces the image on a screen when the screen is not in use. The screensaver
-application for the GNOME Desktop is <application>XScreenSaver</application>.
-The following sections describe how to set preferences for the <application>XScreenSaver</application> application, and how to modify the displays that
+application for the GNOME Desktop is <application>gnome-screensaver</application>.
+The following sections describe how to set preferences for the <application>gnome-screensaver</application> application, and how to change the themes that
 are available for the screensaver.</para>
   </sect1>
   <sect1 id="screensavers-2">
@@ -27,58 +27,59 @@ are available for the screensaver.</para>
       <primary>screensavers</primary>
       <secondary>setting preferences</secondary>
     </indexterm>
-    <para>Default screensaver preferences are stored in a file that
-is called <filename>XScreenSaver</filename>. This file is stored in <filename>/usr/X11R6/lib/X11/app-defaults/XScreenSaver</filename>.</para>
-    <para>To modify screensaver application preferences, users can use the <application>Screensaver</application> preference tool. When a user modifies the screensaver
-preferences, the preferences are stored in the home directory of the user,
-in the <filename>$HOME/.xscreensaver</filename> file. For information on screensaver preferences, see <citetitle>GNOME 2.6 Desktop User Guide</citetitle>.</para>
-    <para>Users can
-also run the command <command>/usr/bin/xscreensaver-demo</command> to open
-the <guilabel>XScreenSaver</guilabel> dialog.</para>
-    <para>To set default screensaver preferences for all users, modify the <filename>XScreenSaver</filename> file. You can also use the <guilabel>XScreenSaver</guilabel> dialog to create a <filename>$HOME/.xscreensaver</filename> file,
-then copy the file to the location of the <filename>XScreenSaver</filename>
-file.</para>
-    <para>To restore the default settings for a user, delete the <filename>$HOME/.xscreensaver</filename> file from the home directory of the user. If no <filename>$HOME/.xscreensaver</filename> file is present, the default preferences in the <filename>XScreenSaver</filename> file are used. </para>
-    <note>
-      <para>The default display behavior of <application>XScreenSaver</application>
-is to display a blank screen. The blank screen might confuse users. You might
-want to change this default display behavior.</para>
-    </note>
-    <para>To activate changes to the screensaver preferences, use the following
-command to reload screensaver preferences:</para>
-    <para>
-      <computeroutput>#</computeroutput>
-      <userinput>xscreensaver-command -restart</userinput>
-    </para>
-    <note>
-      <para>The <application>xset</application> application does not work
-with <application>XScreenSaver</application> at the time of publication of
-this guide. To modify screensaver preferences, modify the <filename>XScreenSaver</filename> file or the <filename>$HOME/.xscreensaver</filename> file. </para>
-    </note>
+    <para>All screensaver preferences and settings are stored in <application>GConf</application>.</para>
+    <para>To modify screensaver application preferences, users can use the <application>Screensaver</application> preference tool.  For information on screensaver preferences, see <citetitle>GNOME Desktop User's Guide</citetitle>.</para>
+    <para>Users can also run the command <command>/usr/bin/gnome-screensaver-preferences</command> to open
+the <guilabel>Screensaver Preferences</guilabel> dialog.</para>
+    <para>To set default screensaver settings and policy for all users, modify the screensaver settings in the Default GConf Configuration Source.</para>
+    <para>To set mandatory screensaver settings and policy for all users, modify the screensaver settings in the Mandatory GConf Configuration Source.</para>
   </sect1>
   <sect1 id="screensavers-3">
-    <title>Modifying Screensaver Displays</title>
+    <title>Modifying Screensaver Themes</title>
     <indexterm>
       <primary>screensavers</primary>
-      <secondary>modifying screensaver
-displays</secondary>
+      <secondary>modifying screensaver themes</secondary>
     </indexterm>
     <para>The screensaver application allows users
-to choose one or more <firstterm>screensaver displays</firstterm>. A screensaver
-display is an application that displays images on the screen of the user when
-the screen is not in use. The screensaver displays are listed in the <filename>XScreenSaver</filename> file and in the <filename>$HOME/.xscreensaver</filename>
-file. </para>
-    <para>To add a new
-screensaver display, copy the executable file for the display to the directory
-where the displays are located. Add the command for the screensaver display
-to the <filename>XScreenSaver</filename> file or the <filename>$HOME/.xscreensaver</filename> file. Include any arguments that are required to run the screensaver
-display on the whole screen, rather than in a window. For example, you might
-want to include the <literal>-root</literal> option to display the screensaver
+to choose one or more <firstterm>screensaver themes</firstterm>. A screensaver
+theme is an application that displays images on the screen of the user when
+the screen is not in use. The available screensaver themes are listed in the <application>Screensaver</application> preference tool.</para>
+    <para>To add a new screensaver theme, copy the executable file for the <firstterm>screensaver theme engine</firstterm> to somewhere in your PATH or into the
+screensaver theme engine executable directory.  The screensaver theme engine executable directory for your system can be determined using the following command:
+<screen><userinput>pkg-config --variable=privlibexecdir gnome-screensaver</userinput></screen>
+
+Next, add a <filename>.desktop</filename> file for the theme into the screensaver themes directory.  The screensaver themes directory for your system
+can be determined using the following command:
+<screen><userinput>pkg-config --variable=themesdir gnome-screensaver</userinput></screen>
+
+In the Exec field of the <filename>.desktop</filename> file include any arguments that are required to run the screensaver
+theme on the whole screen, rather than in a window.  For example, some legacy screensaver theme engines may require you 
+to include the <literal>-root</literal> option to display the screensaver
 display on the whole screen.</para>
-    <para>To disable a screensaver display, add
-a minus sign (-) at the start of the command for the screensaver display in
-the preferences file. The following excerpt from a <filename>$HOME/.xscreensaver</filename> file shows a disabled <literal>Qix (solid)</literal> screensaver
-display:</para>
-    <literallayout>-		 &quot;Qix (solid)&quot; 	qix -root -solid -segments 100</literallayout>
+    <para>The <application>Screensaver</application> infrastructure implements themes according to the <ulink
+    url="http://www.freedesktop.org/wiki/Standards/menu-spec">XDG menu
+    specification</ulink>. By supporting this specification, GNOME allows you
+    to:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Customize the themes easily. You can edit a small number
+        of files to customize the available themes. You do not need to modify
+        your applications or move files.</para>
+      </listitem>
+
+      <listitem>
+        <para>Install themes easily. You do not need to provide
+        information about the system when you install
+        the themes.</para>
+      </listitem>
+
+      <listitem>
+        <para>Configure the system so that users cannot modify the themes.</para>
+      </listitem>
+    </itemizedlist>
+
+  <para>For more information, see <xref linkend="menustructure-0"/>.</para>
+
   </sect1>
 </chapter>
