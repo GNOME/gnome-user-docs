@@ -34,12 +34,24 @@ Desktop adds to the home directories of users. </para>
           <row>
             <entry valign="top">
               <para>
+                <filename>.config</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>This is the default location for the environment variable <envar>XDG_CONFIG_HOME</envar>, 
+if it is not set.  User defined menus can be created at <filename>menus/applications.menu</filename>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
                 <filename>.esd_auth</filename>
               </para>
             </entry>
             <entry valign="top">
               <para>Contains the authentication cookie for the GNOME
 sound daemon. The GNOME sound daemon is the Enlightened Sound Daemon (ESD).</para>
+<para><emphasis>NOTE: This is a file, not a directory.</emphasis></para>
             </entry>
           </row>
           <row>
@@ -84,35 +96,9 @@ daemon details:</para>
             </entry>
             <entry valign="top">
               <para>Contains user-specific application data that is
-not stored in the <application>GConf</application> repository. For example,
-this directory contains MIME type information and session information for
-the user. </para>
-            </entry>
-          </row>
-          <row>
-            <entry valign="top">
-              <para>
-                <filename>.gnome-desktop</filename>
-              </para>
-            </entry>
-            <entry valign="top">
-              <para>The <application>Nautilus</application> file manager
-contains a preference that enables users to use the file manager to manage
-the desktop. If this option is selected, this directory contains the objects
-that are on the desktop of the user. This directory contains the following:</para>
-              <itemizedlist>
-                <listitem>
-                  <para>Objects on the desktop, for example, the <guilabel>Home</guilabel>
-object, the <guilabel>Trash</guilabel> object, and other launchers. The objects
-appear in the directory as desktop entry files. For example, the <filename>starthere.desktop</filename> file contains a link to the <guilabel>Start Here</guilabel> location. </para>
-                </listitem>
-                <listitem>
-                  <para>Removable media volumes that are mounted.</para>
-                </listitem>
-              </itemizedlist>
-              <para>The file manager also contains a preference that enables
-users to use the home directory as the desktop directory, instead of <filename>.gnome-desktop</filename>. If a user selects this option, the contents of
-the home directory are displayed as desktop objects.</para>
+not stored in the <application>GConf</application> repository. </para>
+<para><emphasis>NOTE: this directory is deprecated and is only used by 
+GNOME 1.x applications.</emphasis></para>
             </entry>
           </row>
           <row>
@@ -136,8 +122,8 @@ this directory contains the following:</para>
                   <para>Desktop entry files for panel launchers.</para>
                 </listitem>
               </itemizedlist>
-              <para>This directory also contains user-specific menu data.
-If a user modifies menus, the details are stored here.</para>
+              <para>This directory may also contain sub-directories that store
+application specific data.</para>
             </entry>
           </row>
           <row>
@@ -149,6 +135,18 @@ If a user modifies menus, the details are stored here.</para>
             <entry valign="top">
               <para>Ignore this directory. This directory has no function
 at the time of publication of this guide.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <filename>.local/share</filename>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>This is the default location for the environment variable <envar>XDG_DATA_HOME</envar>, 
+if it is not set.  User defined desktop entries can be created in the subdirectory <filename>applications</filename>. 
+User defined mime types can be created in <filename>mime/packages/Overrides.xml</filename>.</para>
             </entry>
           </row>
           <row>
@@ -180,7 +178,7 @@ user. For example, this directory can contain the following: </para>
 adds.</para>
                 </listitem>
                 <listitem>
-                  <para><application>Nautilus</application> desktop  images.</para>
+                  <para><application>Nautilus</application> desktop images.</para>
                 </listitem>
               </itemizedlist>
             </entry>
@@ -207,17 +205,6 @@ from the <application>Theme</application> preference tool.</para>
               <para>Contains image thumbnails for the user. The image
 thumbnails are used in the file manager. The file manager contains a preference
 that the user can select to stop generation of thumbnail images.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" valign="top">
-              <para>
-                <filename>.xscreensaver</filename>
-              </para>
-            </entry>
-            <entry colname="colspec1" valign="top">
-              <para>Contains
-screensaver configuration data and screensaver preference data.</para>
             </entry>
           </row>
         </tbody>
