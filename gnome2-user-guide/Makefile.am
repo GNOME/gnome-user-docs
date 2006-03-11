@@ -14,7 +14,7 @@ DOC_INCLUDES =			\
 	gostools.xml		\
 	glossary.xml
 
-DOC_LINGUAS = es it nl ru
+DOC_LINGUAS = it nl ru
 
 install: install-doc-pdf
 install-doc-pdf:
