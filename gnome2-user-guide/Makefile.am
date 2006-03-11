@@ -15,3 +15,14 @@ DOC_INCLUDES =			\
 	glossary.xml
 
 DOC_LINGUAS = es it nl ru
+
+install: install-doc-pdf
+install-doc-pdf:
+	for lc in C $(DOC_LINGUAS); do \
+	  pdf="$$lc/$(DOC_MODULE).pdf"; \
+	  if [ -f "$$pdf" ]; then spdf="$$pdf"; else spdf="$(srcdir)/$$pdf"; fi; \
+	  if [ -f "$$spdf" ]; then \
+	    $(mkinstalldirs) "$(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$lc"; \
+	    $(INSTALL_DATA) "$$spdf" "$(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$pdf"; \
+	  fi; \
+	done

@@ -13,3 +13,14 @@ DOC_ENTITIES =			\
 	legal.xml
 
 DOC_LINGUAS = it
+
+install: install-doc-pdf
+install-doc-pdf:
+	for lc in C $(DOC_LINGUAS); do \
+	  pdf="$$lc/$(DOC_MODULE).pdf"; \
+	  if [ -f "$$pdf" ]; then spdf="$$pdf"; else spdf="$(srcdir)/$$pdf"; fi; \
+	  if [ -f "$$spdf" ]; then \
+	    $(mkinstalldirs) "$(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$lc"; \
+	    $(INSTALL_DATA) "$$spdf" "$(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$pdf"; \
+	  fi; \
+	done
