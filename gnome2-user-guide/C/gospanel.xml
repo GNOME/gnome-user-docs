@@ -416,6 +416,8 @@ If you have only one panel in the GNOME Desktop, you cannot delete that panel.</
       </note>
     </section>
   </section>
+  
+  <!-- =============================================== managing panel objects -->
   <section id="gospanel-8">
     <title>Panel Objects</title>
     <!-- Desktop Overview / Panels / To Manipulate Panel Objects -->
@@ -457,8 +459,36 @@ popup menu.</para>
           </listitem>
         </varlistentry>
       </variablelist>
-      <para>You interact with applet panel objects in a different
-way. For more information, see <xref linkend="gospanel-39"/>.</para>
+
+      <section id="gospanel-39">
+        <title>To Select an Applet</title>
+        <indexterm>
+          <primary>applets</primary>
+          <secondary>selecting</secondary>
+        </indexterm>
+        <para>Some restrictions apply on where you can click on an applet in order
+  to display the panel object popup menu, or to move the applet, as follows: </para>
+        <itemizedlist>
+          <listitem>
+            <para>Some applets have popup menus of applet-specific commands
+  that open when you right-click on particular parts of the applet. For example,
+  the <application>Window List</application> applet has a vertical handle on
+  the left side, and buttons that represent your windows on the right side.
+  To open the panel object popup menu for the <application>Window List</application>
+  applet, you must right-click on the handle. If you right-click on a button
+  on the right side, a popup menu for the button opens.</para>
+          </listitem>
+          <listitem>
+            <para>Some applets have areas that you cannot use to select the
+  applet. For example, the <application>Command Line</application> applet has
+  a field in which you enter commands. You cannot middle-click or right-click
+  on this field to select the applet. Instead, middle-click or right-click on
+  another part of the applet. </para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+
     </section>
     <section id="panels-addobject">
       <title>Adding an Object to a Panel</title>
@@ -468,6 +498,7 @@ way. For more information, see <xref linkend="gospanel-39"/>.</para>
 
       <!-- Desktop Overview / Panels / To Add Objects to Panels -->
       <anchor id="gosoverview-4"/>
+      <anchor id="gospanel-40"/><!-- To Add an Applet to a Panel -->
       <indexterm>
         <primary>panel objects</primary>
         <secondary>adding</secondary>
@@ -499,7 +530,9 @@ launcher to the panel. </para>
 
     </section>
     <section id="gospanel-9">
-      <title>To Modify the Properties of an Object</title>
+      <title>Modifying the Properties of an Object</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gospanel-41"/><!-- To Modify Preferences for an Applet -->
       <indexterm>
         <primary>panel objects</primary>
         <secondary>modifying properties</secondary>
@@ -541,7 +574,7 @@ close the <guilabel>Properties</guilabel> dialog.</para>
       </orderedlist>
     </section>
     <section id="gospanel-32">
-      <title>To Move a Panel Object</title>
+      <title>Moving a Panel Object</title>
       <indexterm>
         <primary>panel objects</primary>
         <secondary>moving</secondary>
@@ -627,7 +660,7 @@ further along the panel. </para>
       </informaltable>
     </section>
     <section id="gospanel-566">
-      <title>To Lock a Panel Object</title>
+      <title>Locking a Panel Object</title>
       <indexterm>
         <primary>panel objects</primary>
         <secondary>locking</secondary>
@@ -643,7 +676,7 @@ right-click on the object to open the panel object popup menu, then choose <guim
 choose <guimenuitem>Unlock</guimenuitem>. </para>
     </section>
     <section id="gospanel-33">
-      <title>To Remove a Panel Object</title>
+      <title>Removing a Panel Object</title>
       <indexterm>
         <primary>panel objects</primary>
         <secondary>removing</secondary>
@@ -653,6 +686,12 @@ to open the panel object popup menu, then choose <guimenuitem>Remove From
 Panel</guimenuitem>. </para>
     </section>
   </section>
+  
+  <!-- ============================================== big bag o' panel objects -->
+  <!-- <remark>won't work because of yelp topic clumping</remark>
+    <para>This section describes the different objects you can add to your panels.</para>
+    <para>For a list of the objects that are on the top and bottom panels by default, see <xref linkend="top-panel"/> and <xref linkend="bottom-panel"/>.</para>
+  -->
   <section id="gospanel-17">
     <title>Applets</title>
     <indexterm>
@@ -692,95 +731,8 @@ control the volume of the speaker on your system.</para>
         </textobject>
       </mediaobject>
     </screenshot>
-    <section id="gospanel-40">
-      <title>To Add an Applet to a Panel</title>
-      <indexterm>
-        <primary>applets</primary>
-        <secondary>adding to panel</secondary>
-      </indexterm>
-      <para>You can add an applet to a panel from the panel popup menu.
-Right-click on any vacant space on the panel to open the panel popup menu.
-Choose <guimenu>Add to Panel</guimenu>, then choose the applet that you want
-to add from one of the following submenus:</para>
-      <itemizedlist>
-        <listitem>
-          <para>
-            <guimenu>Accessories</guimenu>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <guimenu>Amusements</guimenu>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <guimenu>Internet</guimenu>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <guimenu>Multimedia</guimenu>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <guimenu>Utility</guimenu>
-          </para>
-        </listitem>
-      </itemizedlist>
-      <para>Alternatively, drag the applet from the submenu on to the panel. </para>
-    </section>
-    <section id="gospanel-39">
-      <title>To Select an Applet</title>
-      <indexterm>
-        <primary>applets</primary>
-        <secondary>selecting</secondary>
-      </indexterm>
-      <para>To modify the properties of an applet, you must first right-click on
-the applet to display the panel object popup menu. To move an applet, you
-must middle-click on the applet. </para>
-      <para>Some restrictions apply on where you can click on an applet in order
-to display the panel object popup menu, or to move the applet, as follows: </para>
-      <itemizedlist>
-        <listitem>
-          <para>Some applets have popup menus of applet-specific commands
-that open when you right-click on particular parts of the applet. For example,
-the <application>Window List</application> applet has a vertical handle on
-the left side, and buttons that represent your windows on the right side.
-To open the panel object popup menu for the <application>Window List</application>
-applet, you must right-click on the handle. If you right-click on a button
-on the right side, a popup menu for the button opens.</para>
-        </listitem>
-        <listitem>
-          <para>Some applets have areas that you cannot use to select the
-applet. For example, the <application>Command Line</application> applet has
-a field in which you enter commands. You cannot middle-click or right-click
-on this field to select the applet. Instead, middle-click or right-click on
-another part of the applet. </para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section id="gospanel-41">
-      <title>To Modify Preferences for an Applet</title>
-      <indexterm>
-        <primary>applets</primary>
-        <secondary>modifying preferences</secondary>
-      </indexterm>
-      <para>To modify the preferences for an applet perform the following
-steps: </para>
-      <orderedlist>
-        <listitem>
-          <para>Right-click on the applet, then choose <guimenuitem>Preferences</guimenuitem>. Use the <guilabel>Preferences</guilabel> dialog to modify
-the preferences as required. The preferences for applets vary depending on
-the applet.</para>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Close</guibutton> to close the <guilabel>Preferences</guilabel> dialog.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-  </section>
+  </section>  
+
   <section id="launchers">
     <title>Launchers</title>
     <!-- preserve id for backwards compatibility: 2.12 -->
@@ -1216,6 +1168,7 @@ the GNOME website in your default browser.</para>
       </section>
     </section>    
 
+  
   </section>
   <section id="gospanel-557">
     <title>Buttons</title>
@@ -1474,7 +1427,7 @@ With Menus</citetitle>.</para>
 on any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guisubmenu>Actions</guisubmenu><guimenuitem>Search</guimenuitem></menuchoice>. To open the <application>Search Tool</application>, click on
 the <guibutton>Search</guibutton> button. </para>
       <para>For more information on the <application>Search Tool</application>,
-see the <citetitle>Search Tool Manual</citetitle>.</para>
+see the <ulink type="help" url="ghelp:gnome-search-tool">Search Tool Manual</ulink>.</para>
     </section>
     <section id="gospanel-564">
       <title>Show Desktop 
@@ -1506,41 +1459,6 @@ button</primary>
       <para>To add a <guibutton>Show Desktop</guibutton> button to a panel, right-click on any vacant
 space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guisubmenu>Actions</guisubmenu><guimenuitem>Show Desktop</guimenuitem></menuchoice>. To minimize all windows and show the desktop,
 click on the <guibutton>Show Desktop</guibutton> button. </para>
-    </section>
-    <section id="panels-notification-area">
-      <title>Notification Area Applet</title>
-      <!-- preserve id for backwards compatibility: 2.12 -->
-      <anchor id="gospanel-567"/>         
-      <indexterm>
-        <primary>applets</primary>
-        <secondary>Notification Area</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>panel objects</primary>
-        <secondary>Notification
-Area applet</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>Notification Area applet</primary>
-      </indexterm>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="figures/notification_area_icon.png" format="PNG"/>
-          </imageobject>
-          <textobject>
-            <phrase>Notification Area icon.</phrase>
-          </textobject>
-        </mediaobject>
-      </screenshot>
-      <para>The <application>Notification Area</application> applet displays icons
-from various applications to indicate activity in the application. For example,
-when you use the <application>CD Player</application> application to play
-a CD, a CD icon is displayed in the <application>Notification Area</application>
-applet. The graphic above illustrates the CD icon in the <application>Notification
-Area</application> applet. </para>
-      <para>To add a <application>Notification Area</application> applet to a panel,
-right-click on any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guisubmenu>Utility</guisubmenu><guimenuitem>Notification Area</guimenuitem></menuchoice>.</para>
     </section>
   </section>
   <section id="panel-menus">
@@ -1581,21 +1499,7 @@ and tools that you can use in the GNOME Desktop. The <guimenu>Applications</guim
 a system menu to a panel, right-click on a launcher in the menu, then choose <menuchoice><guimenu>Entire menu</guimenu><guimenuitem>Add this as menu to panel</guimenuitem></menuchoice>. </para>
       </listitem>
     </itemizedlist>
-    <para>Menus that you add to your panels are represented by an icon with an
-arrow. The arrow indicates that the icon represents a menu or drawer. <xref linkend="gospanel-FIG-68"/> shows how menus typically appear on panels. </para>
-    <figure id="gospanel-FIG-68">
-      <title>Typical Menu Objects on a Panel</title>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="figures/typical_menu.png" format="PNG"/>
-          </imageobject>
-          <textobject>
-            <phrase>Typical menu objects on panel.</phrase>
-          </textobject>
-        </mediaobject>
-      </screenshot>
-    </figure>
+
   </section>
   <section id="gospanel-18">
     <title>Drawers</title>
@@ -1680,12 +1584,7 @@ objects to panels. For more information, see <xref linkend="panels-addobject"/>.
         <primary>drawers</primary>
         <secondary>modifying properties</secondary>
       </indexterm>
-      <para>To modify preferences for all panels and drawers, use the <application>Panel</application> preference tool. For example, you can select various options
-related to the appearance and behavior of objects on panels and drawers. You
-can also select options that relate to drawers only. For example, you can
-select an option to close your drawers when you click on a launcher in the
-drawer.</para>
-      <para>You can also modify other properties for each individual drawer. You
+      <para>You can modify properties for each individual drawer. You
 can change features for each drawer, such as the visual appearance of the
 drawer and whether the drawer has hide buttons.</para>
       <para>To modify properties for a drawer perform the following steps: </para>
@@ -1821,6 +1720,42 @@ applet. The following figure shows an example of the <application>Window Selecto
 all workspaces. The windows in all workspaces other than the current workspace,
 are listed under a separator line.</para>
     </section>  
+
+    <section id="panels-notification-area">
+      <title>Notification Area Applet</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gospanel-567"/>         
+      <indexterm>
+        <primary>applets</primary>
+        <secondary>Notification Area</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panel objects</primary>
+        <secondary>Notification
+Area applet</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Notification Area applet</primary>
+      </indexterm>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/notification_area_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Notification Area icon.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>The <application>Notification Area</application> applet displays icons
+from various applications to indicate activity in the application. For example,
+when you use the <application>CD Player</application> application to play
+a CD, a CD icon is displayed in the <application>Notification Area</application>
+applet. The graphic above illustrates the CD icon in the <application>Notification
+Area</application> applet. </para>
+      <para>To add a <application>Notification Area</application> applet to a panel,
+right-click on any vacant space on the panel. Choose <menuchoice><guimenu>Add to Panel</guimenu><guisubmenu>Utility</guisubmenu><guimenuitem>Notification Area</guimenuitem></menuchoice>.</para>
+    </section>
      
     <section id="goseditmainmenu-7">
       <title>Main Menu panel object</title>
@@ -1858,13 +1793,13 @@ are listed under a separator line.</para>
             <imagedata fileref="figures/menu_bar_applet.png" format="PNG"/>
           </imageobject>
           <textobject>
-            <phrase>Menu Bar applet. Menus: Applications, Actions.</phrase>
+            <phrase>Menu Bar applet. Menus: Applications, Places, Desktop.</phrase>
           </textobject>
         </mediaobject>
       </screenshot>
       <para>The <application>Menu Bar</application> provides access to the <guimenu>Applications</guimenu> and <guimenu>Actions</guimenu> menus. You can access
   almost all of the standard applications, commands, and configuration options
-  from the <application>Menu Bar</application>. </para>
+  from the <application>Menu Bar</application>. For more on using the Menu Bar, see <xref linkend="menubar"/>.</para>
       <section id="goseditmainmenu-66">
         <title>To Add a Menu Bar to a Panel</title>
         <indexterm>
