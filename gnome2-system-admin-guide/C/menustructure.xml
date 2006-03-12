@@ -87,11 +87,11 @@
         <ulink url="http://www.freedesktop.org/Standards/basedir-spec">XDG
         base directory specification</ulink>.</para>
       </footnote> is not set, then the default path
-    <filename>/etc/xdg/</filename> is used. This also implies that a user
+    <filename>/etc/xdg</filename> is used. This also implies that a user
     specific version may be located at
     <filename>$XDG_CONFIG_HOME/menus/applications.menu</filename>
     which is searched first. If <envar>$XDG_CONFIG_HOME</envar> is not set,
-    then the default path <filename>~/.config/</filename> is used. Directories
+    then the default path <filename>~/.config</filename> is used. Directories
     which appear first in <envar>$XDG_CONFIG_DIRS</envar> are given precedence
     when there are several <filename>applications.menu</filename> files. The
     first file found is used and subsequent files are ignored.</para>
@@ -103,16 +103,16 @@
     <orderedlist>
       <listitem>
         <para>Search each directory in <envar>$XDG_CONFIG_HOME</envar> in
-        order to find <filename>/menus/applications.menu</filename>. If
-        <envar>$XDG_CONFIG_HOME</envar> is not set, default to
-        <filename>~/.config/</filename></para>
+        order to find <filename>menus/applications.menu</filename>. If
+        <envar>$XDG_CONFIG_HOME</envar> is not set, it defaults to the
+        <filename>~/.config/</filename> directory.</para>
       </listitem>
 
       <listitem>
         <para>Search each directory in <envar>$XDG_CONFIG_DIRS</envar> in
-        order to find <filename>/menus/applications.menu</filename>. If
-        <filename>$XDG_CONFIG_DIRS</filename> is not set, default to
-        <filename>/etc/xdg/</filename></para>
+        order to find <filename>menus/applications.menu</filename>. If
+        <filename>$XDG_CONFIG_DIRS</filename> is not set, it defaults to the
+        <filename>/etc/xdg/</filename> directory.</para>
       </listitem>
 
       <listitem>
@@ -295,7 +295,7 @@
           </row>
 
           <row>
-            <entry colname="colspec2">&lt;Category&gt;</entry>
+            <entry colname="colspec2"><literal>&lt;Category&gt;</literal></entry>
 
             <entry colname="colspec3">A matching rule that selects a
             <emphasis>desktop entry</emphasis> when the Categories key matches
@@ -370,9 +370,9 @@
         url="http://www.freedesktop.org/Standards/basedir-spec">XDG base
         directory specification</ulink>.</para>
       </footnote> is not set, then the default path is
-    <filename>/usr/share/</filename> is used. This also implies that user
+    <filename>/usr/share</filename> is used. This also implies that user
     specific desktop entries may be located at
-    <filename>$XDG_DATA_HOME/applications/</filename> which is
+    <filename>$XDG_DATA_HOME/applications</filename> which is
     searched first. If <envar>$XDG_DATA_HOME</envar> is not set, then the
     default path <filename>~/.local/share</filename> is used. Desktop entries
     are collected from all directories in the <envar>$XDG_DATA_DIRS</envar>
@@ -421,18 +421,18 @@ Categories=GTK;GNOME;Application;Utility;</programlisting>
 
         <tbody>
           <row>
-            <entry valign="top"><para> <literal>Encoding</literal>
-            </para></entry>
+            <entry colname="colspec0" id="category-key" valign="top"><para>
+            <literal>Categories</literal> </para></entry>
 
-            <entry valign="top"><para>Specifies the encoding of the desktop
-            entry file. </para></entry>
-          </row>
-
-          <row>
-            <entry valign="top"><para> <literal>Name</literal> </para></entry>
-
-            <entry valign="top"><para>Specifies the name of the item. This
-            name is displayed on the item in the menu. </para></entry>
+            <entry colname="colspec1" valign="top"><para>Specifies the
+            keywords that describe the item. The keywords are separated with
+            semicolons (;). To see a list of the standard category keywords,
+            see the desktop menu specification at
+                <ulink url="http://www.freedesktop.org/Standards/menu-spec">
+            http://www.freedesktop.org/Standards/menu-spec</ulink>
+            </para><para><link linkend="menustructure-13">Menu
+            Definition Files</link> map desktop entries to menus by using
+            matching rules against the Categories key.</para></entry>
           </row>
 
           <row>
@@ -442,6 +442,14 @@ Categories=GTK;GNOME;Application;Utility;</programlisting>
             <entry valign="top"><para>Specifies a short description of the
             item. The comment is displayed as a tooltip when you point to the
             item in the menu. </para></entry>
+          </row>
+
+          <row>
+            <entry valign="top"><para> <literal>Encoding</literal>
+            </para></entry>
+
+            <entry valign="top"><para>Specifies the encoding of the desktop
+            entry file. </para></entry>
           </row>
 
           <row>
@@ -458,6 +466,26 @@ Categories=GTK;GNOME;Application;Utility;</programlisting>
             <entry colname="colspec1" valign="top"><para>Specifies the
             filename of an icon that represents the item. Does not specify the
             path to the filename, or the file extension. </para></entry>
+          </row>
+
+          <row>
+            <entry><literal>MimeType</literal></entry>
+
+            <entry>Specifies the MIME types that the application can handle.</entry>
+          </row>
+         
+          <row>
+            <entry valign="top"><para> <literal>Name</literal> </para></entry>
+
+            <entry valign="top"><para>Specifies the name of the item. This
+            name is displayed on the item in the menu. </para></entry>
+          </row>
+
+          <row>
+            <entry valign="top"><para> <literal>NoDisplay</literal> </para></entry>
+
+            <entry valign="top"><para>This options means <quote>This application 
+            exists, but don't display it in the menus</quote>.</para></entry>
           </row>
 
           <row>
@@ -501,26 +529,6 @@ Categories=GTK;GNOME;Application;Utility;</programlisting>
               </itemizedlist></entry>
           </row>
 
-          <row>
-            <entry colname="colspec0" id="category-key" valign="top"><para>
-            <literal>Categories</literal> </para></entry>
-
-            <entry colname="colspec1" valign="top"><para>Specifies the
-            keywords that describe the item. The keywords are separated with
-            semicolons (;). To see a list of the standard category keywords,
-            see the desktop menu specification at the following URL:
-            </para><literallayout>
-                <ulink url="http://www.freedesktop.org/Standards/menu-spec">http://www.freedesktop.org/Standards/menu-spec</ulink>
-              </literallayout><para><link linkend="menustructure-13">Menu
-            Definition Files</link> map desktop entries to menus by using
-            matching rules against the Categories key.</para></entry>
-          </row>
-
-          <row>
-            <entry><literal>MimeType</literal></entry>
-
-            <entry>Specifies the MIME types </entry>
-          </row>
         </tbody>
       </tgroup>
     </table>
@@ -559,14 +567,14 @@ Categories=GTK;GNOME;Application;Utility;</programlisting>
     details for the menu such as a name, a tooltip, and an icon. Directory
     entry files have a <filename>.directory</filename> file extension.</para>
 
-    <para>Directory entry files must reside at
-    <filename>$XDG_DATA_DIRS/desktop-directories/</filename>. If
+    <para>Directory entry files must reside in the
+    <filename>$XDG_DATA_DIRS/desktop-directories</filename> directory. If
     <envar>$XDG_DATA_DIRS</envar> is not set, then the default path is
-    <filename>/usr/share/</filename> is used. This also implies that user
+    <filename>/usr/share</filename> is used. This also implies that user
     specific directory entries may be located at
-    <filename>$XDG_DATA_HOME/desktop-directories/</filename>
+    <filename>$XDG_DATA_HOME/desktop-directories</filename>
     which is searched first. If <envar>$XDG_DATA_HOME</envar> is not set, then
-    the default path <filename>~/.local/share/</filename> is used. Directory
+    the default path <filename>~/.local/share</filename> is used. Directory
     entries are collected from all directories in the
     <envar>$XDG_DATA_DIRS</envar> environment variable. Directories which
     appear first in <envar>$XDG_DATA_DIRS</envar> are given precedence when
@@ -576,10 +584,16 @@ Categories=GTK;GNOME;Application;Utility;</programlisting>
     <para>The following is a sample directory entry file:</para>
 
     <programlisting>[Desktop Entry]
-Name=Accessories
-Comment=Accessories menu
-Icon=gnome-util.png
-Type=Directory</programlisting>
+[Desktop Entry]
+Name=Graphics
+Name[fr]=Graphisme
+...
+Comment=Graphics applications
+Comment[fr]=Applications graphiques
+...
+Icon=gnome-graphics
+Type=Directory
+Encoding=UTF-8</programlisting>
 
     <para><xref linkend="menustructure-TBL-15" /> describes the most important
     keys in directory entry files.</para>
@@ -671,7 +685,7 @@ Type=Directory</programlisting>
         <listitem>
           <para>Create a directory entry file for the item that you want to
           add. Place the directory entry file in the
-          <filename>$XDG_DATA_DIRS/desktop-directories/</filename>
+          <filename>$XDG_DATA_DIRS/desktop-directories</filename>
           directory. For more information on directory entry files, see <xref
           linkend="menustructure-14" />.</para>
         </listitem>
@@ -740,8 +754,8 @@ Type=Directory</programlisting>
         </listitem>
 
         <listitem>
-          <para>Place the desktop entry file in the folder
-          <filename>$XDG_DATA_DIRS/applications/</filename></para>
+          <para>Place the desktop entry file in the 
+          <filename>$XDG_DATA_DIRS/applications</filename> folder.</para>
         </listitem>
 
         <listitem>
@@ -809,9 +823,9 @@ Type=Directory</programlisting>
 
       <orderedlist>
         <listitem>
-          <para>Locate the desktop entry in
-          <filename>$XDG_DATA_DIRS/applications/</filename>
-          corresponding to the menu item.</para>
+          <para>Locate the desktop entry in the 
+          <filename>$XDG_DATA_DIRS/applications</filename>
+          directory that corresponds to the menu item.</para>
         </listitem>
 
         <listitem>
@@ -917,7 +931,7 @@ Type=Directory</programlisting>
     <para>To manually create a custom menu for a user, the
     <filename>$XDG_CONFIG_HOME/menus/applications.menu</filename>
     must exist. In the case that <envar>$XDG_CONFIG_HOME</envar> is not set,
-    the default <filename>~/.config/</filename> is used. Since this is the
+    the default <filename>~/.config</filename> directory is used. Since this is the
     first location that is searched for the
     <filename>applications.menu</filename> file, it takes precedence over all
     other menu files.</para>
@@ -952,8 +966,8 @@ Type=Directory</programlisting>
       be merged with the contents of the user's menu file. When you specify
       the attribute <literal>type="parent"</literal>, then the contents of the
       <literal>&lt;MergeFile&gt;</literal> element are ignored and the next
-      <filename>applications.menu</filename> file in
-      <filename>$XDG_CONFIG_DIRS/menus/</filename> is used for
+      <filename>applications.menu</filename> file in the
+      <filename>$XDG_CONFIG_DIRS/menus</filename> directory is used for
       merging.</para>
 
       <note>
@@ -974,8 +988,8 @@ Type=Directory</programlisting>
           <para>The children of the root <literal>&lt;Menu&gt;</literal>
           element in the merged menu file<footnote>
               <para>Merged menu file refers to the next
-              <filename>applications.menu</filename> in
-              <filename>$XDG_CONFIG_DIRS/menus/</filename></para>
+              <filename>applications.menu</filename> in the
+              <filename>$XDG_CONFIG_DIRS/menus</filename> directory.</para>
             </footnote> are substituted for the
           <literal>&lt;MergeFile&gt;</literal> element in the base menu
           file.</para>
