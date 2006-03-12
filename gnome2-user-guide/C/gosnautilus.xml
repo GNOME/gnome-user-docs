@@ -1674,8 +1674,10 @@ for files</secondary>
     </indexterm>
     <para>This section describes how to work with your
 files and folders.</para>
-    <sect2 id="gosnautilus-201">
+    <sect2 id="nautilus-dragndrop">
       <title>Drag-and-Drop in the File Manager</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gosnautilus-201"/>       
       <indexterm>
         <primary>file manager</primary>
         <secondary>drag-and-drop</secondary>
@@ -1949,33 +1951,31 @@ to execute the default action. For more information, see <xref linkend="gosnauti
 </sect3>
     </sect2>
     <sect2 id="gosnautilus-9">
-      <title>To Move a File or Folder</title>
+      <title>Moving a File or Folder</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>moving files and folders</secondary>
       </indexterm>
-      <para>The following sections describe the ways that
-you can move a file or folder.</para>
+      <para>You can move a file or folder by dragging it with the mouse, or with the cut and paste commands. The following sections describe these two methods.</para>
       <sect3 id="gosnautilus-537">
         <title>Drag to the New Location</title>
         <para>To drag a file or folder to a new location, perform the following steps:</para>
         <orderedlist>
           <listitem>
-            <para>Open two file manager windows. </para>
+            <para>Open two file manager windows:</para>
+            <itemizedlist>
+	            <listitem><para>The window containing the item you want to move.</para></listitem>
+	            <listitem><para>The window you want to move it to, or the window containing the folder you want to move it to.</para></listitem>
+            </itemizedlist>
           </listitem>
           <listitem>
-            <para>In one window, select the folder from which you want to move
-the file or folder. In the other window, select the folder to which you want
-to move the file or folder.</para>
-          </listitem>
-          <listitem>
-            <para>Drag the file or folder that you want to move to the new location
-in the other window.</para>
+            <para>Drag the file or folder that you want to move to the new location. If the new location is a window, drop it anywhere in the window. If the new location is a folder icon, drop the item you are dragging on the folder.</para>
           </listitem>
         </orderedlist>
         <para>To move the file or folder to a folder that is one level below the current
 location, do not open a new window. Instead, drag the file or folder to the
 new location in the same window.</para>
+        <tip><para>For more on dragging items, see <xref linkend="nautilus-dragndrop"/>.</para></tip>
       </sect3>
       <sect3 id="gosnautilus-538">
         <title>Cut and Paste to the New Location</title>
@@ -1994,33 +1994,32 @@ Files</guimenuitem></menuchoice>.</para>
       </sect3>
     </sect2>
     <sect2 id="gosnautilus-10">
-      <title>To Copy a File or Folder</title>
+      <title>Copying a File or Folder</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>copying files and folders</secondary>
       </indexterm>
-      <para>The following sections describe the ways that
-you can copy a file or folder.</para>
+      <para>You can copy a file or folder by dragging it with the mouse, or with the copy and paste commands. The following sections describe these two methods.</para>
       <sect3 id="gosnautilus-640">
         <title>Drag to the New Location</title>
         <para>To copy a file or folder, perform the following steps:</para>
         <orderedlist>
           <listitem>
-            <para>Open two file manager windows. </para>
+            <para>Open two file manager windows:</para>
+            <itemizedlist>
+	            <listitem><para>The window containing the item you want to move.</para></listitem>
+	            <listitem><para>The window you want to move it to, or the window containing the folder you want to move it to.</para></listitem>
+            </itemizedlist>
           </listitem>
           <listitem>
-            <para>In one window, select the folder from which you want to copy
-the file or folder. In the other window, select the folder to which you want
-to copy the file or folder.</para>
-          </listitem>
-          <listitem>
-            <para>Grab the file or folder, then press-and-hold <keycap>Ctrl</keycap>. Drag the file or folder to the new location in the other window.</para>
-          </listitem>
+            <para>Drag the file or folder that you want to move to the new location. Press-and-hold <keycap>Ctrl</keycap> either before or during the drag. If the new location is a window, drop it anywhere in the window. If the new location is a folder icon, drop the item you are dragging on the folder.</para>
+          </listitem>          
         </orderedlist>
         <para>To copy the file or folder to a folder that is one level below the current
 location, do not open a new window. Instead, grab the file or folder, then
 press-and-hold <keycap>Ctrl</keycap>. Drag the file or folder to the new location
 in the same window.</para>
+        <tip><para>For more on dragging items, see <xref linkend="nautilus-dragndrop"/>.</para></tip>
       </sect3>
       <sect3 id="gosnautilus-441">
         <title>Copy and Paste to the New Location</title>
@@ -2039,7 +2038,7 @@ Files</guimenuitem></menuchoice>.</para>
       </sect3>
     </sect2>
     <sect2 id="gosnautilus-82">
-      <title>To Duplicate a File or Folder</title>
+      <title>Duplicating a File or Folder</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>duplicating files and
@@ -2059,7 +2058,7 @@ or folder, then choose <guimenuitem>Duplicate</guimenuitem>.</para>
       </orderedlist>
     </sect2>
     <sect2 id="gosnautilus-11">
-      <title>To Create a Folder</title>
+      <title>Creating a Folder</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>creating folders</secondary>
@@ -2124,7 +2123,7 @@ want to create. </para>
       </sect3>
     </sect2>
     <sect2 id="gosnautilus-12">
-      <title>To Rename a File or Folder</title>
+      <title>Renaming a File or Folder</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>renaming folders</secondary>
@@ -2145,7 +2144,7 @@ or folder, then choose <guimenuitem>Rename</guimenuitem>.</para>
       </orderedlist>
     </sect2>
     <sect2 id="gosnautilus-13">
-      <title>To Move a File or Folder to Trash</title>
+      <title>Moving a File or Folder to Trash</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>Trash</secondary>
@@ -2175,7 +2174,7 @@ from the removable media, you must empty <guilabel>Trash</guilabel>.</para>
       </note>
     </sect2>
     <sect2 id="gosnautilus-443">
-      <title>To Delete a File or Folder</title>
+      <title>Deleting a File or Folder</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>deleting files or folders</secondary>
@@ -2198,7 +2197,7 @@ or folder, then choose <guimenuitem>Delete</guimenuitem>.</para>
       </orderedlist>
     </sect2>
     <sect2 id="nautilus-symlink">
-      <title>To Create a Symbolic Link to a File or Folder</title>
+      <title>Creating a Symbolic Link to a File or Folder</title>
       <!-- preserve id for backwards compatibility: 2.12 -->
       <anchor id="gosnautilus-14"/>        
       <indexterm>
@@ -2225,9 +2224,10 @@ to the location where you want to place the link.</para>
         <para>The permissions of a symbolic link are determined by the file
 or folder to which a symbolic link points.</para>
       </note>
+      <tip><para>For more on dragging items, see <xref linkend="nautilus-dragndrop"/>.</para></tip>      
     </sect2>
     <sect2 id="gosnautilus-476">
-      <title>To View the Properties of a File or Folder</title>
+      <title>Viewing the Properties of a File or Folder</title>
       <indexterm>
         <primary>file manager</primary>
         <secondary>viewing properties</secondary>
@@ -2336,7 +2336,7 @@ dialog.</para>
       </informaltable>
     </sect2>
     <sect2 id="nautilus-permissions">
-      <title>To Change Permissions</title>
+      <title>Changing Permissions</title>
       <!-- preserve id for backwards compatibility: 2.12 -->
       <anchor id="gosnautilus-430"/>
       <indexterm>
@@ -2826,7 +2826,7 @@ you no longer need.
         <para>To hide a file or folder in <application>Nautilus</application>, either rename the file so its name begins with the period (.) character, or create a text file named <filename>.hidden</filename> in the same folder, and add its name to it, as in the example below:</para>
         <programlisting>filename
 foldername</programlisting>
-        <para>You may need to refresh the relevant <application>Nautilus</application> window to see the change: hit <keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>.</para>
+        <para>You may need to refresh the relevant <application>Nautilus</application> window to see the change: press <keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>.</para>
       </sect3>
   </sect2>
   </sect1>
