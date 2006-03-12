@@ -318,6 +318,19 @@ If want to close all folders on the screen, choose <menuchoice><guimenu>File</gu
         </listitem>
       </orderedlist>
     </sect2>
+    <sect2 id="nautilus-open-location">
+      <title>Opening a Location</title>
+      <para>You can open a folder or other location in spatial mode by typing its name.</para>
+      <para>Choose <menuchoice>
+	<shortcut>
+		<keycombo><keysym>L</keysym></keycombo>
+	</shortcut>
+	<guimenu>File</guimenu>
+	<guimenuitem>Open Location</guimenuitem>
+</menuchoice>, and type the path or URI of the location you wish to open.
+</para>
+  
+    </sect2>
   </sect1>
 
   <!-- ====================================================== Browser mode -->
@@ -579,7 +592,7 @@ and hiding</secondary>
 <itemizedlist>
       <listitem>
                       <para><guilabel>Location field</guilabel></para>
-                      <para>By pressing <keycap>Ctrl+L</keycap> or <keycap>Leading Slash (/)</keycap> or <menuchoice><guimenu>Go</guimenu><guimenuitem>Location</guimenuitem></menuchoice> the <guilabel>Location :</guilabel> field will appear and allow you to type the location you wish to browse to manually. To make the location field disappear hit the <keycap>Esc</keycap> key. The location field is particularly useful for jumping to a known folder very quickly.</para>
+                      <para>By pressing <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> or <keycap>Leading Slash (/)</keycap> or choosing <menuchoice><guimenu>Go</guimenu><guimenuitem>Location</guimenuitem></menuchoice> the <guilabel>Location :</guilabel> field will appear and allow you to type the location you wish to browse to manually. To make the location field disappear hit the <keycap>Esc</keycap> key. The location field is particularly useful for jumping to a known folder very quickly.</para>
                     <figure id="gosnautilus-FIG-902">
                     <title>The location bar.</title>
                       <screenshot>
@@ -613,7 +626,7 @@ and hiding</secondary>
                     </listitem>
                     <listitem>
                       <para><guilabel>Search bar</guilabel></para>
-                      <para>By pressing <keycap>Ctrl+F</keycap> or selecting the <guibutton>Search</guibutton> toolbar button the search bar appears. For more information on searching see <xref linkend="nautilus-searching" />. The search bar is excellent for locating files of folders when you are not sure of their exact location.</para>
+                      <para>By pressing <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo> or selecting the <guibutton>Search</guibutton> toolbar button the search bar appears. For more information on searching see <xref linkend="nautilus-searching" />. The search bar is excellent for locating files of folders when you are not sure of their exact location.</para>
                     <figure id="gosnautilus-FIG-904">
                     <title>The button bar.</title>
                       <screenshot>
@@ -676,7 +689,7 @@ information, see <xref linkend="gosnautilus-27"/>.</para>
 </para>
         </listitem>
         <listitem>
-          <para>Press <keycap>Ctrl+L</keycap> to show the text <guilabel>Location</guilabel> field, type the path
+          <para>Press <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> to show the text <guilabel>Location</guilabel> field, type the path
 of the folder that you want to display, then press <keycap>Return</keycap>.
 The <guilabel>Location</guilabel> field includes an autocomplete feature.
 As you type a path, the file manager reads your file system. When you type
@@ -1585,7 +1598,7 @@ Select the default action with the option to the left of the list.</para>
       <primary>file manager</primary>
       <secondary>searching files</secondary>
     </indexterm>
-    <para>The <application>Nautilus</application> file manager includes an easy and simple to use way search for your files and folders. To begin a search press <keycap>Ctrl+F</keycap> or select the <guibutton>Search</guibutton> toolbar button. The search bar should appear as in <xref linkend="gosnautilus-FIG-925" /></para>
+    <para>The <application>Nautilus</application> file manager includes an easy and simple to use way search for your files and folders. To begin a search press <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo> or select the <guibutton>Search</guibutton> toolbar button. The search bar should appear as in <xref linkend="gosnautilus-FIG-925" /></para>
                     <figure id="gosnautilus-FIG-925">
                     <title>The search bar.</title>
                       <screenshot>
@@ -3216,10 +3229,7 @@ the <guibutton>Connect</guibutton> button. When the connection succeeds, the con
       <para>If your system is configured
 to access places on a network, you can use the file manager to access the
 network places. </para>
-      <para>To access network places, open the file manager and choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></menuchoice>.
-Alternatively, double-click on the <guilabel>Computer</guilabel> object on
-the Desktop, then double-click on the <guilabel>Network</guilabel> object. A file
-manager window is displayed. The window displays the network places that you
+      <para>To access network places, open the file manager and choose <menuchoice><guimenu>Places</guimenu><guimenuitem>Network Servers</guimenuitem></menuchoice>. A window opens that displays the network places that you
 can access. Double-click on the network that you want to access. </para>
       <para><indexterm><primary>NFS servers</primary><see>Unix network</see></indexterm>To
 access UNIX shares, double-click on the <guilabel>Unix Network (NFS) </guilabel>
@@ -3245,10 +3255,9 @@ locations</secondary>
         <primary>URI, special</primary>
         <see>special URI locations</see>
       </indexterm>
-      <para>The GNOME Desktop contains
-special URI locations that enable you to access particular functions from
-the file manager. For example, to access fonts, you can access
-the <command>fonts:///</command> URI in a file manager window. <xref linkend="gosnautilus-TBL-479"/> lists the special URI locations that you can
+      <para>Nautilus has certain special URI locations that enable you to access particular functions from the file manager. For example, to access fonts, you can access the <command>fonts:///</command> URI in a file manager window.</para>
+      <para>These are intended for advanced users: in most cases, an easier method of accessing the function or location exists.</para>
+      <para><xref linkend="gosnautilus-TBL-479"/> lists the special URI locations that you can
 use with the file manager.</para>
       <table frame="topbot" id="gosnautilus-TBL-479">
         <title>Special URI Locations</title>
@@ -3286,7 +3295,7 @@ can also use this location to add fonts to the GNOME Desktop.</para>
               </entry>
               <entry colname="colspec1" valign="top">
                 <para>This is a special location where you can copy files and folders that you want to write
-to a CD. From here you can write the contents of the location to a CD easily.</para>
+to a CD. From here you can write the contents of the location to a CD easily. See also <xref linkend="nautilus-cdwriter"/>.</para>
               </entry>
             </row>
             <row>
@@ -3299,7 +3308,7 @@ to a CD. From here you can write the contents of the location to a CD easily.</p
                 <para>Displays network locations to
 which you can connect, if your system is configured to access locations on
 a network. To access a network location, double-click on the network location.
-You can also use this URI to add network locations to your system.</para>
+You can also use this URI to add network locations to your system. See also <xref linkend="nautilus-accessnetwork"/>.</para>
               </entry>
             </row>
             <row>
@@ -3310,8 +3319,9 @@ You can also use this URI to add network locations to your system.</para>
               </entry>
               <entry colname="colspec1" valign="top">
                 <para>Displays all the themes that
-are available in the GNOME Desktop. To preview a theme, double-click on the
+are available in the GNOME Desktop. To apply a theme to the GNOME Desktop, double-click on the
 theme. You can also use this location to add themes to the GNOME Desktop.</para>
+                <para>Alternatively, set a theme with the <link linkend="prefs-theme"><application>Theme</application> preference tool</link>.</para>
               </entry>
             </row>
           </tbody>
