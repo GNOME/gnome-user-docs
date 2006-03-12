@@ -863,308 +863,186 @@ the item in the <guilabel>History</guilabel> list.</para>
     </sect2>
   </sect1>  
   
-  <!-- ====================================================== Appearance -->  
-  <sect1 id="gosnautilus-203">
-    <title>Modifying the Appearance of Files and Folders</title>
+	<!-- ======================================================== Opening -->
+  <sect1 id="nautilus-open-file">
+    <title>Opening Files</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosnautilus-28"/>       
     <indexterm>
       <primary>file manager</primary>
-      <secondary>modifying appearance
-of files and folders</secondary>
+      <secondary>opening files</secondary>
     </indexterm>
-    <para>The <application>Nautilus</application> file manager enables you to modify the appearance of your files and folders in several ways. You may customize the way files or folders look by attaching emblems or backgrounds to them. You can also change format in which <application>Nautilus</application> displays these items to you. The following sections describe how to do so.</para>
-    <sect2 id="gosnautilus-550">
-      <title>Icons and Emblems</title>
+    <para>When you open a file, the file manager performs the default
+action for that file type.</para>
+    <para>For example, opening a music file will play it with the default music playing application, opening a text file will allow you to read and edit it in a text editor, and opening an image file will display the image.</para>
+    <para>The file manager checks the contents of a file to determine the type
+of a file. If the first lines do not determine the type of the file, then
+the file manager checks the <glossterm>file extension</glossterm>.</para>
+    <note><para>If you open an executable text file, that is, one that Nautilus considers can be run as a program, then you will be asked what you want to do: run it, or display it in a text editor. You can modify this behaviour in the <link linkend="nautilus-preferences">File Management preferences</link>.</para></note>
+    <sect2 id="gosnautilus-29">
+      <title>Executing the Default Action</title>
       <indexterm>
         <primary>file manager</primary>
-        <secondary>icons</secondary>
-        <tertiary>introduction</tertiary>
+        <secondary>executing default actions
+for files</secondary>
       </indexterm>
+      <para>To execute the default action for a
+file, double-click on the file. For example, the default action for plain
+text documents is to display the file in a text viewer. In this case, you
+can double-click on the file to  display the file in a text viewer.</para>
+      <para>You can set your file manager preferences so that you click once on
+a file to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-30">
+      <title>Executing Non-Default Actions</title>
       <indexterm>
         <primary>file manager</primary>
-        <secondary>emblems</secondary>
-        <see>emblems</see>
+        <secondary>executing non-default
+actions for files</secondary>
       </indexterm>
-      <indexterm>
-        <primary>emblems</primary>
-        <secondary>introduction</secondary>
-      </indexterm>
-      <para>The file manager displays your files and folders as icons. Depending on the type of the file the icon may be a image representative of the file type, a small thumbnail or preview showing the files contents. You can also add emblems to your file and folder icons. Such emblems appear in addition to the file icon and provide another means to manage your files. For example you can mark a file as important by adding an <guilabel>Important</guilabel> emblem to it, creating the following visual effect: </para>
-<screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="figures/naut_emblem.png" format="PNG"/>
-          </imageobject>
-          <textobject>
-            <phrase>File icon with Important emblem.</phrase>
-          </textobject>
-        </mediaobject>
-      </screenshot>
-      
-      <para>Notice how the file on the left is distinguished from the file on the right by the addition of the <guilabel>Important (!)</guilabel> icon. See <xref linkend="gosnautilus-112"/> for more on adding emblems.</para>
-      <para>The file manager automatically applies emblems for the following types of files:</para>
-      <itemizedlist>
-        <listitem>
-          <para>Symbolic links</para>
-        </listitem>
-        <listitem>
-          <para>Items for which you have the following permissions:<indexterm><primary>permissions</primary><secondary>and emblems</secondary></indexterm></para>
-          <itemizedlist>
-            <listitem>
-              <para>No read permission</para>
-            </listitem>
-            <listitem>
-              <para>No write permission</para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-      </itemizedlist>
-      <para>The following table shows the default emblems:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="35.09*"/>
-          <colspec colname="colspec1" colwidth="64.91*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Default Emblem</para>
-              </entry>
-              <entry>
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>Symbolic link emblem.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para><indexterm><primary>symbolic links</primary><secondary>and emblems</secondary></indexterm>Symbolic
-link</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>No write permission emblem.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry valign="top">
-                <para>No write permission</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <screenshot>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
-                    </imageobject>
-                    <textobject>
-                      <phrase>No read permission emblem.</phrase>
-                    </textobject>
-                  </mediaobject>
-                </screenshot>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>No read permission</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
+      <para>To execute actions other than
+the default action for a file,  select the file that you want to perform
+an action on. In the <menuchoice><guimenu>File</guimenu></menuchoice> menu you will either have "Open with" choices, or an 
+<menuchoice><guimenuitem>Open With</guimenuitem></menuchoice> submenu. Select the desired option from this list.</para>
     </sect2>
-    <sect2 id="gosnautilus-112">
-      <title>Adding an Emblem to a File or Folder</title>
-      <indexterm>
-        <primary>emblems</primary>
-        <secondary>adding to file</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>emblems</primary>
-        <secondary>adding to folder</secondary>
-      </indexterm>
-      <para>To add an emblem to an item perform the following
-steps: </para>
-      <orderedlist>
-        <listitem>
-          <para>Select the item to which you want to add an emblem.</para>
-        </listitem>
-        <listitem>
-          <para>Right-click on the item, then choose <guimenuitem>Properties</guimenuitem>. A properties dialog is displayed.</para>
-        </listitem>
-        <listitem>
-          <para>Click on the <guilabel>Emblems</guilabel> tab to display the <guilabel>Emblems</guilabel> tabbed section.</para>
-        </listitem>
-        <listitem>
-          <para>Select the emblem to add to the item.</para>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Close</guibutton> to close the properties
-dialog.</para>
-        </listitem>
-      </orderedlist>
-      <para>In browser windows you may also add emblems to items by dragging them from the emblem side pane.</para>
-    </sect2>
-    <sect2 id="gosnautilus-471">
-      <title>Creating a New Emblem</title>
-      <indexterm>
-        <primary>emblems</primary>
-        <secondary>adding new</secondary>
-      </indexterm>
-      <para>To Create a new emblem, perform the following steps:</para>
-      <orderedlist>
-        <listitem>
-          <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. </para>
-        </listitem>
-        <listitem>
-          <para>Click on the <guibutton>Emblem</guibutton> button, then click
-on the <guibutton>Add a New Emblem</guibutton> button. A <guilabel>Create
-a New Emblem</guilabel> dialog is displayed.</para>
-        </listitem>
-        <listitem>
-          <para>Type a name for the emblem in the <guilabel>Keyword</guilabel>
-text box.</para>
-        </listitem>
-        <listitem>
-          <para>Click on the <guilabel>Image</guilabel> button. A dialog is
-displayed, click <guibutton>Browse</guibutton>. When you choose an emblem,
-click <guibutton>OK</guibutton>. </para>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>OK</guibutton> on the <guilabel>Create a
-New Emblem</guilabel> dialog.</para>
-        </listitem>
-      </orderedlist>
-    </sect2>
-    <sect2 id="gosnautilus-51">
-      <title>Changing the Icon for a File or Folder</title>
+    <sect2 id="gosnautilus-add-actions">
+      <title>Adding Actions</title>
+	    <!-- preserve id for backwards compatibility: 2.12 -->
+	    <anchor id="gosnautilus-204"/><!-- Assigning Actions to Files -->
       <indexterm>
         <primary>file manager</primary>
-        <secondary>icons</secondary>
-        <tertiary>changing</tertiary>
+        <secondary>adding actions</secondary>
       </indexterm>
-      <para>To change the icon that represents an
-individual file or folder, perform the following steps:</para>
+      <para>To add actions associated with a file type, perform the
+following steps:</para>
       <orderedlist>
         <listitem>
-          <para>Select the file or folder that you want to change.</para>
+         <para>In the view pane, select
+a file of the type to which you want to add an action.</para>
         </listitem>
         <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. A properties dialog is displayed. </para>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open with Other Application</guimenuitem></menuchoice>.</para>
         </listitem>
         <listitem>
-          <para>On the <guilabel>Basic</guilabel> tabbed section, click on
-the current <guibutton>Icon</guibutton>. A <guilabel>Select custom 
-icon</guilabel> dialog is displayed. </para>
-        </listitem>
-        <listitem>
-          <para>Use the <guilabel>Select custom icon</guilabel> dialog to choose
-the icon to represent the file or folder. </para>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Close</guibutton> to close the properties
-dialog.</para>
+        <para>Either choose an application in the open with dialog or browse to the program with 
+which you wish to open this type.</para>
         </listitem>
       </orderedlist>
-      <para>To restore an icon from a custom icon to the default icon,
-Select the file or folder that you want to change, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.
-click on the <guibutton>Icon</guibutton> button, in the <guilabel>Select custom 
-icon</guilabel> dialog click <guibutton>Revert</guibutton>.</para>
-    </sect2>
-    
-    <sect2 id="nautilus-backgrounds-and-emblems">
-      <title>Changing Backgrounds</title>
-    <!-- preserve id for backwards compatibility: 2.12 -->
-    <anchor id="gosnautilus-50"/>         
+       <para>The action you have chosen is now added to the list of actions for that particular file type. If there was 
+no prior action associated with the type, the newly added action is the default.</para>
+       <para>You may also add actions in the <guilabel>Open With</guilabel> tabbed section under <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
+   </sect2>
+    <sect2 id="gosnautilus-75">
+      <title>Modifying Actions</title>
       <indexterm>
         <primary>file manager</primary>
-        <secondary>changing backgrounds</secondary>
+        <secondary>modifying actions</secondary>
       </indexterm>
-      <indexterm>
-        <primary>backgrounds</primary>
-        <secondary>changing screen component</secondary>
-      </indexterm>
-      <para>The file manager includes
-backgrounds that you can use to change the look-and-feel of the following
-screen components: </para>
-      <itemizedlist>
-        <listitem>
-          <para>Desktop</para>
-        </listitem>
-        <listitem>
-          <para>Side pane and view pane of a file browser window</para>
-        </listitem>
-        <listitem>
-          <para>Spatial mode windows</para>
-        </listitem>
-        <listitem>
-          <para>Panels</para>
-        </listitem>
-      </itemizedlist>
-      <para>To change the background of a screen component perform the following
-steps: </para>
+      <para>To modify the actions associated with a file or file
+type, perform the following steps:</para>
       <orderedlist>
         <listitem>
-          <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. The <guilabel>Backgrounds
-and Emblems</guilabel> dialog is displayed. </para>
+         <para>In the view pane, select
+a file of the type to which you want to modify the action.</para>
         </listitem>
         <listitem>
-          <para>To display a list of patterns that you can use on the background,
-click on the <guibutton>Patterns</guibutton> button. To display a list of
-the colors that you can use on the background, click on the <guibutton>Colors</guibutton> button.</para>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
+        </listitem>
+       <listitem>
+          <para>Choose <guilabel>Open With</guilabel> tabbed section.</para>
         </listitem>
         <listitem>
-          <para>To change the background to a pattern, drag the pattern to
-the screen component. To change the background to a color, drag the color
-to the screen component. </para>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Close</guibutton> to close the dialog.</para>
+          <para>Use <guibutton>Add</guibutton> or <guibutton>Remove</guibutton> buttons to tailor the list of actions. 
+Select the default action with the option to the left of the list.</para>
         </listitem>
       </orderedlist>
-      <para>To reset the background of the view pane or side pane to the default
-background, right-click on the background of the pane, then choose <guimenuitem>Use Default Background</guimenuitem>.</para>
-      <sect3 id="gosnautilus-63">
-        <title>To Add a Pattern</title>
-        <indexterm>
-          <primary>backgrounds</primary>
-          <secondary>adding patterns</secondary>
-        </indexterm>
-        <para>To add a pattern to the patterns that you can use on your
-screen components, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. Click on the <guibutton>Patterns</guibutton> button, then click on the <guibutton>Add a New Pattern</guibutton> button. A dialog is displayed. Use the dialog to find the new
-pattern. Click <guibutton>OK</guibutton> to add the new pattern to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
-      </sect3>
-      <sect3 id="gosnautilus-64">
-        <title>To Add a Color</title>
-        <indexterm>
-          <primary>backgrounds</primary>
-          <secondary>adding colors</secondary>
-        </indexterm>
-        <para>To add a color to the colors that you can use on your screen
-components, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. Click on the <guibutton>Colors</guibutton> button, then click on the <guibutton>Add a New Color</guibutton>
-button. A color selector dialog is displayed. Use the color wheel or the sliders
-to choose the color. Click <guibutton>OK</guibutton> to add the new color
-to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
-      </sect3>
     </sect2>    
-    
+   
+	<!-- =========================================== Searching -->    
+  </sect1>
+  <sect1 id="nautilus-searching">
+    <title>Searching For Files</title>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>searching files</secondary>
+    </indexterm>
+    <para>The <application>Nautilus</application> file manager includes an easy and simple to use way search for your files and folders. To begin a search press <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo> or select the <guibutton>Search</guibutton> toolbar button. The search bar should appear as in <xref linkend="gosnautilus-FIG-925" /></para>
+                    <figure id="gosnautilus-FIG-925">
+                    <title>The search bar.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_search_bar.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>The search bar.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+<para>Enter characters present in the name or contents of the file or folder you wish to find and press <keycap>Enter</keycap>. The results of your search should appear in the view pane as illustrated in <xref linkend="gosnautilus-FIG-926" /></para>
+                    <figure id="gosnautilus-FIG-926">
+                    <title>The result of a search.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_search_results.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>The result of a search.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+<para>If you are not happy with your search you can refine it by adding addition conditions. This allows you to restrict the search to a specific file type or location. To add search conditions click the <guibutton>+</guibutton> icon. <xref linkend="gosnautilus-FIG-927" /> shows a search which has been restricted to the users home directory and to only search for text files.</para>
+                    <figure id="gosnautilus-FIG-927">
+                    <title>Restricting a search.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/naut_refine_search.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>Restricting a search.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+    <sect2 id="nautilus-saving-searches">
+      <title>Saving Searches</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>executing default actions
+for files</secondary>
+      </indexterm>
+      <para>Nautilus searches can also be saved for future use. Once saved, searches may be reopened later. <xref linkend="gosnautilus-FIG-935" /> shows a user with three saved searches, browsing one of them.</para>
+                    <figure id="gosnautilus-FIG-935">
+                    <title>Browsing the results of a saved search.</title>
+                      <screenshot>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="figures/nautilus_restore_saved_search.png" format="PNG"/>
+                          </imageobject>
+                          <textobject>
+                            <phrase>Browsing the results of a saved search.</phrase>
+                          </textobject>
+                        </mediaobject>
+                      </screenshot>
+                    </figure>
+<para>Saved searches behave exactly like regular folders, for example you can open, move or delete files from within a saved search.</para>
+    </sect2>
+  </sect1>
+
+	<!-- =========================================== Managing -->
+  <sect1 id="gosnautilus-8">
+    <title>Managing Your Files and Folders</title>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>managing files and folders</secondary>
+    </indexterm>
+    <para>This section describes how to work with your
+files and folders.</para>
+
     <sect2 id="gosnautilus-7">
       <title>Using Views to Display Your Files and Folders</title>
       <indexterm>
@@ -1498,186 +1376,128 @@ choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reset View
 to Defaults</guimenuitem></menuchoice>.</para>
     </sect3>
     </sect2>
-  </sect1>
-	<!-- ======================================================== Opening -->
-  <sect1 id="nautilus-open-file">
-    <title>Opening Files</title>
-    <!-- preserve id for backwards compatibility: 2.12 -->
-    <anchor id="gosnautilus-28"/>       
-    <indexterm>
-      <primary>file manager</primary>
-      <secondary>opening files</secondary>
-    </indexterm>
-    <para>When you open a file, the file manager performs the default
-action for that file type.</para>
-    <para>For example, opening a music file will play it with the default music playing application, opening a text file will allow you to read and edit it in a text editor, and opening an image file will display the image.</para>
-    <para>The file manager checks the contents of a file to determine the type
-of a file. If the first lines do not determine the type of the file, then
-the file manager checks the <glossterm>file extension</glossterm>.</para>
-    <note><para>If you open an executable text file, that is, one that Nautilus considers can be run as a program, then you will be asked what you want to do: run it, or display it in a text editor. You can modify this behaviour in the <link linkend="nautilus-preferences">File Management preferences</link>.</para></note>
-    <sect2 id="gosnautilus-29">
-      <title>Executing the Default Action</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>executing default actions
-for files</secondary>
-      </indexterm>
-      <para>To execute the default action for a
-file, double-click on the file. For example, the default action for plain
-text documents is to display the file in a text viewer. In this case, you
-can double-click on the file to  display the file in a text viewer.</para>
-      <para>You can set your file manager preferences so that you click once on
-a file to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
-    </sect2>
-    <sect2 id="gosnautilus-30">
-      <title>Executing Non-Default Actions</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>executing non-default
-actions for files</secondary>
-      </indexterm>
-      <para>To execute actions other than
-the default action for a file,  select the file that you want to perform
-an action on. In the <menuchoice><guimenu>File</guimenu></menuchoice> menu you will either have "Open with" choices, or an 
-<menuchoice><guimenuitem>Open With</guimenuitem></menuchoice> submenu. Select the desired option from this list.</para>
-    </sect2>
-    <sect2 id="gosnautilus-add-actions">
-      <title>Adding Actions</title>
-	    <!-- preserve id for backwards compatibility: 2.12 -->
-	    <anchor id="gosnautilus-204"/><!-- Assigning Actions to Files -->
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>adding actions</secondary>
-      </indexterm>
-      <para>To add actions associated with a file type, perform the
-following steps:</para>
-      <orderedlist>
-        <listitem>
-         <para>In the view pane, select
-a file of the type to which you want to add an action.</para>
-        </listitem>
-        <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open with Other Application</guimenuitem></menuchoice>.</para>
-        </listitem>
-        <listitem>
-        <para>Either choose an application in the open with dialog or browse to the program with 
-which you wish to open this type.</para>
-        </listitem>
-      </orderedlist>
-       <para>The action you have chosen is now added to the list of actions for that particular file type. If there was 
-no prior action associated with the type, the newly added action is the default.</para>
-       <para>You may also add actions in the <guilabel>Open With</guilabel> tabbed section under <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
-   </sect2>
-    <sect2 id="gosnautilus-75">
-      <title>Modifying Actions</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>modifying actions</secondary>
-      </indexterm>
-      <para>To modify the actions associated with a file or file
-type, perform the following steps:</para>
-      <orderedlist>
-        <listitem>
-         <para>In the view pane, select
-a file of the type to which you want to modify the action.</para>
-        </listitem>
-        <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para>
-        </listitem>
-       <listitem>
-          <para>Choose <guilabel>Open With</guilabel> tabbed section.</para>
-        </listitem>
-        <listitem>
-          <para>Use <guibutton>Add</guibutton> or <guibutton>Remove</guibutton> buttons to tailor the list of actions. 
-Select the default action with the option to the left of the list.</para>
-        </listitem>
-      </orderedlist>
-    </sect2>    
-    
-    
-  </sect1>
-  <sect1 id="nautilus-searching">
-    <title>Searching For Files</title>
-    <indexterm>
-      <primary>file manager</primary>
-      <secondary>searching files</secondary>
-    </indexterm>
-    <para>The <application>Nautilus</application> file manager includes an easy and simple to use way search for your files and folders. To begin a search press <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo> or select the <guibutton>Search</guibutton> toolbar button. The search bar should appear as in <xref linkend="gosnautilus-FIG-925" /></para>
-                    <figure id="gosnautilus-FIG-925">
-                    <title>The search bar.</title>
-                      <screenshot>
-                        <mediaobject>
-                          <imageobject>
-                            <imagedata fileref="figures/naut_search_bar.png" format="PNG"/>
-                          </imageobject>
-                          <textobject>
-                            <phrase>The search bar.</phrase>
-                          </textobject>
-                        </mediaobject>
-                      </screenshot>
-                    </figure>
-<para>Enter characters present in the name or contents of the file or folder you wish to find and press <keycap>Enter</keycap>. The results of your search should appear in the view pane as illustrated in <xref linkend="gosnautilus-FIG-926" /></para>
-                    <figure id="gosnautilus-FIG-926">
-                    <title>The result of a search.</title>
-                      <screenshot>
-                        <mediaobject>
-                          <imageobject>
-                            <imagedata fileref="figures/naut_search_results.png" format="PNG"/>
-                          </imageobject>
-                          <textobject>
-                            <phrase>The result of a search.</phrase>
-                          </textobject>
-                        </mediaobject>
-                      </screenshot>
-                    </figure>
-<para>If you are not happy with your search you can refine it by adding addition conditions. This allows you to restrict the search to a specific file type or location. To add search conditions click the <guibutton>+</guibutton> icon. <xref linkend="gosnautilus-FIG-927" /> shows a search which has been restricted to the users home directory and to only search for text files.</para>
-                    <figure id="gosnautilus-FIG-927">
-                    <title>Restricting a search.</title>
-                      <screenshot>
-                        <mediaobject>
-                          <imageobject>
-                            <imagedata fileref="figures/naut_refine_search.png" format="PNG"/>
-                          </imageobject>
-                          <textobject>
-                            <phrase>Restricting a search.</phrase>
-                          </textobject>
-                        </mediaobject>
-                      </screenshot>
-                    </figure>
-    <sect2 id="nautilus-saving-searches">
-      <title>Saving Searches</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>executing default actions
-for files</secondary>
-      </indexterm>
-      <para>Nautilus searches can also be saved for future use. Once saved, searches may be reopened later. <xref linkend="gosnautilus-FIG-935" /> shows a user with three saved searches, browsing one of them.</para>
-                    <figure id="gosnautilus-FIG-935">
-                    <title>Browsing the results of a saved search.</title>
-                      <screenshot>
-                        <mediaobject>
-                          <imageobject>
-                            <imagedata fileref="figures/nautilus_restore_saved_search.png" format="PNG"/>
-                          </imageobject>
-                          <textobject>
-                            <phrase>Browsing the results of a saved search.</phrase>
-                          </textobject>
-                        </mediaobject>
-                      </screenshot>
-                    </figure>
-<para>Saved searches behave exactly like regular folders, for example you can open, move or delete files from within a saved search.</para>
-    </sect2>
-  </sect1>
 
-	<!-- =========================================== Managing -->
-  <sect1 id="gosnautilus-8">
-    <title>Managing Your Files and Folders</title>
-    <indexterm>
-      <primary>file manager</primary>
-      <secondary>managing files and folders</secondary>
-    </indexterm>
-    <para>This section describes how to work with your
-files and folders.</para>
+    <sect2 id="nautilus-select">
+      <title>Selecting Files and Folders</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gosnautilus-202"/>         
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>selecting files and folders</secondary>
+      </indexterm>
+      <para>You can select files and folders in several
+ways in the file manager. Typically this is achieved by clicking on the files using the mouse, as explained in <xref linkend="gosnautilus-TBL-10"/>. In addition <xref linkend="nautilus-select-pattern"/> describes how to select a group of files matching a specific pattern.</para>
+      <table frame="topbot" id="gosnautilus-TBL-10">
+        <title>Selecting Items in the File Manager</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Task</para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Action</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Select an item</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Click on the item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Select a group of contiguous
+items</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>In icon view,
+drag around the files that you want to select.</para>
+                <para>In list view, click
+on the first item in the group. Press-and-hold <keycap>Shift</keycap>, then
+click on the last item in the group.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Select multiple items</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Press-and-hold <keycap>Ctrl</keycap>.
+Click on the items that you want to select.</para>
+                <para>Alternatively, press-and-hold <keycap>Ctrl</keycap>, then drag around the files that you want to select.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Select all items in a folder</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Select All Files</guimenuitem></menuchoice>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>To perform the default action on an item, double-click on the item.
+You can set your file manager preferences so that you click once on a file
+to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
+<sect3 id="nautilus-select-pattern">
+<title>Selecting Files Matching a Specific Pattern</title>
+<para><application>Nautilus</application> allows you to select all files matching a pattern based upon their filename and an optional number of wildcards. This can be useful if, for example, you wish to select all files which contain the phrase "memo" in their filename. <xref linkend="gosnautilus-TBL-select-pattern"/> gives some examples of possible patterns and the resulting files they would match.</para>
+<table frame="topbot" id="gosnautilus-TBL-select-pattern">
+        <title>Selecting Items in the File Manager</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Pattern</para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Files Matched</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>note.*</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>This pattern would match files called note, with any extension.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>*.ogg</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>This pattern would match all files with the .ogg extension</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>*memo*</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>This pattern would match all files or folders whose name contains the word memo.</para>
+              </entry>
+            </row>
+            </tbody>
+        </tgroup>
+      </table>
+      <para>To perform the Select Pattern command Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Select Patterns</guimenuitem></menuchoice> from the menu. After entering the desired pattern you are left with those files or folders which matched the pattern selected. You may then do with the selected files or folders what you choose.</para>
+      </sect3>
+    </sect2>
+
     <sect2 id="nautilus-dragndrop">
       <title>Drag-and-Drop in the File Manager</title>
       <!-- preserve id for backwards compatibility: 2.12 -->
@@ -1834,126 +1654,7 @@ A popup menu appears. Choose one of the following items from the popup menu:</pa
         </tgroup>
       </table>
     </sect2>
-    <sect2 id="nautilus-select">
-      <title>Selecting Files and Folders</title>
-      <!-- preserve id for backwards compatibility: 2.12 -->
-      <anchor id="gosnautilus-202"/>         
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>selecting files and folders</secondary>
-      </indexterm>
-      <para>You can select files and folders in several
-ways in the file manager. Typically this is achieved by clicking on the files using the mouse, as explained in <xref linkend="gosnautilus-TBL-10"/>. In addition <xref linkend="nautilus-select-pattern"/> describes how to select a group of files matching a specific pattern.</para>
-      <table frame="topbot" id="gosnautilus-TBL-10">
-        <title>Selecting Items in the File Manager</title>
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="36.36*"/>
-          <colspec colname="colspec2" colwidth="63.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Task</para>
-              </entry>
-              <entry colname="colspec2">
-                <para>Action</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Select an item</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Click on the item.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Select a group of contiguous
-items</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>In icon view,
-drag around the files that you want to select.</para>
-                <para>In list view, click
-on the first item in the group. Press-and-hold <keycap>Shift</keycap>, then
-click on the last item in the group.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Select multiple items</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Press-and-hold <keycap>Ctrl</keycap>.
-Click on the items that you want to select.</para>
-                <para>Alternatively, press-and-hold <keycap>Ctrl</keycap>, then drag around the files that you want to select.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>Select all items in a folder</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Select All Files</guimenuitem></menuchoice>.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-      <para>To perform the default action on an item, double-click on the item.
-You can set your file manager preferences so that you click once on a file
-to execute the default action. For more information, see <xref linkend="gosnautilus-56"/>.</para>
-<sect3 id="nautilus-select-pattern">
-<title>Selecting Files Matching a Specific Pattern</title>
-<para><application>Nautilus</application> allows you to select all files matching a pattern based upon their filename and an optional number of wildcards. This can be useful if, for example, you wish to select all files which contain the phrase "memo" in their filename. <xref linkend="gosnautilus-TBL-select-pattern"/> gives some examples of possible patterns and the resulting files they would match.</para>
-<table frame="topbot" id="gosnautilus-TBL-select-pattern">
-        <title>Selecting Items in the File Manager</title>
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="36.36*"/>
-          <colspec colname="colspec2" colwidth="63.64*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Pattern</para>
-              </entry>
-              <entry colname="colspec2">
-                <para>Files Matched</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>note.*</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>This pattern would match files called note, with any extension.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>*.ogg</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>This pattern would match all files with the .ogg extension</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>*memo*</para>
-              </entry>
-              <entry colname="colspec2" valign="top">
-                <para>This pattern would match all files or folders whose name contains the word memo.</para>
-              </entry>
-            </row>
-            </tbody>
-        </tgroup>
-      </table>
-<para>To perform the Select Pattern command Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Select Patterns</guimenuitem></menuchoice> from the menu. After entering the desired pattern you are left with those files or folders which matched the pattern selected. You may then do with the selected files or folders what you choose.</para>
-</sect3>
-    </sect2>
+
     <sect2 id="gosnautilus-9">
       <title>Moving a File or Folder</title>
       <indexterm>
@@ -2843,6 +2544,311 @@ foldername</programlisting>
       </sect3>
   </sect2>
   </sect1>
+  
+  <!-- ====================================================== Appearance -->  
+  <sect1 id="gosnautilus-203">
+    <title>Modifying the Appearance of Files and Folders</title>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>modifying appearance
+of files and folders</secondary>
+    </indexterm>
+    <para>The <application>Nautilus</application> file manager enables you to modify the appearance of your files and folders in several ways. You may customize the way files or folders look by attaching emblems or backgrounds to them. You can also change format in which <application>Nautilus</application> displays these items to you. The following sections describe how to do so.</para>
+    <sect2 id="gosnautilus-550">
+      <title>Icons and Emblems</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>icons</secondary>
+        <tertiary>introduction</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>emblems</secondary>
+        <see>emblems</see>
+      </indexterm>
+      <indexterm>
+        <primary>emblems</primary>
+        <secondary>introduction</secondary>
+      </indexterm>
+      <para>The file manager displays your files and folders as icons. Depending on the type of the file the icon may be a image representative of the file type, a small thumbnail or preview showing the files contents. You can also add emblems to your file and folder icons. Such emblems appear in addition to the file icon and provide another means to manage your files. For example you can mark a file as important by adding an <guilabel>Important</guilabel> emblem to it, creating the following visual effect: </para>
+<screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_emblem.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>File icon with Important emblem.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      
+      <para>Notice how the file on the left is distinguished from the file on the right by the addition of the <guilabel>Important (!)</guilabel> icon. See <xref linkend="gosnautilus-112"/> for more on adding emblems.</para>
+      <para>The file manager automatically applies emblems for the following types of files:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Symbolic links</para>
+        </listitem>
+        <listitem>
+          <para>Items for which you have the following permissions:<indexterm><primary>permissions</primary><secondary>and emblems</secondary></indexterm></para>
+          <itemizedlist>
+            <listitem>
+              <para>No read permission</para>
+            </listitem>
+            <listitem>
+              <para>No write permission</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+      <para>The following table shows the default emblems:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Default Emblem</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Symbolic link emblem.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>symbolic links</primary><secondary>and emblems</secondary></indexterm>Symbolic
+link</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>No write permission emblem.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>No write permission</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>No read permission emblem.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>No read permission</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosnautilus-112">
+      <title>Adding an Emblem to a File or Folder</title>
+      <indexterm>
+        <primary>emblems</primary>
+        <secondary>adding to file</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>emblems</primary>
+        <secondary>adding to folder</secondary>
+      </indexterm>
+      <para>To add an emblem to an item perform the following
+steps: </para>
+      <orderedlist>
+        <listitem>
+          <para>Select the item to which you want to add an emblem.</para>
+        </listitem>
+        <listitem>
+          <para>Right-click on the item, then choose <guimenuitem>Properties</guimenuitem>. A properties dialog is displayed.</para>
+        </listitem>
+        <listitem>
+          <para>Click on the <guilabel>Emblems</guilabel> tab to display the <guilabel>Emblems</guilabel> tabbed section.</para>
+        </listitem>
+        <listitem>
+          <para>Select the emblem to add to the item.</para>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>Close</guibutton> to close the properties
+dialog.</para>
+        </listitem>
+      </orderedlist>
+      <para>In browser windows you may also add emblems to items by dragging them from the emblem side pane.</para>
+    </sect2>
+    <sect2 id="gosnautilus-471">
+      <title>Creating a New Emblem</title>
+      <indexterm>
+        <primary>emblems</primary>
+        <secondary>adding new</secondary>
+      </indexterm>
+      <para>To Create a new emblem, perform the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Click on the <guibutton>Emblem</guibutton> button, then click
+on the <guibutton>Add a New Emblem</guibutton> button. A <guilabel>Create
+a New Emblem</guilabel> dialog is displayed.</para>
+        </listitem>
+        <listitem>
+          <para>Type a name for the emblem in the <guilabel>Keyword</guilabel>
+text box.</para>
+        </listitem>
+        <listitem>
+          <para>Click on the <guilabel>Image</guilabel> button. A dialog is
+displayed, click <guibutton>Browse</guibutton>. When you choose an emblem,
+click <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>OK</guibutton> on the <guilabel>Create a
+New Emblem</guilabel> dialog.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-51">
+      <title>Changing the Icon for a File or Folder</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>icons</secondary>
+        <tertiary>changing</tertiary>
+      </indexterm>
+      <para>To change the icon that represents an
+individual file or folder, perform the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>Select the file or folder that you want to change.</para>
+        </listitem>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. A properties dialog is displayed. </para>
+        </listitem>
+        <listitem>
+          <para>On the <guilabel>Basic</guilabel> tabbed section, click on
+the current <guibutton>Icon</guibutton>. A <guilabel>Select custom 
+icon</guilabel> dialog is displayed. </para>
+        </listitem>
+        <listitem>
+          <para>Use the <guilabel>Select custom icon</guilabel> dialog to choose
+the icon to represent the file or folder. </para>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>Close</guibutton> to close the properties
+dialog.</para>
+        </listitem>
+      </orderedlist>
+      <para>To restore an icon from a custom icon to the default icon,
+Select the file or folder that you want to change, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.
+click on the <guibutton>Icon</guibutton> button, in the <guilabel>Select custom 
+icon</guilabel> dialog click <guibutton>Revert</guibutton>.</para>
+    </sect2>
+    
+    <sect2 id="nautilus-backgrounds-and-emblems">
+      <title>Changing Backgrounds</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosnautilus-50"/>         
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>changing backgrounds</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>backgrounds</primary>
+        <secondary>changing screen component</secondary>
+      </indexterm>
+      <para>The file manager includes
+backgrounds that you can use to change the look-and-feel of the following
+screen components: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Desktop</para>
+        </listitem>
+        <listitem>
+          <para>Side pane and view pane of a file browser window</para>
+        </listitem>
+        <listitem>
+          <para>Spatial mode windows</para>
+        </listitem>
+        <listitem>
+          <para>Panels</para>
+        </listitem>
+      </itemizedlist>
+      <para>To change the background of a screen component perform the following
+steps: </para>
+      <orderedlist>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. The <guilabel>Backgrounds
+and Emblems</guilabel> dialog is displayed. </para>
+        </listitem>
+        <listitem>
+          <para>To display a list of patterns that you can use on the background,
+click on the <guibutton>Patterns</guibutton> button. To display a list of
+the colors that you can use on the background, click on the <guibutton>Colors</guibutton> button.</para>
+        </listitem>
+        <listitem>
+          <para>To change the background to a pattern, drag the pattern to
+the screen component. To change the background to a color, drag the color
+to the screen component. </para>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>Close</guibutton> to close the dialog.</para>
+        </listitem>
+      </orderedlist>
+      <para>To reset the background of the view pane or side pane to the default
+background, right-click on the background of the pane, then choose <guimenuitem>Use Default Background</guimenuitem>.</para>
+      <sect3 id="gosnautilus-63">
+        <title>To Add a Pattern</title>
+        <indexterm>
+          <primary>backgrounds</primary>
+          <secondary>adding patterns</secondary>
+        </indexterm>
+        <para>To add a pattern to the patterns that you can use on your
+screen components, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. Click on the <guibutton>Patterns</guibutton> button, then click on the <guibutton>Add a New Pattern</guibutton> button. A dialog is displayed. Use the dialog to find the new
+pattern. Click <guibutton>OK</guibutton> to add the new pattern to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
+      </sect3>
+      <sect3 id="gosnautilus-64">
+        <title>To Add a Color</title>
+        <indexterm>
+          <primary>backgrounds</primary>
+          <secondary>adding colors</secondary>
+        </indexterm>
+        <para>To add a color to the colors that you can use on your screen
+components, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Backgrounds and Emblems</guimenuitem></menuchoice>. Click on the <guibutton>Colors</guibutton> button, then click on the <guibutton>Add a New Color</guibutton>
+button. A color selector dialog is displayed. Use the color wheel or the sliders
+to choose the color. Click <guibutton>OK</guibutton> to add the new color
+to the <guilabel>Backgrounds and Emblems</guilabel> dialog.</para>
+      </sect3>
+    </sect2>    
+  </sect1>  
+  
+  <!-- ====================================================== Removable media -->    
   <sect1 id="gosnautilus-460">
     <title>Using Removable Media</title>
     <indexterm>
@@ -3118,8 +3124,10 @@ process is complete is displayed in the dialog.</para>
     <title>Navigating Remote Servers</title>
     <para>The <application>Nautilus</application> file manager provides an integrated
 access point to your files, applications, FTP sites, Windows shares, WebDav servers and SSH servers.</para>  
-    <sect2 id="gosnautilus-37">
+    <sect2 id="nautilus-server-connect">
       <title>To Access a remote server</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gosnautilus-37"/>      
       <!-- MOVE THIS ANCHOR -->
       <!-- To Add a Network Server -->
       <anchor id="gosnautilus-466"/>
