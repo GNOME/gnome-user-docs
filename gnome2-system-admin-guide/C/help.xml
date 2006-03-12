@@ -61,6 +61,9 @@ browser.</para>
         <para>A subject category to which the Help document belongs</para>
       </listitem>
     </itemizedlist>
+    <para>For more information on how to create OMF files, please see 
+    <ulink url="ghelp:writing_scrollkeeper_omf_files">Writing Scrollkeeper 
+OMF Files</ulink>.</para>
   </sect1>
   <sect1 id="help-2">
     <title>ScrollKeeper Cataloging System</title>
@@ -72,34 +75,40 @@ browser.</para>
       <primary>ScrollKeeper cataloging system</primary>
     </indexterm>
     <para><application>ScrollKeeper</application> is a cataloging
-system for documentation. The Help browser uses <application>ScrollKeeper</application> to catalog the manuals on the system. <application>ScrollKeeper</application> manages the information in the OMF files for the Help browser. </para>
-    <para><application>ScrollKeeper</application> uses the information in the
-OMF files to enable the Help browser to find Help documents on a system. When
-you install an application, the installation process installs an OMF file
-to a directory of OMF files. </para>
-    <para><application>ScrollKeeper</application> builds a table of contents for
-each Help document that has an associated OMF file. <application>ScrollKeeper</application> builds the table of contents from the XML file specified in
-the OMF file. The table of contents for the Help document is displayed in
-the left pane of the Help browser window, and enables users to navigate the
-Help document in the left pane. The title of the document in the OMF file
-is also displayed in the left pane of the Help browser window. </para>
+system for documentation.  Its primary function is to manage the information in 
+OMF files for the help browser.  When you install an application, the 
+OMF file is copied to the <filename>
+<replaceable>$prefix</replaceable>/share/omf/<replaceable>&lt;application-name&gt;</replaceable>
+</filename> directory.
+</para>
+
+    <para><application>ScrollKeeper</application> builds a table of contents from the
+collection of OMF files in the directories specified in 
+<filename><replaceable>$prefix</replaceable>/etc/scrollkeeper.conf</filename> file. 
+This file usually consists of a single line with the <varname>OMF_DIR</varname> 
+set to a comma separated list of directories to recursively search.</para>
+
+    <programlisting>OMF_DIR=/usr/share/omf:/usr/local/share/omf:/opt/gnome2/share/omf:/opt/kde/omf
+</programlisting>
+
     <para><application>ScrollKeeper</application> contains a hierarchy of subject
-categories to which a Help document can belong. The Help documents are organized
-into this hierarchy of subject categories in the left pane of the Help browser
-window. The subject category of the document in the OMF file determines the
-location of the document in the hierarchy. The hierarchy of subject categories
-is defined in the following file:</para>
-    <para>
-      <filename>/usr/share/scrollkeeper/Templates/C/scrollkeeper_cl.xml</filename>
-    </para>
-    <para>The subject category of a document must correspond to a subject category
-in the following file:</para>
-    <para>
-      <filename>/usr/share/scrollkeeper/Templates/C/scrollkeeper_cl.xml</filename>
-    </para>
+categories to which a help document can belong. The subject category of the document 
+in the OMF file determines the location of the document in the table of contents presented
+by the help browser.</para>
+
+    <para>The hierarchy of subject categories is defined in the file
+<filename>
+<replaceable>$prefix</replaceable>/scrollkeeper/Templates/<replaceable>&lt;lang&gt;</replaceable>/scrollkeeper_cl.xml</filename>. 
+The subject category of a document must correspond to a category specified in this file.</para>
+
+    <para>For more information on the <application>Scrollkeeper</application> system,
+visit the website at 
+<ulink url="http://scrollkeeper.sourceforge.net/">http://scrollkeeper.sourceforge.net/</ulink>.
+</para>
+
     <note>
-      <para>If the Help document XML file is moved to a new location, then
-you might need to update the location in the OMF file.</para>
+      <para>If the help document XML file is moved to a new location, then
+the location in the OMF file needs to be updated.</para>
     </note>
   </sect1>
 </chapter>

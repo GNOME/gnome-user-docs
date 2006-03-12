@@ -81,17 +81,13 @@ as HighContrastInverse. Use Atlanta with inverse controls options.</para>
       </note>
       <para><indexterm><primary>themes</primary><secondary>window frame options</secondary><tertiary>changing</tertiary></indexterm>To change the window
 frame theme option, run the following command: </para>
-      <para>
-        <computeroutput>#</computeroutput>
-        <userinput>gconftool-2 --type string
---set /apps/metacity/general/theme <replaceable>option-name</replaceable></userinput>
-      </para>
+      <screen><userinput>gconftool-2 \
+--type string \
+--set /apps/metacity/general/theme <replaceable>option-name</replaceable></userinput></screen>
       <para>For example, to use Atlanta, run the following command:</para>
-      <para>
-        <computeroutput>#</computeroutput>
-        <userinput>gconftool-2 --type string
---set /apps/metacity/general/theme Atlanta</userinput>
-      </para>
+      <screen><userinput>gconftool-2 \
+--type string \
+--set /apps/metacity/general/theme Atlanta</userinput></screen>
       <para>Alternatively, users can use the <application>Theme</application> preference
 tool to select the appropriate option.</para>
       <tip>
@@ -99,17 +95,10 @@ tool to select the appropriate option.</para>
 to measure the performance of a window frame option, and to preview the option.
 To start <application>Metacity Theme Viewer</application>, use the following
 command:</para>
-        <para>
-          <computeroutput>#</computeroutput>
-          <userinput>metacity-theme-viewer <replaceable>option-name</replaceable></userinput>
-        </para>
+        <screen><userinput>metacity-theme-viewer <replaceable>option-name</replaceable></userinput></screen>
         <para>For example, to measure the performance of Atlanta and preview Atlanta,
 run the following command: </para>
-        <para>
-          <computeroutput>#</computeroutput>
-          <userinput>metacity-theme-viewer
-Atlanta</userinput>
-        </para>
+        <screen><userinput>metacity-theme-viewer Atlanta</userinput></screen>
       </tip>
     </sect2>
     <sect2 id="performance-2">
@@ -128,11 +117,9 @@ Atlanta</userinput>
       </indexterm>
       <para>Some items in menus display an icon beside the
 item. To turn off this feature, run the following command: </para>
-      <para>
-        <computeroutput>#</computeroutput>
-        <userinput>gconftool-2 --type bool
---set /desktop/gnome/interface/menus_have_icons false</userinput>
-      </para>
+      <screen><userinput>gconftool-2 \
+--type bool \
+--set /desktop/gnome/interface/menus_have_icons false</userinput></screen>
       <para>Alternatively, users can use the <application>Menus &amp; Toolbars</application>
 preference tool to deselect the <guilabel>Show icons in menus</guilabel> option.</para>
     </sect2>
@@ -147,11 +134,9 @@ a splash screen is displayed. Icons are displayed on the splash screen while
 the user logs in. You can turn off the splash screen to reduce CPU usage during
 login. </para>
       <para><indexterm><primary>splash screen</primary><secondary>turning off</secondary></indexterm>To turn off the splash screen, run the following command:</para>
-      <para>
-        <computeroutput>#</computeroutput>
-        <userinput>gconftool-2 --type bool
---set /apps/gnome-session/options/show_splash_screen false</userinput>
-      </para>
+      <screen><userinput>gconftool-2 \
+--type bool \
+--set /apps/gnome-session/options/show_splash_screen false</userinput></screen>
       <para>Alternatively, users can use the <application>Sessions</application>
 preference tool to deselect the <guilabel>Show splash screen on login</guilabel>
 option.</para>
@@ -164,11 +149,9 @@ option.</para>
       </indexterm>
       <para>When users show or hide panels, the panels can show or hide
 in an animated style. To turn off panel animation, run the following command: </para>
-      <para>
-        <computeroutput>#</computeroutput>
-        <userinput>gconftool-2 --type bool
---set /apps/panel/global/enable_animations false</userinput>
-      </para>
+      <screen><userinput>gconftool-2 \
+--type bool \
+--set /apps/panel/global/enable_animations false</userinput></screen>
       <para>Alternatively, users can use the <application>Panel</application> preference
 tool to deselect the <guilabel>Drawer and panel animation</guilabel> option.</para>
     </sect2>
@@ -269,11 +252,9 @@ manager. For the fastest performance, set the value of the preferences to <liter
                   <para>Specifies when to preview the content of text files
 in the icon that represents the file. To never preview the content of text
 files, run the following command: </para>
-                  <para>
-                    <computeroutput>#</computeroutput>
-                    <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/</userinput>
-                    <userinput>show_icon_text never</userinput>
-                  </para>
+                  <screen><userinput>gconftool-2 \
+--type string \
+--set /apps/nautilus/preferences/show_icon_text never</userinput></screen>
                   <para>Alternatively, users can perform
 the following steps:</para>
                   <orderedlist>
@@ -296,11 +277,9 @@ preference.</para>
                 <entry valign="top">
                   <para>Specifies when to show the number of items in folders.
 To never show the number of items in folders, run the following command:</para>
-                  <para>
-                    <computeroutput>#</computeroutput>
-                    <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/</userinput>
-                    <userinput>show_directory_item_counts never</userinput>
-                  </para>
+                  <screen><userinput>gconftool-2 \
+--type string \
+--set /apps/nautilus/preferences/show_directory_item_counts never</userinput></screen>
                   <para>Alternatively, users can perform the following steps:</para>
                   <orderedlist>
                     <listitem>
@@ -322,11 +301,9 @@ preference.</para>
                 <entry valign="top">
                   <para>Specifies when to show thumbnails of image files.
 To never show thumbnails, run the following command:</para>
-                  <para>
-                    <computeroutput>#</computeroutput>
-                    <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/</userinput>
-                    <userinput>show_image_thumbnails never</userinput>
-                  </para>
+                  <screen><userinput>gconftool-2 \
+--type string \
+--set /apps/nautilus/preferences/show_image_thumbnails never</userinput></screen>
                   <para>Alternatively, users can perform the following steps:</para>
                   <orderedlist>
                     <listitem>
@@ -348,11 +325,9 @@ preference.</para>
                 <entry valign="top">
                   <para>Specifies when to preview the content of sound files.
 To never preview the content of sound files, run the following command:</para>
-                  <para>
-                    <computeroutput>#</computeroutput>
-                    <userinput>gconftool-2 --type string --set /apps/nautilus/preferences/preview_sound
-never </userinput>
-                  </para>
+                  <screen><userinput>gconftool-2 \
+--type string \
+--set /apps/nautilus/preferences/preview_sound never</userinput></screen>
                   <para>Alternatively, users can perform the following
 steps:</para>
                   <orderedlist>
@@ -380,28 +355,22 @@ preference.</para>
 you to turn off the side pane and the toolbar. To improve file manager performance,
 turn off the side pane and the toolbar.</para>
         <para>To turn off the side pane, run the following command: </para>
-        <para>
-          <computeroutput>#</computeroutput>
-          <userinput>gconftool-2 --type bool
---set /apps/nautilus/preferences/start_with_sidebar false</userinput>
-        </para>
+        <screen><userinput>gconftool-2 \
+--type bool \
+--set /apps/nautilus/preferences/start_with_sidebar false</userinput></screen>
         <para><indexterm><primary>file manager</primary><secondary>toolbar, turning
 off</secondary></indexterm>To turn off the toolbar, run the following command: </para>
-        <para>
-          <computeroutput>#</computeroutput>
-          <userinput>gconftool-2 --type bool
---set /apps/nautilus/preferences/start_with_toolbar false</userinput>
-        </para>
+        <screen><userinput>gconftool-2 \
+--type bool \
+--set /apps/nautilus/preferences/start_with_toolbar false</userinput></screen>
         <para>You can also turn off the location bar. Users can use the <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> keyboard shortcut to display a location bar
 when required.  </para>
         <para><indexterm><primary>file manager</primary><secondary>location bar, turning
 off</secondary></indexterm>To turn off the location bar, run the following
 command:</para>
-        <para>
-          <computeroutput>#</computeroutput>
-          <userinput>gconftool-2 --type bool
---set /apps/nautilus/preferences/start_with_location_bar false</userinput>
-        </para>
+        <screen><userinput>gconftool-2 \
+--type bool \
+--set /apps/nautilus/preferences/start_with_location_bar false</userinput></screen>
       </sect3>
       <sect3 id="performance-11">
         <title>To Turn Off the Desktop</title>
@@ -432,11 +401,9 @@ The desktop objects are not displayed on the desktop. </para>
           </listitem>
         </itemizedlist>
         <para>To disable the desktop, run the following command: </para>
-        <para>
-          <computeroutput>#</computeroutput>
-          <userinput>gconftool-2 --type bool
---set /apps/nautilus/preferences/show_desktop false</userinput>
-        </para>
+        <screen><userinput>gconftool-2 \
+--type bool \
+--set /apps/nautilus/preferences/show_desktop false</userinput></screen>
       </sect3>
     </sect2>
   </sect1>
@@ -590,21 +557,15 @@ for the GNOME Desktop and for applications.</para>
       <para>Use a solid color for the desktop background. Use of a solid
 color reduces the number of colors used by the GNOME Desktop. </para>
       <para>To set a solid color for the background, run the following commands: </para>
-      <para>
-        <computeroutput>#</computeroutput>
-        <userinput>gconftool-2 --type string
---set /desktop/gnome/background/picture_options none</userinput>
-      </para>
-      <para>
-        <computeroutput>#</computeroutput>
-        <userinput>gconftool-2 --type string
---set /desktop/gnome/background/color_shading_type solid</userinput>
-      </para>
-      <para>
-        <computeroutput>#</computeroutput>
-        <userinput>gconftool-2 --type string
---set /desktop/gnome/background/primary_color \#<replaceable>hexadecimal-color</replaceable></userinput>
-      </para>
+      <screen><userinput>gconftool-2 \
+--type string \
+--set /desktop/gnome/background/picture_options none</userinput></screen>
+      <screen><userinput>gconftool-2 \
+--type string \
+--set /desktop/gnome/background/color_shading_type solid</userinput></screen>
+      <screen><userinput>gconftool-2 \
+--type string \
+--set /desktop/gnome/background/primary_color #<replaceable>hexadecimal-color</replaceable></userinput></screen>
       <para>Alternatively, users can use the <application>Background</application>
 preference tool to choose a solid color for the background.</para>
     </sect2>
