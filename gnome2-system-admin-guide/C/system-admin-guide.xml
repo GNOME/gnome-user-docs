@@ -4,20 +4,6 @@
   <!ENTITY gnomeversion "2.14">
   <!ENTITY manrevision "2.4">
   <!ENTITY date "March 2004">
-  <!ENTITY LEGAL SYSTEM             "legal.xml">
-  <!ENTITY gconf SYSTEM             "gconf.xml">
-  <!ENTITY menustructure SYSTEM     "menustructure.xml">
-  <!ENTITY themes SYSTEM            "themes.xml">
-  <!ENTITY fontconfig SYSTEM        "fontconfig.xml">
-  <!ENTITY mimetypes SYSTEM         "mimetypes.xml">
-  <!ENTITY screensavers SYSTEM      "screensavers.xml">
-  <!ENTITY sessions SYSTEM          "sessions.xml">
-  <!ENTITY help SYSTEM              "help.xml">
-  <!ENTITY performance SYSTEM       "performance.xml">
-  <!ENTITY lockdown SYSTEM          "lockdown.xml">
-  <!ENTITY appendixa SYSTEM         "appendixa.xml">
-  <!ENTITY appendixb SYSTEM         "appendixb.xml">
-  <!ENTITY gloss SYSTEM             "glossary.xml">
 ]>
 <book id="index"> 
   <title>GNOME &gnomeversion; Desktop System Administration Guide</title> 
@@ -51,7 +37,9 @@
 -->
 	 <publisher role="maintainer"> 
 		<publishername> GNOME Documentation Project </publishername> 
-	 </publisher> &LEGAL; 
+	 </publisher>
+
+         <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
 	 <authorgroup> 
 		<author>
@@ -121,19 +109,20 @@
 	  type="help">GNOME Feedback Page</ulink>. </para>
 	 </legalnotice> 
   </bookinfo>
-&gconf;
-&menustructure;
-&themes;
-&fontconfig;
-&mimetypes;
-&screensavers;
-&sessions;
-&help;
-&performance;
-&lockdown;
-&appendixa;
-&appendixb;
-&gloss;
+
+  <include href="gconf.xml"         xmlns="http://www.w3.org/2001/XInclude" />       <!-- GConf -->
+  <include href="menustructure.xml" xmlns="http://www.w3.org/2001/XInclude" />       <!-- Menus -->
+  <include href="themes.xml"        xmlns="http://www.w3.org/2001/XInclude" />       <!-- Themes -->
+  <include href="fontconfig.xml"    xmlns="http://www.w3.org/2001/XInclude" />       <!-- Fonts -->
+  <include href="mimetypes.xml"     xmlns="http://www.w3.org/2001/XInclude" />       <!-- MIME types -->
+  <include href="screensavers.xml"  xmlns="http://www.w3.org/2001/XInclude" />       <!-- Screensavers -->
+  <include href="sessions.xml"      xmlns="http://www.w3.org/2001/XInclude" />       <!-- Sessions -->
+  <include href="help.xml"          xmlns="http://www.w3.org/2001/XInclude" />       <!-- Help -->
+  <include href="performance.xml"   xmlns="http://www.w3.org/2001/XInclude" />       <!-- Performance -->
+  <include href="lockdown.xml"      xmlns="http://www.w3.org/2001/XInclude" />       <!-- Lockdown -->
+  <include href="appendixa.xml"     xmlns="http://www.w3.org/2001/XInclude" />       <!-- Appendix A: Hidden Directories -->
+  <include href="appendixb.xml"     xmlns="http://www.w3.org/2001/XInclude" />       <!-- Appendix B: Security note -->
+  <include href="glossary.xml"      xmlns="http://www.w3.org/2001/XInclude" />       <!-- Glossary -->
 
 <!-- If generating PDFs and if you want an index, then uncomment <index/> -->
 <!-- <index/> -->
