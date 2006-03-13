@@ -14,7 +14,7 @@ DOC_ENTITIES =			\
 
 DOC_LINGUAS = it
 
-install: install-doc-pdf
+install-data-local: install-doc-pdf
 install-doc-pdf:
 	for lc in C $(DOC_LINGUAS); do \
 	  pdf="$$lc/$(DOC_MODULE).pdf"; \
