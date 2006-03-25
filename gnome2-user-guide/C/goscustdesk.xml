@@ -1078,8 +1078,10 @@ after a keypress before the pointer moves. </para>
 see the <ulink type="help" url="ghelp:gnome-access-guide?index"><citetitle>GNOME Desktop Accessibility Guide</citetitle></ulink>.</para>
     </sect2>
   </sect1>
-  <sect1 id="goscustperiph-2">
+  <sect1 id="prefs-keyboard">
     <title>Keyboard Preferences</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="goscustperiph-2"/>       
     <indexterm>
       <primary>preference tools</primary>
       <secondary>Keyboard</secondary>
@@ -1091,6 +1093,9 @@ general preferences</secondary>
     </indexterm>
     <para>Use the <application>Keyboard</application> preference tool to modify the autorepeat preferences for
 your keyboard, and to configure typing break settings. </para>
+    <!--
+    adds no information until each tab can be briefly summarized.
+    
     <para>You can set the preferences for the <application>Keyboard</application>
 preference tool in the following functional areas:</para>
     <itemizedlist>
@@ -1115,6 +1120,8 @@ preference tool in the following functional areas:</para>
         </para>
       </listitem>
     </itemizedlist>
+    -->
+    <para>To open the <link linkend="prefs-keyboard-a11y"><application>Keyboard <emphasis>Accessibility</emphasis></application> preference tool</link>, click the <guibutton>Accessibility</guibutton> button.</para>    
     <sect2 id="goscustdesk-40">
       <title>Keyboard Preferences</title>
       <para>Use the <guilabel>Keyboard</guilabel> tabbed section to set general
@@ -1212,6 +1219,43 @@ test area to test the effect of your settings.</para>
         </tgroup>
       </table>
     </sect2>
+    <sect2 id="goscustdesk-100">
+      <title>Keyboard Layouts Preferences</title>
+      <para>Use the <guilabel>Layouts</guilabel> tabbed section to set the your keyboard's language, and also the make and model of keyboard you are using.</para>
+      <para>This will allow GNOME to make use of special media keys on your keyboard, and to show the correct characters for your keyboard's language.</para>
+      
+      <variablelist>
+	      <varlistentry>
+	        <term>Keyboard model</term>
+	        <listitem><para>Use the browse button (labelled with an ellipsis, <guibutton>...</guibutton>) to choose another keyboard make and model.</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term>Selected Layouts</term>
+	        <listitem><para>You can switch between selected layouts to change the characters your keyboard produces when you type. To add a layout, click <guibutton>Add</guibutton>. To remove a layout, select it and press <guibutton>Remove</guibutton>.</para>
+	        <para>To switch between keyboard layouts, use the <ulink type="help" url="ghelp:gswitchit"><application>Keyboard Indicator</application> panel applet</ulink>. <!-- better link to the specific page, but not yet suitable for a direct link: ghelp:gswitchit?gswitchit-applet-switching --></para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term>Separate group for each window</term>
+	        <listitem><para>
+	        When this option is selected, each window has its own keyboard layout. Changing to a different layout will only affect the current window.</para>
+	        <para>This allows you to to type with a Russian keyboard layout in a word processor, then switch to your web browser and type with an English keyboard layout, for example. </para></listitem>
+        </varlistentry>
+      </variablelist>
+      
+      <para>Click <guibutton>Reset to Defaults</guibutton> to restore all keyboard layout settings to their initial state for your system and locale.</para>
+    </sect2>
+    
+    
+    <sect2 id="goscustdesk-101">
+      <title>Keyboard Layout Options</title>
+      <para>Use the <guilabel>Layout Options</guilabel> tabbed section to set options for the behaviour of keyboard modifier keys, and certain shortcut options.</para>
+      <para>A label in boldface indicates that group of options has been changed from the default.</para>
+      <!-- the options of mystery!!! 
+      Compose: if you first press compose, then two other keys, it combines those, for example: compose, o, / =>  ø
+      Group Shift/Lock: change keyboard layout
+      -->     
+    </sect2>
+
     <sect2 id="goscustdesk-86">
       <title>Typing Break Preferences</title>
       <para>Use the <guilabel>Typing Break</guilabel> tabbed section to set typing
@@ -1282,27 +1326,9 @@ typing breaks.</para>
           </tbody>
         </tgroup>
       </table>
-    </sect2>
-    <sect2 id="goscustdesk-100">
-      <title>Keyboard Layout Preferences</title>
-      <para>Use the <guilabel>Layouts</guilabel> tabbed section to set your keyboard
-layout. Select your keyboard model from the drop-down list. Use the navigational
-buttons to add or remove a selected layout from the list of available layouts. </para>
-      <para>You can choose different layouts to suit different locales. For more
-information on keyboard layouts, see the <citetitle>Keyboard Layout Switcher</citetitle> manual.</para>
-      <para>To start the <application>Keyboard</application> <emphasis>accessibility</emphasis> preference tool, that is, <application>AccessX</application>,
-click on the <guibutton>Accessibility</guibutton> button.</para>
-    </sect2>
-    <sect2 id="goscustdesk-101">
-      <title>Keyboard Layout Options</title>
-      <para>Use the <guilabel>Layout Options</guilabel> tabbed section to set your
-keyboard layout options. Select an option from the list of available layout
-options and click <guibutton>Add</guibutton> to select an option. Use <guibutton>Remove</guibutton> to remove a selected option. </para>
-      <para>For more information on the layout options, see the <citetitle>Keyboard
-Layout Switcher</citetitle> manual.</para>
-      <para>To start the <application>Keyboard</application> <emphasis>accessibility</emphasis> preference tool, that is, <application>AccessX</application>,
-click on the <guibutton>Accessibility</guibutton> button.</para>
-    </sect2>
+    </sect2>    
+    
+    
   </sect1>
   <sect1 id="prefs-keyboard-shortcuts">
     <title>Keyboard Shortcuts Preferences</title>
