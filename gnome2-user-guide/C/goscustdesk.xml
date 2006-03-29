@@ -1221,21 +1221,22 @@ test area to test the effect of your settings.</para>
     </sect2>
     <sect2 id="goscustdesk-100">
       <title>Keyboard Layouts Preferences</title>
-      <para>Use the <guilabel>Layouts</guilabel> tabbed section to set the your keyboard's language, and also the make and model of keyboard you are using.</para>
+      <para>Use the <guilabel>Layouts</guilabel> tabbed section to set your keyboard's language, and also the make and model of keyboard you are using.</para>
       <para>This will allow GNOME to make use of special media keys on your keyboard, and to show the correct characters for your keyboard's language.</para>
       
       <variablelist>
 	      <varlistentry>
-	        <term>Keyboard model</term>
+	        <term><guilabel>Keyboard model</guilabel></term>
 	        <listitem><para>Use the browse button (labelled with an ellipsis, <guibutton>...</guibutton>) to choose another keyboard make and model.</para></listitem>
 	      </varlistentry>
 	      <varlistentry>
-	        <term>Selected Layouts</term>
-	        <listitem><para>You can switch between selected layouts to change the characters your keyboard produces when you type. To add a layout, click <guibutton>Add</guibutton>. To remove a layout, select it and press <guibutton>Remove</guibutton>.</para>
-	        <para>To switch between keyboard layouts, use the <ulink type="help" url="ghelp:gswitchit"><application>Keyboard Indicator</application> panel applet</ulink>. <!-- better link to the specific page, but not yet suitable for a direct link: ghelp:gswitchit?gswitchit-applet-switching --></para></listitem>
+	        <term><guilabel>Selected Layouts</guilabel></term>
+	        <listitem><para>You can switch between selected layouts to change the characters your keyboard produces when you type. To add a layout, click <guibutton>Add</guibutton>. You can have up to four layouts. To remove a layout, select it and press <guibutton>Remove</guibutton>.</para>
+	        <para>To switch between keyboard layouts, use the <ulink type="help" url="ghelp:gswitchit"><application>Keyboard Indicator</application> panel applet</ulink>. <!-- better link to the specific page, but not yet suitable for a direct link: ghelp:gswitchit?gswitchit-applet-switching --></para>
+	        </listitem>
 	      </varlistentry>
 	      <varlistentry>
-	        <term>Separate group for each window</term>
+	        <term><guilabel>Separate group for each window</guilabel></term>
 	        <listitem><para>
 	        When this option is selected, each window has its own keyboard layout. Changing to a different layout will only affect the current window.</para>
 	        <para>This allows you to to type with a Russian keyboard layout in a word processor, then switch to your web browser and type with an English keyboard layout, for example. </para></listitem>
@@ -1246,14 +1247,90 @@ test area to test the effect of your settings.</para>
     </sect2>
     
     
-    <sect2 id="goscustdesk-101">
+    <sect2 id="prefs-keyboard-layoutoptions"> 
       <title>Keyboard Layout Options</title>
-      <para>Use the <guilabel>Layout Options</guilabel> tabbed section to set options for the behaviour of keyboard modifier keys, and certain shortcut options.</para>
-      <para>A label in boldface indicates that group of options has been changed from the default.</para>
-      <!-- the options of mystery!!! 
-      Compose: if you first press compose, then two other keys, it combines those, for example: compose, o, / =>  ø
-      Group Shift/Lock: change keyboard layout
-      -->     
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="goscustdesk-101"/>
+      <para>The <guilabel>Layout Options</guilabel> tabbed section has options for the behaviour of keyboard modifier keys and certain shortcut options.</para>
+      <para>Expand each group label to show the available options. A label in boldface indicates that the options in the group have been changed from the default setting.</para>
+      <note><para>The options shown in this tabbed section depend on the X windowing system you are using. Not all the following options might be listed on your system, and not all the options shown might work on your system.</para></note>
+
+      <!-- the options of mystery!!!       
+           for future reference, these are in
+           /etc/X11/xkb/rules/xorg.xml
+      -->
+      <variablelist>
+        <varlistentry>
+                <term><guilabel>Adding the EuroSign to certain keys</guilabel></term>
+                <listitem>
+                  <para>Use these options to add the Euro currency symbol to a key as a third-level character. To access this symbol, you must assign a <guilabel>third level chooser</guilabel>.</para>
+                </listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Alt/Win key behavior</guilabel></term>
+                <listitem><para>
+                  This group of options allows you to assign the behaviour of Unix modifier keys Super, Meta, and Hyper to the <keycap>Alt</keycap> and <keycap>Windows</keycap> keys on your keyboard.
+                </para></listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>CapsLock key behavior</guilabel></term>
+                <listitem><para>
+                  This group has several options for the <keycap>Caps Lock</keycap> key.
+                </para></listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Compose key position</guilabel></term>
+                <listitem>
+                  <para>The Compose key allows you to combine two keypresses to make a single character. This is used to create an accented character that might not be on your keyboard layout. For example, press the Compose key, then <keycap>'</keycap>, then <keycap>e</keycap> to obtain e-acute character. <!-- Translators: feel free to use an example suitable to your locale --></para>
+                </listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Control key position</guilabel></term>
+                <listitem><para>
+                  Use this group of options to set the location of the <keycap>Ctrl</keycap> key to match the layout on older keyboards.
+                </para></listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Group Shift/Lock behavior</guilabel></term>
+                <listitem><para>
+                  Select keys or key combinations to switch your keyboard layout when pressed.
+ 
+                </para></listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Miscellaneous compatibility options</guilabel></term>
+                <listitem>
+                  <variablelist>
+	                  <varlistentry>
+	                    <term><guilabel>Shift with numpad keys works as in MS Windows.</guilabel></term>
+                    	<listitem>
+                    	  <para>With this option selected, using <keycap>Shift</keycap> with keys on the numerical pad when <keycap>NumLock</keycap> is off extends the current selection.</para>
+                    	  <para>With this option unselected, use <keycap>Shift</keycap> with keys on the numerical pad to obtain the reverse of the current behaviour for that key. For example, when <keycap>NumLock</keycap> is off, the <keycap>8</keycap> key acts as an up-arrow. Press <keycombo><keycap>Shift</keycap><keycap>8</keycap></keycombo> to type an '8'.</para></listitem>
+                    	</varlistentry>
+                    	<varlistentry><term><guilabel>Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server.</guilabel></term>
+	<listitem><para>Select this option to have certain keyboard shortcuts passed to the X windowing system instead of being handled by GNOME.</para></listitem>
+</varlistentry>
+                    </variablelist>
+                </listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Third level choosers</guilabel></term>
+                <listitem>
+                  <para>A <firstterm>third level</firstterm> key allows you to obtain a third character from a key, in the same way that pressing <keycap>Shift</keycap> with a key produces a different character to pressing the key alone.</para>
+                  <para>Use this group to select a key you want to act as a third level modifier key.</para>
+                  <para>Pressing the third-level key and <keycap>Shift</keycap> produces a fourth character from a key.</para>
+                  <para>The third and fourth level characters for your keyboard layout are shown in the <ulink type="help" url="ghelp:gswitchit"><application>Keyboard Indicator</application></ulink> Layout View Window.</para>
+                  <!-- better link, pending CVS commit of gswitchit docs: "ghelp:gswitchit?layout-view" -->
+                </listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Use keyboard LED to show alternative group.</guilabel></term>
+                <listitem>
+                  <para>Use this option to specify that one of the light indicators on your keyboard should indicate when an alternative keyboard layout is in use.</para>
+                  <note><para>The selected keyboard light will no longer indicate its standard function. For example, the Caps Lock light will not react to the <keycap>Caps Lock key</keycap>.</para></note>
+                </listitem>
+        </varlistentry>
+      </variablelist>
     </sect2>
 
     <sect2 id="goscustdesk-86">
