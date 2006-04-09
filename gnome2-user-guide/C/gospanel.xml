@@ -1165,10 +1165,148 @@ the GNOME website in your default browser.</para>
             </tbody>
           </tgroup>
         </informaltable>
+        
+        <para>The command can contain the following special codes which will be replaced with the value specified in the following table:</para>
+        <informaltable>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Code</para>
+                </entry>
+                <entry>
+                  <para>Meaning</para>
+                </entry>
+              </row>        
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%f</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>A single file name, even if multiple files are selected. The system reading the desktop entry should recognize that the program in question cannot handle multiple file arguments, and it should should probably spawn and execute multiple copies of a program for each selected file if the program is not able to handle additional file arguments. If files are not on the local file system (i.e. are on HTTP or FTP locations), the files will be copied to the local file system and %f will be expanded to point at the temporary file. Used for programs that do not understand the URL syntax.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%F</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>A list of files. Use for apps that can open several local files at once.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%u</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>A single URL.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%U</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>A list of URLs.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%d</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Directory containing the file that would be passed in a %f field.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%D</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>List of directories containing the files that would be passed in to a %F field.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%n</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>A single filename (without path).</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%N</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>A list of filenames (without paths).</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%i</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>The Icon field of the desktop entry expanded as two parameters, first --icon and then the contents of the Icon field. Should not expand as any parameters if the Icon field is empty or missing.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%c</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>The translated Name field associated with the desktop entry.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%k</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>The location of the desktop file as either a URI (if for example gotten from the vfolder system) or a local filename or empty if no location is known.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>%v</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>The name of the Device entry in the desktop file.</para>                </entry>
+              </row>          
+            </tbody>  
+          </tgroup>                  
+        </informaltable>
+        <para>These are as defined by freedesktop.org's <ulink type="http" url="http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-0.9.4.html">Desktop Entry Specification</ulink>.</para>
       </section>
     </section>    
-
-  
   </section>
   <section id="gospanel-557">
     <title>Buttons</title>
