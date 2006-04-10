@@ -74,7 +74,7 @@
       <term>Workspaces</term>
       <listitem><para>You can subdivide your desktop into separate
       <firstterm>workspaces</firstterm>.  Each workspace can contain
-      separate windows, allowing you to group related tasks together.
+      several windows, allowing you to group related tasks together.
       For more information on working with workspaces, see
       <xref linkend="overview-workspaces"/>.</para></listitem>
     </varlistentry>
@@ -465,11 +465,8 @@ specify the number of workspaces that you require.</para>
   A toolbar contains buttons for the most commonly-used commands. A <firstterm>statusbar</firstterm> is a bar at the bottom of a window that provides information
   about the current state of what you are viewing in the window. GNOME-compliant
   applications might also contains other bars. For example, <application>Nautilus</application> contains a location bar.</para>
-          <para>Some of the bars in GNOME-compliant applications are detachable. That
-  is, the bar has a handle that you can grab then drag the bar to another location.
-  You can drag the bar to snap to another side of the window, or to another
-  part of the screen. For example, you can detach the menubar, toolbar, and
-  location bar in the file manager. </para>
+          <para>You can choose to make the toolbars in GNOME-compliant applications <firstterm>detachable</firstterm>. That
+  is, the toolbar can be removed from within the window and placed anywhere on the screen. When this option is enabled, each toolbar has a handle that you can grab then drag the bar to another location.  You can drag the bar to snap to another side of the window, or to another part of the screen.</para>
         </listitem>
         <listitem>
           <para>Default shortcut keys</para>
@@ -479,11 +476,9 @@ specify the number of workspaces that you require.</para>
         </listitem>
         <listitem>
           <para>Drag-and-drop</para>
-          <para>GNOME-compliant applications use the same protocol to implement drag-and-drop
-  operations. Therefore, GNOME-compliant applications provide consistent feedback
-  when you drag-and-drop items.</para>
-          <para>The use of the same protocol also enables GNOME-compliant applications
-  to interoperate in a sophisticated manner. For example, GNOME-compliant applications
+          <para>GNOME-compliant applications provide consistent feedback
+  when you drag-and-drop items, and interoperate in a sophisticated manner.</para>
+          <para>For example, GNOME-compliant applications
   recognize the format of the items that you drag. When you drag a HTML file
   from a <application>Nautilus</application> window to a web browser, the file
   is displayed in HTML format in the browser. However, when you drag the HTML
@@ -518,7 +513,7 @@ specify the number of workspaces that you require.</para>
       </itemizedlist>
       
       <para>The lower part of the <guilabel>Open File</guilabel> dialog may contain further options specific to the current application.</para>
-      
+              
       <section id="filechooser-open-filter">
         <title>Filtering the File List</title>
         <para>You can restrict the file list to show only files on certain types. To do this, choose a file type from the drop-down list beneath the file list pane. The list of file types depends on the application you are currently using. For example, a graphics application will list different image file formats, and a text editor will list different types of text file.</para>
@@ -529,18 +524,31 @@ specify the number of workspaces that you require.</para>
           <para>If you know the name of the file you want to open, begin typing it: the file list will jump to show you files whose names begin with the characters you type. Arrow keys will now select from only these files. The characters you have typed appear in a pop-up window at the base of the file list.</para>
           <para>To cancel find-as-you-type, press <keycap>Esc</keycap>.</para>    
       </section>
+      
+      <section id="filechooser-open-folder">
+        <title>Choosing a folder</title> 
+        <para>You might sometimes need to choose a folder to work with rather than open a file. For example, if you use <ulink type="help" url="ghelp:file-roller"><application>Archive Manager</application></ulink> to extract files from an archive, you need to choose a folder to place the files into. In this case, the files in the current location are greyed out, and pressing <guibutton>Open</guibutton> when a folder is selected will choose that folder.</para>
+      </section>      
+           
       <section id="filechooser-open-location">
         <title>Open Location</title>
-        <para>To enter the full path to a file you want to open, press <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> or right-click in the right-hand pane and choose <guimenuitem>Open Location</guimenuitem>. This opens the <guilabel>Open Location</guilabel> dialog.</para>
+        <para>You can type a full or relative path to the file you want to open. Begin typing a full path starting with <filename>/</filename> to open the <guilabel>Open Location</guilabel> dialog. Otherwise, to open the <guilabel>Open Location</guilabel> dialog either press <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> or right-click in the right-hand pane and choose <guimenuitem>Open Location</guimenuitem>.</para>
         <para>Type a path from the current location, or an absolute path beginning with <filename>/</filename> or <filename>~/</filename>. The <guilabel>Location</guilabel> field has the following features to simplify the typing of a full filename:</para>
         <itemizedlist>
 	        <listitem><para>A drop-down of possible file and folder names is displayed once you begin typing. Use <keycap>down arrow</keycap> and <keycap>up arrow</keycap> and <keycap>Return</keycap> to choose from the list.</para></listitem>
 	        <listitem><para>If the part of the name typed uniquely identifies a file or folder, the name is auto-completed. Press <keycap>Tab</keycap> to accept the suggested text. For example, if you type "Do", and the only object in the folder beginning with "Do" is <filename>Documents</filename>, then the entire name appears in the field.</para></listitem>
         </itemizedlist>
       </section>
+      
+      <section id="filechooser-open-remote">
+        <title>Opening Remote Locations</title>
+        <para>You can open files in remote locations by choosing the location from the left panel, or by typing a path to a remote location into the <guilabel>Open Location</guilabel> dialog.</para>
+        <para>If you require a password to access the remote location, you will be asked for it when you open it.</para>
+      </section> 
+                   
       <section id="filechooser-open-bookmarks">
         <title>Adding and Removing Bookmarks</title>
-        <para>To add the current location to the bookmarks list, press <guibutton>Add</guibutton>, or right-click a folder in the file list and choose <guimenuitem>Add to Bookmarks</guimenuitem>.</para>
+        <para>To add the current location to the bookmarks list, press <guibutton>Add</guibutton>, or right-click a folder in the file list and choose <guimenuitem>Add to Bookmarks</guimenuitem>. You can add any folder that is listed in the current location by dragging it to the bookmarks list.</para>
         <para>To remove a bookmark from the list, select it and press <guibutton>Remove</guibutton>.</para>
         <note><para>Changes you make to the bookmarks list also affect the <guimenu>Places</guimenu> menu. For more on bookmarks, see <xref linkend="nautilus-bookmarks"/>.</para></note>
       </section>      
@@ -553,11 +561,18 @@ specify the number of workspaces that you require.</para>
       <title>Saving a File</title>
         <para>The first time you save your work in an application, the <guilabel>Save File</guilabel> dialog will ask you for a location and name for the new file. Subsequent saving updates this file. To save to a new file, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Save As</guimenuitem></menuchoice>.</para>
         <para>You can enter a filename and choose a location to save in from the drop-down list of bookmarks and commonly-used locations.</para>
+                          
         <section id="filechooser-save-expanded">
           <title>Saving in another location</title>
           <para>To save the file in a location not listed in the drop-down list, click the <guilabel>Browse for other folders</guilabel> expansion label. This shows a file browser similar to the one in the <guilabel>Open File</guilabel> dialog.</para>
           <tip><para>The expanded <guilabel>Save File</guilabel> dialog has the same features as the <link linkend="filechooser-open"><guilabel>Open File</guilabel> dialog</link>, such as filtering, find-as-you-type, and adding and removing bookmarks.</para></tip>
-        </section>          
+        </section>   
+        
+        <section id="filechooser-save-overwrite">
+          <title>Replacing an existing file</title>
+          <para>If you type in the name of an existing file, you will be asked whether you wish to replace the existing file with your current work. You can also do this by choosing the file you want to overwrite in the browser.</para>
+        </section>         
+               
         <section id="filechooser-save-path">
           <title>Typing a Path</title>
           <para>To specify a path to save a file, type it into the <guilabel>Name</guilabel> field. A drop-down of possible file and folder names is displayed once you begin typing. Use <keycap>down arrow</keycap> and <keycap>up arrow</keycap> and <keycap>Return</keycap> to choose from the list. If only one file or folder matches the partial name you have typed, press <keycap>Tab</keycap> to complete the name.</para>       

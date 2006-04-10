@@ -367,7 +367,7 @@ If want to close all folders on the screen, choose <menuchoice><guimenu>File</gu
         </screenshot>
       </figure>
       <note>
-        <para>In other distributions of the GNOME Desktop, the <guibutton>Home</guibutton> toolbar button might have another designation, for example, <guibutton>Documents</guibutton>.</para>
+        <para>In some distributions of the GNOME Desktop, the <guibutton>Home</guibutton> toolbar button might have another designation, for example, <guibutton>Documents</guibutton>.</para>
       </note>
       <sect3 id="gosnautilus-493">
         <title>The File Browser Window Components</title>
@@ -2159,7 +2159,7 @@ on a file or folder perform the following steps:</para>
           <para>Select the file or folder that you want to change. </para>
         </listitem>
         <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. A properties dialog is displayed.</para>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. The <link linkend="nautilus-properties">properties window</link> for the item is displayed.</para>
         </listitem>
         <listitem>
           <para>Click on the <guilabel>Permissions</guilabel> tab. In the <guilabel>Permissions</guilabel> tabbed section, use the drop-down lists and check boxes
@@ -2290,8 +2290,10 @@ folders in the following ways:</para>
           <para>From <guilabel>Notes</guilabel> in the side pane</para>
         </listitem>
       </itemizedlist>
-      <sect3 id="gosnautilus-472">
+      <sect3 id="nautilus-notes">
         <title>To Add a Note Using the Properties Dialog</title>
+        <!-- preserve id for backwards compatibility: 2.12 -->
+        <anchor id="gosnautilus-472"/>           
         <indexterm>
           <primary>notes</primary>
           <secondary>adding to files and folders</secondary>
@@ -2308,7 +2310,7 @@ to a file or folder, perform the following steps:</para>
             <para>Select the file or folder to which you want to add a note. </para>
           </listitem>
           <listitem>
-            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. A properties dialog is displayed.</para>
+            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. The <link linkend="nautilus-properties">properties window</link> for the item is displayed.</para>
           </listitem>
           <listitem>
             <para>Click on the <guilabel>Notes</guilabel> tab. In the <guilabel>Notes</guilabel> tabbed section, type the note.</para>
@@ -2544,6 +2546,48 @@ foldername</programlisting>
       </sect3>
   </sect2>
   </sect1>
+  <!-- ====================================================== File properties -->    
+
+  <sect1 id="nautilus-properties">
+    <title>Item Properties</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosnautilus-51"/><!-- was: changing icon, but linked to from the GUI -->
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>properties</secondary>
+    </indexterm>    
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>file properties</secondary>
+    </indexterm>
+    <para>
+      The <guilabel>Item Properties</guilabel> window shows more information about any file, folder, or other item in the file manager. With this window, you can also do the following:</para> 
+    <itemizedlist>
+      <listitem><para>Change the icon for an item: see <xref linkend="nautilus-icon"/>.</para></listitem>
+      <listitem><para>Add or remove emblems for an item: see <xref linkend="nautilus-emblems"/>.</para></listitem>
+      <listitem><para>Change the UNIX file permissions for an item: see <xref linkend="nautilus-permissions"/>.</para></listitem>
+      <listitem><para>Choose which application is used to open an item, and others of the same type.</para></listitem>
+      <listitem><para>Add notes to an item: see <xref linkend="nautilus-notes"/>.</para></listitem>
+    </itemizedlist>
+    <para>To open the item properties window, perform the following steps:</para>
+    <orderedlist>
+	    <listitem><para>Select the item whose properties you want to examine or change. If you select more than one item, the properties window will show the properties that are in common to all items.</para></listitem>
+	    <listitem>
+	      <para>Do one of the following:</para>
+  	      <itemizedlist>
+        	  <listitem><para>Choose <menuchoice>
+  <guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.</para></listitem>
+            <listitem><para>Right-click on the selected item and choose <guimenuitem>Properties</guimenuitem>.</para></listitem>
+            <listitem><para>Press <keycombo><keycap>Alt</keycap><keycap>Return</keycap></keycombo>.</para></listitem>
+          </itemizedlist>
+	    </listitem>
+    </orderedlist>
+      
+ 
+
+  </sect1>  
+
+  
   
   <!-- ====================================================== Appearance -->  
   <sect1 id="gosnautilus-203">
@@ -2582,7 +2626,7 @@ of files and folders</secondary>
         </mediaobject>
       </screenshot>
       
-      <para>Notice how the file on the left is distinguished from the file on the right by the addition of the <guilabel>Important (!)</guilabel> icon. See <xref linkend="gosnautilus-112"/> for more on adding emblems.</para>
+      <para>Notice how the file on the left is distinguished from the file on the right by the addition of the <guilabel>Important (!)</guilabel> emblem to its icon. See <xref linkend="nautilus-emblems"/> for more on adding emblems.</para>
       <para>The file manager automatically applies emblems for the following types of files:</para>
       <itemizedlist>
         <listitem>
@@ -2672,8 +2716,45 @@ link</para>
         </tgroup>
       </informaltable>
     </sect2>
-    <sect2 id="gosnautilus-112">
+    <sect2 id="nautilus-icon">
+      <title>Changing the Icon for a File or Folder</title> 
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>icons</secondary>
+        <tertiary>changing</tertiary>
+      </indexterm>
+      <para>To change the icon that represents an
+individual file or folder, perform the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>Select the file or folder that you want to change.</para>
+        </listitem>
+        <listitem>
+          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. The <link linkend="nautilus-properties">properties window</link> for the is displayed. </para>
+        </listitem>
+        <listitem>
+          <para>On the <guilabel>Basic</guilabel> tabbed section, click on
+the current <guibutton>Icon</guibutton>. A <guilabel>Select custom 
+icon</guilabel> dialog is displayed. </para>
+        </listitem>
+        <listitem>
+          <para>Use the <guilabel>Select custom icon</guilabel> dialog to choose
+the icon to represent the file or folder. </para>
+        </listitem>
+        <listitem>
+          <para>Click <guibutton>Close</guibutton> to close the properties
+dialog.</para>
+        </listitem>
+      </orderedlist>
+      <para>To restore an icon from a custom icon to the default icon,
+Select the file or folder that you want to change, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.
+click on the <guibutton>Icon</guibutton> button, in the <guilabel>Select custom 
+icon</guilabel> dialog click <guibutton>Revert</guibutton>.</para>
+    </sect2>
+    <sect2 id="nautilus-emblems">
       <title>Adding an Emblem to a File or Folder</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gosnautilus-112"/>       
       <indexterm>
         <primary>emblems</primary>
         <secondary>adding to file</secondary>
@@ -2689,7 +2770,7 @@ steps: </para>
           <para>Select the item to which you want to add an emblem.</para>
         </listitem>
         <listitem>
-          <para>Right-click on the item, then choose <guimenuitem>Properties</guimenuitem>. A properties dialog is displayed.</para>
+          <para>Right-click on the item, then choose <guimenuitem>Properties</guimenuitem>. The <link linkend="nautilus-properties">properties window</link> for the item is displayed.</para>
         </listitem>
         <listitem>
           <para>Click on the <guilabel>Emblems</guilabel> tab to display the <guilabel>Emblems</guilabel> tabbed section.</para>
@@ -2735,42 +2816,6 @@ New Emblem</guilabel> dialog.</para>
         </listitem>
       </orderedlist>
     </sect2>
-    <sect2 id="gosnautilus-51">
-      <title>Changing the Icon for a File or Folder</title>
-      <indexterm>
-        <primary>file manager</primary>
-        <secondary>icons</secondary>
-        <tertiary>changing</tertiary>
-      </indexterm>
-      <para>To change the icon that represents an
-individual file or folder, perform the following steps:</para>
-      <orderedlist>
-        <listitem>
-          <para>Select the file or folder that you want to change.</para>
-        </listitem>
-        <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. A properties dialog is displayed. </para>
-        </listitem>
-        <listitem>
-          <para>On the <guilabel>Basic</guilabel> tabbed section, click on
-the current <guibutton>Icon</guibutton>. A <guilabel>Select custom 
-icon</guilabel> dialog is displayed. </para>
-        </listitem>
-        <listitem>
-          <para>Use the <guilabel>Select custom icon</guilabel> dialog to choose
-the icon to represent the file or folder. </para>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Close</guibutton> to close the properties
-dialog.</para>
-        </listitem>
-      </orderedlist>
-      <para>To restore an icon from a custom icon to the default icon,
-Select the file or folder that you want to change, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>.
-click on the <guibutton>Icon</guibutton> button, in the <guilabel>Select custom 
-icon</guilabel> dialog click <guibutton>Revert</guibutton>.</para>
-    </sect2>
-    
     <sect2 id="nautilus-backgrounds-and-emblems">
       <title>Changing Backgrounds</title>
     <!-- preserve id for backwards compatibility: 2.12 -->

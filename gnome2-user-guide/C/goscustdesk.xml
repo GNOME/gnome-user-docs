@@ -1078,8 +1078,10 @@ after a keypress before the pointer moves. </para>
 see the <ulink type="help" url="ghelp:gnome-access-guide?index"><citetitle>GNOME Desktop Accessibility Guide</citetitle></ulink>.</para>
     </sect2>
   </sect1>
-  <sect1 id="goscustperiph-2">
+  <sect1 id="prefs-keyboard">
     <title>Keyboard Preferences</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="goscustperiph-2"/>       
     <indexterm>
       <primary>preference tools</primary>
       <secondary>Keyboard</secondary>
@@ -1091,6 +1093,9 @@ general preferences</secondary>
     </indexterm>
     <para>Use the <application>Keyboard</application> preference tool to modify the autorepeat preferences for
 your keyboard, and to configure typing break settings. </para>
+    <!--
+    adds no information until each tab can be briefly summarized.
+    
     <para>You can set the preferences for the <application>Keyboard</application>
 preference tool in the following functional areas:</para>
     <itemizedlist>
@@ -1115,6 +1120,8 @@ preference tool in the following functional areas:</para>
         </para>
       </listitem>
     </itemizedlist>
+    -->
+    <para>To open the <link linkend="prefs-keyboard-a11y"><application>Keyboard <emphasis>Accessibility</emphasis></application> preference tool</link>, click the <guibutton>Accessibility</guibutton> button.</para>    
     <sect2 id="goscustdesk-40">
       <title>Keyboard Preferences</title>
       <para>Use the <guilabel>Keyboard</guilabel> tabbed section to set general
@@ -1212,11 +1219,125 @@ test area to test the effect of your settings.</para>
         </tgroup>
       </table>
     </sect2>
+    <sect2 id="prefs-keyboard-layouts">
+      <title>Keyboard Layouts Preferences</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="goscustdesk-100"/>         
+      <para>Use the <guilabel>Layouts</guilabel> tabbed section to set your keyboard's language, and also the make and model of keyboard you are using.</para>
+      <para>This will allow GNOME to make use of special media keys on your keyboard, and to show the correct characters for your keyboard's language.</para>
+      
+      <variablelist>
+	      <varlistentry>
+	        <term><guilabel>Keyboard model</guilabel></term>
+	        <listitem><para>Use the browse button (labelled with an ellipsis, <guibutton>...</guibutton>) to choose another keyboard make and model.</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>Selected Layouts</guilabel></term>
+	        <listitem><para>You can switch between selected layouts to change the characters your keyboard produces when you type. To add a layout, click <guibutton>Add</guibutton>. You can have up to four layouts. To remove a layout, select it and press <guibutton>Remove</guibutton>.</para>
+	        <para>To switch between keyboard layouts, use the <ulink type="help" url="ghelp:gswitchit"><application>Keyboard Indicator</application> panel applet</ulink>. <!-- better link to the specific page, but not yet suitable for a direct link: ghelp:gswitchit?gswitchit-applet-switching --></para>
+	        </listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>Separate group for each window</guilabel></term>
+	        <listitem><para>
+	        When this option is selected, each window has its own keyboard layout. Changing to a different layout will only affect the current window.</para>
+	        <para>This allows you to to type with a Russian keyboard layout in a word processor, then switch to your web browser and type with an English keyboard layout, for example. </para></listitem>
+        </varlistentry>
+      </variablelist>
+      
+      <para>Click <guibutton>Reset to Defaults</guibutton> to restore all keyboard layout settings to their initial state for your system and locale.</para>
+    </sect2>
+    
+    
+    <sect2 id="prefs-keyboard-layoutoptions"> 
+      <title>Keyboard Layout Options</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="goscustdesk-101"/>
+      <para>The <guilabel>Layout Options</guilabel> tabbed section has options for the behaviour of keyboard modifier keys and certain shortcut options.</para>
+      <para>Expand each group label to show the available options. A label in boldface indicates that the options in the group have been changed from the default setting.</para>
+      <note><para>The options shown in this tabbed section depend on the X windowing system you are using. Not all the following options might be listed on your system, and not all the options shown might work on your system.</para></note>
+
+      <!-- the options of mystery!!!       
+           for future reference, these are in
+           /etc/X11/xkb/rules/xorg.xml
+      -->
+      <variablelist>
+        <varlistentry>
+                <term><guilabel>Adding the EuroSign to certain keys</guilabel></term>
+                <listitem>
+                  <para>Use these options to add the Euro currency symbol to a key as a third-level character. To access this symbol, you must assign a <guilabel>third level chooser</guilabel>.</para>
+                </listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Alt/Win key behavior</guilabel></term>
+                <listitem><para>
+                  This group of options allows you to assign the behaviour of Unix modifier keys Super, Meta, and Hyper to the <keycap>Alt</keycap> and <keycap>Windows</keycap> keys on your keyboard.
+                </para></listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>CapsLock key behavior</guilabel></term>
+                <listitem><para>
+                  This group has several options for the <keycap>Caps Lock</keycap> key.
+                </para></listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Compose key position</guilabel></term>
+                <listitem>
+                  <para>The Compose key allows you to combine two keypresses to make a single character. This is used to create an accented character that might not be on your keyboard layout. For example, press the Compose key, then <keycap>'</keycap>, then <keycap>e</keycap> to obtain e-acute character. <!-- Translators: feel free to use an example suitable to your locale --></para>
+                </listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Control key position</guilabel></term>
+                <listitem><para>
+                  Use this group of options to set the location of the <keycap>Ctrl</keycap> key to match the layout on older keyboards.
+                </para></listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Group Shift/Lock behavior</guilabel></term>
+                <listitem><para>
+                  Select keys or key combinations to switch your keyboard layout when pressed.
+ 
+                </para></listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Miscellaneous compatibility options</guilabel></term>
+                <listitem>
+                  <variablelist>
+	                  <varlistentry>
+	                    <term><guilabel>Shift with numpad keys works as in MS Windows.</guilabel></term>
+                    	<listitem>
+                    	  <para>With this option selected, using <keycap>Shift</keycap> with keys on the numerical pad when <keycap>NumLock</keycap> is off extends the current selection.</para>
+                    	  <para>With this option unselected, use <keycap>Shift</keycap> with keys on the numerical pad to obtain the reverse of the current behaviour for that key. For example, when <keycap>NumLock</keycap> is off, the <keycap>8</keycap> key acts as an up-arrow. Press <keycombo><keycap>Shift</keycap><keycap>8</keycap></keycombo> to type an '8'.</para></listitem>
+                    	</varlistentry>
+                    	<varlistentry><term><guilabel>Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server.</guilabel></term>
+	<listitem><para>Select this option to have certain keyboard shortcuts passed to the X windowing system instead of being handled by GNOME.</para></listitem>
+</varlistentry>
+                    </variablelist>
+                </listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Third level choosers</guilabel></term>
+                <listitem>
+                  <para>A <firstterm>third level</firstterm> key allows you to obtain a third character from a key, in the same way that pressing <keycap>Shift</keycap> with a key produces a different character to pressing the key alone.</para>
+                  <para>Use this group to select a key you want to act as a third level modifier key.</para>
+                  <para>Pressing the third-level key and <keycap>Shift</keycap> produces a fourth character from a key.</para>
+                  <para>The third and fourth level characters for your keyboard layout are shown in the <ulink type="help" url="ghelp:gswitchit"><application>Keyboard Indicator</application></ulink> Layout View Window.</para>
+                  <!-- better link, pending CVS commit of gswitchit docs: "ghelp:gswitchit?layout-view" -->
+                </listitem>
+        </varlistentry>
+        <varlistentry>
+                <term><guilabel>Use keyboard LED to show alternative group.</guilabel></term>
+                <listitem>
+                  <para>Use this option to specify that one of the light indicators on your keyboard should indicate when an alternative keyboard layout is in use.</para>
+                  <note><para>The selected keyboard light will no longer indicate its standard function. For example, the Caps Lock light will not react to the <keycap>Caps Lock key</keycap>.</para></note>
+                </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+
     <sect2 id="goscustdesk-86">
       <title>Typing Break Preferences</title>
-      <para>Use the <guilabel>Typing Break</guilabel> tabbed section to set typing
-break preferences. To start the <application>Keyboard</application> <emphasis>accessibility</emphasis> preference tool, that is, <application>AccessX</application>,
-click on the <guibutton>Accessibility</guibutton> button.</para>
+      <para>Configure the Typing Break Preferences to make GNOME remind you to rest after you have been using the keyboard and mouse for a long time. During a Typing Break, the screen will be locked.</para>
       <para><xref linkend="goscustdesk-TBL-87"/> lists the typing break preferences
  that you can modify.</para>
       <table frame="topbot" id="goscustdesk-TBL-87">
@@ -1282,27 +1403,12 @@ typing breaks.</para>
           </tbody>
         </tgroup>
       </table>
-    </sect2>
-    <sect2 id="goscustdesk-100">
-      <title>Keyboard Layout Preferences</title>
-      <para>Use the <guilabel>Layouts</guilabel> tabbed section to set your keyboard
-layout. Select your keyboard model from the drop-down list. Use the navigational
-buttons to add or remove a selected layout from the list of available layouts. </para>
-      <para>You can choose different layouts to suit different locales. For more
-information on keyboard layouts, see the <citetitle>Keyboard Layout Switcher</citetitle> manual.</para>
-      <para>To start the <application>Keyboard</application> <emphasis>accessibility</emphasis> preference tool, that is, <application>AccessX</application>,
-click on the <guibutton>Accessibility</guibutton> button.</para>
-    </sect2>
-    <sect2 id="goscustdesk-101">
-      <title>Keyboard Layout Options</title>
-      <para>Use the <guilabel>Layout Options</guilabel> tabbed section to set your
-keyboard layout options. Select an option from the list of available layout
-options and click <guibutton>Add</guibutton> to select an option. Use <guibutton>Remove</guibutton> to remove a selected option. </para>
-      <para>For more information on the layout options, see the <citetitle>Keyboard
-Layout Switcher</citetitle> manual.</para>
-      <para>To start the <application>Keyboard</application> <emphasis>accessibility</emphasis> preference tool, that is, <application>AccessX</application>,
-click on the <guibutton>Accessibility</guibutton> button.</para>
-    </sect2>
+      <note><para>
+        If you stop using the keyboard and mouse for a length of time equal to the <guilabel>Break interval</guilabel> setting, the current work interval will be reset.
+      </para></note>
+    </sect2>    
+    
+    
   </sect1>
   <sect1 id="prefs-keyboard-shortcuts">
     <title>Keyboard Shortcuts Preferences</title>
@@ -1322,68 +1428,36 @@ keys</primary>
       <primary>keyboard shortcuts</primary>
       <secondary>configuring</secondary>
     </indexterm>
+    <para>Use the <application>Keyboard Shortcuts</application> preference tool to customize the default keyboard shortcuts to your requirements.</para>    
+    
     <para>A <firstterm>keyboard shortcut</firstterm> is a key or combination of
-keys that provides an alternative to standard ways of performing an action. </para>
-    <para>Use the <application>Keyboard Shortcuts</application> preference tool to display the default keyboard
-shortcuts. You can customize the default keyboard shortcuts to your requirements. </para>
-    <para><xref linkend="goscustdesk-TBL-5"/>
-lists the keyboard shortcut settings that you can customize.</para>
-    <table frame="topbot" id="goscustdesk-TBL-5">
-      <title>Keyboard Shortcuts Preferences</title>
-      <tgroup cols="2" colsep="0" rowsep="0">
-        <colspec colname="colspec0" colwidth="36.11*"/>
-        <colspec colname="colspec1" colwidth="63.89*"/>
-        <thead>
-          <row rowsep="1">
-            <entry>
-              <para>Dialog Element</para>
-            </entry>
-            <entry>
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry colname="colspec0" valign="top">
-              <para>
-                <guilabel>Text editing shortcuts</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" valign="top">
-              <para>Select
-one of the following settings:</para>
-              <itemizedlist>
-                <listitem>
-                  <para><guilabel>GNOME Default</guilabel>: Use this setting for standard
-shortcut keys.</para>
-                </listitem>
-                <listitem>
-                  <para><guilabel>Emacs</guilabel>: Use this setting for <application>Emacs</application> shortcut keys.</para>
-                </listitem>
-              </itemizedlist>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" valign="top">
-              <para>
-                <guilabel>Desktop shortcuts</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" valign="top">
-              <para>This
-table lists actions and the shortcut keys that are associated with each action. </para>
-              <para>To change the shortcut keys for an action, click on the action
-to select the action, then click on the shortcut for the action. Press the
-keys that you want to associate with the action.</para>
-              <para>To disable the
-shortcut keys for an action, click on the action to select the action, then
-click on the shortcut for the action. Press the <keycap>Backspace</keycap> key.</para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
+keys that provides an alternative to standard ways of performing an action. For more on keyboard shortcuts, and a list of the default shortcuts in GNOME, see <xref linkend="keyboard-skills"/>.</para>
+
+    <para>To edit a keyboard shortcut, perform the following steps:</para>
+    <orderedlist>
+	    <listitem><para>
+	    Click the action in the list. If you are using the the keyboard, use the arrow keys to select the shortcut and press <keycap>Return</keycap>.</para></listitem>
+	    <listitem>
+	      <para>Press the new key or key combination you want to assign to the action.</para>
+	      <para>To clear a shortcut, press <keycap>Escape</keycap>. The action is now marked as <guilabel>Disabled</guilabel>.</para>
+	    </listitem>
+    </orderedlist>
+    
+    <para>To cancel assigning a shortcut, click elsewhere in the window or press <keycap>Escape</keycap>.</para>
+    
+    <para>The shortcuts you can customize are grouped as follows:</para>
+    
+    <variablelist>
+    	<varlistentry><term>Desktop</term>
+    	  <listitem><para>These are general shortcuts for the whole desktop, such as logging out, <link linkend="lock-screen">locking the screen</link>, opening the <link linkend="menubar">panel menubar</link>, or launching a web browser.</para></listitem>
+    	</varlistentry>
+    	<varlistentry><term>Sound</term>
+    	  <listitem><para>Shortcuts for controlling your music player and the system volume.</para></listitem>
+    	</varlistentry>
+    	<varlistentry><term>Window Management</term>
+    	  <listitem><para>Shortcuts for working with windows and workspaces, such as such as maximizing or moving the current window, and switching to another workspace. For more information on these kinds of actions, see <xref linkend="windows-manipulating"/> and <xref linkend="overview-workspaces"/>.</para></listitem>
+    	</varlistentry>    	
+    </variablelist>
   </sect1>  
   <sect1 id="prefs-menustoolbars">
     <title>Menus &amp; Toolbars Preferences</title>
@@ -1402,83 +1476,63 @@ click on the shortcut for the action. Press the <keycap>Backspace</keycap> key.<
 customizing appearance</secondary>
     </indexterm>
     <para>You can use the <application>Menus &amp; Toolbars</application> preference tool to customize the appearance
-of menus, menubars, and toolbars for GNOME-compliant applications.</para>
-    <para><xref linkend="goscustuserinter-TBL-8"/> lists the menu and toolbar preferences that
-you can modify for GNOME-compliant applications.</para>
-    <table frame="topbot" id="goscustuserinter-TBL-8">
-      <title>Menu and Toolbar Preferences</title>
-      <tgroup cols="2" colsep="1" rowsep="1">
-        <colspec colname="colspec0" colwidth="18.86*"/>
-        <colspec colname="colspec1" colwidth="47.14*"/>
-        <thead>
-          <row>
-            <entry colsep="0" rowsep="1">
-              <para>Dialog Element</para>
-            </entry>
-            <entry colsep="0" rowsep="1">
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Show icons in menus</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option to display an icon beside
-each item in a menu. Some menu items do not have an icon.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Detachable toolbars</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option if you want to move toolbars
-from application windows to any location on the screen. If you select this
-option, handles are displayed on the left side of the toolbars in your applications.
-To move a toolbar, click-and-hold on the handle, then drag the toolbar to
-the new location.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Toolbar button labels</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Choose one of the following options to specify
-what to display on the toolbars in your GNOME-compliant applications:</para>
-              <itemizedlist>
-                <listitem>
-                  <para><guilabel>Text Below Icons</guilabel>: Select this option
-to display toolbars with text as well as an icon on each button. </para>
-                </listitem>
-                <listitem>
-                  <para><guilabel>Text Beside Icons</guilabel>: Select this option
-to display toolbars with an icon only on each button, and with text on the
-most important buttons.</para>
-                </listitem>
-                <listitem>
-                  <para><guilabel>Icons Only</guilabel>: Select this option to display
-toolbars with an icon only on each button.</para>
-                </listitem>
-                <listitem>
-                  <para><guilabel>Text Only</guilabel>: Select this option to display
-toolbars with text only on each button.</para>
-                </listitem>
-              </itemizedlist>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
+of menus, menubars, and toolbars for applications that are part of GNOME.</para>
+    <para>As you make changes to the settings, the preview display in the window updates. This allows you to see the changes if no application windows are currently open.</para>
+    <variablelist>
+     	<varlistentry>
+    	  <term><guilabel>Show icons in menus</guilabel></term>
+    	  <listitem>
+    	    <para>Select this option to display an icon beside
+    items in application menus and the panel menu. Not all menu items have an icon.</para>
+    	  </listitem>
+    	</varlistentry>
+    	<varlistentry>
+    	  <term><guilabel>Editable menu accelerators</guilabel></term>
+	      <listitem><para>Selecting this option allows you to define new keyboard shortcuts for menu items.</para>
+	      <para>To change an application shortcut key, open the menu, and with the mouse pointer on the menu item you wish to change, press the new combination of keys. To remove a shortcut key, press <keycap>Backspace</keycap> or <keycap>Delete</keycap>.</para>
+	      <warning>
+	        <para>When using this feature, you will not be warned if assigning a new shortcut key to a command also removes it from another command.</para>
+	        <para>There is no way to restore the original, default keyboard shortcut for a comamnd.</para>
+	        <para>This feature does not maintain shortcuts that are normally common to all applications, such as <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> for Copy. This may lead to inconsistencies in your GNOME applications.</para>
+	      </warning>
+	      </listitem>
+      </varlistentry>
+     	<varlistentry>
+    	  <term><guilabel>Detachable toolbars</guilabel></term>
+    	  <listitem>
+    	    <para>Selecting this option allows you to move toolbars
+    from application windows to any location on the screen. A handle is displayed on the left side of the toolbars in your applications.
+    To move a toolbar, click-and-hold on the handle, then drag the toolbar to
+    the new location.</para>
+    	  </listitem>
+    	</varlistentry>
+     	<varlistentry>
+    	  <term><guilabel>Toolbar button labels</guilabel></term>
+    	  <listitem>
+    	    <para>Choose one of the following options to specify
+    what to display on the toolbars in your GNOME-compliant applications:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para><guilabel>Text Below Icons</guilabel>: Select this option
+    to display toolbars with text as well as an icon on each button. </para>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Text Beside Icons</guilabel>: Select this option
+    to display toolbars with an icon only on each button, and with text on the
+    most important buttons.</para>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Icons Only</guilabel>: Select this option to display
+    toolbars with an icon only on each button.</para>
+                    </listitem>
+                    <listitem>
+                      <para><guilabel>Text Only</guilabel>: Select this option to display
+    toolbars with text only on each button.</para>
+                    </listitem>
+                  </itemizedlist>
+    	  </listitem>
+    	</varlistentry>
+    </variablelist>
   </sect1>
   <sect1 id="prefs-mouse">
     <title>Mouse Preferences</title>
@@ -1679,8 +1733,10 @@ action.</para>
     <title>Multimedia Systems Selector</title>
     <para>See the <ulink type="help" url="ghelp:gstreamer-properties">GStreamer Properties Manual</ulink>.</para>
   </sect1>
-  <sect1 id="goscustdesk-50">
+  <sect1 id="prefs-networkproxy">
     <title>Network Proxy Preferences</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="goscustdesk-50"/>       
     <indexterm>
       <primary>preference
 tools</primary>
@@ -1699,135 +1755,53 @@ tools</primary>
       <secondary>setting preferences</secondary>
     </indexterm>
     <para>The <application>Network Proxy</application>
-preference tool enables you to configure how your system connects to the Internet.
-You can configure the GNOME Desktop to connect to a <firstterm>proxy server</firstterm>, and specify the details of the proxy server. A proxy server
+preference tool enables you to configure how your system connects to the Internet.</para>
+    <para>You can configure the GNOME Desktop to connect to a <firstterm>proxy server</firstterm>, and specify the details of the proxy server. A proxy server
 is a server that intercepts requests to another server, and fulfills the request
 itself, if it can. You can enter the Domain Name Service (DNS) name or the
 Internet Protocol (IP) address of the proxy server. A <firstterm>DNS name</firstterm> is a unique alphabetic identifier for a computer on a network.
 An <firstterm>IP address</firstterm> is a unique numeric identifier for a
 computer on a network. </para>
-    <para><xref linkend="goscustdesk-TBL-52"/> lists the Internet connection preferences
-that you can modify.</para>
-    <table frame="topbot" id="goscustdesk-TBL-52">
-      <title>Internet Connection Preferences</title>
-      <tgroup cols="2" colsep="0" rowsep="0">
-        <colspec colname="colspec2" colwidth="35.09*"/>
-        <colspec colname="colspec3" colwidth="64.91*"/>
-        <thead>
-          <row rowsep="1">
-            <entry>
-              <para>Dialog Element</para>
-            </entry>
-            <entry>
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Direct internet
-connection</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Select this option if you want to connect directly to the Internet, without
-a proxy server.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2">
-              <para>
-                <guilabel>Manual proxy configuration</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Select
-this option if you want to connect to the Internet through a proxy server,
-and you want to configure the proxy server manually.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>HTTP proxy</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the DNS name, or the IP
-address of the proxy server to use when you request a HTTP service. Enter
-the port number of the HTTP service on the proxy server in the <guilabel>Port</guilabel> spin box.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Secure HTTP proxy</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter
-the DNS name, or the IP address of the proxy server to use when you request
-a Secure HTTP service. Enter the port number of the Secure HTTP service on
-the proxy server in the <guilabel>Port</guilabel> spin box.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>FTP proxy</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the DNS name, or the IP
-address of the proxy server to use when you request a FTP service. Enter the
-port number of the FTP service on the proxy server in the <guilabel>Port</guilabel>
-spin box.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Socks host</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the DNS name, or the IP
-address of the Socks host to use. Enter the port number for the Socks protocol
-on the proxy server in the <guilabel>Port</guilabel> spin box.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Automatic proxy
-configuration</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Select this option if you want to connect to the Internet through a proxy
-server, and you want to configure the proxy server automatically.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec2" valign="top">
-              <para>
-                <guilabel>Autoconfiguration
-URL</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec3" valign="top">
-              <para>Enter the URL that contains the information required to configure the proxy
-server automatically. </para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
+    
+    <variablelist>
+      <varlistentry><term><guilabel>Direct internet
+    connection</guilabel></term><listitem><para>Select this option if you want to connect to the Internet without
+    a proxy server.</para></listitem></varlistentry>
+      <varlistentry><term><guilabel>Manual proxy configuration</guilabel></term><listitem><para>Select
+    this option if you want to connect to the Internet through a proxy server,
+    and you want to configure the proxy server manually.</para>
+      <variablelist>
+        <varlistentry><term><guilabel>HTTP proxy</guilabel></term><listitem><para>Enter the DNS name, or the IP
+        address of the proxy server to use when you request a HTTP service. Enter
+        the port number of the HTTP service on the proxy server in the <guilabel>Port</guilabel> spin box.</para></listitem></varlistentry>
+        <varlistentry><term><guilabel>Secure HTTP proxy</guilabel></term><listitem><para>Enter
+        the DNS name, or the IP address of the proxy server to use when you request
+        a Secure HTTP service. Enter the port number of the Secure HTTP service on
+        the proxy server in the <guilabel>Port</guilabel> spin box.</para></listitem></varlistentry>
+        <varlistentry><term><guilabel>FTP proxy</guilabel></term><listitem><para>Enter the DNS name, or the IP
+        address of the proxy server to use when you request a FTP service. Enter the
+        port number of the FTP service on the proxy server in the <guilabel>Port</guilabel>
+        spin box.</para></listitem></varlistentry>
+        <varlistentry><term><guilabel>Socks host</guilabel></term><listitem><para>Enter the DNS name, or the IP
+        address of the Socks host to use. Enter the port number for the Socks protocol
+        on the proxy server in the <guilabel>Port</guilabel> spin box.</para></listitem></varlistentry>
+      </variablelist>
+      </listitem></varlistentry>
+      <varlistentry><term><guilabel>Automatic proxy
+      configuration</guilabel></term><listitem><para>Select this option if you want to connect to the Internet through a proxy
+      server, and you want to configure the proxy server automatically.</para></listitem></varlistentry>
+      <varlistentry><term><guilabel>Autoconfiguration
+      URL</guilabel></term><listitem><para>Enter the URL that contains the information required to configure the proxy
+    server automatically. </para></listitem></varlistentry>
+    </variablelist>
+    
+    <para>Set which hosts should not use the proxy in the <guilabel>Ignore Host List</guilabel> in the <guilabel>Advanced Configuration</guilabel> tabbed section. When you access these hosts, you will connect to the Internet directly without a proxy.</para>
+    
   </sect1>
-  <sect1 id="goscustdoc-2">
+  <sect1 id="prefs-preferredapps">
     <title>Preferred Applications</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="goscustdesk-2"/>       
     <indexterm>
       <primary>preference tools</primary>
       <secondary>Preferred Applications</secondary>
