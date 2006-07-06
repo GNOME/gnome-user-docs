@@ -12,6 +12,7 @@ DOC_INCLUDES =			\
 	gospanel.xml		\
 	gosstartsession.xml	\
 	gostools.xml		\
+	gosfeedback.xml		\
 	glossary.xml
 
 DOC_LINGUAS = bg it es pt_BR zh_CN
