@@ -12,7 +12,7 @@ DOC_ENTITIES =			\
 	themes.xml		\
 	legal.xml
 
-DOC_LINGUAS = it
+DOC_LINGUAS = es it
 
 install-data-local: install-doc-pdf
 install-doc-pdf:
@@ -24,3 +24,4 @@ install-doc-pdf:
 	    $(INSTALL_DATA) "$$spdf" "$(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$pdf"; \
 	  fi; \
 	done
+
