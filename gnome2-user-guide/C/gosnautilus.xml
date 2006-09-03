@@ -2044,240 +2044,135 @@ dialog.</para>
       <title>Changing Permissions</title>
       <!-- preserve id for backwards compatibility: 2.12 -->
       <anchor id="gosnautilus-430"/>
-      <indexterm>
-        <primary>permissions</primary>
-        <secondary>introduction</secondary>
-      </indexterm>
-      <para>Permissions are settings assigned to each file and folder
-that determine what type of access users can have to the file or folder. The
-following table lists the permissions that you can set for files and folders,
-and the effect of the permission on files and folders:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="3" colsep="0" rowsep="0">
-          <colspec colwidth="29.62*"/>
-          <colspec colwidth="74.59*"/>
-          <colspec colname="colspec0" colwidth="74.59*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Permission</para>
-              </entry>
-              <entry>
-                <para>File</para>
-              </entry>
-              <entry colname="colspec0">
-                <para>Folder</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>Read</para>
-              </entry>
-              <entry valign="top">
-                <para>Permission to read the file.</para>
-              </entry>
-              <entry colname="colspec0" valign="top">
-                <para>Permission to list the contents of the folder.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Write</para>
-              </entry>
-              <entry valign="top">
-                <para>Permission to make changes to the file. </para>
-              </entry>
-              <entry colname="colspec0" valign="top">
-                <para>Permission to create and delete files in the folder.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Execute</para>
-              </entry>
-              <entry valign="top">
-                <para>Permission to run the file as a program. This is only relevant if the file
-is a program or script.</para>
-              </entry>
-              <entry colname="colspec0" valign="top">
-                <para>Permission to access files in the directory.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para>You can set permissions for different types of user. The following table
-lists the types of user for which you can set permissions:</para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colwidth="27.27*"/>
-          <colspec colwidth="72.73*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>User Category</para>
-              </entry>
-              <entry>
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>Owner</para>
-              </entry>
-              <entry valign="top">
-                <para>The user that created the file or folder.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Group</para>
-              </entry>
-              <entry valign="top">
-                <para>The group to which the owner belongs.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Others</para>
-              </entry>
-              <entry valign="top">
-                <para>All other users who are not in the group to which the owner belongs.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para><indexterm><primary>file manager</primary><secondary>changing permissions</secondary></indexterm><indexterm><primary>permissions</primary><secondary>changing file and folder</secondary></indexterm>To change the permissions
-on a file or folder perform the following steps:</para>
-      <orderedlist>
-        <listitem>
-          <para>Select the file or folder that you want to change. </para>
-        </listitem>
-        <listitem>
-          <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. The <link linkend="nautilus-properties">properties window</link> for the item is displayed.</para>
-        </listitem>
-        <listitem>
-          <para>Click on the <guilabel>Permissions</guilabel> tab. In the <guilabel>Permissions</guilabel> tabbed section, use the drop-down lists and check boxes
-to change the permissions for the file or folder. The following table describes
-the dialog elements on the <guilabel>Permissions</guilabel> tabbed section: </para>
-          <informaltable frame="topbot">
-            <tgroup cols="2" colsep="0" rowsep="0">
-              <colspec colwidth="37.78*"/>
-              <colspec colwidth="62.22*"/>
-              <thead>
-                <row rowsep="1">
-                  <entry>
-                    <para>Element</para>
-                  </entry>
-                  <entry>
-                    <para>Description</para>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>File owner</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>To change the owner of the file or folder, select
-the owner from the drop-down list. </para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>File group</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>To change the group to which a file or folder belongs,
-select the group from the drop-down list. </para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Owner</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select the permissions that you want to apply to the owner
-of the file or folder.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Group</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select the permissions that you want to apply to the group
-to which the owner of the file or folder belongs.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Others</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Select the permissions that you want to apply to
-all other users who are not in the group to which the owner belongs.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Text view</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Displays the permissions that you select from the <guilabel>Read</guilabel>, <guilabel>Write</guilabel>, and <guilabel>Execute</guilabel>
-options, in text format.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Number view</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Displays the permissions that you select from the <guilabel>Read</guilabel>, <guilabel>Write</guilabel>, and <guilabel>Execute</guilabel>
-options, in text format.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>
-                      <guilabel>Last changed</guilabel>
-                    </para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Displays the date and time that the file or folder
-was last modified.</para>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </informaltable>
-        </listitem>
-        <listitem>
-          <para>Click <guibutton>Close</guibutton> to close the properties
-dialog.</para>
-        </listitem>
-      </orderedlist>
+      
+      <sect3 id="nautilus-permissions-overview">    
+        <title>About Permissions</title>
+        <indexterm>
+          <primary>permissions</primary>
+          <secondary>introduction</secondary>
+        </indexterm>     
+        <para>Permissions are settings assigned to each file and folder
+  that determine what type of access users can have to the file or folder. For example, you can determine whether other users can read and edit a file that belongs to you, or only have access to read it but not make changes to it.</para>
+        <para>You can set permissions for three categories of users:</para>
+        <variablelist>
+          <varlistentry><term>Owner</term>
+            <listitem>
+              <para>The user that created the file or folder.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry><term>Group</term>
+            <listitem>
+              <para>A group of users to which the owner belongs.</para>
+            </listitem>     
+          </varlistentry>
+          <varlistentry><term>Others</term>
+            <listitem>
+              <para>All other users not already included.</para>
+            </listitem>     
+          </varlistentry>
+        </variablelist>
+      </sect3>
+
+      <sect3 id="nautilus-permissions-file">    
+        <title>Changing Permissions for a File</title>
+
+        <indexterm>
+          <primary>file manager</primary>
+          <secondary>changing permissions</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>permissions</primary>
+          <secondary>changing file</secondary>
+        </indexterm>      
+        <para>To change the permissions of a file, perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Select the file that you want to change. </para>
+          </listitem>
+          <listitem>
+            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. The <link linkend="nautilus-properties">properties window</link> for the item is displayed.</para>
+          </listitem>
+          <listitem>
+            <para>Click on the <guilabel>Permissions</guilabel> tab.</para>
+          </listitem>
+          <listitem>
+            <para>To change the file's group, choose from the groups the user belongs to in the drop-down selector.</para>
+          </listitem>
+          <listitem>          
+            <para>For each of the owner, the group, and all other users, choose from these permissions for the file:</para>
+            <variablelist>
+              <varlistentry><term>None</term>
+                <listitem>
+                  <para>No access to the file is possible. (You can't set this for the owner.)</para>
+                </listitem>     
+              </varlistentry>
+              <varlistentry><term>Read-only</term>
+                <listitem>
+                  <para>The users can open a file to see its contents, but not make any changes.</para>
+                </listitem>     
+              </varlistentry>
+              <varlistentry><term>Read and write</term>
+                <listitem>
+                  <para>Normal access to a file is possible: it can be opened and saved.</para>
+                </listitem>     
+              </varlistentry>
+            </variablelist>
+          </listitem>
+          <listitem>
+            <para>To allow a file to be run as a program, select <guilabel>Execute</guilabel></para>
+          </listitem>
+        </orderedlist>   
+      </sect3>    
+
+      <sect3 id="nautilus-permissions-folder">    
+        <title>Changing Permissions for a Folder</title>
+        
+        <para>To change the permissions of a folder, perform the following steps:</para>
+        <orderedlist>
+          <listitem>
+            <para>Select the folder that you want to change. </para>
+          </listitem>
+          <listitem>
+            <para>Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Properties</guimenuitem></menuchoice>. The <link linkend="nautilus-properties">properties window</link> for the item is displayed.</para>
+          </listitem>
+          <listitem>
+            <para>Click on the <guilabel>Permissions</guilabel> tab.</para>
+          </listitem>
+          <listitem>
+            <para>To change the folder's group, choose from the groups the user belongs to in the drop-down selector.</para>
+          </listitem>
+          <listitem>          
+            <para>For each of the owner, the group, and all other users, choose from these folder access permissions:</para>
+            <variablelist>
+              <varlistentry><term>None</term>
+                <listitem>
+                  <para>No access to the folder is possible. (You can't set this for the owner.)</para>
+                </listitem>     
+              </varlistentry>
+              <varlistentry><term>List files only</term>
+                <listitem>
+                  <para>The users can see the items in the folder, but not open any of them.</para>
+                </listitem>     
+              </varlistentry>
+              <varlistentry><term>Access files</term>
+                <listitem>
+                  <para>Items in the folder can be opened and modified, provided their own permissions allow it.</para>
+                </listitem>     
+              </varlistentry>
+              <varlistentry><term>Create and delete files</term>
+                <listitem>
+                  <para>The user can create new files and delete files in the folder, in addition to being able to access existing files.</para>
+                </listitem>     
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </orderedlist>  
+       
+        <para>To set permissions for all the items contained in a folder, set the <guilabel>File Access</guilabel> and <guilabel>Execute</guilabel> properties and click on <guibutton>Apply permissions to enclosed files</guibutton>.</para>
+      </sect3>           
+
     </sect2>
+    
     <sect2 id="gosnautilus-200">
       <title>Adding Notes to Files and Folders</title>
       <para>You can add notes to files or folders. You can add notes to files or
