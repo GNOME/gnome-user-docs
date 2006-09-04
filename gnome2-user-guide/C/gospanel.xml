@@ -843,231 +843,63 @@ see <xref linkend="launchers-properties"/>. </para>
       <!-- preserve id for backwards compatibility: 2.12 -->
       <anchor id="gospanel-52"/><!-- To Create a Launcher With the Create Launcher Dialog -->
          
-      <para>You can set a number of properties for a launcher, whether you are creating a launcher, or modify an existing one.</para>
+      <para>When you create or edit a launcher, the following properties can be set:</para>
+      <variablelist>
+        <varlistentry><term>Type</term>
+          <listitem>
+            <para>Use the drop-down list to specify whether this launcher starts an application or opens a document: </para>
+            <variablelist>
+              <varlistentry><term>Application</term>
+                <listitem>
+                  <para>The launcher starts an application.</para>
+                </listitem>     
+              </varlistentry>
+              <varlistentry><term>Application in Terminal</term>
+                <listitem>
+                  <para>The launcher starts an application in a terminal.</para>
+                </listitem>     
+              </varlistentry>
+              <varlistentry><term>File</term>
+                <listitem>
+                  <para>The launcher opens a file.</para>
+                </listitem>     
+              </varlistentry>
+            </variablelist>
+          </listitem>     
+        </varlistentry>
+        <varlistentry><term>Name</term>
+          <listitem>
+            <para>This is displayed when you add the launcher to a menu
+or to the desktop.</para>
+          </listitem>     
+        </varlistentry>
+        <varlistentry><term>Command</term>
+          <listitem>
+            <para>For an application launcher, specify a command to execute when
+you click on the launcher. For sample commands, see <xref linkend="launchers-properties-commands"/>.</para>
+          </listitem>     
+        </varlistentry>
+        <varlistentry><term>Location</term>
+          <listitem>
+            <para>For a file launcher, specify the location of the file.</para>
+          </listitem>     
+        </varlistentry>
+        <varlistentry><term>Comment</term>
+          <listitem>
+            <para>This is displayed  as a tooltip when you point to the
+launcher icon on the panel.  </para>
+          </listitem>     
+        </varlistentry>
+      </variablelist>
       
-      <para>The following table describes the dialog elements on the <guilabel>Basic</guilabel> tabbed
-section: </para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="26.19*"/>
-          <colspec colname="colspec1" colwidth="73.81*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Dialog Element</para>
-              </entry>
-              <entry>
-                <para>Description </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>
-                  <guilabel>Name</guilabel>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Use this text box to specify the name of the launcher.
-You can use the <guilabel>Advanced</guilabel> tab to add translations of the
-name. This name is the name that appears when you add the launcher to a menu
-or to the desktop. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <guilabel>Generic name</guilabel>
-                </para>
-              </entry>
-              <entry colname="colspec1">
-                <para>Use this text box to specify the class of
-application to which the launcher belongs. For example, you might type <userinput>Text Editor</userinput> in this text box for a <application>gedit</application>
-launcher. You can use the <guilabel>Advanced</guilabel> tab to add translations
-of the generic name.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>
-                  <guilabel>Comment</guilabel>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Use this text box to specify a short description
-of the launcher. The comment is displayed as a tooltip when you point to the
-launcher icon on the panel. You can use the <guilabel>Advanced</guilabel>
-tabbed section to add translations of the comment. </para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>
-                  <guilabel>Command</guilabel>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Use this field to specify a command to execute when
-you click on the launcher. For sample commands, see the next section.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>
-                  <guilabel>Type</guilabel>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Use this drop-down combination box to specify the type
-of launcher. Select from the following: </para>
-                <itemizedlist>
-                  <listitem>
-                    <para><guilabel>Application</guilabel>: Select this option to create
-a launcher that starts an application.</para>
-                  </listitem>
-                  <listitem>
-                    <para><guilabel>Link</guilabel>:  Select this option to create a
-launcher that links to a URI.</para>
-                  </listitem>
-                </itemizedlist>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>
-                  <guilabel>Icon</guilabel>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Choose an icon to represent the launcher. To choose an
-icon, click on the <guibutton>No Icon</guibutton> button. An icon selector
-dialog is displayed. Choose an icon from the dialog. Alternatively, to choose
-an icon from another directory, click <guibutton>Browse</guibutton>. When
-you choose an icon, click <guibutton>OK</guibutton>. </para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>
-                  <guilabel>Run in terminal</guilabel>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Select this option to run the application or command
-in a terminal window. Choose this option for an application or command that
-does not create a window in which to run.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
+      <para>To choose an icon for the launcher, click on the <guibutton>No Icon</guibutton> button. An icon selector dialog is displayed. Choose an icon from the dialog. </para>
+      <para>To change the icon for the launcher, click on the button showing the current icon. An icon selector dialog is displayed. Choose an icon from the dialog. </para>
       
-      <para>The following table describes the dialog elements on the top part of the <guilabel>Advanced</guilabel> tabbed section: </para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colwidth="32.03*"/>
-          <colspec colwidth="67.97*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Dialog Element</para>
-              </entry>
-              <entry>
-                <para>Description </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>
-                  <guilabel>Try this before using</guilabel>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Enter a command here to check before starting the
-launcher. If the command is executable and is in your path, the launcher appears
-on the panel.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>
-                  <guilabel>Documentation</guilabel>
-                </para>
-              </entry>
-              <entry valign="top">
-                <para>Enter the path to the help file for the launcher.
-If you enter a path in this field, a <guimenuitem>Help on <replaceable>launcher-name</replaceable> Application</guimenuitem> menu item is displayed on the popup
-menu for the launcher.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-
-      <para>You can also add a translation of the <guilabel>Name</guilabel>, <guilabel>Generic name</guilabel>, and <guilabel>Comment</guilabel> fields from the <guilabel>Basic</guilabel> tabbed section. To add a translation, enter the details of
-the translation in the <guilabel>Name/Comment translations</guilabel> table
-as follows: </para>
-      <informaltable frame="topbot">
-        <tgroup cols="2" colsep="0" rowsep="0">
-          <colspec colname="colspec0" colwidth="20.78*"/>
-          <colspec colname="colspec1" colwidth="79.22*"/>
-          <thead>
-            <row rowsep="1">
-              <entry>
-                <para>Field</para>
-              </entry>
-              <entry>
-                <para>Description </para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para>First field</para>
-              </entry>
-              <entry valign="top">
-                <para>Enter the two-letter code for the language for which you want to add a translation.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Second field</para>
-              </entry>
-              <entry valign="top">
-                <para>Enter the translation of the <guilabel>Name</guilabel> of the launcher.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0">
-                <para>Third field</para>
-              </entry>
-              <entry colname="colspec1">
-                <para>Enter the translation of the <guilabel>Generic name</guilabel> of the launcher.</para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para>Fourth field</para>
-              </entry>
-              <entry valign="top">
-                <para>Enter the translation for the <guilabel>Comment</guilabel> for the launcher. </para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-      <para>Then click on the <guibutton>Add/Set</guibutton> button. </para>
-      <para>To edit a translation, select the translation. The translated text appears
-in the lower part of this dialog. Edit the fields as required, then click
-on the <guibutton>Add/Set</guibutton> button.</para>
-      <para>To remove a translation, select the translation, then click on the <guibutton>Remove</guibutton> button.</para>
-
-      <section id="gospanel-556">
+  
+      <section id="launchers-properties-commands">
         <title>Launcher Commands</title>
+        <!-- Maintained for backwards compatibility: 2.14 -->
+        <anchor id="gospanel-556"/>        
         <para>The type of commands that you can enter in the <guilabel>Command</guilabel>
 field depend on the option that you choose from the <guilabel>Type</guilabel>
 drop-down combination box. If you choose <guilabel>Application</guilabel>
