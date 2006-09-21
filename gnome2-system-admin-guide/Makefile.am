@@ -18,7 +18,7 @@ DOC_ENTITIES =			\
 	themes.xml		\
 	legal.xml
 
-DOC_LINGUAS = es it
+DOC_LINGUAS = es it sv
 
 install-data-local: install-doc-pdf
 install-doc-pdf:
