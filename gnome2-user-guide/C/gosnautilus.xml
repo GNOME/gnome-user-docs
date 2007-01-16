@@ -1048,6 +1048,89 @@ for files</secondary>
     <para>This section describes how to work with your
 files and folders.</para>
 
+  	<sect2 id="nautilus-directories-file-systems" status="complete">
+  			<title>Directories and File Systems</title>
+  				<para>Linux and Unix file systems are organised in a hierarchical, tree-like structure.  The highest level of the file system is the <filename>/</filename> or <emphasis>root directory</emphasis>.  In the Unix and Linux design philosophy, everything is considered a file - including hard disks, partitions and removable media. This means that all files and directories (including other disks and partitions) exist under the root directory.
+  				</para>
+  				<para>For example, <filename>/home/jebediah/cheeses.odt</filename> shows the correct full path to the <filename>cheeses.odt</filename> file that exists in the <filename>jebediah</filename> directory which is under the <filename>home</filename> directory, which in turn, is under the root (<filename>/</filename>) directory.
+  				</para>
+  				<para>Underneath the root (<filename>/</filename>) directory, there is a set of important system directories that are commonly used across most Linux distributions.  The following is a listing of common directories that are directly under the root (<filename>/</filename>) directory:
+  				</para>
+  					<itemizedlist>
+  						<listitem>
+  							<para><filename>/bin</filename> - important <emphasis>bin</emphasis>ary applications
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/boot</filename> - files that are required to <emphasis>boot</emphasis> the computer
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/dev</filename> - the <emphasis>dev</emphasis>ice files
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/etc</filename> - configuration files, startup scripts, <emphasis>etc</emphasis>...
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/home</filename> - local users' <emphasis>home</emphasis> directories
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/lib</filename> - system <emphasis>lib</emphasis>raries
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/lost+found</filename> - provides a <emphasis>lost+found</emphasis> system for files that exist under the root (<filename>/</filename>) directory
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/media</filename> - mounted (loaded) removable <emphasis>media</emphasis> such as CDs, digital cameras, etc...
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/mnt</filename> - <emphasis>m</emphasis>ou<emphasis>nt</emphasis>ed filesystems
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/opt</filename> - provides a location for <emphasis>opt</emphasis>ional applications to be installed
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/proc</filename> - special dynamic directory that maintains information about the state of the system, including currently running <emphasis>proc</emphasis>esses
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/root</filename> - <emphasis>root</emphasis> user home directory, pronounced &apos;slash-root&apos;
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/sbin</filename> - important <emphasis>s</emphasis>ystem <emphasis>bin</emphasis>aries
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/srv</filename> - provides a location for data used by <emphasis>s</emphasis>e<emphasis>rv</emphasis>ers</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/sys</filename> - contains information about the <emphasis>sys</emphasis>tem
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/tmp</filename> - <emphasis>t</emphasis>e<emphasis>mp</emphasis>orary files
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/usr</filename> - applications and files that are mostly available for all <emphasis>us</emphasis>e<emphasis>r</emphasis>s to access
+  							</para>
+  						</listitem>
+  						<listitem>
+  							<para><filename>/var</filename> - <emphasis>var</emphasis>iable files such as logs and databases
+  							</para>
+  						</listitem> 
+  					</itemizedlist>
+  	</sect2>
+
     <sect2 id="gosnautilus-7">
       <title>Using Views to Display Your Files and Folders</title>
       <indexterm>
@@ -2052,20 +2135,13 @@ dialog.</para>
         </tgroup>
       </informaltable>
     </sect2>
-    <sect2 id="nautilus-permissions">
-      <title>Changing Permissions</title>
-      <!-- preserve id for backwards compatibility: 2.12 -->
-      <anchor id="gosnautilus-430"/>
-      
-      <sect3 id="nautilus-permissions-overview">    
-        <title>About Permissions</title>
-        <indexterm>
-          <primary>permissions</primary>
-          <secondary>introduction</secondary>
-        </indexterm>     
+    
+  	<sect2 id="nautilus-permissions-overview" status="review">
+			<title>File Permissions</title>
         <para>Permissions are settings assigned to each file and folder
   that determine what type of access users can have to the file or folder. For example, you can determine whether other users can read and edit a file that belongs to you, or only have access to read it but not make changes to it.</para>
-        <para>You can set permissions for three categories of users:</para>
+        <para>Each file belongs to a particular user, and is associated with a group that the owner belongs to. The super user "root" has the ability to access any file on the system.</para>
+        <para>You can set permissions for three categories of users:</para>        
         <variablelist>
           <varlistentry><term>Owner</term>
             <listitem>
@@ -2083,8 +2159,37 @@ dialog.</para>
             </listitem>     
           </varlistentry>
         </variablelist>
-      </sect3>
+        <para>For each category of user, different permissions can be set. These behave differently for files and folders, as follows:
+        </para>
+        <variablelist>
+          <varlistentry><term>read</term>
+            <listitem>          
+            <para>Files can be opened</para>
+            <para>Directory contents can be displayed</para>
+            </listitem>          
+          </varlistentry>
+          <varlistentry><term>write</term>
+            <listitem>          
+            <para>Files can be edited or deleted</para>
+            <para>Directory contents can be modified</para>
+             </listitem>          
+         </varlistentry>
+          <varlistentry><term>execute</term>
+            <listitem>          
+            <para>Executable files can be run as a program</para>
+            <para>Directories can be entered</para>
+            </listitem>          
+          </varlistentry>
+        </variablelist>        
 
+        <para>For more on changing the permissions for a file or folder, see <xref linkend="nautilus-permissions" />.</para>
+    </sect2>
+
+    <sect2 id="nautilus-permissions">
+      <title>Changing Permissions</title>
+      <!-- preserve id for backwards compatibility: 2.12 -->
+      <anchor id="gosnautilus-430"/>
+      
       <sect3 id="nautilus-permissions-file">    
         <title>Changing Permissions for a File</title>
 
