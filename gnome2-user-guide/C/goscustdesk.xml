@@ -1,3 +1,6 @@
+<?db.chunk.max_depth 2?>
+<?yelp:chunk-depth 2?>
+
 <chapter id="prefs">
   <title>Configuring Your Desktop</title>
   
@@ -15,15 +18,16 @@
   <anchor id="goscustdesk-10"/><!-- Customizing Your Panels -->
 
   <highlights>
-    <para>This chapter describes how to use the preference tools to
+    <para>This chapter describes how to use the Control Center preference tools to
 customize the GNOME Desktop.</para>
   </highlights>
   <!-- move the following to its own section, "Using Pref Tools"? -->
-  <para>A preference tool is a small application that allows you to change settings in the GNOME Desktop. Each preference tool covers a particular aspect of your computer. For example, with the <application>Mouse</application> preference tool you can set your mouse to left-handed or right-handed use, or change the speed of the pointer on the screen. With the <application>Windows</application> preference tool you can set behaviour common to all windows such as the way in which you select them with the mouse.</para>
+  <para>The <application>Control Center</application> allows you to change the settings for your computer. The settings are organized into small applications called <firstterm>preference tools</firstterm>.</para>
+  <para>Each tool covers a particular aspect of your computer. For example, with the <application>Mouse</application> preference tool you can set your mouse to left-handed or right-handed use, or change the speed of the pointer on the screen. With the <application>Windows</application> preference tool you can set behaviour common to all windows such as the way in which you select them with the mouse.</para>
   <para>To open a preference tool, choose <menuchoice><guimenu>System</guimenu><guimenuitem>Control Center</guimenuitem></menuchoice> in the top panel menubar. Click the tool that you require from Control Center.</para>
   <para>With a few exceptions, the changes you make to settings in a preference tool take effect immediately, without needing to close the preference tool. You can keep the preference tool window open while you try the changes, and make further changes if you wish.</para>
   <para>Some applications or system components may add their own preference tools to the Control Center.</para>
-  <note><para>Some preference tools require administrator access. Many of these are found in the <emphasis>System</emphasis> section of the Control Center.</para></note>
+  <note><para>Some tools require administrator access.</para></note>
 
 
 <sect1 id="prefs-personal">
@@ -1775,6 +1779,168 @@ the key to press-and-hold when you drag a window to move the window.</para>
 <sect1 id="prefs-internet-and-network">
 	<title>Internet and Network</title>
 
+  <sect2 id="prefs-network-admin">
+ 	<title>Network Settings</title>
+    <para>The <application>Network Settings</application> allows you to specify the way your system connects to other computers and to internet.</para>
+
+  <sect3 id="prefs-network-admin-getting-started">
+    <title>Getting started</title>
+
+    <para>To start <application>Network Settings</application>,  choose <menuchoice><guimenu>System</guimenu><guimenuitem>Control Center</guimenuitem></menuchoice> in the top panel menubar. Click the tool that you require from Control Center.</para>
+		<para>Alternatively, in a terminal you can execute the following command: <command>network-admin</command>.</para>
+
+    <para>When you start <application>Network Settings</application>, you will be prompted for the administrator password, this is necessary because the changes done with this tool will affect the whole system.</para>
+
+    <para>After entering the administrator password, the following window is displayed.</para>
+
+    <figure id="prefs-network-admin-main-window">
+	 <title>Network Settings main window</title>
+	 <screenshot>
+	   <mediaobject>
+		<imageobject>
+		  <imagedata fileref="figures/network-tool.png" format="PNG"/>
+		</imageobject>
+		<textobject>
+		  <phrase>Shows Network Settings main window.</phrase>
+		</textobject>
+	   </mediaobject>
+	 </screenshot>
+    </figure>
+
+    <para>The <application>Network Settings</application> main window contains four tabbed sections:</para>
+
+    <variablelist>
+	 <varlistentry>
+	   <term><guilabel>Connections</guilabel></term>
+	   <listitem>
+		<para>Shows all network interfaces, it also allows you to modify their settings.</para>
+	   </listitem>
+	 </varlistentry>
+
+	 <varlistentry>
+	   <term><guilabel>General</guilabel></term>
+	   <listitem>
+		<para>Allows you to modify your system host name and domain name.</para>
+	   </listitem>
+	 </varlistentry>
+
+    	 <varlistentry>
+	   <term><guilabel>DNS</guilabel></term>
+	   <listitem>
+		<para>Contains two sections, the <guilabel>DNS servers</guilabel> are what your computer use for resolving the IP addresses from the domain names. The <guilabel>search domains</guilabel> are the default domains in which your system will search any host when no domain is specified.</para>
+	   </listitem>
+	 </varlistentry>
+
+      <varlistentry>
+	   <term><guilabel>Hosts</guilabel></term>
+	   <listitem>
+		<para>Shows the list of aliases for accessing other computers.</para>
+	   </listitem>
+	 </varlistentry>
+    </variablelist>
+  </sect3>
+
+  <sect3 id="prefs-network-admin-usage">
+    <title>Usage</title>
+
+    <sect4 id="tool-modify-connection">
+	 <title>To modify a connection settings</title>
+	 <para>In the <guilabel>Connections</guilabel> section, select the interface you want to modify and press the <guilabel>Properties</guilabel> button, depending on the interface type you will be able to modify different data.</para>
+
+	 <variablelist>
+	   <varlistentry>
+		<term>Ethernet and IRLAN interfaces</term>
+		<listitem>
+		  <para>You can modify the way the interface is configured (DHCP or manually), if the interface is configured manually, you can also modify the interface IP address, netmask and gateway.</para>
+		</listitem>
+	   </varlistentry>
+
+	   <varlistentry>
+		<term>Wireless interfaces</term>
+		<listitem>
+		  <para>You can modify the way the interface is configured (DHCP or manually), if the interface is configured manually, you can also modify the interface IP address, netmask and gateway, you can also modify the network name (ESSID) for this interface.</para>
+		</listitem>
+	   </varlistentry>
+
+	   <varlistentry>
+		<term>Parallel line interfaces</term>
+		<listitem>
+		  <para>You can modify the interface IP address, as well as the remote IP address.</para>
+		</listitem>
+	   </varlistentry>
+
+	   <varlistentry>
+		<term>PPP/Modem interfaces</term>
+		<listitem>
+		  <para>You can modify the modem device, whether you want it to dial using tones or pulses, the modem volume, the phone number, the username and password that your ISP provided and other advanced settings for PPP.</para>
+		</listitem>
+	   </varlistentry>
+	 </variablelist>
+    </sect4>
+
+    <sect4>
+	 <title>To activate or deactivate an interface</title>
+	 <para>In the <guilabel>Connections</guilabel> section, enable or disable the checkbox beside the interface.</para>
+    </sect4>
+    
+    <sect4>
+	 <title>To change your host name and domain name</title>
+	 <para>In the <guilabel>General</guilabel> section, change the hostname or domain name text boxes.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To add a new domain name server</title>
+	 <para>In the <guilabel>DNS Servers</guilabel> section, press the <guilabel>Add</guilabel> button and fill in the new list row with the new domain name server.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To delete a domain name server</title>
+	 <para>In the <guilabel>DNS Servers</guilabel> section, select a DNS IP address from the list and press the <guilabel>Delete</guilabel> button.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To add a new search domain</title>
+	 <para>In the <guilabel>Search Domains</guilabel> section, press the <guilabel>Add</guilabel> button and fill in the new list row with the new search domain.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To delete a search domain</title>
+	 <para>In the <guilabel>Search Domains</guilabel> section, select a search domain from the list and press the <guilabel>Delete</guilabel> button.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To add a new host alias</title>
+	 <para>In the <guilabel>Hosts</guilabel> section, press the <guilabel>Add</guilabel> button and type an IP address and the aliases that will point to in the window that pops up.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To modify a host alias</title>
+	 <para>In the <guilabel>Hosts</guilabel> section, select an alias, press the <guilabel>Properties</guilabel> button from the list and modify the alias settings in the window that pops up.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To delete a host alias</title>
+	 <para>In the <guilabel>Hosts</guilabel> section, select an alias from the list and press the <guilabel>Delete</guilabel> button.</para>
+    </sect4>
+
+    <sect4 id="prefs-network-admin-add-new-profile">
+	 <title>To save your current network configuration as a "Location"</title>
+	 <para>Press the <guilabel>Add</guilabel> button besides the <guilabel>Locations</guilabel> menu, specify the location name in the window that pops up.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To delete a location</title>
+	 <para>Press the <guilabel>Remove</guilabel> button besides the <guilabel>Locations</guilabel> menu, the selected profile will be deleted.</para>
+    </sect4>
+
+    <sect4>
+	 <title>To switch to a location</title>
+	 <para>Select one location from the <guilabel>Locations</guilabel> menu, all the configuration will be switched automatically to the chosen location.</para>
+    </sect4>
+
+	</sect3>
+  </sect2>
+
   <sect2 id="prefs-networkproxy">
     <title>Network Proxy Preferences</title>
     <!-- preserve id for backwards compatibility: 2.12 -->
@@ -2478,6 +2644,20 @@ action.</para>
     </sect3>
   </sect2>
 
+  <!-- ============= Printing ========================= -->
+  <sect2 id="prefs-printers">
+  
+    <title>Setting up a Printer</title>
+    <!-- preserve for backwards compatibility: 2.16 -->    
+    <anchor id="printer-setup"/>   
+          
+    <para>To set up a printer to use with GNOME, choose <menuchoice><guimenu>System</guimenu><guimenuitem>Control Center</guimenuitem></menuchoice> in the top panel menubar. Click the tool that you require from Control Center. The <guilabel>Printers</guilabel> window opens.</para>
+    
+    <para>Choose <menuchoice><guimenu>Printer</guimenu><guimenuitem>Add Printer</guimenuitem></menuchoice>. The <application>Add a Printer</application> assistant opens. This guides you through the process of setting up the printer.</para>
+    
+    <note><para>You can also use the <guilabel>Printers</guilabel> window to check the status of print jobs, and remove or alter the properties of printers that are already set up.</para></note>
+  </sect2>
+
   <sect2 id="goscustdesk-70">
     <title>Screen Resolution Preferences</title>
     <indexterm>
@@ -3154,133 +3334,6 @@ then click on the <guilabel>Delete</guilabel> button.</para>
   </sect2>
 
 </sect1>
-
-  <sect1 id="prefs-cddatabase">
-    <title># CD Database Preferences</title>
-    <!-- preserve id for backwards compatibility: 2.12 -->
-    <anchor id="goscustlookandfeel-39"/>       
-    <indexterm>
-      <primary>preference tools</primary>
-      <secondary>CD Database</secondary>
-    </indexterm>
-    <para>The <application>CD Database</application> preference tool
-enables you to configure a CD database that your system can query. A CD database
-contains information about CDs, such as the name of the artist, the title,
-and the track list. When an application plays a CD, the application can query
-the CD database about the CD, then display the information.</para>
-    <note><para>Not all applications that use audio CDs use the settings in this preference tool. Some may have supply their own settings in their preference dialog.</para></note>
-    <para><xref linkend="goscustlookandfeel-TBL-40"/> describes the preferences in the <application>CD Database</application> preference tool.</para>
-    <table frame="topbot" id="goscustlookandfeel-TBL-40">
-      <title>CD Database Preferences</title>
-      <tgroup cols="2" colsep="1" rowsep="1">
-        <colspec colname="colspec0" colwidth="18.86*"/>
-        <colspec colname="colspec1" colwidth="47.14*"/>
-        <thead>
-          <row>
-            <entry colsep="0" rowsep="1">
-              <para>Dialog Element</para>
-            </entry>
-            <entry colsep="0" rowsep="1">
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Send no information</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option if you do not want to send
-any information to the CD database server.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Send real information</guilabel>
-              </para>
-            </entry>
-            <entry colsep="0" rowsep="0" valign="top">
-              <para>Select this option to send your name and hostname information to the CD database
-server.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Send other information</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option to send another
-name and hostname to the CD database server. Enter the name in the <guilabel>Name</guilabel> field. Enter the hostname in the <guilabel>Hostname</guilabel>
-field.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>FreeDB round robin server</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>FreeDB is a CD database. The FreeDB
-round robin server is a load-sharing configuration of FreeDB servers. Select
-this option to access the FreeDB CD database from this server.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Other FreeDB server</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para> Select this option to access the FreeDB CD
-database from another server. Select the server that you require from the
-server table.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guibutton>Update Server List</guibutton>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Click on this button to update the list of available
-FreeDB servers in the server table.</para>
-            </entry>
-          </row>
-          <row>
-            <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-              <para>
-                <guilabel>Other server</guilabel>
-              </para>
-            </entry>
-            <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-              <para>Select this option to use another CD database.
-Enter the name of the server on which the database resides in the <guilabel>Hostname</guilabel> field. Enter the port number on which you can access the
-database in the <guilabel>Port</guilabel> field.</para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
-  </sect1>   
-
-
-
-
-
-
-
-  
-
-
 
 
 </chapter>
