@@ -1780,7 +1780,159 @@ right-click on any vacant space on the panel. Choose <menuchoice><guimenu>Add to
   applets as you want to your panels. To add a <application>Menu Bar</application>
   to a panel, right-click on any vacant space on the panel. Choose <guimenuitem>Add to Panel</guimenuitem> and choose <guilabel>Menu Bar</guilabel> from the <link linkend="panels-addobject"><guilabel>Add to Panel</guilabel></link> dialog.</para>
       </section>
-    </section>    
-    
+    </section>
+
+
+
+<!-- This has been pasted from the Window List manual so that the Window List applet help be integrated into the GUG. -->
+<!-- This section needs gross refactoring (making task-based for starters) -->
+
+ <section id="panel-windowlist">
+  <title>Window List</title>
+  <section id="panel-windowlist-introduction"> 
+	 <title>Introduction</title> 
+	 <para>The <application>Window List</application> applet enables you to manage the windows that are open on the GNOME desktop. <application>Window List</application> uses a button to represent each window or group of windows that is open. The state of the buttons in the applet varies depending on the state of the window that the button represents. The following table explains the possible states of the <application>Window List</application> buttons.</para>
+	<informaltable>
+	<tgroup cols="2">
+	<colspec colname="col1"/>
+	<colspec colname="col2"/>
+	<thead>
+	<row valign="top">
+	<entry colname="col1"><para>State</para></entry>
+	<entry colname="col2"><para>Indicates...</para></entry>
+	</row>
+	</thead>
+	<tbody>
+	<row valign="top">
+	<entry colname="col1"><para>Button is pressed in.</para></entry>
+	<entry colname="col2"><para>The window has focus.</para></entry>
+	</row>
+	<row valign="top">
+	<entry colname="col1"><para>The button appears faded.</para></entry>
+	<entry colname="col2"><para>The window is minimized.</para></entry>
+	</row> 
+	<row valign="top">
+	<entry colname="col1"><para>Button is not pressed in, and is not faded.</para></entry>
+	<entry colname="col2"><para>The window is displayed on the desktop and is not minimized.</para></entry>
+	</row>
+	<row valign="top">
+	<entry colname="col1"><para>There is a number in parentheses at the end of the button title.</para></entry>
+	<entry colname="col2"><para>The button represents a group of buttons. </para></entry>
+	</row>
+	</tbody>
+	</tgroup>
+	</informaltable>
+
+  </section>
+
+<!-- ================ Usage ================================ -->
+  <section id="panel-windowlist-usage"> 
+	 <title>Usage</title> 
+	 <para>You can use <application>Window List</application> to perform the following tasks:</para>
+	<itemizedlist>
+	<listitem>
+	<para>To give focus to a window</para>
+	<para>If you click on the <application>Window List</application> button that represents a window that is on the desktop but does not have focus, the applet gives focus to the window. </para>
+	</listitem>
+	<listitem>
+	<para>To minimize a window</para>
+	<para>If you click on the <application>Window List</application> button that represents the window that has focus, the applet minimizes the window. </para>
+	</listitem>
+	<listitem>
+	<para>To restore a minimized window</para>
+	<para>If you click on the <application>Window List</application> button that represents a minimized window, the applet restores the window.</para>
+	</listitem>
+	</itemizedlist>
+  </section>
+<!-- ============= Preferences ============================= -->
+  <section id="panel-windowlist-prefs"> 
+	 <title>Preferences</title> 
+	 <para>To configure <application>Window List</application>, right-click on the applet, then choose <guimenuitem>Preferences</guimenuitem>. The <guilabel>Window List Preferences</guilabel> dialog contains the following tabbed sections:
+	 </para>
+         <itemizedlist>
+           <listitem>
+             <para><xref linkend="panel-windowlist-prefs-behavior"/></para>
+           </listitem>
+           <listitem>
+             <para><xref linkend="panel-windowlist-prefs-size"/></para>
+           </listitem>
+         </itemizedlist>
+
+  <section id="panel-windowlist-prefs-behavior"> 
+	 <title>Behavior</title> 
+	 <variablelist>
+	 <varlistentry><term><guilabel>Window List Content</guilabel> </term>
+	 <listitem>
+	 <para>To specify which windows to display in <application>Window List</application>, select one of the following options: </para>
+	 	<itemizedlist>
+	 	<listitem>
+	 	<para><guilabel>Show windows from current workspace</guilabel></para>
+	 	<para>Select this option to only show the windows that are open in the current workspace.</para>
+	 	</listitem>
+	 	<listitem><para><guilabel>Show windows from all workspaces</guilabel></para>
+	 	<para>Select this option to show the windows that are open in all workspaces.</para>
+	 	</listitem>
+	 	</itemizedlist>
+	 </listitem>
+	 </varlistentry>
+	 <varlistentry><term><guilabel>Window Grouping</guilabel> </term>
+	 <listitem>
+	 <para>To specify when <application>Window List</application> groups windows that belong to the same process, select one of the following options: </para>
+		<itemizedlist>
+	 	<listitem>
+	 	<para><guilabel>Never group windows</guilabel></para>
+	 	<para>Select this option to never group windows of the same process under one <application>Window List</application> button.</para>
+		</listitem>
+	 	<listitem>
+	 	<para><guilabel>Group windows when space is limited</guilabel></para>
+	 	<para>Select this option to group windows of the same process under one <application>Window List</application> button when the space on the panel is restricted.</para>
+		</listitem>
+	 	<listitem>
+	 	<para><guilabel>Always group windows</guilabel></para>
+	 	<para>Select this option to always group windows of the same process under one <application>Window List</application> button.</para>
+		</listitem>
+		</itemizedlist>
+	 </listitem>
+	 </varlistentry>
+	 <varlistentry><term><guilabel>Restoring Minimized Windows</guilabel> </term>
+	 <listitem>
+	 <para>To define how <application>Window List</application> behaves when you restore windows, select one of the following options: </para>
+	 	<itemizedlist>
+	 	<listitem>
+	 	<para><guilabel>Restore to current workspace</guilabel></para>
+	 	<para>Select this option to restore a window from the applet to the current workspace, even if the window did not previously reside in the current workspace.</para>
+	 	</listitem>
+	 	<listitem><para><guilabel>Restore to native workspace</guilabel></para>
+	 	<para>Select this option to switch to the native workspace in which a window resides when you restore the window from the applet. </para>
+	 	</listitem>
+	 	</itemizedlist>
+	 </listitem>
+	 </varlistentry>
+	 </variablelist>
+  </section>
+
+  <section id="panel-windowlist-prefs-size"> 
+	 <title>Size</title> 
+	 <variablelist>
+	 <varlistentry><term><guilabel>Window List Size</guilabel> </term>
+	 <listitem>
+	 <para>The size of the <application>Window List</application> applet varies depending on the size of the panel in which the applet resides. Use the following spin boxes to set limitations on the size of the applet:</para>
+		<itemizedlist>
+	 	<listitem>
+	 	<para><guilabel>Minimum size ... pixels</guilabel></para>
+	 	<para>Use the spin box to specify the minimum size of the applet. If the panel is smaller than the minimum size specified, the panel adjusts in size to fit the applet.</para>
+		</listitem>
+	 	<listitem>
+	 	<para><guilabel>Maximum size ... pixels</guilabel></para>
+	 	<para>Use the spin box to specify the maximum size of the applet.</para>
+		</listitem>
+		</itemizedlist>
+	 </listitem>
+	 </varlistentry>
+	 </variablelist>
+  </section>
+  </section>
+ </section>
+
   </section>
 </chapter>
