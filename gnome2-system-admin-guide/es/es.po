@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-admin-guide.HEAD.es\n"
 "POT-Creation-Date: 2007-01-02 02:06+0000\n"
-"PO-Revision-Date: 2007-06-24 19:51+0200\n"
+"PO-Revision-Date: 2007-06-28 23:14+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -299,7 +299,7 @@ msgstr "Establecer valores predeterminados para preferencias particulares para t
 msgid ""
 "Use suggested values for preferences that are specified in definition files "
 "for the preferences."
-msgstr ""
+msgstr "Use los valores sugeridos para las preferencias especificadas en los archivos de definición para las preferencias."
 
 #: C/system-admin-guide.xml:29(para)
 msgid "Read documentation on each preference."
@@ -312,6 +312,9 @@ msgid ""
 "change a preference, all applications that use the preference are "
 "immediately updated."
 msgstr ""
+"<application>GConf</application> también notifica a las aplicaciones cuando un valor de "
+"preferencia ha cambiado, localmente o a traes de una red. De esta manera, cuando "
+"cambie una preferencia, todas las aplicaciones que usen la preferencia se actualizarán inmediatamente."
 
 #: C/system-admin-guide.xml:35(para)
 msgid "<application>GConf</application> has the following components:"
@@ -319,7 +322,7 @@ msgstr "<application>GConf</application> tiene los siguientes componentes:"
 
 #: C/system-admin-guide.xml:38(para)
 msgid "A repository of user preferences."
-msgstr ""
+msgstr "Un repositorio de las preferencias del usuario."
 
 #: C/system-admin-guide.xml:41(para)
 msgid "A daemon, <command>gconfd-2</command>."
@@ -351,20 +354,20 @@ msgid ""
 "<application>Panel</application> preference tool does not contain an option "
 "that corresponds to the <systemitem>/apps/panel/global/tooltips_enabled</"
 "systemitem> key."
-msgstr ""
+msgstr "Cada preferencia en el repositorio de <application>GConf</application> se expresa como un par de valores-clave. Una <firstterm>clave de preferencia de GConf</firstterm> es un elemento en el repositorio que corresponde a una preferencia en una aplicación. Por ehemplo, la clave de preferencia <systemitem>/apps/gnome-session/options/show_splash_screen</systemitem> corresponde a la opción <guilabel>Mostrar la pantalla de bienvenida al iniciar sesión</guilabel> en la herramienta de preferencias <application>Sesiones</application>. El interfaz de usuario del Escritorio GNOME no contiene todas las claves de preferencia en el repositorio de <application>GConf</application>. Por ejemplo, la herramienta de preferencias <application>Panel</application> no contiene una opción que corresponda con la clave <systemitem>/apps/panel/global/tooltips_enabled</systemitem>."
 
 #: C/system-admin-guide.xml:62(para)
 msgid ""
 "The repository is structured like a simple hierarchical file system. The "
 "repository contains the following:"
-msgstr ""
+msgstr "El repositorio está estructurado como un sistema de archivos jerárquico simple. El repositorio contiene lo siguiente:"
 
 #: C/system-admin-guide.xml:66(para)
 msgid ""
 "Directories that correspond to applications that use the <application>GConf</"
 "application> repository. For example, the file system contains the directory "
 "<systemitem>/apps/metacity</systemitem>."
-msgstr ""
+msgstr "Direcciones que corresponden a las aplicaciones que usan el repositorio de <application>GConf</application>. Por ejemplo, el sistema de archivos contiene el directorio <systemitem>/apps/metacity</systemitem>."
 
 #: C/system-admin-guide.xml:70(para)
 msgid ""
@@ -372,6 +375,8 @@ msgid ""
 "the file system contains the directory <systemitem>/apps/metacity/general</"
 "systemitem>."
 msgstr ""
+"Subdirectorios que corresponden con categorías de preferencias. Por ejemplo el sistema de archivos "
+"contiene el directorio <systemitem>/apps/metacity/general</systemitem>."
 
 #: C/system-admin-guide.xml:74(para)
 msgid ""
@@ -380,12 +385,15 @@ msgid ""
 "about the keys that relate to the HTTP proxy preferences is in the directory "
 "<systemitem>/system/http_proxy</systemitem>."
 msgstr ""
+"Archivos especiales que listan las claves de preferencias en el directorio y contienen información acerca de las claves. "
+"Por ejemplo, un archivo que contiene información acerca de las claves referentes a las preferencias del proxy HTTP está "
+"en el directorio <systemitem>/system/http_proxy</systemitem>."
 
 #: C/system-admin-guide.xml:80(para)
 msgid ""
 "A <systemitem>/schemas</systemitem> directory that contains files that "
 "describe all of the preference keys."
-msgstr ""
+msgstr "Un directorio <systemitem>/schemas</systemitem> que contiene archivos que describen todas las claves de preferencias."
 
 #: C/system-admin-guide.xml:84(para)
 msgid ""
@@ -395,7 +403,7 @@ msgid ""
 "repository. The following is an example of the <systemitem>/desktop/gnome/"
 "interface/font_name</systemitem> preference key when an Extensible Markup "
 "Language (XML) backend module is used to read the repository:"
-msgstr ""
+msgstr "Las claves de preferencia generalmente contiene valores simples, tales como cadenas, enteros o listas de cadenas y enteros. El formato de las claves de preferencias en el repositorio depende del módulo de backend usado para leer el repositorio. El siguiente ejemplo muestra la clave de preferencia <systemitem>/desktop/gnome/interface/font_name</systemitem> cuando un módulo backend de «Extensible Markup Language» (XML) se usa para leer el repositorio:"
 
 #: C/system-admin-guide.xml:92(para)
 msgid ""
@@ -404,15 +412,15 @@ msgid ""
 "preference key in the <systemitem>/desktop/gnome/interface</systemitem> "
 "subdirectory is referred to as <systemitem>/desktop/gnome/interface/"
 "font_name</systemitem>."
-msgstr ""
+msgstr "Cuando esta guía se refiere a una clave de preferencia, la ruta a la clave se añade al nombre de la clave. Por ejemplo, a la clave de preferencia <systemitem>font_name</systemitem> en el subdirectorio <systemitem>/desktop/gnome/interface</systemitem> se la suele llamar <systemitem>/desktop/gnome/interface/font_name</systemitem>."
 
 #: C/system-admin-guide.xml:98(title)
 msgid "GConf Configuration Sources"
-msgstr ""
+msgstr "Fuentes de configuración de GConf"
 
 #: C/system-admin-guide.xml:101(secondary)
 msgid "configuration sources"
-msgstr ""
+msgstr "fuentes de configuración"
 
 #: C/system-admin-guide.xml:103(para)
 msgid ""
@@ -424,10 +432,12 @@ msgid ""
 "path</systemitem>. Each user has a path file. The path file specifies the "
 "following information for each configuration source:"
 msgstr ""
+"El repositorio de <application>GConf</application> contiene una serie de lugares de almacenamiento llamados <firstterm>fuentes de configuración</firstterm>. Las fuentes de configuración están listadas en la <firstterm>archivo de ruta de GConf<application>. La ubicación del archivo de ruta de <application>GConf</application> es <systemitem>/etc/gconf/<replaceable>número-de-versión-de-gconf</replaceable>/"
+"path</systemitem>. Cada usuario tiene un archivo de ruta. El archivo de ruta especifica la siguiente información para cada fuente de configuración."
 
 #: C/system-admin-guide.xml:110(para)
 msgid "The backend module to use to read the repository."
-msgstr ""
+msgstr "El módulo backend a usar para leer el repositorio."
 
 #: C/system-admin-guide.xml:113(para)
 msgid "The permissions on the repository."
@@ -442,7 +452,7 @@ msgid ""
 "The <application>GConf</application> path file also contains "
 "<systemitem>include</systemitem> instructions. By default, the contents of "
 "the <application>GConf</application> path file are as follows:"
-msgstr ""
+msgstr "La ruta de archivo de <application>GConf</application> también contiene instrucciones <systemitem>include</systemitem>. De forma predeterminada el contenido de el archivo de ruta de <application>GConf</application> es el siguiente:"
 
 #: C/system-admin-guide.xml:120(programlisting)
 #, no-wrap
@@ -454,6 +464,12 @@ msgid ""
 "xml:readwrite:$(HOME)/.gconf\n"
 "xml:readonly:/etc/gconf/gconf.xml.defaults"
 msgstr ""
+"xml:readonly:/etc/gconf/gconf.xml.mandatory\n"
+"include /etc/gconf/2/local-mandatory.path\n"
+"include \"$(HOME)/.gconf.path\"\n"
+"include /etc/gconf/2/local-defaults.path\n"
+"xml:readwrite:$(HOME)/.gconf\n"
+"xml:readonly:/etc/gconf/gconf.xml.defaults"
 
 #: C/system-admin-guide.xml:126(para)
 msgid ""
@@ -461,11 +477,11 @@ msgid ""
 "<application>GConf</application> reads the configuration sources in the "
 "order specified in the path file. The following table describes the "
 "configuration sources in the path file:"
-msgstr ""
+msgstr "Cuando <application>GConf</application> busca el valor de una preferencia, <application>GConf</application> lee las fuentes de configuración en el orden especificado por el archivo de ruta. La siguiente tabla describe las fuentes de configuración en el archivo de ruta."
 
 #: C/system-admin-guide.xml:136(para)
 msgid "Configuration Source"
-msgstr ""
+msgstr "Configuración fuente"
 
 #: C/system-admin-guide.xml:139(para) C/system-admin-guide.xml:206(para)
 #: C/system-admin-guide.xml:288(para) C/system-admin-guide.xml:197(para)
@@ -485,7 +501,7 @@ msgid ""
 "The permissions on this configuration source are set to read only. Users "
 "cannot overwrite the values in this source, so the preferences in the source "
 "are mandatory."
-msgstr ""
+msgstr "Los permisos sobre esta configuración fuente están establecidos a sólo lectura. Los usuarios no pueden sobreescribir los valores en esta fuente, de tal forma que las preferencias en la fuente son obligatorias."
 
 #: C/system-admin-guide.xml:156(para)
 msgid "User"
@@ -496,13 +512,13 @@ msgid ""
 "This configuration source is stored in the <filename>.gconf</filename> "
 "directory in the home directory of the user. When the user sets a "
 "preference, the new preference information is added to this location."
-msgstr ""
+msgstr "Esta configuración fuente se almacena en el directorio <filename>.gconf</filename> dentro del directorio de inicio del usuario. Cuando el usuario establece una preferencia, la nueva información de la preferencia se añade a esta ubicación."
 
 #: C/system-admin-guide.xml:162(para)
 msgid ""
 "You can use the <application>Configuration Editor</application> to modify "
 "the user configuration source."
-msgstr ""
+msgstr "Puede usar el <application>Editor de configuración</application> para modificar la configuración fuente de un usuario."
 
 #: C/system-admin-guide.xml:169(para)
 msgid "Default"
@@ -510,7 +526,7 @@ msgstr "Predeterminado"
 
 #: C/system-admin-guide.xml:172(para)
 msgid "This configuration source contains the default preference settings."
-msgstr ""
+msgstr "Esta configuración fuente contiene los ajustes predeterminados de preferencias."
 
 #: C/system-admin-guide.xml:178(para)
 msgid ""
@@ -519,81 +535,81 @@ msgid ""
 "sequence also ensures that user preference settings override default "
 "preference settings. That is, <application>GConf</application> applies "
 "preferences in the following order of priority:"
-msgstr ""
+msgstr "La secuencia de las fuentes de configuración en el archivo de ruta asegura que los ajustes de preferencias obligatorias sobreescriben los ajustes de preferencias del usuario. La secuencia también se asegura que los ajustes de preferencias del usuario sobreescriben los ajustes de preferencias predeterminados. Esto es, <application>GConf</application> aplica las preferencias con la siguiente prioridad:"
 
 #: C/system-admin-guide.xml:185(para)
 msgid "Mandatory preferences"
-msgstr ""
+msgstr "Preferencias obligatorias"
 
 #: C/system-admin-guide.xml:188(para)
 msgid "User-specified preferences"
-msgstr ""
+msgstr "Preferencias especificadas por el usuario"
 
 #: C/system-admin-guide.xml:191(para)
 msgid "Default preferences"
-msgstr ""
+msgstr "Preferencias predeterminadas"
 
 #: C/system-admin-guide.xml:194(para)
 msgid ""
 "The <systemitem>include</systemitem> instructions in the <application>GConf</"
 "application> path file enable system administrators to specify other "
 "configuration sources."
-msgstr ""
+msgstr "Las instrucciones <systemitem>include</systemitem> en la ruta de archivo de <application>GConf</application> permiten a los administradores del sistema especificar otras fuentes de configuración."
 
 #: C/system-admin-guide.xml:203(para)
 msgid "Included Configuration Source"
-msgstr ""
+msgstr "Fuente de configuración incluida"
 
 #: C/system-admin-guide.xml:214(filename)
 msgid "/etc/gconf/2/local-mandatory.path"
-msgstr ""
+msgstr "/etc/gconf/2/local-mandatory.path"
 
 #: C/system-admin-guide.xml:218(para)
 msgid ""
 "Use this configuration source to store mandatory preference values for a "
 "particular system."
-msgstr ""
+msgstr "Use esta fuente configuración para almacenar valores de preferencias obligatorios para un sistema particular."
 
 #: C/system-admin-guide.xml:225(filename)
 msgid "$(HOME)/.gconf.path"
-msgstr ""
+msgstr "$(HOME)/.gconf.path"
 
 #: C/system-admin-guide.xml:229(para)
 msgid ""
 "The user specifies the location of the configuration source in the home "
 "directory, in a file that is called <filename>.gconf.path</filename>."
-msgstr ""
+msgstr "El usuario especifica la ubicación de la configuración fuente en el directorio de inicio, en un archillo llamado <filename>.goncf.path</filename>."
 
 #: C/system-admin-guide.xml:236(filename)
 msgid "/etc/gconf/2/local-defaults.path"
-msgstr ""
+msgstr "/etc/gconf/2/local-defaults.path"
 
 #: C/system-admin-guide.xml:240(para)
 msgid ""
 "Use this configuration source to store default preference values for a "
 "particular system."
-msgstr ""
+msgstr "Use esta configuración fuente para almacenar los valores de preferencias predeterminados para un sistema particular."
 
 #: C/system-admin-guide.xml:249(title)
 msgid "GConf Schemas"
-msgstr ""
+msgstr "Esquemas de GConf"
 
 #: C/system-admin-guide.xml:252(secondary)
 #: C/system-admin-guide.xml:263(primary) C/system-admin-guide.xml:267(primary)
 #: C/system-admin-guide.xml:271(primary) C/system-admin-guide.xml:414(primary)
 #: C/system-admin-guide.xml:1003(primary)
 msgid "schemas"
-msgstr ""
+msgstr "esquemas"
 
 #: C/system-admin-guide.xml:256(secondary)
 #: C/system-admin-guide.xml:268(secondary)
 msgid "schema keys"
-msgstr ""
+msgstr "claves de esquema"
 
 #: C/system-admin-guide.xml:260(secondary)
 #: C/system-admin-guide.xml:272(secondary)
 msgid "schema objects"
-msgstr ""
+msgstr "objetos de esquema"
 
 #: C/system-admin-guide.xml:264(secondary)
 #: C/system-admin-guide.xml:602(replaceable)
@@ -607,7 +623,7 @@ msgid ""
 "<firstterm>GConf schema key</firstterm> and a <firstterm>GConf schema "
 "object</firstterm>. The following table describes schema keys and schema "
 "objects and the relationship of these items to preference keys:"
-msgstr ""
+msgstr "Un <firstterm>esquema de GConf</firstterm> es un término colectivo para una <firstterm>clave de esquema de GConf</firstterm> y un <firstterm>objeto de esquema de GConf</firstterm>. La siguiente tabla describe las claves y objetos de esquema y su relación con las claves de preferencias."
 
 #: C/system-admin-guide.xml:285(para) C/system-admin-guide.xml:345(para)
 msgid "Item"
@@ -615,55 +631,55 @@ msgstr "Elemento"
 
 #: C/system-admin-guide.xml:295(para) C/system-admin-guide.xml:355(para)
 msgid "Preference key"
-msgstr ""
+msgstr "Clave de preferencia"
 
 #: C/system-admin-guide.xml:298(para)
 msgid ""
 "An element in the <application>GConf</application> repository that "
 "corresponds to an application preference."
-msgstr ""
+msgstr "Un elemento en el repositorio de <application>GConf</application> que corresponde con la preferencia de una aplicación."
 
 #: C/system-admin-guide.xml:303(para) C/system-admin-guide.xml:365(para)
 msgid "Schema key"
-msgstr ""
+msgstr "Clave de esquema"
 
 #: C/system-admin-guide.xml:306(para)
 msgid "A key that stores a schema object for a preference key."
-msgstr ""
+msgstr "Una clave que almacena un objeto de esquema para una clave de preferencia."
 
 #: C/system-admin-guide.xml:311(para) C/system-admin-guide.xml:375(para)
 msgid "Schema object"
-msgstr ""
+msgstr "Objeto de esquema"
 
 #: C/system-admin-guide.xml:314(para)
 msgid ""
 "An element in a configuration source that contains information for a "
 "preference key, such as the following:"
-msgstr ""
+msgstr "Un elemento en una configuración fuente que contiene información para una clave de preferencia, tal como:"
 
 #: C/system-admin-guide.xml:318(para)
 msgid "The name of the application that uses the preference key."
-msgstr ""
+msgstr "El nombre de la aplicación que usa la clave de preferencia."
 
 #: C/system-admin-guide.xml:321(para)
 msgid ""
 "The type of value required for the preference key, for example integer, "
 "boolean, and so on."
-msgstr ""
+msgstr "El tipo de valor requerido por la clave de preferencia, por ejemplo entero, booleano y demás."
 
 #: C/system-admin-guide.xml:325(para)
 msgid "A default value for the preference key."
-msgstr ""
+msgstr "Un valor predeterminado para la clave de preferencia."
 
 #: C/system-admin-guide.xml:328(para)
 msgid "Brief documentation on the preference key."
-msgstr ""
+msgstr "Breve documentación sobre la clave de preferencia."
 
 #: C/system-admin-guide.xml:336(para)
 msgid ""
 "The following table gives examples of a preference key, a schema key, and a "
 "schema object:"
-msgstr ""
+msgstr "La siguiente tabla proporciona ejemplos de una clave de preferencia, una clave de esquema y un objeto esquema:"
 
 #: C/system-admin-guide.xml:348(para)
 msgid "Example"
@@ -672,18 +688,18 @@ msgstr "Ejemplo"
 #: C/system-admin-guide.xml:359(systemitem)
 #: C/system-admin-guide.xml:1214(para)
 msgid "/desktop/gnome/interface/font_name"
-msgstr ""
+msgstr "/desktop/gnome/interface/font_name"
 
 #: C/system-admin-guide.xml:369(systemitem)
 msgid "/schemas/desktop/gnome/interface/font_name"
-msgstr ""
+msgstr "/schemas/desktop/gnome/interface/font_name"
 
 #: C/system-admin-guide.xml:394(para)
 msgid ""
 "You can associate a schema key with a preference key. For example, the "
 "following <systemitem>/desktop/gnome/interface/font_name</systemitem> key "
 "includes a schema key:"
-msgstr ""
+msgstr "Puede asociar una clave de esquema con una clave de preferencia. Por ejemplo, la siguiente clave <systemitem>/desktop/gnome/interface/font_name</systemitem> incluye una clave de esquema:"
 
 #: C/system-admin-guide.xml:399(para)
 msgid ""
@@ -692,22 +708,22 @@ msgid ""
 "key. The suggested value is contained in the <sgmltag>&lt;default&gt;</"
 "sgmltag> element in the schema object. By default, all the preference keys "
 "in the default configuration source are associated with schema keys."
-msgstr ""
+msgstr "Cuando asocia una clave de esquema con una clave de preferencia, la preferencia usa el valor sugerido especificado en el objeto esquema de la clave de esquema. El valor sugerido está contendio en el elemento <sgmltag>&lt;default&gt;</sgmltag> dentro del objeto esquema. De forma predeterminada todas las claves de preferencias en su configuración fuente predeterminada están asociadas con claves de esquema."
 
 #: C/system-admin-guide.xml:404(para)
 msgid "Typically, schemas are stored in the default configuration source."
-msgstr ""
+msgstr "Generalmente los esquemas están almacenados en la configuración fuente origial."
 
 #: C/system-admin-guide.xml:407(title)
 msgid "GConf Schema Definition Files"
-msgstr ""
+msgstr "Archivos de definición de esquemas de GConf"
 
 #: C/system-admin-guide.xml:410(secondary)
 #: C/system-admin-guide.xml:415(secondary)
 #: C/system-admin-guide.xml:999(secondary)
 #: C/system-admin-guide.xml:1004(secondary)
 msgid "schema definition files"
-msgstr ""
+msgstr "archivos de definición de esquemas"
 
 #: C/system-admin-guide.xml:418(para)
 msgid ""
@@ -715,14 +731,14 @@ msgid ""
 "schema definition file defines the characteristics of all of the keys in a "
 "particular application. Schema definition files have a <filename>.schemas</"
 "filename> extension."
-msgstr ""
+msgstr "Los esquemas se generan desde <firstterm>archivos de definición de esquemas</firstterm>. Un archivo de definición de esquemas define las características de todas las claves de una aplicación en particular. Los archivos de definición de esquemas tienen una extensión <filename>.schema</filename>."
 
 #: C/system-admin-guide.xml:422(para)
 msgid ""
 "The schema definition files are included in the <filename>/etc/gconf/"
 "schemas</filename> directory. You can use the schema definition files to "
 "create a new configuration source."
-msgstr ""
+msgstr "Los archivos de definición de esquema están incluidos en el directorio <filename>/etc/gconf/schemas</filename>. Puede usar los archivos de definición de esquemas para crear una nueva fuente de configuración."
 
 #: C/system-admin-guide.xml:424(para)
 msgid ""
@@ -733,7 +749,7 @@ msgid ""
 "are not present in the GNOME Desktop user interface. For example, the "
 "<systemitem>/apps/panel/global/tooltips_enabled</systemitem> key is not "
 "present in the user interface."
-msgstr ""
+msgstr "Algunos archivos de definición de esquemas corresponden con una parte del interfaz de usuario del Escritorio GNOME. Por ejemplo, <filename>system_http_proxy.schemas</filename> corresponde con la herramienta de preferencias <application>Proxy de la red</application>. Otros archivos de definición de esquemas contienen claves de preferencias que no están presentes en el interfaz de usuario del Escritorio GNOME. Por ejemplo, la clave <systemitem>/apps/panel/global/tooltips_enabled</systemitem> no está presente en el interfaz de usuario."
 
 #: C/system-admin-guide.xml:430(para)
 msgid ""
@@ -742,23 +758,23 @@ msgid ""
 "example, the <application>Keyboard Shortcuts</application> preference tool "
 "contains preferences that represent keys from the <filename>panel-global-"
 "config.schemas</filename> and <filename>metacity.schemas</filename> files."
-msgstr ""
+msgstr "Algunas partes del interfaz de usuario del Escritorio GNOME contienen preferencias que representan claves de preferencias de más de un archivo de definición de esquemas. Por ejemplo, la herramienta de preferencias <application>Combinaciones de teclas</application> contiene preferencias que representan claves de los archivos <filename>panel-global-config.schemas</filename> y <filename>metacity.schemas</filename>"
 
 #: C/system-admin-guide.xml:437(title)
 msgid "GConf Daemon"
-msgstr ""
+msgstr "Demonio de GConf"
 
 #: C/system-admin-guide.xml:439(primary)
 msgid "gconfd"
-msgstr ""
+msgstr "gconfd"
 
 #: C/system-admin-guide.xml:440(see)
 msgid "GConf daemon"
-msgstr ""
+msgstr "Demonio de GConf"
 
 #: C/system-admin-guide.xml:444(secondary)
 msgid "daemon"
-msgstr ""
+msgstr "demonio"
 
 #: C/system-admin-guide.xml:446(para)
 msgid ""
@@ -824,85 +840,85 @@ msgstr ""
 msgid ""
 "To terminate the <application>GConf</application> daemon, run the following "
 "command:"
-msgstr ""
+msgstr "Para finalizar el demonio <application>GConf</application>, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:484(userinput)
 #, no-wrap
 msgid "gconftool-2 --shutdown"
-msgstr ""
+msgstr "gconftool-2 --shutdown"
 
 #: C/system-admin-guide.xml:487(title)
 msgid "GConf Command Line Tool"
-msgstr ""
+msgstr "La herramienta de la línea de comandos de GConf"
 
 #: C/system-admin-guide.xml:490(primary)
 msgid "gconftool-2"
-msgstr ""
+msgstr "gconftool-2"
 
 #: C/system-admin-guide.xml:491(see)
 msgid "GConf command line tool"
-msgstr ""
+msgstr "La herramienta de la línea de comandos de GConf"
 
 #: C/system-admin-guide.xml:495(secondary)
 msgid "command line tool"
-msgstr ""
+msgstr "herramienta de la línea de comandos"
 
 #: C/system-admin-guide.xml:497(para)
 msgid ""
 "<application>GConf</application> includes a command line tool, "
 "<command>gconftool-2</command>. You can use the <command>gconftool-2</"
 "command> command to perform the following tasks:"
-msgstr ""
+msgstr "<application>GConf</application> incluye una herramienta para la línea de comandos, <command>gconftool-2</command>. Puede usar el comando <command>gconftool-2</command> para realizar las siguientes tareas:"
 
 #: C/system-admin-guide.xml:501(para)
 msgid "Set the values of keys."
-msgstr ""
+msgstr "Ajustar los valores de las claves."
 
 #: C/system-admin-guide.xml:504(para)
 msgid "Display the values of keys."
-msgstr ""
+msgstr "Mostrar los valores de las claves."
 
 #: C/system-admin-guide.xml:507(para)
 msgid "Install schemas from schema definition files when you install an application."
-msgstr ""
+msgstr "Instalar esquemas desde archivos de definiciones de esquemas cuando instala una aplicación."
 
 #: C/system-admin-guide.xml:511(para)
 msgid ""
 "For example, use the following command to display the values of all keys in "
 "the <systemitem>/desktop/gnome</systemitem> directory and subdirectories."
-msgstr ""
+msgstr "Por ejemplo, use el siguiente comando para mostrar los valores de todas las claves en el directorio y subdirectorios <systemitem>/desktop/gnome</systemitem>."
 
 #: C/system-admin-guide.xml:513(userinput)
 #, no-wrap
 msgid "gconftool-2 --recursive-list /desktop/gnome"
-msgstr ""
+msgstr "gconftool-2 --recursive-list /desktop/gnome"
 
 #: C/system-admin-guide.xml:514(para)
 msgid ""
 "Below are listed some of the options that you can use with the "
 "<command>gconftool-2</command> command. For detailed command line options, "
 "please see <ulink url=\"man:gconftool-2(1)\">man:gconftool-2(1)</ulink>."
-msgstr ""
+msgstr "Abajo se listan algunas de las opciones que puede usar con el comando <command>gconftool-2</command>. Para obtener más detalles sobre las opciones de la línea de comandos vea <ulink url=\"man:gconftool-2(1)\">man:gconftool-2(1)</ulink>."
 
 #: C/system-admin-guide.xml:518(title)
 msgid "gconftool-2 Command Options"
-msgstr ""
+msgstr "Opciones de comandos para gconftool-2"
 
 #: C/system-admin-guide.xml:521(option)
 msgid "--all-dirs"
-msgstr ""
+msgstr "--all-dirs"
 
 #: C/system-admin-guide.xml:524(para)
 msgid "Lists all subdirectories in a directory that you specify."
-msgstr ""
+msgstr "Lista todos los subdirectorios en el directorio que especifique."
 
 #: C/system-admin-guide.xml:530(option)
 msgid "--all-entries"
-msgstr ""
+msgstr "--all-entries"
 
 #: C/system-admin-guide.xml:533(para)
 msgid "Displays the values of all keys in a directory that you specify."
-msgstr ""
+msgstr "Muestra los valores de todas las claves en el directorio que especifique."
 
 #: C/system-admin-guide.xml:539(replaceable)
 #: C/system-admin-guide.xml:800(replaceable)
@@ -911,7 +927,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:539(option)
 msgid "--config-source=<placeholder-1/>"
-msgstr ""
+msgstr "--config-source=<placeholder-1/>"
 
 #: C/system-admin-guide.xml:542(para)
 msgid ""
@@ -923,7 +939,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:550(option)
 msgid "--direct"
-msgstr ""
+msgstr "--direct"
 
 #: C/system-admin-guide.xml:553(para)
 msgid ""
@@ -936,7 +952,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:560(option)
 msgid "--dump"
-msgstr ""
+msgstr "--dump"
 
 #: C/system-admin-guide.xml:563(para)
 msgid ""
@@ -955,7 +971,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:574(option)
 msgid "--get"
-msgstr ""
+msgstr "--get"
 
 #: C/system-admin-guide.xml:577(para)
 msgid ""
@@ -981,7 +997,7 @@ msgstr "nombre de archivo"
 
 #: C/system-admin-guide.xml:592(option)
 msgid "--load=<placeholder-1/>"
-msgstr ""
+msgstr "--load=<placeholder-1/>"
 
 #: C/system-admin-guide.xml:595(para)
 msgid ""
@@ -993,49 +1009,49 @@ msgstr ""
 
 #: C/system-admin-guide.xml:602(option)
 msgid "--long-desc=<placeholder-1/>"
-msgstr ""
+msgstr "--long-desc=<placeholder-1/>"
 
 #: C/system-admin-guide.xml:605(para)
 msgid ""
 "Use this option with the <option>--set-schema</option> option to specify a "
 "long description for a schema key."
-msgstr ""
+msgstr "Use esta opción con la opción <option>--set-schema</option> para especificar una descripción larga para una clave de esquema."
 
 #: C/system-admin-guide.xml:611(option)
 msgid "--makefile-install-rule"
-msgstr ""
+msgstr "--makefile-install-rule"
 
 #: C/system-admin-guide.xml:614(para)
 msgid "Installs schema definition files to applications."
-msgstr ""
+msgstr "Instala archivos de definición de esquemas a las aplicaciones."
 
 #: C/system-admin-guide.xml:619(replaceable)
 msgid "owner"
-msgstr ""
+msgstr "propietario"
 
 #: C/system-admin-guide.xml:619(option)
 msgid "--owner=<placeholder-1/>"
-msgstr ""
+msgstr "--owner=<placeholder-1/>"
 
 #: C/system-admin-guide.xml:622(para)
 msgid ""
 "Use this option with the <option>--set-schema</option> option to specify an "
 "owner for a schema key."
-msgstr ""
+msgstr "Use esta opción junto con la opción <option>--set-schema</option> para especificar un propietario para una clave de esquema."
 
 #: C/system-admin-guide.xml:628(option)
 msgid "--recursive-list"
-msgstr ""
+msgstr "--recursive-list"
 
 #: C/system-admin-guide.xml:631(para)
 msgid ""
 "Displays the values of all preference keys in all subdirectories in a "
 "directory that you specify."
-msgstr ""
+msgstr "Muestra los valores de todas las claves de preferencias en todos los subdirectorios dentro del directorio que especifique."
 
 #: C/system-admin-guide.xml:637(option)
 msgid "--recursive-unset"
-msgstr ""
+msgstr "--recursive-unset"
 
 #: C/system-admin-guide.xml:640(para)
 msgid ""
@@ -1046,7 +1062,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:647(option)
 msgid "--set"
-msgstr ""
+msgstr "--set"
 
 #: C/system-admin-guide.xml:650(para)
 msgid ""
@@ -1056,7 +1072,7 @@ msgid ""
 "want to set. For example, the following command sets the value of the "
 "<systemitem>/apps/gnome-terminal/profiles/Default/background_color</"
 "systemitem> key in the user configuration source:"
-msgstr ""
+msgstr "Establece el valor de una clave de preferencia y escribe el valor a la fuente de configuración del usuario. Use la opción <option>--type</option> junto con la opción <option>--set</option> para especificar el tipo de datos de la clave que quiere establecer. Por ejemplo, el siguiente comando establece el valor de la clave <systemitem>/apps/gnome-terminal/profiles/Default/background_color</systemitem> en la fuente de configuración del usuario."
 
 #: C/system-admin-guide.xml:656(userinput)
 #, no-wrap
@@ -1065,52 +1081,55 @@ msgid ""
 "  --set \"/apps/gnome-terminal/profiles/Default/background_color\" \\\n"
 "  --type string \"#000000\""
 msgstr ""
+"gconftool-2 \\\n"
+"  --set \"/apps/gnome-terminal/profiles/Default/background_color\" \\\n"
+"  --type string \"#000000\""
 
 #: C/system-admin-guide.xml:659(para)
 msgid ""
 "You can also use the <option>--direct</option> option and the <option>--"
 "config-source</option> option with the <option>--set</option> option to "
 "write a value to another configuration source."
-msgstr ""
+msgstr "También puede usar las opciones <option>--direct</option> y <option>--config-source</option> junto con la opción <option>--set</option> para escribir un valor a otra fuente de configuración."
 
 #: C/system-admin-guide.xml:666(option)
 msgid "--set-schema"
-msgstr ""
+msgstr "--set-schema"
 
 #: C/system-admin-guide.xml:669(para)
 msgid ""
 "Sets the value of an attribute in a schema key, and writes the value to the "
 "default configuration source."
-msgstr ""
+msgstr "Establece el valor de un atributo en una clave de esquema y escribe el valor a la fuente de configuración predeterminada."
 
 #: C/system-admin-guide.xml:671(para)
 msgid ""
 "Use the following options with the <option>--set-schema</option> option to "
 "specify the attribute that you want to update:"
-msgstr ""
+msgstr "Use las siguientes opciones junto con la opción <option>--set-schema</option> para especificar el atributo que quiere actualizar:"
 
 #: C/system-admin-guide.xml:676(option)
 msgid "--type"
-msgstr ""
+msgstr "--type"
 
 #: C/system-admin-guide.xml:681(option)
 msgid "--short-desc"
-msgstr ""
+msgstr "--short-desc"
 
 #: C/system-admin-guide.xml:686(option)
 msgid "--long-desc"
-msgstr ""
+msgstr "--long-desc"
 
 #: C/system-admin-guide.xml:691(option)
 msgid "--owner"
-msgstr ""
+msgstr "--owner"
 
 #: C/system-admin-guide.xml:695(para)
 msgid ""
 "For example, the following command sets the short description in the schema "
 "key for the <systemitem>/apps/gnome-terminal/profiles/Default/"
 "background_color</systemitem> key:"
-msgstr ""
+msgstr "Por ejemplo, el siguiente comando establece la descripción corta en la clave de esquema para la clave <systemitem>/apps/gnome-terminal/profiles/Default/background_color</systemitem>."
 
 #: C/system-admin-guide.xml:697(userinput)
 #, no-wrap
@@ -1119,40 +1138,43 @@ msgid ""
 "  --set-schema  \"/schemas/apps/gnome-terminal/profiles/Default/background_color\" \\\n"
 "  --short-desc \"Default  background color of terminal\""
 msgstr ""
+"gconftool-2 \\\n"
+"  --set-schema  \"/schemas/apps/gnome-terminal/profiles/Default/background_color\" \\\n"
+"  --short-desc \"Default  background color of terminal\""
 
 #: C/system-admin-guide.xml:704(option)
 msgid "--short-desc=<placeholder-1/>"
-msgstr ""
+msgstr "--short-desc=<placeholder-1/>"
 
 #: C/system-admin-guide.xml:707(para)
 msgid ""
 "Use this option with the <option>--set-schema</option> option to specify a "
 "short description for a schema key."
-msgstr ""
+msgstr "Use esta opción junto con la opción <option>--set-schema</option> para especificar una descripción corta para la clave de esquema."
 
 #: C/system-admin-guide.xml:713(option)
 msgid "--shutdown"
-msgstr ""
+msgstr "--shutdown"
 
 #: C/system-admin-guide.xml:716(para)
 msgid "Terminates the <application>GConf</application> daemon."
-msgstr ""
+msgstr "Finaliza el demonio de <application>GConf</application>."
 
 #: C/system-admin-guide.xml:721(replaceable)
 #: C/system-admin-guide.xml:801(replaceable)
 msgid "data-type"
-msgstr ""
+msgstr "data-type"
 
 #: C/system-admin-guide.xml:721(option)
 msgid "--type=<placeholder-1/>"
-msgstr ""
+msgstr "--type=<placeholder-1/>"
 
 #: C/system-admin-guide.xml:724(para)
 msgid ""
 "Use this option to specify the data type when you set a value of a "
 "preference key. You can also use this option when you set the value of an "
 "attribute in a schema key. The following is a list of valid data types:"
-msgstr ""
+msgstr "Use esta opción para especificar los tipos de datos cuando establezca una valor para una clave de preferencia. También puede usar esta opción cuando establezca el valor de un atributo en una clave de esquema. La siguiente es una lista de tipos de dato válidos:"
 
 #: C/system-admin-guide.xml:730(type)
 msgid "bool"
@@ -1168,15 +1190,15 @@ msgstr "int"
 
 #: C/system-admin-guide.xml:745(type)
 msgid "list"
-msgstr "lista"
+msgstr "list"
 
 #: C/system-admin-guide.xml:750(type)
 msgid "pair"
-msgstr "par"
+msgstr "pair"
 
 #: C/system-admin-guide.xml:755(type)
 msgid "string"
-msgstr "cadena"
+msgstr "string"
 
 #: C/system-admin-guide.xml:763(option)
 msgid "--unset"
@@ -1186,7 +1208,7 @@ msgstr "--unset"
 msgid ""
 "Resets the value of a preference key from the user setting to the setting in "
 "the default configuration source."
-msgstr ""
+msgstr "Restablece el valor de una clave de preferencia del ajuste del usuario al ajuste en la fuente de configuración predeterminada."
 
 #: C/system-admin-guide.xml:772(option)
 msgid "--usage"
@@ -1197,7 +1219,7 @@ msgid ""
 "Displays a brief help message about the <command>gconftool-2</command> "
 "command, and the options that you can use with the <command>gconftool-2</"
 "command> command."
-msgstr ""
+msgstr "Muestra un breve mensaje de ayuda acerca del comando <command>gconftool-2</command> y las opciones que puede usar con el mismo."
 
 #: C/system-admin-guide.xml:783(title)
 msgid "To Set Preference Values"
@@ -1232,11 +1254,11 @@ msgstr ""
 msgid ""
 "To set a mandatory value or a default value for a preference key, use the "
 "<command>gconftool-2</command> command, as follows:"
-msgstr ""
+msgstr "Para establecer un valor obligatorio o predeterminado para una clave de preferencia, use el comando <command>gconftool-2</command> tal y como sigue:"
 
 #: C/system-admin-guide.xml:802(replaceable)
 msgid "preference-key"
-msgstr ""
+msgstr "clave de preferencia"
 
 #: C/system-admin-guide.xml:802(replaceable)
 #: C/system-admin-guide.xml:491(literal)
@@ -1251,12 +1273,16 @@ msgid ""
 "  --type <placeholder-2/> \\\n"
 "  --set <placeholder-3/> <placeholder-4/>"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source <placeholder-1/> \\\n"
+"  --type <placeholder-2/> \\\n"
+"  --set <placeholder-3/> <placeholder-4/>"
 
 #: C/system-admin-guide.xml:803(para)
 msgid ""
 "For example, to set <literal>wwwproxy.xyz.com</literal> as the mandatory "
 "HTTP proxy host, run the following command:"
-msgstr ""
+msgstr "Por ejemplo, para establecer <literal>wwwproxy.xyz.com</literal> como el equipo proxy HTTP obligatorio, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:805(userinput)
 #, no-wrap
@@ -1266,10 +1292,14 @@ msgid ""
 "  --type string \\\n"
 "  --set /system/http_proxy/host wwwproxy.xyz.com"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type string \\\n"
+"  --set /system/http_proxy/host wwwproxy.xyz.com"
 
 #: C/system-admin-guide.xml:809(para)
 msgid "The user cannot override this preference value."
-msgstr ""
+msgstr "El usuario no podrá sobreescribir el valor de esta preferencia."
 
 #: C/system-admin-guide.xml:810(para)
 msgid ""
@@ -1277,6 +1307,8 @@ msgid ""
 "values. For example, to set the default number of workspaces to five, run "
 "the following command:"
 msgstr ""
+"También puede usar el comando <command>gconftool-2</command> para establecer valores predeterminados. Por ejemplo, "
+"para establecer el número predeterminado de áreas de trabajo a cinco, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:813(userinput)
 #, no-wrap
@@ -1286,38 +1318,42 @@ msgid ""
 "  --type int \\\n"
 "  --set /apps/metacity/general/num_workspaces 5"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --type int \\\n"
+"  --set /apps/metacity/general/num_workspaces 5"
 
 #: C/system-admin-guide.xml:817(para)
 msgid "The user can override this preference value."
-msgstr ""
+msgstr "El usuario puede sobreescribir el valor de esta preferencia."
 
 #: C/system-admin-guide.xml:819(para)
 msgid ""
 "Before you change mandatory preference values or default preference values "
 "for users, you must ensure that all users are logged out."
-msgstr ""
+msgstr "Antes de que cambie valores de preferencias obligatorios o valores de preferencias predeterminados para los usuarios, asegúrese de que todos los usuarios han salido de su sesión."
 
 #: C/system-admin-guide.xml:824(title)
 msgid "Setting General Preferences"
-msgstr ""
+msgstr "Establecer preferencias generales"
 
 #: C/system-admin-guide.xml:825(para)
 msgid ""
 "The following sections describe how to assign mandatory or default values to "
 "general preferences."
-msgstr ""
+msgstr "Las siguientes secciones describen cómo asignar valores obligatorios o predeterminados para preferencias generales."
 
 #: C/system-admin-guide.xml:828(title)
 msgid "To Set HTTP Proxy Preferences"
-msgstr ""
+msgstr "Establecer las preferencias del proxy HTTP"
 
 #: C/system-admin-guide.xml:831(secondary)
 msgid "HTTP proxy, setting"
-msgstr ""
+msgstr "Proxy HTTP"
 
 #: C/system-admin-guide.xml:834(primary)
 msgid "HTTP proxy"
-msgstr "Proxy HTTP"
+msgstr "proxy HTTP"
 
 #: C/system-admin-guide.xml:838(para)
 msgid ""
@@ -1339,10 +1375,14 @@ msgid ""
 "  --type string \\\n"
 "  --set /system/http_proxy/host <placeholder-1/>"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type string \\\n"
+"  --set /system/http_proxy/host <placeholder-1/>"
 
 #: C/system-admin-guide.xml:846(para)
 msgid "To set a default value for the HTTP proxy host, run the following command:"
-msgstr ""
+msgstr "Para establecer un valor predeterminado para el equipo proxy HTTP, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:847(userinput)
 #, no-wrap
@@ -1352,6 +1392,10 @@ msgid ""
 "  --type string \\\n"
 "  --set /system/http_proxy/host <placeholder-1/>"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --type string \\\n"
+"  --set /system/http_proxy/host <placeholder-1/>"
 
 #: C/system-admin-guide.xml:851(para)
 msgid ""
@@ -1388,6 +1432,10 @@ msgid ""
 "  --type bool \\\n"
 "  --set /apps/gnome-print-manager/show_all_jobs false"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type bool \\\n"
+"  --set /apps/gnome-print-manager/show_all_jobs false"
 
 #: C/system-admin-guide.xml:873(para) C/system-admin-guide.xml:925(para)
 #: C/system-admin-guide.xml:1263(para) C/system-admin-guide.xml:1289(para)
@@ -1402,6 +1450,10 @@ msgid ""
 "  --type bool \\\n"
 "  --set /apps/gnome-print-manager/show_all_jobs false"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --type bool \\\n"
+"  --set /apps/gnome-print-manager/show_all_jobs false"
 
 #: C/system-admin-guide.xml:878(para)
 msgid ""
@@ -1443,6 +1495,10 @@ msgid ""
 "  --type int \\\n"
 "  --set /apps/metacity/general/num_workspaces <placeholder-1/>"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type int \\\n"
+"  --set /apps/metacity/general/num_workspaces <placeholder-1/>"
 
 #: C/system-admin-guide.xml:898(para)
 msgid "To set a default number of workspaces, use the following command:"
@@ -1456,6 +1512,10 @@ msgid ""
 "  --type int \\\n"
 "  --set /apps/metacity/general/num_workspaces <placeholder-1/>"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --type int \\\n"
+"  --set /apps/metacity/general/num_workspaces <placeholder-1/>"
 
 #: C/system-admin-guide.xml:903(para)
 msgid ""
@@ -1496,6 +1556,10 @@ msgid ""
 "  --type bool \\\n"
 "  --set /desktop/gnome/accessibility/keyboard/enable true"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type bool \\\n"
+"  --set /desktop/gnome/accessibility/keyboard/enable true"
 
 #: C/system-admin-guide.xml:926(userinput)
 #, no-wrap
@@ -1505,6 +1569,10 @@ msgid ""
 "  --type bool \\\n"
 "  --set /desktop/gnome/accessibility/keyboard/enable false"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --type bool \\\n"
+"  --set /desktop/gnome/accessibility/keyboard/enable false"
 
 #: C/system-admin-guide.xml:930(para)
 msgid ""
@@ -1544,6 +1612,10 @@ msgid ""
 "  --type string \\\n"
 "  --set /apps/metacity/global_keybindings/panel_run_dialog '&lt;Alt&gt;F3'"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type string \\\n"
+"  --set /apps/metacity/global_keybindings/panel_run_dialog '&lt;Alt&gt;F3'"
 
 #: C/system-admin-guide.xml:952(para)
 msgid ""
@@ -1646,15 +1718,15 @@ msgstr ""
 
 #: C/system-admin-guide.xml:1019(systemitem)
 msgid "/apps/panel/default_setup/general/toplevel_id_list"
-msgstr ""
+msgstr "/apps/panel/default_setup/general/toplevel_id_list"
 
 #: C/system-admin-guide.xml:1024(systemitem)
 msgid "/apps/panel/default_setup/general/object_id_list"
-msgstr ""
+msgstr "/apps/panel/default_setup/general/object_id_list"
 
 #: C/system-admin-guide.xml:1029(systemitem)
 msgid "/apps/panel/default_setup/general/applet_id_list"
-msgstr ""
+msgstr "/apps/panel/default_setup/general/applet_id_list"
 
 #: C/system-admin-guide.xml:1033(para)
 msgid ""
@@ -1678,7 +1750,7 @@ msgstr ""
 #: C/system-admin-guide.xml:1051(programlisting)
 #, no-wrap
 msgid "/apps/panel/default_setup/toplevels/<replaceable>panel-name</replaceable>/<replaceable>panel-property-key</replaceable>"
-msgstr ""
+msgstr "/apps/panel/default_setup/toplevels/<replaceable>panel-name</replaceable>/<replaceable>panel-property-key</replaceable>"
 
 #: C/system-admin-guide.xml:1052(para)
 msgid ""
@@ -1744,7 +1816,7 @@ msgstr ""
 #: C/system-admin-guide.xml:1142(userinput)
 #, no-wrap
 msgid "gconftool-2 --dump /apps/panel &gt; my-panel-setup.entries"
-msgstr ""
+msgstr "gconftool-2 --dump /apps/panel &gt; my-panel-setup.entries"
 
 #: C/system-admin-guide.xml:1145(para)
 msgid ""
@@ -1796,6 +1868,9 @@ msgid ""
 "  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
 "  --load my-panel-setup.entries"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --load my-panel-setup.entries"
 
 #: C/system-admin-guide.xml:1180(title)
 msgid "Setting Look-and-Feel Preferences"
@@ -1845,7 +1920,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:1222(para)
 msgid "/apps/nautilus/preferences/desktop_font"
-msgstr ""
+msgstr "/apps/nautilus/preferences/desktop_font"
 
 #: C/system-admin-guide.xml:1225(para)
 msgid ""
@@ -1867,6 +1942,10 @@ msgid ""
 "  --type string \\\n"
 "  --set /desktop/gnome/interface/font_name \"Sans 12\""
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type string \\\n"
+"  --set /desktop/gnome/interface/font_name \"Sans 12\""
 
 #: C/system-admin-guide.xml:1237(para)
 msgid ""
@@ -1883,23 +1962,27 @@ msgid ""
 "  --type string \\\n"
 "  --set /apps/nautilus/preferences/desktop_font \"palatino 12\""
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --type string \\\n"
+"  --set /apps/nautilus/preferences/desktop_font \"palatino 12\""
 
 #: C/system-admin-guide.xml:1246(title)
 msgid "To Set Background Preferences"
-msgstr ""
+msgstr "Para establecer las preferencias del fondo de pantalla"
 
 #: C/system-admin-guide.xml:1249(secondary)
 msgid "background, setting"
-msgstr ""
+msgstr "fondo de pantalla, ajustes"
 
 #: C/system-admin-guide.xml:1252(primary)
 #: C/system-admin-guide.xml:554(primary)
 msgid "background"
-msgstr ""
+msgstr "fondo de pantalla"
 
 #: C/system-admin-guide.xml:1253(secondary)
 msgid "preferences, setting with GConf"
-msgstr ""
+msgstr "preferencias, ajustes con GConf"
 
 #: C/system-admin-guide.xml:1256(para)
 msgid ""
@@ -1912,7 +1995,7 @@ msgstr ""
 #: C/system-admin-guide.xml:1262(replaceable)
 #: C/system-admin-guide.xml:1267(replaceable)
 msgid "filename.png"
-msgstr ""
+msgstr "filename.png"
 
 #: C/system-admin-guide.xml:1259(userinput)
 #, no-wrap
@@ -1922,6 +2005,10 @@ msgid ""
 "  --type string \\\n"
 "  --set /desktop/gnome/background/picture_filename <placeholder-1/>"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type string \\\n"
+"  --set /desktop/gnome/background/picture_filename <placeholder-1/>"
 
 #: C/system-admin-guide.xml:1264(userinput)
 #, no-wrap
@@ -1931,6 +2018,10 @@ msgid ""
 "  --type string \\\n"
 "  --set /desktop/gnome/background/picture_filename <placeholder-1/>"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --type string \\\n"
+"  --set /desktop/gnome/background/picture_filename <placeholder-1/>"
 
 #: C/system-admin-guide.xml:1268(para)
 msgid ""
@@ -1972,6 +2063,10 @@ msgid ""
 "  --type bool \\\n"
 "  --set /apps/gnome-session/options/show_splash_screen false"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.mandatory \\\n"
+"  --type bool \\\n"
+"  --set /apps/gnome-session/options/show_splash_screen false"
 
 #: C/system-admin-guide.xml:1290(userinput)
 #, no-wrap
@@ -1981,6 +2076,10 @@ msgid ""
 "  --type bool \\\n"
 "  --set /apps/gnome-session/options/show_splash_screen false"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
+"  --type bool \\\n"
+"  --set /apps/gnome-session/options/show_splash_screen false"
 
 #: C/system-admin-guide.xml:1294(para)
 msgid ""
@@ -2018,6 +2117,9 @@ msgid ""
 "  --config-source <placeholder-1/> \\\n"
 "  --recursive-unset"
 msgstr ""
+"gconftool-2 --direct \\\n"
+"  --config-source <placeholder-1/> \\\n"
+"  --recursive-unset"
 
 #: C/system-admin-guide.xml:1314(para)
 msgid ""
@@ -4437,7 +4539,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:534(replaceable)
 msgid "namespace"
-msgstr ""
+msgstr "namespace"
 
 #: C/system-admin-guide.xml:533(literal)
 msgid "&lt;root-XML namespaceURI=\"<placeholder-1/>\" localName=\"\"&gt;"
@@ -5396,6 +5498,9 @@ msgid ""
 "--type string \\\n"
 "--set /apps/metacity/general/theme <placeholder-1/>"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /apps/metacity/general/theme <placeholder-1/>"
 
 #: C/system-admin-guide.xml:87(para)
 msgid "For example, to use Atlanta, run the following command:"
@@ -5408,6 +5513,9 @@ msgid ""
 "--type string \\\n"
 "--set /apps/metacity/general/theme Atlanta"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /apps/metacity/general/theme Atlanta"
 
 #: C/system-admin-guide.xml:91(para)
 msgid ""
@@ -5462,7 +5570,7 @@ msgstr ""
 msgid ""
 "Some items in menus display an icon beside the item. To turn off this "
 "feature, run the following command:"
-msgstr ""
+msgstr "Algunos elementos en los menús muestran un icono junto a ellos. Para desactivar esta característica ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:120(userinput)
 #, no-wrap
@@ -5471,13 +5579,16 @@ msgid ""
 "--type bool \\\n"
 "--set /desktop/gnome/interface/menus_have_icons false"
 msgstr ""
+"gconftool-2 \\\n"
+"--type bool \\\n"
+"--set /desktop/gnome/interface/menus_have_icons false"
 
 #: C/system-admin-guide.xml:123(para)
 msgid ""
 "Alternatively, users can use the <application>Menus &amp; Toolbars</"
 "application> preference tool to deselect the <guilabel>Show icons in menus</"
 "guilabel> option."
-msgstr ""
+msgstr "Alternativamente, los usuarios puede usar la herramienta de preferencias <application>Menús y barras de herramientas</application> para deseleccionar la opción <guilabel>Mostrar iconos en los menús</guilabel>. "
 
 #: C/system-admin-guide.xml:127(title)
 msgid "To Reduce CPU Usage by Turning Off the Splash Screen"
@@ -5504,6 +5615,9 @@ msgid ""
 "--type bool \\\n"
 "--set /apps/gnome-session/options/show_splash_screen false"
 msgstr ""
+"gconftool-2 \\\n"
+"--type bool \\\n"
+"--set /apps/gnome-session/options/show_splash_screen false"
 
 #: C/system-admin-guide.xml:140(para)
 msgid ""
@@ -5533,6 +5647,9 @@ msgid ""
 "--type bool \\\n"
 "--set /apps/panel/global/enable_animations false"
 msgstr ""
+"gconftool-2 \\\n"
+"--type bool \\\n"
+"--set /apps/panel/global/enable_animations false"
 
 #: C/system-admin-guide.xml:155(para)
 msgid ""
@@ -5637,6 +5754,9 @@ msgid ""
 "--type string \\\n"
 "--set /apps/nautilus/preferences/show_icon_text never"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /apps/nautilus/preferences/show_icon_text never"
 
 #: C/system-admin-guide.xml:258(para) C/system-admin-guide.xml:283(para)
 #: C/system-admin-guide.xml:307(para) C/system-admin-guide.xml:331(para)
@@ -5672,6 +5792,9 @@ msgid ""
 "--type string \\\n"
 "--set /apps/nautilus/preferences/show_directory_item_counts never"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /apps/nautilus/preferences/show_directory_item_counts never"
 
 #: C/system-admin-guide.xml:289(para)
 msgid ""
@@ -5696,6 +5819,9 @@ msgid ""
 "--type string \\\n"
 "--set /apps/nautilus/preferences/show_image_thumbnails never"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /apps/nautilus/preferences/show_image_thumbnails never"
 
 #: C/system-admin-guide.xml:313(para)
 msgid "Select an option for the <guilabel>Show thumbnails</guilabel> preference."
@@ -5718,6 +5844,9 @@ msgid ""
 "--type string \\\n"
 "--set /apps/nautilus/preferences/preview_sound never"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /apps/nautilus/preferences/preview_sound never"
 
 #: C/system-admin-guide.xml:338(para)
 msgid "Select an option for the <guilabel>Preview sound files</guilabel> preference."
@@ -5749,6 +5878,9 @@ msgid ""
 "--type bool \\\n"
 "--set /apps/nautilus/preferences/start_with_sidebar false"
 msgstr ""
+"gconftool-2 \\\n"
+"--type bool \\\n"
+"--set /apps/nautilus/preferences/start_with_sidebar false"
 
 #: C/system-admin-guide.xml:361(para)
 msgid ""
@@ -5763,6 +5895,9 @@ msgid ""
 "--type bool \\\n"
 "--set /apps/nautilus/preferences/start_with_toolbar false"
 msgstr ""
+"gconftool-2 \\\n"
+"--type bool \\\n"
+"--set /apps/nautilus/preferences/start_with_toolbar false"
 
 #: C/system-admin-guide.xml:366(para)
 msgid ""
@@ -5785,6 +5920,9 @@ msgid ""
 "--type bool \\\n"
 "--set /apps/nautilus/preferences/start_with_location_bar false"
 msgstr ""
+"gconftool-2 \\\n"
+"--type bool \\\n"
+"--set /apps/nautilus/preferences/start_with_location_bar false"
 
 #: C/system-admin-guide.xml:376(title)
 msgid "To Turn Off the Desktop"
@@ -5808,7 +5946,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:392(para)
 msgid "Use the <guimenu>Desktop</guimenu> menu."
-msgstr ""
+msgstr "Use el menú <guimenu>Escritorio</guimenu>."
 
 #: C/system-admin-guide.xml:395(para)
 msgid ""
@@ -6045,6 +6183,9 @@ msgid ""
 "--type string \\\n"
 "--set /desktop/gnome/background/picture_options none"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /desktop/gnome/background/picture_options none"
 
 #: C/system-admin-guide.xml:563(userinput)
 #, no-wrap
@@ -6053,6 +6194,9 @@ msgid ""
 "--type string \\\n"
 "--set /desktop/gnome/background/color_shading_type solid"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /desktop/gnome/background/color_shading_type solid"
 
 #: C/system-admin-guide.xml:568(replaceable)
 msgid "hexadecimal-color"
@@ -6065,6 +6209,9 @@ msgid ""
 "--type string \\\n"
 "--set /desktop/gnome/background/primary_color #<placeholder-1/>"
 msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /desktop/gnome/background/primary_color #<placeholder-1/>"
 
 #: C/system-admin-guide.xml:569(para)
 msgid ""
@@ -6127,11 +6274,11 @@ msgstr ""
 
 #: C/system-admin-guide.xml:34(secondary)
 msgid "lock screen"
-msgstr ""
+msgstr "bloquear la pantalla"
 
 #: C/system-admin-guide.xml:38(secondary)
 msgid "log out"
-msgstr ""
+msgstr "salir de la sesión"
 
 #: C/system-admin-guide.xml:41(para)
 msgid ""
@@ -6179,11 +6326,11 @@ msgstr ""
 
 #: C/system-admin-guide.xml:63(title)
 msgid "To Disable Command Line Operations"
-msgstr ""
+msgstr "Deshabilitar operaciones con la línea de comandos"
 
 #: C/system-admin-guide.xml:66(secondary)
 msgid "command line"
-msgstr ""
+msgstr "línea de comandos"
 
 #: C/system-admin-guide.xml:68(para)
 msgid ""
@@ -6211,17 +6358,17 @@ msgstr "Menú principal"
 msgid ""
 "<guimenu>Actions</guimenu> submenu in the <guimenu>Add to Panel</guimenu> "
 "menu"
-msgstr ""
+msgstr "submenú <guimenu>Acciones</guimenu> en el menú <guimenu>Añadir al panel</guimenu>."
 
 #: C/system-admin-guide.xml:86(para)
 msgid ""
 "<guimenu>Actions</guimenu> menu in the <application>Menu Bar</application> "
 "applet"
-msgstr ""
+msgstr "menú <guimenu>Acciones</guimenu> en la miniaplicación <application>Barra de menú</application>"
 
 #: C/system-admin-guide.xml:91(para)
 msgid "Any <guibutton>Run</guibutton> buttons on panels are disabled."
-msgstr ""
+msgstr "Se deshabilitará cualquier botón <guibutton>Ejecutar</guibutton> en los paneles."
 
 #: C/system-admin-guide.xml:94(para)
 msgid ""
@@ -6234,15 +6381,15 @@ msgstr ""
 msgid ""
 "<application>GNOME Terminal</application> command, that is <command>/usr/bin/"
 "gnome-terminal</command>"
-msgstr ""
+msgstr "El comando para el <application>Terminal de GNOME</application>, que es <command>/usr/bin/gnome-terminal</command>"
 
 #: C/system-admin-guide.xml:103(command)
 msgid "/usr/bin/xterm"
-msgstr ""
+msgstr "/usr/bin/xterm"
 
 #: C/system-admin-guide.xml:108(command)
 msgid "/usr/bin/setterm"
-msgstr ""
+msgstr "/usr/bin/setterm"
 
 #: C/system-admin-guide.xml:112(para)
 msgid "The items are removed from the following menus:"
@@ -6255,7 +6402,7 @@ msgstr "Añadir al panel"
 
 #: C/system-admin-guide.xml:123(guimenuitem)
 msgid "Launcher from menu"
-msgstr ""
+msgstr "Lanzador desde el menú"
 
 #: C/system-admin-guide.xml:128(para)
 msgid ""
@@ -6271,11 +6418,11 @@ msgstr ""
 
 #: C/system-admin-guide.xml:133(title)
 msgid "To Disable Panel Configuration"
-msgstr ""
+msgstr "Deshabilitar la configuración de un panel"
 
 #: C/system-admin-guide.xml:136(secondary)
 msgid "panel configuration"
-msgstr ""
+msgstr "configuración del panel"
 
 #: C/system-admin-guide.xml:138(para)
 msgid ""
@@ -6297,7 +6444,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:153(guimenuitem)
 msgid "Delete This Panel"
-msgstr ""
+msgstr "Borrar este panel"
 
 #: C/system-admin-guide.xml:158(guimenuitem)
 msgid "Properties"
@@ -6305,7 +6452,7 @@ msgstr "Propiedades"
 
 #: C/system-admin-guide.xml:163(guimenuitem)
 msgid "New Panel"
-msgstr ""
+msgstr "Panel nuevo"
 
 #: C/system-admin-guide.xml:169(para)
 msgid "The launcher popup menu is disabled."
@@ -6722,7 +6869,7 @@ msgid ""
 "Contains the <application>GConf</application> configuration source for the "
 "user. When the user sets a preference, the new preference information is "
 "added to this location."
-msgstr ""
+msgstr "Contiene la configuración fuente de <application>GConf</application> para el usuario. Cuando el usuario establece una preferencia, la nueva información sobre la preferencia se añade en esta ubicación."
 
 #: C/system-admin-guide.xml:83(filename)
 msgid ".gconfd"
@@ -6730,11 +6877,11 @@ msgstr ".gconfd"
 
 #: C/system-admin-guide.xml:87(para)
 msgid "Contains the following <application>GConf</application> daemon details:"
-msgstr ""
+msgstr "Contiene los siguientes detalles del demonio de <application>GConf</application>:"
 
 #: C/system-admin-guide.xml:91(para)
 msgid "Configuration information."
-msgstr ""
+msgstr "Información de la configuración."
 
 #: C/system-admin-guide.xml:94(para)
 msgid ""
@@ -6754,7 +6901,7 @@ msgstr ".gnome"
 msgid ""
 "Contains user-specific application data that is not stored in the "
 "<application>GConf</application> repository."
-msgstr ""
+msgstr "Contiene información de las aplicaciones específicas del usuario que no están almacenadas en el repositorio de <application>GConf</application>."
 
 #: C/system-admin-guide.xml:111(emphasis)
 msgid ""
@@ -6799,7 +6946,7 @@ msgstr ".gnome2-private"
 msgid ""
 "Ignore this directory. This directory has no function at the time of "
 "publication of this guide."
-msgstr ""
+msgstr "Ignore este directorio. Este directorio no tiene ninguna función en el momento de publicación de esta guía."
 
 #: C/system-admin-guide.xml:154(filename)
 msgid ".local/share"
@@ -6822,7 +6969,7 @@ msgstr ".metacity"
 msgid ""
 "Contains session data for the <application>Metacity</application> window "
 "manager."
-msgstr ""
+msgstr "Contiene datos de sesión para el gestor de ventanas <application>Metacity</application>."
 
 #: C/system-admin-guide.xml:176(filename)
 msgid ".nautilus"
@@ -6832,19 +6979,19 @@ msgstr ".nautilus"
 msgid ""
 "Contains file manager data that is specific to the user. For example, this "
 "directory can contain the following:"
-msgstr ""
+msgstr "Contiene información sobre el gestor de archivos que es específica para el usuario. Por ejemplo, este directorio puede contener lo siguiente:"
 
 #: C/system-admin-guide.xml:184(para)
 msgid "Metadata for the directories with which the user works."
-msgstr ""
+msgstr "Metadatos para los directorios con los que trabaja el usuario."
 
 #: C/system-admin-guide.xml:188(para)
 msgid "<application>Nautilus</application> emblems that the user adds."
-msgstr ""
+msgstr "Emblemas de <application>Nautilus</application> que ha añadido el usuario."
 
 #: C/system-admin-guide.xml:192(para)
 msgid "<application>Nautilus</application> desktop images."
-msgstr ""
+msgstr "Imágenes del escritorio de <application>Nautilus</application>."
 
 #: C/system-admin-guide.xml:200(filename)
 msgid ".themes"
@@ -6889,7 +7036,7 @@ msgstr "SMB"
 
 #: C/system-admin-guide.xml:13(primary)
 msgid "Windows network shares"
-msgstr ""
+msgstr "Comparticiones de la red de Windows"
 
 #: C/system-admin-guide.xml:18(secondary)
 msgid "configuring printers"
@@ -6988,7 +7135,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:65(glossterm)
 msgid "GConf preference key"
-msgstr ""
+msgstr "Clave de preferencia de GConf"
 
 #: C/system-admin-guide.xml:67(para)
 msgid ""
@@ -7001,7 +7148,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:73(glossterm)
 msgid "GConf path file"
-msgstr ""
+msgstr "Ruta de archivo de GConf"
 
 #: C/system-admin-guide.xml:75(para)
 msgid ""
@@ -7011,7 +7158,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:80(glossterm)
 msgid "GConf schema"
-msgstr ""
+msgstr "Esquema de GConf"
 
 #: C/system-admin-guide.xml:82(para)
 msgid "A collective term for a schema key and a schema object."
@@ -7019,7 +7166,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:86(glossterm)
 msgid "GConf schema definition file"
-msgstr ""
+msgstr "Archivo de definición de esquema de GConf"
 
 #: C/system-admin-guide.xml:88(para)
 msgid ""
@@ -7156,7 +7303,7 @@ msgstr " PAM"
 
 #: C/system-admin-guide.xml:189(para)
 msgid "Pluggable Authentication Modules."
-msgstr ""
+msgstr "Pluggable Authentication Modules (módulos de autenticación conectables)."
 
 #: C/system-admin-guide.xml:193(glossterm)
 msgid "screensaver"
@@ -7185,7 +7332,7 @@ msgstr "UDP"
 
 #: C/system-admin-guide.xml:210(para)
 msgid "User Datagram Protocol."
-msgstr ""
+msgstr "User Datagram Protocol (protocolo de datagramas de usuario)."
 
 #: C/system-admin-guide.xml:214(glossterm)
 msgid "Uniform Resource Identifier"
