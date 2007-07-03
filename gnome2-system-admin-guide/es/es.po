@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-admin-guide.HEAD.es\n"
 "POT-Creation-Date: 2007-01-02 02:06+0000\n"
-"PO-Revision-Date: 2007-06-29 09:52+0200\n"
+"PO-Revision-Date: 2007-07-02 22:25+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -786,7 +786,7 @@ msgid ""
 "toolbars on all open applications are updated instantly. The "
 "<application>GConf</application> daemon can operate locally, or across a "
 "network."
-msgstr ""
+msgstr "El demonio de <application>GConf</application> se llama <command>gconfd-2</command>. El demonio de <application>GConf</application> notifica a las aplicaciones cuándo un valor de preferencia ha cambiado. Por ejemplo, puede que seleccione mostrar sólo los iconos en las barras de herramientas de la herramienta de preferencias <application>Menús y barras de herraminetas</application>. Cuando seleccione esta opción en la herramienta de preferencias, se actualizan todas las barras de herramientas en todas las aplicaciones. El demonio de <application>GConf</application> puede operar localmente o a través de una red."
 
 #: C/system-admin-guide.xml:451(para)
 msgid ""
@@ -797,44 +797,44 @@ msgid ""
 "<application>GConf</application> path file. The <application>GConf</"
 "application> daemon manages all access between applications and the "
 "configuration sources."
-msgstr ""
+msgstr "Una instancia del demonio de <application>GConf</application> se inicia para cada usuario. El demonio de <application>GConf</application> no tiene que tratar con problemas complejos tales como la autenticación y seguridad de los datos. Cuando el demonio de <application>GConf</application> se inicia, el demonio carga el archivo de ruta de <application>GConf</application>. El demonio de <application>GConf</application> gestiona todo acceso entre las aplicaciones y las fuentes de configuración."
 
 #: C/system-admin-guide.xml:456(para)
 msgid ""
 "When an application requests the value of a preference key, the daemon "
 "searches the configuration sources as follows:"
-msgstr ""
+msgstr "Cuando una aplicación pide el valor de una clave de preferencia, el demonio busca la fuente de configuración como sigue:"
 
 #: C/system-admin-guide.xml:460(para)
 msgid ""
 "Search for the value of the preference key in each configuration source, in "
 "the order specified in the path file. If the value is found, return the "
 "value."
-msgstr ""
+msgstr "Busca el valor de la clave de preferencia en cada fuente de configuración, en el orden especificado en el archivo de ruta. Si el valor se encuentra, lo devuelve."
 
 #: C/system-admin-guide.xml:465(para)
 msgid ""
 "If a value is not found, search for the schema key that corresponds to the "
 "preference key in each configuration source, in the order specified in the "
 "path file."
-msgstr ""
+msgstr "Si no se encuentra el valor, busca la clave de esquema que corresponde con la clave de preferencia en cada fuente de configuración, en el orden especificado en el archivo de ruta."
 
 #: C/system-admin-guide.xml:470(para)
 msgid "If the schema key is found, check the value of the schema key."
-msgstr ""
+msgstr "Si se encuentra la clave de esquema, comprueba el valor de esa clave de esquema."
 
 #: C/system-admin-guide.xml:474(para)
 msgid ""
 "If the value of the schema key is a schema object, return the suggested "
 "value in the <sgmltag>&lt;default&gt;</sgmltag> element of the schema object."
-msgstr ""
+msgstr "Si el valor de la clave de esquema es un objeto esquema, devuelve el valor sugerido en el elemento <sgmltag>&lt;predeterminado&gt;</sgmltag> del objeto esquema."
 
 #: C/system-admin-guide.xml:479(para)
 msgid ""
 "The <application>GConf</application> daemon also caches preference key "
 "values. All applications use this cache, so applications only need to access "
 "the configuration sources once."
-msgstr ""
+msgstr "El demonio de <application>GConf</application> también cachea valores de claves de preferencias. Todas las aplicaciones usan esta caché, de tal forma que las aplicaciones sólo necesitan acceder a las fuentes de configuración una vez."
 
 #: C/system-admin-guide.xml:482(para)
 msgid ""
@@ -923,7 +923,7 @@ msgstr "Muestra los valores de todas las claves en el directorio que especifique
 #: C/system-admin-guide.xml:539(replaceable)
 #: C/system-admin-guide.xml:800(replaceable)
 msgid "configuration-source"
-msgstr ""
+msgstr "fuente de configuración"
 
 #: C/system-admin-guide.xml:539(option)
 msgid "--config-source=<placeholder-1/>"
@@ -935,7 +935,7 @@ msgid ""
 "configuration source to use. If you do not specify a configuration source "
 "with this option, the command runs on all configuration sources in the path "
 "file."
-msgstr ""
+msgstr "Use esta opción junto con la opción <application>GConf</application> para especificar una fuente de configuración para usar. Si no selecciona una fuente de configuración con esta opción, el comando se ejecuta sobre todas las fuentes de configuración en el archivo de ruta."
 
 #: C/system-admin-guide.xml:550(option)
 msgid "--direct"
@@ -948,7 +948,7 @@ msgid ""
 "application> bypasses the server. Ensure that the <application>GConf</"
 "application> daemon, <command>gconfd-2</command>, is not running before you "
 "use this option."
-msgstr ""
+msgstr "Use esta opción junto con la opción <option>--config-source</option> para acceder a la fuente de configuración directamente. Cuando use esta opción, <application>GConf</application> evita el servidor. Asegúrese de que el demonio de <application>GConf</application>, <command>gconfd-2</command>, no se está ejecutando antes de usar esta opción."
 
 #: C/system-admin-guide.xml:560(option)
 msgid "--dump"
@@ -960,14 +960,14 @@ msgid ""
 "application> repository directory that you specify. The list contains XML "
 "descriptions of all the keys. The list is contained in a <sgmltag>&lt;"
 "gconfentryfile&gt;</sgmltag> element."
-msgstr ""
+msgstr "Genera una lista que contiene todas las claves de preferencia en directorio de repositorio de <application>GConf</application> que especifique. La lista contiene descripciones XML de todas las claves. La lista está contenida en un elemento <sgmltag>&lt;gconfentryfile&gt;</sgmltag>."
 
 #: C/system-admin-guide.xml:567(para)
 msgid ""
 "For example, you can redirect the output from this option to generate a file "
 "that lists all keys that are related to your panel configuration. You can "
 "use the <option>--load</option> option with this file."
-msgstr ""
+msgstr "Por ejemplo, puede redireccionar la salida de esta opción para generar un archivo que liste todas las claves relacionadas con la configuración de su panel. Puede usar la opción <option>--load</option> con este archivo."
 
 #: C/system-admin-guide.xml:574(option)
 msgid "--get"
@@ -978,7 +978,7 @@ msgid ""
 "Displays the value of a preference key that you specify. Also displays the "
 "values of the elements in the schema object for a schema key that you "
 "specify."
-msgstr ""
+msgstr "Muestra el valor de una clave de preferencia que especifique. También muestra los valores de los elementos en el objeto de esquema para una clave de esquema que especifique."
 
 #: C/system-admin-guide.xml:584(option)
 msgid "--help"
@@ -989,11 +989,11 @@ msgid ""
 "Displays a help message about the <command>gconftool-2</command> command, "
 "and the options that you can use with the <command>gconftool-2</command> "
 "command."
-msgstr ""
+msgstr "Muestra un mensaje de ayuda para el comando <command>gconftool-2</command>, y las opciones que puede usar con el comando <command>gconftool-2</command>."
 
 #: C/system-admin-guide.xml:592(replaceable)
 msgid "filename"
-msgstr "nombre de archivo"
+msgstr "nombre-de-archivo"
 
 #: C/system-admin-guide.xml:592(option)
 msgid "--load=<placeholder-1/>"
@@ -1005,7 +1005,7 @@ msgid ""
 "directory in a configuration source to the values in the file that you "
 "specify. The file that you specify must contain XML descriptions of the "
 "keys, in a <literal>&lt;gconfentryfile&gt;</literal> element."
-msgstr ""
+msgstr "Use esta opción para cambiar los valores de claves de preferencias en el directorio actual den una fuente de configuración a los valores en el archivo que especifique. El archivo que especifique debe contener descripciones XML de las claves en un elemento <literal>&lt;gconfentryfile&gt;</literal>."
 
 #: C/system-admin-guide.xml:602(option)
 msgid "--long-desc=<placeholder-1/>"
@@ -1058,7 +1058,7 @@ msgid ""
 "Resets the values of all preference keys, in all subdirectories in a "
 "directory, from the user setting to the setting in the default configuration "
 "source."
-msgstr ""
+msgstr "Restablece el valor de todas las claves de preferencias, en todos los subdirectorios de un directorio, de los ajustes del usuario a los ajustes predeterminados en la fuente de configuración."
 
 #: C/system-admin-guide.xml:647(option)
 msgid "--set"
@@ -1239,7 +1239,7 @@ msgstr "valores de preferencias"
 #: C/system-admin-guide.xml:866(secondary)
 #: C/system-admin-guide.xml:1191(secondary)
 msgid "setting with GConf"
-msgstr ""
+msgstr "establecer valores con GConf"
 
 #: C/system-admin-guide.xml:793(para)
 msgid ""
@@ -1248,7 +1248,7 @@ msgid ""
 "for users, you must ensure that the <application>GConf</application> daemon "
 "is not running for any user. Ensure that all users are logged out before you "
 "change preference values for users."
-msgstr ""
+msgstr "Puede establecer un valor obligatorio o predeterminado para una clave de preferencia. Antes de modificar los valores obligatorios o predeterminados para los usuarios, debe asegurarse de que el demonio de <application>GConf</application> no se está ejecutando para ningún usuario. Asegúrese de que todos los usuarios han salido de su sesión antes de cambiar los valores de preferencias para usuarios."
 
 #: C/system-admin-guide.xml:797(para)
 msgid ""
@@ -1349,7 +1349,7 @@ msgstr "Establecer las preferencias del proxy HTTP"
 
 #: C/system-admin-guide.xml:831(secondary)
 msgid "HTTP proxy, setting"
-msgstr "Proxy HTTP"
+msgstr "Proxy HTTP, ajustes"
 
 #: C/system-admin-guide.xml:834(primary)
 msgid "HTTP proxy"
@@ -1360,12 +1360,12 @@ msgid ""
 "To set HTTP proxy preferences, you modify the values of the preference keys "
 "in the <systemitem>/system/http_proxy/</systemitem> location. For example, "
 "to set a mandatory value for the HTTP proxy host, run the following command:"
-msgstr ""
+msgstr "Para ajustar las preferencias del proxy HTTP, puede modificar los valores de las claves de preferencias en la ubicación <systemitem>/system/http_proxy/</systemitem>. Por ejemplo, para establecer un valor obligatorio para el equipo proxy HTTP, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:845(replaceable)
 #: C/system-admin-guide.xml:850(replaceable)
 msgid "proxy-name"
-msgstr ""
+msgstr "nombre-del-proxy"
 
 #: C/system-admin-guide.xml:842(userinput)
 #, no-wrap
@@ -1402,11 +1402,11 @@ msgid ""
 "You can also set other HTTP proxy-related preferences. For information on "
 "the other HTTP proxy preferences, see the <filename>system_http_proxy."
 "schemas</filename> schema definition file."
-msgstr ""
+msgstr "También puede ajustar otras preferencias relacionadas con el proxy HTTP. Para obtener más información acerca de otras preferencias del proxy HTTP, vea el archivo de definición de esquema <filename>system_http_proxy.schemas</filename>."
 
 #: C/system-admin-guide.xml:855(title)
 msgid "To Set Print Manager Preferences"
-msgstr ""
+msgstr "Establecer las preferencias de la gestión de impresión"
 
 #: C/system-admin-guide.xml:856(para)
 msgid ""
@@ -1414,15 +1414,15 @@ msgid ""
 "keys in the <systemitem>/apps/gnome-print-manager</systemitem> location. For "
 "example, if you do not want users to view the print jobs of other users, set "
 "a mandatory value as follows:"
-msgstr ""
+msgstr "Para establecer las preferencias de la gestión de impresión, puede modificar los valores de las claves de preferencias en la ubicación <systemitem>/apps/gnome-print-manager</systemitem>. Por ejemplo, si quiere que los usuarios no puedan ver los trabajos de impresión de otros usuarios, establezca un valor obligatorio tal y como sigue:"
 
 #: C/system-admin-guide.xml:862(secondary)
 msgid "print manager, setting"
-msgstr ""
+msgstr "gestión de impresión, ajustes"
 
 #: C/system-admin-guide.xml:865(primary)
 msgid "print manager"
-msgstr ""
+msgstr "gestión de impresión"
 
 #: C/system-admin-guide.xml:869(userinput)
 #, no-wrap
@@ -1440,7 +1440,7 @@ msgstr ""
 #: C/system-admin-guide.xml:873(para) C/system-admin-guide.xml:925(para)
 #: C/system-admin-guide.xml:1263(para) C/system-admin-guide.xml:1289(para)
 msgid "To set a default value for this preference, run the following command:"
-msgstr ""
+msgstr "Para establecer un valor predeterminado para esta preferencia, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:874(userinput)
 #, no-wrap
@@ -1460,32 +1460,32 @@ msgid ""
 "You can also set other print manager preferences. For information on the "
 "other print manager preferences, see the <filename>gnome-print-manager."
 "schemas</filename> schema definition file."
-msgstr ""
+msgstr "También puede establecer otras preferencias para la gestión de impresión. Para obtener más información acerca de otras preferencias de impresión, vea el archivo de definición de esquema <filename>gnome-print-manager.schemas</filename>."
 
 #: C/system-admin-guide.xml:883(title)
 msgid "To Set the Number of Workspaces"
-msgstr ""
+msgstr "Establecer el número de áreas de trabajo"
 
 #: C/system-admin-guide.xml:886(secondary)
 msgid "number of workspaces, setting"
-msgstr ""
+msgstr "número de áreas de trabajo, ajustes"
 
 #: C/system-admin-guide.xml:889(primary)
 msgid "workspaces"
-msgstr ""
+msgstr "áreas de trabajo"
 
 #: C/system-admin-guide.xml:890(secondary)
 msgid "setting number with GConf"
-msgstr ""
+msgstr "establecer número con GConf"
 
 #: C/system-admin-guide.xml:892(para)
 msgid "To set a mandatory number of workspaces, use the following command:"
-msgstr ""
+msgstr "Para establecer un número obligatorio de áreas de trabajo, use el siguiente comando:"
 
 #: C/system-admin-guide.xml:897(replaceable)
 #: C/system-admin-guide.xml:902(replaceable)
 msgid "integer"
-msgstr ""
+msgstr "entero"
 
 #: C/system-admin-guide.xml:894(userinput)
 #, no-wrap
@@ -1502,7 +1502,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:898(para)
 msgid "To set a default number of workspaces, use the following command:"
-msgstr ""
+msgstr "Para establecer un número predeterminado de áreas de trabajo, use el siguiente comando:"
 
 #: C/system-admin-guide.xml:899(userinput)
 #, no-wrap
@@ -1522,15 +1522,15 @@ msgid ""
 "You can also set other window manager preferences. For information on the "
 "other window manager preferences, see the <filename>metacity.schemas</"
 "filename> schema definition file."
-msgstr ""
+msgstr "También puede establecer otras preferencias del gestor de ventanas. Para obtener más información acerca de otras preferencias del gestor de ventanas, vea el archivo de definición de esquema <filename>metacity.schemas</filename>."
 
 #: C/system-admin-guide.xml:908(title)
 msgid "To Set Keyboard Accessibility Preferences"
-msgstr ""
+msgstr "Establecer las preferencias de la Accesibilidad del teclado"
 
 #: C/system-admin-guide.xml:911(secondary)
 msgid "keyboard accessibility, setting"
-msgstr ""
+msgstr "accesibilidad del teclado, ajustes"
 
 #: C/system-admin-guide.xml:914(primary) C/system-admin-guide.xml:940(primary)
 msgid "keyboard"
@@ -1538,7 +1538,7 @@ msgstr "teclado"
 
 #: C/system-admin-guide.xml:915(secondary)
 msgid "setting accessibility preferences with GConf"
-msgstr ""
+msgstr "establecer las preferencias de accesibilidad con GConf"
 
 #: C/system-admin-guide.xml:917(para)
 msgid ""
@@ -1546,7 +1546,7 @@ msgid ""
 "preference keys in the <systemitem>/desktop/gnome/accessibility/keyboard</"
 "systemitem> location. For example, if you want to set a mandatory value so "
 "that keyboard accessibility features are enabled, run the following command:"
-msgstr ""
+msgstr "Para establecer las preferencias de accesibilidad del teclado, modifique los valores de las claves de preferencias en la ubicación <systemitem>/desktop/gnome/accessibility/keyboard</systemitem>. Por ejemplo, si quiere establecer un valor obligatorio para que las características de accesibilidad del teclado estén activadas, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:921(userinput)
 #, no-wrap
@@ -1580,19 +1580,19 @@ msgid ""
 "on the other keyboard accessibility preferences, see the "
 "<filename>desktop_gnome_accessibility_keyboard.schemas</filename> schema "
 "definition file."
-msgstr ""
+msgstr "También puede establecer otras preferencias de accesibilidad del teclado. Para obtener más información acerca de las otras preferencias de accesibilidad del teclado, vea el archivo de definición de esquema <filename>desktop_gnome_accessibility_keyboard.schemas</filename>."
 
 #: C/system-admin-guide.xml:934(title)
 msgid "To Set Keyboard Shortcut Preferences"
-msgstr ""
+msgstr "Establecer las preferencias de las Combinaciones de teclas"
 
 #: C/system-admin-guide.xml:937(secondary)
 msgid "keyboard shortcuts, setting"
-msgstr ""
+msgstr "combinaciones de teclas, ajustes"
 
 #: C/system-admin-guide.xml:941(secondary)
 msgid "setting shortcut preferences with GConf"
-msgstr ""
+msgstr "establecer las preferencias de las combinaciones de teclas con GConf"
 
 #: C/system-admin-guide.xml:943(para)
 msgid ""
@@ -1602,7 +1602,7 @@ msgid ""
 "keycap><keycap>F3</keycap></keycombo> keyboard shortcut to open the "
 "<guilabel>Run Application</guilabel> dialog. To set this mandatory value, "
 "run the following command:"
-msgstr ""
+msgstr "Para establecer las preferencias de las combinaciones de teclas, puede modificar los valres de las claves en la ubicación <systemitem>/apps/metacity/global_keybindings</systemitem>. Por ejemplo, puede que quiera que los usuarios sólo puedan usar el atajo de teclado <keycombo><keycap>Alt</keycap><keycap>F3</keycap></keycombo> para abrir el diálogo <guilabel>Ejecutar aplicación</guilabel>. Para establecer este valor obligatorio, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:948(userinput)
 #, no-wrap
@@ -1622,19 +1622,19 @@ msgid ""
 "You can also set other keyboard shortcut preferences. For information on the "
 "other keyboard shortcut preferences, see the <filename>metacity.schemas</"
 "filename> schema definition file."
-msgstr ""
+msgstr "También puede establecer otras preferencias de las combinaciones de teclas. Para obtener más información acerca de las otras preferencias de las combinaciones de teclas, vea el archivo de definición de esquema <filename>metacity.schemas</filename>."
 
 #: C/system-admin-guide.xml:956(title)
 msgid "Setting Panel and Panel Object Preferences"
-msgstr ""
+msgstr "Establecer las preferencias del Pabel y de los objetos del Panel"
 
 #: C/system-admin-guide.xml:959(secondary)
 msgid "panel object preferences, setting"
-msgstr ""
+msgstr "preferencias de los objetos del panel, ajustes"
 
 #: C/system-admin-guide.xml:963(secondary)
 msgid "panel preferences, setting individual"
-msgstr ""
+msgstr "preferencias del panel, ajustes individuales"
 
 #: C/system-admin-guide.xml:967(primary) C/system-admin-guide.xml:147(primary)
 msgid "panels"
@@ -1642,29 +1642,29 @@ msgstr "paneles"
 
 #: C/system-admin-guide.xml:968(secondary)
 msgid "preferences, individual, setting with GConf"
-msgstr ""
+msgstr "preferencias, individual, establecer con GConf"
 
 #: C/system-admin-guide.xml:970(para)
 msgid ""
 "The <filename>panel-default-setup.entries</filename> file specifies the "
 "following details of the panels in the GNOME Desktop:"
-msgstr ""
+msgstr "El archivo <filename>panel-default-setup.entries</filename> especifica los siguientes detalles de los paneles en el Escritorio GNOME:"
 
 #: C/system-admin-guide.xml:974(para)
 msgid "Number of panels."
-msgstr ""
+msgstr "Número de paneles."
 
 #: C/system-admin-guide.xml:977(para)
 msgid "Types of the panels."
-msgstr ""
+msgstr "Tipos de panel."
 
 #: C/system-admin-guide.xml:980(para)
 msgid "Properties of the panels."
-msgstr ""
+msgstr "Propiedades de los paneles."
 
 #: C/system-admin-guide.xml:983(para)
 msgid "Contents of the panels."
-msgstr ""
+msgstr "Contenido de los paneles."
 
 #: C/system-admin-guide.xml:986(para)
 msgid ""
@@ -1673,7 +1673,7 @@ msgid ""
 "understand the structure of the <filename>panel-default-setup.entries</"
 "filename> file. For more information on the <filename>panel-default-setup."
 "entries</filename> file, see the next section."
-msgstr ""
+msgstr "La configuración de los paneles individuales y de los objetos del panel es una tarea compleja. Para configurar paneles individuales y objetos del panel, primero debe entender la estructura del archivo <filename>panel-default-setup.entries</filename>. Para obtener más información acerca del archivo <filename>panel-default-setup.entries</filename>, vea la siguiente sección."
 
 #: C/system-admin-guide.xml:991(para)
 msgid ""
@@ -1683,16 +1683,16 @@ msgid ""
 "command with the <option>--dump</option> and <option>--load</option> "
 "options. For more information on how to set preferences for panels and "
 "objects on panels, see <xref linkend=\"gconf-3\"/>."
-msgstr ""
+msgstr "Para establecer preferencias para paneles individuales y objetos del panel, debe ajustar los valores de muchas preferencias en una fuente de configuración. La forma más fácil de establecer los valores de las preferencias del panel es usar el comando <command>gconftool-2</command> junto con las opciones <option>--dump</option> y <option>--load</option>. Para obtener más información acerca de cómo establecer preferencias para objetos en los paneles, vea la <xref linkend=\"gconf-3\"/>."
 
 #: C/system-admin-guide.xml:996(title)
 msgid "Specifying Individual Panels and Panel Objects"
-msgstr ""
+msgstr "Especificar paneles y objetos del panel individuales"
 
 #: C/system-admin-guide.xml:1000(tertiary)
 #: C/system-admin-guide.xml:1005(tertiary)
 msgid "panel and panel object"
-msgstr ""
+msgstr "panel y objetos del panel"
 
 #: C/system-admin-guide.xml:1007(para)
 msgid ""
@@ -1702,19 +1702,23 @@ msgid ""
 "<filename>panel-default-setup.entries</filename> file resides in the "
 "<filename>/etc/gconf/schemas</filename> directory."
 msgstr ""
+"El archivo <filename>panel-default-setup.entries</filename> contiene secciones que especifican "
+"los paneles y el contenido de los paneles. El archivo <filename>panel-default-setup.entries</filename> especifica los valores "
+"para las claves de esquema. El archivo <filename>panel-default-setup.entries</filename> se ubica en el directorio "
+"<filename>/etc/gconf/schemas</filename>."
 
 #: C/system-admin-guide.xml:1009(para)
 msgid ""
 "The <filename>panel-default-setup.entries</filename> file is structured as "
 "follows:"
-msgstr ""
+msgstr "El archivo <filename>panel-default-setup.entries</filename> está estructurado como sigue:"
 
 #: C/system-admin-guide.xml:1013(para)
 msgid ""
 "Keys that specify the general structure of panels, applets, and other panel "
 "objects in the GNOME Desktop. The following keys specify the number of "
 "panels, panel objects, and applets that appear in the GNOME Desktop:"
-msgstr ""
+msgstr "Las claves que especifican la estructura general de los paneles, miniaplicaciones y otros objetos del panel en el Escritorio GNOME. Las siguientes claves especifican el número de paneles, objetos del panel y miniaplicaciones que aparecen en el Escritorio GNOME:"
 
 #: C/system-admin-guide.xml:1019(systemitem)
 msgid "/apps/panel/default_setup/general/toplevel_id_list"
@@ -1733,19 +1737,21 @@ msgid ""
 "The keys also assign identifiers to each panel, panel object, and applet. "
 "For example, the following sample from <filename>panel-default-setup."
 "entries</filename> specifies that one panel appears in the GNOME Desktop:"
-msgstr ""
+msgstr "Las claves también asignan identificadores a cada panel, objeto del panel y miniaplicación. Por ejemplo, el siguiente ejemplo de <filename>panel-default-setup.entries</filename> especifica que aparece un panel en el Escritorio GNOME:"
 
 #: C/system-admin-guide.xml:1046(para)
 msgid ""
 "In the <filename>panel-default-setup.entries</filename> file, the identifier "
 "<systemitem>bottom_panel</systemitem> identifies the bottom edge panel."
 msgstr ""
+"En el archivo <filename>panel-default-setup.entries</filename> el identificador "
+"<systemitem>bottom_panel</systemitem> identifica el panel del borde inferior."
 
 #: C/system-admin-guide.xml:1049(para)
 msgid ""
 "Keys that specify the properties of the panels. The panel property keys are "
 "structured as follows:"
-msgstr ""
+msgstr "La clave que especifica las propiedades de los paneles. Las claves de propiedades del panel están estructuradas como sigue:"
 
 #: C/system-admin-guide.xml:1051(programlisting)
 #, no-wrap
@@ -1757,6 +1763,8 @@ msgid ""
 "For example, the key <systemitem>/apps/panel/default_setup/toplevels/"
 "bottom_panel/size</systemitem> specifies the size of the bottom panel."
 msgstr ""
+"Por ejemplo, la clave <systemitem>/apps/panel/default_setup/toplevels/bottom_panel/size</systemitem> "
+"especifica el tamaño del panel inferior."
 
 #: C/system-admin-guide.xml:1055(para)
 msgid ""
@@ -1888,7 +1896,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:1187(secondary)
 msgid "fonts, setting"
-msgstr ""
+msgstr "tipografías, ajustes"
 
 #: C/system-admin-guide.xml:1190(primary) C/system-admin-guide.xml:11(see)
 #: C/system-admin-guide.xml:15(see) C/system-admin-guide.xml:18(primary)
@@ -2137,17 +2145,17 @@ msgstr ""
 
 #: C/system-admin-guide.xml:3(title)
 msgid "Customizing Menus"
-msgstr ""
+msgstr "Personalizar los menús"
 
 #: C/system-admin-guide.xml:12(para)
 msgid ""
 "The information in this chapter describes how the GNOME Desktop implements "
 "menus and how you can customize menus."
-msgstr ""
+msgstr "La información en este capítulo describe cómo el Escritorio GNOME implementa los menús y cómo puede personalizarlos."
 
 #: C/system-admin-guide.xml:17(title)
 msgid "Introduction to Menus"
-msgstr ""
+msgstr "Introducción a los menús"
 
 #: C/system-admin-guide.xml:20(primary) C/system-admin-guide.xml:660(primary)
 #: C/system-admin-guide.xml:676(primary) C/system-admin-guide.xml:740(primary)
@@ -2184,31 +2192,31 @@ msgstr ""
 
 #: C/system-admin-guide.xml:48(para)
 msgid "Menus in the GNOME Desktop use the following components:"
-msgstr ""
+msgstr "Los menús en el Escritorio GNOMe usan los siguientes componentes:"
 
 #: C/system-admin-guide.xml:52(para) C/system-admin-guide.xml:139(glossterm)
 msgid "Menu definition files"
-msgstr ""
+msgstr "Archivos de definición de menú"
 
 #: C/system-admin-guide.xml:56(para)
 msgid "Desktop entry files"
-msgstr ""
+msgstr "Archivos de entrada de escritorio"
 
 #: C/system-admin-guide.xml:60(para)
 msgid "Directory entry files"
-msgstr ""
+msgstr "Archivos de entrada de directorio"
 
 #: C/system-admin-guide.xml:66(title)
 msgid "Menu Definition Files"
-msgstr ""
+msgstr "Archivos de definición de menú"
 
 #: C/system-admin-guide.xml:69(primary) C/system-admin-guide.xml:75(see)
 msgid "menu definition files"
-msgstr ""
+msgstr "archivos de definición de menú"
 
 #: C/system-admin-guide.xml:73(primary)
 msgid ".menu files"
-msgstr ""
+msgstr "archivos .menú"
 
 #: C/system-admin-guide.xml:78(para)
 msgid ""
@@ -2264,7 +2272,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:119(para)
 msgid "Use the first <filename>applications.menu</filename> file found."
-msgstr ""
+msgstr "Use el primer archivo <filename>applications.menu</filename> que encuentre."
 
 #: C/system-admin-guide.xml:124(para)
 msgid ""
@@ -2293,7 +2301,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:147(title)
 msgid "Example of a <filename>.menu</filename> file"
-msgstr ""
+msgstr "Ejemplo de un archivo <filename>.menu</filename>"
 
 #: C/system-admin-guide.xml:149(programlisting)
 #, no-wrap
@@ -2326,6 +2334,33 @@ msgid ""
 "\n"
 "&lt;/Menu&gt; &lt;!-- End Applications --&gt;\n"
 msgstr ""
+"&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
+" \"http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd\"&gt;\n"
+"&lt;Menu&gt;\n"
+"  &lt;Name&gt;Applications&lt;/Name&gt;\n"
+"  &lt;Directory&gt;Applications.directory&lt;/Directory&gt;\n"
+"\n"
+"  &lt;!-- Read standard .directory and .desktop file locations --&gt;\n"
+"  &lt;DefaultAppDirs/&gt;\n"
+"  &lt;DefaultDirectoryDirs/&gt;\n"
+"\n"
+"  &lt;!-- Accessories submenu --&gt;\n"
+"  &lt;Menu&gt;\n"
+"    &lt;Name&gt;Accessories&lt;/Name&gt;\n"
+"    &lt;Directory&gt;Accessories.directory&lt;/Directory&gt;\n"
+"    &lt;Include&gt;\n"
+"      &lt;And&gt;\n"
+"        &lt;Category&gt;Utility&lt;/Category&gt;\n"
+"        &lt;Not&gt;\n"
+"          &lt;Category&gt;System&lt;/Category&gt;\n"
+"        &lt;/Not&gt;\n"
+"      &lt;/And&gt;\n"
+"    &lt;/Include&gt;\n"
+"  &lt;/Menu&gt; &lt;!-- End Accessories --&gt;\n"
+"\n"
+"  &lt;!-- possibly more submenus --&gt;\n"
+"\n"
+"&lt;/Menu&gt; &lt;!-- End Applications --&gt;\n"
 
 #: C/system-admin-guide.xml:179(para)
 msgid ""
@@ -2334,10 +2369,13 @@ msgid ""
 "see the <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec"
 "\">XDG menu specification</ulink>."
 msgstr ""
+"La <xref linkend=\"menustructure-xmlmenu\"/> describe algunos de los elementos en los "
+"archivos <filename>.menu</filename>. Para obtener una descripción más detallada, vea la "
+"<ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">especificación de menús XDG</ulink>."
 
 #: C/system-admin-guide.xml:186(title)
 msgid "Menu Definition File Elements"
-msgstr ""
+msgstr "Elementos de los archivos de definición de menú"
 
 #: C/system-admin-guide.xml:195(para)
 msgid "Element"
@@ -2345,28 +2383,28 @@ msgstr "Elemento"
 
 #: C/system-admin-guide.xml:204(literal)
 msgid "&lt;Menu&gt;"
-msgstr ""
+msgstr "&lt;Menu&gt;"
 
 #: C/system-admin-guide.xml:206(para)
 msgid ""
 "The root element which may contain nested <literal>&lt;Menu&gt;</literal> "
 "elements that define submenus. How these elements are nested determines the "
 "menu structure."
-msgstr ""
+msgstr "El elemento raíz que puede contener elementos <literal>&lt;Menu&gt;</literal> anidados que definen submenús. Cómo están anidados los elementos determina la estructura del menú."
 
 #: C/system-admin-guide.xml:214(literal)
 msgid "&lt;Name&gt;"
-msgstr ""
+msgstr "&lt;Name&gt;"
 
 #: C/system-admin-guide.xml:216(para)
 msgid ""
 "Specifies the name of the menu. Every <literal>&lt;Menu&gt;</literal> "
 "element must contain a <literal>&lt;Name&gt;</literal> element."
-msgstr ""
+msgstr "Especifica el nombre del menú. Cada elemento <literal>&lt;Menu&gt;</literal> debe contener un elemento <literal>&lt;Name&gt;</literal>."
 
 #: C/system-admin-guide.xml:223(literal)
 msgid "&lt;Directory&gt;"
-msgstr ""
+msgstr "&lt;Directory&gt;"
 
 #: C/system-admin-guide.xml:226(para)
 msgid ""
@@ -2385,73 +2423,73 @@ msgstr ""
 
 #: C/system-admin-guide.xml:240(literal)
 msgid "&lt;DefaultAppDirs&gt;"
-msgstr ""
+msgstr "&lt;DefaultAppDirs&gt;"
 
 #: C/system-admin-guide.xml:244(filename)
 msgid "$XDG_DATA_DIRS/applications/"
-msgstr ""
+msgstr "$XDG_DATA_DIRS/applications/"
 
 #: C/system-admin-guide.xml:242(entry)
 msgid ""
 "This is an instruction which indicates that all the available desktop "
 "entries from <placeholder-1/> should be scanned. If this instruction is not "
 "included, then these locations are not scanned for desktop entries."
-msgstr ""
+msgstr "Esta es una instrucción que indica que todas las entradas de escritorio disponibles de <placeholder-1/> deben escanearse. Si no se incluye esta instrucción, entonces esas ubicaciones no se escanearán para las entradas de escritorio."
 
 #: C/system-admin-guide.xml:251(literal)
 msgid "&lt;DefaultDirectoryDirs&gt;"
-msgstr ""
+msgstr "&lt;DefaultDirectoryDirs&gt;"
 
 #: C/system-admin-guide.xml:255(filename)
 msgid "$XDG_DATA_DIRS/desktop-directories/"
-msgstr ""
+msgstr "$XDG_DATA_DIRS/desktop-directories/"
 
 #: C/system-admin-guide.xml:253(entry)
 msgid ""
 "This is an instruction which indicates that all the available directory "
 "entries from <placeholder-1/> should be scanned. If the instruction is not "
 "included, then these locations are not scanned for directory entries."
-msgstr ""
+msgstr "Esta es una instrucción que indica que todas las entradas de directorio disponibles de <placeholder-1/> deben escanearse. Si no se incluye esta instrucción, entonces esas ubicaciones no se escanearán para las entradas de directorio."
 
 #: C/system-admin-guide.xml:262(literal) C/system-admin-guide.xml:280(literal)
 #: C/system-admin-guide.xml:283(literal)
 msgid "&lt;Include&gt;"
-msgstr ""
+msgstr "&lt;Include&gt;"
 
 #: C/system-admin-guide.xml:266(literal) C/system-admin-guide.xml:289(literal)
 #: C/system-admin-guide.xml:293(literal)
 msgid "&lt;Filename&gt;"
-msgstr ""
+msgstr "&lt;Filename&gt;"
 
 #: C/system-admin-guide.xml:267(literal) C/system-admin-guide.xml:298(literal)
 #: C/system-admin-guide.xml:302(literal)
 msgid "&lt;Category&gt;"
-msgstr ""
+msgstr "&lt;Category&gt;"
 
 #: C/system-admin-guide.xml:268(literal) C/system-admin-guide.xml:307(literal)
 #: C/system-admin-guide.xml:312(literal)
 msgid "&lt;And&gt;"
-msgstr ""
+msgstr "&lt;And&gt;"
 
 #: C/system-admin-guide.xml:268(literal) C/system-admin-guide.xml:316(literal)
 #: C/system-admin-guide.xml:321(literal)
 msgid "&lt;Or&gt;"
-msgstr ""
+msgstr "&lt;Or&gt;"
 
 #: C/system-admin-guide.xml:269(literal) C/system-admin-guide.xml:325(literal)
 #: C/system-admin-guide.xml:330(literal)
 msgid "&lt;Not&gt;"
-msgstr ""
+msgstr "&lt;Not&gt;"
 
 #: C/system-admin-guide.xml:269(literal) C/system-admin-guide.xml:334(literal)
 msgid "&lt;All&gt;"
-msgstr ""
+msgstr "&lt;All&gt;"
 
 #: C/system-admin-guide.xml:271(emphasis)
 #: C/system-admin-guide.xml:280(emphasis)
 #: C/system-admin-guide.xml:337(emphasis)
 msgid "desktop entries"
-msgstr ""
+msgstr "entradas de escritorio"
 
 #: C/system-admin-guide.xml:264(entry)
 msgid ""
@@ -2464,7 +2502,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:277(literal)
 msgid "&lt;Exclude&gt;"
-msgstr ""
+msgstr "&lt;Exclude&gt;"
 
 #: C/system-admin-guide.xml:279(entry)
 msgid ""
@@ -2479,7 +2517,7 @@ msgstr ""
 #: C/system-admin-guide.xml:319(emphasis)
 #: C/system-admin-guide.xml:328(emphasis)
 msgid "desktop entry"
-msgstr ""
+msgstr "entrada de escritorio"
 
 #: C/system-admin-guide.xml:291(entry)
 msgid ""
@@ -2506,7 +2544,7 @@ msgstr ""
 #: C/system-admin-guide.xml:320(emphasis)
 #: C/system-admin-guide.xml:329(emphasis)
 msgid "any"
-msgstr ""
+msgstr "cualquiera"
 
 #: C/system-admin-guide.xml:318(entry)
 msgid ""
@@ -2524,19 +2562,19 @@ msgstr ""
 
 #: C/system-admin-guide.xml:336(entry)
 msgid "A matching rule which selects all <placeholder-1/>."
-msgstr ""
+msgstr "Una regla de coincidencia que selecciona todas las <placeholder-1/>."
 
 #: C/system-admin-guide.xml:345(title)
 msgid "Desktop Entry Files"
-msgstr ""
+msgstr "Archivos de entrada de escritorio"
 
 #: C/system-admin-guide.xml:350(primary) C/system-admin-guide.xml:356(see)
 msgid "desktop entry files"
-msgstr ""
+msgstr "archivos de entrada de escritorio"
 
 #: C/system-admin-guide.xml:354(primary)
 msgid ".desktop files"
-msgstr ""
+msgstr "archivos .desktop"
 
 #: C/system-admin-guide.xml:359(para)
 msgid ""
@@ -2572,7 +2610,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:383(para)
 msgid "The following is a sample desktop entry file:"
-msgstr ""
+msgstr "Lo siguiente es un ejemplo de un archivo de entrada de escritorio:"
 
 #: C/system-admin-guide.xml:385(programlisting)
 #, no-wrap
@@ -2592,6 +2630,20 @@ msgid ""
 "StartupNotify=true\n"
 "Categories=GTK;GNOME;Application;Utility;"
 msgstr ""
+"[Desktop Entry]\n"
+"Encoding=UTF-8\n"
+"Name=Calculator\n"
+"Name[fr]=Calculatrice\n"
+"...\n"
+"Comment=Perform calculations\n"
+"Comment[fr]=Effectue des calculs compliqués\n"
+"...\n"
+"Exec=gcalctool\n"
+"Icon=gnome-calculator\n"
+"Terminal=false\n"
+"Type=Application\n"
+"StartupNotify=true\n"
+"Categories=GTK;GNOME;Application;Utility;"
 
 #: C/system-admin-guide.xml:400(para)
 msgid ""
@@ -2600,18 +2652,20 @@ msgid ""
 "the <ulink url=\"http://www.freedesktop.org/Standards/desktop-entry-spec"
 "\">XDG Desktop Entry Specification</ulink>."
 msgstr ""
+"La <xref linkend=\"menustructure-TBL-7\"/> describe las claves más importantes en los archivos de entrada de escritorio. Para obtener más información acerca de los archivos de entrada de escritorio, vea la <ulink url=\"http://www.freedesktop.org/Standards/desktop-entry-spec"
+"\">Especificación de entrada de escritorio XDG</ulink>."
 
 #: C/system-admin-guide.xml:407(title)
 msgid "Desktop Entry Keys"
-msgstr ""
+msgstr "Claves de entrada de escritorio"
 
 #: C/system-admin-guide.xml:416(para)
 msgid "Desktop Entry Key"
-msgstr ""
+msgstr "Clave de entrada de escritorio"
 
 #: C/system-admin-guide.xml:425(literal)
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Categories"
 
 #: C/system-admin-guide.xml:427(para)
 msgid ""
@@ -2620,79 +2674,81 @@ msgid ""
 "the desktop menu specification at <ulink url=\"http://www.freedesktop.org/"
 "Standards/menu-spec\"> http://www.freedesktop.org/Standards/menu-spec</ulink>"
 msgstr ""
+"Especifica las palabras clave que describen al elemento. Las palabras clave están separados con punto y coma (;). Para ver una lista de las palabras clave de categoría estándar, vea la especificación de menús del escritorio en <ulink url=\"http://www.freedesktop.org/"
+"Standards/menu-spec\"> http://www.freedesktop.org/Standards/menu-spec</ulink>."
 
 #: C/system-admin-guide.xml:433(para)
 msgid ""
 "<link linkend=\"menustructure-13\">Menu Definition Files</link> map desktop "
 "entries to menus by using matching rules against the Categories key."
-msgstr ""
+msgstr "Los <link linkend=\"menustructure-13\">archivos de definición de menú</link> redireccionan las entradas de menú usando reglas de coincidencias contra las claves de las Categorías."
 
 #: C/system-admin-guide.xml:439(literal) C/system-admin-guide.xml:627(literal)
 #: C/system-admin-guide.xml:117(literal)
 msgid "Comment"
-msgstr "Comentario"
+msgstr "Comment"
 
 #: C/system-admin-guide.xml:442(para)
 msgid ""
 "Specifies a short description of the item. The comment is displayed as a "
 "tooltip when you point to the item in the menu."
-msgstr ""
+msgstr "Especifica una corta descripción del elemento. El comentario se muestra como un consejo cuando posicione el ratón encima del elemento del menú."
 
 #: C/system-admin-guide.xml:448(literal)
 msgid "Encoding"
-msgstr "Codificación"
+msgstr "Encoding"
 
 #: C/system-admin-guide.xml:451(para)
 msgid "Specifies the encoding of the desktop entry file."
-msgstr ""
+msgstr "Especifica la codificación del archivo de entrada del escritorio."
 
 #: C/system-admin-guide.xml:456(literal)
 msgid "Exec"
-msgstr ""
+msgstr "Exec"
 
 #: C/system-admin-guide.xml:458(para)
 msgid "Specifies a command to execute when you choose the item from the menu."
-msgstr ""
+msgstr "Especifica el comando a ejecutar cuando elija el elemento del menú."
 
 #: C/system-admin-guide.xml:464(literal) C/system-admin-guide.xml:636(literal)
 #: C/system-admin-guide.xml:44(term)
 msgid "Icon"
-msgstr "Icono"
+msgstr "Icon"
 
 #: C/system-admin-guide.xml:466(para)
 msgid ""
 "Specifies the filename of an icon that represents the item. Does not specify "
 "the path to the filename, or the file extension."
-msgstr ""
+msgstr "Especifica el nombre del archivo del icono que representa el elemento. No especifica la ruta al nombre del archivo o la extensión del archivo."
 
 #: C/system-admin-guide.xml:472(literal)
 msgid "MimeType"
-msgstr ""
+msgstr "MimeType"
 
 #: C/system-admin-guide.xml:474(entry)
 msgid "Specifies the MIME types that the application can handle."
-msgstr ""
+msgstr "Especifica el tipo MIME que puede manejar la aplicación."
 
 #: C/system-admin-guide.xml:478(literal) C/system-admin-guide.xml:619(literal)
 #: C/system-admin-guide.xml:105(literal)
 msgid "Name"
-msgstr "Nombre"
+msgstr "Name"
 
 #: C/system-admin-guide.xml:480(para)
 msgid ""
 "Specifies the name of the item. This name is displayed on the item in the "
 "menu."
-msgstr ""
+msgstr "Especifica el nombre del elemento. Este nombre se muestra en el elemento en el menú."
 
 #: C/system-admin-guide.xml:485(literal)
 msgid "NoDisplay"
-msgstr ""
+msgstr "NoDisplay"
 
 #: C/system-admin-guide.xml:487(para)
 msgid ""
 "This options means <quote>This application exists, but don't display it in "
 "the menus</quote>."
-msgstr ""
+msgstr "Estas opciones significan <quote>Esta aplicación existe, pero no se muestra en el menú</quote>."
 
 #: C/system-admin-guide.xml:493(literal)
 msgid "Terminal"
@@ -2703,50 +2759,50 @@ msgid ""
 "Specifies whether the command in the <literal>Exec</literal> key runs in a "
 "terminal window. If the value is <literal>true</literal> the command runs in "
 "a terminal window."
-msgstr ""
+msgstr "Especifica si el comando en la clave <literal>Exec</literal> se ejecuta en una ventana del terminal. Si el valor es <literal>true</literal> el comanjo se ejecuta en una ventana del terminal."
 
 #: C/system-admin-guide.xml:498(para)
 msgid ""
 "If the command does not create a window in which to run, the value of this "
 "key must be <literal>true</literal>."
-msgstr ""
+msgstr "Si el comando no crea una ventana en la que ejecutarse, el valor de esta clave debe ser <literal>true</literal>."
 
 #: C/system-admin-guide.xml:505(literal) C/system-admin-guide.xml:644(literal)
 #: C/system-admin-guide.xml:93(literal)
 msgid "Type"
-msgstr "Tipo"
+msgstr "Type"
 
 #: C/system-admin-guide.xml:507(para)
 msgid "Specifies the type of item. This value is one of the following:"
-msgstr ""
+msgstr "Especifica el tipo de elemento. Este valor es uno de los siguientes:"
 
 #: C/system-admin-guide.xml:510(para)
 msgid "<literal>Application</literal>: An item that starts an application."
-msgstr ""
+msgstr "<literal>Application</literal>: Un elemento que inicia una aplicación."
 
 #: C/system-admin-guide.xml:515(para)
 msgid ""
 "<literal>Link</literal>: An item that links to a file, folder, or a remote "
 "resource (such as a FTP site, a web page, a Windows share...)."
-msgstr ""
+msgstr "<literal>Link</literal>: Un elemento que enlaza a un archivo, carpeta o recurso remoto (tal como un sitio FTP, una página web, un recurso compartido de Windows...)."
 
 #: C/system-admin-guide.xml:521(para)
 msgid "<literal>FSDevice</literal>: An item that is a file system device."
-msgstr ""
+msgstr "<literal>FSDevice</literal>: Un elemento que es un dispositivo del sistema de archivos."
 
 #: C/system-admin-guide.xml:526(para)
 msgid "<literal>Directory</literal>: An item that is a Directory."
-msgstr ""
+msgstr "<literal>Directory</literal>: Un elemento que es un Ddirectorio."
 
 #: C/system-admin-guide.xml:536(para)
 msgid ""
 "For more information on the keys in desktop entry files, see the desktop "
 "entry specification at the following URL:"
-msgstr ""
+msgstr "Para obtener más información acerca de las claves en los archivos de entrada del escritorio, vea la especificación de entradas del escritorio en el siguiente URL:"
 
 #: C/system-admin-guide.xml:540(ulink)
 msgid "http://www.freedesktop.org/Standards/desktop-entry-spec"
-msgstr ""
+msgstr "http://www.freedesktop.org/Standards/desktop-entry-spec"
 
 #: C/system-admin-guide.xml:544(para)
 msgid ""
@@ -2758,15 +2814,15 @@ msgstr ""
 
 #: C/system-admin-guide.xml:553(title)
 msgid "Directory Entry Files"
-msgstr ""
+msgstr "Archivos de entrada de directorio"
 
 #: C/system-admin-guide.xml:556(primary) C/system-admin-guide.xml:562(see)
 msgid "directory entry files"
-msgstr ""
+msgstr "archivos de entrada de directorio"
 
 #: C/system-admin-guide.xml:560(primary)
 msgid ".directory files"
-msgstr ""
+msgstr "archivos .directory"
 
 #: C/system-admin-guide.xml:565(para)
 msgid ""
@@ -2793,7 +2849,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:584(para)
 msgid "The following is a sample directory entry file:"
-msgstr ""
+msgstr "Lo siguiente es un ejemplo de archivo de entrada de directorio:"
 
 #: C/system-admin-guide.xml:586(programlisting)
 #, no-wrap
@@ -2809,46 +2865,56 @@ msgid ""
 "Type=Directory\n"
 "Encoding=UTF-8"
 msgstr ""
+"[Desktop Entry]\n"
+"Name=Graphics\n"
+"Name[fr]=Graphisme\n"
+"...\n"
+"Comment=Graphics applications\n"
+"Comment[fr]=Applications graphiques\n"
+"...\n"
+"Icon=gnome-graphics\n"
+"Type=Directory\n"
+"Encoding=UTF-8"
 
 #: C/system-admin-guide.xml:597(para)
 msgid ""
 "<xref linkend=\"menustructure-TBL-15\"/> describes the most important keys "
 "in directory entry files."
-msgstr ""
+msgstr "La <xref linkend=\"menustructure-TBL-15\"/> describe las claves más importantes en los archivos de entrada de directorio."
 
 #: C/system-admin-guide.xml:601(title)
 msgid "Directory Entry Keys"
-msgstr ""
+msgstr "Claves de entrada de directorio"
 
 #: C/system-admin-guide.xml:610(para)
 msgid "Directory Entry Key"
-msgstr ""
+msgstr "Clave de entrada de directorio"
 
 #: C/system-admin-guide.xml:621(para)
 msgid "Specifies the name of the menu. This name is displayed on the menu."
-msgstr ""
+msgstr "Especifica el nombre del menú. Este nombre se muestra en el menú."
 
 #: C/system-admin-guide.xml:629(para)
 msgid ""
 "Specifies a short description of the menu. The comment is displayed as a "
 "tooltip when you point to the menu."
-msgstr ""
+msgstr "Especifica una descripción corta del menú. El comentario se muestra como un consejo cuando posiciona el ratón sobre el menú."
 
 #: C/system-admin-guide.xml:638(para)
 msgid ""
 "Specifies the filename of an icon that represents the menu. Does not specify "
 "the path to the filename, or the file extension."
-msgstr ""
+msgstr "Especifica el nombre del archivo del icono que representa el menú. No especifica la ruta al nombre del archivo o la extensión del archivo."
 
 #: C/system-admin-guide.xml:646(para)
 msgid ""
 "Specifies the type of menu. The value of this key is always "
 "<literal>Directory</literal>."
-msgstr ""
+msgstr "Especifica el tipo de menú. El valor de esta clave es siempre <literal>Directory</literal>."
 
 #: C/system-admin-guide.xml:655(title)
 msgid "Editing System Menus"
-msgstr ""
+msgstr "Editar menús del sistema"
 
 #: C/system-admin-guide.xml:662(secondary)
 msgid "editing"
@@ -2858,11 +2924,11 @@ msgstr "editar"
 msgid ""
 "You can edit menu configuration files and menu data files manually to "
 "customize menus."
-msgstr ""
+msgstr "Puede editar los archivos de configuración de menú y archivos de datos del menú manualmente para personalizar menús."
 
 #: C/system-admin-guide.xml:669(title)
 msgid "Adding Menus"
-msgstr ""
+msgstr "Añadir menús"
 
 #: C/system-admin-guide.xml:678(secondary)
 #: C/system-admin-guide.xml:858(secondary)
@@ -2871,7 +2937,7 @@ msgstr "añadir"
 
 #: C/system-admin-guide.xml:681(para)
 msgid "To add a menu for all users, perform the following steps:"
-msgstr ""
+msgstr "Para añadir un menú para todos los usuarios, realice los siguientes pasos:"
 
 #: C/system-admin-guide.xml:685(para)
 msgid ""
@@ -2879,14 +2945,14 @@ msgid ""
 "directory entry file in the <filename>$XDG_DATA_DIRS/desktop-directories</"
 "filename> directory. For more information on directory entry files, see "
 "<xref linkend=\"menustructure-14\"/>."
-msgstr ""
+msgstr "Cree un archivo de entrada de directorio para el elemento que quiere añadir. Sitúe el archivo de entrada de directorio en el directorio <filename>$XDG_DATA_DIRS/desktop-directories</filename>. Para obtener más información acerca de archivos de entrada de directorio, vea la <xref linkend=\"menustructure-14\"/>."
 
 #: C/system-admin-guide.xml:693(para) C/system-admin-guide.xml:761(para)
 #: C/system-admin-guide.xml:791(para) C/system-admin-guide.xml:851(para)
 msgid ""
 "Locate the <filename>$XDG_CONFIG_DIRS/menus/applications.menu</filename> "
 "file."
-msgstr ""
+msgstr "Localice el archivo <filename>$XDG_CONFIG_DIRS/menus/applications.menu</filename>."
 
 #: C/system-admin-guide.xml:699(para)
 msgid ""
@@ -2929,15 +2995,15 @@ msgstr ""
 
 #: C/system-admin-guide.xml:737(title)
 msgid "Adding an Item to a Menu"
-msgstr ""
+msgstr "Añadir un elemento a un menú"
 
 #: C/system-admin-guide.xml:742(secondary)
 msgid "adding items to"
-msgstr ""
+msgstr "añadir elementos a"
 
 #: C/system-admin-guide.xml:745(para)
 msgid "To add an item to a menu for all users, perform the following steps:"
-msgstr ""
+msgstr "Para añadir un elemento a un menú para todos los usuarios, realice los siguientes pasos:"
 
 #: C/system-admin-guide.xml:750(para)
 msgid ""
@@ -3005,18 +3071,18 @@ msgstr "Para editar un elemento del menú, realice los pasos siguientes:"
 msgid ""
 "Locate the desktop entry in the <filename>$XDG_DATA_DIRS/applications</"
 "filename> directory that corresponds to the menu item."
-msgstr ""
+msgstr "Localice la entrada del directorio en el directorio <filename>$XDG_DATA_DIRS/applications</filename> que corresponde con el elemento del menú."
 
 #: C/system-admin-guide.xml:831(para)
 msgid ""
 "Edit the desktop entry to change the properties of the menu item. For more "
 "information on desktop entry files, see <xref linkend=\"menustructure-"
 "desktopentry\"/>."
-msgstr ""
+msgstr "Edite la entrada del directorio para modificar las propiedades del elemento del menú. Para obtener más información acerca de los archivos de entrada de escritorio vea la <xref linkend=\"menustructure-desktopentry\"/>."
 
 #: C/system-admin-guide.xml:839(title) C/system-admin-guide.xml:882(title)
 msgid "Deleting an Item from a Menu"
-msgstr ""
+msgstr "Borrar un elemento del menú"
 
 #: C/system-admin-guide.xml:844(secondary)
 msgid "deleting menu items"
@@ -3024,20 +3090,20 @@ msgstr "borrar elementos del menú"
 
 #: C/system-admin-guide.xml:847(para)
 msgid "To delete an item from a menu for all users:"
-msgstr ""
+msgstr "Para borrar un elemento de un menú para todos los usuarios:"
 
 #: C/system-admin-guide.xml:857(para)
 msgid ""
 "Find the <literal>&lt;Menu&gt;</literal> element in this file that contains "
 "the desktop entry you want to delete."
-msgstr ""
+msgstr "Busque el elemento <literal>&lt;Menu&gt;</literal> en este archivo que contiene la entrada de escritorio que quiere borrar."
 
 #: C/system-admin-guide.xml:862(para)
 msgid ""
 "Insert an <literal>&lt;Exclude&gt;</literal> element after the closing tag "
 "for the <literal>&lt;Include&gt;</literal> element. Make sure this is in the "
 "<literal>&lt;Menu&gt;</literal> element determined in step 2."
-msgstr ""
+msgstr "Introduzca un elemento <literal>&lt;Exclude&gt;</literal> después de cerrar la etiqueta para el elemento <literal>&lt;Include&gt;</literal>. Asegúrese de que éste es el elemento <literal>&lt;Menu&gt;</literal> determinado en el paso 2."
 
 #: C/system-admin-guide.xml:869(para)
 msgid ""
@@ -5504,7 +5570,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:87(para)
 msgid "For example, to use Atlanta, run the following command:"
-msgstr ""
+msgstr "Por ejemplo, para usar Atlanta, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:88(userinput)
 #, no-wrap
@@ -5521,7 +5587,7 @@ msgstr ""
 msgid ""
 "Alternatively, users can use the <application>Theme</application> preference "
 "tool to select the appropriate option."
-msgstr ""
+msgstr "Alternativamente los usuarios pueden usar la herramienta de preferencias <application>Tema</application> para seleccionar la opción apropiada."
 
 #: C/system-admin-guide.xml:94(para)
 msgid ""
