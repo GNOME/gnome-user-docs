@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-admin-guide.HEAD.es\n"
 "POT-Creation-Date: 2007-01-02 02:06+0000\n"
-"PO-Revision-Date: 2007-07-15 20:16+0200\n"
+"PO-Revision-Date: 2007-07-24 00:56+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1773,6 +1773,10 @@ msgid ""
 "<filename>panel-default-setup.entries</filename> specifies a <guimenu>Main "
 "Menu</guimenu> object at the left side of the bottom panel:"
 msgstr ""
+"Las claves que especifican los objetos del panel, las propiedades de los objetos del panel y los "
+"paneles en los que residen los objetos. Por ejemplo, el siguiente ejemplo de "
+"<filename>panel-default-setup.entries</filename> especifica un objeto del <guimenu>Menú "
+"principal</guimenu> a la izquierda del panel inferior:"
 
 #: C/system-admin-guide.xml:1084(para)
 msgid ""
@@ -1781,6 +1785,10 @@ msgid ""
 "<filename>panel-default-setup.entries</filename> specifies the "
 "<application>Window List</application> applet, in the bottom panel:"
 msgstr ""
+"Claves que especifican las miniaplicaciones, las preferencias de las miniaplicaciones y los paneles en "
+"los que residen las miniaplicaciones. Por ejemplo, el siguiente ejemplo de "
+"<filename>panel-default-setup.entries</filename> especifica la "
+"miniaplicación <application>Lista de ventanas</application> en el panel inferior:"
 
 #: C/system-admin-guide.xml:1118(para)
 msgid ""
@@ -1790,20 +1798,25 @@ msgid ""
 "the following excerpt from <filename>GNOME_Wncklet_Factory.server</filename> "
 "shows the OAFIID for the <application>Window List</application> applet:"
 msgstr ""
+"OAFIID es un identificador único para cada miniaplicación. Para buscar el OAFIID de una "
+"miniaplicación en particular, vea el archivo <filename>.server</filename> para la miniaplicación "
+"en el directorio <filename>/usr/lib/bonobo/servers</filename>. Por ejemplo, el siguiente "
+"trozo de <filename>GNOME_Wncklet_Factory.server</filename> muestra el OAFIID de "
+"la miniaplicación <application>Lista de ventanas</application>:"
 
 #: C/system-admin-guide.xml:1129(title)
 msgid "To Set Preferences for Individual Panels and Panel Objects"
-msgstr ""
+msgstr "Establecer preferencias para paneles individuales y objetos del panel"
 
 #: C/system-admin-guide.xml:1130(para)
 msgid ""
 "To set the preferences for a panel and the objects on a panel perform the "
 "following steps:"
-msgstr ""
+msgstr "Para establecer las preferencias de un panel y de los objetos de un panel realice los siguientes pasos:"
 
 #: C/system-admin-guide.xml:1134(para)
 msgid "Log in to a GNOME session, and configure the panels as required."
-msgstr ""
+msgstr "Inicie sesión en GNOME y configure los paneles tal y como se requiera."
 
 #: C/system-admin-guide.xml:1137(para)
 msgid ""
@@ -1813,6 +1826,11 @@ msgid ""
 "generates a list that contains all preference keys in a <application>GConf</"
 "application> repository directory that you specify."
 msgstr ""
+"Use la opción <option>--dump</option> del comando <command>gconftool-2"
+"</command> para generar un archivo que contenga la "
+"descripción XML de la configuración de su panel. La opción <option>--dump</option> "
+"genera una lista que contiene todas las claves de preferencias del "
+"repositorio <application>GConf</application> que elija."
 
 #: C/system-admin-guide.xml:1140(para)
 msgid ""
@@ -1820,17 +1838,20 @@ msgid ""
 "panel configuration in a file called <filename>my-panel-setup.entries</"
 "filename>:"
 msgstr ""
+"Por ejemplo, el siguiente comando crea una descripción XML de la configuración "
+"predeterminada del panel en un archivo llamado <filename>mi-configuracion-del-panel"
+".entries</filename>:"
 
 #: C/system-admin-guide.xml:1142(userinput)
 #, no-wrap
 msgid "gconftool-2 --dump /apps/panel &gt; my-panel-setup.entries"
-msgstr "gconftool-2 --dump /apps/panel &gt; my-panel-setup.entries"
+msgstr "gconftool-2 --dump /apps/panel &gt; mi-configuracion-del-panel.entries"
 
 #: C/system-admin-guide.xml:1145(para)
 msgid ""
 "Open the <filename>my-panel-setup.entries</filename> file in a text editor, "
 "and modify the file as required."
-msgstr ""
+msgstr "Abra el archivo <filename>mi-configuracion-del-panel.entries</filename> en un editor de textos y modifíquelo como se requiera."
 
 #: C/system-admin-guide.xml:1147(para)
 msgid ""
@@ -1838,6 +1859,9 @@ msgid ""
 "files. The following is an excerpt from a file generated with the <option>--"
 "dump</option> option:"
 msgstr ""
+"Por ejemplo, quizá quiera cambiar la ubicación de los archivos de entrada del "
+"escritorio. Lo siguiente es un trozo de un archivo generado con la opción "
+"<option>--dump</option>:"
 
 #: C/system-admin-guide.xml:1156(para)
 msgid ""
@@ -1845,6 +1869,8 @@ msgid ""
 "<filename>hadjaha-00adce02f7.desktop</filename> to another desktop entry "
 "file that is available globally."
 msgstr ""
+"En el ejemplo anterior quizá quiera cambiar la referencia <filename>hadjaha-00adce02f7.desktop</filename> "
+"a otro archivo de entrada de escritorio que esté disponible globalmente."
 
 #: C/system-admin-guide.xml:1158(para)
 msgid ""
@@ -1858,6 +1884,15 @@ msgid ""
 "right side of the panel, set the value of the <systemitem>right_stick</"
 "systemitem> key to <literal>true</literal>."
 msgstr ""
+"Cuando genera una configuración de panel con la opción <option>--dump</option>, "
+"las posiciones de los objetos del panel son absolutas. Quizá quiera "
+"cambiar las posiciones de los objetos del panel de absolutas a "
+"relativas. El objeto en el extremo izquierdo de un panel tiene un valor "
+"<systemitem>position</systemitem> de <literal>0</literal>. El siguiente "
+"objeto tiene un valor de <systemitem>position</systemitem> de <literal>1</"
+"literal>, y así sucesivamente. Si quiere que las posiciones de los objetos sean relativas "
+"a la parte derecha del panel, establezca el valor de la clave <systemitem>right_stick</"
+"systemitem> a <literal>true</literal>."
 
 #: C/system-admin-guide.xml:1167(para)
 msgid ""
@@ -1868,6 +1903,13 @@ msgid ""
 "default configuration source to the values of the corresponding keys in "
 "<filename>my-panel-setup.entries</filename>:"
 msgstr ""
+"Use la opción <option>--load</option> de <command>gconftool-2</command> "
+"para establecer los valores de la configuración fuente predeterminada "
+"a los valres en el archivo<filename>mi-configuracion-del-panel.entries"
+"</filename>. Por ejemplo, el siguiente comando establece los valores "
+"de las claves de la configuración fuente predeterminada a los valres "
+"de las correspondientes claves en <filename>mi-configuracion-del-panel."
+"entries</filename>:"
 
 #: C/system-admin-guide.xml:1171(userinput)
 #, no-wrap
@@ -1878,21 +1920,23 @@ msgid ""
 msgstr ""
 "gconftool-2 --direct \\\n"
 "  --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \\\n"
-"  --load my-panel-setup.entries"
+"  --load mi-configuracion-del-panel.entries"
 
 #: C/system-admin-guide.xml:1180(title)
 msgid "Setting Look-and-Feel Preferences"
-msgstr ""
+msgstr "Establecer preferencias del aspecto"
 
 #: C/system-admin-guide.xml:1181(para)
 msgid ""
 "The following sections describe how to assign mandatory or default values to "
 "look-and-feel preferences."
 msgstr ""
+"Las siguientes secciones describen cómo asignar valores obligatorios o predeterminados "
+"para las preferencias del aspecto."
 
 #: C/system-admin-guide.xml:1184(title)
 msgid "To Set Font Preferences"
-msgstr ""
+msgstr "Establecer preferencias de la tipografía"
 
 #: C/system-admin-guide.xml:1187(secondary)
 msgid "fonts, setting"
@@ -1911,20 +1955,23 @@ msgid ""
 "following table shows the keys to modify, and the part of the user interface "
 "to which the keys correspond:"
 msgstr ""
+"Para establecer las preferencias de la tipografía debe modificar los valores de dos claves de preferencias. La "
+"siguiente tabla la muestra las claves a modificar y la parte del interfaz de usuario "
+"con la que corresponden las claves:"
 
 #: C/system-admin-guide.xml:1203(para)
 msgid "GConf Location"
-msgstr ""
+msgstr "Ubicación en GConf"
 
 #: C/system-admin-guide.xml:1206(para)
 msgid "User Interface Component"
-msgstr ""
+msgstr "Componente del interfaz de usuario"
 
 #: C/system-admin-guide.xml:1217(para)
 msgid ""
 "<application>Font</application> preference tool, <guilabel>Application font</"
 "guilabel> option"
-msgstr ""
+msgstr "Herramienta de preferencias <application>Tipografía</application>, opción <guilabel>Tipografía para la aplicación</guilabel>"
 
 #: C/system-admin-guide.xml:1222(para)
 msgid "/apps/nautilus/preferences/desktop_font"
@@ -1934,13 +1981,13 @@ msgstr "/apps/nautilus/preferences/desktop_font"
 msgid ""
 "<application>Font</application> preference tool, <guilabel>Desktop font</"
 "guilabel> option"
-msgstr ""
+msgstr "Herramienta de preferencias <application>Tipografía</application>, opción <guilabel>Tipografía para el escritorio</guilabel>"
 
 #: C/system-admin-guide.xml:1231(para)
 msgid ""
 "For example, to set <literal>Sans 12</literal> as the mandatory application "
 "font, run the following command:"
-msgstr ""
+msgstr "Por ejemplo, para establecer <literal>Sans 12</literal> como la tipografía obligatoria para las aplicaciones, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:1233(userinput)
 #, no-wrap
@@ -1960,7 +2007,7 @@ msgid ""
 "<indexterm><primary>desktop</primary><secondary>font preferences, setting "
 "with GConf</secondary></indexterm>To set <literal>palatino 12</literal> as "
 "the default desktop object font, run the following command:"
-msgstr ""
+msgstr "<indexterm><primary>escritorio</primary><secondary> preferencias tipografía, ajustar con GConf</secondary></indexterm> Para establecer <literal>palatino 12</literal> como la tipografía predeterminada para el escritorio, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:1240(userinput)
 #, no-wrap
@@ -1999,11 +2046,15 @@ msgid ""
 "location. For example, to set a mandatory image for the background, run the "
 "following command:"
 msgstr ""
+"Para establecer las preferencias para el fondo del escritorio debe modificar los valores "
+"de las claves de preferencias en la ubicación <systemitem>/desktop/gnome/background</systemitem>. "
+"Por ejemplo, para establecer una imagen obligatoria para el fondo de escritorio, ejecute el siguiente "
+"comando:"
 
 #: C/system-admin-guide.xml:1262(replaceable)
 #: C/system-admin-guide.xml:1267(replaceable)
 msgid "filename.png"
-msgstr "filename.png"
+msgstr "nombre-de-archivo.png"
 
 #: C/system-admin-guide.xml:1259(userinput)
 #, no-wrap
@@ -2037,14 +2088,16 @@ msgid ""
 "background preferences, see the <filename>desktop_gnome_background.schemas</"
 "filename> schema definition file."
 msgstr ""
+"También puede establecer otras preferencias del fondo del escritorio. Para obtener más información "
+"sobre las otras preferencias del fondo del escritorio, consulte el archivo de definición de esquemas <filename>desktop_gnome_background.schemas</filename>."
 
 #: C/system-admin-guide.xml:1272(title)
 msgid "To Set Splash Image Preferences"
-msgstr ""
+msgstr "Establecer las preferencias de la pantalla de bienvenida"
 
 #: C/system-admin-guide.xml:1275(secondary)
 msgid "splash image, setting"
-msgstr ""
+msgstr "pantalla de bienvenida, ajustes"
 
 #: C/system-admin-guide.xml:1278(primary)
 #: C/system-admin-guide.xml:129(primary) C/system-admin-guide.xml:544(primary)
@@ -2053,7 +2106,7 @@ msgstr "pantalla de bienvenida"
 
 #: C/system-admin-guide.xml:1279(secondary)
 msgid "image, setting with GConf"
-msgstr ""
+msgstr "imagen, establecer con GConf"
 
 #: C/system-admin-guide.xml:1282(para)
 msgid ""
@@ -2062,6 +2115,10 @@ msgid ""
 "example, if you do not want users ever to see a splash image, set a "
 "mandatory value as follows:"
 msgstr ""
+"Para ajustar las preferencias de la pantalla de bienvenida debe modificar el valor de las claves "
+"de preferencias en la ubicación <systemitem>/apps/gnome-session/options/</systemitem>. "
+"Por ejemplo, si no quiere que los usuarios vean la imagen de la pantalla de bienvenida, establezca "
+"el siguiente valor obligatorio:"
 
 #: C/system-admin-guide.xml:1285(userinput)
 #, no-wrap
@@ -2095,28 +2152,31 @@ msgid ""
 "other splash image preferences, see the <filename>gnome-session.schemas</"
 "filename> schema definition file."
 msgstr ""
+"También puede establecer otras preferencias para la imagen de la pantalla de bienvenida. "
+"Para obtener más información acerca de las otras preferencias de la imagen de la pantalla de bienvenida "
+"consulte el archivo de definición de esquema <filename>gnome-session.schemas</filename>."
 
 #: C/system-admin-guide.xml:1299(title)
 msgid "To Restore Default Preference Values"
-msgstr ""
+msgstr "Restablecer valores de preferencias predeterminados"
 
 #: C/system-admin-guide.xml:1302(secondary)
 msgid "restoring default preference values"
-msgstr ""
+msgstr "restablecer valores preferencias predeterminados"
 
 #: C/system-admin-guide.xml:1307(secondary)
 msgid "restoring to default with GConf"
-msgstr ""
+msgstr "restablecer predeterminados con GConf"
 
 #: C/system-admin-guide.xml:1309(para)
 msgid ""
 "To restore the default preference values for a user, run the following "
 "command:"
-msgstr ""
+msgstr "Para restablecer los valores de preferencias predeterminados para un usuario, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:1312(replaceable)
 msgid "user-configuration-source"
-msgstr ""
+msgstr "fuente-de-configuración-del-usuario"
 
 #: C/system-admin-guide.xml:1311(userinput)
 #, no-wrap
@@ -2135,6 +2195,9 @@ msgid ""
 "configuration source in the <filename>.gconf</filename> directory in the "
 "home directory of the user."
 msgstr ""
+"Reemplace <replaceable>fuente-de-configuración-del-usuario</replaceable> con la "
+"fuente de configuración en el directorio <filename>.gconf</filename> del directorio "
+"«home» del usuario."
 
 #: C/system-admin-guide.xml:1317(para)
 msgid ""
@@ -2142,6 +2205,9 @@ msgid ""
 "subdirectories, from the user setting to the setting in the default "
 "configuration source."
 msgstr ""
+"Este comando restablece los valores de todas las claves de preferencias en todos "
+"los subdirectorios, de los ajustes del usuario a los ajustes en la fuente de configuración "
+"predeterminada."
 
 #: C/system-admin-guide.xml:3(title)
 msgid "Customizing Menus"
@@ -2233,6 +2299,10 @@ msgid ""
 "a single user depending on the location of the <filename>applications.menu</"
 "filename> file that you modify."
 msgstr ""
+"Los archivos de menú definen la jerarquía de los menús que se usan en la barra de menú "
+"de GNOME. Modificando esos archivos puede personalizar los menús para todos los usuarios o "
+"para un solo usuario, dependiendo de la ubicación del archivo <filename>applications.menu</"
+"filename> que modifique."
 
 #: C/system-admin-guide.xml:86(para)
 msgid ""
@@ -2240,6 +2310,9 @@ msgid ""
 "\"http://www.freedesktop.org/Standards/basedir-spec\">XDG base directory "
 "specification</ulink>."
 msgstr ""
+"$XDG_CONFIG_DIRS es la variable de entorno definida en la <ulink url="
+"\"http://www.freedesktop.org/Standards/basedir-spec\">especificación de "
+"base de directorio XDG</ulink>."
 
 #: C/system-admin-guide.xml:83(para)
 msgid ""
@@ -2254,6 +2327,15 @@ msgid ""
 "<filename>applications.menu</filename> files. The first file found is used "
 "and subsequent files are ignored."
 msgstr ""
+"Los archivos de menú deben estar ubicados en <filename>$XDG_CONFIG_DIRS/menus/applications."
+"menu</filename>. Si <envar>$XDG_CONFIG_DIRS</envar><placeholder-1/> no está activado, "
+"entonces se usa la ruta predeterminada <filename>/etc/xdg</filename>. Esto también implica "
+"que una versión específica del usuario debe estar ubicada en <filename>$XDG_CONFIG_HOME/"
+"menus/applications.menu</filename> en el que se busca primeramente. Si <envar>$XDG_CONFIG_"
+"HOME</envar> no está activado, entonces se usa la ruta predeterminada <filename>~/.config</filename>. "
+"Los directorios que aparezcan primero en <envar>$XDG_CONFIG_DIRS</envar> tienen preferencia "
+"cuando existen varios archivos <filename>applications.menu</filename>. El primer archivo encontrado "
+"se usa mientras que los subsiguientes se ignoran."
 
 #: C/system-admin-guide.xml:99(para)
 msgid ""
@@ -2261,6 +2343,9 @@ msgid ""
 "simple list for resolving the location of <filename>applications.menu</"
 "filename>:"
 msgstr ""
+"Si está confundido acerca del orden en el que se buscan las rutas, aquí hay una "
+"pequeña lista para resolver la ubicación de <filename>applications.menu</"
+"filename>:"
 
 #: C/system-admin-guide.xml:105(para)
 msgid ""
@@ -2269,6 +2354,9 @@ msgid ""
 "envar> is not set, it defaults to the <filename>~/.config/</filename> "
 "directory."
 msgstr ""
+"Buescar en cada directorio de <envar>$XDG_CONFIG_HOME</envar> para encontrar "
+"<filename>menus/applications.menu</filename>. Si <envar>$XDG_CONFIG_HOME</"
+"envar> no está establecido, se cambia el predeterminado al directorio <filename>~/.config/</filename>."
 
 #: C/system-admin-guide.xml:112(para)
 msgid ""
@@ -2277,6 +2365,9 @@ msgid ""
 "filename> is not set, it defaults to the <filename>/etc/xdg/</filename> "
 "directory."
 msgstr ""
+"Buescar en cada directorio de <envar>$XDG_CONFIG_HOME</envar> para encontrar "
+"<filename>menus/applications.menu</filename>. Si <envar>$XDG_CONFIG_HOME</"
+"envar> no está establecido, se cambia el predeterminado al directorio <filename>/etc/xdg/</filename>."
 
 #: C/system-admin-guide.xml:119(para)
 msgid "Use the first <filename>applications.menu</filename> file found."
@@ -2293,6 +2384,13 @@ msgid ""
 "the <literal>&lt;Include&gt;</literal> element is to perform a filter on the "
 "set of available desktop entries using matching rules."
 msgstr ""
+"Puede ver un ejemplo de un archivo <filename>.menu</filename> en el <xref linkend="
+"\"example-menu\"/>. En este ejemplo, el menú de nivel superior se llama "
+"<literal>Applications</literal>, que está especificado usando el elemento <literal>&lt;"
+"Name&gt;</literal>. El menú <literal>Applications</literal> contiene un sólo submenú, "
+"pero se permiten varios submenús. Cada submenú puede tener también elementos"
+"<literal>&lt;Include&gt;</literal>. El propósito del elemento <literal>&lt;Include&gt;</literal> "
+"es servir de filtro sobre las entradas de escritorio disponibles usando reglas de coincidencias."
 
 #: C/system-admin-guide.xml:134(para)
 msgid ""
@@ -2306,6 +2404,15 @@ msgid ""
 "<quote>System</quote> in the Categories key. For more information on the "
 "Categories key, see <xref linkend=\"menustructure-desktopentry\"/>."
 msgstr ""
+"Por ejemplo, el elemento <literal>&lt;Category&gt;</literal> es una regla "
+"de coincidencia básica que selecciona una <link linkend=\"menustructure-desktopentry"
+"\"><emphasis>entrada de escritorio</emphasis></link> sólo si la clave "
+"<link linkend=\"category-key\"><literal>Categories</literal> contiene el "
+"contenido del elemento <literal>&lt;Category&gt;</literal>. En el ejemplo, "
+"el menú <literal>Accessories</literal> incluirá una <emphasis>entrada de "
+"escritorio</emphasis> sólo si contiene «Utility» pero no "
+"«System» en la clave <literal>Categories</literal>. Para obtener más información "
+"acerca de las claves de cateogias, consulte la <xref linkend=\"menustructure-desktopentry\"/>."
 
 #: C/system-admin-guide.xml:147(title)
 msgid "Example of a <filename>.menu</filename> file"
@@ -2421,6 +2528,9 @@ msgid ""
 "<literal>&lt;Name&gt;</literal> element is to be used to display the menu "
 "name."
 msgstr ""
+"Especifica el nombre del archivo de entrada de directorio que especifica el nombre, "
+"comentario e icono para el menú. Si este elemento no está especificado, entonces el "
+"elemento <literal>&lt;Name&gt;</literal> se usará para mostrar el nombre del menú."
 
 #: C/system-admin-guide.xml:230(para)
 msgid ""
@@ -2428,6 +2538,9 @@ msgid ""
 "location <filename>$XDG_DATA_DIRS/desktop-directories/</filename> as set "
 "forth in the <citetitle>XDG menu specification.</citetitle>"
 msgstr ""
+"De forma predeterminada, se busca en los archivos <filename>.directory</filename> "
+"para las ubicaciones <filename>$XDG_DATA_DIRS/desktop-directories/</filename> tal "
+"y como se expone en la <citetitle>especificación de menú XDG</citetitle>."
 
 #: C/system-admin-guide.xml:240(literal)
 msgid "&lt;DefaultAppDirs&gt;"
@@ -2507,6 +2620,11 @@ msgid ""
 "If more than one rule is present, the rules are logically ORed so that "
 "<placeholder-7/> that match any rule are included."
 msgstr ""
+"Contiene una lista de reglas coincidentes por las cuales se genera el contenido "
+"de un menú. Puede incluir las reglas de coincidencias <placeholder-1/>, <placeholder-2/>, "
+"<placeholder-3/>, <placeholder-4/>, <placeholder-5/>, o <placeholder-6/>. "
+"Si hay más de una regla persente se aplicacrá un OR lógico sobre las reglas "
+"de tal forma que se incluyan las <placeholder-7/> que coincidan con cualquier regla."
 
 #: C/system-admin-guide.xml:277(literal)
 msgid "&lt;Exclude&gt;"
@@ -2518,6 +2636,9 @@ msgid ""
 "in this element are excluded from the previous set of included elements. For "
 "this reason, this element must appear after the <placeholder-3/> element."
 msgstr ""
+"Lo opuesto a <placeholder-1/> ya que cualquier <placeholder-2/> que coincida "
+"en este elemento se excluirá del conjunto anterior de elementos incluidos. Por "
+"esta razón, este elemento debe aparecer después del elemento <placeholder-3/>."
 
 #: C/system-admin-guide.xml:292(emphasis)
 #: C/system-admin-guide.xml:301(emphasis)
@@ -2532,6 +2653,8 @@ msgid ""
 "A matching rule that selects a <placeholder-1/> when the Desktop File-Id "
 "matches the contents of the <placeholder-2/> element."
 msgstr ""
+"Una regla de coincidencia que selecciona una <placeholder-1/> cuando el "
+"identificador de archivo del escritorio (Desktop File-Id) coincida con el contenido del elemento <placeholder-2/>."
 
 #: C/system-admin-guide.xml:300(entry)
 msgid ""
