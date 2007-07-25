@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-admin-guide.HEAD.es\n"
 "POT-Creation-Date: 2007-01-02 02:06+0000\n"
-"PO-Revision-Date: 2007-07-24 00:56+0200\n"
+"PO-Revision-Date: 2007-07-25 23:45+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -2661,6 +2661,8 @@ msgid ""
 "A matching rule that selects a <placeholder-1/> when the Categories key "
 "matches the contents of the <placeholder-2/> element."
 msgstr ""
+"Una regla de coincidencia que selecciona una <placeholder-1/> cuando la clave de "
+"categorías coincide con el contenido del elemento <placeholder-2/>."
 
 #: C/system-admin-guide.xml:311(emphasis)
 msgid "all"
@@ -2671,6 +2673,8 @@ msgid ""
 "A matching rule that selects a <placeholder-1/> when it is selected by "
 "<placeholder-2/> the nested matching rules in the <placeholder-3/> element."
 msgstr ""
+"Una regla de coincidencia que selecciona una <placeholder-1/> cuando está seleccionada "
+"por <placeholder-2/> de las reglas de coincidencia anidadas en el elemento <placeholder-3/>."
 
 #: C/system-admin-guide.xml:320(emphasis)
 #: C/system-admin-guide.xml:329(emphasis)
@@ -2683,6 +2687,8 @@ msgid ""
 "<placeholder-2/> of the nested matching rules in the <placeholder-3/> "
 "element."
 msgstr ""
+"Una regla de coincidencia que selecciona una <placeholder-1/> cuando está seleccionada "
+"por <placeholder-2/> de las reglas de coincidencia anidadas en el elemento <placeholder-3/>."
 
 #: C/system-admin-guide.xml:327(entry)
 msgid ""
@@ -2690,6 +2696,8 @@ msgid ""
 "by <placeholder-2/> of the nested matching rules in the <placeholder-3/> "
 "element."
 msgstr ""
+"Una regla de coincidencia que no selecciona una <placeholder-1/> cuando está seleccionada "
+"por <placeholder-2/> de las reglas de coincidencia anidadas en el elemento <placeholder-3/>."
 
 #: C/system-admin-guide.xml:336(entry)
 msgid "A matching rule which selects all <placeholder-1/>."
@@ -2715,6 +2723,10 @@ msgid ""
 "It also contains keywords which determine the location of the item in the "
 "menu hierarchy."
 msgstr ""
+"Un <firstterm>archivo de entrada de escritorio</firstterm> es un archivo de datos que proporciona "
+"información acerca de un elemento en un menú. El archivo de entrada de escritorio especifica los "
+"detalles para el elemento del menú, tales como un nombre, comando a ejecutar, un icono y demás. "
+"También contiene palabras clave que determinan la ubicación para el elemento en la jerarquía del menú."
 
 #: C/system-admin-guide.xml:369(para)
 msgid ""
@@ -2722,6 +2734,8 @@ msgid ""
 "\"http://www.freedesktop.org/Standards/basedir-spec\">XDG base directory "
 "specification</ulink>."
 msgstr ""
+"$XDG_DATA_DIRS es la variable de entorno definida en la <ulink url=\"http://www.freedesktop.org/Standards/basedir-spec\">"
+"especificación de base de directorio XDG        .                                                         </ulink>"
 
 #: C/system-admin-guide.xml:365(para)
 msgid ""
@@ -2738,6 +2752,16 @@ msgid ""
 "precedence when there are several <filename>.desktop</filename> files with "
 "the same name."
 msgstr ""
+"Los archivos de entrada de escritorio deben estar en el directorio <filename>$XDG_DATA_DIRS/"
+"applications</filename> y deben tener una extensión de archivo <filename>.desktop</filename>. "
+"Si <envar>$XDG_DATA_DIRS</envar><placeholder-1/> no está activado, entonces la ruta predeterminada "
+"a usar es <filename>/usr/share</filename>. Esto también implica que las entradas de escritorio específicas "
+"del usuario deben ubicarse en <filename>$XDG_DATA_HOME/applications</filename>, en el que se busca "
+"primero. Si <envar>$XDG_DATA_HOME</envar> no está activado, entonces se usa <filename>~/."
+"local/share</filename> como ruta predeterminada. Las entradas de escritorio se recogen de todos "
+"los directorios en la variable de entorno <envar>$XDG_DATA_DIRS</envar>. "
+"Los directorios que aparezcan primero en <envar>$XDG_CONFIG_DIRS</envar> tienen preferencia "
+"cuando hay varios archivos <filename>.desktop</filename> con el mismo nombre."
 
 #: C/system-admin-guide.xml:383(para)
 msgid "The following is a sample desktop entry file:"
@@ -2831,7 +2855,7 @@ msgstr "Encoding"
 
 #: C/system-admin-guide.xml:451(para)
 msgid "Specifies the encoding of the desktop entry file."
-msgstr "Especifica la codificación del archivo de entrada del escritorio."
+msgstr "Especifica la codificación del archivo de entrada de escritorio."
 
 #: C/system-admin-guide.xml:456(literal)
 msgid "Exec"
@@ -2929,7 +2953,7 @@ msgstr "<literal>Directory</literal>: Un elemento que es un Ddirectorio."
 msgid ""
 "For more information on the keys in desktop entry files, see the desktop "
 "entry specification at the following URL:"
-msgstr "Para obtener más información acerca de las claves en los archivos de entrada del escritorio, vea la especificación de entradas del escritorio en el siguiente URL:"
+msgstr "Para obtener más información acerca de las claves en los archivos de entrada de escritorio, vea la especificación de entradas del escritorio en el siguiente URL:"
 
 #: C/system-admin-guide.xml:540(ulink)
 msgid "http://www.freedesktop.org/Standards/desktop-entry-spec"
@@ -2942,6 +2966,10 @@ msgid ""
 "information as for items in a menu. For example, the desktop entry files "
 "provide the command to run when a user chooses the launcher or object."
 msgstr ""
+"Los lanzadores del panel y los objetos del escritorio también usan archivos de entrada de escritorio. Los "
+"archivos de entrada de escritorio para los lanzadores y objetos del panel proporcionan la misma "
+"información que para los elementos de un menú. Por ejemplo, los archivos de entrada de escritorio "
+"proporcionan el comando a ejecutar cuando un usuario elije el lanzador o el objeto."
 
 #: C/system-admin-guide.xml:553(title)
 msgid "Directory Entry Files"
@@ -2962,6 +2990,10 @@ msgid ""
 "the menu such as a name, a tooltip, and an icon. Directory entry files have "
 "a <filename>.directory</filename> file extension."
 msgstr ""
+"Un <firstterm>archivo de entrada de directorio</firstterm> es un archivo de datos que proporciona "
+"información acerca de un menú. El archivo de entrada de directorio especifica los detalles para "
+"el menú, tales como el nombre, un consejo y un icono. Los archivos de entrada de directorio tienen "
+"una extensión de archivo <filename>.directory</filename>."
 
 #: C/system-admin-guide.xml:570(para)
 msgid ""
@@ -2977,6 +3009,14 @@ msgid ""
 "are given precedence when there are several <filename>.directory</filename> "
 "files with the same name."
 msgstr ""
+"Los archivos de entrada de directorio deben ubicarse en el directorio <filename>$XDG_DATA_DIRS/desktop-"
+"directories</filename>. Si <envar>$XDG_DATA_DIRS</envar> no está activado, entonces se usa "
+"<filename>/usr/share</filename> como ruta predeterminada. Esto también implica que los archivos "
+"de entrada de directorio específicos del usuario deben ubicarse en <filename>$XDG_DATA_HOME/desktop-directories</filename>, en el que se busca primero. Si <envar>$XDG_DATA_HOME</envar> no está activado, entonces se usa <filename>~/."
+"local/share</filename> como ruta predeterminada. Las entradas de directorio se recogen de todos "
+"los directorios en la variable de entorno <envar>$XDG_DATA_DIRS</envar>. "
+"Los directorios que aparezcan primero en <envar>$XDG_DATA_DIRS</envar> tienen preferencia "
+"cuando hay varios archivos <filename>.directory</filename> con el mismo nombre."
 
 #: C/system-admin-guide.xml:584(para)
 msgid "The following is a sample directory entry file:"
@@ -3091,12 +3131,17 @@ msgid ""
 "literal> element for the new menu. For more information on <filename>.menu</"
 "filename> files, see <xref linkend=\"menustructure-13\"/>."
 msgstr ""
+"En el archivo <filename>.menu</filename> añada un elemento <literal>&lt;Menu&gt;</"
+"literal> para el nuevo menú. Para obtener más información acerca de archivos <filename>.menu</"
+"filename>, consulte la <xref linkend=\"menustructure-13\"/>."
 
 #: C/system-admin-guide.xml:706(para)
 msgid ""
 "Create a <literal>&lt;Name&gt;</literal> element below <literal>&lt;Menu&gt;"
 "</literal>. The content of the element should contain the name for the menu."
 msgstr ""
+"Cree un elemento <literal>&lt;Name&gt;</literal> debajo de <literal>&lt;Menu&gt;"
+"</literal>. El contenido del elemento debe contener el nombre para el menú."
 
 #: C/system-admin-guide.xml:712(para)
 msgid ""
@@ -3104,18 +3149,21 @@ msgid ""
 "Menu&gt;</literal>. The content of the element should contain the name of "
 "the directory entry file."
 msgstr ""
+"Cree un elemento <literal>&lt;Directory&gt;</literal> debajo de <literal>&lt;"
+"Menu&gt;</literal>. El contenido delo elemento debe contener el nombre del "
+"archivo de entrada de directorio."
 
 #: C/system-admin-guide.xml:718(para)
 msgid "See <xref linkend=\"menustructure-4\"/> for how to add an item to the menu."
-msgstr ""
+msgstr "Consulte la <xref linkend=\"menustructure-4\"/> para saber cómo añadir un elemento a un menú."
 
 #: C/system-admin-guide.xml:723(para)
 msgid "The next time that users log in, the menu should appear in the menu bar."
-msgstr ""
+msgstr "El menú debería aparecer en la barra de menú la próxima vez que los usuarios inicien su sesión."
 
 #: C/system-admin-guide.xml:727(title)
 msgid "Missing Menu?"
-msgstr ""
+msgstr "¿Falta un menú?"
 
 #: C/system-admin-guide.xml:729(para)
 msgid ""
@@ -3123,6 +3171,9 @@ msgid ""
 "literal> element, or if the rule did not match any desktop entries, then you "
 "may not see the menu in the menu bar."
 msgstr ""
+"Si no especificó ninguna regla de coincidencia en el elemento <literal>&lt;Include&gt;</literal> "
+"o si la regla no coincidió con ninguna de las entradas del escritorio, entonces no podrá ver "
+"el menú en la barra de menú."
 
 #: C/system-admin-guide.xml:737(title)
 msgid "Adding an Item to a Menu"
@@ -3142,12 +3193,16 @@ msgid ""
 "information on desktop entry files, see <xref linkend=\"menustructure-"
 "desktopentry\"/>."
 msgstr ""
+"Cree un archivo de entrada de escritorio para el elemento que quiere añadir. Para obtener "
+"más información acerca de los archivos de entrada de escritorio, consulte la <xref linkend=\"menustructure-desktopentry\"/>."
 
 #: C/system-admin-guide.xml:756(para)
 msgid ""
 "Place the desktop entry file in the <filename>$XDG_DATA_DIRS/applications</"
 "filename> folder."
 msgstr ""
+"Emplace el archivo de entrada de escritorio en la carpeta <filename>$XDG_DATA_DIRS/applications</"
+"filename>."
 
 #: C/system-admin-guide.xml:767(para)
 msgid ""
@@ -3155,22 +3210,25 @@ msgid ""
 "<literal>&lt;Include&gt;</literal> element with a matching rule that selects "
 "the desktop entry file made in step 1."
 msgstr ""
+"Compruebe que un elemento <literal>&lt;Menu&gt;</literal> contiene un elemento "
+"<literal>&lt;Include&gt;</literal> con una regla de coincidencia que selecciona el "
+"archivo de entrada de escritorio creado en el paso 1."
 
 #: C/system-admin-guide.xml:773(para)
 msgid "The next time that users log in, the menu item is in the assigned location."
-msgstr ""
+msgstr "El elemento del menú será visitble en la ubicación asignada la próxima vez que los usuarios inicien su sesión."
 
 #: C/system-admin-guide.xml:778(title)
 msgid "Editing the Properties of a Menu"
-msgstr ""
+msgstr "Editar las propiedades de un menú"
 
 #: C/system-admin-guide.xml:783(secondary)
 msgid "editing properties of"
-msgstr ""
+msgstr "editar propiedades"
 
 #: C/system-admin-guide.xml:786(para)
 msgid "To edit the properties of a menu for all users, perform the following steps:"
-msgstr ""
+msgstr "Para editar las propiedades de un menú para todos los usuarios, realice los siguientes pasos:"
 
 #: C/system-admin-guide.xml:797(para)
 msgid ""
@@ -3178,6 +3236,9 @@ msgid ""
 "to the menu you want to modify. Note the filename of the directory entry in "
 "the <literal>&lt;Directory&gt;</literal> element."
 msgstr ""
+"Encuentre la entrada <literal>&lt;Menu&gt;</literal> en este archivo que corresponde con "
+"el menú que quiere modificar. Anote el nombre del archivo del archivo de entrada de directorio "
+"en el elemento <literal>&lt;Directory&gt;</literal>."
 
 #: C/system-admin-guide.xml:804(para)
 msgid ""
@@ -3185,10 +3246,13 @@ msgid ""
 "properties of the menu. For more information on <filename>.directory</"
 "filename> files, see <xref linkend=\"menustructure-14\"/>."
 msgstr ""
+"Localice la entrada de directorio para este menú. Modifique el contenido para cambiar "
+"las propiedades del menú,. Para obtener más información acerca de los archivos "
+"<filename>.directory</filename>, consulte la <xref linkend=\"menustructure-14\"/>."
 
 #: C/system-admin-guide.xml:813(title)
 msgid "Editing a Menu Item"
-msgstr ""
+msgstr "Editar un elemento de menú"
 
 #: C/system-admin-guide.xml:818(secondary)
 msgid "editing menu items"
@@ -3242,6 +3306,8 @@ msgid ""
 "of <literal>&lt;Exclude&gt;</literal> to specifically exclude a desktop "
 "entry."
 msgstr ""
+"Introduzca la regla de coincidencia <literal>&lt;Filename&gt;</literal> como un subelemento "
+"de <literal>&lt;Exclude&gt;</literal> para especificar la exclusión de una entrada de escritorio."
 
 #: C/system-admin-guide.xml:875(para)
 msgid ""
@@ -3251,6 +3317,10 @@ msgid ""
 "<filename>dasher.desktop</filename> is explicitly excluded from showing up "
 "in the accessibility menu."
 msgstr ""
+"El elemento del menú no se mostrará en el menú la próxima vez que los usuarios inicien su sesión. "
+"El <xref linkend=\"menustructure-deleteitem\"/> muestra cómo se realizó esto en el archivo "
+"<filename>applications.menu</filename>. La entrada de escritorio para <filename>dasher.desktop</filename> "
+"está específicamente excluída del menú de accesibilidad."
 
 #: C/system-admin-guide.xml:884(programlisting)
 #, no-wrap
@@ -3273,22 +3343,39 @@ msgid ""
 "\n"
 "&lt;!-- ... --&gt;\n"
 msgstr ""
+"&lt;!-- ... --&gt;\n"
+"\n"
+"  &lt;Menu&gt;\n"
+"    &lt;Name&gt;Accessibility&lt;/Name&gt;\n"
+"    &lt;Directory&gt;Accessibility.directory&lt;/Directory&gt;\n"
+"    &lt;Include&gt;\n"
+"      &lt;And&gt;\n"
+"        &lt;Category&gt;Accessibility&lt;/Category&gt;\n"
+"        &lt;Not&gt;&lt;Category&gt;Settings&lt;/Category&gt;&lt;/Not&gt;\n"
+"      &lt;/And&gt;\n"
+"    &lt;/Include&gt;\n"
+"    &lt;Exclude&gt;\n"
+"      &lt;Filename&gt;dasher.desktop&lt;/Filename&gt;\n"
+"    &lt;/Exclude&gt;\n"
+"  &lt;/Menu&gt;\n"
+"\n"
+"&lt;!-- ... --&gt;\n"
 
 #: C/system-admin-guide.xml:907(title)
 msgid "Editing User Menus and Menu Merging"
-msgstr ""
+msgstr "Editar los menús de usuario y mezclar menús"
 
 #: C/system-admin-guide.xml:912(secondary)
 msgid "editing user menus"
-msgstr ""
+msgstr "editar menús usuario"
 
 #: C/system-admin-guide.xml:915(para)
 msgid "You can use the following GNOME Desktop applications to edit menus for users:"
-msgstr ""
+msgstr "Puede usar las siguientes aplicaciones del Escritorio GNOME para editar menús para los usuarios:"
 
 #: C/system-admin-guide.xml:920(para)
 msgid "GNOME Menu Editor"
-msgstr ""
+msgstr "Editor de menús de GNOME"
 
 #: C/system-admin-guide.xml:924(para)
 msgid ""
@@ -3297,6 +3384,10 @@ msgid ""
 "With Menus</ulink> in the <ulink url=\"ghelp:user-guide\">GNOME User Guide</"
 "ulink>. Alternatively, you can manually create and edit a user menu file."
 msgstr ""
+"Un editor de menús sencillo está disponible para que los usuarios editen sus menús. Para obtener "
+"más información, consulte <ulink url=\"ghelp:user-guide?goseditmainmenu-1\">Trabajar con los menús</ulink> "
+"en la <ulink url=\"ghelp:user-guide\">Guía del usuario de GNOME</ulink>. Alternativamente puede "
+"crear y editar archivos de menú manualmente."
 
 #: C/system-admin-guide.xml:930(para)
 msgid ""
@@ -3307,6 +3398,12 @@ msgid ""
 "searched for the <filename>applications.menu</filename> file, it takes "
 "precedence over all other menu files."
 msgstr ""
+"Para crear un menú personalizado para un usuario manualmente, "
+"<filename>$XDG_CONFIG_HOME/menus/applications.menu</filename> debe existir. "
+"En el caso de que <envar>$XDG_CONFIG_HOME</envar> no esté establecida, se usará "
+"<filename>~/.config</filename> como directorio predeterminado. Ya que esta es la primera "
+"ubicación donde se busca el archivo <filename>applications.menu</filename>, tiene precedencia "
+"sobre el resto de los archivos de menú."
 
 #: C/system-admin-guide.xml:938(para)
 msgid ""
@@ -3315,6 +3412,8 @@ msgid ""
 "<ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG menu "
 "specification</ulink>."
 msgstr ""
+"Los menús de usuario pueden contener todos los elementos descritos en la <xref linkend=\"menustructure-13\"/>. "
+"Para ver una lista completa de los elementos permitidos, consulte la <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">especificacón de menú XDG</ulink>."
 
 #: C/system-admin-guide.xml:944(para)
 msgid ""
@@ -3323,14 +3422,17 @@ msgid ""
 "emphasis> the system menu. Information on menu merging is available in the "
 "following subsections."
 msgstr ""
+"Ya que los archivos de menú de usuario tienen preferencia sobre el archivo de menú del sistema, "
+"reemplazará completamente el menú del sistema a menos que se <emphasis>mezcle</emphasis> "
+"con el menú del sistema. En las siguientes subsecciónes hay información acerca de la mezcla de menús."
 
 #: C/system-admin-guide.xml:950(title) C/system-admin-guide.xml:1011(title)
 msgid "Merging the System Menu"
-msgstr ""
+msgstr "Mezclar el menú del sistema"
 
 #: C/system-admin-guide.xml:955(secondary)
 msgid "merging the system menu"
-msgstr ""
+msgstr "mezclar el menú del sistema"
 
 #: C/system-admin-guide.xml:958(para)
 msgid ""
@@ -3340,6 +3442,10 @@ msgid ""
 "with the attribute <literal>type=\"parent\"</literal> within the user's "
 "<filename>applications.menu</filename> file."
 msgstr ""
+"A menudo, un usuario sólo quiere añadir o borrar elementos del menú a los elementos "
+"ya existentes en el menú. Para soportar cambios individuales como estos, es recomendable "
+"que use el elemento <literal>&lt;MergeFile&gt;</literal> con el atributo <literal>type=\"parent\"</literal> "
+"en el archivo <filename>applications.menu</filename> del usuario."
 
 #: C/system-admin-guide.xml:964(para)
 msgid ""
@@ -3350,10 +3456,16 @@ msgid ""
 "<filename>applications.menu</filename> file in the <filename>"
 "$XDG_CONFIG_DIRS/menus</filename> directory is used for merging."
 msgstr ""
+"El elemento <literal>&lt;MergeFile&gt;</literal> permite que un menú se mezcle "
+"con el contenido del archivo de menú del usuario, Cuando especifica el atributo "
+"<literal>type=\"parent\"</literal>, entonces el contenido del elemento <literal>&lt;"
+"MergeFile&gt;</literal> se ignora y se usa el siguiente archivo <filename>applications."
+"menu</filename> en el directorio <filename>$XDG_CONFIG_DIRS/menus</filename> "
+"para mezclarlo."
 
 #: C/system-admin-guide.xml:973(title)
 msgid "Older Specifications"
-msgstr ""
+msgstr "Especificaciones antiguas"
 
 #: C/system-admin-guide.xml:975(para)
 msgid ""
@@ -3363,16 +3475,23 @@ msgid ""
 "you may still see a location specified in the contents of <literal>&lt;"
 "MergeFile&gt;</literal>, even when <literal>type=\"parent\"</literal>."
 msgstr ""
+"Las especificaciones antiguas no incluyen el atributo <literal>type</literal> "
+"y simplemente requieren la ubicación del archivo de menú para mezclarlo "
+"como el contenido del elemento <literal>&lt;MergeFile&gt;</literal>. Como resultado "
+"puede que vea una ubicación especificada en el contenido de <literal>&lt;"
+"MergeFile&gt;</literal>, incluso un elemento <literal>type=\"parent\"</literal>."
 
 #: C/system-admin-guide.xml:983(para)
 msgid "The merging is performed as follows:"
-msgstr ""
+msgstr "La mezcla se realiza como sigue:"
 
 #: C/system-admin-guide.xml:989(para)
 msgid ""
 "Merged menu file refers to the next <filename>applications.menu</filename> "
 "in the <filename>$XDG_CONFIG_DIRS/menus</filename> directory."
 msgstr ""
+"El menú mezclado referencia al siguiente <filename>applications.menu</filename> "
+"en el directorio <filename>$XDG_CONFIG_DIRS/menus</filename>."
 
 #: C/system-admin-guide.xml:987(para)
 msgid ""
@@ -3380,6 +3499,9 @@ msgid ""
 "merged menu file<placeholder-1/> are substituted for the <literal>&lt;"
 "MergeFile&gt;</literal> element in the base menu file."
 msgstr ""
+"El hijo del elemento raíz <literal>&lt;Menu&gt;</literal> en el archivo de menú "
+"mezclado <literal> se sustituye por el elemento <literal>&lt;MergeFile&gt;</literal> "
+"en el archivo de menú base."
 
 #: C/system-admin-guide.xml:998(para)
 msgid ""
@@ -3389,12 +3511,19 @@ msgid ""
 "element with the same name into the <emphasis>last</emphasis> occurrence of "
 "the menu element."
 msgstr ""
+"Todos los elementos <literal>&lt;Menu&gt;</literal> hijo con el mismo nombre "
+"se consolidan en un solo elemento <literal>&lt;Menu&gt;</literal>. Esto se realiza "
+"añadiendo todos los elementos hijo de cada elemento <literal>&lt;Menu&gt;</literal> "
+"con el mismo nombre en la <emphasis>última</emphasis> coincidencia del "
+"elemento del menú."
 
 #: C/system-admin-guide.xml:1007(para)
 msgid ""
 "<xref linkend=\"menustructure-systemmerge\"/> shows an example of a user "
 "menu file explicitly merging the system menu file."
 msgstr ""
+"El <xref linkend=\"menustructure-systemmerge\"/> muestra un ejemplo de un archivo "
+"de menú de usuario explícitamente mezclado con el archivo de menú del sistema."
 
 #: C/system-admin-guide.xml:1013(programlisting)
 #, no-wrap
@@ -3413,14 +3542,27 @@ msgid ""
 "  &lt;/Menu&gt;\n"
 "&lt;/Menu&gt;\n"
 msgstr ""
+"&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
+" \"http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd\"&gt;\n"
+"\n"
+"&lt;Menu&gt;\n"
+"  &lt;Name&gt;Applications&lt;/Name&gt;\n"
+"  &lt;MergeFile type=\"parent\"&gt;/etc/xdg/menus/applications.menu&lt;/MergeFile&gt;\n"
+"  &lt;Menu&gt;\n"
+"    &lt;Name&gt;Accessibility&lt;/Name&gt;\n"
+"    &lt;Exclude&gt;\n"
+"      &lt;Filename&gt;dasher.desktop&lt;/Filename&gt;\n"
+"    &lt;/Exclude&gt;\n"
+"  &lt;/Menu&gt;\n"
+"&lt;/Menu&gt;\n"
 
 #: C/system-admin-guide.xml:1031(title)
 msgid "Merging Arbitrary Menus"
-msgstr ""
+msgstr "Mezclar menús arbitrarios"
 
 #: C/system-admin-guide.xml:1036(secondary)
 msgid "merging arbitrary menus"
-msgstr ""
+msgstr "mezclar menús arbitrarios"
 
 #: C/system-admin-guide.xml:1039(para)
 msgid ""
@@ -3429,6 +3571,10 @@ msgid ""
 "<literal>path</literal> or must be excluded from the <literal>&lt;"
 "MergeFile&gt;</literal> element in order to do this type of merge."
 msgstr ""
+"Los archivos de menú arbitrarios se pueden mezclar de la misma forma que los menús del sistema. "
+"La diferencia es que el atributo <literal>type</literal> debe establecerse a <literal>path</literal> o "
+"debe excluirse del elemento <literal>&lt;MergeFile&gt;</literal> para poder realizar este tipo "
+"de mezcla."
 
 #: C/system-admin-guide.xml:1045(para)
 msgid ""
@@ -3436,6 +3582,9 @@ msgid ""
 "<emphasis>merged menu file</emphasis> is specified in the contents of the "
 "<literal>&lt;MergeFile&gt;</literal> element."
 msgstr ""
+"La mezcla se realiza de la misma forma excepto por la ubicación de <emphasis>archivo "
+"de menú mezclado</emphasis> que se especifica en el contenido del elemento "
+"<literal>&lt;MergeFile&gt;</literal>."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Installing Themes"
@@ -3500,10 +3649,18 @@ msgid ""
 "setting from the <guilabel>Controls</guilabel> tabbed section in the "
 "<application>Theme</application> preference tool."
 msgstr ""
+"<indexterm><primary>temas</primary><secondary>opciones controles</"
+"secondary><tertiary>introducción</tertiary></"
+"indexterm><indexterm><primary>temas GTK+</primary><see>temas, opciones controles</see></indexterm> Los ajustes de controles para un tema determinan la apariencia visual de ventanas, paneles y miniaplicaciones. Los ajustes de controles también la "
+"determinan la apariencia visual de los elementos de interfaces que cumplen con el estándar de GNOME que "
+"aparecen en ventanas, paneles y miniaplicaciones, tales como menús, iconos y botones."
+"Algunas de las opciones de los ajustes de los controles que están disponibles están diseñadas para "
+"requerimientos de accesibilidad especiales. Los usuarios pueden elegir una opción para el ajuste de "
+"los controles en la solapa <guilabel>Controles</guilabel> de la herramienta de preferencias <application>Tema</application>."
 
 #: C/system-admin-guide.xml:34(term)
 msgid "Window frame"
-msgstr "Marco de ventana"
+msgstr "Borde de la ventana"
 
 #: C/system-admin-guide.xml:36(para)
 msgid ""
@@ -3516,6 +3673,13 @@ msgid ""
 "Border</guilabel> tabbed section in the <application>Theme</application> "
 "preference tool."
 msgstr ""
+"<indexterm><primary>temas</primary><secondary>opciones borde ventana</"
+"secondary><tertiary>introducción</tertiary></"
+"indexterm><indexterm><primary>temas Metacity</primary><see>temas, opciones"
+"borde ventana</see></indexterm> El ajuste del borde de ventana para un tema "
+"determina la apariencia de los bordes alrededor de las ventanas. Los usuarios pueden "
+"elegir una opción para el ajuste de los bordes de ventanas de la solapa <guilabel>Borde "
+"de la ventana</guilabel> en la herramienta de preferencias <application>Tema</application>."
 
 #: C/system-admin-guide.xml:46(para)
 msgid ""
@@ -3527,10 +3691,17 @@ msgid ""
 "choose an option for the icon setting from the <guilabel>Icons</guilabel> "
 "tabbed section in the <application>Theme</application> preference tool."
 msgstr ""
+"<indexterm><primary>temas</primary><secondary>opciones iconos</"
+"secondary><tertiary>introducción</tertiary></"
+"indexterm><indexterm><primary>temas iconos</primary><see>temas, opciones "
+"iconos</see></indexterm> Los ajustes de iconos para un tema determinan la "
+"apariencia de los iconos en los paneles y en el fondo de la pantalla. Los usuarios "
+"pueden elegir una opción para el ajuste de los iconos en la solapa <guilabel>Iconos</guilabel> "
+"en la herramienta de preferencias <application>Tema</application>."
 
 #: C/system-admin-guide.xml:55(title)
 msgid "Theme Index File"
-msgstr ""
+msgstr "Archivo índice del tema"
 
 #: C/system-admin-guide.xml:56(para)
 msgid ""
@@ -3538,10 +3709,13 @@ msgid ""
 "The name of the index file is <filename>/usr/share/themes/<replaceable>theme-"
 "name</replaceable>/index.theme</filename>."
 msgstr ""
+"Cada tema tiene un archivo índice que define las características del tema. "
+"El nombre del archivo índice es <filename>/usr/share/themes/<replaceable>nombre-del-tema"
+"</replaceable>/index.theme</filename>."
 
 #: C/system-admin-guide.xml:58(para)
 msgid "The following is a sample theme index file:"
-msgstr ""
+msgstr "Lo siguiente es un ejemplo de archivo índice de un tema:"
 
 #: C/system-admin-guide.xml:59(programlisting)
 #, no-wrap
@@ -3560,30 +3734,47 @@ msgid ""
 "MetacityTheme=Atlanta\n"
 "ApplicationFont=sans 18\n"
 msgstr ""
+"[Desktop Entry]\n"
+"Type=X-GNOME-Metatheme\n"
+"Name=High Contrast Large\n"
+"Name[es]=Alto contraste grande\n"
+"Comment=Large black-on-white text and icons\n"
+"Comment[es]=Textos e iconos grandes en negro sobre blanco\n"
+"Encoding=UTF-8\n"
+"\n"
+"[X-GNOME-Metatheme]\n"
+"GtkTheme=HighContrastLargePrint\n"
+"IconTheme=HighContrast\n"
+"MetacityTheme=Atlanta\n"
+"ApplicationFont=sans 18\n"
 
 #: C/system-admin-guide.xml:73(para)
 msgid "The following table describes the keys in theme index files:"
-msgstr ""
+msgstr "La siguiente tabla describe las claves en los archivos índices de temas:"
 
 #: C/system-admin-guide.xml:75(title)
 msgid "Keys in Theme Index Files"
-msgstr ""
+msgstr "Claves en los archivos índice de temas"
 
 #: C/system-admin-guide.xml:82(para)
 msgid "Index File Key"
-msgstr ""
+msgstr "archivo índice clave"
 
 #: C/system-admin-guide.xml:97(para)
 msgid ""
 "Specifies that this theme determines the appearance of several theme "
 "options, such as controls, window frames, and icons."
 msgstr ""
+"Especifica que este tema determina la apariencia de varias opciones del "
+"tema, tales como controles, bordes de ventanas e iconos."
 
 #: C/system-admin-guide.xml:109(para)
 msgid ""
 "The name of the theme. This is the name of the theme that is displayed in "
 "the <application>Theme</application> preference tool."
 msgstr ""
+"El nombre del tema. Éste es es nombre del tema que se muestra en la "
+"herramienta de preferencias <application>Tema</application>."
 
 #: C/system-admin-guide.xml:121(para)
 msgid ""
@@ -3591,6 +3782,8 @@ msgid ""
 "the name of the theme in the <application>Theme</application> preference "
 "tool."
 msgstr ""
+"Una breve descripción del tema. Este es el texto que se muestra bajo "
+"el nombre del tema en la herramienta de preferencias <application>Tema</application>."
 
 #: C/system-admin-guide.xml:128(literal)
 msgid "GtkTheme"
@@ -3602,10 +3795,12 @@ msgid ""
 "preference tool. Specifies which controls setting option to apply to "
 "windows, panels, and applets."
 msgstr ""
+"Corresponde al ajuste de los controles en la herramienta de preferencias <application>Tema</application>. "
+"Especifica qué opción de ajuste de los controles aplicar a las ventanas, paneles y miniaplicaciones."
 
 #: C/system-admin-guide.xml:139(literal)
 msgid "IconTheme"
-msgstr ""
+msgstr "IconTheme"
 
 #: C/system-admin-guide.xml:143(para)
 msgid ""
@@ -3613,10 +3808,12 @@ msgid ""
 "preference tool. Specifies which icons setting option to apply to panels and "
 "the desktop background."
 msgstr ""
+"Corresponde al ajuste de iconos en la herramienta de preferencias <application>Tema</application>. "
+"Especifica qué opción de ajuste de iconos aplicar a los paneles y al fondo de la pantalla."
 
 #: C/system-admin-guide.xml:150(literal)
 msgid "MetacityTheme"
-msgstr ""
+msgstr "MetacityTheme"
 
 #: C/system-admin-guide.xml:154(para)
 msgid ""
@@ -3624,25 +3821,27 @@ msgid ""
 "application> preference tool. Specifies which window frame setting option to "
 "apply to windows."
 msgstr ""
+"Corresponde al ajuste del borde de la ventana en la herramienta de preferencias <application>Tema</application>. "
+"Especifica qué opción de ajuste de borde de ventanas aplicar a las ventanas."
 
 #: C/system-admin-guide.xml:161(literal)
 msgid "ApplicationFont"
-msgstr ""
+msgstr "ApplicationFont"
 
 #: C/system-admin-guide.xml:165(para)
 msgid ""
 "Corresponds to the application font setting in the <application>Font</"
 "application> preference tool."
-msgstr ""
+msgstr "Corresponde con el ajuste de tipografía en la herramienta de preferencias <application>Tipografía</application>."
 
 #: C/system-admin-guide.xml:174(title)
 msgid "To Install a New Controls Option"
-msgstr ""
+msgstr "Instalar una nueva opción de controles"
 
 #: C/system-admin-guide.xml:177(secondary)
 #: C/system-admin-guide.xml:342(secondary)
 msgid "controls options"
-msgstr ""
+msgstr "opciones de control"
 
 #: C/system-admin-guide.xml:178(tertiary)
 #: C/system-admin-guide.xml:214(tertiary)
@@ -3657,6 +3856,10 @@ msgid ""
 "share/themes</filename> directory. The typical structure of a controls "
 "option in the file system is as follows:"
 msgstr ""
+"Puede añadir nuevas opciones para el ajuste de los controles en la herramienta de preferencias "
+"<application>Tema</application>. Las opciones de los controles están en el directorio <filename>"
+"/usr/share/themes</filename>. La típica estructura de una opción de controles en el sistema de archivos "
+"es la que sigue:"
 
 #: C/system-admin-guide.xml:187(term) C/system-admin-guide.xml:222(term)
 #: C/system-admin-guide.xml:259(term)
@@ -3694,6 +3897,9 @@ msgid ""
 "<filename>.tar.gz</filename> file, then untar the <filename>.tar</filename> "
 "file into the <filename>/usr/share/themes</filename> directory."
 msgstr ""
+"Típicamente, una nueva opción para el ajuste de los controles se proporciona como un "
+"archivo <filename>tar.gz</filename>. Para instalar la nueva opción de controles, descomprima "
+"el archivo <filename>tar.gz</filename> en el directorio <filename>/usr/share/themes</filename>."
 
 #: C/system-admin-guide.xml:206(para)
 msgid ""
@@ -3701,17 +3907,20 @@ msgid ""
 "installs an option for the controls setting, the option is stored in the "
 "<filename>$HOME/.themes</filename> directory."
 msgstr ""
+"Los usuarios puede instalar sus propias opciones para el ajuste de los controles. Si un usuario "
+"instala una opción para el ajuste de los controles, la opción se almacenará en el directorio "
+"<filename>$HOME/.themes</filename>."
 
 #: C/system-admin-guide.xml:210(title)
 msgid "To Install a New Window Frame Option"
-msgstr ""
+msgstr "Instalar una nueva opción de bordes de ventana"
 
 #: C/system-admin-guide.xml:213(secondary)
 #: C/system-admin-guide.xml:44(secondary)
 #: C/system-admin-guide.xml:429(secondary)
 #: C/system-admin-guide.xml:516(secondary)
 msgid "window frame options"
-msgstr ""
+msgstr "opciones borde ventana"
 
 #: C/system-admin-guide.xml:216(para)
 msgid ""
@@ -3721,6 +3930,10 @@ msgid ""
 "replaceable>/metacity-1</filename> directory. The typical structure of a "
 "window frame option in the file system is as follows:"
 msgstr ""
+"Puede añadir nuevas opciones para el ajuste del borde de las ventanas en la herramienta de preferencias "
+"<application>Tema</application>. Las opciones de los bordes de la ventanas están en el directorio <filename>"
+"/usr/share/themes<replaceable>nombre-de-la-opción</replaceable>/metacity-1</filename>. "
+"La típica estructura de una opción de los bordes de las ventanas en el sistema de archivos es la que sigue:"
 
 #: C/system-admin-guide.xml:225(filename)
 msgid "/usr/share/themes/<placeholder-1/>/metacity-1/metacity-theme-1.xml"
@@ -3737,6 +3950,9 @@ msgid ""
 "unzip the <filename>.tar.gz</filename> file, then untar the <filename>.tar</"
 "filename> file into the <filename>/usr/share/themes</filename> directory."
 msgstr ""
+"Típicamente, una nueva opción para el ajuste del borde de las ventanas se proporciona como un "
+"archivo <filename>tar.gz</filename>. Para instalar la nueva opción de borde de las ventanas, descomprima "
+"el archivo <filename>tar.gz</filename> en el directorio <filename>/usr/share/themes</filename>."
 
 #: C/system-admin-guide.xml:241(para)
 msgid ""
@@ -3744,6 +3960,9 @@ msgid ""
 "installs an option for the window frame setting, the option is stored in the "
 "<filename>$HOME/.themes</filename> directory."
 msgstr ""
+"Los usuarios puede instalar sus propias opciones para el ajuste del borde de las ventanas. Si un usuario "
+"instala una opción para el ajuste del borde de las ventanas, la opción se almacenará en el directorio "
+"<filename>$HOME/.themes</filename>."
 
 #: C/system-admin-guide.xml:246(title)
 msgid "To Install a New Icons Option"
@@ -3760,6 +3979,10 @@ msgid ""
 "share/icons/<replaceable>option-name</replaceable></filename> directory. The "
 "typical structure of an icons option in the file system is as follows:"
 msgstr ""
+"Puede añadir nuevas opciones para el ajuste de los iconos en la herramienta de preferencias "
+"<application>Tema</application>. Las opciones de los iconos están en el directorio <filename>"
+"/usr/share/icons/<replaceable>nombre-de-la-opción</replaceable></filename>. "
+"La típica estructura de una opción de iconos en el sistema de archivos es la que sigue:"
 
 #: C/system-admin-guide.xml:262(filename)
 msgid "/usr/share/icons/<placeholder-1/>"
@@ -3776,6 +3999,9 @@ msgid ""
 "<filename>.tar.gz</filename> file, then untar the <filename>.tar</filename> "
 "file into the <filename>/usr/share/icons</filename> directory."
 msgstr ""
+"Típicamente, una nueva opción para el ajuste de los iconos se proporciona como un "
+"archivo <filename>tar.gz</filename>. Para instalar la nueva opción de iconos, descomprima "
+"el archivo <filename>tar.gz</filename> en el directorio <filename>/usr/share/icons</filename>."
 
 #: C/system-admin-guide.xml:279(para)
 msgid ""
@@ -3784,10 +4010,13 @@ msgid ""
 "<filename>$HOME/.icons/<replaceable>option-name</replaceable></filename> "
 "directory."
 msgstr ""
+"Los usuarios puede instalar sus propias opciones para el ajuste de los iconos. Si un usuario "
+"instala una opción para el ajuste de los iconos, la opción se almacenará en el directorio "
+"<filename>$HOME/.themes</filename>."
 
 #: C/system-admin-guide.xml:283(title)
 msgid "Installing Icons for Themes"
-msgstr ""
+msgstr "Instalar iconos para temas"
 
 #: C/system-admin-guide.xml:286(secondary)
 msgid "installing icons"
@@ -3800,6 +4029,10 @@ msgid ""
 "with low vision. Several versions of icons might be required so that the "
 "icon can be displayed properly in each theme."
 msgstr ""
+"El Escritorio GNOME proporciona varios temas diseñados para usuarios "
+"con necesidades visuales especiales. Por ejemplo, algunos de los temas están diseñados para usuarios "
+"con poca visión. Pueden necesitarse varias versiones de los iconos para que el "
+"icono se pueda mostrar adecuadamente en cada tema."
 
 #: C/system-admin-guide.xml:292(para)
 msgid ""
@@ -3808,14 +4041,18 @@ msgid ""
 "displays correctly in the themes. You must create several versions of the "
 "following types of icon:"
 msgstr ""
+"Puede que necesite instalar un nuevo icono para una aplicación. Cuando instale "
+"un nuevo icono, debe crear varias versiones del icono para que el icono se muestre "
+"adecuadamente en los temas. Debe crear varias versiones de los "
+"siguientes tipos de icono:"
 
 #: C/system-admin-guide.xml:298(para)
 msgid "Icons that are used within applications in the GNOME Desktop."
-msgstr ""
+msgstr "Los iconos que se usan en las aplicaciones del Escritorio GNOME."
 
 #: C/system-admin-guide.xml:301(para)
 msgid "Icons that are used internally by GTK+ applications, or GTK+ stock icons."
-msgstr ""
+msgstr "Los iconos que se usan internamente por las aplicaciones GTK+ o iconos de almacén de GTK+."
 
 #: C/system-admin-guide.xml:305(para)
 msgid ""
@@ -3825,34 +4062,39 @@ msgid ""
 "suggested size of icons for the desktop environment is 48 pixels by 48 "
 "pixels. At this size, most themes can rescale the icons."
 msgstr ""
+" Cuando instale un nuevo icono, debe crear varias versiones del icono "
+"para que el icono se muestre adecuadamente en los temas. Puede crear los "
+"iconos en diversos formatos, por ejemplo en formato Portable Network Graphic (PNG). "
+"El tamaño de icono sugerido para el entorno de escritorio es de 48 por 48 píxeles. "
+"Con este tamaño, la mayoría de temas pueden redimensionar los iconos."
 
 #: C/system-admin-guide.xml:310(para)
 msgid ""
 "When you install a new icon, create the following 48 pixel by 48 pixel "
 "versions of the icon:"
-msgstr ""
+msgstr "Cuando instale un nuevo icono, cree las siguientes versiones del icono de 48 por 48 píxeles:"
 
 #: C/system-admin-guide.xml:314(para)
 msgid "Regular icon"
-msgstr ""
+msgstr "Icono regular"
 
 #: C/system-admin-guide.xml:317(para)
 msgid "Low contrast icon"
-msgstr ""
+msgstr "Icono de bajo contraste"
 
 #: C/system-admin-guide.xml:320(para)
 msgid "High contrast icon"
-msgstr ""
+msgstr "Icono de alto contraste"
 
 #: C/system-admin-guide.xml:323(para)
 msgid "Inverse high contrast icon"
-msgstr ""
+msgstr "Icono de alto contraste inverso"
 
 #: C/system-admin-guide.xml:326(para)
 msgid ""
 "If possible, create 16 pixel by 16 pixel versions of the each of the icons "
 "above also, for themes that do not require large print."
-msgstr ""
+msgstr "Si es posible, cree versiones de 16 por 16 píxeles de cada uno de los iconos anteriores, para temas que no requieran una impresión grande."
 
 #: C/system-admin-guide.xml:328(para)
 msgid ""
@@ -3866,6 +4108,15 @@ msgid ""
 "gtkrc</filename> file. Modify the <filename>gtkrc</filename> file for the "
 "theme to associate the icon with a GTK stock icon identifier."
 msgstr ""
+"Instale los iconos en la ubicación de archivos de imágenes especificada para el "
+"tema en la <xref linkend=\"themes-3\"/> o la <xref linkend=\"themes-5\"/>. Por "
+"ejemplo, para añadir iconos al tema AltoContrasteImpresiónGrande, añada los iconos "
+"en el directorio <filename>/usr/share/themes/HighContrastLargePrint/pixmaps</filename>. "
+"Alada referencias a los iconos en los archivos de tema relevantes. Por ejemplo, para "
+"añadir iconos al tema AltoContrasteImpresiónGrande, añada referencias a los "
+"iconos en el archivo <filename>/usr/share/themes/HighContrastLargePrint/gtk-2.0/"
+"gtkrc</filename>. Modifique el archivo <filename>gtkrc</filename> para el tema "
+"para asociar el icono con un identificador de icono del almacén GTK."
 
 #: C/system-admin-guide.xml:335(para)
 msgid ""
@@ -3873,14 +4124,17 @@ msgid ""
 "for panels, see <ulink url=\"http://www.freedesktop.org/Standards/icon-theme-"
 "spec\">http://www.freedesktop.org/Standards/icon-theme-spec</ulink>."
 msgstr ""
+"Para obtener más información acerca de cómo crear iconos para lanzadores de aplicaciones y "
+"paneles, consulte <ulink url=\"http://www.freedesktop.org/Standards/icon-theme-"
+"spec\">http://www.freedesktop.org/Standards/icon-theme-spec</ulink>."
 
 #: C/system-admin-guide.xml:339(title)
 msgid "To Create a Custom Controls Option"
-msgstr ""
+msgstr "Crear una opción de controles personalizada"
 
 #: C/system-admin-guide.xml:343(tertiary)
 msgid "creating custom"
-msgstr ""
+msgstr "crear personalizado"
 
 #: C/system-admin-guide.xml:345(para)
 msgid ""
@@ -3888,6 +4142,9 @@ msgid ""
 "your users, you can create a custom controls option. To create a custom "
 "controls option, perform the following steps:"
 msgstr ""
+"Si las opciones para el ajuste de los controles no se ajustan a las necesidades "
+"de sus usuarios, puede crear opciones de controles personalizadas. Para crear una "
+"opción de controles personalizada, realice los siguientes pasos:"
 
 #: C/system-admin-guide.xml:351(para)
 msgid ""
@@ -3896,14 +4153,17 @@ msgid ""
 "options use. For example, to create an option that is called SmallPrint, "
 "create the following directories:"
 msgstr ""
+"Cree una estructura de directorios para la opción en el directorio <filename>/usr/share/"
+"themes</filename>. Use la misma estructura que el resto de opciones. Por ejemplo, "
+"para crear una opción llamada ImpresiónPequeña, cree los siguientes directorios:"
 
 #: C/system-admin-guide.xml:357(filename)
 msgid "/usr/share/themes/SmallPrint"
-msgstr "/usr/share/themes/SmallPrint"
+msgstr "/usr/share/themes/ImpresionPequenia"
 
 #: C/system-admin-guide.xml:362(filename)
 msgid "/usr/share/themes/SmallPrint/gtk-2.0"
-msgstr "/usr/share/themes/SmallPrint/gtk-2.0"
+msgstr "/usr/share/themes/ImpresionPequenia/gtk-2.0"
 
 #: C/system-admin-guide.xml:368(para)
 msgid ""
@@ -3911,12 +4171,17 @@ msgid ""
 "needs of your users. Copy the file to the <filename>gtk-2.0</filename> "
 "directory of your new option."
 msgstr ""
+"Localice el archivo <filename>gtkrc</filename> que se ajuste más a las necesidades "
+"de sus usuarios. Copie el archivo al directorio <filename>gtk-2.0</filename> de su "
+"nueva opción."
 
 #: C/system-admin-guide.xml:372(para)
 msgid ""
 "Open the <filename>gtkrc</filename> file in a text editor, and modify the "
 "attributes of the interface elements as required."
 msgstr ""
+"Abra el archivo <filename>gtkrc</filename> en un editor de textos y modifique "
+"los atributos de los elementos de interfaz tal y como se requiera."
 
 #: C/system-admin-guide.xml:376(para)
 msgid ""
@@ -3927,10 +4192,16 @@ msgid ""
 "images in the <literal>pixmap_path</literal> entry in the <filename>gtkrc</"
 "filename> file is correct."
 msgstr ""
+"Si la nueva opción incluye imágenes, instale las imágenes para la nueva opción "
+"en el directorio <filename>pixmaps</filename> de su nueva opción. Si la nueva "
+"opción usa imágenes de otra opción, entonces no necesita crear copias de "
+"las imágenes para la nueva opción. En su lugar, asegúrese de que la referencia "
+"a las imágenes en la entrada <literal>pixmap_path</literal> en el archivo <filename>gtkrc</"
+"filename> es correcta."
 
 #: C/system-admin-guide.xml:383(para)
 msgid "Users can now choose the new option for the controls setting."
-msgstr ""
+msgstr "Ahora los usuarios puede elegir la nueva opción para los ajustes de control."
 
 #: C/system-admin-guide.xml:384(para)
 msgid ""
@@ -3938,18 +4209,21 @@ msgid ""
 "\"http://developer.gnome.org/doc/API/2.0/gtk/index.html\">http://developer."
 "gnome.org/doc/API/2.0/gtk/index.html</ulink>."
 msgstr ""
+"Para obtener más información acerca de los archivos <filename>gtkrc</filename>, "
+"consulte <ulink url=\"http://developer.gnome.org/doc/API/2.0/gtk/index.html\">http://developer."
+"gnome.org/doc/API/2.0/gtk/index.html</ulink>."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Configuring Fonts"
-msgstr ""
+msgstr "Configurar tipografías"
 
 #: C/system-admin-guide.xml:4(para)
 msgid "This chapter describes how to configure fonts in the GNOME Desktop."
-msgstr ""
+msgstr "Este capítulo describe cómo configurar las tipografías en el Escritorio GNOME."
 
 #: C/system-admin-guide.xml:8(title)
 msgid "Introduction to Configuring Fonts"
-msgstr ""
+msgstr "Introducción a la configuración de tipografías"
 
 #: C/system-admin-guide.xml:10(primary)
 msgid "configuring fonts"
@@ -3965,6 +4239,9 @@ msgid ""
 "customization library. The <literal>fontconfig</literal> library can use all "
 "kinds of fonts, including PostScript Type 1 fonts and TrueType fonts."
 msgstr ""
+"El Escritorio GNOME usa la herramienta de configuración de tipografías y biblioteca "
+"de personalización <literal>fontconfig</literal>. La biblioteca <literal>fontconfig</literal> "
+"puede usar todo tipo de tipografías, incluyendo tipografías PostScriot Type 1 y TrueType."
 
 #: C/system-admin-guide.xml:24(para)
 msgid ""
@@ -3975,6 +4252,12 @@ msgid ""
 "available on a system, access the <literal>fonts:///</literal> location in "
 "the file manager on the system."
 msgstr ""
+"La biblioteca <literal>fontconfig</literal> proporciona una lista de todas las "
+"tipografías disponibles en el sistema de Escritorio GNOME. Para compilar esta lista, "
+"<literal>fontconfig</literal> busca los directorios listados en el archivo "
+"<filename>/etc/fonts/fonts.conf</filename>. Para ver todas las fuentes disponibles "
+"en un sistema, acceda a la ubicación <literal>fonts:///</literal> en "
+"el gestor de archivos del sistema."
 
 #: C/system-admin-guide.xml:26(para)
 msgid ""
@@ -3988,11 +4271,11 @@ msgstr "http://freedesktop.org/software/fontconfig"
 
 #: C/system-admin-guide.xml:33(title)
 msgid "Font Substitution"
-msgstr ""
+msgstr "Sustitución de tipografías"
 
 #: C/system-admin-guide.xml:36(secondary)
 msgid "substitution"
-msgstr ""
+msgstr "sustitución"
 
 #: C/system-admin-guide.xml:38(para)
 msgid ""
@@ -4102,6 +4385,8 @@ msgid ""
 "This chapter describes how applications detect MIME types, how to register "
 "MIME types, and how to add applications to the GNOME Desktop."
 msgstr ""
+"Este capítulo describe cómo detectan las aplicaciones los tipos MIME, cómo "
+"registran los tipos MIME y cómo añadir aplicaciones al Escritorio GNOME."
 
 #: C/system-admin-guide.xml:14(para)
 msgid ""
@@ -4237,21 +4522,23 @@ msgstr ""
 
 #: C/system-admin-guide.xml:107(para)
 msgid "Standard locations for all MIME related files."
-msgstr ""
+msgstr "Ubicaciones estándar para todos los archivos relacionados con los tipos MIME."
 
 #: C/system-admin-guide.xml:111(para)
 msgid ""
 "A standard way for applications to register information about a new MIME "
 "type."
 msgstr ""
+"Una manera estándar para que las aplicaciones registren información acerca de un "
+"nuevo tipo MIME."
 
 #: C/system-admin-guide.xml:116(para)
 msgid "A standard way to retrieve the MIME type for a file."
-msgstr ""
+msgstr "Una manera estándar para obtener el tipo MIME de un archivo."
 
 #: C/system-admin-guide.xml:120(para)
 msgid "A standard way to retrieve information about a MIME type."
-msgstr ""
+msgstr "Una manera estándar para obtener información acerca de un tipo MIME."
 
 #: C/system-admin-guide.xml:124(para)
 msgid ""
@@ -4275,17 +4562,19 @@ msgstr "La base de datos MIME es una colección de archivos que sirve para:"
 
 #: C/system-admin-guide.xml:146(para)
 msgid "The set of known MIME types"
-msgstr ""
+msgstr "El conjunto de tipos MIME conocidos"
 
 #: C/system-admin-guide.xml:150(para)
 msgid "The method for determing the MIME type of a file"
-msgstr ""
+msgstr "El método para determinar el tipo MIME para un archivo"
 
 #: C/system-admin-guide.xml:154(para)
 msgid ""
 "Meta information regarding a MIME type, such as a human readable description "
 "to use when displaying files of this type."
 msgstr ""
+"Meta información relacionada con el tipo MIME, tal como una descripción entendible por "
+"personas para usar cuando se muestren archivos de este tipo."
 
 #: C/system-admin-guide.xml:160(title)
 msgid "Location"
@@ -5175,7 +5464,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:823(title)
 msgid "A User's <filename>defaults.list</filename> file"
-msgstr ""
+msgstr "Un archivo de usuario <filename>defaults.list</filename>"
 
 #: C/system-admin-guide.xml:825(programlisting)
 #, no-wrap
@@ -5251,7 +5540,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Setting Screensavers"
-msgstr ""
+msgstr "Establecer salvapantallas"
 
 #: C/system-admin-guide.xml:4(para)
 msgid ""
@@ -5262,7 +5551,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:9(title)
 msgid "Introduction to Screensavers"
-msgstr ""
+msgstr "Introducción a los salvapantallas"
 
 #: C/system-admin-guide.xml:11(primary) C/system-admin-guide.xml:16(see)
 #: C/system-admin-guide.xml:27(primary) C/system-admin-guide.xml:40(primary)
@@ -5402,7 +5691,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:9(title)
 msgid "Introduction to Sessions"
-msgstr ""
+msgstr "Introducción a las sesiones"
 
 #: C/system-admin-guide.xml:11(primary) C/system-admin-guide.xml:40(primary)
 msgid "sessions"
@@ -5460,7 +5749,7 @@ msgstr "Archivo"
 
 #: C/system-admin-guide.xml:63(filename)
 msgid "/usr/share/gnome/default.session"
-msgstr ""
+msgstr "/usr/share/gnome/default.session"
 
 #: C/system-admin-guide.xml:67(para)
 msgid "Default session file. Default session details are stored in this file."
@@ -5468,7 +5757,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:74(filename)
 msgid "$HOME/.gnome2/session"
-msgstr ""
+msgstr "$HOME/.gnome2/session"
 
 #: C/system-admin-guide.xml:78(para)
 msgid ""
@@ -5499,19 +5788,19 @@ msgstr ""
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Help System"
-msgstr ""
+msgstr "Sistema de ayuda"
 
 #: C/system-admin-guide.xml:4(para)
 msgid "This chapter describes the Help system in the GNOME Desktop."
-msgstr ""
+msgstr "Este capítulo describe el sistema de ayuda en el Escritorio GNOME."
 
 #: C/system-admin-guide.xml:7(title)
 msgid "Introduction to the Help System"
-msgstr ""
+msgstr "Introducción al sistema de ayuda"
 
 #: C/system-admin-guide.xml:9(primary)
 msgid "online Help"
-msgstr ""
+msgstr "ayuda en línea"
 
 #: C/system-admin-guide.xml:10(see) C/system-admin-guide.xml:13(primary)
 #: C/system-admin-guide.xml:38(primary) C/system-admin-guide.xml:71(primary)
@@ -5537,7 +5826,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:25(ulink)
 msgid "http://www.oasis-open.org/docbook/xml"
-msgstr ""
+msgstr "http://www.oasis-open.org/docbook/xml"
 
 #: C/system-admin-guide.xml:27(para)
 msgid ""
@@ -5580,11 +5869,11 @@ msgstr ""
 
 #: C/system-admin-guide.xml:55(para)
 msgid "The location of the XML file for the Help document"
-msgstr ""
+msgstr "La ubicación del archivo XML para el documento de ayuda"
 
 #: C/system-admin-guide.xml:58(para)
 msgid "The title of the Help document"
-msgstr ""
+msgstr "El título del documento de ayuda"
 
 #: C/system-admin-guide.xml:61(para)
 msgid "A subject category to which the Help document belongs"
@@ -6744,11 +7033,11 @@ msgstr "Panel nuevo"
 
 #: C/system-admin-guide.xml:169(para)
 msgid "The launcher popup menu is disabled."
-msgstr ""
+msgstr "El menú emergente del lanzador está desactivado."
 
 #: C/system-admin-guide.xml:172(para)
 msgid "The following items are removed from the applet popup menu:"
-msgstr ""
+msgstr "Los siguientes elementos están eliminados del menú emergente de la miniaplicación:"
 
 #: C/system-admin-guide.xml:176(guimenuitem)
 msgid "Remove From Panel"
@@ -6958,7 +7247,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:353(term)
 msgid "Disable log out"
-msgstr ""
+msgstr "Desactivar salir de la sesión"
 
 #: C/system-admin-guide.xml:356(para)
 msgid ""
@@ -7229,13 +7518,15 @@ msgstr "Información de la ubicación de las ventanas."
 
 #: C/system-admin-guide.xml:133(para)
 msgid "Desktop entry files for panel launchers."
-msgstr ""
+msgstr "Archivos de entrada de escritorio para lanzadores del panel."
 
 #: C/system-admin-guide.xml:136(para)
 msgid ""
 "This directory may also contain sub-directories that store application "
 "specific data."
 msgstr ""
+"Este directorio puede contener subdirectorios que almacenan datos específicos "
+"de aplicaciones."
 
 #: C/system-admin-guide.xml:143(filename)
 msgid ".gnome2-private"
@@ -7400,7 +7691,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:42(glossterm)
 msgid "desktop entry file"
-msgstr ""
+msgstr "archivo de entrada de escritorio"
 
 #: C/system-admin-guide.xml:44(para)
 msgid ""
@@ -7412,7 +7703,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:50(glossterm)
 msgid "directory entry file"
-msgstr ""
+msgstr "archivo de entrada de directorio"
 
 #: C/system-admin-guide.xml:52(para)
 msgid ""
@@ -7431,6 +7722,8 @@ msgid ""
 "A storage location in the <application>GConf</application> repository. For "
 "example, <literal>xml:readonly:/etc/gconf/gconf.xml.defaults</literal>."
 msgstr ""
+"Una ubicación de almacenaje en el repositorio de <application>GConf</application>, por ejemplo:"
+"<literal>xml:readonly:/etc/gconf/gconf.xml.defaults</literal>."
 
 #: C/system-admin-guide.xml:65(glossterm)
 msgid "GConf preference key"
@@ -7453,7 +7746,7 @@ msgstr "Archivo de ruta de GConf"
 msgid ""
 "A file that lists the GConf configuration sources, and the order in which to "
 "search the sources."
-msgstr ""
+msgstr "Un archivo que lista las fuentes de configuración de GConf y el orden en el que se deben buscar las fuentes."
 
 #: C/system-admin-guide.xml:80(glossterm)
 msgid "GConf schema"
@@ -7461,7 +7754,7 @@ msgstr "Esquema de GConf"
 
 #: C/system-admin-guide.xml:82(para)
 msgid "A collective term for a schema key and a schema object."
-msgstr ""
+msgstr "Un término colectivo para una clave de esquema y objeto de esquema."
 
 #: C/system-admin-guide.xml:86(glossterm)
 msgid "GConf schema definition file"
@@ -7646,7 +7939,7 @@ msgstr "Un Identificador uniforme de recursos (URI) es una cadena que identifica
 
 #: C/system-admin-guide.xml:222(glossterm)
 msgid "websafe color palette"
-msgstr ""
+msgstr "paleta de colores segura para la web"
 
 #: C/system-admin-guide.xml:224(para)
 msgid ""
@@ -7656,6 +7949,11 @@ msgid ""
 "<emphasis>Netscape color palette</emphasis> and the <emphasis>Netscape color "
 "cube</emphasis>."
 msgstr ""
+"La paleta de colores segura para la web es una paleta de propósito general de 216 colores. La "
+"paleta de colores segura para la web está diseñada para optimizar el uso de color en sistemas "
+"que soportan 8 bits de color. A la paleta de colores segura para la web también se la llama "
+"<emphasis>paleta de colores de Netscape</emphasis> y <emphasis>cubo de color de "
+"Netscape</emphasis>."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/system-admin-guide.xml:0(None)
