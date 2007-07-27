@@ -1,11 +1,12 @@
-# translation of es.po to Spanish
+# translation of system-admin-guide to Spanish
+#
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2006.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: system-admin-guide.HEAD.es\n"
 "POT-Creation-Date: 2007-01-02 02:06+0000\n"
-"PO-Revision-Date: 2007-07-25 23:45+0200\n"
+"PO-Revision-Date: 2007-07-27 22:44+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -4288,6 +4289,13 @@ msgid ""
 "Helvetica. The list of similar fonts is defined in the <filename>/etc/fonts/"
 "fonts.conf</filename> file."
 msgstr ""
+"La biblioteca <literal>fontconfig</literal> realiza sustituciones de tipografías "
+"cuando no están presentes tipografías enteras o caracteres individuales. Si el "
+"sistema necesita mostrar una tipografía que no está disponible, <literal>fontconfig"
+"</literal> intenta mostrar otra tipografía similar. Por ejemplo, si una página web "
+"pide mostrar la tipografía Verdana y no está instalada en el sistema, <literal>fontconfig"
+"</literal> muestra una tipografía similar, como Helvetica. La lista de tipografías similares "
+"está definida en el archivo <filename>/etc/fonts/fonts.conf</filename>."
 
 #: C/system-admin-guide.xml:44(para)
 msgid ""
@@ -4299,6 +4307,13 @@ msgid ""
 "which contains a Cyrillic character, Text Editor uses a similar font that "
 "includes Cyrillic characters to display the character."
 msgstr ""
+"Si el sistema necesita mostrar un carácter que no está presente en la tipografía "
+"seleccionada, <literal>fontconfig</literal> intenta mostrar el carácter de otra "
+"tipografía similar. Por ejemplo, puede que seleccione Bitstream Vera Sans como "
+"la tipografía para la aplicación Editor de textos. La familia de tipografías Bitstream "
+"Vera Sans no incluye caracteres cirílicos. Si abre un documento que contiene un "
+"carácter cirílico, el Editor de textos usa una tipografía similar que incluya caracteres "
+"cirílicos para mostrar el carácter."
 
 #: C/system-admin-guide.xml:51(para)
 msgid ""
@@ -4308,6 +4323,11 @@ msgid ""
 "the system uses the first font that is defined for that alias in the "
 "<filename>/etc/fonts/fonts.conf</filename>."
 msgstr ""
+"La biblioteca <literal>fontconfig</literal> también define alias para las tipografías, "
+"por ejemplo, <literal>serif</literal>, <literal>sans-serif</literal>, y <literal>"
+"monospace</literal>. Cuando selecciona uno de los alias para una tipografía "
+"el sistema usa la primera tipografía definida para ese alias en el archivo"
+"<filename>/etc/fonts/fonts.conf</filename>."
 
 #: C/system-admin-guide.xml:56(title)
 msgid "To Add a Font for All Users"
@@ -4398,6 +4418,13 @@ msgid ""
 "freedesktop.org/Standards/shared-mime-info-spec\">XDG shared mime info "
 "specification</ulink>."
 msgstr ""
+"El propósito de este capítulo es hacer más fácil a un administrador el entender "
+"cómo configurar las diferentes partes de la base de datos MIME y proporcionar "
+"una visión general del sistema MIME. De acuerdo con ello <emphasis>no</"
+"emphasis> se entrará en detalles que no sean necesarios. Para los profundizar "
+"en los detalles, se recomienda que consulte la <ulink url=\"http://www."
+"freedesktop.org/Standards/shared-mime-info-spec\">especificación de información "
+"MIME compartida XDG</ulink>."
 
 #: C/system-admin-guide.xml:23(title)
 msgid "Introduction to MIME Types"
@@ -4420,6 +4447,12 @@ msgid ""
 "appropriate viewer for the file, such as opening a text document with "
 "<application>gedit</application>."
 msgstr ""
+"Un tipo <firstterm>Multipurpose Internet Mail Extension</firstterm> "
+"[<acronym>MIME</acronym>] identifica el formato de un archivo. Las aplicaciones "
+"tales como los navegadores de Internet y clientes de correo usan los tipos MIME de "
+"un archivo para decidir qué acciones realizar sobre él. Por ejemplo, un cliente de correo "
+"puede usar los tipos MIME para detectar el formato de un adjunto y elegir un visor "
+"apropiado para el archivo, tal como abrir un documento de texto con <application>gedit</application>."
 
 #: C/system-admin-guide.xml:40(para)
 msgid ""
@@ -4512,6 +4545,11 @@ msgid ""
 "\">MIME Media Types</ulink> at the <ulink url=\"http://www.iana.org/\">IANA</"
 "ulink> web site."
 msgstr ""
+"Existen ocho tipos mime bendecidos por la <acronym>IANA</acronym> "
+"[Internet Assigned Naming Authority]. Estos ocho tipos media son <placeholder-1/>. "
+"Existen muchos subtipos para cada tipo media, para obtener más información, consulte "
+"<ulink url=\"http://www.iana.org/assignments/media-types/\">Tipos MIME media</ulink> "
+"en la página web de la <ulink url=\"http://www.iana.org/\">IANA</ulink>."
 
 #: C/system-admin-guide.xml:100(para)
 msgid ""
@@ -4519,6 +4557,9 @@ msgid ""
 "freedesktop.org/Standards/shared-mime-info-spec\">XDG shared mime info "
 "specification</ulink>. This specification provides the following advantages:"
 msgstr ""
+"La implementación de los tipos MIME en GNOME sigue la <ulink url=\"http://www."
+"freedesktop.org/Standards/shared-mime-info-spec\">especificación de información "
+"MIME compartida XDG</ulink>. Esta especificación proporciona las siguientes ventajas:"
 
 #: C/system-admin-guide.xml:107(para)
 msgid "Standard locations for all MIME related files."
@@ -4547,6 +4588,10 @@ msgid ""
 "types, how to register applications as handlers for certain MIME types and "
 "finally, how to add an application to the GNOME desktop."
 msgstr ""
+"El resto del capítulo describe los archivos y directorios que constituyen la base "
+"de datos MIME, detalles acerca de los archivos fuente XML, cómo crear o modificar "
+"tipos MIME, cómo registrar aplicaciones como manejadores de ciertos tipos MIME "
+"y finalmente, cómo añadir una aplicación al Escritorio GNOME."
 
 #: C/system-admin-guide.xml:132(title)
 msgid "The MIME Database"
@@ -4593,6 +4638,15 @@ msgid ""
 "menus. A brief summary of the directory locations as pertaining to the MIME "
 "specification is given below."
 msgstr ""
+"Como administrador, el paso más importante y básico para entender el sistema "
+"MIME es aprender las ubicaciones donde esos archivos se almacenan. Ya que la"
+"<ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec"
+"\">Especificación de información MIME compartida XDG</ulink> fue creada por "
+"el X Desktop Group, también usa la <ulink url=\"http://www.freedesktop.org/wiki/"
+"Standards/basedir-spec\">especificación de base de directorio XDG</ulink>. Es "
+"muy recomendable que se familiarice con esta especificación, ya que es importante "
+"para otras tareas de administración como editar los menús. Más abajo se proporciona "
+"un pequeño resumen de las ubicaciones de los directorios de la especificación MIME."
 
 #: C/system-admin-guide.xml:175(para)
 msgid ""
@@ -4609,6 +4663,16 @@ msgid ""
 "specification</citetitle>, we will refer to this set of directories as "
 "<literal>&lt;MIME&gt;</literal> in the rest of this document."
 msgstr ""
+"La base de datos MIME se crea del juego de archivos ubicados en los directorios "
+"<filename>$XDG_DATA_HOME/mime</filename> y <filename>$XDG_DATA_DIRS/mime</filename>. "
+"Si estas variables de entorno no están establecidas, entonces los valores predeterminados serán"
+"<filename>~/.local/share</filename> y <filename>/usr/local/share:/usr/share</filename> respectivamente. "
+"Como se puede ver del valor predeterminado para <envar>$XDG_DATA_DIRS</envar>, cada variable de entorno "
+"es una lista de directorios separada por dos puntos. La base de datos del usuario en "
+"<filename>$XDG_DATA_HOME/mime</filename> tiene preferencia sobre la base de datos del sistema en "
+"<filename>$XDG_DATA_DIRS/mime</filename> cuando se encuentren definiciones en conflicto. "
+"Similar a la <citetitle>especificación de información MIME compartida XDG</citetitle>, de ahora en adelante "
+"las referencias a este juego de directorios se harán como <literal>&lt;MIME&gt;</literal> para el resto del documento."
 
 #: C/system-admin-guide.xml:191(para)
 msgid ""
@@ -4643,7 +4707,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:219(filename)
 msgid "&lt;MIME&gt;/packages/"
-msgstr ""
+msgstr "&lt;MIME&gt;/packages/"
 
 #: C/system-admin-guide.xml:222(para)
 msgid ""
@@ -4653,6 +4717,12 @@ msgid ""
 "filename> directory. This file contains all the default MIME types that are "
 "widely used and recognized."
 msgstr ""
+"Este directorio contiene cierto número de archivos XML, cada uno de los cuales "
+"describe una colección de tipos MIME. De forma predeterminada, el archivo "
+"<filename>freedesktop.org.xml</filename> está instalado en el directorio "
+"<filename>/usr/share/mime/packages</filename>. Este archivo contiene todos "
+"los tipos MIME predeterminados que están ampliamente reconocidos y son ampliamente "
+"usados."
 
 #: C/system-admin-guide.xml:229(para)
 msgid ""
@@ -4666,18 +4736,26 @@ msgid ""
 "information about the XML files in the <filename>packages</filename> "
 "directory, please see <xref linkend=\"mimetypes-source-xml\"/>."
 msgstr ""
+"Las aplicaciones que proporcionan información acerca de nuevos tipos MIME deben instalar "
+"un <emphasis>sólo</emphasis> archivo XML aquí. Dependiendo del prefijo donde la aplicación "
+"está instalada, creará en el archivo en el subdirectorio <filename>/mime/package</filename> "
+"de uno de los directorios en <envar>$XDG_DATA_HOME:$XDG_DATA_DIRS</envar>. Por ejemplo, "
+"una aplicación instalada en <filename>/usr/bin</filename> deberá instalar un nuevo archivo "
+"fuente XML en el directorio <filename>/usr/share/mime/packages</filename>. Para obtener "
+"más información acerca de los archivos XML en el directorio <filename>packages</filename>, "
+"consulte la <xref linkend=\"mimetypes-source-xml\"/>."
 
 #: C/system-admin-guide.xml:244(replaceable)
 msgid "MEDIA"
-msgstr ""
+msgstr "MEDIA"
 
 #: C/system-admin-guide.xml:244(replaceable)
 msgid "SUBTYPE"
-msgstr ""
+msgstr "SUBTYPE"
 
 #: C/system-admin-guide.xml:244(filename)
 msgid "&lt;MIME&gt;/<placeholder-1/>/<placeholder-2/>.xml"
-msgstr ""
+msgstr "&lt;MIME&gt;/<placeholder-1/>/<placeholder-2/>.xml"
 
 #: C/system-admin-guide.xml:247(para)
 msgid ""
@@ -4692,6 +4770,16 @@ msgid ""
 "type as well. The contents of the created XML file include comments (and "
 "translations for them), subclasses designations and aliases."
 msgstr ""
+"Estos directorios y archivos se generan automáticamente de la colección "
+"de archivos fuente XML en subdirectorio <filename>&lt;MIME&gt;/packages/</filename> "
+"por la aplicación <application>update-mime-database</application>. "
+"Por ejemplo, para cada elemento <literal>mime-type</literal> en el archivo "
+"<filename>/usr/share/mime/packages/freedesktop.org.xml</filename>, "
+"se crea un directorio en <filename>/usr/share/mime/</filename> con el "
+"<emphasis>tipo de medio</emphasis> del tipo MIME. Se crea un archivo XML en "
+"ese directorio con el <emphasis>identificador de subtipo</emphasis> de ese tipo MIME. "
+"El contenido del archivo XML creado incluye comentarios (y traducciones de los mismos) "
+"designaciones de subclases y alias."
 
 #: C/system-admin-guide.xml:262(title)
 msgid "Example: <filename>/usr/share/mime/text/plain.xml</filename> file"
@@ -4730,10 +4818,12 @@ msgid ""
 "database</application> application, using the default source XML file "
 "<filename>freedesktop.org.xml</filename>."
 msgstr ""
+"<placeholder-1/> Este archivo se genera con la aplicación <application>update-mime-database</application>, "
+"usando el archivo fuente XML predeterminado <filename>freedesktop.org.xml</filename>."
 
 #: C/system-admin-guide.xml:285(filename)
 msgid "&lt;MIME&gt;/globs"
-msgstr ""
+msgstr "&lt;MIME&gt;/globs"
 
 #: C/system-admin-guide.xml:288(para)
 msgid ""
@@ -4743,6 +4833,11 @@ msgid ""
 "the glob pattern; for more details see the <citetitle>XDG shared mime "
 "specification</citetitle>."
 msgstr ""
+"Contiene una línea con el tipo MIME y el patrón global, separados por dos puntos. "
+"Los archivos que coincidan con el patrón global se resuelven con el tipo MIME especificado "
+"antes de los dos puntos. Existen reglas especiales acerca de cómo los nombres de archivo "
+"coinciden con el patrón global, para obtener más detalles vea la <citetitle>especificación "
+"MIME compartida XDG</citetitle>."
 
 #: C/system-admin-guide.xml:295(para)
 msgid ""
@@ -4750,10 +4845,12 @@ msgid ""
 "application> application, using the default source XML file "
 "<filename>freedesktop.org.xml</filename>."
 msgstr ""
+"Este archivo también está generado por la aplicación <application>update-mime-database</"
+"application>, usando el archivo fuente predeterminado XML <filename>freedesktop.org.xml</filename>."
 
 #: C/system-admin-guide.xml:303(filename)
 msgid "&lt;MIME&gt;/magic"
-msgstr ""
+msgstr "&lt;MIME&gt;/magic"
 
 #: C/system-admin-guide.xml:306(para)
 msgid ""
@@ -4763,17 +4860,22 @@ msgid ""
 "literal>at byte offset 0 in the file; if found, assign it the MIME type "
 "<literal>application/pdf</literal></quote>."
 msgstr ""
+"Un archivo binario que contiene información acerca de cómo se resuelven los tipos "
+"MIME «husmeando» en el contenido del archivo. Generalmente esto comporta un juego "
+"de una o más reglas tales como «comprobar la cadena <literal>%PDF-</literal> en el "
+"desplazamiento de byte 0 en el archivo, si se encuentra, asignarlo al tipo MIME "
+"<literal>application/pdf</literal>» "
 
 #: C/system-admin-guide.xml:313(para) C/system-admin-guide.xml:329(para)
 #: C/system-admin-guide.xml:345(para) C/system-admin-guide.xml:371(para)
 msgid ""
 "This file is also generated by the <application>update-mime-database</"
 "application> application."
-msgstr ""
+msgstr "Este archivo también se genera con la aplicación <application>update-mime-database</application>"
 
 #: C/system-admin-guide.xml:320(filename)
 msgid "&lt;MIME&gt;/XMLnamespaces"
-msgstr ""
+msgstr "&lt;MIME&gt;/XMLnamespaces"
 
 #: C/system-admin-guide.xml:323(para)
 msgid ""
@@ -4782,10 +4884,14 @@ msgid ""
 "separated by a space. If the localName is empty, then there are two spaces "
 "between the namespace and the MIME type."
 msgstr ""
+"Contiene un mapeado de los nombres de espacio XML de los tipos MIME. Cada línea contiene "
+"tres campos, el nombre de espacio, el nombre local y el tipo MIME. Cada campo está separado por "
+"un espacio. Si el nombre local está vacío, entonces existen dos espacios entre el nombre de espacio "
+"y el tipo MIME."
 
 #: C/system-admin-guide.xml:336(filename)
 msgid "&lt;MIME&gt;/aliases"
-msgstr ""
+msgstr "&lt;MIME&gt;/aliases"
 
 #: C/system-admin-guide.xml:339(para)
 msgid ""
@@ -4794,10 +4900,14 @@ msgid ""
 "there are two fields: the first field is the alias name, and the second "
 "field is the MIME type. The fields are separated by a space."
 msgstr ""
+"Contiene una lista de alias para cada tipo MIME. Un alias es simplemente un tipo "
+"MIME que a veces se conoce como otro tipo. Para cada línea de este archivo "
+"existen dos campos: el primer campo es el nombre del alias y el segundo campo "
+"es el tipo MIME. Los campos están separados por un espacio."
 
 #: C/system-admin-guide.xml:352(filename)
 msgid "&lt;MIME&gt;/subclasses"
-msgstr ""
+msgstr "&lt;MIME&gt;/subclasses"
 
 #: C/system-admin-guide.xml:358(para)
 msgid ""
@@ -4807,6 +4917,11 @@ msgid ""
 "about the format, rather than the catagory of the data (for example, there "
 "is no 'generic spreadsheet' class that all spreadsheets inherit from)."
 msgstr ""
+"Un tipo es una subclase de otro tipo si alguna instancia del primer tipo es "
+"también instancia del segundo. Por ejemplo, todos los archivos image/svg también "
+"son archivos text/xml, text/plain y application/octet-stream. Las subclases existen por "
+"el formato más que por la categoría de los datos (por ejemplo, no existe "
+"una clase «hoja de cálculo genérica» que hereden todas las hojas de cálculo)."
 
 #: C/system-admin-guide.xml:355(para)
 msgid ""
@@ -4817,6 +4932,11 @@ msgid ""
 "first field is the subclassed MIME type and the second field is the parent "
 "MIME type. Each field is separated by a space."
 msgstr ""
+"Contiene una lista de subclases de tipos MIME y sus tipos MIME «padre». "
+"De la <citetitle>especificación MIME compartida XDG:</citetitle><placeholder-1/> "
+"El formato de este archivo es mimilar al archivo <filename>aliases</filename>. "
+"Cada línea contiene dos campos donde el primer campo es la subclase del tipo MIME "
+"y el segundo campo es el tipo MIME padre. Cada campo se separa con un espacio."
 
 #: C/system-admin-guide.xml:380(title)
 msgid "Refreshing the MIME Database"
@@ -4829,6 +4949,10 @@ msgid ""
 "modify information about a MIME type. The application <application>update-"
 "mime-database</application> is intended for this purpose."
 msgstr ""
+"Para los administradores que desean añadir nuevos tipos MIME al sistema, "
+"es importante comprender cómo se actualiza la base de datos MIME , o de otra "
+"manera modificar la información acerca de un tipo MIME. La aplicación "
+"<application>update-mime-database</application> se encarga de éste propósito."
 
 #: C/system-admin-guide.xml:388(para)
 msgid ""
@@ -4837,6 +4961,10 @@ msgid ""
 "<application>update-mime-database</application> must be called with the "
 "parameter <filename>/usr/share/mime</filename>."
 msgstr ""
+"Por ejemplo, si una aplicación instala información acerca de un nuevo tipo MIME "
+"en <filename>/usr/share/mime/packages/diff.xml</filename>, entonces se debe "
+"llamar a <application>update-mime-database</application> con el parámetro "
+"<filename>/usr/share/mime</filename>."
 
 #: C/system-admin-guide.xml:393(prompt)
 msgid "#"
@@ -4863,14 +4991,16 @@ msgid ""
 "The MIME database is refreshed by scanning all the source XML files in the "
 "directory <filename>&lt;MIME&gt;/packages</filename>."
 msgstr ""
+"La base de datos MIME se refresca escaneando todos los archivos fuente XML "
+"en el directorio <filename>&lt;MIME&gt;/packages</filename>."
 
 #: C/system-admin-guide.xml:406(title)
 msgid "The source XML files"
-msgstr ""
+msgstr "Los archivos fuente XML"
 
 #: C/system-admin-guide.xml:414(secondary)
 msgid "source XML files"
-msgstr ""
+msgstr "archivos fuente XML"
 
 #: C/system-admin-guide.xml:417(para)
 msgid ""
@@ -4879,16 +5009,22 @@ msgid ""
 "into the database by the <application>update-mime-database</application> "
 "application. There are a few rules about the XML file itself:"
 msgstr ""
+"Unicados en el directorio <filename>&lt;MIME&gt;/packages</filename>, estos "
+"archivos XML proporcionan toda la información acerca de los tipos MIME que están "
+"instalados en la base de datos por la aplicación <application>update-mime-database</application>. "
+"Existen algunas reglas acerca del archivo XML en sí:"
 
 #: C/system-admin-guide.xml:425(para)
 msgid ""
 "It must specify the namespace as <quote><literal>http://www.freedesktop.org/"
 "standards/shared-mime-info</literal></quote>"
 msgstr ""
+"Debe especificar el nombre de espacio como «<literal>http://www.freedesktop.org/"
+"standards/shared-mime-info</literal>»."
 
 #: C/system-admin-guide.xml:430(para)
 msgid "The root element must be <literal>mime-info</literal>"
-msgstr ""
+msgstr "El elemento raíz debe ser <literal>mime-info</literal>"
 
 #: C/system-admin-guide.xml:434(para)
 msgid ""
@@ -4896,6 +5032,9 @@ msgid ""
 "children of the <literal>mime-info</literal> element. The <literal>type</"
 "literal> attribute is used to specify the MIME type that is being defined."
 msgstr ""
+"Se pueden especificar cero o más elementos <literal>mime-type</literal> como "
+"hijos del elemento <literal>mime-info</literal>. El atributo <literal>type</literal> "
+"se usa para especificar el tipo MIME que se está definiendo."
 
 #: C/system-admin-guide.xml:441(para)
 msgid ""
@@ -4904,6 +5043,10 @@ msgid ""
 "MIME&gt;</filename> paths (usually <filename>/usr/share/mime/packages</"
 "filename>)."
 msgstr ""
+"De forma predeterminada el archivo <filename>freedesktop.org.xml</filename> "
+"está instalado en el directorio <filename>packages</filename> en una de las "
+"rutas <filename>&lt;MIME&gt;</filename> (generalmente "
+"<filename>/usr/share/mime/packages</filename>)."
 
 #: C/system-admin-guide.xml:446(para)
 msgid ""
@@ -4911,14 +5054,17 @@ msgid ""
 "for each of the elements that can occur as children to the <literal>mime-"
 "type</literal> element."
 msgstr ""
+"La <xref linkend=\"mimetypes-mimeinfo-elements\"/> proporciona una breve descripción "
+"para cada uno de los elementos que pueden suceder como hijos del elemento "
+"<literal>mime-type</literal>."
 
 #: C/system-admin-guide.xml:451(title)
 msgid "Child elements of <literal>&lt;mime-info&gt;</literal>"
-msgstr ""
+msgstr "Elementos hijo de <literal>&lt;mime-info&gt;</literal>"
 
 #: C/system-admin-guide.xml:460(entry)
 msgid "Element (and attributes)"
-msgstr ""
+msgstr "Elemento (y atributos)"
 
 #: C/system-admin-guide.xml:469(replaceable)
 msgid "*.xyz"
@@ -4931,11 +5077,11 @@ msgstr "&lt;glob pattern=\"<placeholder-1/>\"&gt;"
 #: C/system-admin-guide.xml:473(literal) C/system-admin-guide.xml:504(literal)
 #: C/system-admin-guide.xml:515(literal)
 msgid "mime-type"
-msgstr ""
+msgstr "tipo-mime"
 
 #: C/system-admin-guide.xml:474(literal)
 msgid "pattern"
-msgstr "patrón"
+msgstr "pattern"
 
 #: C/system-admin-guide.xml:471(entry)
 msgid ""
@@ -4943,6 +5089,9 @@ msgid ""
 "matches, then it is assigned the MIME type of the parent <placeholder-1/> "
 "element. The <placeholder-2/> attribute is mandatory."
 msgstr ""
+"Este elemento especifica un patrón global contra nombres de archivo. Si el nombre "
+"de archivo coincide, entonces se asigna al tipo MIME del elemento padre <placeholder-1/>. "
+"El atributo <placeholder-2/> es obligatorio."
 
 #: C/system-admin-guide.xml:479(replaceable)
 msgid "50"
@@ -4954,27 +5103,27 @@ msgstr "&lt;magic priority=\"<placeholder-1/>\"&gt;"
 
 #: C/system-admin-guide.xml:481(literal) C/system-admin-guide.xml:485(literal)
 msgid "match"
-msgstr ""
+msgstr "coincidentes"
 
 #: C/system-admin-guide.xml:482(literal)
 msgid "priority"
-msgstr ""
+msgstr "priority"
 
 #: C/system-admin-guide.xml:487(literal) C/system-admin-guide.xml:516(literal)
 msgid "type"
-msgstr ""
+msgstr "type"
 
 #: C/system-admin-guide.xml:489(literal)
 msgid "offset"
-msgstr ""
+msgstr "offset"
 
 #: C/system-admin-guide.xml:493(literal)
 msgid "mask"
-msgstr ""
+msgstr "mask"
 
 #: C/system-admin-guide.xml:495(ulink)
 msgid "XDG shared mime info specification"
-msgstr "Especificación de información mime compartida XDG"
+msgstr "especificación de información MIME compartida XDG"
 
 #: C/system-admin-guide.xml:481(entry)
 msgid ""
@@ -4985,6 +5134,11 @@ msgid ""
 "a fourth optional attribute, <placeholder-5/>. For details on these "
 "attributes, see the <placeholder-6/>."
 msgstr ""
+"Este elemento contiene una lista de elementos <placeholder-1/> comos hijos suyos. "
+"El atributo <placeholder-2/> es opcional y especifica una prioridad entre 0 y 100, "
+"siendo 100 la prioridad más alta de coincidencia. Cada elemento hijo coincidente posee "
+"los tres elementos necesarios: <placeholder-4/> y un cuarto atributo opcional, <placeholder-5/>. "
+"Para obtener más detalles acerca de estos atributos, consulte la <placeholder-6/>."
 
 #: C/system-admin-guide.xml:501(replaceable)
 #: C/system-admin-guide.xml:512(replaceable)
@@ -4994,7 +5148,7 @@ msgstr "media"
 #: C/system-admin-guide.xml:501(replaceable)
 #: C/system-admin-guide.xml:512(replaceable)
 msgid "subtype"
-msgstr ""
+msgstr "subtype"
 
 #: C/system-admin-guide.xml:500(literal)
 msgid "&lt;alias type=\"<placeholder-1/>/<placeholder-2/>\"&gt;"
@@ -5014,6 +5168,9 @@ msgid ""
 "alias is simply a MIME type that is sometimes known as another type. For "
 "example, <placeholder-2/> is an alias for the MIME type <placeholder-3/>."
 msgstr ""
+"Este elemento define un alias para el elemento padre <placeholder-1/>. Un alias "
+"es simplemente un tipo MIME que a veces se conoce como otro tipo. Por ejemplo, "
+"<placeholder-2/> es un alias para el tipo MIME <placeholder-3/>."
 
 #: C/system-admin-guide.xml:511(literal)
 msgid "&lt;sub-class-of type=\"<placeholder-1/>/<placeholder-2/>\"&gt;"
@@ -5042,10 +5199,13 @@ msgid ""
 "<placeholder-3/> is a sub class of the MIME type <placeholder-4/>, "
 "<placeholder-5/>, and <placeholder-6/>."
 msgstr ""
+"Este elemento define el elemento padre <placeholder-1/> como una subclase del "
+"tipo MIME especificado en el atributo <placeholder-2/>. Por ejemplo, <placeholder-3/> "
+"es una subclase del tipo MIME <placeholder-4/>, <placeholder-5/> y <placeholder-6/>."
 
 #: C/system-admin-guide.xml:524(replaceable)
 msgid "locale"
-msgstr ""
+msgstr "locale"
 
 #: C/system-admin-guide.xml:523(literal)
 msgid "&lt;comment xml:lang=\"<placeholder-1/>\"&gt;"
@@ -5075,12 +5235,12 @@ msgstr "&lt;root-XML namespaceURI=\"<placeholder-1/>\" localName=\"\"&gt;"
 
 #: C/system-admin-guide.xml:539(literal) C/system-admin-guide.xml:541(literal)
 msgid "namespaceURI"
-msgstr ""
+msgstr "namespaceURI"
 
 #: C/system-admin-guide.xml:539(literal) C/system-admin-guide.xml:542(literal)
 #: C/system-admin-guide.xml:543(literal)
 msgid "localName"
-msgstr ""
+msgstr "localName"
 
 #: C/system-admin-guide.xml:537(entry)
 msgid ""
@@ -5214,12 +5374,17 @@ msgid ""
 "file, containing the definitions for the MIME types. For more information, "
 "see <xref linkend=\"mimetypes-source-xml\"/>."
 msgstr ""
+"Cree o modifique un archivo fuente XML <filename>Overrides.xml</filename> que contenga "
+"las fefiniciones para los tipos MIME. Para obtener más información, consulte la"
+"<xref linkend=\"mimetypes-source-xml\"/>."
 
 #: C/system-admin-guide.xml:648(para)
 msgid ""
 "Place the <filename>Overrides.xml</filename> file in the <filename>/usr/"
 "share/mime/packages</filename> directory."
 msgstr ""
+"Mueva el archivo <filename>Overrides.xml</filename> en el directorio "
+"<filename>/usr/share/mime/packages</filename>."
 
 #: C/system-admin-guide.xml:653(para)
 msgid ""
@@ -5227,6 +5392,9 @@ msgid ""
 "application> using the system account.<screen><userinput>update-mime-"
 "database /usr/share/mime</userinput></screen>"
 msgstr ""
+"Actualice la base de datos MIME ejecutando <application>update-mime-database</application> "
+"usando la cuenta del sistema.<screen><userinput>update-mime-"
+"database /usr/share/mime</userinput></screen>"
 
 #: C/system-admin-guide.xml:659(para)
 msgid ""
@@ -5236,6 +5404,11 @@ msgid ""
 "call <application>update-mime-database</application> with <filename>~/.local/"
 "share/mime/packages</filename> as the first parameter."
 msgstr ""
+"Para añadir uno o más tipos MIME para un solo usuario, siga los mismos pasos excepto "
+"que debe ubicar su archivo <filename>Overrides.xml</filename> en el directorio "
+"<filename>~/.local/share/mime/packages</filename>. Adicionalmente, llame a "
+"<application>update-mime-database</application> con <filename>~/.local/"
+"share/mime/packages</filename> como el primer parámetro."
 
 #: C/system-admin-guide.xml:668(title)
 msgid "Verifying Changes"
@@ -5248,6 +5421,10 @@ msgid ""
 "<application>gnomevfs-info</application> application. This application "
 "prints the MIME type and other useful information about a file."
 msgstr ""
+"Después de que haya realizado un cambio sobre la base de datos MIME y haya "
+"actualizado su contenido, puede verificar que el cambio ha tomado efecto usando "
+"la aplicación <application>gnomevfs-info</application>. Esta aplicación "
+"imprime el tipo MIME y otra información útil acerca de un archivo."
 
 #: C/system-admin-guide.xml:676(para)
 msgid ""
@@ -5256,6 +5433,10 @@ msgid ""
 "is <filename>eog.desktop</filename>; We will discuss default applications in "
 "<xref linkend=\"mimetypes-registering\"/>."
 msgstr ""
+"Ejecutar <application>gnomevfs-info</application> sobre un archivo SVG le proporciona "
+"la salida de debajo. Notará que la aplicación predeterminada para este tipo MIME es "
+"<filename>eog.desktop</filename>; Se discutirán las aplicaciones predeterminadas en "
+"la <xref linkend=\"mimetypes-registering\"/>."
 
 #: C/system-admin-guide.xml:681(prompt) C/system-admin-guide.xml:705(prompt)
 #: C/system-admin-guide.xml:755(prompt) C/system-admin-guide.xml:757(prompt)
@@ -5409,11 +5590,11 @@ msgstr ""
 
 #: C/system-admin-guide.xml:773(title)
 msgid "Registering Applications for MIME Types"
-msgstr ""
+msgstr "Registrar aplicaciones para tipos MIME"
 
 #: C/system-admin-guide.xml:780(secondary)
 msgid "registering applications for"
-msgstr ""
+msgstr "registrar aplicaciones"
 
 #: C/system-admin-guide.xml:784(primary) C/system-admin-guide.xml:856(primary)
 msgid "applications"
@@ -5421,7 +5602,7 @@ msgstr "aplicaciones"
 
 #: C/system-admin-guide.xml:786(secondary)
 msgid "registry"
-msgstr ""
+msgstr "registro"
 
 #: C/system-admin-guide.xml:789(para)
 msgid ""
@@ -5477,10 +5658,17 @@ msgid ""
 "image/png=eog.desktop\n"
 "text/xml=gedit.desktop\n"
 msgstr ""
+"[Default Applications]\n"
+"application/pdf=evince.desktop\n"
+"text/html=epiphany.desktop\n"
+"text/plain=gedit.desktop\n"
+"image/jpeg=eog.desktop\n"
+"image/png=eog.desktop\n"
+"text/xml=gedit.desktop\n"
 
 #: C/system-admin-guide.xml:836(title)
 msgid "XDG Desktop Entry Specification"
-msgstr ""
+msgstr "Especificación de entrada de escritorio XDG"
 
 #: C/system-admin-guide.xml:838(para)
 msgid ""
@@ -5490,24 +5678,28 @@ msgid ""
 "freedesktop.org/Standards/shared-mime-info-spec\">XDG shared mime info "
 "specification</ulink>."
 msgstr ""
+"Cómo registrar tipos MIME para aplicaciones es parte de <ulink url=\"http://www.freedesktop.org/wiki/Standards/desktop-entry-spec\">Especificación "
+"de entrada de escritorio XDG</ulink> más que de <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">Especificación de información MIME compartida XDG</ulink>."
 
 #: C/system-admin-guide.xml:847(title)
 msgid "Adding an Application to the GNOME Desktop"
-msgstr ""
+msgstr "Añadir una aplicación al Escritorio GNOME"
 
 #: C/system-admin-guide.xml:852(secondary)
 msgid "adding applications"
-msgstr ""
+msgstr "añadir aplicación"
 
 #: C/system-admin-guide.xml:861(para)
 msgid "To add an application to the GNOME Desktop, perform the following steps:"
-msgstr ""
+msgstr "Para añadir una aplicación al Escritorio GNOME, realice los siguientes pasos:"
 
 #: C/system-admin-guide.xml:866(para)
 msgid ""
 "Add a menu item for the application. For more information on how to add an "
 "item to a menu, see <xref linkend=\"menustructure-2\"/>."
 msgstr ""
+"Añada un elemento de menú para la aplicación. Para obtener más información sobre cómo "
+"añadir un elemento a un menú, consulte la <xref linkend=\"menustructure-2\"/>."
 
 #: C/system-admin-guide.xml:872(para)
 msgid ""
@@ -5516,12 +5708,18 @@ msgid ""
 "apps</filename>. For more information on icons and themes, see <xref linkend="
 "\"themes-11\"/>."
 msgstr ""
+"Añada un icono para la aplicación en <filename>/usr/share/icons/"
+"<replaceable>nombre-del-tema</replaceable>/<replaceable>tamaño-del-icono</replaceable>/"
+"apps</filename>. Para obtener más información acerca de los iconos y temas, consulte la <xref linkend="
+"\"themes-11\"/>."
 
 #: C/system-admin-guide.xml:879(para)
 msgid ""
 "If the application uses a new MIME type, add a source XML file to the MIME "
 "database. For more information, see <xref linkend=\"mimetypes-modifying\"/>."
 msgstr ""
+"Si la aplicación usa un nuevo tipo MIME, añada un archivo XML fuente a la base de datos MIME. Para "
+"obtener más información, consulte la <xref linkend=\"mimetypes-modifying\"/>."
 
 #: C/system-admin-guide.xml:885(para)
 msgid ""
@@ -5530,6 +5728,10 @@ msgid ""
 "<replaceable>icon-size</replaceable>/mimetypes</filename>. For more "
 "information on icons and themes, see <xref linkend=\"themes-0\"/>."
 msgstr ""
+"Si la aplicación usa un nuevo tipo MIME, añada un icono para el tipo MIME en "
+"<filename>/usr/share/icons/<replaceable>nombre-del-tema</replaceable>/"
+"<replaceable>tamaño-del-icono</replaceable>/mimetypes</filename>. Para obtener más "
+"información acerca de los iconos y temas, consulte la <xref linkend=\"themes-0\"/>."
 
 #: C/system-admin-guide.xml:893(para)
 msgid ""
@@ -5537,6 +5739,9 @@ msgid ""
 "literal> key in your <filename>.desktop</filename> file. For more "
 "information, see <xref linkend=\"mimetypes-registering\"/>."
 msgstr ""
+"Para asociar la aplicación con un tipo MIME, incluya una clave <literal>MimeType</"
+"literal> en su archivo <filename>.desktop</filename>. Para obtener más información, "
+"consulte la <xref linkend=\"mimetypes-registering\"/>."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Setting Screensavers"
@@ -5548,6 +5753,9 @@ msgid ""
 "chapter also provides information on how to modify the displays that are "
 "available for the screensaver."
 msgstr ""
+"Este capítulo describe cómo establecer preferencias para el salvapantallas. Este "
+"capítulo también proporciona información acerca de cómo modificar los temas "
+"disponibles para el salvapantallas."
 
 #: C/system-admin-guide.xml:9(title)
 msgid "Introduction to Screensavers"
@@ -5556,11 +5764,11 @@ msgstr "Introducción a los salvapantallas"
 #: C/system-admin-guide.xml:11(primary) C/system-admin-guide.xml:16(see)
 #: C/system-admin-guide.xml:27(primary) C/system-admin-guide.xml:40(primary)
 msgid "screensavers"
-msgstr ""
+msgstr "salvapantallas"
 
 #: C/system-admin-guide.xml:15(primary)
 msgid "gnome-screensaver"
-msgstr ""
+msgstr "gnome-screensaver"
 
 #: C/system-admin-guide.xml:18(para)
 msgid ""
@@ -5574,7 +5782,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:25(title)
 msgid "Setting Screensaver Preferences"
-msgstr ""
+msgstr "Establecer preferencias en el salvapantallas"
 
 #: C/system-admin-guide.xml:28(secondary)
 msgid "setting preferences"
@@ -5585,6 +5793,8 @@ msgid ""
 "All screensaver preferences and settings are stored in <application>GConf</"
 "application>."
 msgstr ""
+"Todas las preferencias y ajustes del salvapantallas se almacenan en <application>GConf</"
+"application>."
 
 #: C/system-admin-guide.xml:31(para)
 msgid ""
@@ -5593,6 +5803,10 @@ msgid ""
 "screensaver preferences, see <citetitle>GNOME Desktop User's Guide</"
 "citetitle>."
 msgstr ""
+"Para modificar las preferencias de la aplicación de salvapantallas, los usuarios pueden usar "
+"la herramienta de preferencias <application>Screensaver</application>. Para obtener más "
+"información acerca de las preferencias del salvapantallas, consulte la "
+"<application>Guía del usuario de GNOME</application>."
 
 #: C/system-admin-guide.xml:32(para)
 msgid ""
@@ -5600,26 +5814,34 @@ msgid ""
 "preferences</command> to open the <guilabel>Screensaver Preferences</"
 "guilabel> dialog."
 msgstr ""
+"Los usuarios también pueden ejecutar el comando <command>/usr/bin/gnome-screensaver-"
+"preferences</command> para abrir el diálogo <guilabel>Preferencias del salvapantallas</guilabel>."
 
 #: C/system-admin-guide.xml:34(para)
 msgid ""
 "To set default screensaver settings and policy for all users, modify the "
 "screensaver settings in the Default GConf Configuration Source."
 msgstr ""
+"Para establecer ajustes predeterminados y una política para todos los usuarios, "
+"modifique los ajustes del salvapantallas en la fuente de configuración predeterminada "
+"de GConf."
 
 #: C/system-admin-guide.xml:35(para)
 msgid ""
 "To set mandatory screensaver settings and policy for all users, modify the "
 "screensaver settings in the Mandatory GConf Configuration Source."
 msgstr ""
+"Para establecer ajustes obligatorios y una política para todos los usuarios, "
+"modifique los ajustes del salvapantallas en la fuente de configuración obligatoria "
+"de GConf."
 
 #: C/system-admin-guide.xml:38(title)
 msgid "Modifying Screensaver Themes"
-msgstr ""
+msgstr "Modificar temas del salvapantallas"
 
 #: C/system-admin-guide.xml:41(secondary)
 msgid "modifying screensaver themes"
-msgstr ""
+msgstr "modificar temas salvapantallas"
 
 #: C/system-admin-guide.xml:43(para)
 msgid ""
@@ -5663,24 +5885,29 @@ msgid ""
 "customize the available themes. You do not need to modify your applications "
 "or move files."
 msgstr ""
+"Personalizar los temas es fácil. Puede editar un pequeño número de archivos "
+"para personalizar los temas disponibles. No necesita modificar sus aplicaciones "
+"o mover archivos."
 
 #: C/system-admin-guide.xml:72(para)
 msgid ""
 "Install themes easily. You do not need to provide information about the "
 "system when you install the themes."
 msgstr ""
+"Instalar temas es fácil. No necesita proporcionar información acerca del sistema "
+"al instalar temas."
 
 #: C/system-admin-guide.xml:78(para)
 msgid "Configure the system so that users cannot modify the themes."
-msgstr ""
+msgstr "Configure el sistema para que los usuarios no puedan modificar los temas."
 
 #: C/system-admin-guide.xml:82(para)
 msgid "For more information, see <xref linkend=\"menustructure-0\"/>."
-msgstr ""
+msgstr "Para obtener más información, consulte el <xref linkend=\"menustructure-0\"/>."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Session Management"
-msgstr "Administrador de sesiones"
+msgstr "Gestor de sesiones"
 
 #: C/system-admin-guide.xml:4(para)
 msgid ""
@@ -5688,6 +5915,9 @@ msgid ""
 "defaults. The chapter also contains information on sessions and login "
 "scripts."
 msgstr ""
+"Este capítulo introduce la gestión de sesiones y describe cómo establecer valores "
+"predeterminados para las sesiones. El capítulo también contiene información acerca "
+"de las sesiones y scripts de inicio de sesión."
 
 #: C/system-admin-guide.xml:9(title)
 msgid "Introduction to Sessions"
@@ -5709,23 +5939,27 @@ msgstr ""
 
 #: C/system-admin-guide.xml:20(para)
 msgid "At a minimum, the following applications run in a session:"
-msgstr ""
+msgstr "Como mínimo, las siguientes aplicaciones se ejecutan en una sesión:"
 
 #: C/system-admin-guide.xml:23(para)
 msgid "The session manager, <command>gnome-session</command>."
-msgstr ""
+msgstr "Es gestor de sesiones, <command>gnome-session</command>."
 
 #: C/system-admin-guide.xml:26(para)
 msgid ""
 "The <application>GConf</application> X settings daemon, <command>gnome-"
 "settings-daemon</command>."
 msgstr ""
+"El demonio de configuración de las X <application>GConf</application>, <command>gnome-"
+"settings-daemon</command>."
 
 #: C/system-admin-guide.xml:29(para)
 msgid ""
 "The <application>gnome-panel</application> application, which runs the "
 "panels in the GNOME Desktop."
 msgstr ""
+"La aplicación <application>gnome-panel</application>, que ejecuta los paneles del "
+"Escritorio GNOMe."
 
 #: C/system-admin-guide.xml:33(para)
 msgid "The <application>Metacity</application> window manager."
@@ -6503,11 +6737,11 @@ msgstr ""
 
 #: C/system-admin-guide.xml:376(title)
 msgid "To Turn Off the Desktop"
-msgstr ""
+msgstr "Apagar el escritorio"
 
 #: C/system-admin-guide.xml:379(secondary)
 msgid "desktop, turning off"
-msgstr ""
+msgstr "escritorio, apagar"
 
 #: C/system-admin-guide.xml:382(primary)
 msgid "desktop"
