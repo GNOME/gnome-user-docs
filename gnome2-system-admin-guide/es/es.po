@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-admin-guide.HEAD.es\n"
 "POT-Creation-Date: 2007-01-02 02:06+0000\n"
-"PO-Revision-Date: 2007-07-28 22:46+0200\n"
+"PO-Revision-Date: 2007-07-29 19:22+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -5252,6 +5252,12 @@ msgid ""
 "empty, then the root element may have any name, but the namespace must still "
 "match."
 msgstr ""
+"Si un archivo se determina como archivo XML, entonces este elemento ayuda a clasificar "
+"futuros archivos a través del uso de los atributos <placeholder-1/> y <placeholder-2/>, ambos "
+"requeridos. El atributo <placeholder-3/> es el nombre del espacio del documento y "
+"<placeholder-4/> es el nombre del elemento raíz para el documento. Si <placeholder-5/> existe "
+"pero su valor está vacío, entonces el elemento raíz puede tener cualquier nombre pero el nombre "
+"del espacio debe seguir coincidiendo."
 
 #: C/system-admin-guide.xml:551(para)
 msgid ""
@@ -5270,6 +5276,18 @@ msgid ""
 "literal> attributes of the <literal>match</literal> element, will resolve to "
 "the <literal>text/x-diff</literal> MIME type."
 msgstr ""
+"La forma más fácil de entener destos archivos es echar un vistazo a un ejemplo. "
+"Según la <citetitle>especificación MIME compartida XDG</citetitle>, el <xref linkend=\"mimetypes-source-xml-example\"/> "
+"muestra el contenido de un archvo fuente XML llamado <filename>diff.xml</filename>. Este "
+"ejemplo define el tipo MIME <literal>text/x-diff</literal>. Existen múltiples elementos "
+"<literal>comment</literal> que dan un nombre legible por humanos al "
+"tipo MIME en varios idiomas diferentes. Este tipo MIME tiene reglas para "
+"coincidencias a través de patrones globales <emphasis>y</emphasis> «husmeando» "
+"en el contenido del archivo (más conocido como reglas <filename>mágicas</filename>). "
+"Cualquier archivo con la extensión <literal>.diff</literal>o <filename>.patch</filename> "
+"se resolverá como este tipo MIME. Además, cualquier archivo cuyo contenido comience con las cadenas "
+"especificadas en los atributos <literal>value</literal> del elemento <iteral>match</literal>, "
+"se resolverá como tipo MIME <literal>text/x-diff</literal>."
 
 #: C/system-admin-guide.xml:568(para)
 msgid ""
@@ -5345,6 +5363,14 @@ msgid ""
 "place it in the proper <filename>&lt;MIME&gt;/packages</filename> directory "
 "(your <filename>Makefile</filename> will take care of this, of course)."
 msgstr ""
+"Nunca debería modificar directamente los archivos fuente XML que están instalados en el "
+"directorio <filename>&lt;MIME&gt;/packages</filename> por las aplicaciones. "
+"En su lugar, modifique el archivo <filename>Overrides.xml</filename>. Este archivo "
+"tiene preferencia sobre todos los demás archivos fuente xML instalados en el mismo "
+"directorio <filename>packages</filename>. Si es el autor de una aplicación, entonces "
+"no haga caso de esta regla. Debería crear un nuevo archivo fuente XML y "
+"emplazarlo en el directorio <filename>&lt;MIME&gt;/packages</filename> adecuado "
+"(su archivo <filename>Makefile</filename> se encargará de esto)."
 
 #: C/system-admin-guide.xml:620(para)
 msgid ""
@@ -5356,6 +5382,13 @@ msgid ""
 "file <filename>Overrides.xml</filename> in the <filename>$XDG_DATA_HOME/mime/"
 "packages</filename> directory."
 msgstr ""
+"Puede modificar la base de datos MIME para todos los usuarios del sistema o para "
+"un usuario en particular, dependiendo de la ubicación del archivo que cambie. Para modificar "
+"la base de datos para todos los usuarios, realice sus cambios sobre el archivo <filename>Overrides."
+"xml</filename> en el directorio <filename>$XDG_DATA_DIRS/mime/packages</filename>. "
+"Para modificar la base de datos para un solo usuario, realice sus cambios sobre el archivo "
+"<filename>Overrides.xml</filename> en el directorio <filename>$XDG_DATA_HOME/mime/"
+"packages</filename>."
 
 #: C/system-admin-guide.xml:630(para)
 msgid ""
@@ -5363,6 +5396,9 @@ msgid ""
 "database</application> application, with the directory location of the MIME "
 "database as the first parameter."
 msgstr ""
+"Después de que se realicen los cambios, siempre debe ejecutar la aplicación "
+"<application>update-mime-database</application>, con la ubicación del directorio de la "
+"base de datos MIME como el primer parámetro."
 
 #: C/system-admin-guide.xml:635(title)
 msgid "Adding or Modifying MIME types"
@@ -5535,6 +5571,9 @@ msgid ""
 "<literal>application/octet-stream</literal> for binary data. If the file is "
 "empty, then it defaults to <literal>text/plain</literal>."
 msgstr ""
+"Cuando ningún patrón global o ninguna regla mágica coincide con un archivo, entonces se resuelve "
+"como el tipo MIME <literal>text/plain</literal> si contiene datos textuales o como <literal>application/octet-stream</literal> "
+"para datos binarios. Si el archivo está vacío, entonces se resuelve como <literal>text/plain</literal>."
 
 #: C/system-admin-guide.xml:725(para)
 msgid ""
@@ -5543,6 +5582,9 @@ msgid ""
 "plain</literal> because there are not any glob patterns or magic rules that "
 "match it<placeholder-1/>."
 msgstr ""
+"Use <application>gnomevfs-info</application> sobre el archivo para encontrar el tipo "
+"MIME. El tipo MIME para este archivo debería detectarse como <literal>text/plain</literal> "
+"porque no existe ningún patrón global o reglas mágicas que coincidan con él <placeholder-1/>."
 
 #: C/system-admin-guide.xml:739(para)
 msgid ""
@@ -5550,6 +5592,9 @@ msgid ""
 "in <xref linkend=\"mimetypes-addmodify\"/> with the contents given in <xref "
 "linkend=\"mimetypes-overrides-xml\"/>."
 msgstr ""
+"Cree (o modifique) el archivo <filename>Overrides.xml</filename> tal y como se "
+"describió en la <xref linkend=\"mimetypes-addmodify\"/> con el contenido proporcionado "
+"en el <xref linkend=\"mimetypes-overrides-xml\"/>."
 
 #: C/system-admin-guide.xml:745(para)
 msgid "Refresh the database using <application>update-mime-database</application>."
@@ -5619,6 +5664,14 @@ msgid ""
 "information on <filename>.desktop</filename> files, see <xref linkend="
 "\"menustructure-desktopentry\"/>."
 msgstr ""
+"Registrar aplicaciones para que manejen tipos MIME es bastante directo. "
+"Las aplicaciones se registran creando una clave <literal>MimeType</literal> "
+"en sus archivos de entrada <filename>.desktop</filename> y listando cada tipo MIME "
+"de forma separada por un punto y coma. La clave <literal>MimeType</literal> sólo "
+"debe usarse en los archivos <filename>.desktop</filename> cuyas claves "
+"<literal>Type</literal> tienen el valor <quote><literal>Application</literal></quote>. "
+"Para obtener más información acerca de los archivos <filename>.desktop</filename>, "
+"consulte la <xref linkend=\"menustructure-desktopentry\"/>."
 
 #: C/system-admin-guide.xml:799(para)
 msgid ""
@@ -5633,6 +5686,15 @@ msgid ""
 "be scanned for just the <literal>MimeType</literal> key, as this causes "
 "unnecessary disk I/O."
 msgstr ""
+"Después de crear o modificar un archivo de entrada <filename>.desktop</filename> "
+"debe actualizar la base de datos de la aplicación usando la aplicación "
+"<application>update-desktop-database</application> (muy similar a <application>update-"
+"mime-database</application> salvo que ésta no tiene parámetros). Esto creará un archivo "
+"<filename>mimeinfo.cache</filename> en el subdirectorio <filename>applications</filename> "
+"para cada directorio en <filename>$XDG_DATA_HOME:$XDG_DATA_DIRS</filename>. "
+"El archivo de caché es necesario para que no se necesite escanear todos los archivos "
+"<filename>.desktop</filename> sólo para la clave <literal>MimeType</literal>, ya que "
+"esto causa E/S de disco innecesarias."
 
 #: C/system-admin-guide.xml:811(para)
 msgid ""
@@ -5646,6 +5708,14 @@ msgid ""
 "<filename>defaults.list</filename> file in a user's <filename>~/.local/share/"
 "applications</filename> directory."
 msgstr ""
+"Las aplicaciones a usar de forma predeterminada para tipos MIME específicos deberían "
+"especificarse en un archivo llamado <filename>defaults.list</filename>. Este archivo está ubicado en "
+"el subdirectorio <filename>applications</filename> para cada directorio en <envar>"
+"$XDG_DATA_HOME</envar> y <envar>$XDG_DATA_DIRS</envar>. El formato para "
+"este archivo consiste del tipo MIME, el símbolo <literal>=</literal> y el "
+"identificador de archivo de escritorio (que es el nombre de archivo para el archivo de entrada de escritorio). El <xref "
+"linkend=\"mimetypes-registering-example\"/> es un ejemplo corto de un archvio <filename>defaults.list</filename> "
+"en el directorio <filename>~/.local/share/applications</filename> de un usuario."
 
 #: C/system-admin-guide.xml:823(title)
 msgid "A User's <filename>defaults.list</filename> file"
@@ -5783,6 +5853,12 @@ msgid ""
 "<application>gnome-screensaver</application> application, and how to change "
 "the themes that are available for the screensaver."
 msgstr ""
+"Un <firstterm>salvapantallas </firstterm> es una aplicación que reemplaza "
+"la imagen en una pantalla cuando la pantalla no se está usando. La aplicación "
+"salvapantallas para el Escritorio GNOME es <application>gnome-screensaver</application>. Las "
+"siguientes secciones describen cómo establecer preferencias para la aplicación"
+"<application>gnome-screensaver</application> y cómo cambiar los temas disponibles "
+"parar el salvapantallas."
 
 #: C/system-admin-guide.xml:25(title)
 msgid "Setting Screensaver Preferences"
@@ -5855,6 +5931,11 @@ msgid ""
 "is not in use. The available screensaver themes are listed in the "
 "<application>Screensaver</application> preference tool."
 msgstr ""
+"La aplicación del salvapantallas permite a los usuarios elegir uno o más "
+"<firstterm>temas del salvapantallas</firstterm>. Un tema del salvapantallas "
+"es una aplicación que muestra imágenes en la pantalla del usuario cuando la "
+"pantalla no se está usando. Los temas del salvapantallas disponibles se listan en "
+"la herramienta de preferencias <application>Salvapantallas</application>."
 
 #: C/system-admin-guide.xml:47(para)
 msgid ""
@@ -5874,6 +5955,19 @@ msgid ""
 "to include the <literal>-root</literal> option to display the screensaver "
 "display on the whole screen."
 msgstr ""
+"Para añadir un nuevo tema del salvapantallas, copie el archivo ejecutable para el "
+"<firstterm>motor de tema del salvapantallas</firstterm> a alguna parte en su RUTA o "
+"en el directorio de motores de temas ejecutables del salvapantallas. El directorio de motores "
+"de temas ejecutables del salvapantallas para su equipo se puede determinar usando "
+"el siguiente comando: <screen><userinput>pkg-config --"
+"variable=privlibexecdir gnome-screensaver</userinput></screen> Ahora añada un archivo "
+"<filename>.desktop</filename> para el tema en el directorio de temas del salvapantallas. "
+"El directorio de temas del salvapantallas para su sistema "
+"se puede determinar usando el siguiente comando: <screen><userinput>pkg-config --"
+"variable=themesdir gnome-screensaver</userinput></screen> En el campo Exec del archivo "
+"<filename>.desktop</filename> incluya cualquier argumento que sea necesario para ejecuar el tema del "
+"salvapantallas a pantalla completa, en lugar de en una ventana. Por ejemplo, algunos motores de temas del salvapantallas "
+"pueden necesitar que incluya la opción <literal>-root</literal> para mostrar el salvapantallas a pantalla completa."
 
 #: C/system-admin-guide.xml:59(para)
 msgid ""
@@ -5882,6 +5976,10 @@ msgid ""
 "spec\">XDG menu specification</ulink>. By supporting this specification, "
 "GNOME allows you to:"
 msgstr ""
+"La infraestructura del <application>Salvapantallas</application> implementa temas "
+"en concordancia con la <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-"
+"spec\">especificacón de menú XDG</ulink>. Al soportar esta especificación, GNOME "
+"le permite:"
 
 #: C/system-admin-guide.xml:66(para)
 msgid ""
@@ -5940,6 +6038,11 @@ msgid ""
 "the state of a session and return to that session the next time that the "
 "user logs in."
 msgstr ""
+"Una sesión sucede entre el instante que el usuario se registra en el Escritorio GNOME "
+"y el instante en el que sale de él. El gestor de sesiones se inicia después de que "
+"el <application>Gestor de entrada</application> autentique al usuario. El gestor "
+"de entrada permite al usuario gestionar la sesión. Por ejemplo, un usuario puede guardar "
+"el estado de una sesión y volver a esa sesión la próxima vez que inicie sesión en el escritorio."
 
 #: C/system-admin-guide.xml:20(para)
 msgid "At a minimum, the following applications run in a session:"
@@ -6059,6 +6162,8 @@ msgid ""
 "Help Browser</ulink> in the <ulink url=\"ghelp:user-guide\">GNOME Desktop "
 "User Guide</ulink>."
 msgstr ""
+"El Escritorio GNOME muestra la ayuda en el navegador de ayuda <application>Yelp</application>. "
+"Para obtener más información, consulte <ulink url=\"ghelp:user-guide?yelp\">Navegador de ayuda Yelp</ulink> en la <ulink url=\"ghelp:user-guide\">Guía del usuario de GNOME</ulink>."
 
 #: C/system-admin-guide.xml:19(para)
 msgid ""
@@ -6068,6 +6173,11 @@ msgid ""
 "<application> gnome-doc-utils</application> and the HTML is displayed in the "
 "help browser. For more information on DocBook XML, see the following URL:"
 msgstr ""
+"Los documentos fuente para la ayuda son los archivos XML. Los archivos XML están escritos "
+"en la definición de tipo de documento (DTD) DocBook XML Versión 4.1.2. Los archivos XML DocBook "
+"se convierten a HTML ysando hojas de estilo instaladas con <application> gnome-doc-utils</application> "
+"y el HTML se muestra en el navegador de la ayuda. Para obtener más información "
+"acerca de DocBook XML, consulte el siguiente URL:"
 
 #: C/system-admin-guide.xml:25(ulink)
 msgid "http://www.oasis-open.org/docbook/xml"
@@ -6101,6 +6211,9 @@ msgid ""
 "contains information about the manual that is used by the Help browser. OMF "
 "files have a <filename>.omf</filename> extension."
 msgstr ""
+"El archivo XML para cada manual tiene un archivo OMF asociado. El archivo OMF "
+"contiene información acerca del manual que usa el navegador de la ayuda. Los "
+"archivos OMF tienen una extensión de archivo <filename>.omf</filename>."
 
 #: C/system-admin-guide.xml:48(para)
 msgid ""
@@ -6109,6 +6222,10 @@ msgid ""
 "file in an OMF file directory, the Help document is displayed in the Help "
 "browser."
 msgstr ""
+"Cuando instala una aplicación, el proceso de instalación instala un archivo OMF "
+"en un directorio de archivos OMF. Si un documento de ayuda tiene un archivo "
+"OMF asociado en el directorio de archivos OMF, el documento de ayuda se mostrará "
+"en el navegador de la ayuda."
 
 #: C/system-admin-guide.xml:52(para)
 msgid "OMF files contain information about Help documents such as the following:"
@@ -6151,6 +6268,11 @@ msgid ""
 "copied to the <filename><replaceable>$prefix</replaceable>/share/omf/"
 "<replaceable>&lt;application-name&gt;</replaceable></filename> directory."
 msgstr ""
+"<application>ScrollKeeper</application> es un sistema de catalogado para"
+"la documentación. Su función primaria es gestionar la información en los archivos "
+"OMF para el navegador de la ayuda. Cuando instala una aplicación, el archivo OMF "
+"se copia al directorio <filename><replaceable>$prefix</replaceable>/share/omf/"
+"<replaceable>&lt;nombre-de-la-aplicación&gt;</replaceable></filename>."
 
 #: C/system-admin-guide.xml:85(para)
 msgid ""
@@ -6161,6 +6283,12 @@ msgid ""
 "<varname>OMF_DIR</varname> set to a comma separated list of directories to "
 "recursively search."
 msgstr ""
+"<application>ScrollKeeper</application> construye una tabla de contenido "
+"a partir de la colección de archivos OMF en los directorios especificados en el "
+"archivo <filename><replaceable>$prefix</replaceable>/etc/scrollkeeper.conf</"
+"filename>. Este archivo generalmente consiste de una sola línea con "
+"<varname>OMF_DIR</varname> establecida a una lista de directorios separados por "
+"comas, donde buscar recursivamente."
 
 #: C/system-admin-guide.xml:91(programlisting)
 #, no-wrap
@@ -6174,6 +6302,10 @@ msgid ""
 "document in the OMF file determines the location of the document in the "
 "table of contents presented by the help browser."
 msgstr ""
+"<application>ScrollKeeper</application> contiene una jerarquía de categorías de "
+"asuntos a la que puede pertenecer un documento de ayuda. La categoría de asunto "
+"del docuemtno en el archivo OMF determina la ubicación del documento en la tabla de "
+"contenido presentada por el navegador de la ayuda."
 
 #: C/system-admin-guide.xml:99(para)
 msgid ""
@@ -6183,6 +6315,11 @@ msgid ""
 "subject category of a document must correspond to a category specified in "
 "this file."
 msgstr ""
+"La jerarquía de categorías de asunto está definida en el archivo "
+"<filename><replaceable>$prefix</replaceable>/scrollkeeper/Templates/"
+"<replaceable>&lt;idioma&gt;</replaceable>/scrollkeeper_cl.xml</filename>. La "
+"categoría de asunto de un documento debe corresponder con la categoría especificada "
+"en este archivo."
 
 #: C/system-admin-guide.xml:104(para)
 msgid ""
@@ -6190,12 +6327,16 @@ msgid ""
 "visit the website at <ulink url=\"http://scrollkeeper.sourceforge.net/"
 "\">http://scrollkeeper.sourceforge.net/</ulink>."
 msgstr ""
+"Para obtener más información acerca del sistema <application>Scrollkeeper</application>, "
+"visite la página web en <ulink url=\"http://scrollkeeper.sourceforge.net/\">http://scrollkeeper.sourceforge.net/</ulink>."
 
 #: C/system-admin-guide.xml:110(para)
 msgid ""
 "If the help document XML file is moved to a new location, then the location "
 "in the OMF file needs to be updated."
 msgstr ""
+"Si el archivo XML de documento de ayuda se mueve a una ubicación nueva, entonces se debe "
+"actualizar la ubicación en el archivo OMF."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Improving Performance"
@@ -6221,6 +6362,11 @@ msgid ""
 "users. The example commands in this chapter show how to set values in the "
 "user configuration source."
 msgstr ""
+"Este capítulo lista varias preferencias cuyos ajustes puede cambiar para "
+"mejorar el rendimiento del Escritorio GNOME. Puede usar el comando "
+"<command>gconftool-2</command> para establecer valores para las preferencias "
+"para los usuarios. Los comandos de ejemplo en este capítulo le muestran cómo establecer "
+"valores en la fuente de configuración del usuario."
 
 #: C/system-admin-guide.xml:18(para)
 msgid ""
@@ -6231,6 +6377,12 @@ msgid ""
 "<command>gconftool-2</command> command and the options that are available "
 "with the command, see <xref linkend=\"gconf-0\"/>."
 msgstr ""
+"Puede usar las opciones <literal>--direct</literal> y <literal>--config-"
+"source</literal> para establecer valores obligatorios o predeterminados para "
+"las preferencias. También puede usar el comando <command>gconftool-2</command> "
+"en un script para establecer los valores de muchas preferencias. Para obtener más información acerca del "
+"comando <command>gconftool-2</command> y de las opciones disponibles "
+"del comando, consulte el <xref linkend=\"gconf-0\"/>."
 
 #: C/system-admin-guide.xml:24(title)
 msgid "Reducing CPU Usage"
@@ -6258,20 +6410,22 @@ msgstr "Esta sección describe las preferencias que puede ajustar para reducir e
 
 #: C/system-admin-guide.xml:41(title)
 msgid "To Use Theme Options Which Require Less CPU Resources"
-msgstr ""
+msgstr "Usar opciones de temas que requieren menos recursos de CPU"
 
 #: C/system-admin-guide.xml:45(tertiary)
 #: C/system-admin-guide.xml:49(secondary)
 #: C/system-admin-guide.xml:112(secondary)
 #: C/system-admin-guide.xml:130(secondary)
 msgid "and CPU usage"
-msgstr ""
+msgstr "y uso de CPU"
 
 #: C/system-admin-guide.xml:51(para)
 msgid ""
 "Some window frame theme options load image files to draw the window frame. "
 "Other options use simpler techniques to draw the window frame."
 msgstr ""
+"Algunas opciones de bordes de ventana cargan archivos de imágenes para mostrar el borde de la ventana. "
+"Otras opciones usan técnicas más simples para dibujar el borde de la ventana."
 
 #: C/system-admin-guide.xml:54(para)
 msgid ""
@@ -6279,6 +6433,9 @@ msgid ""
 "with limited CPU resources. To reduce CPU usage, use one of the following "
 "window frame options:"
 msgstr ""
+"La opción de borde de ventana Crux carga archivos de imágenes y puede ser lenta "
+"en sistemas con recursos de CPU limitados. Para reducir el uso de CPU use una de las "
+"siguientes opciones de borde de ventana:"
 
 #: C/system-admin-guide.xml:59(para) C/system-admin-guide.xml:444(para)
 msgid "Atlanta"
@@ -6286,29 +6443,31 @@ msgstr "Atlanta"
 
 #: C/system-admin-guide.xml:62(para) C/system-admin-guide.xml:447(para)
 msgid "Esco"
-msgstr ""
+msgstr "Esco"
 
 #: C/system-admin-guide.xml:65(para)
 msgid "The following window frame options also use less CPU resources than Crux:"
-msgstr ""
+msgstr "Las siguientes opciones de bordes de ventana también usan menos recursos de CPU que Crux:"
 
 #: C/system-admin-guide.xml:69(para)
 msgid "AgingGorilla"
-msgstr ""
+msgstr "AgingGorilla"
 
 #: C/system-admin-guide.xml:72(para)
 msgid "Bright"
-msgstr ""
+msgstr "Bright"
 
 #: C/system-admin-guide.xml:75(para)
 msgid "Metabox"
-msgstr ""
+msgstr "Metabox"
 
 #: C/system-admin-guide.xml:79(para)
 msgid ""
 "Metabox does not work well with inverse controls options such as "
 "HighContrastInverse. Use Atlanta with inverse controls options."
 msgstr ""
+"Metabox no funciona bien con opciones de controles inversos tales como "
+"AltoContrasteInvertido. Use Atlanta con opciones de controles invertidas."
 
 #: C/system-admin-guide.xml:82(para)
 msgid ""
@@ -6316,6 +6475,9 @@ msgid ""
 "secondary><tertiary>changing</tertiary></indexterm>To change the window "
 "frame theme option, run the following command:"
 msgstr ""
+"<indexterm><primary>temas</primary><secondary>opciones borde ventana</"
+"secondary><tertiary>cambiar</tertiary></indexterm> Para cambiar la opción del "
+"borde de ventana de un tema, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:84(userinput)
 #, no-wrap
@@ -6356,26 +6518,32 @@ msgid ""
 "start <application>Metacity Theme Viewer</application>, use the following "
 "command:"
 msgstr ""
+"Puede usar el <application>Visor de temas de Metacity</application> para comprobar "
+"el rendimiento de una opción de borde de ventana y para previsualizar la opción. Para "
+"iniciar el <application>Visor de temas de Metacity</application> ejecute el siguiente "
+"comando:"
 
 #: C/system-admin-guide.xml:98(userinput)
 #, no-wrap
 msgid "metacity-theme-viewer <placeholder-1/>"
-msgstr ""
+msgstr "metacity-theme-viewer <placeholder-1/>"
 
 #: C/system-admin-guide.xml:99(para)
 msgid ""
 "For example, to measure the performance of Atlanta and preview Atlanta, run "
 "the following command:"
 msgstr ""
+"Por ejemplo, para comprobar el rendimiento y previsualizar el tema Atlanta, ejecute el "
+"siguiente comando:"
 
 #: C/system-admin-guide.xml:101(userinput)
 #, no-wrap
 msgid "metacity-theme-viewer Atlanta"
-msgstr ""
+msgstr "metacity-theme-viewer Atlanta"
 
 #: C/system-admin-guide.xml:105(title)
 msgid "To Reduce CPU Usage by Turning Off Display of Icons in Menus"
-msgstr ""
+msgstr "Reducir el uso de CPU desactivando los iconos de los menús"
 
 #: C/system-admin-guide.xml:107(primary)
 msgid "icons, in menus"
@@ -6390,7 +6558,7 @@ msgstr "iconos del menú"
 #: C/system-admin-guide.xml:116(secondary)
 #: C/system-admin-guide.xml:383(secondary)
 msgid "turning off"
-msgstr ""
+msgstr "desactivar"
 
 #: C/system-admin-guide.xml:118(para)
 msgid ""
@@ -6418,7 +6586,7 @@ msgstr "Alternativamente, los usuarios puede usar la herramienta de preferencias
 
 #: C/system-admin-guide.xml:127(title)
 msgid "To Reduce CPU Usage by Turning Off the Splash Screen"
-msgstr ""
+msgstr "Reducir el uso de CPU desactivando la pantalla de bienvenida"
 
 #: C/system-admin-guide.xml:132(para)
 msgid ""
@@ -6426,6 +6594,10 @@ msgid ""
 "displayed. Icons are displayed on the splash screen while the user logs in. "
 "You can turn off the splash screen to reduce CPU usage during login."
 msgstr ""
+"De forma predeterminada, cuando los usuarios inician sesión en el entorno de escritorio, "
+"se muestra una pantalla de bienvenida. Los iconos se muestran en la pantalla de bienvenida "
+"mientras el usuario inicia sesión. Puede desactivar la pantalla de bienvenida para reducir el uso de "
+"CPU durante el inicio de sesión."
 
 #: C/system-admin-guide.xml:136(para)
 msgid ""
@@ -6433,6 +6605,8 @@ msgid ""
 "secondary></indexterm>To turn off the splash screen, run the following "
 "command:"
 msgstr ""
+"<indexterm><primary>pantalla de bienvenida</primary><secondary>desactivar</"
+"secondary></indexterm>Para desactivar la pantalla de bienvenida, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:137(userinput)
 #, no-wrap
@@ -6451,20 +6625,25 @@ msgid ""
 "preference tool to deselect the <guilabel>Show splash screen on login</"
 "guilabel> option."
 msgstr ""
+"Alternativamente, los usuarios pueden usar la herramienta de preferencias "
+"<application>Sesiones</application> para deseleccionar la opción <guilabel>Mostrar "
+"la pantalla de bienvenida al iniciar sesión</guilabel>."
 
 #: C/system-admin-guide.xml:145(title)
 msgid "To Reduce CPU Usage by Turning Off Panel Animation"
-msgstr ""
+msgstr "Reducir el uso de CPU desactivando la animación del panel"
 
 #: C/system-admin-guide.xml:148(secondary)
 msgid "animation, turning off"
-msgstr ""
+msgstr "animación, desactivar"
 
 #: C/system-admin-guide.xml:150(para)
 msgid ""
 "When users show or hide panels, the panels can show or hide in an animated "
 "style. To turn off panel animation, run the following command:"
 msgstr ""
+"Cuando los usuario muestran u ocultan paneles, los paneles pueden mostrar u ocultar un "
+"estilo animado. Para desactivar la animación del panel, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:152(userinput)
 #, no-wrap
@@ -6482,6 +6661,8 @@ msgid ""
 "Alternatively, users can use the <application>Panel</application> preference "
 "tool to deselect the <guilabel>Drawer and panel animation</guilabel> option."
 msgstr ""
+"Alternativamente, los usuarios pueden usar la herramienta de preferencias <application>Panel</application> "
+"para deseleccionar la opción <guilabel>Animación de cajones y paneles</guilabel>."
 
 #: C/system-admin-guide.xml:159(title)
 msgid "Improving File Manager Performance"
@@ -6501,14 +6682,16 @@ msgid ""
 "The <application>Nautilus</application> file manager includes some features "
 "that you can modify to improve performance."
 msgstr ""
+"El gestor de archivos <application>Nautilus</application> incluye algunas características "
+"que puede modificar para mejorar el rendimiento."
 
 #: C/system-admin-guide.xml:167(title)
 msgid "To Modify Performance Preferences"
-msgstr ""
+msgstr "Modificar las preferencias de rendimiento"
 
 #: C/system-admin-guide.xml:170(secondary)
 msgid "modifying performance preferences"
-msgstr ""
+msgstr "Modificar las preferencias de rendimiento"
 
 #: C/system-admin-guide.xml:173(para)
 msgid ""
@@ -6516,6 +6699,8 @@ msgid ""
 "preference can take one of three values. The values are described in the "
 "following table:"
 msgstr ""
+"El gestor de archivos incluye preferencias relacionadas con el rendimiento. Cada preferencia "
+"de rendimiento puede tomar uno de tres valores. Los valores se describen en la siguiente tabla."
 
 #: C/system-admin-guide.xml:183(para)
 msgid "Value"
@@ -6533,13 +6718,15 @@ msgstr ""
 
 #: C/system-admin-guide.xml:205(literal)
 msgid "local_only"
-msgstr ""
+msgstr "sólo en archivos locales"
 
 #: C/system-admin-guide.xml:209(para)
 msgid ""
 "Performs the action for local files only. When you set a performance "
 "preference to <literal>local_only</literal>, the CPU usage is reduced."
 msgstr ""
+"Realiza la acción sólo para archivos locales. Cuando establece una preferencia de "
+"rendimiento a «sólo en archivos locales» se reduce el uso de CPU."
 
 #: C/system-admin-guide.xml:217(literal)
 msgid "never"
@@ -6550,6 +6737,8 @@ msgid ""
 "Never performs the action. When you set a performance preference to never, "
 "the CPU usage and the network traffic are reduced."
 msgstr ""
+"Nunca se realiza la acción. Cuando establece una preferencia de rendimiento a «nunca», "
+"se reducen el uso de CPU y el tráfico de la red."
 
 #: C/system-admin-guide.xml:228(para)
 msgid ""
@@ -6557,6 +6746,8 @@ msgid ""
 "manager. For the fastest performance, set the value of the preferences to "
 "<literal>never</literal>."
 msgstr ""
+"La siguiente tabla describe las preferencias de rendimiento para el gestor de archivos. "
+"Para obtener un rendimiento más rápido, establezca los valores de las preferencias a «nunca»."
 
 #: C/system-admin-guide.xml:237(para)
 msgid "Preference"
@@ -6564,7 +6755,7 @@ msgstr "Preferencia"
 
 #: C/system-admin-guide.xml:248(literal)
 msgid "show_icon_text"
-msgstr ""
+msgstr "Mostrar texto en los iconos"
 
 #: C/system-admin-guide.xml:252(para)
 msgid ""
@@ -6572,6 +6763,9 @@ msgid ""
 "represents the file. To never preview the content of text files, run the "
 "following command:"
 msgstr ""
+"Especifica cuando se debe previsualizar el contenido de los archivos de texto en el "
+"icono que representa al archivo. Para no mostrar nunca el contenido de archivos "
+"de texto, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:255(userinput)
 #, no-wrap
@@ -6596,20 +6790,24 @@ msgid ""
 "guimenuitem></menuchoice> from a file manager window, then choose "
 "<guilabel>Preview</guilabel>."
 msgstr ""
+"Elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Preferencias</guimenuitem></menuchoice> "
+"de una ventana del gestor de archivos, después elija <guilabel>Vista previa</guilabel>."
 
 #: C/system-admin-guide.xml:265(para)
 msgid "Select an option for the <guilabel>Show text in icons</guilabel> preference."
-msgstr ""
+msgstr "Seleccione una opción para la preferencia <guilabel>Mostrar texto en los iconos</guilabel>."
 
 #: C/system-admin-guide.xml:274(literal)
 msgid "show_directory_item_counts"
-msgstr ""
+msgstr "contar el número de elementos"
 
 #: C/system-admin-guide.xml:278(para)
 msgid ""
 "Specifies when to show the number of items in folders. To never show the "
 "number of items in folders, run the following command:"
 msgstr ""
+"Especifica cuándo se debe mostrar el número de elementos en las carpetas. Para no mostrar "
+"nunca el número de elementos en las carpetas, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:280(userinput)
 #, no-wrap
@@ -6626,17 +6824,19 @@ msgstr ""
 msgid ""
 "Select an option for the <guilabel>Count number of items</guilabel> "
 "preference."
-msgstr ""
+msgstr "Seleccione una opción para la preferencia <guilabel>Contar el número de elementos</guilabel>."
 
 #: C/system-admin-guide.xml:298(literal)
 msgid "show_image_thumbnails"
-msgstr ""
+msgstr "mostrar miniaturas"
 
 #: C/system-admin-guide.xml:302(para)
 msgid ""
 "Specifies when to show thumbnails of image files. To never show thumbnails, "
 "run the following command:"
 msgstr ""
+"Especifica cuándo se deben mostrar las miniaturas de archivos de imagen. Ejecute el siguiente comando "
+"para no mostrar nunca las miniaturas:"
 
 #: C/system-admin-guide.xml:304(userinput)
 #, no-wrap
@@ -6651,17 +6851,19 @@ msgstr ""
 
 #: C/system-admin-guide.xml:313(para)
 msgid "Select an option for the <guilabel>Show thumbnails</guilabel> preference."
-msgstr ""
+msgstr "Seleccione una opción para la preferencia <guilabel>Mostrar miniaturas</guilabel>."
 
 #: C/system-admin-guide.xml:322(literal)
 msgid "preview_sound"
-msgstr ""
+msgstr "escucha previa de archivos de sonido"
 
 #: C/system-admin-guide.xml:326(para)
 msgid ""
 "Specifies when to preview the content of sound files. To never preview the "
 "content of sound files, run the following command:"
 msgstr ""
+"Especifica cuándo se de debe escuchar previamente el contenido de archivos de sonido. "
+"Ejecute el siguiente comando para no escuchar previamente el contenido de archivos de sonido:"
 
 #: C/system-admin-guide.xml:328(userinput)
 #, no-wrap
@@ -6676,15 +6878,15 @@ msgstr ""
 
 #: C/system-admin-guide.xml:338(para)
 msgid "Select an option for the <guilabel>Preview sound files</guilabel> preference."
-msgstr ""
+msgstr "Seleccione una opción para la preferencia <guilabel>Escucha previa de archivos de sonido</guilabel>."
 
 #: C/system-admin-guide.xml:349(title)
 msgid "To Turn Off the Side Pane, Toolbar, and Location Bar"
-msgstr ""
+msgstr "Desactivar el panel lateral, la barra de herramientas y la barra de lugares"
 
 #: C/system-admin-guide.xml:352(secondary)
 msgid "side pane, turning off"
-msgstr ""
+msgstr "panel lateral, desactivar"
 
 #: C/system-admin-guide.xml:354(para)
 msgid ""
@@ -6692,10 +6894,13 @@ msgid ""
 "pane and the toolbar. To improve file manager performance, turn off the side "
 "pane and the toolbar."
 msgstr ""
+"El gestor de archivos incluye preferencias que le permiten desactivar el panel lateral "
+"y la barra de herramientas. Para mejorar el rendimiento del gestor de archivos, desactive "
+"el panel lateral y la barra de herramientas."
 
 #: C/system-admin-guide.xml:357(para)
 msgid "To turn off the side pane, run the following command:"
-msgstr ""
+msgstr "Para desactivar el panel lateral, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:358(userinput)
 #, no-wrap
@@ -6713,6 +6918,8 @@ msgid ""
 "<indexterm><primary>file manager</primary><secondary>toolbar, turning off</"
 "secondary></indexterm>To turn off the toolbar, run the following command:"
 msgstr ""
+"<indexterm><primary>gestor de archivos</primary><secondary>barra de herramientas, desactivar</"
+"secondary></indexterm> Para desactivar la barra de herramientas, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:363(userinput)
 #, no-wrap
@@ -6731,6 +6938,9 @@ msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> keyboard "
 "shortcut to display a location bar when required."
 msgstr ""
+"También puede desactivar la barra de lugares. Los usuarios pueden usar el "
+"atajo de teclado <keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo> para "
+"mostrar una barra de lugares cuando sea necesario."
 
 #: C/system-admin-guide.xml:368(para)
 msgid ""
@@ -6738,6 +6948,8 @@ msgid ""
 "off</secondary></indexterm>To turn off the location bar, run the following "
 "command:"
 msgstr ""
+"<indexterm><primary>gestor de archivos</primary><secondary>barra de lugares, desactivar</secondary></indexterm> "
+"Para desactivar la barra de lugares, ejecute el siguiente comando:"
 
 #: C/system-admin-guide.xml:371(userinput)
 #, no-wrap
@@ -6769,6 +6981,9 @@ msgid ""
 "the desktop to improve performance. However, if you disable the desktop, you "
 "cannot do the following:"
 msgstr ""
+"El gestor de archivos contiene una herramienta de preferencia que permite a los usuarios usar "
+"<application>Nautilus</application> para gestionar el escritorio. Puede desactivar la mejora "
+"de rendimiento del escritorio. No obstante, si desactiva el escritorio, no podrá hacer lo siguiente:"
 
 #: C/system-admin-guide.xml:392(para)
 msgid "Use the <guimenu>Desktop</guimenu> menu."
@@ -6778,13 +6993,15 @@ msgstr "Use el menú <guimenu>Escritorio</guimenu>."
 msgid ""
 "Use the file manager to change the pattern or color of the desktop "
 "background."
-msgstr ""
+msgstr "Use el gestor de archivos para cambiar el patrón o color del fondo del escritorio."
 
 #: C/system-admin-guide.xml:399(para)
 msgid ""
 "Use the desktop objects, such as <guilabel>Trash</guilabel>. The desktop "
 "objects are not displayed on the desktop."
 msgstr ""
+"Use los objetos del escritorio, tales como la <guilabel>Papelera</guilabel>. Los objetos "
+"del panel no se muestran en el escritorio."
 
 #: C/system-admin-guide.xml:403(para)
 msgid "To disable the desktop, run the following command:"
@@ -6803,7 +7020,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:411(title)
 msgid "Reducing X Window System Network Traffic"
-msgstr "Reducir el tráfico del red del sistema X Window"
+msgstr "Reducir el tráfico de red del sistema X Window"
 
 #: C/system-admin-guide.xml:414(secondary)
 msgid "X Window System network traffic"
@@ -6815,29 +7032,31 @@ msgstr "Tráfico de red del sistema X Window, reducción"
 
 #: C/system-admin-guide.xml:421(primary)
 msgid "network traffic, reducing"
-msgstr "tráfico de red, reducción"
+msgstr "tráfico de red, reducir"
 
 #: C/system-admin-guide.xml:423(para)
 msgid ""
 "This section describes preferences that you can set to reduce X Window "
 "System network traffic on the GNOME Desktop."
-msgstr ""
+msgstr "Esta sección describe preferencias que puede establecer para reducir el tráfico de red del sistema X Window en el Escritorio GNOME."
 
 #: C/system-admin-guide.xml:426(title)
 msgid "To Use Theme Options Which Create Less Network Traffic"
-msgstr ""
+msgstr "Usar opciones de temas que crean menos tráfico de red"
 
 #: C/system-admin-guide.xml:430(tertiary)
 #: C/system-admin-guide.xml:434(secondary)
 #: C/system-admin-guide.xml:456(secondary)
 msgid "and network traffic"
-msgstr ""
+msgstr "y tráfico de red"
 
 #: C/system-admin-guide.xml:436(para)
 msgid ""
 "Remote display protocols do not transfer every pixel in a block of pixels if "
 "all pixels in the block are the same color."
 msgstr ""
+"Los sistemas de representación remotos no transfieren cada píxel de un bloque de píxeles "
+"si todos los píxeles del bloque tienen el mismo color."
 
 #: C/system-admin-guide.xml:439(para)
 msgid ""
@@ -6845,6 +7064,8 @@ msgid ""
 "that uses solid colors. That is, use one of the following window frame "
 "options:"
 msgstr ""
+"Para reducir el trafico de red del sistema X Window, use una opción de borde de ventana "
+"que use colores sólidos. Esto es, use una de las siguientes opciones de borde de ventana:"
 
 #: C/system-admin-guide.xml:450(para) C/system-admin-guide.xml:528(para)
 msgid ""
@@ -6854,7 +7075,7 @@ msgstr "Para obtener información acerca de cómo cambiar las opciones de los te
 
 #: C/system-admin-guide.xml:453(title)
 msgid "To Reduce Network Traffic by Turning Off Display of Icons in Menus"
-msgstr ""
+msgstr "Reducir el tráfico de red desactivando los iconos de los menús"
 
 #: C/system-admin-guide.xml:458(para)
 msgid ""
@@ -6863,6 +7084,10 @@ msgid ""
 "traffic. This feature can also increase X Window System network traffic if "
 "the panels are displayed on a remote host."
 msgstr ""
+"Algunos elementos en los menús muestran un icono junto al elemento. Si el icono "
+"está ubicado en otro sistema de archivos, esta característica puede incrementar el "
+"tráfico de red del sistema X Window. Esta característica también puede incrementar el "
+"tráfico de red del sistema X Window si los paneles se muestran en un equipo remoto."
 
 #: C/system-admin-guide.xml:462(para) C/system-admin-guide.xml:539(para)
 msgid ""
@@ -6881,7 +7106,7 @@ msgstr "uso de color"
 
 #: C/system-admin-guide.xml:476(primary)
 msgid "display quality, improving"
-msgstr ""
+msgstr "calidad de mostrado, mejorar"
 
 #: C/system-admin-guide.xml:478(para)
 msgid ""
@@ -6889,6 +7114,9 @@ msgid ""
 "colors. However, many users still use systems that support 8-bit color, that "
 "is, 256 colors."
 msgstr ""
+"La mayoría de los equipos modernos soportan 24 bits de color, esto es 16,777,216 "
+"colores. No obstante muchos usuarios aún usan equipos que sólo soportan 8 bits de color, "
+"esto es, 256 colores."
 
 #: C/system-admin-guide.xml:481(para)
 msgid ""
@@ -6898,12 +7126,17 @@ msgid ""
 "some visual components of the GNOME Desktop are designed for systems that "
 "support 24-bit color."
 msgstr ""
+"El Escritorio GNOME usa la <firstterm>paleta de colores segura para la web</firstterm>. "
+"Esta paleta es una paleta de propósito general de 216 colores, diseñada para "
+"optimizar el uso de color en sistemas que soporten 9 bits de color. No obstante, "
+"algunos componentes visuales del Escritorio GNOME están diseñados para sistemas "
+"que soportan 24 bits de color."
 
 #: C/system-admin-guide.xml:486(para)
 msgid ""
 "The following display problems might occur on systems that support 8-bit "
 "color:"
-msgstr ""
+msgstr "Pueden ocurrir los siguientes problemas en sistemas que soporten color de 8 bits:"
 
 #: C/system-admin-guide.xml:490(para)
 msgid ""
@@ -6913,6 +7146,11 @@ msgid ""
 "nearest equivalent or a dithered approximation. This use of replacement "
 "colors causes the grainy appearance."
 msgstr ""
+"Las ventanas, los iconos y las imágenes de fondo de pantalla pueden aparecer granulosas. "
+"Muchos temas, imágenes de fondo de pantalla e iconos usan colores que no están en la "
+"paleta de colores segura para la web. Los colores que no están en la paleta se reemplazan con los "
+"del equivalente más dercano o por una aproximación. Este reemplazo de color causa la apariencia "
+"granulosa."
 
 #: C/system-admin-guide.xml:497(para)
 msgid ""
@@ -6921,6 +7159,10 @@ msgid ""
 "user interface of the application. Some applications might crash if the "
 "application cannot allocate colors."
 msgstr ""
+"Las aplicaciones que no usan la paleta de colores segura para la web tienen menos colores "
+"disponibles. Pueden suceder errores de color. Puede que algunos colores no aparezcan "
+"en el interfaz de usuario de la aplicación. Algunas aplicaciones se pueden colgar "
+"si la aplicación no puede reservar los colores."
 
 #: C/system-admin-guide.xml:503(para)
 msgid ""
@@ -6930,23 +7172,30 @@ msgid ""
 "custom colormap. When the custom colormap is used, other visual components "
 "might lose colors, then become unviewable."
 msgstr ""
+"Pueden suceder «flashes» de color cuando los usuarios cambian entre aplicaciones "
+"que usan la paleta de colores segura para la web y las aplicaciones que no usan esta paleta. "
+"Las aplicaciones que no usan la paleta de colores segura para la web pueden usar "
+"un mapa de color personalizado. Cuando se usa el mapa de color personalizado, puede que "
+"otros componentes visuales pierdan colores y se conviertan en poco o nada usables."
 
 #: C/system-admin-guide.xml:510(para)
 msgid ""
 "The following sections describe how to optimize the appearance of the GNOME "
 "Desktop for systems that support 8-bit color."
 msgstr ""
+"Las siguientes secciones describen cómo optimizar la apariencia del Escritorio GNOME "
+"para sistemas que soporten 8 bits de color."
 
 #: C/system-admin-guide.xml:513(title)
 msgid "To Use Theme Options That Use the Websafe Color Palette"
-msgstr ""
+msgstr "Usar opciones de temas que usen la paleta de colores segura para la web"
 
 #: C/system-admin-guide.xml:517(tertiary)
 #: C/system-admin-guide.xml:521(secondary)
 #: C/system-admin-guide.xml:534(secondary)
 #: C/system-admin-guide.xml:545(secondary)
 msgid "and color usage"
-msgstr ""
+msgstr "y uso de color"
 
 #: C/system-admin-guide.xml:523(para)
 msgid ""
@@ -6956,10 +7205,15 @@ msgid ""
 "8-bit color displays. Use Bright or Esco for the best color display on 8-bit "
 "visual modes."
 msgstr ""
+"Algunas opciones de bordes de ventana usan colores que están en la paleta de "
+"colores segura para la web. Bright y Esco usan colores de la paleta de colores segura para la web. "
+"Bright y Esco no tienen la apariencia granulosa de otras opciones de bordes de ventana en "
+"las visualizaciones para 8 bits de color. Use Bright y Esco para la mejor visualización en los "
+"modos de 8 bits de color."
 
 #: C/system-admin-guide.xml:531(title)
 msgid "To Reduce Color Usage by Turning Off Display of Icons in Menus"
-msgstr ""
+msgstr "Reducir el uso de color desactivando los iconos de los menús"
 
 #: C/system-admin-guide.xml:536(para)
 msgid ""
@@ -6967,26 +7221,33 @@ msgid ""
 "colors that are not in the websafe color palette, this feature can increase "
 "the number of colors used."
 msgstr ""
+"Algunos elementos en los menús muestran un icono junto a ellos. Si el icono "
+"contiene colores que no están en la paleta de colores segura para la web, esta "
+"característica puede aumentar el número de colores usados."
 
 #: C/system-admin-guide.xml:542(title)
 msgid "To Reduce Color Usage by Turning Off the Splash Screen"
-msgstr ""
+msgstr "Reducir el uso de color desactivando la pantalla de bienvenida"
 
 #: C/system-admin-guide.xml:547(para)
 msgid ""
 "You can turn off the splash screen to make more colors available for the "
 "GNOME Desktop and for applications."
 msgstr ""
+"Puede desactivar la pantalla de bienvenida para dejar más colores disponibles para "
+"el Escritorio GNOME y para las aplicaciones."
 
 #: C/system-admin-guide.xml:549(para)
 msgid ""
 "For information on how to turn off the splash screen, see <xref linkend="
 "\"performance-6\"/>."
 msgstr ""
+"Para obtener más información acerca de cómo desactivar la pantalla de bienvenida, consulte "
+"la <xref linkend=\"performance-6\"/>"
 
 #: C/system-admin-guide.xml:552(title)
 msgid "To Reduce Color Usage by Using a Solid Color for the Background"
-msgstr ""
+msgstr "Reducir el uso de color usando un color sólido para el fondo del escritorio"
 
 #: C/system-admin-guide.xml:555(secondary)
 msgid "using solid color"
@@ -6997,10 +7258,12 @@ msgid ""
 "Use a solid color for the desktop background. Use of a solid color reduces "
 "the number of colors used by the GNOME Desktop."
 msgstr ""
+"Usar un color sólido para el fondo del escritorio. Usar un color sólido reduce "
+"el número de colores que usa el Escritorio GNOME."
 
 #: C/system-admin-guide.xml:559(para)
 msgid "To set a solid color for the background, run the following commands:"
-msgstr ""
+msgstr "Para establecer un color sólido para el fondo del escritorio, ejecute los siguientes comandos:"
 
 #: C/system-admin-guide.xml:560(userinput)
 #, no-wrap
@@ -7026,7 +7289,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:568(replaceable)
 msgid "hexadecimal-color"
-msgstr ""
+msgstr "color-hexadecimal"
 
 #: C/system-admin-guide.xml:566(userinput)
 #, no-wrap
@@ -7044,6 +7307,8 @@ msgid ""
 "Alternatively, users can use the <application>Background</application> "
 "preference tool to choose a solid color for the background."
 msgstr ""
+"Alternativamente, los usuarios pueden usar la herramienta de preferencias "
+"<application>Fondo del escritorio</application> para escoger un color sólido para el fondo del escritorio."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Disabling GNOME Desktop Features"
@@ -7053,7 +7318,7 @@ msgstr "Deshabilitar características del Escritorio GNOME"
 msgid ""
 "This chapter describes how to disable particular features of the GNOME "
 "Desktop."
-msgstr ""
+msgstr "Este capítulo describe cómo desactivar características particulares del Escritorio GNOME."
 
 #: C/system-admin-guide.xml:8(title)
 msgid "Introduction to Disabling GNOME Desktop Features"
@@ -7078,6 +7343,12 @@ msgid ""
 "operations on a computer that is for public use at a trade show. The disable "
 "features are also known as <emphasis>lockdown</emphasis> features."
 msgstr ""
+"El Escritorio GNOMe incluye características que puede usar para restringir el acceso "
+"a ciertas funciones en el Escritorio GNOME. Las características de desactivación son útiles "
+"en varias situaciones donde puede querer restringir las acciones que los usuarios pueden "
+"realizar sobre un equipo. Por ejemplo, puede querer prevenir operaciones sobre la línea de comandos "
+"en un equipo público expuesto en alguna feria. Las características de desactivación "
+"también son conocidas como características de <emphasis>restricción</emphasis>."
 
 #: C/system-admin-guide.xml:23(para)
 msgid ""
@@ -7089,14 +7360,19 @@ msgid ""
 "<application>Configuration Editor</application> application, see the "
 "<citetitle>GConf Editor Manual</citetitle>."
 msgstr ""
+"Puede establecer claves de <application>GConf</application> para desactivar características. Para "
+"obtener más información acerca de cómo establecer claves de <application>GConf</application>, "
+"consulte  la <xref linkend=\"gconf-0\"/>. También puede usar la aplicación <application>Editor de configuración</application> "
+"para establecer claves <application>GConf</application> en una fuente de configuración de usuario. Para obtener más información acerca de la aplicación <application>Editor de configuración</application>, consulte el "
+"<citetitle>Manual del editor GConf</citetitle>."
 
 #: C/system-admin-guide.xml:29(title)
 msgid "Locking Down Setting Manually"
-msgstr ""
+msgstr "Bloquear ajustes manualmente"
 
 #: C/system-admin-guide.xml:31(title)
 msgid "To Disable Lock Screen and Log Out"
-msgstr ""
+msgstr "Desactivar el bloqueo de pantalla y la salida de la sesión"
 
 #: C/system-admin-guide.xml:34(secondary)
 msgid "lock screen"
@@ -7112,19 +7388,24 @@ msgid ""
 "panel/global/disable_lock_screen</literal> key and the <literal>/apps/panel/"
 "global/disable_log_out</literal> key to <literal>true</literal>."
 msgstr ""
+"Para desactivar las funciones de bloquear la pantalla y salir de la sesión, establezca las claves "
+"<literal>/apps/panel/global/disable_lock_screen</literal> y <literal>/apps/panel/"
+"global/disable_log_out</literal> a <literal>true</literal>."
 
 #: C/system-admin-guide.xml:42(para)
 msgid ""
 "When you disable the lock screen and log out functions, the following items "
 "are removed from the panels:"
 msgstr ""
+"Cuando desactiva las funciones bloquear la pantalla y salir de la sesión, los siguientes "
+"elementos se eliminan de los paneles:"
 
 #: C/system-admin-guide.xml:47(para)
 msgid ""
 "<guimenuitem>Lock Screen</guimenuitem> and <guimenuitem>Log Out "
 "<replaceable>user</replaceable></guimenuitem> menu items from the "
 "<guimenu>Main Menu</guimenu>."
-msgstr ""
+msgstr "Elementos del menú del <replaceable>usuario</replaceable><guimenuitem>Bloquear la pantalla</guimenuitem> y <guimenuitem>Salir<replaceable> para el </replaceable>Menú principal</guimenuitem>."
 
 #: C/system-admin-guide.xml:51(para)
 msgid ""
@@ -7135,6 +7416,8 @@ msgid ""
 "<menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Actions</"
 "guimenuitem></menuchoice>."
 msgstr ""
+"Elementos del menú <guimenuitem>Bloquear</guimenuitem> y <guimenuitem>Salir</guimenuitem> del menú <menuchoice><guimenu>Añadir al panel</guimenu><guimenuitem>Acciones</guimenuitem></menuchoice>. Para abrir este menú, "
+"pulse con el botón derecho sobre un espacio vacío en un panel, después elija <menuchoice><guimenu>Añadir al panel</guimenu><guimenuitem>Acciones</guimenuitem></menuchoice>."
 
 #: C/system-admin-guide.xml:56(para)
 msgid ""
@@ -7143,12 +7426,16 @@ msgid ""
 "<guimenu>Actions</guimenu> menu in the <application>Menu Bar</application> "
 "applet."
 msgstr ""
+"Elementos del menú <guimenuitem>Bloquear la pantalla</guimenuitem> y <guimenuitem>Salir<replaceable> del menú "
+"</replaceable>Acciones</guimenuitem> en la miniaplicación <guimenu>Barra de menú</guimenu>."
 
 #: C/system-admin-guide.xml:60(para)
 msgid ""
 "Also, any <guibutton>Lock Screen</guibutton> buttons and <guibutton>Log Out</"
 "guibutton> buttons on panels are disabled."
 msgstr ""
+"Además, se desactiva cualquier botón <guibutton>Bloquear pantalla</guibutton> y "
+"<guibutton>Salir</guibutton> en los paneles."
 
 #: C/system-admin-guide.xml:63(title)
 msgid "To Disable Command Line Operations"
@@ -7163,18 +7450,22 @@ msgid ""
 "To disable operations from a command line, set the <literal>/desktop/gnome/"
 "lockdown/disable_command_line</literal> key to <literal>true</literal>."
 msgstr ""
+"Para deshabilitar operaciones desde la línea de comandos, establezca la clave <literal>/desktop/gnome/"
+"lockdown/disable_command_line</literal> a <literal>true</literal>."
 
 #: C/system-admin-guide.xml:69(para)
 msgid ""
 "When you disable command line operations, the following changes occur in the "
 "user interface:"
 msgstr ""
+"Cuando desactiva las operaciones con la línea de comandos, ocurrirán los siguientes cambios en el "
+"interfaz del usuario:"
 
 #: C/system-admin-guide.xml:73(para)
 msgid ""
 "The <guimenuitem>Run Application</guimenuitem> menu item is removed from the "
 "following menus:"
-msgstr ""
+msgstr "Se eliminará el elemento del menú <guimenuitem>Ejecutar aplicación</guimenuitem> de los siguientes menús:"
 
 #: C/system-admin-guide.xml:78(guimenu) C/system-admin-guide.xml:116(guimenu)
 msgid "Main Menu"
@@ -7202,6 +7493,9 @@ msgid ""
 "start terminal applications. For example, you might want to remove menu "
 "items that contain the following commands from the menus:"
 msgstr ""
+"Para desactivar las operaciones desde la línea de comandos, también debe eliminar los "
+"elementos del menú que iniciar aplicaciones en un termnal. Por ejemplo, puede que quiera "
+"eliminar de los menús los elementos del menú que contienen los siguientes comandos:"
 
 #: C/system-admin-guide.xml:99(para)
 msgid ""
@@ -7241,6 +7535,13 @@ msgid ""
 "and the <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Utility</"
 "guimenuitem></menuchoice> menu."
 msgstr ""
+"Para desactivar las operaciones de la línea de comandos, también debe desactivar la "
+"miniaplicación <application>Línea de comandos</application>. Para desactivar "
+"la miniaplicación <application>Línea de comandos</application> añada la miniaplicación a "
+"la clave <literal>/apps/panel/global/disabled_applets</literal>.. Cuando desactive "
+"la miniaplicación <literal>Línea de comandos</literal>, la miniaplicación <application>Línea "
+"de comandos</application> se elimina del <application>Menú principal</application> y del menú "
+"<guimenu></guimenu>Añadir al panel<menuchoice><guimenu>Utilidades</guimenu><guimenuitem></guimenuitem>."
 
 #: C/system-admin-guide.xml:133(title)
 msgid "To Disable Panel Configuration"
@@ -7255,18 +7556,24 @@ msgid ""
 "To disable panel configuration, set the <literal>/apps/panel/global/"
 "locked_down</literal> key to <literal>true</literal>."
 msgstr ""
+"Para desactivar la configuración del panel, establezca la clave <literal>/apps/panel/global/"
+"locked_down</literal> a <literal>true</literal>."
 
 #: C/system-admin-guide.xml:139(para)
 msgid ""
 "When you disable panel configuration, the following changes occur in the "
 "user interface:"
 msgstr ""
+"Cuando desactiva la configuración del panel, ocurrirán los siguientes cambios en el "
+"interfaz de usuario:"
 
 #: C/system-admin-guide.xml:143(para)
 msgid ""
 "The following items are removed from the panel popup menu, and from the "
 "drawer popup menu:"
 msgstr ""
+"Se eliminan los siguientes elementos del menú contextual del panel y "
+"del menú contextual del cajón:"
 
 #: C/system-admin-guide.xml:153(guimenuitem)
 msgid "Delete This Panel"
@@ -7302,19 +7609,23 @@ msgstr "Mover"
 
 #: C/system-admin-guide.xml:192(para)
 msgid "The <guimenu>Main Menu</guimenu> popup menu is disabled."
-msgstr ""
+msgstr "Se desactiva el menú contextual  <guimenu>Menú principal</guimenu>."
 
 #: C/system-admin-guide.xml:195(para)
 msgid ""
 "The launcher drag feature is disabled, so that users cannot drag launchers "
 "to, or from, panels."
 msgstr ""
+"La característica de arrastrar del lanzador se deshabilita, de tal forma que los usuarios "
+"no pueden arrastrar lanzadores a, o desde los paneles."
 
 #: C/system-admin-guide.xml:199(para)
 msgid ""
 "The panel drag feature is disabled, so that users cannot drag panels to new "
 "locations."
 msgstr ""
+"La característica de arrastrar del panel se deshabilita, de tal forma que los usuarios "
+"no pueden arrastrar paneles a nuevos emplazamientos."
 
 #: C/system-admin-guide.xml:206(title)
 msgid "Lockdown Editor"
@@ -7326,6 +7637,9 @@ msgid ""
 "application> has been included to ease the task of disabling desktop "
 "settings."
 msgstr ""
+"Como parte de GNOME 2.14, se incluye un editor de restricciones gráfico llamado "
+"<application>Pessulus</application> para facilitar la tarea de deshabilitar ajustes "
+"del escritorio."
 
 #: C/system-admin-guide.xml:213(title)
 msgid "Getting Started"
@@ -7339,11 +7653,11 @@ msgstr "Para ejecutar el editor de bloqueos:"
 msgid ""
 "Click the <menuchoice><guimenu>Desktop</guimenu><guisubmenu>Administration</"
 "guisubmenu><guimenuitem>Lockdown Editor</guimenuitem></menuchoice>"
-msgstr ""
+msgstr "Pulse <menuchoice><guimenu>Escritorio</guimenu><guisubmenu>Administración</guisubmenu><guimenuitem>Editor de restricciones</guimenuitem></menuchoice>"
 
 #: C/system-admin-guide.xml:229(para)
 msgid "Run the <command>pessulus</command> command in a terminal window."
-msgstr ""
+msgstr "Ejecute el comando <command>pessulus</command> en una ventana de terminal."
 
 #: C/system-admin-guide.xml:234(para)
 msgid ""
@@ -7352,6 +7666,10 @@ msgid ""
 "the next section, we will discuss each category and provide a brief "
 "description for each setting that can be disabled."
 msgstr ""
+"Verá una ventana con varias solapas diferentes. Cada una de las solapas "
+"representa una categoría diferente para los ajustes del escritorio que pueden "
+"desactivarse. En la siguiente sección se discutirá cada categoría y se proporcionará "
+"un breve resumen para cada uno de los ajustes que se pueden desactivar."
 
 #: C/system-admin-guide.xml:241(title)
 msgid "Disabling Features"
@@ -7364,6 +7682,9 @@ msgid ""
 "some settings will require that the application be restarted in order to "
 "take effect."
 msgstr ""
+"Para desactivar un ajuste, asegúrese de que la casilla de verificación junto a la descripción "
+"del ajuste, está seleccionada. La mayoría de ajustes tomarán efecto inmediatamente, no obstante "
+"algunos ajustes necesitarán que se reinicie la aplicación para poder tomar efecto sobre ella."
 
 #: C/system-admin-guide.xml:248(para)
 msgid ""
@@ -7383,18 +7704,32 @@ msgid ""
 "<application>gconftool-2</application>. For more information on GConf and "
 "mandatory configuration sources, see <xref linkend=\"gconf-26\"/>."
 msgstr ""
+"Al iniciarse <application>pessulus</application>, tratará de obtener una "
+"conexión con la fuente de configuración obligatoria de GConf. La dirección de "
+"esta fuente de configuración es <literal>xml:merged:<replaceable>$prefix</"
+"replaceable>/etc/gconf/gconf.xml.mandatory</literal>. Si el usuario "
+"que está ejecutando <application>pessulus</application> tiene acceso a esta "
+"fuente de configuración, entonces se mostrará un icono de candado junto a la casilla de verificación para cada "
+"ajuste. Al pulsar sobre el candado se conmutará entre si el ajuste es obligatorio o no. "
+"Si el ajuste es obligatorio, entonces los usuarios normales no podrán cambiar o sobreescribir el ajuste. "
+"Si el usuario que está ejecutando pessulus no tiene acceso a la fuente de configuración predeterminada, entonces no aparecerá "
+"el icono del candado. En este caso, todos los ajustes desactivados se almacenarán en la fuente de configuración predeterminada del usuario y podrán ser modificados posteriormente usando otras herramientas tales como <application>gconf-editor</application> o <application>gconftool-2</application>. Para obtener más información acerca de GConf y las fuentes de configuración obligatorias, consulte la <xref linkend=\"gconf-26\"/>."
 
 #: C/system-admin-guide.xml:265(para)
 msgid ""
 "The following subsections will give a brief description of the settings that "
 "can be disabled for each category."
 msgstr ""
+"Las siguientes subsecciones proporcionan una breve descripción de los ajustes "
+"que se pueden desactivar para cada categoría."
 
 #: C/system-admin-guide.xml:269(para)
 msgid ""
 "Depending on the applications you have installed, you may see fewer "
 "categories than those described in this section."
 msgstr ""
+"Dependiendo de las aplicaciones que tenga instaladas, quizá vea menos categorías "
+"de las descritas en esta sección."
 
 #: C/system-admin-guide.xml:274(title)
 msgid "General"
@@ -7549,7 +7884,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:403(term)
 msgid "Disable javascript chrome"
-msgstr ""
+msgstr "Desactivar chrome javascript"
 
 #: C/system-admin-guide.xml:406(para)
 msgid "Disable JavaScript's control over window chrome."
@@ -7968,7 +8303,7 @@ msgstr ".omf"
 
 #: C/system-admin-guide.xml:34(glossterm)
 msgid "application registry"
-msgstr "registro de la aplicación"
+msgstr "registro de aplicación"
 
 #: C/system-admin-guide.xml:36(para)
 msgid ""
@@ -7977,6 +8312,9 @@ msgid ""
 "GNOME Desktop is <filename>$XDG_DATA_DIRS:$XDG_DATA_HOME/applications/</"
 "filename>."
 msgstr ""
+"El registro de aplicación es una colección de archivos de entrada de escritorio que "
+"registran aplicaciones. La ubicación del registro de aplicación para el Escritorio GNOME es "
+"<filename>$XDG_DATA_DIRS:$XDG_DATA_HOME/applications/</filename>."
 
 #: C/system-admin-guide.xml:42(glossterm)
 msgid "desktop entry file"
@@ -7989,6 +8327,10 @@ msgid ""
 "run, an icon, and so on. Desktop entry files have a <filename>.desktop</"
 "filename> file extension."
 msgstr ""
+"Un archivo de datos que proporciona información acerca de un elemento en un menú. El archivo "
+"de entrada de escritorio especifica los detalles para el elemento tales como el nombre, el comando a "
+"ejecutar, un icono y demás. Los archivos de entrada de escritorio tienen una extensión de archivo "
+"<filename>.desktop</filename>."
 
 #: C/system-admin-guide.xml:50(glossterm)
 msgid "directory entry file"
@@ -8001,6 +8343,10 @@ msgid ""
 "an icon to represent the menu. Directory entry files have a <filename>."
 "directory</filename> file extension."
 msgstr ""
+"Un archivo de datos que proporciona información acerca de un menú. El archivo de entrada de "
+"directorio especifica detalles tales como el nombre para el menú, un consejo para el menú y un "
+"icono para representar en el menú. Los archivos de entrada de directorio tienen una extensión "
+"de archivo <filename>.directory</filename>."
 
 #: C/system-admin-guide.xml:58(glossterm)
 msgid "GConf configuration source"
@@ -8026,6 +8372,11 @@ msgid ""
 "<guilabel>Show splash screen on login</guilabel> option in the "
 "<application>Sessions</application> preference tool."
 msgstr ""
+"Un elemento en el repositorio de <application>GConf</application> que "
+"corresponde con una preferencia de una aplicación. Por ejemplo, la clave "
+"<literal>/apps/gnome-session/options/show_splash_screen</literal> corresponde "
+"con la opción <guilabel>Mostrar la pantalla de bienvenida al iniciar sesión</guilabel> en la "
+"herramienta de preferencias <application>Sesiones</application>."
 
 #: C/system-admin-guide.xml:73(glossterm)
 msgid "GConf path file"
@@ -8057,6 +8408,11 @@ msgid ""
 "definition files. Schema definition files have a <filename>.schemas</"
 "filename> file extension."
 msgstr ""
+"Un archivo de definición de esquema de <application>GConf</application> lista las claves "
+"en una aplicación particular y define las características de las claves. Los esquemas de "
+"<application>GConf</application> se generan de archivos de definición de esquemas. Los "
+"archivos de definición de esquema tienen una extensión de archivo <filename>.schemas</"
+"filename>."
 
 #: C/system-admin-guide.xml:96(glossterm)
 msgid "GConf schema key"
@@ -8069,6 +8425,9 @@ msgid ""
 "key for the <literal>/desktop/gnome/interface/font_name</literal> preference "
 "key."
 msgstr ""
+"Una clave que almacena un objeto de esquema para una clave de preferencia. Por ejemplo, "
+"<literal>/schemas/desktop/gnome/interface/font_name</literal> es una clave de esquema "
+"para la clave de preferencia <literal>/desktop/gnome/interface/font_name</literal>."
 
 #: C/system-admin-guide.xml:105(glossterm)
 msgid "GConf schema object"
@@ -8080,6 +8439,9 @@ msgid ""
 "preference key. The schema object contains information such as a default "
 "value for the preference key, and documentation on the preference key."
 msgstr ""
+"Un elemento en una fuente de configuración que contiene información acerca de una "
+"clave de preferencia. El objeto de esquema contiene información tal como el valor "
+"predeterminado para la clave de preferencia y documentación sobre la clave de preferencia."
 
 #: C/system-admin-guide.xml:113(glossterm)
 msgid "glob pattern"
