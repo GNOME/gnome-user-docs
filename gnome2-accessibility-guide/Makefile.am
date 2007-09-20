@@ -4,12 +4,12 @@ dist-hook: doc-dist-hook
 DOC_MODULE = gnome-access-guide
 DOC_ENTITIES =			\
 	accessintro.xml		\
-	ats.xml			\
-	dtconfig.xml		\
-	keynav.xml		\
 	preface.xml		\
 	sysadmin.xml		\
-	themes.xml		\
+	enable.xml  \
+	general.xml \
+	low-vision.xml  \
+	mobility.xml	\
 	legal.xml
 
 DOC_LINGUAS = de el en_GB es fr it pt sv
