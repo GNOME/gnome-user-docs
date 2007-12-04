@@ -15,7 +15,7 @@ DOC_INCLUDES =			\
 	gosfeedback.xml		\
 	glossary.xml
 
-DOC_LINGUAS = ar bg de el es fi fr hu it ko pa pt pt_BR ru sv zh_CN
+DOC_LINGUAS = ar bg de el es fi fr hu it ko oc pa pt pt_BR ru sv zh_CN
 
 install-data-local: install-doc-pdf
 install-doc-pdf:
