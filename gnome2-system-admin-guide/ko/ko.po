@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: system-admin-guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-21 03:14+0000\n"
-"PO-Revision-Date: 2008-01-29 16:29+0900\n"
+"PO-Revision-Date: 2008-02-11 18:25+0900\n"
 "Last-Translator: Namhyung Kim <namhyung@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
 "MIME-Version: 1.0\n"
@@ -1681,15 +1681,15 @@ msgstr "이 명령은 사용자 설정 소스와 기본값 설정 소스 내의 
 
 #: C/system-admin-guide.xml:3(title)
 msgid "Customizing Menus"
-msgstr ""
+msgstr "메뉴 설정하기"
 
 #: C/system-admin-guide.xml:12(para)
 msgid "The information in this chapter describes how the GNOME Desktop implements menus and how you can customize menus."
-msgstr ""
+msgstr "이 부분에서는 그놈 데스크탑에서 메뉴를 구현하는 방법과 이를 적절히 설정하는 방법에 대해 설명합니다."
 
 #: C/system-admin-guide.xml:17(title)
 msgid "Introduction to Menus"
-msgstr ""
+msgstr "개요"
 
 #: C/system-admin-guide.xml:20(primary)
 #: C/system-admin-guide.xml:660(primary)
@@ -1702,93 +1702,93 @@ msgstr ""
 #: C/system-admin-guide.xml:953(primary)
 #: C/system-admin-guide.xml:1034(primary)
 msgid "menus"
-msgstr ""
+msgstr "메뉴"
 
 #: C/system-admin-guide.xml:25(para)
 msgid "The GNOME Desktop implements menus according to the <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG menu specification</ulink>. By supporting this specification, GNOME allows you to:"
-msgstr ""
+msgstr "그놈 데스크탑은 <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG 메뉴 명세서</ulink>에 따라 메뉴를 구현합니다. 이 명세서에 따라 그놈 데스크탑은 다음과 같은 기능을 제공합니다:"
 
 #: C/system-admin-guide.xml:32(para)
 msgid "Customize the menu hierarchy easily. You can edit a small number of files to customize the menu hierarchy. You do not need to modify your applications or move files."
-msgstr ""
+msgstr "메뉴의 구조를 쉽게 조정할 수 있습니다. 메뉴의 계층 구조를 조정하기 위해서는 소수의 파일 만을 편집하면 되며, 프로그램이나 파일을 직접 수정하거나 이동할 필요가 없습니다."
 
 #: C/system-admin-guide.xml:38(para)
 msgid "Install applications easily. You do not need to provide information about the menu hierarchy to applications when you install the applications."
-msgstr ""
+msgstr "프로그램을 쉽게 설치할 수 있습니다. 프로그램을 설치할 때 메뉴의 구조에 대한 정보를 제공할 필요가 없습니다."
 
 #: C/system-admin-guide.xml:44(para)
 msgid "Configure menus so that users cannot modify the menus."
-msgstr ""
+msgstr "메뉴를 사용자들이 수정하지 못하도록 설정합니다."
 
 #: C/system-admin-guide.xml:48(para)
 msgid "Menus in the GNOME Desktop use the following components:"
-msgstr ""
+msgstr "그놈 데스크탑 내의 메뉴들은 다음과 같은 요소들을 사용합니다:"
 
 #: C/system-admin-guide.xml:52(para)
 #: C/system-admin-guide.xml:139(glossterm)
 msgid "Menu definition files"
-msgstr ""
+msgstr "메뉴 정의 파일"
 
 #: C/system-admin-guide.xml:56(para)
 msgid "Desktop entry files"
-msgstr ""
+msgstr "데스크탑 엔트리 파일"
 
 #: C/system-admin-guide.xml:60(para)
 msgid "Directory entry files"
-msgstr ""
+msgstr "디렉토리 엔트리 파일"
 
 #: C/system-admin-guide.xml:66(title)
 msgid "Menu Definition Files"
-msgstr ""
+msgstr "메뉴 정의 파일"
 
 #: C/system-admin-guide.xml:69(primary)
 #: C/system-admin-guide.xml:75(see)
 msgid "menu definition files"
-msgstr ""
+msgstr "메뉴 정의 파일"
 
 #: C/system-admin-guide.xml:73(primary)
 msgid ".menu files"
-msgstr ""
+msgstr ".menu 파일"
 
 #: C/system-admin-guide.xml:78(para)
 msgid "Menu files define the hierarchy of menus that are used in the GNOME menu bar. By modifying these files, you can customize menus for all users, or for a single user depending on the location of the <filename>applications.menu</filename> file that you modify."
-msgstr ""
+msgstr "메뉴 파일은 그놈 메뉴 모음에서 사용되는 메뉴들의 계층 구조를 정의합니다. 이 파일을 수정하여 모든 사용자에게 적용되는 메뉴를 조정하거나, 지정한 <filename>applications.menu</filename> 파일의 위치에 따라 특정 사용자에게 적용되는 메뉴를 조정할 수 있습니다."
 
 #: C/system-admin-guide.xml:86(para)
 msgid "$XDG_CONFIG_DIRS is the environment variable defined in the <ulink url=\"http://www.freedesktop.org/Standards/basedir-spec\">XDG base directory specification</ulink>."
-msgstr ""
+msgstr "$XDG_CONFIG_DIRS는 <ulink url=\"http://www.freedesktop.org/Standards/basedir-spec\">XDG 기본 디렉토리 명세서</ulink>에 정의된 환경 변수입니다."
 
 #: C/system-admin-guide.xml:83(para)
 msgid "Menu files must reside at <filename>$XDG_CONFIG_DIRS/menus/applications.menu</filename>. If <envar>$XDG_CONFIG_DIRS</envar><placeholder-1/> is not set, then the default path <filename>/etc/xdg</filename> is used. This also implies that a user specific version may be located at <filename>$XDG_CONFIG_HOME/menus/applications.menu</filename> which is searched first. If <envar>$XDG_CONFIG_HOME</envar> is not set, then the default path <filename>~/.config</filename> is used. Directories which appear first in <envar>$XDG_CONFIG_DIRS</envar> are given precedence when there are several <filename>applications.menu</filename> files. The first file found is used and subsequent files are ignored."
-msgstr ""
+msgstr "메뉴 파일은 <filename>$XDG_CONFIG_DIRS/menus/applications.menu</filename> 파일입니다. 만약 <envar>$XDG_CONFIG_DIRS</envar><placeholder-1/> 변수가 설정되어 있지 않다면, 기본 경로인 <filename>/etc/xdg</filename>가 사용됩니다. 이것은 사용자가 수정한 버전의 파일은 <filename>$XDG_CONFIG_HOME/menus/applications.menu</filename>에 존재할 수 있으며, 이 경우 해당 파일이 먼저 사용된다는 것을 의미합니다. 만약 <envar>$XDG_CONFIG_HOME</envar> 변수가 설정되어 있지 않으면, 기본 경로인 <filename>~/.config</filename>가 사용됩니다. 여러 개의 <filename>applications.menu</filename> 파일이 존재하는 경우에는 <envar>$XDG_CONFIG_DIRS</envar> 변수 내에서 먼저 나오는 디렉토리가 우선 순위를 가집니다. 이 경우 첫 번째로 찾은 파일이 사용되며 나머지는 무시됩니다."
 
 #: C/system-admin-guide.xml:99(para)
 msgid "If you are confused about the order in which paths are searched, here is a simple list for resolving the location of <filename>applications.menu</filename>:"
-msgstr ""
+msgstr "어떤 순서로 경로를 검색하는지 혼동스러운 사람들을 위해, 아래에서 <filename>applications.menu</filename> 파일의 위치를 찾기 위한 경로의 목록을 설명합니다:"
 
 #: C/system-admin-guide.xml:105(para)
 msgid "Search each directory in <envar>$XDG_CONFIG_HOME</envar> in order to find <filename>menus/applications.menu</filename>. If <envar>$XDG_CONFIG_HOME</envar> is not set, it defaults to the <filename>~/.config/</filename> directory."
-msgstr ""
+msgstr "<envar>$XDG_CONFIG_HOME</envar> 변수 내의 각 디렉토리를 순서대로 검색하여 <filename>menus/applications.menu</filename> 파일을 찾습니다. 만약 <envar>$XDG_CONFIG_HOME</envar> 변수가 설정되지 않았다면, 기본 값인  <filename>~/.config/</filename> 디렉토리가 사용됩니다."
 
 #: C/system-admin-guide.xml:112(para)
 msgid "Search each directory in <envar>$XDG_CONFIG_DIRS</envar> in order to find <filename>menus/applications.menu</filename>. If <filename>$XDG_CONFIG_DIRS</filename> is not set, it defaults to the <filename>/etc/xdg/</filename> directory."
-msgstr ""
+msgstr "<envar>$XDG_CONFIG_DIRS</envar> 변수 내의 각 디렉토리를 순서대로 검색하여 <filename>menus/applications.menu</filename> 파일을 찾습니다. 만약 <filename>$XDG_CONFIG_DIRS</filename> 변수가 설정되지 않았다면, 기본 값인 <filename>/etc/xdg/</filename> 디렉토리가 사용됩니다."
 
 #: C/system-admin-guide.xml:119(para)
 msgid "Use the first <filename>applications.menu</filename> file found."
-msgstr ""
+msgstr "처음으로 찾은 <filename>applications.menu</filename> 파일을 사용합니다."
 
 #: C/system-admin-guide.xml:124(para)
 msgid "You can see an example of a <filename>.menu</filename> file in <xref linkend=\"example-menu\"/>. In this example, the top level menu is named <literal>Applications</literal>, which is specified using the <literal>&lt;Name&gt;</literal> element. The <literal>Applications</literal> menu contains a single submenu, but several submenus are allowed. Each submenu may also have an <literal>&lt;Include&gt;</literal> element. The purpose of the <literal>&lt;Include&gt;</literal> element is to perform a filter on the set of available desktop entries using matching rules."
-msgstr ""
+msgstr " <xref linkend=\"example-menu\"/> 부분에서 <filename>.menu</filename> 파일의 예를 보여줍니다. 이 예제에서 최상위 메뉴는 <literal>Applications</literal>이며, 이는 <literal>&lt;Name&gt;</literal> 엘리먼트에서 볼 수 있습니다. <literal>Applications</literal> 메뉴는 하나의 하위 메뉴 만을 포함하지만, 여러 개의 하위 메뉴를 가질 수도 있습니다. 각 하위 메뉴는 <literal>&lt;Include&gt;</literal> 엘리먼트를 가질 수 있습니다. <literal>&lt;Include&gt;</literal> 엘리먼트는 매칭 규칙을 사용하여 적절한 데스크탑 엔트리를 걸러내는 작업을 위해 사용됩니다."
 
 #: C/system-admin-guide.xml:134(para)
 msgid "For example, the <literal>&lt;Category&gt;</literal> element is a basic matching rule that selects a <link linkend=\"menustructure-desktopentry\"><emphasis>desktop entry</emphasis></link> only if the <link linkend=\"category-key\"><literal>Categories</literal> key</link> contains the content of the <literal>&lt;Category&gt;</literal> element. In the example, the <literal>Accessories</literal> menu will include a <emphasis>desktop entry</emphasis> only if it contains <quote>Utility</quote> but not <quote>System</quote> in the Categories key. For more information on the Categories key, see <xref linkend=\"menustructure-desktopentry\"/>."
-msgstr ""
+msgstr "예르 들어 <literal>&lt;Category&gt;</literal> 엘리먼트는 오직 <link linkend=\"category-key\"><literal>분류</literal> 키</link>가 <literal>&lt;Category&gt;</literal> 엘리먼트의 내용을 포함하는 <link linkend=\"menustructure-desktopentry\"><emphasis>데스크탑 엔트리</emphasis></link>를 선택하는 기본 매칭 규칙입니다. 이 예제에서 <literal>Accessories</literal> 메뉴는 분류 키에 <quote>Utility</quote>를 포함하지만  <quote>System</quote>을 포함하지 않는 <emphasis>데스크탑 엔트리</emphasis> 만을 포함할 것입니다. 분류 키에 대한 자세한 정보는 <xref linkend=\"menustructure-desktopentry\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:147(title)
 msgid "Example of a <filename>.menu</filename> file"
-msgstr ""
+msgstr "<filename>.menu</filename> 파일의 예"
 
 #: C/system-admin-guide.xml:149(programlisting)
 #, no-wrap
@@ -1821,129 +1821,156 @@ msgid ""
 "\n"
 "&lt;/Menu&gt; &lt;!-- End Applications --&gt;\n"
 msgstr ""
+"&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
+" \"http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd\"&gt;\n"
+"&lt;Menu&gt;\n"
+"  &lt;Name&gt;Applications&lt;/Name&gt;\n"
+"  &lt;Directory&gt;Applications.directory&lt;/Directory&gt;\n"
+"\n"
+"  &lt;!-- Read standard .directory and .desktop file locations --&gt;\n"
+"  &lt;DefaultAppDirs/&gt;\n"
+"  &lt;DefaultDirectoryDirs/&gt;\n"
+"\n"
+"  &lt;!-- Accessories submenu --&gt;\n"
+"  &lt;Menu&gt;\n"
+"    &lt;Name&gt;Accessories&lt;/Name&gt;\n"
+"    &lt;Directory&gt;Accessories.directory&lt;/Directory&gt;\n"
+"    &lt;Include&gt;\n"
+"      &lt;And&gt;\n"
+"        &lt;Category&gt;Utility&lt;/Category&gt;\n"
+"        &lt;Not&gt;\n"
+"          &lt;Category&gt;System&lt;/Category&gt;\n"
+"        &lt;/Not&gt;\n"
+"      &lt;/And&gt;\n"
+"    &lt;/Include&gt;\n"
+"  &lt;/Menu&gt; &lt;!-- End Accessories --&gt;\n"
+"\n"
+"  &lt;!-- possibly more submenus --&gt;\n"
+"\n"
+"&lt;/Menu&gt; &lt;!-- End Applications --&gt;\n"
 
 #: C/system-admin-guide.xml:179(para)
 msgid "<xref linkend=\"menustructure-xmlmenu\"/> describes some of the elements in <filename>.menu</filename> files. For a more detailed description, please see the <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG menu specification</ulink>."
-msgstr ""
+msgstr "<xref linkend=\"menustructure-xmlmenu\"/>는 <filename>.menu</filename> 파일 내의 엘리먼트 중의 일부에 대해 설명합니다. 보다 자세한 내용은 <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG 메뉴 명세서</ulink>를 보기 바랍니다."
 
 #: C/system-admin-guide.xml:186(title)
 msgid "Menu Definition File Elements"
-msgstr ""
+msgstr "메뉴 정의 파일 엘리먼트"
 
 #: C/system-admin-guide.xml:195(para)
 msgid "Element"
-msgstr ""
+msgstr "엘리먼트"
 
 #: C/system-admin-guide.xml:204(literal)
 msgid "&lt;Menu&gt;"
-msgstr ""
+msgstr "&lt;Menu&gt;"
 
 #: C/system-admin-guide.xml:206(para)
 msgid "The root element which may contain nested <literal>&lt;Menu&gt;</literal> elements that define submenus. How these elements are nested determines the menu structure."
-msgstr ""
+msgstr "최상위 엘리먼트이며, 하위 메뉴를 정의하는 <literal>&lt;Menu&gt;</literal> 엘리먼트를 내부에 포함할 수 있습니다. 이러한 하위 메뉴의 배치가 메뉴 구조를 결정합니다."
 
 #: C/system-admin-guide.xml:214(literal)
 msgid "&lt;Name&gt;"
-msgstr ""
+msgstr "&lt;Name&gt;"
 
 #: C/system-admin-guide.xml:216(para)
 msgid "Specifies the name of the menu. Every <literal>&lt;Menu&gt;</literal> element must contain a <literal>&lt;Name&gt;</literal> element."
-msgstr ""
+msgstr "메뉴의 이름을 지정합니다. 모든  <literal>&lt;Menu&gt;</literal> 엘리먼트는 반드시  <literal>&lt;Name&gt;</literal> 엘리먼트를 포함해야 합니다."
 
 #: C/system-admin-guide.xml:223(literal)
 msgid "&lt;Directory&gt;"
-msgstr ""
+msgstr "&lt;Directory&gt;"
 
 #: C/system-admin-guide.xml:226(para)
 msgid "Specifies the name of the directory entry file that specifies the name, comment, and icon for the menu. If this element is not specified, then the <literal>&lt;Name&gt;</literal> element is to be used to display the menu name."
-msgstr ""
+msgstr "메뉴의 이름, 설명, 아이콘 등을 포함하는 디렉토리 엔트리 파일의 이름을 지정합니다. 만약 이 엘리먼트가 없다면 <literal>&lt;Name&gt;</literal> 엘리먼트의 내용이 메뉴의 이름으로 표시됩니다."
 
 #: C/system-admin-guide.xml:230(para)
 msgid "By default, <filename>.directory</filename> files are searched for in the location <filename>$XDG_DATA_DIRS/desktop-directories/</filename> as set forth in the <citetitle>XDG menu specification.</citetitle>"
-msgstr ""
+msgstr "기본적으로 <citetitle>XDG 메뉴 명세서</citetitle>에서 지정한 대로 <filename>$XDG_DATA_DIRS/desktop-directories/</filename> 위치 내에서 <filename>.directory</filename> 파일을 검색합니다."
 
 #: C/system-admin-guide.xml:240(literal)
 msgid "&lt;DefaultAppDirs&gt;"
-msgstr ""
+msgstr "&lt;DefaultAppDirs&gt;"
 
 #: C/system-admin-guide.xml:244(filename)
 msgid "$XDG_DATA_DIRS/applications/"
-msgstr ""
+msgstr "$XDG_DATA_DIRS/applications/"
 
 #: C/system-admin-guide.xml:242(entry)
 msgid "This is an instruction which indicates that all the available desktop entries from <placeholder-1/> should be scanned. If this instruction is not included, then these locations are not scanned for desktop entries."
-msgstr ""
+msgstr "이것은 <placeholder-1/> 내에서 이용 가능한 모든 데스크탑 엔트리를 찾으라는 지시입니다. 만약 이러한 지시가 포함되지 않았다면 이 위치에서는 데스크탑 엔트리를 찾지 않을 것입니다."
 
 #: C/system-admin-guide.xml:251(literal)
 msgid "&lt;DefaultDirectoryDirs&gt;"
-msgstr ""
+msgstr "&lt;DefaultDirectoryDirs&gt;"
 
 #: C/system-admin-guide.xml:255(filename)
 msgid "$XDG_DATA_DIRS/desktop-directories/"
-msgstr ""
+msgstr "$XDG_DATA_DIRS/desktop-directories/"
 
 #: C/system-admin-guide.xml:253(entry)
 msgid "This is an instruction which indicates that all the available directory entries from <placeholder-1/> should be scanned. If the instruction is not included, then these locations are not scanned for directory entries."
-msgstr ""
+msgstr "이것은 <placeholder-1/> 내에서 이용 가능한 모든 디렉토리 엔트리를 찾으라는 지시입니다. 만약 이러한 지시가 포함되지 않았다면 이 위치에서는 디렉토리 엔트리를 찾지 않을 것입니다."
 
 #: C/system-admin-guide.xml:262(literal)
 #: C/system-admin-guide.xml:280(literal)
 #: C/system-admin-guide.xml:283(literal)
 msgid "&lt;Include&gt;"
-msgstr ""
+msgstr "&lt;Include&gt;"
 
 #: C/system-admin-guide.xml:266(literal)
 #: C/system-admin-guide.xml:289(literal)
 #: C/system-admin-guide.xml:293(literal)
 msgid "&lt;Filename&gt;"
-msgstr ""
+msgstr "&lt;Filename&gt;"
 
 #: C/system-admin-guide.xml:267(literal)
 #: C/system-admin-guide.xml:298(literal)
 #: C/system-admin-guide.xml:302(literal)
 msgid "&lt;Category&gt;"
-msgstr ""
+msgstr "&lt;Category&gt;"
 
 #: C/system-admin-guide.xml:268(literal)
 #: C/system-admin-guide.xml:307(literal)
 #: C/system-admin-guide.xml:312(literal)
 msgid "&lt;And&gt;"
-msgstr ""
+msgstr "&lt;And&gt;"
 
 #: C/system-admin-guide.xml:268(literal)
 #: C/system-admin-guide.xml:316(literal)
 #: C/system-admin-guide.xml:321(literal)
 msgid "&lt;Or&gt;"
-msgstr ""
+msgstr "&lt;Or&gt;"
 
 #: C/system-admin-guide.xml:269(literal)
 #: C/system-admin-guide.xml:325(literal)
 #: C/system-admin-guide.xml:330(literal)
 msgid "&lt;Not&gt;"
-msgstr ""
+msgstr "&lt;Not&gt;"
 
 #: C/system-admin-guide.xml:269(literal)
 #: C/system-admin-guide.xml:334(literal)
 msgid "&lt;All&gt;"
-msgstr ""
+msgstr "&lt;All&gt;"
 
 #: C/system-admin-guide.xml:271(emphasis)
 #: C/system-admin-guide.xml:280(emphasis)
 #: C/system-admin-guide.xml:337(emphasis)
 msgid "desktop entries"
-msgstr ""
+msgstr "데스크탑 엔트리"
 
 #: C/system-admin-guide.xml:264(entry)
 msgid "Contains a list of matching rules by which the contents of a menu are generated. May include the <placeholder-1/>, <placeholder-2/>, <placeholder-3/>, <placeholder-4/>, <placeholder-5/>, or <placeholder-6/> matching rules. If more than one rule is present, the rules are logically ORed so that <placeholder-7/> that match any rule are included."
-msgstr ""
+msgstr "메뉴의 내용을 만들어 낼 매칭 규칙의 목록을 포함합니다. 여기에는 <placeholder-1/>, <placeholder-2/>, <placeholder-3/>, <placeholder-4/>, <placeholder-5/>, <placeholder-6/> 등의 매칭 규칙이 사용될 수 있습니다. 만약 하나 이상의 규칙이 포함되면 각 규칙들은 논리합(logical OR)으로 연결되므로, 이러한 규칙 중 어느 하나라도 만족하는 <placeholder-7/>는 모두 포함됩니다."
 
 #: C/system-admin-guide.xml:277(literal)
 msgid "&lt;Exclude&gt;"
-msgstr ""
+msgstr "&lt;Exclude&gt;"
 
 #: C/system-admin-guide.xml:279(entry)
 msgid "The opposite of <placeholder-1/> since any <placeholder-2/> that are matched in this element are excluded from the previous set of included elements. For this reason, this element must appear after the <placeholder-3/> element."
-msgstr ""
+msgstr "<placeholder-1/>와 반대되는 엘리먼트로 이 엘리먼트 내의 규칙에 매칭되는 모든 <placeholder-2/>는 포함된 엘리먼트 집합에서 제외됩니다. 따라서 이 엘리먼트는 반드시 <placeholder-3/> 엘리먼트 보다 뒤에 나와야 합니다."
 
 #: C/system-admin-guide.xml:292(emphasis)
 #: C/system-admin-guide.xml:301(emphasis)
@@ -1951,69 +1978,69 @@ msgstr ""
 #: C/system-admin-guide.xml:319(emphasis)
 #: C/system-admin-guide.xml:328(emphasis)
 msgid "desktop entry"
-msgstr ""
+msgstr "데스크탑 엔트리"
 
 #: C/system-admin-guide.xml:291(entry)
 msgid "A matching rule that selects a <placeholder-1/> when the Desktop File-Id matches the contents of the <placeholder-2/> element."
-msgstr ""
+msgstr "데스크탑 파일 ID가 <placeholder-2/> 엘리먼트의 내용과 일치할 때 <placeholder-1/>를 선택하는 매칭 규칙."
 
 #: C/system-admin-guide.xml:300(entry)
 msgid "A matching rule that selects a <placeholder-1/> when the Categories key matches the contents of the <placeholder-2/> element."
-msgstr ""
+msgstr "분류 키가 <placeholder-2/> 엘리먼트의 내용과 일치할 때 <placeholder-1/>를 선택하는 매칭 규칙."
 
 #: C/system-admin-guide.xml:311(emphasis)
 msgid "all"
-msgstr ""
+msgstr "모든"
 
 #: C/system-admin-guide.xml:309(entry)
 msgid "A matching rule that selects a <placeholder-1/> when it is selected by <placeholder-2/> the nested matching rules in the <placeholder-3/> element."
-msgstr ""
+msgstr "<placeholder-3/> 엘리먼트 내에 포함된 <placeholder-2/> 매칭 규칙들과 일치할 때 <placeholder-1/>를 선택하는 매칭 규칙."
 
 #: C/system-admin-guide.xml:320(emphasis)
 #: C/system-admin-guide.xml:329(emphasis)
 msgid "any"
-msgstr ""
+msgstr "어떤"
 
 #: C/system-admin-guide.xml:318(entry)
 msgid "A matching rule that selects a <placeholder-1/> when it is selected by <placeholder-2/> of the nested matching rules in the <placeholder-3/> element."
-msgstr ""
+msgstr "<placeholder-3/> 엘리먼트 내에 포함된 <placeholder-2/> 매칭 규칙들과 일치할 때 <placeholder-1/>를 선택하는 매칭 규칙."
 
 #: C/system-admin-guide.xml:327(entry)
 msgid "A matching rule that does not select a <placeholder-1/> when it is selected by <placeholder-2/> of the nested matching rules in the <placeholder-3/> element."
-msgstr ""
+msgstr "<placeholder-3/> 엘리먼트 내에 포함된 <placeholder-2/> 매칭 규칙들과 일치할 때 <placeholder-1/>를 선택하지 않는 매칭 규칙."
 
 #: C/system-admin-guide.xml:336(entry)
 msgid "A matching rule which selects all <placeholder-1/>."
-msgstr ""
+msgstr "모든 <placehollder-1/>를 선택하는 매칭 규칙."
 
 #: C/system-admin-guide.xml:345(title)
 msgid "Desktop Entry Files"
-msgstr ""
+msgstr "데스크탑 엔트리 파일"
 
 #: C/system-admin-guide.xml:350(primary)
 #: C/system-admin-guide.xml:356(see)
 msgid "desktop entry files"
-msgstr ""
+msgstr "데스크탑 엔트리 파일"
 
 #: C/system-admin-guide.xml:354(primary)
 msgid ".desktop files"
-msgstr ""
+msgstr ".desktop 파일"
 
 #: C/system-admin-guide.xml:359(para)
 msgid "A <firstterm>desktop entry file</firstterm> is a data file that provides information about an item in a menu. The desktop entry file specifies the details for the item such as a name, a command to run, an icon, and so on. It also contains keywords which determine the location of the item in the menu hierarchy."
-msgstr ""
+msgstr "<firstterm>데스크탑 엔트리 파일</firstterm>은 메뉴 내의 한 항목에 대한 정보를 제공하는 데이터 파일입니다. 데스크탑 엔트리 파일은 해당 항목의 이름, 실행할 명령, 아이콘 등과 같은 세부 정보를 지정합니다. 또한 여기에는 메뉴 계층 내에 항목이 포함될 위치를 결정하는 키워드도 포함됩니다."
 
 #: C/system-admin-guide.xml:369(para)
 msgid "$XDG_DATA_DIRS is the environment variable defined in the <ulink url=\"http://www.freedesktop.org/Standards/basedir-spec\">XDG base directory specification</ulink>."
-msgstr ""
+msgstr "$XDG_DATA_DIRS는 <ulink url=\"http://www.freedesktop.org/Standards/basedir-spec\">XDG 기본 디렉토리 명세서</ulink>에 정의된 환경 변수입니다."
 
 #: C/system-admin-guide.xml:365(para)
 msgid "Desktop entry files must reside in the <filename>$XDG_DATA_DIRS/applications</filename> directory and must have a <filename>.desktop</filename> file extension. If <envar>$XDG_DATA_DIRS</envar><placeholder-1/> is not set, then the default path is <filename>/usr/share</filename> is used. This also implies that user specific desktop entries may be located at <filename>$XDG_DATA_HOME/applications</filename> which is searched first. If <envar>$XDG_DATA_HOME</envar> is not set, then the default path <filename>~/.local/share</filename> is used. Desktop entries are collected from all directories in the <envar>$XDG_DATA_DIRS</envar> environment variable. Directories which appear first in <envar>$XDG_CONFIG_DIRS</envar> are given precedence when there are several <filename>.desktop</filename> files with the same name."
-msgstr ""
+msgstr "데스크탑 엔트리 파일은 반드시 <filename>$XDG_DATA_DIRS/applications</filename> 디렉토리 내에 있어야 하며, <filename>.desktop</filename> 파일 확장자를 사용해야 합니다. 만약 <envar>$XDG_DATA_DIRS</envar><placeholder-1/> 변수가 설정되어 있지 않으면 기본값인 <filename>/usr/share</filename> 경로가 사용됩니다. 이것은 사용자가 지정한 데스크탑 엔트리들은 <filename>$XDG_DATA_HOME/applications</filename> 디렉토리 내에 있어야 하며, 이 경로가 먼저 검색된다는 것을 뜻합니다. 만약 <envar>$XDG_DATA_HOME</envar> 변수가 설정되어 있지 않으면, 기본값인 <filename>~/.local/share</filename> 경로가 사용됩니다. 데스크탑 엔트리들은 <envar>$XDG_DATA_DIRS</envar> 환경 변수 내의 모든 디렉토리에서 수집됩니다. 만약 같은 이름의 <filename>.desktop</filename> 파일이 여러 개 있는 경우에는, <envar>$XDG_CONFIG_DIRS</envar> 내에서 먼저 나타난 디렉토리에 있는 것이 사용됩니다."
 
 #: C/system-admin-guide.xml:383(para)
 msgid "The following is a sample desktop entry file:"
-msgstr ""
+msgstr "아래는 데스크탑 엔트리 파일의 예제입니다:"
 
 #: C/system-admin-guide.xml:385(programlisting)
 #, no-wrap
@@ -2033,167 +2060,181 @@ msgid ""
 "StartupNotify=true\n"
 "Categories=GTK;GNOME;Application;Utility;"
 msgstr ""
+"[Desktop Entry]\n"
+"Encoding=UTF-8\n"
+"Name=Calculator\n"
+"Name[fr]=Calculatrice\n"
+"...\n"
+"Comment=Perform calculations\n"
+"Comment[fr]=Effectue des calculs compliqués\n"
+"...\n"
+"Exec=gcalctool\n"
+"Icon=gnome-calculator\n"
+"Terminal=false\n"
+"Type=Application\n"
+"StartupNotify=true\n"
+"Categories=GTK;GNOME;Application;Utility;"
 
 #: C/system-admin-guide.xml:400(para)
 msgid "<xref linkend=\"menustructure-TBL-7\"/> describes the most important keys in desktop entry files. To get more information about desktop entry files, see the <ulink url=\"http://www.freedesktop.org/Standards/desktop-entry-spec\">XDG Desktop Entry Specification</ulink>."
-msgstr ""
+msgstr "<xref linkend=\"menustructure-TBL-7\"/>는 데스크탑 엔트리 파일에 사용되는 가장 중요한 키들에 대해 설명합니다. 이에 대한 자세한 정보는 <ulink url=\"http://www.freedesktop.org/Standards/desktop-entry-spec\">XDG 데스크탑 엔트리 명세서</ulink>를 보기 바랍니다."
 
 #: C/system-admin-guide.xml:407(title)
 msgid "Desktop Entry Keys"
-msgstr ""
+msgstr "데스크탑 엔트리 키"
 
 #: C/system-admin-guide.xml:416(para)
 msgid "Desktop Entry Key"
-msgstr ""
+msgstr "데스크탑 엔트리 키"
 
 #: C/system-admin-guide.xml:425(literal)
 msgid "Categories"
-msgstr ""
+msgstr "Categories"
 
 #: C/system-admin-guide.xml:427(para)
 msgid "Specifies the keywords that describe the item. The keywords are separated with semicolons (;). To see a list of the standard category keywords, see the desktop menu specification at <ulink url=\"http://www.freedesktop.org/Standards/menu-spec\"> http://www.freedesktop.org/Standards/menu-spec</ulink>"
-msgstr ""
+msgstr "이 항목을 설명하는 핵심어를 지정합니다. 각 단어들은 세미콜론 (;) 기호를 통해 구분됩니다. 표준 분류 핵심어의 목록을 확인하려면, <ulink url=\\\"http://www.freedesktop.org/Standards/menu-spec\\\">http://www.freedesktop.org/Standards/menu-spec</ulink>에 있는 데스크탑 메뉴 명세서를 보기 바랍니다."
 
 #: C/system-admin-guide.xml:433(para)
 msgid "<link linkend=\"menustructure-13\">Menu Definition Files</link> map desktop entries to menus by using matching rules against the Categories key."
-msgstr ""
+msgstr "<link linkend=\"menustructure-13\">메뉴 정의 파일</link>은 이 분류(Categories)키를 이용하여 데스크탑 엔트리와 메뉴를 매핑해 줍니다."
 
 #: C/system-admin-guide.xml:439(literal)
 #: C/system-admin-guide.xml:627(literal)
 #: C/system-admin-guide.xml:117(literal)
 msgid "Comment"
-msgstr ""
+msgstr "Comment"
 
 #: C/system-admin-guide.xml:442(para)
 msgid "Specifies a short description of the item. The comment is displayed as a tooltip when you point to the item in the menu."
-msgstr ""
+msgstr "해당 항목에 대한 짧은 설명을 지정합니다. 이 설명은 메뉴 내에서 해당 항목을 가리킬 때 풍선 도움말로 표시됩니다."
 
 #: C/system-admin-guide.xml:448(literal)
 msgid "Encoding"
-msgstr ""
+msgstr "Encoding"
 
 #: C/system-admin-guide.xml:451(para)
 msgid "Specifies the encoding of the desktop entry file."
-msgstr ""
+msgstr "데스크탑 엔트리 파일의 인코딩을 지정합니다."
 
 #: C/system-admin-guide.xml:456(literal)
 msgid "Exec"
-msgstr ""
+msgstr "Exec"
 
 #: C/system-admin-guide.xml:458(para)
 msgid "Specifies a command to execute when you choose the item from the menu."
-msgstr ""
+msgstr "메뉴에서 항목이 선택되었을 때 실행할 명령을 지정합니다."
 
 #: C/system-admin-guide.xml:464(literal)
 #: C/system-admin-guide.xml:636(literal)
 #: C/system-admin-guide.xml:44(term)
 msgid "Icon"
-msgstr ""
+msgstr "Icon"
 
 #: C/system-admin-guide.xml:466(para)
 msgid "Specifies the filename of an icon that represents the item. Does not specify the path to the filename, or the file extension."
-msgstr ""
+msgstr "항목을 표시할 아이콘 파일의 이름을 지정합니다. 파일의 경로나 확장자를 지정하지 마십시오."
 
 #: C/system-admin-guide.xml:472(literal)
 msgid "MimeType"
-msgstr ""
+msgstr "MimeType"
 
 #: C/system-admin-guide.xml:474(entry)
 msgid "Specifies the MIME types that the application can handle."
-msgstr ""
+msgstr "프로그램에서 처리할 수 있는 MIME 형식을 지정합니다."
 
 #: C/system-admin-guide.xml:478(literal)
 #: C/system-admin-guide.xml:619(literal)
 #: C/system-admin-guide.xml:105(literal)
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: C/system-admin-guide.xml:480(para)
 msgid "Specifies the name of the item. This name is displayed on the item in the menu."
-msgstr ""
+msgstr "항목의 이름을 지정합니다. 이 이름은 메뉴 내의 항목에 표시됩니다."
 
 #: C/system-admin-guide.xml:485(literal)
 msgid "NoDisplay"
-msgstr ""
+msgstr "NoDisplay"
 
 #: C/system-admin-guide.xml:487(para)
 msgid "This options means <quote>This application exists, but don't display it in the menus</quote>."
-msgstr ""
+msgstr "이 옵션은 <quote>이 프로그램은 존재하지만, 메뉴에 표시하지 않을 것</quote>을 의미합니다."
 
 #: C/system-admin-guide.xml:493(literal)
 msgid "Terminal"
-msgstr ""
+msgstr "Terminal"
 
 #: C/system-admin-guide.xml:495(para)
 msgid "Specifies whether the command in the <literal>Exec</literal> key runs in a terminal window. If the value is <literal>true</literal> the command runs in a terminal window."
-msgstr ""
+msgstr "<literal>Exec</literal> 키에 지정된 명령이 터미널 창에서 실행될 지 여부를 지정합니다. 만약 이 값이 <literal>참</literal>이면 해당 명령은 터미널 창에서 실행됩니다."
 
 #: C/system-admin-guide.xml:498(para)
 msgid "If the command does not create a window in which to run, the value of this key must be <literal>true</literal>."
-msgstr ""
+msgstr "만약 해당 명령이 자체적으로 실행 창을 만들지 않는다면, 이 키의 값은 반드시 <literal>참</literal>이 되어야 합니다."
 
 #: C/system-admin-guide.xml:505(literal)
 #: C/system-admin-guide.xml:644(literal)
 #: C/system-admin-guide.xml:93(literal)
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: C/system-admin-guide.xml:507(para)
 msgid "Specifies the type of item. This value is one of the following:"
-msgstr ""
+msgstr "해당 항목의 형식을 지정합니다. 이 값은 다음과 같은 것들 중 하나입니다:"
 
 #: C/system-admin-guide.xml:510(para)
 msgid "<literal>Application</literal>: An item that starts an application."
-msgstr ""
+msgstr "<literal>Application</literal>: 이 항목은 프로그램을 실행합니다."
 
 #: C/system-admin-guide.xml:515(para)
 msgid "<literal>Link</literal>: An item that links to a file, folder, or a remote resource (such as a FTP site, a web page, a Windows share...)."
-msgstr ""
+msgstr "<literal>Link</literal>: 이 항목은 파일, 폴더 혹은 (FTP 사이트, 웹페이지, Windows 공유 등과 같은) 원격지의 자원에 대한 링크입니다."
 
 #: C/system-admin-guide.xml:521(para)
 msgid "<literal>FSDevice</literal>: An item that is a file system device."
-msgstr ""
+msgstr "<literal>FSDevice</literal>: 이 항목은 파일 시스템 장치입니다."
 
 #: C/system-admin-guide.xml:526(para)
 msgid "<literal>Directory</literal>: An item that is a Directory."
-msgstr ""
+msgstr "<literal>Directory</literal>: 이 항목은 디렉토리입니다."
 
 #: C/system-admin-guide.xml:536(para)
 msgid "For more information on the keys in desktop entry files, see the desktop entry specification at the following URL:"
-msgstr ""
+msgstr "데스크탑 엔트리 파일의 키에 대한 자세한 정보는, 다음 URL에서 데스크탑 엔트리 명세서를 보기 바랍니다:"
 
 #: C/system-admin-guide.xml:540(ulink)
 msgid "http://www.freedesktop.org/Standards/desktop-entry-spec"
-msgstr ""
+msgstr "http://www.freedesktop.org/Standards/desktop-entry-spec"
 
 #: C/system-admin-guide.xml:544(para)
 msgid "Panel launchers and desktop objects also use desktop entry files. The desktop entry files for launchers and desktop objects provide the same information as for items in a menu. For example, the desktop entry files provide the command to run when a user chooses the launcher or object."
-msgstr ""
+msgstr "패널 실행기와 데스크탑 객체에서도 데스크탑 엔트리 파일을 사용합니다. 실행기와 데스크탑 객체를 위한 데스크탑 엔트리 파일도 메뉴 항목과 동일한 정보를 제공합니다. 예를 들어 데스크탑 엔트리 파일은 사용자가 실행기나 데스크탑 객체를 선택하면 실행할 명령을 제공합니다."
 
 #: C/system-admin-guide.xml:553(title)
 msgid "Directory Entry Files"
-msgstr ""
+msgstr "디렉토리 엔트리 파일"
 
 #: C/system-admin-guide.xml:556(primary)
 #: C/system-admin-guide.xml:562(see)
 msgid "directory entry files"
-msgstr ""
+msgstr "디렉토리 엔트리 파일"
 
 #: C/system-admin-guide.xml:560(primary)
 msgid ".directory files"
-msgstr ""
+msgstr ".directory 파일"
 
 #: C/system-admin-guide.xml:565(para)
 msgid "A <firstterm>directory entry file</firstterm> is a data file that provides information about a menu. The directory entry file specifies the details for the menu such as a name, a tooltip, and an icon. Directory entry files have a <filename>.directory</filename> file extension."
-msgstr ""
+msgstr "<firstterm>디렉토리 엔트리 파일</firstterm>은 메뉴에 대한 정보를 제공하는 데이터 파일입니다. 디렉토리 엔트리 파일은 메뉴의 이름, 풍선 도움말, 아이콘과 같은 정보들을 지정합니다. 디렉토리 엔트리 파일의 확장자는 <filename>.directory</filename>입니다."
 
 #: C/system-admin-guide.xml:570(para)
 msgid "Directory entry files must reside in the <filename>$XDG_DATA_DIRS/desktop-directories</filename> directory. If <envar>$XDG_DATA_DIRS</envar> is not set, then the default path is <filename>/usr/share</filename> is used. This also implies that user specific directory entries may be located at <filename>$XDG_DATA_HOME/desktop-directories</filename> which is searched first. If <envar>$XDG_DATA_HOME</envar> is not set, then the default path <filename>~/.local/share</filename> is used. Directory entries are collected from all directories in the <envar>$XDG_DATA_DIRS</envar> environment variable. Directories which appear first in <envar>$XDG_DATA_DIRS</envar> are given precedence when there are several <filename>.directory</filename> files with the same name."
-msgstr ""
+msgstr "디렉토리 엔트리 파일은 반드시 <filename>$XDG_DATA_DIRS/desktop-directories</filename> 디렉토리 내에 있어야 합니다. 만약 <envar>$XDG_DATA_DIRS</envar> 변수가 설정되어 있지 않으면, 기본값으로 <filename>/usr/share</filename> 경로가 사용됩니다. 이것은 사용자가 지정한 디렉토리 엔트리는 반드시 <filename>$XDG_DATA_HOME/desktop-directories</filename> 내에 있어야 한다는 것을 뜻하며, 이 경우 해당 파일이 먼저 검색됩니다. 만약 <envar>$XDG_DATA_DIRS</envar> 변수가 설정되어 있지 않다면, 기본값인 <filename>.directory</filename> 경로가 사용됩니다. 디렉토리 엔트리들은 <envar>$XDG_DATA_HOME</envar> 환경 변수내의 모든 디렉토리에서 수집됩니다. 만약 같은 이름의 <filename>~/.local/share</filename> 파일이 여러 개 있는 경우에는 <envar>$XDG_DATA_DIRS</envar> 내에서 먼저 나타난 디렉토리에 있는 것이 사용됩니다."
 
 #: C/system-admin-guide.xml:584(para)
 msgid "The following is a sample directory entry file:"
-msgstr ""
+msgstr "아래는 디렉토리 엔트리 파일의 예제입니다:"
 
 #: C/system-admin-guide.xml:586(programlisting)
 #, no-wrap
@@ -2209,195 +2250,205 @@ msgid ""
 "Type=Directory\n"
 "Encoding=UTF-8"
 msgstr ""
+"[Desktop Entry]\n"
+"Name=Graphics\n"
+"Name[fr]=Graphisme\n"
+"...\n"
+"Comment=Graphics applications\n"
+"Comment[fr]=Applications graphiques\n"
+"...\n"
+"Icon=gnome-graphics\n"
+"Type=Directory\n"
+"Encoding=UTF-8"
 
 #: C/system-admin-guide.xml:597(para)
 msgid "<xref linkend=\"menustructure-TBL-15\"/> describes the most important keys in directory entry files."
-msgstr ""
+msgstr "<xref linkend=\"menustructure-TBL-15\"/>는 디렉토리 엔트리 파일 내의 가장 중요한 키들에 대해 설명합니다."
 
 #: C/system-admin-guide.xml:601(title)
 msgid "Directory Entry Keys"
-msgstr ""
+msgstr "디렉토리 엔트리 키"
 
 #: C/system-admin-guide.xml:610(para)
 msgid "Directory Entry Key"
-msgstr ""
+msgstr "디렉토리 엔트리 키"
 
 #: C/system-admin-guide.xml:621(para)
 msgid "Specifies the name of the menu. This name is displayed on the menu."
-msgstr ""
+msgstr "메뉴의 이름을 지정합니다. 이 이름은 메뉴에 표시됩니다."
 
 #: C/system-admin-guide.xml:629(para)
 msgid "Specifies a short description of the menu. The comment is displayed as a tooltip when you point to the menu."
-msgstr ""
+msgstr "메뉴에 대한 짧은 설명을 지정합니다. 이 내용은 해당 메뉴를 가리킬 때 풍선 도움말로 나타납니다."
 
 #: C/system-admin-guide.xml:638(para)
 msgid "Specifies the filename of an icon that represents the menu. Does not specify the path to the filename, or the file extension."
-msgstr ""
+msgstr "메뉴를 표시하는 아이콘 파일 이름을 지정합니다. 파일 이름의 경로나 확장자를 지정하지 마십시오."
 
 #: C/system-admin-guide.xml:646(para)
 msgid "Specifies the type of menu. The value of this key is always <literal>Directory</literal>."
-msgstr ""
+msgstr "메뉴의 형식을 지정합니다. 이 키의 값은 항상 <literal>Directory</literal>입니다."
 
 #: C/system-admin-guide.xml:655(title)
 msgid "Editing System Menus"
-msgstr ""
+msgstr "시스템 메뉴 편집하기"
 
 #: C/system-admin-guide.xml:662(secondary)
 msgid "editing"
-msgstr ""
+msgstr "편집"
 
 #: C/system-admin-guide.xml:665(para)
 msgid "You can edit menu configuration files and menu data files manually to customize menus."
-msgstr ""
+msgstr "메뉴 설정을 변경하기 위해 메뉴 설정 파일과 메뉴 데이터 파일을 직접 편집할 수 있습니다."
 
 #: C/system-admin-guide.xml:669(title)
 msgid "Adding Menus"
-msgstr ""
+msgstr "메뉴 추가하기"
 
 #: C/system-admin-guide.xml:678(secondary)
 #: C/system-admin-guide.xml:858(secondary)
 msgid "adding"
-msgstr ""
+msgstr "더하기"
 
 #: C/system-admin-guide.xml:681(para)
 msgid "To add a menu for all users, perform the following steps:"
-msgstr ""
+msgstr "모든 사용자들이 이용할 수 있는 메뉴를 더하려면 다음 순서대로 하십시오:"
 
 #: C/system-admin-guide.xml:685(para)
 msgid "Create a directory entry file for the item that you want to add. Place the directory entry file in the <filename>$XDG_DATA_DIRS/desktop-directories</filename> directory. For more information on directory entry files, see <xref linkend=\"menustructure-14\"/>."
-msgstr ""
+msgstr "더하고 싶은 항목에 대한 디렉토리 엔트리 파일을 만들어서, <filename>$XDG_DATA_DIRS/desktop-directories</filename> 디렉토리 아래에 둡니다. 디렉토리 엔트리 파일에 대한 정보는 <xref linkend=\"menustructure-14\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:693(para)
 #: C/system-admin-guide.xml:761(para)
 #: C/system-admin-guide.xml:791(para)
 #: C/system-admin-guide.xml:851(para)
 msgid "Locate the <filename>$XDG_CONFIG_DIRS/menus/applications.menu</filename> file."
-msgstr ""
+msgstr "<filename>$XDG_CONFIG_DIRS/menus/applications.menu</filename> 파일을 찾습니다."
 
 #: C/system-admin-guide.xml:699(para)
 msgid "In the <filename>.menu</filename> file, add a <literal>&lt;Menu&gt;</literal> element for the new menu. For more information on <filename>.menu</filename> files, see <xref linkend=\"menustructure-13\"/>."
-msgstr ""
+msgstr "<filename>.menu</filename> 파일에서, 새 메뉴에 대한 <literal>&lt;Menu&gt;</literal> 엘리먼트를 더합니다. <filename>.menu</filename> 파일에 대한 정보는 <xref linkend=\"menustructure-13\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:706(para)
 msgid "Create a <literal>&lt;Name&gt;</literal> element below <literal>&lt;Menu&gt;</literal>. The content of the element should contain the name for the menu."
-msgstr ""
+msgstr "<literal>&lt;Menu&gt;</literal> 엘리먼트 아래에 <literal>&lt;Name&gt;</literal> 엘리먼트를 만듭니다. Name 엘리먼트의 내용은 해당 메뉴에 대한 이름이 되어야 합니다."
 
 #: C/system-admin-guide.xml:712(para)
 msgid "Create a <literal>&lt;Directory&gt;</literal> element below <literal>&lt;Menu&gt;</literal>. The content of the element should contain the name of the directory entry file."
-msgstr ""
+msgstr "<literal>&lt;Menu&gt;</literal> 엘리먼트 아래에 <literal>&lt;Directory&gt;</literal> 엘리먼트를 만듭니다. Directory 엘리먼트의 내용은 디렉토리 엔트리 파일의 이름이 되어야 합니다."
 
 #: C/system-admin-guide.xml:718(para)
 msgid "See <xref linkend=\"menustructure-4\"/> for how to add an item to the menu."
-msgstr ""
+msgstr "메뉴에 항목을 더하는 방법은 <xref linkend=\"menustructure-4\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:723(para)
 msgid "The next time that users log in, the menu should appear in the menu bar."
-msgstr ""
+msgstr "다음 번에 사용자가 로그인하면, 메뉴 모음에서 해당 메뉴를 볼 수 있습니다."
 
 #: C/system-admin-guide.xml:727(title)
 msgid "Missing Menu?"
-msgstr ""
+msgstr "메뉴가 보이지 않는다면?"
 
 #: C/system-admin-guide.xml:729(para)
 msgid "If you did not specify any matching rules in the <literal>&lt;Include&gt;</literal> element, or if the rule did not match any desktop entries, then you may not see the menu in the menu bar."
-msgstr ""
+msgstr "만약 <literal>&lt;Include&gt;</literal> 엘리먼트 내에 매칭 규칙을 지정하지 않았거나, 매칭 규칙이 어떤 데스크탑 엔트리와도 적용되지 않는다면 메뉴 모듬에서 해당 메뉴를 보지 못할 수도 있습니다."
 
 #: C/system-admin-guide.xml:737(title)
 msgid "Adding an Item to a Menu"
-msgstr ""
+msgstr "메뉴에 항목 추가하기"
 
 #: C/system-admin-guide.xml:742(secondary)
 msgid "adding items to"
-msgstr ""
+msgstr "항목 더하기"
 
 #: C/system-admin-guide.xml:745(para)
 msgid "To add an item to a menu for all users, perform the following steps:"
-msgstr ""
+msgstr "모든 사용자들이 이용할 수 있는 메뉴 항목을 더하려면, 다음 순서대로 하십시오:"
 
 #: C/system-admin-guide.xml:750(para)
 msgid "Create a desktop entry file for the item that you want to add. For more information on desktop entry files, see <xref linkend=\"menustructure-desktopentry\"/>."
-msgstr ""
+msgstr "더하고 싶은 항목에 대한 데스크탑 엔트리 파일을 만듭니다. 데스크탑 엔트리 파일에 대한 정보는 <xref linkend=\"menustructure-desktopentry\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:756(para)
 msgid "Place the desktop entry file in the <filename>$XDG_DATA_DIRS/applications</filename> folder."
-msgstr ""
+msgstr "데스크탑 엔트리 파일을 <filename>$XDG_DATA_DIRS/applications</filename> 폴더에 둡니다."
 
 #: C/system-admin-guide.xml:767(para)
 msgid "Verify that a <literal>&lt;Menu&gt;</literal> element contains an <literal>&lt;Include&gt;</literal> element with a matching rule that selects the desktop entry file made in step 1."
-msgstr ""
+msgstr "<literal>&lt;Menu&gt;</literal> 엘리먼트가 1단계에서 만든 데스크탑 엔트리 파일과 일치하는 매칭 규칙을 가지는 <literal>&lt;Include&gt;</literal> 엘리먼트를 포함하는 지 확인합니다."
 
 #: C/system-admin-guide.xml:773(para)
 msgid "The next time that users log in, the menu item is in the assigned location."
-msgstr ""
+msgstr "다음 번에 사용자가 로그인하면, 해당 위치에 메뉴 항목이 보일 것입니다."
 
 #: C/system-admin-guide.xml:778(title)
 msgid "Editing the Properties of a Menu"
-msgstr ""
+msgstr "메뉴 속성 편집하기"
 
 #: C/system-admin-guide.xml:783(secondary)
 msgid "editing properties of"
-msgstr ""
+msgstr "속성 편집"
 
 #: C/system-admin-guide.xml:786(para)
 msgid "To edit the properties of a menu for all users, perform the following steps:"
-msgstr ""
+msgstr "모든 사용자에게 적용되는 메뉴의 속성을 편집하려면, 다음 순서대로 하십시오:"
 
 #: C/system-admin-guide.xml:797(para)
 msgid "Find the <literal>&lt;Menu&gt;</literal> entry in this file that corresponds to the menu you want to modify. Note the filename of the directory entry in the <literal>&lt;Directory&gt;</literal> element."
-msgstr ""
+msgstr "이 파일에서 수정하고 싶은 메뉴에 대한 <literal>&lt;Menu&gt;</literal> 엔트리를 찾습니다. 디렉토리 엔트리 파일의 이름은 <literal>&lt;Directory&gt;</literal> 엘리먼트에 지정되어 있습니다."
 
 #: C/system-admin-guide.xml:804(para)
 msgid "Locate the directory entry for this menu. Modify the contents to change the properties of the menu. For more information on <filename>.directory</filename> files, see <xref linkend=\"menustructure-14\"/>."
-msgstr ""
+msgstr "이 메뉴에 대한 디렉토리 엔트리 파일을 찾아서, 메뉴의 속성을 변경합니다. <filename>.directory</filename> 파일에 대한 자세한 정보는 <xref linkend=\"menustructure-14\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:813(title)
 msgid "Editing a Menu Item"
-msgstr ""
+msgstr "메뉴 항목 편집하기"
 
 #: C/system-admin-guide.xml:818(secondary)
 msgid "editing menu items"
-msgstr ""
+msgstr "메뉴 항목 편집"
 
 #: C/system-admin-guide.xml:821(para)
 msgid "To edit a menu item, perform the following steps:"
-msgstr ""
+msgstr "메뉴 항목을 편집하려면, 다음 순서대로 하십시오:"
 
 #: C/system-admin-guide.xml:825(para)
 msgid "Locate the desktop entry in the <filename>$XDG_DATA_DIRS/applications</filename> directory that corresponds to the menu item."
-msgstr ""
+msgstr "<filename>$XDG_DATA_DIRS/applications</filename> 디렉토리에서 해당 메뉴 항목에 대한 데스크탑 엔트리 파일을 찾습니다."
 
 #: C/system-admin-guide.xml:831(para)
 msgid "Edit the desktop entry to change the properties of the menu item. For more information on desktop entry files, see <xref linkend=\"menustructure-desktopentry\"/>."
-msgstr ""
+msgstr "데스크탑 엔트리 파일을 수정하여 메뉴 항목의 속성을 변경합니다. 데스크탑 엔트리 파일에 대한 자세한 정보는 <xref linkend=\"menustructure-desktopentry\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:839(title)
 #: C/system-admin-guide.xml:882(title)
 msgid "Deleting an Item from a Menu"
-msgstr ""
+msgstr "메뉴에서 항목 삭제하기"
 
 #: C/system-admin-guide.xml:844(secondary)
 msgid "deleting menu items"
-msgstr ""
+msgstr "메뉴 항목 지우기"
 
 #: C/system-admin-guide.xml:847(para)
 msgid "To delete an item from a menu for all users:"
-msgstr ""
+msgstr "모든 사용자에게 적용되는 메뉴 항목을 지우려면:"
 
 #: C/system-admin-guide.xml:857(para)
 msgid "Find the <literal>&lt;Menu&gt;</literal> element in this file that contains the desktop entry you want to delete."
-msgstr ""
+msgstr "이 파일에서 지우고 싶은 데스크탑 엔트리를 포함하는 <literal>&lt;Menu&gt;</literal> 엘리먼트를 찾습니다."
 
 #: C/system-admin-guide.xml:862(para)
 msgid "Insert an <literal>&lt;Exclude&gt;</literal> element after the closing tag for the <literal>&lt;Include&gt;</literal> element. Make sure this is in the <literal>&lt;Menu&gt;</literal> element determined in step 2."
-msgstr ""
+msgstr "<literal>&lt;Include&gt;</literal> 엘리먼트의 닫는 태그 뒤에 <literal>&lt;Exclude&gt;</literal> 엘리먼트를 추가합니다. 이 엘리먼트는 2단계에서 찾은 <literal>&lt;Menu&gt;</literal> 엘리먼트 내에 있어야 합니다."
 
 #: C/system-admin-guide.xml:869(para)
 msgid "Insert the <literal>&lt;Filename&gt;</literal> matching rule as a subelement of <literal>&lt;Exclude&gt;</literal> to specifically exclude a desktop entry."
-msgstr ""
+msgstr "<literal>&lt;Exclude&gt;</literal> 엘리먼트의 하위 엘리먼트로 특정 데스크탑 엔트리를 제외시키기 위한 <literal>&lt;Filename&gt;</literal> 매칭 규칙을 추가합니다."
 
 #: C/system-admin-guide.xml:875(para)
 msgid "The next time that users log in, the menu item is not displayed in the menu. <xref linkend=\"menustructure-deleteitem\"/> shows how this done in the <filename>applications.menu</filename> file. The desktop entry for <filename>dasher.desktop</filename> is explicitly excluded from showing up in the accessibility menu."
-msgstr ""
+msgstr "다음 번에 사용자가 로그인하면, 해당 메뉴 항목은 메뉴에 표시되지 않을 것입니다. <xref linkend=\"menustructure-deleteitem\"/>는 <filename>applications.menu</filename> 파일에서 메뉴를 삭제하는 방법을 보여줍니다. <filename>dasher.desktop</filename> 데스크탑 엔트리는 접근성 메뉴에서 명시적으로 제외되었습니다."
 
 #: C/system-admin-guide.xml:884(programlisting)
 #, no-wrap
@@ -2420,83 +2471,100 @@ msgid ""
 "\n"
 "&lt;!-- ... --&gt;\n"
 msgstr ""
+"&lt;!-- ... --&gt;\n"
+"\n"
+"  &lt;Menu&gt;\n"
+"    &lt;Name&gt;Accessibility&lt;/Name&gt;\n"
+"    &lt;Directory&gt;Accessibility.directory&lt;/Directory&gt;\n"
+"    &lt;Include&gt;\n"
+"      &lt;And&gt;\n"
+"        &lt;Category&gt;Accessibility&lt;/Category&gt;\n"
+"        &lt;Not&gt;&lt;Category&gt;Settings&lt;/Category&gt;&lt;/Not&gt;\n"
+"      &lt;/And&gt;\n"
+"    &lt;/Include&gt;\n"
+"    &lt;Exclude&gt;\n"
+"      &lt;Filename&gt;dasher.desktop&lt;/Filename&gt;\n"
+"    &lt;/Exclude&gt;\n"
+"  &lt;/Menu&gt;\n"
+"\n"
+"&lt;!-- ... --&gt;\n"
 
 #: C/system-admin-guide.xml:907(title)
 msgid "Editing User Menus and Menu Merging"
-msgstr ""
+msgstr "사용자 메뉴 편집 및 통합하기"
 
 #: C/system-admin-guide.xml:912(secondary)
 msgid "editing user menus"
-msgstr ""
+msgstr "사용자 메뉴 편집"
 
 #: C/system-admin-guide.xml:915(para)
 msgid "You can use the following GNOME Desktop applications to edit menus for users:"
-msgstr ""
+msgstr "다음과 같은 그놈 데스크탑 프로그램을 이용하여 사용자 메뉴를 편집할 수 있습니다:"
 
 #: C/system-admin-guide.xml:920(para)
 msgid "GNOME Menu Editor"
-msgstr ""
+msgstr "그놈 메뉴 편집기"
 
 #: C/system-admin-guide.xml:924(para)
 msgid "A simple menu editor is available for users to edit their menus. For more information, see <ulink url=\"ghelp:user-guide?goseditmainmenu-1\">Working With Menus</ulink> in the <ulink url=\"ghelp:user-guide\">GNOME User Guide</ulink>. Alternatively, you can manually create and edit a user menu file."
-msgstr ""
+msgstr "사용자들이 간편하게 자신의 메뉴를 편집할 수 있는 메뉴 편집기가 있습니다. 자세한 정보는 <ulink url=\"ghelp:user-guide\">그놈 사용자 안내서</ulink>의 <ulink url=\"ghelp:user-guide?goseditmainmenu-1\">메인 메뉴 모음 사용하기</ulink> 부분을 보기 바랍니다. 또는 직접 사용자 메뉴 파일을 만들거나 수정할 수도 있습니다."
 
 #: C/system-admin-guide.xml:930(para)
 msgid "To manually create a custom menu for a user, the <filename>$XDG_CONFIG_HOME/menus/applications.menu</filename> must exist. In the case that <envar>$XDG_CONFIG_HOME</envar> is not set, the default <filename>~/.config</filename> directory is used. Since this is the first location that is searched for the <filename>applications.menu</filename> file, it takes precedence over all other menu files."
-msgstr ""
+msgstr "사용자 지정 메뉴를 직접 만들려면 <filename>$XDG_CONFIG_HOME/menus/applications.menu</filename> 파일이 반드시 존재해야 합니다. <envar>$XDG_CONFIG_HOME</envar> 변수가 설정되어 있지 않으면 기본값인 <filename>~/.config</filename> 디렉토리가 사용됩니다. 이곳은 <filename>applications.menu</filename> 파일을 맨 처음으로 찾아보는 곳이므로, 다른 모든 메뉴 파일보다 우선적으로 사용됩니다."
 
 #: C/system-admin-guide.xml:938(para)
 msgid "User menus can contain all the elements described in <xref linkend=\"menustructure-13\"/>. For a complete list of the elements allowed, see the <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG menu specification</ulink>."
-msgstr ""
+msgstr "사용자 메뉴는 <xref linkend=\"menustructure-13\"/> 부분에서 설명한 모든 엘리먼트들을 포함할 수 있습니다. 허용된 엘리먼트의 전체 목록은 <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG 메뉴 명세서</ulink>를 보기 바랍니다."
 
 #: C/system-admin-guide.xml:944(para)
 msgid "Since user menu files take precedence over the system menu file, it will completely replace the system menu unless it explicitly <emphasis>merges</emphasis> the system menu. Information on menu merging is available in the following subsections."
-msgstr ""
+msgstr "사용자 메뉴 파일은 시스템 메뉴 파일보다 우선적으로 사용되기 때문에, 시스템 메뉴를 <emphasis>통합</emphasis>하지 않는다면 시스템 메뉴 전체를 완전히 대체할 것입니다. 메뉴를 통합하는 방법은 다음 절에서 설명합니다."
 
 #: C/system-admin-guide.xml:950(title)
 #: C/system-admin-guide.xml:1011(title)
 msgid "Merging the System Menu"
-msgstr ""
+msgstr "시스템 메뉴 통합하기"
 
 #: C/system-admin-guide.xml:955(secondary)
 msgid "merging the system menu"
-msgstr ""
+msgstr "시스템 메뉴 통합"
 
 #: C/system-admin-guide.xml:958(para)
 msgid "Often, a user only wants to add or delete menu items in addition to the standard system menu. To support single changes like these, it is recommended that you use the <literal>&lt;MergeFile&gt;</literal> element with the attribute <literal>type=\"parent\"</literal> within the user's <filename>applications.menu</filename> file."
-msgstr ""
+msgstr "때때로 사용자들은 표준 시스템 메뉴에 특정 항목들을 추가하거나 삭제하기 만을 원합니다. 이렇게 한 가지 만 변경하도록 지원하려면, 사용자 <filename>applications.menu</filename> 파일에 <literal>type=\"parent\"</literal> 속성을 포함하는 <literal>&lt;MergeFile&gt;</literal> 엘리먼트를 사용하는 것이 좋습니다."
 
 #: C/system-admin-guide.xml:964(para)
 msgid "The <literal>&lt;MergeFile&gt;</literal> element allows a menu to be merged with the contents of the user's menu file. When you specify the attribute <literal>type=\"parent\"</literal>, then the contents of the <literal>&lt;MergeFile&gt;</literal> element are ignored and the next <filename>applications.menu</filename> file in the <filename>$XDG_CONFIG_DIRS/menus</filename> directory is used for merging."
-msgstr ""
+msgstr "<literal>&lt;MergeFile&gt;</literal> 엘리먼트는 메뉴를 사용자의 메뉴 파일의 내용과 통합되도록 허용합니다. <literal>type=\"parent\"</literal> 속성을 사용하면, <literal>&lt;MergeFile&gt;</literal> 엘리먼트의 내용은 무시되고, <filename>$XDG_CONFIG_DIRS/menus</filename> 디렉토리 내의 다음 <filename>applications.menu</filename> 파일을 이용해 통합합니다."
 
 #: C/system-admin-guide.xml:973(title)
 msgid "Older Specifications"
-msgstr ""
+msgstr "예전 명세서"
 
 #: C/system-admin-guide.xml:975(para)
 msgid "Older specifications did not include the <literal>type</literal> attribute and simply required the location of the menu file to be merged as the content of the <literal>&lt;MergeFile&gt;</literal> element. As a result, you may still see a location specified in the contents of <literal>&lt;MergeFile&gt;</literal>, even when <literal>type=\"parent\"</literal>."
-msgstr ""
+msgstr "예전 버전의 명세서에는 <literal>type</literal> 속성이 포함되지 않았고 단순히 <literal>&lt;MergeFile&gt;</literal> 엘리먼트의 내용으로 통합될 메뉴 파일의 위치를 지정해야 했습니다. 따라서 <literal>type=\"parent\"</literal> 속성이 사용된 경우에도 <literal>&lt;MergeFile&gt;</literal> 엘리먼트의 내용에 명시된 위치를 볼 수도 있습니다."
 
 #: C/system-admin-guide.xml:983(para)
 msgid "The merging is performed as follows:"
-msgstr ""
+msgstr "통합 과정은 다음과 같이 수행됩니다:"
 
 #: C/system-admin-guide.xml:989(para)
 msgid "Merged menu file refers to the next <filename>applications.menu</filename> in the <filename>$XDG_CONFIG_DIRS/menus</filename> directory."
-msgstr ""
+msgstr "통합된 메뉴 파일은 <filename>$XDG_CONFIG_DIRS/menus</filename> 디렉토리 내의 다음 <filename>applications.menu</filename> 파일을 가리킵니다."
 
 #: C/system-admin-guide.xml:987(para)
 msgid "The children of the root <literal>&lt;Menu&gt;</literal> element in the merged menu file<placeholder-1/> are substituted for the <literal>&lt;MergeFile&gt;</literal> element in the base menu file."
-msgstr ""
+msgstr "통합된 메뉴 파일<placeholder-1/> 내의 최상위 <literal>&lt;Menu&gt;</literal> 엘리먼트의 하위 엘리먼트들은 기본 메뉴 파일 내의 <literal>&lt;MergeFile&gt;</literal> 엘리먼트로 바뀝니다."
 
 #: C/system-admin-guide.xml:998(para)
 msgid "All child <literal>&lt;Menu&gt;</literal> elements with the same name are consolidated into a single <literal>&lt;Menu&gt;</literal> element. This is by done appending all child elements of each <literal>&lt;Menu&gt;</literal> element with the same name into the <emphasis>last</emphasis> occurrence of the menu element."
-msgstr ""
+msgstr "같은 이름의 <literal>&lt;Menu&gt;</literal> 엘리먼트들은 하나의 <literal>&lt;Menu&gt;</literal> 엘리먼트로 합쳐집니다. 이것은 같은 이름을 가진 <literal>&lt;Menu&gt;</literal> 엘리먼트의 모든 하위 엘리먼트들을 <emphasis>마지막</emphasis>으로 나타나는 메뉴 엘리먼트에 추가하는 방식입니다."
 
 #: C/system-admin-guide.xml:1007(para)
 msgid "<xref linkend=\"menustructure-systemmerge\"/> shows an example of a user menu file explicitly merging the system menu file."
-msgstr ""
+msgstr "<xref linkend=\"menustructure-systemmerge\"/>은 시스템 메뉴 파일을 통합하는 사용자 메뉴 파일의 예입니다."
 
 #: C/system-admin-guide.xml:1013(programlisting)
 #, no-wrap
@@ -2515,22 +2583,35 @@ msgid ""
 "  &lt;/Menu&gt;\n"
 "&lt;/Menu&gt;\n"
 msgstr ""
+"&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
+" \"http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd\"&gt;\n"
+"\n"
+"&lt;Menu&gt;\n"
+"  &lt;Name&gt;Applications&lt;/Name&gt;\n"
+"  &lt;MergeFile type=\"parent\"&gt;/etc/xdg/menus/applications.menu&lt;/MergeFile&gt;\n"
+"  &lt;Menu&gt;\n"
+"    &lt;Name&gt;Accessibility&lt;/Name&gt;\n"
+"    &lt;Exclude&gt;\n"
+"      &lt;Filename&gt;dasher.desktop&lt;/Filename&gt;\n"
+"    &lt;/Exclude&gt;\n"
+"  &lt;/Menu&gt;\n"
+"&lt;/Menu&gt;\n"
 
 #: C/system-admin-guide.xml:1031(title)
 msgid "Merging Arbitrary Menus"
-msgstr ""
+msgstr "임의의 메뉴 통합하기"
 
 #: C/system-admin-guide.xml:1036(secondary)
 msgid "merging arbitrary menus"
-msgstr ""
+msgstr "임의의 메뉴 통합하기"
 
 #: C/system-admin-guide.xml:1039(para)
 msgid "Arbitrary menu files can be merged in much the same way as system menus. The difference is that the <literal>type</literal> attribute must be set to <literal>path</literal> or must be excluded from the <literal>&lt;MergeFile&gt;</literal> element in order to do this type of merge."
-msgstr ""
+msgstr "임의의 메뉴 파일도 시스템 메뉴와 동일한 방식으로 통합할 수 있습니다. 차이점은 이 방식의 통합을 위해서는 <literal>type</literal> 속성이 <literal>path</literal>로 설정되거나 <literal>&lt;MergeFile&gt;</literal> 엘리먼트에 포함되어 있지 않아야 합니다."
 
 #: C/system-admin-guide.xml:1045(para)
 msgid "The merge is performed in the same way except that the location of the <emphasis>merged menu file</emphasis> is specified in the contents of the <literal>&lt;MergeFile&gt;</literal> element."
-msgstr ""
+msgstr "통합 과정은 <literal>&lt;MergeFile&gt;</literal> 엘리먼트에 지정된 <emphasis>통합된 메뉴 파일</emphasis>의 위치를 제외하고는 동일한 방식으로 수행됩니다."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Installing Themes"
