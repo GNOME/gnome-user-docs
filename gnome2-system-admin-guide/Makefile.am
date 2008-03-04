@@ -18,7 +18,7 @@ DOC_ENTITIES =			\
 	themes.xml		\
 	legal.xml
 
-DOC_LINGUAS = ca el es fr it ko oc pa pt sv
+DOC_LINGUAS = ca el es fi fr it ko oc pa pt sv
 
 install-data-local: install-doc-pdf
 install-doc-pdf:
