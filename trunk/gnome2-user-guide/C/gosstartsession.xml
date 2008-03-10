@@ -1,0 +1,328 @@
+<chapter id="sessions">
+  <title>Desktop Sessions</title>
+
+  <!-- Maintained for 2.8 compatibility -->
+  <anchor id="gosgetstarted-1"/>
+
+  <remark>Needs better intro</remark>
+  <remark>This chapter needs work</remark>
+
+  <highlights>
+    <para>This chapter provides the information you need to log in to and shut down GNOME, and to start, manage, and end a desktop session.</para>
+  </highlights>
+
+  <sect1 id="gosgetstarted-69">
+    <title>Starting a Session</title>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>starting</secondary>
+    </indexterm>
+    <para>A <firstterm>session</firstterm> is the period of time you spend using GNOME. During a session, you use your applications, print, browse the web, and so on.</para>
+    <para>Logging in to GNOME begins your session. The login screen is your gateway to the GNOME Desktop: it is where you enter your username and password and select options such as the language you want GNOME to use for your session.</para>
+    <tip><para>
+    Normally, logging out ends the session, but you can choose to save the state of your session and restore it next time you use GNOME: see <xref linkend="prefs-sessions"/>.</para></tip>
+    
+    <!--
+    2.14 has moved all this out of the standard dialogs.
+    
+    The session manager saves and restores the following: 
+    <itemizedlist>
+      <listitem>
+        <para>The appearance and behavior settings, for example fonts, colors,
+and mouse settings. </para>
+      </listitem>
+      <listitem>
+        <para>The applications that you were running, for example file manager
+and text editor windows. You cannot save and restore applications that the
+session manager does not manage. For example, if you start the <application>vi</application> editor from the command line in a terminal window, session
+manager cannot restore your editing session. </para>
+      </listitem>
+    </itemizedlist>
+    -->
+    
+    
+    <sect2 id="gosstartsession-85">
+      <title>Logging in to GNOME</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>logging in</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>logging in</primary>
+        <secondary>to session</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>start session</primary>
+      </indexterm>
+      <para>To log in to a session, perform the following steps:</para>
+      <orderedlist>
+        <listitem>
+          <para>On the login screen, click on the <guilabel>Session</guilabel>
+icon. Choose the GNOME Desktop from the list of available desktop environments.</para>
+        </listitem>
+        <listitem>
+          <para>Enter your username in the <guilabel>Username</guilabel> field
+on the login screen, then press <keycap>Return</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Enter your password in the <guilabel>Password</guilabel> field
+on the login screen, then press <keycap>Return</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <para>When you log in successfully, you will see a splash informing you of the steps GNOME is taking to start up. When GNOME is ready, you will see the Desktop and you can begin using your computer.</para>
+      <para>The first time you log in, then the session manager starts a new
+session. If you have logged in before, then the session manager restores your
+previous session, if you saved the settings for the previous session when
+you logged out.</para>
+      <para>If you want to shut down or restart the system before you log in, click
+on the <guilabel>System</guilabel> icon on the login screen. A dialog is displayed.
+Select the option that you require, then click <guibutton>OK</guibutton>.</para>
+<!--What about failsafe gnome?-->
+    </sect2>
+    <sect2 id="gosstartsession-86">
+      <title>Using a Different Language</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>different language, logging
+in</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>language, logging in in different</primary>
+      </indexterm>
+      <indexterm>
+        <primary>logging in</primary>
+        <secondary>to session in different language</secondary>
+      </indexterm>
+      <para>To log in to
+a session in a different language, perform the following actions.</para>
+      <orderedlist>
+        <listitem>
+          <para>On the login screen, click on the <guilabel>Language</guilabel>
+icon. Choose the language you require from the list of available languages.</para>
+        </listitem>
+        <listitem>
+          <para>Enter your username in the <guilabel>Username</guilabel> field
+on the login screen, then press <keycap>Return</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Enter your password in the <guilabel>Password</guilabel> field
+on the login screen, then press <keycap>Return</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>When you log in to a session in a different language, you choose
+the language for the user interface. You do not specify a keyboard layout
+for the session. To choose a keyboard layout, use the <ulink type="help" url="ghelp:gswitchit"><application>Keyboard Indicator</application></ulink> applet.</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="lock-screen">
+    <title>Locking Your Screen</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosstartsession-1"/>        
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/lockscreen_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Lock screen icon.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>locking screen</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>locking screen</primary>
+    </indexterm>
+    <indexterm>
+      <primary>Lock button</primary>
+    </indexterm>
+    <para>Locking your screen allows you to leave your computer unattended and prevent access to your applications and information. While your screen is locked, the <link linkend="prefs-screensaver">screensaver</link> runs.</para>
+    
+    <para>To lock the screen, perform
+one of the following actions:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Choose <menuchoice><guimenu>System</guimenu><guimenuitem>Lock Screen</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>If the <guibutton>Lock Screen</guibutton> button is present on a
+panel, click on the <guibutton>Lock Screen</guibutton> button.</para>
+        <note><para>The <guibutton>Lock Screen</guibutton> is not present on the panels by default. To add it, see <xref linkend="panels-addobject"/>.</para></note>
+      </listitem>
+    </itemizedlist>
+    <para>To unlock the screen, move your mouse or press any key, enter your password in the locked screen dialog, then press <keycap>Return</keycap>.</para>
+
+    <!--
+    <para>If you share your computer with others, the one can switch the user and start a new session; when finish and end his session, you can unlock your screen as above.</para> -->
+  
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>Managing the Session</title>
+    <indexterm>
+      <primary>preference tools</primary>
+      <secondary>Sessions</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>managing</secondary>
+    </indexterm>
+    <para>To configure the session management of the GNOME Desktop,
+use the <application>Sessions</application> preference tool. The <application>Sessions</application> preference tool recognizes the following types of application: </para>
+    <itemizedlist>
+      <listitem>
+        <indexterm>
+          <primary>startup applications</primary>
+          <secondary>session-managed</secondary>
+        </indexterm>
+        <para>Applications that are session-managed. When
+you save the settings for your session, the session manager saves all of the
+session-managed applications. If you log out, then log in again, the session
+manager automatically starts the session-managed applications. </para>
+      </listitem>
+      <listitem>
+        <para>Applications that are not session-managed. When you save the
+settings for your session, the session manager does not save any applications
+that are not session-managed. If you log out, then log in again, the session
+manager does not start non-session-managed applications. You must start the
+application manually. Alternatively, you can use the <application>Sessions</application> preference tool to specify non-session-managed applications
+that you want to automatically start. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>Defining Session Behavior When You Log In and Log Out</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>login behavior</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>logout behavior</secondary>
+      </indexterm>
+      <para>To set how a session behaves when you log in
+and log out, use <application>Sessions</application> preference tool. Make
+the changes you require in the <guilabel>Session Options</guilabel> tabbed
+section. For example, you can select to display a splash screen when you log
+in. </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>To Use Startup Applications</title>
+      <indexterm>
+        <primary>startup programs</primary>
+        <see>startup applications</see>
+      </indexterm>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>using startup
+applications</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>startup applications</primary>
+        <secondary>non-session-managed</secondary>
+      </indexterm>
+      <para>You
+can configure your sessions to start with applications that are not session-managed.
+To configure non-session-managed startup applications, use the <application>Sessions</application> preference tool. Use the <guilabel>Startup Programs</guilabel> tabbed section to add, edit, and delete applications. If you save
+your settings and log out, the next time that you log in, the startup applications
+start automatically. </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>To Browse Applications in the Current Session</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>browsing applications</secondary>
+      </indexterm>
+      <para>To browse the applications in the current session, use the <application>Sessions</application> preference tool. The <guilabel>Current Session</guilabel>
+tabbed section lists the following:</para>
+      <itemizedlist>
+        <listitem>
+          <para>All GNOME applications that are currently running, that can
+connect to the session manager, and that can save the state of the application.</para>
+        </listitem>
+        <listitem>
+          <para>All preference tools that can connect to the session manager,
+and that can save the state of the tool.</para>
+        </listitem>
+      </itemizedlist>
+      <para>You can use the <guilabel>Current Session</guilabel> tabbed section
+to perform a limited number of actions on the session properties of an application
+or preference tool. For example, you can edit the startup order, and restart
+style of any GNOME application or preference tool that is in the list. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>To Save Session Settings</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>saving settings</secondary>
+      </indexterm>
+      <para>To save your session settings, perform the following steps: </para>
+      <orderedlist>
+        <listitem>
+          <para>Configure your session to automatically save settings when
+you end the session. To configure your session, use the <application>Sessions</application> preference tool. The <application>Sessions</application> preference
+tool starts. Select the <guilabel>Automatically save changes to session</guilabel>
+option on the <guilabel>Session Options</guilabel> tabbed section.</para>
+        </listitem>
+        <listitem>
+          <para>End your session. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="shutdown">
+    <title>Ending a Session</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gosgetstarted-73"/>        
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>ending</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>logging out</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>logging out</primary>
+    </indexterm>
+    <indexterm>
+      <primary>quit</primary>
+    </indexterm>
+    <indexterm>
+      <primary>shutdown</primary>
+    </indexterm>  
+    <!--  
+    commenting this out for now. A shot of the shutdown button would be good too.
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/logout_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Log Out icon.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    -->
+    <para>When you have finished using your computer, you can choose to do one of the following:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Log out for another user to begin working with it. To log out of GNOME, choose <menuchoice><guimenu>System</guimenu><guimenuitem>Log Out <replaceable>username</replaceable></guimenuitem></menuchoice> <!-- Translators: your locale might only have a "Log Out" label in the menu if "Log Out username" is not valid. In this case, remove "<replaceable>username</replaceable>". -->.</para>
+      </listitem>
+      <listitem>
+        <para>Shut down your computer and switch off the power. To shut down, choose <menuchoice><guimenu>System</guimenu><guimenuitem>Shut Down</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>Depending on your computer's configuration, you can also <firstterm>Hibernate</firstterm> your computer. During hibernation, less power is used, but the state of your computer is preserved: all the applications you have running and open documents.</para>
+      </listitem>
+    </itemizedlist>    
+       
+    <para>When you end a session, applications with unsaved work will warn you. You can choose to save your work, or cancel the command to log out or shut down.</para>
+
+    <para>Before you end a session, you might want to save your current
+settings so that you can restore the session later. In the <link linkend="prefs-sessions"><application>Sessions</application></link> preference tool, you can select an option to automatically
+save your current settings.</para>
+  </sect1>
+</chapter>
