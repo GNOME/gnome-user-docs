@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accessibility_guide HEAD\n"
 "POT-Creation-Date: 2008-03-13 03:14+0000\n"
-"PO-Revision-Date: 2008-03-26 00:09+0100\n"
+"PO-Revision-Date: 2008-03-30 17:59+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
@@ -440,132 +440,106 @@ msgid "Log back in. The assistive technology services will be started automatica
 msgstr "Jelentkezzen be ismételten a rendszerbe. Az akadálymentesítési szolgáltatások automatikusan el fognak indulni."
 
 #: C/gnome-access-guide.xml:15(para)
-
 msgid "Once basic assistive technology support is enabled, it is possible to start accessibility services such as the screen reader, screen magnifier and on-screen keyboard."
 msgstr "Miután a kisegítő lehetőségek támogatása engedélyezve lett, elérhetővé válnak olyan akadálymentesítési megoldások, mint például a képernyőolvasó, a nagyító és a képernyőről használható billentyűzet."
 
 #: C/gnome-access-guide.xml:2(title)
-
 msgid "General Accessibility Tips"
 msgstr "Általános akadálymentesítési tanácsok"
 
 #: C/gnome-access-guide.xml:3(para)
-
 msgid "A number of technologies can be of assistance to people with different types of disabilities. These are covered in this section. In particular:"
 msgstr "Számos technológia vehető igénybe a fogyatékkal élő felhasználók számára, melyekről ebben a fejezetben olvashat bővebben. A GNOME Munkaasztalban az alábbi lehetőségek állnak rendelkezésre a fogyatékkal élő felhasználók számára:"
 
 #: C/gnome-access-guide.xml:5(para)
-
 msgid "<emphasis>Keyboard Desktop Navigation</emphasis> - allows users to navigate the desktop without using a mouse or pointer device."
 msgstr "<emphasis>Billentyűzetről vezérelhető kurzor</emphasis> - lehetővé teszi a Munkaasztalon történő navigálást egér vagy más pozíciónálóeszköz használata nélkül."
 
 #: C/gnome-access-guide.xml:6(para)
-
 msgid "<emphasis>Accessible Login</emphasis> - users can configure the login screen to be more accessible."
 msgstr "<emphasis>Akadálymentesített bejelentkezés</emphasis> - lehetővé teszi a bejelentkezési képernyő akadálymentesítését"
 
 #: C/gnome-access-guide.xml:10(title)
-
 msgid "Accessible Login"
 msgstr "Akadálymentesített bejelentkezés"
 
 #: C/gnome-access-guide.xml:12(primary)
-
 msgid "accessible login feature"
 msgstr "akadálymentesített bejelentkezés"
 
 #: C/gnome-access-guide.xml:14(para)
-
 msgid "The GNOME Desktop includes an Accessible Login feature. The Accessible Login feature enables users to:"
 msgstr "A GNOME Munkaasztal magában foglalja az akadálymentesített bejelentkezés lehetőségét. Az akadálymentesített bejelentkezés lehetővé teszi az alábbiakat:"
 
 #: C/gnome-access-guide.xml:18(para)
-
 msgid "Log in to the desktop even if the user cannot easily use the screen, mouse, or keyboard in the usual way."
 msgstr "A látási nehézségekkel küszködők is be tudnak jelentkezni a rendszerbe, illetve azok, akik nem tudják megfelelően használni a billentyűzetet és az egeret."
 
 #: C/gnome-access-guide.xml:22(para)
-
 msgid "Launch assistive technologies at login time by associating a user action with an assistive technology application. The user can perform the user action from the standard keyboard, or from a keyboard, pointing device, or switch device that is attached to the USB or PS/2 mouse port. These user actions are called gestures."
 msgstr "Az egyes felhasználói műveletekhez hozzárendelhetők különféle akadálymentesítési technológiák. A felhasználói műveletek végrehajthatók USB vagy PS/2 portra csatlakozó hagyományos billentyűzettel, mutatóeszközzel vagy kapcsolóeszközzel. Ezeket a műveleteket gesztusoknak nevezzük."
 
 #: C/gnome-access-guide.xml:29(para)
-
 msgid "Change the visual appearance of the login dialog before the user logs in, for example, to use a high contrast theme for better visibility."
 msgstr "Beállítható a bejelentkezési ablak megjelenése, például nagy kontrasztú sémát lehet beállítani a jobb olvashatóság érdekében."
 
 #: C/gnome-access-guide.xml:34(title)
-
 msgid "To Enable Accessible Login"
 msgstr "Az akadálymentesített bejelentkezés bekapcsolása"
 
 #: C/gnome-access-guide.xml:36(primary)
-
 msgid "GDM"
 msgstr "GDM"
 
 #: C/gnome-access-guide.xml:38(para)
-
 msgid "To configure GDM, perform the following steps:"
 msgstr "A GDM konfigurálásához végezze el az alábbi lépéseket:"
 
 #: C/gnome-access-guide.xml:41(para)
-
 msgid "Log in as the <literal>root</literal> user."
 msgstr "Jelentkezzen be <literal>root</literal> felhasználóként."
 
 #: C/gnome-access-guide.xml:44(para)
-
 msgid "Open the file <filename>/etc/X11/gdm/gdm.conf</filename>."
 msgstr "Nyissa meg a következő fájlt: <filename>/etc/X11/gdm/gdm.conf</filename>"
 
 #: C/gnome-access-guide.xml:47(para) C/gnome-access-guide.xml:58(para)
-
 msgid "Search the file for the following line:"
 msgstr "Keresse meg az alábbi sort:"
 
 #: C/gnome-access-guide.xml:49(literal)
-
 msgid "#AddGtkModules=false"
 msgstr "#AddGtkModules=false"
 
 #: C/gnome-access-guide.xml:51(para)
-
 msgid "and replace the line with the following:"
 msgstr "Cserélje ki a sort az alábbi szövegre:"
 
 #: C/gnome-access-guide.xml:53(literal)
-
 msgid "AddGtkModules=true"
 msgstr "AddGtkModules=true"
 
 #: C/gnome-access-guide.xml:55(para)
-
 msgid "This step enables the GtkModules."
 msgstr "Ez engedélyezi a GtkModules használatát."
 
 #: C/gnome-access-guide.xml:60(literal)
-
 msgid "#GtkModulesList=gail:atk-bridge:dwellmouselistener:keymouselistener"
 msgstr "#GtkModulesList=gail:atk-bridge:dwellmouselistener:keymouselistener"
 
 #: C/gnome-access-guide.xml:62(para)
-
 msgid "and delete the <literal>#</literal> from the start of the line so that the line reads:"
 msgstr "Törölje a # jelet a sor elejéről, ami által az alábbi szöveget fogja látni:"
 
 #: C/gnome-access-guide.xml:65(literal)
-
 msgid "GtkModulesList=gail:atk-bridge:dwellmouselistener:keymouselistener"
 msgstr "GtkModulesList=gail:atk-bridge:dwellmouselistener:keymouselistener"
 
 #: C/gnome-access-guide.xml:68(para)
-
 msgid "The above lines must be displayed as single lines in the <filename>gdm.conf</filename> file without line breaks. The formatting of this guide may display the lines over two lines."
 msgstr "A fenti soroknak egészben, tördelés nélkül kell szerepelniük a <filename>gdm.conf</filename> fájlban, még akkor is, ha itt két sorban jelennek meg."
 
 #: C/gnome-access-guide.xml:71(para)
-
 msgid "This step loads all of the GtkModules to enable assistive technologies such as <application>On-Screen Keyboard</application> and <application>Screen Reader and Magnifier</application>. You can edit the line above further to load only the GtkModules that you require to support the user base. For example:"
 msgstr "Ezzel "
 
@@ -762,7 +736,6 @@ msgid "Essential Keyboard Shortcuts"
 msgstr ""
 
 #: C/gnome-access-guide.xml:263(primary) C/gnome-access-guide.xml:371(primary) C/gnome-access-guide.xml:471(primary) C/gnome-access-guide.xml:588(primary) C/gnome-access-guide.xml:680(primary) C/gnome-access-guide.xml:875(primary) C/gnome-access-guide.xml:944(primary) C/gnome-access-guide.xml:1018(primary) C/gnome-access-guide.xml:1083(primary) C/gnome-access-guide.xml:1135(primary) C/gnome-access-guide.xml:1148(primary) C/gnome-access-guide.xml:1196(primary) C/gnome-access-guide.xml:1271(primary) C/gnome-access-guide.xml:1360(primary) C/gnome-access-guide.xml:1427(primary) C/gnome-access-guide.xml:1568(primary) C/gnome-access-guide.xml:1722(primary) C/gnome-access-guide.xml:1806(primary) C/gnome-access-guide.xml:1963(primary) C/gnome-access-guide.xml:2135(primary) C/gnome-access-guide.xml:2242(primary) C/gnome-access-guide.xml:2306(primary) C/gnome-access-guide.xml:2357(primary) C/gnome-access-guide.xml:2409(primary) C/gnome-access-guide.xml:2726(primary) C/gnome-access-guide.xml:2788(primary) C/gnome-access-guide.xml:2882(primary) C/gnome-access-guide.xml:3067(primary) C/gnome-access-guide.xml:3171(primary) C/gnome-access-guide.xml:3293(primary) C/gnome-access-guide.xml:3618(primary)
-
 msgid "keyboard shortcuts"
 msgstr "gyorsbillentyűk"
 
@@ -779,17 +752,14 @@ msgid "The following table lists the essential keyboard shortcuts that you can u
 msgstr ""
 
 #: C/gnome-access-guide.xml:280(para) C/gnome-access-guide.xml:383(para) C/gnome-access-guide.xml:487(para) C/gnome-access-guide.xml:603(para) C/gnome-access-guide.xml:709(para) C/gnome-access-guide.xml:890(para) C/gnome-access-guide.xml:956(para) C/gnome-access-guide.xml:1034(para) C/gnome-access-guide.xml:1098(para) C/gnome-access-guide.xml:1162(para) C/gnome-access-guide.xml:1209(para) C/gnome-access-guide.xml:1284(para) C/gnome-access-guide.xml:1373(para) C/gnome-access-guide.xml:1442(para) C/gnome-access-guide.xml:1486(para) C/gnome-access-guide.xml:1624(para) C/gnome-access-guide.xml:1734(para) C/gnome-access-guide.xml:1824(para) C/gnome-access-guide.xml:1928(para) C/gnome-access-guide.xml:1980(para) C/gnome-access-guide.xml:2147(para) C/gnome-access-guide.xml:2269(para) C/gnome-access-guide.xml:2333(para) C/gnome-access-guide.xml:2384(para) C/gnome-access-guide.xml:2435(para) C/gnome-access-guide.xml:2560(para) C/gnome-access-guide.xml:2755(para) C/gnome-access-guide.xml:2816(para) C/gnome-access-guide.xml:2912(para) C/gnome-access-guide.xml:2962(para) C/gnome-access-guide.xml:3094(para) C/gnome-access-guide.xml:3199(para) C/gnome-access-guide.xml:3249(para) C/gnome-access-guide.xml:3305(para) C/gnome-access-guide.xml:3356(para) C/gnome-access-guide.xml:3566(para)
-
 msgid "Keys"
 msgstr "Billentyűk"
 
 #: C/gnome-access-guide.xml:283(para) C/gnome-access-guide.xml:386(para) C/gnome-access-guide.xml:490(para) C/gnome-access-guide.xml:606(para) C/gnome-access-guide.xml:712(para) C/gnome-access-guide.xml:893(para) C/gnome-access-guide.xml:959(para) C/gnome-access-guide.xml:1037(para) C/gnome-access-guide.xml:1101(para) C/gnome-access-guide.xml:1165(para) C/gnome-access-guide.xml:1212(para) C/gnome-access-guide.xml:1287(para) C/gnome-access-guide.xml:1376(para) C/gnome-access-guide.xml:1445(para) C/gnome-access-guide.xml:1489(para) C/gnome-access-guide.xml:1627(para) C/gnome-access-guide.xml:1737(para) C/gnome-access-guide.xml:1827(para) C/gnome-access-guide.xml:1931(para) C/gnome-access-guide.xml:1983(para) C/gnome-access-guide.xml:2150(para) C/gnome-access-guide.xml:2272(para) C/gnome-access-guide.xml:2336(para) C/gnome-access-guide.xml:2387(para) C/gnome-access-guide.xml:2438(para) C/gnome-access-guide.xml:2563(para) C/gnome-access-guide.xml:2758(para) C/gnome-access-guide.xml:2819(para) C/gnome-access-guide.xml:2915(para) C/gnome-access-guide.xml:2965(para) C/gnome-access-guide.xml:3097(para) C/gnome-access-guide.xml:3202(para) C/gnome-access-guide.xml:3252(para) C/gnome-access-guide.xml:3308(para) C/gnome-access-guide.xml:3359(para) C/gnome-access-guide.xml:3569(para) C/gnome-access-guide.xml:380(para) C/gnome-access-guide.xml:459(para)
-
 msgid "Function"
 msgstr "Funkció"
 
 #: C/gnome-access-guide.xml:291(keycap) C/gnome-access-guide.xml:300(keycap) C/gnome-access-guide.xml:310(keycap) C/gnome-access-guide.xml:509(keycap) C/gnome-access-guide.xml:613(keycap) C/gnome-access-guide.xml:626(keycap) C/gnome-access-guide.xml:749(keycap) C/gnome-access-guide.xml:1172(keycap) C/gnome-access-guide.xml:1753(keycap) C/gnome-access-guide.xml:2098(keycap) C/gnome-access-guide.xml:2107(keycap) C/gnome-access-guide.xml:2643(keycap) C/gnome-access-guide.xml:3279(keycap) C/gnome-access-guide.xml:3337(keycap) C/gnome-access-guide.xml:3528(keycap)
-
 msgid "Tab"
 msgstr "Tab"
 
@@ -798,7 +768,6 @@ msgid "Give focus to the next element or control."
 msgstr ""
 
 #: C/gnome-access-guide.xml:300(keycap) C/gnome-access-guide.xml:456(keycap) C/gnome-access-guide.xml:565(keycap) C/gnome-access-guide.xml:658(keycap) C/gnome-access-guide.xml:994(keycap) C/gnome-access-guide.xml:1066(keycap) C/gnome-access-guide.xml:1949(keycap) C/gnome-access-guide.xml:2107(keycap) C/gnome-access-guide.xml:2524(keycap) C/gnome-access-guide.xml:2532(keycap) C/gnome-access-guide.xml:2652(keycap) C/gnome-access-guide.xml:2661(keycap) C/gnome-access-guide.xml:2670(keycap) C/gnome-access-guide.xml:2678(keycap) C/gnome-access-guide.xml:2687(keycap) C/gnome-access-guide.xml:2696(keycap) C/gnome-access-guide.xml:2705(keycap) C/gnome-access-guide.xml:2713(keycap) C/gnome-access-guide.xml:3431(keycap) C/gnome-access-guide.xml:3439(keycap) C/gnome-access-guide.xml:3448(keycap) C/gnome-access-guide.xml:3457(keycap) C/gnome-access-guide.xml:3528(keycap)
-
 msgid "Shift"
 msgstr "Shift"
 
@@ -807,7 +776,6 @@ msgid "Reverse the navigation direction and give focus to the previous element o
 msgstr ""
 
 #: C/gnome-access-guide.xml:310(keycap) C/gnome-access-guide.xml:446(keycap) C/gnome-access-guide.xml:497(keycap) C/gnome-access-guide.xml:509(keycap) C/gnome-access-guide.xml:574(keycap) C/gnome-access-guide.xml:613(keycap) C/gnome-access-guide.xml:667(keycap) C/gnome-access-guide.xml:1692(keycap) C/gnome-access-guide.xml:1700(keycap) C/gnome-access-guide.xml:1708(keycap) C/gnome-access-guide.xml:1762(keycap) C/gnome-access-guide.xml:1770(keycap) C/gnome-access-guide.xml:2466(keycap) C/gnome-access-guide.xml:2475(keycap) C/gnome-access-guide.xml:2541(keycap) C/gnome-access-guide.xml:2592(keycap) C/gnome-access-guide.xml:2601(keycap) C/gnome-access-guide.xml:2610(keycap) C/gnome-access-guide.xml:2618(keycap) C/gnome-access-guide.xml:2626(keycap) C/gnome-access-guide.xml:2634(keycap) C/gnome-access-guide.xml:2643(keycap) C/gnome-access-guide.xml:2687(keycap) C/gnome-access-guide.xml:2696(keycap) C/gnome-access-guide.xml:2705(keycap) C/gnome-access-guide.xml:2713(keycap) C/gnome-access-guide.xml:3046(keycap) C/gnome-access-guide.xml:3054(keycap) C/gnome-access-guide.xml:3279(keycap) C/gnome-access-guide.xml:3476(keycap) C/gnome-access-guide.xml:3484(keycap) C/gnome-access-guide.xml:3492(keycap) C/gnome-access-guide.xml:3500(keycap) C/gnome-access-guide.xml:3519(keycap) C/gnome-access-guide.xml:3603(keycap)
-
 msgid "Ctrl"
 msgstr "Ctrl"
 
@@ -828,7 +796,6 @@ msgid "Navigate within an element or control."
 msgstr ""
 
 #: C/gnome-access-guide.xml:333(keycap) C/gnome-access-guide.xml:648(keycap) C/gnome-access-guide.xml:759(keycap) C/gnome-access-guide.xml:901(keycap) C/gnome-access-guide.xml:967(keycap) C/gnome-access-guide.xml:985(keycap) C/gnome-access-guide.xml:1045(keycap) C/gnome-access-guide.xml:1219(keycap) C/gnome-access-guide.xml:1334(keycap) C/gnome-access-guide.xml:1401(keycap) C/gnome-access-guide.xml:1540(keycap) C/gnome-access-guide.xml:1853(keycap) C/gnome-access-guide.xml:2215(keycap) C/gnome-access-guide.xml:2280(keycap) C/gnome-access-guide.xml:2395(keycap) C/gnome-access-guide.xml:2827(keycap) C/gnome-access-guide.xml:3036(keycap) C/gnome-access-guide.xml:3326(keycap)
-
 msgid "spacebar"
 msgstr "szóköz"
 
@@ -837,7 +804,6 @@ msgid "Activate the element or control that has focus. For example, if the curre
 msgstr ""
 
 #: C/gnome-access-guide.xml:345(keycap) C/gnome-access-guide.xml:920(keycap) C/gnome-access-guide.xml:1004(keycap) C/gnome-access-guide.xml:1182(keycap) C/gnome-access-guide.xml:1345(keycap) C/gnome-access-guide.xml:1412(keycap) C/gnome-access-guide.xml:1551(keycap) C/gnome-access-guide.xml:1682(keycap) C/gnome-access-guide.xml:1779(keycap) C/gnome-access-guide.xml:2228(keycap) C/gnome-access-guide.xml:2867(keycap)
-
 msgid "Esc"
 msgstr "Esc"
 
@@ -846,7 +812,6 @@ msgid "Close a window, menu, or drawer."
 msgstr ""
 
 #: C/gnome-access-guide.xml:355(keycap) C/gnome-access-guide.xml:1294(keycap) C/gnome-access-guide.xml:1991(keycap)
-
 msgid "F7"
 msgstr "F7"
 
@@ -859,7 +824,6 @@ msgid "Global Keyboard Shortcuts"
 msgstr ""
 
 #: C/gnome-access-guide.xml:372(secondary)
-
 msgid "global"
 msgstr "globális"
 
@@ -868,12 +832,10 @@ msgid "The following table lists the keyboard shortcuts that you can use from an
 msgstr ""
 
 #: C/gnome-access-guide.xml:393(keycap) C/gnome-access-guide.xml:402(keycap) C/gnome-access-guide.xml:424(keycap) C/gnome-access-guide.xml:497(keycap) C/gnome-access-guide.xml:509(keycap) C/gnome-access-guide.xml:613(keycap) C/gnome-access-guide.xml:1172(keycap) C/gnome-access-guide.xml:1182(keycap) C/gnome-access-guide.xml:1219(keycap) C/gnome-access-guide.xml:1227(keycap) C/gnome-access-guide.xml:1240(keycap) C/gnome-access-guide.xml:1248(keycap) C/gnome-access-guide.xml:1257(keycap) C/gnome-access-guide.xml:1294(keycap) C/gnome-access-guide.xml:1383(keycap) C/gnome-access-guide.xml:1744(keycap)
-
 msgid "Alt"
 msgstr "Alt"
 
 #: C/gnome-access-guide.xml:393(keycap) C/gnome-access-guide.xml:435(keycap) C/gnome-access-guide.xml:446(keycap)
-
 msgid "F1"
 msgstr "F1"
 
@@ -886,7 +848,6 @@ msgid "You can customize this keyboard shortcut."
 msgstr ""
 
 #: C/gnome-access-guide.xml:402(keycap) C/gnome-access-guide.xml:555(keycap) C/gnome-access-guide.xml:466(para)
-
 msgid "F2"
 msgstr "F2"
 
@@ -895,7 +856,6 @@ msgid "Open the <guilabel>Run Application </guilabel>dialog."
 msgstr ""
 
 #: C/gnome-access-guide.xml:412(keycap) C/gnome-access-guide.xml:424(keycap)
-
 msgid "Print Screen"
 msgstr "Print Screen"
 
@@ -916,7 +876,6 @@ msgid "If the focused element is a panel or application window, this keyboard sh
 msgstr ""
 
 #: C/gnome-access-guide.xml:456(keycap) C/gnome-access-guide.xml:565(keycap) C/gnome-access-guide.xml:574(keycap) C/gnome-access-guide.xml:637(keycap) C/gnome-access-guide.xml:658(keycap) C/gnome-access-guide.xml:667(keycap) C/gnome-access-guide.xml:994(keycap) C/gnome-access-guide.xml:1066(keycap) C/gnome-access-guide.xml:1248(keycap) C/gnome-access-guide.xml:1635(keycap) C/gnome-access-guide.xml:1949(keycap)
-
 msgid "F10"
 msgstr "F10"
 
@@ -937,7 +896,6 @@ msgid "The desktop background is the part of the GNOME Desktop where there are n
 msgstr ""
 
 #: C/gnome-access-guide.xml:497(keycap)
-
 msgid "D"
 msgstr "D"
 
@@ -1074,12 +1032,10 @@ msgid "The following examples demonstrate the effect of different move operation
 msgstr ""
 
 #: C/gnome-access-guide.xml:780(para)
-
 msgid "Illustration"
 msgstr "Illusztráció"
 
 #: C/gnome-access-guide.xml:783(para) C/gnome-access-guide.xml:1639(para) C/gnome-access-guide.xml:1749(para) C/gnome-access-guide.xml:1908(para)
-
 msgid "Description"
 msgstr "Leírás"
 
@@ -1272,7 +1228,6 @@ msgid "Open the <guimenu>Window</guimenu> Menu."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1227(keycap) C/gnome-access-guide.xml:482(para)
-
 msgid "F4"
 msgstr "F4"
 
@@ -1285,7 +1240,6 @@ msgid "Solaris:"
 msgstr ""
 
 #: C/gnome-access-guide.xml:1238(keycap)
-
 msgid "Open"
 msgstr "Megnyitás"
 
@@ -1294,7 +1248,6 @@ msgid "Linux:"
 msgstr ""
 
 #: C/gnome-access-guide.xml:1240(keycap)
-
 msgid "F9"
 msgstr "F9"
 
@@ -1307,7 +1260,6 @@ msgid "Maximize the window."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1257(keycap)
-
 msgid "F5"
 msgstr "F5"
 
@@ -1364,7 +1316,6 @@ msgid "When a window has focus, you can increase or decrease the size of the win
 msgstr ""
 
 #: C/gnome-access-guide.xml:1383(keycap) C/gnome-access-guide.xml:1464(keycap)
-
 msgid "F8"
 msgstr "F8"
 
@@ -1401,7 +1352,6 @@ msgid "The following table describes the keyboard shortcuts that you can use to 
 msgstr ""
 
 #: C/gnome-access-guide.xml:1453(keycap) C/gnome-access-guide.xml:1939(keycap)
-
 msgid "F6"
 msgstr "F6"
 
@@ -1426,7 +1376,6 @@ msgid "Move the resize handle by a large amount."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1516(keycap) C/gnome-access-guide.xml:1882(keycap) C/gnome-access-guide.xml:2069(keycap) C/gnome-access-guide.xml:2485(keycap) C/gnome-access-guide.xml:2524(keycap) C/gnome-access-guide.xml:2626(keycap) C/gnome-access-guide.xml:2670(keycap) C/gnome-access-guide.xml:2705(keycap) C/gnome-access-guide.xml:2993(keycap) C/gnome-access-guide.xml:3145(keycap) C/gnome-access-guide.xml:3399(keycap) C/gnome-access-guide.xml:3448(keycap) C/gnome-access-guide.xml:3492(keycap)
-
 msgid "Home"
 msgstr "Saját mappa"
 
@@ -1435,7 +1384,6 @@ msgid "Reduce the size of the pane to the left of the resize handle for vertical
 msgstr ""
 
 #: C/gnome-access-guide.xml:1528(keycap) C/gnome-access-guide.xml:1892(keycap) C/gnome-access-guide.xml:2079(keycap) C/gnome-access-guide.xml:2496(keycap) C/gnome-access-guide.xml:2532(keycap) C/gnome-access-guide.xml:2634(keycap) C/gnome-access-guide.xml:2678(keycap) C/gnome-access-guide.xml:2713(keycap) C/gnome-access-guide.xml:3004(keycap) C/gnome-access-guide.xml:3156(keycap) C/gnome-access-guide.xml:3409(keycap) C/gnome-access-guide.xml:3457(keycap) C/gnome-access-guide.xml:3500(keycap)
-
 msgid "End"
 msgstr "Befejezés"
 
@@ -1464,7 +1412,6 @@ msgid "An application is any program, utility, or other software package that yo
 msgstr ""
 
 #: C/gnome-access-guide.xml:1576(term)
-
 msgid "Windows"
 msgstr "Ablakok"
 
@@ -1473,7 +1420,6 @@ msgid "A window is a rectangular frame on your screen that displays an applicati
 msgstr ""
 
 #: C/gnome-access-guide.xml:1584(term)
-
 msgid "Dialogs"
 msgstr "Párbeszédablakok"
 
@@ -1482,7 +1428,6 @@ msgid "A dialog is a popup window in which you enter information or commands. Se
 msgstr ""
 
 #: C/gnome-access-guide.xml:1592(term) C/gnome-access-guide.xml:1583(term)
-
 msgid "Controls"
 msgstr "Vezérlőelemek"
 
@@ -1519,7 +1464,6 @@ msgid "Open the menu that is associated with the access key."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1654(para)
-
 msgid "access keys"
 msgstr "gyorsbillentyű"
 
@@ -1548,7 +1492,6 @@ msgid "Close the open menus and give focus to the control that had focus before 
 msgstr ""
 
 #: C/gnome-access-guide.xml:1692(keycap)
-
 msgid "O"
 msgstr "O"
 
@@ -1557,7 +1500,6 @@ msgid "Open the file selector dialog."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1700(keycap)
-
 msgid "S"
 msgstr "S"
 
@@ -1566,7 +1508,6 @@ msgid "Open the Save dialog."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1708(keycap)
-
 msgid "L"
 msgstr "L"
 
@@ -1599,7 +1540,6 @@ msgid "Give focus to the next control."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1762(keycap) C/gnome-access-guide.xml:2049(keycap) C/gnome-access-guide.xml:2571(keycap) C/gnome-access-guide.xml:2610(keycap) C/gnome-access-guide.xml:2652(keycap) C/gnome-access-guide.xml:3014(keycap) C/gnome-access-guide.xml:3046(keycap) C/gnome-access-guide.xml:3123(keycap) C/gnome-access-guide.xml:3375(keycap) C/gnome-access-guide.xml:3431(keycap) C/gnome-access-guide.xml:3476(keycap)
-
 msgid "Page Up"
 msgstr "Page Up"
 
@@ -1608,7 +1548,6 @@ msgid "If a tab name has focus, move to the next tabbed section of the dialog."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1770(keycap) C/gnome-access-guide.xml:2059(keycap) C/gnome-access-guide.xml:2581(keycap) C/gnome-access-guide.xml:2618(keycap) C/gnome-access-guide.xml:2661(keycap) C/gnome-access-guide.xml:3025(keycap) C/gnome-access-guide.xml:3054(keycap) C/gnome-access-guide.xml:3134(keycap) C/gnome-access-guide.xml:3387(keycap) C/gnome-access-guide.xml:3439(keycap) C/gnome-access-guide.xml:3484(keycap)
-
 msgid "Page Down"
 msgstr "Page Down"
 
@@ -1621,7 +1560,6 @@ msgid "Close the dialog."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1789(keycap) C/gnome-access-guide.xml:2195(keycap) C/gnome-access-guide.xml:2291(keycap) C/gnome-access-guide.xml:3510(keycap)
-
 msgid "Return"
 msgstr "Enter"
 
@@ -1690,7 +1628,6 @@ msgid "Select the last file or folder within the current folder."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1902(keycap)
-
 msgid "backspace"
 msgstr "backspace"
 
@@ -1811,7 +1748,6 @@ msgid "Move focus to the previous focusable control."
 msgstr ""
 
 #: C/gnome-access-guide.xml:2117(keycap)
-
 msgid "Enter"
 msgstr "Enter"
 
@@ -2036,7 +1972,6 @@ msgid "Select all text to the right of the cursor."
 msgstr ""
 
 #: C/gnome-access-guide.xml:2541(keycap) C/gnome-access-guide.xml:3519(keycap)
-
 msgid "A"
 msgstr "A"
 
@@ -2549,7 +2484,6 @@ msgid "Select the parent item."
 msgstr ""
 
 #: C/gnome-access-guide.xml:3603(keycap)
-
 msgid "F"
 msgstr "F"
 
@@ -2562,7 +2496,6 @@ msgid "Customizing Your Keyboard Shortcuts"
 msgstr ""
 
 #: C/gnome-access-guide.xml:3619(secondary)
-
 msgid "customizing"
 msgstr "személyre szabás"
 
@@ -2647,12 +2580,10 @@ msgid "<emphasis>Desktop Appearance Enhancement</emphasis> - users can configure
 msgstr ""
 
 #: C/gnome-access-guide.xml:12(title) C/gnome-access-guide.xml:14(primary)
-
 msgid "Screen Reader and Magnifier"
 msgstr "Képernyőolvasó és nagyító"
 
 #: C/gnome-access-guide.xml:17(primary)
-
 msgid "Orca"
 msgstr "Orca"
 
@@ -2669,7 +2600,6 @@ msgid "The screen reader enables non-visual access to standard applications in t
 msgstr ""
 
 #: C/gnome-access-guide.xml:30(para)
-
 msgid "Magnifier"
 msgstr "Nagyító"
 
@@ -2682,27 +2612,22 @@ msgid "The following sections provide information about Orca and how to use it."
 msgstr ""
 
 #: C/gnome-access-guide.xml:37(title)
-
 msgid "Introduction to Orca"
 msgstr "Az Orca bemutatása"
 
 #: C/gnome-access-guide.xml:39(title)
-
 msgid "What is Orca?"
 msgstr "Mi az Orca?"
 
 #: C/gnome-access-guide.xml:40(para)
-
 msgid "Orca is a flexible, extensible, and powerful assistive technology for people with visual impairments. Using various combinations of speech synthesis, braille, and magnification, Orca helps provide access to applications and toolkits that support the AT-SPI (e.g., the GNOME desktop). Orca is also free open source software."
 msgstr "Az Orca egy flexibilis, kiterjeszthető és jól használható akadálymentesítési megoldás látássérült emberek számára. Különböző megoldásokat tud együttesen kezelni, kezeli a beszédszintetizátorokat, braille támogatással és nagyítási képességekkel rendelkezik, segítséget nyújt a különböző alkalmazások és toolkitek használatához melyek támogatják az AT-SPI technológiát (például a GNOME asztali környezet). Az Orca egy ingyenes, nyílt forrású alkalmazás."
 
 #: C/gnome-access-guide.xml:48(title)
-
 msgid "Why the name Orca?"
 msgstr "Miért Orca a neve?"
 
 #: C/gnome-access-guide.xml:49(para)
-
 msgid "One of the first DOS screen readers was Flipper by Omnichron corporation in Berkeley, CA. It was named Flipper in part because the blind wife of the programmer envisioned computers as being programmed by flipping switches (an accurate image of a bygone era). Then came another DOS screen reader from Henter-Joyce in Florida - \"Jobs access With Speech\" (or JAWS). Meanwhile in the UK we had the company Dolphin systems making their own DOS screen reader."
 msgstr "Az első DOS alatt működő képernyő olvasó a Flipper nevet kapta, az Omnichron részvénytársaság készítette Berkeleyben, CA. Részben azért nevezték Flippernek, mivel a programozó látássérült felesége úgy képzelte, hogy a számítógépeket kapcsolók úsztatásával programozzák (ez egy pontos képe egy letűnt kornak). Később megjelent egy másik DOS alatt működő képernyő olvasó, Ezt a Henter-joyce cég készítette Floridában - \"Jobs access With Speech\" (vagy JAWS) névre keresztelték. Angliában a Dolphin systems az angoloknak saját DoOS alatt működő képernyő olvasót készített."
 
@@ -2715,267 +2640,214 @@ msgid "Hence the lore is that it is just keeping with the sea animal naming them
 msgstr "Ennyi a történet, így az Orca csak folytatja a képernyőolvasók tengeri állatokról való elnevezésének hagyományát. Ezen kívül az Orca sokkal jobban is hangzik, mint a Nemo, Ariel, Willy vagy Mr. Limpet."
 
 #: C/gnome-access-guide.xml:66(title)
-
 msgid "What's the schedule?"
 msgstr "Mi a menetrend?"
 
 #: C/gnome-access-guide.xml:67(para)
-
 msgid "Orca is part of the GNOME platform and Orca's releases are coupled with the releases of the GNOME platform."
 msgstr "Az Orca része a GNOME rendszernek és az Orca változatok idomulnak az új GNOME változatokhoz."
 
 #: C/gnome-access-guide.xml:71(title)
-
 msgid "How do I request a new feature?"
 msgstr "Hogyan kérhet új funkciót?"
 
 #: C/gnome-access-guide.xml:72(para)
-
 msgid "<ulink url=\"http://bugzilla.gnome.org/buglist.cgi?query=product:orca+\"> Bugs</ulink> and feature/enhancement requests (RFEs) should be reported to the <ulink url=\"http://bugzilla.gnome.org\">GNOME Bug Tracking System</ulink>. Patches are always welcome, and instructions for creating patches can be found in the <ulink url=\"http://developer.gnome.org/tools/svn.html\">GNOME introduction to Subversion (svn)</ulink>."
 msgstr "<ulink url=\"http://bugzilla.gnome.org/buglist.cgi?query=product:orca+\">A hibák</ulink> és funkció/kiterjesztés kérések (RFEs) a <ulink url=\"http://bugzilla.gnome.org\">GNOME hibakövető rendszerén keresztül</ulink> küldendők. A patcheket mindig örömmel fogadják. Instrukciókat itt talál arról, hogyan tud létrehozni patcheket: <ulink url=\"http://developer.gnome.org/tools/svn.html\">Bevezetés a GNOME Subversion (svn) rendszer használatába</ulink>."
 
 #: C/gnome-access-guide.xml:83(title)
-
 msgid "Where is the discussion list?"
 msgstr "Hol kaphat segítséget?"
 
 #: C/gnome-access-guide.xml:84(para)
-
 msgid "You can get in touch with developers and other users by <ulink url=\"mailto:orca-list@gnome.org\">sending an e-mail</ulink> to the <ulink url=\"http://mail.gnome.org/mailman/listinfo/orca-list\"> Orca mailing list</ulink> ( <ulink url=\"http://mail.gnome.org/archives/orca-list\"> Archives</ulink>)."
 msgstr "Segítséget a fejlesztőktől és a többi felhasználótól a következő helyeken kaphat: <ulink url=\"mailto:orca-list@gnome.org\">küldhet levelet< /ulink> az <ulink url=\"http://mail.gnome.org/mailman/listinfo/orca-list\"> Orca levelező listára,</ulink> (vagy elolvashatja a <ulink url=\"http://mail.gnome.org/archives/orca-list\"> lista archívumokat</ulink>)."
 
 #: C/gnome-access-guide.xml:94(title)
-
 msgid "Is braille supported?"
 msgstr "A braille támogatott?"
 
 #: C/gnome-access-guide.xml:95(para)
-
 msgid "Yes! Braille is supported via BrlTTY and it is integrated well with Orca. BrlTTY offers support for nearly every refreshable braille display known to man. Please refer to the <ulink url=\"ghelp:orca#braille\">Braille page</ulink> for more information."
 msgstr "Igen! A braille a Brltty rendszeren keresztül támogatott és jól együtt működik az Orca képernyőolvasóval. A Brltty majdnem minden újabb frissíthető braille kijelzőt ismer jelen pillanatban. Ha bővebb információra kíváncsi, kérjük, nézze meg a <ulink url=\"ghelp:orca#braille\">Braille oldalt</ulink>."
 
 #: C/gnome-access-guide.xml:103(title)
-
 msgid "Is contracted braille supported?"
 msgstr "Az összetett braille támogatott?"
 
 #: C/gnome-access-guide.xml:104(para)
-
 msgid "Orca currently only supports uncontracted braille. Future support for contracted braille, however, is in our plans. Please refer to <ulink url=\"http://bugzilla.gnome.org/show_bug.cgi?id=354470\"> GNOME bug 354470</ulink> to track the progress on this front."
 msgstr "Jelenleg az Orca az egyszerű braille-t támogatja. A jövőben fogja támogatni az összetett braille-t, ha kíváncsi arra, hogy hol tart a megvalósítás, kérjük figyelje rendszeresen a <ulink url=\"http://bugzilla.gnome.org/show_bug.cgi?id=354470\"> 354470 számú GNOME hibát. </ulink> Így mindig napra kész lehet, hogy hol tart ennek a funkciónak a megvalósítása."
 
 #: C/gnome-access-guide.xml:112(title)
-
 msgid "What voices are available?"
 msgstr "Milyen beszédszintetizátorok állnak rendelkezésre?"
 
 #: C/gnome-access-guide.xml:113(para)
-
 msgid "Orca provides interfaces to both <userinput>gnome-speech</userinput> and <userinput>emacspeak</userinput> speech services. As such, the available voices for Orca are only restricted by the speech engines supported by the available speech services. For free speech engines, you typically have a choice of the eSpeak, Festival, and FreeTTS speech engines. For commercial engines, you have a choice of additional engines such as Fonix DECtalk, Loquendo, Eloquence, Cepstral, IBMTTS, and others may be on the way soon. Keep an eye on the <userinput>gnome-speech</userinput> package for more progress in this area."
 msgstr "Az Orca a következő beszédrendszereket támogatja: <userinput>gnome-speech</userinput> és <userinput>emacspeak</userinput>. Az elérhető beszédszintetizátorokat az Orca szempontjából csak a zárt rendszerű beszédszintetizátorok korlátozzák. Rendelkezésre állnak azonban ingyenesen használható beszédszintetizátorok, például az Espeak, Festival, Freetts. Fizetős megoldásokként választható például a Fonix DECtalk, Loquendo, Eloquence, Cepstral, IBMTTS, és sok más beszédszintetizátor. Vegye figyelembe, hogy csak olyan beszédszintetizátort válasszon, melyeket a <userinput>gnome-speech</userinput> csomag támogat."
 
 #: C/gnome-access-guide.xml:127(title)
-
 msgid "What languages are supported?"
 msgstr "Milyen nyelvek támogatottak?"
 
 #: C/gnome-access-guide.xml:128(para)
-
 msgid "The <ulink url=\"http://l10n.gnome.org/teams\">GNOME Translation teams</ulink> are composed of many passionate volunteers from around the world. These teams do a great job and keep an up-to-date status report. Please see the <ulink url=\"http://l10n.gnome.org/module/orca\">Orca translation status page</ulink> for the large number of languages into which Orca has been translated. Note that the support for a language also depends upon a speech synthesis engine that supports the language whether BrlTTY has braille tables for the language or not."
 msgstr "A <ulink url=\"http://l10n.gnome.org/teams\">GNOME Fordítói csoportok világszerte honosítással foglalkoznak. Mindig napra kész információk állnak rendelkezésre a honosítás állapotáról. Az <ulink url=\"http://l10n.gnome.org/module/orca\">Orca fordítási státuszát mutató oldalon</ulink> nagyon sok nyelv fordítási állapotát lehet megnézni, valamint azt, hogy milyen Orca verzió van lefordítva. Sok múlik azon is, hogy a beszédrendszer támogatja -e az adott nyelvet, valamint hogy a BrlTTY csomaghoz létezik -e braille fordítási tábla az adott nyelvhez vagy nem."
 
 #: C/gnome-access-guide.xml:141(title)
-
 msgid "How well does magnification work?"
 msgstr "Hogyan működik a nagyító?"
 
 #: C/gnome-access-guide.xml:142(para)
-
 msgid "Orca currently uses the <userinput>gnome-mag</userinput> magnification service. As of this writing (GNOME 2.18), <userinput>gnome-mag</userinput> has incorporated some support for smoother full screen magnification, which relies upon newer extensions in the X Window System server. These extensions do not always function well on all platforms, so smooth full screen magnification may not always work."
 msgstr "Az Orca jelenleg a <userinput>gnome-mag</userinput> szolgáltatást használja a nagyításra. Amikor ez íródott (GNOME 2.18), a <userinput>gnome-mag</userinput> bizonytalanabbul és lassabban működött teljes képernyős nagyításkor az újabb kiterjesztésekkel rendelkező X kiszolgálóval. Ezek a kiterjesztések nem mindig működtek megfelelően minden platformon. Vagyis a teljes képernyős nagyítás nem mindig működött."
 
 #: C/gnome-access-guide.xml:152(title)
-
 msgid "How is web access coming along?"
 msgstr "Hogyan lehet a webet használni?"
 
 #: C/gnome-access-guide.xml:153(para)
-
 msgid "We are targeting Firefox 3 for providing compelling web access. The work is progressing step by step and both the Orca and Firefox teams are working feverishly to get it done."
 msgstr "Azon dolgozunk, hogy a Firefox 3 webböngészővel akadálymentesen lehessen a weboldalakat használni. A munka lépésről lépésre folyamatban van, a Firefox és az Orca fejlesztői csapat addig dolgozik ezen, amíg ez meg nem valósul."
 
 #: C/gnome-access-guide.xml:160(title)
-
 msgid "Using Orca"
 msgstr "Az Orca használata"
 
 #: C/gnome-access-guide.xml:162(title)
-
 msgid "Initial Set-up"
 msgstr "Alapvető beállítások"
 
 #: C/gnome-access-guide.xml:163(para)
-
 msgid "When you run Orca for the first time, it will automatically enter setup mode. If you want to run setup at some later point, you can pass the <userinput>--setup</userinput> option to Orca the next time you run it. Furthermore, while Orca is running, you can press <keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> to bring up the Orca setup window. Finally, Orca provides a text setup utility that you can start by passing the <userinput>--text-setup</userinput> option to Orca. All of these options will create a <userinput>~/.orca/user-settings.py</userinput> file that holds your preferences and will also enable the accessibility infrastructure. You need to log out and log back in for the accessibility infrastructure settings to take effect."
 msgstr "Az Orca képernyőolvasó beállításainak testre szabására számos lehetőség áll az ön rendelkezésére. Amikor először indítja el az Orca képernyőolvasót, automatikusan megjelenik eg beállítások párbeszédpanel. Ha később szeretné megadni a beállításokat, írja be a <userinput>--setup</userinput>kapcsolót amikor legközelebb futtatja az Orca képernyőolvasót. A későbbi használat során amikor az Orca már fut, üsse le az <keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> billentyűparancsot a beállítások párbeszédpanel megjelenítéséhez. Egy másik lehetőség a beállítások megadására: az Orca képernyőolvasó rendelkezik egy szöveges beállító felülettel is. Ennek a felületnek az eléréséhez a futtatáskor írja be a <userinput>--text-setup</userinput> kapcsolót az orca parancs után szóközzel elválasztva. Mindegyik beállítási lehetőség létre hoz egy <userinput>~/.orca/user-settings.py</userinput> fájlt, ez a fájl tartalmazza az ön által megadott beállításokat és engedélyezni fogja az akadálymentesítési szolgáltatást. Ahhoz, hogy az akadálymentesítési szolgáltatás működhessen, ki kell jelentkeznie majd újra be kell jelentkeznie a módosítások életbe lépéséhez."
 
 #: C/gnome-access-guide.xml:182(title)
-
 msgid "How do I run Orca?"
 msgstr "Hogyan indíthatom el az Orca képernyőolvasót?"
 
 #: C/gnome-access-guide.xml:183(para)
-
 msgid "Run Orca by typing <userinput>orca</userinput>into a Terminal. You can do so from a virtual console window if you do not yet have access to the GUI. Orca will automatically enter text setup mode if you run it from a virtual console window or your GUI environment is not yet set up for accessibility."
 msgstr "Első lehetőség: egy terminál ablakban gépelje be az <userinput>orca</userinput parancsot. Ezt megteheti úgy is, hogy éppen egy virtuális konzolon tartózkodik és nem használja a grafikus rendszert. Ekkor az Orca szöveges beállító felülete jelenik meg. Akkor is ez a beállító felület jelenik meg, ha az akadálymentesítési szolgáltatás a grafikus rendszerben még nincs engedélyezve."
 
 #: C/gnome-access-guide.xml:191(title)
-
 msgid "Quitting Orca"
 msgstr "Kilépés az Orca képernyőolvasóból"
 
 #: C/gnome-access-guide.xml:192(para)
-
 msgid "To quit orca, press <keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo>. A confirmation dialog will appear. Select \"yes\" to quit. If the system seems unresponsive, you can do a couple things:"
 msgstr "Ha ki szeretne lépni az Orca képernyőolvasóból, üsse le az <keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo> billentyűkombinációt. Egy megerősítést kérő párbeszédpanel jelenik meg. Válassza és aktiválja a \"kilépés\" gombot a kilépéshez. Ha a rendszer nem reagál, a következő dolgokat teheti meg:"
 
 #: C/gnome-access-guide.xml:201(para)
-
 msgid "Run <userinput>orca --quit</userinput> from a terminal window, such as a virtual console (press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> on most Linux platforms to get to a virtual console and then <keycombo><keycap>Alt</keycap><keycap>F7</keycap></keycombo> to get back to the desktop). This will kill orca and clean up after it. You can then rerun orca using the Orca command."
 msgstr "Futtassa az <userinput>orca --quit</userinput> parancsot egy terminál ablakban, vagy egy virtuális konzolon (üsse le a <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F1</keycap></keycombo> billentyűkombinációt. A legtöbb linux rendszerben a virtuális konzolt így lehet elérni. Az <keycombo><keycap>Alt</keycap><keycap>F7</keycap></keycombo> billentyűkombinációval vissza tud térni a grafikus rendszerbe). Ez a parancs kilépteti az Orca alkalmazást. Ha szükséges, újra el tudja indítani az Orca paranccsal."
 
 #: C/gnome-access-guide.xml:216(para)
-
 msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Backspace</keycap></keycombo> to kill your login session and get back to the graphical login prompt."
 msgstr "Üsse le a <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Backspace</keycap></keycombo> billentyűkombinációt a jelenlegi munkafolyamat megszakításához és a grafikus bejelentkező képernyő megjelenéséhez."
 
 #: C/gnome-access-guide.xml:228(title)
-
 msgid "Customizing Orca"
 msgstr "Az Orca testre szabása"
 
 #: C/gnome-access-guide.xml:230(title)
-
 msgid "How do I define my own keybindings?"
 msgstr "Hogyan tudok saját billentyű társításokat definiálni?"
 
 #: C/gnome-access-guide.xml:231(para)
-
 msgid "You can currently redefine your key bindings for Orca in two main ways. The first way is to be able to choose between the destkop and laptop layouts, which can be selected on the \"General\" page of the Orca Configuration GUI (press <keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> to bring up the Orca preferences GUI). For finer-grained control, you can also redefine indivual key bindings on the \"Key Bindings\" page of the Orca Configuration GUI."
 msgstr "Kétféleképpen tudja testre szabni az Orca billentyűtársításait. Az első lehetőség, hogy választ az asztali és a laptop billentyűzet kiosztások közül, ezt az Orca grafikus beállító párbeszédpanelén (üsse le az <keycombo><keycap>Insert</keycap><keycap>Szóköz</keycap></keycombo> billentyűkombinációt a grafikus beállító párbeszédpanel eléréséhez) az \"Általános\" oldalán teheti meg. Egy sokkal előnyösebb megoldás, ha átdefiniálja az Orca billentyűtársításokat az Orca grafikus beállító párbeszédpanel \"Billentyű társítások\" oldalán "
 
 #: C/gnome-access-guide.xml:243(para)
-
 msgid "The remainder of this answer might be out of date."
 msgstr "Az alábbi módszer viszont már elavult."
 
 #: C/gnome-access-guide.xml:246(para)
-
 msgid "Here's an example you can add to your <userinput>~/.orca/user-settings.py</userinput> file. It sets up a global keybinding for <keycombo><keycap>Insert</keycap><keycap>T</keycap></keycombo> ( <keycap>Insert</keycap> is the Orca modifier) to speak and braille \"Hello World.\""
 msgstr "Néhány példa arra, hogyan tud egyéni billentyű társításokat hozzá adni a saját <userinput>~/.orca/user-settings.py</userinput> fájlhoz. Beállításra kerül billentyű társításként az <keycombo><keycap>Insert</keycap><keycap>T</keycap></keycombo> billentyű kombináció (az <keycap>Insert</keycap> az Orca módosító billentyű), a \"Helló Világ.\" kimondásra és kiírásra kerül a braille kijelzőre."
 
 #: C/gnome-access-guide.xml:286(title)
-
 msgid "Use a keyboard command to make Orca speak or braille the current date and time"
 msgstr "Billentyű kombináció használata az aktuális dátum és idő kimondására, vagy a braille kijelzőre íratásra"
 
 #: C/gnome-access-guide.xml:288(para)
-
 msgid "Place the following lines in <userinput>~/.orca/orca-customizations.py</userinput>. If this file does not exist, create it."
 msgstr "Helyezze el a következő sorokat a <userinput>~/.orca/orca-customizations.py</userinput> fájlba. Ha ez a fájl nem létezik, hozza létre."
 
 #: C/gnome-access-guide.xml:326(para)
-
 msgid "Note that in this case <keycombo><keycap>Insert</keycap><keycap>D</keycap></keycombo> will be used to report current information about the time and date."
 msgstr "Ebben az esetben az <keycombo><keycap>Insert</keycap><keycap>D</keycap></keycombo> billentyűkombináció szolgál majd arra, hogy az aktuális dátumot és időt megtudhassa."
 
 #: C/gnome-access-guide.xml:334(title)
-
 msgid "How do I set up my own custom script area?"
 msgstr "Hogyan lesznek beállítva a saját szkriptjeim?"
 
 #: C/gnome-access-guide.xml:335(para)
-
 msgid "The short answer is that if you create an empty <userinput>~/.orca/orca-scripts/__init__.py</userinput> and place your custom scripts in <userinput>~/.orca/orca-scripts</userinput>, Orca will pick up any scripts from there before looking in the installed area."
 msgstr "A rövid válasz: ha létre hoz egy üres <userinput>~/.orca/orca-scripts/__init__.py</userinput> nevű fájlt és a saját szkriptjeit az <userinput>~/.orca/orca-scripts</userinput> mappába helyezi, akkor az Orca bármilyen saját szkriptet végre hajt mielőtt az installált szkripteket megnézné."
 
 #: C/gnome-access-guide.xml:343(title)
-
 msgid "Orca Configuration GUI"
 msgstr "Az Orca grafikus beállító párbeszédpanel"
 
 #: C/gnome-access-guide.xml:344(para)
-
 msgid "The Orca Configuration GUI allows you to customize the behavior and features of Orca, such as speech, braille, and magnification. For example, you can select which speech synthesis engine you want to use, whether braille is enabled or not, and which magnification preferences you want. You can select which general keyboard layout you want (desktop or laptop) and you can also examine and modify the existing keyboard layout with fine grained control. To bring up the Orca Configuration GUI, press <keycombo><keycap>&lt;ORCA MODIFIER&gt;</keycap><keycap>Space</keycap></keycombo>, where <userinput>&lt;ORCA MODIFIER&gt;</userinput> is <keycap>Insert</keycap> when you use the desktop key bindings, and <keycap>Caps Lock</keycap> when you use the laptop key bindings."
 msgstr "Az Orca grafikus beállító párbeszédpanel segítségével testre szabhatja az Orca funkcióit, például a beszéd, braille, nagyító működését. Kiválaszthatja például, hogy milyen beszéd szintetizátort szeretne használni, engedélyezve legyen -e a braille vagy nem, milyen nagyítási beállításokat akar. Ki tudja választani, hogy milyen általános billentyűzet kiosztást szeretne (asztali vagy laptop), megtekintheti és szükség esetén kényelmesen módosíthatja a létező billentyűzet kiosztást a saját ízlése szerint. Ha szeretne Az Orca grafikus beállító párbeszédpanelbe jutni, üsse le az <keycombo><keycap>&lt;ORCA MÓDOSÍTÓ&gt;</keycap>+<keycap>Szóköz</keycap></keycombo> billentyűkombinációt, asztali billentyű társításnál <keycap>Insert</keycap>, laptop billentyűtársításnál a nagybetű zár az Orca módosító billentyű."
 
 #: C/gnome-access-guide.xml:362(para)
-
 msgid "The Orca Configuration GUI is a multi-page dialog containing several sections, each of which is described in the following sections."
 msgstr "Az Orca grafikus beállító párbeszédpanel egy több oldalas párbeszédpanel számos szekcióval, ezek a következők:"
 
 #: C/gnome-access-guide.xml:366(title)
-
 msgid "General Page"
 msgstr "Általános Oldal"
 
 #: C/gnome-access-guide.xml:367(para)
-
 msgid "The \"General\" page allows you to customize general aspects of Orca. These include the following:"
 msgstr "Az \"Általános\" oldalon lehetőség van arra, hogy az Orca alapvető funkcióit testre szabhassa. Ezek a következők:"
 
 #: C/gnome-access-guide.xml:370(title)
-
 msgid "Keyboard layout"
 msgstr "Billentyűzetkiosztás"
 
 #: C/gnome-access-guide.xml:371(para)
-
 msgid "The keyboard layout section allows you to specify if you will be working on a laptop (small) or desktop (large, with a numeric keypad) keyboard. You select which layout you want by selecting one of the following option:"
 msgstr "A billentyűzet kiosztás szekcióban megadhatja, hogy laptop (kis) vagy asztali (nagy, numerikus billentyűzettel rendelkező) billentyűzeten dolgozik. Az alábbi lehetőségek közül választhat:"
 
 #: C/gnome-access-guide.xml:378(para)
-
 msgid "Desktop - if selected, the Desktop Keyboard Layout will be used."
 msgstr "Asztali - ha ez a lehetőség van kiválasztva, akkor az asztali billentyűzet kiosztás lesz használva."
 
 #: C/gnome-access-guide.xml:382(para)
-
 msgid "Laptop - if selected, the Laptop Keyboard Layout will be used"
 msgstr "Laptop - ha ez a lehetőség van kiválasztva, akkor a laptop billentyűzet kiosztás lesz használva."
 
 #: C/gnome-access-guide.xml:388(title)
-
 msgid "Show Orca main window"
 msgstr "Az Orca főablakának megjelenítése"
 
 #: C/gnome-access-guide.xml:389(para)
-
 msgid "The Orca main window provides you with a graphical way to display the Orca Configuration GUI (also obtainable via <keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo>) and to quit Orca (also achievable via <keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo>). Many users do not like the Orca main window because it shows up in the window manager's tab order when you press <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo> to switch windows. By deselecting the \"Show Orca main window\" button, you can tell Orca to not show the Orca main window."
 msgstr "Az Orca fő ablaka grafikus lehetőséget biztosít arra, hogy megjelenítse az Orca grafikus beállító párbeszédpanelt (mintha lenyomná a <keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> billentyűkombinációt) és kiléphessen az Orca képernyőolvasóból (egyenértékű a <keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo> billentyűkombinációval). Néhány felhasználó nem szereti az Orca fő ablakát, mert megjelenik az ablakkezelő tabulátor sorrendjekor amikor lenyomja az <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo> billentyűkombinációt az ablakok közötti váltáshoz. Ha nem szeretné, hogy az \"Az Orca főablakának megjelenítése\" jelölőnégyzet be legyen jelölve, törölje a jelölést a jelölőnégyzetből. Az Orca fő ablaka így nem fog megjelenni."
 
 #: C/gnome-access-guide.xml:410(title)
-
 msgid "Quit Orca without Confirmation"
 msgstr "Kilépés az Orca programból jóváhagyás nélkül"
 
 #: C/gnome-access-guide.xml:411(para)
-
 msgid "Normally, when you press <keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo> to quit Orca or press the <guibutton>Quit</guibutton>button in the Orca main window, Orca will pop up a confirmation dialog asking you if you want to quit. Unchecking this option prevents the confirmation window from appearing."
 msgstr "Alap esetben, ha lenyomja az <keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo> billentyűkombinációt a kilépéshez az Orca programból, vagy aktiválja a <guibutton>Kilépés</guibutton> gombot az Orca fő ablakában, az Orca egy felugró megerősítő ablakban megerősítést kér öntől, hogy ki szeretne -e lépni. Ha törli a jelölést ebből a jelölő négyzetből, a megerősítést kérő ablak többé nem fog megjelenni."
 
 #: C/gnome-access-guide.xml:422(title)
-
 msgid "Disable gksu keyboard grab"
 msgstr "A gksu nem ragadhatja meg a billentyűzetet"
 
 #: C/gnome-access-guide.xml:423(para)
-
 msgid "When running system administration commands from the launch menu, many distributions use an application known as <application>gksu</application>to authorize the user to run these commands ( <application>gksu</application>is the GUI that asks you for your password). When it runs, <application>gksu</application>enables what is known as a \"keyboard grab,\" which is a feature to prevent keyboard actions from going to any other application on the desktop, including Orca. The result of a keyboard grab is that Orca will not receive any keyboard events, preventing Orca from functioning normally."
 msgstr "Ha az indító menüből rendszeradminisztrációs alkalmazásokat futtat, a legtöbb disztribúció a <application>gksu</application> alkalmazást használja arra, hogy azonosítsa a felhasználót aki az alkalmazást futtatja (a <application>gksu</application> egy grafikus ablakban megkérdezi az ön jelszavát). Amikor ez az alkalmazás fut, a <application>gksu</application> átveszi a vezérlést a billentyűzet felett, hogy más alkalmazások ne férhessenek a munka asztalhoz, például az Orca alkalmazás. Ennek az az eredménye, hogy az Orca nem képes kezelni a billentyűzeten bekövetkező eseményeket, nem képes normálisan működni."
 
 #: C/gnome-access-guide.xml:436(para)
-
 msgid "By selecting the <guibutton>Disable gksu keyboard grab</guibutton>button, you will turn off the keyboard grab behavior, allowing Orca to functional normally with system administration applications."
 msgstr "Ha törli a jelölést ebből a jelölőnégyzetből, megakadályozhatja azt, hogy a <application>gksu</application> alkalmazás átvegye a vezérlést a billentyűzet felett, így az Orca normálisan működik a rendszeradminisztrációs alkalmazások használatakor."
 
@@ -2984,457 +2856,483 @@ msgid "The keyboard grab is a security attempt by <application>gksu</application
 msgstr ""
 
 #: C/gnome-access-guide.xml:448(para)
-
 msgid "If you do not feel comfortable with this, you can always use the root account for system administration purposes. To do so, you need to enable the root account for login, and the logout and log back in as root whenever you want to perform a system administration command."
 msgstr "Másik megoldásként használja mindig a root felhasználó nevet a rendszer adminisztrációhoz. Ha ezt meg szeretné tenni, engedélyeznie kell a rootként történő bejelentkezést, majd ki kell jelentkeznie és rootként kell bejelentkeznie ha adminisztrációs alkalmazást szeretne futtatni."
 
 #: C/gnome-access-guide.xml:457(title)
-
 msgid "Present tooltips"
 msgstr "Buboréksúgók megjelenítése"
 
 #: C/gnome-access-guide.xml:458(para)
-
 msgid "When checked, this option will tell Orca to present information about tooltips when they appear as the result of mouse hovering. Specific actions to force tooltips to appear, such as pressing <keycombo><keycap>Ctrl</keycap><keycap>F1</keycap></keycombo> when an object has focus, will always result in tooltips being presented, regardless of this setting."
 msgstr "Ha ez a jelölőnégyzet be van jelölve, az Orca az egér mozgatásakor elmondja ezeket az információkat. A buboréksúgó egy grafikus képhez társított segítő szöveg, általában akkor jelenik meg, ha az egeret a grafikus képre mozgatja. Speciális akciókban akkor találkozhat ezekkel a buboréksúgókkal, ha egy objektum fókuszban van és lenyomja a <keycombo><keycap>Ctrl</keycap><keycap>F1</keycap></keycombo> billentyűkombinációt. Ez mindig a buboréksúgó megjelenítését eredményezi, függetlenül ennek a lehetőségnek a beállításától."
 
 #: C/gnome-access-guide.xml:471(title)
-
 msgid "Speech Page"
 msgstr "Beszéd oldal"
 
 #: C/gnome-access-guide.xml:472(para)
-
 msgid "The speech page allows you to customize how Orca uses speech synthesis."
 msgstr "Ezen az oldalon azt szabhatja testre, hogy az Orca hogyan kezelje a beszédszintetizátort."
 
 #: C/gnome-access-guide.xml:475(title)
-
 msgid "Enable speech"
 msgstr "Beszéd engedélyezése"
 
 #: C/gnome-access-guide.xml:476(para)
-
 msgid "The first control of note on the speech page is the <guilabel>enable speech</guilabel> check box. This check box toggles whether or not Orca will make use of a speech synthesizer. This option, along with the ability to enable braille and enable magnifier support, allow Orca to be tailored to meet the needs of a wide variety of users."
 msgstr "Az első vezérlő elem ezen az oldalon a <guilabel>beszéd engedélyezése</guilabel> jelölő négyzet. Ez a jelölő négyzet azt szabályozza, hogy az Orca használja -e a beszéd szintetizátort vagy ne. Ez a beállítás ugyanúgy működik, mint a braille engedélyezése vagy a nagyító engedélyezése beállítás. Ezek a beállítások teljesen testre szabhatók a felhasználók igényei szerint."
 
 #: C/gnome-access-guide.xml:486(title)
-
 msgid "Speech System and Speech Synthesizer"
 msgstr "Beszéd rendszer és beszéd szintetizátor"
 
 #: C/gnome-access-guide.xml:487(para)
-
 msgid "The next two controls deal with selecting the speech system and synthesizer. Orca provides support for a growing number of speech systems. At the time of this writing, these include GNOME-speech, Emacspeak, and an experimental backend for Speech Dispatcher. Depending upon how your machine is configured, you may have all or none of these options. Typically, you will have just GNOME-speech."
 msgstr "A következő két vezérlő elem segítségével a beszéd rendszert és a beszéd szintetizátort lehet beállítani. Az Orca képernyőolvasó jelenleg korlátozott számú beszéd rendszert támogat. Jelenleg a következő beszédrendszerek közül lehet választani: Gnome felolvasó szolgáltatás, Emacspeak, valamint egy külső fejlesztésű speech-dispatcher nevű beszéd rendszer. Attól függően, hogy az ön számítógépe hogyan van beállítva, megjelenhet mindegyik opció, vagy egyik sem. Általában a GNOME-felolvasás szolgáltatás szerepel."
 
 #: C/gnome-access-guide.xml:495(para)
-
 msgid "First, determine which speech system you would like to use - GNOME-speech works best at this time. After making your selection, tab to the speech synthesizer combo box and choose from the list of available synthesizers."
 msgstr "Először meg kell határoznia, hogy melyik beszédrendszert szeretné használni - jelenleg a Gnome felolvasó szolgáltatás működik a legjobban. Ha kiválasztotta a beszédrendszert, a tab billentyűvel lépjen a beszédszintetizátor legördülő dobozra és a listából válasszon az elérhető beszédszintetizátorok közül."
 
 #: C/gnome-access-guide.xml:502(title)
-
 msgid "Voice Settings"
 msgstr "Hang beállítások"
 
 #: C/gnome-access-guide.xml:503(para)
-
 msgid "If your synthesizer supports it, Orca can utilize multiple voices in order to identify special cases within an application, such as hyperlinks or upper case text. The voice settings and person combo boxes can be adjusted to customize these settings to your liking. For example, assume you were using Fonix DECtalk and wanted the betty voice to denote upper case. To accomplish this, you could do the following:"
 msgstr "Ha a beszédszintetizátora támogatja, az Orca többféle lehetőséget kínál a hangbeállítások testreszabására az ön által használt alkalmazásban, például testre szabható a hiperhivatkozások vagy a nagybetűk kimondása. A hangbeállítások és a személy legördülő dobozok lehetőséget adnak arra, hogy ezeket a tulajdonságokat testre szabhassa a saját igényei szerint. Ha például a Fonix DECtalk beszédszintetizátort használja és azt akarja, hogy a nagy betűket Betty mondja ki, a következőket kell tennie:"
 
 #: C/gnome-access-guide.xml:513(para)
-
 msgid "Tab to the voice settings combo box, and down arrow until the upper case voice is selected."
 msgstr "A tab billentyűvel lépjen a hangbeállítások legördülő dobozra, majd a lefelé nyíl segítségével válassza ki a nagybetűs elemet."
 
 #: C/gnome-access-guide.xml:517(para)
-
 msgid "Tab to the person combo box, and down arrow to choose the Betty voice."
 msgstr "Ezután a tab billentyűvel lépjen a személy legördülő dobozra, és válassza ki a lefelé nyíllal a Betty hangot."
 
 #: C/gnome-access-guide.xml:521(para)
-
 msgid "The next three sliders in the tab order allow adjustment of the synthesizer's rate, pitch and volume respectively."
 msgstr "A következő három csúszkával a tabulátor sorban a beszédszintetizátorok sebességét, hangmagasságát és hangerejét lehet beállítani."
 
 #: C/gnome-access-guide.xml:524(para)
-
 msgid "Note that you can quickly raise/lower the pitch by pressing <keycombo><keycap>Insert</keycap><keycap>Up Arrow</keycap></keycombo> and <keycombo><keycap>Insert</keycap><keycap>Down Arrow</keycap></keycombo>. You can also modify the speaking rate by pressing <keycombo><keycap>Insert</keycap><keycap>Left Arrow</keycap></keycombo> and <keycombo><keycap>Insert</keycap><keycap>Right Arrow</keycap></keycombo>."
 msgstr "A hangmagasságot gyorsan növelni és csökkenteni tudja, ha lenyomja az <keycombo><keycap>Insert</keycap><keycap>Fel nyíl</keycap></keycombo> és <keycombo><keycap>Insert</keycap><keycap>Le nyíl</keycap></keycombo> billentyűkombinációkat. A beszéd sebességét módosítani tudja, ha lenyomja az <keycombo><keycap>Insert</keycap><keycap>Bal nyíl</keycap></keycombo> és <keycombo><keycap>Insert</keycap><keycap>Jobb nyíl</keycap></keycombo> billentyűkombinációkat."
 
 #: C/gnome-access-guide.xml:545(title)
-
 msgid "Punctuation Level"
 msgstr "Központozás szintje"
 
 #: C/gnome-access-guide.xml:546(para)
-
 msgid "The <guilabel>punctuation level</guilabel> radio button group is used to adjust the amount of punctuation spoken by the synthesizer . The available levels are none, some, most, and all."
 msgstr "A <guilabel>központozás szintje</guilabel> választó gomb csoport meghatározza, hogy a beszéd szintetizátor milyen központozási szintet használjon. Az elérhető szintek: nincs, néhány, legtöbb, mindent."
 
 #: C/gnome-access-guide.xml:553(title) C/gnome-access-guide.xml:646(title)
-
 msgid "Verbosity"
 msgstr "Részletesség"
 
 #: C/gnome-access-guide.xml:554(para)
-
 msgid "The verbosity setting determines the amount of information that will be spoken in certain situations. For example, if it is set to verbose, the synthesizer will speak shortcut keys for items in pull down menus. When it is set to brief, these shortcut keys are not announced."
 msgstr "A részletesség beállítás meghatározza, hogy a különböző szituációkban milyen információ kerüljön kimondásra. Például, ha a részletes lehetőség van beállítva, a beszédszintetizátor egy legördülő menüben ki fogja mondani a menü elemek gyorsbillentyűit. Ha a tömör lehetőség van beállítva, ezek a gyors billentyűk nem kerülnek kimondásra."
 
 #: C/gnome-access-guide.xml:562(title)
-
 msgid "Table Row Speech"
 msgstr "Táblázat oszlopok olvasása"
 
 #: C/gnome-access-guide.xml:563(para)
-
 msgid "The table row speech option determines the way in which Orca will read items within tables. The available settings are speak current row, or speak current cell. The ability to adjust this behavior can be useful in many situations. For example, consider the process of browsing email messages in Evolution. In this instance it may be preferable to set table speech to current row, so that while arrowing through the list of messages, all relevant info, such as the sender, subject, and whether the message has attachments is read automatically. While the current row setting is active, it is still possible to read individual cells by using the left and right arrows."
 msgstr "A táblázat oszlopok olvasása beállítás meghatározza, hogy az Orca hogyan olvassa fel egy táblázat elemeit. Az elérhető beállítások az aktuális sor felolvasása, vagy az aktuális cella felolvasása. Minden szituációban más beállítást érdemes használni. Például az Evolution levelező programban az aktuális sor felolvasása beállítást érdemes használni, így minden információt megkaphat egy üzenetről az üzenet listában (ki a feladó, mi az üzenet tárgya, automatikusan elhangzik, hogy az üzenet tartalmaz -e mellékleteket). Ha az aktuális sor felolvasása beállítás van beállítva, a táblázat celláit a balra és jobbra nyilak segítségével is felolvastathatja."
 
 #: C/gnome-access-guide.xml:576(para)
-
 msgid "Note that you can quickly toggle this behavior by pressing <keycombo><keycap>Insert</keycap><keycap>F11</keycap></keycombo>."
 msgstr "Ha egyszerűen szeretne váltani a két beállítás között, üsse le az <keycombo><keycap>Insert</keycap><keycap>F11</keycap></keycombo> billentyűkombinációt."
 
 #: C/gnome-access-guide.xml:584(title)
-
 msgid "Speak Indentation"
 msgstr "Behúzás és igazítás felolvasása"
 
 #: C/gnome-access-guide.xml:585(para)
-
 msgid "When working with code or editing documents, it is often desirable to be aware of justification as well as indentation. Selecting the <guilabel>speak indentation and justification</guilabel> check box will cause Orca to provide this information."
 msgstr "Ha kódot vagy szövegeket szerkeszt, gyakran szüksége lehet az igazítás vagy a behúzás felolvasására. Jelölje be a <guilabel>behúzás és igazítás felolvasása</guilabel> jelölő négyzetet és az Orca el fogja mondani ezeket az információkat."
 
 #: C/gnome-access-guide.xml:593(title)
-
 msgid "Speak Blank Lines"
 msgstr "Üres sorok olvasása"
 
 #: C/gnome-access-guide.xml:594(para)
-
 msgid "Some users desire to hear \"blank\" when navigating to a blank line in a document. Other users do not. If the <guilabel>speak blank lines</guilabel> check box is selected, Orca will speak blank lines."
 msgstr "A legtöbb felhasználó szereti hallani az \"üres\" szót, ha egy üres sorra lép egy dokumentumban. Más felhasználók viszont nem. Ha az <guilabel>üres sorok olvasása</guilabel> jelölő négyzet be van jelölve, az Orca ki fogja mondani az üres sorokat."
 
 #: C/gnome-access-guide.xml:602(title)
-
 msgid "Braille Page"
 msgstr "Braille oldal"
 
 #: C/gnome-access-guide.xml:603(para)
-
 msgid "The braille page allows you to customize various aspects about the use of braille. Orca does not automatically start BrlTTY for you -- you typically need to do that yourself, and it is something that is usually done at boot time."
 msgstr "A braille oldalon testre szabhatja a különböző braille beállításokat. Az Orca nem indítja el automatikusan a Brltty-t önnek -- ezt szükség szerint önnek kell megtennie, általában a rendszer indulásakor megtörténik."
 
 #: C/gnome-access-guide.xml:609(title)
-
 msgid "Enable Braille Support"
 msgstr "Braille támogatás engedélyezése"
 
 #: C/gnome-access-guide.xml:610(para)
-
 msgid "The first control on the braille page is the <guilabel>enable braille support</guilabel> check box. This check box toggles whether or not Orca will make use of a braille display. This option, along with the ability to enable braille and enable magnifier support, allow Orca to be tailored to meet the needs of a wide variety of users. By default, this check box is enabled. If BrlTTY is not running, Orca will recover gracefully and will not communicate with the braille display. If you configure BrlTTY later on, you need to restart Orca in order for it to use braille."
 msgstr "Az első vezérlő elem a braille oldalon a <guilabel>braille támogatás engedélyezése</guilabel> jelölő négyzet. Ezzel a jelölő négyzettel lehet változtatni, hogy az Orca használja-e a braille kijelzőt vagy ne. Ez az opció, ugyanúgy mint a braille engedélyezése vagy a nagyítási támogatás engedélyezése teljesen a felhasználók igényei szerint testre szabható. Alapértelmezetten ez a jelölő négyzet be van jelölve. Ha a BrlTTY nem fut, az Orca ezt felismeri és nem kommunikál a braille kijelzővel. Ha később konfigurálja a BrlTTY-t, újra kell indítania az Orca alkalmazást ahhoz, hogy a braille-t használni tudja."
 
 #: C/gnome-access-guide.xml:623(title)
-
 msgid "Enable Braille Monitor"
 msgstr "Braille Monitor Engedélyezése"
 
 #: C/gnome-access-guide.xml:624(para)
-
 msgid "Orca's braille monitor provides an onscreen representation of what takes place on the braille display. This feature is mostly for demonstration purposes, but is also useful for Orca developers who do not have access to a braille display."
 msgstr "Az Orca braille monitor a képernyőn jeleníti meg azokat az információkat, amik a braille kijelzőn látszanak. Ez a funkció első sorban demonstrációs célból készült, de hasznos azoknak az Orca fejlesztőknek akiknek nincs braille kijelzőjük."
 
 #: C/gnome-access-guide.xml:631(title)
-
 msgid "Abbreviated Role Names"
 msgstr "Rövidített szerep nevek"
 
 #: C/gnome-access-guide.xml:632(para)
-
 msgid "The <guilabel>abbreviated role names</guilabel> check box determines the manner in which role names are displayed and can be used to help conserve real estate on the braille display. The \"abbreviated role names\" option can be better understood if we consider the following example. Let us assume that a slider had focus, and that the abbreviated role names box was not checked. In that case, the word \"slider\" would be shown on the display, to reflect the fact that the current control was indeed a slider. If the abbreviated role names box was checked, the word \"slider\" would be abbreviated to \"sldr\"."
 msgstr "A <guilabel>rövidített szerep nevek</guylabel> jelölő négyzet meghatározza, hogy milyen szerep nevek jelenjenek meg a braille kijelzőn segítő információként a használatkor. A \"rövidített szerep nevek\" beállítást úgy lehet könnyebben megérteni, ha a következő példán keresztül vezetjük le ennek a beállításnak a magyarázatát: tételezzük fel, hogy az ön által használt alkalmazásnál éppen egy csúszka van a fókuszban, és a rövidített szerep nevek jelölő négyzet nincs bejelölve. Ebben az esetben a braille kijelzőn ilyenkor a csúszka szó jelenik meg, így megtudhatja azt, hogy éppen egy csúszka vezérlő elemen áll. Ha a rövidített szerep nevek jelölő négyzet be van jelölve, a \"csúszka\" szó rövidítetten \"csszk\" szóként jelenik meg."
 
 #: C/gnome-access-guide.xml:647(para)
-
 msgid "The <guilabel>verbosity</guilabel> radio button group determines the amount of information that will be brailled in certain situations. For example, if it is set to verbose, keyboard shortcut and role name information is displayed. This information is not displayed in brief mode."
 msgstr "A <guylabel>részletesség</guylabel> választógomb csoport meghatározza, hogy milyen információk jelenjenek meg a braille kijelzőn a különböző szituációkban. Például, ha a részletes beállítás van beállítva, a billentyűparancsok és a szerep nevek megjelennek. Ezek az információk nem jelennek meg, ha a tömör beállítás van megadva."
 
 #: C/gnome-access-guide.xml:657(title)
 msgid "Key Echo Page"
-msgstr ""
+msgstr "Billentyűvisszhang oldal"
 
 #: C/gnome-access-guide.xml:658(para)
 msgid "The key echo page allows you to specify the behavior of Orca when pressing keys on the page and whether words are spoken as you complete them."
-msgstr ""
+msgstr "A billentyűvisszhang oldalon megadhatja, hogy amikor lenyom egy billentyűt, az Orca a billentyűk lenyomásakor milyen billentyűket mondjon ki."
 
 #: C/gnome-access-guide.xml:662(title)
 msgid "Enable Key Echo"
-msgstr ""
+msgstr "Billentyűzet-visszhang engedélyezése"
 
 #: C/gnome-access-guide.xml:663(para)
 msgid "The first control on the key echo page is the <guilabel>enable key echo</guilabel> check box. When this box is selected, five additional check boxes become available. These are <guilabel>Enable alphanumeric and punctuation keys</guilabel>, <guilabel>Enable modifier keys</guilabel>, <guilabel>Enable locking keys</guilabel>, <guilabel>Enable function keys</guilabel>, and <guilabel>Enable action keys</guilabel>."
-msgstr ""
+msgstr "Az első vezérlőelem a billentyűzetvisszhang oldalon a <guilabel>billentyűzet visszhang engedélyezése</guilabel> jelölőnégyzet. Ha ez a jelölőnégyzet be van jelölve, öt további jelölőnégyzet válik elérhetővé. Ezek a következők: <guilabel>Alfanumerikus- és írásjelek engedélyezése</guilabel>, <guilabel>Módosító billentyűk engedélyezése</guilabel>, <guilabel>Zároló billentyűk engedélyezése</guilabel>, <guilabel>Funkció billentyűk engedélyezése</guilabel>, és <guilabel>Művelet billentyűk engedélyezése</guilabel>."
 
 #: C/gnome-access-guide.xml:673(para)
+
 msgid "The alphanumeric and function key groups are relatively self explanatory."
-msgstr ""
+msgstr "Az alfanumerikus és funkció billentyű csoportok egyértelműek."
 
 #: C/gnome-access-guide.xml:675(para)
+
 msgid "Modifier keys are those such as <keycap>Shift</keycap>, <keycap>Control</keycap>, and <keycap>Alt</keycap>."
-msgstr ""
+msgstr "Módosító billentyűk például a <keycap>Shift</keycap>, <keycap>Kontrol</keycap>, és <keycap>Alt</keycap> billentyűk."
 
 #: C/gnome-access-guide.xml:679(para)
+
 msgid "Locking keys include <keycap>Caps Lock</keycap>, <keycap>Scroll Lock</keycap>, and <keycap>Num Lock</keycap>."
-msgstr ""
+msgstr "Zároló billentyűk pl. a <keycap>Nagybetű zár</keycap>, <keycap>Scroll Lock</keycap>, and <keycap>Num Lock</keycap> billentyűk."
 
 #: C/gnome-access-guide.xml:683(para)
+
 msgid "The action keys group consists of keys that perform some logical action, as <keycap>Backspace</keycap>, <keycap>Return</keycap>and <keycap>Tab</keycap>."
-msgstr ""
+msgstr "A művelet billentyűk csoportjába olyan billentyűk tartoznak, melyek egy logikai műveletet hajtanak végre, pl. a <keycap>Backspace</keycap>, <keycap>Return</keycap>and <keycap>Tab</keycap> billentyűk."
 
 #: C/gnome-access-guide.xml:690(title)
+
 msgid "Enable Echo by Word"
-msgstr ""
+msgstr "Szavankénti visszhang engedélyezése"
 
 #: C/gnome-access-guide.xml:691(para)
+
 msgid "The last toggle on the key echo page is the <guilabel>enable echo by word</guilabel> check box. The echo by word control is always available, regardless of whether any of the key echo options are checked."
-msgstr ""
+msgstr "Az utolsó kapcsoló a billentyű visszhang oldalon a <guilabel>szavankénti visszhang engedélyezése</guilabel> jelölőnégyzet. A szavankénti visszhang vezérlőelem mindíg elérhető függetlenül attól, hogy a billentyű visszhang lapon található többi jelölőnégyzet bármelyike be van -e jelölve vagy nem."
 
 #: C/gnome-access-guide.xml:695(para)
+
 msgid "In summary, the key echo scheme can offer a great deal of flexibility. For example, one user might choose to enable all key echo options, while another might prefer to use word echo, but only have locking keys announced."
-msgstr ""
+msgstr "Összegezve, a billentyű visszhang séma nagyon jól testre szabható. Például egy felhasználó azt szereti, hogy minden billentyű kimondásra kerüljön, egy másik felhasználó pedig a szavankénti visszhangot használja, és csak a zároló billentyűk kerülnek kimondásra."
 
 #: C/gnome-access-guide.xml:703(title)
+
 msgid "Magnifier Page"
-msgstr ""
+msgstr "Nagyító oldal"
 
 #: C/gnome-access-guide.xml:704(para)
+
 msgid "The magnifier page allows you to enable/disable magnification and specify how magnification is performed."
-msgstr ""
+msgstr "A nagyító oldalon be tudja állítani, hogy a nagyítás elérhető legyen-e vagy nem, valamint hogy milyen nagyítás kerüljön alkalmazásra."
 
 #: C/gnome-access-guide.xml:708(title)
+
 msgid "Enable Magnifier"
-msgstr ""
+msgstr "Nagyító engedélyezése"
 
 #: C/gnome-access-guide.xml:709(para)
+
 msgid "The first control on the magnifier page is the <guilabel>enable magnifier</guilabel> check box. This check box toggles whether or not Orca will provide magnification. This option, along with the ability to enable speech and enable braille support, allow Orca to be tailored to meet the needs of a wide variety of users."
-msgstr ""
+msgstr "Az első vezérlőelem a nagyító oldalon a <guilabel>nagyító engedélyezése</guilabel> jelölőnégyzet. Ezzel a jelölőnégyzettel azt lehet változtatni, hogy az Orca használja -e a nagyítót vagy ne. Ez a beállítás, ugyanúgy, mint a beszéd engedélyezése vagy a braille támogatás engedélyezése, teljesen a felhasználók igényeihez igazítható."
 
 #: C/gnome-access-guide.xml:718(title)
+
 msgid "Cursor Settings"
-msgstr ""
+msgstr "Kurzor beállításai"
 
 #: C/gnome-access-guide.xml:721(para)
+
 msgid "Enable cursor"
-msgstr ""
+msgstr "Kurzor engedélyezése"
 
 #: C/gnome-access-guide.xml:724(para)
-
 msgid "Color"
 msgstr "Szín"
 
 #: C/gnome-access-guide.xml:727(para)
+
 msgid "Custom size and width"
-msgstr ""
+msgstr "Egyedi méret és szélesség"
 
 #: C/gnome-access-guide.xml:732(title)
+
 msgid "Cross-hair Settings"
-msgstr ""
+msgstr "Szálkereszt beállításai"
 
 #: C/gnome-access-guide.xml:735(para)
+
 msgid "Enable cross-hair and size"
-msgstr ""
+msgstr "Szálkereszt engedélyezése és mérete"
 
 #: C/gnome-access-guide.xml:738(para)
+
 msgid "Enable cross-hair clip"
-msgstr ""
+msgstr "Szálkereszt kivágásának engedélyezése"
 
 #: C/gnome-access-guide.xml:743(title)
+
 msgid "Zoomer Settings"
-msgstr ""
+msgstr "Nagyítási beállítások"
 
 #: C/gnome-access-guide.xml:746(para)
+
 msgid "Scale factor"
-msgstr ""
+msgstr "Nagyítási arány"
 
 #: C/gnome-access-guide.xml:749(para)
+
 msgid "Invert colors"
-msgstr ""
+msgstr "Színek megfordítása"
 
 #: C/gnome-access-guide.xml:752(para)
+
 msgid "Zoomer position"
-msgstr ""
+msgstr "Nagyító pozíciója"
 
 #: C/gnome-access-guide.xml:755(para)
+
 msgid "Top, left, right, bottom"
-msgstr ""
+msgstr "Felső, bal, jobb, alsó"
 
 #: C/gnome-access-guide.xml:760(para)
+
 msgid "Smoothing"
-msgstr ""
+msgstr "Simítás"
 
 #: C/gnome-access-guide.xml:763(para)
+
 msgid "Mouse tracking mode"
-msgstr ""
+msgstr "Egér követés módja"
 
 #: C/gnome-access-guide.xml:766(para)
+
 msgid "Source display - X Window System DISPLAY of what should be magnified. Typically <userinput>:0</userinput>."
-msgstr ""
+msgstr "Forrás megjelenítő - az X ablakkezelő rendszer melyik képernyője legyen nagyítva. Általában <userinput>:0</userinput>."
 
 #: C/gnome-access-guide.xml:771(para)
+
 msgid "Target display - X Window System DISPLAY of where to put the magnified area. Typically <userinput>:0</userinput>."
-msgstr ""
+msgstr "Cél megjelenítő - az X Ablakkezelő Rendszer melyik képernyőjére kerüljön a nagyított terület. Általában <userinput>:0."
 
 #: C/gnome-access-guide.xml:779(title)
+
 msgid "Key Bindings Page"
-msgstr ""
+msgstr "Billentyű társítások oldal"
 
 #: C/gnome-access-guide.xml:780(para)
+
 msgid "The key bindings page allows you to examine and modify the key bindings for Orca."
-msgstr ""
+msgstr "A billentyű társítások oldal lehetőséget ad önnek arra, hogy megtekintse és szükség esetén módosíthassa az Orca billentyű társításait."
 
 #: C/gnome-access-guide.xml:783(title)
+
 msgid "Orca Modifier Key(s)"
-msgstr ""
+msgstr "Orca módosító billentyű(k)"
 
 #: C/gnome-access-guide.xml:784(para)
+
 msgid "The first control on the key bindings page allows you to eaxmine which key (or keys) acts as the \"Orca modifier\". The Orca modifier is the key that you press and hold in conjunction with other keys to give commands to Orca. For desktop keyboards, the Orca modifier defaults to <keycap>Insert</keycap>. For laptop keyboards, the Orca modifier defaults to the <keycap>Caps Lock</keycap> key."
-msgstr ""
+msgstr "Az első vezérlőelem a billentyű társítások oldalon lehetőséget ad arra, hogy megnézhesse, milyen billentyű (vagy billentyűk) jelenleg az \"Orca módosító\" billentyű. Az orca módosító billentyűt nyomva tartva és egy másik billentyűt mellé nyomva különböző parancsokat lehet adni az Orca számára. Asztali billentyűzeten alapértelmezésként az Orca módosító billentyű az <keycap>Insert</keycap> billentyű. Laptop billentyűzeteknél az Orca módosító billentyű alapértelmezetten a <keycap>nagybetű zár</keycap> billentyű."
 
 #: C/gnome-access-guide.xml:793(para)
+
 msgid "You cannot modify the Orca modifier key(s) using the Configuration GUI at this time."
-msgstr ""
+msgstr "Jelenleg az Orca módosító billentyű(k) nem módosítható(k) az Orca grafikus beállító párbeszédpanelen."
 
 #: C/gnome-access-guide.xml:797(title)
+
 msgid "Key Bindings Table"
-msgstr ""
+msgstr "Billentyű társítások táblázat"
 
 #: C/gnome-access-guide.xml:798(para)
+
 msgid "The key bindings table provides a list of Orca operations and the keys that are bound to them."
-msgstr ""
+msgstr "A billentyű társítások táblázat egy lista a különböző Orca műveletekről és a hozzájuk rendelt billentyű társításokról."
 
 #: C/gnome-access-guide.xml:800(para)
+
 msgid "The \"Function\" column header is a description of the Ora operation to be performed."
-msgstr ""
+msgstr "A \"Funkció\" oszlop fejléc az adott Orca művelet leírását tartalmazza."
 
 #: C/gnome-access-guide.xml:802(para)
+
 msgid "The \"Key Binding\" header is the primary way to invoke the function from the keyboard. Note that the function description may include the word Orca. This indicates that the Orca modifier key should be held down along with the other keys."
-msgstr ""
+msgstr "A \"Billentyű társítás\" fejléc az adott Orca funkció elsődleges billentyű parancsát tartalmazza, az Orca szóval kiegészítve. Ez azt jelenti, hogy az Orca módosító billentyűt nyomva kell tartani az egyéb billentyűk mellé."
 
 #: C/gnome-access-guide.xml:807(para)
+
 msgid "The \"Alternate\" header provides an alternate mechanism for invoking the function from the keyboard."
-msgstr ""
+msgstr "A \"Tartalék\" fejléc egy alternatív lehetőséget biztosít az adott Orca funkció végrehajtására a billentyűzeten."
 
 #: C/gnome-access-guide.xml:810(para)
+
 msgid "To modify either the \"Key Binding\" or the \"Alternate\" bindings, arrow to the cell and press <keycap>Return</keycap>. Then, press a key combination and press <keycap>Return</keycap> to confirm the new combination. When you do so, the new keystroke will be saved and the check box in the last column (the <guilabel>Modified</guilabel> column) will indicate that the key binding has been modified."
-msgstr ""
+msgstr "Ha módosítani szeretné a \"Billentyű társítás\" vagy a \"Tartalék\" társításokat, álljon a jobbra-balra nyilak segítségével a kívánt cellára, majd nyomja meg az <keycap>Enter</keycap> billentyűt. Ezután üsse le az új billentyű parancsot, majd nyomja meg az <keycap>Enter</keycap> billentyűt ahhoz, hogy megerősítse a billentyű parancs módosítását. Ezután a módosítás mentésre kerül, a táblázat utolsó cellájában található <guilabel>Módosítva</guilabel> jelölőnégyzet mutatja, hogy a billentyű társítás módosítva lett."
 
 #: C/gnome-access-guide.xml:819(para)
+
 msgid "To unmodify a modified keybinding, merely arrow to the modified column, uncheck the checkbox, and press the <guibutton>Apply</guibutton>button ( <keycombo><keycap>Alt</keycap><keycap>A</keycap></keycombo>)."
-msgstr ""
+msgstr "Ha vissza szeretné vonni egy billentyű társítás módosítását, álljon a módosítva oszlopra, törölje a jelölést a jelölőnégyzetből, majd aktiválja az <guibutton>Alkalmaz</guibutton> gombot ( <keycombo><keycap>Alt</keycap><keycap>A</keycap></keycombo>)."
 
 #: C/gnome-access-guide.xml:829(title)
+
 msgid "Text Attributes Page"
-msgstr ""
+msgstr "Szöveges attribútumok oldal"
 
 #: C/gnome-access-guide.xml:830(para)
+
 msgid "Orca will speak known text attribute information about an object when you press <keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> ( <keycombo><keycap>Caps Lock</keycap><keycap>F</keycap></keycombo> for laptop systems)."
-msgstr ""
+msgstr "Az Orca ki tudja mondani az ismert szöveges attribútumait egy objektumnak, ha lenyomja az <keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> ( <keycombo><keycap>Caps Lock</keycap><keycap>F</keycap></keycombo> laptop kiosztás használata esetén) billentyű parancsot."
 
 #: C/gnome-access-guide.xml:840(para)
+
 msgid "Because the number of text attributes is large, and not everyone cares about every attribute, the \"Text Attributes\" tab of the configuration GUI allows you to customize which text attributes Orca will present."
-msgstr ""
+msgstr "Mivel az ismert szöveges attribútumok száma nagy, és előfordulhat hogy nem minden szöveges attribútum szerepel, az Orca grafikus beállító párbeszédpanel \"Szöveges attribútumok\" lapfülén testreszabhatja, hogy az Orca milyen szöveges attribútumokat jelenítsen meg."
 
 #: C/gnome-access-guide.xml:844(para)
+
 msgid "On this tab is a text attribute list, where each row consists of three columns:"
-msgstr ""
+msgstr "Ezen a lapfülön egy szöveges attribútumokat tartalmazó listát talál, melynek minden sora három oszlopot tartalmaz:"
 
 #: C/gnome-access-guide.xml:848(para)
+
 msgid "A checkbox which the user can set to indicate whether this text attribute should be spoken or not."
-msgstr ""
+msgstr "Egy jelölőnégyzetet, mellyel beállíthatja, hogy az adott szöveges attribútum kimondásra kerüljön -e vagy nem."
 
 #: C/gnome-access-guide.xml:853(para)
+
 msgid "The name of the text attribute."
-msgstr ""
+msgstr "A szöveges attribútum nevét."
 
 #: C/gnome-access-guide.xml:856(para)
+
 msgid "An editable \"Spoken unless\" string value. By default, not all text attributes will have this set. If present, what it means (assuming the user wants this text attribute spoken) is that the value of the attribute will only be spoken if it's a different value than this value."
-msgstr ""
+msgstr "Egy szerkeszthető \"Megjelenítés, ha nem\" szöveges értéket. Alapértelmezetten nem minden szöveges attribútumhoz van beállítva. Ha szerepel, akkor ez azt jelenti, hogy meg tudja adni hogy az adott szöveges attribútum hogyan kerüljön kimondásra."
 
 #: C/gnome-access-guide.xml:864(para)
+
 msgid "For example, by default the \"underline\" text attribute has a value of \"none\". If the user has this attribute checked and the user presses <keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> and the text in question is not underlined, then this attribute is not spoken. If you always want this attribute to be spoken irrespective of whether the text is underlined, then the attribute should be checked and the \"Spoken unless\" value cleared."
-msgstr ""
+msgstr "Például, az \"aláhúzás\" attribútumnál alapértelmezetten a \"megjelenítés, ha nem\" oszlopban a \"None\" érték szerepel. Ha a jelölő négyzetet bejelöli és lenyomja az <keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> billentyű parancsot, és a kérdéses szöveg nincs aláhúzva, az attribútum nem kerül kimondásra. Ha azt szeretné, hogy ez az attribútum kimondásra kerüljön függetlenül attól, hogy a kérdéses szöveg alá van -e húzva vagy nem, jelölje be a jelölőnégyzetet, majd a \"megjelenítés, ha nem\" oszlopban levő szövegen nyomja meg az <keycap>Enter</keycap> billentyűt.Ezután törölje a \"None\" értéket, majd nyomja meg az <keycap>Enter</keycap> billentyűt."
 
 #: C/gnome-access-guide.xml:875(para)
+
 msgid "There is also a \"Reset\" <keycombo><keycap>Alt</keycap><keycap>R</keycap></keycombo> button combination present that will set the list values back to their initial state when the dialog was first displayed."
-msgstr ""
+msgstr "Lehetősége van arra is, hogy a \"Visszaállítás\" gomb segítségével az attribútum listát alaphelyzetbe állítsa, ahogyan a szöveges attribútum párbeszédpanel először megjelenik. A visszaállítást megteheti úgy is, ha lenyomja az <keycombo><keycap>Alt</keycap><keycap>V</keycap></keycombo> billentyű kombinációt."
 
 #: C/gnome-access-guide.xml:882(para)
+
 msgid "When you initially display the text attribute pane, all your checked attributes are put at the top of the list. They are given in the order that they will be spoken and brailled."
-msgstr ""
+msgstr "Ha először jelenik meg a szöveges attribútumok párbeszédpanel, az összes engedélyezett attribútum a lista elején található. A sorrend a kimondásban és a braille jelölésben is jelezve lesz."
 
 #: C/gnome-access-guide.xml:886(para)
+
 msgid "If you decide to check others or wish to adjust the order, there are four buttons to help you do this:"
-msgstr ""
+msgstr "Ha más attribútumokat is szeretne bejelölni vagy változtatni kíván a sorrenden, a következő négy gomb segítségével megteheti:"
 
 #: C/gnome-access-guide.xml:890(para)
+
 msgid "\"Move to top\" <keycombo><keycap>Alt</keycap><keycap>T</keycap></keycombo> - moves the selected attribute to the top of the list."
-msgstr ""
+msgstr "\"Áthelyezés a tetejére\" (<keycombo><keycap>Alt</keycap><keycap>T</keycap></keycombo>) - a kiválasztott attribútumot a lista tetejére mozgatja."
 
 #: C/gnome-access-guide.xml:898(para)
+
 msgid "\"Move up one\" <keycombo><keycap>Alt</keycap><keycap>U</keycap></keycombo> - moves the selected attribute up one row."
-msgstr ""
+msgstr "\"Áthelyezés eggyel feljebb\" (<keycombo><keycap>Alt</keycap><keycap>F</keycap></keycombo>) - a kiválasztott attribútumot egy sorral feljebb mozgatja."
 
 #: C/gnome-access-guide.xml:906(para)
+
 msgid "\"Move down one\" <keycombo><keycap>Alt</keycap><keycap>D</keycap></keycombo> - moves the selected attribute down one row."
-msgstr ""
+msgstr "\"Áthelyezés eggyel lejjebb\" (<keycombo><keycap>Alt</keycap><keycap>L</keycap></keycombo>) - a kiválasztott attribútumot egy sorral lejjebb mozgatja."
 
 #: C/gnome-access-guide.xml:914(para)
+
 msgid "\"Move to bottom\" <keycombo><keycap>Alt</keycap><keycap>B</keycap></keycombo> - moves the selected attribute to the bottom of the list."
-msgstr ""
+msgstr "\"Áthelyezés az aljára\" (<keycombo><keycap>Alt</keycap><keycap>A</keycap></keycombo>) - a kiválasztott attribútumot a lista aljára helyezi."
 
 #: C/gnome-access-guide.xml:922(para)
+
 msgid "Text attributes can also be set on an individual application basis. The text attribute pane is also part of the application specific settings dialog that is started when you give a particular application focus and press <keycombo><keycap>Insert</keycap><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo>."
-msgstr ""
+msgstr "Az attribútum beállítások alkalmazásonként is testre szabhatók. A szöveges attribútum beállítás párbeszédpanel része az Orca alkalmazás beállító párbeszédpanelnek is. Az alkalmazás beállító párbeszédpanelt a jelenleg aktív alkalmazásnál el tudja érni, ha lenyomja az <keycombo><keycap>Insert</keycap><keycap>Ctrl</keycap><keycap>Szóköz</keycap></keycombo> billentyűkombinációt."
 
 #: C/gnome-access-guide.xml:935(title)
+
 msgid "Application-specific information"
-msgstr ""
+msgstr "Alkalmazás-specifikus információk"
 
 #: C/gnome-access-guide.xml:937(title)
+
 msgid "Accessible Applications"
-msgstr ""
+msgstr "Akadálymentesen használható alkalmazások"
 
 #: C/gnome-access-guide.xml:938(para)
+
 msgid "Orca is designed to work with applications and toolkits that support the assistive technology service provider interface (AT-SPI). This includes the GNOME desktop and its applications, OpenOffice, Firefox, and the Java platform. Some applications work better than others, however, and the Orca community continually works to provide compelling access to more and more applications."
-msgstr ""
+msgstr "Az Orca úgy lett megtervezve, hogy együtt tudjon működni azokkal az alkalmazásokkal és toolkitekkel, melyek támogatják az assistive technology service provider interface (AT-SPI) szabbványt. Ez része a GNOME asztali környezetnek és ennek alkalmazásainak, valamint az Open Office, Firefox és Java platformnak. Néhány alkalmazás jobban működik más alkalmazásoknál, az Orca csoport folyamatosan azon dolgozik, hogy egyre több alkalmazást lehessen kifogástalanul használni."
 
 #: C/gnome-access-guide.xml:947(title)
+
 msgid "Using Adobe's Acrobat Reader"
-msgstr ""
+msgstr "Az Adobe Acrobat Reader használata"
 
 #: C/gnome-access-guide.xml:948(para)
+
 msgid "We are currently working on a script for Adobe's Acrobat Reader, and the initial version has been contributed to Orca v2.17.5. Note that there is still work to do, and we are very encouraged by Adobe's commitment to accessibility."
-msgstr ""
+msgstr "Jelenleg egy szkripten dolgozunk az Adobe Acrobat Reader alkalmazáshoz, ez be fog kerülni az Orca 2.17.5-ös változatába. Folyamatosan együtt működünk az Adobe céggel az akadálymentesítéssel kapcsolatban, akiktől nagyon sok bátorítást kapunk."
 
 #: C/gnome-access-guide.xml:954(title)
+
 msgid "Installation"
-msgstr ""
+msgstr "Telepítés"
 
 #: C/gnome-access-guide.xml:955(para)
+
 msgid "If you get Adobe Acrobat Reader directly from the <ulink url=\"http://www.adobe.com/products/acrobat/readstep2.html\"> Adobe site</ulink>, you may find that the software will not launch. The symptoms: If launched from the Applications menu, it appears that nothing has happened. If launched from a terminal window, you receive a long series of syntax error messages. Should this occur, you will need to edit your /usr/bin/acroread file as described in this <ulink url=\"http://ubuntuforums.org/showthread.php?t=233514\"> Ubuntu forum thread</ulink>."
-msgstr ""
+msgstr "Ha közvetlenül tölti le az Adobe Acrobat Readert a <ulink url=\"http://www.adobe.com/products/acrobat/readstep2.html\"> Adobe oldaláról</ulink>, előfordulhat, hogy a szoftver nem indul. A szimptómák: Ha az alkalmazások menüből indítja a szoftvert, nem történik semmi. Ha ilyenkor egy terminál ablakból indítja az alkalmazást, sok szintaktikai hiba üzenetet fog kapni. Ebben az esetben szerkesztenie kell az ön /usr/bin/acroread fájlját, erről <ulink url=\"http://ubuntuforums.org/showthread.php?t=233514\"> Ebben az Ubuntu fórum topikban</ulink> részletes leírást talál."
 
 #: C/gnome-access-guide.xml:965(para)
+
 msgid "If you instead choose to install Acrobat Reader from your distribution's packages, be sure to install both acroread and acroread-plugins. Without the plugins package, you will not have the access to the \"Reading\" category in the <menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenuitem></menuchoice> dialog."
-msgstr ""
+msgstr "Ha azt választja, hogy az ön által használt disztribúcióból csomagként telepíti az Acrobat Reader alkalmazást, ügyeljen arra, hogy biztosan telepítve legyenek az acroread és az acroread-plugins csomagok. A plugincsomagok nélkül nem tud hozzáférni az \"olvasás\" kategóriához a <menuchoice><guimenuitem>Szerkesztés</guimenuitem> menü <guimenuitem>Beállítások</guimenuitem></menuchoice> párbeszédpanelén."
 
 #: C/gnome-access-guide.xml:974(para)
+
 msgid "Note: If you use Ubuntu and cannot locate the acroread package, you will likely need to edit your /etc/apt/sources.list to include the 'multiverse' repository. Then run <userinput>apt-get update</userinput>. Having done so, you should then be able to install both acroread and acroread-plugins."
-msgstr ""
+msgstr "Ha Ubuntu disztribúciót használ és nem találja az acroread csomagot, szerkesztenie kell az /etc/apt/sources.list fájlt úgy, hogy a multiverse tároló szerepeljen a tárolók között. Ezután futtassa az <userinput>apt-get update</userinput>. parancsot. Ezután telepítheti az acroread és az acroread-plugins csomagokat."
 
 #: C/gnome-access-guide.xml:983(title)
 msgid "Enabling Accessibility and Caret Navigation"
@@ -3545,7 +3443,6 @@ msgid "If you adjust one or more application specific key bindings, the new valu
 msgstr ""
 
 #: C/gnome-access-guide.xml:1141(title)
-
 msgid "Braille"
 msgstr "Braille"
 
@@ -3798,7 +3695,6 @@ msgid "There are a number of methods to enable you to customize the appearance o
 msgstr ""
 
 #: C/gnome-access-guide.xml:1484(term)
-
 msgid "Themes"
 msgstr "Témák"
 
@@ -3875,7 +3771,6 @@ msgid "Introduction to Themes"
 msgstr ""
 
 #: C/gnome-access-guide.xml:1569(primary) C/gnome-access-guide.xml:1613(primary) C/gnome-access-guide.xml:1845(primary) C/gnome-access-guide.xml:1873(primary) C/gnome-access-guide.xml:1999(primary)
-
 msgid "themes"
 msgstr "témák"
 
@@ -3900,7 +3795,6 @@ msgid "The window frame setting determines the appearance of the border around w
 msgstr ""
 
 #: C/gnome-access-guide.xml:1602(term) C/gnome-access-guide.xml:806(para)
-
 msgid "Icon"
 msgstr "Ikon"
 
@@ -3913,7 +3807,6 @@ msgid "To Choose a Theme"
 msgstr ""
 
 #: C/gnome-access-guide.xml:1614(secondary)
-
 msgid "desktop"
 msgstr "munkaasztal"
 
@@ -3938,12 +3831,10 @@ msgid "Themes Designed for Accessibility Requirements"
 msgstr ""
 
 #: C/gnome-access-guide.xml:1636(para)
-
 msgid "Theme Name"
 msgstr "Téma neve"
 
 #: C/gnome-access-guide.xml:1647(guilabel)
-
 msgid "High Contrast"
 msgstr "Nagy kontraszt"
 
@@ -3952,7 +3843,6 @@ msgid "Provides dark text on a light background using high contrast colors."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1658(guilabel)
-
 msgid "High Contrast Inverse"
 msgstr "Inverz nagy kontraszt"
 
@@ -3961,7 +3851,6 @@ msgid "Provides light text on a dark background using high contrast colors."
 msgstr ""
 
 #: C/gnome-access-guide.xml:1669(guilabel)
-
 msgid "Large Print"
 msgstr "Nagy szöveg"
 
@@ -3970,7 +3859,6 @@ msgid "This theme suggests an increased font size of 18pt. The background and fo
 msgstr ""
 
 #: C/gnome-access-guide.xml:1682(guilabel)
-
 msgid "High Contrast Large Print"
 msgstr "Nagy kontraszt és nagy szöveg"
 
@@ -3979,7 +3867,6 @@ msgid "This theme suggests an increased font size of 18pt using dark text on a l
 msgstr ""
 
 #: C/gnome-access-guide.xml:1694(guilabel)
-
 msgid "High Contrast Large Print Inverse"
 msgstr "Nagy kontraszt, nagy szöveg és inverz"
 
@@ -4096,7 +3983,6 @@ msgid "To Modify the Icon Setting for a Theme"
 msgstr ""
 
 #: C/gnome-access-guide.xml:1874(secondary)
-
 msgid "icon"
 msgstr "ikon"
 
@@ -4153,7 +4039,6 @@ msgid "To Customize the Desktop Background"
 msgstr ""
 
 #: C/gnome-access-guide.xml:2014(secondary)
-
 msgid "desktop background"
 msgstr "a munkaasztal háttere"
 
@@ -4190,7 +4075,6 @@ msgid "To Customize Fonts"
 msgstr ""
 
 #: C/gnome-access-guide.xml:2047(secondary)
-
 msgid "fonts"
 msgstr "betűkészletek"
 
@@ -4215,7 +4099,6 @@ msgid "Desktop background only"
 msgstr ""
 
 #: C/gnome-access-guide.xml:2066(para) C/gnome-access-guide.xml:2188(ulink)
-
 msgid "Terminal"
 msgstr "Terminál"
 
@@ -4224,12 +4107,10 @@ msgid "Text editor"
 msgstr ""
 
 #: C/gnome-access-guide.xml:2072(para)
-
 msgid "Help"
 msgstr "Súgó"
 
 #: C/gnome-access-guide.xml:2075(para) C/gnome-access-guide.xml:2191(ulink)
-
 msgid "Web Browser"
 msgstr "Böngésző"
 
@@ -4250,7 +4131,6 @@ msgid "To start the <application>Font</application> preference tool, choose <men
 msgstr ""
 
 #: C/gnome-access-guide.xml:2090(guilabel)
-
 msgid "Application font"
 msgstr "Alkalmazás betűkészlete"
 
@@ -4263,7 +4143,6 @@ msgid "If you use the <application>Theme</application> preference tool to select
 msgstr ""
 
 #: C/gnome-access-guide.xml:2106(guilabel)
-
 msgid "Document font"
 msgstr "Dokumentum betűkészlete"
 
@@ -4272,7 +4151,6 @@ msgid "Click on this button to select a font to use for displaying documents."
 msgstr ""
 
 #: C/gnome-access-guide.xml:2114(guilabel)
-
 msgid "Desktop font"
 msgstr "Asztal betűkészlete"
 
@@ -4281,7 +4159,6 @@ msgid "Click on this button to select a font to use for the text that is display
 msgstr ""
 
 #: C/gnome-access-guide.xml:2122(guilabel)
-
 msgid "Window title font"
 msgstr "Ablak címsorának betűkészlete"
 
@@ -4290,7 +4167,6 @@ msgid "Click on this button to select a font to use for the text that is display
 msgstr ""
 
 #: C/gnome-access-guide.xml:2130(guilabel)
-
 msgid "Fixed width font"
 msgstr "Rögzített szélességű betűkészlet"
 
@@ -4307,7 +4183,6 @@ msgid "To specify how to render fonts on the desktop, select one of the followin
 msgstr ""
 
 #: C/gnome-access-guide.xml:2144(guilabel)
-
 msgid "Monochrome"
 msgstr "Fekete-fehér"
 
@@ -4344,12 +4219,10 @@ msgid "By default, GNOME applications use the default font specified in the <app
 msgstr ""
 
 #: C/gnome-access-guide.xml:2182(ulink)
-
 msgid "Help Browser"
 msgstr "Súgóböngésző"
 
 #: C/gnome-access-guide.xml:2185(ulink)
-
 msgid "Text Editor"
 msgstr "Szövegszerkesztő"
 
@@ -4462,12 +4335,10 @@ msgid "<emphasis>Mouse and Keyboard Enhancements</emphasis> - helpful for users 
 msgstr ""
 
 #: C/gnome-access-guide.xml:11(title) C/gnome-access-guide.xml:13(primary)
-
 msgid "On-Screen Keyboard"
 msgstr "Képernyő-billentyűzet"
 
 #: C/gnome-access-guide.xml:16(primary)
-
 msgid "GOK"
 msgstr "GOK"
 
@@ -4544,7 +4415,6 @@ msgid "To Configure the Mouse for Left-Handed Use"
 msgstr ""
 
 #: C/gnome-access-guide.xml:76(primary) C/gnome-access-guide.xml:87(primary) C/gnome-access-guide.xml:121(primary) C/gnome-access-guide.xml:149(primary) C/gnome-access-guide.xml:165(primary)
-
 msgid "mouse"
 msgstr "egér"
 
@@ -4597,7 +4467,6 @@ msgid "pointer"
 msgstr ""
 
 #: C/gnome-access-guide.xml:126(secondary)
-
 msgid "size"
 msgstr "méret"
 
@@ -4658,7 +4527,6 @@ msgid "Configure the following options:"
 msgstr ""
 
 #: C/gnome-access-guide.xml:178(term)
-
 msgid "Acceleration"
 msgstr "Gyorsítás"
 
@@ -4671,7 +4539,6 @@ msgid "If you select a low setting, the mouse pointer moves at a speed similar t
 msgstr ""
 
 #: C/gnome-access-guide.xml:192(term)
-
 msgid "Sensitivity"
 msgstr "Érzékenység"
 
@@ -4680,7 +4547,6 @@ msgid "Use the slider to specify how responsive the mouse pointer is to movement
 msgstr ""
 
 #: C/gnome-access-guide.xml:199(term)
-
 msgid "Threshold"
 msgstr "Küszöbszint"
 
@@ -4817,7 +4683,6 @@ msgid "To Enable the Keyboard to Emulate the Mouse"
 msgstr ""
 
 #: C/gnome-access-guide.xml:318(primary)
-
 msgid "mouse keys"
 msgstr "egérbillentyűk"
 
@@ -4882,7 +4747,6 @@ msgid "Move the mouse pointer around the screen"
 msgstr ""
 
 #: C/gnome-access-guide.xml:395(para)
-
 msgid "5"
 msgstr "5"
 
@@ -4891,7 +4755,6 @@ msgid "Mouse button click"
 msgstr ""
 
 #: C/gnome-access-guide.xml:403(para)
-
 msgid "0"
 msgstr "0"
 
@@ -4900,7 +4763,6 @@ msgid "Mouse button toggle"
 msgstr ""
 
 #: C/gnome-access-guide.xml:411(para)
-
 msgid "/"
 msgstr "/"
 
@@ -4909,7 +4771,6 @@ msgid "Primary mouse button"
 msgstr ""
 
 #: C/gnome-access-guide.xml:419(para)
-
 msgid "*"
 msgstr "*"
 
@@ -4918,7 +4779,6 @@ msgid "Secondary mouse button"
 msgstr ""
 
 #: C/gnome-access-guide.xml:427(para)
-
 msgid "-"
 msgstr "-"
 
@@ -4955,7 +4815,6 @@ msgid "Mouse button 1"
 msgstr ""
 
 #: C/gnome-access-guide.xml:474(para)
-
 msgid "F3"
 msgstr "F3"
 
@@ -4972,7 +4831,6 @@ msgid "To Enable the Slow Keys Feature"
 msgstr ""
 
 #: C/gnome-access-guide.xml:495(primary)
-
 msgid "slow keys"
 msgstr "lassú billentyűk"
 
@@ -5041,7 +4899,6 @@ msgid "To Enable the Bounce Keys Feature"
 msgstr ""
 
 #: C/gnome-access-guide.xml:572(primary)
-
 msgid "bounce keys"
 msgstr "billentyűszűrés"
 
@@ -5078,7 +4935,6 @@ msgid "To Enable the Sticky Keys Feature"
 msgstr ""
 
 #: C/gnome-access-guide.xml:612(primary)
-
 msgid "sticky keys"
 msgstr "ragadós billentyűk"
 
@@ -5191,7 +5047,6 @@ msgid "To Enable Audible Notifications for Toggle Keys"
 msgstr ""
 
 #: C/gnome-access-guide.xml:726(primary)
-
 msgid "toggle keys"
 msgstr "váltóbillentyűk"
 
@@ -5224,7 +5079,6 @@ msgid "To Enable the Repeat Keys Feature"
 msgstr ""
 
 #: C/gnome-access-guide.xml:754(primary)
-
 msgid "repeat keys"
 msgstr "billentyűismétlés"
 
@@ -5273,7 +5127,6 @@ msgid "Keyboard Accessibility Status Icons"
 msgstr ""
 
 #: C/gnome-access-guide.xml:809(para)
-
 msgid "Keyboard Accessibility Status"
 msgstr "Billentyűzet-akadálymentesítés állapota"
 
