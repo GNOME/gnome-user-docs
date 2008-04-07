@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accessibility_guide HEAD\n"
 "POT-Creation-Date: 2008-03-13 03:14+0000\n"
-"PO-Revision-Date: 2008-04-06 13:18+0200\n"
+"PO-Revision-Date: 2008-04-07 13:32+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
@@ -477,7 +477,7 @@ msgstr "A bejelentkezés a rendszerbe, ha a felhasználó nem tudja egyszerűen,
 
 #: C/gnome-access-guide.xml:22(para)
 msgid "Launch assistive technologies at login time by associating a user action with an assistive technology application. The user can perform the user action from the standard keyboard, or from a keyboard, pointing device, or switch device that is attached to the USB or PS/2 mouse port. These user actions are called gestures."
-msgstr "Akadálymentesítési alkalmazások indítása bejelentkezéskor felhasználói műveletek különféle akadálymentesítési alkalmazáshoz rendelésével. A felhasználói műveletek végrehajthatók USB vagy PS/2 portra csatlakozó hagyományos billentyűzettel, mutatóeszközzel vagy kapcsolóeszközzel. Ezeket a műveleteket gesztusoknak nevezzük."
+msgstr "Akadálymentesítési alkalmazások indítása bejelentkezéskor, felhasználói műveletek különféle akadálymentesítési alkalmazásokhoz rendelésével. A felhasználói műveletek végrehajthatók USB vagy PS/2 portra csatlakozó hagyományos billentyűzettel, mutatóeszközzel vagy kapcsolóeszközzel. Ezeket a műveleteket gesztusoknak nevezzük."
 
 #: C/gnome-access-guide.xml:29(para)
 msgid "Change the visual appearance of the login dialog before the user logs in, for example, to use a high contrast theme for better visibility."
@@ -540,57 +540,56 @@ msgid "The above lines must be displayed as single lines in the <filename>gdm.co
 msgstr "A fenti soroknak egy sorként, tördelés nélkül kell szerepelniük a <filename>gdm.conf</filename> fájlban, még akkor is, ha itt két sorban jelennek meg."
 
 #: C/gnome-access-guide.xml:71(para)
-
 msgid "This step loads all of the GtkModules to enable assistive technologies such as <application>On-Screen Keyboard</application> and <application>Screen Reader and Magnifier</application>. You can edit the line above further to load only the GtkModules that you require to support the user base. For example:"
-msgstr ""
+msgstr "Ez a lépés betölti az összes GTK modult, amely az akadálymentesítési technológiák, például a <application>képernyő-billentyűzet</application> és a <application>képernyőolvasó és nagyító</application> működéséhez szükséges. A fenti sor szerkesztésével elérheti, hogy csak azok a GTK modulok kerüljenek betöltésre, amelyek a felhasználók támogatásához szükségesek. Például:"
 
 #: C/gnome-access-guide.xml:77(para)
 msgid "If you need to use the <application>Screen Reader and Magnifier</application>, include <literal>gail</literal> and <literal>atk-bridge</literal>."
-msgstr ""
+msgstr "Ha a <application>Képernyőolvasó és nagyító</application> használatára van szüksége, akkor a <literal>gail</literal> és <literal>atk-bridge</literal> modulokat vegye fel."
 
 #: C/gnome-access-guide.xml:80(para)
 msgid "If you need to use a pointing device without buttons or switches, include <literal>gail</literal>, <literal>atk-bridge</literal>, and <literal>dwellmouselistener</literal>."
-msgstr ""
+msgstr "Ha gombok vagy kapcsolók nélküli mutatóeszköz használatára van szüksége, akkor a <literal>gail</literal>, <literal>atk-bridge</literal> és <literal>dwellmouselistener</literal> modulokat vegye fel."
 
 #: C/gnome-access-guide.xml:84(para)
 msgid "If you use pointing devices with switches, alternative physical keyboards, or switch and button devices, include <literal>keymouselistener</literal>."
-msgstr ""
+msgstr "Ha kapcsolókkal rendelkező mutatóeszközöket, alternatív fizikai billentyűzeteket vagy kapcsoló- és mutatóeszközöket használ, akkor a <literal>keymouselistener</literal> modult vegye fel."
 
 #: C/gnome-access-guide.xml:88(para)
 msgid "<application>On-Screen Keyboard</application> can operate without <literal>gail</literal> and <literal>atk-bridge</literal> but with a reduced feature set."
-msgstr ""
+msgstr "A <application>Képernyőbillentyűzet</application> képes a <literal>gail</literal> és <literal>atk-bridge</literal> nélkül működni, de kevesebb szolgáltatással."
 
 #: C/gnome-access-guide.xml:93(para)
 msgid "For optimum accessibility, include <literal>gail</literal> and <literal>atk-bridge</literal>."
-msgstr ""
+msgstr "Az akadálymentesítés optimális használata érdekében vegye fel a <literal>gail</literal> és <literal>atk-bridge</literal> modulokat."
 
 #: C/gnome-access-guide.xml:96(para)
 msgid "Save the <filename>/etc/X11/gdm/gdm.conf</filename> file."
-msgstr ""
+msgstr "Mentse a <filename>/etc/X11/gdm/gdm.conf</filename> fájlt."
 
 #: C/gnome-access-guide.xml:98(para)
 msgid "If you make any changes to the <filename>/etc/X11/gdm/gdm.conf</filename> file after you enable GDM, you can execute the following command to restart GDM and activate the changes:"
-msgstr ""
+msgstr "Ha a GDM engedélyezése után módosítja az <filename>/etc/X11/gdm/gdm.conf</filename> fájlt, akkor a következő parancs futtatásával újraindíthatja a GDM-et és aktiválhatja a módosításokat:"
 
 #: C/gnome-access-guide.xml:101(command)
 msgid "gdm-restart"
-msgstr ""
+msgstr "gdm-restart"
 
 #: C/gnome-access-guide.xml:106(para)
 msgid "Edit the file <filename>/etc/group</filename> and append the following to the <literal>audio</literal> line:"
-msgstr ""
+msgstr "Szerkessze az <filename>/etc/group</filename> fájlt és az <literal>audio</literal> sor végéhez adja hozzá a következőt:"
 
 #: C/gnome-access-guide.xml:109(literal)
 msgid ",gdm"
-msgstr ""
+msgstr ",gdm"
 
 #: C/gnome-access-guide.xml:111(para)
 msgid "This step ensures that speech works with GDM."
-msgstr ""
+msgstr "Ez a lépés biztosítja, hogy a beszéd működik a GDM alatt."
 
 #: C/gnome-access-guide.xml:114(para)
 msgid "Restart your system."
-msgstr ""
+msgstr "Indítsa újra a rendszerét."
 
 #: C/gnome-access-guide.xml:119(title)
 msgid "To Start Assistive Technologies at Login"
@@ -2556,29 +2555,30 @@ msgstr ""
 msgid "Click on the action for which you want to disable the keyboard shortcut. The row is highlighted and the text <quote>Type a new accelerator, or press Backspace to clear</quote> is displayed in the Shortcut column."
 msgstr ""
 
+# innentől átnézve.
 #: C/gnome-access-guide.xml:2(title)
 msgid "Low Vision or Blindness"
-msgstr ""
+msgstr "Gyengén látás vagy vakság"
 
 #: C/gnome-access-guide.xml:3(para)
 msgid "From low vision to blindness, the range of visual limitations is broad. Symptoms of low vision include dimness, haziness, extreme far-sightedness or near-sightedness, color blindness, and tunnel vision, among others. People with these disabilities are concerned with being able to see text or images on a computer screen and being able to perform tasks that require eye-hand coordination, such as moving a computer mouse. Text size and color can make a big difference in legibility for people who have low vision."
-msgstr ""
+msgstr "A gyengén látástól a vakságig a látás korlátozottsága változó lehet. A gyengén látás tünetei változóak lehetnek: egyebek közt homályos látás, közel- vagy távollátás, színvakság, csőlátás. Az ilyen fogyatékossággal élőknek nehézségeket okozhat a számítógép képernyőjén látott kép vagy szöveg értelmezése, illetve a szem- és kézmozdulatok koordinációját igénylő különböző feladatok végrehajtása, például az egér mozgatása. A szövegméret és a szövegszín sokat számít az olvashatóság szempontjából a csökkentlátók számára."
 
 #: C/gnome-access-guide.xml:4(para)
 msgid "The technologies that can assist those with low vision or blindness are:"
-msgstr ""
+msgstr "A gyengén látókat vagy vakokat segítő akadálymentesítési technológiák a következők:"
 
 #: C/gnome-access-guide.xml:6(para)
 msgid "<emphasis>Screen Magnifier</emphasis> - this is like a magnifying glass. People using them are able to control what area of the computer screen they want enlarged, and can move that focus to view different areas of the screen. They are also known as screen enlargers or large print programs."
-msgstr ""
+msgstr "<emphasis>Képernyőnagyító</emphasis> – Ez egy nagyítólencsére hasonlít. Ennek felhasználói kiválaszthatják hogy a számítógép képernyőjének melyik területe legyen felnagyítva, a fókuszt pedig mozgatni tudják a képernyő különböző területei között."
 
 #: C/gnome-access-guide.xml:7(para)
 msgid "<emphasis>Screen Reader</emphasis> - this makes on-screen information available as synthesized speech or a refreshable Braille display. They can only translate text based information. Graphics can be translated if there is alternative text describing the visual images. They are also known as blind access utilities or screen reviewers."
-msgstr ""
+msgstr "<emphasis>Képernyőolvasó</emphasis> – A képernyőn megjelenő információkat beszédszintetizátoron vagy frissíthető braille kijelzőn teszi elérhetővé. A képernyőolvasó szoftverek csak szöveges alapú információkat alakítanak át. A grafikus információkat csak akkor tudja átalakítani, ha egy alternatív szöveges leíró rész leírja a vizuális képet. A vak felhasználók ezt az akadálymentesítési eszközt használhatják."
 
 #: C/gnome-access-guide.xml:8(para)
 msgid "<emphasis>Desktop Appearance Enhancement</emphasis> - users can configure the desktop to be easy to read, for example by increasing text size and using high contrast themes."
-msgstr ""
+msgstr "<emphasis>A munkaasztal megjelenésének javítása</emphasis> – A felhasználók a jobb olvashatóság érdekében módosíthatják a munkaasztal megjelenését, például nagyobb méretű szöveget és nagy kontrasztú témát használva."
 
 #: C/gnome-access-guide.xml:12(title) C/gnome-access-guide.xml:14(primary)
 msgid "Screen Reader and Magnifier"
@@ -2590,7 +2590,7 @@ msgstr "Orca"
 
 #: C/gnome-access-guide.xml:19(para)
 msgid "The <application>Orca Screen Reader and Magnifier</application> application enables users with limited vision, or no vision, to use the GNOME Desktop and associated applications. <application>Orca</application> provides the following functionality:"
-msgstr ""
+msgstr "Az <application>Orca képernyőolvasó és nagyító</application> alkalmazás lehetővé teszi a gyengén látó vagy vak felhasználóknak, a GNOME munkaasztal és az ahhoz tartozó alkalmazások használatát. Az <application>Orca</application> a következő funkciókat nyújtja:"
 
 #: C/gnome-access-guide.xml:24(para)
 msgid "Screen reader"
@@ -2598,7 +2598,7 @@ msgstr "Képernyőolvasó"
 
 #: C/gnome-access-guide.xml:25(para)
 msgid "The screen reader enables non-visual access to standard applications in the GNOME Desktop, using speech and Braille output."
-msgstr ""
+msgstr "A képernyőolvasó lehetővé teszi a látássérült felhasználók számára a Gnome Munkaasztal alkalmazásainak használatát beszéd- vagy braille kimeneten keresztül."
 
 #: C/gnome-access-guide.xml:30(para)
 msgid "Magnifier"
@@ -2606,11 +2606,11 @@ msgstr "Nagyító"
 
 #: C/gnome-access-guide.xml:31(para)
 msgid "The magnifier provides automated focus tracking and fullscreen magnification to aid low-vision users."
-msgstr ""
+msgstr "A nagyító lehetővé teszi a gyengén látó felhasználóknak az automatizált fókuszkövetést és a teljes képernyős nagyítást."
 
 #: C/gnome-access-guide.xml:35(para)
 msgid "The following sections provide information about Orca and how to use it."
-msgstr ""
+msgstr "A következő fejezetek információt biztosítanak az Orca képernyőolvasó és nagyító alkalmazásról és annak használatáról."
 
 #: C/gnome-access-guide.xml:37(title)
 msgid "Introduction to Orca"
@@ -2622,7 +2622,7 @@ msgstr "Mi az Orca?"
 
 #: C/gnome-access-guide.xml:40(para)
 msgid "Orca is a flexible, extensible, and powerful assistive technology for people with visual impairments. Using various combinations of speech synthesis, braille, and magnification, Orca helps provide access to applications and toolkits that support the AT-SPI (e.g., the GNOME desktop). Orca is also free open source software."
-msgstr "Az Orca egy rugalmas, bővíthető és hatékony akadálymentesítési megoldás látássérültek számára. Különböző megoldásokat tud együttesen kezelni, kezeli a beszédszintetizátorokat, braille támogatással és nagyítási képességekkel rendelkezik, segítséget nyújt a különböző alkalmazások és eszközkészletek használatához melyek támogatják az AT-SPI technológiát (például a GNOME asztali környezet). Az Orca egy ingyenes, nyílt forrású alkalmazás."
+msgstr "Az Orca egy rugalmas, bővíthető és hatékony akadálymentesítési megoldás látássérültek számára. Különböző megoldásokat tud együttesen kezelni, kezeli a beszédszintetizátorokat, braille támogatással és nagyítási képességekkel rendelkezik, segítséget nyújt az AT-SPI technológiát támogató a különböző alkalmazások és eszközkészletek (mint például a GNOME Munkaasztal) használatához. Az Orca egy ingyenes, nyílt forrású alkalmazás."
 
 #: C/gnome-access-guide.xml:48(title)
 msgid "Why the name Orca?"
@@ -2630,11 +2630,11 @@ msgstr "Miért Orca a neve?"
 
 #: C/gnome-access-guide.xml:49(para)
 msgid "One of the first DOS screen readers was Flipper by Omnichron corporation in Berkeley, CA. It was named Flipper in part because the blind wife of the programmer envisioned computers as being programmed by flipping switches (an accurate image of a bygone era). Then came another DOS screen reader from Henter-Joyce in Florida - \"Jobs access With Speech\" (or JAWS). Meanwhile in the UK we had the company Dolphin systems making their own DOS screen reader."
-msgstr "Az első DOS alatt működő képernyő olvasó a Flipper nevet kapta, az Omnichron részvénytársaság készítette Berkeleyben, CA. Részben azért nevezték Flippernek, mivel a programozó látássérült felesége úgy képzelte, hogy a számítógépeket kapcsolók úsztatásával programozzák (ez egy pontos képe egy letűnt kornak). Később megjelent egy másik DOS alatt működő képernyő olvasó, Ezt a Henter-joyce cég készítette Floridában - \"Jobs access With Speech\" (vagy JAWS) névre keresztelték. Angliában a Dolphin systems az angoloknak saját DoOS alatt működő képernyő olvasót készített."
+msgstr "Az első DOS alatt működő képernyőolvasó a Flipper nevet kapta, az Omnichron részvénytársaság készítette a kaliforniai Berkeleyben. Részben azért nevezték Flippernek, mivel a programozó látássérült felesége úgy képzelte, hogy a számítógépeket kapcsolók kapcsolgatásával programozzák (ez pontos képe egy letűnt kornak). Később megjelent egy másik DOS alatt működő képernyőolvasó, ezt a Henter-Joyce cég készítette Floridában - \"Jobs access With Speech\" (vagy JAWS) névre keresztelték. Angliában a Dolphin systems is készített egy saját, DOS alatt működő képernyőolvasót."
 
 #: C/gnome-access-guide.xml:57(para)
 msgid "While there isn't otherwise an obvious connection between blindness and creatures from the sea, there is certainly a long tradition around it."
-msgstr "Miközben nincs egyéb nyilvánvaló kapcsolat a vakság és a tengeri teremtmények között, mindenképp régi hagyomány veszi körül őket."
+msgstr "Miközben nincs egyéb nyilvánvaló kapcsolat a vakság és a tengeri teremtmények között, mindenképp régi hagyomány lengi körül őket."
 
 #: C/gnome-access-guide.xml:60(para)
 msgid "Hence the lore is that it is just keeping with the sea animal naming theme of screen readers. Plus, Orca is a lot tougher sounding than Nemo, Ariel, Willy, or Mr. Limpet."
@@ -2646,8 +2646,9 @@ msgstr "Milyen az ütemezés?"
 
 #: C/gnome-access-guide.xml:67(para)
 msgid "Orca is part of the GNOME platform and Orca's releases are coupled with the releases of the GNOME platform."
-msgstr "Az Orca része a GNOME rendszernek és az Orca változatok idomulnak az új GNOME változatokhoz."
+msgstr "Az Orca része a GNOME rendszernek és az Orca kiadásai igazodnak a GNOME környezet kiadásaihoz."
 
+# átnézve eddig
 #: C/gnome-access-guide.xml:71(title)
 msgid "How do I request a new feature?"
 msgstr "Hogyan kérhet új funkciót?"
@@ -3273,62 +3274,50 @@ msgid "Note: If you use Ubuntu and cannot locate the acroread package, you will 
 msgstr "Ha Ubuntu disztribúciót használ és nem találja az acroread csomagot, szerkesztenie kell az /etc/apt/sources.list fájlt úgy, hogy a multiverse tároló szerepeljen a tárolók között. Ezután futtassa az <userinput>apt-get update</userinput>. parancsot. Ezután telepítheti az acroread és az acroread-plugins csomagokat."
 
 #: C/gnome-access-guide.xml:983(title)
-
 msgid "Enabling Accessibility and Caret Navigation"
 msgstr "Az akadálymentesítés és a mutató navigáció engedélyezése"
 
 #: C/gnome-access-guide.xml:984(para)
-
 msgid "Once you've installed Reader, you need to enable accessibility:"
 msgstr "Miután telepítette az Adobe Reader alkalmazást, engedélyeznie kell az akadálymentesítést:"
 
 #: C/gnome-access-guide.xml:988(para)
-
 msgid "In the \"Accessibility\" category of the <menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenuitem></menuchoice> dialog, make sure \"Always display the keyboard selection cursor\" (<keycombo><keycap>Alt</keycap><keycap>D</keycap></keycombo>) is checked."
 msgstr "Az \"Accessibility\" (akadálymentesítés) kategóriában (<menuchoice><guimenuitem>Edit</guimenuitem> (szerkesztés) menü <guimenuitem>Preferences</guimenuitem></menuchoice> (beállítások) párbeszédpanel) győződjön meg arról, hogy az \"Always display the keyboard selection cursor\" (a billentyűzet kijelölő kurzor megjelenítése) (<keycombo><keycap>Alt</keycap><keycap>D</keycap></keycombo>) jelölőnégyzet legyen bejelölve."
 
 #: C/gnome-access-guide.xml:999(para)
-
 msgid "In the \"Reading\" category of the <menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenuitem></menuchoice> dialog, make sure \"Enable document accessibility\" (<keycombo><keycap>Alt</keycap><keycap>E</keycap></keycombo>) is checked."
 msgstr "A \"Reading\" (olvasás) kategóriában a <menuchoice><guimenuitem>Edit</guimenuitem> (szerkesztés) menü <guimenuitem>Preferences</guimenuitem></menuchoice> (beállítások) párbeszéd panelén győződjön meg arról, hogy az \"Enable document accessibility\" (dokumentumok akadálymentesítésének engedélyezése) jelölőnégyzet legyen bejelölve (az <keycombo><keycap>Alt</keycap><keycap>E</keycap></keycombo> billentyűparancs segítségével ezt megteheti)."
 
 #: C/gnome-access-guide.xml:1012(title)
-
 msgid "Working with Untagged Documents"
 msgstr "Munka a címke nélküli dokumentumokkal"
 
 #: C/gnome-access-guide.xml:1013(para)
-
 msgid "When you open an untagged document, you will be presented with a dialog box asking you to specify the reading order and the reading mode options. The default reading order is \"Infer reading order from document.\" This setting works well for most documents, but not all of them."
 msgstr "Ha egy olyan dokumentumot nyit meg, mely nem tartalmaz címkéket, akkor egy párbeszédpanel jelenik meg, ahol be lehet állítani a dokumentum olvasási sorrendjét és olvasási módját. Az alapértelmezett olvasási sorrend az \"Infer reading order from document\" (olvasási sorrend a dokumentum alapján). A legtöbb dokumentumnál ez jól működik, de előfordulhat, hogy néhány dokumentumnál viszont nem."
 
 #: C/gnome-access-guide.xml:1019(para)
-
 msgid "The default reading mode will vary depending upon the length of the document: For short documents, the default is \"Read the entire document\"; for long documents it is \"Read the currently visible pages only.\" Orca seems to provide much better access when \"Read the entire document\" is selected."
 msgstr "Az alapértelmezett olvasási mód nagyban függ a dokumentum hosszától: a rövid dokumentumoknál az alapértelmezett olvasási mód a \"Read the entire document\" (a teljes dokumentum olvasása); a hosszú dokumentumoknál pedig \"Read the currently visible pages only\" (csak a jelenleg látható oldalak olvasása). Az Orca jobban működik, ha a \"Teljes dokumentum olvasása\" beállítás van megadva."
 
 #: C/gnome-access-guide.xml:1025(para)
-
 msgid "If you find that a document seems to be missing parts of the text, try changing the reading options. To do so, get into the Document menu and select \"Change Accessibility Reading Options...\" or use the shortcut <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>5</keycap></keycombo>."
 msgstr "Ha olyan dokumentummal találkozik, melyből hiányoznak szöveg részek, próbálja meg megváltoztatni az olvasási beállításokat. Hogy ezt megtehesse, lépjen a document (dokumentum) menübe, és válassza a \"Change Accessibility Reading Options...\" (akadálymentes olvasás beállításainak megváltoztatása...) menüpontot, vagy használja az <keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>5</keycap></keycombo> billentyűparancsot."
 
 #: C/gnome-access-guide.xml:1036(title)
-
 msgid "Page Layout"
 msgstr "Oldal elrendezés"
 
 #: C/gnome-access-guide.xml:1037(para)
-
 msgid "The best page layout for reading a document with Orca is \"single page\". When \"continuous\" is chosen, moving focus to text as the page is scrolling can cause that text not to be read. You can change the page layout to \"single page\" by getting into the View menu and selecting the Page Layout submenu."
 msgstr "Orca használata esetén a legjobb oldal elrendezés dokumentumok olvasásához a \"single page\" (egyetlen oldal) elrendezés. Ha a \"Continous\" (folytonos) elrendezés van kiválasztva és mozog a szövegben, előfordulhat, hogy a görgetéskor a szöveget nem fogja tudni olvasni. Meg tudja változtatni az oldal elrendezést a \"Single page\" (egyetlen oldal) elrendezésre, ha belép a View (nézet) menübe és kiválasztja a page layout (oldal elrendezés) almenüt."
 
 #: C/gnome-access-guide.xml:1045(title)
-
 msgid "Navigating Tables"
 msgstr "Navigálás a táblázatokban"
 
 #: C/gnome-access-guide.xml:1046(para)
-
 msgid "Regarding tables: As far as we know there's not currently a whole lot of keyboard support for tables in Acrobat Reader. This, by the way, is not an Orca thing; it is an Acrobat Reader thing."
 msgstr "A táblázatokról: Jelenleg nem sok billentyűparancs áll rendelkezésre az Acrobat Reader alkalmazásban a táblázatok használatához. Ez nem az Orca problémája; ez az Acrobat Reader problémája."
 
@@ -3337,7 +3326,6 @@ msgid "Basically, there are the arrow keys. Their behavior is to move you first 
 msgstr "Általánosságban rendelkezésre állnak a nyílbillentyűk. Az elsődleges viselkedésük először az első cellára pozicionálás, majd a következő cellára lépés. Megjegyzés: Jelenleg a felfelé és lefelé nyilakkal nem lehet függőleges irányú mozgást végezni a cellák között, legalábbis a tesztelés során ez volt a tapasztalat. A felfelé és lefelé nyilak látszólag a táblázat aktuális sorának felső és alsó cellája között mozognak."
 
 #: C/gnome-access-guide.xml:1061(title)
-
 msgid "Making Application Specific Settings"
 msgstr "Alkalmazás specifikus beállítások megadása"
 
@@ -3346,62 +3334,50 @@ msgid "To customize the settings for a particular application, you will first ne
 msgstr "Ahhoz, hogy egy alkalmazáshoz elkészítse az alkalmazás specifikus Orca beállításokat, először el kell indítania az adott alkalmazást. Győződjön meg arról, hogy az alkalmazás aktív, majd üsse le az <keycombo><keycap>ORCA_MÓDOSÍTÓBILLENTYŰ</keycap><keycap>Control</keycap><keycap>Szóköz</keycap></keycombo> billentyűkombinációt (alapértelmezetten asztali billentyűzet kiosztás esetén <keycombo><keycap>Insert</keycap><keycap>Control</keycap><keycap>szóköz</keycap></keycombo>)."
 
 #: C/gnome-access-guide.xml:1075(para)
-
 msgid "This brings up a tabbed dialog window very similar to the generic Orca Preferences dialog, but with the following differences:"
 msgstr "Megjelenik egy olyan több lapos párbeszédpanel, ami nagyjából hasonlít az Orca általános beállító párbeszédpaneléhez, de a következő dolgok különböznek:"
 
 #: C/gnome-access-guide.xml:1080(para)
-
 msgid "There is no initial General pane."
 msgstr "Ebben a párbeszédpanelben nincs általános oldal."
 
 #: C/gnome-access-guide.xml:1083(para)
-
 msgid "The Speech System and Speech Synthesizer combo boxes on the Speech pane will be grayed out (made inactive)."
 msgstr "A beszéd oldalon a beszédrendszer és a beszédszintetizátor legördülő dobozok le vannak tiltva (inaktívak)."
 
 #: C/gnome-access-guide.xml:1088(para)
-
 msgid "Any existing application specific key bindings will appear at the top of the list on the Key Bindings pane."
 msgstr "A létező alkalmazás specifikus billentyű társítások a billentyű társítás oldalon a billentyű társítások lista tetején találhatók."
 
 #: C/gnome-access-guide.xml:1093(para)
-
 msgid "There may be a new application specific settings pane at the end of the set of tabbed panes. Note that pressing the End key from the tab list will get you directly to that rightmost tab."
 msgstr "Egy új alkalmazás-specifikus beállító lapot talál a laplista végén. Megjegyzés: Ehhez a laphoz könnyedén el tud jutni, ha lenyomja az end billentyűt a laplistán."
 
 #: C/gnome-access-guide.xml:1099(para)
-
 msgid "Adjust your application specific Orca settings in a similar way to the way to set your general Orca preferences. For example, you may have key echo disabled generally in Orca but would like to specifically have it enabled for the gcalctool (GNOME Calculator) application. Here's where you could easily set that."
 msgstr "Ugyanúgy személyre szabhatja az alkalmazás-specifikus beállító párbeszédpanelen is az Orca általános beállításait, mint az Orca grafikus beállító párbeszédpanelén. Például, ha a billentyű visszhang általánosan le van tiltva, engedélyezni tudja a számológép alkalmazásban (Gnome számológép). Ez könnyedén megtehető."
 
 #: C/gnome-access-guide.xml:1105(para)
-
 msgid "When you have your application settings customized the way that you want, press the OK button. These settings will be written away under your <userinput>~/.orca/app-settings</userinput> directory in a file called <userinput>&lt;APPNAME&gt;.py</userinput>, where <userinput>&lt;APPNAME&gt;</userinput> is the name of the application."
 msgstr "Ha személyre szabta az alkalmazás-specifikus beállításokat, aktiválja az Ok gombot. Ezek a beállítások az ön felhasználói könyvtárában tárolódnak a <userinput>~/.orca/app-settings</userinput> könyvtárban egy <userinput>&lt;APPNAME&gt;.py</userinput> nevű fájlban, ahol az <userinput>&lt;APPNAME&gt;</userinput> a kérdéses alkalmazás nevére változik."
 
 #: C/gnome-access-guide.xml:1112(para)
-
 msgid "These files are automatically written by Orca. The existing contents of that file will just be blown away each time you change your application settings for that application."
 msgstr "Ezeket a fájlokat az Orca automatikusan létre hozza. Az adott alkalmazás beállító fájljának a létező tartalma mindig felülíródik, valahányszor megváltoztatja az alkalmazás-specifikus beállításokat az adott alkalmazáshoz."
 
 #: C/gnome-access-guide.xml:1116(para)
-
 msgid "If you want to have some extra application specific settings or code that you don't want to lose, then you should put it in a file called <userinput>\n      ~/.orca/app-settings/&lt;APPNAME&gt;-customizations.py</userinput>. This file will be automatically read when the settings for the <userinput>&lt;APPNAME&gt;</userinput> application are loaded."
 msgstr "Ha extra alkalmazás-specifikus beállításokat szeretne megadni, és az a célja, hogy ezek a beállítások ne vesszenek el, helyezze el ezeket a beállításokat egy <userinput>\n      ~/.orca/app-settings/&lt;APPNAME&gt;-customizations.py</userinput> nevű fájlba. Ennek a fájlnak a tartalma automatikusan beolvasásra kerül, amikor az alkalmazás-specifikus beállítások betöltődnek az <userinput>&lt;APPNAME&gt;</userinput> alkalmazás elindulásakor."
 
 #: C/gnome-access-guide.xml:1124(para)
-
 msgid "Note that this is an advanced feature that we don't expect most Orca users to use. It's just there if you really want it."
 msgstr "Megjegyzés: ez egy olyan extra funkció, amit a legtöbb Orca felhasználó nem használ. Csak akkor használja ezt a funkciót, ha ténylegesen erre van szüksége és tudja hogy miért akarja ezt a funkciót használni."
 
 #: C/gnome-access-guide.xml:1127(para)
-
 msgid "There is currently one known bug (some people would call it a feature) that we are trying to track down and fix:"
 msgstr "Jelenleg van egy ismert hiba (néhány ember ezt funkciónak nevezi), megpróbáljuk lekövetni és kijavítani ezt a hibát:"
 
 #: C/gnome-access-guide.xml:1131(para)
-
 msgid "If you adjust one or more application specific key bindings, the new values will not take immediate effect after you've pressed the OK button on the dialog. The workaround is to either restart Orca, or to Alt-Tab away to some other application and then Alt-Tab back to the one that you've just changed the key bindings for."
 msgstr "Ha megad egy vagy több alkalmazás-specifikus billentyű társítást, az új értékek nem kerülnek módosításra ha aktiválja az Ok gombot a párbeszéd panelen. Egy kerülő megoldásként újra lehet indítani az Orca-t, vagy az Alt-Tab billentyűparancs segítségével át kell váltani egy másik alkalmazásra, majd az Alt-Tab billentyűparancs segítségével vissza kell váltani arra az alkalmazásra, amelynek megváltoztatta a billentyű társításait."
 
@@ -3410,277 +3386,222 @@ msgid "Braille"
 msgstr "Braille"
 
 #: C/gnome-access-guide.xml:1142(para)
-
 msgid "Orca uses <ulink url=\"http://mielke.cc/brltty/\">BrlTTY</ulink> for braille support. Orca does not automatically start BrlTTY for you -- you typically need to do that yourself, and it is something that is usually done at boot time. Start-up options are described in the BRTLTTY reference manual."
 msgstr "Az Orca a <ulink url=\"http://mielke.cc/brltty/\">BrlTTY</ulink> programot használja a braille támogatására. Az Orca nem indítja el automatikusan a BrlTTY programot - ezt önnek kell megtennie, általában viszont a rendszer indulásakor már megtörténik. Az indítási kapcsolók a BrlTTY kézikönyvében vannak leírva."
 
 #: C/gnome-access-guide.xml:1148(para)
-
 msgid "Orca attempts to work with various releases of BrlTTY. It works well with BrlTTY v3.7.2, and we've also been working with the BrlTTY team to get it going for BrlTTY v3.8. The remainder of this document provides information related to using Orca with BRLTTY 3.8."
 msgstr "Az Orca megkísérel együtt működni a BrlTTY különböző változataival. A BrlTTY 3.7.2-es változatával jól együtt tud működni. Jelenleg (ezen dokumentáció írásakor) azon dolgozunk a BrlTTY csoporttal együtt, hogy az Orca együtt tudjon működni a BrlTTY 3.8-as változatával. A dokumentum hátra levő része arról ad információkat, hogyan lehet az Orca-t a 3.8-as változatával használni."
 
 #: C/gnome-access-guide.xml:1153(para)
-
 msgid "To get Orca working with BrlTTY v3.8 requires that the Python bindings for BrlAPI are built/installed as part of the BrlTTY build/install process. Below are descriptions of the necessary tasks to do this for Ubuntu and Solaris. For both, you need to first obtain <ulink url=\"http://mielke.cc/brltty/releases/brltty-3.8.tar.gz\"> brltty-3.8.tar.gz</ulink> from the BrlTTY site."
 msgstr "Ahhoz, hogy az Orca együtt tudjon működni a BrlTTY 3.8-as változatával, szükség van a Python Brl api rutingyűjtemények beépítésére és telepítésére a BrlTTY alkalmazáshoz. Az alábbi részekben a szükséges lépések leírását olvashatja el az Ubuntu és a Solaris rendszerekhez. Mindkét rendszernél az első lépés, hogy le kell töltenie a <ulink url=\"http://mielke.cc/brltty/releases/brltty-3.8.tar.gz\"> brltty-3.8.tar.gz</ulink> fájlt a BrlTTY honlapjáról. Fontos! A következő leírás lépéseit csak az Ubuntu 7.10-es változatánál régebbi változatok esetén kell végrehajtani."
 
 #: C/gnome-access-guide.xml:1163(title)
-
 msgid "BrlTTY 3.8 on Ubuntu"
 msgstr "A BrlTTY 3.8 használata az Ubuntuban"
 
 #: C/gnome-access-guide.xml:1164(para)
-
 msgid "First, setup your build environment to build BrlTTY. Much of this setup is done for you automatically in the Ubuntu distribution with products such as G++ already present. In addition, YOU MUST also install tcl, Pyrex, and the Python developers environment. To do this, execute the following commands as <userinput>root</userinput> :"
 msgstr "Először is, be kell állítania a fordítási környezetet ahhoz, hogy le tudja fordítani a BrlTTY alkalmazást. Ez automatikusan megtörténik az Ubuntu disztribúciókban, ha a G++ már jelen van a rendszerben. Telepítenie kell a tcl, Pyrex, és a Python fejlesztői környezeteket. Hogy ezt megtehesse, a következő parancsokat kell végrehajtania <userinput>rootként</userinput>:"
 
 #: C/gnome-access-guide.xml:1177(para)
-
 msgid "Then, when you build BrlTTY, avoid configuring the package with --prefix=/usr. Use the standard procedure instead, executing the following commands as <userinput>root</userinput> :"
 msgstr "Amikor lefordítja a BrlTTY alkalmazást, konfigurálja a csomagot a --prefix=/usr kapcsolóval. Használja a szabványos eljárásokat, a következő parancsokat <userinput>rootként</userinput> kell futtatnia:"
 
 #: C/gnome-access-guide.xml:1191(para)
-
 msgid "Run BrlTTY as <userinput>root</userinput> (need notes on automatically starting brltty):"
 msgstr "A BrlTTY futtatása <userinput>rootként</userinput> (szüksége lehet a BrlTTY automatikus elindítására):"
 
 #: C/gnome-access-guide.xml:1199(para)
-
 msgid "If you want, you can remove the existing <userinput>/sbin/brltty</userinput> and replace it with the <userinput>/bin/brltty</userinput> either by copying the <userinput>/bin/brltty</userinput> to <userinput>/sbin/brltty</userinput> or just by making a symbolic link. Do so at your own risk."
 msgstr "Ha akarja, letörölheti a létező <userinput>/sbin/brltty</userinput> fájlt, és frissítheti a <userinput>/bin/brltty</userinput> fájllal. Másolja át a <userinput>/bin/brltty</userinput> fájlt a <userinput>/sbin/brltty</userinput> fájlba, vagy készítsen egy szimbolikus linket. Ezt viszont csak saját felelőségére tegye."
 
 #: C/gnome-access-guide.xml:1209(title)
-
 msgid "Keyboard Commands"
 msgstr "Billentyűparancsok"
 
 #: C/gnome-access-guide.xml:1210(para)
-
 msgid "This is the list of common Orca keyboard commands. Note that you can always enter Orca's \"learn mode\" while running Orca by pressing <keycombo><keycap>Insert</keycap><keycap>F1</keycap></keycombo>. When in learn mode, Orca will intercept all keyboard and braille input events and will tell you what the effect of them would be. To exit learn mode, press the <keycombo><keycap>escape</keycap></keycombo> key. If you are using a laptop computer, you will want to see the <ulink url=\"http://live.gnome.org/Orca/LaptopKeyboardCommands\"> laptop keyboard commands</ulink> page at live.gnome.org."
 msgstr "A következő listában az Orca általános billentyűparancsairól olvashat. Megjegyzés: Az Orca futása közben bármikor beléphet az Orca \"tanuló módjába\", ha lenyomja az <keycombo><keycap>Insert</keycap><keycap>H</keycap></keycombo> billentyűkombinációt. Amikor a tanuló módban van, az Orca minden billentyűzet és braille beviteli eseménynél elmondja, hogy mi a feladata az adott billentyűnek vagy braille eseménynek. Ha ki szeretne lépni a tanuló módból, nyomja meg az <keycombo><keycap>escape</keycap></keycombo> billentyűt. Ha hordozható számítógépet használ, megnézheti az <ulink url=\"http://live.gnome.org/Orca/LaptopKeyboardCommands\">Orca laptop billentyűparancsait</ulink> a live.gnome.org honlapon."
 
 #: C/gnome-access-guide.xml:1226(title)
-
 msgid "Commands for adjusting speech parameters"
 msgstr "Beszéd paramétereket változtató billentyűparancsok"
 
 #: C/gnome-access-guide.xml:1227(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Right Arrow</keycap></keycombo> : increase speech rate"
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Jobbra nyíl</keycap></keycombo> : növeli a beszéd sebességét. Megjegyzés: ez a billentyűparancs már az Orca billentyű társításoknál a nem kiosztott billentyűparancsok között szerepel. Ha szeretné használni, billentyű társítást kell hozzá definiálnia"
 
 #: C/gnome-access-guide.xml:1232(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Left Arrow</keycap></keycombo> : decrease speech rate"
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Balra nyíl</keycap></keycombo> : csökkenti a beszéd sebességét. Megjegyzés: ez a billentyűparancs már az Orca billentyű társításoknál a nem kiosztott billentyűparancsok között szerepel. Ha szeretné használni, billentyű társítást kell hozzá definiálnia"
 
 #: C/gnome-access-guide.xml:1237(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Up Arrow</keycap></keycombo> : raise the pitch"
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Felfelé nyíl</keycap></keycombo> : növeli a beszéd hangmagasságát. Megjegyzés: ez a billentyűparancs már az Orca billentyű társításoknál a nem kiosztott billentyűparancsok között szerepel. Ha szeretné használni, billentyű társítást kell hozzá definiálnia."
 
 #: C/gnome-access-guide.xml:1242(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Down Arrow</keycap></keycombo> : lower the pitch"
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Lefelé nyíl</keycap></keycombo> : csökkenti a beszéd hangmagasságát. Megjegyzés: ez a billentyűparancs már az Orca billentyű társításoknál a nem kiosztott billentyűparancsok között szerepel. Ha szeretné használni, billentyű társítást kell hozzá definiálnia"
 
 #: C/gnome-access-guide.xml:1249(title)
-
 msgid "Flat review commands"
 msgstr "Az egyszerű áttekintés billentyűparancsai"
 
 #: C/gnome-access-guide.xml:1250(para)
-
 msgid "<emphasis role=\"strong\">Numpad-7</emphasis>: Move the flat review cursor to the previous line, and read it."
 msgstr "<emphasis role=\"strong\">Numpad-7</emphasis>: Az egyszerű áttekintést az előző sorra mozgatja, és felolvassa azt."
 
 #: C/gnome-access-guide.xml:1253(para)
-
 msgid "<emphasis role=\"strong\">Numpad-8</emphasis>: Read the current line."
 msgstr "<emphasis role=\"strong\">Numpad-8</emphasis>: Felolvassa az aktuális sort."
 
 #: C/gnome-access-guide.xml:1256(para)
-
 msgid "<emphasis role=\"strong\">Numpad-9</emphasis>: Move the flat review cursor to the next line, and read it."
 msgstr "<emphasis role=\"strong\">Numpad-9</emphasis>: Az egyszerű áttekintést a következő sorra mozgatja, és felolvassa azt."
 
 #: C/gnome-access-guide.xml:1259(para)
-
 msgid "<emphasis role=\"strong\">Numpad-4</emphasis>: Move the flat review cursor to the previous word, and read it."
 msgstr "<emphasis role=\"strong\">Numpad-4</emphasis>: Az egyszerű áttekintést az előző szóra mozgatja, és felolvassa azt."
 
 #: C/gnome-access-guide.xml:1262(para)
-
 msgid "<emphasis role=\"strong\">Numpad-5</emphasis>: Read the current word."
 msgstr "<emphasis role=\"strong\">Numpad-5</emphasis>: Felolvassa az aktuális szót."
 
 #: C/gnome-access-guide.xml:1265(para)
-
 msgid "<emphasis role=\"strong\">Numpad-6</emphasis>: Move the flat review cursor to the next word, and read it."
 msgstr "<emphasis role=\"strong\">Numpad-6</emphasis>: Az egyszerű áttekintést a következő szóra mozgatja, és felolvassa azt."
 
 #: C/gnome-access-guide.xml:1268(para)
-
 msgid "<emphasis role=\"strong\">Numpad-1</emphasis>: Move the flat review cursor to the previous character, and read it."
 msgstr "<emphasis role=\"strong\">Numpad-1</emphasis>: Az egyszerű áttekintést az előző karakterre mozgatja, majd felolvassa azt."
 
 #: C/gnome-access-guide.xml:1271(para)
-
 msgid "<emphasis role=\"strong\">Numpad-2</emphasis>: Read the current character."
 msgstr "<emphasis role=\"strong\">Numpad-2</emphasis>: Felolvassa az aktuális karaktert."
 
 #: C/gnome-access-guide.xml:1274(para)
-
 msgid "<emphasis role=\"strong\">Numpad-3</emphasis>: Move the flat review cursor to the next character, and read it."
 msgstr "<emphasis role=\"strong\">Numpad-3</emphasis>: Az egyszerű áttekintést a következő karakterre mozgatja, majd felolvassa azt."
 
 #: C/gnome-access-guide.xml:1277(para)
-
 msgid "<emphasis role=\"strong\">Numpad-/</emphasis>: Perform a left mouse click at the location of the flat review cursor."
 msgstr "<emphasis role=\"strong\">Numpad-/</emphasis>: Bal kattintást végez azon az elemen, ahol az egyszerű áttekintés áll."
 
 #: C/gnome-access-guide.xml:1280(para)
-
 msgid "<emphasis role=\"strong\">Numpad-*</emphasis>: Perform a right mouse click at the location of the flat review cursor."
 msgstr "<emphasis role=\"strong\">Numpad-*</emphasis>: Jobb kattintást végez azon az elemen, ahol az egyszerű áttekintés áll."
 
 #: C/gnome-access-guide.xml:1284(para)
-
 msgid "The above commands apply when working with objects as well as when working with text. For example, if the flat review cursor were positioned on a menu bar, pressing the \"read current line\" command ( <emphasis role=\"strong\">Numpad-8</emphasis>) would speak the names of all visible menus. Similarly, pressing read next word would speak the object to the right of the flat review cursor on the same line, or move flat review to the next line if no more objects were found."
 msgstr "A fentebb leírt billentyűparancsok akkor kerülnek alkalmazásra, ha olyan objektumokkal dolgozik, melyek rendelkeznek szöveges információval. Például, ha az egyszerű áttekintés kurzorral egy menü sorra pozicionál és lenyomja a <emphasis role=\"strong\">Numpad-8</emphasis> billentyűt (\"az aktuális sor felolvasása\"), az összes látható menü kimondásra kerül. Hasonlóan, a következő szó felolvasása parancs a következő objektumot fogja felolvasni ugyanabban a sorban jobbra haladva, vagy átlép a következő sorba, ha már nem található több objektum."
 
 #: C/gnome-access-guide.xml:1296(title)
-
 msgid "Bookmark commands"
 msgstr "Könyvjelzővel kapcsolatos parancsok"
 
 #: C/gnome-access-guide.xml:1297(para)
-
 msgid "<keycombo><keycap>Alt</keycap><keycap>Insert</keycap><keycap>[1-6]</keycap></keycombo> : Add a bookmark in this numbered slot. If a bookmark already exists at this register it will be replaced with the new one."
 msgstr "<keycombo><keycap>Alt</keycap><keycap>Insert</keycap><keycap>[1-6]</keycap></keycombo> : Könyvjelzőt helyez el a megadott számú helyre (1-6). Ha egy megadott számú könyvjelző már létezik, az új könyvjelző a régit felülírja."
 
 #: C/gnome-access-guide.xml:1305(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>[1-6]</keycap></keycombo> : Go to the position pointed to by the bookmark bound to this numbered slot."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>[1-6]</keycap></keycombo> : Ugrás arra a pozícióra, ahová a megfelelő számú könyvjelző mutat."
 
 #: C/gnome-access-guide.xml:1311(para)
-
 msgid "<keycombo><keycap>Alt</keycap><keycap>Shift</keycap><keycap>[1-6]</keycap></keycombo> : \"Where am I\" information for this bookmark relative to the current pointer location."
 msgstr "<keycombo><keycap>Alt</keycap><keycap>Shift</keycap><keycap>[1-6]</keycap></keycombo> : a \"Hol vagyok\" parancs segítségével információt ad arról, hogy a könyvjelző a jelenlegi pozícióhoz képest relatívan hol található."
 
 #: C/gnome-access-guide.xml:1318(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>B</keycap></keycombo> and <keycombo><keycap>Insert</keycap><keycap>Shift</keycap><keycap>B</keycap></keycombo> : Move between the given bookmarks for the given application or page."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>B</keycap></keycombo> és <keycombo><keycap>Insert</keycap><keycap>Shift</keycap><keycap>B</keycap></keycombo>: a megadott könyvjelzőket a megadott alkalmazás vagy megadott oldal között mozgatja."
 
 #: C/gnome-access-guide.xml:1329(para)
-
 msgid "<keycombo><keycap>Alt</keycap><keycap>Insert</keycap><keycap>B</keycap></keycombo> : Save the defined bookmarks for the current application or page."
 msgstr "<keycombo><keycap>Alt</keycap><keycap>Insert</keycap><keycap>B</keycap></keycombo> : Könyvjelző mentése az aktuális alkalmazáshoz vagy oldalhoz."
 
 #: C/gnome-access-guide.xml:1338(title)
-
 msgid "Miscellaneous functions"
 msgstr "Egyéb funkciók"
 
 #: C/gnome-access-guide.xml:1339(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Numpad</keycap><keycap>+</keycap></keycombo> : Say all command. reads from the current position of the caret to the end of the document."
 msgstr "<keycombo><keycap>Numpad</keycap><keycap>+</keycap></keycombo> : Felolvassa az egész dokumentumot onnantól, ahol a kurzor áll."
 
 #: C/gnome-access-guide.xml:1346(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Numpad</keycap><keycap>Enter</keycap></keycombo> : Where am I command. Speaks information such as the title of the current application window, as well as the name of the control that currently has focus."
 msgstr "<keycombo><keycap>Numpad</keycap><keycap>Enter</keycap></keycombo> : Végrehajtja a hol vagyok műveletet. Ez a parancs mégegyszer kimondja a fókuszban levő objektumot Ha például egy menüben tartózkodik és végrehajtja a hol vagyok műveletet, kimondásra kerül a menüpont és annak gyorsbillentyűje is. Ha az aktív alkalmazás címét szeretné meghallgatni, használja az <keycombo><keycap>Insert</keycap><keycap>Numpad</keycap><keycap>Enter</keycap></keycombo> billentyűparancsot."
 
 #: C/gnome-access-guide.xml:1354(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>F1</keycap></keycombo> : Enter learn mode (press <keycap>Escape</keycap>to exit)"
 msgstr "<keycombo><keycap>Insert</keycap><keycap>H</keycap></keycombo>: Belép a tanulási módba. Ha ki szeretne lépni a tanulási módból, nyomja meg az <keycap>Escape</keycap> billentyűt"
 
 #: C/gnome-access-guide.xml:1360(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> : Speak font and attribute information for the current character."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> : Felolvassa az aktuális karakter betűtípusát és szöveges attribútumát."
 
 #: C/gnome-access-guide.xml:1366(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> : Launch the Orca Configuration dialog."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> : Megjeleníti az Orca grafikus beállító párbeszédpanelét."
 
 #: C/gnome-access-guide.xml:1371(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo> : Reload user settings and reinitialize services as necessary. In the latest versions of Orca, launch the Orca Configuration dialog for the current application."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo>: Régebbi Orca verzióknál újra inicializálja azokat a szolgáltatásokat, melyekre szükség van. A mostani Orca verzióknál megjeleníti az alkalmazás-specifikus beállító párbeszédpanelt az aktív alkalmazáshoz."
 
 #: C/gnome-access-guide.xml:1379(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>S</keycap></keycombo> : Toggle speech on and off."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>S</keycap></keycombo>: Átváltja a beszéd némítását."
 
 #: C/gnome-access-guide.xml:1384(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>F11</keycap></keycombo> : Toggle the reading of tables, either by single cell, or whole row."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>F11</keycap></keycombo>: Vált a jelenlegi táblázat cellájának felolvasása és az egész sor felolvasása között."
 
 #: C/gnome-access-guide.xml:1390(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo> : Quit orca."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo>: Kilép az Orca programból."
 
 #: C/gnome-access-guide.xml:1397(title)
-
 msgid "Commands for debugging"
 msgstr "Parancsok hibakereséshez (csak fejlesztőknek)"
 
 #: C/gnome-access-guide.xml:1398(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>F3</keycap></keycombo> : Report information on the currently active script."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Alt</keycap><keycap>Ctrl</keycap><keycap>Home</keycap></keycombo> : Információt ad a jelenleg aktív parancsfájlról."
 
 #: C/gnome-access-guide.xml:1404(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>F4</keycap></keycombo> : Cycle through Orca's various debug levels."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>F4</keycap></keycombo> : Futás időben átváltja a debug szintet. Megjegyzés: ehhez a funkcióhoz az új Orca verziókban már nincs billentyűtársítás definiálva. Ha szeretné használni ezt a funkciót, definiálnia kell egy billentyű társítást."
 
 #: C/gnome-access-guide.xml:1411(para)
-
 msgid "In order for the next three commands to be of use, Orca needs to be started from a virtual console or via gnome-terminal. Output is sent only to the console (i.e., it is not sent to speech or braille)."
 msgstr "A következő három parancs használatához arra van szükség, hogy az Orca a gnome-terminalból vagy virtuális konzolból legyen elindítva. A három parancs kimenete csak a konzolra kerül kiírásra, nem lesz tehát kimondva és kiírva a braille kijelzőre."
 
 #: C/gnome-access-guide.xml:1416(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>F5</keycap></keycombo> : Prints a debug listing of all known applications to the console where Orca is running."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Alt</keycap><keycap>Ctrl</keycap><keycap>End</keycap></keycombo> : Kiírja a konzolra az összes alkalmazás debug információit, amíg az Orca fut."
 
 #: C/gnome-access-guide.xml:1422(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>F7</keycap></keycombo> : Prints debug information about the ancestry of the object with focus."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Alt</keycap><keycap>Ctrl</keycap><keycap>Pageup</keycap></keycombo>: Kiírja a fókuszban levő objektum debug információit."
 
 #: C/gnome-access-guide.xml:1428(para)
-
 msgid "<keycombo><keycap>Insert</keycap><keycap>F8</keycap></keycombo> : Prints debug information about the application with focus."
 msgstr "<keycombo><keycap>Insert</keycap><keycap>Alt</keycap><keycap>Ctrl</keycap><keycap>Pageup</keycap></keycombo>: Kiírja a fókuszban levő alkalmazás debug információit."
 
 #: C/gnome-access-guide.xml:1437(title)
-
 msgid "Troubleshooting"
 msgstr "Hibaelhárítás"
 
 #: C/gnome-access-guide.xml:1439(title)
-
 msgid "Orca is not speaking. What is going wrong?"
 msgstr "Az Orca nem beszél. Mi lehet a hiba?"
 
 #: C/gnome-access-guide.xml:1440(para)
-
 msgid "See <ulink url=\"http://live.gnome.org/Orca/GnomeSpeech\"> Troubleshooting Speech</ulink>."
 msgstr "Nézze meg a <ulink url=\"http://live.gnome.org/Orca/GnomeSpeech\">Beszéddel kapcsolatos hibák elhárítása</ulink> (angol) oldalt."
 
 #: C/gnome-access-guide.xml:1445(title)
-
 msgid "My desktop has stopped responding. What do I do?"
 msgstr "A munkaasztalom nem válaszol. Mit tehetek?"
 
@@ -3689,32 +3610,26 @@ msgid "If you can get to a terminal (or press <keycombo><keycap>Alt</keycap><key
 msgstr "Ha tud nyitni egy terminált (vagy nyomja le az <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> billentyűkombinációt az \"Alkalmazás futtatása\" párbeszédpanel eléréséhez), megpróbálhatja újraindítani az Orca-t a terminálablakból. Ez azt eredményezi, hogy az Orca összes folyamata kilép, és az Orca újra fog indulni. Néha emiatt a (gyakran egy lefagyott alkalmazás miatt) nem válaszoló munkaasztal újra használhatóvá válik."
 
 #: C/gnome-access-guide.xml:1457(para)
-
 msgid "If you cannot get to a terminal window, try pressing <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Backspace</keycap></keycombo> to kill the X Window System server. This should have the effect of returning you to the login screen."
 msgstr "Ha nem tud terminál ablakot kapni, próbálja meg lenyomni a <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Backspace</keycap></keycombo> az X kiszolgáló megöléséhez. Ez azt eredményezi, hogy újra megjelenik a bejelentkező képernyő."
 
 #: C/gnome-access-guide.xml:1470(title)
-
 msgid "Desktop Appearance Enhancement"
 msgstr "A munkaasztal megjelenésének javítása"
 
 #: C/gnome-access-guide.xml:1471(para)
-
 msgid "This chapter describes the methods you can use to change the appearance of the GNOME Desktop to enhance the accessibility of the desktop for users with visual impairments."
 msgstr "Ez a fejezet leírja, hogy milyen módszerekkel tudják megváltoztatni a Gnome munkaasztal megjelenését a látássérült felhasználók az akadálymentes használat érdekében."
 
 #: C/gnome-access-guide.xml:1475(title)
-
 msgid "Customization Options"
 msgstr "Személyre szabási lehetőségek"
 
 #: C/gnome-access-guide.xml:1477(primary) C/gnome-access-guide.xml:2013(primary) C/gnome-access-guide.xml:2023(primary) C/gnome-access-guide.xml:2046(primary) C/gnome-access-guide.xml:2081(primary) C/gnome-access-guide.xml:2176(primary)
-
 msgid "customizing the desktop appearance"
 msgstr "A munkaasztal megjelenésének személyre szabása"
 
 #: C/gnome-access-guide.xml:1479(para)
-
 msgid "There are a number of methods to enable you to customize the appearance of the GNOME Desktop to suit your specific needs, as follows:"
 msgstr "Számos lehetőség áll rendelkezésre a munkaasztal megjelenésének személyre szabásához a saját igényei szerint. Ezek a következők:"
 
@@ -3723,12 +3638,10 @@ msgid "Themes"
 msgstr "Témák"
 
 #: C/gnome-access-guide.xml:1486(para)
-
 msgid "Themes are the most effective way to change the appearance of the desktop in a consistent manner. See <xref linkend=\"themes-2\"/> for more information about themes and how to use themes to achieve the type of desktop environment that you require."
 msgstr "A téma megváltoztatása a leghatékonyabb mód arra, hogy a munkaasztal megjelenését konzisztensen személyre szabja. Ha bővebb információra van szüksége arról, hogy mik azok a témák és hogyan lehet velük az asztal megjelenését az ön igényei szerint személyre szabni, nézze meg a <xref linkend=\"themes-2\"/> részt."
 
 #: C/gnome-access-guide.xml:1492(term)
-
 msgid "Desktop and application-specific configuration settings"
 msgstr "Munkaasztal és alkalmazás-specifikus beállítások"
 
@@ -3737,77 +3650,62 @@ msgid "You can customize different components of the desktop individually to ach
 msgstr ""
 
 #: C/gnome-access-guide.xml:1501(para)
-
 msgid "The following table summarizes the changes that you can make to the GNOME Desktop and where you can make the changes. This guide does not provide detailed instructions about how to customize the desktop. For detailed instructions about how to use the customization tools that the desktop provides, refer to the Help for each tool or to the <ulink type=\"help\" url=\"ghelp:user-guide?prefs\">User Guide</ulink>."
 msgstr "A következő táblázatban áttekintheti, hogy milyen módosításokat tehet meg a GNOME munkaasztal kinézetének megváltoztatása érdekében, valamint hogy hol kell megtennie ezeket a változtatásokat. Megjegyzés: ez a leírás nem ad részletes instrukciókat arról, hogy hogyan szabható testre a munkaasztal kinézete. Ha részletes instrukciókra van szüksége a személyre szabási eszközökről a munkaasztal szempontjából, nézze meg az adott eszköz súgójában vagy a <ulink type=\"help\" url=\"ghelp:user-guide?prefs\">Felhasználói Leírásban</ulink>."
 
 #: C/gnome-access-guide.xml:1507(title)
-
 msgid "Quick Reference to Customizing the Appearance of the Desktop"
 msgstr "Gyors referencia a munkaasztal megjelenésének javításáról"
 
 #: C/gnome-access-guide.xml:1514(para)
-
 msgid "To change the..."
 msgstr "Ha szeretné megváltoztatni a..."
 
 #: C/gnome-access-guide.xml:1517(para)
-
 msgid "Use..."
 msgstr "Használja..."
 
 #: C/gnome-access-guide.xml:1524(para)
-
 msgid "Overall appearance of the desktop to use high contrast colors, low contrast colors, or large print."
 msgstr "A munkaasztal megjelenítésénél nagy, kis kontrasztú színek, nagy méretű betűk használata."
 
 #: C/gnome-access-guide.xml:1528(para)
-
 msgid "The <application>Theme</application> preference tool."
 msgstr "A <application>Téma</application> beállítóeszközt."
 
 #: C/gnome-access-guide.xml:1533(para)
-
 msgid "Appearance of the desktop background only."
 msgstr "Csak az asztal hátterének megváltoztatása."
 
 #: C/gnome-access-guide.xml:1536(para)
-
 msgid "The <application>Desktop Background</application> preference tool and the file manager <guilabel>Backgrounds and Emblems</guilabel> menu item."
 msgstr "A <application>Munkaasztal Háttere</application> beállítóeszközt, és a fájlkezelő <guilabel>Hátterek és címkék</guilabel> menüpontját."
 
 #: C/gnome-access-guide.xml:1542(para)
-
 msgid "Font displayed on the desktop background and in all desktop applications."
-msgstr "A munkaasztal és az alkalmazások betűtípusának  megváltoztatása."
+msgstr "A munkaasztal és az alkalmazások betűtípusának megváltoztatása."
 
 #: C/gnome-access-guide.xml:1546(para)
-
 msgid "The <application>Font</application> preference tool."
 msgstr "A <application>Megjelenés</application> beállítóeszközt."
 
 #: C/gnome-access-guide.xml:1551(para)
-
 msgid "Default font settings of the <application>Text Editor</application>, <application>Terminal</application> or <application>Help</application> application."
 msgstr "Alapértelmezett betűtípus megváltoztatása a <application>Szöveg Szerkesztő</application>, <application>Terminál</application> vagy a <application>Súgó</application> alkalmazásban."
 
 #: C/gnome-access-guide.xml:1554(para)
-
 msgid "By default, these applications use the default application font that is specified in the <application>Font</application> preference tool but can be overridden in the <guilabel>Preferences</guilabel> dialog for the application."
 msgstr "Alapesetben ezek az alkalmazások az alapértelmezett alkalmazás betűtípust használják, mely megadható a <application>Megjelenítés</application> beállító eszközzel, de ez módosítható az adott alkalmazás <guilabel>Beállítások</guilabel> párbeszédpanelén."
 
 #: C/gnome-access-guide.xml:1563(title)
-
 msgid "Using Themes to Customize the Desktop"
 msgstr "Témák használata az asztal személyre szabásához"
 
 #: C/gnome-access-guide.xml:1564(para)
-
 msgid "This section describes how to use themes to customize the appearance of the GNOME Desktop."
 msgstr "Ez a fejezet leírja, hogyan tud javítani a munkaasztal megjelenésén témák használatával."
 
 #: C/gnome-access-guide.xml:1567(title)
-
 msgid "Introduction to Themes"
 msgstr "Bevezetés a témák használatába"
 
@@ -3816,27 +3714,22 @@ msgid "themes"
 msgstr "témák"
 
 #: C/gnome-access-guide.xml:1571(para)
-
 msgid "A theme is a group of coordinated settings that specifies how a desktop component or a group of desktop components appears. You can use themes to modify and control the appearance of the desktop in a consistent manner. When you apply a theme, the system modifies many desktop components simultaneously to achieve the desired effect. For example, if you apply a theme that increases the font size across the desktop, the theme also modifies the size of panels and icons on the desktop for optimum compatibility with the font size."
 msgstr "A téma koordináltan csoportosított beállítások gyűjteménye, mely meghatározza, hogy az asztali komponens vagy a komponensek csoportja hogyan jelenjen meg. A témákat arra használhatja, hogy szükség szerint módosítani és ellenőrizni tudja a munkaasztal megjelenését. Ha egy témát alkalmaz, a rendszer sok komponenst módosít egyszerre a kívánt hatás érdekében. Például, ha egy olyan témát alkalmaz, mely megnöveli a betű méretet a munkaasztalon, a téma módosítja a panelek és az ikonok betű méretét a kompatibilitás érdekében."
 
 #: C/gnome-access-guide.xml:1579(para)
-
 msgid "A theme contains settings that affect different parts of the desktop as follows:"
 msgstr "A téma a munkaasztal különböző részeihez tartalmaz beállításokat, ezek a következők:"
 
 #: C/gnome-access-guide.xml:1585(para)
-
 msgid "The controls setting for a theme determines the visual appearance of all windows, applications, panels, and panel applications. The controls setting also determines the visual appearance of the GNOME-compliant interface items that appear on windows, applications, panels, and panel applications, such as menus, icons, and buttons. Some of the controls options that are available in the desktop are designed for special accessibility needs."
 msgstr "a Vezérlőelemek beállítás egy témánál meghatározza minden ablak, alkalmazás, panel, és kisalkalmazás kinézetét. A vezérlőelemek beállítás tehát meghatározza a GNOME kezelőfelület elemeinek vizuális kinézetét (ablakok, alkalmazások, panelek és kisalkalmazások), ugyanígy a menük, ikonok és gombok kinézetét is. Néhány a munkaasztalon elérhető vezérlőelem beállítási lehetőség az akadálymentesítés érdekében úgy lett megtervezve, hogy megfeleljen a speciális akadálymentesítési igényeknek."
 
 #: C/gnome-access-guide.xml:1595(term)
-
 msgid "Window border"
 msgstr "Ablakszegély"
 
 #: C/gnome-access-guide.xml:1597(para)
-
 msgid "The window frame setting determines the appearance of the border around windows only."
 msgstr "Az ablakszegély beállítás meghatározza az ablak külső szegélyének kinézetét."
 
@@ -3845,12 +3738,10 @@ msgid "Icon"
 msgstr "Ikon"
 
 #: C/gnome-access-guide.xml:1604(para)
-
 msgid "The icon setting determines the appearance of icons on panels and on the desktop background."
 msgstr "Az ikonbeállítás meghatározza paneleken levő ikonok, és a munkaasztalon levő ikonok kinézetét."
 
 #: C/gnome-access-guide.xml:1611(title)
-
 msgid "To Choose a Theme"
 msgstr "Téma kiválasztása"
 
@@ -3859,27 +3750,22 @@ msgid "desktop"
 msgstr "munkaasztal"
 
 #: C/gnome-access-guide.xml:1616(para)
-
 msgid "To choose a theme, perform the following steps:"
 msgstr "Ha témát szeretne választani, hajtsa végre a következő lépéseket:"
 
 #: C/gnome-access-guide.xml:1619(para)
-
 msgid "Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Appearance</guimenuitem></menuchoice>. The themes are listed under the <guilabel>Theme</guilabel> tab."
 msgstr "Válassza a <menuchoice><guimenu>Rendszer</guimenu><guisubmenu>Beállítások</guisubmenu><guimenuitem>Megjelenés</guimenuitem></menuchoice> menüpontot. A témák listáját a <guilabel>Téma</guilabel> fül alatt megtalálja."
 
 #: C/gnome-access-guide.xml:1624(para)
-
 msgid "Click on a theme in the list box to choose a new theme. The system automatically applies the theme to the desktop."
 msgstr "A listából válasszon egy témát. A Rendszer automatikusan alkalmazza a beállításokat a munkaasztalon."
 
 #: C/gnome-access-guide.xml:1626(para)
-
 msgid "There are several themes available that suit different accessibility needs, as described in the following table:"
 msgstr "Sokféle akadálymentesítési téma áll rendelkezésre, a különböző akadálymentesítési igényeknek megfelelően. Ezek a következők:"
 
 #: C/gnome-access-guide.xml:1629(title)
-
 msgid "Themes Designed for Accessibility Requirements"
 msgstr "Akadálymentesítési igényekhez tervezett témák"
 
@@ -3892,7 +3778,6 @@ msgid "High Contrast"
 msgstr "Nagy kontraszt"
 
 #: C/gnome-access-guide.xml:1651(para) C/gnome-access-guide.xml:1761(para)
-
 msgid "Provides dark text on a light background using high contrast colors."
 msgstr "Sötét szöveget fényes háttéren eredményez nagy kontrasztú színekkel."
 
@@ -3901,7 +3786,6 @@ msgid "High Contrast Inverse"
 msgstr "Inverz nagy kontraszt"
 
 #: C/gnome-access-guide.xml:1662(para) C/gnome-access-guide.xml:1772(para)
-
 msgid "Provides light text on a dark background using high contrast colors."
 msgstr "Fényes szöveg, sötét háttérben nagy kontrasztú színekkel."
 
@@ -3910,7 +3794,6 @@ msgid "Large Print"
 msgstr "Nagy szöveg"
 
 #: C/gnome-access-guide.xml:1673(para)
-
 msgid "This theme suggests an increased font size of 18pt. The background and foreground colors are the same as those specified by the <guilabel>Default</guilabel> desktop theme. To apply the suggested font, click on the <guibutton>Apply Font</guibutton> button."
 msgstr "Ez a téma javaslatot tesz a betűméret megnövelésére 18 pontra. Az előtér és háttér szín ugyanaz marad, mint amit az <guilabel>Alapértelmezett</guilabel>  asztali témánál megadott. Ha alkalmazni szeretné a javasolt betűtípust, aktiválja a <guibutton>Betűtípus Alkalmazása</guibutton> gombot."
 
@@ -3919,7 +3802,6 @@ msgid "High Contrast Large Print"
 msgstr "Nagy kontraszt és nagy szöveg"
 
 #: C/gnome-access-guide.xml:1686(para)
-
 msgid "This theme suggests an increased font size of 18pt using dark text on a light background. To apply the suggested font, click on the <guibutton>Apply Font</guibutton> button."
 msgstr "Ez a téma javaslatot tesz a betű méret megnövelésére 18 pontra sötét szöveg és fényes háttér használatával. Ha alkalmazni szeretné a javasolt betűtípust, aktiválja a <guibutton>Betűtípus Alkalmazása</guibutton> gombot."
 
@@ -3928,142 +3810,114 @@ msgid "High Contrast Large Print Inverse"
 msgstr "Nagy kontraszt, nagy szöveg és inverz"
 
 #: C/gnome-access-guide.xml:1698(para)
-
 msgid "This theme suggests an increased font size of 18pt using light text on a dark background. To apply the suggested font, click on the <guibutton>Apply Font</guibutton> button."
 msgstr "Ez a téma javaslatot tesz a betű méret megnövelésére 18 pontra fényes szöveg és sötét háttér használatával. Ha alkalmazni szeretné a javasolt betűtípust, aktiválja a <guibutton>Betűtípus Alkalmazása</guibutton> gombot."
 
 #: C/gnome-access-guide.xml:1708(para)
-
 msgid "To view the controls, window frame, and icon settings that are associated with a theme, select a theme in the <guilabel>Theme Preferences</guilabel> dialog, then click on the <guibutton>Theme Details</guibutton> button. The <guilabel>Theme Details</guilabel> dialog contains a tabbed section for each setting category. Each tabbed section lists the options that are available and the current setting for the theme is highlighted."
 msgstr "Ha meg szeretné nézni a vezérlőelemekhez, ablakszegélyhez, ikonokhoz társított témát, jelöljön ki egy témát a <guilabel>Téma beállítások</guilabel> párbeszédpanelen, majd aktiválja a <guibutton>Téma részletei</guibutton> gombot. A <guilabel>Téma részletei</guilabel> párbeszédpanel minden beállítási kategóriát külön lapfüleken tartalmaz. Mindegyik szekció megjeleníti az elérhető beállítások listáját, a jelenlegi beállítás a témában ki lesz emelve."
 
 #: C/gnome-access-guide.xml:1715(title)
-
 msgid "To Modify the Controls Setting for a Theme"
 msgstr "A vezérlőelemek beállításainak módosítása egy témában"
 
 #: C/gnome-access-guide.xml:1716(para)
-
 msgid "To modify the controls setting that is associated with a theme, perform the following steps:"
 msgstr "Ha módosítani szeretné a témához társított vezérlőelem beállításokat, hajtsa végre a következő lépéseket:"
 
 #: C/gnome-access-guide.xml:1720(para) C/gnome-access-guide.xml:1852(para) C/gnome-access-guide.xml:1880(para)
-
 msgid "In the <guilabel>Theme Preferences</guilabel> dialog, select the theme that you want to modify."
 msgstr "A <guilabel>Téma beállítások</guilabel> párbeszédpanelen válassza ki azt a témát, melyet módosítani szeretne."
 
 #: C/gnome-access-guide.xml:1724(para) C/gnome-access-guide.xml:1856(para) C/gnome-access-guide.xml:1884(para)
-
 msgid "Click on the <guibutton>Theme Details</guibutton> button. The <guilabel>Theme Details</guilabel> dialog is displayed."
 msgstr "Aktiválja a <guibutton>Téma részletei</guibutton> gombot. A <guilabel>Téma részletei</guilabel> párbeszédpanel megjelenik."
 
 #: C/gnome-access-guide.xml:1728(para)
-
 msgid "Click on the <guilabel>Controls</guilabel> tab to display the controls options that are available."
 msgstr "Lépjen a <guilabel>Vezérlőelemek</guilabel> lapfülre, hogy megjelenjenek az elérhető vezérlőelem beállítások."
 
 #: C/gnome-access-guide.xml:1732(para)
-
 msgid "Select the controls option that you want to associate with the current theme from the list box, then click <guibutton>Close</guibutton>. The following table lists the controls options that are suitable for accessibility needs."
 msgstr "Jelölje be azokat a vezérlőelem beállításokat a listában melyeket az aktuális témához társítani szeretne, majd aktiválja a <guibutton>Bezárás</guibutton> gombot."
 
 #: C/gnome-access-guide.xml:1739(title)
-
 msgid "Controls Options Designed for Accessibility Requirements"
 msgstr "Vezérlőelemek beállítási lehetőségei az akadálymentesítéshez"
 
 #: C/gnome-access-guide.xml:1746(para)
-
 msgid "Control Option"
 msgstr "Vezérlőelem beállítás"
 
 #: C/gnome-access-guide.xml:1757(guilabel) C/gnome-access-guide.xml:1916(guilabel)
-
 msgid "HighContrast"
 msgstr "Nagy kontraszt"
 
 #: C/gnome-access-guide.xml:1768(guilabel) C/gnome-access-guide.xml:1927(guilabel)
-
 msgid "HighContrastInverse"
 msgstr "Inverz nagy kontraszt"
 
 #: C/gnome-access-guide.xml:1779(guilabel) C/gnome-access-guide.xml:1938(guilabel)
-
 msgid "LowContrast"
 msgstr "Kis kontraszt"
 
 #: C/gnome-access-guide.xml:1783(para) C/gnome-access-guide.xml:1942(para)
-
 msgid "Uses low contrast colors for the background and foreground text."
 msgstr "Kis kontrasztú színeket használ a háttér és az előtér szövegében."
 
 #: C/gnome-access-guide.xml:1790(guilabel)
-
 msgid "LargePrint"
 msgstr "Nagy szöveg"
 
 #: C/gnome-access-guide.xml:1794(para)
-
 msgid "Increases the size of controls to accommodate larger fonts. To increase the font size, you must use the <application>Font</application> preference tool. The background and foreground colors are the same as those specified by the <guilabel>Default</guilabel> desktop theme."
 msgstr "Megnöveli a vezérlőelemek betűméretét nagyobb méretre. Ha szeretné megnövelni a betűméretet, használja a <application>Megjelenítés</application> beállítóeszközt. Az előtér és háttér szín ugyanaz marad, mint amit az <guilabel>Alapértelmezett</guilabel> asztali témánál megadott."
 
 #: C/gnome-access-guide.xml:1802(guilabel)
-
 msgid "HighContrastLargePrint"
 msgstr "Nagy kontraszt nagy szöveg"
 
 #: C/gnome-access-guide.xml:1806(para)
-
 msgid "Provides dark text on a light background using high contrast colors. Increases the size of controls to accommodate larger fonts. To increase the font size, you must use the <application>Font</application> preference tool."
 msgstr "Sötét szöveget eredményez fényes háttérrel, nagy kontrasztú színek használatával. A vezérlőelemek betűmérete nagyobb lesz. Ha szeretné megnövelni a betűméretet, használja a <application>Megjelenés</application> beállítóeszközt."
 
 #: C/gnome-access-guide.xml:1815(guilabel)
-
 msgid "HighContrastLargePrintInverse"
 msgstr "Inverz nagy kontraszt, nagy szöveg"
 
 #: C/gnome-access-guide.xml:1819(para)
-
 msgid "Provides light text on a dark background using high contrast colors. Increases the size of controls to accommodate larger fonts. To increase the font size, you must use the <application>Font</application> preference tool."
 msgstr "Fényes szöveget eredményez sötét háttérrel, nagy kontrasztú színek használatával. A vezérlőelemek betűmérete nagyobb lesz. Ha szeretné megnövelni a betűméretet, használja a <application>Megjelenés</application> beállítóeszközt."
 
 #: C/gnome-access-guide.xml:1828(guilabel)
-
 msgid "LowContrastLargePrint"
 msgstr "Kis kontraszt, nagy szöveg"
 
 #: C/gnome-access-guide.xml:1832(para)
-
 msgid "Uses low contrast colors for the background and foreground text. Increases the size of controls to accommodate larger fonts. To increase the font size, you must use the <application>Font</application> preference tool."
 msgstr "Kis kontrasztú színeket használ a háttér és az előtér szövegében. A vezérlőelemek betűmérete nagyobb lesz. Ha szeretné megnövelni a betűméretet, használja a <application>Megjelenés</application> beállítóeszközt."
 
 #: C/gnome-access-guide.xml:1843(title)
-
 msgid "To Modify the Window Border Setting for a Theme"
 msgstr "Ablakszegély beállításának megváltoztatása a témában"
 
 #: C/gnome-access-guide.xml:1846(secondary)
-
 msgid "window border"
 msgstr "Ablakszegély"
 
 #: C/gnome-access-guide.xml:1848(para)
-
 msgid "To modify the window border setting that is associated with a theme, perform the following steps:"
 msgstr "Ha szeretné módosítani a témához társított ablakszegély beállításokat, hajtsa végre a következő lépéseket:"
 
 #: C/gnome-access-guide.xml:1860(para)
-
 msgid "Click on the <guilabel>Window Border</guilabel> tab to display the window frame options that are available."
 msgstr "Lépjen az <guilabel>Ablakszegély</guilabel> lapfülre az elérhető ablakszegély beállítások megjelenítéséhez."
 
 #: C/gnome-access-guide.xml:1864(para)
-
 msgid "Select the window frame option that you want to associate with the current theme from the list box, then click <guibutton>Close</guibutton>. The <guilabel>Atlanta</guilabel> option is an accessible option."
 msgstr "A listából válassza ki azt az ablakszegély beállítást, melyet társítani akar a témához, majd aktiválja a <guibutton>Bezárás</guibutton> gombot. Az <guilabel>Atlanta</guilabel> opció egy akadálymentesítési opció."
 
 #: C/gnome-access-guide.xml:1871(title)
-
 msgid "To Modify the Icon Setting for a Theme"
 msgstr "Az ikonbeállítások módosítása egy témában"
 
@@ -4072,67 +3926,54 @@ msgid "icon"
 msgstr "ikon"
 
 #: C/gnome-access-guide.xml:1876(para)
-
 msgid "To modify the icon setting that is associated with a theme, perform the following steps:"
 msgstr "Ha szeretné módosítani a témához társított ikonbeállításokat, hajtsa végre a következő lépéseket:"
 
 #: C/gnome-access-guide.xml:1888(para)
-
 msgid "Click on the <guilabel>Icons</guilabel> tab to display the icon options that are available."
 msgstr "Lépjen az <guilabel>Ikonok</guilabel> fülre az elérhető ikonbeállítások megjelenítéséhez."
 
 #: C/gnome-access-guide.xml:1892(para)
-
 msgid "Select the icon option that you want to associate with the theme from the list box, then click <guibutton>Close</guibutton>. The following table lists the icon options that are suitable for accessibility needs."
 msgstr "A listából válassza ki az ikonbeállítást melyet a témához szeretne társítani, majd aktiválja a <guibutton>Bezárás</guibutton> gombot. A következő táblázat megjeleníti az ikonbeállításokat az akadálymentesítés igényei szerint."
 
 #: C/gnome-access-guide.xml:1898(title)
-
 msgid "Icon Options Designed for Accessibility Requirements"
 msgstr "Ikonbeállítások, melyek az akadálymentesítéshez lettek tervezve"
 
 #: C/gnome-access-guide.xml:1905(para)
-
 msgid "Icon Option"
 msgstr "Ikonbeállítás"
 
 #: C/gnome-access-guide.xml:1920(para)
-
 msgid "Provides dark on light icons using high contrast colors."
 msgstr "Sötét alapon fényes ikonok, nagy kontrasztú színekkel."
 
 #: C/gnome-access-guide.xml:1931(para)
-
 msgid "Provides light on dark icons using high contrast colors."
 msgstr "Fényes alapon sötét ikonok, nagy kontrasztú színekkel."
 
 #: C/gnome-access-guide.xml:1997(title)
-
 msgid "To Create Your Own Themes"
 msgstr "Saját témák létrehozása"
 
 #: C/gnome-access-guide.xml:2000(secondary)
-
 msgid "creating your own"
 msgstr "Saját létrehozása"
 
 #: C/gnome-access-guide.xml:2002(para)
-
 msgid "For information about how to create your own themes, see the <ulink type=\"help\" url=\"ghelp:system-admin-guide?themes-0\">System Administration Guide</ulink>."
 msgstr "Ha információkra kíváncsi arról, hogy hogyan hozhat létre saját témákat, nézze meg a <ulink type=\"help\" url=\"ghelp:system-admin-guide?themes-0\">Rendszer Adminisztrációs Kézikönyvben</ulink>."
 
 #: C/gnome-access-guide.xml:2007(title)
-
 msgid "Customizing Specific Components of the Desktop"
 msgstr "A munkaasztal speciális komponenseinek személyre szabása"
 
 #: C/gnome-access-guide.xml:2008(para)
-
 msgid "This section describes how to customize specific components of the desktop individually."
 msgstr "Ez a fejezet leírja, hogyan szabhatja személyre a munkaasztal speciális komponenseit szükség szerint."
 
 #: C/gnome-access-guide.xml:2011(title)
-
 msgid "To Customize the Desktop Background"
 msgstr "A munkaasztal hátterének személyre szabása"
 
@@ -4141,37 +3982,37 @@ msgid "desktop background"
 msgstr "a munkaasztal háttere"
 
 #: C/gnome-access-guide.xml:2016(para)
-
 msgid "The themes do not affect the desktop background. Therefore to modify the desktop background to complement your desktop, you must customize the desktop background separately using the <application>Desktop Background</application> preference tool. To start the <application>Desktop Background</application> preference tool,choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Appearance</guimenuitem></menuchoice> and choose a background from the <guilabel>Background</guilabel> tab."
 msgstr "A témák nem változtatják meg a munkaasztal hátterét. Ha módosítani szeretné a munkaasztal hátterét, a <application>Munkaasztal háttere</application> beállítóeszközt kell használnia. A <application>Munkaasztal Háttere</application> beállító eszköz elindításához válassza a <menuchoice><guimenu>Rendszer</guimenu><guisubmenu>Beállítások</guisubmenu><guimenuitem>Megjelenítés</guimenuitem></menuchoice> menüpontját, majd a <guilabel>Háttér</guilabel> lapfülön válasszon hátteret."
 
+# átnézve innen
 #: C/gnome-access-guide.xml:2021(title)
 msgid "To Customize Desktop Background Objects"
-msgstr ""
+msgstr "A munkaasztal háttérobjektumainak testreszabása"
 
 #: C/gnome-access-guide.xml:2024(secondary)
 msgid "desktop background objects"
-msgstr ""
+msgstr "munkaasztal háttérobjektumai"
 
 #: C/gnome-access-guide.xml:2026(para)
 msgid "The size of the icons that are displayed on the desktop background is controlled by the <application>File Management</application> preference tool. To change the size of the icons, perform the following steps:"
-msgstr ""
+msgstr "A munkaasztal hátterében megjelenő ikonok méretét a <application>Fájlkezelő beállításai</application> beállítóeszköz vezérli. Ha meg szeretné változtatni az ikonok méretét, tegye a következőket:"
 
 #: C/gnome-access-guide.xml:2031(para)
 msgid "From the <application>File Manager</application> window, choose the <menuchoice><guimenu>Edit</guimenu><guisubmenu>Preferences</guisubmenu></menuchoice> menu item."
-msgstr ""
+msgstr "A <application>Fájlkezelő</application> ablakában válassza a <menuchoice><guimenu>Szerkesztés</guimenu><guisubmenu>Beállítások</guisubmenu></menuchoice> menüpontot."
 
 #: C/gnome-access-guide.xml:2034(para)
 msgid "Select the <guilabel>Views</guilabel> tabbed section."
-msgstr ""
+msgstr "Lépjen a <guilabel>Nézetek</guilabel> lapra."
 
 #: C/gnome-access-guide.xml:2037(para)
 msgid "In the <guilabel>Icon View Defaults</guilabel> group, select the zoom level that you require in the <guilabel>Default zoom level</guilabel> drop-down list."
-msgstr ""
+msgstr "Az <guilabel>Ikonnézet alapbeállításai</guilabel> csoportban válassza ki a használni kívánt nagyítási szintet az <guilabel>Alapértelmezett nagyítás</guilabel> legördülő listából."
 
 #: C/gnome-access-guide.xml:2044(title)
 msgid "To Customize Fonts"
-msgstr ""
+msgstr "Betűkészletek testreszabása"
 
 #: C/gnome-access-guide.xml:2047(secondary)
 msgid "fonts"
@@ -4179,32 +4020,31 @@ msgstr "betűkészletek"
 
 #: C/gnome-access-guide.xml:2051(para)
 msgid "This section describes how to customize the font settings for the desktop and frequently-used applications."
-msgstr ""
+msgstr "Ez a fejezet leírja, hogyan szabhatja személyre a betűkészleteket a munkaasztalon és a gyakran használt alkalmazásokban."
 
 #: C/gnome-access-guide.xml:2053(para)
 msgid "If you have difficulty with the default font type and font size that is used on the desktop and desktop background, you can customize the font settings to suit your needs."
-msgstr ""
+msgstr "Ha nehézségei vannak az alapértelmezett betűtípus és betűméret használatával a munkaasztalon és a munkaasztal hátterén, szükségletei szerint személyre szabhatja a betűkészletek beállításait."
 
 #: C/gnome-access-guide.xml:2056(para)
 msgid "You can specify individual font settings for the following desktop components and applications:"
-msgstr ""
+msgstr "Különböző beállításokat adhat meg a következő munkaasztal-összetevőknek és alkalmazásoknak:"
 
 #: C/gnome-access-guide.xml:2060(para)
 msgid "Entire desktop excluding the desktop background"
-msgstr ""
+msgstr "Teljes munkaasztal, kivéve a munkaasztal hátterét"
 
 #: C/gnome-access-guide.xml:2063(para)
 msgid "Desktop background only"
-msgstr ""
+msgstr "Csak a munkaasztal háttere"
 
 #: C/gnome-access-guide.xml:2066(para) C/gnome-access-guide.xml:2188(ulink)
 msgid "Terminal"
 msgstr "Terminál"
 
 #: C/gnome-access-guide.xml:2069(para)
-
 msgid "Text editor"
-msgstr "Szöveg szerkesztő"
+msgstr "Szövegszerkesztő"
 
 #: C/gnome-access-guide.xml:2072(para)
 msgid "Help"
@@ -4216,19 +4056,19 @@ msgstr "Böngésző"
 
 #: C/gnome-access-guide.xml:2079(title)
 msgid "To Customize the Desktop Fonts"
-msgstr ""
+msgstr "A munkaasztal betűkészleteinek személyre szabása"
 
 #: C/gnome-access-guide.xml:2082(secondary)
 msgid "desktop fonts"
-msgstr ""
+msgstr "munkaasztal betűkészletei"
 
 #: C/gnome-access-guide.xml:2084(para)
 msgid "The <application>Font</application> preference tool allows you to specify the default fonts for the desktop."
-msgstr ""
+msgstr "A <application>Betűkészlet</application> beállítóeszköz lehetővé teszi a munkaasztal alapértelmezett betűkészletének megadását."
 
 #: C/gnome-access-guide.xml:2086(para)
 msgid "To start the <application>Font</application> preference tool, choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Appearance</guimenuitem></menuchoice>. The <guilabel>Fonts</guilabel> tab contains the following options:"
-msgstr ""
+msgstr "A <application>Betűkészlet</application> beállítóeszközt elindításához válassza a <menuchoice><guimenu>Rendszer</guimenu><guisubmenu>Beállítások</guisubmenu><guimenuitem>Megjelenés</guimenuitem></menuchoice> menüpontot. A <guilabel>Betűkészletek</guilabel> fül a következő lehetőségeket tartalmazza:"
 
 #: C/gnome-access-guide.xml:2090(guilabel)
 msgid "Application font"
@@ -4236,11 +4076,11 @@ msgstr "Alkalmazás betűkészlete"
 
 #: C/gnome-access-guide.xml:2093(para)
 msgid "Click on this button to select a default font to use for the text that is displayed on the desktop, including the text displayed on the windows and dialogs associated with GNOME-compliant applications and panel applications."
-msgstr ""
+msgstr "Válassza ezt a gombot a munkaasztalon, a GNOME alkalmazások és panel alkalmazások ablakaiban és párbeszédpaneljein megjelenő szövegek alapértelmezett betűkészletének kiválasztásához."
 
 #: C/gnome-access-guide.xml:2097(para)
 msgid "If you use the <application>Theme</application> preference tool to select a theme and you click on the <guibutton>Apply Font</guibutton> button, the font that is associated with the theme overrides the font that you select using the <application>Font</application> preference tool."
-msgstr ""
+msgstr "Ha a <application>Téma</application> beállítóeszközt használja téma kiválasztására és nyomja meg a <guibutton>Betűkészlet alkalmazása</guibutton> gombot, a témához társított betűkészlet felülírja a <application>Betűkészlet</application> alkalmazásban megadott betűkészletet."
 
 #: C/gnome-access-guide.xml:2106(guilabel)
 msgid "Document font"
@@ -4248,7 +4088,7 @@ msgstr "Dokumentum betűkészlete"
 
 #: C/gnome-access-guide.xml:2109(para)
 msgid "Click on this button to select a font to use for displaying documents."
-msgstr ""
+msgstr "Nyomja meg ezt a gombot a dokumentumok megjelenítésénél használt betűkészlet kiválasztásához."
 
 #: C/gnome-access-guide.xml:2114(guilabel)
 msgid "Desktop font"
@@ -4256,7 +4096,7 @@ msgstr "Asztal betűkészlete"
 
 #: C/gnome-access-guide.xml:2117(para)
 msgid "Click on this button to select a font to use for the text that is displayed on the desktop background only."
-msgstr ""
+msgstr "Nyomja meg ezt a gombot az asztal hátterén megjelenő szöveghez használandó betűkészlet kiválasztásához."
 
 #: C/gnome-access-guide.xml:2122(guilabel)
 msgid "Window title font"
@@ -4264,7 +4104,7 @@ msgstr "Ablak címsorának betűkészlete"
 
 #: C/gnome-access-guide.xml:2124(para)
 msgid "Click on this button to select a font to use for the text that is displayed in titlebars of your windows."
-msgstr ""
+msgstr "Nyomja meg ezt a gombot a megjelenő ablakcímsorok betűkészletének kiválasztásához."
 
 #: C/gnome-access-guide.xml:2130(guilabel)
 msgid "Fixed width font"
@@ -4272,15 +4112,15 @@ msgstr "Rögzített szélességű betűkészlet"
 
 #: C/gnome-access-guide.xml:2132(para)
 msgid "Click on this button to select a font to use for editing documents."
-msgstr ""
+msgstr "Nyomja meg ezt a gombot a dokumentumok szerkesztéshez használandó betűkészlet kiválasztásához."
 
 #: C/gnome-access-guide.xml:2137(guilabel)
 msgid "Font rendering"
-msgstr ""
+msgstr "Megjelenés"
 
 #: C/gnome-access-guide.xml:2139(para)
 msgid "To specify how to render fonts on the desktop, select one of the following options:"
-msgstr ""
+msgstr "A munkaasztalon a betűkészletek megjelenésének megadásához válassza a következő beállítások egyikét:"
 
 #: C/gnome-access-guide.xml:2144(guilabel)
 msgid "Monochrome"
@@ -4288,35 +4128,35 @@ msgstr "Fekete-fehér"
 
 #: C/gnome-access-guide.xml:2149(guilabel)
 msgid "Best shapes"
-msgstr ""
+msgstr "A legszebb betűforma"
 
 #: C/gnome-access-guide.xml:2154(guilabel)
 msgid "Best contrast"
-msgstr ""
+msgstr "A legjobb kontraszt"
 
 #: C/gnome-access-guide.xml:2159(guilabel)
 msgid "Subpixel smoothing"
-msgstr ""
+msgstr "Simítás a képponton belül"
 
 #: C/gnome-access-guide.xml:2167(para)
 msgid "If you use large fonts, you may need to change the size of panes in applications that use panes such as, the file manager and the Help browser."
-msgstr ""
+msgstr "Ha nagy méretű betűkészleteket használ, szükséges lesz az ablaktáblák méretének megváltoztatására az ezeket használó alkalmazásokban, például a fájlkezelőben és a súgóböngészőben."
 
 #: C/gnome-access-guide.xml:2170(para)
 msgid "For more information about the <application>Font</application> preference tool, see the <ulink type=\"help\" url=\"ghelp:user-guide?prefs-font\">User Guide</ulink>."
-msgstr ""
+msgstr "A <application>Betűkészlet</application> beállítóeszközzel kapcsolatos további információkért lásd a <ulink type=\"help\" url=\"ghelp:user-guide?prefs-font\">Felhasználói kézikönyvet</ulink>."
 
 #: C/gnome-access-guide.xml:2174(title)
 msgid "To Customize Application Fonts"
-msgstr ""
+msgstr "Alkalmazás betűkészleteinek személyre szabása"
 
 #: C/gnome-access-guide.xml:2177(secondary)
 msgid "individual font"
-msgstr ""
+msgstr "egyéni betűkészlet"
 
 #: C/gnome-access-guide.xml:2179(para)
 msgid "By default, GNOME applications use the default font specified in the <application>Font</application> preference tool. Some applications allow this default font to be customized. These applications are:"
-msgstr ""
+msgstr "Alapértelmezésben a GNOME alkalmazások a <application>Betűkészlet</application> beállítóeszközben megadott betűkészletet használják. Néhány alkalmazás megengedi az alapértelmezett betűkészlet megváltoztatását. Ezek a következők:"
 
 #: C/gnome-access-guide.xml:2182(ulink)
 msgid "Help Browser"
@@ -4328,92 +4168,93 @@ msgstr "Szövegszerkesztő"
 
 #: C/gnome-access-guide.xml:2198(title)
 msgid "Meeting Specific Accessibility Needs"
-msgstr ""
+msgstr "Speciális akadálymentesítési igények kielégítése"
 
 #: C/gnome-access-guide.xml:2199(para)
 msgid "The following sections summarize the steps you need to take to improve the accessibility of the desktop in a particular area."
-msgstr ""
+msgstr "Az alábbi szakaszok összegzik a munkaasztal akadálymentesítésének adott területeken való javításához szükséges lépéseket."
 
 #: C/gnome-access-guide.xml:2202(title)
 msgid "To Achieve a High or Low Contrast Desktop"
-msgstr ""
+msgstr "Nagy vagy kis kontrasztú asztal használata"
 
 #: C/gnome-access-guide.xml:2204(primary)
 msgid "high contrast desktop"
-msgstr ""
+msgstr "nagy kontrasztú asztal"
 
 #: C/gnome-access-guide.xml:2207(primary)
 msgid "low contrast desktop"
-msgstr ""
+msgstr "kis kontrasztú asztal"
 
 #: C/gnome-access-guide.xml:2209(para)
 msgid "To achieve a high or low contrast desktop, perform the following steps:"
-msgstr ""
+msgstr "Ha a munkaasztalt nagy vagy kis kontraszttal szeretné használni, tegye a következőket:"
 
 #: C/gnome-access-guide.xml:2213(para)
 msgid "Use the <application>Theme</application> preference tool to select the high contrast or low contrast desktop theme that you require."
-msgstr ""
+msgstr "A <application>Téma</application> beállítóeszköz segítségével válassza ki a kívánt nagy vagy kis kontrasztú munkaasztal-témát."
 
 #: C/gnome-access-guide.xml:2217(para)
 msgid "Use the <application>Desktop Background</application> preference tool to customize your desktop background as follows:"
-msgstr ""
+msgstr "A <application>Munkaasztal háttere</application> beállítóeszköz segítségével szabja személyre a munkaasztal hátterét az alábbiak szerint:"
 
 #: C/gnome-access-guide.xml:2221(para)
 msgid "Set the <guilabel>Desktop Wallpaper</guilabel> to <guilabel>No Wallpaper</guilabel>."
-msgstr ""
+msgstr "A <guilabel>Háttérkép</guilabel> listából válassza a <guilabel>Nincs háttérkép</guilabel> beállítást."
 
 #: C/gnome-access-guide.xml:2224(para)
 msgid "Set the <guilabel>Desktop Colors</guilabel> to <guilabel>Solid Color</guilabel>."
-msgstr ""
+msgstr "A <guilabel>Színek</guilabel> listából válassza a <guilabel>Homogén szín</guilabel> beállítást."
 
 #: C/gnome-access-guide.xml:2227(para)
 msgid "Select a background color that suits your needs."
-msgstr ""
+msgstr "Válassza ki az igényeinek megfelelő háttérszínt."
 
 #: C/gnome-access-guide.xml:2232(para)
 msgid "In the <application>Terminal</application> application, ensure that the <guilabel>Use colors from system theme</guilabel> option is selected in the <guilabel>Colors</guilabel> tabbed section of the <guilabel>Editing Profile</guilabel> dialog."
-msgstr ""
+msgstr "A <application>Terminál</application> alkalmazásban győződjön meg róla, hogy a <guilabel>Profil szerkesztése</guilabel> párbeszédpanel <guilabel>Színek</guilabel> lapján a <guilabel>Rendszertéma színeinek használata</guilabel> beállítás van kiválasztva."
 
 #: C/gnome-access-guide.xml:2238(para)
 msgid "In the <application>gedit</application> application, ensure that the <guilabel>Use default theme colors</guilabel> option is selected in the <guilabel>Fonts &amp; Colors</guilabel> tabbed section of the <guilabel>Preferences</guilabel> dialog."
-msgstr ""
+msgstr "A <application>Gedit</application> alkalmazásban győződjön meg róla, hogy a <guilabel>Beállítások</guilabel> ablak <guilabel>Betűk és színek</guilabel> lapján az <guilabel>Téma alapértelmezett színeinek használata</guilabel> beállítás legyen kiválasztva."
 
 #: C/gnome-access-guide.xml:2245(title)
 msgid "To Achieve a Large Print Desktop"
-msgstr ""
+msgstr "Nagy szöveg használata"
 
 #: C/gnome-access-guide.xml:2247(primary)
 msgid "large print desktop"
-msgstr ""
+msgstr "nagy szöveg használata"
 
 #: C/gnome-access-guide.xml:2249(para)
 msgid "To achieve a large print desktop, perform the following steps:"
-msgstr ""
+msgstr "A munkaasztalon nagy szöveg használatához tegye a következőket:"
 
 #: C/gnome-access-guide.xml:2253(para)
 msgid "Use the <application>Theme</application> preference tool to select the <guilabel>Large Print</guilabel> theme."
-msgstr ""
+msgstr "A <application>Téma</application> beállítóeszköz segítségével válassza a <guilabel>Nagy szöveg</guilabel> témát."
 
 #: C/gnome-access-guide.xml:2257(para)
 msgid "Click on the <guibutton>Apply Font</guibutton> button to increase the size of the font that is used on the desktop and on window frames."
-msgstr ""
+msgstr "Kattintson a <guibutton>Betűkészlet alkalmazása</guibutton> gombra az asztalon és az ablakkereteben használt betűkészlet méretének növeléséhez."
 
 #: C/gnome-access-guide.xml:2261(para)
 msgid "Use the <guilabel>Desktop font</guilabel> option in the <application>Font</application> preference tool to increase the font that is displayed on desktop background objects."
-msgstr ""
+msgstr "Az <application>Betűkészlet</application> beállítóeszköz <guilabel>Asztal betűkészlete</guilabel> lehetőségének segítségével növelje az asztal háttérobjektumainak megjelenítéséhez használt betűkészlet méretét."
 
 #: C/gnome-access-guide.xml:2265(para)
 msgid "Increase the font size that is used to display the contents of the <application>Terminal</application> application window."
-msgstr ""
+msgstr "Növelje a <application>Terminál</application> ablak tartalmának megjelenítéséhez használt betűkészlet méretét."
 
 #: C/gnome-access-guide.xml:2269(para)
 msgid "If the <guilabel>Use default theme font</guilabel> option is selected in the <application>gedit</application><guilabel>Preferences</guilabel> dialog, <application>gedit</application> uses the font size that is specified in the large print theme that you selected. However, if the <guilabel>Use default theme font</guilabel> option is not selected, increase the font size that is used to display the contents of the <application>gedit</application> text editor window. See the <ulink type=\"help\" url=\"ghelp:gedit?gedit-prefs-fontsandcolors\"> gedit manual</ulink> for more information."
-msgstr ""
+msgstr "Ha a <application>gedit</application><guilabel>Beállítások</guilabel> ablakában a <guilabel>Téma alapértelmezett betűkészletének használata</guilabel> lehetőség ki van választva, akkor a <application>gedit</application> a kiválasztott nagy bszöveg témában megadott betűméretet használja. Ha azonban a <guilabel>Téma alapértelmezett betűkészletének használata</guilabel> lehetőség nincs kiválasztva, akkor növelje a <application>gedit</application> szövegszerkesztő ablak tartalmának megjelenítéséhez használt betűkészlet méretét. További információkért lásd a <ulink type=\"help\" url=\"ghelp:gedit?gedit-prefs-fontsandcolors\">gedit kézikönyvét</ulink>."
 
 #: C/gnome-access-guide.xml:2276(para)
 msgid "If you use applications that use panes, such as the file manager and the Help browser, you may need to change the size of panes to accommodate the large print. See the online help for the appropriate application for more information."
-msgstr ""
+msgstr "Ablaktáblákat használó alkalmazások (például a fájlkezelő és a súgóböngésző) használata esetén szükséges lehet az ablaktáblák méretének a nagy szöveghez igazítása. További információkért lásd a megfelelő alkalmazások online súgóját."
 
+# átnézve eddig
 #: C/gnome-access-guide.xml:2(title)
 msgid "Mobility Impairments"
 msgstr ""
