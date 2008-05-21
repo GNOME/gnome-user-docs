@@ -119,9 +119,7 @@ and <application>Screen Reader and Magnifier
 <listitem>
 <para>
 If you need to use the <application>
-Screen Reader and Magnifier</application>, include 
-<literal>gail</literal> and <literal>atk-bridge
-</literal>.
+Screen Reader and Magnifier</application>, include <literal>gail</literal> and <literal>atk-bridge</literal>.
 </para>
 </listitem>
 <listitem>
@@ -137,7 +135,7 @@ If you use pointing devices with switches, alternative physical keyboards, or sw
 </listitem>
 <listitem>
 <para>
-<application>On-Screen Keyboard</application> can operate without <literal>gail</literal> and <literal>atk-bridge</literal> but with a reduced feature set. 
+<application>On-Screen Keyboard</application> can operate without <literal>gail</literal> and <literal>atk-bridge</literal>, but with a reduced feature set. 
 </para>
 </listitem>
 </itemizedlist>
@@ -218,12 +216,8 @@ The following sections contain examples of the gestures that you can add to the 
 </para>
 <note>
 <para>
-The gestures must be contained in a single line in the 
-<filename>
-AccessKeyMouseEvents
-</filename> 
-file without line breaks. The formatting of
-this guide might display the examples in the following sections across multiple lines. 
+The gestures must be contained in a single line in the <filename>AccessKeyMouseEvents
+</filename> file without line breaks. The formatting of this guide might display the examples in the following sections across multiple lines. 
 </para>
 </note>
 
@@ -292,8 +286,7 @@ You can define gestures that involve only the motion of a pointing device such a
 file to associate motion gestures with assistive technologies.
 </para>
 <para>
-If the <literal>dwellmouselistener</literal> GtkModule is loaded, alternative pointing devices are temporarily latched to the core pointer. This means that if the user moves the alternative pointing device, the onscreen 
-pointer moves.
+If the <literal>dwellmouselistener</literal> GtkModule is loaded, alternative pointing devices are temporarily latched to the core pointer. This means that if the user moves the alternative pointing device, the on-screen pointer moves.
 </para>
 <para>
 For example, the following line starts 
@@ -407,9 +400,7 @@ Reverse the navigation direction and give focus to the previous element or contr
 Give focus to the next element or control if the <keycap>Tab</keycap> key has a specific purpose in a control. For example, if you press <keycap>Tab</keycap> in a text box, the system inserts a tab space.
 </para>
 <para>
-To give focus to the previous element or control, press 
-<keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap>
-<keycap>Tab</keycap></keycombo>.
+To give focus to the previous element or control, press <keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>Tab</keycap></keycombo>.
 </para>
 </entry>
 </row>
@@ -582,7 +573,7 @@ If the focused element is a panel or application window, this keyboard shortcut 
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Open a popup menu for the element that has focus (if a popup menu exists).
+Open a popup menu for the element that has focus (if a popup menu exists for that element).
 </para>
 </entry>
 </row>
@@ -626,12 +617,10 @@ navigate the desktop background and the desktop background objects. A desktop ba
 </entry>
 <entry valign="top">
 <para>
-Temporarily hides all windows and gives focus to the desktop background.
+Temporarily hide all windows and give focus to the desktop background.
 </para>
 <para>
-To restore the windows, press <keycombo><keycap>
-Ctrl</keycap><keycap>Alt</keycap><keycap>D</keycap>
-</keycombo> again.
+To restore the windows, press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>D</keycap></keycombo> again.
 </para>
 <para>
 You can customize this keyboard shortcut.
@@ -647,8 +636,7 @@ You can customize this keyboard shortcut.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Display a popup window with icons that represent the desktop background and the panels. Press and hold 
-<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press <keycap>Tab</keycap> to switch the focus between the desktop background and the panels. 
+Display a popup window with icons that represent the desktop background and the panels. Press and hold <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press <keycap>Tab</keycap> to switch the focus between the desktop background and the panels. 
 </para>
 <para>
 You can customize this keyboard shortcut.
@@ -675,7 +663,7 @@ background object in alphabetical order.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-When the desktop background or a desktop background object has focus, gives focus to a neighboring desktop background object.
+Give focus to a neighboring desktop background object (if the desktop has focus).
 </para>
 </entry>
 </row>
@@ -688,7 +676,7 @@ characters of a desktop background object name.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-When the desktop background has focus, gives focus to the desktop background object whose name starts with the specified sequence of characters.
+If the desktop background has focus, give focus to the desktop background object whose name starts with the specified sequence of characters.
 </para>
 </entry>
 </row>
@@ -764,7 +752,7 @@ table lists the keyboard shortcuts that you can use to navigate panels and panel
 </entry>
 <entry valign="top">
 <para>
-Gives focus to a panel. This keyboard shortcut displays a popup window with icons that represent the desktop background, panels, and drawers. Press and hold 
+Give focus to a panel. This keyboard shortcut displays a popup window with icons that represent the desktop background, panels, and drawers. Press and hold 
 <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press <keycap>Tab</keycap> to switch the focus between the desktop background, panels, and drawers.
 </para>
 <para>
@@ -780,7 +768,7 @@ You can customize this keyboard shortcut.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the next object on the panel.
+Give focus to the next object on the panel.
 </para>
 </entry>
 </row>
@@ -792,7 +780,7 @@ Gives focus to the next object on the panel.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Opens the <guimenu>Applications</guimenu> menu when the Menu Panel has focus. Continue to press <keycap>F10</keycap> to switch focus between the <guimenu>Applications</guimenu> menu and the window list.
+Open the <guimenu>Applications</guimenu> menu when the Menu Panel has focus. Continue to press <keycap>F10</keycap> to switch focus between the <guimenu>Applications</guimenu> menu and the window list.
 </para>
 </entry>
 </row>
@@ -804,7 +792,7 @@ Opens the <guimenu>Applications</guimenu> menu when the Menu Panel has focus. Co
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Activates a panel object, for example, open a menu or start a launcher.
+Activate a panel object; for example, open a menu or start a launcher (icon shortcut).
 </para>
 </entry>
 </row>
@@ -816,7 +804,7 @@ Activates a panel object, for example, open a menu or start a launcher.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Opens the panel object popup menu.
+Open the panel object popup menu.
 </para>
 </entry>
 </row>
@@ -853,8 +841,7 @@ Press <keycap>Tab</keycap> to give focus to the object.
 </listitem>
 <listitem>
 <para>
-Press <keycombo><keycap>Shift</keycap><keycap>F10
-</keycap></keycombo> to open the panel object popup menu.
+Press <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo> to open the panel object popup menu.
 </para>
 </listitem>
 <listitem>
@@ -865,7 +852,7 @@ Move</guimenuitem> menu item.
 </listitem>
 <listitem>
 <para>
-Use the keyboard shortcuts that are listed in the following table to perform the move operation.
+Use the keyboard shortcuts that are listed in the following table to perform the move operation:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -888,18 +875,17 @@ Use the keyboard shortcuts that are listed in the following table to perform the
 </entry>
 <entry valign="top">
 <para>
-Moves the object left and right on a horizontal panel or up and down on a vertical panel.
+Move the object left/right on a horizontal panel, or up/down on a vertical panel.
 </para>
 </entry>
 </row>
 <row>
 <entry colname="colspec0" valign="top">
-<para><keycap>Shift</keycap> +
-arrow keys</para>
+<para><keycap>Shift</keycap> + arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the object and pushes any objects that you encounter in front of the object.
+Move the object with focus, swapping positions with any other objects encountered.
 </para>
 </entry>
 </row>
@@ -910,7 +896,7 @@ Moves the object and pushes any objects that you encounter in front of the objec
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the object and swaps positions with any objects that you encounter in the move.
+Move the object, swapping positions with any other objects that you encounter in the move.
 </para>
 </entry>
 </row>
@@ -922,7 +908,7 @@ Moves the object and swaps positions with any objects that you encounter in the 
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the object to the next panel.
+Move the object to the next panel.
 </para>
 </entry>
 </row>
@@ -933,7 +919,7 @@ Moves the object to the next panel.
 </para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>Completes the move operation.</para>
+<para>Complete the move operation.</para>
 </entry>
 </row>
 </tbody>
@@ -942,7 +928,7 @@ Moves the object to the next panel.
 </listitem>
 </orderedlist>
 <para>
-The following examples demonstrate the effect of different move operations on the objects in a panel.
+The following examples demonstrate the effect of different move operations on the objects in a panel:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -970,7 +956,7 @@ format="PNG"/>
 </imageobject>
 <textobject>
 <phrase>
-Portion of a panel with three objects  displayed in the following order from left to right: geyes icon, Volume Control icon, and Help icon.
+Portion of a panel with three objects  displayed in the following order from left to right: <application>Geyes</application> icon, <application>Volume Control</application> icon, and <application>Help</application> icon.
 </phrase>
 </textobject>
 </mediaobject>
@@ -978,7 +964,7 @@ Portion of a panel with three objects  displayed in the following order from lef
 </entry>
 <entry valign="top">
 <para>
-Shows a panel with three panel objects before a move operation takes place.
+Show a panel with three panel objects before a move operation takes place.
 </para>
 </entry>
 </row>
@@ -992,7 +978,7 @@ format="PNG"/>
 </imageobject>
 <textobject>
 <phrase>
-Portion of a panel with three objects displayed in the following order from left to right: geyes icon, Volume Control icon, and Help icon. 
+Portion of a panel with three objects displayed in the following order from left to right: <application>Geyes</application> icon, <application>Volume Control</application> icon, and <application>Help</application> icon. 
 </phrase>
 </textobject>
 </mediaobject>
@@ -1015,7 +1001,7 @@ format="PNG"/>
 </imageobject>
 <textobject>
 <phrase>
-Portion of a panel with three objects displayed in the following order from left to right: geyes icon, Volume Control icon, and Help icon.
+Portion of a panel with three objects displayed in the following order from left to right: <application>Geyes</application> icon, <application>Volume Control</application> icon, and <application>Help</application> icon.
 </phrase>
 </textobject>
 </mediaobject>
@@ -1023,7 +1009,7 @@ Portion of a panel with three objects displayed in the following order from left
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Shows the effect of using using <keycap>Shift</keycap> + arrow keys to move the <application>Geyes</application> panel application on the panel. You can use the 
+Shows the effect of using <keycap>Shift</keycap> + arrow keys to move the <application>Geyes</application> panel application on the panel. You can use the 
 <keycap>Shift</keycap> + arrow keys to push the <application>Volume Control</application>
 and <application>Help</application> panel objects ahead of the object that you are moving.
 </para>
@@ -1039,7 +1025,7 @@ format="PNG"/>
 </imageobject>
 <textobject>
 <phrase>
-Portion of a panel with three objects displayed in the following order from left to right: Volume Control icon, Help icon, and geyes icon.
+Portion of a panel with three objects displayed in the following order from left to right: <application>Volume Control</application> icon, <application>Help</application> icon, and <application>Geyes</application> icon.
 </phrase>
 </textobject>
 </mediaobject>
@@ -1057,7 +1043,7 @@ application on the panel. You can use the <keycap>Ctrl</keycap> + arrow keys to 
 </informaltable>
 <note>
 <para>
-Panel applications that are <guilabel>Locked</guilabel> cannot be moved. To unlock a panel application, use the <guimenu>panel object</guimenu> menu and unselect <guimenuitem>Lock to Panel</guimenuitem>.
+Panel applications that are <guilabel>Locked</guilabel> cannot be moved. To unlock a panel application, use the <guimenu>panel object</guimenu> menu and deselect the <guimenuitem>Lock to Panel</guimenuitem> option.
 </para>
 </note>
 </section>
@@ -1095,7 +1081,7 @@ A drawer is a collapsible extension of a panel. The following table lists the ke
 </entry>
 <entry valign="top">
 <para>
-Opens or closes the drawer that has focus.
+Open or close the drawer that has focus.
 </para>
 </entry>
 </row>
@@ -1105,7 +1091,7 @@ Opens or closes the drawer that has focus.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Navigates into the drawer that has focus.
+Navigate into the drawer that has focus.
 </para>
 </entry>
 </row>
@@ -1117,7 +1103,7 @@ Navigates into the drawer that has focus.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Closes the drawer and gives focus to the drawer object on the panel.
+Close the drawer and give focus to the drawer object on the panel.
 </para>
 </entry>
 </row>
@@ -1145,7 +1131,7 @@ the drawer open.
 <secondary>for menus on panels</secondary>
 </indexterm>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate menus on panels.
+The following table lists the keyboard shortcuts that you can use to navigate menus on panels:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1170,7 +1156,7 @@ The following table lists the keyboard shortcuts that you can use to navigate me
 </entry>
 <entry valign="top">
 <para>
-Opens the menu that has focus.
+Open the menu that has focus.
 </para>
 </entry>
 </row>
@@ -1179,7 +1165,7 @@ Opens the menu that has focus.
 <para>arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>Navigates the menu.</para>
+<para>Navigate the menu.</para>
 </entry>
 </row>
 <row>
@@ -1189,7 +1175,7 @@ Opens the menu that has focus.
 </para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>Selects a menu item.</para>
+<para>Select a menu item.</para>
 </entry>
 </row>
 <row>
@@ -1198,7 +1184,7 @@ Opens the menu that has focus.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Opens the popup menu associated with a menu item (if one exists).
+Open the popup menu associated with a menu item (if one exists).
 </para>
 </entry>
 </row>
@@ -1209,7 +1195,7 @@ Opens the popup menu associated with a menu item (if one exists).
 </para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>Closes a menu.</para>
+<para>Close a menu.</para>
 </entry>
 </row>
 </tbody>
@@ -1250,7 +1236,7 @@ you cannot navigate the controls in the panel application. The following table l
 </entry>
 <entry valign="top">
 <para>
-Activates the panel application control that has focus, if applicable. Not all panel applications contain controls that you can activate. If the panel application does not contain a control that you can activate,
+Activate the panel application control that has focus, if applicable. Not all panel applications contain controls that you can activate. If the panel application does not contain a control that you can activate,
 the <keycap>spacebar</keycap> does nothing. 
 </para>
 </entry>
@@ -1261,7 +1247,7 @@ the <keycap>spacebar</keycap> does nothing.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Navigates the controls on the panel application.
+Navigate the controls on the panel application.
 </para>
 </entry>
 </row>
@@ -1272,7 +1258,7 @@ Navigates the controls on the panel application.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Opens the panel application popup menu. To navigate the menu, use the standard keyboard shortcuts for navigating menus. See <xref linkend="keynav-24"/> for information
+Open the panel application popup menu. To navigate the menu, use the standard keyboard shortcuts for navigating menus. See <xref linkend="keynav-24"/> for information
 about how to navigate menus.
 </para>
 </entry>
@@ -1292,7 +1278,7 @@ about how to navigate menus.
 <para>
 A workspace is a discrete area in which you
 can work. You can have many workspaces on your desktop and you can switch from one workspace to another. Each workspace can 
-contain different windows and processes. The following table lists the keyboard shortcuts that you can use to navigate workspaces.
+contain different windows and processes. The following table lists the keyboard shortcuts that you can use to navigate workspaces:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1316,7 +1302,7 @@ contain different windows and processes. The following table lists the keyboard 
 </entry>
 <entry valign="top">
 <para>
-Gives focus to the next or previous workspace. This keyboard shortcut displays a popup window with icons that represent the workspaces. Press and hold  <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press the arrow keys to switch the focus between the workspaces. 
+Give focus to the next or previous workspace. This keyboard shortcut displays a popup window with icons that represent the workspaces. Press and hold  <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press the arrow keys to switch the focus between the workspaces. 
 </para>
 <para>
 You can customize this keyboard shortcut.
@@ -1331,7 +1317,7 @@ You can customize this keyboard shortcut.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the window that has focus to the next or previous workspace.
+Move the window that has focus to the next or previous workspace.
 </para>
 <para>
 You can customize this keyboard shortcut.
@@ -1366,7 +1352,7 @@ You can customize all of the keyboard shortcuts that are associated with navigat
 a window</secondary>
 </indexterm>
 <para>
-Before you can use or modify a window, you must give focus to the window. The following table lists the keyboard shortcuts that you can use to give focus to a window.
+Before you can use or modify a window, you must give focus to the window. The following table lists the keyboard shortcuts that you can use to give focus to a window:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1390,7 +1376,7 @@ Before you can use or modify a window, you must give focus to the window. The fo
 </entry>
 <entry valign="top">
 <para>
-Displays a popup window with icons that represent each window. Press and hold <keycap>Alt</keycap> and continue to press <keycap>Tab</keycap> to move through the windows until you reach the window you want to have focus.
+Display a popup window with icons that represent each window. Press and hold <keycap>Alt</keycap> and continue to press <keycap>Tab</keycap> to move through the windows until you reach the window you want to have focus.
 </para>
 </entry>
 </row>
@@ -1401,7 +1387,7 @@ Displays a popup window with icons that represent each window. Press and hold <k
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Raises each window in turn until you reach the window to which you want to give focus.
+Raise each window in turn until you reach the window you want.
 </para>
 </entry>
 </row>
@@ -1418,7 +1404,7 @@ Raises each window in turn until you reach the window to which you want to give 
 </indexterm>
 <para>
 When a window has focus, you can perform various actions on the window. The following table lists the keyboard shortcuts that
-you can use to control the window that has focus.
+you can use to control the window that has focus:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1442,7 +1428,7 @@ spacebar</keycap></keycombo></para>
 </entry>
 <entry valign="top">
 <para>
-Opens the <guimenu>Window</guimenu> Menu.
+Open the <guimenu>Window</guimenu> menu.
 </para>
 </entry>
 </row>
@@ -1453,7 +1439,7 @@ Opens the <guimenu>Window</guimenu> Menu.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Closes the window.
+Close the window.
 </para>
 </entry>
 </row>
@@ -1468,7 +1454,7 @@ Alt</keycap><keycap>F9</keycap></keycombo></para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Minimizes the window.
+Minimize the window.
 </para>
 </entry>
 </row>
@@ -1479,7 +1465,7 @@ Minimizes the window.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Maximizes the window.
+Maximize the window.
 </para>
 </entry>
 </row>
@@ -1490,7 +1476,7 @@ Maximizes the window.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Restores a maximized window to the original size of the window.
+Restore a maximized window to its original size.
 </para>
 </entry>
 </row>
@@ -1506,7 +1492,7 @@ Restores a maximized window to the original size of the window.
 <secondary>to move a window</secondary>
 </indexterm>
 <para>
-When a window has focus, you can move the window around the screen. The following table lists the keyboard shortcuts that you can use to move a window.
+When a window has focus, you can move the window around the screen. The following table lists the keyboard shortcuts that you can use to move a window:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1530,7 +1516,7 @@ When a window has focus, you can move the window around the screen. The followin
 </entry>
 <entry valign="top">
 <para>
-Starts the move operation. The mouse pointer changes to a cross. 
+Start the move operation. The mouse pointer changes to a cross. 
 </para>
 </entry>
 </row>
@@ -1540,7 +1526,7 @@ Starts the move operation. The mouse pointer changes to a cross.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the window 10 pixels at a time in the direction of the arrow key.
+Move the window 10 pixels at a time in the direction of the arrow key.
 </para>
 </entry>
 </row>
@@ -1551,7 +1537,7 @@ arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the window one pixel at a time in the direction of the arrow key.
+Move the window one pixel at a time in the direction of the arrow key.
 </para>
 </entry>
 </row>
@@ -1562,7 +1548,7 @@ Moves the window one pixel at a time in the direction of the arrow key.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the window in the direction of the arrow key to align it with the edge of the nearest window, panel or screen edge.
+Move the window in the direction of the arrow key and align it with the edge of the nearest window, panel or screen edge.
 </para>
 </entry>
 </row>
@@ -1574,7 +1560,7 @@ Moves the window in the direction of the arrow key to align it with the edge of 
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Completes the move operation and leaves the window in the current position.
+Complete the move operation, leaving the window in the current position.
 </para>
 </entry>
 </row>
@@ -1586,7 +1572,7 @@ Completes the move operation and leaves the window in the current position.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Cancels the move operation and restores the window to the original position.
+Cancel the move operation, restoring the window to its original position.
 </para>
 </entry>
 </row>
@@ -1604,7 +1590,7 @@ Cancels the move operation and restores the window to the original position.
 <para>
 When a window has focus, you can increase or
 decrease the size of the window. The following table lists the keyboard shortcuts
-that you can use to resize the window that has focus.
+that you can use to resize the window that has focus:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1627,7 +1613,7 @@ that you can use to resize the window that has focus.
 <keycap>F8</keycap></keycombo></para>
 </entry>
 <entry valign="top">
-<para>Starts the resize operation.</para>
+<para>Start the resize operation.</para>
 </entry>
 </row>
 <row>
@@ -1636,7 +1622,7 @@ that you can use to resize the window that has focus.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Resizes the window in the direction of the arrow key.
+Resize the window in the direction of the arrow key.
 </para>
 </entry>
 </row>
@@ -1648,7 +1634,7 @@ Resizes the window in the direction of the arrow key.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Completes the resize operation and leaves the window at the current size.
+Complete the resize operation, leaving the window at the current size.
 </para>
 </entry>
 </row>
@@ -1660,7 +1646,7 @@ Completes the resize operation and leaves the window at the current size.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Cancels the resize operation and restores the window to the original size.
+Cancel the resize operation, restoring the window to its original size.
 </para>
 </entry>
 </row>
@@ -1680,7 +1666,7 @@ A paned window is a window that is split into
 two or more panes. <application>Help Browser</application> is an example of an application that uses paned windows. 
 </para>
 <para>
-The following table describes the keyboard shortcuts that you can use to navigate paned/split windows.
+The following table describes the keyboard shortcuts that you can use to navigate paned/split windows:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1705,7 +1691,7 @@ The following table describes the keyboard shortcuts that you can use to navigat
 </entry>
 <entry valign="top">
 <para>
-Gives focus to the next pane. The system gives focus to the control that last had focus in the pane. 
+Give focus to the next pane. The system gives focus to the control that last had focus in the pane. 
 </para>
 </entry>
 </row>
@@ -1717,7 +1703,7 @@ Gives focus to the next pane. The system gives focus to the control that last ha
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the first resize handle in the window. The resize handle is displayed between the panes and enables you to resize the panes. Press <keycap>F8</keycap> again to give focus to the next resize handle.
+Give focus to the first resize handle in the window. The resize handle is displayed between the panes and enables you to resize the panes. Press <keycap>F8</keycap> again to give focus to the next resize handle.
 </para>
 </entry>
 </row>
@@ -1725,7 +1711,7 @@ Gives focus to the first resize handle in the window. The resize handle is displ
 </tgroup>
 </informaltable>
 <para>
-When the resize handle has focus, you can use the keyboard shortcuts that are listed in the following table to modify the paned window.
+When the resize handle has focus, you can use the keyboard shortcuts that are listed in the following table to modify the paned window:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1748,7 +1734,7 @@ When the resize handle has focus, you can use the keyboard shortcuts that are li
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the resize handle by a small amount.
+Move the resize handle by a small amount.
 </para>
 </entry>
 </row>
@@ -1759,7 +1745,7 @@ arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the resize handle by a large amount.
+Move the resize handle by a large amount.
 </para>
 </entry>
 </row>
@@ -1771,7 +1757,7 @@ Moves the resize handle by a large amount.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Contracts the pane to the minimum size allowed. 
+Contract the pane to the minimum size allowed. 
 </para>
 <para>
 For vertical panes, reduces the size of the pane to the left of the resize handle to the minimum size allowed.  
@@ -1789,7 +1775,7 @@ For horizontal panes, reduces the size of the pane above the resize handle to th
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Expands the pane to the maximum size allowed. 
+Expand the pane to the maximum size allowed. 
 </para>
 <para>
 For vertical panes, increases the size of the pane to the left of the resize handle to the maximum size allowed.  
@@ -1807,7 +1793,7 @@ For horizontal panes, increases the size of the pane above the resize handle to 
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Sets the position of the resize handle and returns the focus to the last control that had focus.
+Set the position of the resize handle and return focus to the last control that had focus.
 </para>
 </entry>
 </row>
@@ -1819,7 +1805,7 @@ Sets the position of the resize handle and returns the focus to the last control
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Resets the position of the resize handle to the original position and returns the focus to the last control that had focus.
+Reset the position of the resize handle to the original position and return focus to the last control that had focus.
 </para>
 </entry>
 </row>
@@ -1874,14 +1860,14 @@ This section of the manual describes the essential keyboard shortcuts that you c
 <title>Essential Keyboard Shortcuts for NavigatingApplications</title>
 <anchor id="keynav-22"/>
 <para>
-Since there are so many applications that you can use in the GNOME Desktop, this manual does not describe all the custom keyboard shortcuts that you can use with each individual applications. However, the basic keyboard shortcuts are common to all applications.
+Since there are so many applications that you can use in the GNOME Desktop, this manual does not describe all the custom keyboard shortcuts that you can use with each individual application. However, the basic keyboard shortcuts are common to all applications.
 </para>
 <para>
 Access keys are another way to quickly navigate applications with the keyboard.
 An access key is identified by an underlined letter on a menu or control. In some cases, you must press <keycap>Alt</keycap> in combination with the access key to perform an action.
 </para>
 <para>
-The following table lists the essential keyboard shortcuts that you can use to navigate applications. 
+The following table lists the essential keyboard shortcuts that you can use to navigate applications:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -1906,7 +1892,7 @@ The following table lists the essential keyboard shortcuts that you can use to n
 </entry>
 <entry valign="top">
 <para>
-Opens the first menu on the application menubar.
+Open the first menu on the application menubar.
 </para>
 </entry>
 </row>
@@ -1917,7 +1903,7 @@ key</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Opens the menu that is associated with the access key. 
+Open the menu that is associated with the access key. 
 </para>
 </entry>
 </row>
@@ -1927,7 +1913,7 @@ Opens the menu that is associated with the access key.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the menu item that is associated with the access key.
+Select the menu item that is associated with the access key.
 </para>
 </entry>
 </row>
@@ -1938,7 +1924,7 @@ and <keycap>right arrow</keycap></para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Switches focus between the menus on the menubar.
+Switch focus between the menus on the menubar.
 </para>
 </entry>
 </row>
@@ -1949,7 +1935,7 @@ and <keycap>down arrow</keycap></para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves focus into a menu.
+Move focus into a menu.
 </para>
 </entry>
 </row>
@@ -1961,7 +1947,7 @@ Moves focus into a menu.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Closes the open menu and gives focus to the control that had focus before the menubar.
+Close the open menu and give focus to the control that had focus before the menubar.
 </para>
 </entry>
 </row>
@@ -1972,7 +1958,7 @@ Closes the open menu and gives focus to the control that had focus before the me
 </entry>
 <entry colname="colspec1">
 <para>
-Opens the file selector dialog.
+Open the file selector dialog.
 </para>
 </entry>
 </row>
@@ -1983,7 +1969,7 @@ Opens the file selector dialog.
 </entry>
 <entry colname="colspec1">
 <para>
-Opens the Save dialog.
+Open the Save dialog.
 </para>
 </entry>
 </row>
@@ -1994,8 +1980,8 @@ Opens the Save dialog.
 </entry>
 <entry colname="colspec1">
 <para>
-Opens a Location dialog to enable you to type
-the name of the file that you want to open or save.
+Open a Location dialog, enabling you to type
+the name of a file that you want to open or save.
 </para>
 </entry>
 </row>
@@ -2011,7 +1997,7 @@ the name of the file that you want to open or save.
 <secondary>for dialogs</secondary>
 </indexterm>
 <para>
-The following table lists the essential keyboard shortcuts that you can use to navigate dialogs. 
+The following table lists the essential keyboard shortcuts that you can use to navigate dialogs:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2035,7 +2021,7 @@ The following table lists the essential keyboard shortcuts that you can use to n
 </entry>
 <entry valign="top">
 <para>
-Activates or selects a control.
+Activate or select a control.
 </para>
 </entry>
 </row>
@@ -2047,7 +2033,7 @@ Activates or selects a control.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the next control.
+Give focus to the next control.
 </para>
 </entry>
 </row>
@@ -2058,8 +2044,7 @@ Gives focus to the next control.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-<-- standard control name ... -->
-If a notebook header/tabstrip has focus, moves to the next page/tabbed section of the dialog.
+Move to the next page/tabbed section of the dialog.
 </para>
 </entry>
 </row>
@@ -2070,7 +2055,7 @@ If a notebook header/tabstrip has focus, moves to the next page/tabbed section o
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-If a notebook header/tabstrip has focus, moves to the previous page/tabbed section of the dialog.
+Move to the previous page/tabbed section of the dialog.
 </para>
 </entry>
 </row>
@@ -2082,7 +2067,7 @@ If a notebook header/tabstrip has focus, moves to the previous page/tabbed secti
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Closes the dialog.
+Close and/or cancel the dialog.
 </para>
 </entry>
 </row>
@@ -2094,7 +2079,7 @@ Closes the dialog.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Performs the default action for the dialog. The default action will usually apply any changes and close the dialog.
+Perform the default action for the dialog. The default action will usually apply any changes and close the dialog.
 </para>
 </entry>
 </row>
@@ -2112,7 +2097,7 @@ Performs the default action for the dialog. The default action will usually appl
 </indexterm>
 <para>
 By default, the file manager operates in 
-<guilabel>Spatial</guilabel> mode. This mode uses separate windows for each folder. Another mode, called <guilabel>Browser</guilabel> mode, reuses the same window for each folder.
+<guilabel>Spatial</guilabel> mode. This mode uses separate windows for each folder. Conversely, <guilabel>Browser</guilabel> mode will reuse the same window for each folder.
 </para>
 <note>
 <para>
@@ -2125,7 +2110,7 @@ the user guide</ulink>.
 <section id="keynav-spatial">
 <title>Navigating Folders</title>
 <para>
-The following table describes the keyboard shortcuts that enable you to navigate folders in the file manager.
+The following table describes the keyboard shortcuts that enable you to navigate folders in the file manager:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2148,7 +2133,7 @@ The following table describes the keyboard shortcuts that enable you to navigate
 </entry>
 <entry valign="top">
 <para>
-Selects the next or previous file or folder in the direction of the arrow key.
+Select the next or previous file or folder in the direction of the arrow key.
 </para>
 </entry>
 </row>
@@ -2159,7 +2144,7 @@ arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the next or previous file or folder but does not select the item. This allows multiple files to be selected.
+Give focus to the next or previous file or folder but do not select the item. This allows multiple, non-contiguous blocks of files to be selected.
 </para>
 </entry>
 </row>
@@ -2171,7 +2156,7 @@ Gives focus to the next or previous file or folder but does not select the item.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Opens the focused file or folder.
+Open the focused file or folder.
 </para>
 </entry>
 </row>
@@ -2182,7 +2167,7 @@ Opens the focused file or folder.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the item that currently has focus.
+Select the item that currently has focus.
 </para>
 </entry>
 </row>
@@ -2194,7 +2179,7 @@ A sequence of characters that matches the first <replaceable>n</replaceable> cha
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the first file or folder that starts with the specified sequence of characters.
+Select the first file or folder that starts with the specified sequence of characters.
 </para>
 </entry>
 </row>
@@ -2206,7 +2191,7 @@ Selects the first file or folder that starts with the specified sequence of char
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the first file or folder within the current folder.
+Select the first file or folder within the current folder.
 </para>
 </entry>
 </row>
@@ -2218,7 +2203,7 @@ Selects the first file or folder within the current folder.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the last file or folder within the current folder.
+Select the last file or folder within the current folder.
 </para>
 </entry>
 </row>
@@ -2230,7 +2215,7 @@ Selects the last file or folder within the current folder.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Opens the current folder's parent folder.
+Open the current folder's parent folder.
 </para>
 </entry>
 </row>
@@ -2244,10 +2229,7 @@ Opens the current folder's parent folder.
 <anchor id="keynav-21"/>
 <para>
 When operating in <guilabel>Browser</guilabel> mode, the file manager window 
-contains several components, with keyboard shortcuts defined to navigate each component. 
-</para>
-<para>
-The following table describes the keyboard shortcuts that enable you to navigate between the components.
+contains several components, with keyboard shortcuts defined to navigate each component: 
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2272,7 +2254,7 @@ The following table describes the keyboard shortcuts that enable you to navigate
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Switches focus between the side pane and the view pane.
+Switch focus between the side pane and the view pane.
 </para>
 </entry>
 </row>
@@ -2283,7 +2265,7 @@ Switches focus between the side pane and the view pane.
 </entry>
 <entry valign="top">
 <para>
-Opens the side pane popup menu.
+Open the side pane popup menu.
 </para>
 </entry>
 </row>
@@ -2330,7 +2312,7 @@ help browser. Caret navigation is a mode of operation in an application which en
 </entry>
 <entry colname="colspec1">
 <para>
-Switches to caret navigation mode. 
+Switch to caret navigation mode. 
 </para>
 </entry>
 </row>
@@ -2340,7 +2322,7 @@ Switches to caret navigation mode.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves one character to the left.
+Move one character to the left.
 </para>
 </entry>
 </row>
@@ -2350,7 +2332,7 @@ Moves one character to the left.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves one character to the right.
+Move one character to the right.
 </para>
 </entry>
 </row>
@@ -2360,7 +2342,7 @@ Moves one character to the right.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves up one line.
+Move up one line.
 </para>
 </entry>
 </row>
@@ -2370,7 +2352,7 @@ Moves up one line.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves down one line.
+Move down one line.
 </para>
 </entry>
 </row>
@@ -2380,7 +2362,7 @@ Moves down one line.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves to the beginning of the previous word.
+Move to the beginning of the previous word.
 </para>
 </entry>
 </row>
@@ -2390,7 +2372,7 @@ Moves to the beginning of the previous word.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves to the end of the next word.
+Move to the end of the next word.
 </para>
 </entry>
 </row>
@@ -2402,7 +2384,7 @@ Moves to the end of the next word.
 </entry>
 <entry colname="colspec1">
 <para>
-Scrolls up one page of content.
+Scroll up one page of content.
 </para>
 </entry>
 </row>
@@ -2414,7 +2396,7 @@ Scrolls up one page of content.
 </entry>
 <entry colname="colspec1">
 <para>
-Scrolls down one page of content.
+Scroll down one page of content.
 </para>
 </entry>
 </row>
@@ -2426,7 +2408,7 @@ Scrolls down one page of content.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves to the beginning of the current line.
+Move to the beginning of the current line.
 </para>
 </entry>
 </row>
@@ -2438,7 +2420,7 @@ Moves to the beginning of the current line.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves to the end of the current line.
+Move to the end of the current line.
 </para>
 </entry>
 </row>
@@ -2448,7 +2430,7 @@ Moves to the end of the current line.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves from the current position to the destination position, selecting all text between the two positions.
+Move from the current position to the destination position, selecting all text between the two positions.
 </para>
 </entry>
 </row>
@@ -2460,7 +2442,7 @@ Moves from the current position to the destination position, selecting all text 
 </entry>
 <entry colname="colspec1">
 <para>
-Moves focus to the next focusable control.
+Move focus to the next focusable control.
 </para>
 </entry>
 </row>
@@ -2471,7 +2453,7 @@ Moves focus to the next focusable control.
 </entry>
 <entry colname="colspec1">
 <para>
-Moves focus to the previous focusable control.
+Move focus to the previous focusable control.
 </para>
 </entry>
 </row>
@@ -2483,7 +2465,7 @@ Moves focus to the previous focusable control.
 </entry>
 <entry colname="colspec1">
 <para>
-Activates a button or submits a form.
+Activate a button or submit a form.
 </para>
 </entry>
 </row>
@@ -2505,7 +2487,7 @@ The following sections describe how to navigate and use standard user interface 
 <secondary>for menus</secondary>
 </indexterm>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate menus.
+The following table lists the keyboard shortcuts that you can use to navigate menus:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2524,12 +2506,12 @@ The following table lists the keyboard shortcuts that you can use to navigate me
 <tbody>
 <row>
 <entry valign="top">
-<para><keycap>up arrow</keycap> and <keycap>down
-arrow</keycap></para>
+<para><keycap>up arrow</keycap> and <keycap>down arrow</keycap>
+</para>
 </entry>
 <entry valign="top">
 <para>
-Gives focus to the next or previous menu item on a menu.
+Give focus to the next or previous menu item on a menu.
 </para>
 </entry>
 </row>
@@ -2541,10 +2523,10 @@ Gives focus to the next or previous menu item on a menu.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-If the menu item that has focus is a submenu, opens the submenu and gives focus to the first menu item on the submenu.
+If the menu item that has focus is a submenu, open the submenu and give focus to the first menu item on the submenu.
 </para>
 <para>
-If the menu item that has focus is not a submenu, opens the next menu on the menubar.
+If the menu item that has focus is not a submenu, open the next menu on the menubar.
 </para>
 </entry>
 </row>
@@ -2556,10 +2538,10 @@ If the menu item that has focus is not a submenu, opens the next menu on the men
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-If the menu item that has focus is a submenu item, switches the focus back to the submenu.
+If the menu item that has focus is a submenu item, switch the focus back to the submenu.
 </para>
 <para>
-If the menu item that has focus is not a submenu item, opens the previous menu on the menubar.
+If the menu item that has focus is not a submenu item, open the previous menu on the menubar.
 </para>
 </entry>
 </row>
@@ -2571,7 +2553,7 @@ If the menu item that has focus is not a submenu item, opens the previous menu o
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the focused menu item and closes the open menus.
+Select the focused menu item and close the open menus.
 </para>
 </entry>
 </row>
@@ -2581,7 +2563,7 @@ Selects the focused menu item and closes the open menus.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the menu item that is associated with the access key and closes the menu.
+Select the menu item that is associated with the access key and close the menu.
 </para>
 </entry>
 </row>
@@ -2593,7 +2575,7 @@ Selects the menu item that is associated with the access key and closes the menu
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the focused menu item and closes the menu except when the menu item is a check box or radio button.
+Select the focused menu item and close the menu except when the menu item is a check box or radio button.
 </para>
 </entry>
 </row>
@@ -2605,7 +2587,7 @@ Selects the focused menu item and closes the menu except when the menu item is a
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Closes the menu.
+Close the menu.
 </para>
 </entry>
 </row>
@@ -2637,7 +2619,7 @@ A button is a control that you use to start an action. Most buttons are rectangu
 </screenshot>
 </figure>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate buttons.
+The following table lists the keyboard shortcuts that you can use to navigate buttons:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2662,7 +2644,7 @@ The following table lists the keyboard shortcuts that you can use to navigate bu
 </entry>
 <entry valign="top">
 <para>
-Activates the button that has focus. This is the equivalent of clicking on the button.
+Activate the button that has focus. This is the equivalent of clicking on the button.
 </para>
 </entry>
 </row>
@@ -2674,7 +2656,7 @@ Activates the button that has focus. This is the equivalent of clicking on the b
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Activates the button that has focus or, if no button has focus, performs the default action for the dialog.
+Activate the button that has focus or, if no button has focus, perform the default action for the dialog.
 </para>
 </entry>
 </row>
@@ -2707,7 +2689,7 @@ format="PNG"/>
 </screenshot>
 </figure>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate a set of radio buttons.
+The following table lists the keyboard shortcuts that you can use to navigate a set of radio buttons:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2730,7 +2712,7 @@ The following table lists the keyboard shortcuts that you can use to navigate a 
 </entry>
 <entry valign="top">
 <para>
-Selects the next or previous radio button and deselects the other radio buttons in the group.
+Select the next or previous radio button and deselect the other radio buttons in the group.
 </para>
 </entry>
 </row>
@@ -2763,7 +2745,7 @@ format="PNG"/>
 </screenshot>
 </figure>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate a check box.
+The following table lists the keyboard shortcuts that you can use to navigate a check box:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2788,7 +2770,7 @@ The following table lists the keyboard shortcuts that you can use to navigate a 
 </entry>
 <entry valign="top">
 <para>
-Selects or deselects the check box.
+Select or deselect the check box.
 </para>
 </entry>
 </row>
@@ -2821,7 +2803,7 @@ format="PNG"/>
 </screenshot>
 </figure>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate a single line text box.
+The following table lists the keyboard shortcuts that you can use to navigate a single line text box:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2846,7 +2828,7 @@ The following table lists the keyboard shortcuts that you can use to navigate a 
 </entry>
 <entry valign="top">
 <para>
-Positions the cursor one character to the left.
+Position the cursor one character to the left.
 </para>
 </entry>
 </row>
@@ -2858,7 +2840,7 @@ Positions the cursor one character to the left.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor one character to the right.
+Position the cursor one character to the right.
 </para>
 </entry>
 </row>
@@ -2869,7 +2851,7 @@ Positions the cursor one character to the right.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor at the start of the current word. Press and hold <keycap>Ctrl</keycap> and continue to press <keycap>left arrow</keycap> to position the cursor at the start of the previous word.
+Position the cursor at the start of the current word. Press and hold <keycap>Ctrl</keycap> and continue to press <keycap>left arrow</keycap> to position the cursor at the start of the previous word.
 </para>
 </entry>
 </row>
@@ -2880,7 +2862,7 @@ Positions the cursor at the start of the current word. Press and hold <keycap>Ct
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor at the end of the current word. Press and hold <keycap>Ctrl</keycap> and continue to press <keycap>right arrow</keycap> to position the cursor at the end of the next word.
+Position the cursor at the end of the current word. Press and hold <keycap>Ctrl</keycap> and continue to press <keycap>right arrow</keycap> to position the cursor at the end of the next word.
 </para>
 </entry>
 </row>
@@ -2916,7 +2898,7 @@ Position the cursor at the end of the line.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects one character at a time to the left or right of the cursor.
+Select one character at a time to the left or right of the cursor.
 </para>
 </entry>
 </row>
@@ -2929,7 +2911,7 @@ Selects one character at a time to the left or right of the cursor.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects one word at a time to the left or right of the cursor.
+Select one word at a time to the left or right of the cursor.
 </para>
 </entry>
 </row>
@@ -2940,7 +2922,7 @@ Selects one word at a time to the left or right of the cursor.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects all text to the left of the cursor.
+Select all text to the left of the cursor.
 </para>
 </entry>
 </row>
@@ -2951,7 +2933,7 @@ Selects all text to the left of the cursor.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects all text to the right of the cursor.
+Select all text to the right of the cursor.
 </para>
 </entry>
 </row>
@@ -2962,7 +2944,7 @@ Selects all text to the right of the cursor.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects all text in the text box.
+Select all text in the text box.
 </para>
 </entry>
 </row>
@@ -2970,7 +2952,7 @@ Selects all text in the text box.
 </tgroup>
 </informaltable>
 <para>
-In addition to the keyboard shortcuts listed in the previous table, use the keyboard shortcuts in the following table to navigate multi-line text boxes.
+In addition to the keyboard shortcuts listed in the previous table, use the keyboard shortcuts in the following table to navigate multi-line text boxes:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2995,7 +2977,7 @@ In addition to the keyboard shortcuts listed in the previous table, use the keyb
 </entry>
 <entry valign="top">
 <para>
-Positions the cursor at the top of the current view. Press <keycap>Page Up</keycap> again to position the cursor at the top of the previous view.
+Position the cursor at the top of the current view. Press <keycap>Page Up</keycap> again to position the cursor at the top of the previous view.
 </para>
 </entry>
 </row>
@@ -3007,7 +2989,7 @@ Positions the cursor at the top of the current view. Press <keycap>Page Up</keyc
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor at the end of the current view. Press <keycap>Page Down</keycap> 
+Position the cursor at the end of the current view. Press <keycap>Page Down</keycap> 
 again to position the cursor at the end of the previous view.
 </para>
 </entry>
@@ -3019,7 +3001,7 @@ again to position the cursor at the end of the previous view.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor at the start of the current paragraph. Press and hold <keycap>Ctrl</keycap> and continue to press the <keycap>up arrow</keycap> key to position the cursor at the start of the previous 
+Position the cursor at the start of the current paragraph. Press and hold <keycap>Ctrl</keycap> and continue to press the <keycap>up arrow</keycap> key to position the cursor at the start of the previous 
 paragraph.
 </para>
 </entry>
@@ -3031,7 +3013,7 @@ paragraph.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor at the end of the current paragraph. Press and hold <keycap>Ctrl</keycap> and continue to press the <keycap>down arrow</keycap> key to position the cursor at the end of the next 
+Position the cursor at the end of the current paragraph. Press and hold <keycap>Ctrl</keycap> and continue to press the <keycap>down arrow</keycap> key to position the cursor at the end of the next 
 paragraph.
 </para>
 </entry>
@@ -3043,7 +3025,7 @@ paragraph.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor one view width to the left.
+Position the cursor one view width to the left.
 </para>
 </entry>
 </row>
@@ -3054,7 +3036,7 @@ Positions the cursor one view width to the left.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor one view width to the right.
+Position the cursor one view width to the right.
 </para>
 </entry>
 </row>
@@ -3065,7 +3047,7 @@ Positions the cursor one view width to the right.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor at the start of the text box.
+Position the cursor at the start of the text box.
 </para>
 </entry>
 </row>
@@ -3076,7 +3058,7 @@ Positions the cursor at the start of the text box.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Positions the cursor at the end of the text box.
+Position the cursor at the end of the text box.
 </para>
 </entry>
 </row>
@@ -3087,7 +3069,7 @@ Positions the cursor at the end of the text box.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the next control on the dialog.
+Give focus to the next control on the dialog.
 </para>
 </entry>
 </row>
@@ -3098,7 +3080,7 @@ Gives focus to the next control on the dialog.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the text to the start of the current view. Press and hold <keycap>Shift</keycap> and continue to press <keycap>Page Up</keycap> to extend the selection to the start of the previous view.
+Select the text to the start of the current view. Press and hold <keycap>Shift</keycap> and continue to press <keycap>Page Up</keycap> to extend the selection to the start of the previous view.
 </para>
 </entry>
 </row>
@@ -3109,7 +3091,7 @@ Selects the text to the start of the current view. Press and hold <keycap>Shift<
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the text to the end of the current view. Press and hold <keycap>Shift</keycap> and continue to press <keycap>Page Down</keycap> to extend the selection to the end of the next view.
+Select the text to the end of the current view. Press and hold <keycap>Shift</keycap> and continue to press <keycap>Page Down</keycap> to extend the selection to the end of the next view.
 </para>
 </entry>
 </row>
@@ -3120,7 +3102,7 @@ Selects the text to the end of the current view. Press and hold <keycap>Shift</k
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the text to the start of the line.
+Select the text to the start of the line.
 </para>
 </entry>
 </row>
@@ -3131,7 +3113,7 @@ Selects the text to the start of the line.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the text to the end of the line.
+Select the text to the end of the line.
 </para>
 </entry>
 </row>
@@ -3143,7 +3125,7 @@ Selects the text to the end of the line.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the text to the start of the paragraph, then to the start of the previous paragraph.
+Select the text to the start of the paragraph, then to the start of the previous paragraph.
 </para>
 </entry>
 </row>
@@ -3155,7 +3137,7 @@ Selects the text to the start of the paragraph, then to the start of the previou
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the text to the end of the paragraph, then to the end of the next paragraph.
+Select the text to the end of the paragraph, then to the end of the next paragraph.
 </para>
 </entry>
 </row>
@@ -3167,7 +3149,7 @@ Selects the text to the end of the paragraph, then to the end of the next paragr
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the text to the start of the text box.
+Select the text to the start of the text box.
 </para>
 </entry>
 </row>
@@ -3179,7 +3161,7 @@ Selects the text to the start of the text box.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the text to the end of the text box.
+Select the text to the end of the text box.
 </para>
 </entry>
 </row>
@@ -3211,7 +3193,7 @@ A spin box is a control that allows you to type a numeric value or select a valu
 </screenshot>
 </figure>
 <para>
-The keyboard shortcuts that you use to navigate the text box area of a spin box are listed in <xref linkend="keynav-28"/>. The following table lists the keyboard shortcuts that you can use to navigate the up and down arrows in the spin box.
+The keyboard shortcuts that you use to navigate the text box area of a spin box are listed in <xref linkend="keynav-28"/>. The following table lists the keyboard shortcuts that you can use to navigate the up and down arrows in the spin box:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3230,12 +3212,13 @@ The keyboard shortcuts that you use to navigate the text box area of a spin box 
 <tbody>
 <row>
 <entry valign="top">
-<para><keycap>up arrow</keycap> or <keycap>down arrow
-</keycap></para>
+<para>
+<keycap>up arrow</keycap> or <keycap>down arrow</keycap>
+</para>
 </entry>
 <entry valign="top">
 <para>
-Increases or decreases the value of the spin box by a small amount.
+Increase or decrease the value of the spin box by a small amount.
 </para>
 </entry>
 </row>
@@ -3246,7 +3229,7 @@ or <keycap>Page Down</keycap></para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Increases or decreases the value of the spin box by a large amount.
+Increase or decrease the value of the spin box by a large amount.
 </para>
 </entry>
 </row>
@@ -3280,7 +3263,7 @@ format="PNG"/>
 </screenshot>
 </figure>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate a drop-down list.
+The following table lists the keyboard shortcuts that you can use to navigate a drop-down list:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3329,7 +3312,7 @@ If the drop-down list is open, this key accepts the current selection and closes
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the previous list item.
+Select the previous list item.
 </para>
 </entry>
 </row>
@@ -3341,7 +3324,7 @@ Selects the previous list item.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the next list item.
+Select the next list item.
 </para>
 </entry>
 </row>
@@ -3353,7 +3336,7 @@ Selects the next list item.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Closes the list without changing the selection.
+Close the list without changing the selection.
 </para>
 </entry>
 </row>
@@ -3383,15 +3366,16 @@ fileref="figures/dropdown_combination_box.png"
 format="PNG"/>
 </imageobject>
 <textobject>
-<phrase>Sample drop-down combination box. 
-Contains a text box and an arrow button that you click to display the drop-down list.</phrase>
+<phrase>
+Sample drop-down combination box. Contains a text box and an arrow button that you click to display the drop-down list.
+</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
 </figure>
 <para>
 When the text box has focus, use the keyboard shortcuts that are listed in <xref linkend="keynav-28"/> to navigate the text box area. When the text box has focus, 
-you can also use the keyboard shortcuts in the following table to navigate the drop-down list area.
+you can also use the keyboard shortcuts in the following table to navigate the drop-down list area:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3416,7 +3400,7 @@ you can also use the keyboard shortcuts in the following table to navigate the d
 </entry>
 <entry valign="top">
 <para>
-Selects the previous item from the drop-down list without displaying the list.
+Select the previous item from the drop-down list without displaying the list.
 </para>
 </entry>
 </row>
@@ -3428,7 +3412,7 @@ Selects the previous item from the drop-down list without displaying the list.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the next item from the drop-down list without displaying the list.
+Select the next item from the drop-down list without displaying the list.
 </para>
 </entry>
 </row>
@@ -3439,14 +3423,16 @@ Selects the next item from the drop-down list without displaying the list.
 </para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>Opens the drop-down list.</para>
+<para>
+Open the drop-down list.
+</para>
 </entry>
 </row>
 </tbody>
 </tgroup>
 </informaltable>
 <para>
-When the drop-down list has focus, you can use the keyboard shortcuts that are listed in the following table to navigate the drop-down list.
+When the drop-down list has focus, you can use the keyboard shortcuts that are listed in the following table to navigate the drop-down list:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3471,7 +3457,7 @@ When the drop-down list has focus, you can use the keyboard shortcuts that are l
 </entry>
 <entry valign="top">
 <para>
-Selects the previous list item.
+Select the previous list item.
 </para>
 </entry>
 </row>
@@ -3483,7 +3469,7 @@ Selects the previous list item.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the next list item.
+Select the next list item.
 </para>
 </entry>
 </row>
@@ -3495,7 +3481,7 @@ Selects the next list item.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the first item in the list.
+Select the first item in the list.
 </para>
 </entry>
 </row>
@@ -3507,7 +3493,7 @@ Selects the first item in the list.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the last item in the list.
+Select the last item in the list.
 </para>
 </entry>
 </row>
@@ -3519,7 +3505,7 @@ Selects the last item in the list.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the item at the top of the current list view.
+Select the item at the top of the current list view.
 </para>
 </entry>
 </row>
@@ -3531,7 +3517,7 @@ Selects the item at the top of the current list view.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the item at the bottom of the current list view.
+Select the item at the bottom of the current list view.
 </para>
 </entry>
 </row>
@@ -3543,7 +3529,7 @@ Selects the item at the bottom of the current list view.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Accepts the current selection and closes the drop-down list.
+Accept the current selection and close the drop-down list.
 </para>
 </entry>
 </row>
@@ -3554,7 +3540,7 @@ Accepts the current selection and closes the drop-down list.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Scrolls to the left of the list, if required.
+Scroll to the left of the list, if required.
 </para>
 </entry>
 </row>
@@ -3565,7 +3551,7 @@ Scrolls to the left of the list, if required.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Scrolls to the right of the list, if required.
+Scroll to the right of the list, if required.
 </para>
 </entry>
 </row>
@@ -3599,7 +3585,7 @@ Sample slider. Displays a slider control that you can move left or right.
 </screenshot>
 </figure>
 <para>
-The following table describes the keyboard shortcuts that you can use to navigate a slider.
+The following table describes the keyboard shortcuts that you can use to navigate a slider:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3623,7 +3609,7 @@ The following table describes the keyboard shortcuts that you can use to navigat
 </entry>
 <entry valign="top">
 <para>
-Moves the slider left or up by a small amount.
+Move the slider left or up by a small amount.
 </para>
 </entry>
 </row>
@@ -3634,7 +3620,7 @@ or <keycap>down arrow</keycap></para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the slider right or down by a small amount.
+Move the slider right or down by a small amount.
 </para>
 </entry>
 </row>
@@ -3646,7 +3632,7 @@ Moves the slider right or down by a small amount.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the slider left or up by a large amount.
+Move the slider left or up by a large amount.
 </para>
 </entry>
 </row>
@@ -3658,7 +3644,7 @@ Moves the slider left or up by a large amount.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the slider right or down by a large amount.
+Move the slider right or down by a large amount.
 </para>
 </entry>
 </row>
@@ -3670,7 +3656,7 @@ Moves the slider right or down by a large amount.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the slider to the maximum value.
+Move the slider to the maximum value.
 </para>
 </entry>
 </row>
@@ -3682,7 +3668,7 @@ Moves the slider to the maximum value.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Moves the slider to the minimum value.
+Move the slider to the minimum value.
 </para>
 </entry>
 </row>
@@ -3707,7 +3693,7 @@ format="PNG"/>
 </imageobject>
 <textobject>
 <phrase>
-Editing profile dialog from the GNOME <application>Terminal</application> application. Contains six tabbed sections.
+Editing profile dialog from the GNOME <application>Terminal</application> application; contains six tabbed sections.
 </phrase>
 </textobject>
 </mediaobject>
@@ -3718,7 +3704,7 @@ Windows and dialogs are sometimes divided into logical sections that are display
 called panels, pages, or tabs, and are sometimes collectively referred to as a tabstrip or notebook header. Each individual tab is identified by a text label.
 </para>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate the tabbed sections of a window or dialog when a tabstrip has focus.
+The following table lists the keyboard shortcuts that you can use to navigate the tabbed sections of a window or dialog when a tabstrip has focus:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3743,7 +3729,7 @@ The following table lists the keyboard shortcuts that you can use to navigate th
 </entry>
 <entry valign="top">
 <para>
-Gives focus to the previous tabbed section.
+Give focus to the previous tabbed section.
 </para>
 </entry>
 </row>
@@ -3755,7 +3741,7 @@ Gives focus to the previous tabbed section.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the next tabbed section.
+Give focus to the next tabbed section.
 </para>
 </entry>
 </row>
@@ -3767,7 +3753,7 @@ Gives focus to the next tabbed section.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the first control in the active section.
+Give focus to the first control in the active section.
 </para>
 </entry>
 </row>
@@ -3776,7 +3762,7 @@ Gives focus to the first control in the active section.
 </informaltable>
 <para>
 The following table lists the keyboard shortcuts that you can use to navigate a 
-window or dialog when a control within a section has focus.
+window or dialog when a control within a section has focus:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3803,7 +3789,7 @@ or <keycombo><keycap>Ctrl</keycap>
 </entry>
 <entry valign="top">
 <para>
-Gives focus to the previous section. 
+Give focus to the previous section. 
 </para>
 <para>
 This keyboard shortcut does not work if the focused control uses <keycombo><keycap>Ctrl</keycap><keycap>Page Up</keycap></keycombo> for another purpose.
@@ -3820,7 +3806,7 @@ This keyboard shortcut does not work if the focused control uses <keycombo><keyc
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the next section.
+Give focus to the next section.
 </para>
 <para>
 This keyboard shortcut does not work if the focused control uses <keycombo><keycap>Ctrl</keycap><keycap>Page Down</keycap></keycombo> for another purpose.
@@ -3834,7 +3820,7 @@ This keyboard shortcut does not work if the focused control uses <keycombo><keyc
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the next control outside the sections.
+Give focus to the next control outside the sections.
 </para>
 </entry>
 </row>
@@ -3850,7 +3836,7 @@ Gives focus to the next control outside the sections.
 <secondary>for lists</secondary>
 </indexterm>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate multi-column lists when a column header has focus.
+The following table lists the keyboard shortcuts that you can use to navigate multi-column lists when a column header has focus:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3869,12 +3855,13 @@ The following table lists the keyboard shortcuts that you can use to navigate mu
 <tbody>
 <row>
 <entry valign="top">
-<para><keycap>left arrow</keycap> or <keycap>right
-arrow</keycap></para>
+<para>
+<keycap>left arrow</keycap> or <keycap>right arrow</keycap>
+</para>
 </entry>
 <entry valign="top">
 <para>
-Gives focus to the previous or next column header.
+Give focus to the previous or next column header.
 </para>
 </entry>
 </row>
@@ -3886,7 +3873,7 @@ Gives focus to the previous or next column header.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Activates the header. This action usually sorts the list by the column header.
+Activate the header. This action usually sorts the list by the column header.
 </para>
 </entry>
 </row>
@@ -3898,7 +3885,7 @@ Activates the header. This action usually sorts the list by the column header.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the list contents.
+Give focus to the list contents.
 </para>
 </entry>
 </row>
@@ -3906,7 +3893,7 @@ Gives focus to the list contents.
 </tgroup>
 </informaltable>
 <para>
-The following table lists the keyboard shortcuts that you can use to navigate lists when the contents of the list has focus.
+The following table lists the keyboard shortcuts that you can use to navigate lists when the list area has focus:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -3929,7 +3916,7 @@ The following table lists the keyboard shortcuts that you can use to navigate li
 </entry>
 <entry valign="top">
 <para>
-Selects the next or previous row or column.
+Select the next or previous row or column.
 </para>
 </entry>
 </row>
@@ -3941,7 +3928,7 @@ Selects the next or previous row or column.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the top row of the list contents that are currently in view. Press <keycap>Page Up</keycap> again to select the top row of the previous view.
+Select the top row of the list contents that are currently in view. Press <keycap>Page Up</keycap> again to select the top row of the previous view.
 </para>
 </entry>
 </row>
@@ -3953,7 +3940,7 @@ Selects the top row of the list contents that are currently in view. Press <keyc
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects the bottom row of the list contents that are currently in view. Press <keycap>Page Down</keycap> again to select the bottom row of the next view.
+Select the bottom row of the list contents that are currently in view. Press <keycap>Page Down</keycap> again to select the bottom row of the next view.
 </para>
 </entry>
 </row>
@@ -3964,7 +3951,9 @@ Selects the bottom row of the list contents that are currently in view. Press <k
 </para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>Selects the first row in the list.</para>
+<para>
+Select the first row in the list.
+</para>
 </entry>
 </row>
 <row>
@@ -3974,7 +3963,9 @@ Selects the bottom row of the list contents that are currently in view. Press <k
 </para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>Selects the last row in the list.</para>
+<para>
+Select the last row in the list.
+</para>
 </entry>
 </row>
 <row>
@@ -3984,10 +3975,10 @@ arrow keys</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-For lists that support multi-line selections, adds the next or previous row or column to the current selection.
+For lists that support multi-line selections, add the next or previous row or column to the current selection.
 </para>
 <para>
-For lists that only allow single line selections, selects the next or previous row or column.
+For lists that only allow single line selections, select the next or previous row or column.
 </para>
 </entry>
 </row>
@@ -3998,7 +3989,7 @@ For lists that only allow single line selections, selects the next or previous r
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects all the rows between the current selection and the top row of the view. 
+Select all the rows between the current selection and the top row of the view. 
 </para>
 </entry>
 </row>
@@ -4009,7 +4000,7 @@ Selects all the rows between the current selection and the top row of the view.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects all the rows between the current selection and the bottom row of the view. 
+Select all the rows between the current selection and the bottom row of the view. 
 </para>
 </entry>
 </row>
@@ -4020,7 +4011,7 @@ Selects all the rows between the current selection and the bottom row of the vie
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects all the rows between the current selection and the first row in the list. 
+Select all the rows between the current selection and the first row in the list. 
 </para>
 </entry>
 </row>
@@ -4031,18 +4022,19 @@ Selects all the rows between the current selection and the first row in the list
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Selects all the rows between the current selection and the last row in the list. 
+Select all the rows between the current selection and the last row in the list. 
 </para>
 </entry>
 </row>
 <row>
 <entry colname="colspec0" valign="top">
-<para><keycap>Ctrl</keycap> +
-arrow keys</para>
+<para>
+<keycap>Ctrl</keycap> + arrow keys
+</para>
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the next row or column but does not extend the selection. Further items can be selected by pressing <keycap>spacebar</keycap>.
+Give focus to the next row or column without extending the selection. Further items can be selected by pressing <keycap>spacebar</keycap>.
 </para>
 </entry>
 </row>
@@ -4053,7 +4045,7 @@ Gives focus to the next row or column but does not extend the selection. Further
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the top row in the view but does not extend the selection.
+Give focus to the top row in the view without extending the selection.
 </para>
 </entry>
 </row>
@@ -4064,7 +4056,7 @@ Gives focus to the top row in the view but does not extend the selection.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the bottom row in the view but does not extend the selection.
+Give focus to the bottom row in the view without extending the selection.
 </para>
 </entry>
 </row>
@@ -4075,7 +4067,7 @@ Gives focus to the bottom row in the view but does not extend the selection.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the first row in the list but does not extend the selection.
+Give focus to the first row in the list without extending the selection.
 </para>
 </entry>
 </row>
@@ -4086,7 +4078,7 @@ Gives focus to the first row in the list but does not extend the selection.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the last row in the list but does not extend the selection.
+Give focus to the last row in the list without extending the selection.
 </para>
 </entry>
 </row>
@@ -4098,7 +4090,7 @@ Gives focus to the last row in the list but does not extend the selection.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Activates the item(s).
+Activate the item(s).
 </para>
 </entry>
 </row>
@@ -4109,7 +4101,7 @@ Activates the item(s).
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-For lists that support multi-line selections, selects all rows in the list.
+Select all rows (for lists that support multi-line selections).
 </para>
 </entry>
 </row>
@@ -4120,7 +4112,7 @@ For lists that support multi-line selections, selects all rows in the list.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Gives focus to the column header, if applicable.
+Give focus to the column header, if applicable.
 </para>
 </entry>
 </row>
@@ -4142,14 +4134,16 @@ A tree is a user interface control that contains sections that you can expand an
 <imagedata fileref="figures/tree.png" format="PNG"/>
 </imageobject>
 <textobject>
-<phrase>Categories tree from the <application>gedit</application> Preferences dialog. Contains three subcategories.</phrase>
+<phrase>
+Categories tree from the <application>gedit</application> preferences dialog; contains three subcategories.
+</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
 </figure>
 <para>
 To navigate trees, you can use the same keyboard shortcuts that are listed in 
-<xref linkend="keynav-34"/>. In addition, the following table lists the keyboard shortcuts you can use for the tree items.
+<xref linkend="keynav-34"/>. In addition, the following table lists the keyboard shortcuts you can use for the tree items:
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -4172,7 +4166,7 @@ To navigate trees, you can use the same keyboard shortcuts that are listed in
 </entry>
 <entry valign="top">
 <para>
-Expands the focused item.
+Expand the focused item.
 </para>
 </entry>
 </row>
@@ -4182,7 +4176,7 @@ Expands the focused item.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Collapses the focused item.
+Collapse the focused item.
 </para>
 </entry>
 </row>
@@ -4193,7 +4187,9 @@ Collapses the focused item.
 </para>
 </entry>
 <entry colname="colspec1" valign="top">
-<para>Selects the parent item.</para>
+<para>
+Select the parent item.
+</para>
 </entry>
 </row>
 <row>
@@ -4202,7 +4198,7 @@ Collapses the focused item.
 </entry>
 <entry colname="colspec1">
 <para>
-Displays a search dialog allowing you to type the name of the tree item that you want to find. Not all trees support searching.
+Display a search dialog, allowing you to type the name of the tree item that you want to find. Not all trees support searching.
 </para>
 </entry>
 </row>
@@ -4219,15 +4215,14 @@ Displays a search dialog allowing you to type the name of the tree item that you
 <secondary>customizing</secondary>
 </indexterm>
 <para>
-Use the <application>Keyboard Shortcuts</application> preference tool to display the default keyboard shortcuts that you use to navigate the GNOME Desktop. You can customize the default keyboard shortcuts to meet your requirements. You can also create hot keys, 
-keyboard shortcuts which start applications.
+Use the <application>Keyboard Shortcuts</application> preference tool to display the default keyboard shortcuts that you use to navigate the GNOME Desktop. You can customize the default keyboard shortcuts to meet your requirements. You can also create hot keys (keyboard shortcuts which start applications).
 </para>
 <para>
 To start the <application>Keyboard Shortcuts
 </application> preference tool, choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences
 </guisubmenu><guimenuitem>Keyboard Shortcuts
 </guimenuitem></menuchoice>. The <guilabel>
-Desktop shortcuts</guilabel> table lists the keyboard shortcut that is associated with each action.
+Desktop shortcuts</guilabel> table lists the keyboard shortcuts that are associated with each action.
 </para>
 
 <section id="keynav-49">
