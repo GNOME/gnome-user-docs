@@ -4,12 +4,13 @@ msgstr ""
 "Project-Id-Version: system-admin-guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-21 03:14+0000\n"
-"PO-Revision-Date: 2008-03-02 00:15+0900\n"
+"PO-Revision-Date: 2008-06-01 19:42+0900\n"
 "Last-Translator: Namhyung Kim <namhyung@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Bookmarks: -1,610,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: C/system-admin-guide.xml:23(title)
 msgid "GNOME 2.14 Desktop System Administration Guide"
@@ -2990,123 +2991,123 @@ msgstr "<filename>gtkrc</filename> 파일에 대한 자세한 정보는 <ulink u
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Configuring Fonts"
-msgstr ""
+msgstr "글꼴 설정하기"
 
 #: C/system-admin-guide.xml:4(para)
 msgid "This chapter describes how to configure fonts in the GNOME Desktop."
-msgstr ""
+msgstr "이 부분에서는 그놈 데스크탑에서 글꼴을 설정하는 방법을 설명합니다."
 
 #: C/system-admin-guide.xml:8(title)
 msgid "Introduction to Configuring Fonts"
-msgstr ""
+msgstr "글꼴 설정하기 개요"
 
 #: C/system-admin-guide.xml:10(primary)
 msgid "configuring fonts"
-msgstr ""
+msgstr "글꼴 설정"
 
 #: C/system-admin-guide.xml:14(primary)
 msgid "fontconfig"
-msgstr ""
+msgstr "fontconfig"
 
 #: C/system-admin-guide.xml:21(para)
 msgid "GNOME Desktop uses the <literal>fontconfig</literal> font configuration and customization library. The <literal>fontconfig</literal> library can use all kinds of fonts, including PostScript Type 1 fonts and TrueType fonts."
-msgstr ""
+msgstr "그놈 데스크탑은 <literal>fontconfig</literal> 라고 하는 글꼴 설정 라이브러리를 사용합니다. <literal>fontconfig</literal> 라이브러리는 PostScript Type 1 글꼴과 트루타입 글꼴을 포함한 모든 글꼴을 이용할 수 있습니다."
 
 #: C/system-admin-guide.xml:24(para)
 msgid "The <literal>fontconfig</literal> library provides a list of all the fonts available on a GNOME Desktop system. To compile this list, <literal>fontconfig</literal> searches the directories listed in the <filename>/etc/fonts/fonts.conf</filename> file. To view all the fonts available on a system, access the <literal>fonts:///</literal> location in the file manager on the system."
-msgstr ""
+msgstr "<literal>fontconfig</literal> 라이브러리는 그놈 데스크탑에서 이용할 수 있는 모든 글꼴의 목록을 제공합니다. <literal>fontconfig</literal> 라이브러리는 모든 글꼴의 목록을 작성하기 위해 <filename>/etc/fonts/fonts.conf</filename> 파일에 나열된 모든 디렉토리들을 검색합니다. 시스템 내의 모든 글꼴들을 보려면, 시스템의 파일 관리자에서 <literal>fonts:///</literal> 위치로 이동합니다."
 
 #: C/system-admin-guide.xml:26(para)
 msgid "For more information about the <literal>fontconfig</literal> library, see the following URL:"
-msgstr ""
+msgstr "<literal>fontconfig</literal> 라이브러리에 대한 자세한 정보는 다음 URL을 방문해 보십시오:"
 
 #: C/system-admin-guide.xml:29(ulink)
 msgid "http://freedesktop.org/software/fontconfig"
-msgstr ""
+msgstr "http://freedesktop.org/software/fontconfig"
 
 #: C/system-admin-guide.xml:33(title)
 msgid "Font Substitution"
-msgstr ""
+msgstr "글꼴 바꾸기"
 
 #: C/system-admin-guide.xml:36(secondary)
 msgid "substitution"
-msgstr ""
+msgstr "바꾸기, 대체"
 
 #: C/system-admin-guide.xml:38(para)
 msgid "The <literal>fontconfig</literal> library performs font substitution when either entire fonts, or individual characters, are not present. If the system needs to display a font that is not available, <literal>fontconfig</literal> attempts to display another, similar font. For example, if a web page requests to display the Verdana font, and that font is not installed on the system, <literal>fontconfig</literal> displays a similar font, such as Helvetica. The list of similar fonts is defined in the <filename>/etc/fonts/fonts.conf</filename> file."
-msgstr ""
+msgstr "<literal>fontconfig</literal> 라이브러리는 전체 글꼴이나 특정 글자가 없는 경우에 글꼴을 바꾸어 줍니다. 만약 시스템에서 현재 글꼴에 포함되지 않는 글자를 표시해야 하는 경우, <literal>fontconfig</literal> 라이브러리는 비슷한 다른 글꼴을 표시하려고 시도할 것입니다. 예를 들면, 웹 페이지에서 Verdana 글꼴을 표시하도록 요청했지만 해당 글꼴이 시스템에 설치되어 있지 않다면 <literal>fontconfig</literal> 라이브러리는 Helvetica 와 같은 비슷한 글꼴을 보여줍니다. 비슷한 글꼴의 목록은 <fliename>/etc/fonts/fonts.conf</filename> 파일에 정의되어 있습니다."
 
 #: C/system-admin-guide.xml:44(para)
 msgid "If the system needs to display a character that is not present in the selected font, <literal>fontconfig</literal> attempts to display the character in another, similar font. For example, you might select Bitstream Vera Sans as the font for the Text Editor application. The Bitstream Vera font family does not include Cyrillic characters. If you open a document which contains a Cyrillic character, Text Editor uses a similar font that includes Cyrillic characters to display the character."
-msgstr ""
+msgstr "만약 시스템에서 선택된 글꼴에 포함되지 않은 글자를 표시해야 하는 경우에, <literal>fontconfig</literal> 라이브러리는 비슷한 다른 글꼴을 표시하려고 시도할 것입니다. 예를 들어, 여러분이 텍스트 편집기에서 Bitstream Vera Sans 글꼴을 선택했다고 가정합니다. Bitstream Vera 글꼴 계열은 키릴 문자를 포함하지 않습니다. 만약 여러분이 키릴 문자를 포함한 문서를 연다면, 텍스트 편집기는 키릴 문자를 포함하는 비슷한 다른 글꼴을 사용하여 글자를 보여줄 것입니다."
 
 #: C/system-admin-guide.xml:51(para)
 msgid "The <literal>fontconfig</literal> library also defines aliases for fonts, for example, <literal>serif</literal>, <literal>sans-serif</literal>, and <literal>monospace</literal>. When you select one of the aliases for a font, the system uses the first font that is defined for that alias in the <filename>/etc/fonts/fonts.conf</filename>."
-msgstr ""
+msgstr "<literal>fontconfig</literal> 라이브러리는 또한 <literal>serif</literal>, <literal>sans-serif</literal>, <literal>monospace</literal> 와 같은 글꼴들에 대한 별칭(alias)들도 정의합니다. 만약 여러분이 이러한 별칭 중의 하나를 선택한다면, 시스템은 <filename>/etc/fonts/fonts.conf</filename> 파일 내에 있는 별칭에 정의된 첫 번째 글꼴을 사용합니다."
 
 #: C/system-admin-guide.xml:56(title)
 msgid "To Add a Font for All Users"
-msgstr ""
+msgstr "모든 사용자를 위해 글꼴 추가하기"
 
 #: C/system-admin-guide.xml:59(secondary)
 msgid "adding for all users"
-msgstr ""
+msgstr "모든 사용자에게 적용되도록 추가하기"
 
 #: C/system-admin-guide.xml:61(para)
 msgid "To add a font for all users, perform the following steps:"
-msgstr ""
+msgstr "모든 사용자들에게 적용되도록 글꼴을 추가하려면, 다음 단계를 수행합니다:"
 
 #: C/system-admin-guide.xml:64(para)
 msgid "Copy the font file to one of the directories in the <filename>/etc/fonts/fonts.conf</filename> file. Typically, fonts are stored in the <filename>/usr/share/fonts/</filename> directory."
-msgstr ""
+msgstr "글꼴 파일을 <filename>/etc/fonts/fonts.conf</filename> 파일에 있는 디렉토리 중의 하나에 복사합니다. 일반적으로 글꼴들은 <filename>/usr/share/fonts/</filename> 디렉토리에 저장됩니다."
 
 #: C/system-admin-guide.xml:67(para)
 #: C/system-admin-guide.xml:88(para)
 msgid "The <literal>fontconfig</literal> library updates the list of fonts automatically. If the list of fonts is not updated, run the following command:"
-msgstr ""
+msgstr "<literal>fontconfig</literal> 라이브러리는 자동으로 글꼴의 목록을 갱신합니다. 만약 글꼴 목록이 갱신되지 않았다면, 다음 명령을 실행합니다:"
 
 #: C/system-admin-guide.xml:70(replaceable)
 #: C/system-admin-guide.xml:91(replaceable)
 msgid "directory-name"
-msgstr ""
+msgstr "디렉토리-이름"
 
 #: C/system-admin-guide.xml:70(userinput)
 #: C/system-admin-guide.xml:91(userinput)
 #, no-wrap
 msgid "fc-cache <placeholder-1/>"
-msgstr ""
+msgstr "fc-cache <placeholder-1/>"
 
 #: C/system-admin-guide.xml:75(title)
 msgid "To Add a Font for an Individual User"
-msgstr ""
+msgstr "특정 사용자를 위해 글꼴 추가하기"
 
 #: C/system-admin-guide.xml:78(secondary)
 msgid "adding for individual users"
-msgstr ""
+msgstr "특정 사용자에게 적용되도록 추가하기"
 
 #: C/system-admin-guide.xml:80(para)
 msgid "To add a font for an individual users, perform the following steps:"
-msgstr ""
+msgstr "특정 사용자에게만 적용되도록 글꼴을 추가하려면, 다음 단계를 수행합니다:"
 
 #: C/system-admin-guide.xml:84(para)
 msgid "Copy the font file to the <filename>$HOME/.fonts</filename> directory of the user. If you drag the font file to the <literal>fonts:///</literal> location in the file manager, the font file is copied to the <filename>$HOME/.fonts</filename> directory."
-msgstr ""
+msgstr "글꼴 파일을 사용자의 <filename>$HOME/.fonts</filename> 디렉토리에 복사합니다. 만약 여러분이 파일 관리자에서 <literal>fonts:///</literal> 위치에 글꼴 파일을 옮겨놓았다면(drag), 글꼴 파일은 <filename>$HOME/.fonts</filename> 디렉토리로 복사됩니다."
 
 #: C/system-admin-guide.xml:3(title)
 msgid "MIME Types"
-msgstr ""
+msgstr "MIME 형식"
 
 #: C/system-admin-guide.xml:9(para)
 msgid "This chapter describes how applications detect MIME types, how to register MIME types, and how to add applications to the GNOME Desktop."
-msgstr ""
+msgstr "이 부분에서는 프로그램이 MIME 형식을 인식하는 방법과 MIME 형식을 등록하는 법, 그놈 데스크탑에 프로그램을 추가하는 방법들을 설명합니다."
 
 #: C/system-admin-guide.xml:14(para)
 msgid "The purpose of this chapter is to make it easy for an administrator to understand how to configure different parts of the MIME database and give an general overview of the MIME system. Therefore we will <emphasis>not</emphasis> attempt to go into details where it is not necessary. For the gory details, it is recommended that you refer to the <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG shared mime info specification</ulink>."
-msgstr ""
+msgstr "이 장의 목적은 서로 다른 부분의 MIME 데이터베이스를 설정하는 방법을 익히고, MIME 시스템에 대한 일반적인 이해를 돕기 위한 것입니다. 따라서 여기서는 불필요하게 자세한 부분까지는 설명하지 <emphasis>않을</emphasis> 것입니다. 세부적인 내용들은 <ulink url=\\\"http://www.freedesktop.org/Standards/shared-mime-info-spec\\\">XDG 공통 MIME 정보 명세서</ulink>를 참조하기 바랍니다."
 
 #: C/system-admin-guide.xml:23(title)
 msgid "Introduction to MIME Types"
-msgstr ""
+msgstr "MIME 형식에 대한 소개"
 
 #: C/system-admin-guide.xml:27(primary)
 #: C/system-admin-guide.xml:137(primary)
@@ -3116,187 +3117,187 @@ msgstr ""
 #: C/system-admin-guide.xml:778(primary)
 #: C/system-admin-guide.xml:850(primary)
 msgid "MIME types"
-msgstr ""
+msgstr "MIME 형식"
 
 #: C/system-admin-guide.xml:32(para)
 msgid "A <firstterm>Multipurpose Internet Mail Extension</firstterm> [<acronym>MIME</acronym>] type identifies the format of a file. Applications such as Internet browsers and email applications use the MIME type of a file to decide which actions to perform on it. For example, an email application can use the MIME type to detect the format of an attachment and choose an appropriate viewer for the file, such as opening a text document with <application>gedit</application>."
-msgstr ""
+msgstr "<firstterm>Multipurpose Internet Mail Extension</firstterm> [<acronym>MIME</acronym>] 형식은 파일의 종류를 알려주기 위한 것입니다. 인터넷 브라우저와 같은 프로그램들은 MIME 형식을 이용하여 해당 파일을 어떻게 처리할지 결정합니다. 예를 들어 이메일 응용 프로그램은 첨부된 파일의 형식을 인식하여 <application>gedit</application>와(과) 같은 적절한 보기 프로그램을 선택하기 위해 MIME 형식을 이용할 수 있습니다."
 
 #: C/system-admin-guide.xml:40(para)
 msgid "As another example, the <application>Nautilus</application> file manager needs to know the MIME type of a file to perform the following tasks:"
-msgstr ""
+msgstr "또 다른 예로, <application>노틸러스</application> 파일 관리자는 다음과 같은 작업을 처리하기 위해 파일의 MIME 형식을 알아야만 합니다:"
 
 #: C/system-admin-guide.xml:46(para)
 msgid "Open the file in an appropriate application."
-msgstr ""
+msgstr "적절한 프로그램으로 파일 열기."
 
 #: C/system-admin-guide.xml:50(para)
 msgid "Display a string that describes the type of file."
-msgstr ""
+msgstr "파일의 형식을 설명하는 문자열을 표시하기."
 
 #: C/system-admin-guide.xml:54(para)
 msgid "Display an appropriate icon to represent the file."
-msgstr ""
+msgstr "파일을 나타내는 적절한 아이콘 표시하기."
 
 #: C/system-admin-guide.xml:58(para)
 msgid "Display a list of other applications that can open the file."
-msgstr ""
+msgstr "해당 파일을 열 수 있는 다른 프로그램들의 목록을 표시하기."
 
 #: C/system-admin-guide.xml:63(para)
 msgid "MIME types were originally proposed as a standard for identifying the message body of an e-mail message. Now, many systems use MIME types to identify the format of arbitrary files on the file system. MIME types are composed of a top-level <emphasis>media type</emphasis> followed by a <emphasis>subtype identifier</emphasis>, separated by a forward slash character, <quote><literal>/</literal></quote>. One example of a MIME type is <literal>image/jpeg</literal>. The media type in this example is <quote><literal>image</literal></quote> and the subtype identifier is <quote><literal>jpeg</literal></quote>. The top-level media type is meant to be a general categorization about the content of the file, while the subtype identifer is meant to specifically identify the format of the file."
-msgstr ""
+msgstr "MIME 형식은 원래 이메일 메시지의 내용을 지정하기 위한 표준으로 설계되었습니다. 지금은 많은 시스템들이 파일 시스템 내에 있는 임의의 파일에 대한 형식을 구분하기 위해 MIME 형식을 사용하고 있습니다. MIME 형식은 최상위 <emphasis>미디어 형식</emphasis>과 슬래시 문자(<quote><literal>/</literal></quote>), <emphasis>하위 형식</emphasis>으로 구성됩니다. 이러한 MIME 형식의 예는 <literal>image/jpeg</literal>와 같은 것이 있습니다. 이 예에서 미디어 형식 부분은 <quote><literal>image</literal></quote>에 해당하고, 하위 형식은 <quote><literal>jpeg</literal></quote>에 해당합니다. 최상위 미디어 형식은 파일 내용에 대한 일반적인 분류를 의미하고, 하위 형식은 특정한 파일 형식을 의미합니다."
 
 #: C/system-admin-guide.xml:79(member)
 msgid "application"
-msgstr ""
+msgstr "application"
 
 #: C/system-admin-guide.xml:81(member)
 msgid "audio"
-msgstr ""
+msgstr "audio"
 
 #: C/system-admin-guide.xml:83(member)
 msgid "image"
-msgstr ""
+msgstr "image"
 
 #: C/system-admin-guide.xml:85(member)
 msgid "message"
-msgstr ""
+msgstr "message"
 
 #: C/system-admin-guide.xml:87(member)
 msgid "model"
-msgstr ""
+msgstr "model"
 
 #: C/system-admin-guide.xml:89(member)
 msgid "multipart"
-msgstr ""
+msgstr "multipart"
 
 #: C/system-admin-guide.xml:91(member)
 msgid "text"
-msgstr ""
+msgstr "text"
 
 #: C/system-admin-guide.xml:93(member)
 msgid "video"
-msgstr ""
+msgstr "video"
 
 #: C/system-admin-guide.xml:76(para)
 msgid "There are eight media types currently blessed by the <acronym>IANA</acronym> [Internet Assigned Naming Authority]. These eight media types are <placeholder-1/>. Many subtypes exist for each media type; for more information, see <ulink url=\"http://www.iana.org/assignments/media-types/\">MIME Media Types</ulink> at the <ulink url=\"http://www.iana.org/\">IANA</ulink> web site."
-msgstr ""
+msgstr "<acronym>IANA</acronym> [Internet Assigned Naming Authority]로부터 인증받은 8 가지의 미디어 형식이 존재합니다. 이들은 각각 <placeholder-1/> 에 해당하며, 각 미디어 형식에 따른 여러 가지 하위 형식이 존재합니다. 자세한 정보는 <ulink url=\"http://www.iana.org/\">IANA</ulink> 웹사이트에 있는 <ulink url=\"http://www.iana.org/assignments/media-types/\">MIME 미디어 형식</ulink> 부분을 살펴보기 바랍니다."
 
 #: C/system-admin-guide.xml:100(para)
 msgid "Implementation of MIME types in GNOME follows the <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG shared mime info specification</ulink>. This specification provides the following advantages:"
-msgstr ""
+msgstr "그놈의 MIME 형식에 대한 구현 사항은 <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG 공통 MIME 형식 정보 명세서</ulink>를 따릅니다. 이 명세서는 다음과 같은 장점을 제공합니다:"
 
 #: C/system-admin-guide.xml:107(para)
 msgid "Standard locations for all MIME related files."
-msgstr ""
+msgstr "MIME과 관련된 모든 파일을 위한 표준 위치."
 
 #: C/system-admin-guide.xml:111(para)
 msgid "A standard way for applications to register information about a new MIME type."
-msgstr ""
+msgstr "프로그램에서 새로운 MIME 형식에 대한 정보를 등록하기 위한 표준 방식."
 
 #: C/system-admin-guide.xml:116(para)
 msgid "A standard way to retrieve the MIME type for a file."
-msgstr ""
+msgstr "파일의 MIME 형식을 알아내기 위한 표준 방식."
 
 #: C/system-admin-guide.xml:120(para)
 msgid "A standard way to retrieve information about a MIME type."
-msgstr ""
+msgstr "MIME 형식에 대한 정보를 알아내기 위한 표준 방식."
 
 #: C/system-admin-guide.xml:124(para)
 msgid "The rest of the chapter describes the files and directories that make up the MIME database, details about source XML files, how to create or modify MIME types, how to register applications as handlers for certain MIME types and finally, how to add an application to the GNOME desktop."
-msgstr ""
+msgstr "이 장의 나머지 부분에서는 MIME 데이터베이스를 구성하는 파일과 디렉토리에 대한 설명, 소스 XML 파일의 상세 정보, MIME 형식을 생성하거나 수정하는 방법, 특정 MIME 형식을 다루는 프로그램을 등록하는 방법, 그놈 데스크탑에 프로그램을 추가하는 방법들을 설명합니다."
 
 #: C/system-admin-guide.xml:132(title)
 msgid "The MIME Database"
-msgstr ""
+msgstr "MIME 데이터베이스"
 
 #: C/system-admin-guide.xml:139(secondary)
 msgid "database"
-msgstr ""
+msgstr "데이터베이스"
 
 #: C/system-admin-guide.xml:142(para)
 msgid "The MIME database is a collection of files that make up:"
-msgstr ""
+msgstr "MIME 데이터베이스는 다음과 같은 정보들을 저장하는 파일의 집합입니다:"
 
 #: C/system-admin-guide.xml:146(para)
 msgid "The set of known MIME types"
-msgstr ""
+msgstr "알려진 MIME 형식의 집합"
 
 #: C/system-admin-guide.xml:150(para)
 msgid "The method for determing the MIME type of a file"
-msgstr ""
+msgstr "파일의 MIME 형식을 알아내기 위한 방법"
 
 #: C/system-admin-guide.xml:154(para)
 msgid "Meta information regarding a MIME type, such as a human readable description to use when displaying files of this type."
-msgstr ""
+msgstr "MIME 형식에 대한 메타 정보. 즉, 이 형식의 파일을 표시할 때 사람이 알아보기 쉽도록 설명한 내용"
 
 #: C/system-admin-guide.xml:160(title)
 msgid "Location"
-msgstr ""
+msgstr "위치"
 
 #: C/system-admin-guide.xml:162(para)
 msgid "As an administrator, the most important and basic step to understanding the MIME system is learning the locations where these files are stored. Since the <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG shared mime info specification</ulink> was drafted by the X Desktop Group, it also makes use of the <ulink url=\"http://www.freedesktop.org/wiki/Standards/basedir-spec\">XDG base directory specification</ulink>. It is highly recommended that you familiarize yourself with this specification, as it is also important for other system administration tasks such as editing menus. A brief summary of the directory locations as pertaining to the MIME specification is given below."
-msgstr ""
+msgstr "관리자로써, MIME 시스템을 이해하기 위해 가장 중요하고 기본적인 단계는 이러한 파일들이 저장되는 위치를 아는 것입니다. <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG 공통 MIME 정보 명세서</ulink>는 X 데스크탑 그룹에서 제안되었으므로, <ulink url=\"http://www.freedesktop.org/wiki/Standards/basedir-spec\">XDG 기본 디렉토리 명세서</ulink>의 내용을 따릅니다. 이 명세서는 메뉴를 편집하는 것과 같은 다른 시스템 관리 작업에서도 매우 중요하므로, 이 명세서의 내용을 숙지해 두는 것이 좋습니다."
 
 #: C/system-admin-guide.xml:175(para)
 msgid "The MIME database is created from the set of files located in the <filename>$XDG_DATA_HOME/mime</filename> and <filename>$XDG_DATA_DIRS/mime</filename> directories. If these environment variables are unset, then they default to the values <filename>~/.local/share</filename> and <filename>/usr/local/share:/usr/share</filename> respectively. As can be seen from the default value for <envar>$XDG_DATA_DIRS</envar> , each environment variable is actually a colon separated list of directories. The user's database at <filename>$XDG_DATA_HOME/mime</filename> has precedence over the system database at <filename>$XDG_DATA_DIRS/mime</filename> when conflicting definitions are encountered. Similar to the <citetitle>XDG shared mime specification</citetitle>, we will refer to this set of directories as <literal>&lt;MIME&gt;</literal> in the rest of this document."
-msgstr ""
+msgstr "MIME 데이터베이스는 <filename>$XDG_DATA_HOME/mime</filename>디렉토리와 <filename>$XDG_DATA_DIRS/mime</filename> 디렉토리에 있는 파일의 집합으로 구성됩니다. 만약 이러한 환경 변수들이 설정되어 있지 않다면, 기본값으로 <filename>~/.local/share</filename> 디렉토리와 <filename>/usr/local/share:/usr/share</filename> 디렉토리를 각각 사용합니다. <envar>$XDG_DATA_DIRS</envar> 변수의 기본값에서 볼 수 있듯이, 각각의 환경 변수들은 실제로는 콜론(:)으로 구분된 디렉토리의 목록입니다. 만약 동일한 내용이 중복되는 경우에는 <filename>$XDG_DATA_HOME/mime</filename>에 있는 사용자 데이터베이스는 <filename>$XDG_DATA_DIRS/mime</filename>에 있는 시스템 데이터베이스보다 우선 순위를 가집니다. 앞으로 이 문서에서는 <citetitle>XDG 공통 MIME 정보 명세서</citetitle>와 마찬가지로 이러한 디렉토리들을 <literal>&lt;MIME&gt;</literal>(이)라고 가리킬 것입니다."
 
 #: C/system-admin-guide.xml:191(para)
 msgid "For example, assuming default paths for the environment variables, <quote>Load <filename>&lt;MIME&gt;/text/plain.xml</filename></quote> means to load the following files:"
-msgstr ""
+msgstr "예를 들어, 환경 변수들의 기본값을 사용한다고 가정할 때 <quote>Load <filename>&lt;MIME&gt;/text/plain.xml</filename></quote> 라는 표현은 다음 파일들을 읽어온다(load)는 것을 의미합니다:"
 
 #: C/system-admin-guide.xml:198(filename)
 msgid "~/.local/share/mime/text/plain.xml"
-msgstr ""
+msgstr "~/.local/share/mime/text/plain.xml"
 
 #: C/system-admin-guide.xml:202(filename)
 msgid "/usr/local/share/mime/text/plain.xml"
-msgstr ""
+msgstr "/usr/local/share/mime/text/plain.xml"
 
 #: C/system-admin-guide.xml:206(filename)
 msgid "/usr/share/mime/text/plain.xml"
-msgstr ""
+msgstr "/usr/share/mime/text/plain.xml"
 
 #: C/system-admin-guide.xml:212(title)
 msgid "Contents"
-msgstr ""
+msgstr "내용"
 
 #: C/system-admin-guide.xml:214(para)
 msgid "The following is a list of directories and files that are found inside the MIME database along with brief descriptions:"
-msgstr ""
+msgstr "다음은 MIME 데이터베이스내의 디렉토리와 파일의 목록에 대해 간략한 설명을 추가한 것입니다:"
 
 #: C/system-admin-guide.xml:219(filename)
 msgid "&lt;MIME&gt;/packages/"
-msgstr ""
+msgstr "&lt;MIME&gt;/packages/"
 
 #: C/system-admin-guide.xml:222(para)
 msgid "This directory contains any number of XML files, each of which describe a collection of MIME types. By default, the <filename>freedesktop.org.xml</filename> file is installed in the <filename>/usr/share/mime/packages</filename> directory. This file contains all the default MIME types that are widely used and recognized."
-msgstr ""
+msgstr "이 디렉토리는 MIME 형식들의 집합을 설명하는 여러 XML 파일들을 포함합니다. 기본적으로 <filename>freedesktop.org.xml</filename> 파일은 <filename>/usr/share/mime/packages</filename> 디렉토리에 설치됩니다. 이 파일은 주로 사용되는 모든 기본 MIME 형식에 대한 정보를 포함합니다."
 
 #: C/system-admin-guide.xml:229(para)
 msgid "Applications which provide information about new MIME types are to install a <emphasis>single</emphasis> new XML file here. Depending on the prefix where the application is installed, it will create the file in the <filename>/mime/package</filename> subdirectory of one of the directories in <envar>$XDG_DATA_HOME:$XDG_DATA_DIRS</envar>. For example, an application installed to <filename>/usr/bin</filename> should install a new source XML file to the <filename>/usr/share/mime/packages</filename> directory. For more information about the XML files in the <filename>packages</filename> directory, please see <xref linkend=\"mimetypes-source-xml\"/>."
-msgstr ""
+msgstr "새로운 MIME 형식에 대한 정보를 제공하는 프로그램들은 여기에 <emphasis>하나의</emphasis> 새로운 XML 파일을 설치해야 합니다. 프로그램이 설치된  위치에 따라 <envar>$XDG_DATA_HOME:$XDG_DATA_DIRS</envar> 내의 한 디렉토리에 <filename>/mime/package</filename>라는 이름의 하위 디렉토리를 만들 것입니다. 예를 들어 프로그램이 <filename>/usr/bin</filename> 디렉토리에 설치되었다면, 새로운 소스 XML 파일을 <filename>/usr/share/mime/packages</filename> 디렉토리에 설치할 것입니다. <filename>packages</filename> 디렉토리 내의 XML 파일들에 대한 자세한 정보는, <xref linkend=\"mimetypes-source-xml\"/> 부분을 살펴보기 바랍니다."
 
 #: C/system-admin-guide.xml:244(replaceable)
 msgid "MEDIA"
-msgstr ""
+msgstr "미디어"
 
 #: C/system-admin-guide.xml:244(replaceable)
 msgid "SUBTYPE"
-msgstr ""
+msgstr "하위 형식"
 
 #: C/system-admin-guide.xml:244(filename)
 msgid "&lt;MIME&gt;/<placeholder-1/>/<placeholder-2/>.xml"
-msgstr ""
+msgstr "&lt;MIME&gt;/<placeholder-1/>/<placeholder-2/>.xml"
 
 #: C/system-admin-guide.xml:247(para)
 msgid "These directories and files are automatically generated from the collection of source XML files in the <filename>&lt;MIME&gt;/packages/</filename> subdirectory by the <application>update-mime-database</application> application. For example, for each <literal>mime-type</literal> element in the <filename>/usr/share/mime/packages/freedesktop.org.xml</filename> file, a directory is created at <filename>/usr/share/mime/</filename> with the <emphasis>media type</emphasis> of the MIME type. An XML file is created in that directory with the <emphasis>subtype identifier</emphasis> of that MIME type as well. The contents of the created XML file include comments (and translations for them), subclasses designations and aliases."
-msgstr ""
+msgstr "이 디렉토리와 파일들은 <application>update-mime-database</application> 프로그램에 의해 <filename>&lt;MIME&gt;/packages/</filename> 하위 디렉토리 내의 소스 XML 파일들의 집합으로부터 자동으로 생성됩니다. 예를 들어 <filename>/usr/share/mime/packages/freedesktop.org.xml</filename> 파일 내의 각 <literal>mime-type</literal> 엘리먼트들은, <filename>/usr/share/mime/</filename> 디렉토리 내에 MIME 형식의 <emphasis>미디어 형식</emphasis>에 대한 디렉토리가 만들어져 있습니다. XML 파일은 MIME 형식의 <emphasis>하위 형식 이름</emphasis>의 디렉토리 내에도 생성됩니다. 이 XML 파일은 해당 형식에 대한 설명 (그에 대한 번역도 포함), 하위 클래스 지정(designation), 별칭 등을 포함합니다."
 
 #: C/system-admin-guide.xml:262(title)
 msgid "Example: <filename>/usr/share/mime/text/plain.xml</filename> file"
-msgstr ""
+msgstr "예: <filename>/usr/share/mime/text/plain.xml</filename> 파일"
 
 #: C/system-admin-guide.xml:265(programlisting)
 #, no-wrap
@@ -3313,86 +3314,97 @@ msgid ""
 "  &lt;!-- possibly more translations --&gt;\n"
 "&lt;/mime-type&gt;\n"
 msgstr ""
+"&lt;?xml version='1.0' encoding='utf-8'?&gt;\n"
+"&lt;mime-type xmlns=\"http://www.freedesktop.org/standards/shared-mime-info\" type=\"text/plain\"&gt;\n"
+"&lt;!--Created automatically by update-mime-database. DO NOT EDIT!--&gt;\n"
+"  &lt;comment&gt;plain text document&lt;/comment&gt;\n"
+"  &lt;!-- possibly more translations --&gt;\n"
+"  &lt;comment xml:lang=\"es\"&gt;documento de texto sencillo&lt;/comment&gt;\n"
+"  &lt;comment xml:lang=\"eu\"&gt;testu soileko dokumentua&lt;/comment&gt;\n"
+"  &lt;comment xml:lang=\"fi\"&gt;perustekstiasiakirja&lt;/comment&gt;\n"
+"  &lt;comment xml:lang=\"fr\"&gt;document plein texte&lt;/comment&gt;\n"
+"  &lt;!-- possibly more translations --&gt;\n"
+"&lt;/mime-type&gt;\n"
 
 #: C/system-admin-guide.xml:265(para)
 msgid "<placeholder-1/>This file is generated by the <application>update-mime-database</application> application, using the default source XML file <filename>freedesktop.org.xml</filename>."
-msgstr ""
+msgstr "<placeholder-1/> 이 파일은 기본 소스 XML 파일인 <filename>freedesktop.org.xml</filename>을 이용하여 <application>update-mime-database</application> 프로그램을 통해 생성되었습니다."
 
 #: C/system-admin-guide.xml:285(filename)
 msgid "&lt;MIME&gt;/globs"
-msgstr ""
+msgstr "&lt;MIME&gt;/globs"
 
 #: C/system-admin-guide.xml:288(para)
 msgid "Contains one line with a MIME type and a glob pattern, separated by a colon. Files which match the glob pattern are resolved to the MIME type specified before the colon. There are special rules about how filenames are matched by the glob pattern; for more details see the <citetitle>XDG shared mime specification</citetitle>."
-msgstr ""
+msgstr "이 파일은 콜론(:) 기호로 구분된 MIME 형식과 glob 패턴으로 이루어진 한 줄로 구성됩니다. glob 패턴과 일치하는 파일들은 해당 패턴의 앞에 지정된 MIME 형식으로 인식됩니다. 파일 이름을 glob 패턴과 일치시키는 방법에 대한 특별한 규칙들이 존재합니다. 자세한 내용은 <citetitle>XDG 공통 MIME 명세서</citetitle>를 참조하기 바랍니다."
 
 #: C/system-admin-guide.xml:295(para)
 msgid "This file is also generated by the <application>update-mime-database</application> application, using the default source XML file <filename>freedesktop.org.xml</filename>."
-msgstr ""
+msgstr "이 파일은 기본 소스 XML 파일인 <filename>freedesktop.org.xml</filename>을 이용하여 <application>update-mime-database</application> 프로그램을 통해 생성되었습니다."
 
 #: C/system-admin-guide.xml:303(filename)
 msgid "&lt;MIME&gt;/magic"
-msgstr ""
+msgstr "&lt;MIME&gt;/magic"
 
 #: C/system-admin-guide.xml:306(para)
 msgid "A binary file which contains information on how to resolve MIME types by <quote>sniffing</quote> the content of the file. This is generally a set of one or more rules such as <quote>check for the string <literal>%PDF- </literal>at byte offset 0 in the file; if found, assign it the MIME type <literal>application/pdf</literal></quote>."
-msgstr ""
+msgstr "파일의 내용을 <quote>스니핑(sniffing)</quote>하여 MIME 형식을 인식하는 방법에 대한 정보를 포함하는 바이너리 파일입니다.  이것은 다음과 같은 규칙들을 하나 이상 포함하는 파일입니다: <quote>파일의 0번 오프셋 위치에서 <literal>%PDF- </literal> 문자열을 검사하여, 만약 일치하면 MIME 형식을 <literal>application/pdf</literal>로 지정합니다</quote>."
 
 #: C/system-admin-guide.xml:313(para)
 #: C/system-admin-guide.xml:329(para)
 #: C/system-admin-guide.xml:345(para)
 #: C/system-admin-guide.xml:371(para)
 msgid "This file is also generated by the <application>update-mime-database</application> application."
-msgstr ""
+msgstr "이 파일은 <application>update-mime-database</application> 프로그램을 통해 생성되었습니다."
 
 #: C/system-admin-guide.xml:320(filename)
 msgid "&lt;MIME&gt;/XMLnamespaces"
-msgstr ""
+msgstr "&lt;MIME&gt;/XMLnamespaces"
 
 #: C/system-admin-guide.xml:323(para)
 msgid "Contains a mapping of XML namespaces to MIME types. Each line contains three fields, the namespace, the localName and the MIME type. Each field is separated by a space. If the localName is empty, then there are two spaces between the namespace and the MIME type."
-msgstr ""
+msgstr "이 파일은 XML 이름 공간과 MIME 형식 간의 매핑을 포함합니다. 각 줄은 이름 공간, 로컬 이름, MIME 형식의 세 필드로 이루어져 있으며, 각 필드는 공백 문자로 구분됩니다. 만약 로컬 이름이 비어있다면, 이름 공간과 MIME 형식 사이에 두 개의 공백 문자가 있어야 합니다."
 
 #: C/system-admin-guide.xml:336(filename)
 msgid "&lt;MIME&gt;/aliases"
-msgstr ""
+msgstr "&lt;MIME&gt;/aliases"
 
 #: C/system-admin-guide.xml:339(para)
 msgid "Contains a list of aliases for each MIME type. An alias is simply a MIME type that is sometimes known as another type. For each line in this file there are two fields: the first field is the alias name, and the second field is the MIME type. The fields are separated by a space."
-msgstr ""
+msgstr "이 파일은 각 MIME 형식들에 대한 별칭(alias)의 목록을 포함합니다. 별칭은 단순히 다른 형식으로 알려진 MIME 형식입니다. 이 파일의 각 줄은 두 개의 필드로 이루어지며, 첫번째 필드는 별칭의 이름이며 두번째 필드는 MIME 형식을 가리킵니다. 각 필드는 공백 문자로 구분됩니다."
 
 #: C/system-admin-guide.xml:352(filename)
 msgid "&lt;MIME&gt;/subclasses"
-msgstr ""
+msgstr "&lt;MIME&gt;/subclasses"
 
 #: C/system-admin-guide.xml:358(para)
 msgid "A type is a subclass of another type if any instance of the first type is also an instance of the second. For example, all image/svg files are also text/xml, text/plain and application/octet-stream files. Subclassing is about the format, rather than the catagory of the data (for example, there is no 'generic spreadsheet' class that all spreadsheets inherit from)."
-msgstr ""
+msgstr "만약 한 형식이 다른 형식의 인스턴스이기도 하다면, 이 형식은 다른 형식의 하위 클래스(subclass)입니다. 예를 들어 모든 image/svg 파일은 text/xml 파일이기도 하며 application/octet-stream 파일이기도 합니다. 하위 클래스는 데이터의 분류에 따른 것이라기 보다는 파일의 형식에 대한 것입니다 (예를 들어, 모든 스프레드시트 형식의 부모가 되는 '일반적인 스프레드시트' 클래스는 존재하지 않습니다.)"
 
 #: C/system-admin-guide.xml:355(para)
 msgid "Contains a list of subclassed MIME types and their <quote>parent</quote> MIME type. From the <citetitle>XDG shared mime specification:</citetitle><placeholder-1/>The format of this file is similar to the <filename>aliases</filename> file. Each line contains two fields, where the first field is the subclassed MIME type and the second field is the parent MIME type. Each field is separated by a space."
-msgstr ""
+msgstr "이 파일은 자신의 <quote>부모(parent)</quote> MIME 형식과 그 하위 클래스 MIME 형식에 대한 목록을 포함합니다. <citetitle>XDG 공통 MIME 명세서</citetitle>에 따르면:<placeholder-1/> 이 파일의 형식은 <filename>aliases</filename> 파일과 비슷합니다. 각 줄은 공백 문자로 구분된 두 필드로 구성되며, 첫번째 필드는 하위 클래스 MIME 형식을, 두번째 필드는 부모 MIME 형식을 나타냅니다."
 
 #: C/system-admin-guide.xml:380(title)
 msgid "Refreshing the MIME Database"
-msgstr ""
+msgstr "MIME  데이터베이스 형식 갱신하기"
 
 #: C/system-admin-guide.xml:382(para)
 msgid "Understanding how to refresh the MIME database is important for administrators who wish to add new MIME types to the system, or otherwise modify information about a MIME type. The application <application>update-mime-database</application> is intended for this purpose."
-msgstr ""
+msgstr "MIME 데이터베이스를 갱신하는 방법을 이해하는 것은 새로운 MIME 형식을 시스템에 추가하거나, MIME 형식에 대한 정보를 수정해야 하는 관리자들에게는 중요합니다. <application>update-mime-database</application>는 이를 위한 프로그램입니다."
 
 #: C/system-admin-guide.xml:388(para)
 msgid "For example, if an application installs information about a new MIME type to <filename>/usr/share/mime/packages/diff.xml</filename>, then <application>update-mime-database</application> must be called with the parameter <filename>/usr/share/mime</filename>."
-msgstr ""
+msgstr "예를 들어 어떤 프로그램이 새로운 MIME 형식에 대한 정보를 <filename>/usr/share/mime/packages/diff.xml</filename>에 설치했다면, <filename>/usr/share/mime</filename>을 인자로 주어 <application>update-mime-database</application> 프로그램을 호출해야 합니다."
 
 #: C/system-admin-guide.xml:393(prompt)
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: C/system-admin-guide.xml:393(userinput)
 #, no-wrap
 msgid "update-mime-database /usr/share/mime"
-msgstr ""
+msgstr "update-mime-database /usr/share/mime"
 
 #: C/system-admin-guide.xml:394(computeroutput)
 #, no-wrap
@@ -3401,211 +3413,214 @@ msgid ""
 "* Updating MIME database in /usr/share/mime...\n"
 "***\n"
 msgstr ""
+"***\n"
+"* Updating MIME database in /usr/share/mime...\n"
+"***\n"
 
 #: C/system-admin-guide.xml:399(para)
 msgid "The MIME database is refreshed by scanning all the source XML files in the directory <filename>&lt;MIME&gt;/packages</filename>."
-msgstr ""
+msgstr "MIME 데이터베이스는 <filename>&lt;MIME&gt;/packages</filename> 디렉토리 내의 모든 소스 XML 파일들을 검색하여 갱신합니다."
 
 #: C/system-admin-guide.xml:406(title)
 msgid "The source XML files"
-msgstr ""
+msgstr "소스 XML 파일"
 
 #: C/system-admin-guide.xml:414(secondary)
 msgid "source XML files"
-msgstr ""
+msgstr "소스 XML 파일"
 
 #: C/system-admin-guide.xml:417(para)
 msgid "Located in the <filename>&lt;MIME&gt;/packages</filename> directory, these XML files provide all the information regarding MIME types that is installed into the database by the <application>update-mime-database</application> application. There are a few rules about the XML file itself:"
-msgstr ""
+msgstr "<filename>&lt;MIME&gt;/packages</filename> 디렉토리에 위치한 이러한 XML 파일들은 <application>update-mime-database</application> 프로그램을 통해 설치된 MIME 형식들에 대한 모든 정보를 제공합니다. XML 파일 자체에 대한 다음과 같은 몇 가지 규칙이 존재합니다:"
 
 #: C/system-admin-guide.xml:425(para)
 msgid "It must specify the namespace as <quote><literal>http://www.freedesktop.org/standards/shared-mime-info</literal></quote>"
-msgstr ""
+msgstr "이름 공간을 <quote><literal>http://www.freedesktop.org/standards/shared-mime-info</literal></quote>로 지정해야 합니다"
 
 #: C/system-admin-guide.xml:430(para)
 msgid "The root element must be <literal>mime-info</literal>"
-msgstr ""
+msgstr "최상위(root) 엘리먼트의 이름은 <literal>mime-info</literal>가 되어야 합니다"
 
 #: C/system-admin-guide.xml:434(para)
 msgid "Zero or more <literal>mime-type</literal> elements can be specified as children of the <literal>mime-info</literal> element. The <literal>type</literal> attribute is used to specify the MIME type that is being defined."
-msgstr ""
+msgstr "<literal>mime-info</literal> 엘리먼트의 자식으로 여러 (0개 이상의) <literal>mime-type</literal> 엘리먼트들을 지정할 수 있습니다. <literal>type</literal> 속성은 정의된 MIME 형식을 지정하기 위해 사용됩니다."
 
 #: C/system-admin-guide.xml:441(para)
 msgid "By default, the <filename>freedesktop.org.xml</filename> file is installed to the <filename>packages</filename> directory in one of the <filename>&lt;MIME&gt;</filename> paths (usually <filename>/usr/share/mime/packages</filename>)."
-msgstr ""
+msgstr "기본적으로 <filename>freedesktop.org.xml</filename> 파일은 <filename>&lt;MIME&gt;</filename> 경로 (보통은 <filename>/usr/share/mime/packages</filename>) 중의 하나에 있는 <filename>packages</filename> 디렉토리에 설치됩니다."
 
 #: C/system-admin-guide.xml:446(para)
 msgid "<xref linkend=\"mimetypes-mimeinfo-elements\"/> gives a brief description for each of the elements that can occur as children to the <literal>mime-type</literal> element."
-msgstr ""
+msgstr "<xref linkend=\"mimetypes-mimeinfo-elements\"/>은 <literal>mime-type</literal> 엘리먼트의 자식으로 올 수 있는 각 엘리먼트에 대한 간단한 설명을 제공합니다."
 
 #: C/system-admin-guide.xml:451(title)
 msgid "Child elements of <literal>&lt;mime-info&gt;</literal>"
-msgstr ""
+msgstr "<literal>&lt;mime-info&gt;</literal>의 자식 엘리먼트"
 
 #: C/system-admin-guide.xml:460(entry)
 msgid "Element (and attributes)"
-msgstr ""
+msgstr "엘리먼트 (및 속성)"
 
 #: C/system-admin-guide.xml:469(replaceable)
 msgid "*.xyz"
-msgstr ""
+msgstr "*.xyz"
 
 #: C/system-admin-guide.xml:468(literal)
 msgid "&lt;glob pattern=\"<placeholder-1/>\"&gt;"
-msgstr ""
+msgstr "&lt;glob pattern=\"<placeholder-1/>\"&gt;"
 
 #: C/system-admin-guide.xml:473(literal)
 #: C/system-admin-guide.xml:504(literal)
 #: C/system-admin-guide.xml:515(literal)
 msgid "mime-type"
-msgstr ""
+msgstr "mime-type"
 
 #: C/system-admin-guide.xml:474(literal)
 msgid "pattern"
-msgstr ""
+msgstr "pattern"
 
 #: C/system-admin-guide.xml:471(entry)
 msgid "This element specifies a glob pattern against filenames. If the filename matches, then it is assigned the MIME type of the parent <placeholder-1/> element. The <placeholder-2/> attribute is mandatory."
-msgstr ""
+msgstr "이 엘리먼트는 파일 이름에 glob 패턴을 지정합니다. 만약 파일 이름이 일치하면 부모 <placeholder-1/> 엘리먼트의 MIME 형식으로 지정됩니다. <placeholder-2/> 속성은 필수적인 속성입니다."
 
 #: C/system-admin-guide.xml:479(replaceable)
 msgid "50"
-msgstr ""
+msgstr "50"
 
 #: C/system-admin-guide.xml:478(literal)
 msgid "&lt;magic priority=\"<placeholder-1/>\"&gt;"
-msgstr ""
+msgstr "&lt;magic priority=\"<placeholder-1/>\"&gt;"
 
 #: C/system-admin-guide.xml:481(literal)
 #: C/system-admin-guide.xml:485(literal)
 msgid "match"
-msgstr ""
+msgstr "일치된"
 
 #: C/system-admin-guide.xml:482(literal)
 msgid "priority"
-msgstr ""
+msgstr "priority"
 
 #: C/system-admin-guide.xml:487(literal)
 #: C/system-admin-guide.xml:516(literal)
 msgid "type"
-msgstr ""
+msgstr "type"
 
 #: C/system-admin-guide.xml:489(literal)
 msgid "offset"
-msgstr ""
+msgstr "offset"
 
 #: C/system-admin-guide.xml:493(literal)
 msgid "mask"
-msgstr ""
+msgstr "mask"
 
 #: C/system-admin-guide.xml:495(ulink)
 msgid "XDG shared mime info specification"
-msgstr ""
+msgstr "XDG 공통 MIME 정보 명세서"
 
 #: C/system-admin-guide.xml:481(entry)
 msgid "This element contains a list of <placeholder-1/> elements as its children. The <placeholder-2/> attribute is optional, and specifies a priority between 0 and 100, with 100 being the highest matching priority. Each child <placeholder-3/> element has three required attributes: <placeholder-4/> and a fourth optional attribute, <placeholder-5/>. For details on these attributes, see the <placeholder-6/>."
-msgstr ""
+msgstr "이 엘리먼트는 <placeholder-1/> 엘리먼트를 자식으로 포함합니다. <placeholder-2/> 속성은 생략할 수 있으며, 0부터 100사이의 우선순위를 지정합니다 (가장 우선 순위가 높은 것은 100입니다) 각각의 자식 <placeholder-3/> 엘리먼트는 세 가지 필수 속성인 <placeholder-4/>와 네번째 (생략할 수 있는) 속성인 <placeholder-5/>를 가집니다. 이 속성들에 대한 자세한 정보는 <placeholder-6/>를 참조하기 바랍니다."
 
 #: C/system-admin-guide.xml:501(replaceable)
 #: C/system-admin-guide.xml:512(replaceable)
 msgid "media"
-msgstr ""
+msgstr "미디어"
 
 #: C/system-admin-guide.xml:501(replaceable)
 #: C/system-admin-guide.xml:512(replaceable)
 msgid "subtype"
-msgstr ""
+msgstr "하위 형식"
 
 #: C/system-admin-guide.xml:500(literal)
 msgid "&lt;alias type=\"<placeholder-1/>/<placeholder-2/>\"&gt;"
-msgstr ""
+msgstr "&lt;alias type=\"<placeholder-1/>/<placeholder-2/>\"&gt;"
 
 #: C/system-admin-guide.xml:506(literal)
 msgid "application/x-pdf"
-msgstr ""
+msgstr "application/x-pdf"
 
 #: C/system-admin-guide.xml:507(literal)
 msgid "application/pdf"
-msgstr ""
+msgstr "application/pdf"
 
 #: C/system-admin-guide.xml:503(entry)
 msgid "This element defines an alias for the parent <placeholder-1/> element. An alias is simply a MIME type that is sometimes known as another type. For example, <placeholder-2/> is an alias for the MIME type <placeholder-3/>."
-msgstr ""
+msgstr "이 엘리먼트는 부모 <placeholder-1/> 엘리먼트에 대한 별칭을 정의합니다. 별칭은 단순히 다른 형식으로 알려진 MIME 형식입니다. 예를 들어 <placeholder-2/>는 <placeholder-3/> MIME 형식의 별칭입니다."
 
 #: C/system-admin-guide.xml:511(literal)
 msgid "&lt;sub-class-of type=\"<placeholder-1/>/<placeholder-2/>\"&gt;"
-msgstr ""
+msgstr "&lt;sub-class-of type=\"<placeholder-1/>/<placeholder-2/>\"&gt;"
 
 #: C/system-admin-guide.xml:517(literal)
 msgid "image/svg"
-msgstr ""
+msgstr "image/svg"
 
 #: C/system-admin-guide.xml:518(literal)
 msgid "text/xml"
-msgstr ""
+msgstr "text/xml"
 
 #: C/system-admin-guide.xml:518(literal)
 msgid "text/plain"
-msgstr ""
+msgstr "text/plain"
 
 #: C/system-admin-guide.xml:519(literal)
 msgid "application/octet-stream"
-msgstr ""
+msgstr "application/octet-stream"
 
 #: C/system-admin-guide.xml:514(entry)
 msgid "This element defines the parent <placeholder-1/> element as a subclass of the MIME type specified in the <placeholder-2/> attribute. For example, <placeholder-3/> is a sub class of the MIME type <placeholder-4/>, <placeholder-5/>, and <placeholder-6/>."
-msgstr ""
+msgstr "이 엘리먼트는 부모 <placeholder-1/> 엘리먼트를 <placeholder-2/> 속성 내에 지정된 MIME 형식의 하위 클래스로 정의합니다. 예를 들어, <placeholder-3/>는 <placeholder-4/>, <placeholder-5/>,  <placeholder-6/> MIME 형식의 하위 클래스입니다."
 
 #: C/system-admin-guide.xml:524(replaceable)
 msgid "locale"
-msgstr ""
+msgstr "locale"
 
 #: C/system-admin-guide.xml:523(literal)
 msgid "&lt;comment xml:lang=\"<placeholder-1/>\"&gt;"
-msgstr ""
+msgstr "&lt;comment xml:lang=\"<placeholder-1/>\"&gt;"
 
 #: C/system-admin-guide.xml:529(literal)
 msgid "xml:lang"
-msgstr ""
+msgstr "xml:lang"
 
 #: C/system-admin-guide.xml:526(entry)
 msgid "This element provides a human readable description for the MIME type. There can be zero or more occurrences of this element as long as each one contains a unique value for the <placeholder-1/> attribute."
-msgstr ""
+msgstr "이 엘리먼트는 MIME 형식에 대한 사람이 읽기 편한 설명을 제공합니다.  이 엘리먼트는 여러 (0개 이상) 올 수 있으며 각각은 <placeholder-1/> 속성에 대해 고유한 값을 가집니다."
 
 #: C/system-admin-guide.xml:534(replaceable)
 msgid "namespace"
-msgstr ""
+msgstr "이름 공간"
 
 #: C/system-admin-guide.xml:533(literal)
 msgid "&lt;root-XML namespaceURI=\"<placeholder-1/>\" localName=\"\"&gt;"
-msgstr ""
+msgstr "&lt;root-XML namespaceURI=\"<placeholder-1/>\" localName=\"\"&gt;"
 
 #: C/system-admin-guide.xml:539(literal)
 #: C/system-admin-guide.xml:541(literal)
 msgid "namespaceURI"
-msgstr ""
+msgstr "namespaceURI"
 
 #: C/system-admin-guide.xml:539(literal)
 #: C/system-admin-guide.xml:542(literal)
 #: C/system-admin-guide.xml:543(literal)
 msgid "localName"
-msgstr ""
+msgstr "localName"
 
 #: C/system-admin-guide.xml:537(entry)
 msgid "If a file is determined to an XML file, then this element helps to further classify it through the use of the <placeholder-1/> and <placeholder-2/> attributes, both of which are required. The attribute <placeholder-3/> is the namespace of the document, and <placeholder-4/> is the name of the root element for the document. If <placeholder-5/> is present but its value is empty, then the root element may have any name, but the namespace must still match."
-msgstr ""
+msgstr "만약 파일이 XML 파일로 인식되면 이 엘리먼트의 <placeholder-1/> 속성과 <placeholder-2/> 속성을 이용하여 (둘 다 필수 속성입니다) 보다 세세한 분류를 할 수 있도록 도와줍니다. <placeholder-3/> 속성은 문서의 이름 공간을 지칭하며, <placeholder-4/> 속성은 문서의 최상위 엘리먼트의 이름을 지칭합니다. 만약 <placeholder-5/> 속성이 존재하지만 값이 설정되어 있지 않다면, 최상위 엘리먼트의 이름은 아무렇게나 쓸 수 있지만, 이름 공간은 일치해야 합니다."
 
 #: C/system-admin-guide.xml:551(para)
 msgid "The easiest way to understand these files is to take a look at an example. Borrowing from the <citetitle>XDG shared mime specification</citetitle>, <xref linkend=\"mimetypes-source-xml-example\"/> displays the contents of a source XML file called <filename>diff.xml</filename>. This example defines the MIME type <literal>text/x-diff</literal>. There are multiple <literal>comment</literal> elements which give a human readable name to the MIME type in a number of different languages. This MIME type has both rules for matching through glob patterns <emphasis>and</emphasis> through the use of content <quote>sniffing</quote> (better known as <filename>magic</filename> rules). Any file with the extension <literal>.diff</literal> or <filename>.patch</filename> will resolve to this MIME type. Additionally any file whose contents start with the strings specified in the <literal>value</literal> attributes of the <literal>match</literal> element, will resolve to the <literal>text/x-diff</literal> MIME type."
-msgstr ""
+msgstr "이러한 파일들을 이해할 수 있는 가장 쉬운 방법은 예제를 살펴보는 것입니다. <citetitle>XDG 공통 MIME 명세서</citetitle>에 따르면, <xref linkend=\"mimetypes-source-xml-example\"/>는 <filename>diff.xml</filename>이라는 소스 XML 파일의 내용을 보여줍니다. 이 예에서는 <literal>text/x-diff</literal>라는 MIME 형식을 정의합니다. 여기에는 여러 언어로 MIME 형식에 대한 (사람이 보기 편한) 설명을 담고 있는 <literal>comment</literal> 엘리먼트들이 있습니다. 이 MIME 형식은 glob 패턴과 일치하는 이름을 찾는 규칙<emphasis>과</emphasis> 파일의 내용을 살펴보는 <quote>(sniffing)</quote> 규칙 (<filename>매직(magic)</filename> 규칙이라고도 함)을 모두 가지고 있습니다. <literal>.diff</literal> 혹은 <filename>.patch</filename>라는 확장자를 가지는 파일들은 이 MIME 형식으로 인식됩니다. 또는 파일의 내용이 <literal>match</literal> 엘리먼트의 <literal>value</literal> 속성 내의 문자열값으로 시작하는 파일들은 <literal>text/x-diff</literal> MIME 형식으로 인식될 것입니다."
 
 #: C/system-admin-guide.xml:568(para)
 msgid "The order in which glob patterns and magic rules apply is beyond the scope of this document. For details on this, see the <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG shared mime info specification</ulink>."
-msgstr ""
+msgstr "glob 패턴과 매직 규칙이 적용되는 순서에 대한 것은 이 문서의 범위를 벗어납니다. 이에 대한 자세한 사항은 <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG 공통 MIME 정보 명세서</ulink>를 참조하기 바랍니다."
 
 #: C/system-admin-guide.xml:574(title)
 msgid "Example of a source XML file: <filename>diff.xml</filename>"
-msgstr ""
+msgstr "소스 XML 파일 예제: <filename>diff.xml</filename>"
 
 #: C/system-admin-guide.xml:577(programlisting)
 #, no-wrap
@@ -3626,78 +3641,93 @@ msgid ""
 "  &lt;/mime-type&gt;\n"
 "&lt;/mime-info&gt;"
 msgstr ""
+"&lt;?xml version='1.0'?&gt;\n"
+"&lt;mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'&gt;\n"
+"  &lt;mime-type type=\"text/x-diff\"&gt;\n"
+"    &lt;comment&gt;Differences between files&lt;/comment&gt;\n"
+"    &lt;comment xml:lang=\"af\"&gt;verskille tussen lêers&lt;/comment&gt;\n"
+"    &lt;!-- more translated comment elements --&gt;\n"
+"    &lt;magic priority=\"50\"&gt;\n"
+"      &lt;match type=\"string\" offset=\"0\" value=\"diff\\t\"/&gt;\n"
+"      &lt;match type=\"string\" offset=\"0\" value=\"***\\t\"/&gt;\n"
+"      &lt;match type=\"string\" offset=\"0\" value=\"Common subdirectories: \"/&gt;\n"
+"    &lt;/magic&gt;\n"
+"    &lt;glob pattern=\"*.diff\"/&gt;\n"
+"    &lt;glob pattern=\"*.patch\"/&gt;\n"
+"  &lt;/mime-type&gt;\n"
+"&lt;/mime-info&gt;"
 
 #: C/system-admin-guide.xml:596(title)
 msgid "Modifying MIME types"
-msgstr ""
+msgstr "MIME 형식 변경하기"
 
 #: C/system-admin-guide.xml:601(secondary)
 msgid "verifying changes"
-msgstr ""
+msgstr "변화를 확인하기"
 
 #: C/system-admin-guide.xml:607(secondary)
 msgid "modifying"
-msgstr ""
+msgstr "수정하기"
 
 #: C/system-admin-guide.xml:610(para)
 msgid "You should never directly modify the source XML files that are installed to the <filename>&lt;MIME&gt;/packages</filename> directory by applications. Instead, modify the <filename>Overrides.xml</filename> file. This file has precedence over all other source XML files installed into the same <filename>packages</filename> directory. If you are an application author, then this rule does not apply. You should create a new source XML file and place it in the proper <filename>&lt;MIME&gt;/packages</filename> directory (your <filename>Makefile</filename> will take care of this, of course)."
-msgstr ""
+msgstr "프로그램이 <filename>&lt;MIME&gt;/packages</filename> 디렉토리에 설치한 소스 XML 파일들을 절대로 직접 수정해서는 안됩니다. 대신 <filename>Overrides.xml</filename> 파일을 수정하십시오. 이 파일은 동일한 <filename>packages</filename> 디렉토리에 설치된 다른 모든 소스 XML 파일보다 높은 우선순위를 가집니다. 만약 여러분이 프로그램 개발자라면 이 규칙이 적용되지 않습니다. 이 때는 적절한 <filename>&lt;MIME&gt;/packages</filename> 디렉토리에 새로운 소스 XML 파일을 만들어야 합니다. (물론 <filename>Makefile</filename>에서 이를 처리하도록 할 것입니다.)"
 
 #: C/system-admin-guide.xml:620(para)
 msgid "You can modify the MIME database for all users on the system or for a particular user depending on the location of the file you change. To modify the database for all users, make changes to the file <filename>Overrides.xml</filename> in the <filename>$XDG_DATA_DIRS/mime/packages</filename> directory. To modify the database for a single user, make changes to the file <filename>Overrides.xml</filename> in the <filename>$XDG_DATA_HOME/mime/packages</filename> directory."
-msgstr ""
+msgstr "여러분은 시스템 상의 모든 사용자를 위한 MIME 데이터베이스나, 변경하는 위치에 해당하는 특정 사용자를 위한 MIME 데이터베이스를 수정할 수 있습니다. 모든 사용자에 대한 데이터베이스를 수정하려면 <filename>$XDG_DATA_DIRS/mime/packages</filename> 디렉토리 내의 <filename>Overrides.xml</filename> 파일을 변경하면 됩니다. 특정 사용자를 위한 데이터베이스를 수정하려면 <filename>$XDG_DATA_HOME/mime/packages</filename> 디렉토리 내의 <filename>Overrides.xml</filename> 파일을 변경하면 됩니다."
 
 #: C/system-admin-guide.xml:630(para)
 msgid "After changes are made, you must always run the <application>update-mime-database</application> application, with the directory location of the MIME database as the first parameter."
-msgstr ""
+msgstr "수정을 하고나면 항상 MIME 데이터베이스의 디렉토리 위치를 첫번째 인자로 주어 <application>update-mime-database</application> 프로그램을 실행해야 합니다."
 
 #: C/system-admin-guide.xml:635(title)
 msgid "Adding or Modifying MIME types"
-msgstr ""
+msgstr "MIME 형식 추가 또는 수정하기"
 
 #: C/system-admin-guide.xml:637(para)
 msgid "To add one or more MIME types for all users:"
-msgstr ""
+msgstr "모든 사용자에 대한 하나 이상의 MIME 형식을 추가하려면 다음과 같이 하십시오:"
 
 #: C/system-admin-guide.xml:641(para)
 msgid "Create or modify an existing <filename>Overrides.xml</filename> source XML file, containing the definitions for the MIME types. For more information, see <xref linkend=\"mimetypes-source-xml\"/>."
-msgstr ""
+msgstr "MIME 형식의 정의를 포함하고 있는 기존의 <filename>Overrides.xml</filename> 소스 XML 파일을 수정하거나 새로 만듭니다. 자세한 정보는 <xref linkend=\"mimetypes-source-xml\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:648(para)
 msgid "Place the <filename>Overrides.xml</filename> file in the <filename>/usr/share/mime/packages</filename> directory."
-msgstr ""
+msgstr "<filename>/usr/share/mime/packages</filename> 디렉토리에 <filename>Overrides.xml</filename> 파일을 가져다 놓습니다."
 
 #: C/system-admin-guide.xml:653(para)
 msgid "Update the MIME database by running <application>update-mime-database</application> using the system account.<screen><userinput>update-mime-database /usr/share/mime</userinput></screen>"
-msgstr ""
+msgstr "시스템 계정으로 <application>update-mime-database</application> 프로그램을 실행하여 MIME 데이터베이스를 갱신합니다. <screen><userinput>update-mime-database /usr/share/mime</userinput></screen>"
 
 #: C/system-admin-guide.xml:659(para)
 msgid "To add one or more MIME types for a single user, follow the same steps, except place your <filename>Overrides.xml</filename> file in the <filename>~/.local/share/mime/packages</filename> directory. Additionally, call <application>update-mime-database</application> with <filename>~/.local/share/mime/packages</filename> as the first parameter."
-msgstr ""
+msgstr "특정한 사용자에 대한 하나 이상의 MIME 형식을 추가하는 것은 위와 동일한 과정을 거치지만 <filename>~/.local/share/mime/packages</filename> 디렉토리 내의 <filename>Overrides.xml</filename> 파일을 이용한다는 것이 다릅니다. 그리고 <application>update-mime-database</application> 프로그램을 실행할 때는 첫번째 인자로 <filename>~/.local/share/mime/packages</filename>를 주어야 합니다."
 
 #: C/system-admin-guide.xml:668(title)
 msgid "Verifying Changes"
-msgstr ""
+msgstr "변경 내용을 확인하기"
 
 #: C/system-admin-guide.xml:671(para)
 msgid "After you have made a change to the MIME database and refreshed its contents, you can verify that the change has taken effect using the <application>gnomevfs-info</application> application. This application prints the MIME type and other useful information about a file."
-msgstr ""
+msgstr "MIME 데이터베이스를 변경하고 그 내용을 갱신하고나면 <application>gnomevfs-info</application> 프로그램을 이용하여 변경된 내용이 적용되었는지 확인할 수 있습니다. 이 프로그램은 특정 파일에 대한 MIME 형식 및 다른 유용한 정보들을 출력해 줍니다."
 
 #: C/system-admin-guide.xml:676(para)
 msgid "Running <application>gnomevfs-info</application> on a SVG file gives you the output shown below. You'll notice the default application for this MIME type is <filename>eog.desktop</filename>; We will discuss default applications in <xref linkend=\"mimetypes-registering\"/>."
-msgstr ""
+msgstr "SVG 파일에 대해 <application>gnomevfs-info</application> 프로그램을 실행하면 아래와 같은 출력을 볼 수 있습니다. 이 MIME 형식에 대한 기본 프로그램은 <filename>eog.desktop</filename>(이)라는 것을 알 수 있을 것입니다. 기본 프로그램에 대한 내용은 <xref linkend=\"mimetypes-registering\"/> 부분에서 논의할 것입니다."
 
 #: C/system-admin-guide.xml:681(prompt)
 #: C/system-admin-guide.xml:705(prompt)
 #: C/system-admin-guide.xml:755(prompt)
 #: C/system-admin-guide.xml:757(prompt)
 msgid "$"
-msgstr ""
+msgstr "$"
 
 #: C/system-admin-guide.xml:681(userinput)
 #, no-wrap
 msgid "gnomevfs-info mime-diagram.svg"
-msgstr ""
+msgstr "gnomevfs-info mime-diagram.svg"
 
 #: C/system-admin-guide.xml:682(computeroutput)
 #, no-wrap
@@ -3726,56 +3756,79 @@ msgid ""
 "Writable          : YES\n"
 "Executable        : NO"
 msgstr ""
+"Name              : mime-diagram.svg\n"
+"Type              : Regular\n"
+"MIME type         : image/svg+xml\n"
+"Default app       : eog.desktop\n"
+"Size              : 14869\n"
+"Blocks            : 32\n"
+"I/O block size    : 4096\n"
+"Local             : YES\n"
+"SUID              : NO\n"
+"SGID              : NO\n"
+"Sticky            : NO\n"
+"Permissions       : 600644\n"
+"Link count        : 1\n"
+"UID               : 1000\n"
+"GID               : 100\n"
+"Access time       : Wed Feb 22 18:24:47 2006\n"
+"Modification time : Wed Feb 22 18:24:42 2006\n"
+"Change time       : Wed Feb 22 18:24:42 2006\n"
+"Device #          : 775\n"
+"Inode #           : 297252\n"
+"Readable          : YES\n"
+"Writable          : YES\n"
+"Executable        : NO"
 
 #: C/system-admin-guide.xml:708(para)
 msgid "<xref linkend=\"mimetypes-newtype-example\"/> walks through the steps of creating a new MIME type and then verifying the changes using <application>gnomevfs-info</application>."
-msgstr ""
+msgstr "<xref linkend=\"mimetypes-newtype-example\"/>에서는 새로운 MIME 형식을 만들고 <application>gnomevfs-info</application> 프로그램을 이용하여 이를 확인하는 과정을 수행해 볼 것입니다."
 
 #: C/system-admin-guide.xml:714(title)
 msgid "<literal>application/x-newtype</literal> Example"
-msgstr ""
+msgstr "<literal>application/x-newtype</literal> 예제"
 
 #: C/system-admin-guide.xml:716(para)
 msgid "To create (or override) a MIME type and verify the changes:"
-msgstr ""
+msgstr "MIME 형식을 새로 만들고 (혹은 수정하고) 이를 확인하려면 다음과 같이 하십시오:"
 
 #: C/system-admin-guide.xml:720(para)
 msgid "Make a new, empty file in your home directory called <filename>testing.xyz</filename>."
-msgstr ""
+msgstr "홈 디렉토리에 <filename>testing.xyz</filename>라는 아무 내용없는 새 파일을 만듭니다."
 
 #: C/system-admin-guide.xml:729(para)
 msgid "When no glob patterns or magic rules match a file, then it is resolved to the MIME type <literal>text/plain</literal> if it contains textual data or <literal>application/octet-stream</literal> for binary data. If the file is empty, then it defaults to <literal>text/plain</literal>."
-msgstr ""
+msgstr "어떤 파일이 아무 glob 패턴과도 일치하지 않고 매직 규칙에도 해당하지 않을 때는, 이 파일이 텍스트 데이터를 포함한다면 <literal>text/plain</literal>으로, 바이너리 데이터를 포함한다면 <literal>application/octet-stream</literal>으로 MIME 형식이 정해집니다. 만약 파일이 비어있다면 기본값으로 <literal>text/plain</literal> 형식이 지정됩니다."
 
 #: C/system-admin-guide.xml:725(para)
 msgid "Use <application>gnomevfs-info</application> on the file to find out the MIME type.The MIME type for this file should be detected as <literal>text/plain</literal> because there are not any glob patterns or magic rules that match it<placeholder-1/>."
-msgstr ""
+msgstr "<application>gnomevfs-info</application> 프로그램을 이용하여 이 파일의 MIME 형식을 확인합니다. 이 파일은 어떤 glob 패턴이나 매직 규칙에 해당하지 않으므로 MIME 형식은 <literal>text/plain</literal>으로 인식될 것입니다."
 
 #: C/system-admin-guide.xml:739(para)
 msgid "Create (or modify) the <filename>Overrides.xml</filename> file as described in <xref linkend=\"mimetypes-addmodify\"/> with the contents given in <xref linkend=\"mimetypes-overrides-xml\"/>."
-msgstr ""
+msgstr "<xref linkend=\"mimetypes-addmodify\"/> 부분에서 설명한대로 <filename>Overrides.xml</filename> 파일을 만듭니다. (이미 있다면 수정합니다.) 파일의 내용은 <xref linkend=\"mimetypes-overrides-xml\"/>의 것을 사용합니다."
 
 #: C/system-admin-guide.xml:745(para)
 msgid "Refresh the database using <application>update-mime-database</application>."
-msgstr ""
+msgstr "<application>update-mime-database</application> 프로그램을 이용하여 데이터베이스를 갱신합니다."
 
 #: C/system-admin-guide.xml:750(para)
 msgid "Use <application>gnomevfs-info</application> to verify that your change has taken effect. You should see the MIME type for the <filename>testing.xyz</filename> file resolved as <literal>application/x-newtype</literal>."
-msgstr ""
+msgstr "<application>gnomevfs-info</application> 프로그램을 이용하여 변경 사항이 적용되었는지 확인합니다. <filename>testing.xyz</filename> 파일의 MIME 형식이 <literal>application/x-newtype</literal>으로 인식되는 것을 볼 수 있을 것입니다."
 
 #: C/system-admin-guide.xml:755(userinput)
 #, no-wrap
 msgid "gnomevfs-info testing.xyz | grep MIME\n"
-msgstr ""
+msgstr "gnomevfs-info testing.xyz | grep MIME\n"
 
 #: C/system-admin-guide.xml:756(computeroutput)
 #, no-wrap
 msgid "MIME type         : application/x-newtype\n"
-msgstr ""
+msgstr "MIME 형식         : application/x-newtype\n"
 
 #: C/system-admin-guide.xml:762(title)
 msgid "<filename>Overrides.xml</filename> file"
-msgstr ""
+msgstr "<filename>Overrides.xml</filename> 파일"
 
 #: C/system-admin-guide.xml:764(programlisting)
 #, no-wrap
@@ -3785,39 +3838,43 @@ msgid ""
 "  &lt;mime-type type=\"application/x-newtype\"&gt;&lt;comment&gt;new mime type&lt;/comment&gt;&lt;glob pattern=\"*.xyz\"/&gt;&lt;/mime-type&gt;\n"
 "&lt;/mime-info&gt;"
 msgstr ""
+"&lt;?xml version='1.0' encoding='utf-8'?&gt;\n"
+"&lt;mime-info xmlns=\"http://www.freedesktop.org/standards/shared-mime-info\"&gt;\n"
+"  &lt;mime-type type=\"application/x-newtype\"&gt;&lt;comment&gt;new mime type&lt;/comment&gt;&lt;glob pattern=\"*.xyz\"/&gt;&lt;/mime-type&gt;\n"
+"&lt;/mime-info&gt;"
 
 #: C/system-admin-guide.xml:773(title)
 msgid "Registering Applications for MIME Types"
-msgstr ""
+msgstr "MIME 형식을 위한 등록하기"
 
 #: C/system-admin-guide.xml:780(secondary)
 msgid "registering applications for"
-msgstr ""
+msgstr "프로그램 등록하기"
 
 #: C/system-admin-guide.xml:784(primary)
 #: C/system-admin-guide.xml:856(primary)
 msgid "applications"
-msgstr ""
+msgstr "프로그램"
 
 #: C/system-admin-guide.xml:786(secondary)
 msgid "registry"
-msgstr ""
+msgstr "등록"
 
 #: C/system-admin-guide.xml:789(para)
 msgid "Registering applications to handle MIME types is fairly straightforward. Applications are registered by creating a <literal>MimeType</literal> key in their <filename>.desktop</filename> entry file and listing each MIME type separated by a semicolon. The <literal>MimeType</literal> key should only be used in <filename>.desktop</filename> files whose <literal>Type</literal> key has the value <quote><literal>Application</literal></quote>. For more information on <filename>.desktop</filename> files, see <xref linkend=\"menustructure-desktopentry\"/>."
-msgstr ""
+msgstr "MIME 형식을 처리하기 위해 프로그램을 등록하는 과정은 아주 직관적입니다. 프로그램을 등록하려면  <filename>.desktop</filename> 엔트리 파일에 <literal>MimeType</literal> 키를 만들고 각각의 MIME 형식에 대한 목록을 세미콜론(;)으로 구분하여 써 주면 됩니다. <literal>MimeType</literal> 키는 오직 <filename>.desktop</filename> 파일의 <literal>Type</literal> 키의 값이 <quote><literal>Application</literal></quote>인 경우에만 사용되어야 합니다. <filename>.desktop</filename> 파일에 대한 자세한 정보는 <xref linkend=\"menustructure-desktopentry\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:799(para)
 msgid "After creating or modifying a <filename>.desktop</filename> entry file, you must update the application database using the <application>update-desktop-database</application> application (very similar to <application>update-mime-database</application>, except it does not take a parameter). This will create a <filename>mimeinfo.cache</filename> file in the <filename>applications</filename> subdirectory for each directory in <filename>$XDG_DATA_HOME:$XDG_DATA_DIRS</filename>. The cache file is necessary so that all the <filename>.desktop</filename> files do not need to be scanned for just the <literal>MimeType</literal> key, as this causes unnecessary disk I/O."
-msgstr ""
+msgstr "<filename>.desktop</filename> 엔트리 파일을 만들거나 수정하고 나면, <application>update-desktop-database</application> 프로그램을 이용하여 데이터베이스를 갱신해 주어야 합니다. (이 프로그램은 인자를 받지 않는다는 것만 제외하면 <application>update-mime-database</application> 프로그램과 매우 비슷합니다.) 이 프로그램은 file in the <filename>$XDG_DATA_HOME:$XDG_DATA_DIRS</filename> 내의 각 디렉토리에 있는 <filename>applications</filename> 하위 디렉토리에 <filename>mimeinfo.cache</filename> 파일을 만들 것입니다. cache 파일은 단지 <literal>MimeType</literal> 키를 읽기 위해 <filename>.desktop</filename> 파일 전체를 다시 읽어야 하는 경우를 (이 경우 불필요한 디스크 I/O가 발생될 것입니다) 방지하기 위해 필요합니다."
 
 #: C/system-admin-guide.xml:811(para)
 msgid "Default applications to use for specific MIME types should be specified in a file called <filename>defaults.list</filename>. This file is located in the <filename>applications</filename> subdirectory for each directory in <envar>$XDG_DATA_HOME</envar> and <envar>$XDG_DATA_DIRS</envar>. The format for this file consists of the MIME type, the <literal>=</literal> symbol and the Desktop File ID (which is the filename for the desktop entry file). <xref linkend=\"mimetypes-registering-example\"/> is a short example of a <filename>defaults.list</filename> file in a user's <filename>~/.local/share/applications</filename> directory."
-msgstr ""
+msgstr "특정 MIME 형식을 처리하기 위해 사용되는 기본 프로그램은 <filename>defaults.list</filename> 파일에 지정되어야 합니다. 이 파일은 <envar>$XDG_DATA_HOME</envar>과 <envar>$XDG_DATA_DIRS</envar> 내의 각 디렉토리에 있는 <filename>applications</filename> 하위 디렉토리에 있습니다. 이 파일은 형식은 MIME 형식, <literal>=</literal> 기호, 데스크탑 파일 ID (데스크탑 엔트리 파일의 이름을 말합니다). <xref linkend=\"mimetypes-registering-example\"/>는 사용자의  <filename>~/.local/share/applications</filename> 디렉토리에 있는 <filename>defaults.list</filename> 파일의 간략한 예입니다."
 
 #: C/system-admin-guide.xml:823(title)
 msgid "A User's <filename>defaults.list</filename> file"
-msgstr ""
+msgstr "사용자의 <filename>defaults.list</filename> 파일"
 
 #: C/system-admin-guide.xml:825(programlisting)
 #, no-wrap
@@ -3830,137 +3887,144 @@ msgid ""
 "image/png=eog.desktop\n"
 "text/xml=gedit.desktop\n"
 msgstr ""
+"[Default Applications]\n"
+"application/pdf=evince.desktop\n"
+"text/html=epiphany.desktop\n"
+"text/plain=gedit.desktop\n"
+"image/jpeg=eog.desktop\n"
+"image/png=eog.desktop\n"
+"text/xml=gedit.desktop\n"
 
 #: C/system-admin-guide.xml:836(title)
 msgid "XDG Desktop Entry Specification"
-msgstr ""
+msgstr "XDG 데스크탑 엔트리 명세서"
 
 #: C/system-admin-guide.xml:838(para)
 msgid "How to register MIME types for applications is part of the <ulink url=\"http://www.freedesktop.org/wiki/Standards/desktop-entry-spec\">XDG desktop entry specification</ulink>, rather than the <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG shared mime info specification</ulink>."
-msgstr ""
+msgstr "프로그램에 MIME 형식을 등록하는 것은 <ulink url=\"http://www.freedesktop.org/Standards/shared-mime-info-spec\">XDG 공통 MIME 정보 명세서</ulink>가 아닌 <ulink url=\"http://www.freedesktop.org/wiki/Standards/desktop-entry-spec\">XDG 데스크탑 엔트리 명세서</ulink>일부입니다."
 
 #: C/system-admin-guide.xml:847(title)
 msgid "Adding an Application to the GNOME Desktop"
-msgstr ""
+msgstr "그놈 데스크탑에 프로그램 추가하기"
 
 #: C/system-admin-guide.xml:852(secondary)
 msgid "adding applications"
-msgstr ""
+msgstr "프로그램 추가"
 
 #: C/system-admin-guide.xml:861(para)
 msgid "To add an application to the GNOME Desktop, perform the following steps:"
-msgstr ""
+msgstr "그놈 데스크탑에 프로그램을 추가하려면 다음 과정을 수행하십시오:"
 
 #: C/system-admin-guide.xml:866(para)
 msgid "Add a menu item for the application. For more information on how to add an item to a menu, see <xref linkend=\"menustructure-2\"/>."
-msgstr ""
+msgstr "프로그램에 대한 메뉴 항목을 더합니다. 메뉴에 항목을 추가하는 방법에 대한 정보는 <xref linkend=\"menustructure-2\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:872(para)
 msgid "Add an icon for the application to <filename>/usr/share/icons/<replaceable>theme-name</replaceable>/<replaceable>icon-size</replaceable>/apps</filename>. For more information on icons and themes, see <xref linkend=\"themes-11\"/>."
-msgstr ""
+msgstr "프로그램에 대한 아이콘을 <filename>/usr/share/icons/<replaceable>테마-이름</replaceable>/<replaceable>아이콘-크기</replaceable>/apps</filename>에 추가합니다. 아이콘과 테마에 대한 자세한 정보는 <xref linkend=\"themes-11\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:879(para)
 msgid "If the application uses a new MIME type, add a source XML file to the MIME database. For more information, see <xref linkend=\"mimetypes-modifying\"/>."
-msgstr ""
+msgstr "만약 프로그램이 새로운 MIME 형식을 사용한다면, 소스 XML 파일을 MIME 데이터베이스에 추가합니다. 자세한 정보는 <xref linkend=\"mimetypes-modifying\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:885(para)
 msgid "If the application uses a new MIME type, add an icon for the MIME type to <filename>/usr/share/icons/<replaceable>theme-name</replaceable>/<replaceable>icon-size</replaceable>/mimetypes</filename>. For more information on icons and themes, see <xref linkend=\"themes-0\"/>."
-msgstr ""
+msgstr "만약 프로그램이 새로운 MIME 형식을 사용한다면, MIME 형식에 대한 아이콘을 <filename>/usr/share/icons/<replaceable>테마-이름</replaceable>/<replaceable>아이콘-크기</replaceable>/mimetypes</filename>에 추가합니다. 아이콘과 테마에 대한 자세한 정보는 <xref linkend=\"themes-0\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:893(para)
 msgid "To associate the application with a MIME type, include a <literal>MimeType</literal> key in your <filename>.desktop</filename> file. For more information, see <xref linkend=\"mimetypes-registering\"/>."
-msgstr ""
+msgstr "MIME 형식과 프로그램을 연결하려면 <filename>.desktop</filename> 파일에 <literal>MimeType</literal> 키를 포함시킵니다. 자세한 정보는 <xref linkend=\"mimetypes-registering\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Setting Screensavers"
-msgstr ""
+msgstr "화면 보호기 설정하기"
 
 #: C/system-admin-guide.xml:4(para)
 msgid "This chapter describes how to set preferences for the screensaver. This chapter also provides information on how to modify the displays that are available for the screensaver."
-msgstr ""
+msgstr "이 부분에서는 화면 보호기의 기본 설정을 변경하는 방법을 설명합니다. 또한 화면 보호기에서 사용할 수 있는 화면들을 수정하는 방법에 대해서도 설명합니다."
 
 #: C/system-admin-guide.xml:9(title)
 msgid "Introduction to Screensavers"
-msgstr ""
+msgstr "화면 보호기 소개"
 
 #: C/system-admin-guide.xml:11(primary)
 #: C/system-admin-guide.xml:16(see)
 #: C/system-admin-guide.xml:27(primary)
 #: C/system-admin-guide.xml:40(primary)
 msgid "screensavers"
-msgstr ""
+msgstr "화면 보호기"
 
 #: C/system-admin-guide.xml:15(primary)
 msgid "gnome-screensaver"
-msgstr ""
+msgstr "gnome-screensaver"
 
 #: C/system-admin-guide.xml:18(para)
 msgid "A <firstterm>screensaver</firstterm> is an application that replaces the image on a screen when the screen is not in use. The screensaver application for the GNOME Desktop is <application>gnome-screensaver</application>. The following sections describe how to set preferences for the <application>gnome-screensaver</application> application, and how to change the themes that are available for the screensaver."
-msgstr ""
+msgstr "<firstterm>화면 보호기</firstterm>는 화면을 사용하지 않을 때 화면 상의 이미지를 바꿔주는 프로그램입니다. 그놈 데스크탑의 화면 보호기 프로그램은 <application>gnome-screensaver</application>입니다. 다음의 절에서는 <application>gnome-screensaver</application> 프로그램을 설정하는 방법 및 화면 보호기의 테마를 변경하는 방법을 설명할 것입니다."
 
 #: C/system-admin-guide.xml:25(title)
 msgid "Setting Screensaver Preferences"
-msgstr ""
+msgstr "화면 보호기 기본 설정"
 
 #: C/system-admin-guide.xml:28(secondary)
 msgid "setting preferences"
-msgstr ""
+msgstr "기본 설정 하기"
 
 #: C/system-admin-guide.xml:30(para)
 msgid "All screensaver preferences and settings are stored in <application>GConf</application>."
-msgstr ""
+msgstr "화면 보호기와 관련된 모든 설정은 <application>GConf</application>에 저장됩니다."
 
 #: C/system-admin-guide.xml:31(para)
 msgid "To modify screensaver application preferences, users can use the <application>Screensaver</application> preference tool. For information on screensaver preferences, see <citetitle>GNOME Desktop User's Guide</citetitle>."
-msgstr ""
+msgstr "사용자들이 화면 보호기 프로그램의 기본 설정을 변경하려면 <application>화면 보호기</application> 기본 설정 도구를 이용할 수 있습니다. 화면 보호기 기본 설정에 대한 자세한 정보는 <citetitle>그놈 데스크탑 사용자 가이드</citetitle>를 참조하기 바랍니다."
 
 #: C/system-admin-guide.xml:32(para)
 msgid "Users can also run the command <command>/usr/bin/gnome-screensaver-preferences</command> to open the <guilabel>Screensaver Preferences</guilabel> dialog."
-msgstr ""
+msgstr "사용자들은 <command>/usr/bin/gnome-screensaver-preferences</command> 프로그램을 이용하여 <guilabel>화면 보호기 기본 설정</guilabel> 대화상자를 열 수도 있습니다."
 
 #: C/system-admin-guide.xml:34(para)
 msgid "To set default screensaver settings and policy for all users, modify the screensaver settings in the Default GConf Configuration Source."
-msgstr ""
+msgstr "모든 사용자에게 적용되는 화면 보호기 기본 설정 및 정책을 설정하려면 기본 GConf 설정 소스 내의 화면 보호기 설정을 수정하십시오."
 
 #: C/system-admin-guide.xml:35(para)
 msgid "To set mandatory screensaver settings and policy for all users, modify the screensaver settings in the Mandatory GConf Configuration Source."
-msgstr ""
+msgstr "모든 사용자에게 적용되는 화면 보호기 필수 설정 및 정책을 설정하려면 필수 GConf 설정 소스 내의 화면 보호기 설정을 수정하십시오."
 
 #: C/system-admin-guide.xml:38(title)
 msgid "Modifying Screensaver Themes"
-msgstr ""
+msgstr "화면 보호기 테마 변경하기"
 
 #: C/system-admin-guide.xml:41(secondary)
 msgid "modifying screensaver themes"
-msgstr ""
+msgstr "화면 보호기 테마 변경하기"
 
 #: C/system-admin-guide.xml:43(para)
 msgid "The screensaver application allows users to choose one or more <firstterm>screensaver themes</firstterm>. A screensaver theme is an application that displays images on the screen of the user when the screen is not in use. The available screensaver themes are listed in the <application>Screensaver</application> preference tool."
-msgstr ""
+msgstr "화면 보호기 프로그램은 사용자들이 하나 이상의 <firstterm>화면 보호기 테마</firstterm>를 설정할 수 있도록 해 줍니다. 화면 보호기 테마는 화면을 사용하지 않을 때 화면 상에 이미지를 표시하는 프로그램입니다. 이용할 수 있는 화면 보호기 테마는 <application>화면 보호기</application> 설정 도구에서 볼 수 있습니다."
 
 #: C/system-admin-guide.xml:47(para)
 msgid "To add a new screensaver theme, copy the executable file for the <firstterm>screensaver theme engine</firstterm> to somewhere in your PATH or into the screensaver theme engine executable directory. The screensaver theme engine executable directory for your system can be determined using the following command: <screen><userinput>pkg-config --variable=privlibexecdir gnome-screensaver</userinput></screen> Next, add a <filename>.desktop</filename> file for the theme into the screensaver themes directory. The screensaver themes directory for your system can be determined using the following command: <screen><userinput>pkg-config --variable=themesdir gnome-screensaver</userinput></screen> In the Exec field of the <filename>.desktop</filename> file include any arguments that are required to run the screensaver theme on the whole screen, rather than in a window. For example, some legacy screensaver theme engines may require you to include the <literal>-root</literal> option to display the screensaver display on the whole screen."
-msgstr ""
+msgstr "새 화면 보호기 테마를 추가하려면 <firstterm>화면 보호기 테마 엔진</firstterm>을 위한 실행 파일을 PATH 상에 포함된 경로나 화면 보호기 테마 엔진 실행 파일이 있는 디렉토리에 복사합니다. 시스템 상에 화면 보호기 테마 엔진 실행 파일이 존재하는 디렉토리는 다음과 같은 명령을 통해 확인할 수 있습니다. : <screen><userinput>pkg-config --variable=privlibexecdir gnome-screensaver</userinput></screen> 그리고 <filename>.desktop</filename> 파일은 화면 보호기 테마 디렉토리에 추가합니다. 시스템 상에 화면 보호기 테마 디렉토리의 위치는 다음 명령을 통해 확인할 수 있습니다: <screen><userinput>pkg-config --variable=themesdir gnome-screensaver</userinput></screen> <filename>.desktop</filename> 파일의 Exec 필드에는 화면 보호기를 한 창 내에서가 아닌 화면 전체로 실행할 때 필요한 인자들을 포함합니다. 예를 들어 몇몇 오래된 화면 보호기 테마 엔진들은 화면 보호기를 전체 화면으로 표시하기 위해 <literal>-root</literal> 옵션을 포함해야 할 수 있습니다."
 
 #: C/system-admin-guide.xml:59(para)
 msgid "The <application>Screensaver</application> infrastructure implements themes according to the <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG menu specification</ulink>. By supporting this specification, GNOME allows you to:"
-msgstr ""
+msgstr "<application>화면 보호기</application> 하부 구조는 <ulink url=\"http://www.freedesktop.org/wiki/Standards/menu-spec\">XDG 메뉴 명세서</ulink>에 따라 테마를 구현합니다. 이 명세서를 따름으로써, 그놈에서는 다음과 같은 일들이 가능해 집니다:"
 
 #: C/system-admin-guide.xml:66(para)
 msgid "Customize the themes easily. You can edit a small number of files to customize the available themes. You do not need to modify your applications or move files."
-msgstr ""
+msgstr "테마를 쉽게 변경할 수 있습니다. 이용 가능한 테마를 수정하기 위해 몇 개의 파일 만을 편집하면 되고,  프로그램 자체를 수정하거나 파일을 옮길 필요가 없습니다."
 
 #: C/system-admin-guide.xml:72(para)
 msgid "Install themes easily. You do not need to provide information about the system when you install the themes."
-msgstr ""
+msgstr "테마를 쉽게 설치할 수 있습니다. 테마를 설치할 때 시스템에 대한 정보를 제공해 줄 필요가 없습니다."
 
 #: C/system-admin-guide.xml:78(para)
 msgid "Configure the system so that users cannot modify the themes."
-msgstr ""
+msgstr "사용자들이 테마를 수정하지 못하도록 시스템을 설정할 수 있습니다."
 
 #: C/system-admin-guide.xml:82(para)
 msgid "For more information, see <xref linkend=\"menustructure-0\"/>."
-msgstr ""
+msgstr "자세한 정보는 <xref linkend=\"menustructure-0\"/> 부분을 보기 바랍니다."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Session Management"
