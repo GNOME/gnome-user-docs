@@ -1,5 +1,33 @@
 <chapter id="enabling-accessibility" status="writing">
 <title>Enabling Accessibility Tools</title>
+
+<para>
+Before moving forward, be sure you are familiar with these essential GNOME commands:
+</para>
+
+<para>
+<keycap>Alt + F1</keycap> - display and activate the GNOME Desktop menu bar. This grants access to the <guilabel>Applications</guilabel>, <guilabel>Places</guilabel> and <guilabel>System</guilabel> menu bar items.
+<note>
+For Solaris systems, this key is <keycap>Ctrl + Esc</keycap> (as with Microsoft Windows).
+</note>
+</para>
+
+<para>
+<keycap>Alt-F2</keycap> - summons the <emphasis>Run</emphasis> dialog, where you can issue terminal commands with or without parameters. If a file needs to be passed as one of these parameters, use the <guilabel>Run With File</guilabel> button to easily locate the file needed. This dialog also presents an alternate list of known applications which may be easier to navigate for some than the typical <keycap>Alt-F1</keycap> approach.
+</para>
+
+<para>
+<keycap>Tab</keycap> and <keycap>Shift-Tab</keycap> - move focus within an application between controls; use <keycap>Tab</keycap> to cycle forward through controls and <keycap>Shift-Tab</keycap> to cycle backwards. Controls are any user-interactive element that you can manipulate, such as buttons, drop-down lists, text fields, etc.
+</para>
+
+<para>
+<keycap>Alt-Tab</keycap> and <keycap>Shift-Alt-Tab</keycap> - switches between currently running applications. If you have multiple programs running, use <keycap>Alt-Tab</keycap> to cycle forward through the applications and <keycap>Alt-Shift-Tab</keycap> to cycle backwards.
+</para>
+
+<para>
+<emphasis>Starting Orca and GOK (GNOME Onscreen Keyboard)</emphasis>
+</para>
+
 <para>
 You must enable the assistive technology services before you are able to use many of the accessibility tools available.
 </para>
@@ -20,19 +48,61 @@ Select <guilabel>Enable assistive technologies
 Log back in. The assistive technology services will be started automatically.
 </para>
 </step>
+<step>
+<para>
+Choose <menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>.
+</para>
+</step>
+<step>
+<para>
+Enter: <userinput>sudo apt-get install gok</userinput>
+</para>
+</step>
+<step>
+<para>
+Enter: <userinput>gok</userinput>
+</para>
+</step>
 </procedure>
+
 <para>
-Once basic assistive technology support is
-enabled, it is possible to start accessibility
-services such as <application>Orca</application>, a fully GNOME-compliant application for speech, magnification, Braille output and other accessibility tools.
+If the Sticky Keys feature is not yet enabled, <application>gok</application> will do so the first time it runs.
+</para>
+
+<para>
+use <keycombo>Alt-F2</keycombo> to bring up the <emphasis>Run</emphasis> dialog, type in <literal>Orca</literal> and press <keycap>Enter</keycap>. The first time <application>Orca</application> is launched you will be asked a few questions:
 </para>
 <para>
-Getting started with <application>Orca</application> is quite painless. Use <keycap>Alt-F2</keycap> to bring up a Run dialog and type in <userinput>orca</userinput>. You can also press the up arrow to cycle through previous Run dialog entries. When the text box contains the word <userinput>orca</userinput>, press <keycap>Enter</keycap>.
+First you will be presented with a list of languages to choose from; there are currently about 45 languages supported. Most of this list will scroll off the screen, so you may have to use the terminal's scrollbar to view earlier parts of the list. Type in the number of your language choice (e.g., 7 for American English) and press <keycap>Enter</keycap>.
 </para>
 <para>
-To adjust <application>Orca</application> for your requirements, <keycap>Alt-Tab</keycap> to the Orca main window and then press <keycap>Tab</keycap> by itself until <application>Orca</application> announces the Preferences button. Press Enter and you are presented with the GUI configuration dialog.
+You are next asked to set <guilabel>Echo By Word</guilabel>. This option instructs <application>Orca</application> to speak words as you finish typing them. Type <keycap>y</keycap> or <keycap>n</keycap> and press <keycap>Enter</keycap>.
+</para>
+<para>
+The next item is <guilabel>Key Echo</guilabel>. This option will speak all keys as they are pressed. Type <keycap>y</keycap> or <keycap>n</keycap> and press <keycap>Enter</keycap>.
+</para>
+<para>
+Now select your desired keyboard layout; generally, you will want to choose the layout that matches your keyboard type - 1 for Desktop or 2 for Laptop. This choice will determine what key will act as the <application>Orca</application> modifier key. The Desktop layout uses <keycap>Insert</keycap> while the Laptop layout uses <keycap>Caps Lock</keycap>. A system, host, shift or modifier key is one which is used in conjunction with other keys, enabling keyboard access to most program functions.
+</para>
+<para>
+Next, specify if you require Braille output. This functionality assumes a brlTTY-compatible device is available. Type <keycap>y</keycap> or <keycap>n</keycap> and press <keycap>Enter</keycap>.
+</para>
+<para>
+Lastly, indicate whether you want an on-screen Braille output monitor. This is mostly for developers who need to verify brlTTY output, but may also be useful in other situations, such as visually diagnosing or verifying Braille output. Type <keycap>y</keycap> or <keycap>n</keycap> and press <keycap>Enter</keycap>.
+</para>
+<para>
+That's it! <application>Orca</application> is now ready for use. If accessibility was not yet enabled, <application>Orca</application> does so now and asks you to logout and back in for the services to start. Type <keycap>y</keycap> and press <keycap>Enter</keycap> to restart your login session.
+</para>
+<para>
+After completing the first-time <application>Orca</application> settings, use <keycap>Alt-F2</keycap> to bring up the <emphasis>Run</emphasis> dialog, type in <literal>orca</literal> and press <keycap>Enter</keycap>. Accessibility functions should now be active.
+</para>
+<para>
+When the <application>Orca</application> main window appears, the default button is <guilabel>Preferences</guilabel>; just press <keycap>Enter</keycap> and the GUI configuration dialog will appear. If you move control focus from this button, use <keycap>Alt-P</keycap> to open <guilabel>Preferences</guilabel> while the <application>Orca</application> main window has application focus.
+</para>
+<para>
+To adjust <application>Orca</application> for your requirements, <keycap>Alt-Tab</keycap> to the <application>Orca</application> main window and press <keycap>Tab</keycap> by itself until <application>Orca</application> announces the <guilabel>Preferences</guilabel> button. Press <keycap>Enter</keycap> and you are presented with the GUI configuration dialog.
 <note>
-If you are using large print fonts, the entire Preferences configuration dialog may not fit on your screen. You may have to temporarily downsize to another theme or adjust your monitor resolution before effectively using the Preferences dialog. [Orca may later employ a fully scrollable window (with both vertical and horizontal scroll bars) or the GNOME Desktop itself may add this windowing feature (perhaps by panelizing all child controls). This particular window behavior is currently developer-dependent.]
+If you are using large print fonts, the entire <guilabel>Preferences</guilabel> configuration dialog may not fit on your screen. You may have to temporarily downsize to another theme or adjust your monitor resolution before effectively using the <guilabel>Preferences</guilabel> dialog. [Orca may later employ a fully scrollable window (with both vertical and horizontal scroll bars) or the GNOME Desktop itself may add this windowing feature (perhaps by panelizing all child controls). This particular window behavior is currently developer-dependent.]
 </note>
 </para>
 <para>
@@ -42,7 +112,25 @@ The GUI configuration dialog is made up of several sections, each denoted by a n
 <emphasis>Orca Preferences - General Section</emphasis>
 </para>
 <para>
-Keyboard Layout - this radio group offers two mutually-exclusive options for indicating which keyboard layout applies to you.
+<guilabel>Keyboard Layout</guilabel> - this radio group offers two mutually-exclusive options for indicating which keyboard layout applies to you: Desktop or Laptop. To quickly access <application>Orca</application> functions an "Orca modifier key" is used as a shift-type key, to be used in conjunction with other keys meaningful to <application>Orca</application>. This modifier (also called a system, shift or host key) is the <keycap>Insert</keycap> key for the Desktop layout and the <keycap>Caps Lock</keycap> key for the Laptop layout. For example, to bring up the GUI configuration dialog would require <keycap>Insert + Space</keycap> with the Desktop layout, or <keycap>Caps Lock + Space</keycap> when using the Laptop layout.
+</para>
+<para>
+<guilabel>Show Orca main window</guilabel> - if enabled, the <application>Orca</application> application window will be shown in typical desktop Z-order and can be acessed with <keycap>Alt-Tab</keycap>. This provides access to the GUI configuration dialog and some other functionality, such as quitting <application>Orca</application>. If unchecked, no program window is displayed and all <application>Orca</application> functionality is achieved through keyboard or other means. Experienced users will likely prefer the window not shown, to avoid encountering it unnecessarily while using <keycap>Alt-Tab</keycap> or other window navigation methods.
+</para>
+<para>
+<guilabel>Quit Orca without confirmation</guilabel> - if checked, <application>Orca</application> will shut down without prompting to be sure the action was intended. If unchecked, <application>Orca</application> will always confirm any action that would quit <application>Orca</application> services.
+</para>
+<para>
+<guilabel>Disable gksu keyboard grab</guilabel> - checking this option will allow <application>Orca</application> to provide an accessible login. Disallowing the gksu keyboard grab also allows malicious software to observe everything you type, including login names and passwords, so be aware your security is somewhat reduced with this option enabled. 
+</para>
+<para>
+<guilabel>Present tooltips</guilabel> - if enabled, <application>Orca</application> will relay all application tooltips (balloon help messages), regardless of tooltip settings elsewhere. This is a global override option.
 </para>
 
+<para>
+<emphasis>Orca Preferences - Speech Section</emphasis>
+</para>
+<para>
+<guilabel>Enable Speech</guilabel> - check this option to make use of speech functionality. If unchecked, the other controls in this section will be disabled, as their settings are not relevant without speech being enabled. 
+</para>
 </chapter>
