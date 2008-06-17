@@ -7,10 +7,10 @@
 Before moving forward, be sure you are familiar with these essential GNOME commands:
 </para>
 <para>
-<keycap>Alt + F1</keycap> - display and activate the GNOME Desktop menu bar. This grants access to the <guilabel>Applications</guilabel>, <guilabel>Places</guilabel> and <guilabel>System</guilabel> menu bar items.
+<keycap>Alt-F1</keycap> - display and activate the GNOME Desktop menu bar. This grants access to the <guilabel>Applications</guilabel>, <guilabel>Places</guilabel> and <guilabel>System</guilabel> menu bar items.
 </para>
 <para>
-For Solaris systems, this key is <keycap>Ctrl + Esc</keycap> (as with Microsoft Windows).
+For Solaris systems, this key is <keycap>Ctrl-Esc</keycap> (as with Microsoft Windows).
 </para>
 <para>
 <keycap>Alt-F2</keycap> - summons the <emphasis>Run</emphasis> dialog, where you can issue terminal commands with or without parameters. If a file needs to be passed as one of these parameters, use the <guilabel>Run With File</guilabel> button to easily locate the file needed. This dialog also presents an alternate list of known applications which may be easier to navigate for some than the typical <keycap>Alt-F1</keycap> approach.
@@ -21,12 +21,12 @@ For Solaris systems, this key is <keycap>Ctrl + Esc</keycap> (as with Microsoft 
 <para>
 <keycap>Alt-Tab</keycap> and <keycap>Shift-Alt-Tab</keycap> - switches between currently running applications. If you have multiple programs running, use <keycap>Alt-Tab</keycap> to cycle forward through the applications and <keycap>Alt-Shift-Tab</keycap> to cycle backwards.
 </para>
+<para>
+Knowing how to interact with common GNOME-standard user controls (such as text boxes, drop-down lists and radio groups) is also essential - review [todo: ulink here] to become familiar with these elements and how to quickly and efficiently navigate them.
+</para>
 
 <section>
-<title>Starting Orca and GOK</title>
-<para>
-<emphasis>Starting Orca and GOK (GNOME Onscreen Keyboard)</emphasis>
-</para>
+<title>Starting GOK (GNOME Onscreen Keyboard)</title>
 <para>
 You must enable the assistive technology services before you are able to use many of the accessibility tools available.
 </para>
@@ -47,10 +47,13 @@ Select <guilabel>Enable assistive technologies
 Log back in. The assistive technology services will be started automatically.
 </para>
 </step>
-<step>
+</procedure>
+
 <para>
 The next steps enable <application>gok</application> (GNOME Onscreen Keyboard). These steps are not necessary for Solaris and target Debian platforms (Ubuntu, etc.). See further down for rpm-based distributions (RedHat, Fedora, etc.).
 </para>
+<procedure>
+<step>
 <para>
 Choose <menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>.
 </para>
@@ -73,7 +76,27 @@ If the Sticky Keys feature is not yet enabled, <application>gok</application> wi
 <para>
 Installing gok for rpm-based systems: [not impl.]
 </para>
+<procedure>
+<step>
+<para>
+Choose <menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>.
+</para>
+</step>
+<step>
+<para>
+Enter: <userinput>sudo --- --- --- gok</userinput>
+</para>
+</step>
+<step>
+<para>
+Enter: <userinput>gok</userinput>
+</para>
+</step>
+</procedure>
+</section>
 
+<section>
+<title>Starting Orca</title>
 <para>
 Use <keycap>Alt-F2</keycap> to bring up the <emphasis>Run</emphasis> dialog, type in <literal>orca</literal> and press <keycap>Enter</keycap>. The first time <application>Orca</application> is launched you will be asked a few questions:
 </para>
@@ -102,6 +125,10 @@ That's it! <application>Orca</application> is now ready for use. If accessibilit
 <para>
 After completing the first-time <application>Orca</application> settings, use <keycap>Alt-F2</keycap> to bring up the <emphasis>Run</emphasis> dialog, type in <literal>orca</literal> and press <keycap>Enter</keycap>. Accessibility functions should now be active.
 </para>
+</section>
+
+<section>
+<title>Setting Orca Preferences</title>
 <para>
 When the <application>Orca</application> main window appears, the default button is <guilabel>Preferences</guilabel>; just press <keycap>Enter</keycap> and the GUI configuration dialog will appear. If you move control focus from this button, use <keycap>Alt-P</keycap> to open <guilabel>Preferences</guilabel> while the <application>Orca</application> main window has application focus.
 </para>
@@ -117,30 +144,71 @@ If you are using large print fonts, the entire <guilabel>Preferences</guilabel> 
 <para>
 The GUI configuration dialog is made up of several sections, each denoted by a notebook tab at the top of the dialog. These tabs can be navigated with the left/right arrow keys when the tabstrip has focus. Press the down arrow or <keycap>Tab</keycap> to move from the tabstrip into the options area for the currently highlighted tab/section. To return to the tabstrip, use <keycap>Shift-Tab</keycap> until the tabstrip is selected again.
 </para>
+
+<section id="orca_prefs">
+<title>Orca Preferences - General Section</title>
 <para>
-<emphasis>Orca Preferences - General Section</emphasis>
+<emphasis>Keyboard Layout</emphasis> - this radio group offers two mutually-exclusive options for indicating which keyboard layout applies to you: Desktop or Laptop. To quickly access <application>Orca</application> functions an "Orca modifier key" is used as a shift-type key, to be used in conjunction with other keys meaningful to <application>Orca</application>. This modifier (also called a system, shift or host key) is the <keycap>Insert</keycap> key for the Desktop layout and the <keycap>Caps Lock</keycap> key for the Laptop layout. For example, to bring up the GUI configuration dialog would require <keycap>Insert + Space</keycap> with the Desktop layout, or <keycap>Caps Lock + Space</keycap> when using the Laptop layout.
 </para>
 <para>
-<guilabel>Keyboard Layout</guilabel> - this radio group offers two mutually-exclusive options for indicating which keyboard layout applies to you: Desktop or Laptop. To quickly access <application>Orca</application> functions an "Orca modifier key" is used as a shift-type key, to be used in conjunction with other keys meaningful to <application>Orca</application>. This modifier (also called a system, shift or host key) is the <keycap>Insert</keycap> key for the Desktop layout and the <keycap>Caps Lock</keycap> key for the Laptop layout. For example, to bring up the GUI configuration dialog would require <keycap>Insert + Space</keycap> with the Desktop layout, or <keycap>Caps Lock + Space</keycap> when using the Laptop layout.
+<emphasis>Show Orca main window</emphasis> - if enabled, the <application>Orca</application> application window will be shown in typical desktop Z-order and can be acessed with <keycap>Alt-Tab</keycap>. This provides access to the GUI configuration dialog and some other functionality, such as quitting <application>Orca</application>. If unchecked, no program window is displayed and all <application>Orca</application> functionality is achieved through keyboard or other means. Experienced users will likely prefer the window not shown, to avoid encountering it unnecessarily while using <keycap>Alt-Tab</keycap> or other window navigation methods.
 </para>
 <para>
-<guilabel>Show Orca main window</guilabel> - if enabled, the <application>Orca</application> application window will be shown in typical desktop Z-order and can be acessed with <keycap>Alt-Tab</keycap>. This provides access to the GUI configuration dialog and some other functionality, such as quitting <application>Orca</application>. If unchecked, no program window is displayed and all <application>Orca</application> functionality is achieved through keyboard or other means. Experienced users will likely prefer the window not shown, to avoid encountering it unnecessarily while using <keycap>Alt-Tab</keycap> or other window navigation methods.
+<emphasis>Quit Orca without confirmation</emphasis> - if checked, <application>Orca</application> will shut down without prompting to be sure the action was intended. If unchecked, <application>Orca</application> will always confirm any action that would quit <application>Orca</application> services.
 </para>
 <para>
-<guilabel>Quit Orca without confirmation</guilabel> - if checked, <application>Orca</application> will shut down without prompting to be sure the action was intended. If unchecked, <application>Orca</application> will always confirm any action that would quit <application>Orca</application> services.
+<emphasis>Disable gksu keyboard grab</emphasis> - checking this option will allow <application>Orca</application> to provide an accessible login. Disallowing the gksu keyboard grab also allows malicious software to observe everything you type, including login names and passwords, so be aware your security is somewhat reduced with this option enabled. 
 </para>
 <para>
-<guilabel>Disable gksu keyboard grab</guilabel> - checking this option will allow <application>Orca</application> to provide an accessible login. Disallowing the gksu keyboard grab also allows malicious software to observe everything you type, including login names and passwords, so be aware your security is somewhat reduced with this option enabled. 
+<emphasis>Present tooltips</emphasis> - if enabled, <application>Orca</application> will relay all application tooltips (balloon help messages), regardless of tooltip settings elsewhere. This is a global override option.
+</para>
+</section>
+
+<section>
+<title>Orca Preferences - Speech Section</title>
+<para>
+<emphasis>Enable Speech (Alt-E)</emphasis> - check this option to make use of speech functionality. If unchecked, the other controls in this section will be disabled, as their settings are not relevant without speech being enabled. 
 </para>
 <para>
-<guilabel>Present tooltips</guilabel> - if enabled, <application>Orca</application> will relay all application tooltips (balloon help messages), regardless of tooltip settings elsewhere. This is a global override option.
+If speech is enabled, there are several additional settings which you can adjust:
 </para>
 <para>
-<emphasis>Orca Preferences - Speech Section</emphasis>
+<emphasis>Speech System (Alt-S)</emphasis> - If you have additional hardware or software speech services, they can be selected here. Otherwise the only setting is GNOME Speech Services (the default, always-available option). 
 </para>
 <para>
-<guilabel>Enable Speech</guilabel> - check this option to make use of speech functionality. If unchecked, the other controls in this section will be disabled, as their settings are not relevant without speech being enabled. 
+<emphasis>Speech Synthesizer (Alt-Z)</emphasis> - If you have additional hardware or software speech synthesizers, they can be selected here. Otherwise the only setting is the eSpeak GNOME Speech Driver (the default, always-available option). 
 </para>
+
+<para>
+<emphasis>Voice Settings (Alt-V)</emphasis> - you can select among three options: Default, Uppercase or Hyperlink. [todo: differences]
+</para>
+
+<para>
+<emphasis>Person (Alt-P)</emphasis> - depending on the source language, a multitude of vocal personalities may exist, allowing for variation in regional accent and dialectal enunciation.
+</para>
+
+<para>
+<emphasis>Rate (Alt-R)</emphasis> - this setting effectively sets how fast words are spoken. After some familiarity and attunement, you may be able to increase this setting, achieving more feedback in less time. 
+</para>
+
+<para>
+<emphasis>Pitch (Alt-T)</emphasis> - this setting is used to raise or lower the vocal tonality of speech. Adjust pitch to complement your other settings for best tonal clarity.
+</para>
+<para>
+<emphasis>Volume (Alt-L)</emphasis> - this setting is used to raise or lower the speech volume relative to the main sound mixer, with 9.0 equalling current maximum system volume.
+</para>
+<para>
+<emphasis>Punctuation Level</emphasis> - this radio group determines the amount of punctuation spoken: None (Alt-N), Some (Alt-M), Most (Alt-O) or All (Alt-A).
+</para>
+<para>
+<emphasis>Verbosity</emphasis> - this radio group determines the amount of verbal feedback [todo: expand]: Brief (Alt-B) or Verbose (Alt-B).
+</para>
+<para>
+<emphasis>Table Row Speech</emphasis> - this radio group specifies whether an individual Cell (Alt-C) is spoken or the entire Row (Alt-R) when navigating cell/row table structures.
+</para>
+
+
+</section>
 </section>
 </section>
 </chapter>
