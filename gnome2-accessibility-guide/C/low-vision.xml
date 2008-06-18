@@ -468,7 +468,7 @@ check box is selected, <application>Orca</application> will announce any blank l
 <section>
 <title>Braille Page</title>
 <para> 
-The Braille page allows you to customize various aspects of Braille output. <application>Orca</application> does not automatically start BrlTTY - you typically need to do this yourself, and it usually occurs during OS startup.
+The Braille page allows you to customize various aspects of Braille output. 
 </para>
 
 <section>
@@ -965,14 +965,14 @@ away to some other application and then Alt-Tab back to the one that you've just
 <title>Braille</title>
 <para>
 <application>Orca</application> uses 
-<ulink url='http://mielke.cc/brltty/'>BrlTTY</ulink> for Braille support. <application>Orca</application> does not automatically start BrlTTY - you typically need to do that yourself, and it is something that is usually done at boot time. Start-up options are described in the BRTLTTY reference manual.
+<ulink url='http://mielke.cc/brltty/'>BrlTTY</ulink> for Braille support. On Linux systems, BrlTTY is used to access the text mode console content. On a typical Braille-enabled installation of Linux, BrlTTY is already running and providing access to the text consoles. When Orca starts, it connects to BrlTTY. If you switch from a text console to your X Windows session, your Braille display will automatically follow and display the content that Orca is presenting to you.
 </para>
 <para>
-<application>Orca</application> attempts to work with various releases of BrlTTY. It works well with BrlTTY v3.7.2, and we've also been working with the BrlTTY team to get it going for BrlTTY v3.8. The remainder of this document provides information related to using <application>Orca</application> with BRLTTY 3.8.
+<application>Orca</application> attempts to work with various releases of BrlTTY. It works well with BrlTTY v3.7.2, and we've also been working with the BrlTTY team to get it going for BrlTTY v3.8. The remainder of this document provides information related to using <application>Orca</application> with <application>BrlTTY</application> 3.8.
 </para>
+
 <para>
-To get <application>Orca</application> working with BrlTTY v3.8 requires that the
-Python bindings for BrlAPI are built/installed as part of the BrlTTY build/install process. Below are descriptions of the necessary tasks to do this in Ubuntu and Solaris. For both, you need to first obtain 
+Below are descriptions of the necessary tasks to install/setup BrlTTY in Ubuntu and Solaris. For both, you need to first obtain 
 <ulink url='http://mielke.cc/brltty/releases/
 brltty-3.8.tar.gz'>brltty-3.8.tar.gz</ulink> from the BrlTTY site.
 </para>
