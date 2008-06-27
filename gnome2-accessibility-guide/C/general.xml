@@ -492,6 +492,11 @@ Open the <guimenu>Main Applications Menu</guimenu>.
 <para>
 You can customize this keyboard shortcut.
 </para>
+<note>
+<para>
+For Solaris systems, this key is <keycap>Ctrl-Esc</keycap> (as with Microsoft Windows).
+</para>
+</note>
 </entry>
 </row>
 <row>
@@ -508,6 +513,11 @@ Open the <guilabel>Run Application</guilabel> dialog.
 <para>
 You can customize this keyboard shortcut.
 </para>
+<note>
+<para>
+For Solaris systems, this key is <keycap>Meta-R</keycap> (as with Microsoft Windows). A meta- or super-key is an OS-logo shift key.
+</para>
+</note>
 </entry>
 </row>
 <row>
@@ -590,8 +600,7 @@ Open a popup menu for the element that has focus (if a popup menu exists for tha
 <secondary>for desktop background</secondary>
 </indexterm>
 <para>
-The desktop background is the part of the GNOME Desktop where there are no interface items or applications, such as panels and windows. The following table lists the keyboard shortcuts that you can use to 
-navigate the desktop background and the desktop background objects. A desktop background object is an icon on the desktop background that you can use to open files, folders, or applications. 
+The desktop background is the part of the GNOME Desktop where there are no interface items or applications, such as panels and windows. The following table lists the keyboard shortcuts that you can use to navigate the desktop background and the desktop background objects. A desktop background object is an icon on the desktop background that you can use to open files, folders, or applications. 
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -625,6 +634,12 @@ To restore the windows, press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap
 <para>
 You can customize this keyboard shortcut.
 </para>
+<note>
+<para>
+For Solaris systems, this key is <keycap>Meta-D</keycap> (as with Microsoft Windows). A meta- or super-key is an OS-logo shift key.
+</para>
+</note>
+
 </entry>
 </row>
 <row>
@@ -753,7 +768,7 @@ table lists the keyboard shortcuts that you can use to navigate panels and panel
 <entry valign="top">
 <para>
 Give focus to a panel. This keyboard shortcut displays a popup window with icons that represent the desktop background, panels, and drawers. Press and hold 
-<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press <keycap>Tab</keycap> to switch the focus between the desktop background, panels, and drawers.
+<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press <keycap>Tab</keycap> to switch the focus between the desktop background, panels, and drawers. If you're especially dexterous, you can add <keycap>Shift</keycap> to go in reverse.
 </para>
 <para>
 You can customize this keyboard shortcut.
@@ -780,7 +795,7 @@ Give focus to the next object on the panel.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Open the <guimenu>Applications</guimenu> menu when the Menu Panel has focus. Continue to press <keycap>F10</keycap> to switch focus between the <guimenu>Applications</guimenu> menu and the window list.
+Open the <guimenu>Applications</guimenu> menu when the Menu Panel has focus. Continue to press <keycap>F10</keycap> to switch focus between the <guimenu>Applications</guimenu> menu and the window list. This key behavior may alter slightly depending on context and specific user setup.
 </para>
 </entry>
 </row>
@@ -1391,6 +1406,20 @@ Raise each window in turn until you reach the window you want.
 </para>
 </entry>
 </row>
+
+<row>
+<entry colname="colspec0" valign="top">
+<para><keycombo><keycap>Alt</keycap><keycap>F6
+</keycap></keycombo></para>
+</entry>
+<entry colname="colspec1" valign="top">
+<para>
+Cycle between windows belonging to the current application (eg, a multiple document interface application like <application>Text Editor</application>).
+</para>
+</entry>
+</row>
+
+
 </tbody>
 </tgroup>
 </informaltable>
@@ -1857,14 +1886,13 @@ This section of the manual describes the essential keyboard shortcuts that you c
 </para>
 
 <section id="keynav-18">
-<title>Essential Keyboard Shortcuts for NavigatingApplications</title>
+<title>Essential Keyboard Shortcuts for Navigating Applications</title>
 <anchor id="keynav-22"/>
 <para>
-Since there are so many applications that you can use in the GNOME Desktop, this manual does not describe all the custom keyboard shortcuts that you can use with each individual application. However, the basic keyboard shortcuts are common to all applications.
+Since there are so many applications that you can use in the GNOME Desktop, this manual does not describe all the custom keyboard shortcuts that you can use with each individual application. However, the basic keyboard shortcuts are common to many applications.
 </para>
 <para>
-Access keys are another way to quickly navigate applications with the keyboard.
-An access key is identified by an underlined letter on a menu or control. In some cases, you must press <keycap>Alt</keycap> in combination with the access key to perform an action.
+Access keys are another way to quickly navigate applications with the keyboard. An access key is identified by an underlined letter on a menu or control. In some cases, you must press <keycap>Alt</keycap> in combination with the access key to perform an action.
 </para>
 <para>
 The following table lists the essential keyboard shortcuts that you can use to navigate applications:
@@ -1985,6 +2013,55 @@ the name of a file that you want to open or save.
 </para>
 </entry>
 </row>
+
+<row>
+<entry colname="colspec0">
+<para><keycombo><keycap>Ctrl</keycap>
+<keycap>P</keycap></keycombo></para>
+</entry>
+<entry colname="colspec1">
+<para>
+Open a Print dialog, if available.
+</para>
+</entry>
+</row>
+
+<row>
+<entry colname="colspec0">
+<para><keycombo><keycap>Ctrl</keycap>
+<keycap>C</keycap></keycombo></para>
+</entry>
+<entry colname="colspec1">
+<para>
+Copy highlighted text to the global, application-spanning clipboard.
+</para>
+</entry>
+</row>
+
+<row>
+<entry colname="colspec0">
+<para><keycombo><keycap>Ctrl</keycap>
+<keycap>X</keycap></keycombo></para>
+</entry>
+<entry colname="colspec1">
+<para>
+Cut highlighted text to the global, application-spanning clipboard.
+</para>
+</entry>
+</row>
+
+<row>
+<entry colname="colspec0">
+<para><keycombo><keycap>Ctrl</keycap>
+<keycap>V</keycap></keycombo></para>
+</entry>
+<entry colname="colspec1">
+<para>
+Paste text from the global, application-spanning clipboard to the current cursor position.
+</para>
+</entry>
+</row>
+
 </tbody>
 </tgroup>
 </informaltable>
@@ -2067,7 +2144,7 @@ Move to the previous page/tabbed section of the dialog.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Close and/or cancel the dialog.
+Cancel/dismiss the dialog. Some application-specific dialogs may retain dialog settings, but this practice is discouraged. These dialogs usually have a single <guilabel>Close</guilabel> button, with no <guilabel>Ok/Accept</guilabel> buttons.
 </para>
 </entry>
 </row>
@@ -2079,7 +2156,7 @@ Close and/or cancel the dialog.
 </entry>
 <entry colname="colspec1" valign="top">
 <para>
-Perform the default action for the dialog. The default action will usually apply any changes and close the dialog.
+Perform the default action for the dialog. The default action will usually apply any changes and close the dialog. A default button will have a bold outline and a selected button will have a slightly bolder outline than the default button.
 </para>
 </entry>
 </row>
@@ -2219,6 +2296,33 @@ Open the current folder's parent folder.
 </para>
 </entry>
 </row>
+
+<row>
+<entry colname="colspec0" valign="top">
+<para>
+<keycap>Shift-F10</keycap>
+</para>
+</entry>
+<entry colname="colspec1" valign="top">
+<para>
+Open a file or folder popup menu.
+</para>
+</entry>
+</row>
+
+<row>
+<entry colname="colspec0" valign="top">
+<para>
+<keycap>Ctrl-F10</keycap>
+</para>
+</entry>
+<entry colname="colspec1" valign="top">
+<para>
+Open the enclosing folder's popup menu (equivalent to right-clicking on the view pane background).
+</para>
+</entry>
+</row>
+
 </tbody>
 </tgroup>
 </informaltable>
@@ -2276,18 +2380,12 @@ Open the side pane popup menu.
 </section>
 
 <section id="keynav-52">
-<title>Navigating Help Content in Caret Navigation Mode
-</title>
-<indexterm>
-<primary>keyboard shortcuts</primary>
-<secondary>for Help content</secondary>
-</indexterm>
+<title>Caret Navigation Mode</title>
 <indexterm>
 <primary>caret navigation mode</primary>
 </indexterm>
 <para>
-The following table describes how to navigate HTML-based help content in caret navigation mode in the <application>Yelp</application>
-help browser. Caret navigation is a mode of operation in an application which enables you to use the keyboard to navigate and select text.
+The following table describes how to use caret navigation mode (eg, in supporting applications like <application>Yelp</application>, <application>Evolution</application>, <application>Epiphany</application>, or <application>Firefox</application>). Caret navigation is a mode of operation in an application which enables you to use the keyboard to navigate and select text.
 </para>
 <informaltable frame="topbot">
 <tgroup cols="2" colsep="0" rowsep="0">
@@ -2312,7 +2410,7 @@ help browser. Caret navigation is a mode of operation in an application which en
 </entry>
 <entry colname="colspec1">
 <para>
-Switch to caret navigation mode. 
+Switch to caret navigation mode [Yelp-only]. 
 </para>
 </entry>
 </row>
@@ -2465,7 +2563,7 @@ Move focus to the previous focusable control.
 </entry>
 <entry colname="colspec1">
 <para>
-Activate a button or submit a form.
+Activate a button, link or other control.
 </para>
 </entry>
 </row>
@@ -3419,7 +3517,7 @@ Select the next item from the drop-down list without displaying the list.
 <row>
 <entry colname="colspec0" valign="top">
 <para><keycombo><keycap>Ctrl</keycap>
-<keycap>down arrow</keycap></keycombo> (Solaris only)
+<keycap>down arrow</keycap></keycombo>
 </para>
 </entry>
 <entry colname="colspec1" valign="top">
@@ -3700,8 +3798,7 @@ Editing profile dialog from the GNOME <application>Terminal</application> applic
 </screenshot>
 </figure>
 <para>
-Windows and dialogs are sometimes divided into logical sections that are displayed one section at a time on the window or dialog. The overall control is referred to as a notebook or tabbed panel. The divisions are 
-called panels, pages, or tabs, and are sometimes collectively referred to as a tabstrip or notebook header. Each individual tab is identified by a text label.
+Windows and dialogs are sometimes divided into logical sections that are displayed one section at a time on the window or dialog. The overall control is referred to as a notebook or tabbed panel. The divisions are called panels, pages, or tabs, and are sometimes collectively referred to as a tabstrip or notebook header. Each individual tab is identified by a text label.
 </para>
 <para>
 The following table lists the keyboard shortcuts that you can use to navigate the tabbed sections of a window or dialog when a tabstrip has focus:
@@ -3781,25 +3878,21 @@ window or dialog when a control within a section has focus:
 <tbody>
 <row>
 <entry valign="top">
-<para><keycombo><keycap>Ctrl</keycap>
-<keycap>Page Up</keycap></keycombo>
-or <keycombo><keycap>Ctrl</keycap>
+<para>
+<keycombo><keycap>Ctrl</keycap>
 <keycap>Alt</keycap><keycap>Page Up
-</keycap></keycombo></para>
+</keycap></keycombo>
+</para>
 </entry>
 <entry valign="top">
 <para>
 Give focus to the previous section. 
 </para>
-<para>
-This keyboard shortcut does not work if the focused control uses <keycombo><keycap>Ctrl</keycap><keycap>Page Up</keycap></keycombo> for another purpose.
-</para>
 </entry>
 </row>
 <row>
 <entry colname="colspec0" valign="top">
-<para><keycombo><keycap>Ctrl</keycap>
-<keycap>Page Down</keycap></keycombo> or 
+<para>
 <keycombo><keycap>Ctrl</keycap><keycap>Alt
 </keycap><keycap>Page Down</keycap></keycombo>
 </para>
@@ -3807,9 +3900,6 @@ This keyboard shortcut does not work if the focused control uses <keycombo><keyc
 <entry colname="colspec1" valign="top">
 <para>
 Give focus to the next section.
-</para>
-<para>
-This keyboard shortcut does not work if the focused control uses <keycombo><keycap>Ctrl</keycap><keycap>Page Down</keycap></keycombo> for another purpose.
 </para>
 </entry>
 </row>
@@ -4225,6 +4315,7 @@ To start the <application>Keyboard Shortcuts
 Desktop shortcuts</guilabel> table lists the keyboard shortcuts that are associated with each action.
 </para>
 
+<!--commenting out old irrelevant Solaris-only method...
 <section id="keynav-49">
 <title>Customizing Keyboard Shortcuts on Solaris Systems</title>
 <para>
@@ -4268,12 +4359,13 @@ Press the <keycap>backspace</keycap>. The keyboard shortcut is disabled.
 </listitem>
 </orderedlist>
 </section>
+-->
 
 <section id="keynav-50">
-<title>Customizing Keyboard Shortcuts on Linux Systems
+<title>Assigning and Clearing Keyboard Shortcuts
 </title>
 <para>
-To customize a keyboard shortcut on a Linux system, perform the following steps:
+To assign a keyboard shortcut, perform the following steps:
 </para>
 <orderedlist>
 <listitem>
