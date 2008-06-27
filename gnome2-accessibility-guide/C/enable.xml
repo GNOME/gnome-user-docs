@@ -78,23 +78,123 @@ Enter: <userinput>gok</userinput>
 If the Sticky Keys feature is not yet enabled, <application>gok</application> will do so the first time it runs.
 </para>
 <para>
-Installing gok for rpm-based systems: [not impl.]
+TESTING -- Installing gok for rpm-based systems (specifically, Fedora RedHat):
 </para>
 <procedure>
+<step>
+<para>
+Download <ulink 
+url="http://rpmfind.net/linux/rpm2html/search.php?query=gnome-common">the gok RPM package</ulink>.
+</para>
+<figure id="enable-gok-fig1">
+<title>RPM Search Results</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="figures/RPM_search_gnome_common.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Package listing</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</figure>
+</step>
 <step>
 <para>
 Choose <menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>.
 </para>
 </step>
+
 <step>
 <para>
-Enter: <userinput>sudo --- --- --- gok</userinput>
+Enter: <userinput>rpm -Uvh your_downloaded_file.rpm</userinput>
 </para>
 </step>
 <step>
 <para>
-Enter: <userinput>gok</userinput>
+You will need to install several additional files from the RedHat distribution:
 </para>
+<para>
+<userinput>cd /distro_path/redhat-8.0/RedHat/RPMS</userinput>
+</para>
+<para>
+<userinput>rpm -Uvh perl-SGMLSpm-1.03ii-6.noarch.rpm</userinput>
+</para>
+<para>
+<userinput>rpm -Uvh docbook-style-dsssl-1.76-6.noarch.rpm</userinput>
+</para>
+<para>
+<userinput>rpm -Uvh docbook-utils-0.6.11-2.noarch.rpm</userinput>
+</para>
+<para>
+<userinput>rpm -Uvh gtk-doc-0.9-5.noarch.rpm</userinput>
+</para>
+<para>
+<userinput>rpm -Uvh at-spi-1.0.1-4.i386.rpm</userinput>
+</para>
+<para>
+<userinput>rpm -Uvh at-spi-devel-1.0.1-4.i386.rpm</userinput>
+</para>
+<para>
+<userinput>rpm -Uvh libwnck-devel-0.17-1.i386.rpm</userinput>
+</para>
+</step>
+
+<step>
+<para>
+Install the latest version of <application>gok</application> from GNOME CVS:
+</para>
+<note>
+<para>
+When prompted for a password, press <keycap>Enter</keycap>.
+</para>
+</note>
+<para>
+<userinput>
+cvs -d :pserver:anonymous@anoncvs.gnome.org:
+/cvs/gnome login
+</userinput>
+</para>
+<para>
+<userinput>
+cvs -d :pserver:anonymous@anoncvs.gnome.org:/cvs/gnome -z3 checkout gok
+</userinput>
+</para>
+<note>
+<para>
+To update this release, use the terminal command <userinput>cvs -q up -P -d</userinput>
+</para>
+</note>
+</step>
+
+<step>
+<para>
+Run the autogen script:
+</para>
+<para>
+<userinput>cd gok/</userinput>
+</para>
+<para>
+<userinput>./autogen.sh</userinput>
+</para>
+<para>
+<userinput>make</userinput>
+</para>
+<para>
+<userinput>su -</userinput>
+</para>
+<para>
+<userinput>make install</userinput>
+</para>
+<para>
+<userinput>gok</userinput>
+</para>
+<note>
+<para>
+Because <application>gok</application> does not install <application>gconf</application> settings for individual users, run as root instead of an unpriviledged user.
+</para>
+</note>
 </step>
 </procedure>
 </section>
