@@ -1,9 +1,7 @@
 <chapter id="ats-1">
 <title>Mobility Impairments</title>
 <para>
-Mobility impairments can be caused by arthritis, stroke, cerebral palsy, Parkinson's disease, multiple sclerosis,
-and loss of limbs or digits, among others. Poor muscle control or weakness can make using standard keyboards and mouse devices difficult. For instance, some people are unable to type two keys simultaneously, while 
-others tend to hit multiple keys or to bounce keys when pressing or releasing them. People who are able to use only one hand likewise have difficulties with some keyboard and mouse tasks. 
+Mobility impairments can be caused by arthritis, stroke, cerebral palsy, Parkinson's disease, multiple sclerosis, and loss of limbs or digits, among others. Poor muscle control or weakness can make using standard keyboards and mouse devices difficult. For instance, some people are unable to type two keys simultaneously, while others tend to hit multiple keys or to bounce keys when pressing or releasing them. People who are able to use only one hand likewise have difficulties with some keyboard and mouse tasks. 
 </para>
 <para>
 The technologies which can assist those with mobility impairments are:
@@ -305,19 +303,57 @@ If you have difficulty using a mouse, you can use the keyboard to emulate the mo
 </section>
 </section>
 
-<section id="dtconfig-11">
-<title>Configuring the Keyboard</title>
+<section id="dtconfig-14">
+<title>Configuring an Accessible Keyboard</title>
 <para>
 Use the <application>Keyboard</application> preference tool to configure the keyboard accessibility options. To open the <application>Keyboard</application> 
 preference tool, choose <menuchoice><guimenu>System
 </guimenu><guisubmenu>Preferences</guisubmenu>
-<guimenuitem>Keyboard</guimenuitem></menuchoice>. Accessibility options can be enabled by selecting <guilabel>Accessibility</guilabel>. This will open a new dialog, <application>Keyboard Accessibility Preferences</application>, also known as <application>AccessX</application>.
+<guimenuitem>Keyboard</guimenuitem></menuchoice>. Accessibility options can be enabled by selecting the <guilabel>Accessibility</guilabel> tab.
 </para>
 <para>
-The <guilabel>Keyboard Accessibility Preferences (AccessX)</guilabel> dialog enables you to customize your keyboard in the 
-following ways:
+The <guilabel>Accessibility</guilabel> tabbed section allows the following options:
 </para>
-<itemizedlist>
+<para>
+<emphasis>"Allow to turn accessibility features on and off from the keyboard" (Alt-A)</emphasis> - this determines if keyboard accessibility functions can be turned on or off with a key command.
+</para>
+<para>
+<emphasis>Simulate simultaneous keypresses (Alt-S)</emphasis> - allows multiple shift (or other) keys to be entered individually but processed as a single combination keystroke. This keyboard accessibility technique is known as "sticky keys."
+</para>
+<para>
+<emphasis>Disable sticky keys if two keys are pressed together (Alt-B)</emphasis> - automatically exit the sticky keys mode if any key combination is entered normally (eq, at the same time instead of entered individually).
+</para>
+<para>
+<emphasis>Only accept long keypresses (Alt-O)</emphasis> - in this mode, keys must be pressed for a given length of time before they are accepted as input. This accessibility technique is also known as "slow keys." This portion of the <guilabel>Accessibility</guilabel> tabbed section also supplies a Delay slider (Alt-D) to indicate the press-down delay before the key is accepted as input.
+</para>
+<para>
+<emphasis>Ignore fast duplicate keypresses (Alt-I)</emphasis> - in this mode, successive entry of the same key will only have a single instance of that key accepted as input. This accessibility technique is also known as "bounce keys." This portion of the <guilabel>Accessibility</guilabel> tabbed section also supplies a Delay slider (Alt-E) to indicate the press-down delay before successive keys are ignored.
+</para>
+</section>
+
+<section id="dtconfig-mousekeys">
+<title>Configuring a Keyboard-Based Mouse</title>
+<para>
+Use the <application>Keyboard</application> preference tool to configure the keyboard to simulate a mouse. To open the <application>Keyboard</application> 
+preference tool, choose <menuchoice><guimenu>System
+</guimenu><guisubmenu>Preferences</guisubmenu>
+<guimenuitem>Keyboard</guimenuitem></menuchoice>. The Mouse Keys options can be enabled by selecting the <guilabel>Mouse Keys</guilabel> tab.
+</para>
+<para>
+<emphasis>"Allow to control the pointer using the keyboard" (Alt-A)</emphasis> - this determines if the keyboard can be used to control the mouse pointer.
+</para>
+<para>
+<emphasis>Acceleration (Alt-C)</emphasis> - determines how quickly mouse motion will accelerate when keyboard directional keys are pressed.
+</para>
+<para>
+<emphasis>Speed (Alt-S)</emphasis> - determines how quickly the mouse pointer will move when keyboard directional keys are pressed.
+</para>
+<para>
+<emphasis>Delay (Alt-D)</emphasis> - determines how much (or if) keypresses may be dampened or ignored when keyboard directional keys are pressed.
+</para>
+</section>
+
+<!--
 <listitem>
 <para>
 Using the numeric keypad to emulate mouse actions. See <xref linkend="dtconfig-14"/>.
@@ -1228,5 +1264,6 @@ The Sticky Keys feature is enabled and the
 </tgroup>
 </table>
 </section>
+-->
 </section>
 </chapter>
