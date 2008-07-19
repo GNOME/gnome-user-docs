@@ -36,7 +36,7 @@ o to become familiar with these elements and how to quickly and efficiently navi
 </para>
 -->
 <section id="enable-gok">
-<title>GOK (GNOME Onscreen Keyboard)</title>
+<title>GOK (GNOME On-Screen Keyboard)</title>
 <para>
 You must enable the assistive technology services before you are able to use many of the accessibility tools available.
 </para>
@@ -284,5 +284,69 @@ Press <keycap>Alt-F1</keycap> and select <menuchoice><guimenuitem>Applications</
 </para>
 </listitem>
 </itemizedlist>
+</section>
+
+<section>
+<title>MouseTweaks</title>
+<para>
+<application>MouseTweaks</application> is a collection of accessibility enhancements for pointing devices.
+</para>
+
+<section>
+<title>Dwell Click</title>
+<para>
+Additional accessibility options related to mouse-type pointing devices can be adjusted by using <menuchoice><guimenuitem>System</guimenuitem><guimenuitem>Preferences</guimenuitem><guimenuitem>Mouse</guimenuitem></menuchoice> and selecting the <guilabel>Accessibility</guilabel> tab.
+</para>
+<para>
+There are two modes to aid mouse usage; in the first, the click type is chosen beforehand by using the <guilabel>ClickType</guilabel> window or the <guilabel>Dwell Click</guilabel> panel applet. In the second mode, click-type is 
+determined by the direction in which the user moves the mouse after the dwell time has elapsed. There is only a determined amount 
+of time to move the mouse to indicate the click type; after that time has elapsed the pointer movement does not trigger a click until after 
+the dwell time of the next pointer stop. The following options describe how to configure the controls in the <guilabel>Accessibility</guilabel> tab.
+</para>
+<para>
+The <application>Dwell Click</application> panel applet can be enabled by right-clicking the GNOME Desktop menu bar / system panel, selecting <guilabel>Add to Panel</guilabel>, choosing <application>Dwell Click</application> and clicking the <guilabel>Add</guilabel> button.
+</para>
+<para>
+<emphasis>Trigger secondary click (Alt-T)</emphasis> - a secondary click can be issued by using the primary button and keeping it held down for a specified delay (Alt-D).
+</para>
+<para>
+<emphasis>Initiate click when stopping pointer movement (Alt-I)</emphasis> - a "dwell click" can be performed with a given delay (Alt-E) and motion threshold (Alt-M). The type of click may optionally be set beforehand (Alt-B) with the ClickType floating window (Alt-W) or Dwell Click panel applet. The click-type can be single, double, drag or right. Lastly, mouse direction movement can also specify the click type to be issued (Alt-U) - eg, moving the mouse left will result in a single click by default, or you may specify which direction equals what type of click.
+</para>
+<para>
+The two available operating modes may be summarized as follows:
+</para>
+<para>
+<emphasis>Choose type of click beforehand (Alt-B)</emphasis> - the click type selected in the ClickType floating window (Alt-W) or the Dwell Click applet is automatically issued after the given delay.
+</para>
+<para>
+<emphasis>Choose type of click with mouse movement (Alt-U)</emphasis> - at the end of the given delay, the shape of the pointer turns into a cross. If the user moves the pointer while it is showing the cross, the direction of the movement specifies what click type is issued and triggers the click. If the user does not move the pointer while it is showing a cross (which lasts only a short time) it turns back to its arrow shape and no automatic click is performed for that move-stop cycle.
+</para>
+</section>
+
+<section>
+<title>Pointer Capture</title>
+<para>
+The mouse pointer can be locked into an area of the screen so the pointing device is free for other tasks.
+</para>
+<para>
+The <application>Pointer Capture</application> panel applet creates such an area on the panel, into which the user can lock the pointer until released in a determined way.
+</para>
+
+<para>
+The <application>Pointer Capture</application> panel applet can be enabled by right-clicking the GNOME Desktop menu bar / system panel, selecting <guilabel>Add to Panel</guilabel>, choosing <application>Pointer Capture</application> and clicking the <guilabel>Add</guilabel> button.
+</para>
+<para>
+Preferences may be set by choosing <guilabel>Preferences</guilabel> in the context menu of the <application>Pointer Capture</application> applet:
+</para>
+<para>
+In the <guilabel>Capture Pointer</guilabel> section, the user can specify under what circumstances the pointer gets captured when it moves into the capture area. For example, if the <keycap>Ctrl</keycap> modifier key is checked, the pointer gets captured when it is over the capture area and the user presses the <keycap>Ctrl</keycap> modifier key. If no modifier is checked and the mouse button is set to 0, the pointer only has to move into the capture area to get locked. It is also possible to specify a combination of modifiers with the chosen mouse button.
+</para>
+<para>
+In the <guilabel>Release Pointer</guilabel> section, the user can specify what modifier or mouse button releases the pointer. It is also possible to specify a combination of modifiers with the chosen mouse button.
+</para>
+<para>
+In the <guilabel>Size of Capture Area</guilabel> section, the user can specify the width of the capture area on the GNOME panel.
+</para>
+</section>
 </section>
 </chapter>
