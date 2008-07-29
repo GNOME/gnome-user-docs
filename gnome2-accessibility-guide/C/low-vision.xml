@@ -166,6 +166,43 @@ relies upon newer extensions in the X Window System server. These extensions do 
 </section>
 </section>
 
+<section id="enable-orca">
+<title>Enabling Orca</title>
+<para>
+For a text-only guided setup, open a terminal session (<keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo>) : Applications - Accessories - Terminal) and use the command <userinput>orca --text-setup</userinput> <keycap>Enter</keycap>.
+</para>
+<para>
+Alternatively, use <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> to bring up the <emphasis>Run</emphasis> dialog, type in <literal>orca</literal> and press <keycap>Enter</keycap>.
+</para>
+<para>
+The first time <application>Orca</application> is launched you will be asked a few questions:
+</para>
+<para>
+First you will be presented with a list of languages to choose from; there are currently about 45 languages supported. Most of this list will scroll off the screen, so you may have to use the terminal's scrollbar to view earlier parts of the list. Type in the number of your language choice (e.g., 7 for American English) and press <keycap>Enter</keycap>.
+</para>
+<para>
+You are next asked to set <guilabel>Echo By Word</guilabel>. This option instructs <application>Orca</application> to speak words as you finish typing them. Type <keycap>y</keycap> or <keycap>n</keycap> and press <keycap>Enter</keycap>.
+</para>
+<para>
+The next item is <guilabel>Key Echo</guilabel>. This option will speak all keys as they are pressed. Type <keycap>y</keycap> or <keycap>n</keycap> and press <keycap>Enter</keycap>.
+</para>
+<para>
+Now select your desired keyboard layout; generally, you will want to choose the layout that matches your keyboard type - 1 for Desktop or 2 for Laptop. This choice will determine what key will act as the <application>Orca</application> modifier key. The Desktop layout uses <keycap>Insert</keycap> while the Laptop layout uses <keycap>Caps Lock</keycap>. A system, host, shift or modifier key is one which is used in conjunction with other keys, enabling keyboard access to most program functions.
+</para>
+<para>
+Next, specify if you require Braille output. This functionality assumes a brlTTY-compatible device is available. Type <keycap>y</keycap> or <keycap>n</keycap> and press <keycap>Enter</keycap>.
+</para>
+<para>
+Lastly, indicate whether you want an on-screen Braille output monitor. This is mostly for developers who need to verify brlTTY output, but may also be useful in other situations, such as visually diagnosing or verifying Braille output. Type <keycap>y</keycap> or <keycap>n</keycap> and press <keycap>Enter</keycap>.
+</para>
+<para>
+That's it! <application>Orca</application> is now ready for use. If accessibility was not yet enabled, <application>Orca</application> does so now and asks you to logout and back in for the services to start. Type <keycap>y</keycap> and press <keycap>Enter</keycap> to restart your login session.
+</para>
+<para>
+After completing the first-time <application>Orca</application> settings, use <keycap>Alt-F2</keycap> to bring up the <emphasis>Run</emphasis> dialog, type in <literal>orca</literal> and press <keycap>Enter</keycap>. Accessibility functions should now be active.
+</para>
+</section>
+
 <section>
 <title>Using Orca</title>
 <section>
@@ -2185,7 +2222,7 @@ If the <guilabel>Use default theme font</guilabel> option is selected in the <ap
 </listitem>
 <listitem>
 <para>
-If you use applications that use panes, such as the file manager and Help browser, you may need to change the size of panes to accommodate the large print. See the online help for the appropriate application for more information.
+If you use applications that use panes, such as the file manager and help browser, you may need to change the size of panes to accommodate the large print. See the online help for the appropriate application for more information.
 </para>
 </listitem>
 </orderedlist>
