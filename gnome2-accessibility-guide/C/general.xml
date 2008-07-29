@@ -88,7 +88,7 @@ Change the visual appearance of the login dialog before the user logs in; for ex
 </itemizedlist>
 <note>
 <para>
-Ceessible login features are presently 100% functioning for Solaris only.
+Accessible login features are presently 100% functioning for Solaris only.
 </para>
 </note>
 
@@ -183,8 +183,7 @@ If you use pointing devices with switches, alternative physical keyboards, or sw
 </itemizedlist>
 <para>
 For optimum accessibility, include 
-<literal>gail</literal> and 
-<literal>atk-bridge</literal>.
+<literal>gail</literal> and <literal>atk-bridge</literal>.
 </para>
 </listitem>
 <listitem>
@@ -228,9 +227,7 @@ Restart your system.
 <primary>gestures</primary>
 </indexterm>
 <para>
-If you load the <literal>keymouselistener</literal> and 
-<literal>dwellmouselistener</literal> GtkModules in the GDM configuration file, you can assign user actions to launch specific assistive technologies at login time. These user actions are called gestures. The gesture associations are contained in the following 
-GDM configuration files: 
+If you load the <literal>keymouselistener</literal> and <literal>dwellmouselistener</literal> GtkModules in the GDM configuration file, you can assign user actions to launch specific assistive technologies at login time. These user actions are called gestures. The gesture associations are contained in the following GDM configuration files: 
 </para>
 <itemizedlist>
 <listitem>
@@ -264,17 +261,18 @@ The gestures must be contained in a single line in the <filename>AccessKeyMouseE
 </note>
 
 <section id="sysadmin-30">
-<title>Starting the Screen Reader Using a Keyboard 
-Shortcut</title>
+<title>Starting the Screen Reader Using a Keyboard Shortcut</title>
 <para>
-Edit the <filename>AccessKeyMouseEvents</filename> file to associate keyboard shortcuts with assistive technologies. For example, the following line enables 
-you to press and hold <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>
-for one second to start <application>Screen Reader and Magnifier</application> in speech and Braille mode:
+Edit the <filename>AccessKeyMouseEvents</filename> file to associate keyboard shortcuts with assistive technologies. For example, the following lines enable you to press and hold <keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo> or <keycombo><keycap>Ctrl</keycap><keycap>M</keycap></keycombo> for one second to either start speech or magnification:
 </para>
 <para>
 <literal>
-&lt;Control&gt;s 1 1000 10000 srcore --login 
---disable-magnifier --enable-speech --enable-braille
+&lt;Control&gt;s 1 1000 10000 /usr/bin/orca -n -d main-window
+</literal>
+</para>
+<para>
+<literal>
+&lt;Control&gt;m 1 1000 10000 /usr/bin/orca -n -d main-window -e magnifier
 </literal>
 </para>
 </section>
