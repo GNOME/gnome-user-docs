@@ -36,15 +36,15 @@ Accessible Login
 Before moving forward, be sure you are familiar with these essential GNOME commands:
 </para>
 <para>
-<keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo> - display and activate the GNOME Desktop menu bar. This grants access to the <guimenu>Applications</guimenu>, <guimenu>Places</guimenu> and <guimenu>System</guimenu> menu bar items.
+<keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo> [Debian] - display and activate the GNOME Desktop menu bar. This grants access to the <guimenu>Applications</guimenu>, <guimenu>Places</guimenu> and <guimenu>System</guimenu> menu bar items.
 </para>
 <note>
 <para>
-For Solaris systems, this key is <keycombo><keycap>Ctrl</keycap><keycap>Esc</keycap></keycombo> (as with Microsoft Windows).
+For Solaris and Windows systems, this key is <keycombo><keycap>Ctrl</keycap><keycap>Esc</keycap></keycombo>.
 </para>
 </note>
 <para>
-<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> - summons the <application>Run</application> dialog, where you can issue terminal commands with or without parameters. If a file needs to be passed as one of these parameters, use the <guilabel>Run With File</guilabel> button to easily locate the file needed. This dialog also presents an alternate list of known applications which may be easier to navigate for some than the typical <keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo> approach.
+<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> or <keycombo><keycap>Meta</keycap><keycap>R</keycap></keycombo> - summons the <application>Run</application> dialog, where you can issue terminal commands with or without parameters. If a file needs to be passed as one of these parameters, use the <guilabel>Run With File</guilabel> button to easily locate the file needed. This dialog also presents an alternate list of known applications which may be easier to navigate than the Debian system desktop menu (<keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo>) approach.
 </para>
 <note>
 <para>
@@ -77,7 +77,7 @@ Log in to the desktop even if the user cannot easily use the screen, mouse, or k
 <para>
 Launch assistive technologies at login time by
 associating a user action with an assistive technology application. The user can perform the user action from the standard keyboard, or from a keyboard, pointing device, or switch device that is attached to the USB or
-PS/2 mouse port. These user actions are called gestures.
+PS/2 mouse port. These user actions are called <emphasis>gestures</emphasis>.
 </para>
 </listitem>
 <listitem>
@@ -330,8 +330,7 @@ If the <literal>dwellmouselistener</literal> GtkModule is loaded, alternative po
 </para>
 <para>
 For example, the following line starts 
-<application>On-Screen Keyboard</application> in dwell mode when the user moves the on-screen pointer from inside the login dialog through the top edge, back into the dialog through the top edge, out of the dialog 
-through the left edge, back into the dialog through the left edge, and similarly through the bottom and right edges of the dialog in a cross pattern:
+<application>On-Screen Keyboard</application> in dwell mode when the user moves the on-screen pointer from inside the login dialog through the top edge, back into the dialog through the top edge, out of the dialog through the left edge, back into the dialog through the left edge, and similarly through the bottom and right edges of the dialog in a cross pattern:
 </para>
 <para>
 <literal>TTLLBBRR O 10000 gok --login --access-method=dwellselection
@@ -347,8 +346,7 @@ Note that the <literal>--input-device</literal> parameter specified in the gestu
 <title>Additional Requirements for Accessible Login</title>
 <para>
 To enable the Accessible Login feature to use 
-alternative pointing devices and switch devices such as sip-and-puff switches, wheelchair-mounted switches or trackballs, you might need to modify your X server 
-system configuration to recognize these devices. You can use most devices that emulate mouse buttons with the Accessible Login feature and <application>On-Screen Keyboard</application>, including USB single switches and mouse-like pointing devices.
+alternative pointing devices and switch devices such as sip-and-puff switches, wheelchair-mounted switches or trackballs, you might need to modify your X server system configuration to recognize these devices. You can use most devices that emulate mouse buttons with the Accessible Login feature and <application>On-Screen Keyboard</application>, including USB single switches and mouse-like pointing devices.
 </para>
 <note>
 <para>
