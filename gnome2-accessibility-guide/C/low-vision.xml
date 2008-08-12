@@ -169,10 +169,7 @@ relies upon newer extensions in the X Window System server. These extensions do 
 <section id="enable-orca">
 <title>Enabling Orca</title>
 <para>
-For a text-only guided setup, open a terminal session (<keycombo><keycap>Alt</keycap><keycap>F1</keycap></keycombo>) : Applications - Accessories - Terminal) and use the command <userinput>orca --text-setup</userinput> <keycap>Enter</keycap>.
-</para>
-<para>
-Alternatively, use <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> to bring up the <emphasis>Run</emphasis> dialog, type in <literal>orca</literal> and press <keycap>Enter</keycap>.
+For a text-only guided setup, open a Run dialog with <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> or <keycombo><keycap>Meta</keycap><keycap>R</keycap></keycombo> and use the command <userinput>orca --text-setup</userinput> <keycap>Enter</keycap>.
 </para>
 <para>
 The first time <application>Orca</application> is launched you will be asked a few questions:
@@ -199,7 +196,7 @@ Lastly, indicate whether you want an on-screen braille output monitor. This is m
 That's it! <application>Orca</application> is now ready for use. If accessibility was not yet enabled, <application>Orca</application> does so now and asks you to logout and back in for the services to start. Type <keycap>y</keycap> and press <keycap>Enter</keycap> to restart your login session.
 </para>
 <para>
-After completing the first-time <application>Orca</application> settings, use <keycap>Alt-F2</keycap> to bring up the <emphasis>Run</emphasis> dialog, type in <literal>orca</literal> and press <keycap>Enter</keycap>. Accessibility functions should now be active.
+After completing the first-time <application>Orca</application> settings, use <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> or <keycombo><keycap>Meta</keycap><keycap>R</keycap></keycombo> to bring up the Run dialog, type in <literal>orca</literal> and press <keycap>Enter</keycap>. Accessibility functions should now be active.
 </para>
 </section>
 
@@ -222,7 +219,8 @@ you can press <keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo>
 <para>
 Run <application>Orca</application> by typing <userinput>orca</userinput> in a terminal session window. You can do so from a virtual 
 console window if you do not yet have access to the GUI. With the GUI installed you can also press <keycombo><keycap>Alt</keycap>
-<keycap>F2</keycap></keycombo> to bring up the Run dialog and then enter <userinput>orca</userinput> as the command (followed by any optional parameters). <application>Orca</application> will automatically enter text setup mode if you run it from a virtual console window or your GUI environment is not yet set up for accessibility.
+<keycap>F2</keycap></keycombo> or <keycombo><keycap>Meta</keycap>
+<keycap>R</keycap></keycombo> to bring up the Run dialog and then enter <userinput>orca</userinput> as the command (followed by any optional parameters). <application>Orca</application> will automatically enter text setup mode if you run it from a virtual console window or your GUI environment is not yet set up for accessibility.
 </para>
 </section>
 
@@ -253,7 +251,6 @@ Press <keycombo><keycap>Ctrl</keycap>
 
 <section>
 <title>Customizing Orca</title>
-
 <section>
 <title>How do I define my own keybindings?</title>
 <para>
@@ -832,8 +829,7 @@ We are currently working on a script for Adobe's Acrobat Reader, and the initial
 <section>
 <title>Installation</title>
 <para>
-If you get Adobe Acrobat Reader directly from the <ulink url='http://www.adobe.com/products/acrobat/readstep2.html'>Adobe site</ulink>, you may find that the software will not launch. If launched from the Applications menu, it may appear that nothing has happened, or if launched from a terminal window you may receive a long series of 
-syntax error messages. Should this occur, you will need to edit your /usr/bin/acroread file as described in this <ulink url='http://ubuntuforums.org/showthread.php?t=233514'>Ubuntu forum thread</ulink>.
+If you get Adobe Acrobat Reader directly from the <ulink url='http://www.adobe.com/products/acrobat/readstep2.html'>Adobe site</ulink>, you may find that the software will not launch. If launched from the Applications menu, it may appear that nothing has happened, or if launched from a terminal window you may receive a long series of syntax error messages. Should this occur, you will need to edit your /usr/bin/acroread file as described in this <ulink url='http://ubuntuforums.org/showthread.php?t=233514'>Ubuntu forum thread</ulink>.
 </para>
 <para>
 If you instead choose to install Acrobat Reader from your distribution's packages, be sure to install both <application>acroread</application> and <application>acroread-plugins</application>. Without the plugins package, you will not have the access to the "Reading" category in the <menuchoice>
@@ -1277,8 +1273,7 @@ Troubleshooting Speech</ulink>.
 <title>My desktop has stopped responding. What do I do?
 </title>
 <para>
-If you can get to a terminal (or press 
-<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> to open the "Run Command" dialog box), try restarting <application>Orca</application> by issuing another <application>Orca</application> command in a terminal window. This will force any existing <application>Orca</application> process to exit and will then restart <application>Orca</application>. This 
+Press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> or <keycombo><keycap>Meta</keycap><keycap>R</keycap></keycombo> to open the Run dialog and restart <application>Orca</application> by running a new instance: type <userinput>orca</userinput> and press <keycap>Enter</keycap>. This will force any existing <application>Orca</application> processes to exit and will then restart <application>Orca</application>. This 
 sometimes has the effect of unhanging the desktop (which is usually due to an ill-behaved application).
 </para>
 <para>
