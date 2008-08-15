@@ -98,7 +98,23 @@ Accessible login features are presently 100% functioning for Solaris only.
 <primary>GDM</primary>
 </indexterm>
 <para>
-To configure GDM, perform the following steps:
+In order to use the accessibility support for GNOME, the accessibility infrastructure must be enabled. To enable GNOME accessibility features from the command line, type the following command and then log out:
+</para>
+<para>
+<userinput>gconftool-2 --set "/desktop/gnome/interface/accessibility" --type boolean "True"</userinput>
+</para>
+<para>
+To enable GNOME accessibility features from a GUI, run the <menuchoice>
+<guimenuitem>System</guimenuitem>
+<guimenuitem>Preferences</guimenuitem>
+<guimenuitem>Assistive Technology</guimenuitem>
+</menuchoice> command from the top level menu.  Select the <guilabel>"Enable assistive technologies"</guilabel> checkbox and then press the <guilabel>"Close and Log Out"</guilabel> button.
+</para>
+<para>
+The next time you log in, assistive technology support will be enabled for the desktop.
+</para>
+<para>
+To configure GDM by using the GUI (the preferred method), perform the following steps:
 </para>
 <orderedlist>
 <listitem>
@@ -108,8 +124,22 @@ Log in as the <literal>root</literal> user.
 </listitem>
 <listitem>
 <para>
-Open the file
-<filename>/etc/X11/gdm/gdm.conf</filename>
+Run <application>gdmsetup</application> from a terminal; you may be advised to reboot after exiting the application.
+</para>
+</listitem>
+<orderedlist>
+<para>
+To configure GDM if you cannot access the GUI environment, you will need to navigate the file system and modify files:
+</para>
+<orderedlist>
+<listitem>
+<para>
+Log in as the <literal>root</literal> user.
+</para>
+</listitem>
+<listitem>
+<para>
+Open the file <filename>/etc/X11/gdm/custom.conf</filename>
 </para>
 </listitem>
 <listitem>
@@ -219,6 +249,22 @@ Restart your system.
 </para>
 </listitem>
 </orderedlist>
+<para>
+<application>Xserver</application> is required for all distributions; for Linux and OpenSolaris, it should be <application>Xorg</application>. You can find them in both <filename>/etc/X11</filename> and <filename>/usr/bin</filename>. Generally for Linux there will be a symbol link in <filename>/etc/X11/X</filename> and it is always linked to the binary <filename>Xorg</filename> in <filename>/usr/bin/Xorg</filename>. For OpenSolaris, you can find this process with the command <userinput>ps -ef | grep X</userinput>.
+</para>
+<para>
+To enable or disable <application>Xorg</application> extensions, you can edit the file
+<filename>/etc/X11/xorg.conf</filename> and add the following parameters to enable different
+extensions:
+</para>
+<programlisting>
+<computeroutput>
+Section "Extensions"
+  Option "Composite"         "Enable"
+  Option "other extensions"  "Enable/Disable"
+EndSection
+</computeroutput>
+</programlisting>
 </section>
 
 <section id="sysadmin-29">
