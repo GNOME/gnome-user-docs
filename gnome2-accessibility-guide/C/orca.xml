@@ -130,7 +130,606 @@ format="PNG"/>
 <para>
 The speech page allows you to customize how <application>Orca</application> uses speech synthesis.
 </para>
+
+<section>
+<title>Enable speech</title>
+<para>
+The first control of note on the speech page is the "enable speech" check box. This check box toggles whether or not <application>Orca</application> will make use of a speech synthesizer. This option, along with the ability to enable braille and enable magnifier support, allow <application>Orca</application> to be tailored to meet the needs of a wide variety of users.
+</para>
 </section>
 
+<section>
+<title>Speech System and Speech Synthesizer</title>
+<para>
+The next two controls deal with selecting the speech system and synthesizer. <application>Orca</application> provides support for a growing number of speech systems. At the time of this writing, these include GNOME-speech, Emacspeak, and an experimental backend for Speech Dispatcher.  Depending upon how your machine is configured, you may have all or none of these options.  Typically, you will have just GNOME-speech.
+</para>
+<para>
+First, determine which speech system you would like to use - GNOME-speech works best at this time. After making your selection, tab to the speech synthesizer combo box and choose from the list of available synthesizers.
+</para>
+</section>
+
+<section>
+<title>Voice Settings</title>
+<para>
+If your synthesizer supports it, <application>Orca</application> can utilize multiple voices in order to identify special cases within an application, such as hyperlinks or upper case text. The voice settings and person combo boxes can be adjusted to customize these settings to your liking. For example, assume you were using Fonix DECtalk and wanted the Betty voice to denote upper case. To accomplish this, you could do the following:
+</para>
+<procedure>
+<step>
+<para>
+Tab to the voice settings combo box, and down arrow until the upper case voice is selected.
+</para>
+</step>
+<step>
+<para>
+Tab to the person combo box, and down arrow to choose the Betty voice.
+</para>
+</step>
+</procedure>
+<para>
+The next three sliders in the tab order allow adjustment of the synthesizer's rate, pitch and volume, respectively.
+</para>
+<note>
+<para>
+You can quickly raise/lower the pitch by pressing <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>UpArrow</keycap></keycombo> and <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>DownArrow</keycap></keycombo>.  You can also modify the speech rate by pressing <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>LeftArrow</keycap></keycombo> and <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>RightArrow</keycap></keycombo>.
+</para>
+</note>
+</section>
+
+<section>
+<title>Punctuation Level</title>
+<para>
+The punctuation level radio button group is used to adjust the amount of punctuation spoken by the synthesizer. The available levels are None, Some, Most and All.
+</para>
+</section>
+
+<section>
+<title>Verbosity</title>
+<para>
+The verbosity setting determines the amount of information that will be spoken in certain situations. For example, if it is set to verbose, the synthesizer will speak shortcut keys for items in pull down menus. When it is set to brief, these shortcut keys are not announced.
+</para>
+</section>
+
+<section>
+<title>Table Row Speech</title>
+<para>
+The table row speech option determines the way in which <application>Orca</application> will read items within tables. The available settings are "speak current row" or "speak current cell". The ability to adjust this behavior can be useful in many situations.  For example, consider the process of browsing email messages in <application>Evolution</application>. In this instance it may be preferable to set table speech to "speak current row" so that while arrowing through the list of messages all relevant info, such as the sender, subject, and whether the message has attachments, is read automatically. While the current row setting is active, it is still possible to read individual cells by using the left and right arrows.
+</para>
+<note>
+<para>
+You can quickly toggle this behavior by pressing <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>F11</keycap></keycombo>.
+</para>
+</note>
+</section>
+
+<section>
+<title>Speak Progress Bar Updates</title>
+<para>
+If this setting is enabled, <application>Orca</application> will periodically announce the status of progress bars. How often the announcement is made is determined by the value chosen in the <guilabel>Update Interval</guilabel> spin button. Note that this spin button is only available if the "Speak progress bar updates" checkbox has been checked.
+</para>
+</section>
+
+<section>
+<title>Speak Indentation and Justification</title>
+<para>
+When working with code or editing other documents it is often desirable to be aware of justification and indentation. Selecting the "Speak indentation and justification" check box will cause <application>Orca</application> to provide this information.
+</para>
+</section>
+
+<section>
+<title>Speak Blank Lines</title>
+<para>
+Some users desire to hear "blank" when navigating to a blank line in a document.  Other users do not. If the "speak blank lines" check box is selected, <application>Orca</application> will speak blank lines.
+</para>
+</section>
+
+<section>
+<title>Speak tutorial messages</title>
+<para>
+When moving from component to component in an interface, this option will provide spoken tutorial messages for how to work with the component.
+</para>
+</section>
+
+<section>
+<title>Say All By</title>
+<para>
+This combo box allows you to specify whether the "say all" functionality of <application>Orca</application> speaks by sentence or line (see Desktop Keyboard Layout and Laptop Keyboard Layout for how to invoke the "say all" functionality).
+</para>
+</section>
+</section>
+
+<section>
+<title>Braille Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/Braille_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Braille Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The braille page allows you to customize various aspects about the use of braille. See also Using Orca with BrlTTY for more information on configuring and setting up BrlTTY.
+</para>
+<note>
+<para>
+<application>Orca</application> does not automatically start BrlTTY for you; typically you need to do this yourself, usually at boot time.
+</para>
+</note>
+
+<section>
+<title>Enable Braille Support</title>
+<para>
+The first control on the braille page is the "enable braille support" check box. This check box toggles whether or not <application>Orca</application> will make use of a braille display. This option, along with the ability to enable braille and enable magnifier support, allow <application>Orca</application> to be tailored to meet the needs of a wide variety of users. By default, this check box is enabled. If BrlTTY is not running, <application>Orca</application> will recover gracefully and will not communicate with the braille display. If you configure BrlTTY later on, you need to restart <application>Orca</application> in order for it to use braille.
+</para>
+</section>
+
+<section>
+<title>Enable Braille Monitor</title>
+<para>
+<application>Orca</application>'s braille monitor provides an on-screen representation of what takes place on the braille display. This feature is mostly for demonstration purposes, but is also useful for <application>Orca</application> developers who do not have access to a braille display.
+</para>
+</section>
+
+<section>
+<title>Abbreviated Role Names</title>
+<para>
+The "abbreviated role names" check box determines the manner in which role names are displayed and can be used to help conserve real estate on the braille display. The "abbreviated role names" option can be better understood if we consider the following example. Let us assume that a slider had focus, and that the abbreviated role names box was not checked. In this case, the word "slider" would be shown on the display, to reflect the fact that the current control was indeed a slider. If the abbreviated role names box were checked, the word "slider" would be abbreviated to "sldr".
+</para>
+</section>
+
+<section>
+<title>Disable end of line symbol</title>
+<para>
+When checked, this feature tells <application>Orca</application> to not present the "$l" string at the end of a line.
+</para>
+</section>
+
+<section>
+<title>Contracted Braille</title>
+<para>
+<application>Orca</application> supports contracted braille via the <ulink url="http://live.gnome.org/Orca/Braille#Braille">liblouis project</ulink>, where you can find additional information about setting up liblouis with <application>Orca</application>.
+</para>
+</section>
+
+<section>
+<title>Verbosity</title>
+<para>
+The verbosity radio button group determines the amount of information that will be brailled in certain situations. For example, if it is set to verbose, keyboard shortcut and role name information is displayed. This information is not displayed in brief mode.
+</para>
+</section>
+
+<section>
+<title>Selection Indicator</title>
+<para>
+When you select text, <application>Orca</application> will "underline" that text on your braille display with Dots 7 and 8. If you would prefer, you can change the indicator to only be Dot 7, only be Dot 8, or not be present at all.
+</para>
+</section>
+
+<section>
+<title>Hyperlink Indicator</title>
+<para>
+When you encounter a hyperlink, <application>Orca</application> will "underline" that text on your braille display with Dots 7 and 8. If you would prefer, you can change the indicator to only be Dot 7, only be Dot 8, or not be present at all.
+</para>
+</section>
+</section>
+
+<section>
+<title>Key Echo Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/KeyEcho_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Key Echo Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The key echo page allows you to specify the behavior of <application>Orca</application> when pressing keys on the page and whether words are spoken as you complete them.
+</para>
+
+<section>
+<title>Enable Key Echo</title>
+<para>
+The first control on the key echo page is the "enable key echo" check box. When this box is selected, six additional check boxes become available. These are: Enable alphanumeric and punctuation keys, Enable modifier keys, Enable locking keys, Enable function keys, Enable action keys, and Enable navigation keys.
+</para>
+<para>
+The alphanumeric and function key groups are relatively self explanatory.
+</para>
+<para>
+Modifier keys are those such as <keycap>Shift</keycap>, <keycap>Control</keycap>, and <keycap>Alt</keycap>.
+</para>
+<para>
+Locking keys include <keycap>Caps Lock</keycap>, <keycap>Scroll Lock</keycap> and <keycap>Num Lock</keycap>.
+</para>
+<para>
+The action keys group consists of keys that perform some logical action, such as <keycap>Backspace</keycap>, <keycap>Return</keycap> and <keycap>Tab</keycap>.
+</para>
+<para>
+The navigation keys group include the four arrow keys as well as any key combination in which the Orca Modifier key is being held down. The latter is designed to prevent <application>Orca</application> from echoing flat review commands.
+</para>
+</section>
+
+<section>
+<title>Enable Echo by Word</title>
+<para>
+The next toggle on the key echo page is the "enable echo by word" check box, used to echo the word you just typed. The "echo by word" control is always available, regardless of whether any of the key echo options are checked.
+</para>
+</section>
+
+<section>
+<title>Enable Echo by Sentence</title>
+<para>
+The last toggle on the key echo page is the "enable echo by sentence" check box, used to echo the sentence you just typed. The echo by sentence control is always available, regardless of whether any of the key echo options are checked.
+</para>
+<para>
+In summary, the key echo scheme can offer a great deal of flexibility. For example, one user might choose to enable all key echo options, while another might prefer to use word echo, but only have locking keys announced.
+</para>
+</section>
+</section>
+
+<section>
+<title>Magnifier Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/Magnifier_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Magnifier Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The magnifier page allows you to enable/disable magnification and specify how magnification is performed.
+</para>
+
+<section>
+<title>Enable Magnifier</title>
+<para>
+The first control on the magnifier page is the "enable magnifier" check box. This check box toggles whether or not <application>Orca</application> will provide magnification. This option, along with the ability to enable speech and enable braille support, allow <application>Orca</application> to be tailored to meet the needs of a wide variety of users.
+</para>
+</section>
+
+<section>
+<title>Zoomer Settings</title>
+<para>
+Two zoomer GUI controls determine magnification characteristics:
+</para>
+<itemizedlist>
+<listitem>
+<para>
+Scale factor, which sets magnification power from 1.0x to 16.0x (fractional values are supported).
+</para>
+</listitem>
+<listitem>
+<para>
+Position, which sets the location and size of the magnifier window: Full Screen, Left Half, Right Half, Top Half, Bottom Half, and Custom. The default position is Full Screen. Choosing Custom causes four spin buttons to become available: Top, Left, Right, and Bottom.  These spin buttons allow you to define the location of each edge of the zoom window.  Units are in pixels.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Border Settings</title>
+<note>
+<para>
+These options are not available in Full Screen mode.
+</para>
+</note>
+
+<section>
+<title>Enable border</title>
+<para>
+This option determines if a window border is visible for the magnifier.
+</para>
+</section>
+
+<section>
+<title>Border size</title>
+<para>
+This value determines the size of the border in pixels. 
+</para>
+</section>
+
+<section>
+<title>Border color</title>
+<para>
+Border color settings allow additional visual options.
+</para>
+
+<section>
+<title>Invert colors</title>
+<para>
+Creates a reverse or negative-image effect.
+</para>
+</section>
+
+<section>
+<title>Brightness</title>
+<para>
+Ranges from -1 to 1 (-1 is black/no brightness; 1 is white/total brightness; 0 is "normal"/unchanged).
+</para>
+</section>
+
+<section>
+<title>Contrast</title>
+<para>
+Ranges from -1 to 1 (-1 is grey/no contrast; 1 is maximum contrast; 0 is "normal"/unchanged).
+</para>
+</section>
+</section>
+
+<section>
+<title>Cursor Settings</title>
+<para>
+These controls can be used to customize the size and color of the magnifier's cursor.
+</para>
+
+<section>
+<title>Enable cursor</title>
+<para>
+If this check box is enabled then a cursor is visible and the size and color options become available.
+</para>
+</section>
+
+<section>
+<title>Custom size</title>
+<para>
+Enable this check box if you would like to make the mouse pointer larger than it normally is. The cursor size can be changed from the default value of 32 pixels.
+</para>
+</section>
+
+<section>
+<title>Custom color</title>
+<para>
+If the cursor is enabled, a custom color can also be applied.
+</para>
+</section>
+</section>
+
+<section>
+<title>Cross-hair Settings</title>
+<para>
+This set of controls can be used to customize the magnifier's optional area-targeting cursor.
+</para>
+
+<section>
+<title>Enable cross-hair</title>
+<para>
+If checked, you can additionally configure the clipping behavior, size and color of the cross-hair.
+</para>
+</section>
+
+<section>
+<title>Enable cross-hair clip</title>
+<para>
+If enabled, the cross-hair will be "clipped" (removed) in the area immediately surrounding the mouse pointer.
+</para>
+</section>
+
+<section>
+<title>Cross-hair size</title>
+<para>
+This control sets the thickness of the cross-hair in pixels.
+</para>
+</section>
+
+<section>
+<title>Cross-hair color</title>
+<para>
+This control allows a custom color to be used for the cross-hair.
+</para>
+</section>
+</section>
+
+<section>
+<title>Tracking and Alignment Settings</title>
+<para>
+These options control the behavior of the mouse cursor.
+</para>
+
+<section>
+<title>Mouse pointer</title>
+<para>
+If unchecked, no mouse pointer is visible.
+</para>
+
+<section>
+<title>Centered</title>
+<para>
+Keep the mouse pointer at the center of the screen whenever possible. This is the default.
+</para>
+</section>
+
+<section>
+<title>Proportional</title>
+<para>
+Position the mouse pointer in the zoom window relative to its actual, unmagnified position.  For instance, if the mouse pointer is 25% away from the left edge of the desktop, <application>Orca</application> positions the magnified mouse pointer 25% from the left edge of the zoom window.
+</para>
+</section>
+
+<section>
+<title>Push</title>
+<para>
+Move the zoomer window the least amount necessary to keep the mouse pointer on the screen.
+</para>
+</section>
+
+<section>
+<title>None</title>
+<para>
+Moving the mouse pointer has no impact on what the zoomer window displays.
+</para>
+</section>
+
+<section>
+<title>Pointer follows zoomer</title>
+<para>
+This option is enabled by default. If the mouse pointer is not on the screen when you initially move the mouse, it will be moved into the zoomer so that you can continue to see what you were working on. If your preferred mouse tracking mode is centered, the pointer will be moved to the center; otherwise it will be moved to the item with focus.
+</para>
+</section>
+</section>
+
+<section>
+<title>Control and menu item</title>
+<para>
+These options control additional behavior of the magnifier.
+</para>
+
+<section>
+<title>Centered</title>
+<para>
+When navigating via keyboard, keep the focused dialog box control or menu item at the center of the screen whenever possible.
+</para>
+</section>
+
+<section>
+<title>Push</title>
+<para>
+When navigating via keyboard, move the zoomer window the least amount necessary to display the focused dialog box control or menu item.  This is the default.
+</para>
+</section>
+
+<section>
+<title>None</title>
+<para>
+Using the keyboard to navigate among dialog box controls and menu items will have no impact on what the zoomer window displays.
+</para>
+</section>
+
+<section>
+<title>Pointer follows focus</title>
+<para>
+If this option is enabled, the mouse pointer will follow you as you arrow through menu items and move among controls in dialog boxes. This option is disabled by default.
+</para>
+</section>
+</section>
+
+<section>
+<title>Text cursor</title>
+<para>
+These options control how the text cursor behaves.
+</para>
+
+<section>
+<title>Centered</title>
+<para>
+As the text cursor moves, keep it at the center of the screen whenever possible.
+</para>
+</section>
+
+<section>
+<title>Push</title>
+<para>
+As the text cursor moves, move the zoomer window the least amount necessary to display it. This is the default.
+</para>
+</section>
+
+<section>
+<title>None</title>
+<para>
+Moving the text cursor will have no impact on what the zoomer window displays.
+</para>
+</section>
+
+<section>
+<title>Edge margin</title>
+<para>
+The edge margin is how close the caret should be allowed to get to the edge of the screen before it's time to "push" the zoomer window. The margin can range from 0 to 50%, with 50% being the equivalent of choosing centering.  The default value is 0.
+</para>
+<note>
+<para>
+This option is only available if "Push" is your text cursor tracking mode.
+</para>
+</note>
+</section>
+</section>
+
+<section>
+<title>Advanced Settings</title>
+<para>
+If you press the Advanced Settings button located near the bottom of the Magnifier page, the following dialog will appear:
+</para>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/Magnifier_Advanced.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Magnifier - Advanced Settings
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<section>
+<title>Smoothing</title>
+<para>
+Bilinear or none.
+</para>
+</section>
+
+<section>
+<title>Brightness</title>
+<para>
+Red, Green, Blue: Individual controls for choosing customized brightness levels.  Choosing different brightness levels for each color allows you to create the color scheme that works best for you.
+</para>
+</section>
+
+<section>
+<title>Contrast</title>
+<para>
+Red, Green, Blue: Individual controls for choosing customized contrast levels. While not as significant as changes to brightness, choosing different contrast levels for each color helps you to create the color scheme that works best for you.
+</para>
+</section>
+
+<section>
+<title>Color Filtering</title>
+<para>
+Allows you to pick one of the colorblind filters available through libcolorblind.
+</para>
+<note>
+<para>
+In order to take advantage of this feature you will need to install libcolorblind and then rebuild gnome-mag.
+</para>
+</note>
+</section>
+
+<section>
+<title>Multi-Monitor Settings - Source Display</title>
+<para>
+X Window System DISPLAY of what should be magnified. Written in the form ":0.x" where x is the number of the screen whose contents should be magnified.
+</para>
+</section>
+
+<section>
+<title>Multi-Monitor Settings - Target Display</title>
+<para>
+X Window System DISPLAY of where to put the zoomer window. Written in the form ":0.y" where y is the number of the screen where the zoomer window should appear.
+</para>
+</section>
+</section>
+</section>
+</section>
+</section>
 </section>
 </chapter>
