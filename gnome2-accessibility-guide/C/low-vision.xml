@@ -31,7 +31,7 @@ blind access utilities or screen reviewers.
 </itemizedlist>
 
 <section id="ats-2">
-<title>Screen Reader and Magnifier</title>
+<title>Orca: Screen Reader and Magnifier</title>
 <indexterm>
 <primary>Screen Reader and Magnifier</primary>
 </indexterm>
@@ -39,7 +39,7 @@ blind access utilities or screen reviewers.
 <primary>Orca</primary>
 </indexterm>
 <para>
-The <application>Orca Screen Reader and Magnifier</application> application enables users with limited or no vision to use the GNOME Desktop and associated applications. <application>Orca</application> provides the following functionality: 
+The <application>Orca</application> Screen Reader and Magnifier application enables users with limited or no vision to use the GNOME Desktop and associated applications. <application>Orca</application> provides the following functionality: 
 </para>
 <itemizedlist>
 <listitem>
@@ -256,350 +256,396 @@ Press <keycombo><keycap>Ctrl</keycap>
 </section>
 
 <section>
-<title>Customizing Orca</title>
-<section>
-<title>How do I define my own keybindings?</title>
+<title>Orca Configuration GUI</title>
 <para>
-You can redefine your key bindings for <application>Orca</application> in two main ways. The first way is to choose between the 
-Desktop and Laptop layouts, which can be selected on the General page of the <application>Orca</application> configuration dialog (press <keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> to bring up Orca Preferences). For more refined 
-control, you can set individual key bindings 
-on the Key Bindings page of the <application>Orca</application> configuration 
-dialog.
+The <application>Orca</application> Configuration GUI allows you to customize the behavior and features of <application>Orca</application>, such as speech, braille, and magnification. For example, you can select which speech synthesis engine you want to use, whether braille is enabled or not, and which magnification preferences you want. You can select which general keyboard layout you want (desktop or laptop) and you can also examine and modify the existing keyboard layout with fine-grained control. To bring up the <application>Orca</application> Configuration GUI, press <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>Space</keycap></keycombo>, where ORCA_MODIFIER is <keycap>Insert</keycap> when you use the desktop key bindings and <keycap>Caps_Lock</keycap> when you use the laptop key bindings. See also the [[Orca/AppSpecificSettings| Application Specific Settings]] page for how to set settings specific to a single application.
 </para>
-</section>
-
-<section>
-<title>Use a keyboard command to make Orca speak or braille-output the current date and time</title>
 <para>
-Place the following lines in <userinput>~/.orca/orca-customizations.py</userinput>. If this file doesn't exist yet, go ahead and create it.
-</para>
-<screen>
-<![CDATA[
-import orca.input_event
-import orca.keybindings
-import orca.orca
-import orca.speech
-import orca.braille
-import re
-]]>
-<![CDATA[
-myKeyBindings = orca.keybindings.KeyBindings()
-]]>
-<![CDATA[
-def sayTime(script, inputEvent=None):
-  import time
-  message = time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime())
-  orca.speech.speak(message)
-  orca.braille.displayMessage(message)
-  return True
-]]>
-<![CDATA[
-sayTimeHandler = orca.input_event.InputEventHandler(
-  sayTime,
-  "Presents the time.")
-]]>
-<![CDATA[
-myKeyBindings.add(orca.keybindings.KeyBinding(
-  "d",
-  1 << orca.settings.MODIFIER_ORCA,
-  1 << orca.settings.MODIFIER_ORCA,
-  sayTimeHandler))
-]]>
-<![CDATA[
-orca.settings.keyBindingsMap["default"] = myKeyBindings
-]]>
-</screen>
-
-<para>
-Note that in this case <keycombo><keycap>Insert</keycap><keycap>D</keycap></keycombo> will be used to report current information about the time and date.
-</para>
-</section>
-
-<section>
-<title>How do I set up my own custom scripts?</title>
-<para>
-Create an empty file named 
-<userinput>~/.orca/orca-scripts/__init__.py</userinput> and place your custom scripts in 
-<userinput>~/.orca/orca-scripts</userinput>
-, <application>Orca</application> will pick up any scripts from there before looking in the installed area.
-</para>
-</section>
-
-<section>
-<title>Orca Configuration</title>
-<para>
-The <application>Orca</application> configuration dialog allows you to customize 
-the behavior and features of <application>Orca</application>, such as speech, braille, and magnification. For example, you can select which speech synthesis engine you want to use, whether 
-braille is enabled or not, and which magnification preferences you want. You can select between Laptop/Desktop keyboard 
-layouts and you can also examine and modify the existing keyboard layout with granular 
-control. To bring up the <application>Orca</application> configuration dialog, press 
-<keycombo><keycap>&lt;ORCA MODIFIER&gt;</keycap><keycap>Space</keycap></keycombo>, where <userinput>&lt;ORCA MODIFIER&gt;</userinput> is <keycap>Insert</keycap> 
-when you use the Desktop key bindings, and 
-<keycap>Caps Lock</keycap> when you use the Laptop key bindings.
-</para>
-
-<para>
-The <application>Orca</application> configuration dialog is a multi-tab 
-container for several pages, each of which is 
-described in the following sections.
+The <application>Orca</application> Configuration GUI is a dialog containing several tabbed pages, each of which is described in the following sections.
 </para>
 
 <section>
-<title>General</title>
+<title>General Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/General_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - General Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 <para>
-The General section details the following items:
+The <guilabel>General</guilabel> page allows you to customize general aspects of <application>Orca</application>. These include the following:
 </para>
-</section>
 
 <section>
 <title>Keyboard Layout</title>
 <para>
-The <guilabel>keyboard layout</guilabel> option lets you choose between a small keyboard layout (<guilabel>Laptop</guilabel>) or large keyboard layout with a numeric keypad (<guilabel>Desktop</guilabel>). If you choose <guilabel>Laptop</guilabel> the <application>Orca</application> system key is <keycap>Caps Lock</keycap>; for the <guilabel>Desktop</guilabel> layout the system key is <keycap>Insert</keycap>.
+The keyboard layout section allows you to specify if you will be working on a laptop (small) or desktop (large, with a numeric keypad) keyboard. You select which layout you want by selecting one of the following options:
+</para>
+<para>
+<emphasis>Desktop</emphasis> - if selected, the Desktop Keyboard Layout (link kb table) will be used.
+</para>
+<para>
+<emphasis>Laptop</emphasis> - if selected, the Laptop Keyboard Layout (link kb table) will be used.
 </para>
 </section>
 
 <section>
-<title>Show Orca Main Window</title>
+<title>Show Orca main window</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/MainWindow.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Main window
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 <para>
-The <application>Orca</application> main window provides you with a graphical way 
-to display the <application>Orca</application> configuration dialog (also obtained by <keycombo><keycap>Insert</keycap>
-<keycap>Space</keycap></keycombo>). Many users do not like the <application>Orca</application> main window because it shows up in the window manager's tab order when you press <keycombo><keycap>Alt</keycap>
-<keycap>Tab</keycap></keycombo> to switch windows. By deselecting the <guilabel>Show Orca Main Window</guilabel> option, you can tell <application>Orca</application> to not show its main window.
+The <application>Orca</application> main window provides you with a graphical way to display the <application>Orca</application> Configuration GUI (also accessible with <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>Space</keycap></keycombo>, where ORCA_MODIFIER is <keycap>Insert</keycap> when you use the desktop key bindings and <keycap>Caps_Lock</keycap> when you use the laptop key bindings). The main window also provides a <guibutton>Quit</guibutton> option, also available with <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>Q</keycap></keycombo>). Many users do not like the <application>Orca</application> main window because it shows up in the window manager's tab order when you press <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo> to switch windows. By deselecting the "Show Orca main window" button, you can tell <application>Orca</application> to not show the <application>Orca</application> main window.
 </para>
 </section>
 
 <section>
 <title>Quit Orca without Confirmation</title>
 <para>
-Normally when you press <keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo> or press the <guibutton>Quit</guibutton> button in the <application>Orca</application> main window,  a confirmation dialog will prompt if you really want to quit. Unchecking this option prevents the confirmation window from appearing.
+Normally, when you press <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>Q</keycap></keycombo> to quit <application>Orca</application> or press the <guibutton>Quit</guibutton> button in the <application>Orca</application> main window, <application>Orca</application> will pop up a confirmation dialog asking you if you want to quit. Unchecking this option prevents the confirmation window from appearing.
 </para>
 </section>
 
 <section>
 <title>Disable gksu keyboard grab</title>
 <para>
-When running system administration commands from the launch menu, many distributions use an application known as <application>gksu</application> to authorize the user to run these commands (<application>gksu</application> is the dialog that asks you for your password). When it runs, <application>gksu</application> enables what is known as a "keyboard grab," which is a 
-feature to prevent keyboard actions from going to any other application on the desktop, including <application>Orca</application>. The result of a keyboard grab is that <application>Orca</application> will not receive any keyboard events, preventing <application>Orca</application> from functioning normally.
+When running commands from the launch menu, many distributions use an application known as <application>gksu</application> to authorize the user to run these commands; <application>gksu</application> is the GUI that asks you for your password. When it runs, <application>gksu</application> enables what is known as a "keyboard grab," which is a feature to prevent keyboard actions from going to any other application on the desktop, including <application>Orca</application>.  The result of a keyboard grab is that <application>Orca</application> will not receive any keyboard events, preventing <application>Orca</application> from functioning normally.
 </para>
 <para>
-By selecting the <guibutton>Disable gksu Keyboard Grab</guibutton> button, you will turn off the keyboard grab behavior, 
-allowing <application>Orca</application> to function normally with system administration applications.
+By selecting the "Disable gksu keyboard grab" button, you will turn off the keyboard grab behavior, allowing <application>Orca</application> to function normally with system administration applications.
 </para>
-
 <note>
 <para>
-The keyboard grab is a security attempt by
-<application>gksu</application> to prevent malicious applications from "sniffing" the keyboard and obtaining your password. Please be advised that disabling <application>gksu</application>'s keyboard grab feature can expose you to such nefarious behavior.
-</para>
-<para>
-If you do not feel comfortable with this, you can always use the root account for system administration purposes. To do so, you need to enable the root account for login, and then log out and back in again as root whenever you want to perform a system administration command.
+The keyboard grab is a security attempt by <application>gksu</application> to prevent nefarious applications from "sniffing" the keyboard and grabbing secret information.  Please be advised that disabling the gksu keyboard grab feature can expose you to such nefarious behavior. If you do not feel comfortable with this, you can always use the root account for system administration purposes. To do so, you need to enable the root account for login, and then logout and log back in as root whenever you want to perform a system administration command.
 </para>
 </note>
 </section>
 
 <section>
-<title>Present Tooltips</title>
+<title>Present tooltips</title>
 <para>
 When checked, this option will tell <application>Orca</application> to present information about tooltips when they appear as the result of mouse hovering. Specific actions to force tooltips to appear, such as pressing <keycombo><keycap>Ctrl</keycap><keycap>F1</keycap></keycombo> when an object has focus, will always result in tooltips being presented, regardless of this setting.
+</para>
+</section>
+
+<section>
+<title>Speak object under mouse</title>
+<para>
+When checked, this option will tell <application>Orca</application> to present information about the object under the mouse when you move it around the screen. Note that this can cause <application>Firefox</application> and <application>Thunderbird</application> versions 2.x and earlier to crash; this is not a problem with <application>Firefox</application> and <application>Thunderbird</application> versions 3.x and later.
+</para>
+</section>
+
+<section>
+<title>Start Orca when you login</title>
+<para>
+When checked, this option will tell the system to automatically launch <application>Orca</application> when you log in.
 </para>
 </section>
 </section>
 
 <section>
 <title>Speech Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/Speech_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Speech Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 <para>
 The speech page allows you to customize how <application>Orca</application> uses speech synthesis.
 </para>
 
 <section>
-<title>Enable Speech</title>
+<title>Enable speech</title>
 <para>
-The first control of note on the speech page is the <guilabel>Enable Speech</guilabel> check box. This check box toggles whether or not <application>Orca</application> will make use of a speech synthesizer. This option, along with the ability to enable braille and magnifier support, allows <application>Orca</application> to be tailored to meet the specific needs of a wide variety of users.
+The first control of note on the speech page is the "enable speech" check box. This check box toggles whether or not <application>Orca</application> will make use of a speech synthesizer. This option, along with the ability to enable braille and enable magnifier support, allow <application>Orca</application> to be tailored to meet the needs of a wide variety of users.
 </para>
 </section>
 
 <section>
 <title>Speech System and Speech Synthesizer</title>
 <para>
-The next two controls deal with selecting the speech system and synthesizer. <application>Orca</application> provides support for a growing number of speech systems. At the time of this writing these include GNOME-speech, Emacspeak, and an
-experimental backend for Speech Dispatcher. Depending on how your machine is configured, you may have all or none of these options. Typically, you will only have GNOME-speech available.
+The next two controls deal with selecting the speech system and synthesizer. <application>Orca</application> provides support for a growing number of speech systems. At the time of this writing, these include GNOME-speech, Emacspeak, and an experimental backend for Speech Dispatcher.  Depending upon how your machine is configured, you may have all or none of these options.  Typically, you will have just GNOME-speech.
 </para>
-
 <para>
-First, determine which speech system you would like to use - GNOME-speech works best at this time. After making your selection, tab to the speech synthesizer combo box 
-and choose from the list of available synthesizers.
+First, determine which speech system you would like to use - GNOME-speech works best at this time. After making your selection, tab to the speech synthesizer combo box and choose from the list of available synthesizers.
 </para>
 </section>
 
 <section>
 <title>Voice Settings</title>
 <para>
-If your synthesizer supports it, <application>Orca</application> can utilize multiple voices in order to identify special cases within an application, such as hyperlinks or uppercase text. The voice settings and person combo boxes can be adjusted to customize these settings to your liking. For example, assume you were using Fonix DECtalk and wanted the Betty voice to denote uppercase. To accomplish this, you could do the following:
+If your synthesizer supports it, <application>Orca</application> can utilize multiple voices in order to identify special cases within an application, such as hyperlinks or upper case text. The voice settings and person combo boxes can be adjusted to customize these settings to your liking. For example, assume you were using Fonix DECtalk and wanted the Betty voice to denote upper case. To accomplish this, you could do the following:
 </para>
-<orderedlist numeration='arabic'>
-<listitem>
+<procedure>
+<step>
 <para>
-Tab to the voice settings combo box, and press the down arrow until the uppercase voice is selected.
+Tab to the voice settings combo box, and down arrow until the upper case voice is selected.
 </para>
-</listitem>
-<listitem>
+</step>
+<step>
 <para>
-Tab to the person combo box, and press the down arrow to choose the Betty voice.
+Tab to the person combo box, and down arrow to choose the Betty voice.
 </para>
-</listitem>
-</orderedlist>
+</step>
+</procedure>
 <para>
 The next three sliders in the tab order allow adjustment of the synthesizer's rate, pitch and volume, respectively.
 </para>
+<note>
 <para>
-Note that you can quickly raise/lower the pitch by pressing <keycombo><keycap>Insert</keycap><keycap>Up Arrow</keycap></keycombo> and <keycombo><keycap>Insert</keycap>
-<keycap>Down Arrow</keycap></keycombo>. You can also modify the speaking rate by pressing 
-<keycombo><keycap>Insert</keycap><keycap>Left Arrow</keycap></keycombo> and <keycombo>
-<keycap>Insert</keycap><keycap>Right Arrow</keycap></keycombo>.
+You can quickly raise/lower the pitch by pressing <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>UpArrow</keycap></keycombo> and <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>DownArrow</keycap></keycombo>.  You can also modify the speech rate by pressing <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>LeftArrow</keycap></keycombo> and <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>RightArrow</keycap></keycombo>.
 </para>
+</note>
 </section>
 
 <section>
 <title>Punctuation Level</title>
 <para>
-The <guilabel>Punctuation Level</guilabel> radio button group is used to adjust the amount of punctuation spoken by the synthesizer. The available levels are None, Some, Most and All.
+The punctuation level radio button group is used to adjust the amount of punctuation spoken by the synthesizer. The available levels are None, Some, Most and All.
 </para>
 </section>
 
 <section>
 <title>Verbosity</title>
 <para>
-The Verbosity setting determines the amount of information that will be spoken in certain situations. For example, if it is set to <guilabel>Verbose</guilabel>, the synthesizer
-will speak shortcut keys for items in pull-down menus. When it is set to <guilabel>Brief</guilabel>, these shortcut keys are not announced.
+The verbosity setting determines the amount of information that will be spoken in certain situations. For example, if it is set to verbose, the synthesizer will speak shortcut keys for items in pull down menus. When it is set to brief, these shortcut keys are not announced.
 </para>
 </section>
 
 <section>
 <title>Table Row Speech</title>
 <para>
-The table row speech option determines the way in which <application>Orca</application> will read items within tables. The available 
-settings are <guilabel>Speak Current Row
-</guilabel> or <guilabel>Speak Current Cell</guilabel>. The ability to adjust this behavior can be useful in many situations. For example, consider the process of browsing email messages in Evolution. In this instance it may be preferable to set table speech to <guilabel>Speak Current Row</guilabel>, so arrowing through the list of messages causes all relevant info, such as the sender, subject, and whether the message has attachments, is read automatically. While the current row setting is active, it is still possible to read individual cells by using the left and right arrows.
+The table row speech option determines the way in which <application>Orca</application> will read items within tables. The available settings are "speak current row" or "speak current cell". The ability to adjust this behavior can be useful in many situations.  For example, consider the process of browsing email messages in <application>Evolution</application>. In this instance it may be preferable to set table speech to "speak current row" so that while arrowing through the list of messages all relevant info, such as the sender, subject, and whether the message has attachments, is read automatically. While the current row setting is active, it is still possible to read individual cells by using the left and right arrows.
 </para>
+<note>
 <para>
-Note that you can quickly toggle this behavior by pressing <keycombo><keycap>Insert</keycap><keycap>F11</keycap></keycombo>.
+You can quickly toggle this behavior by pressing <keycombo><keycap>ORCA_MODIFIER</keycap><keycap>F11</keycap></keycombo>.
+</para>
+</note>
+</section>
+
+<section>
+<title>Speak Progress Bar Updates</title>
+<para>
+If this setting is enabled, <application>Orca</application> will periodically announce the status of progress bars. How often the announcement is made is determined by the value chosen in the <guilabel>Update Interval</guilabel> spin button. Note that this spin button is only available if the "Speak progress bar updates" checkbox has been checked.
 </para>
 </section>
 
 <section>
-<title>Speak Indentation</title>
+<title>Speak Indentation and Justification</title>
 <para>
-When working with code or editing documents, it is often desirable to be aware of justification as well as indentation. Selecting the <guilabel>Speak Indentation and Justification</guilabel> check box will cause <application>Orca</application> to provide this information.
+When working with code or editing other documents it is often desirable to be aware of justification and indentation. Selecting the "Speak indentation and justification" check box will cause <application>Orca</application> to provide this information.
 </para>
 </section>
 
 <section>
 <title>Speak Blank Lines</title>
 <para>
-Some users desire to hear the word "blank" when navigating through empty lines in a document. Other users do not. If the    
-<guilabel>Speak Blank Lines</guilabel> 
-check box is selected, <application>Orca</application> will announce any blank lines.
+Some users desire to hear "blank" when navigating to a blank line in a document.  Other users do not. If the "speak blank lines" check box is selected, <application>Orca</application> will speak blank lines.
+</para>
+</section>
+
+<section>
+<title>Speak tutorial messages</title>
+<para>
+When moving from component to component in an interface, this option will provide spoken tutorial messages for how to work with the component.
+</para>
+</section>
+
+<section>
+<title>Say All By</title>
+<para>
+This combo box allows you to specify whether the "say all" functionality of <application>Orca</application> speaks by sentence or line (see Desktop Keyboard Layout and Laptop Keyboard Layout for how to invoke the "say all" functionality).
 </para>
 </section>
 </section>
 
 <section>
 <title>Braille Page</title>
-<para> 
-The braille page allows you to customize various aspects of braille output. 
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/Braille_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Braille Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The braille page allows you to customize various aspects about the use of braille. See also Using Orca with BrlTTY for more information on configuring and setting up BrlTTY.
 </para>
+<note>
+<para>
+<application>Orca</application> does not automatically start BrlTTY for you; typically you need to do this yourself, usually at boot time.
+</para>
+</note>
 
 <section>
 <title>Enable Braille Support</title>
 <para>
-The first control on the braille page is the 
-<guilabel>Enable Braille Support</guilabel> check box. This toggles whether or not <application>Orca</application> will make use of a braille display. This option, along with the ability to enable braille and magnifier support, allows <application>Orca</application> to be tailored to meet the needs of a wide variety of users. By default, this check box is enabled. If BrlTTY is not running, <application>Orca</application> will recover gracefully and will not communicate with the braille display. If you configure BrlTTY later on, you need to restart <application>Orca</application> in
-order for it to use braille.
+The first control on the braille page is the "enable braille support" check box. This check box toggles whether or not <application>Orca</application> will make use of a braille display. This option, along with the ability to enable braille and enable magnifier support, allow <application>Orca</application> to be tailored to meet the needs of a wide variety of users. By default, this check box is enabled. If BrlTTY is not running, <application>Orca</application> will recover gracefully and will not communicate with the braille display. If you configure BrlTTY later on, you need to restart <application>Orca</application> in order for it to use braille.
 </para>
 </section>
 
 <section>
 <title>Enable Braille Monitor</title>
 <para>
-<application>Orca</application>'s braille monitor provides an on-screen representation of what takes place on the braille display. This feature is mostly for demonstration
-purposes, but is also useful for <application>Orca</application> developers who do not have access to a braille display.
+<application>Orca</application>'s braille monitor provides an on-screen representation of what takes place on the braille display. This feature is mostly for demonstration purposes, but is also useful for <application>Orca</application> developers who do not have access to a braille display.
 </para>
 </section>
 
 <section>
 <title>Abbreviated Role Names</title>
 <para>
-The <guilabel>Abbreviated Role Names</guilabel> check box determines the manner in which role names are displayed and can be used to help conserve real estate on the braille display. This option is best explained by example:
+The "abbreviated role names" check box determines the manner in which role names are displayed and can be used to help conserve real estate on the braille display. The "abbreviated role names" option can be better understood if we consider the following example. Let us assume that a slider had focus, and that the abbreviated role names box was not checked. In this case, the word "slider" would be shown on the display, to reflect the fact that the current control was indeed a slider. If the abbreviated role names box were checked, the word "slider" would be abbreviated to "sldr".
 </para>
+</section>
+
+<section>
+<title>Disable end of line symbol</title>
 <para>
-Let us assume that a slider had focus, and that the abbreviated role names box was not checked. In that case, the word "slider" would be shown on the display, to reflect the fact that the current control was indeed a slider. If the abbreviated role names box was checked, the word "slider" would be abbreviated to "sldr".
+When checked, this feature tells <application>Orca</application> to not present the "$l" string at the end of a line.
+</para>
+</section>
+
+<section>
+<title>Contracted Braille</title>
+<para>
+<application>Orca</application> supports contracted braille via the <ulink url="http://live.gnome.org/Orca/Braille#Braille">liblouis project</ulink>, where you can find additional information about setting up liblouis with <application>Orca</application>.
 </para>
 </section>
 
 <section>
 <title>Verbosity</title>
 <para>
-The <guilabel>Verbosity</guilabel> radio button group determines the amount of information that will be output to braille in certain situations. For example, if it is set to Verbose, keyboard shortcut and role name information is displayed. This information is not displayed in Brief mode.
+The verbosity radio button group determines the amount of information that will be brailled in certain situations. For example, if it is set to verbose, keyboard shortcut and role name information is displayed. This information is not displayed in brief mode.
+</para>
+</section>
+
+<section>
+<title>Selection Indicator</title>
+<para>
+When you select text, <application>Orca</application> will "underline" that text on your braille display with Dots 7 and 8. If you would prefer, you can change the indicator to only be Dot 7, only be Dot 8, or not be present at all.
+</para>
+</section>
+
+<section>
+<title>Hyperlink Indicator</title>
+<para>
+When you encounter a hyperlink, <application>Orca</application> will "underline" that text on your braille display with Dots 7 and 8. If you would prefer, you can change the indicator to only be Dot 7, only be Dot 8, or not be present at all.
 </para>
 </section>
 </section>
 
 <section>
 <title>Key Echo Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/KeyEcho_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Key Echo Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 <para>
-The Key Echo page allows you to specify the behavior of <application>Orca</application> when pressing keys on the page and whether 
-words are spoken as you complete them.
+The key echo page allows you to specify the behavior of <application>Orca</application> when pressing keys on the page and whether words are spoken as you complete them.
 </para>
 
 <section>
 <title>Enable Key Echo</title>
 <para>
-The first control on the key echo page is the 
-<guilabel>Enable Key Echo</guilabel> check box. When this box is checked, five additional check boxes become available. These are <guilabel>Enable Alphanumeric and Punctuation Keys</guilabel>, <guilabel>Enable Modifier Keys</guilabel>, <guilabel>Enable Locking Keys</guilabel>, <guilabel>Enable Function Keys</guilabel>, and <guilabel>Enable Action Keys</guilabel>.
+The first control on the key echo page is the "enable key echo" check box. When this box is selected, six additional check boxes become available. These are: Enable alphanumeric and punctuation keys, Enable modifier keys, Enable locking keys, Enable function keys, Enable action keys, and Enable navigation keys.
 </para>
 <para>
-The alphanumeric and punctuation option determines if letter, number and punctuation characters are echoed as you type them.
+The alphanumeric and function key groups are relatively self explanatory.
 </para>
 <para>
-Modifier keys are those such as <keycap>Shift</keycap>, <keycap>Control</keycap>, and 
-<keycap>Alt</keycap>.
+Modifier keys are those such as <keycap>Shift</keycap>, <keycap>Control</keycap>, and <keycap>Alt</keycap>.
 </para>
-
 <para>
-Locking keys include 
-<keycap>Caps Lock</keycap>, 
-<keycap>Scroll Lock</keycap>, and 
-<keycap>Num Lock</keycap>.
+Locking keys include <keycap>Caps Lock</keycap>, <keycap>Scroll Lock</keycap> and <keycap>Num Lock</keycap>.
 </para>
-
 <para>
-Enabling function key echo will announce F1 - F12 when they are pressed.
+The action keys group consists of keys that perform some logical action, such as <keycap>Backspace</keycap>, <keycap>Return</keycap> and <keycap>Tab</keycap>.
 </para>
-
 <para>
-The action keys group consists of keys that perform some logical action, as 
-<keycap>Backspace</keycap>, 
-<keycap>Return</keycap> and 
-<keycap>Tab</keycap>.
+The navigation keys group include the four arrow keys as well as any key combination in which the Orca Modifier key is being held down. The latter is designed to prevent <application>Orca</application> from echoing flat review commands.
 </para>
 </section>
 
 <section>
 <title>Enable Echo by Word</title>
 <para>
-The last toggle on the Key Echo page is the 
-<guilabel>Enable Echo by Word</guilabel> check box. This option is always available, regardless of whether any of the key echo options are checked. When enabled, whole words are spoken as typing progresses.
+The next toggle on the key echo page is the "enable echo by word" check box, used to echo the word you just typed. The "echo by word" control is always available, regardless of whether any of the key echo options are checked.
 </para>
+</section>
 
+<section>
+<title>Enable Echo by Sentence</title>
 <para>
-In summary, the Key Echo scheme can offer a great deal of flexibility. For example, one user might choose to enable all Key Echo options, while another might prefer to use word echo, but only have locking keys
-announced.
+The last toggle on the key echo page is the "enable echo by sentence" check box, used to echo the sentence you just typed. The echo by sentence control is always available, regardless of whether any of the key echo options are checked.
+</para>
+<para>
+In summary, the key echo scheme can offer a great deal of flexibility. For example, one user might choose to enable all key echo options, while another might prefer to use word echo, but only have locking keys announced.
 </para>
 </section>
 </section>
 
 <section>
 <title>Magnifier Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/Magnifier_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Magnifier Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 <para>
 The magnifier page allows you to enable/disable magnification and specify how magnification is performed.
 </para>
@@ -607,80 +653,352 @@ The magnifier page allows you to enable/disable magnification and specify how ma
 <section>
 <title>Enable Magnifier</title>
 <para>
-The first control on the magnifier page is the <guilabel>Enable Magnifier</guilabel> check box. This toggles whether or not <application>Orca</application> will provide magnification. This option, along with the ability to enable speech and braille support, allow <application>Orca</application> to be tailored to meet the needs of a wide variety of users.
+The first control on the magnifier page is the "enable magnifier" check box. This check box toggles whether or not <application>Orca</application> will provide magnification. This option, along with the ability to enable speech and enable braille support, allow <application>Orca</application> to be tailored to meet the needs of a wide variety of users.
 </para>
-</section>
-
-<section>
-<title>Cursor Settings</title>
-<itemizedlist>
-<listitem>
-<para>Enable Cursor</para>
-</listitem>
-<listitem>
-<para>Color</para>
-</listitem>
-<listitem>
-<para>Custom Size and Width</para>
-</listitem>
-</itemizedlist>
-</section>
-
-<section>
-<title>Cross-Hair Settings</title>
-<itemizedlist>
-<listitem>
-<para>Enable Cross-Hair and Size</para>
-</listitem>
-<listitem>
-<para>Enable Cross-Hair Clip</para>
-</listitem>
-</itemizedlist>
 </section>
 
 <section>
 <title>Zoomer Settings</title>
+<para>
+Two zoomer GUI controls determine magnification characteristics:
+</para>
 <itemizedlist>
-<listitem>
-<para>Scale factor</para>
-</listitem>
-<listitem>
-<para>Invert Colors</para>
-</listitem>
-<listitem>
-<para>Zoomer Position</para>
-<itemizedlist>
-<listitem>
-<para>Top, Left, Right, Bottom</para>
-</listitem>
-</itemizedlist>
-</listitem>
-<listitem>
-<para>Smoothing</para>
-</listitem>
-<listitem>
-<para>Mouse Tracking Mode</para>
-</listitem>
 <listitem>
 <para>
-Source Display - X Window System display of
-what should be magnified. Typically 
-<userinput>:0</userinput>.
+Scale factor, which sets magnification power from 1.0x to 16.0x (fractional values are supported).
 </para>
 </listitem>
 <listitem>
 <para>
-Target Display - X Window System display of
-where to put the magnified area. Typically 
-<userinput>:0</userinput>.
+Position, which sets the location and size of the magnifier window: Full Screen, Left Half, Right Half, Top Half, Bottom Half, and Custom. The default position is Full Screen. Choosing Custom causes four spin buttons to become available: Top, Left, Right, and Bottom.  These spin buttons allow you to define the location of each edge of the zoom window.  Units are in pixels.
 </para>
 </listitem>
 </itemizedlist>
+</section>
+
+<section>
+<title>Border Settings</title>
+<note>
+<para>
+These options are not available in Full Screen mode.
+</para>
+</note>
+
+<section>
+<title>Enable border</title>
+<para>
+This option determines if a window border is visible for the magnifier.
+</para>
+</section>
+
+<section>
+<title>Border size</title>
+<para>
+This value determines the size of the border in pixels. 
+</para>
+</section>
+
+<section>
+<title>Border color</title>
+<para>
+Border color settings allow additional visual options.
+</para>
+
+<section>
+<title>Invert colors</title>
+<para>
+Creates a reverse or negative-image effect.
+</para>
+</section>
+
+<section>
+<title>Brightness</title>
+<para>
+Ranges from -1 to 1 (-1 is black/no brightness; 1 is white/total brightness; 0 is "normal"/unchanged).
+</para>
+</section>
+
+<section>
+<title>Contrast</title>
+<para>
+Ranges from -1 to 1 (-1 is grey/no contrast; 1 is maximum contrast; 0 is "normal"/unchanged).
+</para>
+</section>
+</section>
+
+<section>
+<title>Cursor Settings</title>
+<para>
+These controls can be used to customize the size and color of the magnifier's cursor.
+</para>
+
+<section>
+<title>Enable cursor</title>
+<para>
+If this check box is enabled then a cursor is visible and the size and color options become available.
+</para>
+</section>
+
+<section>
+<title>Custom size</title>
+<para>
+Enable this check box if you would like to make the mouse pointer larger than it normally is. The cursor size can be changed from the default value of 32 pixels.
+</para>
+</section>
+
+<section>
+<title>Custom color</title>
+<para>
+If the cursor is enabled, a custom color can also be applied.
+</para>
+</section>
+</section>
+
+<section>
+<title>Cross-hair Settings</title>
+<para>
+This set of controls can be used to customize the magnifier's optional area-targeting cursor.
+</para>
+
+<section>
+<title>Enable cross-hair</title>
+<para>
+If checked, you can additionally configure the clipping behavior, size and color of the cross-hair.
+</para>
+</section>
+
+<section>
+<title>Enable cross-hair clip</title>
+<para>
+If enabled, the cross-hair will be "clipped" (removed) in the area immediately surrounding the mouse pointer.
+</para>
+</section>
+
+<section>
+<title>Cross-hair size</title>
+<para>
+This control sets the thickness of the cross-hair in pixels.
+</para>
+</section>
+
+<section>
+<title>Cross-hair color</title>
+<para>
+This control allows a custom color to be used for the cross-hair.
+</para>
+</section>
+</section>
+
+<section>
+<title>Tracking and Alignment Settings</title>
+<para>
+These options control the behavior of the mouse cursor.
+</para>
+
+<section>
+<title>Mouse pointer</title>
+<para>
+If unchecked, no mouse pointer is visible.
+</para>
+
+<section>
+<title>Centered</title>
+<para>
+Keep the mouse pointer at the center of the screen whenever possible. This is the default.
+</para>
+</section>
+
+<section>
+<title>Proportional</title>
+<para>
+Position the mouse pointer in the zoom window relative to its actual, unmagnified position.  For instance, if the mouse pointer is 25% away from the left edge of the desktop, <application>Orca</application> positions the magnified mouse pointer 25% from the left edge of the zoom window.
+</para>
+</section>
+
+<section>
+<title>Push</title>
+<para>
+Move the zoomer window the least amount necessary to keep the mouse pointer on the screen.
+</para>
+</section>
+
+<section>
+<title>None</title>
+<para>
+Moving the mouse pointer has no impact on what the zoomer window displays.
+</para>
+</section>
+
+<section>
+<title>Pointer follows zoomer</title>
+<para>
+This option is enabled by default. If the mouse pointer is not on the screen when you initially move the mouse, it will be moved into the zoomer so that you can continue to see what you were working on. If your preferred mouse tracking mode is centered, the pointer will be moved to the center; otherwise it will be moved to the item with focus.
+</para>
+</section>
+</section>
+
+<section>
+<title>Control and menu item</title>
+<para>
+These options control additional behavior of the magnifier.
+</para>
+
+<section>
+<title>Centered</title>
+<para>
+When navigating via keyboard, keep the focused dialog box control or menu item at the center of the screen whenever possible.
+</para>
+</section>
+
+<section>
+<title>Push</title>
+<para>
+When navigating via keyboard, move the zoomer window the least amount necessary to display the focused dialog box control or menu item.  This is the default.
+</para>
+</section>
+
+<section>
+<title>None</title>
+<para>
+Using the keyboard to navigate among dialog box controls and menu items will have no impact on what the zoomer window displays.
+</para>
+</section>
+
+<section>
+<title>Pointer follows focus</title>
+<para>
+If this option is enabled, the mouse pointer will follow you as you arrow through menu items and move among controls in dialog boxes. This option is disabled by default.
+</para>
+</section>
+</section>
+
+<section>
+<title>Text cursor</title>
+<para>
+These options control how the text cursor behaves.
+</para>
+
+<section>
+<title>Centered</title>
+<para>
+As the text cursor moves, keep it at the center of the screen whenever possible.
+</para>
+</section>
+
+<section>
+<title>Push</title>
+<para>
+As the text cursor moves, move the zoomer window the least amount necessary to display it. This is the default.
+</para>
+</section>
+
+<section>
+<title>None</title>
+<para>
+Moving the text cursor will have no impact on what the zoomer window displays.
+</para>
+</section>
+
+<section>
+<title>Edge margin</title>
+<para>
+The edge margin is how close the caret should be allowed to get to the edge of the screen before it's time to "push" the zoomer window. The margin can range from 0 to 50%, with 50% being the equivalent of choosing centering.  The default value is 0.
+</para>
+<note>
+<para>
+This option is only available if "Push" is your text cursor tracking mode.
+</para>
+</note>
+</section>
+</section>
+
+<section>
+<title>Advanced Settings</title>
+<para>
+If you press the Advanced Settings button located near the bottom of the Magnifier page, the following dialog will appear:
+</para>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/Magnifier_Advanced.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Magnifier - Advanced Settings
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<section>
+<title>Smoothing</title>
+<para>
+Bilinear or none.
+</para>
+</section>
+
+<section>
+<title>Brightness</title>
+<para>
+Red, Green, Blue: Individual controls for choosing customized brightness levels.  Choosing different brightness levels for each color allows you to create the color scheme that works best for you.
+</para>
+</section>
+
+<section>
+<title>Contrast</title>
+<para>
+Red, Green, Blue: Individual controls for choosing customized contrast levels. While not as significant as changes to brightness, choosing different contrast levels for each color helps you to create the color scheme that works best for you.
+</para>
+</section>
+
+<section>
+<title>Color Filtering</title>
+<para>
+Allows you to pick one of the colorblind filters available through libcolorblind.
+</para>
+<note>
+<para>
+In order to take advantage of this feature you will need to install libcolorblind and then rebuild gnome-mag.
+</para>
+</note>
+</section>
+
+<section>
+<title>Multi-Monitor Settings - Source Display</title>
+<para>
+X Window System DISPLAY of what should be magnified. Written in the form ":0.x" where x is the number of the screen whose contents should be magnified.
+</para>
+</section>
+
+<section>
+<title>Multi-Monitor Settings - Target Display</title>
+<para>
+X Window System DISPLAY of where to put the zoomer window. Written in the form ":0.y" where y is the number of the screen where the zoomer window should appear.
+</para>
+</section>
+</section>
+</section>
 </section>
 </section>
 
 <section>
 <title>Key Bindings Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/KeyBindings_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Key Bindings Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 <para>
 The key bindings page allows you to examine and modify the key bindings for <application>Orca</application>.
 </para>
@@ -688,135 +1006,657 @@ The key bindings page allows you to examine and modify the key bindings for <app
 <section>
 <title>Orca Modifier Key(s)</title>
 <para>
-The first control on the Key Bindings page allows you to examine which key (or keys) acts as the "Orca modifier" (<application>Orca</application> system key). The <application>Orca</application> modifier is the key that you press and hold in conjunction with other 
-keys to give commands to <application>Orca</application>. For Desktop keyboards, the modifier defaults to <keycap>Insert</keycap>. 
-For Laptop keyboards, the modifier defaults to the <keycap>Caps Lock</keycap> key.
+The first control on the key bindings page allows you to examine which key (or keys) acts as the "<application>Orca</application> modifier." The <application>Orca</application> modifier is the key that you press and hold in conjunction with other keys to give commands to <application>Orca</application>. For  desktop keyboards, the Orca modifier defaults to <keycap>Insert</keycap>. For laptop keyboards, the <application>Orca</application> modifier defaults to the <keycap>Caps Lock</keycap> key.
 </para>
+<note>
 <para>
-You cannot modify the <application>Orca</application> modifier key(s) using the configuration dialog at this time.
+You cannot modify the <application>Orca</application> modifier key(s) using the Configuration GUI at this time.
 </para>
+</note>
 </section>
 
 <section>
 <title>Key Bindings Table</title>
 <para>
-The key bindings table provides a list of <application>Orca</application>
-operations and the keys that are bound to them.
+The key bindings table provides a list of <application>Orca</application> operations and the keys that are bound to them.
 </para>
 <para>
-The "Function" column header is a description of the operation to be performed.
+The "Function" column header is a description of the <application>Orca</application> operation to be performed.
 </para>
 <para>
-The "Key Binding" header is the primary way to
-invoke the function from the keyboard. Note that the function description may include the word <literal>Orca</literal>. This indicates that the <application>Orca</application> modifier key should be held down along with the other key(s).
+The "Key Binding" header is the primary way to invoke the function from the keyboard. Note that the function description may include the word "Orca". This indicates that the <application>Orca</application> modifier key should be held down along with the other keys.
 </para>
 <para>
-The "Alternate" header provides an alternate
-mechanism for invoking the function from the
-keyboard.
+The "Alternate" header provides an alternate mechanism for invoking the function from the keyboard.
 </para>
 <para>
-To modify either the "Key Binding" or the
-"Alternate" bindings, arrow to the cell and press <keycap>Return</keycap>. Then, press a key combination and press <keycap>Return</keycap> to confirm the new combination. When you do so, the new keystroke will be saved and the check box in the <guilabel>Modified</guilabel> column will indicate that the key binding has been modified.
+To modify either the "Key Binding" or the "Alternate" bindings, arrow to the cell and press <keycap>Return</keycap>. Then, press a key combination and press <keycap>Return</keycap> to confirm the new combination. When you do so, the new keystroke will be saved and the check box in the last column (the "Modified" column) will indicate that the key binding has been modified.
 </para>
 <para>
-To undo a modified keybinding, arrow to the modified column, uncheck the checkbox, and press the <guibutton>Apply</guibutton> button (<keycombo><keycap>Alt</keycap>
-<keycap>A</keycap></keycombo>).
+To undo a modified keybinding, merely arrow to the modified column, uncheck the checkbox, and press the "Apply" button <keycombo><keycap>Alt</keycap><keycap>A</keycap></keycombo>.
+</para>
+<para>
+Beneath the list of <application>Orca</application> keybindings, you will find a group of "unbound" commands:
+</para>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/KeyBindings_Tab_Unbound.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Key Bindings Page showing the 'unbound' group of commands
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+These are commands which we feel will be very useful for some users, but not needed by most users. Rather than "use up" a keystroke for such commands, we have left them unassigned.  You can assign a keystroke to any of these unbound commands by following the procedure outlined above. In addition, you can unbind any bound command in a similar fashion: press <keycap>Return</keycap> to edit the keybinding, and when prompted for the new keybinding, press <keycap>Delete</keycap> or <keycap>Backspace</keycap>. You will be told that the key binding has been removed. Press <keycap>Return</keycap> to confirm.
 </para>
 </section>
 </section>
 
 <section>
+<title>Pronunciation Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/Pronunciation_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Pronunciation Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+Sometimes your speech synthesizer just doesn't say the right thing for a given string. You might prefer to hear "laughing out loud" rather than "LOL." Or there may be a name or a technical term which the synthesizer mispronounces. The pronunciation page is where you can add, edit, and delete <application>Orca</application>'s pronunciation dictionary entries. Because the pronunciation page is also part of the application-specific settings dialog that's started when you give a particular application focus and type <keycombo><keycap>Orca_Modifier</keycap><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo>, you can customize your entries on an as-needed basis for each application you use.
+</para>
+
+<section>
+<title>Add a new dictionary entry</title>
+<procedure>
+<step>
+<para>
+Press the <guibutton>New Entry</guibutton> button (<keycombo><keycap>Alt</keycap><keycap>N</keycap></keycombo>).
+</para>
+</step>
+<step>
+<para>
+Type the text of the new entry and press <keycap>Return</keycap> to finish editing the actual string.
+</para>
+</step>
+<step>
+<para>
+Move to the Replacement String column and press <keycap>Return</keycap> to begin editing.
+</para>
+</step>
+<step>
+<para>
+Type the text that you would like to have spoken instead and press <keycap>Return</keycap> to finish editing the replacement string.
+</para>
+</step>
+</procedure>  
+</section>
+
+<section>
+<title>Edit an existing dictionary entry</title>
+<procedure>
+<step>
+<para>
+Move to the cell you wish to edit and press <keycap>Return</keycap> to begin editing.
+</para>
+</step>
+<step>
+<para>
+Make your changes and then press <keycap>Return</keycap> to finish editing.
+</para>
+</step>
+</procedure>  
+</section>
+
+<section>
+<title>Delete an existing dictionary entry</title>
+<procedure>
+<step>
+<para>
+Move to the entry you wish to delete.
+</para>
+</step>
+<step>
+<para>
+Press the Delete button or <keycombo><keycap>Alt</keycap><keycap>D</keycap></keycombo>.
+</para>
+</step>
+</procedure>  
+</section>
+</section>
+
+<section>
 <title>Text Attributes Page</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata 
+fileref="figures/TextAttributes_Tab.png" 
+format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>
+<application>Orca</application> GUI Configuration - Text Attributes Page
+</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 <para>
-<application>Orca</application> will speak known text attribute information about an object when you press 
-<keycombo><keycap>Insert</keycap>
-<keycap>F</keycap></keycombo> (<keycombo>
-<keycap>Caps Lock</keycap><keycap>F</keycap>
-</keycombo> for Laptop systems).
+<application>Orca</application> will speak known text attribute information about an object when you press <keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> (desktop layout) or <keycombo><keycap>Caps_Lock</keycap><keycap>F</keycap></keycombo> (laptop layout). Because the number of text attributes is large, and not everyone cares about every attribute, the "Text Attributes" tab of the configuration
+GUI allows you to customize which text attributes <application>Orca</application> will present.
 </para>
 <para>
-Because the number of text attributes is large, and not everyone cares about every attribute, the "Text Attributes" tab of the <application>Orca</application> configuration dialog allows you to customize which text attributes will be presented.
-</para>
-<para>
-On this tab is a text attribute list, where each row consists of three columns:
-</para>
-<orderedlist numeration='arabic'>
-<listitem>
-<para>
-A checkbox which the user can set to indicate
-whether this text attribute should be spoken or not.
-</para>
-</listitem>
-<listitem>
-<para>The name of the text attribute.</para>
-</listitem>
-<listitem>
-<para>
-An editable "Spoken unless" string value. By
-default, not all text attributes will have this set. If present, what it means (assuming the user wants this text attribute spoken) is that the value of the attribute will only be spoken if it's a different value than this value.
-</para>
-</listitem>
-</orderedlist>
-<para>
-For example, by default the "underline" text
-attribute has a value of "none". If the user has this attribute checked and the user presses <keycombo><keycap>Insert</keycap>
-<keycap>F</keycap></keycombo> and the text in question is not underlined, then this attribute is not spoken. If you always want 
-this attribute to be spoken regardless of whether the text is underlined, then the attribute should be checked and the "Spoken unless" value cleared.
-</para>
-<para>
-There is also a <guibutton>Reset</guibutton> button (<keycombo><keycap>Alt</keycap>
-<keycap>R</keycap></keycombo>) that will set the list values back to their initial state when the dialog was first displayed.
-</para>
-<para>
-When you initially display the text attribute pane, all your checked attributes are put at the top of the list. They are given in the order that they will be spoken and output to braille.
-</para>
-<para>
-If you decide to check others or wish to adjust the order, there are four buttons to help you do this:
+On this tab is a text attribute list, where each row consists of four columns:
 </para>
 <itemizedlist>
 <listitem>
-<para><guibutton>Move to Top</guibutton> ( 
-<keycombo>
-<keycap>Alt</keycap>
-<keycap>T</keycap>
-</keycombo>) - moves the selected attribute to the top of the list.
+<para>
+The name of the text attribute.
 </para>
 </listitem>
 <listitem>
-<para><guibutton>Move Up One</guibutton> ( 
-<keycombo>
-<keycap>Alt</keycap>
-<keycap>U</keycap>
-</keycombo>) - moves the selected attribute up one row.
+<para>
+A checkbox which the user can set to indicate whether this text attribute should be spoken or not.
 </para>
 </listitem>
 <listitem>
-<para><guibutton>Move Down One</guibutton> ( 
-<keycombo>
-<keycap>Alt</keycap>
-<keycap>D</keycap>
-</keycombo>) - moves the selected attribute down one row.
+<para>
+A checkbox which the user can set to indicate whether this text attribute should be "underlined" on the braille display.
 </para>
 </listitem>
 <listitem>
-<para><guibutton>Move to Bottom</guibutton> (  
-<keycombo>
-<keycap>Alt</keycap>
-<keycap>B</keycap>
-</keycombo>) - moves the selected attribute to the bottom of the list.
+<para>
+An editable "Present unless" string value. By default, not all text attributes will have this set. If present, what it means (assuming the user wants this text attribute presented) is that the value of the attribute will only be presented if it is <emphasis>not</emphasis> this value.
+</para>
+<para>
+For example, by default the "underline" text attribute has a value of "none." If the user has this attribute checked and the user types
+<keycombo><keycap>Orca_Modifier</keycap><keycap>F</keycap></keycombo> and the text in question is not underlined, then this
+attribute is not spoken. If you always want this attribute to be spoken irrespective of whether the text is underlined, then the
+attribute should be checked and the "Present unless" value cleared.
+</para>
+</listitem>
+<listitem>
+<para>
+There is also a <guibutton>Reset</guibutton> button (<keycombo><keycap>Alt</keycap><keycap>R</keycap></keycombo>) which will set the list values back to their initial state when the dialog was first displayed.
 </para>
 </listitem>
 </itemizedlist>
 <para>
-Text attributes can also be set on an individual application basis. The text attribute pane is also part of the application specific settings dialog that is started when you give a particular application focus and press <keycombo>
-<keycap>Insert</keycap><keycap>Ctrl</keycap>
-<keycap>Space</keycap></keycombo>.
+When you initially display the text attribute pane, all your checked attributes are put at the top of the list. They are given in the order that they will be spoken and brailled.
+</para>
+<para>
+If you decide to check others or adjust the order, there are four buttons to help you do this:
+</para>
+<itemizedlist>
+<listitem>
+<para>
+<guibutton>Move to top</guibutton> (<keycombo><keycap>Alt</keycap><keycap>T</keycap></keycombo>) - moves the selected attribute to the top of the list.
+</para>
+</listitem>
+<listitem>
+<para>
+<guibutton>Move up one</guibutton> (<keycombo><keycap>Alt</keycap><keycap>U</keycap></keycombo>) - moves the selected attribute up one row.
+</para>
+</listitem>
+<listitem>
+<para>
+<guibutton>Move down one</guibutton> (<keycombo><keycap>Alt</keycap><keycap>D</keycap></keycombo>) - moves the selected attribute down one row.
+</para>
+</listitem>
+<listitem>
+<para>
+<guibutton>Move to bottom</guibutton> (<keycombo><keycap>Alt</keycap><keycap>B</keycap></keycombo>) - moves the selected attribute to the bottom of the list.
+</para>
+</listitem>
+</itemizedlist>
+<para>
+Beneath these push buttons is the Braille Indicator group of radio buttons. Here you can select the cell or cells to be used to indicate text which has at least one of the specified attributes. Your choices are:
+</para>
+<itemizedlist>
+<listitem>
+<para>
+None (the default)
+</para>
+</listitem>
+<listitem>
+<para>
+Dot 7
+</para>
+</listitem>
+<listitem>
+<para>
+Dot 8
+</para>
+</listitem>
+<listitem>
+<para>
+Dots 7 and 8
+</para>
+</listitem>
+</itemizedlist>
+<para>
+Text attributes can also be set on an individual application basis. The text attribute pane is also part of the application-specific settings dialog that's started when you give a particular application focus and type <keycombo><keycap>Orca_Modifier</keycap><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo>.
 </para>
 </section>
 </section>
+
+<section>
+<title>Orca Keyboard Commands</title>
+<para>
+You can get a complete list of available keyboard commands by visiting the <guilabel>Key Bindings</guilabel> page of the <application>Orca</application> Configuration GUI. To bring up the <application>Orca</application> Configuration GUI, press <keycombo><keycap>Orca_Modifier</keycap><keycap>Space</keycap></keycombo>, where <userinput>Orca_Modifier</userinput> is the <keycap>Insert</keycap> key for the <link linkend="orca-desktop-keys">desktop layout</link> and the <keycap>Caps_Lock</keycap> key for the <link linkend="orca-laptop-keys">laptop layout</link>. Note that you can also enter <application>Orca</application>'s "learn mode" while running <application>Orca</application> by pressing <keycombo><keycap>Orca_Modifier</keycap><keycap>H</keycap></keycombo>. When in learn mode, <application>Orca</application> will intercept all keyboard and braille input events and tell you what the effect would be.  To exit learn mode, press the <keycap>Escape</keycap> key.
+</para>
+<note>
+<para>
+<application>Orca</application> provides additional commands for some applications, such as <application>Firefox</application>.  To get the list of additional commands for an application, press <keycombo><keycap>Ctrl</keycap><keycap>Orca_Modifier</keycap><keycap>Space</keycap></keycombo> when that application has focus. This will bring up the <application>Orca</application> Configuration GUI in the "application-specific" state, and the additional commands will appear in the <guilabel>Key Bindings</guilabel> page.
+</para>
+<para>
+The GNOME Desktop itself also has <ulink url="http://library.gnome.org/users/user-guide/stable/shortcuts-global.html.en">built in keyboard commands</ulink> to control the desktop and its applications.
+</para>
+<para>
+WARNING: the MouseKeys functionality of AccessX can interfere with the <application>Orca</application> modifier key (see <ulink url="http://bugzilla.gnome.org/show_bug.cgi?id=548169">bug 548169</ulink>), resulting in odd behavior. In particular, MouseKeys uses the <keycap>KP_Insert</keycap> key to emulate a mouse button press. When enabled, MouseKeys can conflict with <keycap>KP_Insert</keycap> as the <application>Orca</application> modifier, resulting in what appears to be a stuck <application>Orca</application> modifier key.  As an alternative, you can use the <link linkend="orca-laptop-keys">laptop key bindings</link>, which avoids the keypad for <application>Orca</application> commands. If you accidentally enabled MouseKeys, you can disable it via the <application>gnome-keyboard-properties</application> application.
+</para>
+</note>
+
+<section id="orca-desktop-keys">
+<title>Desktop Layout</title>
+<para>
+Following is a list of common <application>Orca</application> keyboard commands for desktop keyboards arranged by category:
+</para>
+
+<section>
+<title>Flat review commands</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycap>Numpad-7</keycap> - move the flat review cursor to the previous line and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-8</keycap> - read the current line.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-9</keycap> - move the flat review cursor to the next line and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-4</keycap> - move the flat review cursor to the previous word and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-5</keycap> - read the current word.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-6</keycap> - move the flat review cursor to the next word and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-1</keycap> - move the flat review cursor to the previous character and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-2</keycap> - read the current character.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-3</keycap> - move the flat review cursor to the next character and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-slash</keycap> - perform a left mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-star</keycap> - perform a right mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+</itemizedlist>
+<note>
+<para>
+The above commands apply when working with objects as well as when working with text.  For example, if the flat review cursor were positioned on a menu bar, pressing the "read current line" command would speak the names of all visible menus. Similarly, pressing the "read next word" command would speak the object to the right of the flat review cursor on the same line, or move flat review to the next line if no more objects were found.
+</para>
+</note>
 </section>
 
+<section>
+<title>Bookmark commands</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Insert</keycap><keycap>[1-6]</keycap></keycombo> - assign a bookmark to a numbered slot. If a bookmark already exists in the slot it will be replaced with the new one. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>[1-6]</keycap></keycombo> - go to the position pointed to by the bookmark bound to this numbered slot.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Shift</keycap><keycap>[1-6]</keycap></keycombo> -  "Where am I" information for this bookmark relative to the current pointer location.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>B</keycap></keycombo> and <keycombo><keycap>Insert</keycap><keycap>Shift</keycap><keycap>B</keycap></keycombo> - move between the given bookmarks for the given application or page. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Insert</keycap><keycap>B</keycap></keycombo> - save the defined bookmarks for the current application or page.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Miscellaneous functions</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Numpad</keycap><keycap>Plus</keycap></keycombo> - "say all" command; reads from the current position of the caret to the end of the document. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Numpad</keycap><keycap>Enter</keycap></keycombo> - "Where am I" command; speaks information such as the title of the current application window, as well as the name of the control that currently has focus. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>H</keycap></keycombo> - enter into <application>Orca</application>'s "learn mode"; press <keycap>Escape</keycap> to exit. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> - speak font and attribute information for the current character. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> - Launch the <application>Orca</application> Configuration dialog. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Control</keycap><keycap>Space</keycap></keycombo> - reload user settings and reinitialize services as necessary. Also launches the <application>Orca</application> Configuration dialog for the current application.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>S</keycap></keycombo> - toggle speech on and off.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>F11</keycap></keycombo> - toggle the reading of tables, either by single cell or whole row.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo> - quit <application>Orca</application>.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Commands for debugging</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Home</keycap></keycombo> - report information on the currently active script. 
+</para>
+</listitem>
+</itemizedlist>
+<note>
+<para>
+In order for the next three commands to be of use, <application>Orca</application> needs to be started from a virtual console or via gnome-terminal. Output is sent to the console only (i.e., it is not sent to speech or braille).
+</para>
+</note>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>End</keycap></keycombo> - print a debug listing of all known applications to the console where <application>Orca</application> is running. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Page_Up</keycap></keycombo> - print debug information about the ancestry of the object with focus. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Page_Down</keycap></keycombo> - print debug information about the hierarchy of the application with focus. 
+</para>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+
+<section id="orca-laptop-keys">
+<title>Laptop Layout</title>
+<para>
+Following is a list of common <application>Orca</application> keyboard commands for laptop keyboards arranged by category:
+</para>
+
+<section>
+<title>Flat review commands</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>U</keycap></keycombo> - move the flat review cursor to the previous line and read it.
+Double-click to move flat review to the top of the current window.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>I</keycap></keycombo> - read the current line.
+Double-click to read the current line along with formatting and capitalization details.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>O</keycap></keycombo> - move the flat review cursor to the next line and read it. Double- click to move flat review to the bottom of the current window.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>J</keycap></keycombo> - move the flat review cursor to the previous word and read it.
+Double-click to move flat review to the word above the current word.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>K</keycap></keycombo> - read the current word.
+Double-click to spell the word. Triple-click  to hear the word spelled phonetically.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>L</keycap></keycombo> - move the flat review cursor to the next word and read it. Double- click to move flat review to the word below the current word.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>M</keycap></keycombo> - move the flat review cursor to the previous character and read it.
+Double-click to move flat review to the end of the current line.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Comma</keycap></keycombo> - read the current character. Double-click to pronounce the character phonetically if it is a letter.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Period</keycap></keycombo> - move the flat review cursor to the next character and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>7</keycap></keycombo> - perform a left mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>8</keycap></keycombo> - perform a right mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>8</keycap></keycombo> - perform a right mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+</itemizedlist>
+<note>
+<para>
+The above commands apply when working with objects as well as when working with text.  For example, if the flat review cursor were positioned on a menu bar, pressing the "read current line" command would speak the names of all visible menus. Similarly, pressing the "read next word" command would speak the object to the right of the flat review cursor on the same line, or move flat review to the next line if no more objects were found.
+</para>
+</note>
+</section>
+
+<section>
+<title>Bookmark commands</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Caps_Lock</keycap><keycap>[1-6]</keycap></keycombo> - add a bookmark to the numbered slot. If a bookmark already exists for the slot it will be replaced with the new one.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>[1-6]</keycap></keycombo> - go to the position pointed to by the bookmark bound to this numbered slot.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Shift</keycap><keycap>[1-6]</keycap></keycombo> - "Where am I" information for this bookmark relative to the current pointer location.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>B</keycap></keycombo>and <keycombo><keycap>Caps_Lock</keycap><keycap>Shift</keycap><keycap>B</keycap></keycombo> - move between the given bookmarks for the given application or page.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Caps_Lock</keycap><keycap>B</keycap></keycombo> - save the defined bookmarks for the current application or page.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Miscellaneous functions</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Semicolon</keycap></keycombo> - "Say all" command; reads from the current position of the caret to the end of the document.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Enter</keycap></keycombo> - "Where am I" command; speaks information such as the title of the current application window, as well as the name of the control that currently has focus.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>H</keycap></keycombo> - enter learn mode (press <keycap>Escape</keycap> to exit).
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>F</keycap></keycombo> - speak font and attribute information for the current character.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Space</keycap></keycombo> - launch the <application>Orca</application> Configuration dialog.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Control</keycap><keycap>Space</keycap></keycombo> - reload user settings and reinitialize services as necessary; also  launches the <application>Orca</application> Configuration dialog for the current application.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>S</keycap></keycombo> - toggle speech on and off.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>F11</keycap></keycombo> - toggle the reading of tables, either by single cell or whole row.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Q</keycap></keycombo> - quit <application>Orca</application>.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Commands for debugging</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Alt</keycap><keycap>Control</keycap><keycap>Home</keycap></keycombo> - report information on the currently active script.
+</para>
+</listitem>
+</itemizedlist>
+<note>
+<para>
+In order for the next three commands to be of use, <application>Orca</application> needs to be started from a virtual console or via <application>gnome-terminal</application>. Output is sent to the console only (i.e., 
+it is not sent to speech or braille).
+</para>
+</note>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Alt</keycap><keycap>Control</keycap><keycap>End</keycap></keycombo> - prints a debug listing of all known applications to the console where <application>Orca</application> is running.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Alt</keycap><keycap>Control</keycap><keycap>Page_Up</keycap></keycombo> - prints debug information about the ancestry of the object with focus.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Alt</keycap><keycap>Control</keycap><keycap>Page_Down</keycap></keycombo> - prints debug information about the object hierarchy of the application with focus.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+
+</section>
 <section>
 <title>Application-Specific Information</title>
 <section>
@@ -1043,227 +1883,6 @@ symbolic link. Do so at your own risk.
 </section>
 </section>
 
-<section>
-<title>Keyboard Commands</title>
-<para>
-This is the list of common <application>Orca</application> keyboard commands. Note that you can always enter <application>Orca</application>'s Learn mode while running <application>Orca</application> by pressing <keycombo><keycap>Insert</keycap><keycap>F1</keycap></keycombo>. When in Learn mode, <application>Orca</application> will intercept all keyboard and braille input events and will tell you what the effect of them would be. To exit Learn mode, press the <keycombo><keycap>Escape</keycap></keycombo> key. If you are using a laptop computer, you will want to see the <ulink url="http://live.gnome.org/Orca/LaptopKeyboardCommands">laptop keyboard commands</ulink> page at live.gnome.org.
-</para>
-
-<section>
-<title>Adjusting Speech Parameters</title>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Right Arrow</keycap>
-</keycombo>: increase speech rate
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Left Arrow</keycap>
-</keycombo>: decrease speech rate
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Up Arrow</keycap>
-</keycombo>: raise the pitch
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Down Arrow</keycap>
-</keycombo>: lower the pitch
-</para>
-</section>
-
-<section>
-<title>Flat Review Commands</title>
-<para>
-<emphasis role="strong">Numpad-7</emphasis>: Move the flat review cursor to the previous line and read it.
-</para>
-<para>
-<emphasis role="strong">Numpad-8</emphasis>: Read the current line.
-</para>
-<para>
-<emphasis role="strong">Numpad-9</emphasis>: Move the flat review cursor to the next line and read it.
-</para>
-<para>
-<emphasis role="strong">Numpad-4</emphasis>: Move the flat review cursor to the previous word and read it.
-</para>
-<para>
-<emphasis role="strong">Numpad-5</emphasis>: Read the current word.
-</para>
-<para>
-<emphasis role="strong">Numpad-6</emphasis>: Move the flat review cursor to the next word and read it.
-</para>
-<para>
-<emphasis role="strong">Numpad-1</emphasis>: Move the flat review cursor to the previous character and read it.
-</para>
-<para>
-<emphasis role="strong">Numpad-2</emphasis>: Read the current character.
-</para>
-<para>
-<emphasis role="strong">Numpad-3</emphasis>: Move the flat review cursor to the next character and read it.
-</para>
-<para>
-<emphasis role="strong">Numpad-/</emphasis>: Perform a left mouse click at the location of the flat review cursor.
-</para>
-<para>
-<emphasis role="strong">Numpad-*</emphasis>: Perform a right mouse click at the location of the flat review cursor.
-</para>
-<note>
-<para>
-The above commands apply when working with objects as well as when working with text. For example, if the flat review cursor were positioned on a menu bar, pressing the "read current line" command (<emphasis role="strong">Numpad-8</emphasis>) would 
-speak the names of all visible menus. Similarly, pressing "read next word" would speak the object to the right of the flat review cursor on the same line, or move flat review to the next line if no more objects 
-were found.
-</para>
-</note>
-</section>
-
-<section>
-<title>Bookmark Commands</title>
-<para>
-<keycombo>
-<keycap>Alt</keycap>
-<keycap>Insert</keycap>
-<keycap>[1-6]</keycap>
-</keycombo>: add a bookmark in this numbered slot. If a bookmark already exists it will be replaced.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>[1-6]</keycap>
-</keycombo>: go to the position pointed to by the bookmark bound to this numbered slot.
-</para>
-<para>
-<keycombo>
-<keycap>Alt</keycap>
-<keycap>Shift</keycap>
-<keycap>[1-6]</keycap>
-</keycombo>: "Where am I" information for this bookmark relative to the current pointer location.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>B</keycap>
-</keycombo> and 
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Shift</keycap>
-<keycap>B</keycap>
-</keycombo>: move between the given bookmarks for the given application or page.
-</para>
-<para>
-<keycombo>
-<keycap>Alt</keycap>
-<keycap>Insert</keycap>
-<keycap>B</keycap>
-</keycombo>: save the defined bookmarks for the current application or page.
-</para>
-</section>
-
-<section>
-<title>Miscellaneous Functions</title>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Numpad</keycap>
-<keycap>+</keycap>
-</keycombo>: "say all" command; reads from the current position of the caret to the end of the document.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Numpad</keycap>
-<keycap>Enter</keycap>
-</keycombo>: "where am I" command; speaks information such as the title of the current application window as well as the name of the control that currently has focus.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>F1</keycap>
-</keycombo>: enter Learn mode (press 
-<keycap>Escape</keycap> to exit)</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>F</keycap>
-</keycombo>: speak font and attribute information for the current character.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Space</keycap>
-</keycombo>: launch the <application>Orca</application> configuration dialog.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Ctrl</keycap>
-<keycap>Space</keycap>
-</keycombo>: reload user settings and reinitialize services as necessary. Also launch the <application>Orca</application> configuration dialog for the current 
-application.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>S</keycap>
-</keycombo>: toggle speech on and off.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>F11</keycap>
-</keycombo>: toggle table-reading mode between single cell or entire row.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>Q</keycap>
-</keycombo>: quit <application>Orca</application>.
-</para>
-</section>
-
-<section>
-<title>Commands for Debugging</title>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>F3</keycap>
-</keycombo>: report information on the currently active script.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>F4</keycap>
-</keycombo>: cycle through <application>Orca</application>'s various debug levels.
-</para>
-<note>
-<para>
-In order for the next three commands to be of use, <application>Orca</application> needs to be started from a virtual console or via <application>gnome-terminal</application>. Output is sent only to the console (i.e., it is not sent to speech or braille).
-</para>
-</note>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>F5</keycap>
-</keycombo>: prints a debug listing of all known applications to the console where <application>Orca</application> is running.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>F7</keycap>
-</keycombo>: prints debug information about the ancestry of the object with focus.
-</para>
-<para>
-<keycombo>
-<keycap>Insert</keycap>
-<keycap>F8</keycap>
-</keycombo>: prints debug information about the current application.
-</para>
-</section>
-</section>
 <section>
 <title>Troubleshooting</title>
 <section>
@@ -2203,6 +2822,7 @@ If you use applications that use panes, such as the file manager and help browse
 </para>
 </listitem>
 </orderedlist>
+</section>
 </section>
 </section>
 </section>
