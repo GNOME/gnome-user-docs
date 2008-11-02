@@ -999,6 +999,411 @@ Dots 7 and 8
 Text attributes can also be set on an individual application basis. The text attribute pane is also part of the application-specific settings dialog that's started when you give a particular application focus and type <keycombo><keycap>Orca_Modifier</keycap><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo>.
 </para>
 </section>
+</section>
+
+<section>
+<title>Orca Keyboard Commands</title>
+<para>
+You can get a complete list of available keyboard commands by visiting the <guilabel>Key Bindings</guilabel> page of the <application>Orca</application> Configuration GUI. To bring up the <application>Orca</application> Configuration GUI, press <keycombo><keycap>Orca_Modifier</keycap><keycap>Space</keycap></keycombo>, where <userinput>Orca_Modifier</userinput> is the <keycap>Insert</keycap> key for the <link linkend="orca-desktop-keys">desktop layout</link> and the <keycap>Caps_Lock</keycap> key for the <link linkend="orca-laptop-keys">laptop layout</link>. Note that you can also enter <application>Orca</application>'s "learn mode" while running <application>Orca</application> by pressing <keycombo><keycap>Orca_Modifier</keycap><keycap>H</keycap></keycombo>. When in learn mode, <application>Orca</application> will intercept all keyboard and braille input events and tell you what the effect would be.  To exit learn mode, press the <keycap>Escape</keycap> key.
+</para>
+<note>
+<para>
+<application>Orca</application> provides additional commands for some applications, such as <application>Firefox</application>.  To get the list of additional commands for an application, press <keycombo><keycap>Ctrl</keycap><keycap>Orca_Modifier</keycap><keycap>Space</keycap></keycombo> when that application has focus. This will bring up the <application>Orca</application> Configuration GUI in the "application-specific" state, and the additional commands will appear in the <guilabel>Key Bindings</guilabel> page.
+</para>
+<para>
+The GNOME Desktop itself also has <ulink url="http://library.gnome.org/users/user-guide/stable/shortcuts-global.html.en">built in keyboard commands</ulink> to control the desktop and its applications.
+</para>
+<para>
+WARNING: the MouseKeys functionality of AccessX can interfere with the <application>Orca</application> modifier key (see <ulink url="http://bugzilla.gnome.org/show_bug.cgi?id=548169">bug 548169</ulink>), resulting in odd behavior. In particular, MouseKeys uses the <keycap>KP_Insert</keycap> key to emulate a mouse button press. When enabled, MouseKeys can conflict with <keycap>KP_Insert</keycap> as the <application>Orca</application> modifier, resulting in what appears to be a stuck <application>Orca</application> modifier key.  As an alternative, you can use the <link linkend="orca-laptop-keys">laptop key bindings</link>, which avoids the keypad for <application>Orca</application> commands. If you accidentally enabled MouseKeys, you can disable it via the <application>gnome-keyboard-properties</application> application.
+</para>
+</note>
+
+<section id="orca-desktop-keys">
+<title>Desktop Layout</title>
+<para>
+Following is a list of common <application>Orca</application> keyboard commands for desktop keyboards arranged by category:
+</para>
+
+<section>
+<title>Flat review commands</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycap>Numpad-7</keycap> - move the flat review cursor to the previous line and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-8</keycap> - read the current line.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-9</keycap> - move the flat review cursor to the next line and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-4</keycap> - move the flat review cursor to the previous word and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-5</keycap> - read the current word.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-6</keycap> - move the flat review cursor to the next word and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-1</keycap> - move the flat review cursor to the previous character and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-2</keycap> - read the current character.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-3</keycap> - move the flat review cursor to the next character and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-slash</keycap> - perform a left mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycap>Numpad-star</keycap> - perform a right mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+</itemizedlist>
+<note>
+<para>
+The above commands apply when working with objects as well as when working with text.  For example, if the flat review cursor were positioned on a menu bar, pressing the "read current line" command would speak the names of all visible menus. Similarly, pressing the "read next word" command would speak the object to the right of the flat review cursor on the same line, or move flat review to the next line if no more objects were found.
+</para>
+</note>
+</section>
+
+<section>
+<title>Bookmark commands</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Insert</keycap><keycap>[1-6]</keycap></keycombo> - assign a bookmark to a numbered slot. If a bookmark already exists in the slot it will be replaced with the new one. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>[1-6]</keycap></keycombo> - go to the position pointed to by the bookmark bound to this numbered slot.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Shift</keycap><keycap>[1-6]</keycap></keycombo> -  "Where am I" information for this bookmark relative to the current pointer location.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>B</keycap></keycombo> and <keycombo><keycap>Insert</keycap><keycap>Shift</keycap><keycap>B</keycap></keycombo> - move between the given bookmarks for the given application or page. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Insert</keycap><keycap>B</keycap></keycombo> - save the defined bookmarks for the current application or page.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Miscellaneous functions</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Numpad</keycap><keycap>Plus</keycap></keycombo> - "say all" command; reads from the current position of the caret to the end of the document. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Numpad</keycap><keycap>Enter</keycap></keycombo> - "Where am I" command; speaks information such as the title of the current application window, as well as the name of the control that currently has focus. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>H</keycap></keycombo> - enter into <application>Orca</application>'s "learn mode"; press <keycap>Escape</keycap> to exit. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>F</keycap></keycombo> - speak font and attribute information for the current character. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Space</keycap></keycombo> - Launch the <application>Orca</application> Configuration dialog. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Control</keycap><keycap>Space</keycap></keycombo> - reload user settings and reinitialize services as necessary. Also launches the <application>Orca</application> Configuration dialog for the current application.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>S</keycap></keycombo> - toggle speech on and off.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>F11</keycap></keycombo> - toggle the reading of tables, either by single cell or whole row.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Q</keycap></keycombo> - quit <application>Orca</application>.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Commands for debugging</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Home</keycap></keycombo> - report information on the currently active script. 
+</para>
+</listitem>
+</itemizedlist>
+<note>
+<para>
+In order for the next three commands to be of use, <application>Orca</application> needs to be started from a virtual console or via gnome-terminal. Output is sent to the console only (i.e., it is not sent to speech or braille).
+</para>
+</note>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>End</keycap></keycombo> - print a debug listing of all known applications to the console where <application>Orca</application> is running. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Page_Up</keycap></keycombo> - print debug information about the ancestry of the object with focus. 
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Insert</keycap><keycap>Page_Down</keycap></keycombo> - print debug information about the hierarchy of the application with focus. 
+</para>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+
+<section id="orca-laptop-keys">
+<title>Laptop Layout</title>
+<para>
+Following is a list of common <application>Orca</application> keyboard commands for laptop keyboards arranged by category:
+</para>
+
+<section>
+<title>Flat review commands</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>U</keycap></keycombo> - move the flat review cursor to the previous line and read it.
+Double-click to move flat review to the top of the current window.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>I</keycap></keycombo> - read the current line.
+Double-click to read the current line along with formatting and capitalization details.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>O</keycap></keycombo> - move the flat review cursor to the next line and read it. Double- click to move flat review to the bottom of the current window.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>J</keycap></keycombo> - move the flat review cursor to the previous word and read it.
+Double-click to move flat review to the word above the current word.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>K</keycap></keycombo> - read the current word.
+Double-click to spell the word. Triple-click  to hear the word spelled phonetically.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>L</keycap></keycombo> - move the flat review cursor to the next word and read it. Double- click to move flat review to the word below the current word.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>M</keycap></keycombo> - move the flat review cursor to the previous character and read it.
+Double-click to move flat review to the end of the current line.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Comma</keycap></keycombo> - read the current character. Double-click to pronounce the character phonetically if it is a letter.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Period</keycap></keycombo> - move the flat review cursor to the next character and read it.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>7</keycap></keycombo> - perform a left mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>8</keycap></keycombo> - perform a right mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>8</keycap></keycombo> - perform a right mouse click at the location of the flat review cursor.
+</para>
+</listitem>
+</itemizedlist>
+<note>
+<para>
+The above commands apply when working with objects as well as when working with text.  For example, if the flat review cursor were positioned on a menu bar, pressing the "read current line" command would speak the names of all visible menus. Similarly, pressing the "read next word" command would speak the object to the right of the flat review cursor on the same line, or move flat review to the next line if no more objects were found.
+</para>
+</note>
+</section>
+
+<section>
+<title>Bookmark commands</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Caps_Lock</keycap><keycap>[1-6]</keycap></keycombo> - add a bookmark to the numbered slot. If a bookmark already exists for the slot it will be replaced with the new one.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>[1-6]</keycap></keycombo> - go to the position pointed to by the bookmark bound to this numbered slot.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Shift</keycap><keycap>[1-6]</keycap></keycombo> - "Where am I" information for this bookmark relative to the current pointer location.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>B</keycap></keycombo>and <keycombo><keycap>Caps_Lock</keycap><keycap>Shift</keycap><keycap>B</keycap></keycombo> - move between the given bookmarks for the given application or page.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Alt</keycap><keycap>Caps_Lock</keycap><keycap>B</keycap></keycombo> - save the defined bookmarks for the current application or page.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Miscellaneous functions</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Semicolon</keycap></keycombo> - "Say all" command; reads from the current position of the caret to the end of the document.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Enter</keycap></keycombo> - "Where am I" command; speaks information such as the title of the current application window, as well as the name of the control that currently has focus.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>H</keycap></keycombo> - enter learn mode (press <keycap>Escape</keycap> to exit).
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>F</keycap></keycombo> - speak font and attribute information for the current character.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Space</keycap></keycombo> - launch the <application>Orca</application> Configuration dialog.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Control</keycap><keycap>Space</keycap></keycombo> - reload user settings and reinitialize services as necessary; also  launches the <application>Orca</application> Configuration dialog for the current application.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>S</keycap></keycombo> - toggle speech on and off.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>F11</keycap></keycombo> - toggle the reading of tables, either by single cell or whole row.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Q</keycap></keycombo> - quit <application>Orca</application>.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section>
+<title>Commands for debugging</title>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Alt</keycap><keycap>Control</keycap><keycap>Home</keycap></keycombo> - report information on the currently active script.
+</para>
+</listitem>
+</itemizedlist>
+<note>
+<para>
+In order for the next three commands to be of use, <application>Orca</application> needs to be started from a virtual console or via <application>gnome-terminal</application>. Output is sent to the console only (i.e., 
+it is not sent to speech or braille).
+</para>
+</note>
+<itemizedlist>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Alt</keycap><keycap>Control</keycap><keycap>End</keycap></keycombo> - prints a debug listing of all known applications to the console where <application>Orca</application> is running.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Alt</keycap><keycap>Control</keycap><keycap>Page_Up</keycap></keycombo> - prints debug information about the ancestry of the object with focus.
+</para>
+</listitem>
+<listitem>
+<para>
+<keycombo><keycap>Caps_Lock</keycap><keycap>Alt</keycap><keycap>Control</keycap><keycap>Page_Down</keycap></keycombo> - prints debug information about the object hierarchy of the application with focus.
+</para>
+</listitem>
+</itemizedlist>
+</section>
+</section>
 
 </section>
 </chapter>
