@@ -712,12 +712,11 @@ applets, from left to right: </para>
 currently open on your system.</para>
       </listitem>
       <listitem>
-        <para><application>CD Player</application>: Enables you to control
-the compact disc player on your system.</para>
-      </listitem>
-      <listitem>
         <para><application>Volume Control</application>: Enables you to
 control the volume of the speaker on your system.</para>
+      </listitem>
+      <listitem>
+        <para><application>Clock</application>: Shows the current date and time.</para>
       </listitem>
     </itemizedlist>
     <screenshot>
@@ -996,7 +995,8 @@ the GNOME website in your default browser.</para>
             </tbody>
           </tgroup>
         </informaltable>
-        
+
+        <!-- This table is mostly copied from http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html. Last update is from 1.1-draft specification. -->        
         <para>The command can contain the following special codes which will be replaced with the value specified in the following table:</para>
         <informaltable>
           <tgroup cols="2" colsep="0" rowsep="0">
@@ -1020,7 +1020,8 @@ the GNOME website in your default browser.</para>
                   </para>
                 </entry>
                 <entry valign="top">
-                  <para>A single file name, even if multiple files are selected. The system reading the desktop entry should recognize that the program in question cannot handle multiple file arguments, and it should should probably spawn and execute multiple copies of a program for each selected file if the program is not able to handle additional file arguments. If files are not on the local file system (i.e. are on HTTP or FTP locations), the files will be copied to the local file system and %f will be expanded to point at the temporary file. Used for programs that do not understand the URL syntax.</para>
+                  <para>A single file name, even if multiple files are selected. If the program in question cannot handle multiple file arguments, the system reading the desktop entry will probably spawn and execute multiple copies of the program for each selected file.</para> 
+                  <para>If files are not on the local file system (i.e. are on HTTP or FTP locations), the files will be copied to the local file system and %f will be expanded to point at the temporary file. Used for programs that do not understand the URL syntax.</para>
                 </entry>
               </row>
               <row>
@@ -1030,7 +1031,7 @@ the GNOME website in your default browser.</para>
                   </para>
                 </entry>
                 <entry valign="top">
-                  <para>A list of files. Use for apps that can open several local files at once.</para>
+                  <para>A list of files. Use for applications that can open several local files at once. Each file is passed as a separate argument to the executable program. </para>
                 </entry>
               </row>
               <row>
@@ -1040,7 +1041,7 @@ the GNOME website in your default browser.</para>
                   </para>
                 </entry>
                 <entry valign="top">
-                  <para>A single URL.</para>
+                  <para>A single URL. Local files may either be passed as file: URLs or as file path.</para>
                 </entry>
               </row>
               <row>
@@ -1050,47 +1051,7 @@ the GNOME website in your default browser.</para>
                   </para>
                 </entry>
                 <entry valign="top">
-                  <para>A list of URLs.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <command>%d</command>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>Directory containing the file that would be passed in a %f field.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <command>%D</command>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>List of directories containing the files that would be passed in to a %F field.</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <command>%n</command>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>A single filename (without path).</para>
-                </entry>
-              </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <command>%N</command>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>A list of filenames (without paths).</para>
+                  <para>A list of URLs. Each URL is passed as a separate argument to the executable program. Local files may either be passed as file: URLs or as file path.</para>
                 </entry>
               </row>
               <row>
@@ -1100,7 +1061,7 @@ the GNOME website in your default browser.</para>
                   </para>
                 </entry>
                 <entry valign="top">
-                  <para>The Icon field of the desktop entry expanded as two parameters, first --icon and then the contents of the Icon field. Should not expand as any parameters if the Icon field is empty or missing.</para>
+                  <para>The Icon key of the desktop entry expanded as two arguments, first --icon and then the value of the Icon key. It does not expand to any arguments if the Icon key is empty or missing.</para>
                 </entry>
               </row>
               <row>
@@ -1110,7 +1071,7 @@ the GNOME website in your default browser.</para>
                   </para>
                 </entry>
                 <entry valign="top">
-                  <para>The translated Name field associated with the desktop entry.</para>
+                  <para>The translated name of the application as listed in the appropriate Name key in the desktop entry.</para>
                 </entry>
               </row>
               <row>
@@ -1123,19 +1084,10 @@ the GNOME website in your default browser.</para>
                   <para>The location of the desktop file as either a URI (if for example gotten from the vfolder system) or a local filename or empty if no location is known.</para>
                 </entry>
               </row>
-              <row>
-                <entry valign="top">
-                  <para>
-                    <command>%v</command>
-                  </para>
-                </entry>
-                <entry valign="top">
-                  <para>The name of the Device entry in the desktop file.</para>                </entry>
-              </row>          
             </tbody>  
           </tgroup>                  
         </informaltable>
-        <para>These are as defined by freedesktop.org's <ulink type="http" url="http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-0.9.4.html">Desktop Entry Specification</ulink>.</para>
+        <para>These are as defined by freedesktop.org's <ulink type="http" url="http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html">Desktop Entry Specification</ulink>.</para>
       </section>
     </section>    
   </section>
