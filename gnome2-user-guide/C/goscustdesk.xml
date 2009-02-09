@@ -1853,48 +1853,75 @@ tools</primary>
       <primary>proxy</primary>
       <secondary>setting preferences</secondary>
     </indexterm>
-    <para>The <application>Network Proxy</application>
-preference tool enables you to configure how your system connects to the Internet.</para>
-    <para>You can configure the GNOME Desktop to connect to a <firstterm>proxy server</firstterm>, and specify the details of the proxy server. A proxy server
-is a server that intercepts requests to another server, and fulfills the request
-itself, if it can. You can enter the Domain Name Service (DNS) name or the
-Internet Protocol (IP) address of the proxy server. A <firstterm>DNS name</firstterm> is a unique alphabetic identifier for a computer on a network.
-An <firstterm>IP address</firstterm> is a unique numeric identifier for a
-computer on a network. </para>
-    
+    <para>The <application>Network Proxy Preferences</application>
+    enables you to configure how your system connects to the Internet.</para>
+    <para>You can configure the GNOME Desktop to connect to a <firstterm>proxy server</firstterm>,
+    and specify the details of the proxy server. A proxy server is a server that intercepts requests
+    to another server, and fulfills the request itself, if it can. You can enter the domain name or
+    the Internet Protocol (IP) address of the proxy server. A <firstterm>domain name</firstterm> is
+    a unique alphabetic identifier for a computer on a network. An <firstterm>IP address</firstterm>
+    is a unique numeric identifier for a computer on a network.</para>
+    <remark>Why would one want to use a proxy?  This description makes it sounds like it's
+    a user preference, rather than being dictated by the network you're on.  We should make
+    this more clear.</remark>
+    <para>Since it is possible that you need to use a different proxy configuration in different places,
+    <application>Network Proxy Preferences</application> allows you to define separate proxy configurations
+    and switch between them using the <guilabel>Location</guilabel> drop-down box at the top of the window.
+    Choose <guilabel>New Location</guilabel> to create a proxy configuration for a new location. Locations
+    can be removed using the <guilabel>Delete Location</guilabel> button at the bottom of the window.</para>
+  
     <variablelist>
-      <varlistentry><term><guilabel>Direct internet
-    connection</guilabel></term><listitem><para>Select this option if you want to connect to the Internet without
-    a proxy server.</para></listitem></varlistentry>
-      <varlistentry><term><guilabel>Manual proxy configuration</guilabel></term><listitem><para>Select
-    this option if you want to connect to the Internet through a proxy server,
-    and you want to configure the proxy server manually.</para>
-      <variablelist>
-        <varlistentry><term><guilabel>HTTP proxy</guilabel></term><listitem><para>Enter the DNS name, or the IP
-        address of the proxy server to use when you request a HTTP service. Enter
-        the port number of the HTTP service on the proxy server in the <guilabel>Port</guilabel> spin box.</para></listitem></varlistentry>
-        <varlistentry><term><guilabel>Secure HTTP proxy</guilabel></term><listitem><para>Enter
-        the DNS name, or the IP address of the proxy server to use when you request
-        a Secure HTTP service. Enter the port number of the Secure HTTP service on
-        the proxy server in the <guilabel>Port</guilabel> spin box.</para></listitem></varlistentry>
-        <varlistentry><term><guilabel>FTP proxy</guilabel></term><listitem><para>Enter the DNS name, or the IP
-        address of the proxy server to use when you request a FTP service. Enter the
-        port number of the FTP service on the proxy server in the <guilabel>Port</guilabel>
-        spin box.</para></listitem></varlistentry>
-        <varlistentry><term><guilabel>Socks host</guilabel></term><listitem><para>Enter the DNS name, or the IP
-        address of the Socks host to use. Enter the port number for the Socks protocol
-        on the proxy server in the <guilabel>Port</guilabel> spin box.</para></listitem></varlistentry>
-      </variablelist>
+      <varlistentry>
+        <term><guilabel>Direct internet connection</guilabel></term>
+        <listitem><para>Select this option to connect to the Internet without a proxy server.</para></listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><guilabel>Manual proxy configuration</guilabel></term>
+        <listitem><para>Select this option to connect to the Internet through a proxy server and
+        configure the proxy settings manually.</para>
+
+        <variablelist>
+          <varlistentry>
+            <term><guilabel>HTTP proxy</guilabel></term>
+            <listitem>
+              <para>Enter the domain name or IP address of the proxy server to use when you request
+              an HTTP service. Enter the port number of the HTTP service on the proxy server in the
+              <guilabel>Port</guilabel> field.</para>
+              <para>If the HTTP proxy server requires authentication, click the <guibutton>Details</guibutton>
+              button to enter your username and password.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><guilabel>Secure HTTP proxy</guilabel></term>
+            <listitem><para>Enter the domain name or IP address of the proxy server to use when you
+            request a secure HTTP service. Enter the port number of the secure HTTP service on
+            the proxy server in the <guilabel>Port</guilabel> field.</para></listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><guilabel>FTP proxy</guilabel></term>
+            <listitem><para>Enter the domain name or IP address of the proxy server to use when you
+            request an FTP service. Enter the port number of the FTP service on the proxy server in
+            the <guilabel>Port</guilabel> field.</para></listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><guilabel>Socks host</guilabel></term>
+            <listitem><para>Enter the domain name or IP address of the Socks host to use. Enter the port
+            number for the Socks protocol on the proxy server in the <guilabel>Port</guilabel> field.</para></listitem>
+          </varlistentry>
+        </variablelist>
       </listitem></varlistentry>
       <varlistentry><term><guilabel>Automatic proxy
       configuration</guilabel></term><listitem><para>Select this option if you want to connect to the Internet through a proxy
-      server, and you want to configure the proxy server automatically.</para></listitem></varlistentry>
+      server, and you want to configure the proxy server automatically.</para>
+      <variablelist>
       <varlistentry><term><guilabel>Autoconfiguration
       URL</guilabel></term><listitem><para>Enter the URL that contains the information required to configure the proxy
     server automatically. </para></listitem></varlistentry>
+      </variablelist></listitem></varlistentry>
     </variablelist>
     
-    <para>Set which hosts should not use the proxy in the <guilabel>Ignore Host List</guilabel> in the <guilabel>Advanced Configuration</guilabel> tabbed section. When you access these hosts, you will connect to the Internet directly without a proxy.</para>
+    <para>Set which hosts should not use the proxy in the <guilabel>Ignore Host List</guilabel> in the <guilabel>Ignored Hosts</guilabel> tabbed section. When you access these hosts, you will connect to the Internet directly without a proxy.</para>
     
   </sect2>
 
