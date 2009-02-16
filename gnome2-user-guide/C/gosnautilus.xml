@@ -3430,6 +3430,9 @@ and Trash.</para>
       <listitem>
         <para>Preview options to improve the performance of the file manager.</para>
       </listitem>
+      <listitem>
+        <para>How removable media and connected devices are handled.</para>
+      </listitem>
     </itemizedlist>
     <sect2 id="gosnautilus-438">
       <title>Views Preferences</title>
@@ -3470,7 +3473,7 @@ you can modify. </para>
               </entry>
               <entry valign="top">
                 <para>Select the default view for folders. When you open
-a folder, the folder is displayed in the view that you select. This can be either the icon view or the list view.</para>
+a folder, the folder is displayed in the view that you select. This can be the icon view, the list view, or the compact view, which is a variant of the icon view that is organized in columns rather than rows..</para>
               </entry>
             </row>
             <row>
@@ -3509,12 +3512,11 @@ backup files</guilabel>
             <row>
               <entry colname="colspec0" valign="top">
                 <para>
-                  <guilabel>Icon View Default zoom level</guilabel>
+                  <guilabel>Default zoom level</guilabel> in the Icon View, Compact View, or List View sections
                 </para>
               </entry>
               <entry colname="colspec1" valign="top">
-                <para>There are two settings, one for the icon
-view and one for the list view. Select the default zoom level for folders that are displayed
+                <para>Select the default zoom level for folders that are displayed
 in this view. The zoom level specifies the size of items in a view.</para>
               </entry>
             </row>
@@ -3544,6 +3546,16 @@ for items beside the icon rather than under the icon.</para>
             <row>
               <entry colname="colspec0">
                 <para>
+                  <guilabel>All columns have the same width</guilabel>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Select this option to make all columns in a compact view have the same width.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
                   <guilabel>Show only folders</guilabel>
                 </para>
               </entry>
@@ -3568,7 +3580,7 @@ tab to display the <guilabel>Behavior</guilabel> tabbed section. You can set the
 
       <variablelist>
        	<varlistentry>
-      	  <term><guilabel>Single click to activate items</guilabel></term>
+      	  <term><guilabel>Single click to open items</guilabel></term>
       	  <listitem>
       	    <para>Select this option to perform the default action
       for an item when you click on the item. When this option is selected, and
@@ -3576,7 +3588,7 @@ tab to display the <guilabel>Behavior</guilabel> tabbed section. You can set the
       	  </listitem>
       	</varlistentry>
        	<varlistentry>
-      	  <term><guilabel>Double click to activate items</guilabel></term>
+      	  <term><guilabel>Double click to open items</guilabel></term>
       	  <listitem>
       	    <para>Select this option to perform the default action for an item when you double-click
       on the item.</para>
@@ -3590,7 +3602,7 @@ tab to display the <guilabel>Behavior</guilabel> tabbed section. You can set the
       	  </listitem>
       	</varlistentry>
        	<varlistentry>
-      	  <term><guilabel>Run executable text files when they are clicked</guilabel></term>
+      	  <term><guilabel>Run executable text files when they are opened</guilabel></term>
       	  <listitem>
       	    <para>Select this option to run an text executable file when you choose
       the file. An executable text file is a text file that can execute, that
@@ -3598,7 +3610,7 @@ tab to display the <guilabel>Behavior</guilabel> tabbed section. You can set the
       	  </listitem>
       	</varlistentry>
        	<varlistentry>
-      	  <term><guilabel>View executable text files when they are clicked</guilabel></term>
+      	  <term><guilabel>View executable text files when they are opened</guilabel></term>
       	  <listitem>
       	    <para>Select this option to display the contents of an executable text file when you
       choose the executable text file.</para>
@@ -3703,7 +3715,7 @@ the description of the MIME type of the item.</para>
             <row>
               <entry colname="colspec0" valign="top">
                 <para>
-                  <guilabel>Date modified</guilabel>
+                  <guilabel>Date Modified</guilabel>
                 </para>
               </entry>
               <entry colname="colspec1" valign="top">
@@ -3714,7 +3726,7 @@ this option to display the last modification date of  the item.</para>
             <row>
               <entry colname="colspec0" valign="top">
                 <para>
-                  <guilabel>Date accessed</guilabel>
+                  <guilabel>Date Accessed</guilabel>
                 </para>
               </entry>
               <entry colname="colspec1" valign="top">
@@ -3759,7 +3771,7 @@ characters, for example <computeroutput>-rwxrw-r--</computeroutput>.</para>
             <row>
               <entry colname="colspec0" valign="top">
                 <para>
-                  <guilabel>Octal permissions</guilabel>
+                  <guilabel>Octal Permissions</guilabel>
                 </para>
               </entry>
               <entry colname="colspec1" valign="top">
@@ -3770,7 +3782,7 @@ notation, for example <computeroutput>764</computeroutput>. </para>
             <row>
               <entry colname="colspec0" valign="top">
                 <para>
-                  <guilabel>MIME type</guilabel>
+                  <guilabel>MIME Type</guilabel>
                 </para>
               </entry>
               <entry colname="colspec1" valign="top">
@@ -4084,6 +4096,129 @@ need to increase your zoom level to see the number of items in each folder.</par
             </row>
           </tbody>
         </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-61">
+      <title>Media Preferences</title>
+      <para>
+        You can configure how <application>Nautilus</application> handles
+        removable media and devices that are connected to the computer, such
+        as music players or cameras. For each media format or device 
+        type, <application>Nautilus</application> offers to run one of the 
+        applications that are known to support this format, as well as
+        the following options:
+      </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="35.09*"/>
+          <colspec colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Option</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Ask what to do</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Make <application>Nautilus</application> ask for the desired
+                   action when the media or device appears.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Do Nothing</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Do nothing.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Open Folder</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Treat the media or device like an ordinary folder and open
+                it in a <application>Nautilus</application> window.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Open with other Application</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Select an application to run with the <application>Nautilus</application> application chooser dialog. Note that applications known to handle
+                the media or device can be chosen directly from the drop-down list.
+                
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>The most common media formats can be configured in the <guilabel>Media Handling</guilabel> section: audio CDs, video DVDs, music players, cameras, and software cds.</para>
+      <para>To configure the handling for other media formats, first select the format in the <guilabel>Type</guilabel> drop-down list, then select the desired handling for this format in the <guilabel>Action</guilabel> drop-down list.</para>
+      <para><xref linkend="gosnautilus-TBL-43"/> lists other media handling preferences that
+you can modify.</para>
+      <table frame="topbot" id="gosnautilus-TBL-43">
+        <title>Preview Preferences</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Dialog Element</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Never prompt or start programs on media insertion</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>
+                   Select this option to prevent <application>Nautilus</application> from showing dialogs or running programs when media or devices appear. When this option is selected, the preferences for the handling of specific media formats are ignored.
+                </para>
+              </entry>
+           </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guilabel>Browse media when inserted</guilabel>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  When this option is selected, <application>Nautilus</application>
+                  will automatically open a folder when media is inserted. This
+                  only applies for media formats for which the handling has not been explicitly configured.
+                </para>
+              </entry>
+           </row>
+         </tbody>
+       </tgroup>
       </table>
     </sect2>
 
