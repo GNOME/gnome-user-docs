@@ -12,7 +12,7 @@ DOC_ENTITIES =			\
 	mobility.xml	\
 	legal.xml
 
-DOC_LINGUAS = de el en_GB es fi fr hu it oc pt sv zh_CN
+DOC_LINGUAS = de el en_GB es eu fi fr hu it oc pt sv zh_CN
 
 install-data-local: install-doc-pdf
 install-doc-pdf:
