@@ -2141,17 +2141,20 @@ typing breaks.</para>
         <para>configure your mouse for right-hand use or for left-hand use,</para>
       </listitem>
       <listitem>      
-        <para>specify the speed and sensitivity of mouse movement.</para>
+        <para>specify the speed and sensitivity of mouse movement,</para>
+      </listitem>
+      <listitem>
+        <para>configure mouse accessibility features.</para>
       </listitem>
     </itemizedlist>
     
     
     <sect3 id="goscustdesk-55">
-      <title>Buttons Preferences</title>
-      <para>Use the <guilabel>Buttons</guilabel> tabbed section to specify whether
-the mouse buttons are configured for left-hand use. You can also specify the
-delay between clicks for a double-click.</para>
-      <para><xref linkend="goscustperiph-TBL-6"/> lists the mouse button preferences
+      <title>General Mouse Preferences</title>
+      <para>Use the <guilabel>General</guilabel> tabbed section to specify whether
+      the mouse buttons are configured for left-hand or right-hand use and configure
+      the speed and sensitivity of your mouse.</para>
+      <para><xref linkend="goscustperiph-TBL-6"/> lists the general mouse preferences
 that you can modify.</para>
 
     <!-- convert to variablelist -->
@@ -2174,14 +2177,74 @@ that you can modify.</para>
             <row>
               <entry colsep="0" rowsep="0" valign="top">
                 <para>
-                  <guilabel>Left-handed
-mouse</guilabel>
+                  <guilabel>Right-handed</guilabel>
+                </para>
+              </entry>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>Select this option to configure your mouse for right-hand use. When you configure your mouse for right-hand use, the left mouse button is the primary button and the right mouse button is the secondary button.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>Left-handed</guilabel>
                 </para>
               </entry>
               <entry colsep="0" rowsep="0" valign="top">
                 <para>Select this option to configure your mouse for left-hand use. When you configure
 your mouse for left-hand use, the functions of the left mouse button and the
 right mouse button are swapped.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>Show position of pointer when the Control key is pressed</guilabel>
+                </para>
+              </entry>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>Select this option to enable a mouse pointer animation
+when you press and release the Control key. This feature can assist
+you to locate the mouse pointer.</para>
+                <note>
+                  <para>The position of the Control key on the keyboard can be 
+                  modified in the Keyboard Layout Options dialog, see 
+                  <xref linkend="prefs-keyboard-layoutoptions"/>.</para>
+                </note>
+              </entry>
+            </row>
+            <row>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>Acceleration</guilabel>
+                </para>
+              </entry>
+              <entry colsep="0" rowsep="0"  valign="top">
+                <para>Use the slider to specify the speed at which your
+mouse pointer moves on your screen when you move your mouse.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colsep="0" rowsep="0"  valign="top">
+                <para>
+                  <guilabel>Sensitivity</guilabel>
+                </para>
+              </entry>
+              <entry  colsep="0" rowsep="0" valign="top">
+                <para>Use the slider to specify how sensitive your mouse
+pointer is to movements of your mouse.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>
+                  <guilabel>Threshold</guilabel>
+                </para>
+              </entry>
+              <entry colsep="0" rowsep="0" valign="top">
+                <para>Use the slider to specify the distance that you
+must move an item before the move action is interpreted as a drag-and-drop
+action.</para>
               </entry>
             </row>
             <row>
@@ -2203,11 +2266,58 @@ specified here, the action is not interpreted as a double-click. </para>
         </tgroup>
       </table>
     </sect3>
+-->
     <sect3 id="goscustdesk-53">
-      <title>Motion Preferences</title>
-      <para>Use the <guilabel>Motion</guilabel> tabbed section to set your preferences
-for mouse movement.</para>
-      <para><xref linkend="goscustdesk-TBL-47"/> lists the mouse motion preferences
+      <title>Mouse Accessibility Preferences</title>
+      <para>Use the <guilabel>Accessibility</guilabel> tabbed section to configure
+      accessibility features that can help people who have difficulty with exact positioning of the pointer or with pressing the mouse buttons:</para>
+      <itemizedlist>
+         <listitem>
+            <para>
+              Open a contextual menu by clicking and holding the primary mouse button; this is useful for users that can manipulate only one button.
+            </para>
+         </listitem>
+         <listitem>
+            <para>
+              Perform different types of mouse button click by software; this useful for users that are not able to manipulate any buttons. The types of click that can be performed are:
+               <variablelist>
+                 <varlistentry>
+                   <term>Single click</term>
+                   <listitem>
+                     <para>
+                       A single click of the primary mouse button
+                     </para>
+                   </listitem>
+                 </varlistentry>
+                 <varlistentry>
+                   <term>Double click</term>
+                   <listitem>
+                     <para>
+                        A double click of the primary mouse button
+                     </para>
+                   </listitem>
+                 </varlistentry>
+                 <varlistentry>
+                   <term>Drag click</term>
+                   <listitem>
+                     <para>
+                       A click that begins a drag operation
+                     </para>
+                   </listitem>
+                 </varlistentry>
+                 <varlistentry>
+                   <term>Secondary click</term>
+                   <listitem>
+                     <para>
+                       A single click of the secondary mouse button
+                     </para>
+                   </listitem>
+                 </varlistentry>
+               </variablelist>
+            </para>
+         </listitem>
+      </itemizedlist>
+      <para><xref linkend="goscustdesk-TBL-47"/> lists the mouse accessibility preferences
 that you can modify:</para>
       <table frame="topbot" id="goscustdesk-TBL-47">
         <title>Mouse Motion Preferences</title>
@@ -2226,37 +2336,136 @@ that you can modify:</para>
           </thead>
           <tbody>
             <row>
-              <entry valign="top">
+              <entry rowsep="0" colsep="0" valign="top">
                 <para>
-                  <guilabel>Acceleration</guilabel>
+                  <guilabel>Trigger secondary click by holding down the primary button</guilabel>
                 </para>
               </entry>
-              <entry valign="top">
-                <para>Use the slider to specify the speed at which your
-mouse pointer moves on your screen when you move your mouse.</para>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>Select this option to enable simulated secondary clicks by pressing the primary mouse button for an extended time.</para>
               </entry>
             </row>
             <row>
-              <entry valign="top">
+              <entry rowsep="0" colsep="0" valign="top">
                 <para>
-                  <guilabel>Sensitivity</guilabel>
+                  <guilabel>Delay</guilabel> slider in the <guilabel>Simulated Secondary Click</guilabel> section
                 </para>
               </entry>
-              <entry valign="top">
-                <para>Use the slider to specify how sensitive your mouse
-pointer is to movements of your mouse.</para>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>Use the slider to specify how long the primary button must be pressed to simulate a secondary click.</para>
               </entry>
             </row>
             <row>
-              <entry valign="top">
+              <entry rowsep="0" colsep="0" valign="top">
                 <para>
-                  <guilabel>Threshold</guilabel>
+                  <guilabel>Initiate click when stopping pointer movement</guilabel>
                 </para>
               </entry>
-              <entry valign="top">
-                <para>Use the slider to specify the distance that you
-must move an item before the move action is interpreted as a drag-and-drop
-action.</para>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>Select this option to enable automatic clicks when the mouse stops. Use the additional preferences in the <guilabel>Dwell Click</guilabel> section to configure how the type of click is chosen.</para>
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Delay</guilabel> slider in the <guilabel>Dwell Click</guilabel> section
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>Use the slider to specify how long the pointer must remain at rest before an automatic click will be triggered.</para>
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Motion threshold</guilabel> slider 
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>Use the slider to specify how much the pointer may move to still be considered at rest.</para>
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Choose type of click beforehand</guilabel>
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>Select this option to pick the type of click to perform 
+                from a window or panel applet.</para> 
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Show click type window</guilabel>
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  When this option is enabled, the different types of click (single click, double click, drag click or secondary click) can be selected in a window.</para> 
+                <note><para>The <guilabel>Dwell Click</guilabel> panel applet can
+                be used instead of the window.</para></note>
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Choose type of click with mouse gestures</guilabel> 
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>Select this option to pick the type of click by moving the mouse in a certain direction. The four combo boxes below this option allow to assign directions to the different types of click. Note that each direction can be used only for one type of click.</para> 
+              
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Single click</guilabel> 
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  Choose the direction to trigger a single click.
+                </para> 
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Dpuble click</guilabel> 
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  Choose the direction to trigger a double click.
+                </para> 
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Drag click</guilabel> 
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  Choose the direction to trigger a drag click.
+                </para> 
+              </entry>
+            </row>
+            <row>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  <guilabel>Secondary click</guilabel> 
+                </para>
+              </entry>
+              <entry rowsep="0" colsep="0" valign="top">
+                <para>
+                  Choose the direction to trigger a secondary click.
+                </para> 
               </entry>
             </row>
           </tbody>
