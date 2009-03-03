@@ -1,12 +1,15 @@
+# German translation of the gnome-systemadmin-guide.
+# Mario Blättermann <mariobl@gnome.org>, 2008, 2009.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: system-admin-guide\n"
-"POT-Creation-Date: 2008-08-02 03:14+0000\n"
-"PO-Revision-Date: 2008-11-15 23:58+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@t-online.de>\n"
+"POT-Creation-Date: 2008-11-15 23:01+0000\n"
+"PO-Revision-Date: 2009-03-03 22:28+0100\n"
+"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
@@ -315,6 +318,8 @@ msgid ""
 "Use suggested values for preferences that are specified in definition files "
 "for the preferences."
 msgstr ""
+"Verwenden Sie empfohlene Einstellungswerte, die in den Definitionsdateien der "
+"Einstellungen angegeben sind."
 
 #: C/system-admin-guide.xml:29(para)
 msgid "Read documentation on each preference."
@@ -326,6 +331,10 @@ msgid ""
 "value changes, locally or across a network. In this way, when you change a "
 "preference, all applications that use the preference are immediately updated."
 msgstr ""
+"<application>GConf</application> stellt auch Änderungen von "
+"Einstellungswerten fest, sowohl lokal als auch im Netzwerk. Auf diese Weise "
+"werden bei einer Änderung eines Einstellungswertes alle Anwendungen "
+"unmittelbar aktualisiert, die diese Einstellung verwenden."
 
 #: C/system-admin-guide.xml:35(para)
 msgid "<application>GConf</application> has the following components:"
@@ -337,9 +346,8 @@ msgid "A repository of user preferences."
 msgstr "Einstellugen für Experten"
 
 #: C/system-admin-guide.xml:41(para)
-#, fuzzy
 msgid "A daemon, <command>gconfd-2</command>."
-msgstr "Befehlszeilenoptionen:\n"
+msgstr "Ein Dienst, <command>gconfd-2</command>."
 
 #: C/system-admin-guide.xml:44(para)
 msgid "A command line tool, <command>gconftool-2</command>."
@@ -390,6 +398,9 @@ msgid ""
 "file system contains the directory <systemitem>/apps/metacity/general</"
 "systemitem>."
 msgstr ""
+"Unterordner, die sich auf Einstellungskategorien beziehen. Beispielsweise "
+"enthält das Dateisystem den Ordner <systemitem>/apps/metacity/general</"
+"systemitem>."
 
 #: C/system-admin-guide.xml:74(para)
 msgid ""
@@ -398,6 +409,11 @@ msgid ""
 "about the keys that relate to the HTTP proxy preferences is in the directory "
 "<systemitem>/system/http_proxy</systemitem>."
 msgstr ""
+"Spezielle Dateien, die eine Liste der Einstellungsschlüssel im jeweiligen "
+"Ordner sowie Informationen über diese Schlüssel enthalten. Beispielsweise "
+"enthält eine solche Datei Informationen über die Schlüssel, die sich auf die "
+"HTTP-Proxy-Einstellungen im Ordner <systemitem>/system/http_proxy</"
+"systemitem> beziehen."
 
 #: C/system-admin-guide.xml:80(para)
 msgid ""
@@ -425,14 +441,12 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:98(title)
-#, fuzzy
 msgid "GConf Configuration Sources"
-msgstr "Fehler beim Laden von Konfigurationsquellen: %s"
+msgstr "GConf-Konfigurationsquellen"
 
 #: C/system-admin-guide.xml:101(secondary)
-#, fuzzy
 msgid "configuration sources"
-msgstr "Datenquellen"
+msgstr "Konfigurationsquellen"
 
 #: C/system-admin-guide.xml:103(para)
 msgid ""
@@ -465,6 +479,9 @@ msgid ""
 "<systemitem>include</systemitem> instructions. By default, the contents of "
 "the <application>GConf</application> path file are as follows:"
 msgstr ""
+"Die <application>GConf</application>-Pfaddatei enthält auch "
+"<systemitem>include</systemitem>-Anweisungen. Per Vorgabe sieht der Inhalt "
+"der <application>GConf</application>-Pfaddatei wie folgt aus:"
 
 #: C/system-admin-guide.xml:120(programlisting)
 #, no-wrap
@@ -532,12 +549,18 @@ msgid ""
 "directory in the home directory of the user. When the user sets a preference, "
 "the new preference information is added to this location."
 msgstr ""
+"Die Konfigurationsquelle wird im Ordner <filename>.gconf</filename> im "
+"persönlichen Ordner des Benutzers gespeichert. Wenn der Benutzer "
+"Einstellungen ändert, dann wird die neue Einstellungsinformation zu diesem "
+"Ort hinzugefügt."
 
 #: C/system-admin-guide.xml:162(para)
 msgid ""
 "You can use the <application>Configuration Editor</application> to modify the "
 "user configuration source."
 msgstr ""
+"Sie können den <application>Konfigurationseditor</application> zum Anpassen "
+"der Konfigurationsquelle des Benutzers verwenden."
 
 #: C/system-admin-guide.xml:169(para)
 msgid "Default"
@@ -545,7 +568,7 @@ msgstr "Standard"
 
 #: C/system-admin-guide.xml:172(para)
 msgid "This configuration source contains the default preference settings."
-msgstr ""
+msgstr "Diese Konfigurationsquelle enthält die vorgegebenen Einstellungen."
 
 #: C/system-admin-guide.xml:178(para)
 msgid ""
@@ -555,6 +578,12 @@ msgid ""
 "settings. That is, <application>GConf</application> applies preferences in "
 "the following order of priority:"
 msgstr ""
+"Die Anordnung der Konfigurationsquellen  in der Pfaddatei stellt sicher, "
+"dass  obligatorische Einstellungen die benutzerdefinierten Einstellungen "
+"überschreiben. Außerdem wird sichergestellt, dass benutzerdefinierte "
+"Einstellungen die vorgegebenen Einstellungen überschreiben. Daher wendet "
+"<application>GConf</application> die Einstellungen in folgender Reihenfolge "
+"der Priorität an:"
 
 #: C/system-admin-guide.xml:185(para)
 msgid "Mandatory preferences"
@@ -574,6 +603,9 @@ msgid ""
 "application> path file enable system administrators to specify other "
 "configuration sources."
 msgstr ""
+"Die <systemitem>include</systemitem>-Anweisungen in der <application>GConf</"
+"application>-Pfaddatei ermöglichen Systemverwaltern, weitere "
+"Konfigurationsquellen anzugeben."
 
 #: C/system-admin-guide.xml:203(para)
 #, fuzzy
@@ -618,21 +650,18 @@ msgstr "GConf-Schemas"
 #: C/system-admin-guide.xml:263(primary) C/system-admin-guide.xml:267(primary)
 #: C/system-admin-guide.xml:271(primary) C/system-admin-guide.xml:414(primary)
 #: C/system-admin-guide.xml:1003(primary)
-#, fuzzy
 msgid "schemas"
-msgstr "lese Schemas\n"
+msgstr "schemas"
 
 #: C/system-admin-guide.xml:256(secondary)
 #: C/system-admin-guide.xml:268(secondary)
-#, fuzzy
 msgid "schema keys"
-msgstr "<b>Springende Tasten</b>"
+msgstr "Schema-Schlüssel"
 
 #: C/system-admin-guide.xml:260(secondary)
 #: C/system-admin-guide.xml:272(secondary)
-#, fuzzy
 msgid "schema objects"
-msgstr "/Objekte _sortieren"
+msgstr "Schema-Objekte"
 
 #: C/system-admin-guide.xml:264(secondary)
 #: C/system-admin-guide.xml:602(replaceable)
@@ -647,6 +676,10 @@ msgid ""
 "firstterm>. The following table describes schema keys and schema objects and "
 "the relationship of these items to preference keys:"
 msgstr ""
+"Ein <firstterm>GConf-Schema</firstterm> ist ein Sammelbegriff für einen "
+"<firstterm>GConf-Schema-Schlüssel</firstterm> und ein <firstterm>GConf-Schema-"
+"Objekt</firstterm>. Die folgende Tabelle beschreibt Schema-Schlüssel und "
+"Schema-Objekte und stellt diese zu den Einstellungschlüsseln in Beziehung:"
 
 #: C/system-admin-guide.xml:285(para) C/system-admin-guide.xml:345(para)
 msgid "Item"
@@ -663,18 +696,16 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:303(para) C/system-admin-guide.xml:365(para)
-#, fuzzy
 msgid "Schema key"
-msgstr "Das Schema »%s« wurde an den Schlüssel »%s« angehängt\n"
+msgstr "Schema-Schlüssel"
 
 #: C/system-admin-guide.xml:306(para)
 msgid "A key that stores a schema object for a preference key."
 msgstr ""
 
 #: C/system-admin-guide.xml:311(para) C/system-admin-guide.xml:375(para)
-#, fuzzy
 msgid "Schema object"
-msgstr "Objekt kopieren"
+msgstr "Schema-Objekt"
 
 #: C/system-admin-guide.xml:314(para)
 msgid ""
@@ -697,19 +728,20 @@ msgstr ""
 "Integer, Boolean, usw."
 
 #: C/system-admin-guide.xml:325(para)
-#, fuzzy
 msgid "A default value for the preference key."
-msgstr "Kein Vorgabewert für %s vorhanden\n"
+msgstr "Ein Vorgabewert für den Einstellungsschlüssel."
 
 #: C/system-admin-guide.xml:328(para)
 msgid "Brief documentation on the preference key."
-msgstr ""
+msgstr "Kurze Dokumentation des Einstellungsschlüssels."
 
 #: C/system-admin-guide.xml:336(para)
 msgid ""
 "The following table gives examples of a preference key, a schema key, and a "
 "schema object:"
 msgstr ""
+"In der folgenden Tabelle finden Sie Beispiele für einen "
+"Einstellungsschlüssel, einen Schema-Schlüssel und ein Schema-Objekt:"
 
 #: C/system-admin-guide.xml:348(para)
 msgid "Example"
@@ -742,18 +774,19 @@ msgstr ""
 #: C/system-admin-guide.xml:404(para)
 msgid "Typically, schemas are stored in the default configuration source."
 msgstr ""
+"Typischerweise werden Schemata in der vorgegebenen Konfigurationsquelle "
+"gespeichert."
 
 #: C/system-admin-guide.xml:407(title)
 msgid "GConf Schema Definition Files"
-msgstr ""
+msgstr "GConf-Schema-Definitionsdateien"
 
 #: C/system-admin-guide.xml:410(secondary)
 #: C/system-admin-guide.xml:415(secondary)
 #: C/system-admin-guide.xml:999(secondary)
 #: C/system-admin-guide.xml:1004(secondary)
-#, fuzzy
 msgid "schema definition files"
-msgstr "ändert die Definition eines Schemas"
+msgstr "Schema-Definitionsdateien"
 
 #: C/system-admin-guide.xml:418(para)
 msgid ""
@@ -803,9 +836,8 @@ msgid "GConf daemon"
 msgstr "GConf-Dienst"
 
 #: C/system-admin-guide.xml:444(secondary)
-#, fuzzy
 msgid "daemon"
-msgstr "GVFS-Dienst"
+msgstr "Dienst"
 
 #: C/system-admin-guide.xml:446(para)
 msgid ""
@@ -901,6 +933,9 @@ msgid ""
 "<command>gconftool-2</command>. You can use the <command>gconftool-2</"
 "command> command to perform the following tasks:"
 msgstr ""
+"<application>GConf</application> enthält ein Befehlszeilenwerkzeug namens "
+"<command>gconftool-2</command>. Sie können den Befehl <command>gconftool-2</"
+"command> zur Erledigung folgender Aufgaben verwenden:"
 
 #: C/system-admin-guide.xml:501(para)
 msgid "Set the values of keys."
@@ -921,6 +956,9 @@ msgid ""
 "For example, use the following command to display the values of all keys in "
 "the <systemitem>/desktop/gnome</systemitem> directory and subdirectories."
 msgstr ""
+"Beispielsweise verwenden Sie folgenden Befehl, um die Werte aller Schlüssel "
+"im Ordner <systemitem>/desktop/gnome</systemitem> und dessen Unterordnern "
+"anzuzeigen."
 
 #: C/system-admin-guide.xml:513(userinput)
 #, no-wrap
@@ -1198,7 +1236,6 @@ msgstr "Beendet den <application>GConf</application>-Dienst."
 
 #: C/system-admin-guide.xml:721(replaceable)
 #: C/system-admin-guide.xml:801(replaceable)
-#, fuzzy
 msgid "data-type"
 msgstr "Datentyp"
 
@@ -1259,9 +1296,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:783(title)
-#, fuzzy
 msgid "To Set Preference Values"
-msgstr "Setze die Liste der Voreinstellungen auf:\n"
+msgstr "Festlegen von Einstellungswerten"
 
 #: C/system-admin-guide.xml:786(secondary)
 #, fuzzy
@@ -1277,9 +1313,8 @@ msgstr "Rückgabewerte"
 #: C/system-admin-guide.xml:835(secondary)
 #: C/system-admin-guide.xml:866(secondary)
 #: C/system-admin-guide.xml:1191(secondary)
-#, fuzzy
 msgid "setting with GConf"
-msgstr "GConf-Fehler (FIXME): %s\n"
+msgstr "Einstellungen mit GConf"
 
 #: C/system-admin-guide.xml:793(para)
 msgid ""
@@ -1297,9 +1332,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:802(replaceable)
-#, fuzzy
 msgid "preference-key"
-msgstr "Schlüssel-ID:"
+msgstr "Einstellungsschlüssel"
 
 #: C/system-admin-guide.xml:802(replaceable)
 #: C/system-admin-guide.xml:491(literal)
@@ -1340,7 +1374,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:809(para)
 msgid "The user cannot override this preference value."
-msgstr ""
+msgstr "Der Benutzer kann diesen Einstellungswert nicht überschreiben."
 
 #: C/system-admin-guide.xml:810(para)
 msgid ""
@@ -1376,7 +1410,6 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:824(title)
-#, fuzzy
 msgid "Setting General Preferences"
 msgstr "Konfigurieren allgemeiner Einstellungen"
 
@@ -1385,16 +1418,16 @@ msgid ""
 "The following sections describe how to assign mandatory or default values to "
 "general preferences."
 msgstr ""
+"Der folgende Abschnitt beschreibt, wie obligatorische oder vorgegebenen Werte "
+"den allgemeinen Einstellungen zugeordnet werden können."
 
 #: C/system-admin-guide.xml:828(title)
-#, fuzzy
 msgid "To Set HTTP Proxy Preferences"
-msgstr "Legen Sie hier Ihre Netzwerk-Proxy-Einstellungen fest"
+msgstr "HTTP-Proxy-Einstellungen"
 
 #: C/system-admin-guide.xml:831(secondary)
-#, fuzzy
 msgid "HTTP proxy, setting"
-msgstr "Benutze die HTTP Proxy Einstellung des Systems"
+msgstr "HTTP-Proxy-Einstellungen"
 
 #: C/system-admin-guide.xml:834(primary)
 msgid "HTTP proxy"
@@ -1451,9 +1484,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:855(title)
-#, fuzzy
 msgid "To Set Print Manager Preferences"
-msgstr "Ausdruckgröße gleich Bildgröße"
+msgstr "Einstellungen zur Druckverwaltung"
 
 #: C/system-admin-guide.xml:856(para)
 msgid ""
@@ -1464,12 +1496,10 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:862(secondary)
-#, fuzzy
 msgid "print manager, setting"
-msgstr "Xfce4-Druckerverwaltung"
+msgstr "Druckerverwaltung"
 
 #: C/system-admin-guide.xml:865(primary)
-#, fuzzy
 msgid "print manager"
 msgstr "Druckerverwaltung"
 
@@ -1516,18 +1546,16 @@ msgid "To Set the Number of Workspaces"
 msgstr "Anzahl der Arbeitsflächen einstellen"
 
 #: C/system-admin-guide.xml:886(secondary)
-#, fuzzy
 msgid "number of workspaces, setting"
-msgstr "Fehler beim Festlegen der Anzahl der Arbeitsflächen auf %d: %s\n"
+msgstr "Festlegen der Anzahl der Arbeitsflächen"
 
 #: C/system-admin-guide.xml:889(primary)
 msgid "workspaces"
 msgstr "Arbeitsflächen"
 
 #: C/system-admin-guide.xml:890(secondary)
-#, fuzzy
 msgid "setting number with GConf"
-msgstr "    -N# :                  nur die Partition Nummer # ändern"
+msgstr "Anzahl festlegen mit GConf"
 
 #: C/system-admin-guide.xml:892(para)
 msgid "To set a mandatory number of workspaces, use the following command:"
@@ -1576,14 +1604,12 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:908(title)
-#, fuzzy
 msgid "To Set Keyboard Accessibility Preferences"
-msgstr "Zum Dialog »Tastatur-Barrierefreiheit« springen"
+msgstr "Festlegen von Einstellungen zur Tastatur-Barrierefreiheit"
 
 #: C/system-admin-guide.xml:911(secondary)
-#, fuzzy
 msgid "keyboard accessibility, setting"
-msgstr "Hinweise zur Tastatur-Barrierefreiheit"
+msgstr "Tastatur-Barrierefreiheit einstellen"
 
 #: C/system-admin-guide.xml:914(primary) C/system-admin-guide.xml:940(primary)
 msgid "keyboard"
@@ -1591,7 +1617,7 @@ msgstr "Tastatur"
 
 #: C/system-admin-guide.xml:915(secondary)
 msgid "setting accessibility preferences with GConf"
-msgstr ""
+msgstr "Barrierefreiheits-Einstellungen mit GConf"
 
 #: C/system-admin-guide.xml:917(para)
 msgid ""
@@ -1690,7 +1716,7 @@ msgstr "Das Objekt auf dem Panel sperren"
 
 #: C/system-admin-guide.xml:963(secondary)
 msgid "panel preferences, setting individual"
-msgstr ""
+msgstr "Benutzerdefinierte Panel-Einstellungen"
 
 #: C/system-admin-guide.xml:967(primary) C/system-admin-guide.xml:147(primary)
 msgid "panels"
@@ -1698,7 +1724,7 @@ msgstr "Panels"
 
 #: C/system-admin-guide.xml:968(secondary)
 msgid "preferences, individual, setting with GConf"
-msgstr ""
+msgstr "individuelle Einstellungen mit GConf"
 
 #: C/system-admin-guide.xml:970(para)
 msgid ""
@@ -1732,6 +1758,10 @@ msgid ""
 "filename> file. For more information on the <filename>panel-default-setup."
 "entries</filename> file, see the next section."
 msgstr ""
+"Die Konfiguration individueller Panels und Panel-Objekte ist eine komplexe "
+"Aufgabe. Dafür sollten Sie zunächst den Aufbau der Datei <filename>panel-"
+"default-setup.entries</filename> verstehen. Weitere Informationen über diese "
+"Datei finden Sie im nächsten Abschnitt."
 
 #: C/system-admin-guide.xml:991(para)
 msgid ""
@@ -1742,6 +1772,12 @@ msgid ""
 "For more information on how to set preferences for panels and objects on "
 "panels, see <xref linkend=\"gconf-3\"/>."
 msgstr ""
+"Zur individuellen Einstellung der Panels und Panel-Objekte müssen Sie "
+"zahlreiche Einstellungen in der Konfigurationsquelle verändern. Der "
+"einfachste Weg ist die Verwendung des Befehls <command>gconftool-2</command> "
+"mit den Optionen <option>--dump</option> und <option>--load</option>. Weitere "
+"Informationen über die Einstellungen für Panels und Panel-Objekte finden Sie "
+"in <xref linkend=\"gconf-3\"/>."
 
 #: C/system-admin-guide.xml:996(title)
 msgid "Specifying Individual Panels and Panel Objects"
@@ -1766,6 +1802,8 @@ msgid ""
 "The <filename>panel-default-setup.entries</filename> file is structured as "
 "follows:"
 msgstr ""
+"Die Datei <filename>panel-default-setup.entries</filename> ist wie folgt "
+"aufgebaut:"
 
 #: C/system-admin-guide.xml:1013(para)
 msgid ""
@@ -1773,6 +1811,10 @@ msgid ""
 "objects in the GNOME Desktop. The following keys specify the number of "
 "panels, panel objects, and applets that appear in the GNOME Desktop:"
 msgstr ""
+"Schlüssel, die den allgemeinen Aufbau von Panels, Applets und anderen Panel-"
+"Objekten auf dem GNOME-Desktop festlegen. Die folgenden Schlüssel geben die "
+"anzahl der Panels, Panel-Objekte und angezeigten Applets auf dem GNOME-"
+"Desktop an:"
 
 #: C/system-admin-guide.xml:1019(systemitem)
 msgid "/apps/panel/default_setup/general/toplevel_id_list"
@@ -1792,12 +1834,18 @@ msgid ""
 "example, the following sample from <filename>panel-default-setup.entries</"
 "filename> specifies that one panel appears in the GNOME Desktop:"
 msgstr ""
+"Die Schlüssel ordnen auch Bezeichner jedem Panel, Panel-Objekt und Applet zu. "
+"Als Beispiel zeigt folgender Ausschnitt aus der Datei <filename>panel-default-"
+"setup.entries</filename>, dass ein Panel auf dem GNOME-Desktop erscheint:"
 
 #: C/system-admin-guide.xml:1046(para)
 msgid ""
 "In the <filename>panel-default-setup.entries</filename> file, the identifier "
 "<systemitem>bottom_panel</systemitem> identifies the bottom edge panel."
 msgstr ""
+"In der Datei <filename>panel-default-setup.entries</filename> bezieht sich "
+"der Bezeichner <systemitem>bottom_panel</systemitem> auf das Panel am unteren "
+"Bildschirmrand."
 
 #: C/system-admin-guide.xml:1049(para)
 msgid ""
@@ -1942,14 +1990,12 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:1184(title)
-#, fuzzy
 msgid "To Set Font Preferences"
-msgstr "Die Tastatureinstellungen festlegen"
+msgstr "Festlegen von Schrifteinstellungen "
 
 #: C/system-admin-guide.xml:1187(secondary)
-#, fuzzy
 msgid "fonts, setting"
-msgstr "setze das Passwort ... "
+msgstr "Schriften einstellen"
 
 #: C/system-admin-guide.xml:1190(primary) C/system-admin-guide.xml:11(see)
 #: C/system-admin-guide.xml:15(see) C/system-admin-guide.xml:18(primary)
@@ -2037,7 +2083,7 @@ msgstr "Einstellungen für den Hintergrund"
 msgid "background, setting"
 msgstr "Hintergrund, einstellen"
 
-#: C/system-admin-guide.xml:1252(primary) C/system-admin-guide.xml:554(primary)
+#: C/system-admin-guide.xml:1252(primary) C/system-admin-guide.xml:551(primary)
 msgid "background"
 msgstr "Hintergrund"
 
@@ -2100,14 +2146,13 @@ msgid "splash image, setting"
 msgstr "Begrüßungsbildschirm, einstellen"
 
 #: C/system-admin-guide.xml:1278(primary) C/system-admin-guide.xml:129(primary)
-#: C/system-admin-guide.xml:544(primary)
+#: C/system-admin-guide.xml:541(primary)
 msgid "splash screen"
 msgstr "Begrüßungsbildschirm"
 
 #: C/system-admin-guide.xml:1279(secondary)
-#, fuzzy
 msgid "image, setting with GConf"
-msgstr "Bild mit Wellen verzerren"
+msgstr "Bild, Einstellen mit GConf"
 
 #: C/system-admin-guide.xml:1282(para)
 msgid ""
@@ -2149,6 +2194,9 @@ msgid ""
 "splash image preferences, see the <filename>gnome-session.schemas</filename> "
 "schema definition file."
 msgstr ""
+"Sie können noch weitere Einstellungen für den Begrüßungsbildschirm ändern. "
+"Nähere Informationen hierzu finden Sie in der Schema-Definitionsdatei "
+"<filename>gnome-session.schemas</filename>."
 
 #: C/system-admin-guide.xml:1299(title)
 msgid "To Restore Default Preference Values"
@@ -2172,9 +2220,8 @@ msgstr ""
 "führen Sie den folgenden Befehl aus:"
 
 #: C/system-admin-guide.xml:1312(replaceable)
-#, fuzzy
 msgid "user-configuration-source"
-msgstr "Benutzerdefinierte Quelle 1"
+msgstr "Benutzer-Konfigurationsquelle"
 
 #: C/system-admin-guide.xml:1311(userinput)
 #, no-wrap
@@ -2193,6 +2240,9 @@ msgid ""
 "configuration source in the <filename>.gconf</filename> directory in the home "
 "directory of the user."
 msgstr ""
+"Ersetzen Sie <replaceable>user-configuration-source</replaceable> durch die "
+"Konfigurationsquelle im Ordner <filename>.gconf</filename> im persönlichen "
+"Ordner des Benutzers."
 
 #: C/system-admin-guide.xml:1317(para)
 msgid ""
@@ -2209,6 +2259,8 @@ msgid ""
 "The information in this chapter describes how the GNOME Desktop implements "
 "menus and how you can customize menus."
 msgstr ""
+"Dieser Abschnitt beschreibt, wie der GNOME-Desktop Menüs verarbeitet und wie "
+"Sie diese Menüs anpassen können."
 
 #: C/system-admin-guide.xml:17(title)
 msgid "Introduction to Menus"
@@ -2248,7 +2300,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:48(para)
 msgid "Menus in the GNOME Desktop use the following components:"
-msgstr ""
+msgstr "Die Menüs auf dem GNOME-Desktop verwenden die folgenden Komponenten:"
 
 #: C/system-admin-guide.xml:52(para) C/system-admin-guide.xml:139(glossterm)
 #, fuzzy
@@ -2395,6 +2447,33 @@ msgid ""
 "\n"
 "&lt;/Menu&gt; &lt;!-- End Applications --&gt;\n"
 msgstr ""
+"&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
+" \"http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd\"&gt;\n"
+"&lt;Menu&gt;\n"
+"  &lt;Name&gt;Applications&lt;/Name&gt;\n"
+"  &lt;Directory&gt;Applications.directory&lt;/Directory&gt;\n"
+"\n"
+"  &lt;!-- Read standard .directory and .desktop file locations --&gt;\n"
+"  &lt;DefaultAppDirs/&gt;\n"
+"  &lt;DefaultDirectoryDirs/&gt;\n"
+"\n"
+"  &lt;!-- Accessories submenu --&gt;\n"
+"  &lt;Menu&gt;\n"
+"    &lt;Name&gt;Accessories&lt;/Name&gt;\n"
+"    &lt;Directory&gt;Accessories.directory&lt;/Directory&gt;\n"
+"    &lt;Include&gt;\n"
+"      &lt;And&gt;\n"
+"        &lt;Category&gt;Utility&lt;/Category&gt;\n"
+"        &lt;Not&gt;\n"
+"          &lt;Category&gt;System&lt;/Category&gt;\n"
+"        &lt;/Not&gt;\n"
+"      &lt;/And&gt;\n"
+"    &lt;/Include&gt;\n"
+"  &lt;/Menu&gt; &lt;!-- End Accessories --&gt;\n"
+"\n"
+"  &lt;!-- possibly more submenus --&gt;\n"
+"\n"
+"&lt;/Menu&gt; &lt;!-- End Applications --&gt;\n"
 
 #: C/system-admin-guide.xml:179(para)
 msgid ""
@@ -2736,7 +2815,7 @@ msgstr "Encoding"
 
 #: C/system-admin-guide.xml:451(para)
 msgid "Specifies the encoding of the desktop entry file."
-msgstr ""
+msgstr "Legt die Zeichenkodierung der Desktop-Datei fest."
 
 #: C/system-admin-guide.xml:456(literal)
 #, fuzzy
@@ -2779,13 +2858,15 @@ msgstr ""
 
 #: C/system-admin-guide.xml:485(literal)
 msgid "NoDisplay"
-msgstr ""
+msgstr "NoDisplay"
 
 #: C/system-admin-guide.xml:487(para)
 msgid ""
 "This options means <quote>This application exists, but don't display it in "
 "the menus</quote>."
 msgstr ""
+"Diese Option bedeutet »Diese Anwendung existiert, soll aber nicht in den "
+"Menüs angezeigt werden«."
 
 #: C/system-admin-guide.xml:493(literal)
 msgid "Terminal"
@@ -2945,6 +3026,8 @@ msgid ""
 "Specifies a short description of the menu. The comment is displayed as a "
 "tooltip when you point to the menu."
 msgstr ""
+"Eine kurze Beschreibung des Menüs. Dieser Kommentar wird als Minihilfe "
+"angezeigt, wenn sich der Mauszeiger über dem Menü befindet."
 
 #: C/system-admin-guide.xml:638(para)
 msgid ""
@@ -3025,10 +3108,14 @@ msgstr ""
 msgid ""
 "See <xref linkend=\"menustructure-4\"/> for how to add an item to the menu."
 msgstr ""
+"Wie Sie einen Eintrag zu einem Menü hinzufügen können, lesen Sie in <xref "
+"linkend=\"menustructure-4\"/>."
 
 #: C/system-admin-guide.xml:723(para)
 msgid "The next time that users log in, the menu should appear in the menu bar."
 msgstr ""
+"Beim nächsten Anmelden eines Benutzers sollte das Menü in der Menüleiste "
+"erscheinen."
 
 #: C/system-admin-guide.xml:727(title)
 msgid "Missing Menu?"
@@ -3278,9 +3365,8 @@ msgid "Merging the System Menu"
 msgstr "Zusammenführen des Systemmenüs"
 
 #: C/system-admin-guide.xml:955(secondary)
-#, fuzzy
 msgid "merging the system menu"
-msgstr "Menü <guimenu>System</guimenu>"
+msgstr "Systemmenü zusammenführen"
 
 #: C/system-admin-guide.xml:958(para)
 msgid ""
@@ -3414,6 +3500,9 @@ msgid ""
 "GNOME Desktop, how to install options for theme settings, and how to create a "
 "custom option."
 msgstr ""
+"Dieser Abschnitt beschreibt Themen, die in GNOME verfügbaren "
+"Themeneinstellungen. die Installation von Optionen für die Themeneinstellung "
+"sowie die Erstellung eigener Optionen."
 
 #: C/system-admin-guide.xml:9(title)
 msgid "Introduction to Themes"
@@ -3423,8 +3512,8 @@ msgstr "Einführung in Themen"
 #: C/system-admin-guide.xml:212(primary) C/system-admin-guide.xml:248(primary)
 #: C/system-admin-guide.xml:285(primary) C/system-admin-guide.xml:341(primary)
 #: C/system-admin-guide.xml:43(primary) C/system-admin-guide.xml:48(primary)
-#: C/system-admin-guide.xml:428(primary) C/system-admin-guide.xml:433(primary)
-#: C/system-admin-guide.xml:515(primary) C/system-admin-guide.xml:520(primary)
+#: C/system-admin-guide.xml:425(primary) C/system-admin-guide.xml:430(primary)
+#: C/system-admin-guide.xml:512(primary) C/system-admin-guide.xml:517(primary)
 msgid "themes"
 msgstr "Themen"
 
@@ -3496,6 +3585,9 @@ msgid ""
 "The name of the index file is <filename>/usr/share/themes/<replaceable>theme-"
 "name</replaceable>/index.theme</filename>."
 msgstr ""
+"Jedes Thema verfügt über eine Indexdatei, die das Thema charakterisiert. Der "
+"Name der Indexdatei ist <filename>/usr/share/themes/<replaceable>Name-des-"
+"Themas</replaceable>/index.theme</filename>."
 
 #: C/system-admin-guide.xml:58(para)
 msgid "The following is a sample theme index file:"
@@ -3534,11 +3626,11 @@ msgstr ""
 
 #: C/system-admin-guide.xml:73(para)
 msgid "The following table describes the keys in theme index files:"
-msgstr ""
+msgstr "Die folgende Tabelle beschreibt die Schlüssel in Themen-Indexdateien:"
 
 #: C/system-admin-guide.xml:75(title)
 msgid "Keys in Theme Index Files"
-msgstr ""
+msgstr "Schlüssel in Themen-Indexdateien"
 
 #: C/system-admin-guide.xml:82(para)
 #, fuzzy
@@ -3562,6 +3654,8 @@ msgid ""
 "A brief description of the theme. This is the text that is displayed under "
 "the name of the theme in the <application>Theme</application> preference tool."
 msgstr ""
+"Eine Kurzbeschreibung des Themas. Dieser Text wird unter dem Namen des Themas "
+"im Einstellungswerkzeug <application>Erscheinungsbild</application> angezeigt."
 
 #: C/system-admin-guide.xml:128(literal)
 msgid "GtkTheme"
@@ -3614,9 +3708,8 @@ msgstr ""
 
 #: C/system-admin-guide.xml:177(secondary)
 #: C/system-admin-guide.xml:342(secondary)
-#, fuzzy
 msgid "controls options"
-msgstr "Inkompatible Optionen."
+msgstr "Steuerungsoptionen"
 
 #: C/system-admin-guide.xml:178(tertiary)
 #: C/system-admin-guide.xml:214(tertiary)
@@ -3680,12 +3773,12 @@ msgstr ""
 
 #: C/system-admin-guide.xml:210(title)
 msgid "To Install a New Window Frame Option"
-msgstr ""
+msgstr "Installieren einer neuen Option für den Fensterrahmen"
 
 #: C/system-admin-guide.xml:213(secondary)
 #: C/system-admin-guide.xml:44(secondary)
-#: C/system-admin-guide.xml:429(secondary)
-#: C/system-admin-guide.xml:516(secondary)
+#: C/system-admin-guide.xml:426(secondary)
+#: C/system-admin-guide.xml:513(secondary)
 #, fuzzy
 msgid "window frame options"
 msgstr "Titelleiste eines Anwendungsfensters"
@@ -3723,10 +3816,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:246(title)
-#, fuzzy
 msgid "To Install a New Icons Option"
-msgstr ""
-"Zum Installieren eines neuen Themas führen Sie die folgenden Schritte aus:"
+msgstr "Installieren einer neuen Option für Symbole"
 
 #: C/system-admin-guide.xml:249(secondary)
 #, fuzzy
@@ -3790,7 +3881,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:298(para)
 msgid "Icons that are used within applications in the GNOME Desktop."
-msgstr ""
+msgstr "Symbole, die in Anwendungen auf dem GNOME-Desktop verwendet werden."
 
 #: C/system-admin-guide.xml:301(para)
 msgid ""
@@ -3857,6 +3948,10 @@ msgid ""
 "panels, see <ulink url=\"http://www.freedesktop.org/Standards/icon-theme-spec"
 "\">http://www.freedesktop.org/Standards/icon-theme-spec</ulink>."
 msgstr ""
+"Weitere Informationen über die Erstellung von Symbolen für Anwendungsstarter "
+"und Panels finden Sie hier: <ulink url=\"http://www.freedesktop.org/Standards/"
+"icon-theme-spec\">http://www.freedesktop.org/Standards/icon-theme-spec</"
+"ulink>."
 
 #: C/system-admin-guide.xml:339(title)
 #, fuzzy
@@ -3926,6 +4021,9 @@ msgid ""
 "\"http://developer.gnome.org/doc/API/2.0/gtk/index.html\">http://developer."
 "gnome.org/doc/API/2.0/gtk/index.html</ulink>."
 msgstr ""
+"Weitere Informationen über <filename>gtkrc</filename>-Dateien finden Sie "
+"hier: ulink url=\"http://developer.gnome.org/doc/API/2.0/gtk/index.html"
+"\">http://developer.gnome.org/doc/API/2.0/gtk/index.html</ulink>."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Configuring Fonts"
@@ -3934,6 +4032,8 @@ msgstr "Schriften einstellen"
 #: C/system-admin-guide.xml:4(para)
 msgid "This chapter describes how to configure fonts in the GNOME Desktop."
 msgstr ""
+"Dieser Abschnitt beschreibt, wie Sie Schriften für den GNOME-Desktop "
+"einstellen."
 
 #: C/system-admin-guide.xml:8(title)
 msgid "Introduction to Configuring Fonts"
@@ -3970,6 +4070,8 @@ msgid ""
 "For more information about the <literal>fontconfig</literal> library, see the "
 "following URL:"
 msgstr ""
+"Weitere Informationen über die Bibliothek <literal>fontconfig</literal> "
+"finden sie unter folgender Adresse:"
 
 #: C/system-admin-guide.xml:29(ulink)
 msgid "http://freedesktop.org/software/fontconfig"
@@ -4016,9 +4118,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:56(title)
-#, fuzzy
 msgid "To Add a Font for All Users"
-msgstr "Eine für alle Klebezettel zu verwendende Schrift wählen"
+msgstr "Hinzufügen einer Schrift für alle Benutzer"
 
 #: C/system-admin-guide.xml:59(secondary)
 #, fuzzy
@@ -4056,7 +4157,7 @@ msgstr "fc-cache <placeholder-1/>"
 
 #: C/system-admin-guide.xml:75(title)
 msgid "To Add a Font for an Individual User"
-msgstr ""
+msgstr "Hinzufügen einer Schrift für einen individuellen Benutzer"
 
 #: C/system-admin-guide.xml:78(secondary)
 #, fuzzy
@@ -4066,6 +4167,8 @@ msgstr "Werkzeug für eBay Benutzer"
 #: C/system-admin-guide.xml:80(para)
 msgid "To add a font for an individual users, perform the following steps:"
 msgstr ""
+"Um eine Schrift für einen individuellen Benutzer hinzuzufügen, gehen Sie wie "
+"folgt vor:"
 
 #: C/system-admin-guide.xml:84(para)
 msgid ""
@@ -4084,6 +4187,9 @@ msgid ""
 "This chapter describes how applications detect MIME types, how to register "
 "MIME types, and how to add applications to the GNOME Desktop."
 msgstr ""
+"Dieser Abschnitt beschreibt, wie Anwendungen MIME-Typen erkennen, wie MIME-"
+"Typen registriert werden und wie Anwendungen zum GNOME-Desktop hinzugefügt "
+"werden können."
 
 #: C/system-admin-guide.xml:14(para)
 msgid ""
@@ -4378,7 +4484,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:262(title)
 msgid "Example: <filename>/usr/share/mime/text/plain.xml</filename> file"
-msgstr ""
+msgstr "Beispiel: Datei <filename>/usr/share/mime/text/plain.xml</filename>"
 
 #: C/system-admin-guide.xml:265(programlisting)
 #, no-wrap
@@ -4453,6 +4559,8 @@ msgid ""
 "This file is also generated by the <application>update-mime-database</"
 "application> application."
 msgstr ""
+"Diese Datei wird auch durch den Befehl <application>update-mime-database</"
+"application> erzeugt."
 
 #: C/system-admin-guide.xml:320(filename)
 msgid "&lt;MIME&gt;/XMLnamespaces"
@@ -4804,7 +4912,7 @@ msgstr ""
 
 #: C/system-admin-guide.xml:574(title)
 msgid "Example of a source XML file: <filename>diff.xml</filename>"
-msgstr ""
+msgstr "Beispiel für eine XML-Quelldatei: <filename>diff.xml</filename>"
 
 #: C/system-admin-guide.xml:577(programlisting)
 #, no-wrap
@@ -5071,9 +5179,8 @@ msgid "MIME type         : application/x-newtype\n"
 msgstr "MIME type         : application/x-newtype\n"
 
 #: C/system-admin-guide.xml:762(title)
-#, fuzzy
 msgid "<filename>Overrides.xml</filename> file"
-msgstr "Visio XML File Format"
+msgstr "Die Datei <filename>Overrides.xml</filename>"
 
 #: C/system-admin-guide.xml:764(programlisting)
 #, no-wrap
@@ -5146,11 +5253,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:823(title)
-#, fuzzy
 msgid "A User's <filename>defaults.list</filename> file"
-msgstr ""
-"Liste der gültigen Benutzer hat sich geändert, aktualisiere "
-"Konfigurationsdatei."
+msgstr "Die Datei <filename>defaults.list</filename> eines Benutzers"
 
 #: C/system-admin-guide.xml:825(programlisting)
 #, no-wrap
@@ -5196,12 +5300,17 @@ msgstr "Anwendungen hinzufügen"
 #: C/system-admin-guide.xml:861(para)
 msgid "To add an application to the GNOME Desktop, perform the following steps:"
 msgstr ""
+"Um eine neue Anwendung zum GNOME-Desktop hinzuzufügen, gehen Sie wie folgt "
+"vor:"
 
 #: C/system-admin-guide.xml:866(para)
 msgid ""
 "Add a menu item for the application. For more information on how to add an "
 "item to a menu, see <xref linkend=\"menustructure-2\"/>."
 msgstr ""
+"Fügen Sie einen Menüeintrag für die Anwendung hinzu. Weitere Informationen "
+"über das Hinzufügen eines Eintargs zu einem Menü finden Sie in <xref linkend="
+"\"menustructure-2\"/>."
 
 #: C/system-admin-guide.xml:872(para)
 msgid ""
@@ -5269,9 +5378,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:25(title)
-#, fuzzy
 msgid "Setting Screensaver Preferences"
-msgstr "Festlegen von Sitzungs-Einstellungen"
+msgstr "Einstellungen des Bildschirmschoners ändern"
 
 #: C/system-admin-guide.xml:28(secondary)
 #, fuzzy
@@ -5298,6 +5406,9 @@ msgid ""
 "preferences</command> to open the <guilabel>Screensaver Preferences</"
 "guilabel> dialog."
 msgstr ""
+"Sie können auch den Befehl <command>/usr/bin/gnome-screensaver-preferences</"
+"command> ausführen, um den Dialog <guilabel>Bildschirmschoner-Einstellungen</"
+"guilabel> zu öffnen."
 
 #: C/system-admin-guide.xml:34(para)
 msgid ""
@@ -5376,6 +5487,7 @@ msgstr ""
 #: C/system-admin-guide.xml:82(para)
 msgid "For more information, see <xref linkend=\"menustructure-0\"/>."
 msgstr ""
+"Weitere Informationen finden Sie in <xref linkend=\"menustructure-0\"/>."
 
 #: C/system-admin-guide.xml:2(title)
 msgid "Session Management"
@@ -5442,6 +5554,8 @@ msgstr "Vorgaben _wiederherstellen"
 msgid ""
 "The following table lists the files that contain default session information:"
 msgstr ""
+"Die folgende Tabelle listet die Dateien auf, die die vorgegebenen "
+"Sitzungsinformationen enthalten:"
 
 #: C/system-admin-guide.xml:52(para)
 msgid "File"
@@ -5565,11 +5679,11 @@ msgstr ""
 #: C/system-admin-guide.xml:52(para)
 msgid ""
 "OMF files contain information about Help documents such as the following:"
-msgstr ""
+msgstr "OMF-Dateien enthalten Informationen über Hilfedokumente wie folgt:"
 
 #: C/system-admin-guide.xml:55(para)
 msgid "The location of the XML file for the Help document"
-msgstr ""
+msgstr "Der Ort der XML-Datei für das Hilfedokument"
 
 #: C/system-admin-guide.xml:58(para)
 msgid "The title of the Help document"
@@ -5648,9 +5762,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:2(title)
-#, fuzzy
 msgid "Improving Performance"
-msgstr "Leistungsbericht"
+msgstr "Verbessern der Leistung"
 
 #: C/system-admin-guide.xml:4(para)
 #, fuzzy
@@ -5661,14 +5774,12 @@ msgstr ""
 "grundlegenden Einstellungwerkzeugen anpassen."
 
 #: C/system-admin-guide.xml:8(title)
-#, fuzzy
 msgid "Introduction to Improving Performance"
-msgstr "Eine Notiz die als Einleitung verwendet wird"
+msgstr "Einführung in die Leistungsverbesserung"
 
 #: C/system-admin-guide.xml:10(primary) C/system-admin-guide.xml:26(primary)
-#, fuzzy
 msgid "performance, improving"
-msgstr "Leistungsbericht"
+msgstr "Leistung verbessern"
 
 #: C/system-admin-guide.xml:13(para)
 msgid ""
@@ -5699,8 +5810,8 @@ msgid "reducing CPU usage"
 msgstr "Prozessorlast-Monitor"
 
 #: C/system-admin-guide.xml:31(primary) C/system-admin-guide.xml:36(secondary)
-#: C/system-admin-guide.xml:413(primary) C/system-admin-guide.xml:468(primary)
-#: C/system-admin-guide.xml:473(secondary)
+#: C/system-admin-guide.xml:410(primary) C/system-admin-guide.xml:465(primary)
+#: C/system-admin-guide.xml:470(secondary)
 msgid "reducing"
 msgstr "reducing"
 
@@ -5717,6 +5828,8 @@ msgstr ""
 #: C/system-admin-guide.xml:41(title)
 msgid "To Use Theme Options Which Require Less CPU Resources"
 msgstr ""
+"Verwendung von Themenoptionen mit geringeren Ansprüchen an die "
+"Prozessorleistung"
 
 #: C/system-admin-guide.xml:45(tertiary) C/system-admin-guide.xml:49(secondary)
 #: C/system-admin-guide.xml:112(secondary)
@@ -5738,11 +5851,11 @@ msgid ""
 "window frame options:"
 msgstr ""
 
-#: C/system-admin-guide.xml:59(para) C/system-admin-guide.xml:444(para)
+#: C/system-admin-guide.xml:59(para) C/system-admin-guide.xml:441(para)
 msgid "Atlanta"
 msgstr "Atlanta"
 
-#: C/system-admin-guide.xml:62(para) C/system-admin-guide.xml:447(para)
+#: C/system-admin-guide.xml:62(para) C/system-admin-guide.xml:444(para)
 msgid "Esco"
 msgstr "Esco"
 
@@ -5756,9 +5869,8 @@ msgid "AgingGorilla"
 msgstr "AgingGorilla"
 
 #: C/system-admin-guide.xml:72(para)
-#, fuzzy
 msgid "Bright"
-msgstr "Hell"
+msgstr "Helligkeit"
 
 #: C/system-admin-guide.xml:75(para)
 msgid "Metabox"
@@ -5791,6 +5903,7 @@ msgstr ""
 #: C/system-admin-guide.xml:87(para)
 msgid "For example, to use Atlanta, run the following command:"
 msgstr ""
+"Um beispielsweise Atlanta zu verwenden, führen Sie folgenden Befehl aus:"
 
 #: C/system-admin-guide.xml:88(userinput)
 #, no-wrap
@@ -5835,6 +5948,7 @@ msgstr "metacity-theme-viewer Atlanta"
 #: C/system-admin-guide.xml:105(title)
 msgid "To Reduce CPU Usage by Turning Off Display of Icons in Menus"
 msgstr ""
+"Verminderung der Prozessorlast durch Abschalten der Symbolanzeige in Menüs"
 
 #: C/system-admin-guide.xml:107(primary)
 #, fuzzy
@@ -5842,8 +5956,8 @@ msgid "icons, in menus"
 msgstr "_Symbole in den Menüs anzeigen"
 
 #: C/system-admin-guide.xml:108(see) C/system-admin-guide.xml:111(primary)
-#: C/system-admin-guide.xml:115(primary) C/system-admin-guide.xml:455(primary)
-#: C/system-admin-guide.xml:533(primary)
+#: C/system-admin-guide.xml:115(primary) C/system-admin-guide.xml:452(primary)
+#: C/system-admin-guide.xml:530(primary)
 msgid "menu icons"
 msgstr "Menüsymbole"
 
@@ -5858,6 +5972,8 @@ msgid ""
 "Some items in menus display an icon beside the item. To turn off this "
 "feature, run the following command:"
 msgstr ""
+"Einige Einträge zeigen Symbole neben dem Eintrag an. Um diese Funktion "
+"abzuschalten, führen sie den folgenden Befehl aus:"
 
 #: C/system-admin-guide.xml:120(userinput)
 #, no-wrap
@@ -5920,9 +6036,8 @@ msgstr ""
 "So reduzieren Sie die Prozessorlast durch Abschalten der Panel-Animation"
 
 #: C/system-admin-guide.xml:148(secondary)
-#, fuzzy
 msgid "animation, turning off"
-msgstr "Quota ausschalten: "
+msgstr "Animationen ausschalten"
 
 #: C/system-admin-guide.xml:150(para)
 msgid ""
@@ -5948,9 +6063,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:159(title)
-#, fuzzy
 msgid "Improving File Manager Performance"
-msgstr "In Dateiverwaltung öffnen"
+msgstr "Verbesserung der Leistung des Dateimanagers"
 
 #: C/system-admin-guide.xml:161(primary)
 msgid "Nautilus"
@@ -5993,11 +6107,11 @@ msgid "always"
 msgstr "always"
 
 #: C/system-admin-guide.xml:198(para)
-#, fuzzy
 msgid ""
 "Performs the action for both local files, and files on other file systems."
 msgstr ""
-"Führt die Aktion für lokale Dateien und Dateien in anderen Dateisystemen aus."
+"Führt die Aktion für sowohl lokale Dateien als auch Dateien in anderen "
+"Dateisystemen aus."
 
 #: C/system-admin-guide.xml:205(literal)
 msgid "local_only"
@@ -6155,9 +6269,8 @@ msgstr ""
 "So deaktivieren Sie die Seitenleiste, die Werkzeugleiste und die Adressleiste"
 
 #: C/system-admin-guide.xml:352(secondary)
-#, fuzzy
 msgid "side pane, turning off"
-msgstr "Seitenleiste ist sichtbar"
+msgstr "Seitenleiste abschalten"
 
 #: C/system-admin-guide.xml:354(para)
 msgid ""
@@ -6228,17 +6341,14 @@ msgstr ""
 "--set /apps/nautilus/preferences/start_with_location_bar false"
 
 #: C/system-admin-guide.xml:376(title)
-#, fuzzy
 msgid "To Turn Off the Desktop"
-msgstr "Einrasten deaktivieren"
+msgstr "Den Desktop abschalten"
 
 #: C/system-admin-guide.xml:379(secondary)
-#, fuzzy
 msgid "desktop, turning off"
-msgstr "Quota ausschalten: "
+msgstr "Desktop abschalten"
 
 #: C/system-admin-guide.xml:382(primary)
-#, fuzzy
 msgid "desktop"
 msgstr "Desktop"
 
@@ -6251,26 +6361,21 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:392(para)
-#, fuzzy
-msgid "Use the <guimenu>Desktop</guimenu> menu."
-msgstr "Stan_darddatei für das Menü verwenden"
-
-#: C/system-admin-guide.xml:395(para)
 msgid ""
 "Use the file manager to change the pattern or color of the desktop background."
 msgstr ""
 
-#: C/system-admin-guide.xml:399(para)
+#: C/system-admin-guide.xml:396(para)
 msgid ""
 "Use the desktop objects, such as <guilabel>Trash</guilabel>. The desktop "
 "objects are not displayed on the desktop."
 msgstr ""
 
-#: C/system-admin-guide.xml:403(para)
+#: C/system-admin-guide.xml:400(para)
 msgid "To disable the desktop, run the following command:"
 msgstr "Um den Desktop zu deaktivieren, führen sie folgenden Befehl aus:"
 
-#: C/system-admin-guide.xml:404(userinput)
+#: C/system-admin-guide.xml:401(userinput)
 #, no-wrap
 msgid ""
 "gconftool-2 \\\n"
@@ -6281,64 +6386,64 @@ msgstr ""
 "--type bool \\\n"
 "--set /apps/nautilus/preferences/show_desktop false"
 
-#: C/system-admin-guide.xml:411(title)
+#: C/system-admin-guide.xml:408(title)
 msgid "Reducing X Window System Network Traffic"
 msgstr ""
 
-#: C/system-admin-guide.xml:414(secondary)
+#: C/system-admin-guide.xml:411(secondary)
 #, fuzzy
 msgid "X Window System network traffic"
 msgstr "X Window System (Kein Xv)"
 
-#: C/system-admin-guide.xml:417(primary)
+#: C/system-admin-guide.xml:414(primary)
 msgid "X Window System network traffic, reducing"
 msgstr ""
 
-#: C/system-admin-guide.xml:421(primary)
+#: C/system-admin-guide.xml:418(primary)
 msgid "network traffic, reducing"
 msgstr "Netzwerkverkehr, reduzieren"
 
-#: C/system-admin-guide.xml:423(para)
+#: C/system-admin-guide.xml:420(para)
 msgid ""
 "This section describes preferences that you can set to reduce X Window System "
 "network traffic on the GNOME Desktop."
 msgstr ""
 
-#: C/system-admin-guide.xml:426(title)
+#: C/system-admin-guide.xml:423(title)
 msgid "To Use Theme Options Which Create Less Network Traffic"
 msgstr ""
 
-#: C/system-admin-guide.xml:430(tertiary)
-#: C/system-admin-guide.xml:434(secondary)
-#: C/system-admin-guide.xml:456(secondary)
+#: C/system-admin-guide.xml:427(tertiary)
+#: C/system-admin-guide.xml:431(secondary)
+#: C/system-admin-guide.xml:453(secondary)
 #, fuzzy
 msgid "and network traffic"
 msgstr "Netzwerkanalyse"
 
-#: C/system-admin-guide.xml:436(para)
+#: C/system-admin-guide.xml:433(para)
 msgid ""
 "Remote display protocols do not transfer every pixel in a block of pixels if "
 "all pixels in the block are the same color."
 msgstr ""
 
-#: C/system-admin-guide.xml:439(para)
+#: C/system-admin-guide.xml:436(para)
 msgid ""
 "To reduce X Window System network traffic, use a window frame theme option "
 "that uses solid colors. That is, use one of the following window frame "
 "options:"
 msgstr ""
 
-#: C/system-admin-guide.xml:450(para) C/system-admin-guide.xml:528(para)
+#: C/system-admin-guide.xml:447(para) C/system-admin-guide.xml:525(para)
 msgid ""
 "For information on how to change theme options, see <xref linkend="
 "\"performance-3\"/>."
 msgstr ""
 
-#: C/system-admin-guide.xml:453(title)
+#: C/system-admin-guide.xml:450(title)
 msgid "To Reduce Network Traffic by Turning Off Display of Icons in Menus"
 msgstr ""
 
-#: C/system-admin-guide.xml:458(para)
+#: C/system-admin-guide.xml:455(para)
 msgid ""
 "Some items in menus display an icon beside the item. If the icon is located "
 "on another file system, this feature can increase X Window System network "
@@ -6346,28 +6451,28 @@ msgid ""
 "the panels are displayed on a remote host."
 msgstr ""
 
-#: C/system-admin-guide.xml:462(para) C/system-admin-guide.xml:539(para)
+#: C/system-admin-guide.xml:459(para) C/system-admin-guide.xml:536(para)
 msgid ""
 "For information on how to turn off this feature, see <xref linkend="
 "\"performance-2\"/>."
 msgstr ""
 
-#: C/system-admin-guide.xml:466(title)
+#: C/system-admin-guide.xml:463(title)
 msgid "Reducing Color Usage and Improving Display Quality"
 msgstr ""
 
-#: C/system-admin-guide.xml:469(secondary)
-#: C/system-admin-guide.xml:472(primary)
+#: C/system-admin-guide.xml:466(secondary)
+#: C/system-admin-guide.xml:469(primary)
 #, fuzzy
 msgid "color usage"
 msgstr "CPU-Auslastung"
 
-#: C/system-admin-guide.xml:476(primary)
+#: C/system-admin-guide.xml:473(primary)
 #, fuzzy
 msgid "display quality, improving"
 msgstr "Durchschnittliche Qualität, akzeptable Geschwindigkeit der Anzeige"
 
-#: C/system-admin-guide.xml:478(para)
+#: C/system-admin-guide.xml:475(para)
 msgid ""
 "Many modern computer systems support 24-bit color, that is, 16,777,216 "
 "colors. However, many users still use systems that support 8-bit color, that "
@@ -6377,7 +6482,7 @@ msgstr ""
 "Farben. Jedoch verwenden viele Benutzer noch Systeme mit 8 Bit Farbtiefe, "
 "also 256 Farben."
 
-#: C/system-admin-guide.xml:481(para)
+#: C/system-admin-guide.xml:478(para)
 msgid ""
 "The GNOME Desktop uses the <firstterm>websafe color palette</firstterm>. This "
 "palette is a general-purpose palette of 216 colors, which is designed to "
@@ -6386,13 +6491,13 @@ msgid ""
 "24-bit color."
 msgstr ""
 
-#: C/system-admin-guide.xml:486(para)
+#: C/system-admin-guide.xml:483(para)
 msgid ""
 "The following display problems might occur on systems that support 8-bit "
 "color:"
 msgstr ""
 
-#: C/system-admin-guide.xml:490(para)
+#: C/system-admin-guide.xml:487(para)
 msgid ""
 "Windows, icons, and background images might appear grainy. Many themes, "
 "background images, and icons use colors that are not in the websafe color "
@@ -6401,7 +6506,7 @@ msgid ""
 "the grainy appearance."
 msgstr ""
 
-#: C/system-admin-guide.xml:497(para)
+#: C/system-admin-guide.xml:494(para)
 msgid ""
 "Applications that do not use the websafe color palette have less colors "
 "available. Color errors might occur. Some colors might not appear in the user "
@@ -6409,7 +6514,7 @@ msgid ""
 "application cannot allocate colors."
 msgstr ""
 
-#: C/system-admin-guide.xml:503(para)
+#: C/system-admin-guide.xml:500(para)
 msgid ""
 "Color flashing might occur when users switch between applications that use "
 "the websafe color palette, and applications that do not use this palette. The "
@@ -6418,7 +6523,7 @@ msgid ""
 "lose colors, then become unviewable."
 msgstr ""
 
-#: C/system-admin-guide.xml:510(para)
+#: C/system-admin-guide.xml:507(para)
 msgid ""
 "The following sections describe how to optimize the appearance of the GNOME "
 "Desktop for systems that support 8-bit color."
@@ -6427,19 +6532,19 @@ msgstr ""
 "Desktops für Systeme optimieren lässt, die lediglich 8 Bit Farbtiefe "
 "unterstützen."
 
-#: C/system-admin-guide.xml:513(title)
+#: C/system-admin-guide.xml:510(title)
 msgid "To Use Theme Options That Use the Websafe Color Palette"
 msgstr ""
 
-#: C/system-admin-guide.xml:517(tertiary)
-#: C/system-admin-guide.xml:521(secondary)
-#: C/system-admin-guide.xml:534(secondary)
-#: C/system-admin-guide.xml:545(secondary)
+#: C/system-admin-guide.xml:514(tertiary)
+#: C/system-admin-guide.xml:518(secondary)
+#: C/system-admin-guide.xml:531(secondary)
+#: C/system-admin-guide.xml:542(secondary)
 #, fuzzy
 msgid "and color usage"
 msgstr "Aufruf: %s [-b][-v] und eines der Folgenden:\n"
 
-#: C/system-admin-guide.xml:523(para)
+#: C/system-admin-guide.xml:520(para)
 msgid ""
 "Some window frame theme options use colors that are in the websafe color "
 "palette. Bright and Esco use colors from the websafe color palette. Bright "
@@ -6448,117 +6553,116 @@ msgid ""
 "visual modes."
 msgstr ""
 
-#: C/system-admin-guide.xml:531(title)
+#: C/system-admin-guide.xml:528(title)
 msgid "To Reduce Color Usage by Turning Off Display of Icons in Menus"
 msgstr ""
 
-#: C/system-admin-guide.xml:536(para)
+#: C/system-admin-guide.xml:533(para)
 msgid ""
 "Some items in menus display an icon beside the item. If the icon contains "
 "colors that are not in the websafe color palette, this feature can increase "
 "the number of colors used."
 msgstr ""
 
-#: C/system-admin-guide.xml:542(title)
+#: C/system-admin-guide.xml:539(title)
 msgid "To Reduce Color Usage by Turning Off the Splash Screen"
 msgstr ""
 
-#: C/system-admin-guide.xml:547(para)
+#: C/system-admin-guide.xml:544(para)
 msgid ""
 "You can turn off the splash screen to make more colors available for the "
 "GNOME Desktop and for applications."
 msgstr ""
 
-#: C/system-admin-guide.xml:549(para)
+#: C/system-admin-guide.xml:546(para)
 msgid ""
 "For information on how to turn off the splash screen, see <xref linkend="
 "\"performance-6\"/>."
 msgstr ""
 
-#: C/system-admin-guide.xml:552(title)
+#: C/system-admin-guide.xml:549(title)
 msgid "To Reduce Color Usage by Using a Solid Color for the Background"
 msgstr ""
 
-#: C/system-admin-guide.xml:555(secondary)
-#, fuzzy
+#: C/system-admin-guide.xml:552(secondary)
 msgid "using solid color"
-msgstr "Keiner (einfarbig)"
+msgstr "einfache Farbe verwenden"
 
-#: C/system-admin-guide.xml:557(para)
+#: C/system-admin-guide.xml:554(para)
 msgid ""
 "Use a solid color for the desktop background. Use of a solid color reduces "
 "the number of colors used by the GNOME Desktop."
 msgstr ""
 
-#: C/system-admin-guide.xml:559(para)
+#: C/system-admin-guide.xml:556(para)
 msgid "To set a solid color for the background, run the following commands:"
 msgstr ""
+
+#: C/system-admin-guide.xml:557(userinput)
+#, no-wrap
+msgid ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /desktop/gnome/background/picture_options none"
+msgstr ""
+"gconftool-2 \\\n"
+"--type string \\\n"
+"--set /desktop/gnome/background/picture_options none"
 
 #: C/system-admin-guide.xml:560(userinput)
 #, no-wrap
 msgid ""
 "gconftool-2 \\\n"
 "--type string \\\n"
-"--set /desktop/gnome/background/picture_options none"
+"--set /desktop/gnome/background/color_shading_type solid"
 msgstr ""
 "gconftool-2 \\\n"
 "--type string \\\n"
-"--set /desktop/gnome/background/picture_options none"
+"--set /desktop/gnome/background/color_shading_type solid"
+
+#: C/system-admin-guide.xml:565(replaceable)
+msgid "hexadecimal-color"
+msgstr "Hexadezimalfarbwert"
 
 #: C/system-admin-guide.xml:563(userinput)
 #, no-wrap
 msgid ""
 "gconftool-2 \\\n"
 "--type string \\\n"
-"--set /desktop/gnome/background/color_shading_type solid"
-msgstr ""
-"gconftool-2 \\\n"
-"--type string \\\n"
-"--set /desktop/gnome/background/color_shading_type solid"
-
-#: C/system-admin-guide.xml:568(replaceable)
-#, fuzzy
-msgid "hexadecimal-color"
-msgstr "Hexadezimalfarbe"
-
-#: C/system-admin-guide.xml:566(userinput)
-#, no-wrap
-msgid ""
-"gconftool-2 \\\n"
-"--type string \\\n"
 "--set /desktop/gnome/background/primary_color #<placeholder-1/>"
 msgstr ""
 "gconftool-2 \\\n"
 "--type string \\\n"
 "--set /desktop/gnome/background/primary_color #<placeholder-1/>"
 
-#: C/system-admin-guide.xml:569(para)
+#: C/system-admin-guide.xml:566(para)
 msgid ""
 "Alternatively, users can use the <application>Background</application> "
 "preference tool to choose a solid color for the background."
 msgstr ""
 
 #: C/system-admin-guide.xml:2(title)
-#, fuzzy
 msgid "Disabling GNOME Desktop Features"
-msgstr "Installiertes GNOME-Desktop-Thema"
+msgstr "Deaktivieren von GNOME-Desktop-Funktionen"
 
 #: C/system-admin-guide.xml:4(para)
 msgid ""
 "This chapter describes how to disable particular features of the GNOME "
 "Desktop."
 msgstr ""
+"Dieser Abschnitt beschreibt, wie Sie einzelne Funktionsmerkmale des GNOME-"
+"Desktops deaktivieren können."
 
 #: C/system-admin-guide.xml:8(title)
 msgid "Introduction to Disabling GNOME Desktop Features"
 msgstr ""
+"Einführung in die Deaktivierung von Funktionsmerkmalen des GNOME-Desktops"
 
 #: C/system-admin-guide.xml:10(primary) C/system-admin-guide.xml:15(see)
 #: C/system-admin-guide.xml:33(primary) C/system-admin-guide.xml:37(primary)
 #: C/system-admin-guide.xml:65(primary) C/system-admin-guide.xml:135(primary)
-#, fuzzy
 msgid "disabling features"
-msgstr "GroupWise-Funktionen"
+msgstr "Funktionen abschalten"
 
 #: C/system-admin-guide.xml:14(primary)
 #, fuzzy
@@ -6705,6 +6809,8 @@ msgid ""
 "<application>GNOME Terminal</application> command, that is <command>/usr/bin/"
 "gnome-terminal</command>"
 msgstr ""
+"Der Befehl für das <application>GNOME Terminal</application>, welcher "
+"<command>/usr/bin/gnome-terminal</command> lautet."
 
 #: C/system-admin-guide.xml:103(command)
 msgid "/usr/bin/xterm"
@@ -6716,7 +6822,7 @@ msgstr "/usr/bin/setterm"
 
 #: C/system-admin-guide.xml:112(para)
 msgid "The items are removed from the following menus:"
-msgstr ""
+msgstr "Die Einträge werden aus den folgenden Menüs entfernt:"
 
 #: C/system-admin-guide.xml:122(guimenu)
 #: C/system-admin-guide.xml:148(guimenuitem)
@@ -6724,7 +6830,6 @@ msgid "Add to Panel"
 msgstr "Zum Panel hinzufügen"
 
 #: C/system-admin-guide.xml:123(guimenuitem)
-#, fuzzy
 msgid "Launcher from menu"
 msgstr "Einen Anwendungsstarter aus dem Anwendungsmenü kopieren"
 
@@ -6745,9 +6850,8 @@ msgid "To Disable Panel Configuration"
 msgstr "Deaktivieren der Panel-Konfiguration"
 
 #: C/system-admin-guide.xml:136(secondary)
-#, fuzzy
 msgid "panel configuration"
-msgstr "Konfiguration gespeichert!"
+msgstr "Panel-Einstellungen"
 
 #: C/system-admin-guide.xml:138(para)
 msgid ""
@@ -6838,7 +6942,7 @@ msgstr "Zurück zum Namen-Editor"
 
 #: C/system-admin-guide.xml:219(para)
 msgid ""
-"Click the <menuchoice><guimenu>Desktop</guimenu><guisubmenu>Administration</"
+"Click the <menuchoice><guimenu>System</guimenu><guisubmenu>Administration</"
 "guisubmenu><guimenuitem>Lockdown Editor</guimenuitem></menuchoice>"
 msgstr ""
 
@@ -6928,7 +7032,6 @@ msgstr ""
 "auf den Druckdialog aller Anwendungen."
 
 #: C/system-admin-guide.xml:297(term)
-#, fuzzy
 msgid "Disable print setup"
 msgstr "Druckeinstellungen deaktivieren"
 
@@ -7003,9 +7106,8 @@ msgstr ""
 "Menüeinträge bewerkstelligt."
 
 #: C/system-admin-guide.xml:353(term)
-#, fuzzy
 msgid "Disable log out"
-msgstr "Schaltfläche \"Abmelden\""
+msgstr "Abmelden deaktivieren"
 
 #: C/system-admin-guide.xml:356(para)
 msgid ""
@@ -7029,7 +7131,6 @@ msgid "User is not allowed to close Epiphany."
 msgstr "Dem Benutzer ist nicht gestattet, Epiphany zu beenden."
 
 #: C/system-admin-guide.xml:376(term)
-#, fuzzy
 msgid "Disable arbitrary URL"
 msgstr "Beliebige URLs deaktivieren"
 
@@ -7058,7 +7159,6 @@ msgstr ""
 "und »Vor« verbergen. Dies betrifft auch den Chronik-Dialog und die Lesezeichen."
 
 #: C/system-admin-guide.xml:403(term)
-#, fuzzy
 msgid "Disable javascript chrome"
 msgstr "JavaScript-Kontrolle über Chrome deaktivieren"
 
@@ -7125,7 +7225,8 @@ msgstr ""
 "der Bildschirmschoner aktiviert wird."
 
 #: C/system-admin-guide.xml:460(term)
-msgid "Allow logout"
+#, fuzzy
+msgid "Allow log out"
 msgstr "Abmelden zulassen"
 
 #: C/system-admin-guide.xml:463(para)
@@ -7158,6 +7259,8 @@ msgid ""
 "This appendix describes the hidden directories that the GNOME Desktop adds to "
 "the home directories of users."
 msgstr ""
+"Dieser Anhang beschreibt die verborgenen Ordner, die der GNOME-Desktop zu den "
+"persönlichen Ordnern der Benutzer hinzufügt."
 
 #: C/system-admin-guide.xml:9(primary) C/system-admin-guide.xml:13(see)
 msgid "hidden directories"
@@ -7298,6 +7401,8 @@ msgid ""
 "This directory may also contain sub-directories that store application "
 "specific data."
 msgstr ""
+"Dieser Ordner kann auch Unterordner enthalten, die anwendungsbezogene Daten "
+"speichern."
 
 #: C/system-admin-guide.xml:143(filename)
 msgid ".gnome2-private"
@@ -7490,9 +7595,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:58(glossterm)
-#, fuzzy
 msgid "GConf configuration source"
-msgstr "Auf Konfigurationsdatenquelle(n) konnte nicht zugegriffen werden: %s\n"
+msgstr "GConf-Konfigurationsquelle"
 
 #: C/system-admin-guide.xml:60(para)
 msgid ""
@@ -7501,9 +7605,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:65(glossterm)
-#, fuzzy
 msgid "GConf preference key"
-msgstr "Fehler beim Überwachen des GConf-Schlüssels »%s«: %s"
+msgstr "GConf-Einstellungsschlüssel"
 
 #: C/system-admin-guide.xml:67(para)
 msgid ""
@@ -7515,9 +7618,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:73(glossterm)
-#, fuzzy
 msgid "GConf path file"
-msgstr "Pfad zur Datei"
+msgstr "GConf-Pfaddatei"
 
 #: C/system-admin-guide.xml:75(para)
 msgid ""
@@ -7526,18 +7628,16 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:80(glossterm)
-#, fuzzy
 msgid "GConf schema"
-msgstr "Schema-Optionen:"
+msgstr "GConf-Schema"
 
 #: C/system-admin-guide.xml:82(para)
 msgid "A collective term for a schema key and a schema object."
 msgstr ""
 
 #: C/system-admin-guide.xml:86(glossterm)
-#, fuzzy
 msgid "GConf schema definition file"
-msgstr "Die Lokale-Definitionsdatei »%s« kann nicht geöffnet werden"
+msgstr "GConf-Schema-Definitionsdatei"
 
 #: C/system-admin-guide.xml:88(para)
 msgid ""
@@ -7549,9 +7649,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:96(glossterm)
-#, fuzzy
 msgid "GConf schema key"
-msgstr "Das Schema »%s« wurde an den Schlüssel »%s« angehängt\n"
+msgstr "GConf-Schema-Schlüssel"
 
 #: C/system-admin-guide.xml:98(para)
 msgid ""
@@ -7561,9 +7660,8 @@ msgid ""
 msgstr ""
 
 #: C/system-admin-guide.xml:105(glossterm)
-#, fuzzy
 msgid "GConf schema object"
-msgstr "Ausgewähltes Objekt absenken"
+msgstr "GConf-Schema-Schlüssel"
 
 #: C/system-admin-guide.xml:107(para)
 msgid ""
@@ -7726,9 +7824,8 @@ msgstr ""
 "Beispielsweise ist eine Webadresse eine solche URI."
 
 #: C/system-admin-guide.xml:222(glossterm)
-#, fuzzy
 msgid "websafe color palette"
-msgstr "Palettenfarbe %d auswählen"
+msgstr ""
 
 #: C/system-admin-guide.xml:224(para)
 msgid ""
@@ -7742,4 +7839,8 @@ msgstr ""
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/system-admin-guide.xml:0(None)
 msgid "translator-credits"
-msgstr "Mario Blättermann <mario,blaettermann@t-online.de>, 2008"
+msgstr "Mario Blättermann <mariobl@gnome.org>, 2008, 2009"
+
+#, fuzzy
+#~ msgid "Use the <guimenu>Desktop</guimenu> menu."
+#~ msgstr "Stan_darddatei für das Menü verwenden"
