@@ -2484,16 +2484,34 @@ that you can modify:</para>
   </sect2>
 
   <sect2 id="goscustdesk-70">
-    <title>Screen Resolution Preferences</title>
+    <title>Display Preferences</title>
     <indexterm>
       <primary>preference tools</primary>
-      <secondary>Screen Resolution</secondary>
+      <secondary>Display</secondary>
     </indexterm>
-    <para>Use the <application>Screen Resolution</application>
-preference tool to specify the resolution settings for your screen. <xref linkend="goscustdesk-TBL-72"/> lists the screen resolution preferences that
-you can modify.</para>
+    <para>Use the <application>Display</application>
+preference tool to configure the monitors that your computer uses.</para>
+<note><para>On most laptop keyboards, you can use the key combination
+<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> to cycle between
+several typical monitor configurations without starting the <application>Display</application> preference tool.
+</para></note>
+<para>You can drag and move the graphical representations of the monitors in
+the upper part of the window to arrange how they are connected to form your
+desktop area. Note that the application displays small 'stickers' in the top
+left corner of each monitor to help you identify which rectangle corresponds
+to which monitor.</para>
+<note><para>In contrast to most other preference tools, changes you make in
+the <application>Display</application> preference tool don't take effect until
+you click the <guibutton>Apply</guibutton> button, and will revert to their
+previous settings unless you confirm the changes. This is a precaution to
+prevent bad display settings from rendering your computer unusable.</para></note>
+<para><xref linkend="goscustdesk-TBL-72"/> lists the display preferences that
+you can modify for the currently selected monitor. The currently selected
+monitor is the one whose graphical representation has a bold black outline.
+It is also indicated by the background color of the section label.
+              </para>
     <table frame="topbot" id="goscustdesk-TBL-72">
-      <title>Screen Resolution Preferences</title>
+      <title>Display Preferences</title>
       <tgroup cols="2" colsep="0" rowsep="0">
         <colspec colname="colspec0" colwidth="50*"/>
         <colspec colname="colspec1" colwidth="50*"/>
@@ -2511,12 +2529,39 @@ you can modify.</para>
           <row>
             <entry valign="top">
               <para>
+                <guilabel>Mirror Screens</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option to have all monitors show the whole desktop.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                 <guibutton>Detect Monitors</guibutton>
+              </para>
+            </entry>
+            <entry valign="top">
+               <para>Use this button to make your desktop notice newly plugged
+                 in or unplugged monitors. This is necessary, since it would
+                 cost too much energy to constantly check for these changes.
+               </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
                 <guilabel>Resolution</guilabel>
               </para>
             </entry>
             <entry valign="top">
-              <para>Select the resolution to use for the screen from
-the drop-down list.</para>
+              <para>Select the resolution to use for the currently selected
+                monitor from the drop-down list. <emphasis>Resolution</emphasis>
+                refers to the pixel dimensions of the screen. A larger
+                resolution means that more things fit on the screen, but
+                everything will be smaller.
+              </para>
             </entry>
           </row>
           <row>
@@ -2526,19 +2571,34 @@ the drop-down list.</para>
               </para>
             </entry>
             <entry valign="top">
-              <para>Select the screen refresh rate to use for the screen
-from the drop-down list.</para>
+              <para>Select the refresh rate to use for the currently
+                selected monitor from the drop-down list. The <emphasis>refresh
+                rate</emphasis> determines how often the computer redraws the
+                screen. A too low refresh rate (below 60) makes the monitor
+                flicker and can cause discomfort to your eyes. This is less
+                of a problem on lcd displays.
+              </para>
             </entry>
           </row>
           <row>
-            <entry colname="colspec0" valign="top">
+            <entry valign="top">
               <para>
-                <guilabel>Make default for
-this computer only</guilabel>
+                <guilabel>Rotation</guilabel>
               </para>
             </entry>
-            <entry colname="colspec1" valign="top">
-              <para>Select this option to make these settings the defaults only for the system that you are logged in to.</para>
+            <entry valign="top">
+              <para>Select the rotation for the currently selected monitor. This option may not be supported on all graphics cards.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guilabel>Show displays in panel</guilabel>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option to show an icon in the notification area
+                that allows you to quickly change the rotation.</para>
             </entry>
           </row>
         </tbody>
