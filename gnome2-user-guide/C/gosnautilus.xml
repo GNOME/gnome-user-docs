@@ -2881,23 +2881,20 @@ New Emblem</guilabel> dialog.</para>
   
   <!-- ====================================================== Removable media -->    
   <sect1 id="gosnautilus-460">
+    <!-- compatibility -->
+    <anchor id="gosnautilus-469"/>
     <title>Using Removable Media</title>
     <indexterm>
       <primary>removable media</primary>
       <secondary>introduction</secondary>
     </indexterm>
-    <para>The file manager supports all removable media that have
-the following characteristics: </para>
-    <itemizedlist>
-      <listitem>
-        <para>The removable media has an entry in the <filename>/etc/fstab</filename> file. The <filename>/etc/fstab</filename> file describes the file
-systems that the computer uses.</para>
-      </listitem>
-      <listitem>
-        <para>The <literal>user</literal> option is specified in the entry
-for the removable media in the <filename>/etc/fstab</filename> file.</para>
-      </listitem>
-    </itemizedlist>
+    <para>
+      The file manager can initiate various actions when removable media appear,
+      such as mounting it, opening a file manager window showing its contents,
+      or running a suitable application that can handle it (for example a music
+      player for an audio CD). See <xref linkend="gosnautilus-61"/> for how to
+      configure these actions for different media formats.
+    </para>
     <sect2 id="gosnautilus-462">
       <title>To Mount Media</title>
       <indexterm>
@@ -2907,17 +2904,17 @@ for the removable media in the <filename>/etc/fstab</filename> file.</para>
       <para>To <firstterm>mount</firstterm> media is to make the file
 system of the media available for access. When you mount media, the file system
 of the media is attached as a subdirectory to your file system.</para>
-      <para>To mount media, insert the media in the appropriate device. An object
-that represents the media is added to the desktop. The object is added only
+      <para>To mount media, insert the media in the appropriate device. An icon 
+that represents the media is added to the desktop. The icon is added only
 if your system is configured to mount the device automatically when media
 is detected. </para>
       <para>If your system is not configured to mount the device automatically,
 you must mount the device manually. Double-click on the <guilabel>Computer</guilabel> icon from the desktop. A <guilabel>Computer </guilabel> dialog
-is displayed. Double-click on the object that represents the media. For example,
+is displayed. Double-click on the icon that represents the media. For example,
 to mount a floppy diskette, double-click on the <guilabel>Floppy</guilabel>
-object. An object that represents the media is added to the desktop. </para>
+icon. An icon that represents the media is added to the desktop. </para>
       <note>
-        <para>You cannot change the name of a removable media object.</para>
+        <para>You cannot change the name of a removable media icon.</para>
       </note>
     </sect2>
     <sect2 id="gosnautilus-461">
@@ -2930,11 +2927,11 @@ object. An object that represents the media is added to the desktop. </para>
 following ways: </para>
       <itemizedlist>
         <listitem>
-          <para>Double-click on the object that represents the media on the
+          <para>Double-click on the icon that represents the media on the
 desktop. </para>
         </listitem>
         <listitem>
-          <para>Right-click on the object that represents the media on the
+          <para>Right-click on the icon that represents the media on the
 desktop, then choose <guimenuitem>Open</guimenuitem>. </para>
         </listitem>
       </itemizedlist>
@@ -2948,32 +2945,8 @@ the display, click on the <guibutton>Reload</guibutton> button.</para>
         <secondary>displaying media properties</secondary>
       </indexterm>
       <para>To display the properties of removable media,
-right-click on the object that represents the media on the desktop, then choose <guimenuitem>Properties</guimenuitem>. A dialog displays the properties of the media.</para>
+right-click on the icon that represents the media on the desktop, then choose <guimenuitem>Properties</guimenuitem>. A dialog displays the properties of the media.</para>
       <para>To close the properties dialog, click <guibutton>Close</guibutton>.</para>
-    </sect2>
-    <sect2 id="gosnautilus-469">
-      <title>To Format a Floppy Disk</title>
-      <indexterm>
-        <primary>removable media</primary>
-        <secondary>formatting floppy
-diskette</secondary>
-      </indexterm>
-      <para>To <firstterm>format</firstterm> media
-is to prepare the media for use. You can use
-the file manager to format floppy disks.</para>
-
-   <warning>
-    <title>Warning</title>
-    <para>
-     When you format, you destroy all files on your floppy disk. Do not format floppies
-     containing files you wish to keep.
-    </para>
-   </warning>
-
-   <para>To format a floppy disk, right-click on the object that represents the floppy on
-the desktop, then choose <guimenuitem>Format</guimenuitem>. A <guilabel>Floppy
-Formatter</guilabel> dialog is displayed. See the <ulink type="help" url="ghelp:gfloppy?usage">Floppy
-Formatter</ulink> documentation for more details.</para>
     </sect2>
     <sect2 id="gosnautilus-464">
       <title>To Eject Media</title>
@@ -2981,38 +2954,36 @@ Formatter</ulink> documentation for more details.</para>
         <primary>removable media</primary>
         <secondary>ejecting</secondary>
       </indexterm>
-      <para>To eject media, right-click on the media object on the desktop,
+      <para>To eject media, right-click on the media icon on the desktop,
 then choose <guimenuitem>Eject</guimenuitem>. If the drive for the media is
 a motorized drive, the media is ejected from the drive. If the drive for the
-media is not motorized, wait until the desktop object for the media disappears,
+media is not motorized, wait until the desktop icon for the media disappears,
 then eject the media manually.</para>
       <para>You cannot eject media from a motorized drive when the media is mounted.
-To eject media, first unmount the media. To remove a floppy diskette from
-the drive, perform the following steps:</para>
+To eject media, first unmount the media. For example, to remove a USB flash drive, perform the following steps:</para>
       <orderedlist>
         <listitem>
           <para>Close all file manager windows, <application>Terminal</application>
-windows, and any other windows that access the diskette. </para>
+windows, and any other windows that access the USB drive. </para>
         </listitem>
         <listitem>
-          <para>Right-click on the object that represents the diskette on
-the desktop, then choose <guimenuitem>Eject</guimenuitem>. The desktop object
-for the diskette disappears.</para>
+          <para>Right-click on the icon that represents the drive on
+the desktop, then choose <guimenuitem>Eject</guimenuitem>. The desktop icon
+for the drive disappears.</para>
         </listitem>
         <listitem>
-          <para>Eject the diskette from the drive.</para>
+          <para>Remove the USB flash drive.</para>
         </listitem>
       </orderedlist>
           <caution>
-            <para>You must unmount removable media before ejecting. Do not eject a diskette from the drive before you unmount
-the diskette. Do not remove a USB flash drive before you unmount the flash drive. If you do not unmount the media first you might lose data.</para>
+            <para>You must unmount removable media before ejecting. Do not remove a USB flash drive before you unmount the flash drive. If you do not unmount the media first you might lose data.</para>
           </caution>
     </sect2>
   </sect1>
   <sect1 id="nautilus-cdwriter">
     <title>Writing CDs or DVDs</title>
     <!-- preserve id for backwards compatibility: 2.12 -->
-    <anchor id="gosnautilus-475"/>    
+    <anchor id="gosnautilus-475"/>
     <indexterm>
       <primary>file manager</primary>
       <secondary>writing CDs</secondary>
@@ -3039,8 +3010,8 @@ a special folder for files and folders that you wish to write to a CD or DVD. Fr
     <para>To write a CD or DVD, perform the following steps:</para>
     <orderedlist>
       <listitem>
-        <para>In a folder window menubar, choose <menuchoice><guimenu>Places</guimenu><guimenuitem>CD/DVD Creator</guimenuitem></menuchoice>. The file manager opens the CD/DVD Creator folder.</para>
-        <note><para>In a File Browser window, this item is in the <guimenu>Go</guimenu> menu.</para></note>
+        <para>Open <menuchoice><guimenu>Applications</guimenu><guimenu>System Tools</guimenu><guimenuitem>CD/DVD Creator</guimenuitem></menuchoice>. The file manager opens the CD/DVD Creator folder.</para>
+        <note><para>In a File Browser window, the <guimenuitem>CD/DVD Creator</guimenuitem> item is available in the <guimenu>Go</guimenu> menu.</para></note>
       </listitem>
       <listitem>
         <para>Drag the files and folders that you want to write to CD or DVD to
@@ -3128,7 +3099,7 @@ written or when the disc image file is created, a message to indicate that the
 process is complete is displayed in the dialog.</para>
       </listitem>
     </orderedlist>
-    <tip><para>You can set the CD/DVD Creator folder to open automatically when you instert a blank disc. See <application>Removable Drives and Media Preferences</application>.</para></tip>
+    <tip><para>You can set the CD/DVD Creator folder to open automatically when you instert a blank disc. See <xref linkend="gosnautilus-61"/>.</para></tip>
     <note><para>The filesystem written to the CD will be readable with long filenames on all recent operating systems. Both the Joliet and the Rock Ridge CD-ROM filesystem extensions are used.</para></note>
     </sect2>
     <sect2 id="nautilus-cdwriter-copy">
@@ -3308,7 +3279,7 @@ locations</secondary>
         <primary>URI, special</primary>
         <see>special URI locations</see>
       </indexterm>
-      <para>Nautilus has certain special URI locations that enable you to access particular functions from the file manager. For example, to access fonts, you can access the <command>fonts:///</command> URI in a file manager window.</para>
+      <para>Nautilus has certain special URI locations that enable you to access particular functions from the file manager.</para>
       <para>These are intended for advanced users: in most cases, an easier method of accessing the function or location exists.</para>
       <para><xref linkend="gosnautilus-TBL-479"/> lists the special URI locations that you can
 use with the file manager.</para>
@@ -3331,18 +3302,6 @@ use with the file manager.</para>
             <row>
               <entry colname="colspec0" valign="top">
                 <para>
-                  <command>fonts:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays all the fonts that are
-available in your system. To preview a font, double-click on the font. You
-can also use this location to add fonts to the GNOME Desktop.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
                   <command>burn:///</command>
                 </para>
               </entry>
@@ -3362,19 +3321,6 @@ to a CD. From here you can write the contents of the location to a CD easily. Se
 which you can connect, if your system is configured to access locations on
 a network. To access a network location, double-click on the network location.
 You can also use this URI to add network locations to your system. See also <xref linkend="nautilus-accessnetwork"/>.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" valign="top">
-                <para>
-                  <command>themes:///</command>
-                </para>
-              </entry>
-              <entry colname="colspec1" valign="top">
-                <para>Displays all the themes that
-are available in the GNOME Desktop. To apply a theme to the GNOME Desktop, double-click on the
-theme. You can also use this location to add themes to the GNOME Desktop.</para>
-                <para>Alternatively, set a theme with the <link linkend="prefs-theme"><application>Theme</application> preference tool</link>.</para>
               </entry>
             </row>
           </tbody>
