@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-accessibility-guide\n"
 "POT-Creation-Date: 2009-04-07 15:39+0000\n"
-"PO-Revision-Date: 2009-04-10 15:09+0100\n"
+"PO-Revision-Date: 2009-04-10 20:10+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -742,7 +742,7 @@ msgstr "Redigera filen <filename>AccessKeyMouseEvents</filename> för att associ
 
 #: C/gnome-access-guide.xml:332(para)
 msgid "If there is a tendency for a user to start an application unintentionally, you can associate the gestures with multiple switch presses or minimum durations. For example, the following line starts <application>On-Screen Keyboard</application> in inverse scanning mode when the user presses the switch that is defined as Switch 2 three times within two seconds, for a minimum of 100 milliseconds for each press:"
-msgstr ""
+msgstr "Om det finns en tendens för en användare att oavsiktligen starta ett problem så kan du associera gesterna med flera brytartryck eller korta tidsperioder. Till exempel så startar följande rad <application>Skärmtangentbord</application> i omvänt avsökningsläge när användaren trycker på brytaren som är definierad som Brytare 2 tre gånger inom två sekunder, för ett minimum på 100 millisekunder för varje tryckning:"
 
 #: C/gnome-access-guide.xml:338(literal)
 msgid "&lt;Switch2&gt;3 100 2000 gok --login --accessmethod=inversescanning --scan-action=switch1 --select-action=switch2"
@@ -750,7 +750,7 @@ msgstr "&lt;Switch2&gt;3 100 2000 gok --login --accessmethod=inversescanning --s
 
 #: C/gnome-access-guide.xml:341(para)
 msgid "Users who use single switches may prefer to start <application>On-Screen Keyboard</application> in automatic scanning mode. The following line starts <application>On-Screen Keyboard</application> in automatic scanning mode when the user presses the switch on an alternative access device for more than four seconds:"
-msgstr ""
+msgstr "Användare som använder enkla brytare kan föredra att starta <application>Skärmtangentbord</application> i automatiskt avsökningsläge. Följande rad startar <application>Skärmtangentbord</application> i automatiskt avsökningsläge när användaren trycker på brytaren på en alternativ åtkomstenhet i mer än fyra sekunder:"
 
 #: C/gnome-access-guide.xml:345(literal)
 msgid "&lt;Switch&gt;1 4000 5000 gok --login --accessmethod=automaticscanning --scan-action=switch1 --select-action=switch1"
@@ -766,15 +766,15 @@ msgstr "Starta skärmtangentbord med endast en rörelsegest"
 
 #: C/gnome-access-guide.xml:355(para)
 msgid "You can define gestures that involve only the motion of a pointing device such as a mouse, or an alternative pointing device, such as a head pointer or trackball. The syntax of the gesture does not change depending on whether you are using a mouse or an alternative pointing device. Edit the <filename>AccessKeyMouseEvents</filename> file to associate motion gestures with assistive technologies."
-msgstr ""
+msgstr "Du kan definiera gester som innefattar rörelsen av en pekenhet, såsom en mus, eller en alternativ pekenhet, såsom en huvudpekare eller styrkula. Syntaxen för gesten ändrar sig inte beroende på huruvida du använder en mus eller en alternativ pekenhet. Redigera filen <filename>AccessKeyMouseEvents</filename> för att associera rörelsegester med hjälpmedelsfunktioner."
 
 #: C/gnome-access-guide.xml:360(para)
 msgid "If the <literal>dwellmouselistener</literal> GtkModule is loaded, alternative pointing devices are temporarily latched to the core pointer. This means that if the user moves the alternative pointing device, the on-screen pointer moves."
-msgstr ""
+msgstr "Om Gtk-modulen <literal>dwellmouselistener</literal> är inläst hakar sig alternativa pekenheter temporärt på kärnpekaren. Detta betyder att om användaren förflyttar den alternativa pekenheten så förflyttas skärmpekaren."
 
 #: C/gnome-access-guide.xml:363(para)
 msgid "For example, the following line starts <application>On-Screen Keyboard</application> in dwell mode when the user moves the on-screen pointer from inside the login dialog through the top edge, back into the dialog through the top edge, out of the dialog through the left edge, back into the dialog through the left edge, and similarly through the bottom and right edges of the dialog in a cross pattern:"
-msgstr ""
+msgstr "Till exempel startar följande rad <application>Skärmtangentbord</application> i uppehållsläge när användaren förflyttar skärmpekaren inifrån inloggningsdialogen via överkanten, tillbaka in i dialogrutan via överkanten, ut från dialogrutan via vänstra kanten, tillbaka in i dialogrutan genom vänstra kanten och på samma sätt genom nederkanten och högra kanterna för dialogrutan i ett korsmönster:"
 
 #: C/gnome-access-guide.xml:368(literal)
 msgid "TTLLBBRR O 10000 gok --login --access-method=dwellselection --input-device=MOUSE[3]"
@@ -782,7 +782,7 @@ msgstr "TTLLBBRR O 10000 gok --login --access-method=dwellselection --input-devi
 
 #: C/gnome-access-guide.xml:371(para)
 msgid "Note that the <literal>--input-device</literal> parameter specified in the gesture must match the name of the extended user input device, such as a head pointer or trackball, as specified in <filename>/etc/X11/XF86Config</filename>."
-msgstr ""
+msgstr "Observera att parametern <literal>--input-device</literal> som anges i gesten måste matcha namnet på den utökade inmatningsenheten för användaren, såsom en huvudpekare eller styrkula (trackball), som anges i <filename>/etc/X11/XF86Config</filename>."
 
 #: C/gnome-access-guide.xml:378(title)
 msgid "Additional Requirements for Accessible Login"
@@ -790,11 +790,11 @@ msgstr "Ytterligare krav för hjälpmedelsinloggning"
 
 #: C/gnome-access-guide.xml:379(para)
 msgid "To enable the Accessible Login feature to use alternative pointing devices and switch devices such as sip-and-puff switches, wheelchair-mounted switches or trackballs, you might need to modify your X server system configuration to recognize these devices. You can use most devices that emulate mouse buttons with the Accessible Login feature and <application>On-Screen Keyboard</application>, including USB single switches and mouse-like pointing devices."
-msgstr ""
+msgstr "För att funktionen Hjälpmedelsinloggning ska använda alternativa pekenheter och brytarenheter såsom en sug-och-blås-brytare, rullstolsmonterade brytare eller styrkula, så kanske du behöver ändra din systemkonfiguration för X-servern för att känna igen dessa enheter. Du kan använda de flesta enheter som kan emulera musknappar med funktionen Hjälpmedelsinloggning och <application>Skärmtangentbord</application>, inklusive enkla USB-brytare och musliknande pekenheter."
 
 #: C/gnome-access-guide.xml:384(para)
 msgid "You should not configure an alternative input device to control the primary on-screen pointer. This might result in undesirable behavior or cause situations from which the user of the alternate input device cannot recover without using the primary keyboard or mouse. To prevent this problem, remove any occurrences of the attributes <literal>SendCore</literal> or <literal>AlwaysCore</literal> from any of the <literal>InputDevice</literal> lines in the X Server configuration file."
-msgstr ""
+msgstr "Du bör inte konfigurera en alternativ inmatningsenhet för att kontrollera den primära skärmpekaren. Detta kan resultera i oönskat beteendet eller orsaka situationer från vilken användaren av den alternativa inmatningsenheten inte kan återställa sig utan det primära tangentbordet eller mus. För att förhindra liknande problem så ta bort alla förekomster av attribut som <literal>SendCore</literal> eller <literal>AlwaysCore</literal> från någon av <literal>InputDevice</literal>-raderna i konfigurationsfilen för X-servern."
 
 #: C/gnome-access-guide.xml:395(title)
 msgid "Keyboard Desktop Navigation"
@@ -1259,11 +1259,11 @@ msgstr "Tryck på <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>D</
 
 #: C/gnome-access-guide.xml:708(para)
 msgid "For Solaris systems, this key is <keycap>Meta-D</keycap> (as with Microsoft Windows). A meta- or super-key is an OS-logo shift key."
-msgstr ""
+msgstr "För Solaris-system så är denna tangent <keycap>Meta-D</keycap> (som med Microsoft Windows). En meta- eller super-tangent är en skift-tangent med en operativsystemslogotyp."
 
 #: C/gnome-access-guide.xml:723(para)
 msgid "Display a popup window with icons that represent the desktop background and the panels. Press and hold <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press <keycap>Tab</keycap> to switch the focus between the desktop background and the panels."
-msgstr ""
+msgstr "Visa ett popupfönster med ikoner som representerar skrivbordsbakgrunden och panelerna. Tryck och håll ner <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> och fortsätt att trycka på <keycap>Tabulator</keycap> för att växla fokus mellan skrivbordsbakgrunden och panelerna."
 
 #: C/gnome-access-guide.xml:750(para)
 msgid "Give focus to a neighboring desktop background object (if the desktop has focus)."
@@ -1299,11 +1299,11 @@ msgstr "för paneler"
 
 #: C/gnome-access-guide.xml:813(para)
 msgid "A panel is an area from which you can run special programs, applications, and panel applications. The most common panel is the panel that stretches the full width of the bottom edge of the desktop. The following table lists the keyboard shortcuts that you can use to navigate panels and panel objects."
-msgstr ""
+msgstr "En panel är ett område från vilket du kan köra speciella program och panelprogram. Den mest vanliga panelen är panelen som sträcker sig längs hela nederkanten av skrivbordet. Följande tabell listar tangentbordsgenvägarna som du kan använda för att navigera i paneler och panelobjekt."
 
 #: C/gnome-access-guide.xml:839(para)
 msgid "Give focus to a panel. This keyboard shortcut displays a popup window with icons that represent the desktop background, panels, and drawers. Press and hold <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press <keycap>Tab</keycap> to switch the focus between the desktop background, panels, and drawers. If you're especially dexterous, you can add <keycap>Shift</keycap> to go in reverse."
-msgstr ""
+msgstr "Ge fokus till en panel. Denna tangentbordsgenväg visar ett popupfönster med ikoner som representerar skrivbordsbakgrunden, panelerna och lådorna. Tryck och håll ner <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> och fortsätt att trycka på <keycap>Tabulator</keycap> för att växla fokus mellan skrivbordsbakgrunden, panelerna och lådorna. Om du är fingerfärdig så kan du lägga till <keycap>Skift</keycap> för att gå i omvänd riktning."
 
 #: C/gnome-access-guide.xml:855(para)
 msgid "Give focus to the next object on the panel."
@@ -1311,7 +1311,7 @@ msgstr "Ge fokus till nästa objekt på panelen."
 
 #: C/gnome-access-guide.xml:867(para)
 msgid "Open the <guimenu>Applications</guimenu> menu when the Menu Panel has focus. Continue to press <keycap>F10</keycap> to switch focus between the <guimenu>Applications</guimenu> menu and the window list. This key behavior may alter slightly depending on context and specific user setup."
-msgstr ""
+msgstr "Öppna menyn <guimenu>Program</guimenu> när Meny-panelen har fokus. Fortsätt att trycka på <keycap>F10</keycap> för att växla fokus mellan menyn <guimenu>Program</guimenu> och fönsterlisten. Detta tangentbeteende kan skilja sig lite beroende på sammanhang och specifik användarkonfiguration."
 
 #: C/gnome-access-guide.xml:879(para)
 msgid "Activate a panel object; for example, open a menu or start a launcher (icon shortcut)."
@@ -1430,27 +1430,27 @@ msgstr "Hjälp"
 #: C/gnome-access-guide.xml:1088(phrase)
 #: C/gnome-access-guide.xml:1112(phrase)
 msgid "Portion of a panel with three objects displayed in the following order from left to right: <placeholder-1/> icon, <placeholder-2/> icon, and <placeholder-3/> icon."
-msgstr ""
+msgstr "Del av en panel med tre objekt som visas i följande ordning från vänster till höger: <placeholder-1/>-ikon, <placeholder-2/>-ikon och <placeholder-3/>-ikon."
 
 #: C/gnome-access-guide.xml:1051(para)
 msgid "Show a panel with three panel objects before a move operation takes place."
-msgstr ""
+msgstr "Visa en panel med tre panelobjekt innan en förflyttningsåtgärd sker."
 
 #: C/gnome-access-guide.xml:1073(para)
 msgid "Shows the effect of using the arrow keys to move the <application>Geyes</application> panel application on the panel. You can use the arrow keys to move the panel application left or right until you meet the next panel object."
-msgstr ""
+msgstr "Visar effekten av att använda piltangenterna för att förflytta panelprogrammet <application>Geyes</application> på panelen. Du kan använda piltangenterna för att förflytta panelprogrammet vänster eller höger tills du träffar nästa panelobjekt."
 
 #: C/gnome-access-guide.xml:1096(para)
 msgid "Shows the effect of using <keycap>Shift</keycap> + arrow keys to move the <application>Geyes</application> panel application on the panel. You can use the <keycap>Shift</keycap> + arrow keys to push the <application>Volume Control</application> and <application>Help</application> panel objects ahead of the object that you are moving."
-msgstr ""
+msgstr "Visar effekten av att använda <keycap>Skift</keycap> + piltangenterna för att förflytta panelprogrammet <application>Geyes</application> på panelen. Du kan använda <keycap>Skift</keycap> + piltangenter för att trycka panelobjekten <application>Volymkontroll</application> och <application>Hjälp</application> framför objektet som du förflyttar."
 
 #: C/gnome-access-guide.xml:1120(para)
 msgid "Shows the effect of using <keycap>Ctrl</keycap> + arrow keys to move the <application>Geyes</application> panel application on the panel. You can use the <keycap>Ctrl</keycap> + arrow keys to swap positions with the <application>Volume Control</application> and <application>Help</application> panel objects as you meet the objects."
-msgstr ""
+msgstr "Visar effekten av att använda <keycap>Ctrl</keycap> + piltangenterna för att förflytta panelprogrammet <application>Geyes</application> på panelen. Du kan använda <keycap>Ctrl</keycap> + piltangenter för att växla positioner med panelobjekten <application>Volymkontroll</application> och <application>Hjälp</application> när du möter objekten."
 
 #: C/gnome-access-guide.xml:1130(para)
 msgid "Panel applications that are <guilabel>Locked</guilabel> cannot be moved. To unlock a panel application, use the <guimenu>panel object</guimenu> menu and deselect the <guimenuitem>Lock to Panel</guimenuitem> option."
-msgstr ""
+msgstr "Panelprogram som är <guilabel>låsta</guilabel> kan inte förflyttas. För att låsa upp ett panelprogram så använd <guimenu>panelobjektets</guimenu> meny och avmarkera alternativet <guimenuitem>Lås till panel</guimenuitem>."
 
 #: C/gnome-access-guide.xml:1137(title)
 msgid "Navigating Drawers"
@@ -1462,7 +1462,7 @@ msgstr "för lådor"
 
 #: C/gnome-access-guide.xml:1142(para)
 msgid "A drawer is a collapsible extension of a panel. The following table lists the keyboard shortcuts that you can use to navigate into and out of drawers. When you open a drawer, you can navigate the contents of the drawer in the same way as you navigate a panel. See <xref linkend=\"keynav-5\"/> for information about how to navigate a panel."
-msgstr ""
+msgstr "En låda är en utdragbar utökning av en panel. Följande tabell listar tangentbordsgenvägarna som du kan använda för att navigera in och ut i lådor. När du öppnar en låda så kan du navigera i lådans innehåll på samma sätt som om du navigerade i en panel. Se <xref linkend=\"keynav-5\"/> för information om hur man navigerar i en panel."
 
 #: C/gnome-access-guide.xml:1168(para)
 msgid "Open or close the drawer that has focus."
@@ -1474,7 +1474,7 @@ msgstr "Navigera in i lådan som har fokus."
 
 #: C/gnome-access-guide.xml:1190(para)
 msgid "Close the drawer and give focus to the drawer object on the panel."
-msgstr ""
+msgstr "Stäng lådan och ge fokus till lådobjektet på panelen."
 
 #: C/gnome-access-guide.xml:1213(title)
 msgid "Navigating Panel Menus"
@@ -1498,11 +1498,11 @@ msgstr "Navigera i menyn."
 
 #: C/gnome-access-guide.xml:1263(para)
 msgid "Select a menu item."
-msgstr "Välj en menypost."
+msgstr "Välj ett menyobjekt."
 
 #: C/gnome-access-guide.xml:1271(para)
 msgid "Open the popup menu associated with a menu item (if one exists)."
-msgstr ""
+msgstr "Öppna popupmenyn som är associerad med ett menyobjekt (om det finns en)."
 
 #: C/gnome-access-guide.xml:1283(para)
 msgid "Close a menu."
@@ -1518,19 +1518,19 @@ msgstr "för panelprogram"
 
 #: C/gnome-access-guide.xml:1297(para)
 msgid "A panel application is a small application that resides on a panel. You can navigate to all panel applications and open the panel application popup menu from the keyboard. However, if the panel application does not contain controls that you can give focus to, you cannot navigate the controls in the panel application. The following table lists the keyboard shortcuts that you can use to navigate panel applications."
-msgstr ""
+msgstr "Ett panelprogram är ett litet program som lever i en panel. Du kan navigera till alla panelprogram och öppna panelprogrammets popupmeny från tangentbordet. Dock, om panelprogrammet inte har kontroller som du kan ge fokus till, så kan du inte navigera i kontrollerna i panelprogrammet. Följande tabell listar tangentbordsgenvägarna som du kan använda för att navigera i panelprogram."
 
 #: C/gnome-access-guide.xml:1323(para)
 msgid "Activate the panel application control that has focus, if applicable. Not all panel applications contain controls that you can activate. If the panel application does not contain a control that you can activate, the <keycap>spacebar</keycap> does nothing."
-msgstr ""
+msgstr "Aktivera panelprogrammets kontroll som har fokus, om möjligt. Inte alla panelprogram innehåller kontroller som du kan aktivera. Om panelprogrammet inte har en kontroll som du kan aktivera så gör <keycap>blanksteg</keycap> ingenting."
 
 #: C/gnome-access-guide.xml:1334(para)
 msgid "Navigate the controls on the panel application."
-msgstr ""
+msgstr "Navigera i kontrollerna för panelprogrammet."
 
 #: C/gnome-access-guide.xml:1345(para)
 msgid "Open the panel application popup menu. To navigate the menu, use the standard keyboard shortcuts for navigating menus. See <xref linkend=\"keynav-24\"/> for information about how to navigate menus."
-msgstr ""
+msgstr "Öppna panelprogrammets popupmeny. För att navigera i menyn, använd standardgenvägarna för tangentbordet för att navigera i menyerna. Se <xref linkend=\"keynav-24\"/> för information om hur man navigerar i menyer."
 
 #: C/gnome-access-guide.xml:1358(title)
 msgid "Navigating Workspaces"
@@ -1542,7 +1542,7 @@ msgstr "för arbetsytor"
 
 #: C/gnome-access-guide.xml:1363(para)
 msgid "A workspace is a discrete area in which you can work. You can have many workspaces on your desktop and you can switch from one workspace to another. Each workspace can contain different windows and processes. The following table lists the keyboard shortcuts that you can use to navigate workspaces:"
-msgstr ""
+msgstr "En arbetsyta är ett avskilt område i vilket du kan arbeta. Du kan ha många arbetsytor på ditt skrivbord och du kan växla från en arbetsyta till en annan. Varje arbetsyta kan innehålla olika fönster och processer. Följande tabell listar tangentbordsgenvägarna som du kan använda för att navigera i arbetsytor:"
 
 #: C/gnome-access-guide.xml:1385(para)
 msgid "<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> + arrow keys"
@@ -1550,15 +1550,15 @@ msgstr "<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> + piltang
 
 #: C/gnome-access-guide.xml:1389(para)
 msgid "Give focus to the next or previous workspace. This keyboard shortcut displays a popup window with icons that represent the workspaces. Press and hold <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> and continue to press the arrow keys to switch the focus between the workspaces."
-msgstr ""
+msgstr "Ge fokus till nästa eller föregående arbetsyta. Denna tangentbordsgenväg visar ett popupfönster med ikoner som representerar arbetsytorna. Tryck och håll ner <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> och fortsätt med att trycka på piltangenterna för att växla fokus mellan arbetsytorna."
 
 #: C/gnome-access-guide.xml:1399(para)
 msgid "<keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Alt</keycap></keycombo> + arrow keys"
-msgstr ""
+msgstr "<keycombo><keycap>Ctrl</keycap><keycap>Skift</keycap><keycap>Alt</keycap></keycombo> + piltangenter"
 
 #: C/gnome-access-guide.xml:1404(para)
 msgid "Move the window that has focus to the next or previous workspace."
-msgstr ""
+msgstr "Förflytta fönstret som har fokus till nästa eller föregående arbetsyta."
 
 #: C/gnome-access-guide.xml:1418(title)
 msgid "Navigating Windows"
@@ -1574,7 +1574,7 @@ msgstr "Följande avsnitt beskriver tangentbordsgenvägarna som du kan använda 
 
 #: C/gnome-access-guide.xml:1427(para)
 msgid "You can customize all of the keyboard shortcuts that are associated with navigating windows. See <xref linkend=\"keynav-10\"/> for more information."
-msgstr ""
+msgstr "Du kan anpassa alla tangentbordsgenvägar som är associerade med att navigera i fönster. Se <xref linkend=\"keynav-10\"/> för mer information."
 
 #: C/gnome-access-guide.xml:1433(title)
 msgid "Giving Focus to Windows"
@@ -1590,11 +1590,11 @@ msgstr "Innan du kan använda eller ändra ett fönster så måste du ge fokus t
 
 #: C/gnome-access-guide.xml:1463(para)
 msgid "Display a popup window with icons that represent each window. Press and hold <keycap>Alt</keycap> and continue to press <keycap>Tab</keycap> to move through the windows until you reach the window you want to have focus."
-msgstr ""
+msgstr "Visa ett popupfönster med ikoner som representerar varje fönster. Tryck och håll ner <keycap>Alt</keycap> och fortsätt med att trycka på <keycap>Tabulator</keycap> för att förflytta dig mellan fönstren tills du når fram till fönstret som du vill ska ha fokus."
 
 #: C/gnome-access-guide.xml:1474(para)
 msgid "Raise each window in turn until you reach the window you want."
-msgstr ""
+msgstr "Höj varje fönster i tur och ordning tills du når fram till fönstret som du vill ha."
 
 #: C/gnome-access-guide.xml:1482(keycap)
 #: C/gnome-access-guide.xml:1788(keycap)
@@ -1604,7 +1604,7 @@ msgstr "F6"
 
 #: C/gnome-access-guide.xml:1486(para)
 msgid "Cycle between windows belonging to the current application (eg, a multiple document interface application like <application>Text Editor</application>)."
-msgstr ""
+msgstr "Växla mellan fönster som tillhör samma program (t.ex. ett program som innehåller flera dokument såsom <application>Textredigerare</application>)."
 
 #: C/gnome-access-guide.xml:1499(title)
 msgid "Controlling Windows"
@@ -1676,27 +1676,27 @@ msgstr "När ett fönster har fokus så kan du flytta fönstret runt på skärme
 
 #: C/gnome-access-guide.xml:1617(para)
 msgid "Start the move operation. The mouse pointer changes to a cross."
-msgstr ""
+msgstr "Starta förflyttningsåtgärden. Muspekaren ändras till ett kors."
 
 #: C/gnome-access-guide.xml:1627(para)
 msgid "Move the window 10 pixels at a time in the direction of the arrow key."
-msgstr ""
+msgstr "Flytta fönstret 10 bildpunkter åt gången i riktningen för piltangenten."
 
 #: C/gnome-access-guide.xml:1638(para)
 msgid "Move the window one pixel at a time in the direction of the arrow key."
-msgstr ""
+msgstr "Flytta fönstret en bildpunkt åt gången i riktningen för piltangenten."
 
 #: C/gnome-access-guide.xml:1649(para)
 msgid "Move the window in the direction of the arrow key and align it with the edge of the nearest window, panel or screen edge."
-msgstr ""
+msgstr "Flytta fönstret i riktningen för piltangenten och justera den längs kanten på närmsta fönster, panel eller skärmkant."
 
 #: C/gnome-access-guide.xml:1661(para)
 msgid "Complete the move operation, leaving the window in the current position."
-msgstr ""
+msgstr "Färdigställ förflyttningsåtgärden, lämna fönstret i den aktuella positionen."
 
 #: C/gnome-access-guide.xml:1673(para)
 msgid "Cancel the move operation, restoring the window to its original position."
-msgstr ""
+msgstr "Avbryt förflyttningsåtgärden, återställ fönstret till dess ursprungliga position."
 
 #: C/gnome-access-guide.xml:1684(title)
 msgid "Resizing Windows"
@@ -1717,19 +1717,19 @@ msgstr "F8"
 
 #: C/gnome-access-guide.xml:1715(para)
 msgid "Start the resize operation."
-msgstr ""
+msgstr "Starta storleksändringsåtgärden."
 
 #: C/gnome-access-guide.xml:1723(para)
 msgid "Resize the window in the direction of the arrow key."
-msgstr ""
+msgstr "Ändra storlek på fönstret i riktningen för piltangenten."
 
 #: C/gnome-access-guide.xml:1735(para)
 msgid "Complete the resize operation, leaving the window at the current size."
-msgstr ""
+msgstr "Färdigställ storleksändringsåtgärden, lämna fönstret i den aktuella storleken."
 
 #: C/gnome-access-guide.xml:1747(para)
 msgid "Cancel the resize operation, restoring the window to its original size."
-msgstr ""
+msgstr "Avbryt storleksändringsåtgärden, återställ fönstret till dess ursprungliga storlek."
 
 #: C/gnome-access-guide.xml:1758(title)
 msgid "Navigating Paned Windows"
@@ -1741,7 +1741,7 @@ msgstr "för fönster med paneler"
 
 #: C/gnome-access-guide.xml:1763(para)
 msgid "A paned window is a window that is split into two or more panes. <application>Help Browser</application> is an example of an application that uses paned windows."
-msgstr ""
+msgstr "Ett panelfönster är ett fönster som är uppdelat i två eller flera paneler. <application>Hjälpbläddrare</application> är ett exempel på ett program som använda panelfönster."
 
 #: C/gnome-access-guide.xml:1767(para)
 msgid "The following table describes the keyboard shortcuts that you can use to navigate paned/split windows:"
@@ -1749,23 +1749,23 @@ msgstr "Följande tabell beskriver tangentbordsgenvägarna som du kan använda f
 
 #: C/gnome-access-guide.xml:1792(para)
 msgid "Give focus to the next pane. The system gives focus to the control that last had focus in the pane."
-msgstr ""
+msgstr "Ge fokus till nästa panel. Systemet ger fokus till kontrollen som senast hade fokus i panelen."
 
 #: C/gnome-access-guide.xml:1804(para)
 msgid "Give focus to the first resize handle in the window. The resize handle is displayed between the panes and enables you to resize the panes. Press <keycap>F8</keycap> again to give focus to the next resize handle."
-msgstr ""
+msgstr "Ge fokus till första storleksändringshandtaget i fönstret. Storleksändringshandtaget visas mellan panelerna och låter dig ändra storlek på panelerna. Tryck på <keycap>F8</keycap> igen för att ge fokus till nästa storleksändringshandtag."
 
 #: C/gnome-access-guide.xml:1812(para)
 msgid "When the resize handle has focus, you can use the keyboard shortcuts that are listed in the following table to modify the paned window:"
-msgstr ""
+msgstr "Du kan använda tangentbordsgenvägarna som listas i följande tabell för att ändra panelfönstret när storleksändringshandtaget har fokus:"
 
 #: C/gnome-access-guide.xml:1835(para)
 msgid "Move the resize handle by a small amount."
-msgstr ""
+msgstr "Flytta storleksändringshandtaget lite."
 
 #: C/gnome-access-guide.xml:1846(para)
 msgid "Move the resize handle by a large amount."
-msgstr ""
+msgstr "Flytta storleksändringshandtaget mycket."
 
 #: C/gnome-access-guide.xml:1854(keycap)
 #: C/gnome-access-guide.xml:2336(keycap)
@@ -1789,11 +1789,11 @@ msgstr "Förminska panelen till den minsta tillåtna storleken."
 
 #: C/gnome-access-guide.xml:1861(para)
 msgid "For vertical panes, reduces the size of the pane to the left of the resize handle to the minimum size allowed."
-msgstr ""
+msgstr "För vertikala paneler minskas storleken på panelen till vänster om storleksändringshandtaget till den minsta tillåtna storleken."
 
 #: C/gnome-access-guide.xml:1864(para)
 msgid "For horizontal panes, reduces the size of the pane above the resize handle to the minimum size allowed."
-msgstr ""
+msgstr "För horisontella paneler minskas storleken på panelen ovanför storleksändringshandtaget till den minsta tillåtna storleken."
 
 #: C/gnome-access-guide.xml:1872(keycap)
 #: C/gnome-access-guide.xml:2348(keycap)
@@ -1817,19 +1817,19 @@ msgstr "Förstora panelen till den största tillåtna storleken."
 
 #: C/gnome-access-guide.xml:1879(para)
 msgid "For vertical panes, increases the size of the pane to the left of the resize handle to the maximum size allowed."
-msgstr ""
+msgstr "För vertikala paneler ökas storleken på panelen till vänster om storleksändringshandtaget till den största tillåtna storleken."
 
 #: C/gnome-access-guide.xml:1882(para)
 msgid "For horizontal panes, increases the size of the pane above the resize handle to the maximum size allowed."
-msgstr ""
+msgstr "För horisontella paneler ökas storleken på panelen ovanför storleksändringshandtaget till den största tillåtna storleken."
 
 #: C/gnome-access-guide.xml:1894(para)
 msgid "Set the position of the resize handle and return focus to the last control that had focus."
-msgstr ""
+msgstr "Ställ in positionen för storleksändringshandtaget och återställ fokus till senaste kontrollen som hade fokus."
 
 #: C/gnome-access-guide.xml:1906(para)
 msgid "Reset the position of the resize handle to the original position and return focus to the last control that had focus."
-msgstr ""
+msgstr "Nollställ positionen för storleksändringshandtaget till den ursprungliga positionen och återställ fokus till senaste kontrollen som hade fokus."
 
 #: C/gnome-access-guide.xml:1918(title)
 msgid "Navigating Applications"
@@ -1841,7 +1841,7 @@ msgstr "för program"
 
 #: C/gnome-access-guide.xml:1923(para)
 msgid "An application is any program, utility, or other software package that you run on your desktop. Applications contain standard user interface components:"
-msgstr ""
+msgstr "Ett program är ett valfritt program, verktyg eller annan typ av programpaket som du kör på ditt skrivbord. Program innehåller standardkomponenter för användargränssnitt:"
 
 #: C/gnome-access-guide.xml:1928(term)
 msgid "Windows"
@@ -1849,15 +1849,15 @@ msgstr "Fönster"
 
 #: C/gnome-access-guide.xml:1930(para)
 msgid "A window is a rectangular frame on your screen that displays an application. See <xref linkend=\"keynav-11\"/> for information about how to navigate windows."
-msgstr ""
+msgstr "Ett fönster är en rektangulär ruta på din skärm som visar ett program. Se <xref linkend=\"keynav-11\"/> för information om hur man navigerar i fönster."
 
 #: C/gnome-access-guide.xml:1937(term)
 msgid "Dialogs"
-msgstr "Dialoger"
+msgstr "Dialogrutor"
 
 #: C/gnome-access-guide.xml:1939(para)
 msgid "A dialog is a popup window which displays information or accepts input from the user. See <xref linkend=\"keynav-19\"/> for information about how to navigate dialogs."
-msgstr ""
+msgstr "En dialogruta är ett popupfönster som visar information eller tar emot inmatningar från användaren. Se <xref linkend=\"keynav-19\"/> för information om hur man navigerar i dialogrutor."
 
 #: C/gnome-access-guide.xml:1946(term)
 #: C/gnome-access-guide.xml:177(term)
@@ -1866,7 +1866,7 @@ msgstr "Kontroller"
 
 #: C/gnome-access-guide.xml:1948(para)
 msgid "A control is any user-interactive screen element. Examples of controls include buttons, check boxes, menus, and text boxes. See <xref linkend=\"keynav-23\"/> for detailed information about how to navigate the different types of controls that are available."
-msgstr ""
+msgstr "En kontroll är ett användarinteraktivt skärmelement. Exempel på kontroller inkluderar knappar, kryssrutor, menyer och textrutor. Se <xref linkend=\"keynav-23\"/> för detaljerad information om hur man navigerar i de olika typerna av kontroller som finns tillgängliga."
 
 #: C/gnome-access-guide.xml:1954(para)
 msgid "This section of the manual describes the essential keyboard shortcuts that you can use in applications and dialogs."
@@ -1878,11 +1878,11 @@ msgstr "Grundläggande tangentbordsgenvägar för navigering i program"
 
 #: C/gnome-access-guide.xml:1961(para)
 msgid "Since there are so many applications that you can use in the GNOME Desktop, this manual does not describe all the custom keyboard shortcuts that you can use with each individual application. However, the basic keyboard shortcuts are common to many applications."
-msgstr ""
+msgstr "Eftersom det finns så många program som du kan använda i GNOME-skrivbordet så kan inte denna handbok beskriva alla de anpassade tangentbordsgenvägar som du kan använda med varje individuellt program. Dock är de grundläggande tangentbordsgenvägarna gemensamma för många program."
 
 #: C/gnome-access-guide.xml:1964(para)
 msgid "Access keys are another way to quickly navigate applications with the keyboard. An access key is identified by an underlined letter on a menu or control. In some cases, you must press <keycap>Alt</keycap> in combination with the access key to perform an action."
-msgstr ""
+msgstr "Snabbtangenter är ett annat sätt att snabbt navigera i program med tangentbordet. En snabbtangent identifieras av en understruken bokstav på en meny eller kontroll. I vissa fall så måste du trycka på <keycap>Alt</keycap> i kombination med snabbtangenten för att genomföra en åtgärd."
 
 #: C/gnome-access-guide.xml:1967(para)
 msgid "The following table lists the essential keyboard shortcuts that you can use to navigate applications:"
@@ -1890,23 +1890,23 @@ msgstr "Följande tabell listar de grundläggande tangentbordsgenvägarna som du
 
 #: C/gnome-access-guide.xml:1992(para)
 msgid "Open the first menu on the application menubar."
-msgstr ""
+msgstr "Öppna första menyn på programmets menyrad."
 
 #: C/gnome-access-guide.xml:1999(para)
 msgid "<keycap>Alt</keycap> + access key"
-msgstr ""
+msgstr "<keycap>Alt</keycap> + snabbtangent"
 
 #: C/gnome-access-guide.xml:2003(para)
 msgid "Open the menu that is associated with the access key."
-msgstr ""
+msgstr "Öppna menyn som är associerad med snabbtangenten."
 
 #: C/gnome-access-guide.xml:2010(para)
 msgid "access keys"
-msgstr ""
+msgstr "snabbtangenter"
 
 #: C/gnome-access-guide.xml:2013(para)
 msgid "Select the menu item that is associated with the access key."
-msgstr ""
+msgstr "Välj menyobjektet som är associerat med snabbtangenten."
 
 #: C/gnome-access-guide.xml:2020(para)
 msgid "<keycap>left arrow</keycap> and <keycap>right arrow</keycap>"
@@ -1927,7 +1927,7 @@ msgstr "Flytta fokus till en meny."
 
 #: C/gnome-access-guide.xml:2047(para)
 msgid "Close the open menu and give focus to the control that had focus before the menubar."
-msgstr ""
+msgstr "Stäng den öppna menyn och ge fokus till kontrollen som hade fokus innan menyraden."
 
 #: C/gnome-access-guide.xml:2054(keycap)
 msgid "O"
@@ -1951,7 +1951,7 @@ msgstr "L"
 
 #: C/gnome-access-guide.xml:2080(para)
 msgid "Open a Location dialog, enabling you to type the name of a file that you want to open or save."
-msgstr ""
+msgstr "Öppna en Plats-dialogruta som låter dig ange namnet på en fil som du vill öppna eller spara."
 
 #: C/gnome-access-guide.xml:2090(keycap)
 msgid "P"
@@ -1967,7 +1967,7 @@ msgstr "C"
 
 #: C/gnome-access-guide.xml:2105(para)
 msgid "Copy highlighted text to the global, application-spanning clipboard."
-msgstr ""
+msgstr "Kopiera markerad text till det allmänna, programoberoende urklippet."
 
 #: C/gnome-access-guide.xml:2114(keycap)
 msgid "X"
@@ -1975,7 +1975,7 @@ msgstr "X"
 
 #: C/gnome-access-guide.xml:2117(para)
 msgid "Cut highlighted text to the global, application-spanning clipboard."
-msgstr ""
+msgstr "Klipp ut markerad text till det allmänna, programoberoende urklippet."
 
 #: C/gnome-access-guide.xml:2126(keycap)
 msgid "V"
@@ -1983,7 +1983,7 @@ msgstr "V"
 
 #: C/gnome-access-guide.xml:2129(para)
 msgid "Paste text from the global, application-spanning clipboard to the current cursor position."
-msgstr ""
+msgstr "Klistra in text från det allmänna, programoberoende urklippet till den aktuella markörpositionen."
 
 #: C/gnome-access-guide.xml:2141(title)
 msgid "Essential Keyboard Shortcuts for Navigating Dialogs"
@@ -1991,7 +1991,7 @@ msgstr "Grundläggande tangentbordsgenvägar för navigering i dialogrutor"
 
 #: C/gnome-access-guide.xml:2144(secondary)
 msgid "for dialogs"
-msgstr "för dialoger"
+msgstr "för dialogrutor"
 
 #: C/gnome-access-guide.xml:2146(para)
 msgid "The following table lists the essential keyboard shortcuts that you can use to navigate dialogs:"
@@ -2000,15 +2000,15 @@ msgstr "Följande tabell listar de grundläggande tangentbordsgenvägarna som du
 #: C/gnome-access-guide.xml:2167(keycap)
 #: C/gnome-access-guide.xml:2730(para)
 msgid "access key"
-msgstr ""
+msgstr "snabbtangent"
 
 #: C/gnome-access-guide.xml:2170(para)
 msgid "Activate or select a control."
-msgstr ""
+msgstr "Aktivera eller välj en kontroll."
 
 #: C/gnome-access-guide.xml:2182(para)
 msgid "Give focus to the next control."
-msgstr ""
+msgstr "Ge fokus till nästa kontroll."
 
 #: C/gnome-access-guide.xml:2190(keycap)
 #: C/gnome-access-guide.xml:2550(keycap)
@@ -2097,7 +2097,7 @@ msgstr ""
 
 #: C/gnome-access-guide.xml:2305(para)
 msgid "Open the focused file or folder."
-msgstr ""
+msgstr "Öppna fokuserad fil eller mapp."
 
 #: C/gnome-access-guide.xml:2312(para)
 msgid "<keycap>Ctrl</keycap> + <keycap>spacebar</keycap>"
@@ -2105,23 +2105,23 @@ msgstr "<keycap>Ctrl</keycap> + <keycap>blanksteg</keycap>"
 
 #: C/gnome-access-guide.xml:2316(para)
 msgid "Select the item that currently has focus."
-msgstr ""
+msgstr "Välj objektet som för närvarande har fokus."
 
 #: C/gnome-access-guide.xml:2323(para)
 msgid "A sequence of characters that matches the first <replaceable>n</replaceable> characters of a filename."
-msgstr ""
+msgstr "En teckensekvens som matchar de första <replaceable>n</replaceable> tecknen i ett filnamn."
 
 #: C/gnome-access-guide.xml:2328(para)
 msgid "Select the first file or folder that starts with the specified sequence of characters."
-msgstr ""
+msgstr "Välj första filen eller mappen som börjar med den angivna teckensekvensen."
 
 #: C/gnome-access-guide.xml:2340(para)
 msgid "Select the first file or folder within the current folder."
-msgstr ""
+msgstr "Välj första filen eller mappen inom den aktuella mappen."
 
 #: C/gnome-access-guide.xml:2352(para)
 msgid "Select the last file or folder within the current folder."
-msgstr ""
+msgstr "Välj den sista filen eller mappen inom den aktuella mappen."
 
 #: C/gnome-access-guide.xml:2360(keycap)
 #: C/gnome-access-guide.xml:4348(keycap)
@@ -2130,7 +2130,7 @@ msgstr "backsteg"
 
 #: C/gnome-access-guide.xml:2364(para)
 msgid "Open the current folder's parent folder."
-msgstr ""
+msgstr "Öppna den aktuella mappens föräldramapp."
 
 #: C/gnome-access-guide.xml:2373(keycap)
 msgid "Shift-F10"
@@ -2150,7 +2150,7 @@ msgstr ""
 
 #: C/gnome-access-guide.xml:2402(title)
 msgid "Navigating Browser Window Components"
-msgstr ""
+msgstr "Navigera bland komponenter i bläddrarfönster"
 
 #: C/gnome-access-guide.xml:2404(para)
 msgid "When operating in <guilabel>Browser</guilabel> mode, the file manager window contains several components, with keyboard shortcuts defined to navigate each component:"
@@ -2158,11 +2158,11 @@ msgstr ""
 
 #: C/gnome-access-guide.xml:2430(para)
 msgid "Switch focus between the side pane and the view pane."
-msgstr ""
+msgstr "Växla fokus mellan sidopanelen och vypanelen."
 
 #: C/gnome-access-guide.xml:2441(para)
 msgid "Open the side pane popup menu."
-msgstr ""
+msgstr "Öppna sidopanelens popupmeny."
 
 #: C/gnome-access-guide.xml:2453(title)
 msgid "Caret Navigation Mode"
@@ -2170,7 +2170,7 @@ msgstr "Markörnavigeringsläge"
 
 #: C/gnome-access-guide.xml:2457(para)
 msgid "The following table describes how to use caret navigation mode (eg, in supporting applications like <application>Yelp</application>, <application>Evolution</application>, <application>Epiphany</application>, or <application>Firefox</application>). In computing, caret navigation is a kind of keyboard navigation where a caret (also known as \"text cursor\", \"text insertion cursor\", or \"text selection cursor\") is used to navigate and select text within a document."
-msgstr ""
+msgstr "Följande tabell beskriver hur man använder markörnavigeringsläget (t.ex. i program som har stöd för det som <application>Yelp</application>, <application>Evolution</application>, <application>Epiphany</application> eller <application>Firefox</application>). I datorsammanhang så är markörnavigering en typ av tangentbordsnavigering där en markör (även känd som \"textmarkör\", \"textinmatningsmarkör\" eller \"textmarkeringsmarkör\") används för att navigera och markera text inom ett dokument."
 
 #: C/gnome-access-guide.xml:2482(para)
 msgid "Switch to caret navigation mode [Yelp-only]."
@@ -2261,15 +2261,15 @@ msgstr "Flytta till slutet av den aktuella raden."
 
 #: C/gnome-access-guide.xml:2600(para)
 msgid "Move from the current position to the destination position, selecting all text between the two positions."
-msgstr ""
+msgstr "Flytta från den aktuella positionen till målpositionen och markera all text mellan de två positionerna."
 
 #: C/gnome-access-guide.xml:2612(para)
 msgid "Move focus to the next focusable control."
-msgstr ""
+msgstr "Flytta fokus till nästa fokuserbara kontroll."
 
 #: C/gnome-access-guide.xml:2623(para)
 msgid "Move focus to the previous focusable control."
-msgstr ""
+msgstr "Flytta fokus till föregående fokuserbara kontroll."
 
 #: C/gnome-access-guide.xml:2631(keycap)
 msgid "Enter"
