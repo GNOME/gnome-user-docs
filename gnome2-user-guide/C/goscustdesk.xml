@@ -2918,11 +2918,6 @@ in the following functional areas:</para>
       </listitem>
       <listitem>
         <para>
-          <guilabel>Current Session</guilabel>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
           <guilabel>Startup Programs</guilabel>
         </para>
       </listitem>
@@ -2954,31 +2949,28 @@ you can modify.</para>
           </thead>
           <tbody>
             <row>
-              <entry colsep="0" rowsep="0" valign="top">
-                <para>
-                  <guilabel>Show splash
-screen on login</guilabel>
-                </para>
-              </entry>
-              <entry colsep="0" rowsep="0" valign="top">
-                <para>Select this option to display a splash screen when you start a session. </para>
-              </entry>
-            </row>
-            <row>
               <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
                 <para>
-                  <guilabel>Prompt on logout</guilabel>
+                  <guilabel>Automatically remember running applications when logging out</guilabel>
                 </para>
               </entry>
               <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-                <para>Select this option to display a confirmation
-dialog when you end a session. </para>
+                <indexterm>
+                  <primary>startup applications</primary>
+                  <secondary>session-managed</secondary>
+                </indexterm>
+                <para>Select this
+option if you want the session manager to save the state of your session 
+when logging out. The session manager saves the session-managed applications 
+that are open, and the settings associated with the session-managed applications 
+when you log out. The next time that you start a session, the applications start 
+automatically, with the saved settings.</para>
               </entry>
             </row>
             <row>
               <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
                 <para>
-                  <guilabel>Automatically save changes to session</guilabel>
+                  <guilabel>Remember currently running applications</guilabel>
                 </para>
               </entry>
               <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
@@ -2992,156 +2984,6 @@ The session manager saves the session-managed applications that are open,
 and the settings associated with the session-managed applications. The next
 time that you start a session, the applications start automatically, with
 the saved settings.</para>
-                <para> If you do not select this option, when you
-end your session the <guilabel>Logout Confirmation</guilabel> dialog displays
-a <guilabel>Save current setup</guilabel> option.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-                <para>
-                  <guilabel>Sessions</guilabel>
-                </para>
-              </entry>
-              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-                <para>Use this area of the dialog to manage multiple sessions
-in the GNOME Desktop, as follows:</para>
-                <itemizedlist>
-                  <listitem>
-                    <para>To create a new session, click on the <guibutton>Add</guibutton>
-button.  The <guilabel>Add a new session</guilabel> dialog is displayed. Use
-this dialog to specify a name for your session.</para>
-                  </listitem>
-                  <listitem>
-                    <para>To change the name of a session, select the session in the <guilabel>Sessions</guilabel> table. Click on the <guibutton>Edit</guibutton>
-button. The <guilabel>Edit session name</guilabel> dialog is displayed. Type
-a new name for your session.</para>
-                  </listitem>
-                  <listitem>
-                    <para>To delete a session, select the session in the <guilabel>Sessions</guilabel> table. Click on the <guibutton>Delete</guibutton>
-button.</para>
-                  </listitem>
-                </itemizedlist>
-                <para>When you log in on GDM, you choose
-a session. When you choose a session, you can select which of the multiple
-sessions to use.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-    </sect3>
-    <sect3 id="goscustlookandfeel-27">
-      <title>Setting Session Properties</title>
-      <indexterm>
-        <primary>startup applications</primary>
-        <secondary>session-managed</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>sessions</primary>
-        <secondary>setting properties</secondary>
-      </indexterm>
-      <para>Use the <guilabel>Current
-Session</guilabel> tabbed section to specify startup order values, and to
-choose restart styles for the session-managed applications in your current
-session. </para>
-      <para><xref linkend="sessprop01"/> lists the session properties that you can
-configure. </para>
-      <table frame="topbot" id="sessprop01">
-        <title>Session Properties</title>
-        <tgroup cols="2" colsep="1" rowsep="1">
-          <colspec colname="colspec0" colwidth="18.86*"/>
-          <colspec colname="colspec1" colwidth="47.14*"/>
-          <thead>
-            <row>
-              <entry colsep="0" rowsep="1">
-                <para>Dialog Element</para>
-              </entry>
-              <entry colsep="0" rowsep="1">
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colsep="0" rowsep="0" valign="top">
-                <para>
-                  <guilabel>Order</guilabel>
-                </para>
-              </entry>
-              <entry colsep="0" rowsep="0" valign="top">
-                <para>The <guilabel>Order</guilabel>
-property specifies the order in which the session manager starts session-managed
-startup applications. The session manager starts applications with lower order
-values first. The default value is 50.</para>
-                <para>To specify the startup
-order of an application, select the application in the table. Use the <guilabel>Order</guilabel> spin box to specify the startup order value.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-                <para>
-                  <guilabel>Style</guilabel>
-                </para>
-              </entry>
-              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-                <para>The <guilabel>Style</guilabel> property determines the
-restart style of an application. To select a restart style for an application,
-select the application in the table, then choose one of the following styles:</para>
-                <itemizedlist>
-                  <listitem>
-                    <para>
-                      <guilabel>Normal</guilabel>
-                    </para>
-                    <para>Starts automatically when you start a GNOME session.</para>
-                  </listitem>
-                  <listitem>
-                    <para>
-                      <guilabel>Restart</guilabel>
-                    </para>
-                    <para>Restarts automatically whenever you close or terminate the application.
-Choose this style for an application if the application must run continuously
-during your  session.</para>
-                  </listitem>
-                  <listitem>
-                    <para>
-                      <guilabel>Trash</guilabel>
-                    </para>
-                    <para>Does not start when you start a GNOME session.</para>
-                  </listitem>
-                  <listitem>
-                    <para>
-                      <guilabel>Settings</guilabel>
-                    </para>
-                    <para>Starts automatically when you start a  session. Applications with this
-style usually have a low startup order, and store your configuration settings
-for GNOME and session-managed applications.</para>
-                  </listitem>
-                </itemizedlist>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" colsep="0" rowsep="0" valign="top">
-                <para>
-                  <guibutton>Remove</guibutton>
-                </para>
-              </entry>
-              <entry colname="colspec1" colsep="0" rowsep="0" valign="top">
-                <para>Click on the <guibutton>Remove</guibutton> button to delete
-the selected application from the list. The application is removed from the
-session manager,  and closed. If you save the session after doing this any
-deleted applications will not start the next time you start a session.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec0" colsep="0" rowsep="0">
-                <para>
-                  <guibutton>Apply</guibutton>
-                </para>
-              </entry>
-              <entry colname="colspec1" colsep="0" rowsep="0">
-                <para>Click on the <guibutton>Apply</guibutton> button to apply changes to the startup
-order and the restart style.</para>
               </entry>
             </row>
           </tbody>
@@ -3192,12 +3034,7 @@ preferences that you can modify.</para>
 startup applications as follows:</para>
                 <itemizedlist>
                   <listitem>
-                    <para>To add a startup application, click on the <guibutton>Add</guibutton> button. The <guilabel>Add Startup Program</guilabel> dialog is
-displayed. Enter the command to start the application in the <guilabel>Startup
-Command</guilabel> field. </para>
-                    <para>If you specify more than one startup application, use the <guilabel>Priority</guilabel> spin box to specify the startup order of the each application.
-The startup order is the order in which you want the startup applications
-to start.</para>
+                    <para>To add a startup application, click on the <guibutton>Add</guibutton> button. The <guilabel>New Startup Program</guilabel> dialog is displayed. Enter the name of the appplication in the <guilabel>Name</guilabel> field. Then enter the command to start the application in the <guilabel>Command</guilabel> field. you can also specify a comment in the <guilabel>Comment</guilabel> field</para>
                   </listitem>
                   <listitem>
                     <para>To edit a startup application, select the startup application,
@@ -3207,7 +3044,7 @@ and the startup order for the startup application.</para>
                   </listitem>
                   <listitem>
                     <para>To delete a startup application, select the startup application,
-then click on the <guilabel>Delete</guilabel> button.</para>
+then click on the <guilabel>Remove</guilabel> button.</para>
                   </listitem>
                 </itemizedlist>
               </entry>
