@@ -2626,19 +2626,14 @@ events with sounds</secondary>
 sounds with</primary>
     </indexterm>
     <indexterm>
-      <primary>sound server</primary>
+      <primary>volume</primary>
     </indexterm>
     <para>The <application>Sound</application> preference tool enables
-you to control when the GNOME sound server starts. You can also specify which
-sounds to play when particular events occur.</para>
+you to control devices and volume for sound input and output. 
+You can also specify which sounds to play when particular events occur.</para>
     <para>You can customize the settings for the <application>Sound</application>
 preference tool in the following functional areas:</para>
     <itemizedlist>
-      <listitem>
-        <para>
-          <guilabel>General</guilabel>
-        </para>
-      </listitem>
       <listitem>
         <para>
           <guilabel>Sound Events</guilabel>
@@ -2646,74 +2641,23 @@ preference tool in the following functional areas:</para>
       </listitem>
       <listitem>
         <para>
-          <guilabel>System Bell</guilabel>
+          <guilabel>Input</guilabel>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>Output</guilabel>
         </para>
       </listitem>
     </itemizedlist>
-    <sect3 id="goscustmulti-3">
-      <title>General Sound Preferences</title>
-      <para>Use the <guilabel>General</guilabel> tabbed section of the <application>Sound</application> preference tool to specify when to launch the GNOME sound
-server. You can also enable sound event functions.</para>
-      <para><xref linkend="goscustmulti-TBL-4"/> lists the general sound preferences
-that you can modify.</para>
-      <table frame="topbot" id="goscustmulti-TBL-4">
-        <title>General Sound Preferences</title>
-        <tgroup cols="2" colsep="1" rowsep="1">
-          <colspec colname="colspec18" colwidth="19.21*"/>
-          <colspec colname="colspec19" colwidth="46.79*"/>
-          <thead>
-            <row>
-              <entry colsep="0" rowsep="1">
-                <para>Dialog Element</para>
-              </entry>
-              <entry colsep="0" rowsep="1">
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry colsep="0" rowsep="0" valign="top">
-                <para>
-                  <guilabel>Enable sound
-server startup</guilabel>
-                </para>
-              </entry>
-              <entry colsep="0" rowsep="0" valign="top">
-                <para>Select this option to start the GNOME sound server when you start a GNOME
-session. When the sound server is active, the GNOME Desktop can play sounds.</para>
-              </entry>
-            </row>
-            <row>
-              <entry colsep="0" rowsep="0" valign="top">
-                <para>
-                  <guilabel>Sounds for
-events</guilabel>
-                </para>
-              </entry>
-              <entry colsep="0" rowsep="0" valign="top">
-                <para>Select this option to play sounds when particular events occur in the GNOME
-Desktop. You can select this option only if the <guilabel>Enable sound server
-startup</guilabel> option is selected.</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-    </sect3>
+    <para>You can chance the overall output volume using the <guilabel>Output volume </guilabel> slider at the top of the window. The <guilabel>Mute </guilabel> checkbox allows to temporarily suppress all output without disturbing the current volume.</para>
     <sect3 id="goscustdesk-48">
-      <title>Sound Event Preferences</title>
-      <para>Use the <guilabel>Sound Events</guilabel> tabbed section of the <application>Sound</application> preference tool to associate particular sounds with particular
-events. </para>
-      <note>
-        <para>You must select the <guilabel>Enable sound server startup</guilabel>
-option, and the <guilabel>Sounds for events</guilabel> option before you can
-access the <guilabel>Sound Events</guilabel> tabbed section.</para>
-      </note>
-      <para><xref linkend="goscustmulti-TBL-6"/> lists the sound events preferences
+      <title>Sound Effects Preferences</title>
+      <para>A sound theme is collection of sound effects that are associated to various events, such as opening a dialog, clicking a button or selecting an item in a menu. One of the most prominent event sounds is the <emphasis>System Bell</emphasis> sound that often played to indicate a keyboard input error. Use the <guilabel>Sound Effects</guilabel> tabbed section of the <application>Sound</application> preference tool to choose a sound theme and modify the bell sound</para>
+      <para><xref linkend="goscustmulti-TBL-6"/> lists the sound effects preferences
 that you can modify.</para>
       <table frame="topbot" id="goscustmulti-TBL-6">
-        <title>Sound Event Preferences</title>
+        <title>Sound Effects Preferences</title>
         <tgroup cols="2" colsep="1" rowsep="1">
           <colspec colname="colspec18" colwidth="19.21*"/>
           <colspec colname="colspec19" colwidth="46.79*"/>
@@ -2730,73 +2674,60 @@ that you can modify.</para>
           <tbody>
             <row>
               <entry colname="colspec18" colsep="0" rowsep="0" valign="top">
-                <para><guilabel>Sounds</guilabel> table</para>
+                <para><guilabel>Alert Volume</guilabel> slider</para>
               </entry>
               <entry colname="colspec19" colsep="0" rowsep="0" valign="top">
-                <para>Use the <guilabel>Sounds</guilabel> table to
-associate particular sounds with particular events. </para>
-                <para>The <guilabel>Event</guilabel> column displays a hierarchical list of events that can occur.
-To expand a category of events, click on the right arrow beside a category
-of events.</para>
-                <para>The <guilabel>File to play</guilabel> column lists
-the sound file that plays when the event occurs.</para>
+                <para>Use the <guilabel>Alert Volume</guilabel> slider to
+control the volume for event sounds.</para>
+                <para>The <guilabel>Mute</guilabel> checkbox allows to
+                temporarily suppress event sounds without modifying the
+                current volume.</para>
               </entry>
             </row>
             <row>
               <entry colsep="0" rowsep="0" valign="top">
                 <para>
-                  <guibutton>Play </guibutton>
+                  <guilabel>Sound Theme </guilabel>
                 </para>
               </entry>
               <entry colsep="0" rowsep="0" valign="top">
-                <para>Click on this button to play
-the sound file that is associated with the selected event. </para>
+                <para>Use this combobox to select a different sound theme.</para>
+                <para>Choose <guilabel>No sounds</guilabel> to turn off all event sounds.</para>
               </entry>
             </row>
             <row>
               <entry colname="colspec18" colsep="0" rowsep="0" valign="top">
-                <para>Sound file drop-down combination box, <guibutton>Browse </guibutton></para>
+                <para><guilabel>Choose an alert sound </guilabel> list</para>
               </entry>
               <entry colname="colspec19" colsep="0" rowsep="0" valign="top">
-                <para>To associate
-a sound with an event, select the event in the <guilabel>Sounds</guilabel>
-table. Enter the name of the sound file that you want to associate with the
-selected event in the drop-down combination box. Alternatively, click <guibutton>Browse </guibutton> to display a <guilabel>Select sound file</guilabel> dialog.
-Use the dialog to specify the sound file that you want to associate with the
-selected event.</para>
-                <note>
-                  <para>You can only associate sound files in <filename>.wav</filename> format with events.</para>
-                </note>
+                <para>Choose an alternative sound for the System Bell from 
+                this list.</para>
+                <para>Selecting a list element plays the sound.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec18" colsep="0" rowsep="0" valign="top">
+                <para><guilabel>Enable window and button sounds </guilabel> checkbox</para>
+              </entry>
+              <entry colname="colspec19" colsep="0" rowsep="0" valign="top">
+                <para>Uncheck this option if you don't want to hear sounds
+                for window-related events (such as a dialog or a menu appearing)
+                and button clicks.
+                </para>
               </entry>
             </row>
           </tbody>
         </tgroup>
       </table>
     </sect3>
-    <sect3 id="goscustdesk-41">
-      <title>System Bell Settings</title>
-      <indexterm>
-        <primary>keyboard</primary>
-        <secondary>configuring sound preferences</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>sound</primary>
-        <secondary>configuring
-system bell preferences</secondary>
-      </indexterm>
-      <indexterm>
-        <primary>system
-bell</primary>
-        <secondary>configuring preferences</secondary>
-      </indexterm>
-      <para>Use the <guilabel>System Bell</guilabel> tabbed section to set your preferences
-for the system bell.</para>
-      <para>Some applications play a bell sound to indicate a keyboard input error.
-Use the preferences in the <guilabel>System Bell</guilabel> tabbed section
-to configure the bell sound. <xref linkend="goscustdesk-TBL-1"/> lists the
-system bell preferences that you can modify.</para>
+    <sect3>
+      <title>Sound Input Preferences</title>
+      <para>Use the <guilabel>Input</guilabel> tabbed section to set your 
+      preferences for sound input.</para>
+      <para><xref linkend="goscustdesk-TBL-1"/> lists the
+sound input preferences that you can modify.</para>
       <table frame="topbot" id="goscustdesk-TBL-1">
-        <title>System Bell Preferences</title>
+        <title>Sound Input Preferences</title>
         <tgroup cols="2" colsep="1" rowsep="1">
           <colspec colname="colspec18" colwidth="19.21*"/>
           <colspec colname="colspec19" colwidth="46.79*"/>
@@ -2814,52 +2745,113 @@ system bell preferences that you can modify.</para>
             <row>
               <entry colname="colspec18" colsep="0" rowsep="0">
                 <para>
-                  <guilabel>Sound
-an audible bell</guilabel>
+                  <guilabel>Input volume </guilabel> slider
                 </para>
               </entry>
               <entry colname="colspec19" colsep="0" rowsep="0">
-                <para>Select this option to enable the system bell.</para>
+                <para>Use the input volume slider to control the input level.</para>
+                <para>The <guilabel>Mute </guilabel> checkbox allows to temporarily suppress all input without disturbing the current input level.</para>
               </entry>
             </row>
             <row>
               <entry colname="colspec18" colsep="0" rowsep="0" valign="top">
                 <para>
-                  <guilabel>Visual feedback</guilabel>
+                  <guilabel>Input level</guilabel>
                 </para>
               </entry>
               <entry colname="colspec19" colsep="0" rowsep="0" valign="top">
-                <para>Select this option to enable visual feedback
-to indicate input errors. </para>
+                <para>The <guilabel>Input level</guilabel> display provides
+                visual feedback that helps to  select a suitable input volume</para>
               </entry>
             </row>
             <row>
               <entry colname="colspec18" colsep="0" rowsep="0">
                 <para>
-                  <guilabel>Flash
-window titlebar</guilabel>
+                  <guilabel>Choose a device for sound input </guilabel> list
                 </para>
               </entry>
               <entry colname="colspec19" colsep="0" rowsep="0">
-                <para>Select this option if you want window titlebars to flash
-to indicate an input error. </para>
-              </entry>
-            </row>
-            <row>
-              <entry colname="colspec18" colsep="0" rowsep="0">
-                <para>
-                  <guilabel>Flash
-entire screen</guilabel>
-                </para>
-              </entry>
-              <entry colname="colspec19" colsep="0" rowsep="0">
-                <para>Select this option if you want the entire screen to flash
-to indicate an input error. </para>
+                <para>Choose the device that you want to receive sound input
+                from.</para>
               </entry>
             </row>
           </tbody>
         </tgroup>
       </table>
+      <note><para>Note that the input volume can also be controlled with
+      the microphone icon that is shown in the notification area of the panel
+      when an application is listening for sound input.</para></note>
+    </sect3>
+    <sect3>
+      <title>Sound Output Preferences</title>
+      <para>Use the <guilabel>Output</guilabel> tabbed section to set your 
+      preferences for sound output.</para>
+      <para><xref linkend="goscustdesk-TBL-2"/> lists the
+sound output preferences that you can modify.</para>
+      <table frame="topbot" id="goscustdesk-TBL-2">
+        <title>Sound Output Preferences</title>
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec18" colwidth="19.21*"/>
+          <colspec colname="colspec19" colwidth="46.79*"/>
+          <thead>
+            <row>
+              <entry colsep="0" rowsep="1">
+                <para>Dialog Element</para>
+              </entry>
+              <entry colsep="0" rowsep="1">
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec18" colsep="0" rowsep="0">
+                <para>
+                  <guilabel>Output volume </guilabel> slider
+                </para>
+              </entry>
+              <entry colname="colspec19" colsep="0" rowsep="0">
+                <para>Use the output volume slider to control the overall output volume.</para>
+                <para>The <guilabel>Mute </guilabel> checkbox allows to temporarily suppress all output without disturbing the current volume.</para>
+                <para>Note that the <guilabel>Output volume</guilabel> slider 
+                is located above the tabbed section at the top of the window.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec18" colsep="0" rowsep="0">
+                <para>
+                  <guilabel>Choose a device for sound output </guilabel> list
+                </para>
+              </entry>
+              <entry colname="colspec19" colsep="0" rowsep="0">
+                <para>Choose the device that you want to hear sound output
+                from.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec18" colsep="0" rowsep="0">
+                <para>
+                  <guilabel>Balance </guilabel> slider
+                </para>
+              </entry>
+              <entry colname="colspec19" colsep="0" rowsep="0">
+                <para>Use the <guilabel>Balance</guilabel> slider to control
+                the left/right balance of an output device that has more than
+                one channel (e.g. stereo or 5.1).</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <note><para>Note that the output volume can also be controlled with
+      the speaker icon that is shown in the notification area of the panel.</para></note>
+    </sect3>
+    <sect3 id="goscustdesk-41">
+      <title>Application Sound Preferences</title>
+      <para>Use the <guilabel>Applications</guilabel> tabbed section to 
+      control the volume of sound played by individual applications.</para>
+      <para>Each application that is currently playing sound is identified
+      by its name and icon.</para>
     </sect3>
   </sect2>
 
