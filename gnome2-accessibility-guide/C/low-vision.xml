@@ -1356,20 +1356,6 @@ You can quickly toggle this behavior by pressing <keycombo><keycap>Orca_Modifier
 </section>
 
 <section>
-<title>Speak Progress Bar Updates</title>
-<para>
-If this setting is enabled, <application>Orca</application> will periodically announce the status of progress bars. How often the announcement is made is determined by the value chosen in the <guilabel>Update Interval</guilabel> spin button. Note that this spin button is only available if the "Speak progress bar updates" checkbox has been checked.
-</para>
-</section>
-
-<section>
-<title>Speak Indentation and Justification</title>
-<para>
-When working with code or editing other documents it is often desirable to be aware of justification and indentation. Selecting the "Speak indentation and justification" check box will cause <application>Orca</application> to provide this information.
-</para>
-</section>
-
-<section>
 <title>Speak Blank Lines</title>
 <para>
 Some users desire to hear "blank" when navigating to a blank line in a document.  Other users do not. If the "speak blank lines" check box is selected, <application>Orca</application> will speak blank lines.
@@ -1377,9 +1363,58 @@ Some users desire to hear "blank" when navigating to a blank line in a document.
 </section>
 
 <section>
+<title>Speak multicase strings as words</title>
+<para>
+When working with code, one often comes across a "word" consisting of several words with alternating case, such as "MultiCaseString." Speech synthesizers do not always pronounce such multicase strings correctly. Checking the <guilabel>Speak multicase strings as words</guilabel> checkbox will cause <application>Orca</application> to break a word like "MultiCaseString" into separate words ("Multi," "Case," and "String") prior to passing it along to the speech synthesizer.
+</para>
+</section>
+
+<section>
 <title>Speak tutorial messages</title>
 <para>
 When moving from component to component in an interface, this option will provide spoken tutorial messages for how to work with the component.
+</para>
+</section>
+
+<section>
+<title>Speak object mnemonics</title>
+<para>
+This option will cause <application>Orca</application> to announce the mnemonic associated with the object with focus (such as "Alt O" for the <guilabel>OK</guilabel> button).
+</para>
+</section>
+
+<section>
+<title>Break speech into chunks between pauses</title>
+<para>
+Depending on the enabled speech settings, <application>Orca</application> may have quite a bit to say about a particular object such as its name, its role, its state, its mnemonic, its tutorial message, and so on. Checking the <guilabel>Break speech into chunks between pauses</guilabel> checkbox will cause <application>Orca</application> to insert brief pauses in between each of these pieces of information.
+</para>
+</section>
+
+<section>
+<title>Speak child position</title>
+<para>
+Checking the <guilabel>Speak child position</guilabel> checkbox will cause <application>Orca</application> to announce the position of the focused item in menus and lists (e.g. "9 of 16").
+</para>
+</section>
+
+<section>
+<title>Speak Indentation and Justification</title>
+<para>
+When working with code or editing other documents it is often desirable to be aware of justification and indentation. Selecting the <guilabel>Speak indentation and justification</guilabel> check box will cause <application>Orca</application> to provide this information.
+</para>
+</section>
+
+<section>
+<title>Speak Progress Bar Updates</title>
+<para>
+If this setting is enabled, <application>Orca</application> will periodically announce the status of progress bars. How often the announcement is made is determined by the value chosen in the update interval spin button. Note that this spin button is only available if the <guilabel>Speak progress bar updates</guilabel> checkbox has been checked.
+</para>
+</section>
+
+<section>
+<title>Restrict progress bar updates to</title>
+<para>
+This setting controls which progress bars should be spoken, assuming the <guilabel>Speak progress bar updates</guilabel> checkbox has been checked. The choices are All, Application, and Window. Choosing All will result in <application>Orca</application> speaking updates for all progress bars, regardless of where the progress bars are located. Choosing Application will result in <application>Orca</application> speaking updates from progress bars in the active application, even if they are not in the active window. Choosing Window will result in <application>Orca</application> only speaking updates for progress bars in the active window. The default value is Application.
 </para>
 </section>
 
@@ -1496,7 +1531,7 @@ The key echo page allows you to specify the behavior of <application>Orca</appli
 <section>
 <title>Enable Key Echo</title>
 <para>
-The first control on the key echo page is the "Enable key echo" check box. When this box is selected, six additional check boxes become available. These are: "Enable alphanumeric and punctuation keys", "Enable modifier keys", "Enable locking keys", "Enable function keys", "Enable action keys", and "Enable navigation keys".
+The first control on the key echo page is the "Enable key echo" check box. When this box is selected, seven additional check boxes become available. These are: "Enable alphanumeric and punctuation keys", "Enable modifier keys", "Enable locking keys", "Enable function keys", "Enable action keys", "Enable navigation keys", and "Enable non-spacing diacritical keys".
 </para>
 <para>
 The alphanumeric and function key groups are relatively self explanatory.
@@ -1512,6 +1547,16 @@ The action keys group consists of keys that perform some logical action, such as
 </para>
 <para>
 The navigation keys group include the four arrow keys as well as any key combination in which the Orca Modifier key is being held down. The latter is designed to prevent <application>Orca</application> from echoing flat review commands.
+</para>
+<para>
+Non-spacing diacritical keys are those "dead keys" used to generate accented letters.
+</para>
+</section>
+
+<section>
+<title>Enable Echo by Character</title>
+<para>
+The next toggle on the key echo page is the "Enable echo by character" check box, used to echo the character you just typed. While echo by character seems quite similar to the key echo of alphanumeric and punctuation keys, there are important differences, especially with respect to accented letters and other symbols for which there is no dedicated key. Key echo causes <application>Orca</application> to announce what you just pressed; character echo causes it to announce what was inserted. The "Echo by character" control is always available, regardless of whether any of the key echo options are checked.
 </para>
 </section>
 
