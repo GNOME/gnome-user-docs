@@ -1,0 +1,78 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="mouse-disabletouchpad">
+<info>
+    <link type="guide" xref="mouse#behavior"/>
+    <link type="guide" xref="mouse-preferences#touchpad"/>
+    <link type="seealso" xref="mouse-mousekeys"/>
+    
+    <desc>
+    Disable the touchpad permanently, or just when you plug-in a mouse.
+    </desc>
+    
+    <revision pkgversion="2.28" version="0.1" date="2009-08-22" status="draft"/>
+    <credit type="author">
+        <name>Phil Bull</name>
+        <email>philbull@gmail.com</email>
+    </credit>
+    <copyright>
+        <year>2009</year>
+        <name>GNOME Documentation Project</name>
+    </copyright>
+    <license>Creative Commons Share Alike 3.0</license>
+    <!-- <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/> -->
+</info>
+
+<title>Turning-off the touchpad</title>
+<p>
+To disable the touchpad:
+</p>
+
+<steps>
+ <item>
+  <p>
+  Click <guiseq><gui>System</gui><gui>Preferences</gui><gui>Mouse</gui></guiseq> 
+  and select the <gui>Touchpad</gui> tab.
+  </p>
+ </item>
+ <item>
+  <p>Uncheck <gui>Enable touchpad</gui>. The touchpad will be turned-off 
+  immediately.
+  </p>
+ </item>
+</steps>
+
+<note style="important">
+    <p>
+    If the touchpad is your only pointing device and you accidentally turned it 
+    off, you can turn it back on again using just the keyboard.
+    </p>
+    <p>
+    Press <keyseq><key>Alt</key><key>F2</key></keyseq>, type 
+    <cmd>gconftool --set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool True</cmd> 
+    and press <key>Enter</key>.
+    </p>
+</note>
+
+<section status="incomplete">
+    <title>Disable the touchpad when a mouse is plugged-in</title>
+    <comment>
+        <cite>Phil Bull</cite>
+        <p>
+        This section needs fixing-up to provide useful advice. It's basically 
+        working around a feature request bug.
+        </p>
+    </comment>
+    <p>
+    There is currently no simple way of having your touchpad automatically 
+    disabled when a mouse is plugged in.
+    </p>
+    <code>
+    gconftool --set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool True
+    gconftool --set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool False
+    ENV{ID_CLASS}="mouse", ACTION=="add", RUN+="synclient touchpadoff=1"
+    ENV{ID_CLASS}="mouse", ACTION=="remove", RUN+="synclient touchpadoff=0"
+    </code>
+</section>
+
+</page>

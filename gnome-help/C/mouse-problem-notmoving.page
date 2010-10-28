@@ -1,0 +1,152 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="mouse-problem-notmoving">
+<info>
+    <link type="guide" xref="mouse#problems"/>
+    <link type="seealso" xref="mouse-mousekeys"/>
+    <link type="seealso" xref="mouse-disabletouchpad"/>
+    
+    <desc>
+    The mouse pointer doesn't move when you move your mouse or use your touchpad.
+    </desc>
+    
+    <revision pkgversion="2.28" version="0.1" date="2009-09-11" status="draft"/>
+    <credit type="author">
+        <name>Phil Bull</name>
+        <email>philbull@gmail.com</email>
+    </credit>
+    <copyright>
+        <year>2009</year>
+        <name>GNOME Documentation Project</name>
+    </copyright>
+    <license>Creative Commons Share Alike 3.0</license>
+    <!-- <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/> -->
+</info>
+
+<title>My mouse pointer isn't moving</title>
+
+<p>
+Your mouse may be unplugged or broken, or may not have been recognized by the 
+computer.
+</p>
+
+<section>
+ <title>Check that the mouse is plugged in</title>
+ <p>
+ If you have a mouse with a cable, check that it is firmly plugged in to 
+ your computer.
+ </p>
+ <p>
+ If it is a USB mouse (with a rectangular connector), try plugging it in to a 
+ different USB port. If it is a PS/2 mouse (with a small, round connector with 
+ six pins), make sure that it is plugged in to the green mouse port rather 
+ than the purple keyboard port. You may need to restart the computer if it was 
+ not plugged in.
+ </p>
+</section>
+
+<section>
+ <title>Check that the mouse was recognized by the computer</title>
+ <steps>
+  <item>
+   <p>
+   Click <guiseq><gui>Applications</gui><gui>Accessories</gui>
+   <gui>Terminal</gui></guiseq>.
+   </p>
+  </item>
+  <item>
+   <p>
+   Type <cmd>xsetpointer -l | grep Pointer</cmd>, exactly as it appears here, 
+   and press <key>Enter</key>.
+   </p>
+  </item>
+  <item>
+   <p>
+   A short list of mouse devices will appear. Make sure that at least one 
+   of the items says <quote>[XExtensionPointer]</quote> next to it.
+   </p>
+  </item>
+ </steps>
+
+ <p>
+ If your mouse has a serial (RS-232) connector, you may need to perform some 
+ extra steps to get it working. The steps might depend on the make or model of 
+ your mouse.
+ </p>
+ 
+ <p>
+ It can be complicated to fix problems with mouse detection. Ask for support 
+ from your distribution/vendor if you think that your mouse has not been 
+ detected properly.
+ </p>
+ 
+ <comment>
+ <cite date="2009-09-11">Phil Bull</cite>
+  <p>
+  Should provide some useful advice rather than just saying "you might need to 
+  perform extra steps".
+  </p>
+ </comment>
+</section>
+
+<section>
+ <title>Check that the mouse isn't broken</title>
+ <p>
+ Plug the mouse in to a different computer and see if it works.
+ </p>
+ 
+ <p>
+ If the mouse is an optical or laser mouse, a light should be shining out 
+ of the bottom of the mouse if it is turned on.
+ </p>
+</section>
+
+<section>
+ <title>Checking wireless mice</title>
+ 
+ <list>
+  <item>
+   <p>
+   Click a button and see if the mouse pointer moves now. Some wireless mice go 
+   to sleep to save power, so might not respond until you click a button.
+   </p>
+  </item>
+  <item>
+   <p>
+   Check that the battery of the mouse is charged.
+   </p>
+  </item>
+  <item>
+   <p>
+   Make sure that the receiver (dongle) is firmly plugged in to the computer.
+   </p>
+  </item>
+  <item>
+   <p>
+   If your mouse and receiver can operate on different radio channels, make 
+   sure that they are both set to the same channel.
+   </p>
+  </item>
+  <item>
+   <p>
+   You may need to press a button on the mouse, receiver or both to establish 
+   a connection. The instruction manual of your mouse should have more details 
+   if this is the case.
+   </p>
+  </item>
+ </list>
+
+ <p>
+ Most RF (radio) wireless mice should work automatically when you plug them 
+ into your computer. If you have a bluetooth or IR (infrared) wireless mouse, 
+ you may need to perform some extra steps to get it working. The steps might 
+ depend on the make or model of your mouse.
+ </p>
+
+<comment>
+ <cite date="2009-09-11">Phil Bull</cite>
+ <p>Should provide some useful advice rather than just saying "you might need to perform extra steps".</p>
+</comment>
+</section>
+
+</page>

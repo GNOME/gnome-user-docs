@@ -1,0 +1,47 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" id="look-windowbuttons">
+
+  <info>
+    <link type="guide" xref="look"/>
+    
+    <desc>How to change the layout of the window buttons</desc>
+    <revision pkgversion="0.1" version="0.1" date="2010-08-12" status="review"/>
+    
+    <credit type="author">
+      <name>GNOME Documentation Project</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>April Gonzales</name>
+      <email>loonycookie@gmail.com</email>
+    </credit>
+    
+  </info>
+
+<title>Change the order of the close, minimize, and maximize window buttons</title>
+
+<p>You can change the layout of the window buttons for all the application windows that are launched on your computer. </p>
+
+<p>The layout of the window buttons is dictated by a configuration file. You can modify the configuration by using the gconf-editor. To do this:</p>
+
+<steps>
+<item><p>Press <keyseq><key>Alt</key><key>F2</key></keyseq> to bring up the <gui>Run Application</gui> window. </p></item> 
+<item><p>Type in <input>gconf-editor</input> in the text field and click <gui>Run</gui>. This launches the <gui>Configuration Editor</gui>. </p></item> 
+<item><p>Refer to the left-hand panel. Click on the expand button next to <gui>apps</gui>. </p></item> 
+<item><p>Click on the expand button next to <gui>metacity</gui>. Select <gui>general</gui>. </p></item> 
+<item><p>On the right-hand panel of the <gui>Configuration Editor</gui> window, locate the <gui>button_layout</gui> key. Double click on this item. </p></item> 
+<item><p>On the <gui>Edit Key</gui> dialog box, modify the text in the <gui>Value</gui> text field to fit the order or layout of the window buttons you wish to use. (Example: If you want the buttons to be displayed on the right side of the title bar, and in this order: maximize, minimize, close; then type in “maximize,minimize,close:”).</p>
+<note><p>
+The position of the colon determines the location of the window buttons. In the above example "maximize,minimize,close:", the buttons will be located at the left side of the title bar. </p>
+
+<p>To move the window buttons to the right, simply type in ":maximize,minimize,close".
+</p></note></item> 
+<item><p>Click <gui>Ok</gui>. The changes will be applied and will be reflected immediately on all open windows. </p></item> 
+</steps>
+
+<list>
+<item><p>Remember to take note of the original configuration settings. You may need to revert back to the original settings if you are not pleased with the changes made.</p></item> 
+<item><p>The <gui>Configuration Editor</gui> does not offer an option to revert back to the original settings once the changes are applied; you will need to modify the button_layout key again to go back to the old window button layout.</p></item>
+</list>
+
+</page>
