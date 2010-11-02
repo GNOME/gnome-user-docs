@@ -8,6 +8,8 @@ DOC_FIGURES = \
 	figures/highlight-color.png \
 	figures/icon-themes.png
 
+DOC_ENTITIES = legal.xml
+
 DOC_PAGES = \
 	backup-frequency.page \
 	backup.page \
