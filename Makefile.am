@@ -1,7 +1,4 @@
-SUBDIRS =				\
-	gnome2-user-guide		\
-	gnome2-accessibility-guide	\
-	gnome2-system-admin-guide
+SUBDIRS = gnome-help
 
 EXTRA_DIST = COPYING-DOCS gnome-doc-utils.make
 
