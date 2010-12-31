@@ -1,25 +1,38 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:e="http://projectmallard.org/experimental/"
       type="topic"
       id="power-batteryestimate">
 
   <info>
+  
     <link type="guide" xref="power#battery"/>
-    <desc>XXX</desc>
-    <revision pkgversion="0.1" version="0.1" date="2010-06-29" status="stub"/>
+    
+    <desc>The battery life that is displayed is only an estimate.</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-12-31" status="draft"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
     </credit>
     
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-  <title>It says X minutes of battery remaining, but that's not true</title>
-  
-  <comment>
-   <cite date="2010-06-29" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
-   <p>Explain why the "charge remaining" estimate isn't completely accurate, and how the estimate improves over time.</p>
-  </comment>
-	
+<title>It says X minutes of battery remaining, but that's not true</title>
+
+<p>When you check the remaining battery life, you may find that the <em>time remaining</em> it reports is different to how long the battery <em>actually</em> lasts. This is because the amount of remaining battery life can only be estimated. The estimates should get better over time, though.</p>
+
+<p>In order to estimate the remaining battery life, a number of factors must be taken into account. One is the amount of power currently being used by the computer: power consumption varies depending on how many programs you have open, which devices are plugged in, and whether you are running any intensive tasks (like watching a DVD or converting music files, for example). This changes from moment to moment, and is difficult to predict.</p>
+
+<p>Another factor is how the battery discharges. Some batteries lose charge faster the emptier they get. Without precise knowledge of how the battery discharges, only a rough estimate of remaining battery life can be made.</p>
+
+<p>As the battery discharges, the Power Manager will figure-out its discharge properties and will learn how to make better estimates of battery life. They will never be completely accurate, though.</p>
+
+<note>
+ <p>If you get a completely ridiculous battery life estimate (say, hundreds of days!), the Power Manager is probably missing some of the data it needs to make a sensible estimate.</p>
+ <p>If you unplug the power and run the laptop on battery for a while, then plug it in and let it recharge again, the Power Manager should be able to get the data it needs.</p>
+</note>
+
 </page>

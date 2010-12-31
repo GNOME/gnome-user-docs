@@ -1,25 +1,52 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:e="http://projectmallard.org/experimental/"
       type="topic"
       id="power-batterycapacity">
 
   <info>
     <link type="guide" xref="power#battery"/>
-    <desc>XXX</desc>
-    <revision pkgversion="0.1" version="0.1" date="2010-06-29" status="stub"/>
+    <link type="seealso" xref="power-batteryoptimal"/>
+    
+    <desc>Batteries get less efficient at storing charge as they get older, so you might want to check how efficient your battery is.</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-12-31" status="draft"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
     </credit>
     
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-  <title>XXX</title>
-  
-  <comment>
-   <cite date="2010-06-29" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
-   <p>This is a conceptual topic. It should explain the difference between design and actual battery capacity (these figures can be viewed in the GPM interface). It should explain why there is a difference, and why battery capacity degrades over time.</p>
-  </comment>
-	
+<title>Checking the capacity of your battery</title>
+
+<p>Laptop batteries lose their ability to store charge with age. In general, this means that your laptop's battery will not last as long as time goes by. You can check how much charge it can store now, compared with when it was new:</p>
+
+<steps>
+ <item>
+  <!-- FIXME: Check this. It's different in Ubuntu. -->
+  <p>Right-click the battery icon on the top panel and click the battery status (above <gui>Preferences</gui>).</p>
+ </item>
+ <item>
+  <p>The Power Statistics window will be displayed. Select the laptop battery from the list on the left of the window and go to the <gui>Details</gui> tab.</p>
+ </item>
+ <item>
+  <p>Scroll down to find the <gui>Energy when full</gui>, <gui>Energy (design)</gui> and <gui>Capacity</gui> attributes.</p>
+ </item>
+</steps>
+
+<p><gui>Energy (design)</gui> is how much energy (charge) the battery could store when it was brand new.</p>
+
+<p><gui>Energy when full</gui> is how much energy the battery can currently store when it is fully charged.</p>
+
+<p><gui>Capacity</gui> tells you how much charge the battery can store now compared to when it was new.</p>
+
+<p>The lower the capacity gets, the shorter the period of time you will be able to use the laptop for (on battery) before needing to plug it in. If this gets too low, you will have to either keep the laptop plugged in all the time or buy a new battery.</p>
+
+<note>
+ <p>There may be a small discrepancy between the Capacity and Energy statistics. Most of the figures displayed in the Power Statistics are only approximate guides.</p>
+</note>
+
 </page>
