@@ -14,29 +14,70 @@
 
   <title>Backup Your Important Files</title>
   <p>
-What does it mean to back files up? It simply means to make a copy of a file or files for safekeeping. This is done in the event that the original files become unusable due to loss or corruption. Copies should be stored on a different device from the original files. For example, you may use a USB drive, a CD/DVD, or an off-site service.
+What does it mean to back files up? It simply means to make a copy of a file or files for safekeeping. This is done in the event that the original files become unusable due to loss or corruption. These copies can be used to restore the original  data in the event of loss. Copies should be stored on a different device from the original files. For example, you may use a USB drive, a CD/DVD, or an off-site service.
 </p>
 <p>
 The best way to backup up your files is to do so regularly, off-site and encrypted.</p>
 
   <section>
     <title>
-      Why Backup?
+      Why should you bother making backups?
     </title>
-    <p>
-       Many files are irreplaceable.  Backups protect against loss of files. 
+  <list>
+   <item><p>
+ Hardware can break, making it impossible to get your data off your computer.  </p></item>
 
-    Files can be lost due to hardware failure, accidental deletion, and theft.      </p>
+  <item><p>Also, software can fail, corrupting or even deleting your important files.</p></item>
+
+<item><p> You may even accidently delete an important file.</p></item>
+
+<item><p> Data can also be lost as a result of computer theft.
+</p></item>
+</list>
+    <p>
+       Many files are irreplaceable.  Backups protect against loss of files. Only the very latest changes would be lost, depending on <link xref="backup-frequency">frequency of backups</link>.
+  </p>
     <p>Additionally, it may be good to have access to older versions of certain files. 
     </p>
   </section>
   
     <section>
     <title>
-      What to Backup?
+      What should you backup?
     </title>
+
+<p>
+Your priority should be to backup your most important files as well as those that are difficult to recreate.  An example of most important to least important:
+</p>
+
+<terms>
+ <item>
+   <title>Your personal files </title>
+   <p>Documents, spreadsheets, email, calendar data, financial data, music, anything that you made that has importance to you. These are clearly the most important as they may be irreplaceable.</p>
+    </item>
+
+  <item>
+  <title>Your settings</title>
+  <p> This includes changes you may have made to colours, backgrounds, screen resolution and mouse settings on your desktop. This also includes program preferences, such as settings for OpenOffice, your music player, and your email program. These are replaceable, but may take up valuable time to recreate.</p>
+</item>
+
+<item>
+<title> System settings. </title>
+<p>Most people never alter the settings that are created during installation.  Therefore, backing up system settings is less crucial than backing up personal settings. But for those who do customize their systems (by changing configuration files in /etc, as an example), backing up these settings can be as important as backing up personal settings.
+</p>
+</item>
+
+<item>
+<title> Installed software (and everything else). </title> 
+<p> Such software can usually be restored by reinstalling, but not always.</p>
+</item>
+</terms>
+
     <p>
-    In general, you will want to backup files that are irreplaceable without a backup.  These files are usually in your home directory.   </p><p>If there is room on the backup media, it is best to backup the entire home directory with the following exceptions:
+    In general, you will want to backup files that are irreplaceable without a backup.  Your personal files and your settings are usually in your home directory.  
+ </p
+><p>
+If there is room on the backup media, it is best to backup the entire home directory with the following exceptions:
     </p>
 
 <list>
@@ -44,8 +85,55 @@ The best way to backup up your files is to do so regularly, off-site and encrypt
  <item><p>Files that you can generate easily. For example, PDF's that can be generated from TeX files, or object files that can be made with make.  Just make sure the source is backed up.</p></item>
 </list>
 
+<p>
+The amount of data you can backup is limited by the size of the storage device. 
+</p>
 
 
+
+<p>
+Deciding what to backup and then finding it all is the most difficult step in starting the backup. Let's look at where the above mentioned files and settings are stored in your computer, so you can easily find them and copy them to your backup media.
+</p>
+
+
+<terms>
+<item>
+   <title>Your files </title> 
+<p>These are usually stored in your home directory such as /home/tiffany. They could be in a variety of subdirectories such as Documents, Pictures, Music or Videos. If your backup medium has sufficient space, consider backing up the entire /home directory.</p>
+
+<p>
+      If you are not able to backup all of <cmd>/home</cmd>, see below for a list of some subdirectories of the /home directory to check for important files. 
+</p>
+
+<list>
+<item><p><cmd>~/</cmd> represents your home directory <cmd>/home/tiffany</cmd> </p></item>
+
+ <item><p>any file or folder name that starts with a period is by default hidden. To view these  select <gui>View</gui> from the main menu, then select <gui>Show Hidden Files</gui> or press <keyseq><key>Ctrl</key><key>H</key></keyseq>.
+</p></item>
+</list>
+
+</item>
+</terms>
+
+<subtitle>jdf;lka</subtitle>
+<table shade="rows">
+  <tr>
+    <td><p>Mallard</p></td> <td><p>Anas platyrhynchos</p></td>
+    <td><p>56-65cm</p></td> 
+  </tr>
+  <tr>
+    <td><p>Eurasian Wigeon</p></td> <td><p>Anas penelope</p></td>
+    <td><p>45-50cm</p></td>         
+  </tr>
+  <tr>
+    <td><p>Common Teal</p></td> <td><p>Anas crecca</p></td>
+    <td><p>34-43cm</p></td>     
+  </tr>
+  <tr>
+    <td><p>Northern Pintail</p></td> <td><p>Anas acuta</p></td>
+    <td><p>59-76cm</p></td>          
+  </tr>
+</table>
 
   </section>
   
@@ -54,16 +142,24 @@ The best way to backup up your files is to do so regularly, off-site and encrypt
       Where to Backup?
     </title>
     <p>
-    You should store backup copies of your files in file storage separate from your computer.
+    You should store backup copies of your files in file storage separate from your computer. An important consideration when choosing the backup medium is capacity. This will depend on  how much data you need to backup. 
+
+
     </p>
     
    <list>
     <title>Local and Remote Options</title>
     <item>
-      <p>Removable storage such as an external hard drive or a USB memory stick. </p>
+      <p>USB memory key (low capacity).</p>
     </item>
     <item>
-      <p>Another computer on the network.</p>
+      <p>An internal drive (higher capacity).</p>
+    </item>
+    <item>
+      <p>An external USB drive (variable capacity, but can be very high, such as a Terabyte.)</p>
+    </item>
+    <item>
+      <p>A network drive (high capacity).</p>
     </item>
     <item>
       <p>A connected server.</p>
@@ -71,7 +167,9 @@ The best way to backup up your files is to do so regularly, off-site and encrypt
     <item><p>Writable CDs or DVDs.</p></item>
     <item><p><link href = "http://aws.amazon.com/s3/">Amazon S3</link> storage service from Amazon stores your data away from your site for a small fee.</p></item>
     </list>
-
+<p>
+Some of these would allow for a backup of every file on your system, called a complete system backup.
+</p>
   </section>
 
     <section>
