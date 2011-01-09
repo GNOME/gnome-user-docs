@@ -3,8 +3,8 @@
 
   <info>
     <link type="guide" xref="files#management"/>
-    <desc>XXX</desc>
-    <revision pkgversion="0.1" version="0.1" date="2010-06-29" status="stub"/>
+    <desc>Change file or folder name.</desc>
+    <revision pkgversion="0.1" version="0.1" date="2011-01-08" status="review"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -12,7 +12,111 @@
 
   </info>
 
-  <title>Rename a file</title>
+  <title>Rename a File or Folder</title>
+  <section>
+    <title>Using the the <app>File Manager</app></title>
+      <steps>
+       <item><p>Right-click on the file or folder icon. A menu will pop-up.</p></item>
+       <item><p>Left-click on the <gui>Rename</gui> option in the menu.  The name of the file or folder will become highlighted.</p></item>
+       <item><p>Type the new name of the file or folder.</p></item>
+       <item><p>Press <key>Enter</key>.</p></item>
+      </steps>
+      <note>
+        <p>
+          In the case of files, only the name of the file is highlighted, not the file extention.  This is because in general, you will not need to change the extention of a file.
+        </p>
+        <p>However, in the event that it is necessary to change the extention of a file, you can follow the same steps, and when the name of the file is highlighted, hightlight the file extention with your mouse. Now, type the new file extention and press <key>Enter</key>.
+        </p>
+      </note>
+  </section>
+
+  <section>
+    <title>Shortcuts</title>
+      <steps>
+        <item><p>Left-click on the file or folder icon. This selects the file.</p></item>
+        <item><p>Press the <key>F2</key> key. This selects the file or folder name.</p></item>
+        <item><p>Type the new name of the file or folder.</p></item>
+        <item><p>Press <key>Enter</key>.</p></item>
+      </steps>
+  </section>
+
+  <section>
+    <title>Valid Characters For File Names</title>
+    <p>
+      On your system, the <key>/</key> (slash character) is invalid for names of files and folders.
+      All other characters can be used.
+    </p>
+
+    <note style="warning">
+    <p>
+      If you name a file with a <key> . </key> as the first character, the file will be hidden.  Generally, avoid the  <key> . </key> as the first character in a file name.
+    </p>
+     <p>
+       Some characters in file and folder names may not be valid in Windows and Mac OSX.  Therefore, if you think a file
+       may need to be read on these systems (like in the event you e-mail it to someone using Windows or Mac), the following characters may cause problems and should be avoided in naming files and folders:
+       <key> | </key>, <key> \ </key>, <key> ? </key>, <key> * </key>, <key> &lt; </key>, <key> " </key>, <key> : </key>, <key> &gt; </key>, <key> / </key>.
+     </p>
+     </note>
+
+  </section>
+
+  <section>
+    <title>Common Problems</title>
+      <section>
+       <title>The Item Could Not Be Renamed</title>
+       <section><title>The Name is Already Used</title>
+      <p>
+        You can't have two files with the same name in the same folder.  Also, you can not have a subfolder with the same name as a file in the same folder. Therefore, if you try to rename a file to a name that already exists in the folder you are working in, the <app>File Manager</app> will not allow it.  Use a different name.
+      </p>
+        <note>
+          <p>
+            File and folder names are case sensitive.
+          </p>
+        <p>
+          Example:
+          File.txt and file.txt are different names.  This is allowed.
+        </p>
+       </note>
+       </section>
+       <section>
+         <title>File Name Too Long</title>
+         <p>
+           File names can have no more than 255 characters in their names.  Use a shorter name.
+         </p>
+       </section>
+      </section>
+
+
+      <section>
+       <title>The Option to Rename is Greyed Out</title>
+        <p>
+         You do not have permission to rename the file.  Generally, if you do not have
+         the correct permissions to rename a file, you should not be renaming the file.
+        </p>
+      </section>
+  </section>
+
+  <section>
+    <title>Using the Command Line</title>
+     <steps>
+       <item>
+       <p>
+        <code>cd</code> into the folder where the file or subfolder you wish to rename is located.
+       </p>
+       </item>
+       
+       <item>
+       <p>
+        At the shell prompt type: <code>mv -i current_filename new_filename</code>
+       </p>
+         <note style="important">
+           <p>
+             If you omit the <code> -i</code>, you may overwrite a file if you try to rename the file to a name that already exists in the folder.  The -i option will ask you if you are sure that you want to overwrite the existing file.  If you overwrite an existing file, there is no way you can get the original back, so be sure to use the<code> -i </code> option.
+          </p>
+         </note>
+       </item>
+     </steps>
+  </section>
 
   <comment>
    <cite date="2010-06-29" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
