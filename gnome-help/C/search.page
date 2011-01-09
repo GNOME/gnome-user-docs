@@ -1,0 +1,119 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" id="search">
+
+  <info>
+    <link type="guide" xref="files-search#search"/>
+    <title type="sort">a</title>
+    <desc>How to find a file.</desc>
+    <revision pkgversion="0.1" version="0.1" date="2011-01-9" status="review"/>
+    <credit type="author">
+      <name>GNOME Documentation Project</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+  </info>
+    <title>Search For a File</title>
+      <steps>
+      <item>
+        <p>
+         In the <link xref="shell-apps">applications overview</link> click on the <app>Search for Files</app> application icon.  If you don't see it, you can type "search for files" in the search textbox.
+         </p>
+                  <p>
+         Alternatively, you can use the command-line.  Type <code> gnome-search-tool </code> at the prompt.
+         </p>
+         <p>
+         <media type="image" src="Screenshot-Search for Files.png"/>
+         </p>
+      </item>
+
+      <item>
+        <p>
+          In the <gui>Name contains</gui> textbox, type the full or partial file name.  The search is case insensitive, and the ? and * wildcards can be used.  The ? stands in for any one letter, and the * stands in for any sequence of one or more letters.  For example:
+        </p>
+        <terms>
+        <item>
+          <title>
+            If you type "file.txt", the following files will be found:
+          </title>
+          <p>
+            file.txt, File.txt, myfile.txt, MyFile.txtxyz, etc.
+          </p>
+          </item>
+        <item>
+         <title>
+            If you type "fi?e.txt", the following files will be found:
+          </title>
+                <p>
+                  Five.txt, file.txt, File.txt, myfile.txt, MyFile.txtxyz, etc.
+                </p>
+              </item>
+          <item>
+           <title>
+            If you type "fi*e.*txt", the following files will be found:
+           </title>
+                <p>
+                  File.txt, fillie.odt, fibonacci_example.txt, FindMachineEpsilon.exe.manifest, etc.
+                </p>
+              </item>
+         </terms>
+      </item>
+      <item>
+        <p>
+        In the <gui>Look in folder</gui> menu, select the folder you wish to search.  <app>Search for Files</app> will search the folder you choose, including the subfolders.
+        </p>
+      </item>
+      
+      <item>
+        <p>
+         Click <gui>Find</gui>.  Your results will be displayed in the <gui>Search results</gui> box.  If the search found no matches, <gui>No files found</gui> will be displayed.  You can stop a search in progress by clicking <gui>Stop</gui>.   
+        </p>
+        <p>
+         Alternatively, you can go to step 5 to add more search options.
+        </p>
+      </item>
+      
+      <item>
+        <p>
+          To add more search options:
+        </p>
+        <steps>
+          <item>
+            <p>
+              Click on <gui>Select more options</gui>.  This will reveal the <gui>Available options</gui> menu.
+            </p>
+          </item>
+         <item>
+            <p>
+              Click on the <gui>Available options</gui> menu.  Select a search option.
+            </p>
+            <p>
+              <media type="image" src="Screenshot-Search for Files-options.png"/>
+           </p>
+          </item>
+          <item>
+            <p>
+              Click <gui>Add</gui>.
+            </p>
+          </item>
+          <item>
+            <p>
+               If the search option requires additional information, type it in the textbox.
+            </p>
+          </item>
+          <item>
+            <p>
+             You can specify as many additional search options as needed.
+            </p>
+          </item>
+          <item>
+            <p>
+              When you are finished adding search options, click <gui>Find</gui>.
+            </p>
+
+          </item>
+        </steps>
+      </item>
+    </steps>
+  
+  
+</page>
