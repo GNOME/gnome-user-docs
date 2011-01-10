@@ -24,7 +24,6 @@ DOC_PAGES = \
 	files-delete.page \
 	files-hidden.page \
 	files-listview-columns.page \
-	files-lost.page \
 	files-move.page \
 	files-open.page \
 	files.page \
