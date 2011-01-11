@@ -5,7 +5,7 @@
     <link type="guide" xref="files#others"/>
     <desc>Descriptions of the columns of information that can be viewed in the file browser's list view.</desc>
 
-    <revision pkgversion="3.0" version="1.0" date="2010-07-26" status="stub"/>
+    <revision pkgversion="3.0" version="1.0" date="2010-07-26" status="review"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -18,57 +18,104 @@
 
 <title>Listview column descriptions</title>
 
-<p>There are 12 columns of information that you can display in the file browser's list view. Click <guiseq><gui>View</gui><gui>Visible Columns</gui></guiseq> to see which columns are available. They are described below.</p>
+<p>There are 12 columns of information that you can display in the file browser's list view. Click <guiseq><gui>View</gui><gui>Visible Columns</gui></guiseq> to select which columns will be visible.</p>
 
+<note style="tip">
+<p>
+  Use the <gui>Move Up</gui> and <gui>Move Down</gui> buttons to choose the order in which the selected columns will appear.
+</p>
+</note>
+<note>
+<p>
+  To view <link xref="files-hidden">hidden files</link>, click on <gui>View</gui> and check the box next to <gui>Show Hidden Files</gui>.  Alternatively, click <keyseq><key>Ctrl</key><key>H</key></keyseq>.  
+</p>
+<p>
+  To hide hidden files, click on <gui>View</gui> and uncheck the box next to <gui>Show Hidden Files</gui>.  Alternatively, click <keyseq><key>Ctrl</key><key>H</key></keyseq>.  
+</p>
+</note>
 <terms>
  <item>
   <title>Name</title>
-  <p></p>
+  <p>The name of subfolders and files located in folder being viewed. </p>
  </item>
  <item>
   <title>Size</title>
-  <p></p>
+  <p>The size of a folder is given as the number of items contained in the folder.  </p>
+  <p>The size of a file is given as bytes, KB or MB.</p>
  </item>
  <item>
   <title>Type</title>
-  <p></p>
+  <p>Displayed as folder, or file type such as PDF document, JPEG image, MP3 audio, and more.</p>
  </item>
  <item>
   <title>Date Modified</title>
-  <p></p>
+  <p>Gives the date and time of the last time the file was modified.</p>
+    
  </item>
  <item>
   <title>Date Accessed</title>
-  <p></p>
+  <p>Gives the date and time of the last time the file was accessed.</p>
  </item>
  <item>
   <title>Group</title>
-  <p></p>
+  <p>The group the file is owned by.</p>
  </item>
  <item>
   <title>Location</title>
-  <p></p>
+  <p>The path to the location of the file.</p>
  </item>
  <item>
   <title>MIME Type</title>
-  <p></p>
+  <p>Displays the MIME type of the item.</p>
+ </item>
+    
+  <item>
+  <title>Permissions</title>
+  <p>Displays the file access permissions eg. <gui>drwxrw-r--</gui></p>
+  <list>
+   <item>
+    <p>The first character <gui>-</gui> is the file type. <gui>-</gui> means regular file and <gui>d</gui> means directory (folder).</p>
+   </item>
+   <item>
+     <p>The next three characters <gui>rw-</gui> specify permissions for the user who owns the file.</p>
+   </item>
+   <item>
+     <p>The next three <gui>r--</gui> specify permissions for all members of the group that owns the file.</p>
+   </item>
+   <item>
+    <p>The last three characters in the column <gui>r--</gui> specify permissions for all other users on the system.</p>
+   </item>
+  </list>
+  <p>
+    Each character has the following meanings:
+  </p>
+  <list>
+    <item><p> r : Read permission. </p></item>
+    <item><p> w : Write permission. </p></item>
+    <item><p>x : Execute permission. </p></item>
+    <item><p> - : No permission. </p></item>
+    </list>
+
  </item>
  <item>
   <title>Octal Permissions</title>
-  <p></p>
+  <p>Displays the file permissions in octal notation prefixed with '40' for folders and '100' for files. In the last three digits,  each digit represents user class, group class and other users respectively.</p>
+  <list>
+    <item><p>Read adds 4 to the total of each of the last three digits.</p></item>
+    <item><p>Write adds 2 to the total.</p></item>
+    <item><p>Execute adds 1 to the total.</p></item>
+  </list>
  </item>
  <item>
   <title>Owner</title>
-  <p></p>
+  <p>The name of the user the folder or file is owned by.</p>
  </item>
- <item>
-  <title>Permissions</title>
-  <p></p>
- </item>
+
  <item>
   <title>SELinux Context</title>
-  <p></p>
+  <p>Dislplays the SELinux Context of the file, if applicable.</p>
  </item>
 </terms>
+
 
 </page>
