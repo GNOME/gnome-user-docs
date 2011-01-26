@@ -5,19 +5,19 @@
   <info>
     <link type="guide" xref="user-admin#manage"/>
     <desc>How to delete a user or group.</desc>
-    <revision pkgversion="3.0" version="0.1" date="201-1-19" status="incomplete"/>
+    <revision pkgversion="3.0" version="0.1" date="201-1-19" status="review"/>
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email>tiffany@antopolski.com</email>
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
     </credit>
-    
+
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
   <title>Delete A User or Group</title>
-  
-  
+
+
   <section id = "delete-user">
     <title>Delete A User</title>
     <p>To delete a user account from your computer:</p>
@@ -33,52 +33,57 @@
             Click <gui>Delete</gui>.  You will be prompted for your password.  Enter it and click <gui>Authenticate</gui>.
       </p></item>
             <item><p>
-            You will be asked if you wish to remove the user's home folder.  You have 3 options:
-            
+            You will be asked if you wish to remove the user's home folder.  Select on of the following 3 options:
+
       </p>
       <terms>
       <item><title>Keep Files</title><p>
+        The home directory of the user will not be deleted.
       </p></item>
       <item><title>Don't Remove Account</title><p>
         Cancels the removal request.
       </p></item>
       <item><title>Delete Files</title><p>
-      </p></item>
-      
-      </terms>
+      Files owned by user can be completely removed if you don't need them anymore.
+      </p>
       <note style="tip">
       <p>
-      Files owned by user bla in /home/bla can be completely removed if you don't need them anymore. You may want to back them up before deleting the account, or keep them so that an administrator can save them later.
+       You may want to back them up before deleting the account, or keep them so that an administrator can save them later.
       </p>
       </note>
-      
       </item>
-            <item><p>
-      </p></item>
-            <item><p>
-      </p></item>
+
+      </terms>
+      </item>
+
     </steps>
   </section>
-  
+
     <section id = "delete-group">
     <title>Delete A Group</title>
         <p>To delete a group from your computer:</p>
-    
+
         <steps>
       <item><p>
-       When in the <gui>Activities</gui> overview, <gui>Search your computer</gui> by typing 'users and groups'.  This will open the <app>Users Administration Tool</app>.  
+       When in the <gui>Activities</gui> overview, <gui>Search your computer</gui> by typing 'users and groups'.  This will open the <app>Users Administration Tool</app>.
       </p></item>
-            <item><p>
+            <item><p>Click <gui>Manage Groups</gui>.
       </p></item>
-            <item><p>
+            <item><p>Scroll through the list to select the group you wish to remove.
       </p></item>
+            <item><p>Click <gui>Delete</gui>.
+      </p>
+      
+      </item>
+            <item><p>You will be prompted to authenticate using a password.
+      </p><note style="warning">
+      <p>Deleting a group may leave files with an unassigned group ID in the filesystem. In the event that this does happen, files belonging the removed group will not have a group name but a group ID number instead. Generally this will not cause you any problems. 
+      </p>
+      </note></item>
             <item><p>
-      </p></item>
-            <item><p>
-      </p></item>
-            <item><p>
+            After the warning, click <gui>Delete</gui>.
       </p></item>
     </steps>
   </section>
-  
+
 </page>
