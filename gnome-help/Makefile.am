@@ -17,7 +17,6 @@ DOC_PAGES = \
 	backup-thinkabout.page \
 	clock-style.page \
 	clock-timezone.page \
-	clock-weather.page \
 	display-dim.page \
 	files-arrange.page \
 	files-copy.page \
