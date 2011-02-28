@@ -11,10 +11,29 @@ DOC_FIGURES = \
 DOC_ENTITIES = legal.xml
 
 DOC_PAGES = \
+	a11y-bouncekeys.page \
+	a11y-braille.page \
+	a11y-contrast.page \
+	a11y-dwellclick.page \
+	a11y-font-size.page \
+	a11y-locate-pointer.page \
+	a11y-mag.page \
+	a11y-mousekeys.page \
+	a11y.page \
+	a11y-right-click.page \
+	a11y-screen-reader.page \
+	a11y-slowkeys.page \
+	a11y-stickykeys.page \
 	backup-frequency.page \
+	backup-how.page \
 	backup.page \
+	backup-restore.page \
 	backup-testing.page \
 	backup-thinkabout.page \
+	backup-what.page \
+	backup-where.page \
+	backup-why.page \
+	clock-calendar.page \
 	clock-style.page \
 	clock-timezone.page \
 	display-dim.page \
@@ -29,9 +48,15 @@ DOC_PAGES = \
 	files-preview-music.page \
 	files-recover.page \
 	files-renaming.page \
+	files-search.page \
 	files-special.page \
 	files-tilde.page \
+	function-printing.page \
+	function-scanning.page \
+	get-involved.page \
 	index.page \
+	keyboard-cursor-blink.page \
+	keyboard-repeat-keys.page \
 	look-background-online.page \
 	look-background.page \
 	look-fonts-bigger.page \
@@ -50,6 +75,7 @@ DOC_PAGES = \
 	mouse-cursor-size.page \
 	mouse-cursor-style.page \
 	mouse-disabletouchpad.page \
+	mouse-drag-threshold.page \
 	mouse-focusfollows.page \
 	mouse-highlightcolor.page \
 	mouse-lefthanded.page \
@@ -63,6 +89,8 @@ DOC_PAGES = \
 	mouse-sound.page \
 	mouse-touchpad-losefocus.page \
 	mouse-wakeup.page \
+	open-file-manager.page \
+	passwords.page \
 	power-batterybroken.page \
 	power-batterycapacity.page \
 	power-batteryestimate.page \
@@ -78,12 +106,21 @@ DOC_PAGES = \
 	power-lowpower.page \
 	power-nowireless.page \
 	power-othercountry.page \
+	power.page \
 	power-spindown.page \
 	power-suspendfail.page \
 	power-suspendhibernate.page \
 	power-turnoffbutton.page \
 	power-whydim.page \
 	power-willnotturnon.page \
+	search-commandline.page \
+	search-delete.page \
+	search-intro.page \
+	search-open.page \
+	search-otherapps.page \
+	search.page \
+	search-save.page \
+	search-settings.page \
 	session-authmethods.page \
 	session-changegdmtheme.page \
 	session-exit.page \
@@ -91,21 +128,40 @@ DOC_PAGES = \
 	session-login.page \
 	session-loginsound.page \
 	session-netlogin.page \
+	session.page \
 	session-screenlocks.page \
 	session-suspend.page \
 	session-switchuser.page \
+	shell-apps-favorites.page \
+	shell-apps-forcequit.page \
+	shell-apps-install.page \
+	shell-apps-open.page \
+	shell-apps-search.page \
+	shell-files.page \
+	shell-notifications.page \
+	shell-prefs.page \
+	shell-session.page \
+	shell-session-status.page \
+	shell-windows-lost.page \
+	shell-windows.page \
+	shell-windows-states.page \
+	shell-windows-switching.page \
+	shell-windows-workspaces.page \
 	time-change.page \
+	user-accounts.page \
 	user-addguest.page \
 	user-add.page \
 	user-admin-change.page \
 	user-admin-explain.page \
-	user-admin.page \
 	user-admin-privdescriptions.page \
 	user-admin-problems.page \
 	user-admin-restrictothers.page \
 	user-changepassword.page \
 	user-changepicture.page \
+	user-delete.page \
 	user-forgottenpassword.page \
-	user-goodpassword.page
+	user-goodpassword.page \
+	user-modify.page \
+	user-priveleges.page
 
 dist-hook: doc-dist-hook
