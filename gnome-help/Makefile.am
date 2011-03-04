@@ -44,7 +44,6 @@ DOC_PAGES = \
 	files-listview-columns.page \
 	files-move.page \
 	files-open.page \
-	files.page \
 	files-preview-music.page \
 	files-recover.page \
 	files-renaming.page \
