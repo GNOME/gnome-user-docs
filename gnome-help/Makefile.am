@@ -86,7 +86,6 @@ DOC_PAGES = \
 	mouse-problem-themeerror.page \
 	mouse-sensitivity.page \
 	mouse-sound.page \
-	mouse-touchpad-losefocus.page \
 	mouse-wakeup.page \
 	open-file-manager.page \
 	passwords.page \
