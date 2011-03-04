@@ -113,6 +113,7 @@ DOC_PAGES = \
 	power-whydim.page \
 	power-willnotturnon.page \
 	search-commandline.page \
+	screen-shot-record.page \
 	search-delete.page \
 	search-intro.page \
 	search-open.page \
