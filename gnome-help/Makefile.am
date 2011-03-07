@@ -8,7 +8,7 @@ DOC_FIGURES = \
 	figures/highlight-color.png \
 	figures/icon-themes.png
 
-DOC_ENTITIES = legal.xml
+DOC_INCLUDES = legal.xml
 
 DOC_PAGES = \
 	a11y-bouncekeys.page \

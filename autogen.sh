@@ -7,7 +7,7 @@ test -z "$srcdir" && srcdir=.
 PKG_NAME="gnome-user-docs"
 
 (test -f $srcdir/configure.in \
-  && test -d $srcdir/gnome2-user-guide) || {
+  && test -d $srcdir/gnome-help) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
     echo " top-level $PKG_NAME directory"
     exit 1
