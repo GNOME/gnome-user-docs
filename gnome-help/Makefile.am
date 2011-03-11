@@ -75,7 +75,6 @@ DOC_PAGES = \
 	mouse-cursor-style.page \
 	mouse-disabletouchpad.page \
 	mouse-drag-threshold.page \
-	mouse-focusfollows.page \
 	mouse-highlightcolor.page \
 	mouse-lefthanded.page \
 	mouse-mousekeys.page \
