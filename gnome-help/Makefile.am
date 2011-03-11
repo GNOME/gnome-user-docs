@@ -79,7 +79,6 @@ DOC_PAGES = \
 	mouse-highlightcolor.page \
 	mouse-lefthanded.page \
 	mouse-mousekeys.page \
-	mouse.page \
 	mouse-preferences.page \
 	mouse-problem-doubleclick.page \
 	mouse-problem-notmoving.page \
