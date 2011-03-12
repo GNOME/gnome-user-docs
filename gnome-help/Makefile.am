@@ -18,7 +18,6 @@ DOC_PAGES = \
 	a11y-font-size.page \
 	a11y-locate-pointer.page \
 	a11y-mag.page \
-	a11y-mousekeys.page \
 	a11y.page \
 	a11y-right-click.page \
 	a11y-screen-reader.page \
