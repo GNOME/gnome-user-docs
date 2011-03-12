@@ -2,15 +2,13 @@
   type="topic"
   id="mouse-problem-notmoving">
 <info>
-    <link type="guide" xref="mouse#problems"/>
-    <link type="seealso" xref="mouse-mousekeys"/>
-    <link type="seealso" xref="mouse-disabletouchpad"/>
+    <link type="guide" xref="mouse-faq"/>
     
     <desc>
-    The mouse pointer doesn't move when you move your mouse or use your touchpad.
+    How to check your mouse if it's not working.
     </desc>
     
-    <revision pkgversion="2.28" version="0.1" date="2009-09-11" status="draft"/>
+    <revision pkgversion="3.0" version="0.1" date="2011-03-11" status="review"/>
     <credit type="author">
         <name>Phil Bull</name>
         <email>philbull@gmail.com</email>
@@ -23,15 +21,11 @@
     <!-- <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/> -->
 </info>
 
-<title>My mouse pointer isn't moving</title>
+<title>Mouse Pointer Not Moving</title>
 
-<p>
-Your mouse may be unplugged or broken, or may not have been recognized by the 
-computer.
-</p>
 
-<section>
- <title>Check that the mouse is plugged in</title>
+<section id="plugged-in">
+ <title>Check That the Mouse is Plugged In</title>
  <p>
  If you have a mouse with a cable, check that it is firmly plugged in to 
  your computer.
@@ -45,27 +39,32 @@ computer.
  </p>
 </section>
 
-<section>
- <title>Check that the mouse was recognized by the computer</title>
+<section id="connected">
+ <title>Check That the Mouse was Recognized by Your Computer</title>
  <steps>
   <item>
    <p>
-   Click <guiseq><gui>Applications</gui><gui>Accessories</gui>
-   <gui>Terminal</gui></guiseq>.
+   Click <guiseq><gui>Alt</gui><gui>F2</gui></guiseq>.
    </p>
   </item>
+  <item><p>
+  Type <input>gnome-terminal</input>.  A terminal window will open.
+  </p></item>
   <item>
    <p>
-   Type <cmd>xsetpointer -l | grep Pointer</cmd>, exactly as it appears here, 
+   In the terminal window, at the prompt (the $), type <cmd>xsetpointer -l | grep Pointer</cmd>, exactly as it appears here, 
    and press <key>Enter</key>.
    </p>
   </item>
   <item>
    <p>
-   A short list of mouse devices will appear. Make sure that at least one 
-   of the items says <quote>[XExtensionPointer]</quote> next to it.
+   A short list of mouse devices will appear. Check that at least one 
+   of the items says <quote>[XExtensionPointer]</quote> next to it, and that one of the  <quote>[XExtensionPointer]</quote> items has the name of the mouse to the left of it.
    </p>
   </item>
+  <item><p>
+  If there is no entry that has the name of the mouse followed by  <quote>[XExtensionPointer]</quote>, then the mouse was not recognized by your computer. If the entry exists, your mouse was recognized by your computer.  In this case you should check that the mouse is <link xref="#plugged-in">plugged</link> in and in <link xref="#broken">working condition</link>.
+  </p></item>
  </steps>
 
  <p>
@@ -89,15 +88,15 @@ computer.
  </comment>
 </section>
 
-<section>
- <title>Check that the mouse isn't broken</title>
+<section id="broken">
+ <title>Check the Mouse Actually Works</title>
  <p>
  Plug the mouse in to a different computer and see if it works.
  </p>
  
  <p>
  If the mouse is an optical or laser mouse, a light should be shining out 
- of the bottom of the mouse if it is turned on.
+ of the bottom of the mouse if it is turned on.  If there is no light, check that it is turned on.  If it is and there is still no light, the mouse may be broken.
  </p>
 </section>
 
