@@ -129,7 +129,6 @@ DOC_PAGES = \
 	session.page \
 	session-screenlocks.page \
 	session-suspend.page \
-	session-switchuser.page \
 	shell-apps-favorites.page \
 	shell-apps-forcequit.page \
 	shell-apps-install.page \
