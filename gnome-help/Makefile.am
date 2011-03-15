@@ -121,7 +121,6 @@ DOC_PAGES = \
 	search-settings.page \
 	session-authmethods.page \
 	session-changegdmtheme.page \
-	session-exit.page \
 	session-language.page \
 	session-login.page \
 	session-loginsound.page \
