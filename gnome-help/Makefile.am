@@ -2,7 +2,7 @@ include $(top_srcdir)/gnome-doc-utils.make
 
 DOC_ID = gnome-help
 
-DOC_LINGUAS = es
+DOC_LINGUAS = es gl
 
 DOC_FIGURES = \
 	figures/highlight-color.png \
