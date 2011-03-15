@@ -133,10 +133,10 @@ DOC_PAGES = \
 	shell-apps-install.page \
 	shell-apps-open.page \
 	shell-apps-search.page \
-	shell-files.page \
+	shell-exit.page \
+        shell-files.page \
 	shell-notifications.page \
 	shell-prefs.page \
-	shell-session.page \
 	shell-session-status.page \
 	shell-windows-lost.page \
 	shell-windows.page \
