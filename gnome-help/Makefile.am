@@ -122,7 +122,6 @@ DOC_PAGES = \
 	session-authmethods.page \
 	session-changegdmtheme.page \
 	session-language.page \
-	session-login.page \
 	session-loginsound.page \
 	session-netlogin.page \
 	session.page \
