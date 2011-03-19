@@ -6,7 +6,9 @@ DOC_LINGUAS = es gl sv
 
 DOC_FIGURES = \
 	figures/highlight-color.png \
-	figures/icon-themes.png
+	figures/icon-themes.png \
+	figures/Screenshot-SearchForFiles.png \
+	figures/Screenshot-SearchForFiles-options.png
 
 DOC_INCLUDES = legal.xml
 
