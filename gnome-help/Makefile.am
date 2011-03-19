@@ -18,11 +18,14 @@ DOC_PAGES = \
 	a11y-font-size.page \
 	a11y-locate-pointer.page \
 	a11y-mag.page \
+	a11y-mobility.page \
 	a11y.page \
 	a11y-right-click.page \
 	a11y-screen-reader.page \
 	a11y-slowkeys.page \
+	a11y-sound.page \
 	a11y-stickykeys.page \
+	a11y-vision.page \
 	backup-frequency.page \
 	backup-how.page \
 	backup.page \
@@ -33,9 +36,10 @@ DOC_PAGES = \
 	backup-where.page \
 	backup-why.page \
 	clock-calendar.page \
-	clock-style.page \
+	clock-set.page \
 	clock-timezone.page \
 	display-dim.page \
+	fallback-mode.page \
 	files-arrange.page \
 	files-copy.page \
 	files-delete.page \
@@ -43,49 +47,40 @@ DOC_PAGES = \
 	files-listview-columns.page \
 	files-move.page \
 	files-open.page \
+	files.page \
 	files-preview-music.page \
 	files-recover.page \
 	files-renaming.page \
 	files-search.page \
+	files-sharing.page \
+	files-sort.page \
 	files-special.page \
 	files-tilde.page \
 	function-printing.page \
 	function-scanning.page \
 	get-involved.page \
+	hardware.page \
 	index.page \
 	keyboard-cursor-blink.page \
 	keyboard-repeat-keys.page \
-	look-background-online.page \
 	look-background.page \
 	look-fonts-bigger.page \
-	look-fonts-change.page \
-	look-fonts-details.page \
-	look-fonts-rendering.page \
-	look-fonts-resolution.page \
 	look-fonts-smoothing.page \
-	look-fonts-toobig.page \
 	look.page \
-	look-theme-custom.page \
-	look-theme-icons.page \
-	look-theme-online.page \
-	look-theme.page \
-	look-windowbuttons.page \
-	mouse-cursor-size.page \
-	mouse-cursor-style.page \
+	media.page \
+	mouse-behavior.page \
 	mouse-disabletouchpad.page \
 	mouse-drag-threshold.page \
-	mouse-highlightcolor.page \
+	mouse-faq.page \
 	mouse-lefthanded.page \
 	mouse-mousekeys.page \
-	mouse-appearance.page \
-	mouse-behavior.page \
-	mouse-faq.page \
 	mouse-problem-doubleclick.page \
 	mouse-problem-notmoving.page \
 	mouse-problem-themeerror.page \
 	mouse-sensitivity.page \
 	mouse-sound.page \
 	mouse-wakeup.page \
+	net.page \
 	open-file-manager.page \
 	passwords.page \
 	power-batterybroken.page \
@@ -110,8 +105,9 @@ DOC_PAGES = \
 	power-turnoffbutton.page \
 	power-whydim.page \
 	power-willnotturnon.page \
-	search-commandline.page \
+	prefs.page \
 	screen-shot-record.page \
+	search-commandline.page \
 	search-delete.page \
 	search-intro.page \
 	search-open.page \
@@ -120,7 +116,6 @@ DOC_PAGES = \
 	search-save.page \
 	search-settings.page \
 	session-authmethods.page \
-	session-changegdmtheme.page \
 	session-language.page \
 	session-loginsound.page \
 	session-netlogin.page \
@@ -131,12 +126,13 @@ DOC_PAGES = \
 	shell-apps-forcequit.page \
 	shell-apps-install.page \
 	shell-apps-open.page \
-	shell-apps-search.page \
 	shell-exit.page \
-        shell-files.page \
+	shell-files.page \
 	shell-notifications.page \
-	shell-prefs.page \
+	shell-overview.page \
+	shell-prefs.page.old \
 	shell-session-status.page \
+	shell-terminology.page \
 	shell-windows-lost.page \
 	shell-windows.page \
 	shell-windows-states.page \
@@ -157,6 +153,8 @@ DOC_PAGES = \
 	user-forgottenpassword.page \
 	user-goodpassword.page \
 	user-modify.page \
-	user-priveleges.page
+	user-privileges.page \
+	web.page \
+	windows-key.page
 
 dist-hook: doc-dist-hook
