@@ -1,5 +1,4 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:e="http://projectmallard.org/experimental/"
       type="topic"
       id="power-suspendfail">
 
@@ -7,9 +6,9 @@
     <link type="guide" xref="power#problems"/>
     <link type="guide" xref="hardware#power"/>
     
-    <desc>XXX</desc>
+    <desc>Some computer hardware causes problems with suspend/hibernate</desc>
     
-    <revision pkgversion="0.1" version="0.1" date="2010-06-29" status="stub"/>
+    <revision pkgversion="3.0" version="0.1" date="2011-03-19" status="incomplete"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -18,8 +17,33 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-  <title>Why won't my computer turn back on after I suspended it?</title>
-  
+<title>Why won't my computer turn back on after I sent it to sleep?</title>
+
+<p>If you send your computer to sleep (suspend it) or hibernate it, then try to wake it up or turn it back on, you may find that it doesn't work as you expected. This could be because suspend/hibernate aren't supported properly by your hardware.</p>
+
+<section id="wakeup">
+ <title>My computer is asleep and won't wake up</title>
+ <p>If you sent your computer to sleep (suspended it) and then press a key or click the mouse, it should wake up and display a screen asking for your password. If this does not happen, try pressing the power button (don't hold it in; just press it once).</p>
+ <p>If this still doesn't help, make sure that your computer's monitor is switched on and try pressing a key on the keyboard again.</p>
+ <p>As a last resort, turn off the computer by holding-in the power button for 5-10 seconds. You will lose any unsaved work by doing this. You should then be able to turn on the computer again, though.</p>
+ <p>If this happens every time you send your computer to sleep, the suspend feature may not work with your hardware.</p>
+</section>
+
+<section id="hibernate">
+ <title>None of my applications/documents are open when I turn on the computer again</title>
+ <p>If you hibernated your computer and switched it on again, but none of your documents or applications are open, it probably failed to hibernate properly. Sometimes this happens because of a minor problem, and the computer will be able to hibernate properly the next time you do it. It might also happen because you had installed a software update which required the computer to be restarted; in this case, the computer may have shut down instead of hibernating.</p>
+ 
+ <p>It is also possible that the computer is not capable of hibernating because the hardware doesn't support it properly. This might be because of a problem with Linux drivers for your hardware, for example. You can test this by hibernating again and seeing if it works the second time. If it doesn't, it's probably a problem with your computer's drivers.</p>
+
+</section>
+
+<section id="hardware">
+ <title>My wireless connection (or other hardware) doesn't work when I wake up my computer</title>
+ <p>If you send your computer to sleep or hibernate it and then wake it up again, you may find that your internet connection, mouse, or some other device doesn't work properly. This could be because the device's driver doesn't properly support suspend/hibernate. This is a <link xref="hardware-driver">problem with the driver</link> and not the device itself.</p>
+ <p>If the device has a power switch, try turning it off and then on again. In most cases, the device will start working again. If it connects via a USB cable or similar, unplug the device and then plug it in again and see if it works.</p>
+ <p>If you cannot turn off/unplug the device, or if this doesn't work, you may need to restart your computer for the device to start working again.</p>
+</section>
+
   <comment>
    <cite date="2010-06-29" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
    <p>Explain symptoms of computer that failed to resume from a suspend problerly. Give troubleshooting steps.</p>
