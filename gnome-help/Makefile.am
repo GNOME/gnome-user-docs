@@ -66,7 +66,7 @@ DOC_PAGES = \
 	keyboard-cursor-blink.page \
 	keyboard-repeat-keys.page \
 	look-background.page \
-	look-fonts-bigger.page \
+	look-fonts-bigger.page.old \
 	look-fonts-smoothing.page \
 	look.page \
 	media.page \
