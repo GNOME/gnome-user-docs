@@ -20,17 +20,13 @@ DOC_PAGES = \
 	a11y-font-size.page \
 	a11y-locate-pointer.page \
 	a11y-mag.page \
-	a11y-mobility.page \
 	a11y.page \
 	a11y-right-click.page \
 	a11y-screen-reader.page \
 	a11y-slowkeys.page \
-	a11y-sound.page \
 	a11y-stickykeys.page \
-	a11y-vision.page \
 	backup-frequency.page \
 	backup-how.page \
-	backup.page \
 	backup-restore.page \
 	backup-testing.page \
 	backup-thinkabout.page \
@@ -40,7 +36,6 @@ DOC_PAGES = \
 	clock-calendar.page \
 	clock-set.page \
 	clock-timezone.page \
-	display-dim.page \
 	fallback-mode.page \
 	files-arrange.page \
 	files-copy.page \
@@ -58,26 +53,31 @@ DOC_PAGES = \
 	files-sort.page \
 	files-special.page \
 	files-tilde.page \
-	function-printing.page \
-	function-scanning.page \
 	get-involved.page \
+	hardware-driver.page \
 	hardware.page \
+	hardware-problems-bluetooth.page \
+	hardware-problems-crashes.page \
+	hardware-problems-graphics.page \
+	hardware-problems-printing.page \
+	hardware-problems-scanning.page \
 	index.page \
 	keyboard-cursor-blink.page \
 	keyboard-repeat-keys.page \
 	look-background.page \
-	look-fonts-bigger.page.old \
+	look-dimscreen.page \
 	look-fonts-smoothing.page \
 	look.page \
+	look-resolution.page \
 	media.page \
 	mouse-behavior.page \
 	mouse-disabletouchpad.page \
 	mouse-drag-threshold.page \
-	mouse-faq.page \
 	mouse-lefthanded.page \
 	mouse-mousekeys.page \
 	mouse-problem-doubleclick.page \
 	mouse-problem-notmoving.page \
+	mouse-problems.page \
 	mouse-problem-themeerror.page \
 	mouse-sensitivity.page \
 	mouse-sound.page \
@@ -95,7 +95,6 @@ DOC_PAGES = \
 	power-brighter.page \
 	power-closelid.page \
 	power-constantfan.page \
-	power-history.page \
 	power-hotcomputer.page \
 	power-lowpower.page \
 	power-nowireless.page \
@@ -108,6 +107,13 @@ DOC_PAGES = \
 	power-whydim.page \
 	power-willnotturnon.page \
 	prefs.page \
+	printing-setup-default-printer.page \
+	printing-setup-drivers.page \
+	printing-setup-networked.page \
+	printing-setup.page \
+	printing-setup-paper-jam.page \
+	printing-setup-wireless.page \
+	scanning.page \
 	screen-shot-record.page \
 	search-commandline.page \
 	search-delete.page \
@@ -126,21 +132,20 @@ DOC_PAGES = \
 	session-suspend.page \
 	shell-apps-favorites.page \
 	shell-apps-forcequit.page \
-	shell-apps-install.page \
 	shell-apps-open.page \
 	shell-exit.page \
 	shell-files.page \
-	shell-notifications.page \
+	shell-messages.page \
 	shell-overview.page \
-	shell-prefs.page.old \
 	shell-session-status.page \
 	shell-terminology.page \
 	shell-windows-lost.page \
+	shell-windows-maximize.page \
 	shell-windows.page \
 	shell-windows-states.page \
 	shell-windows-switching.page \
+	shell-windows-workspaces-add.page \
 	shell-windows-workspaces.page \
-	time-change.page \
 	user-accounts.page \
 	user-addguest.page \
 	user-add.page \
