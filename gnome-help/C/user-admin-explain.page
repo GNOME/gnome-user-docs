@@ -4,8 +4,10 @@
 
   <info>
     <link type="guide" xref="user-privileges"/>
-    <desc>XXX</desc>
-    <revision pkgversion="3.0" version="0.1" date="2010-03-19" status="stub"/>
+    
+    <desc>You need admin privileges to change important parts fo your system.</desc>
+    
+    <revision pkgversion="3.0" version="0.1" date="2010-03-20" status="review"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -14,11 +16,28 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-  <title>How do administrative privileges work?</title>
-  
-  <comment>
-   <cite date="2010-10-31" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
-   <p>Explain how admin privileges work. Pitch at a basic level. Explain why they are necessary, and how they promote security.</p>
-  </comment>
-	
+<title>How do administrative privileges work?</title>
+
+<p>As well as the files that <em>you</em> create, your computer also has a number of files which are needed by the system for it to work properly. If these important <em>system files</em> are changed improperly they can cause various things to break, so they are protected from changes by default. Certain applications also modify important parts of the system, and so are also protected.</p>
+
+<p>The way that they are protected is by only allowing users with <em>administrative privileges</em> to change the files or use the applications. In day-to-day use, you won't need to change any system files or use these applications, so by default you do not have admin privileges.</p>
+
+<p>Sometimes you need to use these applications, so you can temporarily get admin privileges to allow you to make the changes. If an application needs admin privileges, it will ask for your password. For example, if you want to install some new software, the software installer (package manager) will ask for your admin password so it can add the new application to the system. Once it has finished, your admin privileges will be taken away again.</p>
+
+<p>Admin privileges are associated with your user account. Some users are allowed to have admin privileges and some are not. If you aren't allowed any admin privileges, you will not be able to install software, for example. Some user accounts (for example, the "root" account) have permanent admin privileges. You shouldn't use admin privileges all of the time, because you might accidentally change an important file and break something.</p>
+
+<p>In summary, admin privileges allow you to change important parts of your system when you need to, but prevent you from doing it accidentally.</p>
+
+<note>
+ <title>What does "super user" mean?</title>
+ <p>A user with admin privileges is sometimes called a <em>super user</em>. This is simply because that user has more privileges than normal users. You might see people discussing things like <cmd>su</cmd> and <cmd>sudo</cmd>; these are programs for temporarily giving you "super user" (admin) privileges.</p>
+</note>
+
+<section id="advantages">
+ <title>Why are admin privileges useful?</title>
+ <p>Requiring users to have admin privileges before important system changes are made is useful because it helps to prevent your system from being broken, intentionally or unintentionally.</p>
+ <p>If you had admin privileges all of the time, you might accidentally change an important file, or run an application which changes something important by mistake. Only getting admin privileges temporarily, when you need them, reduces the risk of these mistakes happening.</p>
+ <p>Only certain, trusted users should be allowed to have admin privileges. This prevents other users from messing with the computer and doing things like uninstalling applications that you need, installing applications that you don't want, or changing important files. This is useful from a security standpoint.</p>
+</section>
+
 </page>
