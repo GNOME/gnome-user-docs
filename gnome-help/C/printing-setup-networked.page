@@ -4,6 +4,7 @@
 
   <info>
     <link type="guide" xref="hardware#printing-get-setup" />
+    <link type="topic" xref="printing" />
 
     <desc>Set up a printer on the network.</desc>
 
@@ -11,6 +12,10 @@
     <credit type="author">
       <name>Jim Campbell</name>
       <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit>
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
     </credit>    
     <license>
       <p>Creative Commons Share Alike 3.0</p>
@@ -18,7 +23,44 @@
 
   </info>
 
-<title>Set up a networked printer</title>
+  <title>Set up a networked printer</title>
+  <p>Your home or office network may include a printer. Many modern, inexpensive printers can be directly attached to your network. If you're in an office environment, your system administration staff should be able to provide details about the available network printers.</p>
 
+  <comment>
+    <cite date="2011-03-20" href="mailto:gnome-docs-list@gnome.org">GNOME Documentation Project</cite>
+    <p>Let's assume that the printer is shared out correctly in a way that makes it discoverable (via mDNS/avahi) and that it's providing CUPS/IPP service over port 631. These capabilities are typical in most modern printers that have cross-platform support.</p>
+    <p>Perhaps setting up a printer in that way should be covered elsewhere, but the capability doesn't currently exist in the GNOME 3 Printers tool.</p>
+  </comment>
+
+  <p>Depending on how you installed GNOME, you may need to set your system's firewall to permit connections to the network printer.</p>
+
+  <steps>
+    <item>
+      <p>To locate your system's firewall tool, open the Overview, and type "firewall".</p>
+      <note>
+	<p>If this step doesn't locate the appropriate tool, consult the documentation for your overall operating system for the correct application name. To open the application, hit <keyseq type="combo"><key>Alt</key><key>F2</key></keyseq>, type that name, and hit <key>Enter</key>.</p>
+      </note>
+    </item>
+    <item>
+      <p>In your system's firewall tool, check that the mDNS (5353/UDP) and IPP printing client (631/UDP) ports are open or enabled.</p>
+    </item>
+    <item>
+      <p>Save or apply the changes.</p>
+    </item>
+  </steps>
+
+  <p>To make sure the new printer is available to your GNOME system, visit the Printers tool.</p>
+
+  <steps>
+    <item>
+      <p>Select your user name in the upper right-hand corner of the screen. Then choose "System Settings" to open the control panel.</p>
+    </item>
+    <item>
+      <p>Select the Printers tool from the control panel.</p>
+    </item>
+    <item>
+      <p>If the printer is correctly broadcasting, it will appear in the list. You can now <link xref="printing-setup-default-printer.page">make it your default printer</link> if desired. You may be able to perform other tasks depending on how your system is administered.</p>
+    </item>
+  </steps>
 
 </page>
