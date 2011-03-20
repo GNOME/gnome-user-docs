@@ -25,10 +25,10 @@ DOC_PAGES = \
 	a11y-screen-reader.page \
 	a11y-slowkeys.page \
 	a11y-stickykeys.page \
+	backup-checkpage \
 	backup-frequency.page \
 	backup-how.page \
 	backup-restore.page \
-	backup-testing.page \
 	backup-thinkabout.page \
 	backup-what.page \
 	backup-where.page \
