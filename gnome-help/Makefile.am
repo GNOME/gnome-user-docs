@@ -70,12 +70,12 @@ DOC_PAGES = \
 	look.page \
 	look-resolution.page \
 	media.page \
-	mouse-behavior.page \
 	mouse-disabletouchpad.page \
 	mouse-drag-threshold.page \
 	mouse-lefthanded.page \
 	mouse-mousekeys.page \
 	mouse-middleclick.page \
+	mouse-prefs.page \
 	mouse-problem-doubleclick.page \
 	mouse-problem-notmoving.page \
 	mouse-problems.page \
