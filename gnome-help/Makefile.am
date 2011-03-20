@@ -5,6 +5,7 @@ DOC_ID = gnome-help
 DOC_LINGUAS = es gl sv
 
 DOC_FIGURES = \
+	figures/gnome.png \
 	figures/highlight-color.png \
 	figures/icon-themes.png \
 	figures/Screenshot-SearchForFiles.png \
