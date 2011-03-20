@@ -147,6 +147,8 @@ DOC_PAGES = \
 	shell-windows-switching.page \
 	shell-windows-workspaces-add.page \
 	shell-windows-workspaces.page \
+	tips.page \
+	tips-specialchars.page \
 	user-accounts.page \
 	user-addguest.page \
 	user-add.page \
