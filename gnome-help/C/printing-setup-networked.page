@@ -32,24 +32,18 @@
     <p>Perhaps installing a printer in that way on GNOME should be covered elsewhere, but the capability doesn't currently exist in the GNOME 3 Printers tool, meaning it would need to be covered by distros.</p>
   </comment>
 
-  <p>Depending on how you installed GNOME, you may need to set your system's firewall to permit connections to the network printer.</p>
+  <p>Depending on how you installed GNOME, you may need to <link xref="net-firewall-on-off">set your system's firewall</link> to permit connections to the network printer. The ports you should enable in the firewall are:</p>
 
-  <steps>
+  <list>
     <item>
-      <p>To locate your system's firewall tool, open the Overview, and type "firewall".</p>
-      <note>
-	<p>If this step doesn't locate the appropriate tool, consult the documentation for your overall operating system for the correct application name. To open the application, hit <keyseq type="combo"><key>Alt</key><key>F2</key></keyseq>, type that name, and hit <key>Enter</key>.</p>
-      </note>
+      <p>UDP port 5353, which allows your system to communicate with other systems to find printers</p>
     </item>
     <item>
-      <p>In your system's firewall tool, check that the mDNS (5353/UDP) and IPP printing client (631/UDP) ports are open or enabled.</p>
+      <p>UDP port 631, which allows your system to send print jobs to printers</p>
     </item>
-    <item>
-      <p>Save or apply the changes.</p>
-    </item>
-  </steps>
+  </list>
 
-  <p>To make sure the new printer is available to your GNOME system, visit the Printers tool.</p>
+  <p>To make sure the new printer is available to your GNOME system, use the Printers tool.</p>
 
   <steps>
     <item>
