@@ -16,12 +16,7 @@
         <name>Phil Bull</name>
         <email>philbull@gmail.com</email>
     </credit>
-    <copyright>
-        <year>2009</year>
-        <name>GNOME Documentation Project</name>
-    </copyright>
-    <license>Creative Commons Share Alike 3.0</license>
-    <!-- <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/> -->
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 </info>
 
 <title>Touchpad</title>
@@ -72,7 +67,7 @@ To enable or disable the touchpad:
     </item>
     </steps>
 </note>
-<comment>
+<!--
 <section id="disable-touchpad">
     <title>Disable the touchpad when a mouse is plugged-in</title>
 
@@ -81,12 +76,12 @@ To enable or disable the touchpad:
     disabled when a mouse is plugged in.
     </p>
     <code>
-    gconftool --set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool True
-    gconftool --set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool False
+    gconftool -FIXME-set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool True
+    gconftool -FIXME-set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool False
     ENV{ID_CLASS}="mouse", ACTION=="add", RUN+="synclient touchpadoff=1"
     ENV{ID_CLASS}="mouse", ACTION=="remove", RUN+="synclient touchpadoff=0"
     </code>
 </section>
-</comment>
+-->
 
 </page>

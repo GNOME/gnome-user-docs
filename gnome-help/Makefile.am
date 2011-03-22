@@ -5,11 +5,23 @@ DOC_ID = gnome-help
 DOC_LINGUAS = es gl sv
 
 DOC_FIGURES = \
+	figures/deja-dup.png \
 	figures/gnome.png \
+	figures/gnome-searchtool.png \
+	figures/help-browser.png \
 	figures/highlight-color.png \
 	figures/icon-themes.png \
+	figures/printing-select.png \
+	figures/Screenshot-SearchForFiles-options.png \
 	figures/Screenshot-SearchForFiles.png \
-	figures/Screenshot-SearchForFiles-options.png
+	figures/shell-apps-open.png \
+	figures/shell-exit.png \
+	figures/shell-files.png \
+	figures/shell.png \
+	figures/shell-terminology.png \
+	figures/shell-windows.png \
+	figures/universal-access-menu.png \
+	figures/yelp-icon-big.png
 
 DOC_INCLUDES = legal.xml
 
@@ -19,6 +31,7 @@ DOC_PAGES = \
 	a11y-contrast.page \
 	a11y-dwellclick.page \
 	a11y-font-size.page \
+	a11y-icon.page \
 	a11y-locate-pointer.page \
 	a11y-mag.page \
 	a11y.page \
@@ -26,7 +39,7 @@ DOC_PAGES = \
 	a11y-screen-reader.page \
 	a11y-slowkeys.page \
 	a11y-stickykeys.page \
-	backup-checkpage \
+	backup-check.page \
 	backup-frequency.page \
 	backup-how.page \
 	backup-restore.page \
@@ -34,9 +47,19 @@ DOC_PAGES = \
 	backup-what.page \
 	backup-where.page \
 	backup-why.page \
+	bluetooth-connect-device.page \
+	bluetooth-problem-connecting.page \
+	bluetooth-remove-connection.page \
+	bluetooth-send-file.page \
+	bluetooth-turn-on-off.page \
 	clock-calendar.page \
 	clock-set.page \
 	clock-timezone.page \
+	disk-benchmark.page \
+	disk-capacity.page \
+	disk-check.page \
+	disk-format.page \
+	disk-partitions.page \
 	fallback-mode.page \
 	files-arrange.page \
 	files-copy.page \
@@ -64,18 +87,20 @@ DOC_PAGES = \
 	hardware-problems-scanning.page \
 	index.page \
 	keyboard-cursor-blink.page \
+	keyboard-inputmethods.page \
+	keyboard-layouts.page \
 	keyboard-repeat-keys.page \
 	look-background.page \
 	look-dimscreen.page \
 	look-fonts-smoothing.page \
-	look.page \
 	look-resolution.page \
 	media.page \
+	more-help.page \
 	mouse-disabletouchpad.page \
 	mouse-drag-threshold.page \
 	mouse-lefthanded.page \
-	mouse-mousekeys.page \
 	mouse-middleclick.page \
+	mouse-mousekeys.page \
 	mouse-prefs.page \
 	mouse-problem-doubleclick.page \
 	mouse-problem-notmoving.page \
@@ -84,9 +109,34 @@ DOC_PAGES = \
 	mouse-sensitivity.page \
 	mouse-sound.page \
 	mouse-wakeup.page \
+	net-adhoc.page \
+	net-editcon.page \
+	net-findip.page \
+	net-fixed-ip-address.page \
+	net-macaddress.page \
+	net-manual.page \
+	net-mobile.page \
+	net-nonm.page \
+	net-no-wireless-connection.page \
+	net-othersconnect.page \
+	net-otherscontrol.page \
 	net.page \
+	net-passwordok-noconnect.page \
+	net-proxy.page \
+	net-slow.page \
+	net-tethering.page \
+	net-vpn-connect.page \
+	net-what-is-ip-address.page \
+	net-wired-connect.page \
+	net-wireless-airplane.page \
+	net-wireless-connect.page \
+	net-wireless-disconnecting.page \
+	net-wireless-find.page \
+	net-wireless-hidden.page \
+	net-wireless-troubleshooting.page \
+	net-wireless-wepwpa.page \
+	net-wrongnetwork.page \
 	open-file-manager.page \
-	passwords.page \
 	power-batterybroken.page \
 	power-batterycapacity.page \
 	power-batteryestimate.page \
@@ -102,20 +152,25 @@ DOC_PAGES = \
 	power-nowireless.page \
 	power-othercountry.page \
 	power.page \
-	power-spindown.page \
 	power-suspendfail.page \
 	power-suspendhibernate.page \
 	power-turnoffbutton.page \
 	power-whydim.page \
 	power-willnotturnon.page \
 	prefs.page \
+	printing-2sided.page \
+	printing-booklet.page \
+	printing-cancel-job.page \
+	printing-differentsize.page \
+	printing-envelopes.page \
+	printing-order.page \
+	printing-paperjam.page \
+	printing-select.page \
 	printing-setup-default-printer.page \
 	printing-setup-drivers.page \
 	printing-setup-networked.page \
 	printing-setup.page \
-	printing-setup-paper-jam.page \
 	printing-setup-wireless.page \
-	scanning.page \
 	screen-shot-record.page \
 	search-commandline.page \
 	search-delete.page \
@@ -125,18 +180,16 @@ DOC_PAGES = \
 	search.page \
 	search-save.page \
 	search-settings.page \
-	session-authmethods.page \
+	session-fingerprint.page \
 	session-language.page \
 	session-loginsound.page \
 	session-netlogin.page \
-	session.page \
 	session-screenlocks.page \
-	session-suspend.page \
+	session-smartcard.page \
 	shell-apps-favorites.page \
 	shell-apps-forcequit.page \
 	shell-apps-open.page \
 	shell-exit.page \
-	shell-files.page \
 	shell-messages.page \
 	shell-overview.page \
 	shell-session-status.page \
@@ -146,8 +199,13 @@ DOC_PAGES = \
 	shell-windows.page \
 	shell-windows-states.page \
 	shell-windows-switching.page \
-	shell-windows-workspaces-add.page \
-	shell-windows-workspaces.page \
+	shell-workspaces-movewindow.page \
+	shell-workspaces.page \
+	shell-workspaces-switch.page \
+	sound-alert.page \
+	sound-usemic.page \
+	sound-usespeakers.page \
+	sound-volume.page \
 	tips.page \
 	tips-specialchars.page \
 	user-accounts.page \
@@ -155,9 +213,7 @@ DOC_PAGES = \
 	user-add.page \
 	user-admin-change.page \
 	user-admin-explain.page \
-	user-admin-privdescriptions.page \
 	user-admin-problems.page \
-	user-admin-restrictothers.page \
 	user-changepassword.page \
 	user-changepicture.page \
 	user-delete.page \
