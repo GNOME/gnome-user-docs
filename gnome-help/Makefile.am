@@ -71,6 +71,7 @@ DOC_PAGES = \
 	files.page \
 	files-preview-music.page \
 	files-recover.page \
+	files-removedrive.page \
 	files-renaming.page \
 	files-search.page \
 	files-sharing.page \
