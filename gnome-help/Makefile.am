@@ -176,7 +176,6 @@ DOC_PAGES = \
 	printing-setup.page \
 	printing-setup-wireless.page \
 	screen-shot-record.page \
-	search-commandline.page \
 	search-delete.page \
 	search-intro.page \
 	search-open.page \
