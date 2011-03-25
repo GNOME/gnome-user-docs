@@ -61,7 +61,6 @@ DOC_PAGES = \
 	disk-format.page \
 	disk-partitions.page \
 	fallback-mode.page \
-	files-arrange.page \
 	files-copy.page \
 	files-delete.page \
 	files-hidden.page \
