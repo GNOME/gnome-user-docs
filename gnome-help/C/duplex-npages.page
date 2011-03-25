@@ -1,0 +1,65 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="duplex-npage">
+
+  <info>
+    <link type="guide" xref="printing-booklet"/>
+
+    <desc></desc>
+
+    <revision pkgversion="3.0" version="0.1" date="2010-10-28" status="review"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Duplex printer</title>
+
+<note><p>These instruction are for printing a booklet from a PDF document.  If you want to print a booklet from a <app>LibreOffice</app> document, first export it to a PDF. Make sure the document has a multiple of 4 pages.  You may need to add up to 3 blank pages.</p></note>
+
+
+<p>To print:</p>
+<steps>
+ <item><p>
+   Click <guiseq><gui>File</gui><gui>Print</gui></guiseq>.
+  </p></item>
+ <item>
+  <p> Choose the <gui>General</gui> tab. Under <em>Range</em>, choose <gui>Pages</gui>.</p>
+  </item>
+   <item><p> Type the numbers of the pages in this order (n is the total number of pages, and a multiple of 4):</p>
+ <p>n, 1, 2, n-1, n-2, 3, 4, n-3, n-4, 5, 6, n-5, n-6, 7, 8, n-7, n-8, 9, 10, n-9, n-10, 11, 12, n-11...</p><p>...until you have typed all the page numbers.</p>
+     
+    <note><p>Examples:</p>
+     <p>4 page booklet: Type <input>4,1,2,5</input></p>
+     <p>8 page booklet: Type <input>8,1,2,7,6,3,4,5</input></p>
+     <p>12 page booklet: Type <input>12,1,2,11,10,3,4,9,8,5,6,7</input></p>
+     <p>16  page booklet: Type <input>16,1,2,15,14,3,4,13,12,5,6,11,10,7,8,9</input></p>
+     <p>20  page booklet: Type <input>20,1,2,19,18,3,4,17,16,5,6,15,14,7,8,13,12,9,10,11</input></p>
+     </note>
+    </item>
+ <item>
+  <p>
+   Choose the <gui>Page Setup</gui> tab.
+  </p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-side</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
+  <p>
+   In the <gui>Pages per side</gui> option, select <gui>2</gui>.
+  </p>
+  <p>
+   In the <gui>Page ordering</gui> menu, select <gui>Left to right</gui>.
+  </p>
+ </item>
+ <item>
+  <p>
+   Click <gui>Print</gui>.
+  </p>
+ </item>
+</steps>
+</page>
