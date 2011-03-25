@@ -110,6 +110,11 @@ DOC_PAGES = \
 	mouse-sensitivity.page \
 	mouse-sound.page \
 	mouse-wakeup.page \
+	nautilus-behavior.page \
+	nautilus-display.page \
+	nautilus-list.page \
+	nautilus-preview.page \
+	nautilus-views.page \
 	net-adhoc.page \
 	net-editcon.page \
 	net-findip.page \
