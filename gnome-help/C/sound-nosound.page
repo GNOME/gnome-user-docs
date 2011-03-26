@@ -3,11 +3,11 @@
       id="sound-nosound">
 
   <info>
-    <link type="guide" xref="media#sound"/>
+    <link type="guide" xref="sound-broken"/>
     
-    <desc>XXXXX</desc>
+    <desc>Check that it's not muted, that cables are plugged in properly, and that the sound card is detected.</desc>
     
-    <revision pkgversion="3.0" version="0.1" date="2011-03-25" status="stub"/>
+    <revision pkgversion="3.0" version="0.1" date="2011-03-26" status="review"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -16,10 +16,70 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-<title>The sound is broken on my computer!</title>
+<title>I can't hear any sounds on the computer</title>
 
-<comment>
- <p>Explain different problems that can happen with sound: no sound is heard, the sound is too quiet, there is crackling or distortion in the sound. Link to topics which help fix these problems.</p>
-</comment>
-	
+<p>If you can't hear any sounds on your computer, for example when you try to play some music, try these troubleshooting steps to see if you can fix the problem.</p>
+
+<section id="mute">
+ <title>Make sure that the sound is not muted</title>
+ <p>Click the sound icon on the top panel (it looks like a speaker) and make sure that the sound is not muted or turned right down.</p>
+ <p>Some laptops have mute switches or keys on their keyboards - try pressing that key to see if it unmutes the sound.</p>
+ <p>You should also check that you haven't muted the application that you're using to play sound (e.g. your music player or movie player). The application may have a mute or volume button in its main window, so check that. Also, click the sound icon on the top panel and choose <gui>Sound Preferences</gui>. When the <gui>Sound</gui> window appears, go to the <gui>Applications</gui> tab and check that your application is not muted on there.</p>
+</section>
+
+<section id="speakers">
+ <title>Check that the speakers are turned on and connected properly</title>
+ <p>If your computer has external speakers, make sure that they are turned on and that the volume is turned up. Make sure that the speaker cable is securely plugged into the "output" audio socket on the back of the computer. This socket is usually light green in color.</p>
+ 
+ <p>Some sound cards are able to switch which socket they use for output (to the speakers) and input (from a microphone, for instance). The output socket may be different when running Linux than on Windows or Mac OS. Try connecting the speaker cable to the different audio sockets on the computer in turn to see if that works.</p>
+ 
+ <p>A final thing to check is that the audio cable is securely plugged into the back of the speakers. Some speakers have more than one input too.</p>
+</section>
+
+<section id="device">
+ <title>Check that the right sound device is selected</title>
+ <p>Some computers have multiple "sound devices" installed. Some of these are capable of outputting sound and some are not, so you should check that you have the correct one selected. This might involve some trial-and-error to choose the right one.</p>
+ <steps>
+  <item>
+   <p>Click the sound icon on the top panel and select <gui>Sound Preferences</gui>.</p>
+  </item>
+  <item>
+   <p>In the <gui>Sound</gui> window that appears, go to the <gui>Hardware</gui> tab. Make a note of which device and which profile are selected (so you can return to the default selections if changing them doesn't work).</p>
+  </item>
+  <item>
+   <p>For the selected device, try changing the profile - play a sound after you change the profile to see if it works. You might need to go through the list and try each profile.</p>
+  </item>
+  <item>
+   <p>If that doesn't work, you might want to try doing the same for any other devices that are listed.</p>
+  </item>
+  <item>
+   <p>Try changing the <gui>Connector</gui> option in the <gui>Output</gui> tab too.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="hardware-detected">
+ <title>Check that the sound card was detected properly</title>
+ <p>Your sound card may not have been detected properly. If this has happened, your computer will think that it isn't able to play sound. A possible reason for the card not being detected properly is that the drivers for the card are not installed.</p>
+ <steps>
+  <item>
+   <p>Go to the <gui>Activities</gui> overview and open a Terminal.</p>
+  </item>
+  <item>
+   <p>Type <cmnd>aplay -l</cmnd> and press <key>Enter</key>.</p>
+  </item>
+  <item>
+   <p>A list of devices will be shown. If there are no <gui>playback hardware devices</gui>, your sound card has not been detected.</p>
+  </item>
+ </steps>
+ 
+ <p>If your sound card is not detected, you may need to manually install the drivers for it. How you do this will depend on the card you have.</p>
+ 
+ <p>You can see what sound card you have by using the <cmnd>lspci</cmnd> command in the Terminal. You may have to run <cmnd>lspci</cmnd> as <link xref="user-admin-explain">superuser</link>; either type <cmnd>sudo lspci</cmnd> and type your password, or type <cmnd>su</cmnd>, enter the <em>root</em> (administrative) password, then type <cmnd>lspci</cmnd>. See if an <em>audio controller</em> or <em>audio device</em> is listed - it should have the sound card's make and model number. <cmnd>lspci -v</cmnd> will show a list with more detailed information.</p>
+  
+ <p>You may be able to find and install drivers for your card. It's best to ask on support forums (or otherwise) for your Linux distribution for instructions.</p>
+ 
+ <p>If you can't get drivers for your sound card, you might prefer to buy a new sound card. You can get sound cards that can be installe dinside the computer and external USB sound cards.</p>
+</section>
+
 </page>
