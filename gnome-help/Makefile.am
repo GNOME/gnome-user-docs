@@ -64,7 +64,6 @@ DOC_PAGES = \
 	files-copy.page \
 	files-delete.page \
 	files-hidden.page \
-	files-listview-columns.page \
 	files-open.page \
 	files.page \
 	files-preview-music.page \
