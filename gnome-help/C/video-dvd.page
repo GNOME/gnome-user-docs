@@ -5,9 +5,9 @@
   <info>
     <link type="guide" xref="media#videos"/>
     
-    <desc>XXXXX</desc>
+    <desc>You might not have the right codecs installed, or the DVD might be the wrong region.</desc>
     
-    <revision pkgversion="3.0" version="0.1" date="2011-03-25" status="stub"/>
+    <revision pkgversion="3.0" version="0.1" date="2011-03-26" status="review"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -18,8 +18,21 @@
 
 <title>Why won't DVDs play?</title>
 
-<comment>
- <p>Explain that you may need extra codecs, plus deCSS. This might be illegal to use in some countries, though. You can buy a codec from Fluendo.</p>
-</comment>
+<p>If you insert a DVD into your computer and it won't play, you may not have the right DVD "codecs" installed, or the DVD might be from a different "region".</p>
+
+<section id="codecs">
+ <title>Installing the right codecs for DVD playback</title>
+ <p>In order to play DVDs, you need to have the right <em>codecs</em> installed. A codec is some software that allows applications to read a video or audio format. If you try to play a DVD and don't have the right codecs installed, the Movie Player should tell you about this and offer to install it for you. If it does not, you will have to install it manually - ask for help on how to do this using your Linux distribution's support forums or otherwise. The software packages you probably need are <app>gstreamer0.10-plugins-ugly</app> and <app>libdvd0</app>.</p>
+ <p>DVDs are also "copy-protected" using a system called CSS. This prevents you from copying DVDs, but it also prevents you from playing them unless you have some extra software to handle the copy protection.</p>
+ <p>You can install a program called <app>deCSS</app> to handle the copy protection. You will need to find specific installation instructions for your Linux distribution. Unfortunately, this cannot be used in some countries because the way it gets around the copy protection is illegal there.</p>
+ <p>You can buy a commercial DVD decoder that can handle copy protection from <link href="http://www.fluendo.com/shop/product/fluendo-dvd-player/">Fluendo</link>. It works with Linux and should be legal to use in all countries.</p>
+</section>
+
+<section id="region">
+ <title>Checking the DVD region</title>
+ <p>DVDs have a "region code", which tells you in which region of the world you are allowed to play the DVD. DVD players can only play DVDs from the same region as them. For example, if you have a region 1 DVD player, you will only be allowed to play DVDs from North Amercia.</p>
+ <p>If the region of your computer's DVD player and the DVD you are trying to play do not match, you won't be able to play the DVD. It is often possible to change the region used by your DVD player, but you can only do this a few times before it locks into one region permanently.</p>
+ <p>To change the DVD region of your computer's DVD player, use <link href="http://linvdr.org/projects/regionset/">regionset</link>.</p>
+</section>
 	
 </page>
