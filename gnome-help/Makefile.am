@@ -39,6 +39,7 @@ DOC_PAGES = \
 	a11y-screen-reader.page \
 	a11y-slowkeys.page \
 	a11y-stickykeys.page \
+	a11y-visualalert.page \
 	backup-check.page \
 	backup-frequency.page \
 	backup-how.page \
