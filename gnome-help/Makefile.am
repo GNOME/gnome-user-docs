@@ -111,6 +111,7 @@ DOC_PAGES = \
 	mouse-wakeup.page \
 	nautilus-behavior.page \
 	nautilus-display.page \
+	nautilus-file-properties-permissions.page \
 	nautilus-list.page \
 	nautilus-preview.page \
 	nautilus-views.page \
