@@ -111,6 +111,8 @@ DOC_PAGES = \
 	mouse-sound.page \
 	mouse-wakeup.page \
 	nautilus-behavior.page \
+	nautilus-bookmarks-edit.page \
+	nautilus-connect.page \
 	nautilus-display.page \
 	nautilus-file-properties-basic.page \
 	nautilus-file-properties-permissions.page \
