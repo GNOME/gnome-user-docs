@@ -73,6 +73,7 @@ DOC_PAGES = \
 	files-removedrive.page \
 	files-renaming.page \
 	files-search.page \
+	files-select.page \
 	files-sharing.page \
 	files-sort.page \
 	files-special.page \
