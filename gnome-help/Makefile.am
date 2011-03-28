@@ -86,7 +86,6 @@ DOC_PAGES = \
 	hardware-problems-bluetooth.page \
 	hardware-problems-crashes.page \
 	hardware-problems-graphics.page \
-	hardware-problems-printing.page \
 	hardware-problems-scanning.page \
 	index.page \
 	keyboard-cursor-blink.page \
