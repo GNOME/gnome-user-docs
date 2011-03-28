@@ -1,6 +1,6 @@
 SUBDIRS = gnome-help
 
-EXTRA_DIST = COPYING-DOCS gnome-doc-utils.make
+EXTRA_DIST = gnome-doc-utils.make
 
 DISTCLEANFILES = gnome-doc-utils.make
 
