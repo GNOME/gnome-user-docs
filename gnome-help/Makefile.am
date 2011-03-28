@@ -65,6 +65,7 @@ DOC_PAGES = \
 	disk-format.page \
 	disk-partitions.page \
 	fallback-mode.page \
+	files-browse.page \
 	files-copy.page \
 	files-delete.page \
 	files-hidden.page \
@@ -73,10 +74,10 @@ DOC_PAGES = \
 	files-preview-music.page \
 	files-recover.page \
 	files-removedrive.page \
-	files-renaming.page \
+	files-rename.page \
 	files-search.page \
 	files-select.page \
-	files-sharing.page \
+	files-share.page \
 	files-sort.page \
 	files-special.page \
 	files-tilde.page \
@@ -147,7 +148,6 @@ DOC_PAGES = \
 	net-wireless-troubleshooting.page \
 	net-wireless-wepwpa.page \
 	net-wrongnetwork.page \
-	open-file-manager.page \
 	power-batterybroken.page \
 	power-batterycapacity.page \
 	power-batteryestimate.page \
