@@ -2,7 +2,7 @@ include $(top_srcdir)/gnome-doc-utils.make
 
 DOC_ID = gnome-help
 
-DOC_LINGUAS = es gl sv
+DOC_LINGUAS = de es gl sv
 
 DOC_FIGURES = \
 	figures/deja-dup.png \
