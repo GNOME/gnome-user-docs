@@ -7,16 +7,93 @@
     <desc>View and edit files on another computer over FTP, SSH, Windows
     shares, or WebDAV.</desc>
 
-    <revision pkgversion="3.0" date="2011-03-27" status="stub"/>
+    <revision pkgversion="3.0" date="2011-03-28" status="incomplete"/>
     <credit type="author">
-      <name>...</name>
-      <email>...</email>
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
     </credit>
     <license>
       <p>Creative Commons Share Alike 3.0</p>
     </license>
-
   </info>
 
 <title>Browse files on a server or network share</title>
+
+<p>You can connect to a server or network share to browse and
+view files on that server, exactly as if they were on your
+local machine or removable device. This is a convenient way
+to download or upload files, or to share files with users on
+your local network.</p>
+
+<steps>
+  <title>Connect to a file server</title>
+  <item><p>From the <gui>Activities</gui> overview, open the application
+  <app>Files</app>. This will bring up the file manager in your home
+  folder.</p></item>
+  <item><p>Click <guiseq><gui>File</gui><gui>Connect to Server</gui></guiseq>.</p></item>
+  <item><p>Enter the server address, select the type of server,
+  and enter any additional information as required.
+  Then click <gui>Connect</gui>.</p></item>
+  <item><p>A new window will open showing you the files on the server.
+  Browse the files and folders just as you would for local files and
+  folders.</p></item>
+</steps>
+
+<p>Connecting to a server will also add that server to the sidebar
+so you can access it quickly in the future. If you do not see the
+sidebar in the file manager, click <guiseq><gui>View</gui>
+<gui>Sidebar</gui><gui>Show Sidebar</gui></guiseq>.</p>
+
+<p>You can connect to different types of servers. Some servers
+are public, and allow anybody to connect. Other servers require
+you to log in with a user name and password. You may not have
+permissions to perform certain actions on files on a server.
+For example, on public FTP sites, you will probably not be
+able to delete files.</p>
+
+<terms>
+<title>Types of servers</title>
+<item>
+  <title>SSH</title>
+  <p>If you have a <em>secure shell</em> account on a server, you
+  can connect using this method. Many web hosts provide SSH accounts
+  to members so they can securely upload files. SSH servers always
+  require you to log in. If you use a secure shell key to log in,
+  leave the password field blank.</p>
+  <comment><cite>shaunm</cite><p>We should have a topics on encryption
+  keys, possibly rolling the seahorse help into gnome-help. Then link
+  from here.</p></comment>
+  <p>When using SSH, all the data you send (including your password)
+  is encrypted so that other users on your network can't sniff it.</p>
+</item>
+<item>
+  <title>FTP (with login)</title>
+  <p>FTP is a popular protocol for exchanging files on the Internet.
+  Because data is not encrypted over FTP, many servers now provide
+  access through SSH. Some servers, however, still allow or require
+  you to use FTP to upload or download files. FTP sites with logins
+  will usually allow you to delete and upload files.</p>
+</item>
+<item>
+  <title>Public FTP</title>
+  <p>Sites that allow you to download files will sometimes provide
+  public or anonymouse FTP access. These servers do not require a
+  user name and password, and will usually not allow you to delete
+  or upload files.</p>
+  <note><p>Some anonymous FTP sites require you to log in with a
+  public user name and password, or with a public user name using
+  your email address as the password. For these servers, use the
+  <gui>FTP (with login)</gui> method, and use the credentials
+  specified by the FTP site.</p></note>
+</item>
+<item>
+  <title>Windows share</title>
+  <p>XXXXX</p>
+</item>
+<item>
+  <title>WebDAV and Secure WebDAV</title>
+  <p>XXXXX</p>
+</item>
+</terms>
+
 </page>
