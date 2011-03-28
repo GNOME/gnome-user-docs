@@ -11,6 +11,7 @@ DOC_FIGURES = \
 	figures/help-browser.png \
 	figures/highlight-color.png \
 	figures/icon-themes.png \
+	figures/nautilus.png \
 	figures/printing-select.png \
 	figures/Screenshot-SearchForFiles-options.png \
 	figures/Screenshot-SearchForFiles.png \
