@@ -20,6 +20,7 @@ DOC_FIGURES = \
 	figures/shell.png \
 	figures/shell-terminology.png \
 	figures/shell-windows.png \
+	figures/system-run.png \
 	figures/universal-access-menu.png \
 	figures/yelp-icon-big.png
 
