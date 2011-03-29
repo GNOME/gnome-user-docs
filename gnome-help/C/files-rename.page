@@ -5,127 +5,74 @@
   <info>
     <link type="guide" xref="files"/>
     <desc>Change file or folder name.</desc>
-    <revision pkgversion="3.0" version="0.1" date="2011-01-08" status="review"/>
+    <revision pkgversion="3.0" date="2011-03-29" status="candidate"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
     </credit>
 
   </info>
 
   <title>Rename a file or folder</title>
-  <comment>
-   <cite date="2010-06-29" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
-   <p>Explain basic procedure of renaming file</p>
-   <p>Mention shortcut keys and faster ways of doing it</p>
-   <p>New section: Mention valid characters, which is basically everything except /, though there are more restrictions if the file is on e.g. a fat32 filesystem.</p>
-   <p>Common problems when renaming files (i.e. error messages, how to solve problems). Probably a new section for each problem.</p>
-  </comment>
 
-  <section id="file-manager">
-    <title>Using the the <app>File Manager</app></title>
-      <steps>
-       <item><p>Right-click on the file or folder icon. A menu will pop-up.</p></item>
-       <item><p>Left-click on the <gui>Rename</gui> option in the menu.  The name of the file or folder will become highlighted.</p></item>
-       <item><p>Type the new name of the file or folder.</p></item>
-       <item><p>Press <key>Enter</key>.</p></item>
-      </steps>
- <p>Alternately, you can use the <link xref="nautilus-file-properties-basic#rename">file properties</link>.</p>
-      <note>
-        <p>
-          In the case of files, only the name of the file is highlighted, not the file extention.  This is because in general, you will not need to change the extention of a file.
-        </p>
-        <p>However, in the event that it is necessary to change the extention of a file, you can follow the same steps, and when the name of the file is highlighted, hightlight the file extention with your mouse. Now, type the new file extention and press <key>Enter</key>.
-        </p>
-      </note>
-  </section>
+  <steps>
+    <item><p>Right-click on a file or folder and select <gui>Rename</gui>.
+    Or select the file and press <key>F2</key>.</p></item>
+    <item><p>Type the new name and press <key>Enter</key>.</p></item>
+  </steps>
 
-  <section id="shortcuts">
-    <title>Shortcuts</title>
-      <steps>
-        <item><p>Left-click on the file or folder icon. This selects the file.</p></item>
-        <item><p>Press the <key>F2</key> key. This selects the file or folder name.</p></item>
-        <item><p>Type the new name of the file or folder.</p></item>
-        <item><p>Press <key>Enter</key>.</p></item>
-      </steps>
-  </section>
+  <p>You can also rename a file from the
+  <link xref="nautilus-file-properties-basic#rename">properties</link> window.</p>
+
+  <p>When you rename a file, only the base name of the file is selected, not the file
+  extention. You usually do not need to change the extention of a file, so selecting
+  the base name makes it easier to just type a new name. If you need to change the
+  extension as well, select it with your mouse, or press <keyseq><key>Ctrl</key>
+  <key>A</key></keyseq> to select the entire file name.</p>
 
   <section id="valid-chars">
     <title>Valid characters for file names</title>
-    <p>
-      On your system, the <key>/</key> (slash character) is invalid for names of files and folders.
-      All other characters can be used.
-    </p>
+    <p>You can use any character except the <key>/</key> (slash) character in file names.
+    Some devices, however, use a <em>file system</em> that has more restrictions on file
+    names. For example, USB flash drives are often formatted with the <em>FAT32</em> file
+    system. On these devices, or if you intend to share files with people who use another
+    operating system, you should avoid the following characters:
+    <key>|</key>, <key>\</key>, <key>?</key>, <key>*</key>, <key>&lt;</key>, <key>"</key>,
+    <key>:</key>, <key>&gt;</key>, <key>/</key>.</p>
 
     <note style="warning">
-    <p>
-      If you name a file with a <key> . </key> as the first character, the file will be hidden.  Generally, avoid the  <key> . </key> as the first character in a file name.
-    </p>
-     <p>
-       Some characters in file and folder names may not be valid in Windows and Mac OSX.  Therefore, if you think a file
-       may need to be read on these systems (like in the event you e-mail it to someone using Windows or Mac), the following characters may cause problems and should be avoided in naming files and folders:
-       <key> | </key>, <key> \ </key>, <key> ? </key>, <key> * </key>, <key> &lt; </key>, <key> " </key>, <key> : </key>, <key> &gt; </key>, <key> / </key>.
-     </p>
-     </note>
-
+    <p> If you name a file with a <key>.</key> as the first character, the file will be
+    <link xref="files-hidden">hidden</link>.</p>
+    </note>
   </section>
 
   <section id="common-probs">
     <title>Common problems</title>
-      <section id="no-rename">
-       <title>The item could not be renamed</title>
-       <section id="name-in-use"><title>The name is already used</title>
-      <p>
-        You can't have two files with the same name in the same folder.  Also, you can not have a subfolder with the same name as a file in the same folder. Therefore, if you try to rename a file to a name that already exists in the folder you are working in, the <app>File Manager</app> will not allow it.  Use a different name.
-      </p>
-        <note>
-          <p>
-            File and folder names are case sensitive.
-          </p>
-        <p>
-          Example:
-          File.txt and file.txt are different names.  This is allowed.
-        </p>
-       </note>
-       </section>
-       <section id="too-long">
-         <title>File name too long</title>
-         <p>
-           File names can have no more than 255 characters in their names.  Use a shorter name.
-         </p>
-       </section>
-      </section>
-
-
-      <section id="grayed">
-       <title>The option to rename is grayed out</title>
-        <p>
-         You do not have permission to rename the file.  Generally, if you do not have
-         the correct permissions to rename a file, you should not be renaming the file.
-        </p>
-      </section>
+    <terms>
+      <item>
+        <title>The name is already used</title>
+        <p>You can't have two files or folders with the same name in the same folder.
+        If you try to rename a file to a name that already exists in the folder you
+        are working in, the file manager will not allow it.  Use a different name.</p>
+        <p>File and folder names are case sensitive. For example, <file>File.txt</file>
+        and <file>file.txt</file> are different names.  This is allowed, though it's
+        not always a good idea.</p>
+      </item>
+      <item>
+        <title>File name too long</title>
+        <p>On some file systems, file names can have no more than 255 characters in their names.  Use a shorter name.</p>
+      </item>
+      <item>
+        <title>The option to rename is grayed out</title>
+        <p>If <gui>Rename</gui> is grayed out, you do not have permission to rename
+        the file.  Generally, if you do not have the correct permissions to rename
+        a file, you should not be renaming it.
+        See <link xref="nautilus-file-properties-permissions"/>.</p>
+      </item>
+    </terms>
   </section>
-
-  <section id="command-line">
-    <title>Using the command line</title>
-     <steps>
-       <item>
-       <p>
-        <cmd>cd</cmd> into the folder where the file or subfolder you wish to rename is located.
-       </p>
-       </item>
-       
-       <item>
-       <p>
-        At the shell prompt type: <cmd>mv -i current_filename new_filename</cmd>
-       </p>
-         <note style="important">
-           <p>
-             If you omit the <cmd> -i</cmd>, you may overwrite a file if you try to rename the file to a name that already exists in the folder.  The -i option will ask you if you are sure that you want to overwrite the existing file.  If you overwrite an existing file, there is no way you can get the original back, so be sure to use the<cmd> -i </cmd> option.
-          </p>
-         </note>
-       </item>
-     </steps>
-  </section>
-
 </page>
