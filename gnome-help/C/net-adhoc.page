@@ -3,31 +3,75 @@
       id="net-adhoc">
   <info>
     <link type="guide" xref="net#wireless"/>
-    <revision pkgversion="3.0" date="2011-03-20" status="stub"/>
+    <revision pkgversion="3.0" date="2011-03-29" status="review"/>
 
-    <credit type="author copyright">
-      <name>Shaun McCance</name>
-      <email>shaunm@gnome.org</email>
-      <years>2011</years>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
     </credit>
 
-    <desc>XXXXX use the term ad-hoc in the desc</desc>
+    <desc>You can connect computers together by forming an <em>ad-hoc</em> wireless network.</desc>
   </info>
 
-  <title>Connect directly to another computer</title>
+<title>Connect directly to another computer with a wireless connection</title>
 
-  <comment>
-    <cite date="2011-03-20" href="mailto:shaunm@gnome.org">Shaun McCance</cite>
-    <p>This assumes the reader knows how to.... By the end of this page,
-    the reader will be able to....</p>
-  </comment>
+<p>You can connect computers together by forming an <em>ad-hoc</em> wireless network. This is useful if one of the computers has a printer connected to it that you want to share, or if you want to transfer files between them, for example. With a normal (<em>infrastructure</em>) wireless network, you would connect both computers to a wireless network provided by wireless base station or router. If you don't have a base station, however, an ad-hoc network will still allow you to connect the computers to each other.</p>
 
-  <p>Short introductory text...</p>
+<p>To set-up an ad-hoc wireless network:</p>
+<steps>
+ <item>
+  <p>On one of the computers, click the network icon on the top bar and select <gui>Edit Connections</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Go to the <gui>Wireless</gui> tab and click <gui>Add</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>In the window that appears, choose a name for the wireless network and then look at the <gui>Wireless</gui> tab.</p>
+ </item>
+ 
+ <item>
+  <p>Choose an <gui>SSID</gui>. This is the name of the network that other people will be able to see.</p>
+ </item>
+ 
+ <item>
+  <p>Change the <gui>Mode</gui> to <gui>Ad-hoc</gui> and leave the other settings at their defaults. Click <gui>Save</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>On the other computer, click the network icon on the top bar and look for a network with the SSID you chose. It might take a minute or two to appear in the list.</p>
+  <p>Click it to connect to the ad-hoc network. You will be able to access network shares and so on, like you would if both computers were connected to a conventional wireless network.</p>
+ </item>
+</steps>
 
-  <steps>
-    <item><p>First step...</p></item>
-    <item><p>Second step...</p></item>
-    <item><p>Third step...</p></item>
-  </steps>
+<p>These instructions will be different if one of the computers is not running Linux. You may find it easiest to set-up the ad-hoc network on the Linux computer and connect to it using the other computer.</p>
+
+<p>Also note that some wireless network cards do not support ad-hoc networking, so you will not be able to use them to create an ad-hoc network.</p>
+
+<section id="security">
+ <title>Securing an ad-hoc network</title>
+ <p>Anyone in the area will be able to connect to your ad-hoc network, so it's not very secure. You can add a <link xref="net-wireless-wepwpa">WEP/WPA password</link> to the network to protect it from unauthorized access.</p>
+ 
+ <p>To add a password:</p>
+ 
+ <steps>
+  <item>
+   <p>Click the network icon on the top bar and click <gui>Edit Connections</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Go to the <gui>Wireless</gui> tab, select the ad-hoc wireless network and click <gui>Edit</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Go to the <gui>Wireless Security</gui> tab and change the <gui>Security</gui> from <gui>None</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Choose your own password and then click <gui>Save</gui>. The other computers connected to the ad-hoc connection will have to reconnect and you'll have to enter the password on each of them.</p>
+  </item>
+ </steps>
+</section>
 
 </page>
