@@ -15,12 +15,17 @@ DOC_FIGURES = \
 	figures/printing-select.png \
 	figures/Screenshot-SearchForFiles-options.png \
 	figures/Screenshot-SearchForFiles.png \
+	figures/shell-activities.png \
 	figures/shell-apps-open.png \
+	figures/shell-appts.png \
+	figures/shell-dash.png \
 	figures/shell-exit.png \
 	figures/shell-files.png \
-	figures/shell.png \
-	figures/shell-terminology.png \
+	figures/shell-introduction.png \
+	figures/shell-top-bar.png \
 	figures/shell-windows.png \
+	figures/shell-workspaces.png \
+	figures/shell.png \
 	figures/system-run.png \
 	figures/universal-access-menu.png \
 	figures/yelp-icon-big.png
@@ -200,6 +205,7 @@ DOC_PAGES = \
 	shell-apps-forcequit.page \
 	shell-apps-open.page \
 	shell-exit.page \
+	shell-introduction.page \
 	shell-messages.page \
 	shell-overview.page \
 	shell-session-status.page \
