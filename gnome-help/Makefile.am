@@ -84,7 +84,6 @@ DOC_PAGES = \
 	files-select.page \
 	files-share.page \
 	files-sort.page \
-	files-special.page \
 	files-tilde.page \
 	get-involved.page \
 	hardware-driver.page \
