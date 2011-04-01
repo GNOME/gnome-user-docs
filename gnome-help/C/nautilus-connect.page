@@ -7,7 +7,7 @@
     <desc>View and edit files on another computer over FTP, SSH, Windows
     shares, or WebDAV.</desc>
 
-    <revision pkgversion="3.0" date="2011-03-28" status="incomplete"/>
+    <revision pkgversion="3.0" date="2011-04-01" status="candidate"/>
     <credit type="author">
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
@@ -25,15 +25,29 @@ local machine or removable device. This is a convenient way
 to download or upload files, or to share files with users on
 your local network.</p>
 
+<p>To browse files over the network, open the <app>Files</app>
+application from the <gui>Activities</gui> overview.</p>
+
+<p>Click <gui>Browse Network</gui> in the sidebar, or select
+<gui>Network</gui> from the <gui>Go</gui> menu. The file manager
+will find any computers on your local area network that advertise
+their ability to serve files. If you want to connect to a server
+on the internet, or if you do not see the computer you're looking
+for, you can manually connect to a server.</p>
+
 <steps>
   <title>Connect to a file server</title>
-  <item><p>From the <gui>Activities</gui> overview, open the application
-  <app>Files</app>. This will bring up the file manager in your home
-  folder.</p></item>
-  <item><p>Click <guiseq><gui>File</gui><gui>Connect to Server</gui></guiseq>.</p></item>
-  <item><p>Enter the server address, select the type of server,
-  and enter any additional information as required.
-  Then click <gui>Connect</gui>.</p></item>
+  <item><p>In the file manager, click <guiseq><gui>File</gui>
+  <gui>Connect to Server</gui></guiseq>.</p></item>
+  <item><p>Enter the server address, select the type of server, and enter
+  any additional information as required. Then click <gui>Connect</gui>.
+  Details on server types are listed below.</p>
+  <p>For servers on the internet, you can usually use the domain name.
+  For computers on your local area network, however, you may have to
+  use the computer's numeric IP address. If the other computer is
+  running GNOME, see <link xref="net-findip"/> to find that computer's
+  internal IP address. Otherwise, check the help on that computer.</p>
+  </item>
   <item><p>A new window will open showing you the files on the server.
   Browse the files and folders just as you would for local files and
   folders.</p></item>
@@ -88,11 +102,26 @@ able to delete files.</p>
 </item>
 <item>
   <title>Windows share</title>
-  <p>XXXXX</p>
+  <p>Windows computers use a proprietary protocol to share files over a local
+  area network. Computers on a Windows network are sometimes grouped into
+  <em>domains</em> for organization and to better control access. If you have
+  the right permissions on the remote computer, you can connect to a Windows
+  share from the file manager.</p>
 </item>
 <item>
   <title>WebDAV and Secure WebDAV</title>
-  <p>XXXXX</p>
+  <p>Based on the HTTP protocol used on the web, WebDAV is sometimes used to
+  share files on a local network and to store files on the internet. If the
+  server you're connecting to supports secure connections, you should choose
+  this option. Secure WebDAV uses strong SSL encryption, so your password
+  and data can't be sniffed.</p>
+  <comment>
+    <cite date="2011-04-01">shaunm</cite>
+    <p>Also used by gnome-user-share, but we're not talking about that
+    in gnome-help for 3.0. Hopefully it will be better integrated in 3.2,
+    and we can discuss it better in the help. If that happens, link from
+    here.</p>
+  </comment>
 </item>
 </terms>
 
