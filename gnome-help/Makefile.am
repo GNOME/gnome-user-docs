@@ -8,9 +8,6 @@ DOC_FIGURES = \
 	figures/deja-dup.png \
 	figures/gnome.png \
 	figures/gnome-searchtool.png \
-	figures/help-browser.png \
-	figures/highlight-color.png \
-	figures/icon-themes.png \
 	figures/nautilus.png \
 	figures/printing-select.png \
 	figures/Screenshot-SearchForFiles-options.png \
