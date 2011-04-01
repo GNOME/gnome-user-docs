@@ -3,31 +3,41 @@
       id="net-otherscontrol">
   <info>
     <link type="guide" xref="net#problems"/>
-    <revision pkgversion="3.0" date="2011-03-20" status="stub"/>
+    <revision pkgversion="3.0" date="2011-04-01" status="review"/>
 
-    <credit type="author copyright">
-      <name>Shaun McCance</name>
-      <email>shaunm@gnome.org</email>
-      <years>2011</years>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
     </credit>
 
-    <desc></desc>
+    <desc>You need to uncheck the <gui>Available to all users</gui> option in the connection settings.</desc>
   </info>
 
-  <title>Other users can't control the network connections</title>
+<title>Other users can't control the network connections</title>
 
-  <comment>
-    <cite date="2011-03-20" href="mailto:shaunm@gnome.org">Shaun McCance</cite>
-    <p>This assumes the reader knows how to.... By the end of this page,
-    the reader will be able to....</p>
-  </comment>
+<p>If you can edit a network connection but other users on your computer can't, you may have set the connection to be <gui>available to all users</gui>. This makes it so that everyone on the computer can <em>connect</em> using that connection, but only users <link xref="user-admin-explain">with administrative rights</link> are allowed to change its settings.</p>
 
-  <p>Short introductory text...</p>
+<p>The reason for this is that, since everyone is affected if the settings are changed, only highly-trusted (admin) users should be allowed to modify the connection.</p>
 
-  <steps>
-    <item><p>First step...</p></item>
-    <item><p>Second step...</p></item>
-    <item><p>Third step...</p></item>
-  </steps>
+<p>If other users really need to be able to change the connection themselves, make it so the connection is <em>not</em> available to everyone on the computer. This way, everyone will be able to manage their own connection settings rather than relying on one set of shared, system-wide settings for the connection.</p>
+
+<steps>
+ <title>Make it so that the connection isn't shared any more</title>
+ <item>
+  <p>Click the network icon on the top bar and click <gui>Edit Connections</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Find the connection you want everyone to be able to manage/edit themselves. Click to select it and then click <gui>Edit</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>You will have to enter your admin password to change the connection. Only admin users can do this.</p>
+ </item>
+ 
+ <item>
+  <p>Uncheck <gui>Available to all users</gui> and click <gui>Save</gui>. Other users of the computer will now be able to manage the connection themselves.</p>
+ </item>
+</steps>
 
 </page>
