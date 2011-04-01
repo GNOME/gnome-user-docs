@@ -3,31 +3,137 @@
       id="net-editcon">
   <info>
     <link type="guide" xref="net"/>
-    <revision pkgversion="3.0" date="2011-03-20" status="stub"/>
+    <revision pkgversion="3.0" date="2011-04-01" status="review"/>
 
     <credit type="author copyright">
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
       <years>2011</years>
     </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
 
-    <desc></desc>
+    <desc>Learn what the options on the wireless connection editing screen mean.</desc>
   </info>
 
-  <title>Editing a wireless connection</title>
+<title>Edit a wireless connection</title>
 
-  <comment>
-    <cite date="2011-03-20" href="mailto:shaunm@gnome.org">Shaun McCance</cite>
-    <p>This assumes the reader knows how to.... By the end of this page,
-    the reader will be able to....</p>
-  </comment>
+<comment>
+ <p>This topic needs significant revision to be comprehensive. A number of settings remain undocumented.</p>
+</comment>
 
-  <p>Short introductory text...</p>
+<p>This topic describes all of the options that are available when you click to <gui>Edit</gui> a wireless network connection in the <gui>Network Connections</gui> window (click the network icon on the top bar and click <gui>Edit Connections</gui> to get to the <gui>Network Connections</gui> window).</p>
 
-  <steps>
-    <item><p>First step...</p></item>
-    <item><p>Second step...</p></item>
-    <item><p>Third step...</p></item>
-  </steps>
+<note>
+ <p>Most networks will work fine if you leave these settings at their defaults, so you probably don't need to change any of them. Many of the options here are provided to give you greater control over more advanced networks.</p>
+</note>
+
+<section id="available">
+ <title>Available to all users / Connect automatically</title>
+ <terms>
+  <item>
+   <title><gui>Connect automatically</gui></title>
+   <p>Check this option if you would like the computer to try to connect to this wireless network whenever it is in range.</p>
+   <p>If several networks which are set to connect automatically are in range, the computer will connect to the first one shown in the <gui>Wireless</gui> tab in the <gui>Network Connections</gui> window. It won't disconnect from one available network to connect to a different one that has just come in range.</p>
+  </item>
+  
+  <item>
+   <title><gui>Available to all users</gui></title>
+   <p>Check this if you would like all of the users on the computer to have access to this wireless network. If the network has a <link xref="net-wireless-wepwpa">WEP/WPA password</link> and you have checked this option, you will only need to enter the password once. All of the other users on your computer will be able to connect to the network without having to know the password themselves.</p>
+   <p>If this is checked, you need to be an <link xref="user-admin-explain">administrator</link> to change any of the settings for this network. You may be asked to enter your admin password.</p>
+  </item>
+ </terms>
+</section>
+
+<section id="wireless">
+ <title>Wireless</title>
+ <terms>
+  <item>
+   <title><gui>SSID</gui></title>
+   <p>This is the name of the wireless network you are connecting to, otherwise known as the <em>Service Set Identifier</em>. Don't change this unless you have changed the name of the wireless network (for example, by changing the settings of your wireless router or base station).</p>
+  </item>
+  
+  <item>
+   <title><gui>Mode</gui></title>
+   <p>Use this to specify whether you are connecting to an <gui>Infrastructure</gui> network (one where computers wirelessly connect to a central base station or router) or an <gui>Ad-hoc</gui> network (where there is no base station, and the computers in the network connect to one another). Most networks are inffrastructure ones; you may wish to <link xref="net-adhoc">set-up your own ad-hoc network</link> though.</p>
+   <p>If you choose <gui>Ad-hoc</gui>, you will see two other options, <gui>Band</gui> and <gui>Channel</gui>. These determine which wireless frequency band the ad-hoc wireless network will operate on. Some computers are only able to work on certain bands (for example, only <gui>A</gui> or only <gui>B/G</gui>), so you might want to pick a band that all of the computers in the ad-hoc network can use. In busy places, there might be several wireless networks sharing the same channel; this might slow-down your connection, so you can change which channel you are using too.</p>
+  </item>
+  
+  <item>
+   <title><gui>BSSID</gui></title>
+   <p>This is the <em>Basic Service Set Identifier</em>. The SSID (see above) is the name of the network which humans are intended to read; the BSSID is a name which the computer understands (it's a string of letters and numbers that's supposed to be unique to the wireless network). If a <link xref="net-wireless-hidden">network is hidden</link>, it will not have an SSID but it will have a BSSID.</p>
+  </item>
+  
+  <item>
+   <title><gui>Device MAC address</gui></title>
+   <p>A <link xref="net-macaddress">MAC address</link> is a code which identifies a piece of network hardware (for example, a wireless card, an Ethernet network card or a router). Every device that you can connect to a network has a unique MAC address which was given to it in the factory.</p>
+   <p>This option can be used to change the MAC address of your network card.</p>
+  </item>
+  
+  <item>
+   <title><gui>Cloned MAC address</gui></title>
+   <p>Your network hardware (wireless card) can pretend to have a different MAC address. This is useful if you have a device or service which will only communicate with a certain MAC address (for example, a cable broadband modem). If you put that MAC address into the <gui>cloned MAC address</gui> box, the device/service will think that your computer has the cloned MAC address rather than its real one.</p>
+  </item>
+  
+  <item>
+   <title><gui>MTU</gui></title>
+   <p>This setting changes the <em>Maximum Transmission Unit</em>, which is the maximum size of a chunk of data that can be sent over the network. When files are sent over a network, data is broken up into small chunks (or packets). The optimal MTU for your network will depend on how likely it is for packets to be lost (due to a noisy connection) and how fast the connection is.</p>
+  </item>
+  
+ </terms>
+</section>
+
+<section id="security">
+ <title>Wireless Security</title>
+ <terms>
+  <item>
+   <title><gui>Security</gui></title>
+   <p>This defines what sort of <em>encryption</em> your wireless network uses. Encrypted connections help protect your wireless connection from being intercepted, so other people can't "listen in" and see what websites you're visiting and so on.</p>
+   <p>Some types of encryption are stronger than others, but may not be supported by older wireless networking equipment. You'll normally need to type a password for the connection; more sophisticated types of security may also require a username and a digital "certificate". See <link xref="net-wireless-wepwpa" /> for more information on popular types of wireless encryption.</p>
+  </item>
+ </terms>
+</section>
+
+<section id="ipv4">
+ <title>Available to all users / Connect automatically</title>
+ 
+ <p>Use this tab to define information like the IP address of your computer and which DNS servers it should use. Change the <gui>Method</gui> to see different ways of getting/setting that information.</p>
+ <p>The following methods are available:</p>
+ <terms>
+  <item>
+   <title><gui>Automatic (DHCP)</gui></title>
+   <p>Get information like the IP address and DNS server to use from a <em>DHCP server</em>. A DHCP server is a computer (or other device, like a router) connected to the network which decides which settings your computer should have - when you first connect to the network, you will automatically be assigned the correct settings. Most networks use DHCP.</p>
+  </item>
+  
+  <item>
+   <title><gui>Automatic (DHCP) addresses only</gui></title>
+   <p>If you choose this setting, your computer will get its IP address from a DHCP server, but you will have to manually define other details (like which DNS server to use).</p>
+  </item>
+  
+  <item>
+   <title><gui>Manual</gui></title>
+   <p>Choose this option if you would like to define all of the network settings yourself, including which IP address the computer should use.</p>
+  </item>
+  
+  <item>
+   <title><gui>Link-Local Only</gui></title>
+   <p><em>Link-Local</em> is a way of connecting computers together on a network without requiring a DHCP server or manually defining IP addresses and other information. If you connect to a Link-Local network, the computers on the network will decide amongst themselves which IP addresses to use and so on. This is useful if you want to temporarily connect a few computers together so they communicate amongst themselves.</p>
+  </item>
+  
+  <item>
+   <title><gui>Disabled</gui></title>
+   <p>This option will disable the network connection and prevent you from connecting to it. Note that <gui>IPv4</gui> and <gui>IPv6</gui> are treated as separate connections even though they are for the same network card. If you have one enabled, you may wish to set the other to disabled.</p>
+  </item>
+  
+ </terms>
+</section>
+
+<section id="ipv6">
+ <title>Available to all users / Connect automatically</title>
+ <p>This is similar to the <gui>IPv4</gui> tab except it deals with the newer IPv6 standard. Very modern networks use IPv6, but IPv4 is still more popular at the moment.</p>
+</section>
 
 </page>
