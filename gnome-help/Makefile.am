@@ -9,6 +9,7 @@ DOC_FIGURES = \
 	figures/gnome.png \
 	figures/gnome-searchtool.png \
 	figures/nautilus.png \
+	figures/nautilus-icons.png \
 	figures/printing-select.png \
 	figures/Screenshot-SearchForFiles-options.png \
 	figures/Screenshot-SearchForFiles.png \
@@ -120,6 +121,7 @@ DOC_PAGES = \
 	nautilus-file-properties-basic.page \
 	nautilus-file-properties-permissions.page \
 	nautilus-list.page \
+	nautilus-prefs.page \
 	nautilus-preview.page \
 	nautilus-views.page \
 	net-adhoc.page \
