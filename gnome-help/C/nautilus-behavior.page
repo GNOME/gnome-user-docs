@@ -5,12 +5,17 @@
   <info>
     <link type="guide" xref="nautilus-prefs" group="nautilus-behavior"/>
 
-    <desc>XXXXX</desc>
+    <desc>Single-click to open files, run or view executable
+    text files, and specify trash behavior.</desc>
 
-    <revision pkgversion="3.0" version="0.1" date="2011-03-25" status="review"/>
+    <revision pkgversion="3.0" date="2011-04-02" status="candidate"/>
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
     </credit>
     <license>
       <p>Creative Commons Share Alike 3.0</p>
@@ -18,37 +23,47 @@
 
   </info>
 
-<title>File manager behavior</title>
-<p>To specify your file manager behavior preferences, click <guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq>, and select the <gui>Behavior</gui> tab.</p>
+<title>File manager behavior preferences</title>
+<p>You can control whether you single-click or double-click files, whether
+folders are opened in new windows, how executable text files are handled,
+and the trash behavior. In any file manager window, click
+<guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq> and select the
+<gui>Behavior</gui> tab.</p>
 
 <section id="behavior">
 <title>Behavior</title>
-<p>You can select one of the following default behaviors to open files and folders.</p>
 <terms>
  <item>
   <title>Single click to open items</title>
-  <p>This behavior will underline the item when you point to it.  One click will open the file or folder you point to.</p>
- </item>
- <item>
   <title>Double click to open items</title>
-  <p>This behavior requires a <link xref="mouse-problem-doubleclick">double click</link> to open the file or folder you click on.</p>
+  <p>By default, clicking a selects files and double-clicking opens them.
+  You can instead choose to have files and folders open when you click on
+  them once. When you use single-click mode, you can hold down the
+  <key>Ctrl</key> key while clicking to select one or more files.</p>
  </item>
  <item>
   <title>Open each folder in its own window</title>
-  <p>If this option is left unchecked, folders will open in the same window you are in, replacing the view of the outer folder contents, with the view of the contents of the selected folder.</p>
-<p>Checking this option will open the selected folder in a new window, allowing you to view both the contents of the outer folder and the selected folder in separate windows.</p>
+  <p>When you open a folder in the file manager, it will normally open in
+  the same window. You can right-click a folder and select <gui>Open in
+  New Window</gui> to open any single folder in a new window. If you often
+  do this, select this option if you would rather have each folder open
+  in its own window by default.</p>
  </item>
 </terms>
 
 </section>
 <section id="executable">
-<title><gui>Executable Text Files</gui></title>
- <p>An executable text file is a file that contains a program that you can run (execute).  The <link xref="nautilus-file-properties-permissions#execute">file permissions</link> must also allow for the file to run as a program.  The most common are Shell, Python and Perl scripts.  These have extensions .sh, .py and .pl respectively.</p>
+<title>Executable text files</title>
+ <p>An executable text file is a file that contains a program that you can run (execute).  The <link xref="nautilus-file-properties-permissions#execute">file permissions</link> must also allow for the file to run as a program.  The most common are Shell, Python, and Perl scripts.  These have extensions .sh, .py, and .pl respectively.</p>
  <p>You can select to <gui>Run executable text files when they are opened</gui>, <gui>View executable text files when they are opened</gui> or <gui>Ask each time</gui>. If the last option is selected, a dialog box will appear asking if you wish to run or view the selected text file.</p>
 
 
 </section>
 <section id="trash">
+<info>
+<link type="seealso" xref="files-delete"/>
+<title type="link">File manager trash preferences</title>
+</info>
 <title>Trash</title>
 
 <terms>
