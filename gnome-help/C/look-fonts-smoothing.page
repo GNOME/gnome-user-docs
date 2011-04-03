@@ -1,24 +1,55 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic" 
       style="problem"
-      id="look-fonts-smoothing">
+      id="look-display-fuzzy">
 
   <info>
    <link type="guide" xref="hardware-problems-graphics"/>
-   <desc>Why and how to solve it.</desc>	
-   <revision pkgversion="3.0" version="0.1" date="2011-03-19" status="review"/>
+   <desc>The screen resolution may be set incorrectly.</desc>	
+   <revision pkgversion="3.0" date="2011-04-03" status="candidate"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
     </credit>
     <credit type="author">
       <name>Natalia Ruz Leiva</name>
-      <email>nruz@alumnos.inf.utfsm.cl </email>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
     </credit>
   </info>
 
-<title>Why does text look fuzzy/pixelated on my screen?</title>
-<p>This can happen because of the display resolution that you have set it is not the right one for your screen.</p>
-<p>To solve this, go to <gui>System Settings</gui> and in the Hardware section, choose <gui>Displays</gui>. You should try with the options shown in the <gui>Resolution</gui> drop-down menu and set the one that makes text looks better.</p>
+<title>Why do things look fuzzy/pixelated on my screen?</title>
+
+<p>This can happen because the display resolution that you have set it is not the right one for your screen.</p>
+
+<p>To solve this, click your name on the top bar and go to <gui>System Settings</gui>. In the Hardware section, choose <gui>Displays</gui>. Try some of the <gui>Resolution</gui> options and set the one that makes the screen look better.</p>
+
+<section id="multihead">
+ <title>When multiple displays are connected</title>
+ 
+ <p>If you have two displays connected to the computer (for example, a normal monitor and a projector), the displays might have different resolutions. However, the computer's graphics card can only display the screen in one resolution at a time, so at least one of the displays might look fuzzy.</p>
+ 
+ <p>You can set it so that the two displays have different resolutions, but you won't be able to display the same thing on both screens simultaneously. In effect, you will have two independent screens connected at the same time. You can move windows from one screen to another, but you can't show the same window on both screens at once.</p>
+ 
+ <p>To set-up the displays so that they each have their own resolution:</p>
+ 
+ <steps>
+  <item>
+   <p>Click your name on the top bar and click <gui>System Settings</gui>. Open <gui>Displays</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Uncheck <gui>Mirror Displays</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Select each display in turn from the gray box at the top of the <gui>Displays</gui> window. Change the <gui>Resolution</gui> until that display looks right.</p>
+  </item>
+ </steps>
+ 
+</section>
 
 </page>
