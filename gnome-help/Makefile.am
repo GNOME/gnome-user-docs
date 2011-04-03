@@ -96,7 +96,7 @@ DOC_PAGES = \
 	keyboard-repeat-keys.page \
 	look-background.page \
 	look-dimscreen.page \
-	look-fonts-smoothing.page \
+	look-display-fuzzy.page \
 	look-resolution.page \
 	media.page \
 	more-help.page \
@@ -151,7 +151,6 @@ DOC_PAGES = \
 	net-wireless-wepwpa.page \
 	net-wrongnetwork.page \
 	power-batterybroken.page \
-	power-batterycapacity.page \
 	power-batteryestimate.page \
 	power-batterylife.page \
 	power-batteryoptimal.page \
@@ -194,7 +193,6 @@ DOC_PAGES = \
 	search-settings.page \
 	session-fingerprint.page \
 	session-language.page \
-	session-loginsound.page \
 	session-netlogin.page \
 	session-screenlocks.page \
 	session-smartcard.page \
