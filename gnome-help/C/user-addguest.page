@@ -5,14 +5,18 @@
   <info>
     <link type="guide" xref="user-accounts#manage"/>
     <desc>Allow guests to use your computer temporarily, without having to give them a password.</desc>
-    <revision pkgversion="3.0" version="0.1" date="2011-02-26" status="candidate"/>
-    <credit type="author">
+    <revision pkgversion="3.0" date="2011-04-03" status="candidate"/>
+    <credit type="maintainer">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
     </credit>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
     </credit>
     
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -22,35 +26,30 @@
 
 <p>You can create a user account for guests, people who will only use the computer on a brief, temporary basis. The guest user will be able to use the programs on your computer, but they won't be able to access your files, mess with your settings or install apps.</p>
 
-<!--Could conceivably do this by putting the guest user's home directory in /tmp:
-<p>Guests can save files, but those files will be deleted when they log out. Everything about a guest account is temporary.</p>
--->
-
-<p>To create a guest user account:</p>
-
 <steps>
- <item><p>
-      When in the <gui>Activities</gui> overview, <gui>Type to search</gui> 'users and groups'.  This will open the <app>Users Administration Tool</app>.   
-    </p></item>
-    <item><p>
-      Click on <gui>Add</gui>.  You will be prompted for your password.
-    </p></item>
-    <item><p>
-      In the <gui>Create a new user</gui> dialog, enter <input>guest</input> as the <gui>Name</gui>, and <input>guest</input> as the <gui>Username</gui>.  
-    </p></item>
- <item>
-  <p>When the <gui>Changing user password for guest</gui> window appears, enter a password, then check <gui>Don't ask for password on login</gui> and click <gui>OK</gui>.</p>
- </item>
- <item>
-  <p>You will be returned to the Users Settings window. Make sure that <gui>guest</gui> is selected from the list on the left side of the window, and check that the account type is set to <gui>Desktop user</gui>.</p>
-  <p>If it isn't, click the <gui>Change</gui> button to change the account type.</p>
- </item>
- <item>
-  <p>You can change what the guest user is allowed access to on the computer. Click <gui>Advanced Settings</gui> and use the <gui>User Privileges</gui> tab to do this.</p>
- </item>
- <item>
-  <p>When you've finished, close the Users Settings and try logging in to the guest user account.</p>
- </item>
+  <title>Create a guest user account:</title>
+
+  <item><p>Click your name in the top bar and select <gui>System Settings</gui>.</p></item>
+  <item><p>Click <gui>User Accounts</gui>.</p></item>
+  <item><p>Click <gui>Unlock</gui> in the bottom left corner and type your
+  password to make changes. You must be an administrative user to add user
+  accounts.</p></item>
+  <item><p>In the list of accounts on the left, click the <gui>+</gui> button
+  to add a new user account.</p></item>
+  <item><p>Select <gui>Standard</gui> for the account type. You don't want to
+  give the guest account administrative access. Then give the account a name
+  like <em>Guest</em>, or any other name you like. The username will be filled
+  in automatically based on the full name. The default is probably OK, but you
+  can change it if you like. Click <gui>Create</gui> when you're done.</p></item>
+  <item><p>The new guest user account will be selected. Under <gui>Login Options</gui>,
+  click the button label next to <gui>Password</gui>. You will be presented
+  with a window with password options. From the <gui>Action</gui> drop-down
+  list, select <gui>Log in without a password</gui>.</p></item>
 </steps>
+
+<p>If you like, you can click the image next to the guest user's name on
+the right to set an image for the account. This image will be shown in
+the login window. GNOME provides some stock photos you can use, or you
+can take a picture with your webcam.</p>
 
 </page>
