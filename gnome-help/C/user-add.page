@@ -3,93 +3,59 @@
       id="user-add">
 
   <info>
-    <link type="guide" xref="user-accounts#manage"/>
-    <desc>Add new user or group so that other people can log in to the computer.</desc>
-    <revision pkgversion="3.0" version="0.1" date="2011-01-20" status="candidate"/>
+    <link type="guide" xref="user-accounts#manage" group="#first"/>
+    <link type="seealso" xref="user-addguest"/>
+    <desc>Add new user so that other people can log in to the computer.</desc>
+    <revision pkgversion="3.0" date="2011-04-03" status="candidate"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
     </credit>
     
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
   <title>Add a new user account</title>
-  <steps>
-    <item><p>
-      When in the <gui>Activities</gui> overview, <gui>Type to search</gui> <input>users and groups</input>.  This will open the <app>Users Administration Tool</app>.   
-    </p></item>
-    <item><p>
-      Click on <gui>Add</gui>.  You will be prompted for your password.
-    </p></item>
-    <item><p>
-      In the <gui>Create a new user</gui> dialog, enter the new user's <gui>Name</gui>, and choose a <gui>Username</gui>.  Some options for usernames are offered in the <gui>Username</gui> dropdown menu.
-    </p><note><p>Usernames must consist of a combination of any of the following:</p>
-    <list>
-    <item><p>lower case letters from the English alphabet</p></item>
-    <item><p>digits</p></item>
-    <item><p>any of ".", "-" and "_"</p></item>
-    </list>
-    </note>
-    </item>
-    <item><p>Click <gui>Ok</gui>.</p></item>
-    
-    <item><p>Set the <link xref="user-goodpassword">New password</link> and <gui>Confirmation</gui> of password.  Passwords have to be a minimum of 5 characters in length.  Make sure the password confirmation matches the <gui>New password</gui>.  You have the option to <gui>Generate random password</gui>.
-    </p></item>
-    <item><p>
-      Click <gui>Ok</gui>.  The new user has been added to your computer.
-    </p></item>
-  </steps>
-  <note style= "tip">
-  <p>
-    This method will also allow you to create a guest account,  allowing you to let someone else use your computer without giving them access to any of your files.  Eventually, you may want to <link xref="user-delete">delete</link> a guest account.
-  </p>
-  <!--Could conceivably do this by putting the guest user's home directory in /tmp:
-<p>Guests can save files, but those files will be deleted when they log out. Everything about a guest account is temporary.</p>
--->
-  </note>
-  <comment>
-   <cite date="2010-10-31" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
-   <p>Explain how to add a new user account. Describe a basic method, then go into detail about more advanced options in later sections (e.g. choice between administrative user or normal, ways of setting the password etc.).</p>
-  </comment>
+
+  <p>You can add mutliple user account to your computer. Give one account
+  to each person in your household or company. Every user has their own
+  home folder, documents, and settings.</p>
+
+<steps>
+  <item><p>Click your name in the top bar and select <gui>System Settings</gui>.</p></item>
+  <item><p>Click <gui>User Accounts</gui>.</p></item>
+  <item><p>Click <gui>Unlock</gui> in the bottom left corner and type your
+  password to make changes. You must be an administrative user to add user
+  accounts.</p></item>
+  <item><p>In the list of accounts on the left, click the <gui>+</gui> button
+  to add a new user account.</p></item>
+  <item><p>If you want the new user to have administrative access to the computer,
+  select <gui>Administrator</gui> for the account type. Administrators can do things
+  like add and delete users, install software and drivers, and chang the date and
+  time.</p></item>
+  <item><p>Enter the new user's full name. The username wil be fill in automatically
+  based on the full name. The default is probably OK, but you can change it if you
+  like. Click <gui>Create</gui> when you're done.</p></item>
+  <item><p>The account is initially disabled, until you choose what to do about
+  the user's password. Under <gui>Login Options</gui> click the button label next
+  to <gui>Password</gui>. Use the <gui>Action</gui> drop-down list to set the
+  password now, allow the user to log in without a password, or have the user
+  set their password the first time they log in.</p>
+  <p>If you choose <gui>Set a password now</gui>, have the user type their password
+  in the <gui>New password</gui> and <gui>Confirm password</gui> fields. See
+  <link xref="user-goodpassword"/>. You can also click the button next to the
+  <gui>New password</gui> to select a randomly generated secure password. These
+  passwords are hard for others to guess, but they can be hard to remember, so
+  be careful.</p></item>
+</steps>
 	
+<p>If you like, you can click the image next to the guest user's name on
+the right to set an image for the account. This image will be shown in
+the login window. GNOME provides some stock photos you can use, or you
+can select your own or take a picture with your webcam.</p>
 
-  <section id="add">
-    <title>Add A Group</title>
-     
-     
-   <steps>  
-   <item><p>
-      When in the <gui>Activities</gui> overview, <gui>Type to search</gui> <input>users and groups</input>.  This will open the <app>Users Administration Tool</app>.   
-    </p></item>
-    <item><p>
-      Click on <gui>Manage Groups</gui>.
-    </p></item>
-    <item><p>
-     Click <gui>Add</gui>.  You will be prompted for your password to <gui>Authenticate</gui>.
-    </p>
-    </item>
-    <item><p>Click <gui>Ok</gui>.</p></item>
-    
-    <item><p> Click <gui>Add</gui>. 
-    </p></item>
-        <item><p> Enter <gui>Group Name</gui>.
-    </p>
-        <note>
-    <p>A valid group name consisting of a lower case letter followed by lower case letters and numbers.</p>
-    </note>
-    </item>
-        <item><p> Click <gui>Ok</gui>. 
-    </p>
-
-    </item>
-    <item><p>
-      <link xref="user-modify#add-user-to-group">Add users to the group</link>.
-    </p></item>
-  </steps>
-    
-  </section>
-  
-
-  
 </page>
