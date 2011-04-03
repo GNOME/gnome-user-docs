@@ -1,12 +1,13 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic"
-      style="task"
+      type="topic" style="task"
       id="power-whydim">
 
   <info>
     <link type="guide" xref="power#battery"/>
+    <link type="guide" xref="hardware-problems-graphics"/>
+    
     <desc>When your laptop is running on battery, the screen will dim when the computer is idle in order to save power.</desc>
-    <revision pkgversion="3.0" version="0.1" date="2011-03-19" status="review"/>
+    <revision pkgversion="3.0" date="2011-04-03" status="candidate"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -15,23 +16,19 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-  <title>Why does my screen go dim after a while?</title>
- <p>
-  When your laptop computer is running on battery, the screen will dim when the computer is idle in order to save power.
- </p>
-<p>
- You can adjust the dimming brightness, disable it, or change the amount of time before dimming by following these steps:</p>
+<title>Why does my screen go dim after a while?</title>
+
+<p>When your laptop computer is running on battery, the screen will dim when the computer is idle in order to save power. When you start using the computer again, the screen will brighten.</p>
+
+<p>You can stop the screen from dimming itself:</p>
 <steps>
-<item><p>Click <keyseq><key>Alt</key><key>F2</key></keyseq></p></item>
-<item><p>Type <input>gconf-editor</input>.  The <app>Gnome Configuration Editor</app> window opens.</p></item>
-<item><p>In the left panel click <guiseq><gui>/</gui><gui>apps</gui><gui>gnome-power-manager</gui><gui>backlight</gui></guiseq>.</p></item>
-<item><p>In the right panel, you can now adjust the <gui>brightness_dim_batter</gui>, <gui>idle_brightness</gui>, and <gui>idle_dim_time</gui> by clicking twice (not double-clicking) on the associated <gui>Value</gui>. This will allow you to change the value in the field. </p></item>
-<item><p>You can also choose to disable this feature by unchecking the box next to <gui>enable</gui>.</p></item>
+ <item>
+  <p>Click your name on the top bar and click <gui>System Settings</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Open <gui>Screen</gui> and uncheck <gui>Dim screen to save power</gui>.</p>
+ </item>
 </steps>
 
-  <comment>
-   <cite date="2010-06-29" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
-   <p>Explain that screen dimming is a power saving feature, normally when disconnected from AC power. Link to power-dim to explain how to control this behaviour.</p>
-  </comment>
-	
 </page>
