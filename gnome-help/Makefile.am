@@ -104,14 +104,14 @@ DOC_PAGES = \
 	more-help.page \
 	mouse.page \
 	mouse-disabletouchpad.page \
+	mouse-doubleclick.page \
 	mouse-drag-threshold.page \
 	mouse-lefthanded.page \
 	mouse-middleclick.page \
 	mouse-mousekeys.page \
-	mouse-problem-doubleclick.page \
 	mouse-problem-notmoving.page \
-	mouse-problems.page \
 	mouse-problem-themeerror.page \
+	mouse-problems.page \
 	mouse-sensitivity.page \
 	mouse-sound.page \
 	mouse-touchpad-scroll.page \
