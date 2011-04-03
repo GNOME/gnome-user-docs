@@ -6,81 +6,38 @@
     <link type="guide" xref="mouse"/>
     <link type="seealso" xref="mouse-mousekeys"/>
     
-    <desc>
-    Enable or disable the touchpad.
-    </desc>
+    <desc>Turn the touchpad off while typing to prevent accidental clicks.</desc>
     
-    <revision pkgversion="3.0" version="0.1" date="2011-02-04" status="candidate"/>
+    <revision pkgversion="3.0" date="2011-04-03" status="final"/>
     <credit type="author">
-        <name>Phil Bull</name>
-        <email>philbull@gmail.com</email>
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
     </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 </info>
 
-<title>Touchpad</title>
-<p>
-To enable or disable the touchpad:
-</p>
+<title>Disable touchpad while typing</title>
+
+<p>Touchpads on laptops are often located where you rest your wrist
+while typing, which can sometimes cause accidental clicks while you
+type. You can disable the touchpad while you type. It will only
+work again a short time after your last key stroke.</p>
 
 <steps>
- <item>
-  <p>
-  Press <keyseq><key>Alt</key><key>F2</key></keyseq>.  
-  </p>
- </item>
- <item><p>
- Type <input>gconf-editor</input> to bring up the <gui>Configuration Editor</gui> window.
- </p></item>
- <item><p>
-  Click <guiseq><gui>/</gui><gui>desktop</gui><gui>gnome</gui><gui>peripherals</gui><gui>touchpad</gui></guiseq>.
-  </p>
- </item>
- <item><p>
- Check/uncheck <gui>touchpad_enabled</gui>.
- </p></item>
- <item><p>
- Click <guiseq><gui>File</gui><gui>Quit</gui></guiseq>.
- </p></item>
+  <item><p>Click your name on the top bar and select <gui>System Settings</gui>.</p></item>
+  <item><p>Click <gui>Mouse and Touchpad</gui>.</p></item>
+  <item><p>On the <gui>Touchpad</gui> tab, select <gui>Disable
+  touchpad while typing</gui>.</p></item>
 </steps>
 
-<note style="important">
-    <p>
-    If the touchpad is your only pointing device and you accidentally disabled it, you can enable it again using just the keyboard:
-    </p>
-    <steps>
-    <item>
-    <p>
-    Press <keyseq><key>Alt</key><key>F2</key></keyseq>
-    </p>
-    </item>
-    <item>
-    <p>
-     Type <cmd>gconftool --set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool True</cmd> 
-     </p>
-     </item>
-     <item>
-     <p>
-    Press <key>Enter</key>.
-    </p>
-    </item>
-    </steps>
-</note>
-<!--
-<section id="disable-touchpad">
-    <title>Disable the touchpad when a mouse is plugged-in</title>
-
-    <p>
-    There is currently no simple way of having your touchpad automatically 
-    disabled when a mouse is plugged in.
-    </p>
-    <code>
-    gconftool -FIXME-set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool True
-    gconftool -FIXME-set /desktop/gnome/peripherals/mouse/touchpad_enabled -t bool False
-    ENV{ID_CLASS}="mouse", ACTION=="add", RUN+="synclient touchpadoff=1"
-    ENV{ID_CLASS}="mouse", ACTION=="remove", RUN+="synclient touchpadoff=0"
-    </code>
-</section>
--->
+<comment>
+  <cite date="2011-04-03">Shaun McCance</cite>
+  <p>I repurposed this page. It used to just be how to disable your
+  touchpad entirely. Phil had some instructions on how to do this
+  in gconf-editor, as well as how to trigger an auto-disable when
+  you plugged in your mouse. GConf instructions are outdated for
+  GNOME 3. We could resurrect and make current the old stuff, but
+  as maybe a tip or advanced topics. Check git history.</p>
+</comment>
 
 </page>

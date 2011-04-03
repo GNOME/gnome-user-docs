@@ -110,11 +110,8 @@ DOC_PAGES = \
 	mouse-middleclick.page \
 	mouse-mousekeys.page \
 	mouse-problem-notmoving.page \
-	mouse-problem-themeerror.page \
-	mouse-problems.page \
 	mouse-sensitivity.page \
-	mouse-sound.page \
-	mouse-touchpad-scroll.page \
+	mouse-touchpad-click.page \
 	mouse-wakeup.page \
 	nautilus-behavior.page \
 	nautilus-bookmarks-edit.page \
