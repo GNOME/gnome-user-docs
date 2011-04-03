@@ -58,6 +58,7 @@ DOC_PAGES = \
 	bluetooth-remove-connection.page \
 	bluetooth-send-file.page \
 	bluetooth-turn-on-off.page \
+	clock.page \
 	clock-calendar.page \
 	clock-set.page \
 	clock-timezone.page \
@@ -90,6 +91,7 @@ DOC_PAGES = \
 	hardware-problems-graphics.page \
 	hardware-problems-scanning.page \
 	index.page \
+	keyboard.page \
 	keyboard-cursor-blink.page \
 	keyboard-inputmethods.page \
 	keyboard-layouts.page \
@@ -100,18 +102,19 @@ DOC_PAGES = \
 	look-resolution.page \
 	media.page \
 	more-help.page \
+	mouse.page \
 	mouse-disabletouchpad.page \
 	mouse-drag-threshold.page \
 	mouse-lefthanded.page \
 	mouse-middleclick.page \
 	mouse-mousekeys.page \
-	mouse-prefs.page \
 	mouse-problem-doubleclick.page \
 	mouse-problem-notmoving.page \
 	mouse-problems.page \
 	mouse-problem-themeerror.page \
 	mouse-sensitivity.page \
 	mouse-sound.page \
+	mouse-touchpad-scroll.page \
 	mouse-wakeup.page \
 	nautilus-behavior.page \
 	nautilus-bookmarks-edit.page \
@@ -170,6 +173,8 @@ DOC_PAGES = \
 	power-whydim.page \
 	power-willnotturnon.page \
 	prefs.page \
+	prefs-language.page \
+	prefs-display.page \
 	printing-2sided.page \
 	printing-booklet.page \
 	printing-cancel-job.page \
