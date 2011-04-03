@@ -61,7 +61,6 @@ DOC_PAGES = \
 	clock-calendar.page \
 	clock-set.page \
 	clock-timezone.page \
-	default-zoom-level.page \
 	disk-benchmark.page \
 	disk-capacity.page \
 	disk-check.page \
