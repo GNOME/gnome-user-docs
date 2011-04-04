@@ -5,7 +5,6 @@ DOC_ID = gnome-help
 DOC_LINGUAS = de es gl sv
 
 DOC_FIGURES = \
-	figures/deja-dup.png \
 	figures/gnome.png \
 	figures/gnome-searchtool.png \
 	figures/nautilus.png \
