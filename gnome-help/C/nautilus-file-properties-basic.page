@@ -3,40 +3,67 @@
       id="nautilus-file-properties-basic">
 
   <info>
-    <link type="guide" xref="files#manage-prefs"/>
+    <link type="guide" xref="files" group="more"/>
 
-   <desc>Left click on the file, select <gui>Properties</gui>, select <gui>Basic</gui> tab.</desc>
+   <desc>View basic file information, set permissions, and choose
+   default applications.</desc>
 
-	<revision pkgversion="3.0" version="0.1" date="2011-03-29" status="review"/>
-    <credit type="author">
-      <name>Tiffany Antopolski</name>
-      <email>tiffany@antopolski.com</email>
-    </credit>
-    <license>
-      <p>Creative Commons Share Alike 3.0</p>
-    </license>
+   <revision pkgversion="3.0" date="2011-04-04" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany@antopolski.com</email>
+   </credit>
+   <credit type="author">
+     <name>Shaun McCance</name>
+     <email>shaunm@gnome.org</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
 
   </info>
-<title>Basic file properties</title>
-  <p>To view the file properties you can do one of the following:</p>
-  <list>
-   <item><p>Right click on the file, select <gui>Properties</gui>.</p></item>
-   <item><p>Open the file and click on <guiseq><gui>File</gui><gui>Properties</gui></guiseq>.</p></item>
-   <item><p>Select the file in the file manager by clicking on it once.  Then press <guiseq><gui>Alt</gui><gui>Enter</gui></guiseq>.</p></item>
-  </list>
-  <p>Select the <gui>Basic</gui> tab.</p>
+  <title>File properties</title>
 
-<section id="properties">
- <title><gui>Basic</gui> tab</title>
+  <p>You can view information about a file in the file properties dialog.
+  To view the properties for a file or folder, right-click it and select
+  <gui>Properties</gui>. You can also select the file and press
+  <guiseq><gui>Alt</gui><gui>Enter</gui></guiseq>.</p>
+
+  <p>The file properties dialog shows you information like the file type,
+  size, and modification time. If you need this information often, you
+  can have it displayed in <link xref="nautilus-list">list view columns</link>
+  or <link xref="nautilus-display#icon-captions">icon captions</link>.</p>
+
+  <p>The file properties dialog also allow you to
+  <link xref="nautilus-file-properties-permissions">set file permissions</link>
+  and <link xref="files-open">choose applications to open files</link>.</p>
+
+  <p>For certain types of files, such as images and videos, there will be
+  an extra tab that provides information like the dimensions, duration,
+  and codec.</p>
+
+  <comment>
+    <cite date="2011-04-04">shaunm</cite>
+    <p>This page is intentionally written to give you some overview of
+    the other tabs, because I happen to know that in 3.0 it's the target
+    of the Help button in the properties dialog, regardless of the tab
+    you're on.</p>
+  </comment>
+
  <terms>
+ <title>Basic properties</title>
   <item>
-    <title>Name</title>
-    <p>The name of the file is in the textbox.  You can <link xref="nautilus-file-properties-basic#rename">rename</link> your file or folder here.</p>
+    <title><gui>Name</gui></title>
+    <p>The name of the file. You can rename the file by changing this field.
+    You can also rename a file outside the properties window. See
+    <link xref="files-rename"/>.</p>
   </item>
-
   <item>
-    <title>Type</title>
-    <p>Here you will see the type of the item you are looking at.  It may be a folder, a Gzip archive, a PDF document, a plain text document, an OpenDocument Text, a Python Script, or one of many other types.</p>
+    <title><gui>Type</gui></title>
+    <p>The type of the file, such as PDF document, OpenDocument Text, or JPEG
+    image. The MIME type of the file is shown in parentheses. The file type
+    determines which applications can open the file, among other things. See
+    <link xref="files-open"/> for more information.</p>
   </item>
 
   <item>
@@ -46,57 +73,47 @@
 
   <item>
     <title>Size</title>
-    <p>This field is displayed if you are looking at an item other than a folder.  The size may be stated as bytes, KB, MB or GB.  In the case of the last three, the size in bytes will be stated in brackets.</p>
+    <p>This field is displayed if you are looking at an item other than a folder.  The size may be stated as bytes, KB, MB, or GB.  In the case of the last three, the size in bytes will be stated in parentheses.</p>
     <note>
-     <p>1 KB = 1 024 bytes</p>
-     <p>1 MB = 1 048 576 bytes</p>
-     <p>1 GB = 1 073 741 824 bytes</p>
+      <list style="compact">
+        <item><p>1 KB = 1 024 bytes</p></item>
+        <item><p>1 MB = 1 048 576 bytes</p></item>
+        <item><p>1 GB = 1 073 741 824 bytes</p></item>
+      </list>
     </note>
   </item>
 
   <item>
     <title>Location</title>
-    <p>This is the absolute path to your item.</p>
+    <p>The absolute path to your item.</p>
   </item>
 
   <item>
     <title>Volume</title>
-    <p>Displayed for all file types and folders.</p>
+    <p>The file system or device that the file is stored on. This shows you
+    the storage medium the file is on, such as a
+    <link xref="disk-partitions">disk partition</link> on your computer, an
+    external drive or optical disc, or a
+    <link xref="nautilus-connect">network share or file server</link>.</p>
   </item>
 
   <item>
     <title>Free Space</title>
-    <p>Only displayed for folders.</p>
+    <p>For folders, the amount of free space left for new files on the
+    containing volume.</p>
   </item>
 
 
   <item>
     <title>Accessed</title>
-    <p>Displayed for items other than folders.  This is the last date and time that the item was opened.</p>
+    <p>The date and time when the file was last opened.</p>
   </item>
-
-
 
   <item>
     <title>Modified</title>
-    <p>Displayed for items other than folders.  This is the last date and time that changes to the contents of the file were saved.</p>
+    <p>The date and time when the file was last changed and saved.</p>
   </item>
-
  </terms>
-
-
-
-</section>
-
-<section id="rename">
-<title>Renaming a File or Folder</title>
-<steps>
-  <item><p>Right click on the file or folder, and select <gui>Properties</gui>.</p></item>
-  <item><p>Click on the <gui>Basic</gui> tab.</p></item>
-  <item><p>Delete the current name of the item in the <gui>Name</gui> textbox, and enter the new name.</p></item>
-  <item><p>Click <gui>Close</gui> to exit the <gui>File Properties</gui>.</p></item>
-</steps>
-</section>
 
 
 </page>
