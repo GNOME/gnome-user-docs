@@ -7,10 +7,14 @@
     <link type="guide" xref="shell-overview#files"/>
     <desc>Open files using an application that isn't the default one for that type of file. You can change the default too.</desc>
 
-    <revision pkgversion="3.0" version="1.0" date="2011-03-29" status="final"/>
+    <revision pkgversion="3.0" date="2011-04-04" status="final"/>
     <credit type="author">
       <name>Cristopher Thomas</name>
       <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
     </credit>
     <license>
       <p>Creative Commons Share Alike 3.0</p>
@@ -20,26 +24,50 @@
 
 <title>Open files with other applications</title>
 
-<p>You can change the default application that is used to open files of a given type. This will allow you to open your preferred application when you double-click to open a file. For example, you might want your favorite music player to open when you double-click an MP3 file.</p>
+<p>When you double-click a file in the file manager, it will be opened with
+the default application for that file type. You can open it in a different
+application, search online for applications, or set the default application
+for all files of the same type.</p>
 
-<steps>
-  <item><p>Select a file of the type whose default application you want to change. For example, to change which application is used to open MP3s, select a <file>.mp3</file> file.</p></item>
-  <item><p>Click <guiseq><gui>File</gui><gui>Properties</gui></guiseq> and go to the <gui>Open With</gui> tab.</p></item>
-  <item><p>Select the application you want to make the default for your chosen file type and click <gui>Set as default</gui>.</p></item>
-</steps>
+<p>To open a file with an application other than the default, right-click
+the file and select the application you want from the top of the menu. If
+you don't see the application you want, click <gui>Open With Other
+Application</gui>. By default, the file manager only shows applications
+it knows can handle the file. To look through all the applications on
+your computer, click <gui>Show other applications</gui>.</p>
 
-<p>The <gui>Add</gui> button allows you to add other applications to the list of options. You can see a list of all of the applications that are installed on your computer by clicking <gui>Show other applications</gui>.</p>
+<p>If you still can't find the application you want, you can search for
+more applications by clicking <gui>Find applications online</gui>. The
+file manager will search online for packages containing applications
+that are known to handle files of that type.</p>
 
-<section id="not-default">
- <title>Open a file using a different application, but don't make it the default</title>
- <p>You can open a file using a different application without having to set that application as the default one. For example, if Rhythmbox is the default music player, you can open an audio file with another music player without changing the default. To do this:</p>
+<section id="default">
+  <title>Change the default application</title>
+  <p>You can change the default application that is used to open files of a
+  given type. This will allow you to open your preferred application when you
+  double-click to open a file. For example, you might want your favorite music
+  player to open when you double-click an MP3 file.</p>
 
-<steps>
-  <item><p>Right-click the file you want to open.</p></item>
-  <item><p>Select from the available "Open with" choices.</p></item>
-</steps>
+  <steps>
+    <item><p>Select a file of the type whose default application you want to change.
+    For example, to change which application is used to open MP3 files,
+    select a <file>.mp3</file> file.</p></item>
+    <item><p>Right-click the file and select <gui>Properties</gui>.</p></item>
+    <item><p>Select the <gui>Open With</gui> tab.</p></item>
+    <item><p>Select the application you want and click <gui>Set as default</gui>.
+    By default, the file manager only shows applications it knows can handle the
+    file. To look through all the applications on your computer, click <gui>Show
+    other applications</gui>.</p>
+    <p>If <gui>Other Applications</gui> contains an application you sometimes
+    want to use, but don't want to make the default, select that application and
+    click <gui>Add</gui>. This will add it to <gui>Recommended Applications</gui>.
+    You will then be able to use this application by right-clicking the file and
+    selecting it from the list.</p></item>
+  </steps>
 
-<p>Selecting the <gui>Open with Other Application</gui> option will bring up a list of available applications for you to select from. Not all applications listed will be able to work with that file type, though - for example, you cannot open an audio file with a text editor.</p>
+  <p>This changes the default application not just for the selected file,
+  but for all files with the same type.</p>
+
 </section>
 
 </page>
