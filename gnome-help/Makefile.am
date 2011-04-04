@@ -11,8 +11,6 @@ DOC_FIGURES = \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
 	figures/printing-select.png \
-	figures/Screenshot-SearchForFiles-options.png \
-	figures/Screenshot-SearchForFiles.png \
 	figures/shell-activities.png \
 	figures/shell-apps-open.png \
 	figures/shell-appts.png \
@@ -186,13 +184,6 @@ DOC_PAGES = \
 	printing-setup.page \
 	printing-setup-wireless.page \
 	screen-shot-record.page \
-	search-delete.page \
-	search-intro.page \
-	search-open.page \
-	search-otherapps.page \
-	search.page \
-	search-save.page \
-	search-settings.page \
 	session-fingerprint.page \
 	session-language.page \
 	session-netlogin.page \
