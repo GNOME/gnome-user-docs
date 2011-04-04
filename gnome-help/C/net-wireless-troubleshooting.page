@@ -26,37 +26,61 @@
 
   <note><p>Due to the technical nature of trouble-shooting network problems, this guide contains some commands that will need to be entered into a <app>terminal</app> window. While this may seem intimidating at first, these commands present the easiest way of getting the information that you need to restore your network access.</p></note>
 
-  <p>Trouble-shooting problems with wireless networks involves several steps:</p>
-  <p>Initial Check:</p>
-  <steps>  
-    <item><p>Perform a quick check</p></item>
-    <item><p>Attempt to connect to your wireless router</p></item>
-    <item><p>Perform a check of your modem and router</p></item>
-  </steps>
-  <!-- <p>Hardware Check:</p>
-  <p>For this section, it will be useful to have
+  <p>Trouble-shooting problems with wireless networks involves several steps. Throughout this portion of the guide, we will proceed through the following tasks to connect your computer to the internet:</p>
+  <list style="numbered">
+    <item><p>Performing an initial check</p></item>
+    <item><p>Gathering information about your hardware</p></item>
+    <item><p>Checking your hardware</p></item>
+    <item><p>Attempting to create a connection to your wireless router</p></item>
+    <item><p>Performing a check of your modem and router</p></item>
+  </list>
+  <p>After we complete each step, click on the <em>Next</em> link in the upper-right portion of the page. This will take you to the next step in the guide.</p>
 
-    Your device
-    The packaging and contents for your device
-    A driver disc - even if it only contains Windows drivers.
-    An alternate working internet connection for downloading software and drivers.</p> 
-
-  <p>Initially, note down the following:
-
-    Manufacturer
-    Complete model number
-    Any version numbers that may be printed on the device or its packaging. These can be crucial, so look carefully.
-    Anything on the driver disc that identifies either the device itself or the components it uses. Wireless implementation chips are often operated by firmware, a type of software written specifically for that chip.</p>
-  -->
+  <section id="net-wireless-initial-check">
+    <title>Performing an initial check</title>
+  <p>Our first step will be to see if your computer is already connected to a wireless network.</p>
   <steps>
-    <item><p>Check your modem and router</p></item>
+   <item><p>Make sure that your laptop is not connected to a <em>wired</em> internet connection.</p></item>
+   <item><p>If you have an external wireless adapter, make sure that it is plugged-in.</p></item>
+   <item><p>Make sure that your wireless adapter switch is turned on</p></item>
+   <item><p>In the <gui>Top Bar</gui>, make sure that you have not set the <gui>Wireless</gui> setting to <gui>Off</gui>.</p></item>
+   <item><p>Open a <app>terminal</app> window, and enter the following command:</p>
+  <p><cmd>nm-tool</cmd></p>
+   <p>The nm-tool program will display information about your network hardware and connection status. If the wireless connection output section contains the text:</p>
+  <p><code>State: Connected</code></p>
+  <p>then your wireless adapter is working and is connected to your wireless router.</p></item>
+  </steps>
+  <p>If you are connected to your wireless router, but you still cannot access the internet, your router may not be set up correctly, or your Internet Service Provider (ISP) maybe experiencing some technical problems. Review your router and ISP setup guides, or contact your ISP for support.</p>
+  <p>If the output from the <cmd>nm-tool</cmd> command did not indicate that you were connected to the network, click <gui>Next</gui> to proceed to the next portion of the troubleshooting guide.</p>
+  </section>
+<section id="net-hardware-check">  
+  <title>Gather information about your computer and network hardware:</title>
+  <p>For this section, it will be useful to have the follwing items available:</p>
+    <list>
+      <item><p>Your laptop and wireless router</p></item>
+      <item><p>The packaging and contents for your device (particularly the user guide for your router)</p></item>
+      <item><p>A driver disc - even if it only contains Windows drivers</p></item>
+      <item><p>An alternate working internet connection for downloading software and drivers</p></item>
+    </list>
+
+  <p>Additionally, it is helpful to have the following information:</p>
+    <list>
+      <item><p>The name of the device manufacturer</p></item>
+      <item><p>The complete model number of your computer and router</p></item>
+      <item><p>Any version numbers that may be printed on the device or its packaging. These can be crucial, so look carefully.</p></item>
+      <item><p>Anything on the driver disc that identifies either the device itself or the components it uses. Wireless implementation chips are often operated by firmware, a type of software written specifically for that chip.</p></item>
+    </list>
+
+<p>With this information available, we will proceed with the following steps</p>
+  <list>
+    <item><p>Checking your modem and router</p></item>
     <item><p>Check if your wireless card is enabled and recognized by your computer.</p></item>
     <item><p>Second step...</p></item>
     <item><p>Third step...</p></item>
-  </steps>
+  </list>
 
   <p>make sure can identify your networking device</p>
   <p>PCI device, USB device, internal device</p>
-
+</section>
    
 </page>
