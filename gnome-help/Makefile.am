@@ -64,6 +64,8 @@ DOC_PAGES = \
 	disk-check.page \
 	disk-format.page \
 	disk-partitions.page \
+	display-dimscreen.page \
+	display-lock.page \
 	fallback-mode.page \
 	files-browse.page \
 	files-copy.page \
@@ -94,7 +96,6 @@ DOC_PAGES = \
 	keyboard-layouts.page \
 	keyboard-repeat-keys.page \
 	look-background.page \
-	look-dimscreen.page \
 	look-display-fuzzy.page \
 	look-resolution.page \
 	media.page \
