@@ -1,0 +1,42 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="net-wireless-troubleshooting-initial-check">
+  <info>
+    <link type="next" xref="net-wireless-troubleshooting-hardware-info"/>
+    
+    <revision pkgversion="3.0" date="2011-03-20" status="stub"/>
+
+
+    <credit type="author">
+      <name>Contributors to the Ubuntu documentation wiki</name>
+    </credit>
+
+    <credit type="author">
+      <name>GNOME Documentation Project</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Troubleshoot your connection to a wireless network.</desc>
+  </info>
+
+<title>Resolve problems with wireless connections</title>
+
+  <section id="net-wireless-initial-check">
+    <title>Performing an initial check</title>
+  <p>Our first step will be to verify some basic network connectivity information.</p>
+  <steps>
+   <item><p>Make sure that your laptop is not connected to a <em>wired</em> internet connection.</p></item>
+   <item><p>If you have an external wireless adapter (such as a wireless-USB adapater, or a PCMCIA card), make sure that it is inserted into the proper slot on your computer.</p></item>
+   <item><p>If your wireless card is <em>inside</em> of your computer, make sure that your wireless adapter switch is turned on.</p></item>
+   <item><p>In the <gui>Top Bar</gui>, make sure that you have not set the <gui>Wireless</gui> setting to <gui>Off</gui>.</p></item>
+   <item><p>Open a <app>terminal</app> window (such as <app>gnome-terminal</app>), and enter the following command:</p>
+  <p><cmd>nm-tool</cmd></p></item>
+  </steps>
+
+   <p>The <app>nm-tool</app> program will display information about your network hardware and connection status. If output from the wireless connection section contains the text, <code>State: Connected</code>, it means that your wireless adapter is working and it is connected to your wireless router.</p>
+
+  <p>If you are connected to your wireless router, but you still cannot access the internet, your router may not be set up correctly, or your Internet Service Provider (ISP) maybe experiencing some technical problems. Review your router and ISP setup guides, or contact your ISP for support.</p>
+  <p>If the output from the <cmd>nm-tool</cmd> command did not indicate that you were connected to the network, click <gui>Next</gui> to proceed to the next portion of the troubleshooting guide.</p>
+  </section>
+   
+</page>
