@@ -233,7 +233,6 @@ DOC_PAGES = \
 	user-forgottenpassword.page \
 	user-goodpassword.page \
 	user-modify.page \
-	user-privileges.page \
 	web.page \
 	windows-key.page
 
