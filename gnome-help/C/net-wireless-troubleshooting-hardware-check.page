@@ -60,6 +60,13 @@
   <note><p>PCMCIA is an external, card-style adapter, and is more common on older hardware.</p></note>
       <section id="net-wireless-hardware-pcicheck">
         <title>Checking for a PCI (internal) device</title>
+      <p>PCI devices should be fairly straightforward to identify. When a device is discovered, your computer checks the device's PCI ID against the PCI ID Database and determines the manufacturer, model number and version (if applicable).</p>
+      <p>To see if your computer can identify a PCI device, enter <cmd>sudo lspci</cmd> into a terminal window. The terminal will display a list of PCI devices that it has found on your computer.</p>
+      <p>Although this may be a bit difficult to read-through, look for the name and model number of your wireless adapter. Here is an example of what a PCI device listing may look like:</p>
+      <example>
+        <p><code><![CDATA[Network controller: Intel Corporation PRO/Wireless 3945ABG [Golan] Network Connection]]></code></p>
+      </example>
+      <p>If your device is recognized by the previous command, great! Proceed to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers</link> page.</p> 
       </section>
       <section id="net-wireless-hard-ware-usbcheck">
         <title>Checking for a USB device</title>
