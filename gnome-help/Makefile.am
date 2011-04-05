@@ -171,6 +171,8 @@ DOC_PAGES = \
 	prefs-display.page \
 	printing-2sided.page \
 	printing-booklet.page \
+	printing-booklet-duplex.page \
+	printing-booklet-singlesided.page \
 	printing-cancel-job.page \
 	printing-differentsize.page \
 	printing-envelopes.page \
@@ -178,10 +180,8 @@ DOC_PAGES = \
 	printing-paperjam.page \
 	printing-select.page \
 	printing-setup-default-printer.page \
-	printing-setup-drivers.page \
 	printing-setup-networked.page \
 	printing-setup.page \
-	printing-setup-wireless.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
 	session-language.page \
