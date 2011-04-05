@@ -4,8 +4,8 @@
 
   <info>
     <link type="guide" xref="user-accounts#manage"/>
-    <desc><gui>Users and groups</gui></desc>
-    <revision pkgversion="3.0" version="0.1" date="2011-01-19" status="candidate"/>
+    <desc>Remove users that no longer use your computer.</desc>
+    <revision pkgversion="3.0" date="2011-04-04" status="final"/>
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email>tiffany@antopolski.com</email>
@@ -14,77 +14,32 @@
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
     </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
-  <title>Delete users or groups</title>
+  <title>Delete a user account</title>
 
-  <section id="delete-user">
-    <title>Delete a user</title>
-    <p>To delete a user account from your computer:</p>
+  <p>You can add multiple user accounts to your computer. See
+  <link xref="user-add"/> to learn how. If somebody is no longer using
+  your computer, you can delete that user's account.</p>
 
-        <steps>
-      <item><p>
-       When in the <gui>Activities</gui> overview, <gui>Type to search</gui> <input>users and groups</input>.  This will open the <app>Users Administration Tool</app>.
-      </p></item>
-            <item><p>
-            Select the user you wish to delete from the list on the left.
-      </p></item>
-            <item><p>
-            Click <gui>Delete</gui>.  You will be prompted for your password.  Enter it and click <gui>Authenticate</gui>.
-      </p></item>
-            <item><p>
-            You will be asked if you wish to remove the user's home folder.  Select on of the following 3 options:
-
-      </p>
-      <terms>
-      <item><title>Keep Files</title><p>
-        The home directory of the user will not be deleted.
-      </p></item>
-      <item><title>Don't Remove Account</title><p>
-        Cancels the removal request.
-      </p></item>
-      <item><title>Delete Files</title><p>
-      Files owned by user can be completely removed if you don't need them anymore.
-      </p>
-      <note style="tip">
-      <p>
-       You may want to back them up before deleting the account, or keep them so that an administrator can save them later.
-      </p>
-      </note>
-      </item>
-
-      </terms>
-      </item>
-
-    </steps>
-  </section>
-
-    <section id="delete-group">
-    <title>Delete a group</title>
-        <p>To delete a group from your computer:</p>
-
-        <steps>
-      <item><p>
-       When in the <gui>Activities</gui> overview, <gui>Type to search</gui> <input>users and groups</input>.  This will open the <app>Users Administration Tool</app>.
-      </p></item>
-            <item><p>Click <gui>Manage Groups</gui>.
-      </p></item>
-            <item><p>Scroll through the list to select the group you wish to remove.
-      </p></item>
-            <item><p>Click <gui>Delete</gui>.
-      </p>
-      
-      </item>
-            <item><p>You will be prompted to authenticate using a password.
-      </p><note style="warning">
-      <p>Deleting a group may leave files with an unassigned group ID in the filesystem. In the event that this does happen, files belonging the removed group will not have a group name but a group ID number instead. Generally this will not cause you any problems. 
-      </p>
-      </note></item>
-            <item><p>
-            After the warning, click <gui>Delete</gui>.
-      </p></item>
-    </steps>
-  </section>
+<steps>
+  <item><p>Click your name in the top bar and select <gui>System Settings</gui>.</p></item>
+  <item><p>Click <gui>User Accounts</gui>.</p></item>
+  <item><p>Click <gui>Unlock</gui> in the bottom left corner and type your
+  password to make changes. You must be an administrative user to delete user
+  accounts.</p></item>
+  <item><p>Select the user you want to delete and click the <gui>-</gui> button.</p></item>
+  <item><p>Each user has their own home folder for their files and settings.
+  You can choose to keep or delete the user's home folder. Delete the files
+  if you're sure they won't be used anymore and you need to free up disk
+  space. These files are permanently deleted. They can't be recovered. You
+  may want to back up the files to an external drive or CD before deleting
+  them.</p></item>
+</steps>
 
 </page>
