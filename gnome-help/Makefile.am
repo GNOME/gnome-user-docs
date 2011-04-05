@@ -202,7 +202,7 @@ DOC_PAGES = \
 	shell-exit.page \
 	shell-introduction.page \
 	shell-keyboard-shortcuts.page \
-	shell-messages.page \
+	shell-notifications.page \
 	shell-overview.page \
 	shell-session-status.page \
 	shell-terminology.page \
