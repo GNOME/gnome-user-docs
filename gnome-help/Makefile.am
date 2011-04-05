@@ -136,7 +136,6 @@ DOC_PAGES = \
 	net-passwordok-noconnect.page \
 	net-proxy.page \
 	net-slow.page \
-	net-tethering.page \
 	net-vpn-connect.page \
 	net-what-is-ip-address.page \
 	net-wired-connect.page \
@@ -186,7 +185,6 @@ DOC_PAGES = \
 	screen-shot-record.page \
 	session-fingerprint.page \
 	session-language.page \
-	session-netlogin.page \
 	session-screenlocks.page \
 	session-smartcard.page \
 	shell-apps-favorites.page \
