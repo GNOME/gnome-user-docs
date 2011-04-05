@@ -42,6 +42,7 @@ DOC_PAGES = \
 	a11y-slowkeys.page \
 	a11y-stickykeys.page \
 	a11y-visualalert.page \
+	about-this-guide.page \
 	backup-check.page \
 	backup-frequency.page \
 	backup-how.page \
@@ -67,10 +68,13 @@ DOC_PAGES = \
 	display-dimscreen.page \
 	display-lock.page \
 	fallback-mode.page \
+	files-autorun.page \
 	files-browse.page \
 	files-copy.page \
 	files-delete.page \
+	files-disc-write.page \
 	files-hidden.page \
+	files-lost.page \
 	files-open.page \
 	files.page \
 	files-preview-music.page \
@@ -108,6 +112,10 @@ DOC_PAGES = \
 	mouse-sensitivity.page \
 	mouse-touchpad-click.page \
 	mouse-wakeup.page \
+	music-cantplay-drm.page \
+	music-player-ipodtransfer.page \
+	music-player-newipod.page \
+	music-player-notrecognized.page \
 	nautilus-behavior.page \
 	nautilus-bookmarks-edit.page \
 	nautilus-connect.page \
@@ -119,8 +127,11 @@ DOC_PAGES = \
 	nautilus-preview.page \
 	nautilus-views.page \
 	net-adhoc.page \
+	net-antivirus.page \
 	net-editcon.page \
 	net-findip.page \
+	net-firewall-on-off.page \
+	net-firewall-ports.page \
 	net-fixed-ip-address.page \
 	net-macaddress.page \
 	net-manual.page \
@@ -139,6 +150,10 @@ DOC_PAGES = \
 	net-wireless-find.page \
 	net-wireless-hidden.page \
 	net-wireless-troubleshooting.page \
+	net-wireless-troubleshooting-device-drivers.page \
+	net-wireless-troubleshooting-hardware-check.page \
+	net-wireless-troubleshooting-hardware-info.page \
+	net-wireless-troubleshooting-initial-check.page \
 	net-wireless-wepwpa.page \
 	net-wrongnetwork.page \
 	power-batterybroken.page \
@@ -163,6 +178,7 @@ DOC_PAGES = \
 	prefs.page \
 	prefs-language.page \
 	prefs-display.page \
+	printing.page \
 	printing-2sided.page \
 	printing-booklet.page \
 	printing-booklet-duplex.page \
@@ -176,6 +192,7 @@ DOC_PAGES = \
 	printing-setup-default-printer.page \
 	printing-setup-networked.page \
 	printing-setup.page \
+	printing-streaks.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
 	session-language.page \
@@ -185,6 +202,7 @@ DOC_PAGES = \
 	shell-apps-open.page \
 	shell-exit.page \
 	shell-introduction.page \
+	shell-keyboard-shortcuts.page \
 	shell-messages.page \
 	shell-overview.page \
 	shell-session-status.page \
@@ -198,6 +216,9 @@ DOC_PAGES = \
 	shell-workspaces.page \
 	shell-workspaces-switch.page \
 	sound-alert.page \
+	sound-broken.page \
+	sound-crackle.page \
+	sound-nosound.page \
 	sound-usemic.page \
 	sound-usespeakers.page \
 	sound-volume.page \
@@ -214,7 +235,14 @@ DOC_PAGES = \
 	user-delete.page \
 	user-forgottenpassword.page \
 	user-goodpassword.page \
+	video-dvd.page \
+	video-sending.page \
 	web.page \
+	web-default-browser.page \
+	web-default-email.page \
+	web-email-virus.page \
+	web-install-flash.page \
+	web-install-moonlight.page \
 	windows-key.page
 
 dist-hook: doc-dist-hook
