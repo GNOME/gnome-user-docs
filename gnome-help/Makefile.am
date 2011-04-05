@@ -190,7 +190,6 @@ DOC_PAGES = \
 	printing-paperjam.page \
 	printing-select.page \
 	printing-setup-default-printer.page \
-	printing-setup-networked.page \
 	printing-setup.page \
 	printing-streaks.page \
 	screen-shot-record.page \
