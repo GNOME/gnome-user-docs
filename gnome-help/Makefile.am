@@ -86,9 +86,7 @@ DOC_PAGES = \
 	hardware-driver.page \
 	hardware.page \
 	hardware-problems-bluetooth.page \
-	hardware-problems-crashes.page \
 	hardware-problems-graphics.page \
-	hardware-problems-scanning.page \
 	index.page \
 	keyboard.page \
 	keyboard-cursor-blink.page \
