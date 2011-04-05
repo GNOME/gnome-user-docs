@@ -1,10 +1,10 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic" style="task"
-      id="net-wireless-troubleshooting-hardware-check">
+      id="net-wireless-troubleshooting-device-drivers">
   <info>
-    <link type="next" xref="net-wireless-troubleshooting-device-drivers"/>
+    <link type="next" xref="net-wireless-troubleshooting"/>
     
-    <revision pkgversion="3.0" date="2011-03-20" status="incomplete"/>
+    <revision pkgversion="3.0" date="2011-04-05" status="incomplete"/>
 
 
     <credit type="author">
@@ -12,14 +12,14 @@
     </credit>
 
     <credit type="author">
-      <name>GNOME Documentation Project</name>
-      <email>gnome-doc-list@gnome.org</email>
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
     </credit>
 
     <desc>Troubleshoot your connection to a wireless network.</desc>
   </info>
 
-<title>Resolve problems with wireless connections</title>
+<title>Checking for wireless device drivers</title>
 
   <p>This guide is designed to help you troubleshoot and resolve problems with accessing a wireless network.</p>
 
@@ -27,7 +27,7 @@
     <title>Checking your system hardware</title>
   <p>Our first step will be to see if your computer recognizes your wireless adapter.</p>
   <steps>
-   <item><p>Open a <app>terminal</app> window, and enter <cmd>sudo lshw -C network</cmd>.</p>
+   <item><p>Open a <app>terminal</app> window, and enter <cmd>sudo lshw -C network</cmd></p>
     <p>If you get no response, you may need to install the <app>lshw</app> program on your computer.</p></item>
    <item><p>Read the output from the command, and check for the <em>Wireless interface</em> section. If your wireless adapter is detected, the output should look similar to this:</p>
    <example> 
@@ -50,13 +50,13 @@
    </example>
 </item>
   </steps>
-  <p>If a wireless device is listed, then continue to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers page</link>.</p>
+  <p>If a wireless device is listed, then continue to the Device Drivers page</p>
   <p>If a wireless device is not listed, the next steps will help you to locate the hardware information.</p> 
 </section>
    <section id="net-wireless-hardware-check2">
     <title>Further wireless hardware checks</title>
   <p>Because your wireless adapter was not found with the previous command, you need to take further steps to make sure your computer recognizes your adapter.</p>
-  <p>The steps you take will depend on the type of device that you use. Refer to the section that is relevant to the type of wireless adapter that you use with your computer: PCI (internal), USB, or PCMCIA.</p>
+  <p>The next steps will depend on the type of device that you use. Refer to the section that is relevant to the type of wireless adapter that you use with your computer: PCI (internal), USB, or PCMCIA.</p>
   <note><p>PCMCIA is an external, card-style adapter, and is more common on older hardware.</p></note>
       <section id="net-wireless-hardware-pcicheck">
         <title>Checking for a PCI (internal) device</title>
@@ -67,7 +67,5 @@
       <section id="net-wireless-hard-ware-pcmciacheck">
         <title>Checking for a PCMCIA device</title>
       </section>
-   <p>If your device is not recognized by any of the above commands, it may mean that your device is not working, or that your device is not supported by your operating system.</p>
-   <p>To get additional help, post a message to a user forum appropriate to your operating system (e.g., Fedora, OpenSUSE, or Ubuntu forums, etc.), or post a message to an appropriate mailing list.</p>
    </section>
 </page>
