@@ -90,7 +90,6 @@ DOC_PAGES = \
 	index.page \
 	keyboard.page \
 	keyboard-cursor-blink.page \
-	keyboard-inputmethods.page \
 	keyboard-layouts.page \
 	keyboard-repeat-keys.page \
 	look-background.page \
@@ -125,9 +124,6 @@ DOC_PAGES = \
 	net-fixed-ip-address.page \
 	net-macaddress.page \
 	net-manual.page \
-	net-mobile.page \
-	net-nonm.page \
-	net-no-wireless-connection.page \
 	net-othersconnect.page \
 	net-otherscontrol.page \
 	net.page \
@@ -184,7 +180,6 @@ DOC_PAGES = \
 	session-fingerprint.page \
 	session-language.page \
 	session-screenlocks.page \
-	session-smartcard.page \
 	shell-apps-favorites.page \
 	shell-apps-forcequit.page \
 	shell-apps-open.page \
