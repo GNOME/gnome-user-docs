@@ -198,7 +198,6 @@ DOC_PAGES = \
 	session-language.page \
 	session-screenlocks.page \
 	shell-apps-favorites.page \
-	shell-apps-forcequit.page \
 	shell-apps-open.page \
 	shell-exit.page \
 	shell-introduction.page \
