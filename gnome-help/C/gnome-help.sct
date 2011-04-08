@@ -1,0 +1,11 @@
+<schema xmlns="http://www.ascc.net/xml/schematron" >
+  <title>Some sanity checks for the GNOME desktop help</title>
+  <ns prefix="mal" uri="http://projectmallard.org/1.0/"/>
+  <ns prefix="xi" uri="http://www.w3.org/2001/XInclude"/>
+  <pattern name="Info element checks">
+    <rule context="mal:page/mal:info">
+      <assert test="not(mal:license)">Must not include license directly</assert>
+      <assert test="xi:include[@href='legal.xml']">Must include legal.xml</assert>
+    </rule>
+  </pattern>
+</schema>
