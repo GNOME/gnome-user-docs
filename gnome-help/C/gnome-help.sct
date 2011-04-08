@@ -8,4 +8,15 @@
       <assert test="xi:include[@href='legal.xml']">Must include legal.xml</assert>
     </rule>
   </pattern>
+  <pattern name="Desc checks">
+    <rule context="mal:page/mal:info">
+      <assert test="normalize-space(mal:desc) != ''">Must have non-empty desc</assert>
+    </rule>
+    <rule context="mal:page/mal:info/mal:desc">
+      <assert test="substring(normalize-space(.), string-length(normalize-space(.))) = '.'">Desc must end with a period</assert>
+    </rule>
+    <rule context="mal:page/mal:info/mal:desc/mal:link">
+      <assert test="substring(normalize-space(..), string-length(normalize-space(..)) - 2) = '...'">Desc with links must end with an ellipsis</assert>
+    </rule>
+  </pattern>
 </schema>
