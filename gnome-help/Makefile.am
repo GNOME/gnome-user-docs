@@ -2,7 +2,7 @@ include $(top_srcdir)/gnome-doc-utils.make
 
 DOC_ID = gnome-help
 
-DOC_LINGUAS = de fi es gl sv
+DOC_LINGUAS = de fi es gl hi sv
 
 DOC_FIGURES = \
 	figures/gnome.png \
