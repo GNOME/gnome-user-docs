@@ -6,13 +6,12 @@
 
     <link type="guide" xref="index" group="shell-exit" />
     <link type="guide" xref="shell-overview#desktop" />
-    <link type="seealso" xref="power-turnoffbutton" />
 
     <desc>Learn how to leave your user account, by logging out, switching users, and so on.</desc>
     <!-- Should this be a guide which links to other topics? -->
     
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-04-15" status="incomplete"/>
     <credit type="author">
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
@@ -25,13 +24,14 @@
 
 <comment>
   <cite date="2011-04-04">shaunm</cite>
-  <p>More links would be good.</p>
+  <p>More links would be good, especially in #logout. Could go final
+  as-is. Incomplete for now</p>
 </comment>
 
 <p>When you've finished using your computer, you can turn it off, suspend it (to save power),
 or leave it powered on and just log out.</p>
 
-<section id = "logout">
+<section id="logout">
 <title>Log out or switch users</title>
 <p>To let other users use your computer, you can either log out, or leave
 yourself logged in and just switch users. If you just switch users, all of
@@ -41,7 +41,10 @@ left it when you log back in.</p>
 the appropriate option.</p>
 </section>
 
-<section id = "lock-screen">
+<section id="lock-screen">
+<info>
+  <link type="seealso" xref="session-screenlocks"/>
+</info>
 <title>Lock the screen</title>
 <p>If you're leaving your computer for a short time, you should lock your
 screen to prevent other people from accessing your files and running
@@ -57,29 +60,43 @@ by clicking <gui>Switch User</gui> on the password screen. You can switch
 back to your desktop when they are finished.</p>
 </section>
 
-<section id = "shut-down">
+<section id="suspend">
 <info>
   <link type="seealso" xref="power-suspendhibernate"/>
 </info>
-<title>Suspend, shut down, or restart.</title>
+<title>Suspend</title>
 
-<p>To save power, turn off your computer when you aren't using it. By default,
-GNOME simply suspends your computer. This saves your state to your computer's
-memory and powers off most of your computer's functions. A very small amount of
-power is still used during suspend.</p>
+<p>To save power, suspend your computer when you aren't using it. If you use
+a laptop, GNOME suspends your computer automatically when you close your lid.
+This saves your state to your computer's memory and powers off most of your
+computer's functions. A very small amount of power is still used during suspend.</p>
 
-<p>To suspend your computer, click your name on the top bar and select
-<gui>Suspend</gui>. Or, if you have a laptop, simply close the lid. Your
-computer will automatically suspend when the lid is closed.</p>
+<p>To suspend your computer manaully, click your name on the top bar and select
+<gui>Suspend</gui>.</p>
+</section>
+
+<section id="shutdown">
+<info>
+  <link type="seealso" xref="power-turnoffbutton"/>
+</info>
+<title>Shut down or restart</title>
 
 <p>If you want to power off your computer entirely, or do a full restart,
-click your name on the top bar, then hold down the <key>Alt</key> key.
-The <gui>Suspend</gui> option will change to <gui>Power Off</gui>. Click
-this to choose to power off or restart.</p>
+first log out by clicking your name on the top bar and selecting
+<gui>Log Out</gui>. You will be returned to the login screen. On the
+login screen, click the power icon on the top bar and select either
+<gui>Restart</gui> or <gui>Shut Down</gui>.</p>
 
-<note><p>If there are other users logged in, you may not be allowed to
+<p>If there are other users logged in, you may not be allowed to
 power off or restart the computer, because this will end their sessions.
 If you are an administrative user, you may be asked for your password
-to power off.</p></note>
+to power off.</p>
+
+<note style="tip"><p>If you need to shut down or restart quickly, you
+can do it without logging out. Click your name on the top bar, then
+hold down the <key>Alt</key> key. The <gui>Suspend</gui> option will
+change to <gui>Power Off</gui>. Select this to shut down or
+restart.</p></note>
+
 </section>
 </page>
