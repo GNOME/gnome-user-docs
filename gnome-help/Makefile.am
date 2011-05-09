@@ -1,10 +1,10 @@
-include $(top_srcdir)/gnome-doc-utils.make
+@HELP_RULES@
 
-DOC_ID = gnome-help
+HELP_ID = gnome-help
 
-DOC_LINGUAS = de fi es gl hi sv
+HELP_LINGUAS = de fi es gl hi sv
 
-DOC_FIGURES = \
+HELP_MEDIA = \
 	figures/gnome.png \
 	figures/gnome-searchtool.png \
 	figures/nautilus.png \
@@ -25,9 +25,8 @@ DOC_FIGURES = \
 	figures/universal-access-menu.png \
 	figures/yelp-icon-big.png
 
-DOC_INCLUDES = legal.xml
-
-DOC_PAGES = \
+HELP_FILES = \
+	legal.xml \
 	a11y-bouncekeys.page \
 	a11y-braille.page \
 	a11y-contrast.page \
@@ -242,5 +241,3 @@ DOC_PAGES = \
 	web-install-flash.page \
 	web-install-moonlight.page \
 	windows-key.page
-
-dist-hook: doc-dist-hook
