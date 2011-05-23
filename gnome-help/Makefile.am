@@ -2,7 +2,7 @@
 
 HELP_ID = gnome-help
 
-HELP_LINGUAS = de fi es gl hi sl sv
+HELP_LINGUAS = de fi es gl hi sl sv vi
 
 HELP_MEDIA = \
 	figures/gnome.png \
