@@ -4,11 +4,12 @@
 
   <info>
     <link type="guide" xref="files" group="more"/>
+    <link type="guide" xref="net#sharing"/>
     <desc>View and edit files on another computer over FTP, SSH, Windows
     shares, or WebDAV.</desc>
 
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-06" status="final"/>
     <credit type="author">
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
@@ -20,19 +21,19 @@
 
 <p>You can connect to a server or network share to browse and
 view files on that server, exactly as if they were on your
-local machine or removable device. This is a convenient way
-to download or upload files, or to share files with users on
+own computer. This is a convenient way to download or upload 
+files on the internet, or to share files with other people on
 your local network.</p>
 
 <p>To browse files over the network, open the <app>Files</app>
-application from the <gui>Activities</gui> overview.</p>
-
-<p>Click <gui>Browse Network</gui> in the sidebar, or select
+application from the <gui>Activities</gui> overview. Then, click 
+<gui>Browse Network</gui> in the sidebar, or select
 <gui>Network</gui> from the <gui>Go</gui> menu. The file manager
 will find any computers on your local area network that advertise
 their ability to serve files. If you want to connect to a server
 on the internet, or if you do not see the computer you're looking
-for, you can manually connect to a server.</p>
+for, you can manually connect to a server by typing in its 
+internet/network address.</p>
 
 <steps>
   <title>Connect to a file server</title>
@@ -40,32 +41,31 @@ for, you can manually connect to a server.</p>
   <gui>Connect to Server</gui></guiseq>.</p></item>
   <item><p>Enter the server address, select the type of server, and enter
   any additional information as required. Then click <gui>Connect</gui>.
-  Details on server types are listed below.</p>
-  <p>For servers on the internet, you can usually use the domain name.
-  For computers on your local area network, however, you may have to
-  use the computer's numeric IP address. If the other computer is
-  running GNOME, see <link xref="net-findip"/> to find that computer's
-  internal IP address. Otherwise, check the help on that computer.</p>
+  Details on server types are <link xref="#types">listed below</link>.</p>
+  <p>For servers on the internet, you can usually use the domain name 
+  (e.g. <sys>ftp.example.com</sys>). For computers on your local network, 
+  however, you may have to use the computer's 
+  <link xref="net-findip">numeric IP address</link>.</p>
   </item>
   <item><p>A new window will open showing you the files on the server.
-  Browse the files and folders just as you would for local files and
-  folders.</p></item>
+  You can browse the files just as you would for those on your own computer.</p>
+  <p>The server will also be added to the sidebar so you can access it quickly 
+  in the future</p>
+  </item>
 </steps>
 
-<p>Connecting to a server will also add that server to the sidebar
-so you can access it quickly in the future. If you do not see the
-sidebar in the file manager, click <guiseq><gui>View</gui>
-<gui>Sidebar</gui><gui>Show Sidebar</gui></guiseq>.</p>
+<section id="types">
+ <title>Different types of server</title>
 
 <p>You can connect to different types of servers. Some servers
 are public, and allow anybody to connect. Other servers require
-you to log in with a user name and password. You may not have
-permissions to perform certain actions on files on a server.
-For example, on public FTP sites, you will probably not be
+you to log in with a user name and password.</p>
+<p>You may not have permissions to perform certain actions on files 
+on a server. For example, on public FTP sites, you will probably not be
 able to delete files.</p>
 
 <terms>
-<title>Types of servers</title>
+<title>Types of server</title>
 <item>
   <title>SSH</title>
   <p>If you have a <em>secure shell</em> account on a server, you
@@ -73,15 +73,17 @@ able to delete files.</p>
   to members so they can securely upload files. SSH servers always
   require you to log in. If you use a secure shell key to log in,
   leave the password field blank.</p>
+  
   <comment><cite>shaunm</cite><p>We should have a topics on encryption
   keys, possibly rolling the seahorse help into gnome-help. Then link
   from here.</p></comment>
+  
   <p>When using SSH, all the data you send (including your password)
-  is encrypted so that other users on your network can't sniff it.</p>
+  is encrypted so that other users on your network can't see it.</p>
 </item>
 <item>
   <title>FTP (with login)</title>
-  <p>FTP is a popular protocol for exchanging files on the Internet.
+  <p>FTP is a popular way of exchanging files on the Internet.
   Because data is not encrypted over FTP, many servers now provide
   access through SSH. Some servers, however, still allow or require
   you to use FTP to upload or download files. FTP sites with logins
@@ -93,11 +95,11 @@ able to delete files.</p>
   public or anonymous FTP access. These servers do not require a
   user name and password, and will usually not allow you to delete
   or upload files.</p>
-  <note><p>Some anonymous FTP sites require you to log in with a
+  <p>Some anonymous FTP sites require you to log in with a
   public user name and password, or with a public user name using
   your email address as the password. For these servers, use the
   <gui>FTP (with login)</gui> method, and use the credentials
-  specified by the FTP site.</p></note>
+  specified by the FTP site.</p>
 </item>
 <item>
   <title>Windows share</title>
@@ -112,8 +114,8 @@ able to delete files.</p>
   <p>Based on the HTTP protocol used on the web, WebDAV is sometimes used to
   share files on a local network and to store files on the internet. If the
   server you're connecting to supports secure connections, you should choose
-  this option. Secure WebDAV uses strong SSL encryption, so your password
-  and data can't be sniffed.</p>
+  this option. Secure WebDAV uses strong SSL encryption, so that other users 
+  can't see your password.</p>
   <comment>
     <cite date="2011-04-01">shaunm</cite>
     <p>Also used by gnome-user-share, but we're not talking about that
@@ -123,5 +125,6 @@ able to delete files.</p>
   </comment>
 </item>
 </terms>
+</section>
 
 </page>
