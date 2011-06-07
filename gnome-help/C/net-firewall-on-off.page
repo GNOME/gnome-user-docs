@@ -5,9 +5,9 @@
   <info>
     <link type="guide" xref="net#security"/>
     <link type="guide" xref="web#connections"/>
-    <desc>You can control what programs are accessible by the network.</desc>
+    <desc>You can control which programs can access the network. This helps to keep your computer secure.</desc>
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-06-06" status="incomplete"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-06" status="final"/>
     <credit type="author">
       <name>Paul W. Frields</name>
       <email>stickster@gmail.com</email>
@@ -16,25 +16,18 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-  <title>Enabling and blocking firewall access</title>
-<comment>
-<cite>shaunm</cite>
-<p>Technical directions correct, but check language for consistency with
-how we tell people to access the overview.</p>
-</comment>
-  <p>Your system may be equipped with a firewall that allows it to block programs from being accessible by other network users.</p>
-  <p>Many GNOME programs are built to offer network services. For instance, you can share content, or let someone view your desktop remotely. Depending on how you installed GNOME, you may need to adjust the firewall to allow these services to work as intended. For instance, if your GNOME desktop was installed along with a larger software distribution, the firewall may also be pre-configured by the vendor.</p>
-  <p>Each program that provides services uses a specific <em>network port</em>. To enable access to that program's services, you may need to allow access to its assigned port on the firewall. To allow access, follow these steps.</p>
+  <title>Enable or block firewall access</title>
+
+  <p>Your system should be equipped with a <em>firewall</em> that allows it to block programs from being accessed by other people on the internet or your network. This helps to keep your computer secure.</p>
+  <p>Many applications can provide network services. For instance, you can share files or let someone view your desktop remotely. Depending on how your computer is set up, you may need to adjust the firewall to allow these services to work as intended.</p>
+  <p>Each program that provides network services uses a specific <em>network port</em>. To enable other computers on the network to access a service, you may need to "open" its assigned port on the firewall:</p>
 
   <steps>
     <item>
-      <p>To locate your system's firewall tool, open the Overview, and type "firewall".</p>
-      <note>
-	<p>If this step doesn't locate the appropriate tool, consult the documentation for your overall operating system for the correct application name. To open the application, hit <keyseq type="combo"><key>Alt</key><key>F2</key></keyseq>, type that name, and hit <key>Enter</key>.</p>
-      </note>
+      <p>Go to <gui>Activities</gui> in the top left corner of the screen and start your firewall application. You may need to install a firewall manager youself if you can't find one (for example, Firestarter or GUFW).</p>
     </item>
     <item>
-      <p>To allow access to the desired port number through the firewall, enable the port. To block access, disable the port. Repeat this step as needed.</p>
+      <p>Open or disable the port for your network service, depending on whether you want people to be able to access it or not. Which port you need to change will <link xref="net-firewall-ports">depend on the service</link>.</p>
     </item>
     <item>
       <p>Save or apply the changes, following any additional instructions given by the firewall tool.</p>
