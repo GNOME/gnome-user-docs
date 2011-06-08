@@ -231,7 +231,7 @@ DOC_PAGES = \
 	user-changepassword.page \
 	user-changepicture.page \
 	user-delete.page \
-	user-forgottenpassword.page \
+#	user-forgottenpassword.page \
 	user-goodpassword.page \
 	video-dvd.page \
 	video-sending.page \
