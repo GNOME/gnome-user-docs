@@ -6,7 +6,7 @@
     <desc>A list of folders where you can find documents, files and settings that you may want to back up.</desc>
     
     <revision pkgversion="3.0" date="2011-04-03" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-07" status="final"/>
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email>tiffany.antopolski@gmail.com</email>
@@ -22,54 +22,36 @@
   <title>Where can I find the files I want to back up?</title>
 
 <p>
-Deciding what files to back up and locating them is the most difficult step when attempting to perform a backup.
+Deciding which files to back up, and locating them, is the most difficult step when attempting to perform a backup.
 Listed below are the most common locations of important files and settings that you may want to back up.
 </p>
-<terms>
 
-<item>
-   <title>Your personal files and settings</title>
-<p>These are usually stored in your <file>Home</file> folder (<cmd>/home/your_name</cmd>). 
-They could be in subfolders such as <file>Desktop</file>, <file>Documents</file>, 
-<file>Pictures</file>, <file>Music</file>, <file>Videos</file> 
-and/or <file>.evolution</file> (for email). If your backup medium has 
-sufficient space, consider backing up the entire <cmd>/home</cmd> folder. 
-This is the simplest way.</p>
-
-<p>
-      If you are not able to backup all of <cmd>/home</cmd>, see below for a list of some 
-subfolders of the <cmd>/home</cmd> folder to check for important files.
-</p>
-<note>
 <list>
-<item><p><cmd>~/</cmd> represents your home folder <cmd>/home/your_name</cmd> </p></item>
+ <item>
+  <p>Personal files (documents, music, photos and videos)</p>
+  <p>These are usually stored in your <file>Home</file> folder (<cmd>/home/your_name</cmd>). 
+They could be in subfolders such as <file>Desktop</file>, <file>Documents</file>, 
+<file>Pictures</file>, <file>Music</file> and <file>Videos</file>.</p>
+  <p>If your backup medium has sufficient space (if it's an external hard disk, for example), consider backing up the entire Home folder. You can find out how much disk space your Home folder takes up by using the <app>Disk Usage Analyzer</app>.</p>
+ </item>
 
- <item><p>Any file or folder name that starts with a period is hidden by default. 
+ <item>
+  <p>Hidden files</p>
+  <p>Any file or folder name that starts with a period (.) is hidden by default. 
 To view hidden files, click <guiseq><gui>View</gui><gui>Show Hidden Files</gui></guiseq> or 
-press <keyseq><key>Ctrl</key><key>H</key></keyseq>.
-</p></item>
+press <keyseq><key>Ctrl</key><key>H</key></keyseq>. You can copy these to a backup location like any other file.</p>
+ </item>
+
+ <item>
+  <p>Personal settings (desktop preferences, themes, and software settings)</p>
+  <p>Most applications store their settings in hidden folders inside your Home folder (see above for information on hidden files).</p>
+  <p>Most of your application settings will be stored in the hidden folders <cmd>.config</cmd>, <cmd>.gconf</cmd>, <cmd>.gnome3</cmd>, and <cmd>.local</cmd> in your Home folder.</p>
+ </item>
+ 
+ <item>
+  <p>System-wide settings</p>
+  <p>Settings for important parts of the system aren't stored in your Home folder. There are a number of locations that they could be stored, but most are stored in the <file>/etc</file> folder. In general, you won't need to back-up these files on a home computer. If you are running a server, however, you should back up the files for the services that it is running.</p>
+ </item>
 </list>
-</note>
-</item>
-</terms>
-
-<table shade="rows">
-  <tr>
-    <td><p>Your personal files</p></td><td><p><cmd>~/</cmd>, <cmd>~/Desktop</cmd>, 
-<cmd>~/Documents</cmd>, <cmd>~/Pictures</cmd>, <cmd>~/Music</cmd>, <cmd>Videos</cmd>, <cmd>~/bin</cmd>, 
-and others</p></td> <td><p> Contain files you actively created.</p></td>
-
-  </tr>
-  <tr>
-    <td><p>Your personal settings</p></td> <td><p><cmd>~/.config</cmd>, <cmd>~/.gconf</cmd>, 
-<cmd>~/.gnome3</cmd>, <cmd>~/.local</cmd></p></td>
-    <td><p>Contain your settings for the desktop and some applications.</p></td>
-  </tr>
-  <tr>
-    <td><p>System settings</p></td> <td><p><cmd>/etc</cmd> located in the File System outside of your Home folder.</p></td>
-    <td><p>Your system settings.  In general, you don't need to go outside of your Home folder.</p></td>
-  </tr>
-
-</table>
 
 </page>
