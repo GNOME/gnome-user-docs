@@ -17,6 +17,7 @@ DOC_FIGURES = \
 	figures/shell-exit.png \
 	figures/shell-files.png \
 	figures/shell-introduction.png \
+	figures/shell-notification.png \
 	figures/shell-top-bar.png \
 	figures/shell-windows.png \
 	figures/shell-workspaces.png \
@@ -92,6 +93,7 @@ DOC_PAGES = \
 	hardware-problems-bluetooth.page \
 	hardware-problems-graphics.page \
 	index.page \
+	irc.page \
 	keyboard.page \
 	keyboard-cursor-blink.page \
 	keyboard-layouts.page \
@@ -99,6 +101,7 @@ DOC_PAGES = \
 	look-background.page \
 	look-display-fuzzy.page \
 	look-resolution.page \
+	mailing-list \
 	media.page \
 	more-help.page \
 	mouse.page \
@@ -231,6 +234,7 @@ DOC_PAGES = \
 	user-changepassword.page \
 	user-changepicture.page \
 	user-delete.page \
+	user-forum.page \
 	user-forgottenpassword.page \
 	user-goodpassword.page \
 	video-dvd.page \
