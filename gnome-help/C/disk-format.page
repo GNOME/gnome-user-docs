@@ -5,7 +5,7 @@
     <link type="guide" xref="disk"/>
 
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-06-13" status="review"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-14" status="final"/>
     
     <credit type="author">
       <name>GNOME Documentation Team</name>
@@ -18,9 +18,13 @@
 
 <title>Wipe everything off a removable disk</title>
 
-<p>If you have a removable disk like a USB memory stick or an external hard disk, you may wish to completely remove all of the files you have on there. You can do this by <em>formatting</em> the disk - this deletes all of the files on the disk and leaves it empty.</p>
+<p>If you have a removable disk, like a USB memory stick or an external hard 
+disk, you may sometimes wish to completely remove all of its files and 
+folders. You can do this by <em>formatting</em> the disk - this deletes all 
+of the files on the disk and leaves it empty.</p>
 
 <steps>
+ <title>Format a removable disk</title>
  <item><p>Open the <app>Disk Utility</app> application from the <gui>Activities</gui> overview.</p></item>
  <item><p>Select the disk you want to wipe from the <gui>Storage Devices</gui> list.</p>
   <note style="warning"><p>Make sure that you have selected the correct disk! If you choose the wrong disk, all of the files on the other disk will be deleted!</p></note></item>
@@ -30,8 +34,12 @@
 </steps>
 
 <note style="warning">
- <title>Formatting permanently deletes your files</title>
- <p>Once the drive has been formatted, the files on it will have been completely removed, so you can't get them back. It is possible that special recovery software could retrieve the files, so formatting a disk is not a completely secure way of wiping a disk.</p>
+ <title>Formatting a disk does not securely delete your files</title>
+ <p>Formatting a disk is not a completely secure way of wiping all of its 
+data. A formatted disk will not appear to have files on it, but it is 
+possible that special recovery software could retrieve the files. If you 
+need to securely delete the files, you will need to use a command-line 
+utility, such as <app>shred</app>.</p>
 </note>
 
 </page>
