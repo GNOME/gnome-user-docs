@@ -101,7 +101,7 @@ DOC_PAGES = \
 	look-background.page \
 	look-display-fuzzy.page \
 	look-resolution.page \
-	mailing-list \
+	mailing-list.page \
 	media.page \
 	more-help.page \
 	mouse.page \
