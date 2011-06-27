@@ -52,6 +52,7 @@ DOC_PAGES = \
 	backup-what.page \
 	backup-where.page \
 	backup-why.page \
+	bluetooth.page \
 	bluetooth-connect-device.page \
 	bluetooth-problem-connecting.page \
 	bluetooth-remove-connection.page \
@@ -61,6 +62,7 @@ DOC_PAGES = \
 	clock-calendar.page \
 	clock-set.page \
 	clock-timezone.page \
+	disk.page \
 	disk-benchmark.page \
 	disk-capacity.page \
 	disk-check.page \
@@ -88,6 +90,8 @@ DOC_PAGES = \
 	files-sort.page \
 	files-tilde.page \
 	get-involved.page \
+	hardware-auth.page \
+	hardware-cardreader.page \
 	hardware-driver.page \
 	hardware.page \
 	hardware-problems-bluetooth.page \
