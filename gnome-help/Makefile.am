@@ -17,6 +17,7 @@ HELP_MEDIA = \
 	figures/shell-exit.png \
 	figures/shell-files.png \
 	figures/shell-introduction.png \
+	figures/shell-notification.png \
 	figures/shell-top-bar.png \
 	figures/shell-windows.png \
 	figures/shell-workspaces.png \
@@ -50,6 +51,7 @@ HELP_FILES = \
 	backup-what.page \
 	backup-where.page \
 	backup-why.page \
+	bluetooth.page \
 	bluetooth-connect-device.page \
 	bluetooth-problem-connecting.page \
 	bluetooth-remove-connection.page \
@@ -59,6 +61,7 @@ HELP_FILES = \
 	clock-calendar.page \
 	clock-set.page \
 	clock-timezone.page \
+	disk.page \
 	disk-benchmark.page \
 	disk-capacity.page \
 	disk-check.page \
@@ -86,11 +89,14 @@ HELP_FILES = \
 	files-sort.page \
 	files-tilde.page \
 	get-involved.page \
+	hardware-auth.page \
+	hardware-cardreader.page \
 	hardware-driver.page \
 	hardware.page \
 	hardware-problems-bluetooth.page \
 	hardware-problems-graphics.page \
 	index.page \
+	irc.page \
 	keyboard.page \
 	keyboard-cursor-blink.page \
 	keyboard-layouts.page \
@@ -98,6 +104,7 @@ HELP_FILES = \
 	look-background.page \
 	look-display-fuzzy.page \
 	look-resolution.page \
+	mailing-list.page \
 	media.page \
 	more-help.page \
 	mouse.page \
@@ -230,7 +237,7 @@ HELP_FILES = \
 	user-changepassword.page \
 	user-changepicture.page \
 	user-delete.page \
-	user-forgottenpassword.page \
+	user-forum.page \
 	user-goodpassword.page \
 	video-dvd.page \
 	video-sending.page \

@@ -1,15 +1,14 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic"
+      type="topic" style="question"
       id="power-closelid">
 
   <info>
-    <link type="guide" xref="power#problems"/>
-    <link type="guide" xref="hardware#power"/>
+    <link type="guide" xref="power"/>
     <link type="seealso" xref="power-suspendfail"/>
     
     <desc>Laptops go to sleep when you close the lid, in order to save power.</desc>
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-08" status="final"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -27,20 +26,22 @@
 <section id="nosuspend">
  <title>Stop the computer from suspending when the lid is closed</title>
  <p>If you don't want the computer to suspend when you close the lid, you can change the settings for that behavior.  To set the computer to blank the screen, rather than suspend, when the lid is closed:</p>
+ <note style="warning">
+   <p>Be very careful if you change this setting. Some laptops can overheat
+   if they are left running with the lid closed, especially if they are in
+   a confined place like a backpack.</p>
+ </note>
  <steps>
    <item>
-     <p>Move your mouse to the Activities menu to activate the overview.</p>
+     <p>Open the <app>Terminal</app> application from the <gui>Activities</gui> overview.</p>
    </item>
    <item>
-     <p>Choose <gui>Applications</gui> and locate the Terminal in the list, or type "terminal" to locate it.  Click the <gui>Terminal</gui> icon to start the application.</p>
+     <p>To change the setting used when running on battery power, type this command and press <key>Enter</key>:</p>
+     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-battery-action blank</screen>
    </item>
    <item>
-     <p>To change the setting used when running on battery power, type this command and hit <key>Enter</key>:</p>
-     <code>gsettings set org.gnome.settings-daemon.plugin.power lid-close-battery-action blank</code>
-   </item>
-   <item>
-     <p>To change the setting used when running on AC power, type this command and hit <key>Enter</key>:</p>
-     <code>gsettings set org.gnome.settings-daemon.plugin.power lid-close-ac-action blank</code>
+     <p>To change the setting used when running on AC power, type this command and press <key>Enter</key>:</p>
+     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-ac-action blank</screen>
    </item>
  </steps>
  <p>There are other settings available besides "blank," such as "nothing," which causes the computer to do nothing.</p>

@@ -2,10 +2,10 @@
       type="topic" style="task"
       id="disk-format">
   <info>
-    <link type="guide" xref="hardware#disk"/>
+    <link type="guide" xref="disk"/>
 
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-14" status="final"/>
     
     <credit type="author">
       <name>GNOME Documentation Team</name>
@@ -18,35 +18,28 @@
 
 <title>Wipe everything off a removable disk</title>
 
-<p>If you have a removable disk like a USB memory stick or an external hard disk, you may wish to completely remove all of the files you have on there. You can do this by <em>formatting</em> the disk - this deletes all of the files on the disk and leaves it empty.</p>
+<p>If you have a removable disk, like a USB memory stick or an external hard 
+disk, you may sometimes wish to completely remove all of its files and 
+folders. You can do this by <em>formatting</em> the disk - this deletes all 
+of the files on the disk and leaves it empty.</p>
 
 <steps>
- <item>
-  <p>Go to the <gui>Activities</gui> overview and open the <app>Disk Utility</app>.</p>
- </item>
- 
- <item>
-  <p>Find the disk you want to wipe in the list on the left side of the window and click to select it.</p>
-  <note style="warning"><p>Make sure that you have selected the correct disk! If you choose the wrong disk, all of the files on the other disk will be deleted!</p></note>
- </item>
- 
- <item>
-  <p>In the window that pops up, choose a <gui>Type</gui> for the disk. This chooses what is known as the <em>file system type</em>.</p>
-  <p>If you want to use the disk on Windows and Mac OS computers as well as Linux, choose <gui>FAT</gui>. If you only want to use it on Windows, <gui>NTFS</gui> may be a better option.</p>
- </item>
- 
- <item>
-  <p>Give the disk a name and click <gui>Format</gui> to begin wiping the disk.</p>
- </item>
- 
- <item>
-  <p>Once the formatting has finished, <gui>safely remove</gui> the disk. It should now be blank and ready to use again.</p>
- </item>
+ <title>Format a removable disk</title>
+ <item><p>Open the <app>Disk Utility</app> application from the <gui>Activities</gui> overview.</p></item>
+ <item><p>Select the disk you want to wipe from the <gui>Storage Devices</gui> list.</p>
+  <note style="warning"><p>Make sure that you have selected the correct disk! If you choose the wrong disk, all of the files on the other disk will be deleted!</p></note></item>
+ <item><p>Click <gui>Format Volume</gui> from <gui>Volumes</gui>. A window pops up from below, so you can choose the <gui>Type</gui> of the disk. If you use the disk on Windows, Mac OS as well as Linux computers, choose <gui>FAT</gui>. If you only use it on Windows, <gui>NTFS</gui> may be a better option. A brief description of the <gui>file system type</gui> will be presented as a label.</p></item>
+ <item><p>Give the disk a name and click <gui>Format</gui> to begin wiping the disk.</p></item>
+ <item><p>Right-click on the disk and choose <gui>Safely Remove Drive</gui> once the formatting has finished. It should now be blank and ready to use again.</p></item>
 </steps>
 
 <note style="warning">
- <title>Formatting permanently deletes your files</title>
- <p>Once the drive has been formatted, the files on it will have been completely removed, so you can't get them back. It is possible that special recovery software could retrieve the files, so formatting a disk is not a completely secure way of wiping a disk.</p>
+ <title>Formatting a disk does not securely delete your files</title>
+ <p>Formatting a disk is not a completely secure way of wiping all of its 
+data. A formatted disk will not appear to have files on it, but it is 
+possible that special recovery software could retrieve the files. If you 
+need to securely delete the files, you will need to use a command-line 
+utility, such as <app>shred</app>.</p>
 </note>
 
 </page>

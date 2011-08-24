@@ -9,7 +9,7 @@
    default applications.</desc>
 
    <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-   <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+   <revision pkgversion="3.0" version="3.0.1" date="2011-06-06" status="final"/>
    <credit type="author">
      <name>Tiffany Antopolski</name>
      <email>tiffany@antopolski.com</email>
@@ -25,23 +25,25 @@
   </info>
   <title>File properties</title>
 
-  <p>You can view information about a file in the file properties dialog.
-  To view the properties for a file or folder, right-click it and select
+  <p>To view information about a file or folder, right-click it and select
   <gui>Properties</gui>. You can also select the file and press
   <guiseq><gui>Alt</gui><gui>Enter</gui></guiseq>.</p>
 
-  <p>The file properties dialog shows you information like the file type,
-  size, and modification time. If you need this information often, you
+  <p>The file properties window shows you information like the type of file,
+  the size of the file, and when you last modified it. If you need this 
+  information often, you
   can have it displayed in <link xref="nautilus-list">list view columns</link>
-  or <link xref="nautilus-display#icon-captions">icon captions</link>.</p>
-
-  <p>The file properties dialog also allow you to
+  or <link xref="nautilus-display#icon-captions">icon captions</link>. You can 
+  also use this window to 
   <link xref="nautilus-file-properties-permissions">set file permissions</link>
   and <link xref="files-open">choose applications to open files</link>.</p>
 
-  <p>For certain types of files, such as images and videos, there will be
-  an extra tab that provides information like the dimensions, duration,
-  and codec.</p>
+  <p>The information given on the <gui>Basic</gui> tab is explained below. 
+  There are also 
+  <gui><link xref="nautilus-file-properties-permissions">Permissions</link></gui> 
+  and <gui><link xref="files-open#default">Open With</link></gui> tabs. For 
+  certain types of files, such as images and videos, there will be an extra tab 
+  that provides information like the dimensions, duration, and codec.</p>
 
   <comment>
     <cite date="2011-04-04">shaunm</cite>
@@ -51,57 +53,58 @@
     you're on.</p>
   </comment>
 
- <terms>
+<section id="basic">
  <title>Basic properties</title>
+ <terms>
   <item>
     <title><gui>Name</gui></title>
-    <p>The name of the file. You can rename the file by changing this field.
+    <p>You can rename the file by changing this field.
     You can also rename a file outside the properties window. See
     <link xref="files-rename"/>.</p>
   </item>
   <item>
     <title><gui>Type</gui></title>
-    <p>The type of the file, such as PDF document, OpenDocument Text, or JPEG
-    image. The MIME type of the file is shown in parentheses. The file type
-    determines which applications can open the file, among other things. See
-    <link xref="files-open"/> for more information.</p>
+    <p>This helps you identify the type of the file, such as PDF document, 
+    OpenDocument Text, or JPEG image. The file type determines which 
+    applications can open the file, amongst  other things. For example, you 
+    can't open a picture with a music player. See <link xref="files-open"/> 
+    for more information on this.</p> 
+  <p>The <em>MIME type</em> of the file is shown in parentheses; MIME type is 
+    a standard way that computers use to refer to the file type.</p>
   </item>
 
   <item>
     <title>Contents</title>
-    <p>This field is displayed if you are looking at the properties of a folder. It shows the number of items in the folder.  If the folder includes other folders, each inner folder is counted as one item, even if it contains further items. Each file is also counted as one item.  If the folder is empty, the contents will display <gui>nothing</gui>.</p>
+    <p>This field is displayed if you are looking at the properties of a folder rather than a file. It helps you see the number of items in the folder.  If the folder includes other folders, each inner folder is counted as one item, even if it contains further items. Each file is also counted as one item. If the folder is empty, the contents will display <gui>nothing</gui>.</p>
   </item>
 
   <item>
     <title>Size</title>
-    <p>This field is displayed if you are looking at an item other than a folder.  The size may be stated as bytes, KB, MB, or GB.  In the case of the last three, the size in bytes will be stated in parentheses.</p>
-    <note>
-      <list style="compact">
-        <item><p>1 KB = 1 024 bytes</p></item>
-        <item><p>1 MB = 1 048 576 bytes</p></item>
-        <item><p>1 GB = 1 073 741 824 bytes</p></item>
-      </list>
-    </note>
+    <p>This field is displayed if you are looking at a file (not a folder). The size of a file tells you how much disk space it takes up. This is also an indicator of how long it will take to download a file or send it in an email (big files take longer to send/receive).</p>
+    <p>Sizes may be given in bytes, KB, MB, or GB; in the case of the last three, the size in bytes will also be given in parentheses. Technically, 1 KB is 1024 bytes, 1 MB is 1024 KB and so on.</p>
   </item>
 
   <item>
     <title>Location</title>
-    <p>The absolute path to your item.</p>
+    <p>The location of each file on your computer is given by its <em>absolute path</em>. This is a unique "address" of the file on your computer, made up of a list of the folders that you would need to go into to find the file. For example, if Jim had a file called <file>Resume.pdf</file> in his Home folder, its location would be <file>/home/jim/Resume.pdf</file>.</p>
   </item>
 
   <item>
     <title>Volume</title>
     <p>The file system or device that the file is stored on. This shows you
-    the storage medium the file is on, such as a
-    <link xref="disk-partitions">disk partition</link> on your computer, an
-    external drive or optical disc, or a
-    <link xref="nautilus-connect">network share or file server</link>.</p>
+    where the file is physically stored, for example if it is on the hard disk 
+    or on a CD, or a
+    <link xref="nautilus-connect">network share or file server</link>. Hard 
+    disks can be split up into several 
+    <link xref="disk-partitions">disk partitions</link>; the partition will 
+    be displayed under <gui>Volume</gui> too.</p>
   </item>
 
   <item>
     <title>Free Space</title>
-    <p>For folders, the amount of free space left for new files on the
-    containing volume.</p>
+    <p>This is only displayed for folders. It gives the amount of disk space 
+    which is available on the disk that the folder is on. This is useful for 
+    checking if the hard disk is full.</p>
   </item>
 
 
@@ -115,6 +118,6 @@
     <p>The date and time when the file was last changed and saved.</p>
   </item>
  </terms>
-
+</section>
 
 </page>

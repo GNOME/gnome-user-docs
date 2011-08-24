@@ -5,8 +5,7 @@
     <link type="next" xref="net-wireless-troubleshooting-device-drivers"/>
     
     <revision pkgversion="3.0" date="2011-04-05" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
-
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-08" status="review"/>
 
     <credit type="author">
       <name>Contributors to the Ubuntu documentation wiki</name>
@@ -17,83 +16,78 @@
       <email>gnome-doc-list@gnome.org</email>
     </credit>
 
-    <desc>Troubleshoot your connection to a wireless network.</desc>
+    <desc>Even though your wireless adapter is connected, it may not have been recognized properly by the computer.</desc>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-<title>Resolve problems with wireless connections</title>
+<title>Wireless connection troubleshooter</title>
+<subtitle>Check that the wireless adapter was recognized</subtitle>
 
-  <p>This guide is designed to help you troubleshoot and resolve problems with accessing a wireless network.</p>
+<p>Even though the wireless adapter is connected to the computer, it may not have been recognized as a network device by the computer. In this step, you will check whether the device was recognized properly.</p>
 
-  <section id="net-wireless-hardware-check">
-    <title>Checking your system hardware</title>
-  <p>Our first step will be to see if your computer recognizes your wireless adapter.</p>
-  <steps>
-   <item><p>Open a <app>terminal</app> window, and enter <cmd>sudo lshw -C network</cmd>.</p>
-    <p>If you get no response, you may need to install the <app>lshw</app> program on your computer.</p></item>
-   <item><p>Read the output from the command, and check for the <em>Wireless interface</em> section. If your wireless adapter is detected, the output should look similar to this:</p>
-   <example> 
+<steps>
+ <item>
+  <p>Open a Terminal window, type <cmd>lshw -C network</cmd> and press <key>Enter</key>. If this gives an error message, you may need to install the <app>lshw</app> program on your computer.</p>
+ </item>
+ <item>
+  <p>Look through the information that appeared and find the <em>Wireless interface</em> section. If your wireless adapter was detected properly, you should see something similar (but not identical) to this:</p>
    <code><![CDATA[*-network
        description: Wireless interface
        product: PRO/Wireless 3945ABG [Golan] Network Connection
-       vendor: Intel Corporation
-       physical id: 0
-       bus info: pci@0000:03:00.0
-       logical name: wlan0
-       version: 02
-       serial: 00:1b:77:11:5a:a7
-       width: 32 bits
-       clock: 33MHz
-       capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
-       configuration: broadcast=yes driver=iwl3945 driverversion=2.6.38.2-9.fc15.i686 
-       firmware=15.32.2.9 ip=192.168.1.42 latency=0 link=yes multicast=yes 
-       wireless=IEEE 802.11abg
-       resources: irq:46 memory:edf00000-edf00fff]]></code>
-   </example>
-</item>
-  </steps>
-  <p>If a wireless device is listed, then continue to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers page</link>.</p>
-  <p>If a wireless device is not listed, the next steps will help you to locate the hardware information.</p> 
+       vendor: Intel Corporation]]></code>
+ </item>
+ <item>
+  <p>If a wireless device is listed, continue on to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers step</link>.</p>
+  <p>If a wireless device is <em>not</em> listed, the next steps you take will depend on the type of device that you use. Refer to the section below that is relevant to the type of wireless adapter that your computer has (<link xref="#pci">internal PCI</link>, <link xref="#usb">USB</link>, or <link xref="#pcmcia">PCMCIA</link>).</p>
+ </item>
+</steps>
+
+<section id="pci">
+ <title>PCI (internal) wireless adapter</title>
+ <p>Internal PCI adapters are the most common, and are found in most laptops made within the past few years. To check if your PCI wireless adapter was recognized:</p>
+ <steps>
+  <item><p>Open a Terminal, type <cmd>lspci</cmd> and press <key>Enter</key>.</p></item>
+  <item>
+   <p>Look through the list of devices that is shown and find any that are marked <code>Network controller</code> or <code>Ethernet controller</code>. Several devices may be marked in this way; the one corresponding to your wireless adapter might include words like <code>wireless</code>, <code>WLAN</code>, <code>wifi</code> or <code>802.11</code>. Here is an example of what the entry might look like:</p>
+ <code>Network controller: Intel Corporation PRO/Wireless 3945ABG [Golan] Network Connection</code>
+ </item>
+ <item><p>If you found your wireless adapter in the list, proceed to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers step</link>. If you didn't find anything related to your wireless adapter, see <link xref="#not-recognized">the instructions below</link>.</p></item>
+ </steps>
 </section>
-   <section id="net-wireless-hardware-check2">
-    <title>Further wireless hardware checks</title>
-  <p>Because your wireless adapter was not found with the previous command, you need to take further steps to make sure your computer recognizes your adapter.</p>
-  <p>The steps you take will depend on the type of device that you use. Refer to the section that is relevant to the type of wireless adapter that you use with your computer: PCI (internal), USB, or PCMCIA.</p>
-  <note><p>Internal PCI adapters are most common, and are found on laptops made within the past few years. PCMCIA adapters are external, card-style adapters, and are more common on older laptops.</p></note>
-      <section id="net-wireless-hardware-pcicheck">
-        <title>Checking for a PCI (internal) device</title>
-      <p>To check if your computer can recognizes your PCI wireless adapter, enter <cmd>sudo lspci</cmd> into a terminal window. The terminal will display a list of PCI devices that it has found on your computer.</p>
-      <p>Although this may be a bit difficult to read-through, look for the name and model number of your wireless adapter. Here is an example of what a PCI device listing may look like:</p>
-      <example>
-        <p><code><![CDATA[Network controller: Intel Corporation PRO/Wireless 3945ABG [Golan] Network Connection]]></code></p>
-      </example>
-      <p>If your device is recognized by the previous command, great! Proceed to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers</link> page. If the above command does not show any output related to your wireless adapter, see the instructions at the bottom of this page.</p> 
-      </section>
-      <section id="net-wireless-hard-ware-usbcheck">
-        <title>Checking for a USB device</title>
-      <p>To check if your computer recognizes your USB wireless adapter, enter <cmd>sudo lsusb</cmd> into a terminal window. The terminal will display a list of USB devices that it has found on your computer.</p>
-     <p>Although it may be difficult to read-through, look for the name and model number of your USB wireless adapter. Here is some sample output from the <cmd>lsusb</cmd> command:</p>
-     <example>
-        <p><code><![CDATA[Bus 005 Device 009: ID 12d1:140b Huawei Technologies Co., Ltd. EC1260 Wireless Data Modem HSD USB Card]]></code></p>
-     </example>
-     <p>If your device is recognized by the previous command, great! Proceed to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers</link> page. If the above command does not show any output related to your wireless adapter, see the instructions at the bottom of this page.</p>
-      </section>
-      <section id="net-wireless-hard-ware-pcmciacheck">
-        <title>Checking for a PCMCIA device</title>
-      <p>To check if your computer recognizes your PCMCIA adapter, complete the following steps:</p>
-        <steps>
-          <item><p>Start your computer <em>without</em> the wireless adapter plugged in.</p></item>
-          <item><p>Log in when/if prompted.</p></item>
-          <item><p>When the desktop loads, open a terminal window and type the following command:</p>
-                   <p><cmd>sudo tail -f /var/log/messages</cmd></p></item>
-          <item><p>Insert your wireless adapter into an available slot.</p></item>
-          <item><p>Repeat the command above, and note the difference between the two.</p></item>
-	</steps>
 
-      <p>If your device is recognized by the previous command, great! Proceed to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers</link> page.</p>
+<section id="usb">
+ <title>USB wireless adapter</title>
+ <p>Wireless adapters that plug into a USB port on your computer are less common. They can plug directly into a USB port, or may be connected by a USB cable. 3G/mobile broadband adapters look quite similar to wireless (wifi) adapters, so if you think you have a USB wireless adapter, double-check that it is not actually a 3G adapter. To check if your USB wireless adapter was recognized:</p>
+ <steps>
+  <item><p>Open a Terminal, type <cmd>lsusb</cmd> and press <key>Enter</key>.</p></item>
+  <item>
+   <p>Look through the list of devices that is shown and find any that seem to refer to a wireless or network device. The one corresponding to your wireless adapter might include words like <code>wireless</code>, <code>WLAN</code>, <code>wifi</code> or <code>802.11</code>. Here is an example of what the entry might look like:</p>
+   <code><![CDATA[Bus 005 Device 009: ID 12d1:140b Huawei Technologies Co., Ltd. EC1260 Wireless Data Modem HSD USB Card]]></code>
+  </item>
+  <item><p>If you found your wireless adapter in the list, proceed to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers step</link>. If you didn't find anything related to your wireless adapter, see <link xref="#not-recognized">the instructions below</link>.</p></item>
+ </steps>
+</section>
 
-   <note><p>If your device is not recognized by any of the above commands, it may mean that your device is not working, or that your device is not supported by your operating system.</p>
-   <p>To get additional help, post a message to a user forum appropriate to your operating system (e.g., Fedora, OpenSUSE, or Ubuntu forums, etc.), or post a message to an appropriate mailing list.</p></note>
-   </section>
-   </section>
+<section id="pcmcia">
+ <title>Checking for a PCMCIA device</title>
+ <p>PCMCIA wireless adapters are typically rectangular cards which slot into the side of your laptop. They are more commonly found in older computers. To check if your PCMCIA adapter was recognized:</p>
+ <steps>
+  <item><p>Start your computer <em>without</em> the wireless adapter plugged in.</p></item>
+  <item>
+   <p>Open a Terminal and type the following, then press <key>Enter</key>:</p>
+   <code>tail -f /var/log/messages</code>
+   <p>This will display a list of messages related to your computer's hardware, and will automatically update if anything to do with your hardware changes.</p>
+  </item>
+  <item><p>Insert your wireless adapter into the PCMCIA slot and see what changes in the Terminal window. The changes should include some information about your wireless adapter. Look through them and see if you can identify it.</p></item>
+  <item><p>To stop the command from running in the Terminal, press <keyseq><key>Ctrl</key><key>C</key></keyseq>. After you have done that, you can close the Terminal if you like.</p></item>
+  <item><p>If you found any information about your wireless adapter, proceed to the <link xref="net-wireless-troubleshooting-device-drivers">Device Drivers step</link>. If you didn't find anything related to your wireless adapter, see <link xref="#not-recognized">the instructions below</link>.</p></item>
+ </steps>
+</section>
+
+<section id="not-recognized">
+ <title>Wireless adapter was not recognized</title>
+<p>If your wireless adapter was not recognized, it might not be working properly or the correct drivers may not be installed for it. How you check to see if there are any drivers you can install will depend on which Linux distribution you are using (like Ubuntu, Fedora or openSuSE).</p>
+<p>To get specific help, look at the support options on your distribution's website. These might include mailing lists and web chats where you can ask about your wireless adapter, for example.</p>
+</section>
+
 </page>

@@ -2,10 +2,10 @@
       type="topic" style="task"
       id="disk-check">
   <info>
-    <link type="guide" xref="hardware#disk"/>
+    <link type="guide" xref="disk"/>
 
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-14" status="final"/>
     
     <credit type="author">
       <name>GNOME Documentation Team</name>
@@ -28,29 +28,44 @@
 </comment>
 <section id="disk-status">
  <title>Checking the hard disk</title>
-<p>Hard disks have a built-in health-check called <em>SMART</em>. This continually checks for potential problems, and can warn you if the disk is about to fail. This is useful for avoiding future loss of important data.</p>
-<p>To check your disk's health status:</p>
+  <p>Hard disks have a built-in health-check tool called <app>SMART</app> 
+(Self-Monitoring, Analysis, and Reporting Technology), which continually 
+checks the disk for potential problems. SMART also warns you if the disk 
+is about to fail, helping you avoid loss of important data.</p>
+
+  <p>Although SMART runs automatically, you can also check your disk's 
+health by running the <app>Disk Utility</app> application:</p>
+
 <steps>
- <item>
-  <p>Go to <gui>Activities</gui> in the top left corner of the screen and start the <app>Disk Utility</app>.</p>
- </item>
- <item>
-  <p>Select your hard drive in the <gui>Storage Devices</gui> list. Information will appear about the disk and its status under <gui>Drive</gui>.</p>
- </item>
- <item>
-  <p><gui>SMART Status</gui> should say "Disk is healthy".</p>
- </item> 
- <item>
-  <p>To see details of the data and tests applied, click on the <gui>SMART Data</gui> button located below <gui>SMART Status</gui>.</p>
- </item>
+  <title>Check your disk's health using the Disk Utility application</title>
+     <item><p>Open the <app>Disk Utility</app> application from the 
+<gui>Activities</gui> overview.</p></item>
+     <item><p>Select the disk you want to check from the <gui>Storage Devices
+</gui> list. Information and status of the disk will appear under <gui>Drive
+</gui>.</p></item>
+     <item><p><gui>SMART Status</gui> should say "Disk is healthy".</p></item> 
+     <item><p>Click the <gui>SMART Data</gui> button to view more drive 
+information, or to run a self-test.</p></item>
 </steps>
 
 </section>
 
 <section id="disk-not-healthy">
  <title>What if the disk isn't healthy?</title>
- <p>Even if the <gui>SMART Status</gui> indicates that the disk <em>isn't</em> healthy, there may be no cause for alarm. However, it's better to be prepared with a <link xref="backup-why">backup</link> to prevent data loss. You may wish to take the computer/hard disk to a professional for further diagnosis and repair.</p>
- <p>If the status says "Pre-fail", the disk is still reasonably healthy but signs of wear have been detected which mean it might fail in the near future. If your hard disk (or computer) is a few years old, you are likely to see this message on at least some of the health checks. You should <link xref="backup-how">backup your important files regularly</link> and check the disk status periodically to see if it gets worse.</p>
+ <p>Even if the <gui>SMART Status</gui> indicates that the disk <em>isn't</em> 
+healthy, there may be no cause for alarm. However, it's better to be prepared 
+with a <link xref="backup-why">backup</link> to prevent data loss.</p>
+
+ <p>If the status says "Pre-fail", the disk is still reasonably healthy but 
+signs of wear have been detected which mean it might fail in the near future. 
+If your hard disk (or computer) is a few years old, you are likely to see 
+this message on at least some of the health checks. You should <link 
+xref="backup-how">backup your important files regularly</link> and check 
+the disk status periodically to see if it gets worse.</p>
+
+ <p>If it gets worse, you may wish to take the computer/hard disk to a 
+professional for further diagnosis or repair.</p>
+
 </section>
 
 </page>

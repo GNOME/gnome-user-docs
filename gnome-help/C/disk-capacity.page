@@ -2,10 +2,10 @@
       type="topic" style="task"
       id="disk-capacity">
   <info>
-    <link type="guide" xref="hardware#disk"/>
+    <link type="guide" xref="disk"/>
 
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-13" status="review"/>
     
     <credit type="author">
       <name>GNOME Documentation Team</name>
@@ -21,8 +21,9 @@
   </info>
 
 <title>Check how much disk space is left</title>
-<section id="disk-usage-analyzer"><title>With Disk Usage Analyzer</title>
-<p>To check the free disk space and disk capacity using <gui>Disk Usage Analyzer</gui>:</p>
+<p>You can check how much disk space is left by using <app>Disk Usage Analyzer</app> and <app>System Monitor</app>.</p>
+<section id="disk-usage-analyzer"><title>Check with Disk Usage Analyzer</title>
+<p>To check the free disk space and disk capacity using <app>Disk Usage Analyzer</app>:</p>
 
 <comment>
   <cite date="2011-04-04">shaunm</cite>
@@ -30,25 +31,25 @@
 </comment>
 
 <steps>
-    <item><p>Go to <gui>Activities</gui> in the top left corner of the screen.</p></item>
-    <item><p>Start typing 'Disk Usage Analyzer'.</p></item> 
-    <item><p>Press <key>Enter</key> or click on the <gui>Disk Usage Analyzer</gui> icon.</p></item>
-</steps>
+     <item><p>Open the <app>Disk Usage Analyzer</app> application from the <gui>Activities</gui> overview.</p></item>
+     <item><p>The <app>Disk Usage Analyzer</app> window will display the <gui>Total file system capacity</gui> and <gui>Total file system usage</gui>.</p><p>(You can click on <gui>View as Rings Chart</gui> to change the display to <gui>View as Treemap Chart</gui>).</p></item> 
+    <item><p>Click <gui>Scan Home</gui> if you want to check how much disk space is left inside the Home folder or click <gui>Scan filesystem</gui> icon if you want to check how much disk space is left inside the '/' (Root) folder. In both cases, the location of the files and other options like Usage, Size and Contents will be presented. You can change the order of the details and view the files in order of file size.</p></item>
+    <item><p>Click the <gui>Scan a folder</gui> icon if you want to scan disk space inside specific folder or click <gui>Scan a remote folder</gui> if you want to scan disk space inside remote folder. See more details in <link xref="Disk Usage Analyzer"><app>Disk Usage Analyzer</app></link></p></item>
+    <item><p>Click <gui>Stop </gui> or <gui>Refresh</gui> anytime you need to cancel or update the scanning.</p></item>
+  </steps>
+
+
 <note style="tip"><p><gui>Disk Usage Analyzer</gui> can also be run by pressing <keyseq><key>Alt</key><key>F2</key></keyseq>, typing 'baobab' (without the single-quotes) and pressing <key>Enter</key>.</p></note>
 
-<p>The <gui>Disk Usage Analyzer</gui> window will display the <gui>Total file system capacity</gui> and <gui>Total file system usage</gui>, in percentage and gigabytes. Click on <gui>View as Rings Chart</gui> to change the display to <gui>View as Treemap Chart</gui>.</p>
 </section>
-<section id="system-monitor"><title>With System Monitor</title>
 
-<p>To check the free disk space and disk capacity with <gui>System Monitor</gui>:</p>
+<section id="system-monitor"><title>Check with System Monitor</title>
+
+<p>To check the free disk space and disk capacity with <app>System Monitor</app>:</p>
 <steps>
-    <item><p>Go to <gui>Activities</gui> in the top left corner of the screen.</p></item>
-    <item><p>Start typing 'System Monitor'.</p></item> 
-    <item><p>Press <key>Enter</key> or click on the <gui>System Monitor</gui> icon.</p></item>
-    <item><p>Click on the <gui>File Systems</gui> tab.</p></item>
+    <item><p>Open the <app>System Monitor</app> application from the <gui>Activities</gui> overview.</p></item>
+    <item><p>Select the <gui>File Systems</gui> tab to view the system's partitions and disk space usage in Total, Free, Available and Used.</p></item>
 </steps>
-<p>For each device, the <gui>System Monitor</gui> window displays the Total, Free, Available and Used space.</p>
-
 </section>
 <section id="disk-full"><title>What if the disk is too full?</title>
 <p>If the disk is too full you should:</p>

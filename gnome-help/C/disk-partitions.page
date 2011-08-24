@@ -2,42 +2,47 @@
       type="topic"
       id="disk-partitions">
   <info>
-    <link type="guide" xref="hardware#disk"/>
+    <link type="guide" xref="disk"/>
 
     <revision pkgversion="3.0" date="2011-04-04" status="final"/>
-    <revision pkgversion="3.0" version="3.0.1" date="2011-04-06" status="outdated"/>
+    <revision pkgversion="3.0" version="3.0.1" date="2011-06-07" status="final"/>
     
     <credit type="author">
       <name>GNOME Documentation Team</name>
       <email>gnome-doc-list@gnome.org</email>
     </credit>
    
-    <desc>Understand what volumes and partitions are and use the
-    disk utility application.</desc>
+    <desc>Understand what volumes and partitions are and use the disk utility 
+    to manage them.</desc>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
 <title>Manage volumes and partitions</title>
 
-<p>The word <em>volume</em> is used to describe areas of storage that your computer has made available for your use. The computer makes this storage accessible via your file system in a process referred to as <em>mounting</em>. Mounted volumes may be hard drives, USB drives, DVD-RWs, SD cards, and other media.</p>
+<p>The word <em>volume</em> is used to describe a storage device, like a hard disk. It can also refer to a <em>part</em> of the storage on that device, because you can split the storage up into chunks. The computer makes this storage accessible via your file system in a process referred to as <em>mounting</em>. Mounted volumes may be hard drives, USB drives, DVD-RWs, SD cards, and other media. If a volume is currently mounted, you can read (and possibly write) files on it.</p>
 
-<p>Often, a mounted volume is called a <em>partition</em>, though they are not identical. "Partition" refers to one or more <em>physical</em> areas of storage on a single drive. Once a partition has been mounted, it can be called a volume. You can think of volumes as the labeled, accessible “storefronts” to the functional “back rooms” of partitions and drives.</p>
+<p>Often, a mounted volume is called a <em>partition</em>, though they are not necessarily the same thing. A “partition” refers to a <em>physical</em> area of storage on a single disk drive. Once a partition has been mounted, it can be referred to as a volume because you can access the files on it. You can think of volumes as the labeled, accessible “storefronts” to the functional “back rooms” of partitions and drives.</p>
 
+<section id="manage">
+ <title>View and manage volumes and partitions using the disk utility</title>
+ <p>You can check and modify your computer's storage volumes with the disk utility.</p>
 <steps>
-  <title>View and manage volumes and partitions using <app>Disk Utility</app></title>
  <item>
-  <p>Go to <gui>Activities</gui> in the top left corner of the screen and start the <app>Disk Utility</app>.</p>
+  <p>Open the <gui>Activities</gui> overview and start the <app>Disk Utility</app>.</p>
  </item>
  <item>
-  <p> In the pane marked <gui>Storage Devices</gui>, you will find hard disks, CD/DVD drives, and other physical devices. Click on a device of interest.</p>
+  <p> In the pane marked <gui>Storage Devices</gui>, you will find hard disks, CD/DVD drives, and other physical devices. Click on the device you want to inspect.</p>
  </item>
  <item>
- <p> In the right pane, the area labeled <gui>Volumes</gui> provides a visual breakdown of the volumes and partitions present on the selected device. It also contains a variety of tools used to manage these volumes. Be careful, it is possible to completely erase the data on your disk with these utilities.</p>
+ <p> In the right pane, the area labeled <gui>Volumes</gui> provides a visual breakdown of the volumes and partitions present on the selected device. It also contains a variety of tools used to manage these volumes.</p>
+ <p>Take care; it is possible to completely erase the data on your disk with these tools if you try to.</p>
 </item>
 </steps>
 
-<p>Your computer most likely has at least one <em>primary</em> partition and a single <em>swap</em> partition. The swap partition is used by your operating system for memory management, and is rarely mounted.  The primary partition contains your operating system, applications, settings, and personal files. These files can be distributed among multiple partitions for security or convenience.</p>
+<p>Your computer most likely has at least one <em>primary</em> partition and a single <em>swap</em> partition. The swap partition is used by the operating system for memory management, and is rarely mounted.  The primary partition contains your operating system, applications, settings, and personal files. These files can also be distributed among multiple partitions for security or convenience.</p>
 
-<p>One primary partition must contain information that your computer uses to start up, or <em>boot</em>. For this reason it is sometimes called a boot partition, or boot volume. To determine if a volume is bootable, look for <gui>Partition Flags</gui> in <gui>Disk Utility</gui>. External media such as USB drives and CDs may also contain a bootable volume.</p>
+<p>One primary partition must contain information that your computer uses to start up, or <em>boot</em>. For this reason it is sometimes called a boot partition, or boot volume. To determine if a volume is bootable, look at its <gui>Partition Flags</gui> in the disk utility. External media such as USB drives and CDs may also contain a bootable volume.</p>
+
+</section>
 
 </page>
