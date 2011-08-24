@@ -5,6 +5,11 @@ HELP_ID = gnome-help
 HELP_LINGUAS = ca de fi es gl hi nl sl sv vi
 
 HELP_MEDIA = \
+	figures/color-average.png \
+	figures/color-camera.png \
+	figures/color-display.png \
+	figures/color-printer.png \
+	figures/color-profile-default.png \
 	figures/gnome.png \
 	figures/gnome-searchtool.png \
 	figures/nautilus.png \
@@ -57,6 +62,22 @@ HELP_FILES = \
 	bluetooth-remove-connection.page \
 	bluetooth-send-file.page \
 	bluetooth-turn-on-off.page \
+	color.page \
+	color-assignprofiles.page \
+	color-calibrate-camera.page \
+	color-calibrate-printer.page \
+	color-calibrate-scanner.page \
+	color-calibrate-screen.page \
+	color-calibrationcharacterization.page \
+	color-calibrationdevices.page \
+	color-calibrationtargets.page \
+	color-canshareprofiles.page \
+	color-gettingprofiles.page \
+	color-missingvcgt.page \
+	color-notspecifiededid.page \
+	color-whatisprofile.page \
+	color-why-calibrate.page \
+	color-whyimportant.page \
 	clock.page \
 	clock-calendar.page \
 	clock-set.page \
