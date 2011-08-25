@@ -1,0 +1,62 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="color-testing">
+
+  <info>
+    <link type="guide" xref="color#problems"/>
+    <link type="seealso" xref="color-gettingprofiles"/>
+    <desc>Testing color management isn't hard, and we even supply some test profiles.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+  <title>How do I test if color management is working correctly?</title>
+  <p>
+    The effects of a color profile are sometimes subtle and it may be
+    hard to see if anything much has changed.
+  </p>
+  <p>
+    In GNOME we ship several profiles for testing that make it very
+    clear when the profiles are being applied:
+  </p>
+
+  <list>
+    <item>
+      <p>
+        <em>Bluish Test</em>: This will turn the screen blue and tests
+        if the calibration curves are being sent to the display
+      </p>
+    </item>
+    <item>
+      <p>
+        <em>ADOBEGAMMA-test</em>: This will turn the screen pink and
+        tests different features of a screen profile
+      </p>
+    </item>
+    <item>
+      <p>
+        <em>FakeBRG</em>: This will not change the screen, but will swap
+        around the RGB channels to become BGR.
+        This will make all the colors gradients look mostly correct, and
+        there won't be much difference on the whole screen, but images
+        will look very different in applications that support color
+        management.
+      </p>
+    </item>
+  </list>
+
+  <p>
+    Add one of the test profiles to your display device using the
+    <guiseq><gui>System Settings</gui><gui>Color</gui></guiseq>
+    preferences.
+  </p>
+
+  <p>
+    Using these profiles you can clearly see when an application
+    supports color management.
+  </p>
+
+</page>
