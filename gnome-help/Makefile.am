@@ -10,6 +10,7 @@ HELP_MEDIA = \
 	figures/color-display.png \
 	figures/color-printer.png \
 	figures/color-profile-default.png \
+	figures/color-space.png \
 	figures/gnome.png \
 	figures/gnome-searchtool.png \
 	figures/nautilus.png \
@@ -78,6 +79,7 @@ HELP_FILES = \
 	color-notspecifiededid.page \
 	color-virtualdevice.page \
 	color-whatisprofile.page \
+	color-whatisspace.page \
 	color-why-calibrate.page \
 	color-whyimportant.page \
 	clock.page \
