@@ -73,8 +73,10 @@ HELP_FILES = \
 	color-calibrationtargets.page \
 	color-canshareprofiles.page \
 	color-gettingprofiles.page \
+	color-howtoimport.page \
 	color-missingvcgt.page \
 	color-notspecifiededid.page \
+	color-virtualdevice.page \
 	color-whatisprofile.page \
 	color-why-calibrate.page \
 	color-whyimportant.page \
