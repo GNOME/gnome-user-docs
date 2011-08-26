@@ -76,6 +76,7 @@ HELP_FILES = \
 	color-gettingprofiles.page \
 	color-howtoimport.page \
 	color-missingvcgt.page \
+	color-notifications.page \
 	color-notspecifiededid.page \
 	color-testing.page \
 	color-virtualdevice.page \
