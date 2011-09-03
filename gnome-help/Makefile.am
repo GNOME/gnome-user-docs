@@ -30,6 +30,7 @@ HELP_MEDIA = \
 	figures/shell.png \
 	figures/system-run.png \
 	figures/universal-access-menu.png \
+	figures/view-fullscreen-16.png \
 	figures/yelp-icon-big.png
 
 HELP_FILES = \
@@ -106,7 +107,7 @@ HELP_FILES = \
 	files-lost.page \
 	files-open.page \
 	files.page \
-	files-preview-music.page \
+	files-preview.page \
 	files-recover.page \
 	files-removedrive.page \
 	files-rename.page \
