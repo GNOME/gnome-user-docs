@@ -269,7 +269,6 @@ HELP_FILES = \
 	user-goodpassword.page \
 	video-dvd.page \
 	video-sending.page \
-	web.page \
 	web-default-browser.page \
 	web-default-email.page \
 	web-email-virus.page \
