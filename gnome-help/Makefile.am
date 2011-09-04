@@ -65,6 +65,10 @@ HELP_FILES = \
 	bluetooth-send-file.page \
 	bluetooth-turn-on-off.page \
 	color.page \
+	clock-calendar.page \
+	clock-set.page \
+	clock-timezone.page \
+	clock.page \
 	color-assignprofiles.page \
 	color-calibrate-camera.page \
 	color-calibrate-printer.page \
@@ -85,16 +89,12 @@ HELP_FILES = \
 	color-whatisspace.page \
 	color-why-calibrate.page \
 	color-whyimportant.page \
-	clock.page \
-	clock-calendar.page \
-	clock-set.page \
-	clock-timezone.page \
-	disk.page \
 	disk-benchmark.page \
 	disk-capacity.page \
 	disk-check.page \
 	disk-format.page \
 	disk-partitions.page \
+	disk.page \
 	display-dimscreen.page \
 	display-lock.page \
 	fallback-mode.page \
@@ -106,7 +106,6 @@ HELP_FILES = \
 	files-hidden.page \
 	files-lost.page \
 	files-open.page \
-	files.page \
 	files-preview.page \
 	files-recover.page \
 	files-removedrive.page \
@@ -115,27 +114,28 @@ HELP_FILES = \
 	files-select.page \
 	files-share.page \
 	files-sort.page \
+	files-templates.page \
 	files-tilde.page \
+	files.page \
 	get-involved.page \
 	hardware-auth.page \
 	hardware-cardreader.page \
 	hardware-driver.page \
-	hardware.page \
 	hardware-problems-bluetooth.page \
 	hardware-problems-graphics.page \
+	hardware.page \
 	index.page \
 	irc.page \
-	keyboard.page \
 	keyboard-cursor-blink.page \
 	keyboard-layouts.page \
 	keyboard-repeat-keys.page \
+	keyboard.page \
 	look-background.page \
 	look-display-fuzzy.page \
 	look-resolution.page \
 	mailing-list.page \
 	media.page \
 	more-help.page \
-	mouse.page \
 	mouse-disabletouchpad.page \
 	mouse-doubleclick.page \
 	mouse-drag-threshold.page \
@@ -146,6 +146,7 @@ HELP_FILES = \
 	mouse-sensitivity.page \
 	mouse-touchpad-click.page \
 	mouse-wakeup.page \
+	mouse.page \
 	music-cantplay-drm.page \
 	music-player-ipodtransfer.page \
 	music-player-newipod.page \
@@ -162,34 +163,47 @@ HELP_FILES = \
 	nautilus-views.page \
 	net-adhoc.page \
 	net-antivirus.page \
+	net-browser.page \
+	net-default-browser.page \
+	net-default-email.page \
 	net-editcon.page \
+	net-email-virus.page \
+	net-email.page \
 	net-findip.page \
 	net-firewall-on-off.page \
 	net-firewall-ports.page \
 	net-fixed-ip-address.page \
+	net-general.page \
+	net-install-flash.page \
+	net-install-moonlight.page \
 	net-macaddress.page \
 	net-manual.page \
 	net-othersconnect.page \
 	net-otherscontrol.page \
-	net.page \
 	net-passwordok-noconnect.page \
+	net-problem.page \
 	net-proxy.page \
+	net-security-tips.page \
+	net-security.page \
 	net-slow.page \
 	net-vpn-connect.page \
 	net-what-is-ip-address.page \
 	net-wired-connect.page \
+	net-wired.page \
 	net-wireless-airplane.page \
 	net-wireless-connect.page \
 	net-wireless-disconnecting.page \
 	net-wireless-find.page \
 	net-wireless-hidden.page \
-	net-wireless-troubleshooting.page \
 	net-wireless-troubleshooting-device-drivers.page \
 	net-wireless-troubleshooting-hardware-check.page \
 	net-wireless-troubleshooting-hardware-info.page \
 	net-wireless-troubleshooting-initial-check.page \
+	net-wireless-troubleshooting.page \
 	net-wireless-wepwpa.page \
+	net-wireless.page \
 	net-wrongnetwork.page \
+	net.page \
 	power-batterybroken.page \
 	power-batteryestimate.page \
 	power-batterylife.page \
@@ -203,29 +217,30 @@ HELP_FILES = \
 	power-lowpower.page \
 	power-nowireless.page \
 	power-othercountry.page \
-	power.page \
 	power-suspendfail.page \
 	power-suspendhibernate.page \
 	power-turnoffbutton.page \
 	power-whydim.page \
 	power-willnotturnon.page \
-	prefs.page \
-	prefs-language.page \
+	power.page \
 	prefs-display.page \
-	printing.page \
+	prefs-language.page \
+	prefs.page \
 	printing-2sided.page \
-	printing-booklet.page \
 	printing-booklet-duplex.page \
 	printing-booklet-singlesided.page \
+	printing-booklet.page \
 	printing-cancel-job.page \
 	printing-differentsize.page \
 	printing-envelopes.page \
+	printing-inklevel.page \
 	printing-order.page \
 	printing-paperjam.page \
 	printing-select.page \
 	printing-setup-default-printer.page \
 	printing-setup.page \
 	printing-streaks.page \
+	printing.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
 	session-language.page \
@@ -241,12 +256,12 @@ HELP_FILES = \
 	shell-terminology.page \
 	shell-windows-lost.page \
 	shell-windows-maximize.page \
-	shell-windows.page \
 	shell-windows-states.page \
 	shell-windows-switching.page \
+	shell-windows.page \
 	shell-workspaces-movewindow.page \
-	shell-workspaces.page \
 	shell-workspaces-switch.page \
+	shell-workspaces.page \
 	sound-alert.page \
 	sound-broken.page \
 	sound-crackle.page \
@@ -254,11 +269,11 @@ HELP_FILES = \
 	sound-usemic.page \
 	sound-usespeakers.page \
 	sound-volume.page \
-	tips.page \
 	tips-specialchars.page \
+	tips.page \
 	user-accounts.page \
-	user-addguest.page \
 	user-add.page \
+	user-addguest.page \
 	user-admin-change.page \
 	user-admin-explain.page \
 	user-admin-problems.page \
@@ -269,9 +284,4 @@ HELP_FILES = \
 	user-goodpassword.page \
 	video-dvd.page \
 	video-sending.page \
-	web-default-browser.page \
-	web-default-email.page \
-	web-email-virus.page \
-	web-install-flash.page \
-	web-install-moonlight.page \
 	windows-key.page
