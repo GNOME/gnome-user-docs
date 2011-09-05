@@ -245,6 +245,8 @@ HELP_FILES = \
 	session-fingerprint.page \
 	session-language.page \
 	session-screenlocks.page \
+	sharing.page \
+	sharing-desktop.page \
 	shell-apps-favorites.page \
 	shell-apps-open.page \
 	shell-exit.page \
