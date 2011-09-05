@@ -1,5 +1,7 @@
 @YELP_HELP_RULES@
 
+EXTRA_DIST = C/gnome-help.its
+
 HELP_ID = gnome-help
 
 HELP_LINGUAS = ca de fi es gl hi nl sl sv vi
