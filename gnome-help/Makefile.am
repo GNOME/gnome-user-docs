@@ -4,7 +4,7 @@ EXTRA_DIST = C/gnome-help.its
 
 HELP_ID = gnome-help
 
-HELP_LINGUAS = ca de fi es gl hi nl sl sv vi
+HELP_LINGUAS = ca de fi es gl hi hu nl sl sv vi
 
 HELP_MEDIA = \
 	figures/color-average.png \
