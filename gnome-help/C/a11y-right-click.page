@@ -2,8 +2,10 @@
       type="topic" style="task a11y"
       id="a11y-right-click">
   <info>
+    <link type="guide" xref="mouse"/>
     <link type="guide" xref="a11y#mobility" group="clicking"/>
- 
+
+    <revision pkgversion="3.2" date="2011-09-19" status="final"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
@@ -21,7 +23,9 @@
 
 <title>Simulate a right mouse click</title>
 
-<p>You can make it so that, instead of clicking the right mouse button, you can just hold-down the left mouse button for a while to do the same thing. This is useful if you find it difficult to move your fingers individually on one hand, or if you have a specialized mouse.</p>
+<p>You can right-click by holding down the left mouse button. This is useful if
+you find it difficult to move your fingers individually on one hand, or if your
+pointing device only has a single button.</p>
 
 <steps>
   <item><p>Click your name on the top bar and select <gui>System Settings</gui>.</p></item>
@@ -29,6 +33,28 @@
   <item><p>Switch <gui>Simulated Secondary Click</gui> on.</p></item>
 </steps>
 
-<p>You can change how long you must hold down the left mouse button for before it is registered as a right click. In the <gui>Pointing and Clicking</gui> tab, change the <gui>Acceptance delay</gui> under <gui>Simulated Secondary Click</gui>.</p>
+<p>You can change how long you must hold down the left mouse button for before
+it is registered as a right click. On the <gui>Pointing and Clicking</gui> tab,
+change the <gui>Acceptance delay</gui> under <gui>Simulated Secondary Click</gui>.</p>
+
+<comment>
+<cite>shaunm</cite>
+<p>I wanted to document that the pointer fills up with blue, and you get a
+right-click when it's full. But it only seemed to work on the arrow pointer,
+and now it's not even working there for me. Investigate.</p>
+</comment>
+
+<p>To right-click with simulated secondary click, hold down the left mouse
+button where you would normally right-click, then release. You will only
+right-click once you release the mouse button. If you use
+<link xref="mouse-mousekeys">Mouse Keys</link>, this will also allow you to
+right-click by holding down the <key>5</key> key on your keypad.</p>
+
+<note>
+<p>In the <gui>Activities</gui> overview, you are always able to long-press
+to right-click, even with this feature disabled. Long-press works slightly
+differently in the overview: You do not have to release the button to
+right-click.</p>
+</note>
 
 </page>
