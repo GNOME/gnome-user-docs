@@ -66,6 +66,7 @@ HELP_FILES = \
 	bluetooth-remove-connection.page \
 	bluetooth-send-file.page \
 	bluetooth-turn-on-off.page \
+	bluetooth-visibility.page \
 	color.page \
 	clock-calendar.page \
 	clock-set.page \
@@ -123,7 +124,6 @@ HELP_FILES = \
 	hardware-auth.page \
 	hardware-cardreader.page \
 	hardware-driver.page \
-	hardware-problems-bluetooth.page \
 	hardware-problems-graphics.page \
 	hardware.page \
 	index.page \
