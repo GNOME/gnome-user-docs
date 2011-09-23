@@ -15,6 +15,7 @@ HELP_MEDIA = \
 	figures/color-space.png \
 	figures/gnome.png \
 	figures/gnome-searchtool.png \
+	figures/input-keyboard-symbolic.png \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
 	figures/printing-select.png \
@@ -30,7 +31,6 @@ HELP_MEDIA = \
 	figures/shell-windows.png \
 	figures/shell-workspaces.png \
 	figures/shell.png \
-	figures/system-run.png \
 	figures/universal-access-menu.png \
 	figures/view-fullscreen-16.png \
 	figures/yelp-icon-big.png
@@ -130,6 +130,7 @@ HELP_FILES = \
 	irc.page \
 	keyboard-cursor-blink.page \
 	keyboard-layouts.page \
+	keyboard-osk.page \
 	keyboard-repeat-keys.page \
 	keyboard.page \
 	look-background.page \
