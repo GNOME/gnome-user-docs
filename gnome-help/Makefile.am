@@ -262,6 +262,7 @@ HELP_FILES = \
 	shell-windows-maximize.page \
 	shell-windows-states.page \
 	shell-windows-switching.page \
+	shell-windows-tiled.page \
 	shell-windows.page \
 	shell-workspaces-movewindow.page \
 	shell-workspaces-switch.page \
