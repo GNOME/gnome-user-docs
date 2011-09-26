@@ -246,6 +246,7 @@ HELP_FILES = \
 	printing.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
+	session-formats.page \
 	session-language.page \
 	session-screenlocks.page \
 	sharing.page \
