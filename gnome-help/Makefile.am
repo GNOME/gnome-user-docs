@@ -222,7 +222,6 @@ HELP_FILES = \
 	power-othercountry.page \
 	power-suspendfail.page \
 	power-suspendhibernate.page \
-	power-turnoffbutton.page \
 	power-whydim.page \
 	power-willnotturnon.page \
 	power.page \
