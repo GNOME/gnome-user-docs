@@ -127,7 +127,6 @@ HELP_FILES = \
 	hardware-problems-graphics.page \
 	hardware.page \
 	index.page \
-	irc.page \
 	keyboard-cursor-blink.page \
 	keyboard-layouts.page \
 	keyboard-osk.page \
@@ -285,7 +284,6 @@ HELP_FILES = \
 	user-changepassword.page \
 	user-changepicture.page \
 	user-delete.page \
-	user-forum.page \
 	user-goodpassword.page \
 	video-dvd.page \
 	video-sending.page \
