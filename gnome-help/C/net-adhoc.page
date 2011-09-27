@@ -4,84 +4,52 @@
   <info>
     <link type="guide" xref="net-wireless"/>
 
+    <revision pkgversion="3.2" date="2011-09-26" status="review"/>
+
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
     </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
 
-    <desc>You can connect computers together by forming an <em>ad-hoc</em> wireless network.</desc>
+    <desc>Use an ad-hoc network to allow other devices to connect to you
+    and your network connections.</desc>
+
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-<title>Connect directly to another computer with a wireless connection</title>
+<title>Create a wireless hotspot</title>
+
+<p>You can use your computer as a wireless hotspot. This allows other devices to
+connect to you without a separate network, and allows you to share an internet
+connection you've made with another interface, such as to a wired network or
+over the cullular network.</p>
 
 <comment>
- <cite>philbull@gmail.com</cite>
- <p>These instructions are outdated - at the moment there doesn't seem to be a way to create a new wireless network that you can then change to being Ad-Hoc. You used to be able to do this. This becomes an issue at step 3 in the steps list below.</p>
+<cite date="2011-09-26">shaunm</cite>
+<p>Things I'm not sure about: Is this actually ad-hoc? It seems to use the
+same icon. What happens if you have multiple wireless adapters? Ought to be
+able to share wireless to wireless, I think, but I don't know what the UI
+looks like. Also, does any of this work? I couldn't successfully test.</p>
+<p>Also, looks like there's no page to set the device name. Make one, then
+link below where it says the name of the network is your device name.</p>
 </comment>
 
-<comment>
- <cite>jbicha@ubuntu.com</cite>
- <p>This definitely needs review. nm-connection-editor was not cooperating for me today but I think this comes closer to working. I think we should also integrate the security part into the main instructions.</p>
-</comment>
-
-<p>You can connect computers together by forming an <em>ad-hoc</em> wireless network. This is useful if one of the computers has a printer connected to it that you want to share, or if you want to transfer files between them, for example. With a normal (<em>infrastructure</em>) wireless network, you would connect both computers to a network provided by wireless base station or router. If you don't have a base station, however, an ad-hoc network will still allow you to connect the computers to each other.</p>
-
-<p>To set-up an ad-hoc wireless network:</p>
 <steps>
- <item>
-  <p>On one of the computers, click the network icon on the top bar and select <gui>Network Settings</gui>.</p>
- </item>
-
- <item>
-  <p>Select <gui>Wireless</gui> from the list on the left and click <gui>Configure</gui>.</p>
- </item>
-
- <item>
-  <p>In the window that appears, switch to the Wireless tab and click <gui>Add</gui>.</p>
- </item>
-
- <item>
-  <p>Choose an <gui>SSID</gui>. This is the name of the network that other people will be able to see.</p>
- </item>
- 
- <item>
-  <p>Change the <gui>Mode</gui> to <gui>Ad-hoc</gui>. You may also want to switch to the <gui>Wireless Security</gui> tab and set the security protocol. Click <gui>Save</gui>.</p>
- </item>
- 
- <item>
-  <p>On the other computer, click the network icon on the top bar and look for a network with the SSID you chose. It might take a minute or two to appear in the list.</p>
-  <p>Click it to connect to the ad-hoc network. Once connected, you will be able to access network shares and so on, like you would if both computers were connected to a conventional wireless network.</p>
- </item>
+  <item><p>Click the network icon on the top bar and select <gui>Network Settings</gui>.</p></item>
+  <item><p>Select <gui>Wireless</gui> on the left.</p></item>
+  <item><p>Click the <gui>Use as Hotspot</gui> button.</p></item>
+  <item><p>If you are already connected to a wireless network, you will be asked
+  if you want to disconnect from that network. A single wireless adapter can only
+  connect to or create one network at a time. Click <gui>Create Hotspot</gui> to
+  confirm.</p></item>
 </steps>
 
-<p>These instructions will be different if one of the computers is not running Linux. You may find it easiest to set-up the ad-hoc network on the Linux computer and connect to it using the other computer.</p>
-
-<p>Also note that some wireless network cards do not support ad-hoc networking, so you will not be able to use them to create an ad-hoc network.</p>
-
-<section id="security">
- <title>Securing an ad-hoc network</title>
- <p>Anyone in the area will be able to connect to your ad-hoc network, so it's not very secure. You can add a <link xref="net-wireless-wepwpa">WEP/WPA password</link> to the network to protect it from unauthorized access.</p>
- 
- <p>To add a password:</p>
- 
- <steps>
-  <item>
-   <p>Click the network icon on the top bar and click <gui>Network Settings</gui>.</p>
-  </item>
-  
-  <item>
-   <p>Go to the <gui>Wireless</gui> tab, select the ad-hoc wireless network and click <gui>Configure</gui>.</p>
-  </item>
-  
-  <item>
-   <p>Go to the <gui>Wireless Security</gui> tab and change the <gui>Security</gui> from <gui>None</gui>. WPA is a good, secure choice, but some older wireless cards do not support it so you might have to use WEP instead.</p>
-  </item>
-  
-  <item>
-   <p>Choose your own password and then click <gui>Save</gui>. The other computers connected to the ad-hoc connection will have to reconnect and you'll have to enter the password on each of them.</p>
-  </item>
- </steps>
-</section>
+<p>A network name (SSID) and security key are automatically generated.
+The network name will be based on the name of your computer. Other devices
+will need this information to connect to the hotspot you've just created.</p>
 
 </page>
