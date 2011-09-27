@@ -205,7 +205,6 @@ HELP_FILES = \
 	net-wireless-troubleshooting.page \
 	net-wireless-wepwpa.page \
 	net-wireless.page \
-	net-wrongnetwork.page \
 	net.page \
 	power-batterybroken.page \
 	power-batteryestimate.page \
