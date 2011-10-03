@@ -5,7 +5,7 @@
     <link type="guide" xref="prefs-language"/>
     <link type="guide" xref="keyboard" group="i18n"/>
 
-    <revision pkgversion="3.2" date="2011-09-26" status="final"/>
+    <revision pkgversion="3.2.1" date="2011-10-03" status="final"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
@@ -42,7 +42,7 @@
   </note>
 
   <p>When you add multiple layouts, you can quickly switch between them using
-  the keyboard layout icon in the top bar. The top bar will display a short
+  the keyboard layout icon on the top bar. The top bar will display a short
   identifier for the current layout, such as <gui>en</gui> for the standard
   English layout. Click the layout indicator and select the layout you want to
   use from the menu.</p>
@@ -82,12 +82,23 @@
       <link type="seealso" xref="session-language#system"/>
     </info>
     <title>Change the system keyboard</title>
-    <note style="bug">
-      <p>Currently, the <gui>Copy Settings</gui> button on the <gui>System</gui>
-      tab does not set the system keyboard layouts.</p>
-      <!--
-          https://bugzilla.gnome.org/show_bug.cgi?id=660187
-      -->
-    </note>
+
+    <p>When you change your keyboard layout, you only change it for your account
+    after you log in. You can also change the <em>system layouts</em>, the keyboard
+    layouts used in places like the login screen.</p>
+
+    <steps>
+      <item><p>Change your keyboard layout, as described above.</p></item>
+      <item><p>Select the <gui>System</gui> tab.</p></item>
+      <item><p>Click <gui>Copy Settings</gui>.</p></item>
+      <item><p><link xref="user-admin-explain">Administrative privileges</link> are
+      required. Enter your password, or the password for the requested administrator
+      account.</p></item>
+    </steps>
+
+    <p>The layouts are shown next to the <gui>Input source</gui> label.</p>
+
+    <p>If you use multiple layouts, the login screen will present the keyboard
+    layout menu on the top bar.</p>
   </section>
 </page>
