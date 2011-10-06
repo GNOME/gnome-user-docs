@@ -14,7 +14,6 @@ HELP_MEDIA = \
 	figures/color-profile-default.png \
 	figures/color-space.png \
 	figures/gnome.png \
-	figures/gnome-searchtool.png \
 	figures/input-keyboard-symbolic.png \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
