@@ -14,7 +14,9 @@
       <email>nruz@alumnos.inf.utfsm.cl</email>
     </credit>
 
-    <desc>You can test your hard disk for problems to make sure that it's healthy.</desc>
+    <revision pkgversion="3.2" date="2011-10-07" status="candidate"/>
+
+    <desc>Test your hard disk for problems to make sure that it's healthy.</desc>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
@@ -24,45 +26,57 @@
   <cite date="2011-04-04">shaunm</cite>
   <p>Rewrite steps to use common simple form in 3.0.1</p>
 </comment>
+
 <section id="disk-status">
  <title>Checking the hard disk</title>
   <p>Hard disks have a built-in health-check tool called <app>SMART</app> 
-(Self-Monitoring, Analysis, and Reporting Technology), which continually 
-checks the disk for potential problems. SMART also warns you if the disk 
-is about to fail, helping you avoid loss of important data.</p>
+ (Self-Monitoring, Analysis, and Reporting Technology), which continually 
+ checks the disk for potential problems. SMART also warns you if the disk 
+ is about to fail, helping you avoid loss of important data.</p>
 
   <p>Although SMART runs automatically, you can also check your disk's 
-health by running the <app>Disk Utility</app> application:</p>
+ health by running the <app>Disk Utility</app> application:</p>
 
 <steps>
-  <title>Check your disk's health using the Disk Utility application</title>
-     <item><p>Open the <app>Disk Utility</app> application from the 
-<gui>Activities</gui> overview.</p></item>
-     <item><p>Select the disk you want to check from the <gui>Storage Devices
-</gui> list. Information and status of the disk will appear under <gui>Drive
-</gui>.</p></item>
-     <item><p><gui>SMART Status</gui> should say "Disk is healthy".</p></item> 
-     <item><p>Click the <gui>SMART Data</gui> button to view more drive 
-information, or to run a self-test.</p></item>
+ <title>Check your disk's health using the Disk Utility application</title>
+ 
+ <item>
+  <p>Open the <app>Disk Utility</app> application from the <gui>Activities</gui>
+  overview.</p>
+ </item>
+ <item>
+  <p>Select the disk you want to check from the <gui>Storage Devices</gui> list.
+  Information and status of the disk will appear under <gui>Drive</gui>.</p>
+ </item>
+ <item>
+  <p><gui>SMART Status</gui> should say "Disk is healthy".</p>
+ </item> 
+ <item>
+  <p>Click the <gui>SMART Data</gui> button to view more drive information, or
+  to run a self-test.</p>
+ </item>
+
 </steps>
 
 </section>
 
 <section id="disk-not-healthy">
+ 
  <title>What if the disk isn't healthy?</title>
- <p>Even if the <gui>SMART Status</gui> indicates that the disk <em>isn't</em> 
-healthy, there may be no cause for alarm. However, it's better to be prepared 
-with a <link xref="backup-why">backup</link> to prevent data loss.</p>
 
- <p>If the status says "Pre-fail", the disk is still reasonably healthy but 
-signs of wear have been detected which mean it might fail in the near future. 
-If your hard disk (or computer) is a few years old, you are likely to see 
-this message on at least some of the health checks. You should <link 
-xref="backup-how">backup your important files regularly</link> and check 
-the disk status periodically to see if it gets worse.</p>
+  <p>Even if the <gui>SMART Status</gui> indicates that the disk <em>isn't</em> 
+ healthy, there may be no cause for alarm. However, it's better to be prepared 
+ with a <link xref="backup-why">backup</link> to prevent data loss.</p>
 
- <p>If it gets worse, you may wish to take the computer/hard disk to a 
-professional for further diagnosis or repair.</p>
+  <p>If the status says "Pre-fail", the disk is still reasonably healthy but 
+ signs of wear have been detected which mean it might fail in the near future. 
+ If your hard disk (or computer) is a few years old, you are likely to see 
+ this message on at least some of the health checks. You should 
+ <link xref="backup-how">backup your important files regularly</link> and check 
+ the disk status periodically to see if it gets worse.</p>
+
+  <p>If it gets worse, you may wish to take the computer/hard disk to a 
+ professional for further diagnosis or repair.</p>
 
 </section>
 
