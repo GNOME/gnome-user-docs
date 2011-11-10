@@ -125,6 +125,7 @@ HELP_FILES = \
 	hardware-driver.page \
 	hardware-problems-graphics.page \
 	hardware.page \
+	help-mailing-list.page \
 	index.page \
 	keyboard-cursor-blink.page \
 	keyboard-layouts.page \
@@ -134,7 +135,6 @@ HELP_FILES = \
 	look-background.page \
 	look-display-fuzzy.page \
 	look-resolution.page \
-	mailing-list.page \
 	media.page \
 	more-help.page \
 	mouse-disabletouchpad.page \
