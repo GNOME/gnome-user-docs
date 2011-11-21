@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="question"
       id="power-closelid">
 
@@ -36,11 +37,15 @@
    </item>
    <item>
      <p>To change the setting used when running on battery power, type this command and press <key>Enter</key>:</p>
-     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-battery-action blank</screen>
+     <screen its:translate="no">
+       gsettings set org.gnome.settings-daemon.plugins.power lid-close-battery-action blank
+     </screen>
    </item>
    <item>
      <p>To change the setting used when running on AC power, type this command and press <key>Enter</key>:</p>
-     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-ac-action blank</screen>
+     <screen its:translate="no">
+       gsettings set org.gnome.settings-daemon.plugins.power lid-close-ac-action blank
+     </screen>
    </item>
  </steps>
  <p>There are other settings available besides "blank," such as "nothing," which causes the computer to do nothing.</p>
