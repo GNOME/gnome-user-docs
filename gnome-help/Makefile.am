@@ -15,6 +15,7 @@ HELP_MEDIA = \
 	figures/color-space.png \
 	figures/gnome.png \
 	figures/input-keyboard-symbolic.png \
+	figures/monitors-dual.webm \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
 	figures/printing-select.png \
@@ -136,6 +137,7 @@ HELP_FILES = \
 	look-display-fuzzy.page \
 	look-resolution.page \
 	media.page \
+	monitors-dual.page \
 	more-help.page \
 	mouse-disabletouchpad.page \
 	mouse-doubleclick.page \
