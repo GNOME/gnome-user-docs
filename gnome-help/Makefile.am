@@ -276,6 +276,7 @@ HELP_FILES = \
 	sound-volume.page \
 	tips-specialchars.page \
 	tips.page \
+        translate.page \
 	user-accounts.page \
 	user-add.page \
 	user-addguest.page \
