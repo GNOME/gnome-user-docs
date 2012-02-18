@@ -8,8 +8,12 @@
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
     </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
 
-    <revision pkgversion="3.4" date="2012-02-19" status="outdated"/>
+    <revision pkgversion="3.4.0" date="2012-02-19" status="review"/>
 
     <desc>Eject or unmount a USB flash drive, CD, DVD, or other device.</desc>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -20,12 +24,14 @@
   <p>When you use external storage devices like USB flash drives, you
   should safely remove them before unplugging them. If you just unplug
   a device, you run the risk of unplugging while an application is still
-  using it, which could result in some of your files being lost or damaged.
-  When you use an optical disc like a CD or DVD, you can use the same steps to eject
-  the disc from your computer.</p>
+  using it. This could result in some of your files being lost or damaged.
+  When you use an optical disc like a CD or DVD, you can use the same steps 
+  to eject the disc from your computer.</p>
 
   <steps>
-    <item><p>From the <gui>Activities</gui> overview, open <app>Files</app>.</p></item>
+    <title>To eject a removable device:</title>
+    <item><p>From the <gui>Activities</gui> overview, open <app>Files</app>.</p>
+    </item>
     <item><p>Locate the device in the sidebar. It should have a small
     eject icon next to the name. Click the eject icon to safely
     remove or eject the device.</p></item>
@@ -35,20 +41,25 @@
   <gui>Eject</gui> or <gui>Safely Remove Drive</gui>. USB drives can't
   be physically ejected, so for these devices, there is no difference
   between <gui>Eject</gui> and <gui>Safely Remove Drive</gui>.</p>
+  
+  <section id="remove-busy-device">
+    <title>Safely remove a device that is in use</title>
 
-  <p>If any of the files on the device are open and in use by an application, you
-  will not be able to safely remove the device. You will be prompted with a
-  window telling you that "the volume is busy", and listing all the open files
+  <p>If any of the files on the device are open and in use by an application, 
+  you will not be able to safely remove the device. You will be prompted with a
+  window telling you that "the volume is busy," and listing all the open files
   on the device. Once you close all the files on the device, the device
-  will automatically be safe to remove (so you can unplug or eject it).</p>
-
-  <p>You can also choose <gui>Unmount Anyway</gui> to remove the device
-  without closing the files. This can cause errors in applications that
-  have those files open.</p>
+  will automatically be safe to remove. At that time you can unplug or eject it.
+  </p>
 
   <p>If you can't close one of the files, for example if the application
   using the file is locked up, you can right-click the file in the
   <gui>Volume is busy</gui> window and select <gui>End Process</gui>.
   This will force the entire locked up application to close, which could close
   other files you have open with that application.</p>
+
+  <note style="warning"><p>You can also choose <gui>Unmount Anyway</gui> to 
+  remove the device without closing the files. This may cause errors in 
+  applications that have those files open.</p></note>
+  </section>
 </page>
