@@ -164,14 +164,10 @@ HELP_FILES = \
 	nautilus-prefs.page \
 	nautilus-preview.page \
 	nautilus-views.page \
-	net-adhoc.page \
 	net-antivirus.page \
 	net-browser.page \
 	net-default-browser.page \
 	net-default-email.page \
-	net-editcon.page \
-	net-email-virus.page \
-	net-email.page \
 	net-findip.page \
 	net-firewall-on-off.page \
 	net-firewall-ports.page \
@@ -182,8 +178,7 @@ HELP_FILES = \
 	net-macaddress.page \
 	net-manual.page \
 	net-othersconnect.page \
-	net-otherscontrol.page \
-	net-passwordok-noconnect.page \
+	net-othersedit.page \
 	net-problem.page \
 	net-proxy.page \
 	net-security-tips.page \
@@ -193,11 +188,14 @@ HELP_FILES = \
 	net-what-is-ip-address.page \
 	net-wired-connect.page \
 	net-wired.page \
+	net-wireless-adhoc.page \
 	net-wireless-airplane.page \
 	net-wireless-connect.page \
 	net-wireless-disconnecting.page \
+	net-wireless-edit-connection.page \
 	net-wireless-find.page \
 	net-wireless-hidden.page \
+	net-wireless-noconnection.page \
 	net-wireless-troubleshooting-device-drivers.page \
 	net-wireless-troubleshooting-hardware-check.page \
 	net-wireless-troubleshooting-hardware-info.page \
