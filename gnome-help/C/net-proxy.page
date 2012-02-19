@@ -1,5 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic" style="question"
+      type="topic" style="task"
       id="net-proxy">
   <info>
     <link type="guide" xref="net-general"/>
@@ -15,21 +15,50 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-<title>What is a proxy?</title>
+  <title>Define proxy settings</title>
 
-<comment>
-<cite date="2012-02-19">shaunm</cite>
-<p>We have <gui>Network proxy</gui> in the network system settings now.
-Repurpose this page as a task like "Set proxy settings". Maybe include
-snippets from below to explain what a proxy is, but be more concise and
-make it clear why a user would ever want to touch those settings, i.e.
-because they're in an environment that forces them to.</p>
-</comment>
+ <section>
+  <title>What is a proxy?</title>
 
-<p>A <em>web proxy</em> filters websites that you look at. They are commonly used in businesses and at public wireless hotspots to control what websites you can look at, prevent you from accessing the internet without logging-in, or to do security checks on websites.</p>
+  <p>A <em>web proxy</em> filters websites that you look at, it receipts requests
+  from your web browser to fetches the web pages and their elements, and following
+  a policy will decide to pass them you back. They are commonly used in businesses
+  and at public wireless hotspots to control what websites you can look at, 
+  prevent you from accessing the internet without logging-in, or to do security 
+  checks on websites.</p>
+ </section>
 
-<p>When you go to a website, the text and images on that website pass through the proxy first before reaching your computer. The proxy will scan the contents of the website and will decide whether to display it or whether to show you a different page, for example.</p>
+ <section>
+  <title>Change proxy method.</title>
+   <steps>
+    <item>
+    <p>Click your name on the top bar and select <gui>System Settings</gui>.</p>
+   </item>
 
-<p>An example of where proxies are commonly used is in universities. When a student connects to the university's wireless network and tries to visit a website, the proxy will instead redirect them to a log-in page. They will then log-in to the network and can go to the page they were trying to look at. Someone who is not a student will get the same log-in page but will not have log-in details, so will be unable to browse the web. This stops people who are not authorized from using the connection.</p>
+   <item>
+    <p>Open <gui>Network</gui> and choose <gui>Network Proxy</gui> from the list on the left side of the window.</p>
+   </item>
+
+   <comment>
+    <cite>Baptiste Mille-Mathias</cite>
+    <p>We should develop the proxy methods, and how they work.</p>
+   </comment>
+
+   <item>
+    <p>Choose which proxy method you want to use amoung the following methods.</p>
+    <table rules="rows" frame="top bottom">
+     <tr>
+      <td><gui>None</gui></td>
+     </tr>
+    </table>
+    <list>
+     <item><p><gui>None</gui></p></item>
+     <item><p><gui>Manual</gui></p></item>
+     <item><p><gui>Automatic</gui></p></item>
+    </list>
+   </item>
+  </steps>
+
+ </section>
 
 </page>
