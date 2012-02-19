@@ -219,7 +219,6 @@ HELP_FILES = \
 	net-wireless-wepwpa.page \
 	net-wireless.page \
 	net.page \
-	power-batterybroken.page \
 	power-batteryestimate.page \
 	power-batterylife.page \
 	power-batteryoptimal.page \
