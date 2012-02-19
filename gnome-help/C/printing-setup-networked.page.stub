@@ -7,7 +7,7 @@
 
     <desc>Set up a printer on the network.</desc>
 
-    <revision pkgversion="3.0" version="0.1" date="2011-03-18" status="review"/>
+    <revision pkgversion="3.4" version="0.2" date="2011-03-18" status="review"/>
     <credit type="author">
       <name>Jim Campbell</name>
       <email>jwcampbell@gmail.com</email>
@@ -16,13 +16,17 @@
       <name>Paul W. Frields</name>
       <email>stickster@gmail.com</email>
     </credit>    
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
     <license>
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
   </info>
 
-  <title>Set up a networked printer</title>
+  <title>Set up a network printer</title>
 <comment>
   <cite date="2011-04-05">shaunm</cite>
   <p>Hate to see this go. This is really important. But I don't think
@@ -39,7 +43,29 @@
     <p>Perhaps installing a printer in that way on GNOME should be covered elsewhere, but the capability doesn't currently exist in the GNOME 3 Printers tool, meaning it would need to be covered by distros.</p>
   </comment>
 
-  <p>Depending on how you installed GNOME, you may need to <link xref="net-firewall-on-off">set your system's firewall</link> to permit connections to the network printer. The ports you should enable in the firewall are:</p>
+  <p>To make sure the new printer is available to your GNOME system, use the Printers tool.</p>
+
+  <steps>
+    <item><p>Click your name on the top bar and select
+    <gui>System Settings</gui>.</p></item>
+    <item><p>Click <gui>Printers</gui>.</p></item>
+    <item><p>Click the <gui>Unlock</gui> button in the top-right corner and enter
+    your password.</p>
+    </item>
+    <item><p>Click the <gui>+</gui> button.</p></item>
+    <item><p>In the pop-up window, select <gui>Network</gui> on the left.</p></item>
+    <item><p>Click <gui>Add</gui>.</p></item>
+  </steps>
+    <item>
+      <p>If the printer is correctly broadcasting, it will appear in the list. If it is not shown automatically you will have to add its network address in the <gui>Address</gui> field. You can now <link xref="printing-setup-default-printer">make it your default printer</link> if desired. You may be able to perform other tasks depending on how your system is administered.</p>
+    </item>
+  <comment>
+    <cite date="2012-02-19">Andre Klapper</cite>
+    <p>Wondering what exact address format to enter as network address. Something like 10.0.0.255 or 192.168.1.14?</p>
+  </comment>
+  </steps>
+
+  <p>If the printer is not shown in the list, you may need to <link xref="net-firewall-on-off">set your system's firewall</link> to permit connections to the network printer. The ports you should enable in the firewall are:</p>
 
   <list>
     <item>
@@ -50,18 +76,5 @@
     </item>
   </list>
 
-  <p>To make sure the new printer is available to your GNOME system, use the Printers tool.</p>
-
-  <steps>
-    <item>
-      <p>Select your user name in the upper right-hand corner of the screen. Then choose "System Settings" to open the control panel.</p>
-    </item>
-    <item>
-      <p>Select the Printers tool from the control panel.</p>
-    </item>
-    <item>
-      <p>If the printer is correctly broadcasting, it will appear in the list. You can now <link xref="printing-setup-default-printer">make it your default printer</link> if desired. You may be able to perform other tasks depending on how your system is administered.</p>
-    </item>
-  </steps>
-
+  <note style="tip"><p>If a firewall service is installed you might get notified in the right pane of the "Add a New Printer" dialog.</p></note>
 </page>
