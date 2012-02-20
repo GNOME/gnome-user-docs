@@ -4,7 +4,7 @@ EXTRA_DIST = C/gnome-help.its
 
 HELP_ID = gnome-help
 
-HELP_LINGUAS = ca de el fi fr es gl hi hu ja lv nl pa pt_BR ru sl sr sv te vi
+HELP_LINGUAS = ca de el fi fr es gl hi hu it ja lv nl pa pt_BR ru sl sr sv te vi
 
 HELP_MEDIA = \
 	figures/color-average.png \
@@ -51,7 +51,7 @@ HELP_FILES = \
 	a11y-slowkeys.page \
 	a11y-stickykeys.page \
 	a11y-visualalert.page \
- 	about-this-guide.page \
+	about-this-guide.page \
 	accounts-add.page \
 	accounts-create.page \
 	accounts-disable-service.page \
@@ -110,17 +110,17 @@ HELP_FILES = \
 	disk.page \
 	display-dimscreen.page \
 	display-lock.page \
-	documents-collection-send.page \  
+	documents-collection-send.page \
 	documents-previews.page \
-	documents-collections.page \ 
+	documents-collections.page \
 	documents-print.page \
-	documents-info.page \             
+	documents-info.page \
 	documents-search.page \
-	documents-location.page \         
+	documents-location.page \
 	documents-select.page \
-	documents-online.page \           
+	documents-online.page \
 	documents-sort.page \
-	documents.page \                  
+	documents.page \
 	documents-viewgrid.page \
 	fallback-mode.page \
 	files-autorun.page \
