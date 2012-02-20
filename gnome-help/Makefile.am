@@ -110,6 +110,18 @@ HELP_FILES = \
 	disk.page \
 	display-dimscreen.page \
 	display-lock.page \
+	documents-collection-send.page \  
+	documents-previews.page \
+	documents-collections.page \ 
+	documents-print.page \
+	documents-info.page \             
+	documents-search.page \
+	documents-location.page \         
+	documents-select.page \
+	documents-online.page \           
+	documents-sort.page \
+	documents.page \                  
+	documents-viewgrid.page \
 	fallback-mode.page \
 	files-autorun.page \
 	files-browse.page \
