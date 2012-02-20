@@ -5,47 +5,81 @@
   <info>
     <link type="guide" xref="power#problems"/>
     <link type="guide" xref="hardware-problems-graphics"/>
-    <revision pkgversion="3.4.0" date="2012-02-19" status="outdated"/>
+    <revision pkgversion="3.4.0" date="2012-02-20" status="review"/>
     
-    <desc>Some computer hardware causes problems with suspend/hibernate.</desc>
+    <desc>Some computer hardware causes problems with suspend or hibernate.</desc>
     
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
     </credit>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
     
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-<title>Why won't my computer turn back on after I sent it to sleep?</title>
+<title>Why does my computer not turn back on after I suspended it?</title>
 
-<comment>
-  <cite date="2012-02-19">shaunm</cite>
-  <p>Standard terminology is suspend. Instances of sleep are bugs.</p>
-</comment>
+<p>If you <link xref="power-suspend">suspend</link> or <link
+xref="power-hibernate">hibernate</link> your computer, then try to resume it or
+turn it back on, you may find that it does not work as you expected. This could
+be because suspend and hibernate are not supported properly by your
+hardware.</p>
 
-<p>If you send your computer to sleep (suspend it) or hibernate it, then try to wake it up or turn it back on, you may find that it doesn't work as you expected. This could be because suspend/hibernate aren't supported properly by your hardware.</p>
-
-<section id="wakeup">
- <title>My computer is asleep and won't wake up</title>
- <p>If you sent your computer to sleep (suspended it) and then press a key or click the mouse, it should wake up and display a screen asking for your password. If this does not happen, try pressing the power button (don't hold it in; just press it once).</p>
- <p>If this still doesn't help, make sure that your computer's monitor is switched on and try pressing a key on the keyboard again.</p>
- <p>As a last resort, turn off the computer by holding-in the power button for 5-10 seconds. You will lose any unsaved work by doing this. You should then be able to turn on the computer again, though.</p>
- <p>If this happens every time you send your computer to sleep, the suspend feature may not work with your hardware.</p>
+<section id="resume">
+  <title>My computer is suspended and is not resuming</title>
+  <p>If you suspend your computer and then press a key or click the mouse, it
+  should wake up and display a screen asking for your password. If this does
+  not happen, try pressing the power button (do not hold it in, just press it
+  once).</p>
+  <p>If this still does not help, make sure that your computer's monitor is
+  switched on and try pressing a key on the keyboard again.</p>
+  <p>As a last resort, turn off the computer by holding-in the power button for
+  4-10 seconds, although you will lose any unsaved work by doing this. You
+  should then be able to turn on the computer again.</p>
+  <p>If this happens every time you suspend your computer, the suspend
+  feature may not work with your hardware.</p>
+  <note style="warning">
+    <p>If your computer loses power and does not have an alternative power
+    supply (such as a working battery), it will switch off.</p>
+  </note>
 </section>
 
 <section id="hibernate">
- <title>None of my applications/documents are open when I turn on the computer again</title>
- <p>If you hibernated your computer and switched it on again, but none of your documents or applications are open, it probably failed to hibernate properly. Sometimes this happens because of a minor problem, and the computer will be able to hibernate properly the next time you do it. It might also happen because you had installed a software update which required the computer to be restarted; in this case, the computer may have shut down instead of hibernating.</p>
- 
- <p>It is also possible that the computer is not capable of hibernating because the hardware doesn't support it properly. This might be because of a problem with Linux drivers for your hardware, for example. You can test this by hibernating again and seeing if it works the second time. If it doesn't, it's probably a problem with your computer's drivers.</p>
+  <title>None of my applications/documents are open when I turn on the computer
+  again</title>
+  <p>If you hibernated your computer and switched it on again, but none of your
+  documents or applications are open, it probably failed to hibernate properly.
+  Sometimes this happens because of a minor problem, and the computer will be
+  able to hibernate properly the next time you do it. It might also happen
+  because you had installed a software update which required the computer to be
+  restarted; in this case, the computer may have shut down instead of
+  hibernating.</p>
+  <p>It is also possible that the computer is not capable of hibernating
+  because the hardware does not support it properly. This might be because of a
+  problem with Linux drivers for your hardware, for example. You can test this
+  by hibernating again and seeing if it works the second time. If it does not,
+  it is probably a problem with drivers on your computer.</p>
 </section>
 
 <section id="hardware">
- <title>My wireless connection (or other hardware) doesn't work when I wake up my computer</title>
- <p>If you send your computer to sleep or hibernate it and then wake it up again, you may find that your internet connection, mouse, or some other device doesn't work properly. This could be because the device's driver doesn't properly support suspend/hibernate. This is a <link xref="hardware-driver">problem with the driver</link> and not the device itself.</p>
- <p>If the device has a power switch, try turning it off and then on again. In most cases, the device will start working again. If it connects via a USB cable or similar, unplug the device and then plug it in again and see if it works.</p>
- <p>If you cannot turn off/unplug the device, or if this doesn't work, you may need to restart your computer for the device to start working again.</p>
+  <title>My wireless connection (or other hardware) does not work when I wake
+  up my computer</title>
+  <p>If you suspend or hibernate your computer and then resume it again, you
+  may find that your internet connection, mouse, or some other device does not
+  work properly. This could be because the driver for the device does not
+  properly support suspend or hibernate. This is a <link
+  xref="hardware-driver">problem with the driver</link> and not the device
+  itself.</p>
+  <p>If the device has a power switch, try turning it off and then on again. In
+  most cases, the device will start working again. If it connects via a USB
+  cable or similar, unplug the device and then plug it in again and see if it
+  works.</p>
+  <p>If you cannot turn off/unplug the device, or if this does not work, you
+  may need to restart your computer for the device to start working again.</p>
 </section>
 
 </page>
