@@ -224,15 +224,16 @@ HELP_FILES = \
 	power-batteryoptimal.page \
 	power-batteryslow.page \
 	power-batterywindows.page \
-	power-brighter.page \
 	power-closelid.page \
 	power-constantfan.page \
+	power-hibernate.page \
 	power-hotcomputer.page \
 	power-lowpower.page \
 	power-nowireless.page \
+	power-off.page \
 	power-othercountry.page \
 	power-suspendfail.page \
-	power-suspendhibernate.page \
+	power-suspend.page \
 	power-whydim.page \
 	power-willnotturnon.page \
 	power.page \
