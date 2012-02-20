@@ -281,7 +281,6 @@ HELP_FILES = \
 	shell-keyboard-shortcuts.page \
 	shell-notifications.page \
 	shell-overview.page \
-	shell-session-status.page \
 	shell-terminology.page \
 	shell-windows-lost.page \
 	shell-windows-maximize.page \
