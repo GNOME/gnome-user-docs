@@ -6,7 +6,7 @@
     <link type="guide" xref="files"/>
     <desc>Change file or folder name.</desc>
 
-    <revision pkgversion="3.4.0" date="2012-02-19" status="outdated"/>
+    <revision pkgversion="3.4.0" date="2012-02-20" status="review"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -15,36 +15,46 @@
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
     </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>    
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
   <title>Rename a file or folder</title>
 
-<p>You can change the name of a file or folder.</p>
+<p>As with other file managers, you can use the GNOME file manager to change 
+the name of a file or folder.</p>
   <steps>
-    <item><p>Right-click on a file or folder and select <gui>Rename</gui>, 
-    or select the file and press <key>F2</key>.</p></item>
+    <title>To rename a file or folder:</title>
+    <item><p>Right-click on the item and select <gui>Rename</gui>, or select 
+    the file and press <key>F2</key>.</p></item>
     <item><p>Type the new name and press <key>Enter</key>.</p></item>
   </steps>
 
   <p>You can also rename a file from the
   <link xref="nautilus-file-properties-basic">properties</link> window.</p>
 
-  <p>When you rename a file, only the first part of the name of the file is selected, not the file extension (the part after the "."). The extension normally denotes what type of file it is (e.g. <file>file.pdf</file> is a PDF document), and you usually do not want to change that. If you need to change the extension as well, select the entire file name and change it.</p>
+  <p>When you rename a file, only the first part of the name of the file is 
+  selected, not the file extension (the part after the "."). The extension 
+  normally denotes what type of file it is (e.g. <file>file.pdf</file> is a PDF 
+  document), and you usually do not want to change that. If you need to change 
+  the extension as well, select the entire file name and change it.</p>
 
   <section id="valid-chars">
     <title>Valid characters for file names</title>
-    <p>You can use any character except the <key>/</key> (slash) character in file names.
-    Some devices, however, use a <em>file system</em> that has more restrictions on file
-    names. For example, USB flash drives are often formatted with the <em>FAT32</em> file
-    system. On these devices, or if you intend to share files with people who use another
-    operating system, you should avoid the following characters:
-    <key>|</key>, <key>\</key>, <key>?</key>, <key>*</key>, <key>&lt;</key>, <key>"</key>,
-    <key>:</key>, <key>&gt;</key>, <key>/</key>.</p>
+    <p>You can use any character except the <key>/</key> (slash) character in 
+    file names. Some devices, however, use a <em>file system</em> that has more 
+    restrictions on file names. Therefore, it is a best practice to avoid the 
+    following characters in your file names: <key>|</key>, <key>\</key>, 
+    <key>?</key>, <key>*</key>, <key>&lt;</key>, <key>"</key>, <key>:</key>, 
+    <key>&gt;</key>, <key>/</key>.</p>
 
     <note style="warning">
-    <p> If you name a file with a <key>.</key> as the first character, the file will be
-    <link xref="files-hidden">hidden</link>.</p>
+    <p> If you name a file with a <key>.</key> as the first character, the file 
+    will be <link xref="files-hidden">hidden</link> when you attempt to view 
+    it in the file manager.</p>
     </note>
   </section>
 
@@ -52,24 +62,30 @@
     <title>Common problems</title>
     <terms>
       <item>
-        <title>The name is already used</title>
-        <p>You can't have two files or folders with the same name in the same folder.
-        If you try to rename a file to a name that already exists in the folder you
-        are working in, the file manager will not allow it.  Use a different name.</p>
-        <p>File and folder names are case sensitive. For example, <file>File.txt</file>
-        and <file>file.txt</file> are different names.  This is allowed, though it's
-        not always a good idea.</p>
+        <title>The file name is already in use</title>
+        <p>You can't have two files or folders with the same name in the same 
+        folder. If you try to rename a file to a name that already exists in 
+        the folder you are working in, the file manager will not allow it.</p> 
+        <p>File and folder names are case sensitive, so the file name 
+        <file>File.txt</file> is not the same as <file>FILE.txt</file>. 
+        Using different file names like this is allowed, though it is not 
+        recommended.</p>
       </item>
       <item>
         <title>The file name is too long</title>
-        <p>On some file systems, file names can have no more than 255 characters in their names.  Use a shorter name.</p>
+        <p>On some file systems, file names can have no more than 255 
+        characters in their names.  This 255 character limit includes both the 
+        file name and the path to the file (e.g., <file>/home/wanda/Documents/work/business-proposals/...
+        </file>), so you should avoid long file and folder names where 
+        possible.</p>
       </item>
       <item>
         <title>The option to rename is grayed out</title>
-        <p>If <gui>Rename</gui> is grayed out, you do not have permission to rename
-        the file.  Generally, if you do not have the correct permissions to rename
-        a file, you should not be renaming it.
-        See <link xref="nautilus-file-properties-permissions"/>.</p>
+        <p>If <gui>Rename</gui> is grayed out, you do not have permission to 
+        rename the file. You should use caution with renaming such files, as 
+        renaming some protected files may cause your system to become unstable. 
+        See <link xref="nautilus-file-properties-permissions"/> for more 
+        information.</p>
       </item>
     </terms>
   </section>
