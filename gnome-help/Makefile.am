@@ -51,7 +51,14 @@ HELP_FILES = \
 	a11y-slowkeys.page \
 	a11y-stickykeys.page \
 	a11y-visualalert.page \
-	about-this-guide.page \
+ 	about-this-guide.page \
+	accounts-add.page \
+	accounts-create.page \
+	accounts-disable-service.page \
+	accounts-password.page \
+	accounts-provider-not-available.page \
+	accounts-whyadd.page \
+	accounts.page \
 	backup-check.page \
 	backup-frequency.page \
 	backup-how.page \
@@ -92,6 +99,9 @@ HELP_FILES = \
 	color-whatisspace.page \
 	color-why-calibrate.page \
 	color-whyimportant.page \
+	contacts-edit-details.page \
+	contacts-link-unlink.page \
+	contacts-search.page \
 	disk-benchmark.page \
 	disk-capacity.page \
 	disk-check.page \
@@ -126,12 +136,15 @@ HELP_FILES = \
 	hardware-driver.page \
 	hardware-problems-graphics.page \
 	hardware.page \
+	help-irc.page \
 	help-mailing-list.page \
 	index.page \
 	keyboard-cursor-blink.page \
 	keyboard-layouts.page \
+	keyboard-nav.page \
 	keyboard-osk.page \
 	keyboard-repeat-keys.page \
+	keyboard-shortcuts-set.page \
 	keyboard.page \
 	look-background.page \
 	look-display-fuzzy.page \
@@ -168,6 +181,8 @@ HELP_FILES = \
 	net-browser.page \
 	net-default-browser.page \
 	net-default-email.page \
+	net-email-virus.page \
+	net-email.page \
 	net-findip.page \
 	net-firewall-on-off.page \
 	net-firewall-ports.page \
