@@ -57,6 +57,7 @@ HELP_FILES = \
 	accounts-disable-service.page \
 	accounts-password.page \
 	accounts-provider-not-available.page \
+	accounts-which-application.page \
 	accounts-whyadd.page \
 	accounts.page \
 	backup-check.page \
