@@ -122,6 +122,7 @@ HELP_FILES = \
 	documents-online.page \
 	documents-sort.page \
 	documents.page \
+        documents-list.page \
 	documents-viewgrid.page \
 	fallback-mode.page \
 	files-autorun.page \
