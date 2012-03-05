@@ -112,17 +112,16 @@ HELP_FILES = \
 	display-dimscreen.page \
 	display-lock.page \
 	documents-collection-send.page \
-	documents-previews.page \
 	documents-collections.page \
-	documents-print.page \
 	documents-info.page \
-	documents-search.page \
 	documents-location.page \
-	documents-select.page \
 	documents-online.page \
-	documents-sort.page \
 	documents.page \
-        documents-list.page \
+	documents-previews.page \
+	documents-print.page \
+	documents-search.page \
+	documents-select.page \
+	documents-sort.page \
 	documents-viewgrid.page \
 	fallback-mode.page \
 	files-autorun.page \
