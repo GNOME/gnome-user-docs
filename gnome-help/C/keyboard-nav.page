@@ -7,13 +7,13 @@
     <link type="guide" xref="a11y#mobility" group="keyboard"/>
     <link type="seealso" xref="shell-keyboard-shortcuts"/>
 
-    <revision pkgversion="3.4.0" date="2012-02-19" status="review"/>
+    <revision pkgversion="3.4.0" date="2012-02-19" status="candidate"/>
 
     <credit type="author">
       <name>Michael Hill</name>
       <email>mdhillca@gmail.com</email>
     </credit>
-    <credit type="author">
+    <credit type="editor">
        <name>Julita Inca</name>
        <email>yrazes@gmail.com</email>
     </credit>
@@ -30,36 +30,21 @@
     just like their keyboard.</p>
   </comment>
 
+  <p>It may be necessary to move the cursor around the screen using only the
+  keyboard. Here are some keyboard-only navigation methods.</p>
+
 <section id="desktop">
-<title>Desktop</title>
+<title>On the Desktop</title>
 
 <list>
- <item>
-   <p><keyseq><key>Alt</key><key>Tab</key></keyseq> switches between open applications.</p>
- </item>
- <item>
-   <p><keyseq><key>Alt</key><key>`</key></keyseq> switches between windows
-   that belong to the same open application.</p>
- </item>
- <item>
-  <p><keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq> switch
-  accessibility to focus to the <gui>top bar</gui>.</p>
- </item>
-</list>
-
- <note style="tip"><p>Hold down <key>Alt</key> and press <key>Tab</key> or left and
- right arrow keys to start navigation and release both keys when you have selected the window that you want.
- To display the preview window of the application you have selected, press the down arrow.
- You can exit the option you have activated by pressing <key>Esc</key>.</p>
- </note>
-
+<item>
  <p><link xref="mouse-mousekeys">Mouse keys</link> allow you to move the cursor
  around the desktop using the numeric keypad. To activate mouse keys using the
  keyboard:</p>
 
 <steps>
   <item><p>Press <keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq>
- to open the accessibility switcher.</p></item>
+ to open the <em>accessibility switcher</em>.</p></item>
   <item><p>Release to select the <gui>Top Bar</gui>.</p></item>
   <item><p>Right arrow to the <gui>Universal Access</gui> menu, then down arrow
  to <gui>Mouse Keys</gui>.</p></item>
@@ -67,33 +52,65 @@
   <item><p>Make sure that <key>Num Lock</key> is turned off. You will now be
  able to move the mouse pointer using the keypad.</p></item>
 </steps>
-
- <list>
+</item>
+<item>
+   <p><keyseq><key>Alt</key><key>Tab</key></keyseq> opens the <em>window
+   switcher</em>.</p>
+  <list>
+  <item>
+    <p>Hold down <key>Alt</key> and use <key>Tab</key> and
+    <keyseq><key>Shift</key><key>Tab</key></keyseq> or left and right arrows to
+    navigate between open applications.</p></item>
+  <item>
+   <p>Down arrow displays a preview of any application in the switcher.</p>
+  </item>
+  <item>
+   <p><keyseq><key>Alt</key><key>`</key></keyseq> switches between windows
+   that belong to the same open application.</p>
+  </item>
+  </list>
+ </item>
+ <item>
+  <p><keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq> allows you to
+  switch focus to the <gui>top bar</gui> using the <em>accessibility
+  switcher</em>.</p>
+ </item>
+</list>
+<list>
 <item>
  <p><keyseq><key>Alt</key><key>F2</key></keyseq> activates the launcher. Key in
- the comand name to launch an application.</p></item>
-<!--
+ the command name to launch an application.</p></item>
+
  <item>
-  <p>If notifications are focused, use left and right arrow, <key>Tab</key> and
+  <p>If <link xref="shell-notifications">notifications</link> have the focus,
+  move between them and select using left and right arrow, <key>Tab</key> and
  <key>Enter</key>.</p></item>
--->
+
  <item>
-  <p>Inside the window of an application, <key>Tab</key> and
- <keyseq><key>Ctrl</key><key>Tab</key></keyseq> move between widgets.</p></item>
+  <p>Inside the window of an application, use <key>Tab</key> and
+ <keyseq><key>Ctrl</key><key>Tab</key></keyseq> to move between widgets.</p></item>
  <item>
-  <p><key>Esc</key> exits <keyseq><key>Alt</key><key>Tab</key></keyseq>,
- <keyseq><key>Alt</key><key>F2</key></keyseq>, menu and calendar.</p></item>
+  <p>Use <key>Esc</key> to exit window switcher, launcher, menu or
+  calendar.</p></item>
 </list>
 </section>
 
 <section id="overview">
-<title>Overview</title>
+<title>In the Overview</title>
 
 <list>
  <item>
   <p><key>System</key> (<link xref="windows-key">Windows</link>) key or
  <keyseq><key>Alt</key><key>F1</key></keyseq> switches to <gui>overview</gui>
  or back to desktop.</p></item>
+ <item>
+  <p>Start typing in the overview to start a search for applications or files.</p>
+  <list>
+     <item>
+    <p>Use up and down arrow keys to navigate through search results.</p>
+   </item>
+  </list>
+ </item>
  <item>
   <p><keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq> opens the
  <em>accessibility switcher</em>.</p>
@@ -106,11 +123,8 @@
   </list>
  </item>
  <item>
-  <p>Up and down arrow keys navigate search results.</p>
- </item>
- <item>
   <p><keyseq><key>Ctrl</key><key>Alt</key><key>Up</key></keyseq> and <key>Down</key>
- move between workspaces in the <gui>workspace swicher</gui>.</p>
+ move between workspaces in the <gui>workspace switcher</gui>.</p>
  </item>
  <item>
   <p><keyseq><key>Ctrl</key><key>PgDn</key></keyseq> and <key>PgUp</key> move from
@@ -118,7 +132,7 @@
  back.</p>
  </item>
  <item>
-  <p><key>Esc</key> exits search, overview.</p>
+  <p>Use <key>Esc</key> to exit search or overview.</p>
  </item>
 </list>
 
