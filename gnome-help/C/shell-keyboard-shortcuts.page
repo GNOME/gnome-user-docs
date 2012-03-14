@@ -7,39 +7,42 @@
     <link type="guide" xref="keyboard"/>
     <link type="guide" xref="shell-overview"/>
     <desc>Get around the desktop using the keyboard.</desc>
-    <revision pkgversion="3.4.0" date="2012-02-19" status="review"/>
-    <credit type="author">
-      <name>GNOME Documentation Project</name>
-      <email>gnome-doc-list@gnome.org</email>
+    <revision pkgversion="3.4.0" date="2012-03-14" status="candidate"/>
+    <credit type="author copyright">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+      <years>2012</years>
     </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-
 <title>Useful keyboard shortcuts</title>
 
-<comment>
-  <p>In 3.4 and below, can't get Ctrl-Alt-D to work in *any* distro.</p>
-</comment>
+<p>This page provides an overview of keyboard shortcuts that can help you
+use your desktop and applications more efficiently. If you cannot use a
+mouse or pointing device at all, see <link xref="keyboard-nav"/> for more
+information on navigating user interfaces with only the keyboard.</p>
 
 <table rules="rows" frame="top bottom" ui:expanded="yes">
 <title>Getting around the desktop</title>
-  <tr>
+  <tr xml:id="alt-f1">
     <td><p><keyseq><key>Alt</key><key>F1</key></keyseq> or
     the <link xref="windows-key">windows key</link></p></td>
-    <td><p>Switch between the <gui>Activities</gui> overview and desktop.</p></td>
+    <td><p>Switch between the <gui>Activities</gui> overview and desktop. In
+    the overview, start typing to instantly search your applications, contacts,
+    and documents.</p></td>
   </tr>
-  <tr>
+  <tr xml:id="alt-f2">
     <td><p><keyseq><key>Alt</key><key>F2</key></keyseq></p></td> <td><p>Pop up
      command window (for quickly running commands)</p></td>
   </tr>
-  <tr>
+  <tr xml:id="alt-tab">
     <td><p><keyseq><key>Alt</key><key>Tab</key></keyseq></p></td>
     <td><p><link xref="shell-windows-switching">Quickly switch between
      windows.</link>
     Hold down <key>Shift</key> for reverse order.</p></td>
   </tr>
-  <tr>
+  <tr xml:id="alt-tick">
     <td><p><keyseq><key>Alt</key><key>`</key></keyseq></p></td>
     <td><p>Switch between windows from the same application, or from the selected
     application after <keyseq><key>Alt</key><key>Tab</key></keyseq>.</p>
@@ -47,30 +50,34 @@
     key is above <key>Tab</key>. On all other keyboards, the shortcut is
     <key>Alt</key> plus whatever key is above <key>Tab</key>.</p></td>
   </tr>
-  <tr>
+  <tr xml:id="ctrl-alt-tab">
     <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq></p></td>
-    <td><p>Give keyboard focus to the top bar. In the <gui>Activities</gui> overview,
-    switch keyboard focus between the top bar, dash, windows overview, applications
-    list, and search field.</p></td>
+    <td>
+      <p>Give keyboard focus to the top bar. In the <gui>Activities</gui> overview,
+      switch keyboard focus between the top bar, dash, windows overview, applications
+      list, and search field. Use the arrow keys to navigate.</p>
+      <p>It is not currently possible to use the arrow keys to navigate the windows
+      overview. To switch windows, exit the overview and use <keyseq><key>Alt</key>
+      <key>Tab</key></keyseq> and <keyseq><key>Alt</key><key>`</key></keyseq>.</p>
+    </td>
   </tr>
-<!--
- <tr>
-    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>D</key></keyseq></p></td>
-    <td><p>Hide all windows and show the desktop. This shortcut may not work on
-     all distros.</p></td>
-  </tr>
--->
-  <tr>
-    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Up/Down</key></keyseq></p></td>
+  <tr xml:id="ctrl-alt-updown">
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Up</key></keyseq> and
+    <keyseq><key>Ctrl</key><key>Alt</key><key>Down</key></keyseq></p></td>
     <td><p><link xref="shell-workspaces-switch">Switch between
      workspaces.</link></p></td>
   </tr>
-  <tr>
-    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>Up/Down</key></keyseq></p></td>
+  <tr xml:id="ctrl-alt-shift-updown">
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>Up</key></keyseq> and
+    <keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>Down</key></keyseq></p></td>
     <td><p><link xref="shell-workspaces-movewindow">Move the current window to a
      different workspace.</link></p></td>
   </tr>
-  <tr>
+  <tr xml:id="ctrl-alt-Del">
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Delete</key></keyseq></p></td>
+    <td><p><link xref="shell-exit">Log out.</link></p></td>
+  </tr>
+  <tr xml:id="ctrl-alt-l">
     <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>L</key></keyseq></p></td>
     <td><p><link xref="shell-exit#lock-screen">Lock the screen.</link></p></td>
   </tr>
@@ -110,6 +117,12 @@
     <td><p><keyseq><key>Alt</key><key>Print</key></keyseq></p></td>
     <td><p><link xref="screen-shot-record#screenshot">Take a screenshot of a
      window.</link></p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Shift</key><key>Print</key></keyseq></p></td>
+    <td><p><link xref="screen-shot-record#screenshot">Take a screenshot of an
+    area of the screen.</link> The pointer changes to a crosshair. Click and
+    drag to select an area.</p></td>
   </tr>
   <tr>
     <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>R</key></keyseq></p></td>
