@@ -18,7 +18,7 @@ Dependencies of goa in jhbuild as per 3.4 modulesets:
 * gnome-control-center -> goa
 * gnome-contacts -> folks -> evolution-data-server -> goa
 
-As "rpm -q --whatrequires gnome-online-accounts" (resp. dpkg-query -W -f='${Package}: ${Depends}\n' '*' | grep ': .*gnome-online-accounts') did not work for me, I tried "rpm -e --test gnome-online-accounts"
+As "rpm -q - -whatrequires gnome-online-accounts" (resp. dpkg-query -W -f='${Package}: ${Depends}\n' '*' | grep ': .*gnome-online-accounts') did not work for me, I tried "rpm -e - -test gnome-online-accounts"
 error: Failed dependencies:
 	libgoa-1.0.so.0 is needed by (installed) gnome-contacts-3.2.2-2.fc16.i686
 	libgoa-1.0.so.0 is needed by (installed) empathy-3.2.2-1.fc16.i686
