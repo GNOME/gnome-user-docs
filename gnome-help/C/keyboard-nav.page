@@ -2,12 +2,11 @@
       type="topic" style="tip"
       id="keyboard-nav">
   <info>
-    <link type="guide" xref="tips"/>
     <link type="guide" xref="keyboard" group="a11y"/>
     <link type="guide" xref="a11y#mobility" group="keyboard"/>
     <link type="seealso" xref="shell-keyboard-shortcuts"/>
 
-    <revision pkgversion="3.4.0" date="2012-02-19" status="candidate"/>
+    <revision pkgversion="3.4.0" date="2012-03-14" status="candidate"/>
 
     <credit type="author">
       <name>Michael Hill</name>
@@ -17,125 +16,196 @@
        <name>Julita Inca</name>
        <email>yrazes@gmail.com</email>
     </credit>
-    <desc>Moving around the interface without a mouse</desc>
+    <credit type="author copyright">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+      <years>2012</years>
+    </credit>
+    <desc>Use applications and the desktop without a mouse.</desc>
   </info>
 
   <title>Keyboard navigation</title>
 
   <comment>
-    <cite date="2012-02-19" href="mailto:shaunm@gnome.org">Shaun McCance</cite>
-    <p>Describe keyboard navigation for general application interaction.
-    Tab and Ctrl+Tab between widgets, arrow keys, accelerators, etc.
-    Essential for people who can't use a mouse. Handy for people who
-    just like their keyboard.</p>
+    <cite date="2012-03-14" href="mailto:shaunm@gnome.org">Shaun McCance</cite>
+    <p>Do <em>NOT</em> use <code>ui:expanded</code> on this page. I know it's
+    tempting, but the target audience for this page is people who cannot use
+    a mouse, and having to expand sections when you're just figuring out how
+    to drive things with the keyboard is a burden.</p>
   </comment>
 
-  <p>It may be necessary to move the cursor around the screen using only the
-  keyboard. Here are some keyboard-only navigation methods.</p>
+  <comment>
+    <cite date="2012-03-14" href="mailto:shaunm@gnome.org">Shaun McCance</cite>
+    <p>The message tray isn't keyboard accessible. Watch <link
+    href="https://bugzilla.gnome.org/show_bug.cgi?id=672086">bug #672086</link>
+    and add an item here if it's fixed.</p>
+  </comment>
 
-<section id="desktop">
-<title>On the Desktop</title>
+  <p>This page details keyboard navigation for people who cannot use a mouse or
+  other pointing device, or who want to use a keyboard as much as possible. For
+  keyboard shortcuts that are useful to all users, see
+  <link xref="shell-keyboard-shortcuts"/> instead.</p>
 
-<list>
-<item>
- <p><link xref="mouse-mousekeys">Mouse keys</link> allow you to move the cursor
- around the desktop using the numeric keypad. To activate mouse keys using the
- keyboard:</p>
+  <note style="tip">
+    <p>If you cannot use a pointing device like a mouse, you can control the
+    mouse pointer using the numeric keypad on your keyboard. See
+    <link xref="mouse-mousekeys"/> for details.</p>
+  </note>
 
-<steps>
-  <item><p>Press <keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq>
- to open the <em>accessibility switcher</em>.</p></item>
-  <item><p>Release to select the <gui>Top Bar</gui>.</p></item>
-  <item><p>Right arrow to the <gui>Universal Access</gui> menu, then down arrow
- to <gui>Mouse Keys</gui>.</p></item>
-  <item><p>Release to activate <gui>Mouse Keys</gui>.</p></item>
-  <item><p>Make sure that <key>Num Lock</key> is turned off. You will now be
- able to move the mouse pointer using the keypad.</p></item>
-</steps>
-</item>
-<item>
-   <p><keyseq><key>Alt</key><key>Tab</key></keyseq> opens the <em>window
-   switcher</em>.</p>
-  <list>
-  <item>
-    <p>Hold down <key>Alt</key> and use <key>Tab</key> and
-    <keyseq><key>Shift</key><key>Tab</key></keyseq> or left and right arrows to
-    navigate between open applications.</p></item>
-  <item>
-   <p>Down arrow displays a preview of any application in the switcher.</p>
-  </item>
-  <item>
-   <p><keyseq><key>Alt</key><key>`</key></keyseq> switches between windows
-   that belong to the same open application.</p>
-  </item>
-  </list>
- </item>
- <item>
-  <p><keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq> allows you to
-  switch focus to the <gui>top bar</gui> using the <em>accessibility
-  switcher</em>.</p>
- </item>
-</list>
-<list>
-<item>
- <p><keyseq><key>Alt</key><key>F2</key></keyseq> activates the launcher. Key in
- the command name to launch an application.</p></item>
+<table frame="top bottom" rules="rows">
+  <title>Navigate user interfaces</title>
+  <tr>
+    <td><p><key>Tab</key> and <keyseq><key>Ctrl</key><key>Tab</key></keyseq></p></td>
+    <td>
+      <p>Move keyboard focus between different controls. <keyseq><key>Ctrl</key>
+      <key>Tab</key></keyseq> moves between groups of controls, such as from a sidebar
+      to the main content. <keyseq><key>Ctrl</key><key>Tab</key></keyseq> can also
+      break out of a control that uses <key>Tab</key> itself, such as a text area.</p>
+      <p>Hold down <key>Shift</key> to move focus in reverse order.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><p>Arrow keys</p></td>
+    <td>
+      <p>Move selection between items in a single control, or among a set of
+      related controls. Use the arrow keys to focus buttons in a toolbar, select
+      items in a list or icon view, or select a radio button from a group.</p>
+      <p>In a tree view, use the left and right arrow keys to collapse and
+      expand items with children.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key>Arrow keys</keyseq></p></td>
+    <td><p>In a list or icon view, move the keyboard focus to another item
+    without changing which item is selected.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Shift</key>Arrow keys</keyseq></p></td>
+    <td><p>In a list or icon view, select all items from the currently selected
+    item to the newly focused item.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>Space</key></p></td>
+    <td><p>Activate a focused item such as a button, check box, or list item.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Space</key></keyseq></p></td>
+    <td><p>In a list or icon view, select or deselect the focused item without
+    deselecting other items.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>Alt</key></p></td>
+    <td><p>Hold down the <key>Alt</key> key to reveal <em>accelerators</em>:
+    underlined letters on menu items, buttons, and other controls. Press
+    <key>Alt</key> plus the underlined letter to activate a control, just
+    as if you had clicked on it.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>Esc</key></p></td>
+    <td><p>Exit a menu, popup, switcher, or dialog window.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>F10</key></p></td>
+    <td><p>Open the first menu on the menubar of a window. Use the arrow keys
+    to navigate the menus.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Shift</key><key>F10</key></keyseq> or the Menu key</p></td>
+    <td>
+      <p>Pop up the context menu for the current selection, as if you had
+      right-clicked.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>F10</key></keyseq></p></td>
+    <td><p>In the file manager, pop up the context menu for the current folder,
+    as if you had right-clicked on the background and not on any item.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>PageUp</key></keyseq> and
+    <keyseq><key>Ctrl</key><key>PageDown</key></keyseq></p></td>
+    <td><p>In a tabbed interface, switch to the tab to the left or right.</p></td>
+  </tr>
+</table>
 
- <item>
-  <p>If <link xref="shell-notifications">notifications</link> have the focus,
-  move between them and select using left and right arrow, <key>Tab</key> and
- <key>Enter</key>.</p></item>
+<table frame="top bottom" rules="rows">
+  <title>Navigate the desktop</title>
+  <include xmlns="http://www.w3.org/2001/XInclude"
+           href="shell-keyboard-shortcuts.page"
+           xpointer="alt-f1"/>
+  <include xmlns="http://www.w3.org/2001/XInclude"
+           href="shell-keyboard-shortcuts.page"
+           xpointer="alt-tab"/>
+  <include xmlns="http://www.w3.org/2001/XInclude"
+           href="shell-keyboard-shortcuts.page"
+           xpointer="alt-tick"/>
+  <include xmlns="http://www.w3.org/2001/XInclude"
+           href="shell-keyboard-shortcuts.page"
+           xpointer="ctrl-alt-tab"/>
+  <include xmlns="http://www.w3.org/2001/XInclude"
+           href="shell-keyboard-shortcuts.page"
+           xpointer="ctrl-alt-updown"/>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F6</key></keyseq></p></td>
+    <td><p>Cycle through windows in the same application. Hold down the <key>Alt</key>
+    key and press <key>F6</key> until the window you want is highlighted, then release
+    <key>Alt</key>. This is similar to the <keyseq><key>Alt</key><key>`</key></keyseq>
+    feature.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Esc</key></keyseq></p></td>
+    <td><p>Cycle through all open windows on a workspace.</p></td>
+  </tr>
+</table>
 
- <item>
-  <p>Inside the window of an application, use <key>Tab</key> and
- <keyseq><key>Ctrl</key><key>Tab</key></keyseq> to move between widgets.</p></item>
- <item>
-  <p>Use <key>Esc</key> to exit window switcher, launcher, menu or
-  calendar.</p></item>
-</list>
-</section>
+<table frame="top bottom" rules="rows">
+  <title>Navigate windows</title>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F4</key></keyseq></p></td>
+    <td><p>Close the current window.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F5</key></keyseq> or
+    <keyseq><key xref="windows-key">windows</key><key>Down</key></keyseq></p></td>
+    <td><p>Restore a maximized window to its original size. Use <keyseq><key>Alt</key>
+    <key>F10</key></keyseq> to maximize. <keyseq><key>Alt</key><key>F10</key></keyseq>
+    both maximizes and restores.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F7</key></keyseq></p></td>
+    <td><p>Move the current window. Press <keyseq><key>Alt</key><key>F7</key></keyseq>,
+    then use the arrow keys to move the window. Press <key>Enter</key> to finish
+    moving the window, or <key>Esc</key> to return it to its original place.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F8</key></keyseq></p></td>
+    <td><p>Resize the current window. Press <keyseq><key>Alt</key><key>F8</key></keyseq>,
+    then use the arrow keys to resize the window. Press <key>Enter</key> to finish
+    resizing the window, or <key>Esc</key> to return it to its original size.</p></td>
+  </tr>
+  <include xmlns="http://www.w3.org/2001/XInclude"
+           href="shell-keyboard-shortcuts.page"
+           xpointer="ctrl-alt-shift-updown"/>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F10</key></keyseq> or
+    <keyseq><key xref="windows-key">windows</key><key>Up</key></keyseq></p></td>
+    <td><p><link xref="shell-windows-maximize">Maximize</link> a window, or
+    restore a maximized window to its original size.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key xref="windows-key">windows</key><key>Left</key></keyseq></p></td>
+    <td><p>Maximize a window vertically along the left side of the screen.
+    Press again to restore the window to its previous size.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key xref="windows-key">windows</key><key>Right</key></keyseq></p></td>
+    <td><p>Maximize a window vertically along the right side of the screen.
+    Press again to restore the window to its previous size.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Space</key></keyseq></p></td>
+    <td><p>Pop up the window menu, as if you had right-clicked on the titlebar.</p></td>
+  </tr>
+</table>
 
-<section id="overview">
-<title>In the Overview</title>
-
-<list>
- <item>
-  <p><key>System</key> (<link xref="windows-key">Windows</link>) key or
- <keyseq><key>Alt</key><key>F1</key></keyseq> switches to <gui>overview</gui>
- or back to desktop.</p></item>
- <item>
-  <p>Start typing in the overview to start a search for applications or files.</p>
-  <list>
-     <item>
-    <p>Use up and down arrow keys to navigate through search results.</p>
-   </item>
-  </list>
- </item>
- <item>
-  <p><keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq> opens the
- <em>accessibility switcher</em>.</p>
-  <list>
-   <item>
-    <p>Hold down <keyseq><key>Ctrl</key><key>Alt</key></keyseq> and use
- <key>Tab</key> and <keyseq><key>Shift</key><key>Tab</key></keyseq> or left and
- right arrow to move back and forth between <gui>Top Bar</gui>, <gui>Dash</gui>,
- <gui>Windows</gui>, <gui>Applications</gui> and <gui>Search</gui>.</p></item>
-  </list>
- </item>
- <item>
-  <p><keyseq><key>Ctrl</key><key>Alt</key><key>Up</key></keyseq> and <key>Down</key>
- move between workspaces in the <gui>workspace switcher</gui>.</p>
- </item>
- <item>
-  <p><keyseq><key>Ctrl</key><key>PgDn</key></keyseq> and <key>PgUp</key> move from
- the <gui>Windows</gui> overview to the <gui>Applications</gui> overview and
- back.</p>
- </item>
- <item>
-  <p>Use <key>Esc</key> to exit search or overview.</p>
- </item>
-</list>
-
-</section>
 </page>
-
