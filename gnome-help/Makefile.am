@@ -13,6 +13,7 @@ HELP_MEDIA = \
 	figures/color-printer.png \
 	figures/color-profile-default.png \
 	figures/color-space.png \
+	figures/documents-icon.png \
 	figures/gnome.png \
 	figures/input-keyboard-symbolic.png \
 	figures/monitors-dual.webm \
