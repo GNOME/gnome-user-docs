@@ -104,7 +104,6 @@ HELP_FILES = \
 	contacts-edit-details.page \
 	contacts-link-unlink.page \
 	contacts-search.page \
-	disk-benchmark.page \
 	disk-capacity.page \
 	disk-check.page \
 	disk-format.page \
