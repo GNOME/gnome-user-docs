@@ -110,6 +110,7 @@ HELP_FILES = \
 	disk-partitions.page \
 	disk.page \
 	display-dimscreen.page \
+	display-dual-monitors.page \
 	display-lock.page \
 	documents-collection-send.page \
 	documents-collections.page \
@@ -165,7 +166,6 @@ HELP_FILES = \
 	look-display-fuzzy.page \
 	look-resolution.page \
 	media.page \
-	monitors-dual.page \
 	more-help.page \
 	mouse-disabletouchpad.page \
 	mouse-doubleclick.page \
