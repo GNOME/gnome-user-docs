@@ -13,10 +13,10 @@ HELP_MEDIA = \
 	figures/color-printer.png \
 	figures/color-profile-default.png \
 	figures/color-space.png \
+	figures/display-dual-monitors.webm \
 	figures/documents-icon.png \
 	figures/gnome.png \
 	figures/input-keyboard-symbolic.png \
-	figures/monitors-dual.webm \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
 	figures/printing-select.png \
