@@ -5,11 +5,12 @@
     <link type="guide" xref="mouse"/>
     <link type="guide" xref="a11y#mobility" group="clicking"/>
 
-    <revision pkgversion="3.4.0" date="2012-02-19" status="review"/>
+    <revision pkgversion="3.4.0" date="2012-03-25" status="final"/>
 
-    <credit type="author">
+    <credit type="author copyright">
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
+      <years>2012</years>
     </credit>
     
     <credit type="author">
@@ -35,23 +36,22 @@ pointing device only has a single button.</p>
   <item><p>Switch <gui>Simulated Secondary Click</gui> on.</p></item>
 </steps>
 
-<p>You can change how long you must hold down the left mouse button for before
+<p>You can change how long you must hold down the left mouse button before
 it is registered as a right click. On the <gui>Pointing and Clicking</gui> tab,
 change the <gui>Acceptance delay</gui> under
 <gui>Simulated Secondary Click</gui>.</p>
 
-<comment>
-<cite>shaunm</cite>
-<p>I wanted to document that the pointer fills up with blue, and you get a
-right-click when it's full. But it only seemed to work on the arrow pointer,
-and now it's not even working there for me. Investigate.</p>
-</comment>
-
 <p>To right-click with simulated secondary click, hold down the left mouse
-button where you would normally right-click, then release. You will only
-right-click once you release the mouse button. If you use
-<link xref="mouse-mousekeys">Mouse Keys</link>, this will also allow you to
-right-click by holding down the <key>5</key> key on your keypad.</p>
+button where you would normally right-click, then release. The pointer fills
+with blue as you hold down the left mouse button. Once it is entirely blue,
+release the mouse button to right-click.</p>
+
+<p>Some special pointers, such as the resize pointers, do not change colors.
+You can still use simulated secondary click as normal, even if you don't get
+visual feedback from the pointer.</p>
+
+<p>If you use <link xref="mouse-mousekeys">Mouse Keys</link>, this also allows
+you to right-click by holding down the <key>5</key> key on your keypad.</p>
 
 <note>
 <p>In the <gui>Activities</gui> overview, you are always able to long-press
