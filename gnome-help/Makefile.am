@@ -27,6 +27,7 @@ HELP_MEDIA = \
 	figures/shell-exit.png \
 	figures/shell-files.png \
 	figures/shell-introduction.png \
+	figures/shell-keyboard-shortcuts.png \
 	figures/shell-notification.png \
 	figures/shell-top-bar.png \
 	figures/shell-windows.png \
