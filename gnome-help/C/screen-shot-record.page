@@ -7,10 +7,16 @@
     <link type="guide" xref="tips"/>
     
     <desc>Take a picture or record a video of what's happening on your screen.</desc>
-    <revision pkgversion="3.4.0" date="2012-02-19" status="review"/>
-    <credit type="author">
+    <revision pkgversion="3.4.1" date="2012-03-30" status="final"/>
+    <credit type="author copyright">
       <name>Tiffany Antopolski</name>
       <email>tiffany.antopolski@gmail.com</email>
+      <years>2011</years>
+    </credit>
+    <credit type="author copyright">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+      <years>2012</years>
     </credit>
     
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -21,45 +27,54 @@
   <p>You can take a picture of your screen (a <em>screenshot</em>) or record a
  video of what's happening on the screen (a <em>screencast</em>). This is useful
  if you want to show someone how to do something on the computer, for example.
- Screenshots and screencasts are just normal picture/video files, so you can
+ Screenshots and screencasts are just normal picture and video files, so you can
  email them and share them on the web.</p>
 
 <section id="screenshot">
  <title>Take a screenshot</title>
- <p>To take a picture of what's on your screen:</p>
 <steps>
-<item>
-  <p>Go to the <gui>Activities</gui> overview and open the <app>Screenshot</app>
- tool.</p>
-</item>
+<item><p>Open <app>Screenshot</app> from the <gui>Activities</gui> overview.</p></item>
  
 <item>
- <p>In the window that appears, choose what to capture.</p>
- <p>You can take a picture of the whole of the screen
- (<gui>Grab the whole desktop</gui>), the window that you're currently using
- (<gui>Grab the current window</gui>), or an area of the screen you can select
- by dragging a box around it (<gui>Select the area to grab</gui>).</p>
+ <p>In the <app>Take Screenshot</app> window, select whether to grab the
+ entire desktop, a single window, or an area of the screen. Set a delay
+ if you need to select a window or otherwise set up your desktop for
+ the screenshot. Then choose any effects you want.</p>
 </item>
 
 <item>
   <p>Click <gui>Take Screenshot</gui>.</p>
-  <p>If you selected <gui>Select area to grab</gui>, the cursor will change into
- a cross. Click and drag the area you want for the screenshot.</p>
+  <p>If you selected <gui>Select area to grab</gui>, the pointer changes into
+  a crosshair. Click and drag the area you want for the screenshot.</p>
 </item>
 
 <item>
-  <p>The <gui>Save Screenshot</gui> window will now appear. Choose where to save
- the screenshot and click <gui>Save</gui>.</p>
+  <p>In the <gui>Save Screenshot</gui> window, enter a file name and choose a
+  folder, then click <gui>Save</gui>.</p>
+  <p>Alternatively, import the screenshot directly into an image-editing application
+  without saving it first. Click <gui>Copy to Clipboard</gui> then paste the image in
+  the other application, or drag the screenshot thumbnail to the application.</p>
 </item>
 </steps>
 
-<note>
-  <p>You can also drag and drop the screenshot image into another application,
- to paste it there, or to <app>files</app> to save it in a folder.</p>
+<note style="tip">
+  <title>Keyboard shortcuts</title>
+  <p>Quickly take a screenshot of the desktop, a window, or an area at any time
+  using these global keyboard shortcuts:</p>
+  <list style="compact">
+    <item><p><key>Prt Scrn</key> to take a screenshot of the desktop.</p></item>
+    <item><p><keyseq><key>Alt</key><key>Prt Scrn</key></keyseq> to take a screenshot
+    of a window.</p></item>
+    <item><p><keyseq><key>Shift</key><key>Prt Scrn</key></keyseq> to take a screenshot
+    of an area you select.</p></item>
+  </list>
+  <p>When you use a keyboard shortcut, the image is automatically saved in
+  your Pictures folder with a file name that begins with "Screenshot" and
+  includes the date and time it was taken.</p>
+  <p>You can also hold down <key>Ctrl</key> with any of the above shortcuts to
+  copy the screenshot image to the clipboard instead of saving it.</p>
 </note>
-
 </section>
-
 
 
 <section id="screencast">
@@ -71,7 +86,7 @@
   <p>Press <keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>R</key></keyseq>
  to start recording what's on your screen.</p>
   <p>A red circle is displayed in the bottom right corner of the screen when the
- recording is in progress.</p>
+ recording is in progress. This indicator does not show up in the video.</p>
 </item>
 
 <item>
@@ -81,15 +96,9 @@
 </item>
 
 <item>
-  <p>In your Home folder, a file named <file>shell-%d%u-%c.webm</file> will be
- saved, where %d is the date, %u is a string of letters that makes the file name
- unique, and %c is a counter that is incremented each time a recording is made
- within a single session.</p>
+  <p>The video is automatically saved in your Videos folder with a file name
+  that starts with "Screencast" and includes the date and time it was taken.</p>
 </item>
-
-<item>
-  <p>You can <link xref="files-rename">rename</link> the file as you wish.</p>
-</item> 
 </steps>
 </section>
 
