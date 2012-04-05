@@ -123,8 +123,6 @@ HELP_FILES = \
 	documents-previews.page \
 	documents-print.page \
 	documents-search.page \
-	documents-select.page \
-	documents-sort.page \
         documents-tracer.page \
 	documents-viewgrid.page \
 	fallback-mode.page \
