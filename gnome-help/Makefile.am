@@ -7,6 +7,24 @@ HELP_ID = gnome-help
 HELP_LINGUAS = ca de el fi fr es gl hi hu id it ja lv nl pa pt_BR ru sl sr sr@latin sv te vi
 
 HELP_MEDIA = \
+	figures/audio-volume-high-symbolic.svg \
+	figures/audio-volume-low-symbolic.svg \
+	figures/audio-volume-medium-symbolic.svg \
+	figures/audio-volume-muted-symbolic.svg \
+	figures/battery-caution-charging-symbolic.svg \
+	figures/battery-caution-symbolic.svg \
+	figures/battery-empty-charging-symbolic.svg \
+	figures/battery-empty-symbolic.svg \
+	figures/battery-full-charged-symbolic.svg \
+	figures/battery-full-charging-symbolic.svg \
+	figures/battery-full-symbolic.svg \
+	figures/battery-good-charging-symbolic.svg \
+	figures/battery-good-symbolic.svg \
+	figures/battery-low-charging-symbolic.svg \
+	figures/battery-low-symbolic.svg \
+	figures/battery-missing-symbolic.svg \
+	figures/bluetooth-active-symbolic.svg \
+	figures/bluetooth-disabled-symbolic.svg \
 	figures/color-average.png \
 	figures/color-camera.png \
 	figures/color-display.png \
@@ -19,6 +37,31 @@ HELP_MEDIA = \
 	figures/input-keyboard-symbolic.png \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
+	figures/network-cellular-3g-symbolic.svg \
+	figures/network-cellular-4g-symbolic.svg \
+	figures/network-cellular-acquiring-symbolic.svg \
+	figures/network-cellular-connected-symbolic.svg \
+	figures/network-cellular-edge-symbolic.svg \
+	figures/network-cellular-gprs-symbolic.svg \
+	figures/network-cellular-signal-excellent-symbolic.svg \
+	figures/network-cellular-signal-good-symbolic.svg \
+	figures/network-cellular-signal-none-symbolic.svg \
+	figures/network-cellular-signal-ok-symbolic.svg \
+	figures/network-cellular-signal-weak-symbolic.svg \
+	figures/network-cellular-umts-symbolic.svg \
+	figures/network-error-symbolic.svg \
+	figures/network-idle-symbolic.svg \
+	figures/network-no-route-symbolic.svg \
+	figures/network-offline-symbolic.svg \
+	figures/network-receive-symbolic.svg \
+	figures/network-transmit-receive-symbolic.svg \
+	figures/network-transmit-symbolic.svg \
+	figures/network-vpn-acquiring-symbolic.svg \
+	figures/network-vpn-symbolic.svg \
+	figures/network-wired-acquiring-symbolic.svg \
+	figures/network-wired-disconnected-symbolic.svg \
+	figures/network-wired-symbolic.svg \
+	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
 	figures/shell-activities.png \
 	figures/shell-apps-open.png \
@@ -33,8 +76,17 @@ HELP_MEDIA = \
 	figures/shell-windows.png \
 	figures/shell-workspaces.png \
 	figures/shell.png \
+	figures/top-bar-icons.png \
 	figures/universal-access-menu.png \
 	figures/view-fullscreen-16.png \
+	figures/network-wireless-acquiring-symbolic.svg \
+	figures/network-wireless-connected-symbolic.svg \
+	figures/network-wireless-encrypted-symbolic.svg \
+	figures/network-wireless-signal-excellent-symbolic.svg \
+	figures/network-wireless-signal-good-symbolic.svg \
+	figures/network-wireless-signal-none-symbolic.svg \
+	figures/network-wireless-signal-ok-symbolic.svg \
+	figures/network-wireless-signal-weak-symbolic.svg \
 	figures/yelp-icon-big.png
 
 HELP_FILES = \
@@ -300,6 +352,7 @@ HELP_FILES = \
 	sound-usemic.page \
 	sound-usespeakers.page \
 	sound-volume.page \
+	status-icons.page \
 	tips-specialchars.page \
 	tips.page \
         translate.page \
