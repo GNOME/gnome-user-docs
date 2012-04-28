@@ -368,4 +368,5 @@ HELP_FILES = \
 	user-goodpassword.page \
 	video-dvd.page \
 	video-sending.page \
+	wacom-mode.page \
 	windows-key.page
