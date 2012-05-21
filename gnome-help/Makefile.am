@@ -369,4 +369,5 @@ HELP_FILES = \
 	video-dvd.page \
 	video-sending.page \
 	wacom-mode.page \
+	wacom-multi-monitor.page \
 	windows-key.page
