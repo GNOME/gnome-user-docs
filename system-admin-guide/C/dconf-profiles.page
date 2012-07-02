@@ -6,28 +6,42 @@
     <link type="guide" xref="index" group="user" />
 
     <credit type="author copyright">
-      <name>Michael Hill</name>
-      <email>mdhillca@gmail.com</email>
+      <name>Ryan Lortie</name>
+      <email>desrt@desrt.ca</email>
       <years>2012</years>
     </credit>
 
-    <desc>Set system-wide default values using dconf's Key File Directories</desc>
+    <desc>Set system-wide default values using dconf's key file directories</desc>
   </info>
 
   <title>Custom default values for system settings</title>
 
-  <comment>
-    <cite date="2012-05-21" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
-    <p>This assumes the reader knows how to.... By the end of this page,
-    the reader will be able to....</p>
-  </comment>
+  <p>System-wide default values can be set using dconf's <em>key file
+   directories</em>. These were introduced to support the ability to configure
+   the system with a text editor. For any given system database, a corresponding
+   directory can be created (with <file>.d</file> added to the filename, for
+   example <file>/etc/dconf/db/local.d</file>). This directory contains keyfiles
+   in a special format that can be compiled into the dconf database.</p>
 
-  <p>Short introductory text...</p>
+  <p>A key file in this directory will look something like this:</p>
 
-  <steps>
-    <item><p>First step...</p></item>
-    <item><p>Second step...</p></item>
-    <item><p>Third step...</p></item>
-  </steps>
+  <code>
+# Some useful default settings for our site
+
+[system/proxy/http]
+host='172.16.0.1'
+enabled=true
+
+[org/gnome/desktop/background]
+picture-uri='file:///usr/local/rupert-corp/company-wallpaper.jpeg'
+  </code>
+
+  <p>After modifying any key file in one of these directories, the
+   <app>dconf update</app> tool should be run. This tool scans the
+   <file>/etc/dconf/db/</file> directory for databases with corresponding
+   <file>.d</file> directories. If the timestamp on the directory is newer than
+   the one on the file, the file is regenerated. The tool sends a notification
+   on the system D-Bus to all running applications instructing them to re-read
+   their settings.</p>
 
 </page>
