@@ -2,7 +2,7 @@
       type="topic" style="task"
       id="gsettings-browse">
   <info>
-    <revision version="0.1" date="2012-07-02" status="stub"/>
+    <revision pkgversion="3.6" version="0.8" date="2012-08-11" status="draft"/>
     <link type="guide" xref="index" group="tools" />
 
     <credit type="author copyright">
@@ -10,23 +10,43 @@
       <email>matthias.clasen@gmail.com</email>
       <years>2012</years>
     </credit>
+    <credit type="author copyright">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+      <years>2012</years>
+    </credit>
 
-    <desc>Which tool can I use to explore gsettings?</desc>
+    <desc>What tool can I use to explore gsettings values?</desc>
   </info>
 
-  <title>Exploring gsettings</title>
+  <title>Browse gsettings values for your applications</title>
 
   <comment>
     <cite date="2012-07-02" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
     <p>Adapted from l-g-o SysAdminGuide page. Add a see-also?</p>
   </comment>
 
-  <p><app>dconf-editor</app> is a graphical utility that lets you browse
-   gsettings. The <app>gsettings</app> commandline utility does the same in a
-   non-graphical way; it has very useful bash completion. Note that these tools
-   always operate on the current user's gsettings database, so you don't want to
-   run them as root. In addition, they require a D-Bus session bus in order to
-   make any changes (since that requires activating the dconf daemon via
-   D-Bus).</p>
-
+  <p>There are two tools you can use to browse gsettings values, the <app>
+  dconf-editor</app> graphical utility and the <app>gsettings</app> commandline 
+  utility.</p>
+  
+  <p>Both <app>dconf-editor</app> and <app>gsettings</app> let you browse and 
+  change options for system and application preferences. You can even use 
+  them to change preferences that do not exist in the graphical user interface.
+  </p>
+  
+  <p><app>dconf-editor</app> may be better to use if you are not familiar with 
+  the options available an application. However, as a commandline application, 
+  <app>gsettings</app> is more powerful than <app>dconf-editor</app>. <app>
+  gsettings</app> permits bash completion, and you can write scripts that 
+  include <app>gsettings</app> commands.</p>
+  
+  <note style="warning"><p>Note that these tools always operate using the 
+  current user's gsettings database, so you should not run these applications 
+  as root.</p></note>
+  
+  <note><p>Both <app>dconf-editor</app> and <app>gsettings</app> require a 
+  D-Bus session bus in order to make any changes. This is because the dconf 
+  daemon must be activated using D-Bus.</p></note>
+  
 </page>
