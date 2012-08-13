@@ -4,6 +4,7 @@
   <info>
     <revision version="0.1" date="2012-05-21" status="stub"/>
     <link type="guide" xref="index" group="user" />
+    <link type="seealso" xref="dconf-profiles" />
 
     <credit type="author copyright">
       <name>Ryan Lortie</name>
@@ -15,7 +16,7 @@
      settings</desc>
    </info>
 
-  <title>Locking down specific settings</title>
+  <title>Lock down specific settings</title>
 
   <p>Use dconf's <em>lockdown</em> to prevent users changing specific settings.
    Lockdown is supported by creating a <file>locks</file> subdirectory in the
@@ -25,14 +26,18 @@
    number of files to this directory. Here's an example of what one might look
    like:</p>
 
-  <code>
+<list type="numbered">
+  <title>How to lock the default wallpaper</title>
+  <item><p>First, <link type="seealso" xref="dconf-profiles">set a default wallpaper</link></p></item>
+<item><p>Create a directory named /etc/dconf/db/local.d/locks</p></item>
+<item><p>Edit <file>/etc/dconf/db/local.d/locks/00_default-wallpaper</file></p>
+<code>
 # prevent changes to the company wallpaper
 /org/gnome/desktop/background/picture-uri
-  </code>
-
-  <p><app>dconf update</app> needs to be run after changing the locks. The tool
-   will notice if the timestamp on the <file>locks</file> directory has changed,
-   so there is no need to touch the <file>.d</file> directory as well.</p>
+</code>
+</item>
+<item><p>Run <cmd>dconf update</cmd> as root.</p></item>
+</list>
 
   <note>
     <p>As of dconf 0.7.4, lockdown is only supported on a per-key basis for

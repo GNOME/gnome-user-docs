@@ -25,23 +25,23 @@
 
   <p>A key file in this directory will look something like this:</p>
 
-  <code>
-# Some useful default settings for our site
 
-[system/proxy/http]
-host='172.16.0.1'
-enabled=true
+<list type="numbered">
+  <title>Set the default wallpaper</title>
+  <item><p>Create a directory named <file>/etc/dconf/profile</file></p></item>
+  <item><p>Edit <file>/etc/dconf/profile/user</file></p>
+<code>
+user
+local
+</code></item>
 
+  <item><p>Create a directory named <file>/etc/dconf/db/local.d</file></p></item>
+  <item><p>Edit <file>/etc/dconf/db/local.d/00_default-wallpaper</file></p>
+<code>
 [org/gnome/desktop/background]
-picture-uri='file:///usr/local/rupert-corp/company-wallpaper.jpeg'
-  </code>
-
-  <p>After modifying any key file in one of these directories, the
-   <app>dconf update</app> tool should be run. This tool scans the
-   <file>/etc/dconf/db/</file> directory for databases with corresponding
-   <file>.d</file> directories. If the timestamp on the directory is newer than
-   the one on the file, the file is regenerated. The tool sends a notification
-   on the system D-Bus to all running applications instructing them to re-read
-   their settings.</p>
-
+picture-uri='file:///usr/local/share/backgrounds/company-wallpaper.jpg'
+</code>
+</item>
+<item><p>Run <cmd>dconf update</cmd></p></item>
+</list>
 </page>
