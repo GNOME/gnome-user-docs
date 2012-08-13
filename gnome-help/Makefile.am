@@ -154,9 +154,12 @@ HELP_FILES = \
 	color-whatisspace.page \
 	color-why-calibrate.page \
 	color-whyimportant.page \
+  contacts-add-remove.page \
 	contacts-edit-details.page \
+	contacts-import.page \
 	contacts-link-unlink.page \
 	contacts-search.page \
+	contacts-setup.page \
 	disk-capacity.page \
 	disk-check.page \
 	disk-format.page \
