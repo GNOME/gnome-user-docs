@@ -155,8 +155,9 @@ HELP_FILES = \
 	color-why-calibrate.page \
 	color-whyimportant.page \
   contacts-add-remove.page \
+  contacts.page \
+  contacts-connect.page \
 	contacts-edit-details.page \
-	contacts-import.page \
 	contacts-link-unlink.page \
 	contacts-search.page \
 	contacts-setup.page \
