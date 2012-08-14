@@ -4,6 +4,7 @@
   <info>
     <revision version="0.1" date="2012-05-21" status="stub"/>
     <link type="guide" xref="index" group="user" />
+    <link type="seealso" xref="backgrounds-extra" />
 
     <credit type="author copyright">
       <name>Ryan Lortie</name>
@@ -17,22 +18,24 @@
   <title>Custom default values for system settings</title>
 
   <p>System-wide default values can be set using dconf's <em>key file
-   directories</em>. These were introduced to support the ability to configure
-   the system with a text editor. For any given system database, a corresponding
-   directory can be created (with <file>.d</file> added to the filename, for
-   example <file>/etc/dconf/db/local.d</file>). This directory contains keyfiles
-   in a special format that can be compiled into the dconf database.</p>
+   directories</em>. </p>
 
   <p>A key file in this directory will look something like this:</p>
 
 
+<comment><p>You don't have to use "local" as the profile name. You can even have
+different profiles for different users. This isn't mentioned because this
+functionality needs something like accountsservice integration to enforce this. 
+gnome-control-center integration would be great too.</p></comment>
+
+<example>
 <list type="numbered">
   <title>Set the default wallpaper</title>
   <item><p>Create a directory named <file>/etc/dconf/profile</file></p></item>
   <item><p>Edit <file>/etc/dconf/profile/user</file></p>
 <code>
-user
-local
+user-db:user
+system-db:local
 </code></item>
 
   <item><p>Create a directory named <file>/etc/dconf/db/local.d</file></p></item>
@@ -40,8 +43,19 @@ local
 <code>
 [org/gnome/desktop/background]
 picture-uri='file:///usr/local/share/backgrounds/company-wallpaper.jpg'
+picture-options='scaled'
+# You can use any hex color; 000000 is white.
+primary-color='000000'
+secondary-color='000000'
 </code>
 </item>
 <item><p>Run <cmd>dconf update</cmd></p></item>
 </list>
+
+  <note>
+    <p>The first time you create a dconf user profile, you'll need to log out and log
+    in to apply the new profile.</p>
+  </note>
+</example>
+
 </page>
