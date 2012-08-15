@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic" style="task a11y"
       id="a11y-contrast">
   <info>
@@ -20,13 +21,23 @@
 <p>You can adjust the contrast of windows and buttons so that they're easier to see. This is not the same as <link xref="display-dimscreen">changing the brightness of the whole screen</link>; only parts of the <em>user interface</em> will change.</p>
 
   <steps>
-    <item><p>Click your name on the top bar and select <gui>System Settings</gui>.</p></item>
+    <item>
+    <if:choose>
+      <if:when test="platform:unity">
+         <p>Click the icon at the very right of the <gui>menu bar</gui> and select <gui>System Settings</gui>.</p>
+      </if:when>
+      <p>Click your name on the top bar and select <gui>System Settings</gui>.</p>
+    </if:choose>
+    </item>
     <item><p>Open <gui>Universal Access</gui> and select the <gui>Seeing</gui> tab.</p></item>
     <item><p>Under <gui>Display</gui> select the <gui>Contrast</gui> that best suits your needs.
     <gui>Low</gui> will make things less vivid, for example.</p></item>
   </steps>
+  <if:choose>
+  <if:when test="platform:unity"></if:when>
  <note style = "tip">
  <p>You can quickly change the contrast by clicking the <link xref="a11y-icon">accessibility
  icon</link> on the top bar and selecting <gui>High Contrast</gui>.</p>
  </note>
+ </if:choose>
 </page>

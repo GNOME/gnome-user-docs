@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic" style="task a11y"
       id="a11y-bouncekeys">
   <info>
@@ -26,17 +27,27 @@
 <p>Turn on <em>bounce keys</em> to ignore key presses that are rapidly repeated. For example, if you have hand tremors which cause you to press a key multiple times when you only want to press it once, you should turn on bounce keys.</p>
 
 <steps>
-  <item><p>Click your name on the top bar and select <gui>System Settings</gui>.</p></item>
+  <item>
+    <if:choose>
+      <if:when test="platform:unity">
+        <p>Click the icon at the very right of the <gui>menu bar</gui> and select <gui>System Settings</gui>.</p>
+      </if:when>
+      <p>Click your name on the top bar and select <gui>System Settings</gui>.</p>
+    </if:choose>
+  </item>
   <item><p>Open <gui>Universal Access</gui> and select the <gui>Typing</gui> tab.</p></item>
   <item><p>Switch <gui>Bounce Keys</gui> on.</p></item>
 </steps>
 
+<if:choose>
+<if:when test="platform:unity"></if:when>
 <note style="tip">
 <title>Quickly turn bounce keys on and off</title>
 <p>You can turn bounce keys on and off by clicking the
 <link xref="a11y-icon">accessibility icon</link> on the top bar and selecting
 <gui>Bounce Keys</gui>.</p>
 </note>
+</if:choose>
 
 <p>Use the <gui>Acceptance delay</gui> slider to change how long bounce keys waits before it registers another key press after you pressed the key for the first time. Select <gui>Beep when a key is rejected</gui> if you want the computer to make a sound each time it ignores a key press because it happened too soon after the previous key press.</p>
 

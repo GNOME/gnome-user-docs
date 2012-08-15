@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic" style="task a11y"
       id="a11y-right-click">
   <info>
@@ -29,8 +30,14 @@ you find it difficult to move your fingers individually on one hand, or if your
 pointing device only has a single button.</p>
 
 <steps>
-  <item><p>Click your name on the top bar and select
-   <gui>System Settings</gui>.</p></item>
+  <item>
+    <if:choose>
+      <if:when test="platform:unity">
+        <p>Click the icon at the very right of the <gui>menu bar</gui> and select <gui>System Settings</gui>.</p>
+      </if:when>
+      <p>Click your name on the top bar and select <gui>System Settings</gui>.</p>
+    </if:choose>
+  </item>
   <item><p>Open <gui>Universal Access</gui> and select the <gui>Pointing and
    Clicking</gui> tab.</p></item>
   <item><p>Switch <gui>Simulated Secondary Click</gui> on.</p></item>
@@ -53,11 +60,14 @@ visual feedback from the pointer.</p>
 <p>If you use <link xref="mouse-mousekeys">Mouse Keys</link>, this also allows
 you to right-click by holding down the <key>5</key> key on your keypad.</p>
 
+<if:choose>
+<if:when test="platform:unity"></if:when>
 <note>
 <p>In the <gui>Activities</gui> overview, you are always able to long-press
 to right-click, even with this feature disabled. Long-press works slightly
 differently in the overview: You do not have to release the button to
 right-click.</p>
 </note>
+</if:choose>
 
 </page>

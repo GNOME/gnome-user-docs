@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic" style="task a11y"
       id="a11y-stickykeys">
   <info>
@@ -35,8 +36,14 @@
  several keys at once.</p>
 
 <steps>
-  <item><p>Click your name on the top bar and select
-   <gui>System Settings</gui>.</p></item>
+  <item>
+    <if:choose>
+      <if:when test="platform:unity">
+        <p>Click the icon at the very right of the <gui>menu bar</gui> and select <gui>System Settings</gui>.</p>
+      </if:when>
+      <p>Click your name on the top bar and select <gui>System Settings</gui>.</p>
+    </if:choose>
+  </item>
   <item><p>Open <gui>Universal Access</gui> and select the
    <gui>Typing</gui> tab.</p></item>
   <item><p>Switch <gui>Sticky Keys</gui> on.</p></item>
@@ -48,9 +55,12 @@
 <gui>Sticky Keys</gui>) to turn sticky keys on and off from the keyboard. When
 this option is selected, you can press <key>Shift</key> five times in a row to
 enable or disable sticky keys.</p>
+<if:choose>
+<if:when test="platform:unity"></if:when>
 <p>You can also turn sticky keys on and off by clicking the
 <link xref="a11y-icon">accessibility icon</link> on the top bar and selecting
 <gui>Sticky Keys</gui>.</p>
+</if:choose>
 </note>
 
 <p>If you press two keys at once, you can have sticky keys turn itself off
