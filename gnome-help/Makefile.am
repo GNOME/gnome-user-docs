@@ -109,7 +109,6 @@ HELP_FILES = \
 	accounts-add.page \
 	accounts-create.page \
 	accounts-disable-service.page \
-	accounts-password.page \
 	accounts-provider-not-available.page \
 	accounts-remove.page \
 	accounts-which-application.page \
