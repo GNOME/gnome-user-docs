@@ -111,6 +111,7 @@ HELP_FILES = \
 	accounts-disable-service.page \
 	accounts-password.page \
 	accounts-provider-not-available.page \
+	accounts-remove.page \
 	accounts-which-application.page \
 	accounts-whyadd.page \
 	accounts.page \
@@ -372,6 +373,9 @@ HELP_FILES = \
 	user-goodpassword.page \
 	video-dvd.page \
 	video-sending.page \
+	wacom-left-handed.page \
 	wacom-mode.page \
 	wacom-multi-monitor.page \
+	wacom-stylus.page \
+	wacom.page \
 	windows-key.page
