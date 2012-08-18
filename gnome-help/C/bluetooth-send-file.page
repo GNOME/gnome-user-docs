@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="guide" style="task"
       id="bluetooth-send-file">
 
@@ -23,11 +24,20 @@
 
   <title>Send a file to a Bluetooth device</title>
 
+<if:choose>
+  <if:when test="platform:unity">
+    <p>You can send files to connected Bluetooth devices, such as some mobile
+    phones or other computers. Some types of devices don't allow the transfer
+    of files, or specific types of files. You can send files in one of three
+    ways: using the Bluetooth icon in the menu bar, from the Bluetooth settings
+    window, or directly from the file manager.</p>
+  </if:when>
   <p>You can send files to connected Bluetooth devices, such as some mobile
   phones or other computers. Some types of devices don't allow the transfer
   of files, or specific types of files. You can send files in one of three
   ways: using the Bluetooth icon on the top bar, from the Bluetooth settings
   window, or directly from the file manager.</p>
+</if:choose>
 
   <p>To send files directly from the file manager, see <link xref="files-share"/>.</p>
 
@@ -39,7 +49,12 @@
   <steps>
     <title>Send files using the Bluetooth icon</title>
     <item>
+      <if:choose>
+        <if:when test="platform:unity">
+      <p>Click the Bluetooth icon in the menu bar and select <gui>Send Files to Device</gui>.</p>
+        </if:when>
       <p>Click the Bluetooth icon on the top bar and select <gui>Send Files to Device</gui>.</p>
+      </if:choose>
     </item>
     <item>
       <p>Choose the file you want to send and click <gui>Select</gui>.</p>
@@ -62,7 +77,14 @@
 
   <steps>
     <title>Send files from the Bluetooth settings</title>
-    <item><p>Click the Bluetooth icon on the top bar and select <gui>Bluetooth Settings</gui>.</p></item>
+    <item>
+      <if:choose>
+        <if:when test="platform:unity">
+          <p>Click the Bluetooth icon in the menu bar and select <gui>Bluetooth Settings</gui>.</p>
+        </if:when>
+        <p>Click the Bluetooth icon on the top bar and select <gui>Bluetooth Settings</gui>.</p>
+      </if:choose>
+    </item>
     <item><p>Select the device to send files to from the list on the left. The list
     only shows devices you've already connected to. See
     <link xref="bluetooth-connect-device"/>.</p></item>

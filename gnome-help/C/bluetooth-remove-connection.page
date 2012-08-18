@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="guide" style="task"
       id="bluetooth-remove-connection">
 
@@ -30,7 +31,12 @@
 
   <steps>
     <item>
+      <if:choose>
+        <if:when test="platform:unity">
+      <p>Click the Bluetooth icon in the <gui>menu bar</gui> and select <gui>Bluetooth Settings</gui>.</p>
+        </if:when>
       <p>Click the Bluetooth icon on the top bar and select <gui>Bluetooth Settings</gui>.</p>
+      </if:choose>
     </item>
     <item>
       <p>Select the device you want to disconnect in the left pane, then click the <gui>-</gui>
