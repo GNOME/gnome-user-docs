@@ -168,6 +168,7 @@ HELP_FILES = \
 	disk.page \
 	display-dimscreen.page \
 	display-dual-monitors.page \
+	display-dual-monitors-desktop.page \
 	display-lock.page \
 	documents-collection-send.page \
 	documents-collections.page \
