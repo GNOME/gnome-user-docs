@@ -2,7 +2,7 @@
       type="topic" style="task"
       id="documents-info">
   <info>
-    <revision pkgversion="3.4.0" date="2012-02-20" status="stub"/>
+    <revision pkgversion="3.5.90" date="2012-09-02" status="review"/>
 
     <link type="guide" xref="documents#view"  group="#last" />
 
@@ -11,9 +11,13 @@
       <email>yrazes@gmail.com</email>
       <years>2012</years>
     </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+      <years>2012</years>
+    </credit>
 
-    <desc>See information like owner, type, size, location, number of pages,
-    last accessed and last modified of the document.</desc>
+    <desc>See a document's name, location, date modified, or type.</desc>
   </info>
 
   <title>Find information about documents</title>
@@ -26,24 +30,35 @@
      - Mention that this metadata is searched.</p>
   </comment>
 
-   <p>When you create a document, metadata is also created.
-    Metadata refers information about the document like owner, type, size,
-    location, number of pages, last accessed and last modified of the document.
-    These properties are typically stored, but further information is also added
-    and can be searched. You can currently choose to have the search string
-    apply to everything, or just match the title or the author. To configure it:
-   </p>
+   <p>When a document is created, it comes with <em>metadata</em>.
+    <app>Documents</app> displays the following metadata for each document:</p>
+    
+   <list>
+     <item><p>Title: the name of the document, which can be edited;</p></item>
+     <item><p>Source: the path of the folder containing the document;</p></item>
+     <item><p>Date Modified;</p></item>
+     <item><p>Type: the <link xref="documents-formats">file format</link>
+      of the document.</p></item>
+   </list>
+    
+   <p>To see a document's properties:</p>
    <steps>
-    <item><p>Select <gui>Search</gui> from the dropdown menu that is triggered
-    by pressing the arrow right to the search entry.</p></item>
+    <item><p>Click the <gui>Check</gui> button to switch to selection
+     mode.</p></item>
+    <item><p>Select a document.</p></item>
+    <item><p>Click the <gui>Properties</gui> button at the right end of the </p></item>
    </steps>
 
-   <p>Documents itself does not currently offer any mechanism to add privacy to
-   a document. You are typically able to do this from your content-creation
-   application though (e.g. LibreOffice or Adobe Acrobat).</p>
+   <note style="tip">
+     <p>Some types of documents (e.g. PDF files) can be password protected,
+     preventing access to their metadata or content.</p>
+   </note>
 
-   <note style="tip"><p>Some kind of documents (e.g. PDF files) can be
-   password-protected though, and you would not be able to access all metadata
-   or content for those.</p></note>
+   <note style="info">
+     <p><app>Documents</app> does not currently offer any mechanism to add
+     privacy to a document. You may be able to do this from the application you
+     used to create the document (e.g. <app>LibreOffice</app> or
+     <app>Adobe Acrobat</app>).</p>
+   </note>
 
 </page>
