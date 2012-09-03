@@ -172,10 +172,7 @@ HELP_FILES = \
 	display-lock.page \
 	documents-collection-send.page \
 	documents-collections.page \
-        documents-favorite.page \
 	documents-info.page \
-	documents-location.page \
-	documents-online.page \
 	documents.page \
 	documents-previews.page \
 	documents-print.page \
