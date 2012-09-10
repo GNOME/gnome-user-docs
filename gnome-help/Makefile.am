@@ -154,9 +154,9 @@ HELP_FILES = \
 	color-whatisspace.page \
 	color-why-calibrate.page \
 	color-whyimportant.page \
-  contacts-add-remove.page \
-  contacts.page \
-  contacts-connect.page \
+	contacts-add-remove.page \
+	contacts.page \
+	contacts-connect.page \
 	contacts-edit-details.page \
 	contacts-link-unlink.page \
 	contacts-search.page \
@@ -172,13 +172,17 @@ HELP_FILES = \
 	display-lock.page \
 	documents-collection-send.page \
 	documents-collections.page \
+	documents-filter.page \
+	documents-formats.page \
 	documents-info.page \
 	documents.page \
 	documents-previews.page \
 	documents-print.page \
 	documents-search.page \
-        documents-tracer.page \
+	documents-select.page \
+        documents-tracker.page \
 	documents-viewgrid.page \
+	documents-view.page \
 	fallback-mode.page \
 	files-autorun.page \
 	files-browse.page \
