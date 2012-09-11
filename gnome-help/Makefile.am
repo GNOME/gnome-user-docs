@@ -170,7 +170,6 @@ HELP_FILES = \
 	display-dual-monitors.page \
 	display-dual-monitors-desktop.page \
 	display-lock.page \
-	documents-collection-send.page \
 	documents-collections.page \
 	documents-filter.page \
 	documents-formats.page \
