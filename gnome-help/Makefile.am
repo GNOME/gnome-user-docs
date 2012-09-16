@@ -161,6 +161,7 @@ HELP_FILES = \
 	contacts-link-unlink.page \
 	contacts-search.page \
 	contacts-setup.page \
+	disk-benchmark.page \
 	disk-capacity.page \
 	disk-check.page \
 	disk-format.page \
