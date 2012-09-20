@@ -8,6 +8,8 @@
     <desc>Specify the default view, sort order, and zoom levels for
     the file manager.</desc>
 
+    <revision pkgversion="3.5.92" version="0.2" date="2012-09-19" status="review"/>
+
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email>tiffany.antopolski@gmail.com</email>
@@ -15,6 +17,10 @@
     <credit type="author">
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
     </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
     <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
@@ -26,8 +32,8 @@
 <p>You can control the default view for new folders, how files and folders
 are sorted by default, the zoom level for the icon and compact views, and
 whether files are displayed in the tree sidebar. In any file manager window,
-click <guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq> and select the
-<gui>Views</gui> tab.</p>
+click <gui>Files</gui> in the top bar, select <gui>Preferences</gui> and select
+the <gui>Views</gui> tab.</p>
 
 <section id="default-view">
 <title>Default view</title>
@@ -35,23 +41,22 @@ click <guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq> and select the
   <item>
     <title><gui>View new folders using</gui></title>
     <p>By default, new folders are shown in icon view. You can select a view
-    for each folder as you browse, and the file manager will remember which
-    view you prefer for each folder. But if you often use the list or compact
-    views, you can use these views by default.</p>
-    <p>Change the view for an individual folder from the <gui>View</gui> menu
-    by clicking <gui>Icons</gui>, <gui>List</gui>, or <gui>Compact</gui>.</p>
+    for each folder as you browse by clicking the list button or the icons
+    button in the toolbar. If you often use the list view, you can set it here
+    as the default.</p>
   </item>
   <item>
     <title><gui>Arrange items</gui></title>
-    <p>You can arrange the items in your folder by name, file size, file type,
-    when they were last modified, when they were last accessed, or when they
-    were trashed. You can change how files are sorted in an individual folder
-    using the <guiseq><gui>View</gui><gui>Arrange Items</gui></guiseq> menu,
-    or by clicking the list column headers in list view. See <link xref="files-sort"/>
-    for details. This menu only affects the current folder, and the file manager
-    will remember your preferred sorting technique for each folder.</p>
-    <p>Use the <gui>Arrange items</gui> drop-down list in the preferences
-    to change the default order used in new folders.</p>
+    <p>You can change how files are sorted in an individual folder by clicking
+    the down arrow button in the toolbar and choosing <gui>By Name</gui>,
+    <gui>By Size</gui>, <gui>By Type</gui> or <gui>By Modification Date</gui>,
+    or by clicking the list column headers in list view. See
+    <link xref="files-sort"/> for details. This menu only affects the current
+    folder.</p>
+    <p>To change the default order used in new folders, use the
+    <gui>Arrange items</gui> drop-down list in the preferences to sort by name,
+    file size, file type, when they were last modified, when they were last
+    accessed, or when they were trashed.</p>
   </item>
   <item>
     <title><gui>Sort folders before files</gui></title>
@@ -64,9 +69,10 @@ click <guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq> and select the
     <title><gui>Show hidden and backup files</gui></title>
     <p>The file manager does not display hidden files or folders by default.
     See <link xref="files-hidden"/> for information on hidden files. You can
-    show hidden files in an individual window from the <gui>View</gui> menu.
-    If you prefer to always show hidden files, or want to see hidden files
-    in every open file manager window, select this option.</p>
+    show hidden files in an individual window by selecting
+    <gui>Show Hidden Files</gui>,from the down arrow menu in the toolbar. If you
+    prefer to always show hidden files, or want to see hidden files in every
+    open file manager window, select this option.</p>
   </item>
 </terms>
 </section>
@@ -78,22 +84,17 @@ click <guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq> and select the
    <item>
     <title><gui>Default zoom level</gui></title>
     <p>You can make the icons and text larger or smaller in icon view. You can
-    do this in an individual folder from the <gui>View</gui> menu, and the file
-    manager will remember your zoom choice for each folder. If you frequently use
-    a larger or smaller zoom level, you can set the default with this option.</p>
+    do this in an individual folder by clicking the down arrow button in the
+    toolbar and selecting <gui>Zoom In</gui>, <gui>Zoom Out</gui>, or
+    <gui>Normal Size</gui>. If you frequently use a larger or smaller zoom
+    level, you can set the default with this option.</p>
     <p>In icon view, more or fewer captions are shown based on your zoom level.
     See <link xref="nautilus-display#icon-captions"/> for more information.</p>
-   </item>
-   <item>
-    <title><gui>Text beside icons</gui></title>
-    <p>Selecting this option will place folder and file names to the right
-    of icons, rather than below them. This is a more compact layout that
-    allows you to see more information at once.</p>
    </item>
   </terms>
 </section>
 
-
+<!--
 <section id="compact-view-defaults">
  <title>Compact view defaults</title>
 
@@ -115,7 +116,7 @@ click <guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq> and select the
    </item>
   </terms>
 </section>
-
+-->
 
 <section id="list-view-defaults">
  <title>List view defaults</title>
@@ -123,14 +124,15 @@ click <guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq> and select the
    <item>
     <title><gui>Default zoom level</gui></title>
     <p>You can make the icons and text larger or smaller in list view. You can
-    do this in an individual folder from the <gui>View</gui> menu, and the file
-    manager will remember your zoom choice for each folder. If you frequently use
-    a larger or smaller zoom level, you can set the default with this option.</p>
+    do this in an individual folder by clicking the down arrow button in the
+    toolbar and selecting <gui>Zoom In</gui>, <gui>Zoom Out</gui>, or
+    <gui>Normal Size</gui>. If you frequently use a larger or smaller zoom
+    level, you can set the default with this option.</p>
    </item>
   </terms>
 </section>
 
-
+<!--
 <section id="tree-view-defaults">
 <title>Tree view defaults</title>
 <p>You can show a full folder tree in your file manager sidebar by selecting
@@ -138,5 +140,6 @@ click <guiseq><gui>Edit</gui><gui>Preferences</gui></guiseq> and select the
 the tree sidebar only shows folders. If you want to show files in the sidebar
 as well, turn <gui>Show only folders</gui> off.</p>
 </section>
+-->
 
 </page>
