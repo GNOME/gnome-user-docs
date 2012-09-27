@@ -302,7 +302,6 @@ HELP_FILES = \
 	power-hotcomputer.page \
 	power-lowpower.page \
 	power-nowireless.page \
-	power-off.page \
 	power-othercountry.page \
 	power-suspendfail.page \
 	power-suspend.page \
