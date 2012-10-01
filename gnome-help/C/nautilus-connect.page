@@ -8,7 +8,7 @@
     <link type="guide" xref="net#sharing"/>
 -->
 
-    <revision pkgversion="3.6.0" version="0.2" date="2012-09-30" status="incomplete"/>
+    <revision pkgversion="3.6.0" version="0.2" date="2012-09-30" status="review"/>
 
     <desc>View and edit files on another computer over FTP, SSH, Windows
     shares, or WebDAV.</desc>
@@ -23,13 +23,6 @@
     </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
-
-  <comment>
-    <cite date="2012-10-01" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
-    <p>Detail the "additional information" below with the removal of the Type
-    option, i.e. prefix (smb:///) or port number for each type.</p>
-  </comment>
-
 
 <title>Browse files on a server or network share</title>
 
@@ -52,30 +45,31 @@ internet/network address.</p>
   <title>Connect to a file server</title>
   <item><p>In the file manager, click <gui>Files</gui> in the top bar and pick
   <gui>Connect to Server</gui> from the app menu.</p></item>
-  <item><p>Enter the server address, and enter any additional information as
-  required. Then click <gui>Connect</gui>. Details on server types are
+  <item><p>Enter the URL of the server. Details on supported URLs are
   <link xref="#types">listed below</link>.</p>
-  <p>For servers on the internet, you can usually use the domain name
-  (e.g. <sys>ftp.example.com</sys>). For computers on your local network,
-  however, you may have to use the computer's
-  <link xref="net-findip">numeric IP address</link>.</p>
+  <note>
+    <p>If you have connected to the server before, the URL may still be
+    available in the history list.</p>
+  </note>
   </item>
-  <item><p>A new window will open showing you the files on the server.
-  You can browse the files just as you would for those on your own computer.</p>
-  <p>The server will also be added to the sidebar so you can access it quickly
-  in the future</p>
+  <item><p>Click <gui>Connect</gui>. A new window will open showing you the
+  files on the server. You can browse the files just as you would for those on
+  your own computer. The server will also be added to the sidebar so you can
+  access it quickly in the future</p>
   </item>
 </steps>
 
 <section id="types">
  <title>Different types of servers</title>
 
-<p>You can connect to different types of servers. Some servers
-are public, and allow anybody to connect. Other servers require
-you to log in with a user name and password.</p>
-<p>You may not have permissions to perform certain actions on files
-on a server. For example, on public FTP sites, you will probably not be
-able to delete files.</p>
+<p>You can connect to different types of servers. Some servers are public,
+   and allow anybody to connect. Other servers require you to log in with a
+   user name and password.</p>
+<p>You may not have permissions to perform certain actions on files on a server.
+  For example, on public FTP sites, you will probably not be able to delete
+  files.</p>
+<p>The kind of URL you have to enter depends on the protocol that the
+  server uses to export its file shares.</p>
 
 <terms>
 <title>Types of servers</title>
@@ -84,8 +78,9 @@ able to delete files.</p>
   <p>If you have a <em>secure shell</em> account on a server, you
   can connect using this method. Many web hosts provide SSH accounts
   to members so they can securely upload files. SSH servers always
-  require you to log in. If you use a secure shell key to log in,
-  leave the password field blank.</p>
+  require you to log in.</p>
+  <p>A typical SSH URL looks like this:</p>
+     <p><sys>ssh://username@hostname.example.com/folder</sys></p>
 
   <comment><cite>shaunm</cite><p>We should have a topics on encryption
   keys, possibly rolling the seahorse help into gnome-help. Then link
@@ -101,6 +96,8 @@ able to delete files.</p>
   access through SSH. Some servers, however, still allow or require
   you to use FTP to upload or download files. FTP sites with logins
   will usually allow you to delete and upload files.</p>
+  <p>A typical FTP URL looks like this:</p>
+     <p><sys>ftp://username@ftp.example.com/path/</sys></p>
 </item>
 <item>
   <title>Public FTP</title>
@@ -108,6 +105,8 @@ able to delete files.</p>
   public or anonymous FTP access. These servers do not require a
   user name and password, and will usually not allow you to delete
   or upload files.</p>
+  <p>A typical anonymous FTP URL looks like this:</p>
+     <p><sys>ftp://ftp.example.com/path/</sys></p>
   <p>Some anonymous FTP sites require you to log in with a
   public user name and password, or with a public user name using
   your email address as the password. For these servers, use the
@@ -121,6 +120,8 @@ able to delete files.</p>
   <em>domains</em> for organization and to better control access. If you have
   the right permissions on the remote computer, you can connect to a Windows
   share from the file manager.</p>
+  <p>A typical Windows share URL looks like this:</p>
+    <p><sys>smb://servername/Share</sys></p>
 </item>
 <item>
   <title>WebDAV and Secure WebDAV</title>
@@ -129,6 +130,8 @@ able to delete files.</p>
   server you're connecting to supports secure connections, you should choose
   this option. Secure WebDAV uses strong SSL encryption, so that other users
   can't see your password.</p>
+  <p>A typical WebDAV URL looks like this:</p>
+    <p><sys>http://example.hostname.com/path</sys></p>
   <comment>
     <cite date="2012-02-19">shaunm</cite>
     <p>Also used by gnome-user-share, but we're not talking about that
