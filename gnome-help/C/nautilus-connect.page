@@ -8,7 +8,7 @@
     <link type="guide" xref="net#sharing"/>
 -->
 
-    <revision pkgversion="3.6.0" version="0.2" date="2012-10-03" status="incomplete"/>
+    <revision pkgversion="3.6.0" version="0.2" date="2012-10-06" status="review"/>
 
     <desc>View and edit files on another computer over FTP, SSH, Windows
     shares, or WebDAV.</desc>
@@ -45,11 +45,12 @@ internet/network address.</p>
   <title>Connect to a file server</title>
   <item><p>In the file manager, click <gui>Files</gui> in the top bar and pick
   <gui>Connect to Server</gui> from the app menu.</p></item>
-  <item><p>Enter the address of the server, in the form of a URL. Details on
-  supported URLs are <link xref="#types">listed below</link>.</p>
+  <item><p>Enter the address of the server, in the form of a
+   <link xref="#urls">URL</link>. Details on supported URLs are
+   <link xref="#types">listed below</link>.</p>
   <note>
-    <p>If you have connected to the server before, the URL may still be
-    available in the history list.</p>
+    <p>If you have connected to the server before, you can click on it in the
+    <gui>Recent Servers</gui> list.</p>
   </note>
   </item>
   <item><p>Click <gui>Connect</gui>. A new window will open showing you the
@@ -61,8 +62,22 @@ internet/network address.</p>
 
 <section id="urls">
  <title>Writing URLs</title>
-<p>A <em>URL</em>, or <em>uniform resource locator</em>, is a
- form of address that refers to a location or file on a network.</p>
+<p>A <em>URL</em>, or <em>uniform resource locator</em>, is a form of address
+ that refers to a location or file on a network. The address is formatted like this:</p>
+<terms>
+  <item><p><sys>scheme://servername.example.com/folder</sys></p></item>
+</terms>
+<p>The <em>scheme</em> specifies the protocol or type of server. The
+  <em>example.com</em> portion of the address is called the <em>domain name</em>.
+  If a user name is required, it is inserted before the server name:</p>
+<terms>
+  <item><p><sys>scheme://username@servername.example.com/folder</sys></p></item>
+</terms>
+<p>Some schemes require the port number to be specified. Insert it after the domain name:</p>
+<terms>
+  <item><p><sys>scheme://servername.example.com:port/folder</sys></p></item>
+</terms>
+<p>Below are specific examples for the various server types that are supported.</p>
 </section>
 
 <section id="types">
@@ -84,7 +99,9 @@ internet/network address.</p>
   to members so they can securely upload files. SSH servers always
   require you to log in.</p>
   <p>A typical SSH URL looks like this:</p>
-     <p><sys>ssh://username@hostname.example.com/folder</sys></p>
+  <terms>
+    <item><p><sys>ssh://username@servername.example.com/folder</sys></p></item>
+  </terms>
 
   <comment><cite>shaunm</cite><p>We should have a topics on encryption
   keys, possibly rolling the seahorse help into gnome-help. Then link
@@ -101,7 +118,9 @@ internet/network address.</p>
   you to use FTP to upload or download files. FTP sites with logins
   will usually allow you to delete and upload files.</p>
   <p>A typical FTP URL looks like this:</p>
-     <p><sys>ftp://username@ftp.example.com/path/</sys></p>
+  <terms>
+    <item><p><sys>ftp://username@ftp.example.com/path/</sys></p></item>
+  </terms>
 </item>
 <item>
   <title>Public FTP</title>
@@ -110,7 +129,9 @@ internet/network address.</p>
   user name and password, and will usually not allow you to delete
   or upload files.</p>
   <p>A typical anonymous FTP URL looks like this:</p>
-     <p><sys>ftp://ftp.example.com/path/</sys></p>
+  <terms>
+    <item><p><sys>ftp://ftp.example.com/path/</sys></p></item>
+  </terms>
   <p>Some anonymous FTP sites require you to log in with a
   public user name and password, or with a public user name using
   your email address as the password. For these servers, use the
@@ -125,7 +146,9 @@ internet/network address.</p>
   the right permissions on the remote computer, you can connect to a Windows
   share from the file manager.</p>
   <p>A typical Windows share URL looks like this:</p>
-    <p><sys>smb://servername/Share</sys></p>
+  <terms>
+    <item><p><sys>smb://servername/Share</sys></p></item>
+  </terms>
 </item>
 <item>
   <title>WebDAV and Secure WebDAV</title>
@@ -135,7 +158,9 @@ internet/network address.</p>
   this option. Secure WebDAV uses strong SSL encryption, so that other users
   can't see your password.</p>
   <p>A typical WebDAV URL looks like this:</p>
-    <p><sys>http://example.hostname.com/path</sys></p>
+  <terms>
+    <item><p><sys>http://example.hostname.com/path</sys></p></item>
+  </terms>
   <comment>
     <cite date="2012-02-19">shaunm</cite>
     <p>Also used by gnome-user-share, but we're not talking about that
