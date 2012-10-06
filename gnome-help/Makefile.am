@@ -97,7 +97,6 @@ HELP_FILES = \
 	a11y-dwellclick.page \
 	a11y-font-size.page \
 	a11y-icon.page \
-	a11y-locate-pointer.page \
 	a11y-mag.page \
 	a11y.page \
 	a11y-right-click.page \
@@ -226,7 +225,6 @@ HELP_FILES = \
 	more-help.page \
 	mouse-disabletouchpad.page \
 	mouse-doubleclick.page \
-	mouse-drag-threshold.page \
 	mouse-lefthanded.page \
 	mouse-middleclick.page \
 	mouse-mousekeys.page \
