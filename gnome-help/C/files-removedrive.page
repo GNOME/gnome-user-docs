@@ -12,8 +12,13 @@
       <name>Jim Campbell</name>
       <email>jwcampbell@gmail.com</email>
     </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+      <years>2012</years>
+    </credit>
 
-    <revision pkgversion="3.4.0" date="2012-02-19" status="review"/>
+    <revision pkgversion="3.6.0" version="0.2" date="2012-10-08" status="review"/>
 
     <desc>Eject or unmount a USB flash drive, CD, DVD, or other device.</desc>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -44,18 +49,25 @@
 
   <p>If any of the files on the device are open and in use by an application,
   you will not be able to safely remove the device. You will be prompted with a
-  window telling you that "the volume is busy," and listing all the open files
-  on the device. Once you close all the files on the device, the device
-  will automatically be safe to remove. At that time you can unplug or eject it.
-  </p>
+  window telling you <gui>Volume is busy</gui>. To safely remove the device:</p>
 
+  <steps>
+    <item><p>Click <gui>Cancel</gui>.</p></item>
+    <item><p>Close all the files on the device.</p></item>
+    <item><p>Click the eject icon to safely remove or eject the device.</p></item>
+    <item><p>Alternately, you can right-click the name of the device in the
+    sidebar and select <gui>Eject</gui>.</p></item>
+  </steps>
+
+<!--
   <p>If you can't close one of the files, for example if the application
   using the file is locked up, you can right-click the file in the
   <gui>Volume is busy</gui> window and select <gui>End Process</gui>.
   This will force the entire locked up application to close, which could close
   other files you have open with that application.</p>
+-->
 
-  <note style="warning"><p>You can also choose <gui>Unmount Anyway</gui> to
+  <note style="warning"><p>You can also choose <gui>Eject Anyway</gui> to
   remove the device without closing the files. This may cause errors in
   applications that have those files open.</p></note>
   </section>
