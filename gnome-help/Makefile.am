@@ -34,6 +34,7 @@ HELP_MEDIA = \
 	figures/display-dual-monitors.webm \
 	figures/documents-icon.png \
 	figures/gnome.png \
+	figures/go-down.png \
 	figures/input-keyboard-symbolic.png \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
