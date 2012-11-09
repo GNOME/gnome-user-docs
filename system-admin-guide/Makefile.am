@@ -7,17 +7,13 @@ HELP_LINGUAS =
 HELP_MEDIA =
 
 HELP_FILES = \
-	authentication.page		\
-	autologin.page			\
 	background.page			\
 	backgrounds-extra.page		\
-	custom-session.page		\
 	dconf-profiles-edit.page	\
 	dconf-profiles.page		\
 	fonts.page			\
 	gsettings-browse.page		\
 	index.page			\
-	keyboard-layout.page		\
 	lockdown.page			\
 	lockscreenbackground.page	\
 	login-background.page		\
@@ -29,7 +25,4 @@ HELP_FILES = \
 	screen-locking.page		\
 	servers-list.page   \
 	session-debug.page		\
-	sessions.page			\
-	user-list.page			\
-	user-session.page   \
 	vpn-list.page
