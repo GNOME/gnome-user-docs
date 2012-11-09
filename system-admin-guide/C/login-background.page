@@ -1,0 +1,45 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="login-background">
+  <info>
+    <revision version="0.1" date="2012-05-21" status="draft"/>
+    <link type="guide" xref="index" group="login" />
+
+    <credit type="author copyright">
+      <name>Matthias Clasen</name>
+      <email>matthias.clasen@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="author copyright">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+      <years>2012</years>
+    </credit>
+
+    <desc>Edit the GDM dconf profile</desc>
+   </info>
+
+  <title>Changing the background of the login screen</title>
+
+  <comment>
+    <cite date="2012-11-07" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
+    <p>Adapted from l-g-o SysAdminGuide page.</p>
+  </comment>
+
+  <p>See the <file>org.gnome.desktop.background.picture-uri</file> gsettings
+ key. Note that <app>GDM</app> uses its own DConf profile. To change settings in
+ this profile, place a keyfile in <file>/etc/dconf/db/gdm.d</file> and run
+ <input>dconf update</input>. Here is an example keyfile that could be stored as
+ <file>/etc/dconf/db/gdm.d/corp-login</file>:</p>
+
+<code>
+[org/gnome/desktop/background]
+picture-uri='file:///opt/corp/background.jpg'
+</code>
+
+  <note>
+    <p>Note that these DConf key files are slightly different from gsettings
+    override files.</p>
+  </note>
+
+</page>
