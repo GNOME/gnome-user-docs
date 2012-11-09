@@ -2,9 +2,14 @@
       type="topic" style="task"
       id="logo">
   <info>
-    <revision version="0.1" date="2012-05-21" status="stub"/>
+    <revision version="0.1" date="2012-05-21" status="draft"/>
     <link type="guide" xref="index" group="login" />
 
+    <credit type="author copyright">
+      <name>Matthias Clasen</name>
+      <email>matthias.clasen@gmail.com</email>
+      <years>2012</years>
+    </credit>
     <credit type="author copyright">
       <name>Michael Hill</name>
       <email>mdhillca@gmail.com</email>
@@ -17,17 +22,24 @@
   <title>Adding a logo to the login screen</title>
 
   <comment>
-    <cite date="2012-05-21" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
-    <p>This assumes the reader knows how to.... By the end of this page,
-    the reader will be able to....</p>
+    <cite date="2012-11-07" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
+    <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-  <p>Short introductory text...</p>
+  <p>See the <file>org.gnome.login-screen.logo</file> gsettings key. Note that
+ <app>GDM</app> uses its own DConf profile. To change settings in this profile,
+ place a keyfile in <file>/etc/dconf/db/gdm.d</file> and run
+ <input>dconf update</input>. Here is an example keyfile that could be stored as
+ <file>/etc/dconf/db/gdm.d/corp-login</file>:</p>
 
-  <steps>
-    <item><p>First step...</p></item>
-    <item><p>Second step...</p></item>
-    <item><p>Third step...</p></item>
-  </steps>
+<code>
+[org/gnome/login-screen]
+logo='/opt/corp/logo.png'
+</code>
+
+  <note>
+    <p>Note that these DConf key files are slightly different from gsettings
+    override files.</p>
+  </note>
 
 </page>

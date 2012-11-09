@@ -2,7 +2,7 @@
 
 HELP_ID = system-admin-guide
 
-HELP_LINGUAS = 
+HELP_LINGUAS =
 
 HELP_MEDIA =
 
@@ -20,6 +20,8 @@ HELP_FILES = \
 	keyboard-layout.page		\
 	lockdown.page			\
 	lockscreenbackground.page	\
+	login-background.page		\
+	login-disclaimer.page		\
 	logo.page			\
 	overrides.page			\
 	power-settings.page		\
