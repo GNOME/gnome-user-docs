@@ -71,6 +71,7 @@ HELP_MEDIA = \
 	figures/shell-exit.png \
 	figures/shell-files.png \
 	figures/shell-introduction.png \
+	figures/shell-lock.png \
 	figures/shell-keyboard-shortcuts.png \
 	figures/shell-notification.png \
 	figures/shell-top-bar.png \
@@ -337,6 +338,7 @@ HELP_FILES = \
 	shell-exit.page \
 	shell-introduction.page \
 	shell-keyboard-shortcuts.page \
+	shell-lockscreen.page \
 	shell-notifications.page \
 	shell-overview.page \
 	shell-terminology.page \
