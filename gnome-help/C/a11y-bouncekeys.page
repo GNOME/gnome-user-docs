@@ -1,21 +1,23 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic" style="task a11y"
       id="a11y-bouncekeys">
   <info>
     <link type="guide" xref="a11y#mobility" group="keyboard"/>
     <link type="guide" xref="keyboard" group="a11y"/>
 
-    <revision pkgversion="3.4.0" date="2012-03-25" status="final"/>
+    <revision pkgversion="3.7.1" version="0.2" date="2012-11-16" status="outdated"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
     </credit>
-
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
     </credit>
 
     <desc>Ignore quickly-repeated key presses of the same key.</desc>
@@ -28,26 +30,18 @@
 
 <steps>
   <item>
-    <if:choose>
-      <if:when test="platform:unity">
-        <p>Click the icon at the very right of the <gui>menu bar</gui> and select <gui>System Settings</gui>.</p>
-      </if:when>
-      <p>Click your name on the top bar and select <gui>System Settings</gui>.</p>
-    </if:choose>
+    <p>Click your name on the top bar and select <gui>Settings</gui>.</p>
   </item>
   <item><p>Open <gui>Universal Access</gui> and select the <gui>Typing</gui> tab.</p></item>
   <item><p>Switch <gui>Bounce Keys</gui> on.</p></item>
 </steps>
 
-<if:choose>
-<if:when test="platform:unity"></if:when>
 <note style="tip">
 <title>Quickly turn bounce keys on and off</title>
 <p>You can turn bounce keys on and off by clicking the
 <link xref="a11y-icon">accessibility icon</link> on the top bar and selecting
 <gui>Bounce Keys</gui>.</p>
 </note>
-</if:choose>
 
 <p>Use the <gui>Acceptance delay</gui> slider to change how long bounce keys waits before it registers another key press after you pressed the key for the first time. Select <gui>Beep when a key is rejected</gui> if you want the computer to make a sound each time it ignores a key press because it happened too soon after the previous key press.</p>
 
