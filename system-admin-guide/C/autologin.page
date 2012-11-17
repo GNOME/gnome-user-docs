@@ -1,0 +1,46 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="autologin">
+  <info>
+    <revision pkgversion="3.4.2" version="0.1" date="2012-12-01" status="draft"
+    />
+    <link type="guide" xref="index" group="login" />
+
+    <credit type="author copyright">
+      <name>minnie_eg</name>
+      <email>amany.elguindy@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <desc>Edit GDM custom configuration file.</desc>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+   </info>
+
+  <title>Configuring automatic login</title>
+
+  <comment>
+    <cite date="2012-11-17"
+    href="mailto:amany.elguindy@gmail.com">minnie_eg</cite>
+    <p>This assumes the reader knows how to edit files as root user.
+    By the end of this page, the reader will be able to enable autologin
+    and select a user to automatically login.</p>
+  </comment>
+
+  <p>This will guide you to configure user autologin through the custom
+  configuration file of GDM.</p>
+
+  <p>Open the <file>custom.conf</file> file as the root user with a text
+  editor and edit or add the following:</p>
+
+  <listing>
+    <title><file>/etc/gdm3/custom.conf</file></title>
+    <desc>The exact location of GDM custom configuration file might vary depending on your system.</desc>
+    <code>
+    <input>[daemon]</input>
+    <output>AutomaticLoginEnable=true</output>
+    <output>AutomaticLogin=<input>username</input></output>
+    # Replace the word <input>username</input> above by your actual username.
+    </code>
+  </listing>
+</page>

@@ -7,6 +7,7 @@ HELP_LINGUAS =
 HELP_MEDIA =
 
 HELP_FILES = \
+	autologin.page			\
 	background.page			\
 	backgrounds-extra.page		\
 	dconf-profiles-edit.page	\
