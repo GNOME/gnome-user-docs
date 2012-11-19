@@ -10,6 +10,7 @@ HELP_FILES = \
 	autologin.page			\
 	background.page			\
 	backgrounds-extra.page		\
+	custom-session.page		\
 	dconf-profiles-edit.page	\
 	dconf-profiles.page		\
 	fonts.page			\
