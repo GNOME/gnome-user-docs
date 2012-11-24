@@ -27,4 +27,5 @@ HELP_FILES = \
 	screen-locking.page		\
 	servers-list.page		\
 	session-debug.page		\
+	user-session.page		\
 	vpn-list.page
