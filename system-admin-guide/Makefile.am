@@ -23,6 +23,6 @@ HELP_FILES = \
 	power-settings.page		\
 	processes.page			\
 	screen-locking.page		\
-	servers-list.page   \
+	servers-list.page		\
 	session-debug.page		\
 	vpn-list.page
