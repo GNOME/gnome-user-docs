@@ -1,0 +1,54 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+     id="keyboard-layout">
+  <info>
+    <revision pkgversion="3.4.2" version="0.1" date="2012-12-02" status="draft"/>
+    <link type="guide" xref="index" group="login" />
+
+    <credit type="author copyright">
+      <name>minnie_eg</name>
+      <email>amany.elguindy@gmail.com</email>
+      <years>2012</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Populate the keyboard layout chooser on the login screen.</desc>
+  </info>
+
+  <title>Add multiple keyboard layouts from the login screen.</title>
+
+  <comment>
+    <cite date="2012-12-02" href="mailto:amany.elguindy@gmail.com">Amany El-Guindy</cite>
+    <p>This assumes the reader knows how to edit files as root.
+    The reader will be able to add a list of keyboard layouts to the login screen, so that
+    usernames/passwords of different languages other than the default can be typed.</p>
+  </comment>
+
+  <steps>
+    <item>
+      <p>Find the code of the desired languages layouts in
+      <file>/usr/share/X11/xkb/rules/xorg.lst</file>
+      under the section named <code>! layout</code>.</p>
+    </item>
+    <item>
+      <p>Add the layouts codes to <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</file>
+      as the following:</p>
+      <note style="notice">
+        <p>Multiple layouts can be added as a comma separated list as the example below for English and French layouts.</p>
+      </note>
+      <screen>
+        Section "InputClass"
+          Identifier "evdev keyboard catchall"
+          MatchIsKeyboard "on"
+          MatchDevicePath "/dev/input/event*"
+          Driver "evdev"
+          <input>Option "XkbLayout" "en,fr"</input>
+        EndSection
+      </screen>
+    </item>
+    <item>
+      <p>Logout to find that the defined layouts are available on the top bar of the login screen.</p>
+    </item>
+  </steps>
+</page>

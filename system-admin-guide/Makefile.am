@@ -16,6 +16,7 @@ HELP_FILES = \
 	fonts.page			\
 	gsettings-browse.page		\
 	index.page			\
+	keyboard-layout.page		\
 	lockdown.page			\
 	lockscreenbackground.page	\
 	login-background.page		\
