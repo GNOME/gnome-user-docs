@@ -2,12 +2,17 @@
       type="topic" style="task"
      id="keyboard-layout">
   <info>
-    <revision pkgversion="3.4.2" version="0.1" date="2012-12-02" status="draft"/>
+    <revision pkgversion="3.6.0" version="0.1" date="2012-12-10" status="draft"/>
     <link type="guide" xref="index" group="login" />
 
     <credit type="author copyright">
       <name>minnie_eg</name>
       <email>amany.elguindy@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimvoa</name>
+      <email>kittykat3756@gmail.com</email>
       <years>2012</years>
     </credit>
 
@@ -16,27 +21,30 @@
     <desc>Populate the keyboard layout chooser on the login screen.</desc>
   </info>
 
-  <title>Add multiple keyboard layouts from the login screen.</title>
+  <title>Multiple keyboard layouts on the login screen</title>
 
   <comment>
     <cite date="2012-12-02" href="mailto:amany.elguindy@gmail.com">Amany El-Guindy</cite>
-    <p>This assumes the reader knows how to edit files as root.
-    The reader will be able to add a list of keyboard layouts to the login screen, so that
-    usernames/passwords of different languages other than the default can be typed.</p>
+    <p>This assumes the reader knows how to edit files as root. The reader
+    will be able to add a list of keyboard layouts to the login screen, so that
+    usernames/passwords of different languages other than the default can be
+    typed.</p>
   </comment>
+
+  <p>You can add alternative keyboard layouts for users to chose from on the
+  login screen. This can be helpful for users who normally use a different
+  keyboard layout from the default.</p>
 
   <steps>
     <item>
       <p>Find the code of the desired languages layouts in
-      <file>/usr/share/X11/xkb/rules/xorg.lst</file>
-      under the section named <code>! layout</code>.</p>
+      <file>/usr/share/X11/xkb/rules/xorg.lst</file> under the section named
+      <code>! layout</code>.</p>
     </item>
     <item>
-      <p>Add the layouts codes to <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</file>
-      as the following:</p>
-      <note style="notice">
-        <p>Multiple layouts can be added as a comma separated list as the example below for English and French layouts.</p>
-      </note>
+      <p>Add the layouts codes to
+      <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</file> in the following
+      way:</p>
       <screen>
         Section "InputClass"
           Identifier "evdev keyboard catchall"
@@ -46,9 +54,13 @@
           <input>Option "XkbLayout" "en,fr"</input>
         EndSection
       </screen>
+      <p>Multiple layouts can be added as a comma separated list, as shown in
+      the example for English and French layouts.</p>
     </item>
     <item>
-      <p>Logout to find that the defined layouts are available on the top bar of the login screen.</p>
+      <p>Logout to find that the defined layouts are available on the top bar
+      of the login screen.</p>
     </item>
   </steps>
+
 </page>
