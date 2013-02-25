@@ -390,6 +390,34 @@
 
 </section>
 
+<section id="changing-shorcuts">
+  <title>Change keyboard shortcuts</title>
+  <p>This section shows how to change keyboard shortcuts for an application.</p>
+
+  <steps>
+    <item>
+	<p>Open the Terminal application.</p>
+     </item>
+    <item><p>Run the <cmd>gsettings set org.gnome.desktop.interface can-change-accels true</cmd> command.</p>
+    </item>
+       <item>
+      <p>Start the application for which you want to change the keyboard shortcut.</p>
+    </item>
+  <item>
+      <p>Find the menu item for which you want to change the keyboard shortcut.</p>
+    </item>
+<item>
+      <p>Type the shortcut that you want on the keyboard.</p>
+    </item>
+  </steps>
+
+<note style="note style">
+  <p>
+Note that this setting is desktop-wide and that you can disable it after your made changes by running the <cmd>gsettings set org.gnome.desktop.interface can-change-accels false</cmd> command. You can also use the <app>dconf-editor</app> utility to do this.
+  </p>
+</note>  
+</section>
+
 <section id="custom">
 <title>Custom shortcuts</title>
 
