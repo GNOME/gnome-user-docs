@@ -326,6 +326,8 @@ HELP_FILES = \
 	printing-setup.page \
 	printing-streaks.page \
 	printing.page \
+	privacy.page \
+	privacy-history-recent-off.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
 	session-formats.page \
