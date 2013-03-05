@@ -171,7 +171,6 @@ HELP_FILES = \
 	display-dimscreen.page \
 	display-dual-monitors.page \
 	display-dual-monitors-desktop.page \
-	display-lock.page \
 	documents-collections.page \
 	documents-filter.page \
 	documents-formats.page \
