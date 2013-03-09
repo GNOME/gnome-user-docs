@@ -168,7 +168,6 @@ HELP_FILES = \
 	disk-format.page \
 	disk-partitions.page \
 	disk.page \
-	display-dimscreen.page \
 	display-dual-monitors.page \
 	display-dual-monitors-desktop.page \
 	documents-collections.page \
