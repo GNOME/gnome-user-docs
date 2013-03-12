@@ -22,6 +22,10 @@
       <name>Michael Hill</name>
       <email>mdhillca@gmail.com</email>
     </credit>
+    <credit type="editor">
+      <name>Sindhu S</name>
+      <email>sindhus@live.in</email>
+    </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
@@ -46,9 +50,53 @@ executable text files are handled, and the trash behavior. Click
 </section>
 <section id="executable">
 <title>Executable text files</title>
- <p>An executable text file is a file that contains a program that you can run (execute).  The <link xref="nautilus-file-properties-permissions">file permissions</link> must also allow for the file to run as a program.  The most common are Shell, Python, and Perl scripts.  These have extensions .sh, .py and .pl, respectively.</p>
- <p>You can select to <gui>Run executable text files when they are opened</gui>, <gui>View executable text files when they are opened</gui> or <gui>Ask each time</gui>. If the last option is selected, a window will appear asking if you wish to run or view the selected text file.</p>
+ <p>An executable text file is a file that contains a program that you can run
+ (execute). The <link xref="nautilus-file-properties-permissions">file
+ permissions</link> must also allow for the file to run as a program. The most
+ common are <src>Shell</src>, <src>Python</src> and <src>Perl</src> scripts.
+ These have extensions <file>.sh</file>, <file>.py</file> and <file>.pl</file>,
+ respectively.</p>
+ 
+ <p>When you open an executable text file, you can select from:</p>
+ 
+ <list>
+  <item>
+    <p><gui>Run executable text files when they are opened</gui></p>
+  </item>
+  <item>
+    <p><gui>View executable text files when they are opened</gui></p>
+  </item>
+  <item>
+    <p><gui>Ask each time</gui></p>
+  </item>
+ </list>
 
+ <p>If <gui>Ask each time</gui> is selected, a dialog will pop up asking if you
+ wish to run or view the selected text file.</p>
+
+ <p>Executable text files are also called scripts. All scripts in
+ <file>~/.local/share/nautilus/scripts</file> folder will appear in the context
+ menu for a file under the <gui style="menuitem">Scripts</gui> submenu. When a
+ script is executed from a local folder, all selected files will be pasted to
+ the script as parameters. To execute a script on a file:</p>
+
+<steps>
+  <item>
+    <p>Navigate to the desired folder.</p>
+  </item>
+  <item>
+    <p>Select the desired file.</p>
+  </item>
+  <item>
+    <p>Right click on the file to open the context menu and select the desired
+    script to execute from the <gui style="menuitem">Scripts</gui> menu.</p>
+  </item>
+</steps>
+
+ <note style="important">
+  <p>A script will not be passed any parameters when executed from a remote
+  folder such as a folder showing web or <src>ftp</src> content.</p>
+ </note>
 
 </section>
 <section id="trash">
