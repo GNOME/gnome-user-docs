@@ -327,6 +327,7 @@ HELP_FILES = \
 	privacy.page \
 	privacy-hide-notifications.page \
 	privacy-history-recent-off.page \
+	privacy-name-visibility.page \
 	privacy-purge.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
