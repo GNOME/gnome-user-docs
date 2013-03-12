@@ -325,6 +325,7 @@ HELP_FILES = \
 	printing-streaks.page \
 	printing.page \
 	privacy.page \
+	privacy-hide-notifications.page \
 	privacy-history-recent-off.page \
 	privacy-purge.page \
 	screen-shot-record.page \
