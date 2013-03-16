@@ -36,6 +36,7 @@ HELP_MEDIA = \
 	figures/gnome.png \
 	figures/go-down.png \
 	figures/input-keyboard-symbolic.png \
+	figures/keyboard-key-menu.svg \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
 	figures/network-cellular-3g-symbolic.svg \
@@ -213,6 +214,7 @@ HELP_FILES = \
 	help-mailing-list.page \
 	index.page \
 	keyboard-cursor-blink.page \
+	keyboard-key-menu.page \
 	keyboard-layouts.page \
 	keyboard-nav.page \
 	keyboard-osk.page \
