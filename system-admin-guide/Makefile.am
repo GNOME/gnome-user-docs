@@ -11,13 +11,13 @@ HELP_FILES = \
 	backgrounds-extra.page		\
 	custom-default-values.page	\
 	custom-session.page		\
+	dconf-lockdown.page		\
 	dconf-profiles-edit.page	\
 	dconf-profiles.page		\
 	fonts.page			\
 	gsettings-browse.page		\
 	index.page			\
 	keyboard-layout.page		\
-	lockdown.page			\
 	lockscreenbackground.page	\
 	login-background.page		\
 	login-banner.page		\
