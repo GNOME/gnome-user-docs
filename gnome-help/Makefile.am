@@ -89,6 +89,7 @@ HELP_MEDIA = \
 	figures/network-wireless-signal-none-symbolic.svg \
 	figures/network-wireless-signal-ok-symbolic.svg \
 	figures/network-wireless-signal-weak-symbolic.svg \
+	figures/view-more-symbolic.svg \
 	figures/yelp-icon-big.png
 
 HELP_FILES = \
