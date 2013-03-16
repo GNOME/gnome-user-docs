@@ -215,6 +215,7 @@ HELP_FILES = \
 	index.page \
 	keyboard-cursor-blink.page \
 	keyboard-key-menu.page \
+	keyboard-key-super.page \
 	keyboard-layouts.page \
 	keyboard-nav.page \
 	keyboard-osk.page \
@@ -384,5 +385,4 @@ HELP_FILES = \
 	wacom-mode.page \
 	wacom-multi-monitor.page \
 	wacom-stylus.page \
-	wacom.page \
-	windows-key.page
+	wacom.page
