@@ -33,9 +33,11 @@ HELP_MEDIA = \
 	figures/color-space.png \
 	figures/display-dual-monitors.webm \
 	figures/documents-icon.png \
+	figures/emblem-system-symbolic.svg \
 	figures/gnome.png \
 	figures/go-down.png \
 	figures/input-keyboard-symbolic.png \
+	figures/input-methods-switcher.png \
 	figures/keyboard-key-menu.svg \
 	figures/nautilus.png \
 	figures/nautilus-icons.png \
@@ -90,6 +92,7 @@ HELP_MEDIA = \
 	figures/network-wireless-signal-none-symbolic.svg \
 	figures/network-wireless-signal-ok-symbolic.svg \
 	figures/network-wireless-signal-weak-symbolic.svg \
+	figures/system-run-symbolic.svg \
 	figures/view-more-symbolic.svg \
 	figures/yelp-icon-big.png
 
