@@ -330,6 +330,7 @@ HELP_FILES = \
 	printing-setup-default-printer.page \
 	printing-setup.page \
 	printing-streaks.page \
+	printing-to-file.page \
 	printing.page \
 	privacy.page \
 	privacy-hide-notifications.page \
