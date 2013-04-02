@@ -1,0 +1,35 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="automatic-logout">
+
+<info>
+ 
+  <revision version="0.1" date="2013-03-19" status="draft"/>
+  <link type="guide" xref="index" group="net" />
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+ <desc>How to end user sessions after a period of idle, or forcibly.</desc>
+
+</info>
+
+<title>Automatic logout</title>
+  <p>GNOME can optionally force the automatic logout of users after being 
+  idle for a certain amount of time. This feature is exposed through 
+  GSettings.</p>
+
+  <p>The code below shows how to configure an end of user sessions 
+  after X seconds of idle, in power management settings.</p>
+<code>
+org.gnome.settings-daemon.plugins.power.sleep-battery-timeout=
+&lt;number-of-seconds&gt;
+org.gnome.settings-daemon.plugins.power.sleep-battery-type='interactive'
+
+org.gnome.settings-daemon.plugins.power.sleep-ac-timeout=
+&lt;number-of-seconds&gt;
+org.gnome.settings-daemon.plugins.power.sleep-ac-type='interactive'
+</code>
+
+</page>
