@@ -1,0 +1,106 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="custom-default-values">
+  <info>
+    <revision pkgversion="3.6" version="0.1" date="2012-05-21" status="draft"/>
+    <link type="guide" xref="index" group="user" />
+    <link type="seealso" xref="backgrounds-extra" />
+    <link type="seealso" xref="dconf-profiles" />
+
+    <credit type="author copyright">
+      <name>Ryan Lortie</name>
+      <email>desrt@desrt.ca</email>
+      <years>2012</years>
+    </credit>
+
+    <credit type="author copyright">
+      <name>Jeremy Bicha</name>
+      <email>jbicha@ubuntu.com</email>
+      <years>2012</years>
+    </credit>
+
+    <credit type="author copyright">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+      <years>2012</years>
+    </credit>
+
+    <credit type="editor">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+
+  <desc>Set system-wide default values using dconf's key file directories</desc>
+
+  </info>
+
+  <title>Custom default values for system settings</title>
+
+  <p>System-wide default values can be set using dconf's <em>key file
+   directories</em>. Key files contain <em>groups</em> and <em>key-value pairs
+   </em>.</p>
+
+  <p>To demonstrate how dconf key files can be used to set default values,
+  we'll look at how to use them to set a default wallpaper.</p>
+
+<comment><p>You don't have to use "local" as the profile name. You can even have
+different profiles for different users. This isn't mentioned because this
+functionality needs something like accountsservice integration to enforce this.
+gnome-control-center integration would be great too.</p></comment>
+
+<example>
+<list type="numbered">
+  <title>Set the default wallpaper</title>
+  <item><p>Create a directory named 
+     <file>/etc/dconf/db/local.d/</file></p></item>
+  <item><p>From within the <file>profile</file> directory, create and edit a
+  file named <file>user</file>.</p> 
+<code>
+user-db:user
+system-db:local
+</code></item>
+
+  <item><p>Navigate to the <file>/etc/dconf/db/local.d/</file> directory. If
+  this directory doesn't exist, you will need to create it.</p>
+  </item>
+  <item><p>In the <file>local.d</file> directory, create and edit a
+  key file named <file>00_default-wallpaper</file>.</p>
+<code>
+#this portion of the key file identifies the dconf group
+[org/gnome/desktop/background]
+#these are the individual key-value pairs that are relevant to the key file group
+picture-uri='file:///usr/local/share/backgrounds/company-wallpaper.jpg'
+picture-options='scaled'
+primary-color='000000'
+secondary-color='000000'
+</code>
+</item>
+<item>
+<p>Update the system databases</p>
+<screen> <output style="prompt"># </output> 
+<input>dconf update</input> </screen>
+</item>
+</list>
+</example>
+
+  <p>It is good to know that the <file>/etc/dconf/db/site.d/</file> file is 
+  an alternative for site-wide settings.</p> 
+
+<note>
+  <p>The first time you create a dconf user profile, you'll need to log out
+    and log in to apply the new profile.</p>
+</note>
+
+
+<note>
+  <p>
+  You can include multiple sets of groups and key-value pairs in each key 
+  file, or you can use a separate key file for each group.</p>
+</note>
+
+  <p>For more in-depth information, see the 
+  <link xref="https://live.gnome.org/dconf/SystemAdministrators"> 
+  gnome.org</link> website.</p>
+
+</page>
