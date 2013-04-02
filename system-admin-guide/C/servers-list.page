@@ -11,6 +11,12 @@
       <years>2012</years>
     </credit>
 
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+
     <desc>How do I make it easy for my users to access file shares?</desc>
   </info>
 
@@ -23,6 +29,28 @@
 
   <p>Nautilus stores a list of servers in
     <file>~/.config/nautilus/servers</file>. The list can be pre-populated in
-    this file.</p>
+    this file. It is also good to know that this file is in the XBEL format.</p> 
+    
+<p>See the following example of the file content:</p>
+
+<code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"&gt;
+   &lt;bookmark href="ftp://ftp.gnome.org/"&gt;
+      &lt;title&gt;GNOME ftp&lt;/title&gt;
+   &lt;/bookmark&gt;
+&lt;/xbel&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"&gt;
+   &lt;bookmark href="ftp://ftp.gnome.org/"&gt;
+     &lt;title&gt;GNOME ftp&lt;/title&gt;
+   &lt;/bookmark&gt;
+&lt;/xbel&gt;
+</code>
 
 </page>
