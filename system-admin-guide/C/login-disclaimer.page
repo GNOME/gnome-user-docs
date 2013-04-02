@@ -15,6 +15,11 @@
       <email>mdhillca@gmail.com</email>
       <years>2012</years>
     </credit>
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
 
     <desc>Edit the GDM dconf profile</desc>
    </info>
@@ -31,11 +36,16 @@
  <file>org.gnome.login-screen.banner-message-text</file> gsettings keys. Note
  that <app>GDM</app> uses its own DConf profile. To change settings in this
  profile, place a keyfile in <file>/etc/dconf/db/gdm.d</file> and run
- <input>dconf update</input>. An example keyfile is shown
- <link xref="logo">here</link>.</p>
+ <input>dconf update</input>. Have a look at this keyfile example:</p>
+
+<code> 
+[org/gnome/login-screen]
+banner-message-enable=true
+banner-message-text='Example disclaimer text'
+</code>
 
   <note>
-    <p>Note that these DConf key files are slightly different from gsettings
+  <p>Note that these DConf key files are slightly different from gsettings
     override files.</p>
   </note>
 
