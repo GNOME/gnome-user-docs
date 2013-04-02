@@ -1,0 +1,54 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="nfs-home-directories">
+
+<info>
+   <revision version="0.1" date="2013-03-19" status="draft"/>
+   <link type="guide" xref="index" group="user" />
+
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+
+  <desc>When users have home directories on NFS, the <sys>dconf</sys> 
+  configuration needs to be changed to make things work.</desc>
+</info>
+
+<title>NFS home directories</title>
+
+  <comment>
+    <cite date="2013-03-19" href="mailto:jsvarova@gmail.com">Jana Svarova</cite>
+    <p>Adapted from GNOME Bugzilla: Bug 694569</p>
+  </comment>
+
+  <p>Network File System (NFS) directories enable users and programs access 
+  files on remote systems almost as if they were local files.</p> 
+
+  <note style="important">
+  <p>Users with <file>~/.config/dconf/</file> directories on NFS need to change 
+  the <sys>dconf</sys> configuration, which is used for collecting a system's 
+  hardware and software configuration. Otherwise, the <sys>dconf</sys> tool
+  does not work correctly.</p>
+  </note>
+
+  <p>Follow these steps to change the <sys>dconf</sys> configuration.</p>
+
+<steps>
+  <title>Change <sys>dconf</sys> configuration</title>
+  <item><p>Create the <file>/etc/dconf/profile/user</file> file on each 
+  client.</p></item>
+  <item><p>Write the following line in it:
+  <code>service-db:keyfile/user</code></p></item>
+  <item><p>Save the changes.</p></item>
+</steps>
+
+  <p>Clients configured this way will use the keyfile <sys>backend</sys> daemon.
+  This <sys>backend</sys> correctly updates keys changed by other clients 
+  because it uses <sys>GFileMonitor</sys> for change monitoring.</p>
+
+  <p>Note that <sys>GFileMonitor</sys> uses polling for NFS, so the update is 
+  not instant.</p>
+
+</page>
