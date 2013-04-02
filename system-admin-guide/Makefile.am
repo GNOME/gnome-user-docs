@@ -8,8 +8,10 @@ HELP_MEDIA =
 
 HELP_FILES = \
 	autologin.page			\
+	automatic-logout.page		\
 	background.page			\
 	backgrounds-extra.page		\
+	custom-default-values.page	\
 	custom-session.page		\
 	dconf-profiles-edit.page	\
 	dconf-profiles.page		\
@@ -22,8 +24,10 @@ HELP_FILES = \
 	login-background.page		\
 	login-disclaimer.page		\
 	logo.page			\
+	nfs-home-directories.page	\
 	overrides.page			\
 	power-settings.page		\
+	printer-configuration.page	\
 	processes.page			\
 	screen-locking.page		\
 	servers-list.page		\
