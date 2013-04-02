@@ -11,14 +11,22 @@
       <years>2012</years>
     </credit>
 
+  <credit type="editor">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+
     <desc>How do I make extra backgrounds available to my users?</desc>
   </info>
 
-  <title>Extra backgrounds</title>
+<title>Extra backgrounds</title>
 
-  <p>Install an XML file describing your extra backgrounds in
-   <file>/usr/local/share/gnome-background-properties</file>. Here is a small
-   example:</p>
+  <p>You can make extra backgrounds available to users on your system.</p>
+
+  <p>To do so, install an XML file describing your extra backgrounds in
+       the <file>/usr/share/gnome-background-properties/</file> directory.
+       Below is a simple example:</p>
 
 <code><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
@@ -36,4 +44,37 @@
 </wallpapers>
 ]]></code>
 
+<section id="backgrounds-extra-two-wallpapers">
+  <title>An example with two &lt;wallpaper&gt;s</title>
+  <p>In one configuration file, it is possible to add multiple backgrounds 
+   by adding more &lt;wallpaper&gt; elements.</p>
+  <p>See the following example which shows an XML file with two &lt;wallpaper&gt; elements</p>
+
+<code><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper deleted="false">
+    <name>Company Background</name>
+    <name xml:lang="de">Firmenhintergrund</name>
+    <filename>/usr/local/share/backgrounds/company-wallpaper.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+<wallpapers>
+  <wallpaper deleted="false">
+    <name>Company Background 2</name>
+    <name xml:lang="de">Firmenhintergrund 2</name>
+    <filename>/usr/local/share/backgrounds/company-wallpaper-2.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#ff0000</pcolor>
+    <scolor>#00ffff</scolor>
+  </wallpaper>
+</wallpapers>
+]]></code>
+
+</section>
 </page>
