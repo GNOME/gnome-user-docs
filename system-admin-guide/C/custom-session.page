@@ -12,32 +12,25 @@
       <years>2012</years>
     </credit>
 
-  <credit type="author copyright">
-      <name>Jana Svarova</name>
-      <email>jana.svarova@gmail.com</email>
-      <years>2013</years>
-    </credit>
-
     <desc>Install a desktop session file.</desc>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-  <title>Create a custom session</title>
+  <title>Creating a custom session</title>
 
   <comment>
     <cite date="2012-11-19"
     href="mailto:amany_elguindy@gmail.com">minnie_eg</cite>
-    <p>This assumes the reader knows how to edit files as the root user and how
-    to navigate through the manual page. By the end of this page,
+    <p>This assumes the reader knows how to edit files as user root and how
+    to navigate through a <cmd>man</cmd> page. By the end of this page,
     the reader will be able to create custom sessions with different
     options.</p>
   </comment>
 
- <p>To create a custom session with different options, follow these steps:</p>
-
-<steps>
-  <item><p>Create a desktop file in the <file>/usr/share/xsessions/new-session.desktop</file> file format. The content of the desktop file should contain the following entries:</p>
+  <p>User sessions can be created using desktop files such as
+  <file>/usr/share/xsessions/new-session.desktop</file> which
+  may contain the following:</p>
   <code>
   [Desktop Entry]
   Encoding=UTF-8
@@ -46,56 +39,39 @@
   Comment=This is our custom session
   <input>Exec</input>=gnome-session
   </code>
-  </item>
-  <item><p>Type <cmd>man gnome-session</cmd> into the Terminal to display more information on session options and
-  parameters that can be used with <code>Exec</code>.</p>
-  </item>
-  <item><p>Save the custom session file that includes various parameters in
-  the <file>/usr/share/gnome-session/sessions/new-session.session</file> file.</p>
-  </item>
- <item>
-  <p>Run the custom session by using the <cmd>Exec=gnome-session --session=new-session</cmd> command.</p>
-  </item>
-</steps>
+  <p>To display more information on sessions options and
+  parameters that an be used with <code>Exec</code>,
+  type <cmd>man gnome-session</cmd> into a terminal.
+  For example, a debugging session can be created on
+  <file>/usr/share/xsessions/debugging.session</file>
+  and called by <code>Exec=gnome-session --debug</code>.</p>
+  <p>Custom session files that include various parameters can
+  be saved in
+  <file>/usr/share/gnome-session/sessions/new-session.session</file>
+  and then called using
+  <code>Exec=gnome-session --session=new-session</code>.</p>
 
-<note style="note style">
-  <p>Note that after creating the session desktop file with the user
+  <p>After the creation of the session desktop file with the user
   root, the new session will be available on the sessions list of the
   GDM log-in screen.</p>
-</note>
- 
 
-
-
-<section id="custom-session-classic-mode">
-  <title>Classic mode</title>
-  <p>"classic mode" as an example of a custom session</p>
-</section>
-
-<section id="custom-session-set-up">
-  <title>Set up a custom session</title>
-  <p>How to set up a custom session that shows up in the session chooser on the login screen.</p>
-</section>
-<section id="custom-session-change">
-  <title>Change the default session</title>
-  <p>How to change the default session for new users.</p>
-</section>
-
-  <section id="custom-session-issues">
+  <section id="issues">
   <title>Known issues</title>
-    <p>On a Debian or Debian-based system, the following error may occur:</p>
+    <p>On a Debian or Debian-based system, if you see the
+    following error:</p>
 
     <screen>Xsession: unable to launch ""
     Xsession --- "" not found; falling back to default
     session.</screen>
 
-    <p>Should this happen to you, follow these steps to change the  
-    <file>/etc/X11/Xsession.d/20x11-common_process-args</file> file.</p>
+    <p>Make the following changes to
+    <file>/etc/X11/Xsession.d/20x11-common_process-args</file>:</p>
     <steps>
     <item><p>Change <code>STARTUP_FULL_PATH=$(/usr/bin/which <input>"$1"</input>|| true)</code>
     to <code>STARTUP_FULL_PATH=$(/usr/bin/which <input>$1</input> || true)</code>
     </p></item>
-    <item><p>Change <code>STARTUP=<input>"$1"</input></code> to <code>STARTUP=<input>$1</input></code>
+    <item><p>Change <code>STARTUP=<input>"$1"</input></code>
+    to <code>STARTUP=<input>$1</input></code>
     </p></item>
     </steps>
   </section>
