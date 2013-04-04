@@ -379,6 +379,7 @@ HELP_FILES = \
 	user-admin-change.page \
 	user-admin-explain.page \
 	user-admin-problems.page \
+	user-autologin.page \
 	user-changepassword.page \
 	user-changepicture.page \
 	user-delete.page \

@@ -7,7 +7,6 @@ HELP_LINGUAS =
 HELP_MEDIA =
 
 HELP_FILES = \
-	autologin.page			\
 	background.page			\
 	backgrounds-extra.page		\
 	custom-default-values.page	\
@@ -31,5 +30,6 @@ HELP_FILES = \
 	screen-locking.page		\
 	servers-list.page		\
 	session-debug.page		\
+	user-autologin.page		\
 	user-session.page		\
 	vpn-list.page
