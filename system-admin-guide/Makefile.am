@@ -8,7 +8,6 @@ HELP_MEDIA =
 
 HELP_FILES = \
 	autologin.page			\
-	automatic-logout.page		\
 	background.page			\
 	backgrounds-extra.page		\
 	custom-default-values.page	\
