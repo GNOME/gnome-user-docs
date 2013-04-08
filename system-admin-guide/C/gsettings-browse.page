@@ -34,23 +34,23 @@
   change options for system and application preferences. You can even use 
   them to change preferences that do not exist in the graphical user interface.
   </p>
-  
-  <p><app>Dconf-editor</app> may be better to use if you are not familiar with 
-  the options available an application. However, as a commandline application, 
-  <app>gsettings</app> is more powerful than <app>dconf-editor</app>. <app>
-  Gsettings</app> permits bash completion, and you can write scripts that 
-  include <app>gsettings</app> commands.</p>
-  
+    
   <note style="warning"><p>Note that these tools always operate using the 
   current user's <app>gsettings</app> database, so you should not run these 
-  applications as root.</p></note>
-  
-  <note><p>Both <app>dconf-editor</app> and <app>gsettings</app> require a 
-  D-Bus session bus in order to make any changes. This is because the 
-  <sys>dconf</sys> daemon must be activated using D-Bus.</p></note>
-
+  applications as root.</p>
   <p>You can get the required session bus by running gsettings under 
   <sys>dbus-launch</sys> utility, like this:</p>
 <code>dbus-launch gsettings set org.gnome.desktop.background draw-background true</code>
+  </note>
   
+  <p>Both <app>dconf-editor</app> and <app>gsettings</app> require a 
+  D-Bus session bus in order to make any changes. This is because the 
+  <sys>dconf</sys> daemon must be activated using D-Bus.</p>
+  
+  <p><app>dconf-editor</app> may be better to use if you are not familiar with 
+  the options available an application. However, as a commandline application, 
+  <app>gsettings</app> is more powerful than <app>dconf-editor</app>. 
+  Bash completion is provided for <app>gsettings</app>, and you can write 
+  scripts that include <app>gsettings</app> commands.</p>
+
 </page>
