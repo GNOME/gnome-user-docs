@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic"
       style="task"
       id="shell-apps-favorites">
@@ -25,19 +26,26 @@
 
 <title>Pin your favorite apps to the dash</title>
 
-<p>To add an application to the <link xref="shell-terminology">dash</link> for
- easy access:</p>
+  <p>To add an application to the <link xref="shell-terminology">dash</link> for
+  easy access:</p>
  <steps>
-  <item><p>Open the <link xref="shell-terminology">Activities overview</link>.</p></item>
-  <item>
-   <p>Click on the grid button in the dash and find the application you want to
-    add. Right-click on the application icon and select
-     <gui>Add to Favorites</gui>.</p>
-   <p>Alternately, you can click-and-drag the icon into the dash.</p>
+  <item><p if:test="!platform:gnome-classic">Open the
+  <link xref="shell-terminology">Activities overview</link>.</p>
+  <p if:test="platform:gnome-classic">Press the
+  <key xref="keyboard-key-super">Super</key> key to open the
+  <link xref="shell-terminology">Activities overview</link>.</p></item>
+  <item><p>Click on the grid button in the dash and find the application you
+  want to add. Right-click on the application icon and select <gui>Add to
+  Favorites</gui>.</p>
+  <p>Alternately, you can click-and-drag the icon into the dash.</p>
   </item>
   </steps>
 
-<p>To remove an application icon from the dash, right click on the application
- icon and select <gui>Remove from Favorites</gui>.</p>
+  <p>To remove an application icon from the dash, right click on the application
+  icon and select <gui>Remove from Favorites</gui>.</p>
+
+  <note style="tip" if:test="platform:gnome-classic"><p>Favorite applications also
+  appear in the <gui>Favorites</gui> section of the main menu.</p>
+  </note>
 
 </page>
