@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic"
       style="task"
       id="shell-workspaces-switch">
@@ -21,21 +22,29 @@
 
   </info>
 
-<title>Switch between workspaces</title>
+ <title>Switch between workspaces</title>
 
-<terms>
-<item>
+ <steps>  
  <title>Using the mouse:</title>
-  <p>In the <gui>Activities</gui> overview, click on a workspace in the
- <link xref="shell-terminology">workspace selector</link> on the right side of
- the screen to view the open windows on that workspace. Click on any window
- thumbnail to activate the workspace.</p>
-</item>
-
-<item>
- <title>Using the keyboard:</title>
+ <item>
+  <p if:test="!platform:gnome-classic">Open the <link xref="shell-terminology">
+  Activities overview</link>.</p>
+  <p if:test="platform:gnome-classic">At the top left of the screen, click the
+  <gui>Applications</gui> drop-down menu and choose <gui>Activities Overview
+  </gui>.</p>
+ </item>
+ <item>
+  <p>Click on a workspace in the <link xref="shell-terminology">workspace
+  selector</link> on the right side of the screen to view the open windows on
+  that workspace.</p>
+ </item>
+ <item>
+  <p>Click on any window thumbnail to activate the workspace.</p>
+ </item>
+ </steps>
 
  <list>
+ <title>Using the keyboard:</title>  
   <item>
    <p>Press <keyseq><key>Super</key><key>Page Up</key></keyseq> to move to a
     workspace which is above the current workspace in the workspace selector.
@@ -48,7 +57,5 @@
   </item>
  </list>
 
-</item>
-</terms>
 
 </page>

@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic" style="ui"
       id="shell-notifications">
 
@@ -9,7 +10,7 @@
     <desc>Messages pop-up at the bottom of the screen telling you when certain
     events happen.</desc>
 
-    <revision pkgversion="3.6.2" version="0.2" date="2012-11-12" status="review"/>
+    <revision pkgversion="3.8.0" version="0.3" date="2013-04-23" status="review"/>
 
     <credit type="author">
       <name>Marina Zhurakhinskaya</name>
@@ -51,12 +52,20 @@
 
 <title>The message tray</title>
 
-  <p>The message tray gives you a way to get back to your notifications when it
-  is convenient for you. It appears when you move your mouse to the bottom
-  right corner of the screen, or press
-  <keyseq><key xref="keyboard-key-super">Super</key><key>M</key></keyseq>. The
-  message tray contains all the notifications that you have not acted upon or
-  that permanently reside in it.</p>
+  <p if:test="!platform:gnome-classic">The message tray gives you a way to get
+  back to your notifications when it is convenient for you. It appears when you
+  move your mouse to the bottom-right corner of the screen, or press <keyseq>
+  <key xref="keyboard-key-super">Super</key><key>M</key></keyseq>. The message
+  tray contains all the notifications that you have not acted upon or that
+  permanently reside in it.</p>
+
+  <p if:test="platform:gnome-classic">The message tray gives you a way to get
+  back to your notifications when it is convenient for you. It appears when you
+  move your mouse to the bottom-right corner of the screen, or press <keyseq>
+  <key xref="keyboard-key-super">Super</key><key>M</key></keyseq>. You can also
+  show the message tray by clicking on the blue number icon at the right-hand
+  side of the window list. The message tray contains all the notifications that
+  you have not acted upon or that permanently reside in it.</p>
 
   <p>You can view the notifications by clicking on the message tray items. These
  are usually messages sent by applications. However, chat notifications are
@@ -82,10 +91,10 @@
 
   <p>When switched off, most notifications will not pop up at the bottom of the
   screen. Very important notifications, such as when your battery is critically
-  low, will still pop up. Notifications will still be available in the
-  messaging tray when you display it (by moving your mouse to the bottom right
-  corner, or pressing <keyseq><key>Super</key><key>M</key></keyseq>), and they
-  will redisplay when you switch the toggle to <gui>ON</gui> again.</p>
-
+  low, will still pop up. Notifications will still be available in the messaging
+  tray when you display it (by moving your mouse to the bottom right corner, or
+  pressing <keyseq><key>Super</key><key>M</key></keyseq>), and they will
+  redisplay when you switch the toggle to <gui>ON</gui> again.</p>
+  
 </section>
 </page>

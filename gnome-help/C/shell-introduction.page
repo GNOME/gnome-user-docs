@@ -31,38 +31,67 @@
   <p>Add a screen shot of a message tray</p>
 </comment>
 
-<p>GNOME 3 features a completely reimagined user interface designed to
-stay out of your way, minimize distractions, and help you get things done.
-When you first log in, you will see an empty desktop and the top bar.</p>
+  <p>GNOME 3 features a completely reimagined user interface designed to
+  stay out of your way, minimize distractions, and help you get things done.
+  When you first log in, you will see an empty desktop and the top bar.</p>
 
+<if:choose>
+<if:when test="!platform:gnome-classic">
 <media type="image" src="figures/shell-top-bar.png"
        width="500" height="40" if:test="!target:mobile">
   <p>GNOME shell top bar</p>
 </media>
+</if:when>
+<if:when test="platform:gnome-classic">
+<media type="image" src="figures/shell-top-bar-classic.png"
+       width="500" height="40" if:test="!target:mobile">
+  <p>GNOME shell top bar</p>
+</media>
+</if:when>
+</if:choose>
 
-<p>The top bar provides access to your windows and applications, your calendar
-and appointments, and <link xref="status-icons">system properties</link> like
-sound, networking, and power. Under your name in the top bar, you can set your
-availability, change your profile or settings, log out or switch users, or turn
-off your computer.</p>
+  <p>The top bar provides access to your windows and applications, your
+  calendar and appointments, and
+  <link xref="status-icons">system properties</link> like sound, networking,
+  and power. Under your name in the top bar, you can set your availability,
+  change your profile or settings, log out or switch users, or turn off your
+  computer.</p>
 
 <links type="section"/>
 
 <section id="activities">
 <title>Activities overview</title>
 
+<if:choose>
+<if:when test="!platform:gnome-classic">
 <media type="image" src="figures/shell-activities.png"
        width="128" height="75" style="floatend floatright"
        if:test="!target:mobile">
   <p>Activities button</p>
 </media>
+</if:when>
+<if:when test="platform:gnome-classic">
+<media type="image" src="figures/shell-activities-classic.png"
+       width="108" height="69" style="floatend floatright"
+       if:test="!target:mobile">
+  <p>Activities button</p>
+</media>
+</if:when>
+</if:choose>
 
-<p>To access your windows and applications, click the <gui>Activities</gui>
-button, or just throw your mouse pointer to the top-left hot corner.
-You can also press the <link xref="keyboard-key-super">Super key</link> on
-your keyboard. You can see your windows and applications in the overview.
-You can also just start typing to search your applications, files, and
-folders.</p>
+  <p if:test="!platform:gnome-classic">To access your windows and applications,
+  click the <gui>Activities</gui> button, or just move your mouse pointer to
+  the top-left hot corner. You can also press the
+  <key xref="keyboard-key-super">Super</key> key on your keyboard. You can
+  see your windows and applications in the overview. You can also just start
+  typing to search your applications, files, and folders.</p>
+
+  <p if:test="platform:gnome-classic">To access your windows and applications,
+  click the <gui>Applications</gui> menu at the top left of the screen and
+  select the <gui>Activities Overview</gui> item. You can also press the
+  <key xref="keyboard-key-super">Super</key> key to see your windows and
+  applications in the <gui>Activities</gui> overview. Just start typing to
+  search your applications, files, and folders.</p>
 
 <media type="image" src="figures/shell-dash.png"
        width="49" height="300" style="floatstart floatleft"
@@ -70,46 +99,60 @@ folders.</p>
   <p>The dash</p>
 </media>
 
-<p>On the left of the overview, you will find the <em>dash</em>. The dash
-shows you your favorite and running applications. Click any icon in the dash to
-open that application; if the application is already running, it will be
-highlighted. Clicking its icon will bring up the most recently used window. You
-can also drag the icon to the overview, or onto any workspace on the right.</p>
+  <p>On the left of the overview, you will find the <em>dash</em>. The dash
+  shows you your favorite and running applications. Click any icon in the
+  dash to open that application; if the application is already running, it will
+  be highlighted. Clicking its icon will bring up the most recently used 
+  window. You can also drag the icon to the overview, or onto any workspace on
+  the right.</p>
 
-<p>Right-clicking the icon displays a menu that allows you to pick any window in
-a running application, or to open a new window. You can also click the icon
-while holding down <key>Ctrl</key> to open a new window.</p>
+  <p>Right-clicking the icon displays a menu that allows you to pick any window
+  in a running application, or to open a new window. You can also click the icon
+  while holding down <key>Ctrl</key> to open a new window.</p>
 
-<p>When you enter the overview, you will initially be in the windows overview.
-This shows you live thumbnails of all the windows on the current workspace.
-Click any window to focus that window and exit the overview. You can also
-use the scroll wheel on your mouse to zoom in on any window thumbnail.</p>
+  <p>When you enter the overview, you will initially be in the windows overview.
+  This shows you live thumbnails of all the windows on the current workspace.
+  Click any window to focus that window and exit the overview. You can also
+  use the scroll wheel on your mouse to zoom in on any window thumbnail.</p>
 
-<p>Click the grid button at the bottom of the dash to display the applications
-overview. This shows you all the applications installed on your computer. Click
-any application to run it, or drag an application to the overview or onto
-a workspace thumbnail. You can also drag an application onto the dash
-to make it a favorite. Your favorite applications stay in the dash even
-when they're not running, so you can access them quickly.</p>
+  <p>Click the grid button at the bottom of the dash to display the applications
+  overview. This shows you all the applications installed on your computer. Click
+  any application to run it, or drag an application to the overview or onto
+  a workspace thumbnail. You can also drag an application onto the dash
+  to make it a favorite. Your favorite applications stay in the dash even
+  when they're not running, so you can access them quickly.</p>
 
 <list style="compact">
-  <item><p><link xref="shell-apps-open">Learn more about starting applications.</link></p></item>
-  <item><p><link xref="shell-windows">Learn more about windows and workspaces.</link></p></item>
+  <item><p><link xref="shell-apps-open">Learn more about starting applications.
+  </link></p></item>
+  <item><p><link xref="shell-windows">Learn more about windows and workspaces.
+  </link></p></item>
 </list>
 </section>
 
 <section id="clock">
 <title>Clock, calendar &amp; appointments</title>
+<if:choose>
+<if:when test="!platform:gnome-classic">
 <media type="image" src="figures/shell-appts.png"
        width="250" height="198" style="floatend floatright"
        if:test="!target:mobile">
   <p>Clock, calendar, and appointments</p>
 </media>
+</if:when>
+<if:when test="platform:gnome-classic">
+<media type="image" src="figures/shell-appts-classic.png"
+       width="373" height="250" style="floatend floatright"
+       if:test="!target:mobile">
+  <p>Clock, calendar, and appointments</p>
+</media>
+</if:when>
+</if:choose>
 
-<p>Click the clock in the middle of the top bar to see the current date,
-a month-by-month calendar, and a list of your upcoming appointments.
-You can also access the date and time settings and open your full
-<app>Evolution</app> calendar directly from the menu.</p>
+  <p>Click the clock on the top bar to see the current date,
+  a month-by-month calendar, and a list of your upcoming appointments.
+  You can also access the date and time settings and open your full
+  <app>Evolution</app> calendar directly from the menu.</p>
 
 <list style="compact">
   <item><p><link xref="clock-calendar">Learn more about the calendar and
@@ -120,24 +163,35 @@ You can also access the date and time settings and open your full
 <section id="yourname">
 <title>You and your computer</title>
 
+<if:choose>
+<if:when test="!platform:gnome-classic">
 <media type="image" src="figures/shell-exit.png"
        width="250" height="200" style="floatend floatright"
        if:test="!target:mobile">
   <p>User menu</p>
 </media>
+</if:when>
+<if:when test="platform:gnome-classic">
+<media type="image" src="figures/shell-exit-classic.png"
+       width="250" height="200" style="floatend floatright"
+       if:test="!target:mobile">
+  <p>User menu</p>
+</media>
+</if:when>
+</if:choose>
 
-<p>Click your name in the top-right corner to manage your profile and
-your computer.</p>
+  <p>Click your name in the top-right corner to manage your profile and
+  your computer.</p>
 
-<p>You can quickly set your availability directly from the menu. This will set
-your status for your contacts to see in instant messaging applications such as
-<app>Empathy</app>.</p>
+  <p>You can quickly set your availability directly from the menu. This will set
+  your status for your contacts to see in instant messaging applications such as
+  <app>Empathy</app>.</p>
 
 <comment>
 <cite date="2012-02-19">shaunm</cite>
-<p>These are separate now. Write another blurb about "Notifications".
-I'm also dropping shell-session-status UNTIL the docs for this get
-cleared up. It was orphaned and incorrect.</p>
+  <p>These are separate now. Write another blurb about "Notifications".
+  I'm also dropping shell-session-status UNTIL the docs for this get
+  cleared up. It was orphaned and incorrect.</p>
 </comment>
 
 <!--
@@ -152,13 +206,13 @@ messages will be presented, such as when your battery is critically low.</p>
 </list>
 -->
 
-<p>The menu also allows you to edit your personal information and change
-the system settings.</p>
+  <p>The menu also allows you to edit your personal information and change
+  the system settings.</p>
 
-<p>When you leave your computer, you can lock your screen to prevent other
-people from using it. You can quickly switch users without logging out
-completely to give somebody else access to the computer. Or you can
-suspend or power off the computer from the menu.</p>
+  <p>When you leave your computer, you can lock your screen to prevent other
+  people from using it. You can quickly switch users without logging out
+  completely to give somebody else access to the computer. Or you can
+  suspend or power off the computer from the menu.</p>
 
 <list style="compact">
   <item><p><link xref="shell-exit">Learn more about switching users,
@@ -175,29 +229,60 @@ suspend or power off the computer from the menu.</p>
   <p>Lock Screen</p>
 </media>
 
-<p>When you lock your screen, or it locks automatically, the lock screen is
-displayed. In addition to protecting your desktop while you're away from your
-computer, the lock screen displays the date, time, and your name as the
-logged-in user. It also shows information about your battery and network status,
-and allows you to control media playback.</p>
+  <p>When you lock your screen, or it locks automatically, the lock screen is
+  displayed. In addition to protecting your desktop while you're away from your
+  computer, the lock screen displays the date, time, and your name as the
+  logged-in user. It also shows information about your battery and network
+  status, and allows you to control media playback.</p>
 
 <list style="compact">
-  <item><p><link xref="shell-lockscreen">Learn more about the lock screen.</link></p></item>
+  <item><p><link xref="shell-lockscreen">Learn more about the lock screen.</link>
+  </p></item>
 </list>
 </section>
 
 <section id="message-tray">
 <title>Message Tray</title>
 
-<p>The message tray can be brought into view by pushing your mouse pointer
-against the bottom of the screen or by pressing
-<keyseq><key>Super</key><key>M</key></keyseq>. This is where your
-notifications are stored until you are ready to view them.</p>
+  <p>The message tray can be brought into view by moving your mouse into the
+  bottom-right corner, or by pressing
+  <keyseq><key xref="keyboard-key-super">Super</key><key>M</key></keyseq>.
+  This is where your notifications are stored until you are ready to view
+  them.</p>
 
 <list style="compact">
 <item><p><link xref="shell-notifications">Learn more about notifications and
  the message tray.</link></p></item>
 </list>
+</section>
+
+<section id="window-list">
+<title>Window List</title>
+
+<if:choose>
+<if:when test="!platform:gnome-classic">
+
+  <p>GNOME features a different approach to switching windows than a
+  permanently visible window list found in other desktop environments.
+  This lets you focus on the task at hand without distractions.</p>
+
+<list style="compact">
+<item><p><link xref="shell-windows-switching">Learn more about switching windows.
+</link></p></item>
+</list>
+
+</if:when>
+<if:when test="platform:gnome-classic">
+<media type="image" src="figures/shell-window-list-classic.png"
+       width="500" height="40" if:test="!target:mobile">
+  <p>Window List</p>
+</media>
+
+  <p>The window list at the bottom of the screen provides access to
+  all your open windows and applications and lets you quickly minimize
+  and restore them. Clicking on the blue icon shows the message tray.</p>
+</if:when>
+</if:choose>
 </section>
 
 </page>

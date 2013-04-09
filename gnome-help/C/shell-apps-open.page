@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic"
       style="task"
       id="shell-apps-open">
@@ -31,13 +32,19 @@ to overview in list item below, not just workspace thumbnail.) Right-click
 icon to choose a window to focus or get new window. Mention middle-click?</p>
 </comment>
 
-  <p>Move your mouse pointer to the <gui>Activities</gui> corner at the top
-  left of the screen to show the <gui>Activities Overview</gui>. This is where
-  you can find all of your applications. You can also open the overview by
-  pressing the <link xref="keyboard-key-super">Super key</link>.</p>
+  <p if:test="platform:gnome-classic">You can start applications from the
+  <gui>Applications</gui> menu at the top left of the screen, or you can use
+  the <gui>Activities Overview</gui> by pressing the
+  <key xref="keyboard-key-super">Super</key> key.</p>
+
+  <p if:test="!platform:gnome-classic">Move your mouse pointer to the
+  <gui>Activities</gui> corner at the top left of the screen to show the
+  <gui>Activities</gui> overview. This is where you can find all of your
+  applications. You can also open the overview by pressing the
+  <key xref="keyboard-key-super">Super</key> key.</p>
 
   <p>There are several ways of opening an application once you're in the
- activities overview:</p>
+  <gui>Activities</gui> overview:</p>
 
 <list>
 
@@ -49,8 +56,8 @@ icon to choose a window to focus or get new window. Mention middle-click?</p>
 
  <item>
   <p>Some applications have icons in the <em>dash</em>, the vertical strip of
- icons on the left-hand side of the activities overview. Click one of these to
- start the corresponding application.</p>
+ icons on the left-hand side of the <gui>Activities</gui> overview. Click one of
+ these to start the corresponding application.</p>
   <p>If you have applications that you use very frequently, you can
  <link xref="shell-apps-favorites">add them to the dash</link> yourself.</p>
  </item>

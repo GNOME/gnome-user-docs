@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic"
       style="task"
       id="shell-windows-lost">
@@ -8,7 +9,7 @@
     <link type="guide" xref="shell-windows#working-with-windows"/>
 
     <desc>Check the activities overview or other workspaces.</desc>
-    <revision pkgversion="3.6.0" version="0.2" date="2012-10-14" status="review"/>
+    <revision pkgversion="3.8.0" version="0.3" date="2013-04-23" status="review"/>
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
@@ -23,36 +24,37 @@
 
 <title>Find a lost window</title>
   <p>A window on a different workspace, or hidden behind another window, is easily
- found using the <link xref="shell-terminology">activities overview</link>:</p>
+  found using the <link xref="shell-terminology">activities overview</link>:</p>
 
 <list>
  <item>
   <p>Open the activities overview. If the missing window is on the current
- <link xref="shell-windows#working-with-workspaces">workspace</link>, it will be
- shown here in thumbnail. Simply click the thumbnail to redisplay the window, or</p>
+  <link xref="shell-windows#working-with-workspaces">workspace</link>, it will be
+  shown here in thumbnail. Simply click the thumbnail to redisplay the window, or</p>
  </item>
  <item>
-  <p>Click on the different workspaces in the
- <link xref="shell-terminology">workspace selector</link> on the right-hand side
- of the screen to try to find your window, or</p>
+  <p>Click different workspaces in the
+ <link xref="shell-terminology">workspace selector</link> at the right-hand side
+  of the screen to try to find your window, or</p>
  </item>
  <item>
-  <p>Right-click on the application in the dash and its open windows will be
- listed. Click on the window in the list to switch to it.</p>
+  <p>Right-click the application in the dash and its open windows will be
+  listed. Click the window in the list to switch to it.</p>
  </item>
 </list>
 
-<p>Using the window switcher:</p>
+  <p>Using the window switcher:</p>
 <list>
  <item>
-  <p>Press <keyseq><key>Alt</key><key>Tab</key></keyseq> to display the window
- switcher. Continue to hold down the <key>Alt</key> key and press <key>Tab</key>
- to cycle through the open windows, or <keyseq><key>Shift</key><key>Tab</key></keyseq>
- to cycle backwards.</p>
+  <p>Press <keyseq><key xref="keyboard-key-super">Super</key><key>Tab</key>
+  </keyseq> to display the <link xref="shell-terminology">window switcher</link>.
+  Continue to hold down the <key>Super</key> key and press <key>Tab</key> to
+  cycle through the open windows, or <keyseq><key>Shift</key><key>Tab</key>
+  </keyseq> to cycle backwards.</p>
  </item>
- <item>
-  <p>If an application has multiple open windows, hold down <key>Alt</key> and press
- <key>`</key> (or the key above <key>Tab</key>) to step through them.</p>
+ <item if:test="!platform:gnome-classic">
+  <p>If an application has multiple open windows, hold down <key>Super</key> and
+  press <key>`</key> (or the key above <key>Tab</key>) to step through them.</p>
  </item>
 </list>
 

@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic"
       style="task"
       id="shell-windows-switching">
@@ -42,14 +43,14 @@
   backwards.</p></item>
 </list>
 
-<note style="tip">
+<note style="tip" if:test="!platform:gnome-classic">
   <p>Windows in the window switcher are grouped by application. Previews of
   applications with multiple windows pop down as you click through. Hold down
   <key xref="keyboard-key-super">Super</key> and press <key>`</key> (or the key
   above <key>Tab</key>) to step through the list.</p>
 </note>
 
-<note>
+<note if:test="!platform:gnome-classic">
   <p>In the window switcher, applications from different workspaces are divided
   by vertical separators.</p>
 </note>
