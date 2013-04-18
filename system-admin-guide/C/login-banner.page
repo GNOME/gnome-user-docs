@@ -1,0 +1,89 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="login-banner">
+
+  <info>
+    <link type="guide" xref="index" group="login" />
+    <revision pkgversion="3.8" version="0.1" date="2013-04-18" status="draft"/>
+
+    <credit type="author copyright">
+      <name>Matthias Clasen</name>
+      <email its:translate="no">matthias.clasen@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="author copyright">
+      <name>Michael Hill</name>
+      <email its:translate="no">mdhillca@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email its:translate="no">jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+    <credit type="author copyright editor">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+      <years>2013</years>
+    </credit>
+
+    <desc>Edit a <sys its:translate="no">GDM</sys> <sys its:translate="no">dconf</sys> profile to display a text banner on the login screen.</desc>
+  </info>
+
+  <title>Add text to the login screen</title>
+
+  <comment>
+    <cite date="2012-11-07" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
+    <p>Adapted from l-g-o SysAdminGuide page.</p>
+  </comment>
+
+  <p>The text banner on the login screen is controlled by the
+  <cmd>org.gnome.login-screen.banner-message-enable</cmd> and
+  <cmd>org.gnome.login-screen.banner-message-text</cmd>
+  <sys its:translate="no">GSettings</sys> keys. Note that
+  <sys its:translate="no">GDM</sys> uses its own
+  <sys its:translate="no">dconf</sys> profile. To change settings in this
+  profile, add a key file to the
+  <file its:translate="no">/etc/dconf/db/gdm.d</file> directory and run
+  <cmd its:translate="no">dconf update</cmd>.</p>
+
+  <listing>
+    <title>Sample <file its:translate="no">/etc/dconf/db/gdm.d/01-banner-message</file> file</title>
+      <code its:translate="no">[org/gnome/login-screen]
+banner-message-enable=true
+banner-message-text='<input its:translate="yes">Type the banner message here.</input>'
+</code>
+  </listing>
+
+  <note>
+    <p>Note that these <sys its:translate="no">dconf</sys> key files are
+    slightly different from <sys its:translate="no">GSettings</sys> override
+    files.</p>
+  </note>
+
+<section id="prob">
+  <title>What if the banner message does not update?</title>
+
+  <p>You may need to delete the old <app its:translate="no">dconf</app>
+  database for the <file its:translate="no">gdm</file> profile:</p>
+
+  <steps>
+    <item>
+      <p>Add the keys to a file in the
+      <file its:translate="no">/etc/dconf/db/gdm.d</file> directory.</p>
+    </item>
+    <item>
+      <p>Delete <file its:translate="no">/etc/dconf/db/gdm</file>.</p>
+    </item>
+    <item>
+      <p>Run <cmd its:translate="no">dconf update</cmd>.</p>
+    </item>
+    <item>
+      <p>Restart <sys its:translate="no">gdm</sys>.</p>
+    </item>
+  </steps>
+
+</section>
+
+</page>

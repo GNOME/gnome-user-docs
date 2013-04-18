@@ -20,7 +20,7 @@ HELP_FILES = \
 	lockdown.page			\
 	lockscreenbackground.page	\
 	login-background.page		\
-	login-disclaimer.page		\
+	login-banner.page		\
 	logo.page			\
 	nfs-home-directories.page	\
 	overrides.page			\
