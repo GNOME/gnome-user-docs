@@ -5,7 +5,7 @@
 
   <info>
     <link type="guide" xref="index" group="login" />
-    <revision pkgversion="3.8" version="0.1" date="2013-04-18" status="draft"/>
+    <revision pkgversion="3.8" version="0.1" date="2013-04-19" status="review"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -62,27 +62,30 @@ banner-message-text='<input its:translate="yes">Type the banner message here.</i
     files.</p>
   </note>
 
-<section id="prob">
+<!-- TODO
+<section>
+  <title>What if the banner message does not display?</title>
+
+  <comment>
+    <cite>Kat</cite>
+    <p>Apparently the message may not be displayed if the theme does not
+    support it. Find out if this is really the case and how to check the
+    theme.</p>
+  </comment>
+
+</section>
+-->
+
+<section id="prob-update">
   <title>What if the banner message does not update?</title>
 
-  <p>You may need to delete the old <app its:translate="no">dconf</app>
-  database for the <file its:translate="no">gdm</file> profile:</p>
+  <include href="prob-gdm-dconf.xml"
+    xpointer="xmlns(mal=http://projectmallard.org/1.0/)xpointer(/mal:page/mal:p)"
+    xmlns="http://www.w3.org/2001/XInclude"/>
 
-  <steps>
-    <item>
-      <p>Add the keys to a file in the
-      <file its:translate="no">/etc/dconf/db/gdm.d</file> directory.</p>
-    </item>
-    <item>
-      <p>Delete <file its:translate="no">/etc/dconf/db/gdm</file>.</p>
-    </item>
-    <item>
-      <p>Run <cmd its:translate="no">dconf update</cmd>.</p>
-    </item>
-    <item>
-      <p>Restart <sys its:translate="no">gdm</sys>.</p>
-    </item>
-  </steps>
+  <include href="prob-gdm-dconf.xml"
+    xpointer="xmlns(mal=http://projectmallard.org/1.0/)xpointer(/mal:page/mal:steps)"
+    xmlns="http://www.w3.org/2001/XInclude"/>
 
 </section>
 
