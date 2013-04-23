@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2013-03-29 15:19+0000\n"
-"PO-Revision-Date: 2013-03-30 04:54+0200\n"
+"POT-Creation-Date: 2013-04-22 02:02+0000\n"
+"PO-Revision-Date: 2013-04-23 10:17+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -1480,7 +1480,7 @@ msgstr ""
 #: C/accounts-create.page:10(credit/name)
 #: C/keyboard-key-menu.page:17(credit/name)
 #: C/keyboard-key-super.page:15(credit/name)
-#: C/keyboard-nav.page:25(credit/name)
+#: C/keyboard-nav.page:25(credit/name) C/nautilus-views.page:26(credit/name)
 #: C/power-batteryestimate.page:21(credit/name)
 #: C/power-batterylife.page:23(credit/name)
 #: C/power-batteryoptimal.page:21(credit/name)
@@ -1493,6 +1493,7 @@ msgstr ""
 #: C/printing-to-file.page:10(credit/name) C/sharing.page:13(credit/name)
 #: C/sharing-desktop.page:10(credit/name)
 #: C/shell-keyboard-shortcuts.page:24(credit/name)
+#: C/user-autologin.page:13(credit/name)
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -5636,6 +5637,7 @@ msgstr "Podesite dva monitora na vašem stonom računaru."
 #: C/display-dual-monitors-desktop.page:15(credit/years)
 #: C/printing-to-file.page:12(credit/years) C/privacy.page:17(credit/years)
 #: C/privacy-hide-notifications.page:12(credit/years)
+#: C/user-autologin.page:15(credit/years)
 msgid "2013"
 msgstr "2013"
 
@@ -5813,8 +5815,8 @@ msgstr ""
 #: C/files-hidden.page:63(media) C/files-lost.page:51(media)
 #: C/files-sort.page:44(media) C/files-sort.page:60(media)
 #: C/files-tilde.page:32(media) C/nautilus-display.page:43(media)
-#: C/nautilus-views.page:51(media) C/nautilus-views.page:74(media)
-#: C/nautilus-views.page:89(media) C/nautilus-views.page:130(media)
+#: C/nautilus-views.page:65(media) C/nautilus-views.page:84(media)
+#: C/nautilus-views.page:100(media) C/nautilus-views.page:121(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/go-down.png' md5='e8c16f5ab9ed933f4a537b740506f4d4'"
@@ -11914,13 +11916,6 @@ msgid "Executable text files"
 msgstr "Izvršne tekstualne datoteke"
 
 #: C/nautilus-behavior.page:53(section/p)
-#| msgid ""
-#| "An executable text file is a file that contains a program that you can "
-#| "run (execute). The <link xref=\"nautilus-file-properties-permissions"
-#| "\">file permissions</link> must also allow for the file to run as a "
-#| "program. The most common are <src>Shell</src>, <src>Python</src> and "
-#| "<src>Perl</src> scripts. These have extensions <file>.sh</file>, <file>."
-#| "py</file> and <file>.pl</file>, respectively."
 msgid ""
 "An executable text file is a file that contains a program that you can run "
 "(execute). The <link xref=\"nautilus-file-properties-permissions\">file "
@@ -11930,11 +11925,11 @@ msgid ""
 "pl</file>, respectively."
 msgstr ""
 "Izvršna tekstualna datoteka je datoteka koja sadrži program koji možete da "
-"pokrenete (izvršite). <link xref=\"nautilus-file-properties-"
-"permissions\">Ovlašćenja datoteke</link> moraju takođe da dopuštaju da "
-"datoteka bude pokrenuta kao program. Najčešće su skripte <sys>Školjke</sys>, "
-"<sys>Pitona</sys> i <sys>Perla</sys>. Njihova proširenja su redom "
-"<file>.sh</file>, <file>.py</file> i <file>.pl</file>."
+"pokrenete (izvršite). <link xref=\"nautilus-file-properties-permissions"
+"\">Ovlašćenja datoteke</link> moraju takođe da dopuštaju da datoteka bude "
+"pokrenuta kao program. Najčešće su skripte <sys>Školjke</sys>, <sys>Pitona</"
+"sys> i <sys>Perla</sys>. Njihova proširenja su redom <file>.sh</file>, <file>."
+"py</file> i <file>.pl</file>."
 
 #: C/nautilus-behavior.page:60(section/p)
 msgid "When you open an executable text file, you can select from:"
@@ -11994,9 +11989,6 @@ msgstr ""
 "\">Skripte</gui>."
 
 #: C/nautilus-behavior.page:97(note/p)
-#| msgid ""
-#| "A script will not be passed any parameters when executed from a remote "
-#| "folder such as a folder showing web or <src>ftp</src> content."
 msgid ""
 "A script will not be passed any parameters when executed from a remote "
 "folder such as a folder showing web or <sys>ftp</sys> content."
@@ -13122,174 +13114,225 @@ msgstr ""
 "mogućnost, ili da je uključite samo za datoteke na vašem računaru i lokalnim "
 "spoljnim uređajima."
 
-#: C/nautilus-views.page:8(info/desc)
+#: C/nautilus-views.page:9(info/desc)
 msgid ""
 "Specify the default view, sort order, and zoom levels for the file manager."
 msgstr ""
 "Odredite osnovni pregled, način ređanja, i nivoe uvećanja za upravnika "
 "datoteka."
 
-#: C/nautilus-views.page:31(page/title)
-msgid "File manager views preferences"
-msgstr "Postavke pregleda upravnika datoteka"
+#: C/nautilus-views.page:35(page/title)
+msgid "Views preferences in <app>Files</app>"
+msgstr "Prikažite postavke u <app>Datotekama</app>"
 
-#: C/nautilus-views.page:32(page/p)
+#: C/nautilus-views.page:37(page/p)
+#| msgid ""
+#| "You can control the default view for new folders, how files and folders "
+#| "are sorted by default, the zoom level for the icon and compact views, and "
+#| "whether files are displayed in the tree sidebar. In any file manager "
+#| "window, click <gui>Files</gui> in the top bar, select <gui>Preferences</"
+#| "gui> and select the <gui>Views</gui> tab."
 msgid ""
-"You can control the default view for new folders, how files and folders are "
+"You can change the default view for new folders, how files and folders are "
 "sorted by default, the zoom level for the icon and compact views, and "
-"whether files are displayed in the tree sidebar. In any file manager window, "
-"click <gui>Files</gui> in the top bar, select <gui>Preferences</gui> and "
-"select the <gui>Views</gui> tab."
+"whether files are displayed in the tree sidebar. Select <guiseq><gui style="
+"\"menu\">Files</gui> <gui style=\"menuitem\">Preferences</gui></guiseq> in "
+"the top bar while <app>Files</app> is open and select the <gui style=\"tab"
+"\">Views</gui> tab."
 msgstr ""
-"Možete da odredite osnovni pregled za nove fascikle, kako će po osnovi biti "
+"Možete da izmenite osnovni pregled za nove fascikle, kako će po osnovi biti "
 "poređane datoteke i fascikle, nivo uvećanja za pregled ikonama i zbijeni "
-"prikaz, i da li će datoteke biti prikazane u stablu bočne površi. U bilo kom "
-"prozoru upravnika datoteka, kliknite <gui>Datoteke</gui> na gornjoj traci, "
-"izaberite <gui>Postavke</gui> a zatim jezičak <gui>Pregledi</gui>."
+"prikaz, i da li će datoteke biti prikazane u stablu bočne površi. Izaberite "
+"<guiseq><gui style=\"menu\">Datoteke</gui> <gui "
+"style=\"menuitem\">Postavke</gui></guiseq> na gornjoj traci kada je otvoren "
+"program <app>Datoteke</app> i izaberite jezičak<gui "
+"style=\"tab\">Pregledi</gui>."
 
-#: C/nautilus-views.page:39(section/title)
+#: C/nautilus-views.page:45(section/title)
 msgid "Default view"
 msgstr "Podrazumevani prikaz"
 
-#: C/nautilus-views.page:42(title/gui)
+#: C/nautilus-views.page:48(title/gui)
 msgid "View new folders using"
 msgstr "Pregledaj nove fascikle pomoću"
 
-#: C/nautilus-views.page:43(item/p)
+#: C/nautilus-views.page:49(item/p)
 msgid ""
-"By default, new folders are shown in icon view. You can select a view for "
-"each folder as you browse by clicking the list button or the icons button in "
-"the toolbar. If you often use the list view, you can set it here as the "
-"default."
+"By default, new folders are shown in icon view. If you prefer the list view, "
+"you can set it here as the default. Alternatively, you can select a "
+"different view for each folder as you browse by clicking the <gui style="
+"\"button\">View items as a list</gui> or <gui style=\"button\">View items as "
+"a grid of icons</gui> button in the toolbar."
 msgstr ""
-"Po osnovi, nove fascikle se prikazuju u pregledu ikonicama. Možete da "
-"izaberete pregled za svaku fasciklu koju razgledate tako što ćete kliknuti "
-"na dugme spiska ili na dugme ikonica na traci alata. Ako često koristite "
-"pregled spiskom, ovde možete da ga postavite za osnovni."
+"Po osnovi, nove fascikle se prikazuju u pregledu ikonica. Ako vam više "
+"odgovara pregled spiskom, ovde možete da ga postavite za osnovni pregled. U "
+"suprotnom, možete da izaberete drugačiji pregled za svaku fasciklu koju "
+"razgledate tako što ćete na traci alata kliknuti na dugme <gui "
+"style=\"button\">Pregledajte stavke kao spisak</gui> ili <gui "
+"style=\"button\">Pregledajte stavke kao ikonice</gui>."
 
-#: C/nautilus-views.page:49(title/gui)
+#: C/nautilus-views.page:56(title/gui)
 msgid "Arrange items"
 msgstr "Poređaj stavke"
 
-#: C/nautilus-views.page:50(item/p)
+#: C/nautilus-views.page:57(item/p)
+#| msgid ""
+#| "To change the default order used in new folders, use the <gui>Arrange "
+#| "items</gui> drop-down list in the preferences to sort by name, file size, "
+#| "file type, when they were last modified, when they were last accessed, or "
+#| "when they were trashed."
 msgid ""
-"You can change how files are sorted in an individual folder by clicking the "
-"<media type=\"image\" src=\"figures/go-down.png\">down</media> button in the "
-"toolbar and choosing <gui>By Name</gui>, <gui>By Size</gui>, <gui>By Type</"
-"gui> or <gui>By Modification Date</gui>, or by clicking the list column "
-"headers in list view. See <link xref=\"files-sort\"/> for details. This menu "
+"You can change the default sort order that is used in folders using the "
+"<gui>Arrange items</gui> drop-down list in the preferences to sort by name, "
+"file size, file type, when they were last modified, when they were last "
+"accessed or when they were trashed."
+msgstr ""
+"Možete da izmenite osnovni način ređanja koji je korišćen u fasciklama "
+"koristeći padajući spisak <gui>Poređaj stavke</gui> u postavkama da poređate "
+"prema nazivu, veličini datoteke, vrsti datoteke, prema vremenu poslednje "
+"izmene, prema vremenu poslednjeg pristupa ili prema vremenu njihovog bacanja u "
+"smeće."
+
+#. TRANSLATORS: use the translation of the tooltip for the downwards
+#. pointing arrow button that opens the preferences menu in the main
+#. window for 'View options'
+#: C/nautilus-views.page:63(item/p)
+#| msgid ""
+#| "You can change how files are sorted in an individual folder by clicking "
+#| "the <media type=\"image\" src=\"figures/go-down.png\">down</media> button "
+#| "in the toolbar and choosing <gui>By Name</gui>, <gui>By Size</gui>, "
+#| "<gui>By Type</gui> or <gui>By Modification Date</gui>, or by clicking the "
+#| "list column headers in list view. See <link xref=\"files-sort\"/> for "
+#| "details. This menu only affects the current folder."
+msgid ""
+"You can change how <link xref=\"files-sort\">files are sorted</link> in an "
+"individual folder by clicking the <media type=\"image\" src=\"figures/go-"
+"down.png\">View options</media> button in the toolbar and choosing <gui>By "
+"Name</gui>, <gui>By Size</gui>, <gui>By Type</gui> or <gui>By Modification "
+"Date</gui>, or by clicking the list column headers in list view. This menu "
 "only affects the current folder."
 msgstr ""
-"Možete da izmenite način na koji datoteke bivaju smeštene u zasebnoj "
-"fascikli tako što ćete kliknuti na dugme <media type=\"image\" src=\"figures/"
-"go-down.png\">na dole</media> na traci alata i izabrati <gui>Prema nazivu</"
-"gui>, <gui>Prema veličini</gui>, <gui>Prema vrsti</gui> ili <gui>Prema "
-"datumu izmene</gui>, ili klikom na zaglavlja kolone spiska u pregledu "
-"spiskom. Pogledajte <link xref=\"files-sort\"/> za pojedinosti. Ovaj "
-"izbornik utiče samo na tekuću fasciklu."
+"Možete da izmenite način na koji <link xref=\"files-sort\">su datoteke "
+"poređane</link> u zasebnoj fascikli tako što ćete kliknuti na dugme <media "
+"type=\"image\" src=\"figures/go-down.png\">Mogućnosti pregleda</media> na traci "
+"alata i izabrati <gui>Prema nazivu</gui>, <gui>Prema veličini</gui>, "
+"<gui>Prema vrsti</gui> ili <gui>Prema datumu izmene</gui>, ili klikom na "
+"zaglavlja kolone spiska u pregledu spiskom. Pogledajte <link xref=\"files-"
+"sort\"/> za pojedinosti. Ovaj izbornik utiče samo na tekuću fasciklu."
 
-#: C/nautilus-views.page:56(item/p)
-msgid ""
-"To change the default order used in new folders, use the <gui>Arrange items</"
-"gui> drop-down list in the preferences to sort by name, file size, file "
-"type, when they were last modified, when they were last accessed, or when "
-"they were trashed."
-msgstr ""
-"Da izmenite osnovni poredak korišćen u novim fasciklama, koristite padajući "
-"spisak <gui>Poređaj stavke</gui> u postavkama da poređate prema nazivu, "
-"veličini datoteke, vrsti datoteke, prema vremenu poslednje izmene, prema "
-"vremenu poslednjeg pristupa, ili prema vremenu njihovog bacanja u smeće."
-
-#: C/nautilus-views.page:62(title/gui)
+#: C/nautilus-views.page:71(title/gui)
 msgid "Sort folders before files"
 msgstr "Poređaj fascikle pre datoteka"
 
-#: C/nautilus-views.page:63(item/p)
+#: C/nautilus-views.page:72(item/p)
 msgid ""
-"By default, the file manager will show all folders before files. Folders and "
-"files will each be arranged according to the selected sort order. If you "
-"would rather not treat folders specially and have them mixed with files "
-"according to the sort order, deselect this option."
+"By default, the file manager no longer shows all folders before files. To "
+"see all folders listed before files, enable this option."
 msgstr ""
-"Po osnovi, upravnik datoteka će prikazati sve fascikle pre datoteka. "
-"Fascikle i datoteke će biti poređane na osnovu izabranog poretka ređanja. Ako "
-"radije želite da fascikle ne tretirate posebno i želite da ih pomešate sa "
-"datotekama na osnovu poretka ređanja, poništite izbor ove opcije."
+"Po osnovi, upravnik datoteka više ne prikazuje sve fascikle pre datoteka. Da "
+"vidite sve fascikle navedene pre datoteka, uključite ovu mogućnost."
 
-#: C/nautilus-views.page:69(title/gui)
+#: C/nautilus-views.page:76(title/gui)
 msgid "Show hidden and backup files"
 msgstr "Prikaži skrivene i rezervne datoteke"
 
-#: C/nautilus-views.page:70(item/p)
+#: C/nautilus-views.page:77(item/p)
 msgid ""
-"The file manager does not display hidden files or folders by default. See "
-"<link xref=\"files-hidden\"/> for information on hidden files. You can show "
-"hidden files in an individual window by selecting <gui>Show Hidden Files</"
-"gui>, from the <media type=\"image\" src=\"figures/go-down.png\">down</"
-"media> menu in the toolbar. If you prefer to always show hidden files, or "
-"want to see hidden files in every open file manager window, select this "
-"option."
+"The file manager does not display <link xref=\"files-hidden\">hidden files</"
+"link> and folders by default. You can always show hidden files by selecting "
+"this option."
 msgstr ""
-"Upravnik datoteka po osnovi ne prikazuje skrivene datoteke ili fascikle. "
-"Pogledajte <link xref=\"files-hidden\"/> za objašnjenja o skrivenim "
-"datotekama. Možete da prikažete skrivene datoteke u pojedinačnom prozoru "
-"tako što ćete izabrati <gui>Prikaži skrivene datoteke</gui>, iz izbornika "
-"<media type=\"image\" src=\"figures/go-down.png\">na dole</media> na traci "
-"alata. Ako želite da uvek prikažete skrivene datoteke, ili da ih vidite u "
-"svakom otvorenom prozoru upravnika datoteka, izaberite ovu opciju."
+"Upravnik datoteka ne prikazuje <link xref=\"files-hidden\">skrivene "
+"datoteke</link> i fascikle po osnovi. Uvek možete prikazati skrivene "
+"datoteke biranjem ove mogućnosti."
 
-#: C/nautilus-views.page:83(section/title)
+#. TRANSLATORS: use the translation of the tooltip for the downwards
+#. pointing arrow button that opens the preferences menu in the main
+#. window for 'View options'
+#: C/nautilus-views.page:82(item/p)
+msgid ""
+"You can also show hidden files in an individual window by selecting "
+"<gui>Show Hidden Files</gui>, from the <media type=\"image\" src=\"figures/"
+"go-down.png\">View options</media> menu in the toolbar."
+msgstr ""
+"Takođe možete da prikažete skrivene datoteke u zasebnom prozoru tako što "
+"ćete izabrati <gui>Prikaži skrivene datoteke</gui>, iz izbornika <media "
+"type=\"image\" src=\"figures/go-down.png\">Mogućnosti pregleda</media> na traci "
+"alata."
+
+#: C/nautilus-views.page:91(section/title)
 msgid "Icon view defaults"
 msgstr "Podrazumevano za prikaz ikonicama"
 
-#: C/nautilus-views.page:86(title/gui) C/nautilus-views.page:127(title/gui)
+#: C/nautilus-views.page:94(title/gui) C/nautilus-views.page:115(title/gui)
 msgid "Default zoom level"
 msgstr "Podrazumevano uvećanje"
 
-#: C/nautilus-views.page:87(item/p)
+#. TRANSLATORS: use the translation of the tooltip for the downwards
+#. pointing arrow button that opens the preferences menu in the main
+#. window for 'View options'
+#: C/nautilus-views.page:97(item/p)
+#| msgid ""
+#| "You can make the icons and text larger or smaller in icon view. You can "
+#| "do this in an individual folder by clicking the <media type=\"image\" src="
+#| "\"figures/go-down.png\">down</media> button in the toolbar and selecting "
+#| "<gui>Zoom In</gui>, <gui>Zoom Out</gui>, or <gui>Normal Size</gui>. If "
+#| "you frequently use a larger or smaller zoom level, you can set the "
+#| "default with this option."
 msgid ""
-"You can make the icons and text larger or smaller in icon view. You can do "
-"this in an individual folder by clicking the <media type=\"image\" src="
-"\"figures/go-down.png\">down</media> button in the toolbar and selecting "
-"<gui>Zoom In</gui>, <gui>Zoom Out</gui>, or <gui>Normal Size</gui>. If you "
-"frequently use a larger or smaller zoom level, you can set the default with "
-"this option."
+"You can make the icons and text larger or smaller by default in icon view "
+"using this option. You can also change this setting in an individual folder "
+"by clicking the <media type=\"image\" src=\"figures/go-down.png\">View "
+"options</media> button in the toolbar and selecting <gui>Zoom In</gui>, "
+"<gui>Zoom Out</gui> or <gui>Normal Size</gui>. If you frequently use a "
+"larger or smaller zoom level, you can set the default with this option."
 msgstr ""
-"Možete da učinite ikonice i tekst većim ili manjim u pregledu ikonicama. Ovo "
-"možete da uradite u pojedinačnoj fascikli tako što ćete kliknuti na dugme "
-"<media type=\"image\" src=\"figures/go-down.png\">na dole</media> na traci "
-"alata i izabrati <gui>Uvećaj</gui>, <gui>Umanji</gui>, ili <gui>Uobičajena "
-"veličina</gui>. Ako često koristite veći ili manji nivo uvećanja, ovom opcijom "
-"možete da postavite osnovni nivo uvećanja."
+"Možete da učinite ikonice i tekst većim ili manjim po osnovi u pregledu "
+"ikonicama koristeći ovu mogućnost. Ovo možete da uradite u pojedinačnoj "
+"fascikli tako što ćete kliknuti na dugme <media type=\"image\" src=\"figures"
+"/go-down.png\">Mogućnosti pregleda</media> na traci alata i izabrati "
+"<gui>Uvećaj</gui>, <gui>Umanji</gui> ili <gui>Uobičajena veličina</gui>. Ako "
+"često koristite veći ili manji nivo uvećanja, ovom opcijom možete da postavite "
+"osnovni nivo uvećanja."
 
-#: C/nautilus-views.page:93(item/p)
+#: C/nautilus-views.page:104(item/p)
+#| msgid ""
+#| "In icon view, more or fewer captions are shown based on your zoom level. "
+#| "See <link xref=\"nautilus-display#icon-captions\"/> for more information."
 msgid ""
-"In icon view, more or fewer captions are shown based on your zoom level. See "
-"<link xref=\"nautilus-display#icon-captions\"/> for more information."
+"In icon view, more or fewer <link xref=\"nautilus-display#icon-captions"
+"\">captions</link> are shown based on your zoom level."
 msgstr ""
-"U pregledu spiskom, više ili manje natpisa je prikazano na osnovu nivoa "
-"uvećanja. Pogledajte <link xref=\"nautilus-display#icon-captions\"/> za više "
-"pojedinosti."
+"U pregledu ikonicama, više ili manje <link xref=\"nautilus-display#icon-"
+"captions\">natpisa</link> je prikazano na osnovu nivoa uvećanja."
 
-#: C/nautilus-views.page:124(section/title)
+#: C/nautilus-views.page:112(section/title)
 msgid "List view defaults"
 msgstr "Podrazumevano za prikaz spiskom"
 
-#: C/nautilus-views.page:128(item/p)
+#. TRANSLATORS: use the translation of the tooltip for the downwards
+#. pointing arrow button that opens the preferences menu in the main
+#. window for 'View options'
+#: C/nautilus-views.page:118(item/p)
+#| msgid ""
+#| "You can make the icons and text larger or smaller in list view. You can "
+#| "do this in an individual folder by clicking the <media type=\"image\" src="
+#| "\"figures/go-down.png\">down</media> button in the toolbar and selecting "
+#| "<gui>Zoom In</gui>, <gui>Zoom Out</gui>, or <gui>Normal Size</gui>. If "
+#| "you frequently use a larger or smaller zoom level, you can set the "
+#| "default with this option."
 msgid ""
-"You can make the icons and text larger or smaller in list view. You can do "
-"this in an individual folder by clicking the <media type=\"image\" src="
-"\"figures/go-down.png\">down</media> button in the toolbar and selecting "
-"<gui>Zoom In</gui>, <gui>Zoom Out</gui>, or <gui>Normal Size</gui>. If you "
-"frequently use a larger or smaller zoom level, you can set the default with "
-"this option."
+"You can make the icons and text larger or smaller in list view using this "
+"option. You can also do this in an individual folder by clicking the <media "
+"type=\"image\" src=\"figures/go-down.png\">View options</media> button in "
+"the toolbar and selecting <gui>Zoom In</gui>, <gui>Zoom Out</gui> or "
+"<gui>Normal Size</gui>."
 msgstr ""
-"Možete da učinite ikonice i tekst većim ili manjim u pregledu spiskom. Ovo "
-"možete da uradite u pojedinačnoj fascikli tako što ćete kliknuti na dugme "
-"<media type=\"image\" src=\"figures/go-down.png\">na dole</media> na traci "
-"alata i izabrati <gui>Uvećaj</gui>, <gui>Umanji</gui>, ili <gui>Uobičajena "
-"veličina</gui>. Ako često koristite veći ili manji nivo uvećanja, ovom opcijom "
-"možete da postavite osnovni nivo uvećanja."
+"Možete da učinite ikonice i tekst većim ili manjim u pregledu spiskom "
+"koristeći ovu mogućnost. Takođe ovo možete da uradite u zasebnoj fascikli "
+"tako što ćete kliknuti na dugme <media type=\"image\" src=\"figures/go-"
+"down.png\">Mogućnosti pregleda</media> na traci alata i izabrati "
+"<gui>Uvećaj</gui>, <gui>Umanji</gui> ili <gui>Uobičajena veličina</gui>."
 
 #: C/net-antivirus.page:10(info/desc)
 msgid ""
@@ -18930,7 +18973,6 @@ msgstr ""
 
 #: C/printing-to-file.page:20(page/title)
 #: C/printing-to-file.page:29(steps/title)
-#| msgid "Print a booklet"
 msgid "Print to file"
 msgstr "Štampajte u datoteku"
 
@@ -18983,15 +19025,14 @@ msgid ""
 "<sys>SVG</sys>."
 msgstr ""
 "<sys>PDF</sys> je osnovna vrsta datoteke za dokumenta. Ako želite da "
-"koristite drugačiji <gui>Izlazni zapis</gui>, Izaberite ili "
-"<sys>Postskript</sys> ili <sys>SVG</sys>."
+"koristite drugačiji <gui>Izlazni zapis</gui>, Izaberite ili <sys>Postskript</"
+"sys> ili <sys>SVG</sys>."
 
 #: C/printing-to-file.page:50(item/p)
 msgid "Chose your other page preferences."
 msgstr "Izaberite druge postavke stranice."
 
 #: C/printing-to-file.page:53(item/p)
-#| msgid "Click <gui style=\"button\">+</gui>."
 msgid "Press <gui style=\"button\">Print</gui> to save the file."
 msgstr "Pritisnite <gui style=\"button\">Štampaj</gui> da sačuvate datoteku."
 
@@ -20234,14 +20275,19 @@ msgstr ""
 "<gui>Zaključaj ekran</gui>."
 
 #: C/shell-exit.page:75(section/p)
+#| msgid ""
+#| "When your screen is locked, other users can log in to their own accounts "
+#| "by clicking <gui>Switch User</gui> on the password screen. You can switch "
+#| "back to your desktop when they are finished."
 msgid ""
 "When your screen is locked, other users can log in to their own accounts by "
-"clicking <gui>Switch User</gui> on the password screen. You can switch back "
-"to your desktop when they are finished."
+"clicking <gui>Log in as another user</gui> on the password screen. You can "
+"switch back to your desktop when they are finished."
 msgstr ""
 "Kada je zaključan vaš ekran, drugi korisnici mogu da se prijave na svoje "
-"lične naloge klikom na <gui>Promeni korisnika</gui> na ekranu za lozinku. Vi "
-"ćete moći da se vratite vašem okruženju kada oni završe."
+"lične naloge tako što će na ekranu za lozinku kliknuti na <gui>Prijavite se "
+"kao drugi korisnik</gui>. Vi ćete moći da se vratite vašem okruženju kada oni "
+"završe."
 
 #: C/shell-exit.page:84(section/title)
 msgid "Suspend"
@@ -20608,18 +20654,23 @@ msgstr ""
 msgid "Message Tray"
 msgstr "Fioka poruka"
 
-#: C/shell-introduction.page:191(section/p)
+#: C/shell-introduction.page:192(section/p)
+#| msgid ""
+#| "The message tray can be brought into view by moving your mouse into the "
+#| "bottom-right corner, or by pressing <keyseq><key>Super</key><key>M</key></"
+#| "keyseq>. This is where your notifications are stored until you are ready "
+#| "to view them."
 msgid ""
-"The message tray can be brought into view by moving your mouse into the "
-"bottom-right corner, or by pressing <keyseq><key>Super</key><key>M</key></"
-"keyseq>. This is where your notifications are stored until you are ready to "
-"view them."
+"The message tray can be brought into view by pushing your mouse pointer "
+"against the bottom of the screen or by pressing <keyseq><key>Super</"
+"key><key>M</key></keyseq>. This is where your notifications are stored until "
+"you are ready to view them."
 msgstr ""
-"Fioka poruka može biti prikazana pomeranjem miša u donjem levom uglu, ili "
-"pritiskom na <keyseq><key>Super</key><key>M</key></keyseq>. To je mesto gde "
-"se čuvaju vaša obaveštenja sve dok ne budete bili spremni da ih pogledate."
+"Fioka poruka može biti prikazana guranjem miša u donji levi ugao ili pritiskom "
+"na <keyseq><key>Super</key><key>M</key></keyseq>. To je mesto gde se čuvaju "
+"vaša obaveštenja sve dok ne budete bili spremni da ih pogledate."
 
-#: C/shell-introduction.page:197(item/p)
+#: C/shell-introduction.page:198(item/p)
 msgid ""
 "<link xref=\"shell-notifications\">Learn more about notifications and the "
 "message tray.</link>"
@@ -21710,24 +21761,34 @@ msgstr ""
 "prozora</link>)."
 
 #: C/shell-workspaces-movewindow.page:58(item/p)
+#| msgid ""
+#| "Press <keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>↑</key></"
+#| "keyseq> to move the window to a workspace which is above the current "
+#| "workspace on the <gui>workspace selector</gui>."
 msgid ""
-"Press <keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>↑</key></"
-"keyseq> to move the window to a workspace which is above the current "
-"workspace on the <gui>workspace selector</gui>."
+"Press <keyseq><key xref=\"keyboard-key-super\">Super</key><key>Shift</"
+"key><key>Page Up</key></keyseq> to move the window to a workspace which is "
+"above the current workspace on the <gui>workspace selector</gui>."
 msgstr ""
-"Pritisnite <keyseq><key>Ktrl</key><key>Alt</key><key>Šift</key><key>↑</key></"
-"keyseq> da premestite prozor na radni prostor koji se nalazi iznad tekućeg "
-"radnog prostora u <gui>biraču radnih prostora</gui>."
+"Pritisnite <keyseq><key xref=\"keyboard-key-"
+"super\">Super</key><key>Šift</key><key>Stranica gore</key></keyseq> da "
+"premestite prozor na radni prostor koji se nalazi iznad tekućeg radnog "
+"prostora u <gui>biraču radnih prostora</gui>."
 
 #: C/shell-workspaces-movewindow.page:64(item/p)
+#| msgid ""
+#| "Press <keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>↓</key></"
+#| "keyseq> to move the window to a workspace which is below the current "
+#| "workspace on the <gui>workspace selector</gui>."
 msgid ""
-"Press <keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>↓</key></"
-"keyseq> to move the window to a workspace which is below the current "
-"workspace on the <gui>workspace selector</gui>."
+"Press <keyseq><key xref=\"keyboard-key-super\">Super</key><key>Shift</"
+"key><key>Page Down</key></keyseq> to move the window to a workspace which is "
+"below the current workspace on the <gui>workspace selector</gui>."
 msgstr ""
-"Pritisnite <keyseq><key>Ktrl</key><key>Alt</key><key>Šift</key><key>↓</key></"
-"keyseq> da premestite prozor na radni prostor koji se nalazi ispod tekućeg "
-"radnog prostora u <gui>biraču radnih prostora</gui>."
+"Pritisnite <keyseq><key xref=\"keyboard-key-"
+"super\">Super</key><key>Šift</key><key>Stranica dole</key></keyseq> da "
+"premestite prozor na radni prostor koji se nalazi ispod tekućeg radnog "
+"prostora u <gui>biraču radnih prostora</gui>."
 
 #: C/shell-workspaces-switch.page:11(info/desc)
 msgid "Use the workspace selector in the Activities overview."
@@ -24185,6 +24246,76 @@ msgid ""
 msgstr ""
 "Vi možete da <link xref=\"user-admin-change\">izmenite ko ima "
 "administratorska ovlašćenja</link>."
+
+#: C/user-autologin.page:20(info/desc)
+#| msgid "Set up dual monitors on your desktop computer."
+msgid "Set up automatic login for when you switch on your computer."
+msgstr "Podesite samostalno prijavljivanje kada se prebacujete na vaš računar."
+
+#: C/user-autologin.page:23(page/title)
+#| msgid "Connect automatically"
+msgid "Log in automatically"
+msgstr "Samostalno prijavljivanje"
+
+#: C/user-autologin.page:25(page/p)
+msgid ""
+"You can change your settings so that you are automatically logged in to your "
+"account when you start up your computer:"
+msgstr ""
+"Možete da izmenite vaša podešavanja tako da budete samostalno prijavljeni na "
+"vaš nalog kada pokrenete vaš računar:"
+
+#: C/user-autologin.page:30(item/p)
+#| msgid "Open <app>Screenshot</app> from the <gui>Activities</gui> overview."
+msgid "Open <app>Settings</app> from the <gui>Activities</gui> overview."
+msgstr "Otvorite <app>Podešavanja</app> iz pregleda <gui>Aktivnosti</gui>."
+
+#: C/user-autologin.page:33(item/p)
+#| msgid "From the <gui>Activities</gui> overview, open <app>Files</app>."
+msgid "Open the <gui>Users</gui> panel from <app>Settings</app>."
+msgstr "Otvorite panel <gui>Korisnici</gui> u <app>Podešavanjima</app>."
+
+#: C/user-autologin.page:36(item/p)
+#| msgid "Select the account you want to change from the list on the left."
+msgid ""
+"Select the user account that you want to log in to automatically at startup."
+msgstr ""
+"Izaberite korisnički nalog na koji želite samostalno prijavljivanje prilikom "
+"pokretanja."
+
+#: C/user-autologin.page:40(item/p)
+#| msgid "Press <gui style=\"button\">Print</gui> to save the file."
+msgid "Press <gui style=\"button\">Unlock</gui> and enter your password."
+msgstr "Pritisnite <gui style=\"button\">Otključaj</gui> i unesite vašu lozinku."
+
+#: C/user-autologin.page:43(item/p)
+#| msgid "Set the <gui>Show Notifications</gui> slider to <gui>Off</gui>."
+msgid "Toggle the <gui>Automatic Login</gui> switch to <gui>On</gui>."
+msgstr "Prebacite dugme <gui>Samostalno prijavljivanje</gui> na <gui>Uklj.</gui>."
+
+#: C/user-autologin.page:47(page/p)
+msgid ""
+"When you next start up your computer, you will be logged in automatically. "
+"If you have this opiton enabled, you will not need to type in your password "
+"to log in to your account which means that if someone else starts up your "
+"computer, they will be able to access your account and your personal data "
+"including your files and browser history."
+msgstr ""
+"Kada sledeći put budete pokrenuli vaš računar, bićete odmah prijavljeni. Ako "
+"vam je ova mogućnost uključena, nećete morati da upisujete vašu lozinku za "
+"prijavljivanje na vaš nalog što znači da će neko drugi ako pokrene vaš "
+"računar, biti u mogućnosti da pristupi vašem nalogu i vašim ličnim podacima "
+"uključujući vaše datoteke i istorijat veb preglednika."
+
+#: C/user-autologin.page:54(note/p)
+msgid ""
+"If your account type is <em>Standard</em>, you cannot change this setting; "
+"your system administrator <link href=\"help:system-administrator-guide/user-"
+"autologin\">can change this setting</link> for you."
+msgstr ""
+"Ako je vrsta vašeg naloga <em>Standardni</em>, nećete moći da izmenite ovo "
+"podešavanje; već će to za vas <link href=\"help:system-administrator-guide"
+"/user-autologin\">moći da uradi</link> administrator vašeg sistema."
 
 #: C/user-changepassword.page:9(info/desc)
 msgid ""
