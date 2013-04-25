@@ -12,6 +12,14 @@
       <email>matthias.clasen@gmail.com</email>
       <years>2012</years>
     </credit>
+    <credit type="editor">
+      <name>Sindhu S</name>
+      <email>sindhus@live.in</email>
+    </credit>
+    <credit type="editor">
+      <name>Aruna Sankaranarayanan</name>
+      <email>aruna.evam@gmail.com</email>
+    </credit>
 
     <desc>Which processes should I expect to see running in a pristine, stock
      GNOME session?</desc>
@@ -19,16 +27,68 @@
 
   <title>Typical processes</title>
 
-  <p>In a pristine, stock GNOME session, the following processes should be
-   running:</p>
-   <list>
-     <item><p>dbus-daemon</p></item>
-     <item><p>gnome-keyring-daemon</p></item>
-     <item><p>gnome-session</p></item>
-     <item><p>gnome-settings-daemon</p></item>
-     <item><p>gnome-shell</p></item>
-     <item><p>pulseaudio</p></item>
-   </list>
+
+  <p>In a stock <app>GNOME</app> session, programs called
+  <link href="man:daemon"><app>daemon</app></link> run on the system as
+  background processes. You should find the following daemons running by
+   default:</p>
+
+   <terms>
+     <item>
+       <title>dbus-daemon</title>
+       <p>D-Bus is a library that provides one-to-one communication between any
+       two applications. The <app>dbus-daemon</app> is a program that uses the
+       D-Bus library to implement a message bus daemon. Multiple programs can
+       connect to the message bus daemon and exchange messages with one
+       another.</p>
+       <p>For extended information, consider reading the manual page for
+       <link href="man:dbus-daemon">dbus-daemon</link>.</p>
+     </item>
+     <item>
+       <title>gnome-keyring-daemon</title>
+       <p>Credentials such as username and password for various programs and
+       websites are stored securely using the <app>gnome-keyring-daemon</app>.
+       This information is written into an encrypted file called the keyring
+       file and saved in the user's home directory.</p>
+       <p>For extended information, consider reading the manual page for
+       <link href="man:gnome-keyring-daemon">gnome-keyring-daemon</link>.</p>
+     </item>
+     <item>
+       <title>gnome-session</title>
+       <p>The <app>gnome-session</app> program is responsible for running the
+       GNOME desktop environment with help of a display manager such as
+       <app>GDM</app>, <app>LightDM</app>, <app>NODM</app> and so on. The
+       default session for the user is set at the time of system installation
+       by the system administrator. <app>gnome-session</app> typically loads
+       the last session that ran successfully on the system.</p>
+       <p>For extended information consider reading the manual page for
+       <link href="man:gnome-session">gnome-session</link>.</p>
+     </item>
+     <item>
+       <title>gnome-settings-daemon</title>
+       <p>The <app>gnome-settings-daemon</app> handles settings for a
+       GNOME session and for all programs that are run within the
+       session.</p>
+       <p>For extended information, consider reading the manual page for
+       <link href="man:gnome-settings-daemon">gnome-settings-daemon</link>.</p>
+     </item>
+     <item>
+       <title>gnome-shell</title>
+       <p><app>gnome-shell</app> provides the core user interface functionality
+       for GNOME such as launching programs, browsing directories,
+       viewing files and so on.</p>
+       <p>For extended information, consider reading the
+       manual page for <link href="man:gnome-shell">gnome-shell</link>.</p>
+     </item>
+     <item>
+       <title>pulseaudio</title>
+       <p><app>PulseAudio</app> is a sound server for Linux, POSIX and Windows
+       systems that lets programs output audio via the <app>Pulseaudio</app>
+       daemon.</p>
+       <p>For extended information, consider reading the manual page for
+       <link href="man:pulseaudio">pulseaudio</link>.</p>
+     </item>
+   </terms>
 
   <p>Depending on the user's setup, you may also see some of the
   following, among others:</p>
