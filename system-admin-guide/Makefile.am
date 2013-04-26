@@ -21,7 +21,7 @@ HELP_FILES = \
 	lockscreenbackground.page	\
 	login-background.page		\
 	login-banner.page		\
-	logo.page			\
+	login-logo.page			\
 	nfs-home-directories.page	\
 	overrides.page			\
 	power-settings.page		\
