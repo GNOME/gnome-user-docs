@@ -1,0 +1,95 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="custom-session">
+  <info>
+    <revision version="0.1" date="2012-12-01" status="draft"
+    />
+    <link type="guide" xref="index" group="login" />
+    <link type="seealso" xref="classic-mode" />
+    <link type="seealso" xref="custom-session-classic-mode" />
+    <link type="seealso" xref="custom-session-set" />
+    <link type="seealso" xref="custom-session-change" />
+
+    <credit type="author copyright">
+      <name>minnie_eg</name>
+      <email>amany.elguindy@gmail.com</email>
+      <years>2012</years>
+    </credit>
+
+  <credit type="editor">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+
+    <desc>Install a desktop session file.</desc>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+  <title>Create a custom session</title>
+
+  <comment>
+    <cite date="2012-11-19"
+    href="mailto:amany_elguindy@gmail.com">minnie_eg</cite>
+    <p>This assumes the reader knows how to edit files as the root user and how
+    to navigate through the manual page. By the end of this page,
+    the reader will be able to create custom sessions with different
+    options.</p>
+  </comment>
+
+ <p>To create a custom session with different options, follow these steps:</p>
+
+<steps>
+  <item><p>Create a desktop file in the 
+  <file>/usr/share/xsessions/new-session.desktop</file> file format. The content 
+  of the desktop file should contain the following entries:</p>
+  <code>
+  [Desktop Entry]
+  Encoding=UTF-8
+  Type=Application
+  Name=Custom session
+  Comment=This is our custom session
+  <input>Exec</input>=gnome-session
+  </code>
+  </item>
+  <item><p>Type <cmd>man gnome-session</cmd> into the Terminal to display more 
+  information on session options and
+  parameters that can be used with <code>Exec</code>.</p>
+  </item>
+  <item><p>Save the custom session file that includes various parameters in
+  the <file>/usr/share/gnome-session/sessions/new-session.session</file> 
+  file.</p>
+  </item>
+ <item>
+  <p>Run the custom session by using the 
+  <cmd>Exec=gnome-session --session=new-session</cmd> command.</p>
+  </item>
+</steps>
+
+<note style="note style">
+  <p>Note that after creating the session desktop file with the user
+  root, the new session will be available on the sessions list of the
+  GDM log-in screen.</p>
+</note>
+
+  <section id="custom-session-issues">
+  <title>Known issues</title>
+    <p>On a Debian or Debian-based system, the following error may occur:</p>
+
+    <screen>Xsession: unable to launch ""
+    Xsession --- "" not found; falling back to default
+    session.</screen>
+
+    <p>Should this happen to you, follow these steps to change the  
+    <file>/etc/X11/Xsession.d/20x11-common_process-args</file> file.</p>
+    <steps>
+    <item><p>Change <code>STARTUP_FULL_PATH=$(/usr/bin/which <input>"$1"</input>|| true)</code>
+    to <code>STARTUP_FULL_PATH=$(/usr/bin/which <input>$1</input> || true)</code>
+    </p></item>
+    <item><p>Change <code>STARTUP=<input>"$1"</input></code> to <code>STARTUP=<input>$1</input></code>
+    </p></item>
+    </steps>
+  </section>
+
+</page>
