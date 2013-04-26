@@ -26,7 +26,6 @@ HELP_FILES = \
 	overrides.page			\
 	power-settings.page		\
 	printer-configuration.page	\
-	prob-gdm-dconf.xml		\
 	processes.page			\
 	screen-locking.page		\
 	servers-list.page		\
