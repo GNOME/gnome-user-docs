@@ -14,6 +14,7 @@ HELP_FILES = \
 	dconf-nfs-home.page		\
 	dconf-profiles-edit.page	\
 	dconf-profiles.page		\
+	dconf-favorite-applications.page\
 	fonts.page			\
 	gsettings-browse.page		\
 	index.page			\
