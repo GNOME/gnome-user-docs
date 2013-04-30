@@ -187,7 +187,6 @@ HELP_FILES = \
         documents-tracker.page \
 	documents-viewgrid.page \
 	documents-view.page \
-	fallback-mode.page \
 	files-autorun.page \
 	files-browse.page \
 	files-copy.page \
