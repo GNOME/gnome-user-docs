@@ -207,6 +207,7 @@ HELP_FILES = \
 	files-tilde.page \
 	files.page \
 	get-involved.page \
+	gnome-classic.page \
 	hardware-auth.page \
 	hardware-cardreader.page \
 	hardware-driver.page \
