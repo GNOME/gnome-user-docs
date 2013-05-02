@@ -18,7 +18,6 @@ HELP_FILES = \
 	gsettings-browse.page		\
 	index.page			\
 	keyboard-layout.page		\
-	lockscreenbackground.page	\
 	login-background.page		\
 	login-banner.page		\
 	login-logo.page			\
