@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic" style="task"
       id="shell-windows-states">
 
@@ -22,7 +23,7 @@
 <title>Move and resize windows</title>
 
 <p>You can move and resize windows to help you work more efficiently.
-In addition to the the dragging behavior you might expect, GNOME features
+In addition to the dragging behavior you might expect, GNOME features
 shortcuts and modifiers to help you arrange windows quickly.</p>
 
 <list>
@@ -32,7 +33,10 @@ snap the window to the edges of the screen and other windows.</p></item>
 
 <item><p>Resize a window by dragging the edges or corner of the window.
 Hold down <key>Shift</key> while resizing to snap the window to the edges
-of the screen and other windows.</p></item>
+of the screen and other windows.</p>
+
+<p if:test="platform:gnome-classic">You can also resize a maximized window by
+clicking the maximize button in the titlebar.</p></item>
 
 <item><p>Move or resize a window using only the keyboard. Press
 <keyseq><key>Alt</key><key>F7</key></keyseq> to move a window or
