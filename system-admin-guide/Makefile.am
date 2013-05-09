@@ -12,6 +12,7 @@ HELP_FILES = \
 	custom-session.page		\
 	dconf-custom-defaults.page	\
 	dconf-lockdown.page		\
+	dconf-nfs-home.page		\
 	dconf-profiles-edit.page	\
 	dconf-profiles.page		\
 	fonts.page			\
@@ -21,7 +22,6 @@ HELP_FILES = \
 	login-background.page		\
 	login-banner.page		\
 	login-logo.page			\
-	nfs-home-directories.page	\
 	overrides.page			\
 	power-settings.page		\
 	printer-configuration.page	\

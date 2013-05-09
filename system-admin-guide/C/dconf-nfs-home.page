@@ -1,0 +1,73 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="dconf-nfs-home">
+
+  <info>
+    <link type="guide" xref="index" group="user" />
+    <revision version="0.1" date="2013-03-19" status="draft"/>
+    <revision pkgversion="3.8" date="2013-05-09" status="review"/>
+
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email its:translate="no">jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+    <credit type="author copyright">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+      <years>2013</years>
+    </credit>
+
+    <desc>Update the system configuration for <sys its:translate="no">dconf</sys> to store user settings in a <sys>Network File System</sys> home directory.</desc>
+  </info>
+
+  <title>Store <sys its:translate="no">dconf</sys> settings on <sys>NFS</sys></title>
+
+  <comment>
+    <cite date="2013-03-19" href="mailto:jsvarova@gmail.com">Jana Svarova</cite>
+    <p>Adapted from GNOME Bugzilla: Bug 694569</p>
+  </comment>
+  <comment>
+    <cite date="2013-05-09" href="mailto:kittykat3756@gmail.com">Kat</cite>
+    <p>Also affected by bugs 595579 and 670493.</p>
+    <p>https://bugzilla.gnome.org/show_bug.cgi?id=595579#c40 and
+    https://bugzilla.gnome.org/show_bug.cgi?id=670493#c8</p>
+  </comment>
+
+  <p>For <sys its:translate="no">dconf</sys> to work correctly when using
+  <sys>Network File System</sys> (<sys>NFS</sys>) home directories, the
+  <sys its:translate="no">dconf</sys> <em>keyfile backend</em> must be
+  used.</p>
+
+  <steps>
+    <item>
+      <p>Edit the <file its:translate="no">/etc/dconf/profile/user</file> file
+      on every client. If one does not already exist, create it.</p>
+    </item>
+    <item>
+      <p>Add a line containing
+      <code><input its:translate="no">service-db:keyfile/user</input></code> to
+      the file and save your changes.</p>
+    </item>
+  </steps>
+
+  <comment>
+    <cite href="mailto:kittykat3756@gmail.com">Kat</cite>
+    <p>In-process changes will take effect imediately, but out-of-process
+    changes will be delayed by the poll time on GFileMonitor.</p>
+  </comment>
+  <p>The <sys its:translate="no">dconf</sys> <em>keyfile backend</em> will only
+  take effect the next time that the user logs in. It polls the keyfile to
+  determine whether updates have been made, so settings may not be updated
+  imediately.</p>
+
+  <comment>
+    <cite href="mailto:kittykat3756@gmail.com">Kat</cite>
+    <p>According to Ryan, "SIGBUS being semi-randomly delivered to your
+    processes is a real downer". This means stuff will crash.</p>
+  </comment>
+  <p>If a <em>keyfile backend</em> is not used, the user settings may not be
+  retrieved or updated correctly.</p>
+
+</page>
