@@ -342,6 +342,7 @@ HELP_FILES = \
 	session-formats.page \
 	session-language.page \
 	session-screenlocks.page \
+	settings-sharing.page \
 	sharing.page \
 	sharing-desktop.page \
 	shell-apps-favorites.page \
