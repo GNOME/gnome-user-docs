@@ -345,6 +345,7 @@ HELP_FILES = \
 	settings-sharing.page \
 	sharing.page \
 	sharing-desktop.page \
+	sharing-media.page \
 	shell-apps-favorites.page \
 	shell-apps-open.page \
 	shell-exit.page \
