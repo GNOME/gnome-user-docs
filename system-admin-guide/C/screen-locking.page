@@ -11,6 +11,12 @@
       <years>2012</years>
     </credit>
 
+    <credit type="editor">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+
     <desc>How can I set system-wide screen saver locking settings that can't be
     modified by users?</desc>
   </info>
@@ -23,9 +29,19 @@
      enforce system-wide custom values for gsettings keys.</p>
   </comment>
 
-  <p>Screen saver locking settings are controlled by gsettings keys.
-   For instance, <em>lock screens after X minutes</em> is controlled by the
-   <cmd>org.gnome.desktop.screensaver.lock-delay</cmd> and
-   <cmd>org.gnome.desktop.screensaver.lock-enabled</cmd> gsettings keys.</p>
+  <p>If you want to set <em>screen saver locking</em> system-wide,
+  you need to change two gsettings keys which control this. Here is a short
+  procedure how to do this.</p>
+  
+  <steps>
+  <title>Lock screen after X minutes</title>
+  <item><p>Go to the terminal.</p></item>
+  <item><p>Run the
+  <cmd>gsettings set org.gnome.desktop.screensaver lock-delay uint32 0</cmd>
+  command.</p></item>
+  <item><p>Run the
+  <cmd>gsettings set org.gnome.desktop.screensaver lock-enabled true</cmd>
+  command.</p></item>
+  </steps>
 
 </page>
