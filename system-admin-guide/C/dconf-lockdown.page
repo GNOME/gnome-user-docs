@@ -20,17 +20,17 @@
       <years>2013</years>
     </credit>
 
-    <desc>Use the <em>lockdown</em> mode in <app its:translate="no">dconf</app> to prevent users from changing specific settings.</desc>
+    <desc>Use the <em>lockdown</em> mode in <sys its:translate="no">dconf</sys> to prevent users from changing specific settings.</desc>
   </info>
 
   <title>Lock down specific settings</title>
 
-  <p>To <em>lockdown</em> <sys its:translate="no">GSettings</sys> keys in
-  <app its:translate="no">dconf</app>, you will need to create a
-  <file its:translate="no">locks</file> subdirectory in the keyfile directory.
-  The files inside this directory contain a list of keys to lock. Just as with
-  the <link xref="dconf-profiles">keyfiles</link>, you may add any number of
-  files to this directory. Here is an example of what one might look like:</p>
+  <p>To <em>lockdown</em> a <sys its:translate="no">dconf</sys> key, you will
+  need to create a <file its:translate="no">locks</file> subdirectory in the
+  keyfile directory.  The files inside this directory contain a list of keys to
+  lock. Just as with the <link xref="dconf-profiles">keyfiles</link>, you may
+  add any number of files to this directory. Here is an example of what one
+  might look like:</p>
 
   <steps>
     <title>How to lock the default wallpaper</title>
@@ -46,7 +46,7 @@
       <file its:translate="no">/etc/dconf/db/local.d/locks/00_default-wallpaper</file>,
       listing one key per line:</p>
 <code its:translate="no">
-# <span its:translate="yes">prevent changes to the company wallpaper</span>
+# <span its:translate="yes">prevent changes to the background</span>
 /org/gnome/desktop/background/picture-uri
 /org/gnome/desktop/background/picture-options
 /org/gnome/desktop/background/primary-color
@@ -56,7 +56,7 @@
     <item>
       <p>Update the system databases:</p>
       <screen its:translate="no">
-        <output style="prompt">#</output> <input>dconf update</input>
+        <output style="prompt"># </output><input>dconf update</input>
 </screen>
     </item>
   </steps>
