@@ -14,18 +14,28 @@
 
 <title>Set autostart applications</title>
 
-  <p>To enable a number of users start a few applications at the start of their
-  computers, you need to create autostart files in system-wide desktops.</p>
+  <p>To start an application automatically on the startup,
+  you need to create a desktop file in the system directory.</p>
 
 <steps>
-<title>How to create an autostart list?</title>
-  <item><p>Open the <file>/etc/xdg/autostart/</file> directory.</p></item>
-  <item><p>Create autostart files in the desktop format (an extension of 
-  ".desktop") and save them.</p></item>
-  <item><p>Insert the list of the applications in the files.</p></item>
+<title>To create a desktop file for an autostart application:</title>
+  <item><p>In the <file>/etc/xdg/autostart/</file> directory, create a desktop
+  file.</p></item>
+  <item><p>Insert a desktop file entry for the autostart application into the
+  desktop file.</p></item>
 </steps>
 
+<p>Here is an example of a desktop file content:</p>
+<code>
+[Desktop Entry]
+Type=Application
+Name=Files
+Exec=nautilus -n
+OnlyShowIn=GNOME;Unity;
+AutostartCondition=GSettings org.gnome.desktop.background show-desktop-icons
+</code>
+
 <note>
-  <p>Follow the GNOME format for desktop entries.</p>
+  <p>Make sure that the entries in your desktop file follow the GNOME format.</p>
 </note>
 </page>
