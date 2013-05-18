@@ -345,6 +345,7 @@ HELP_FILES = \
 	session-screenlocks.page \
 	settings-sharing.page \
 	sharing.page \
+	sharing-bluetooth.page \
 	sharing-desktop.page \
 	sharing-media.page \
 	shell-apps-favorites.page \
