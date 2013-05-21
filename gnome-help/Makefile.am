@@ -185,7 +185,7 @@ HELP_FILES = \
 	documents-print.page \
 	documents-search.page \
 	documents-select.page \
-        documents-tracker.page \
+	documents-tracker.page \
 	documents-viewgrid.page \
 	documents-view.page \
 	files-autorun.page \
@@ -338,6 +338,7 @@ HELP_FILES = \
 	privacy-history-recent-off.page \
 	privacy-name-visibility.page \
 	privacy-purge.page \
+	privacy-screen-lock.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
 	session-formats.page \
@@ -376,7 +377,7 @@ HELP_FILES = \
 	status-icons.page \
 	tips-specialchars.page \
 	tips.page \
-        translate.page \
+	translate.page \
 	user-accounts.page \
 	user-add.page \
 	user-addguest.page \
