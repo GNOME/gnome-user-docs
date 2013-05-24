@@ -23,8 +23,14 @@
       <email its:translate="no">kittykat3756@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email its:translate="no">pknbe@volny.cz</email>
+      <years>2013</years>
+    </credit>
 
-    <desc>Edit a <sys its:translate="no">GDM</sys> <sys its:translate="no">dconf</sys> profile to display an image on the login screen.</desc>
+    <desc>Edit a <sys its:translate="no">GDM</sys> <sys its:translate="no">dconf</sys>
+     profile to display an image on the login screen.</desc>
    </info>
 
   <title>Add a greeter logo to the login screen</title>
@@ -56,13 +62,22 @@ logo='<input>/usr/share/pixmaps/logo/greeter-logo.png</input>'
     from <sys its:translate="no">GSettings</sys> override files.</p>
   </note>
 
-<!--
-<section id="prob-update">
+<section id="prob-login-logo-update">
   <title>What if the logo does not update?</title>
-
-  TODO
+  
+  <p>Make sure that you have run the <cmd its:translate="no">dconf update</cmd>
+   command to update the system databases.</p>
+  
+  <p>You can also restart <sys its:translate="no">GDM</sys> to make sure that
+   the settings are properly reloaded. To do so, run the following command:</p>
+  
+  <p><cmd>systemctl restart gdm.service</cmd></p>
+  
+  <note>
+  <p>Keep in mind that restarting the service interrupts any currently running
+   GNOME session.</p>
+  </note>
 
 </section>
--->
 
 </page>
