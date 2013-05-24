@@ -17,7 +17,7 @@
       <email its:translate="no">mdhillca@gmail.com</email>
       <years>2012</years>
     </credit>
-    <credit type="author copyright">
+    <credit type="editor">
       <name>Jana Svarova</name>
       <email its:translate="no">jana.svarova@gmail.com</email>
       <years>2013</years>
@@ -28,7 +28,8 @@
       <years>2013</years>
     </credit>
 
-    <desc>Edit a <sys its:translate="no">GDM</sys> <sys its:translate="no">dconf</sys> profile to display a text banner on the login screen.</desc>
+    <desc>Edit a <sys its:translate="no">GDM</sys> <sys its:translate="no">dconf</sys>
+    profile to display a text banner on the login screen.</desc>
   </info>
 
   <title>Add text to the login screen</title>
@@ -38,48 +39,51 @@
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-  <p>The text banner on the login screen is controlled by the
-  <cmd>org.gnome.login-screen.banner-message-enable</cmd> and
-  <cmd>org.gnome.login-screen.banner-message-text</cmd>
-  <sys its:translate="no">GSettings</sys> keys.
-  <sys its:translate="no">GDM</sys> uses its own
-  <sys its:translate="no">dconf</sys> profile. To change settings in this
-  profile, add a key file to the
-  <file its:translate="no">/etc/dconf/db/gdm.d</file> directory and run
-  <cmd its:translate="no">dconf update</cmd>.</p>
+  <p>The text banner on the login screen is controlled by the following
+  <sys its:translate="no">GSettings</sys> keys:</p>
+<screen>
+org.gnome.login-screen.banner-message-enable
+org.gnome.login-screen.banner-message-text
+</screen> 
+  <p>The first key enables showing the banner message, the second is used to
+  show the text banner message in the login window.</p>
 
-  <listing>
-    <title>Sample <file its:translate="no">/etc/dconf/db/gdm.d/01-banner-message</file> file</title>
-      <code its:translate="no">[org/gnome/login-screen]
+<steps>
+  <title>To add text to the login screen:</title>
+  <item><p>Add a key file to the
+  <file its:translate="no">/etc/dconf/db/gdm.d</file> directory and name it,
+  for example, <file>01-banner-message</file>.</p></item>
+  <item><p>Put the following content to the file:</p>
+<screen its:translate="no">[org/gnome/login-screen]
 banner-message-enable=true
 banner-message-text='<input its:translate="yes">Type the banner message here.</input>'
-</code>
-  </listing>
+</screen>
+  </item>
+  <item><p>Run the <cmd its:translate="no">dconf update</cmd> command.</p></item>
+</steps>
 
-  <note>
-    <p><sys its:translate="no">dconf</sys> key files are slightly different
-    from <sys its:translate="no">GSettings</sys> override files.</p>
-  </note>
+  <p>Note that <sys its:translate="no">dconf</sys> key files are slightly different
+  from <sys its:translate="no">GSettings</sys> override files.</p>
 
-<!-- TODO
-<section>
+<!--
+<section id="not-display">
   <title>What if the banner message does not display?</title>
-
+  <p></p>
   <comment>
     <cite>Kat</cite>
     <p>Apparently the message may not be displayed if the theme does not
     support it. Find out if this is really the case and how to check the
     theme.</p>
   </comment>
-
+pokud nema podporu, nemusi se zobrazit
 </section>
+
 
 <section id="prob-update">
   <title>What if the banner message does not update?</title>
 
-  TODO
-
 </section>
+make sure that you run the cmd everytime you change.. 
 -->
 
 </page>
