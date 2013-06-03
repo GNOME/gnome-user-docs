@@ -2,7 +2,7 @@
       type="topic" style="task"
       id="servers-list">
   <info>
-    <revision version="0.1" date="2012-10-08" status="draft"/>
+    <revision version="0.2" date="2013-06-03" status="draft"/>
     <link type="guide" xref="index" group="net" />
 
     <credit type="author copyright">
@@ -10,40 +10,53 @@
       <email>matthias.clasen@gmail.com</email>
       <years>2012</years>
     </credit>
-
    <credit type="editor">
       <name>Jana Svarova</name>
      <email>jana.svarova@gmail.com</email>
       <years>2013</years>
     </credit>
-  <desc>How do I make it easy for my users to access file shares?</desc>
+   <credit type="editor">
+      <name>Petr Kovar</name>
+     <email>pknbe@gvolny.cz</email>
+      <years>2013</years>
+    </credit>
+
+  <desc>How do I make it easy for different users to access different file shares?</desc>
   
   </info>
 
-  <title>Default server list</title>
+  <title>Configure a default server list</title>
 
  <comment>
     <cite date="2012-10-08" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-  <p>Nautilus stores a list of servers in the XBEL format file
-  <file>~/.config/nautilus/servers</file>. The list can be pre-populated in
-  this file.</p>
+  <p><app>Nautilus</app> (the <app>Files</app> application) stores a list of
+  file-sharing servers in the file <file>~/.config/nautilus/servers</file> in
+  the XBEL format. Add the list of file-sharing servers to that file to make file
+  shares easily accessible to your user.</p>
+  
+  <note style="tip">
+  <p><em>XBEL</em> (<em>XML Bookmark Exchange Language</em>) is an XML standard
+  that lets you share URIs (Uniform Resource Identifiers). In GNOME, XBEL is used
+  to share desktop bookmarks in applications such as <app>Nautilus</app>.</p>
+  </note>
 
-  <p>See the following example of the XBEL file content:</p>
-
-<code>
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xbel version="1.0"
+<example>
+<p>An example of the <file>~/.config/nautilus/servers</file> file:</p>
+<code><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
-      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"&gt;
-   &lt;bookmark href="ftp://ftp.gnome.org/"&gt;
-      &lt;title&gt;GNOME FTP&lt;/title&gt;
-   &lt;/bookmark&gt;
-&lt;/xbel&gt;
-</code>
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info">
+   <bookmark href="]]><input><![CDATA[ftp://ftp.gnome.org/]]></input><![CDATA[">
+      <title>]]><input>GNOME FTP</input><![CDATA[</title>
+   </bookmark>
+</xbel>
+]]></code>
+  <p>In the example above, <app>Nautilus</app> creates a bookmark titled
+  <em>GNOME FTP</em> with the URI <code>ftp://ftp.gnome.org/</code>.</p>
+</example>
 
-  <p>In the example above, Nautilus creates a bookmark for the GNOME FTP server 
-  at ftp://ftp.gnome.org/.</p>
 </page>
