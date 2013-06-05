@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="background">
   <info>
@@ -7,24 +8,32 @@
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
-      <email>matthias.clasen@gmail.com</email>
+      <email its:translate="no">matthias.clasen@gmail.com</email>
       <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Jana Svarova</name>
+      <email its:translate="no">jana.svarova@gmail.com</email>
+      <years>2013</years>
     </credit>
 
     <desc>Set the default desktop background using a GSettings override</desc>
    </info>
 
-  <title>Setting the default desktop background</title>
+  <title>Set the default desktop background</title>
 
-  <p>Install an <link xref="overrides">override</link> for the
-  <cmd>org.gnome.desktop.background.picture-uri</cmd> gsettings key. As an
-  example, here is the file
-  <file>/usr/share/glib-2.0/schemas/org.gnome.desktop.background.fedora.gschema.override</file>
-  that is used in Fedora 17:</p>
+  <p>To set the default desktop background, you need to override the original
+  default setting. To do so, use the
+  <cmd>org.gnome.desktop.background.picture-uri</cmd> gsettings key. Below is
+  a concrete example how to do so in the terminal.</p>
 
-<code>
-[org.gnome.desktop.background]
-picture-uri='file:///usr/share/backgrounds/beefy-miracle/default/beefy-miracle.xml'
-</code>
+<steps>
+  <item><p>Insert the picture you would like to have as the desktop background
+  in the <file>/usr/share/backgrounds/gnome/</file> directory.</p></item>
+  <item><p>Open the terminal.</p></item>
+  <item><p>Run the
+  <cmd>gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/beefy-miracle/default/beefy-miracle.xml'</cmd>
+  command.</p></item>
+</steps>
 
 </page>
