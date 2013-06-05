@@ -53,7 +53,7 @@ org.gnome.login-screen.banner-message-text
   <item><p>Add a key file to the
   <file its:translate="no">/etc/dconf/db/gdm.d</file> directory and name it,
   for example, <file>01-banner-message</file>.</p></item>
-  <item><p>Put the following content to the file:</p>
+  <item><p>Add the following content to the file:</p>
 <screen its:translate="no">[org/gnome/login-screen]
 banner-message-enable=true
 banner-message-text='<input its:translate="yes">Type the banner message here.</input>'
@@ -65,25 +65,57 @@ banner-message-text='<input its:translate="yes">Type the banner message here.</i
   <p>Note that <sys its:translate="no">dconf</sys> key files are slightly different
   from <sys its:translate="no">GSettings</sys> override files.</p>
 
+<list>
+<title>Trouleshooting</title>
+  <item><p>If the banner message does not show up, make sure you have run the
+  <cmd>dconf update</cmd> command.</p></item>
+  <item><p>In case the banner message does not update, try to restart
+  <sys>GDM</sys>. (To do so, run the <cmd>systemctl restart gdm.service</cmd>
+  command.)</p></item>
+</list>
+
+<note>
+  <p>You should keep the banner message reasonably short.</p>
+</note>
+
 <!--
 <section id="not-display">
   <title>What if the banner message does not display?</title>
-  <p></p>
   <comment>
     <cite>Kat</cite>
     <p>Apparently the message may not be displayed if the theme does not
     support it. Find out if this is really the case and how to check the
     theme.</p>
   </comment>
-pokud nema podporu, nemusi se zobrazit
 </section>
-
 
 <section id="prob-update">
   <title>What if the banner message does not update?</title>
 
 </section>
-make sure that you run the cmd everytime you change.. 
 -->
 
+<!--
+#gnome-os:
+<pmkovar> mclasen: so no need to cover questions like What if the banner message does not display? or What if the banner message does not update? in the login banner topic?
+<fmuellner> if the latter is false, the message in the former doesn't matter
+<pmkovar> fmuellner: right, we already have this documented 
+<fmuellner> pmkovar: then I  guess you are covered :)
+<pmkovar> fmuellner: cool, thanks :-)
+<pmkovar> jsvarova: ^ ;-)
+<mclasen> you could include a reminder to keep the message reasonably short
+<mclasen> do you explain the logo support in the same page ?
+<pmkovar> mclasen: not yet. are there any special keys for that one?
+<pmkovar> will include that reminder, thanks.
+<pmkovar>  mclasen:  actually, we have a separate page for the logo topic: https://git.gnome.org/browse/gnome-user-docs/tree/system-admin-guide/C/login-logo.page
+<mclasen> fmuellner: whats the logo key ?
+<mclasen> oh, ok
+<pmkovar> eg. /etc/dconf/db/gdm.d/01-logo i guess?
+<pmkovar> on that page, we have drafted a troubleshooting section titled What if the logo does not update?
+<pmkovar> fmuellner: anything we could cover there ^ ?
+<fmuellner> mmh
+<fmuellner> I *think* it's "restart gdm"
+<fmuellner> e.g. I don't think dconf sends change notifications for keys set via overrides
+<pmkovar>  fmuellner: ok
+-->
 </page>
