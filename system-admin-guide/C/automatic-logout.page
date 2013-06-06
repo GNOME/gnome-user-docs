@@ -18,14 +18,17 @@
 
 <title>Automatic logout</title>
 
-  <p>To configure an end of a user session after a specified number of seconds
-  of idle, the following keys need to be changed:</p>
+  <p>User sessions that have been idle for a specific period of time can be
+  ended automatically. Use the
+  <link href="man:gsettings"><cmd>gsettings</cmd></link> commandline tool to
+  enable this and to set the timeout. The following keys need to be changed:</p>
 <screen>
 org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout
 org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type
 org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout
 org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type
 </screen>
+
   <p>As you can see from the list, the keys differ according to the power mode:
   whether the computer is on battery (-battery-) or on ac power (-ac-).</p>
 
