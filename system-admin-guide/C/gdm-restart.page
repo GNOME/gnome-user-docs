@@ -1,0 +1,38 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="gdm-restart">
+
+  <info>
+    <link type="guide" xref="index" group="login" />
+    <revision pkgversion="3.8" version="0.1" date="2013-06-05" status="draft"/>
+
+    <credit type="author">
+      <name>Jana Svarova</name>
+      <email its:translate="no">jana.svarova@gmail.com</email>
+      <years>2013</years>
+   </credit>
+   <credit type="author">
+      <name>Petr Kovar</name>
+     <email its:translate="no">pknbe@gvolny.cz</email>
+      <years>2013</years>
+    </credit>
+
+    <desc>How to restart <sys its:translate="no">GDM</sys>.</desc>
+  </info>
+  
+<title>Restart <sys its:translate="no">GDM</sys></title>
+
+  <p>In certain cases you might want to restart <sys its:translate="no">GDM</sys>
+  to make sure that the settings you have made are properly reloaded.
+  On <sys its:translate="no">systemd</sys>-based systems, run the following
+  command:</p>
+
+  <p><cmd>systemctl restart gdm.service</cmd></p>
+
+  <note>
+  <p>Keep in mind that restarting the service interrupts any currently running
+   GNOME session.</p>
+  </note>
+
+</page>
