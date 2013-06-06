@@ -22,20 +22,29 @@
   ended automatically. Use the
   <link href="man:gsettings"><cmd>gsettings</cmd></link> commandline tool to
   enable this and to set the timeout. The following keys need to be changed:</p>
-<screen>
-org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout
-org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type
-org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout
-org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type
-</screen>
 
-  <p>As you can see from the list, the keys differ according to the power mode:
-  whether the computer is on battery (-battery-) or on ac power (-ac-).</p>
-
-  <p>Firstly, you can set what kind of automatic logout should
-  be used (<var>'hibernate'</var>, <var>'suspend'</var> or <var>'do nothing'</var>)
-  and, secondly, the number of seconds the user has been inactive to log them
-  out. See the examples below.</p>
+<terms>
+  <item>
+  <title>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</title>
+    <p>sets the number of seconds the user has been inactive to log them out
+    when the computer is on ac</p>
+  </item>
+  <item>
+  <title>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</title>
+    <p>sets the type of automatic logout should be used (<var>'hibernate'</var>,
+    <var>'suspend'</var> or <var>'do nothing'</var>) when the computer is on ac</p>
+  </item>
+  <item>
+  <title>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout</title>
+    <p>sets the number of seconds the user has been inactive to log them out
+    when the computer is on battery</p>
+  </item>
+  <item>
+  <title>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</title>
+    <p>sets the type of automatic logout should be used (<var>'hibernate'</var>,
+    <var>'suspend'</var> or <var>'do nothing'</var>) when the computer is on battery</p>
+  </item>
+</terms>
 
 <steps>
   <title>To suspend the computer after 5 minutes of idle:</title>
@@ -50,7 +59,7 @@ org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type
   set by default.</p>
 </note>
 
-  <p>Whereas the first example concerned a computer on alternating current,
+  <p>Whereas the first example concerned a computer on ac,
   the second example deals with a computer on battery.</p>
 
 <steps>
