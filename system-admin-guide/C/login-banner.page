@@ -4,8 +4,10 @@
       id="login-banner">
 
   <info>
-    <link type="guide" xref="index" group="login" />
     <revision pkgversion="3.8" version="0.1" date="2013-04-19" status="review"/>
+    <link type="guide" xref="index" group="login" />
+    <link type="seealso" xref="gdm-restart"/>
+
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -66,12 +68,11 @@ banner-message-text='<input its:translate="yes">Type the banner message here.</i
   from <sys its:translate="no">GSettings</sys> override files.</p>
 
 <list>
-<title>Trouleshooting</title>
+<title>Troubleshooting</title>
   <item><p>If the banner message does not show up, make sure you have run the
   <cmd>dconf update</cmd> command.</p></item>
-  <item><p>In case the banner message does not update, try to restart
-  <sys>GDM</sys>. (To do so, run the <cmd>systemctl restart gdm.service</cmd>
-  command.)</p></item>
+  <item><p>In case the banner message does not update, try restarting
+  <sys>GDM</sys>.</p></item>
 </list>
 
 <note>
