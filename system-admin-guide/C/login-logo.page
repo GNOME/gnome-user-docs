@@ -7,6 +7,7 @@
     <link type="guide" xref="index" group="login" />
     <revision version="0.1" date="2012-05-21" status="draft"/>
     <revision pkgversion="3.8" version="0.1" date="2013-04-24" status="review"/>
+    <link type="seealso" xref="gdm-restart"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -45,18 +46,23 @@
   <cmd>org.gnome.login-screen.logo</cmd>
   <sys its:translate="no">GSettings</sys> key.
   <sys its:translate="no">GDM</sys> uses its own
-  <sys its:translate="no">dconf</sys> profile. To change settings in this
-  profile, add a key file to the
-  <file its:translate="no">/etc/dconf/db/gdm.d</file> directory and run
-  <cmd its:translate="no">dconf update</cmd>.</p>
+  <sys its:translate="no">dconf</sys> profile. Change settings in the
+  <sys its:translate="no">dconf</sys> profile to add a greeter logo to the login
+  screen.</p>
 
-  <listing>
-    <title>Sample <file its:translate="no">/etc/dconf/db/gdm.d/01-logo</file>
-    file</title>
-    <code its:translate="no">[org/gnome/login-screen]
+<steps>
+  <title>Change settings in the <sys its:translate="no">dconf</sys> profile</title>
+  <item><p>Add a key file to the <file its:translate="no">/etc/dconf/db/gdm.d</file>
+  directory.</p></item>
+  <item><p>Run the <cmd its:translate="no">dconf update</cmd> command.</p></item>
+</steps>
+
+  <p>Here is a sample <file its:translate="no">/etc/dconf/db/gdm.d/01-logo</file>
+    file:</p>
+<code its:translate="no">[org/gnome/login-screen]
 logo='<input>/usr/share/pixmaps/logo/greeter-logo.png</input>'
 </code>
-  </listing>
+
 
   <note>
     <p><sys its:translate="no">dconf</sys> key files are slightly different
@@ -70,15 +76,7 @@ logo='<input>/usr/share/pixmaps/logo/greeter-logo.png</input>'
    command to update the system databases.</p>
   
   <p>You can also restart <sys its:translate="no">GDM</sys> to make sure that
-   the settings are properly reloaded. On <sys its:translate="no">systemd</sys>-based
-   systems, run the following command:</p>
-  
-  <p><cmd>systemctl restart gdm.service</cmd></p>
-  
-  <note>
-  <p>Keep in mind that restarting the service interrupts any currently running
-   GNOME session.</p>
-  </note>
+   the settings are properly reloaded.</p>
 
 </section>
 
