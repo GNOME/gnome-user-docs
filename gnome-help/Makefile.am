@@ -333,6 +333,7 @@ HELP_FILES = \
 	printing-differentsize.page \
 	printing-envelopes.page \
 	printing-inklevel.page \
+	printing-name-location.page \
 	printing-order.page \
 	printing-paperjam.page \
 	printing-select.page \
