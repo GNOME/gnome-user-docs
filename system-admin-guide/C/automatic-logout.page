@@ -20,35 +20,35 @@
 
   <p>User sessions that have been idle for a specific period of time can be
   ended automatically. Use the
-  <link href="man:gsettings"><cmd>gsettings</cmd></link> commandline tool to
+  <link href="man:gsettings"><cmd>gsettings</cmd></link> command-line tool to
   enable this and to set the timeout. The following keys need to be changed:</p>
 
 <terms>
   <item>
-  <title>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</title>
-    <p>sets the number of seconds the user has been inactive to log them out
-    when the computer is on ac</p>
+  <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</code></title>
+    <p>Sets the number of seconds the user has been inactive to log them out
+    when the computer is on ac.</p>
   </item>
   <item>
-  <title>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</title>
-    <p>sets the type of automatic logout should be used (<var>'hibernate'</var>,
-    <var>'suspend'</var> or <var>'do nothing'</var>) when the computer is on ac</p>
+  <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</code></title>
+    <p>Sets the type of automatic logout should be used (<var>'hibernate'</var>,
+    <var>'suspend'</var> or <var>'do nothing'</var>) when the computer is on ac.</p>
   </item>
   <item>
-  <title>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout</title>
-    <p>sets the number of seconds the user has been inactive to log them out
-    when the computer is on battery</p>
+  <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout</code></title>
+    <p>Sets the number of seconds the user has been inactive to log them out
+    when the computer is on battery.</p>
   </item>
   <item>
-  <title>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</title>
-    <p>sets the type of automatic logout should be used (<var>'hibernate'</var>,
-    <var>'suspend'</var> or <var>'do nothing'</var>) when the computer is on battery</p>
+  <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</code></title>
+    <p>Sets the type of automatic logout should be used (<var>'hibernate'</var>,
+    <var>'suspend'</var> or <var>'do nothing'</var>) when the computer is on battery.</p>
   </item>
 </terms>
 
 <steps>
   <title>To suspend the computer after 5 minutes of idle:</title>
-  <item><p>Open the terminal.</p></item>
+  <item><p>Open the terminal and become root.</p></item>
   <item><p>Run the
   <cmd>gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 300</cmd>
   command to set the number of seconds (5 minutes equals 300 seconds).</p></item>
@@ -64,7 +64,7 @@
 
 <steps>
   <title>To hibernate the computer after 10 minutes of idle:</title>
-  <item><p>Open the terminal.</p></item>
+  <item><p>Open the terminal and become root.</p></item>
   <item><p>Run the
   <cmd>gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 600</cmd>
   command to set the number of seconds (10 minutes equals 600 seconds).</p></item>
