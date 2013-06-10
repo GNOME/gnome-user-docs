@@ -4,7 +4,7 @@
       id="gdm-restart">
 
   <info>
-    <link type="guide" xref="index" group="login" />
+    <links type="guide" xref="index" group="login" />
     <revision pkgversion="3.8" version="0.1" date="2013-06-05" status="draft"/>
 
     <credit type="author">
@@ -18,21 +18,34 @@
       <years>2013</years>
     </credit>
 
-    <desc>How to restart <sys its:translate="no">GDM</sys>.</desc>
-  </info>
-  
-<title>Restart <sys its:translate="no">GDM</sys></title>
+    <desc>How to restart GDM.</desc>
 
-  <p>In certain cases you might want to restart <sys its:translate="no">GDM</sys>
-  to make sure that the settings you have made are properly reloaded.
-  On <sys its:translate="no">systemd</sys>-based systems, run the following
-  command:</p>
+</info>
 
-  <p><cmd>systemctl restart gdm.service</cmd></p>
+<title>Restart GDM</title>
+
+  <p>When you make changes to configuration of the login screen banner message,
+  login screen logo or login screen background, you need to restart
+  <sys its:translate="no">GDM</sys> to reload the new settings.</p>
 
   <note>
   <p>Keep in mind that restarting the service interrupts any currently running
-   GNOME session.</p>
+  GNOME session.</p>
   </note>
+  
+  <section id="restart-gdm-systemd">
+  
+  <title>Restart GDM on systemd-based systems</title>
+  <p>To restart the <sys its:translate="no">GDM</sys> service on
+  <sys its:translate="no">systemd</sys>-based systems, run the
+  following command:</p> 
+  <p><cmd>systemctl restart gdm.service</cmd></p>
+  
+  </section>
 
+<!-- 
+  <section id="other-systems">
+  <title>Restart GDM on other systems</title>
+  </section>
+-->
 </page>

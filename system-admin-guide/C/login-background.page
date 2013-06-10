@@ -27,6 +27,9 @@
 
   <title>Change the background of the login screen</title>
 
+<section id="change-background">
+<title>Change your background</title>
+
   <comment>
     <cite date="2012-11-07" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
     <p>Adapted from l-g-o SysAdminGuide page.</p>
@@ -44,17 +47,28 @@
   <item><p>Run the <input>dconf update</input> command.</p></item>
 </steps>
 
-  <p>Here is an example keyfile that could be stored as <file>/etc/dconf/db/gdm.d/corp-login</file>:</p>
+  <p>Here is an example keyfile that you can store as
+  <file>/etc/dconf/db/gdm.d/corp-login</file>:</p>
 
 <code>
 [org/gnome/desktop/background]
-picture-uri='file:///opt/corp/background.jpg'
+picture-uri='file:///<input its:translate="yes">opt/corp/background.jpg</input>'
 </code>
 
-
   <note>
-    <p>Note that these DConf key files are slightly different from gsettings
-    override files.</p>
+    <p><sys its:translate="no">dconf</sys> key files are slightly different
+    from <sys its:translate="no">GSettings</sys> override files.</p>
   </note>
+</section>
 
+<section id="troubleshooting-background">
+  <title>Troubleshooting: what if the background does not update?</title>
+  
+  <p>Make sure that you have run the <cmd its:translate="no">dconf update</cmd>
+  command to update the system databases.</p>
+
+  <p>In case the logo does not update, try restarting <sys>GDM</sys>. For more
+  information see <link xref="gdm-restart">Restart GDM</link>.</p>
+  
+</section>
 </page>

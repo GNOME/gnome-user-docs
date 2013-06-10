@@ -4,9 +4,9 @@
       id="login-logo">
 
   <info>
-    <link type="guide" xref="index" group="login" />
     <revision version="0.1" date="2012-05-21" status="draft"/>
     <revision pkgversion="3.8" version="0.1" date="2013-04-24" status="review"/>
+    <link type="guide" xref="index" group="login" />
     <link type="seealso" xref="gdm-restart"/>
 
     <credit type="author copyright">
@@ -42,11 +42,14 @@
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
+<section id="greeter-logo">
+  <title>Add a greeter logo</title>
+
   <p>The logo on the login screen is controlled by the
   <cmd>org.gnome.login-screen.logo</cmd>
-  <sys its:translate="no">GSettings</sys> key.
+  <sys its:translate="no">GSettings</sys> key. Since
   <sys its:translate="no">GDM</sys> uses its own
-  <sys its:translate="no">dconf</sys> profile. Change settings in the
+  <sys its:translate="no">dconf</sys> profile, change settings in the
   <sys its:translate="no">dconf</sys> profile to add a greeter logo to the login
   screen.</p>
 
@@ -57,26 +60,26 @@
   <item><p>Run the <cmd its:translate="no">dconf update</cmd> command.</p></item>
 </steps>
 
-  <p>Here is a sample <file its:translate="no">/etc/dconf/db/gdm.d/01-logo</file>
-    file:</p>
+  <p>Below is an example <file its:translate="no">/etc/dconf/db/gdm.d/01-logo</file>
+  file:</p>
 <code its:translate="no">[org/gnome/login-screen]
 logo='<input>/usr/share/pixmaps/logo/greeter-logo.png</input>'
 </code>
-
 
   <note>
     <p><sys its:translate="no">dconf</sys> key files are slightly different
     from <sys its:translate="no">GSettings</sys> override files.</p>
   </note>
+</section>
 
-<section id="prob-login-logo-update">
-  <title>What if the logo does not update?</title>
-  
+<section id="troubleshooting-logo">
+
+  <title>Troubleshooting: what if the logo does not update?</title>
   <p>Make sure that you have run the <cmd its:translate="no">dconf update</cmd>
-   command to update the system databases.</p>
-  
-  <p>You can also restart <sys its:translate="no">GDM</sys> to make sure that
-   the settings are properly reloaded.</p>
+  command to update the system databases.</p>
+
+  <p>In case the logo does not update, try restarting <sys>GDM</sys>. For more
+  information see <link xref="gdm-restart">Restart GDM</link>.</p>
 
 </section>
 
