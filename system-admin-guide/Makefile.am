@@ -9,7 +9,6 @@ HELP_MEDIA =
 HELP_FILES = \
 	background.page			\
 	backgrounds-extra.page		\
-	custom-session.page		\
 	dconf-custom-defaults.page	\
 	dconf-lockdown.page		\
 	dconf-nfs-home.page		\
