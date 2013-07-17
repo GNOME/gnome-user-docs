@@ -1,76 +1,99 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="automatic-logout">
 
-<info>
- 
-  <revision version="0.1" date="2013-03-19" status="draft"/>
-  <link type="guide" xref="index" group="net" />
+  <info>
+    <link type="guide" xref="index" group="session" />
+    <revision pkgversion="3.10" date="2013-07-17" status="incomplete"/>
+
     <credit type="author copyright">
-      <name>Jana Svarova</name>
-      <email>jana.svarova@gmail.com</email>
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
       <years>2013</years>
     </credit>
 
- <desc>How to end user sessions after a period of idle</desc>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-</info>
+    <desc>Automatically end an idle user session.</desc>
 
-<title>Automatic logout</title>
+  </info>
+
+  <title>Automatic logout</title>
 
   <p>User sessions that have been idle for a specific period of time can be
-  ended automatically. Use the
-  <link href="man:gsettings"><cmd>gsettings</cmd></link> command-line tool to
-  enable this and to set the timeout. The following keys need to be changed:</p>
+  ended automatically. You can set different behaviour based on whether the
+  machine is running from a battery or from mains power by setting the
+  corresponding dconf key, then locking it.</p>
 
-<terms>
-  <item>
-  <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</code></title>
-    <p>Sets the number of seconds the user has been inactive to log them out
-    when the computer is on ac.</p>
-  </item>
-  <item>
-  <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</code></title>
-    <p>Sets the type of automatic logout should be used (<var>'hibernate'</var>,
-    <var>'suspend'</var> or <var>'do nothing'</var>) when the computer is on ac.</p>
-  </item>
-  <item>
-  <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout</code></title>
-    <p>Sets the number of seconds the user has been inactive to log them out
-    when the computer is on battery.</p>
-  </item>
-  <item>
-  <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</code></title>
-    <p>Sets the type of automatic logout should be used (<var>'hibernate'</var>,
-    <var>'suspend'</var> or <var>'do nothing'</var>) when the computer is on battery.</p>
-  </item>
-</terms>
+  <p>To set automatic logout for a mains powered machine:</p>
 
-<steps>
-  <title>To suspend the computer after 5 minutes of idle:</title>
-  <item><p>Open the terminal and become root.</p></item>
-  <item><p>Run the
-  <cmd>gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 300</cmd>
-  command to set the number of seconds (5 minutes equals 300 seconds).</p></item>
-</steps>
+  <steps>
+    <item>
+      <p>Create a <code>user</code> profile in <file>/etc/dconf/profile/user</file>:</p>
+      <listing>
+        <code>
+user-db:user
+system-db:local
+</code>
+      </listing>
+    </item>
+    <item>
+      <p>Create a <code>local</code> database for machine-wide settings in
+      <file>/etc/dconf/db/local.d/00-autologout</file>:</p>
+      <listing>
+        <code>
+[org/gnome/settings-daemon/plugins/power]
+# Set the timeout to 900 seconds when on mains power
+sleep-inactive-ac-timeout=900
+# Set action after timeout to be logout when on mains power
+sleep-inactive-ac-type='logout'
+</code>
+      </listing>
+    </item>
+    <item>
+      <p>Override the user's setting and prevent the user from changing it in
+      <file>/etc/dconf/db/local.d/locks/autologout</file>:</p>
+      <listing>
+        <code>
+# Lock automatic logout settings
+/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-timeout
+/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type
+</code>
+</listing>
+    </item>
+    <item>
+      <p>Run <cmd>dconf update</cmd>.</p>
+    </item>
+  </steps>
 
-<note>
-  <p>You do not need to specify the type of logout as <var>'suspend'</var> is
-  set by default.</p>
-</note>
+  <!-- There will shortly be a way to get key descriptions using gsettings, we
+       should recommend this instead of listing the terms here. See
+       https://bugzilla.gnome.org/show_bug.cgi?id=668232 -->
+  <p>The following gsettings keys are of interest:</p>
+  <terms>
+    <item>
+      <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</code></title>
+      <p>The number of seconds that the computer needs to be inactive before it
+      goes to sleep if it is running from AC power.</p>
+    </item>
+    <item>
+      <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</code></title>
+      <p>What should happen when the timeout has passed if the computer is
+      running from AC power.</p>
+    </item>
+    <item>
+      <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout</code></title>
+      <p>The number of seconds that the computer needs to be inactive before it
+      goes to sleep if it is running from power.</p>
+    </item>
+    <item>
+      <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</code></title>
+      <p>What should happen when the timeout has passed if the computer is
+      running from battery power.</p>
+    </item>
+  </terms>
 
-  <p>Whereas the first example concerned a computer on ac,
-  the second example deals with a computer on battery.</p>
-
-<steps>
-  <title>To hibernate the computer after 10 minutes of idle:</title>
-  <item><p>Open the terminal and become root.</p></item>
-  <item><p>Run the
-  <cmd>gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 600</cmd>
-  command to set the number of seconds (10 minutes equals 600 seconds).</p></item>
-  <item><p>Run the
-  <cmd>gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'hibernate'</cmd>
-  command to set the type of logout.</p></item>
-</steps>
-
+  <p>You can run <cmd>gsettings range</cmd> on a key for a list of values which
+  you can use.</p>
 </page>
