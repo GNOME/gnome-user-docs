@@ -28,7 +28,6 @@ HELP_FILES = \
 	processes.page			\
 	screen-locking.page		\
 	servers-list.page		\
-	session-debug.page		\
 	user-autologin.page		\
 	user-session.page		\
 	vpn-list.page
