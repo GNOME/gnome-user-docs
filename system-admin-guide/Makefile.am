@@ -17,7 +17,6 @@ HELP_FILES = \
 	dconf-profiles.page		\
 	dconf-favorite-applications.page\
 	fonts.page			\
-	gsettings-browse.page		\
 	index.page			\
 	keyboard-layout.page		\
 	login-background.page		\
