@@ -4,14 +4,19 @@
       id="user-session">
 
   <info>
-    <revision pkgversion="3.4.2" version="0.1" date="2012-12-01" status="draft"
-    />
     <link type="guide" xref="index" group="session" />
+    <revision pkgversion="3.4.2" version="0.1" date="2012-12-01" status="draft" />
+    <revision pkgversion="3.8" date="2013-08-06" status="review" />
 
     <credit type="author copyright">
       <name>minnie_eg</name>
       <email>amany.elguindy@gmail.com</email>
       <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
     </credit>
 
     <desc>Specify the default session for a user.</desc>
@@ -19,7 +24,7 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
    </info>
 
-  <title>Users default sessions</title>
+  <title>User default sessions</title>
 
   <comment>
     <cite date="2012-11-20"
@@ -29,12 +34,25 @@
     users.</p>
   </comment>
 
-  <p>To specify a default session for a user, edit the session name in the
-  <var>username</var>'s file under the following location as:</p>
-  <screen>/var/lib/AccountsService/users/<var>username</var></screen>
+  <p>You can retrieve the default session from a new program called
+  <app>AccountsService</app>. <app>AccountsService</app> stores this information
+  in the <file>/var/lib/AccountsService</file> directory.</p>
+
+  <p>To specify a default session for a user, update the user's
+  <app>account service</app> in
+  <file>/var/lib/AccountsService/users/<var>username</var></file>.
+  In the following example, GNOME Classic has been set as the default session:</p>
   <screen><output>[User]
   Language=
-  XSession=<input>session name</input>
+  XSession=<input>gnome-classic</input>
   </output></screen>
+  
+  <p>The list of sessions which you can choose from can be found in
+  <file>.desktop</file> files in the
+  <file>/usr/share/xsessions</file> directory.</p>
 
+<note style="note">
+  <p>In GNOME 2, the .dmrc file in the home directory was used to create default
+  sessions. This .dmrc file is no longer used.</p>
+</note>
 </page>
