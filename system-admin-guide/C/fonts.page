@@ -11,22 +11,28 @@
 <years>2012</years>
 </credit>
 
+<credit type="editor">
+<name>Jana Svarova</name>
+<email>jana.svarova@gmail.com</email>
+<years>2013</years>
+</credit>
+
 <desc>Make extra fonts available to users</desc>
 </info>
 
 <title>Adding fonts</title>
 
-<p>To make extra fonts available to users:</p>
-
 <steps>
-  <item><p>Copy the fonts into a subdirectory of <file>/usr/local/share/fonts</file>.</p></item>
+<title>To make extra fonts available to users:</title>
+  <item><p>Install the font files into the
+  <file>/usr/share/fonts</file> subdirectory.</p></item>
   <item>
-    <p>Update the font cache</p>
-    <screen> <output style="prompt"># </output> <input>fc-cache</input> </screen>
+    <p>Update the font cache by running the following command as root:</p>
+    <screen>fc-cache</screen>
   </item>
 </steps>
 
 <p>The new fonts will be available as soon as you update the font cache.
-User sessions don't have to be restarted to see the changes.</p>
+User sessions do not have to be restarted to see the changes.</p>
 
 </page>
