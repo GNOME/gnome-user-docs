@@ -1,46 +1,82 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic" style="task"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="guide" style="task"
       id="dconf">
 
-<info>
-  <link type="guide" xref="index" group="tools" />
-  <link type="seealso" xref="dconf-custom-default-values" />
-  <link type="seealso" xref="dconf-profiles" />
-  <revision version="0.1" date="2013-03-25" status="draft"/>
-  
-  <credit type="author">
-    <name>Jana Švárová</name>
-    <email>jana.svarova@gmail.com</email>
-  </credit>
-  
+  <info>
+    <link type="guide" xref="index"/>
+    <revision pkgversion="3.8" date="2013-08-08" status="incomplete"/>
+
     <credit type="author copyright">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+      <years>2013</years>
+    </credit>
+    <credit type="collaborator">
       <name>Ryan Lortie</name>
-      <email>desrt@desrt.ca</email>
-      <years>2012</years>
-   </credit>
+      <email its:translate="no">desrt@desrt.ca</email>
+      <years>2013</years>
+    </credit>
+    <credit type="copyright editor">
+      <name></name>
+      <email its:translate="no"></email>
+      <years></years>
+    </credit>
 
-  <desc>This page defines the dconf tool and the dconf profiles.</desc>
-</info>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-<title>dconf and its profiles</title>
-  
-<section id="dconf">
-  <title>dconf</title>
-  <p>The <sys>dconf</sys> tool collects a system's hardware and software
-  configuration. It allows to take your system configuration with you on the
-  road, compare identical systems to troubleshoot hardware or software 
-  problems.</p>
-</section>
+    <desc>What is <sys>dconf</sys>? How can it be used to edit configurations?</desc>
+  </info>
+
+  <title>User and system settings</title>
+
+  <!-- TODO: improve wording throughout the page -->
+  <p><sys>dconf</sys> is a key-based configuration system which manages user
+  settings. It is the backend for <sys>GSettings</sys>. <sys>dconf</sys>
+  manages a range of different settings, including <sys>GDM</sys>, application
+  and proxy settings.</p>
+
+  <!-- TODO: changes are written to the first database in the list, but
+       multiple databases can be writable. -->
+  <p>A <em>profile</em> is a list of configuration databases. The first
+  database in a profile is the write-to database and the remaining databases
+  are read-only. Each of the system databases is generated from a key file
+  directory. Each key file directory contains one or more key files. Each key
+  file contains at least one dconf patch and one or more keys and the
+  corresponding values.</p>
+
+  <p>Key pairs which are set in a <sys>dconf</sys> <em>profile</em> will
+  override the default settings unless there is a problem with the value that
+  you have set.</p>
+
+  <!-- TODO: databases -->
+  <p></p>
 
 <section id="profile">
-  <title>Profile</title>
-  <p><sys>dconf</sys> is based on the concept of a 'profile'. A profile is a
-  list of configuration databases.</p>
-
-  <p>The <sys>dconf</sys> tool stores its profiles in text files. 
-  $DCONF_PROFILE can specify a relative path to the file from the 
-  <file>/etc/dconf/profile/</file> directory, or an absolute path 
-  (such as in a user's home directory).</p>
-  
+  <!-- TODO: explain the profile syntax (maybe new page) -->
+  <title>Profiles</title>
+  <p>You will usually want your <sys>dconf</sys> profile to consist of a
+  <em>user database</em> and at least one system database. The profile must
+  list one database per line.</p>
+  <p>The first line in a profile is the database that changes are written to. It
+  is usually <code>user-db:<input>user</input></code>. <input>user</input> is
+  the name of the user database which can normally be found in
+  <file>~/.config/dconf</file>.</p>
+  <example>
+    <listing>
+      <title>Sample profile</title>
+      <code its:translate="no">user-db:user
+system-db:<input>local</input>
+system-db:<input>site</input></code>
+    </listing>
+  </example>
+  <!--TODO: explain local and site -->
 </section>
+
+<section id="key file">
+  <!-- TODO: explain the key file syntax (maybe new page) -->
+  <p></p>
+
+</section>
+
 </page>
