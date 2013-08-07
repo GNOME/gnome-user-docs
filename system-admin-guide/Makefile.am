@@ -11,6 +11,7 @@ HELP_FILES = \
 	backgrounds-extra.page		\
 	dconf-custom-defaults.page	\
 	dconf-lockdown.page		\
+	dconf-keyfiles.page		\
 	dconf-nfs-home.page		\
 	dconf-profiles-edit.page	\
 	dconf-profiles.page		\
