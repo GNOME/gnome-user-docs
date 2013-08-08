@@ -28,23 +28,26 @@
   <title>Change the background of the login screen</title>
 
 <section id="change-background">
-<title>Change your background</title>
 
   <comment>
     <cite date="2012-11-07" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-  <p>Change of the background of the login screen is controlled by the
+  <p>The background of the login screen is controlled by the
   <cmd>org.gnome.desktop.background.picture-uri</cmd>
   <sys its:translate="no">GSettings</sys> key. <app>GDM</app> uses its own
-  <sys its:translate="no">dconf</sys> profile. To change settings in this profile,
-  follow these steps:</p>
+  <sys its:translate="no">dconf</sys> profile.</p>
 
 <steps>
-<title>Change settings in the <sys its:translate="no">dconf</sys> profile</title>
+<title>Change settings in the <app>GDM</app> <sys its:translate="no">dconf</sys> profile</title>
   <item><p>Place a keyfile in the <file>/etc/dconf/db/gdm.d</file> directory.</p></item>
-  <item><p>Run the <input>dconf update</input> command.</p></item>
+    <item>
+      <p>Update the system databases:</p>
+      <screen its:translate="no">
+        <output style="prompt"># </output><input>dconf update</input>
+      </screen>
+    </item>
 </steps>
 
   <p>Here is an example keyfile that you can store as
@@ -56,8 +59,9 @@ picture-uri='file:///<input its:translate="yes">opt/corp/background.jpg</input>'
 </code>
 
   <note>
-    <p><sys its:translate="no">dconf</sys> key files are slightly different
-    from <sys its:translate="no">GSettings</sys> override files.</p>
+    <p><sys its:translate="no">dconf</sys>
+    <link xref="dconf-keyfiles">keyfiles</link> are slightly different from
+    <sys its:translate="no">GSettings</sys> override files.</p>
   </note>
 </section>
 

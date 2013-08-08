@@ -41,25 +41,23 @@
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-<section id="display-login-banner">
-  <title>Display a text banner</title>
   <p>The text banner on the login screen is controlled by the following
   <sys its:translate="no">GSettings</sys> keys:</p>
 
 <terms>
   <item>
       <title><code>org.gnome.login-screen.banner-message-enable</code></title>
-      <p>enables showing the banner message</p>
+      <p>enables showing the banner message.</p>
   </item>
   <item>
   <title><code>org.gnome.login-screen.banner-message-text</code></title>
-      <p>shows the text banner message in the login window</p>
+      <p>shows the text banner message in the login window.</p>
   </item>
 </terms>
 
 <steps>
   <title>Display a text banner on the login screen:</title>
-  <item><p>Add a key file to the
+  <item><p>Add a keyfile to the
   <file its:translate="no">/etc/dconf/db/gdm.d</file> directory and name it,
   for example, <file>01-banner-message</file>.</p></item>
   <item><p>Add the following content to the file:</p>
@@ -72,10 +70,10 @@ banner-message-text='<input its:translate="yes">Type the banner message here.</i
 </steps>
 
 <note>
-  <p><sys its:translate="no">dconf</sys> key files are slightly different
-  from <sys its:translate="no">GSettings</sys> override files.</p>
+  <p><sys its:translate="no">dconf</sys>
+  <link xref="dconf-keyfiles">keyfiles</link> are slightly different from
+  <sys its:translate="no">GSettings</sys> override files.</p>
 </note>
-</section>
 
 <section id="troubleshooting-banner">
 <title>Troubleshooting: what if the banner message does not update?</title>

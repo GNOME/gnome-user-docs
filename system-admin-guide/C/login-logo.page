@@ -42,9 +42,6 @@
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-<section id="greeter-logo">
-  <title>Add a greeter logo</title>
-
   <p>The logo on the login screen is controlled by the
   <cmd>org.gnome.login-screen.logo</cmd>
   <sys its:translate="no">GSettings</sys> key. Since
@@ -54,8 +51,8 @@
   screen.</p>
 
 <steps>
-  <title>Change settings in the <sys its:translate="no">dconf</sys> profile.</title>
-  <item><p>Add a key file to the <file its:translate="no">/etc/dconf/db/gdm.d</file>
+  <title>Change settings in the <sys its:translate="no">dconf</sys> profile</title>
+  <item><p>Add a keyfile to the <file its:translate="no">/etc/dconf/db/gdm.d</file>
   directory.</p></item>
   <item><p>Run the <cmd its:translate="no">dconf update</cmd> command.</p></item>
 </steps>
@@ -67,10 +64,10 @@ logo='<input>/usr/share/pixmaps/logo/greeter-logo.png</input>'
 </code>
 
   <note>
-    <p><sys its:translate="no">dconf</sys> key files are slightly different
-    from <sys its:translate="no">GSettings</sys> override files.</p>
+    <p><sys its:translate="no">dconf</sys>
+    <link xref="dconf-keyfiles">keyfiles</link> are slightly different from
+    <sys its:translate="no">GSettings</sys> override files.</p>
   </note>
-</section>
 
 <section id="troubleshooting-logo">
 

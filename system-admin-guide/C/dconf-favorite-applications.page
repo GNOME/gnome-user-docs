@@ -75,16 +75,16 @@
   database files using <sys its:translate="no">dconf</sys>. System database
   files are found in <file its:translate="no">/etc/dconf/db</file>, but cannot
   be edited because they are written in GVDB format. In order to change system
-  settings using a text editor, you can modify key files found in
-  key file directories. Each key file directory corresponds to a particular
+  settings using a text editor, you can modify keyfiles found in
+  keyfile directories. Each keyfile directory corresponds to a particular
   system database file and has the same name as the database file, appended
-  with a '.d' extension. All key file directories are found in
+  with a '.d' extension. All keyfile directories are found in
   <file its:translate="no">/etc/dconf/db</file>. The following code snippets
   edit the <sys its:translate="no">dconf</sys> profile and then create a
   keyfile to set default favorite applications for all employees
   in the first floor of an organization.</p>
 
-  <!--The code itself need not be translated but the comments withing the
+  <!--The code itself need not be translated but the comments within the
   code have to be translated.-Aruna-->
 
   <listing>
@@ -118,10 +118,10 @@
   </listing>
 
   <note style="important">
-    <p><cmd>dconf-update</cmd> has to be run whenever you modify a key file.
+    <p><cmd>dconf-update</cmd> has to be run whenever you modify a keyfile.
     When you do this, <sys its:translate="no">dconf</sys> compares the time
     stamp on a system database file with the time stamp on the corresponding
-    key file directory. If the time stamp on the key file directory is more
+    keyfile directory. If the time stamp on the keyfile directory is more
     recent than the one on the database file,
     <sys its:translate="no">dconf</sys> regenerates the
     <code>system-db</code> file and sends a notification to the system

@@ -24,11 +24,10 @@
   <p>User sessions that have been idle for a specific period of time can be
   ended automatically. You can set different behaviour based on whether the
   machine is running from a battery or from mains power by setting the
-  corresponding dconf key, then locking it.</p>
-
-  <p>To set automatic logout for a mains powered machine:</p>
+  corresponding <sys its:translate="no">dconf</sys> key, then locking it.</p>
 
   <steps>
+    <title>Set automatic logout for a mains powered machine</title>
     <item>
       <p>Create a <code>user</code> profile in <file>/etc/dconf/profile/user</file>:</p>
       <listing>
@@ -63,7 +62,10 @@ sleep-inactive-ac-type='logout'
 </listing>
     </item>
     <item>
-      <p>Run <cmd>dconf update</cmd>.</p>
+      <p>Update the system databases:</p>
+      <screen its:translate="no">
+        <output style="prompt"># </output><input>dconf update</input>
+      </screen>
     </item>
   </steps>
 

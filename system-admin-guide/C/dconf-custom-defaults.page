@@ -36,7 +36,8 @@
       <years>2013</years>
     </credit>
 
-    <desc>Set system-wide default settings using <sys its:translate="no">dconf</sys> profiles.</desc>
+    <desc>Set system-wide default settings using <sys its:translate="no">dconf</sys>
+    profiles.</desc>
 
   </info>
 
@@ -74,9 +75,8 @@ system-db:local</code>
       <sys its:translate="no">dconf</sys> database.</p>
     </item>
     <item>
-      <p>Create a <em>key file</em> for the
-      <input its:translate="no">local</input> database which contains the
-      default settings:</p>
+      <p>Create a <em>keyfile</em> for the <input its:translate="no">local</input>
+      database which contains the default settings:</p>
       <listing its:translate="no">
         <title><file>/etc/dconf/db/local.d/01-background</file></title>
 <code># <span its:translate="yes">dconf path</span>
@@ -90,8 +90,10 @@ secondary-color='FFFFFF'</code>
       </listing>
     </item>
     <item>
-      <p>Run <input its:translate="no">dconf update</input> to update the
-      <sys its:translate="no">dconf</sys> databases.</p>
+      <p>Update the system databases:</p>
+      <screen its:translate="no">
+        <output style="prompt"># </output><input>dconf update</input>
+      </screen>
     </item>
   </steps>
 
