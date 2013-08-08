@@ -2,50 +2,98 @@
       xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="screen-locking">
+
   <info>
-    <revision version="0.1" date="2012-07-24" status="draft"/>
     <link type="guide" xref="index" group="user" />
+    <link type="seealso" xref="dconf-profiles" />
+    <link type="seealso" xref="dconf-lockdown" />
+    <revision pkgversion="3.8" date="2013-08-08" status="review"/>
 
     <credit type="author copyright">
-      <name>Matthias Clasen</name>
-      <email>matthias.clasen@gmail.com</email>
-      <years>2012</years>
-    </credit>
-    <credit type="editor">
       <name>Jana Svarova</name>
       <email its:translate="no">jana.svarova@gmail.com</email>
       <years>2013</years>
     </credit>
 
-    <desc>How can I set system-wide screensaver locking settings that can't be
-    modified by users?</desc>
+    <desc>Enable the screensaver and make the screen lock automatically when the
+    user is idle.</desc>
   </info>
 
-  <title>Set screensaver locking</title>
+  <title>Lock the screen when user is idle</title>
 
-  <comment>
-    <cite date="2012-07-24" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
-    <p>Adapted from l-g-o SysAdminGuide page. Add link for how to install and
-     enforce system-wide custom values for GSettings keys.</p>
-  </comment>
+  <p>If you want to enable the screensaver and make the screen lock automatically
+  when the user is idle, you need to create a dconf profile, set the 
+  <sys>GSettings</sys> key pairs and then lock it to prevent users from editing it.</p>
 
-  <p>If you want to set <em>screensaver locking</em> system-wide,
-  you need to change two GSettings keys.</p>
-  <p>The <code>org.gnome.desktop.screensaver.lock-delay</code> key specifies
-  the number of seconds after the system activates the screensaver and before it
-  locks the screen.</p>
-  <p>When set to <cmd>true</cmd>, the <code>org.gnome.desktop.screensaver.lock-enabled</code>
-  key locks the screen with active screensaver on. The TRUE value is set
-  by default. In case the value has been changed to <cmd>false</cmd>, you need to run the
-  <cmd>gsettings set org.gnome.desktop.screensaver lock-enabled true</cmd>
-  command to enable the screensaver lock.</p>
-  
+<section id="setting-screensaver">
+
+  <title>Enable the screensaver</title>
   <steps>
-  <title>For example, to lock the screen after 20 seconds:</title>
-  <item><p>Open the terminal.</p></item>
-  <item><p>As root, run the
-  <cmd>gsettings set org.gnome.desktop.screensaver lock-delay uint32 20</cmd>
-  command.</p></item>
+  <title>To enable the screensaver and lock the screen, follow this procedure:</title>
+    <item>
+      <p>Create a <code>user</code> profile in <file>/etc/dconf/profile/user</file>:</p>
+      <listing>
+        <code>
+user-db:user
+system-db:local
+</code>
+      </listing>
+    </item>
+    <item>
+      <p>As root, create a <code>local</code> database for system-wide settings
+      in <file>/etc/dconf/db/local.d/00-screensaver</file>:</p>
+      <listing>
+<code>
+[org/gnome/desktop/session]
+# Set the lock time out to 180 seconds before the session is considered idle.
+idle-delay=180
+[org/gnome/desktop/screensaver]
+# Set this to true to lock the screen when the screensaver activates
+lock-enabled=true
+# Set the lock timeout to 180 seconds after the screensaver has been activated
+lock-delay=180
+</code>
+      </listing>
+    </item>
+    <item>
+      <p>Override the user's setting and prevent the user from changing it in the
+      <file>/etc/dconf/db/local.d/locks/screensaver</file> file:</p>
+      <listing>
+<code>
+# Lock desktop screensaver settings
+/org/gnome/desktop/session/idle-delay
+/org/gnome/desktop/screensaver/lock-enabled
+/org/gnome/desktop/screensaver/lock-delay
+</code>
+      </listing>
+    </item>
+    <item>
+      <p>Run <cmd>dconf update</cmd>.</p>
+    </item>
   </steps>
 
+</section>
+
+<section id="gsettings-keys-screensaver">
+<title>GSettings keys</title>
+
+  <p>The following <sys>GSettings</sys> keys are of interest:</p>
+
+  <terms>
+    <item>
+      <title><code>org.gnome.desktop.session.idle-delay</code></title>
+      <p>The number of seconds before the session is considered idle.</p>
+    </item>
+    <item>
+      <title><code>org.gnome.desktop.screensaver.lock-delay</code></title>
+      <p>The number of seconds after screensaver activation before locking the
+      screen.</p>
+    </item>
+    <item>
+      <title><code>org.gnome.desktop.screensaver.lock-enabled</code></title>
+      <p>Set to <input>true</input> to lock the screen when the screensaver goes active.</p>
+    </item>
+  </terms>
+
+</section>
 </page>
