@@ -14,6 +14,10 @@ HELP_FILES = \
 	dconf-nfs-home.page		\
 	dconf-profiles.page		\
 	dconf-favorite-applications.page\
+	extensions-enable.page		\
+	extensions-lockdown.page	\
+	extensions-mandatory.page	\
+	extensions.page		\
 	fonts.page			\
 	index.page			\
 	keyboard-layout.page		\
