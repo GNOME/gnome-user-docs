@@ -13,7 +13,6 @@ HELP_FILES = \
 	dconf-lockdown.page		\
 	dconf-keyfiles.page		\
 	dconf-nfs-home.page		\
-	dconf-profiles-edit.page	\
 	dconf-profiles.page		\
 	dconf-favorite-applications.page\
 	fonts.page			\
