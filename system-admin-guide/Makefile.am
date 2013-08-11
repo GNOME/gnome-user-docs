@@ -21,7 +21,7 @@ HELP_FILES = \
 	login-banner.page		\
 	login-logo.page			\
 	overrides.page			\
-	power-settings.page		\
+	power-dim-screen.page		\
 	printer-configuration.page	\
 	processes.page			\
 	screen-locking.page		\
