@@ -1,10 +1,11 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="fonts">
 
   <info>
     <link type="guide" xref="index#appearance" />
-    <revision version="0.1" date="2012-05-21" status="draft"/>
+    <revision pkgversion="3.8" date="2013-08-11" status="review"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -16,23 +17,38 @@
       <email>jana.svarova@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="author copyright">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+      <years>2013</years>
+    </credit>
 
-    <desc>Make extra fonts available to users</desc>
+    <desc>Add extra fonts for all users</desc>
   </info>
 
-<title>Adding fonts</title>
+  <title>Add an extra font</title>
 
-<steps>
-<title>To make extra fonts available to users:</title>
-  <item><p>Install the font files into the
-  <file>/usr/share/fonts</file> subdirectory.</p></item>
-  <item>
-    <p>Update the font cache by running the following command as root:</p>
-    <screen>fc-cache</screen>
-  </item>
-</steps>
+  <comment>
+    <cite date="2013-08-11">Kat</cite>
+    <p>See http://www.pathname.com/fhs/pub/fhs-2.3.html#USRLOCALLOCALHIERARCHY :
+    /usr/local/share/fonts is the correct place for fonts to go into.</p>
+  </comment>
 
-<p>The new fonts will be available as soon as you update the font cache.
-User sessions do not have to be restarted to see the changes.</p>
+  <p>You can install a new font which will be available to users through
+  applications that use <sys>fontconfig</sys> for font handling.</p>
+
+  <steps>
+    <title>Install a font</title>
+    <item>
+      <p>Copy the font to <file>/usr/local/share/fonts/</file> to install
+      it.</p>
+    </item>
+    <item>
+      <p>You may need to run <cmd>fc-cache</cmd> to update the font cache.</p>
+    </item>
+  </steps>
+
+  <p>Running applications must be restarted to see the changes, while user
+  sessions do not need to be restarted.</p>
 
 </page>
