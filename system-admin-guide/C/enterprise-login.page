@@ -1,0 +1,47 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="enterprise-login">
+
+  <info>
+    <link type="guide" xref="index#session" />
+    <revision version="0.1" date="2013-09-18" status="stub"/>
+
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email its:translate="no">pknbe@volny.cz</email>
+      <years>2013</years>
+    </credit>
+
+    <desc>Use your Enterprise credentials to log into the GNOME Desktop.</desc>
+   </info>
+
+  <title>Use your Enterprise credentials to log into GNOME</title>
+  
+  <p>Once you have a working Active Directory domain available, you can
+   configure the GNOME Desktop to join the Active Directory domain using your
+   Enterprise credentials. Make sure that you have set up a domain user account
+   before proceeding.</p>
+  
+  <steps>
+  	<title>Join an Active Directory domain</title>
+  	<item><p>Click your name on the top bar and select <gui>Settings</gui>
+  	 from the menu.</p></item>
+  	<item><p>From the list of items, select <gui>Users</gui>.</p></item>
+  	<item><p>Click the <gui>Unlock</gui> button and type the administrator's
+  	 password.</p></item>
+  	<item><p>Click the <gui>[+]</gui> button in the lower left of the window.</p>
+  	</item>
+  	<item><p>Select the <gui>Enterprise Login</gui> pane.</p></item>
+  	<item><p>Enter the domain, user, and password for your Enterprise account,
+  	 and click <gui>Add</gui>.</p></item>
+  	<item><p>To check that the domain is properly configured, run the
+  	 following command in the terminal:</p>
+  	<screen its:translate="no">
+        <output style="prompt">$ </output><input>realm list</input>
+        </screen>
+        <p>Verify that the output lists the Active Directory domain.</p>
+  	</item>
+  </steps>
+
+</page>
