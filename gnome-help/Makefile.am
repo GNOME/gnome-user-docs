@@ -4,8 +4,6 @@ EXTRA_DIST = C/gnome-help.its
 
 HELP_ID = gnome-help
 
-HELP_LINGUAS = as ca cs de el fi fr es gl gu hi hu id it ja kn lv nl pa pt_BR ru sl sr sr@latin sv te vi ta zh_CN
-
 HELP_MEDIA = \
 	figures/audio-volume-high-symbolic.svg \
 	figures/audio-volume-low-symbolic.svg \
@@ -183,7 +181,6 @@ HELP_FILES = \
 	disk-partitions.page \
 	disk.page \
 	display-dual-monitors.page \
-	display-dual-monitors-desktop.page \
 	documents-collections.page \
 	documents-filter.page \
 	documents-formats.page \
@@ -405,3 +402,5 @@ HELP_FILES = \
 	wacom-multi-monitor.page \
 	wacom-stylus.page \
 	wacom.page
+
+HELP_LINGUAS = as ca cs de el fi fr es gl gu hi hu id it ja kn lv nl pa pt_BR ru sl sr sr@latin sv te vi ta zh_CN
