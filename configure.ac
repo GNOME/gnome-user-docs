@@ -1,4 +1,4 @@
-AC_INIT([gnome-user-docs], [3.9.92],
+AC_INIT([gnome-user-docs], [3.10.0],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-user-docs])
 AM_INIT_AUTOMAKE
 AM_SILENT_RULES([yes])
