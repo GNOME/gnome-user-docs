@@ -340,9 +340,7 @@ HELP_FILES = \
 	printing-to-file.page \
 	printing.page \
 	privacy.page \
-	privacy-hide-notifications.page \
 	privacy-history-recent-off.page \
-	privacy-name-visibility.page \
 	privacy-purge.page \
 	privacy-screen-lock.page \
 	screen-shot-record.page \
