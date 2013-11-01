@@ -1,24 +1,31 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="tips-specialchars">
+
   <info>
     <link type="guide" xref="tips"/>
     <link type="seealso" xref="keyboard-layouts"/>
 
     <revision pkgversion="3.8.2" version="0.3" date="2013-05-18" status="review"/>
+    <revision pkgversion="3.10" date="2013-11-01" status="review"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
-      <email>shaunm@gnome.org</email>
+      <email its:translate="no">shaunm@gnome.org</email>
     </credit>
     <credit type="editor">
       <name>Michael Hill</name>
-      <email>mdhillca@gmail.com</email>
+      <email its:translate="no">mdhillca@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
     </credit>
 
-    <desc>Type characters not found on your keyboard, including
-    foreign alphabets, mathematical symbols, and dingbats.</desc>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Type characters not found on your keyboard, including foreign alphabets, mathematical symbols, and dingbats.</desc>
   </info>
 
   <title>Enter special characters</title>
@@ -36,9 +43,11 @@
     <p>GNOME comes with a character map application that allows you to browse
     all the characters in Unicode. Use the character map to find the character
     you want, and then copy and paste it to wherever you need it.</p>
-    <p>You can find <app>Character Map</app> in the <gui>Activities</gui> overview.
-    For more information on the character map, see the
+
+    <p>You can find <app>Character Map</app> in the <gui>Activities</gui>
+    overview. For more information on the character map, see the
     <link href="help:gucharmap">Character Map Manual</link>.</p>
+
   </section>
 
   <section id="compose">
@@ -49,10 +58,16 @@
     then <key>e</key>.</p>
     <p>Keyboards don't have specific compose keys. Instead, you can define
     one of the existing keys on your keyboard as a compose key.</p>
+
     <steps>
       <title>Define a compose key</title>
-      <item><p>Click your name on the top bar and select <gui>Settings</gui>.</p></item>
-      <item><p>Click <gui>Keyboard</gui>.</p></item>
+      <item>
+        <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
+        start typing <gui>Keyboard</gui>.</p>
+      </item>
+      <item>
+        <p>Click on <gui>Keyboard</gui> to open the panel.</p>
+      </item>
       <item><p>Select the <gui>Shortcuts</gui> tab and click
       <gui>Typing</gui>.</p></item>
       <item><p>Click on <gui>Compose Key</gui> in the right pane.</p></item>
@@ -82,21 +97,24 @@
     compose key page on Wikipedia</link>.</p>
   </section>
 
-  <section id="ctrlshiftu">
-    <title>Code points</title>
-    <p>You can enter any Unicode character using only your keyboard with the numeric
-    code point of the character. Every character is identified by a four-character
-    code point. To find the code point for a character, find the character in the
-    character map application and look in the status bar or the <gui>Character
-    Details</gui> tab. The code point is the four characters after <gui>U+</gui>.</p>
+<section id="ctrlshiftu">
+  <title>Code points</title>
 
-    <p>To enter a character by its code point, hold down <key>Ctrl</key> and
-    <key>Shift</key>, type <key>u</key> followed by the four-character code
-    point, then release <key>Ctrl</key> and <key>Shift</key>. If you often use
-    characters that you can't easily access with other methods, you might find
-    it useful to memorize the code point for those characters so you can enter
-    them quickly.</p>
-  </section>
+  <p>You can enter any Unicode character using only your keyboard with the
+  numeric code point of the character. Every character is identified by a
+  four-character code point. To find the code point for a character, find the
+  character in the character map application and look in the status bar or the
+  <gui>Character Details</gui> tab. The code point is the four characters after
+  <gui>U+</gui>.</p>
+
+  <p>To enter a character by its code point, hold down <key>Ctrl</key> and
+  <key>Shift</key>, type <key>U</key> followed by the four-character code
+  point, then release <key>Ctrl</key> and <key>Shift</key>. If you often use
+  characters that you can't easily access with other methods, you might find
+  it useful to memorize the code point for those characters so you can enter
+  them quickly.</p>
+
+</section>
 
   <section id="layout">
     <title>Keyboard layouts</title>
@@ -106,17 +124,19 @@
     how, see <link xref="keyboard-layouts"/>.</p>
   </section>
 
-  <section id="im">
-    <title>Input methods</title>
-    <p>An Input Method expands the previous methods by allowing to enter
-    characters not only with keyboard but any input devices also. For instance
-    you could enter characters with a mouse using a gesture method, or enter
-    Japanese characters using a Latin keyboard.</p>
+<section id="im">
+  <title>Input methods</title>
 
-    <p>To choose an input method, right-click over a text widget, and in the menu
-    <gui>Input Method</gui>, choose an input method you want to use. There is
-    no default input method provided, so refer to the input methods
-    documentation to see how to use them.</p>
-  </section>
+  <p>An Input Method expands the previous methods by allowing to enter
+  characters not only with keyboard but also any input devices. For instance
+  you could enter characters with a mouse using a gesture method, or enter
+  Japanese characters using a Latin keyboard.</p>
+
+  <p>To choose an input method, right-click over a text widget, and in the menu
+  <gui>Input Method</gui>, choose an input method you want to use. There is no
+  default input method provided, so refer to the input methods documentation to
+  see how to use them.</p>
+
+</section>
 
 </page>
