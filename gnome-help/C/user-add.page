@@ -1,105 +1,131 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="user-add">
 
   <info>
     <link type="guide" xref="user-accounts#manage" group="#first"/>
     <link type="seealso" xref="user-addguest"/>
-    <desc>Add new users so that other people can log in to the computer.</desc>
+
     <!-- Setting 3.4.0 version to final for release, but we need to do something
          about the various comments in here, so incomplete for 3.4.1.
     -->
     <revision pkgversion="3.8.0" version="0.3" date="2013-03-09" status="candidate"/>
+
     <credit type="author">
       <name>GNOME Documentation Project</name>
-      <email>gnome-doc-list@gnome.org</email>
+      <email its:translate="no">gnome-doc-list@gnome.org</email>
     </credit>
     <credit type="author">
       <name>Shaun McCance</name>
-      <email>shaunm@gnome.org</email>
+      <email its:translate="no">shaunm@gnome.org</email>
     </credit>
     <credit type="editor">
       <name>Michael Hill</name>
-      <email>mdhillca@gmail.com</email>
+      <email its:translate="no">mdhillca@gmail.com</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Add new users so that other people can log in to the computer.</desc>
   </info>
 
   <title>Add a new user account</title>
 
-<comment>
-  <cite date="2012-02-19">shaunm</cite>
-  <p>We need a note in here about password hints. Share content
-  with user-changepassword</p>
-</comment>
+  <comment>
+    <cite date="2012-02-19">shaunm</cite>
+    <p>We need a note in here about password hints. Share content with
+    user-changepassword</p>
+  </comment>
 
-<comment>
-  <cite date="2012-03-24">shaunm</cite>
-  <p>Let's add a "Disable account" page. Click the account, click the dots
-  next to "Password", select "Disable this account" from "Type".</p>
-</comment>
+  <comment>
+    <cite date="2012-03-24">shaunm</cite>
+    <p>Let's add a "Disable account" page. Click the account, click the dots
+    next to "Password", select "Disable this account" from "Type".</p>
+  </comment>
 
-<comment>
-<cite date="2012-03-24">shaunm</cite>
-<p>Much of the password dialog simply does not work:</p>
-<list>
-<item><p><gui>Choose a password at next login</gui> does nothing</p></item>
-<item><p><gui>Log in without a password</gui> does nothing</p></item>
-<item><p><gui>Enable this account</gui> does nothing (and it's not even
-clear to me what it should do):
-<link href="https://bugzilla.gnome.org/show_bug.cgi?id=655914">665914</link></p></item>
-<item><p><gui>Hint</gui> does nothing:
-<link href="https://bugzilla.gnome.org/show_bug.cgi?id=647912">647912</link>,
-<link href="https://bugzilla.gnome.org/show_bug.cgi?id=643445">643445</link></p></item>
-</list>
-</comment>
+  <comment>
+    <cite date="2012-03-24">shaunm</cite>
+    <p>Much of the password dialog simply does not work:</p>
+    <list>
+      <item>
+        <p><gui>Choose a password at next login</gui> does nothing</p>
+      </item>
+      <item>
+        <p><gui>Log in without a password</gui> does nothing</p>
+      </item>
+      <item>
+        <p><gui>Enable this account</gui> does nothing (and it's not even
+        clear to me what it should do):
+        <link href="https://bugzilla.gnome.org/show_bug.cgi?id=655914">665914</link></p>
+      </item>
+      <item>
+        <p><gui>Hint</gui> does nothing:
+        <link href="https://bugzilla.gnome.org/show_bug.cgi?id=647912">647912</link>,
+        <link href="https://bugzilla.gnome.org/show_bug.cgi?id=643445">643445</link></p>
+      </item>
+    </list>
+  </comment>
 
-  <p>You can add multiple user accounts to your computer. Give one account
-  to each person in your household or company. Every user has their own
-  home folder, documents, and settings.</p>
+  <p>You can add multiple user accounts to your computer. Give one account to
+  each person in your household or company. Every user has their own home
+  folder, documents, and settings.</p>
 
-<steps>
-  <item><p>Click your name on the top bar and select <gui>Settings</gui>.</p></item>
-  <item><p>Open <gui>Users</gui>.</p></item>
+  <steps>
+    <item>
+      <p>Click your name on the top bar and select <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Open <gui>Users</gui>.</p>
+    </item>
+    <item>
+      <p>You need <link xref="user-admin-explain">administrator
+      privileges</link> to add user accounts. Click <gui>Unlock</gui> in the
+      top right corner and type your password or the administrator password, as
+      prompted.</p>
+    </item>
+    <item>
+      <p>In the list of accounts on the left, click the
+      <gui style="button">+</gui> button to add a new user account.</p>
+    </item>
+    <item>
+      <p>If you want the new user to have
+      <link xref="user-admin-explain">administrative access</link> to the
+      computer, select <gui>Administrator</gui> for the account type.
+      Administrators can do things like add and delete users, install software
+      and drivers, and change the date and time.</p>
+    </item>
+    <item>
+      <p>Enter the new user's full name. The username will be filled in
+      automatically based on the full name. The default is probably OK, but you
+      can change it if you like.</p>
+    </item>
+    <item>
+      <p>Click <gui>Add</gui>.</p>
+    </item>
+    <item>
+      <p>The account is initially disabled until you choose what to do about
+      the user's password. Select the new account from the list. Under
+      <gui>Login Options</gui> click <gui>Account disabled</gui> next to
+      <gui>Password</gui>. Select <gui>Set a password now</gui> from the
+      <gui>Action</gui> drop-down list, and have the user type their password
+      in the <gui>New password</gui> and <gui>Confirm password</gui> fields.
+      See <link xref="user-goodpassword"/>.</p>
+      <p>You can also click the button next to the <gui>New password</gui>
+      field to select a randomly generated secure password. These passwords are
+      hard for others to guess, but they can be hard to remember, so be
+      careful.</p>
+    </item>
+    <item>
+      <p>Click <gui>Change</gui>.</p>
+    </item>
+  </steps>
 
-  <item><p>You need <link xref="user-admin-explain">administrator privileges</link>
-  to add user accounts. Click <gui>Unlock</gui> in the top right corner and type
-  your password or the administrator password, as prompted.</p></item>
-
-  <item><p>In the list of accounts on the left, click the
-  <gui style="button">+</gui> button to add a new user account.</p></item>
-
-  <item><p>If you want the new user to have
-  <link xref="user-admin-explain">administrative access</link> to the computer,
-  select <gui>Administrator</gui> for the account type. Administrators can do things
-  like add and delete users, install software and drivers, and change the date and
-  time.</p></item>
-
-  <item><p>Enter the new user's full name. The username will be filled in
-  automatically based on the full name. The default is probably OK, but you can
-  change it if you  like.</p></item>
-
-  <item><p>Click <gui>Add</gui>.</p></item>
-
-  <item><p>The account is initially disabled until you choose what to do about
-  the user's password. Select the new account from the list. Under
-  <gui>Login Options</gui> click <gui>Account disabled</gui> next to
-  <gui>Password</gui>. Select <gui>Set a password now</gui> from the
-  <gui>Action</gui> drop-down list, and have the user type their password in the
-  <gui>New password</gui> and <gui>Confirm password</gui> fields.
-  See <link xref="user-goodpassword"/>.</p>
-  <p>You can also click the button next to the
-  <gui>New password</gui> field to select a randomly generated secure password.
-  These passwords are hard for others to guess, but they can be hard to remember,
-  so be careful.</p></item>
-  <item><p>Click <gui>Change</gui>.</p></item>
-</steps>
-
-<note><p>In the <gui>User Accounts</gui> window you can click the image next
- to the user's name on the right to set an image for the account. This image will
- be shown in the login window. GNOME provides some stock photos you can use, or
- you can select your own or take a picture with your webcam.</p>
-</note>
+  <note>
+    <p>In the <gui>User Accounts</gui> window you can click the image next to
+    the user's name on the right to set an image for the account. This image
+    will be shown in the login window. GNOME provides some stock photos you can
+    use, or you can select your own or take a picture with your webcam.</p>
+  </note>
 
 </page>
