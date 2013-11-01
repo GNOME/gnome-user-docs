@@ -385,7 +385,6 @@ HELP_FILES = \
 	translate.page \
 	user-accounts.page \
 	user-add.page \
-	user-addguest.page \
 	user-admin-change.page \
 	user-admin-explain.page \
 	user-admin-problems.page \
