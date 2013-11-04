@@ -162,7 +162,6 @@ HELP_FILES = \
 	color-notifications.page \
 	color-notspecifiededid.page \
 	color-testing.page \
-	color-virtualdevice.page \
 	color-whatisprofile.page \
 	color-whatisspace.page \
 	color-why-calibrate.page \
