@@ -1,5 +1,6 @@
 <page xmlns="http://projectmallard.org/1.0/"
       xmlns:if="http://projectmallard.org/if/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="guide" style="task" version="1.0 if/1.0"
       id="bluetooth-remove-connection">
 
@@ -7,45 +8,68 @@
     <link type="guide" xref="bluetooth"/>
 
     <revision pkgversion="3.4.0" date="2012-02-19" status="outdated"/>
+    <revision pkgversion="3.10" version="0.3" date="2013-11-07" status="review"/>
 
     <desc>Remove a device from the list of Bluetooth devices.</desc>
 
     <credit type="author">
       <name>Jim Campbell</name>
-      <email>jwcampbell@gmail.com</email>
+      <email its:translate="no">jwcampbell@gmail.com</email>
     </credit>
     <credit type="author">
       <name>Paul W. Frields</name>
-      <email>stickster@gmail.com</email>
+      <email its:translate="no">stickster@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email its:translate="no">mdhillca@gmail.com</email>
+      <years>2013</years>
     </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
   <title>Remove a connection between Bluetooth devices</title>
 
-
   <p>If you don't want to be connected to a Bluetooth device anymore, you can
   remove the connection. This is useful if you no longer want to use a device
   like a mouse or headset, or if you no longer wish to transfer files to or
   from a device.</p>
 
+  <comment>
+    <cite date="2013-11-08" href="mailto:mdhillca@gmail.com">mdhill</cite>
+    <p>The second step needs to be fixed for Unity instructions.</p>
+  </comment>
+
   <steps>
     <item>
-      <if:choose>
-        <if:when test="platform:unity">
-      <p>Click the Bluetooth icon in the <gui>menu bar</gui> and select <gui>Bluetooth Settings</gui>.</p>
-        </if:when>
-      <p>Click the Bluetooth icon on the top bar and select <gui>Bluetooth Settings</gui>.</p>
-      </if:choose>
+    <if:choose>
+      <if:when test="platform:unity">
+      <p>Click the Bluetooth icon in the <gui>menu bar</gui> and select
+      <gui>Bluetooth Settings</gui>.</p>
+      </if:when>
+      <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
+      start typing <gui>Bluetooth</gui>.</p>
+    </if:choose>
     </item>
     <item>
-      <p>Select the device you want to disconnect in the left pane, then click the <gui>-</gui>
-      icon underneath the list.</p>
+    <if:choose>
+      <if:when test="platform:gnome-shell">
+      <p>Click on <gui>Bluetooth</gui> to open the panel.</p>
+      </if:when>
+    </if:choose>
+    </item>
+    <item>
+      <p>Select the device you want to disconnect in the left pane, then click
+      the <key>-</key> icon below the list.</p>
     </item>
     <item>
       <p>Click <gui>Remove</gui> in the confirmation window.</p>
+      <note style="info">
+        <p>.</p>
+      </note>
     </item>
   </steps>
 
-  <p>You can <link xref="bluetooth-connect-device">reconnect a Bluetooth device</link> later if desired.</p>
+  <p>You can <link xref="bluetooth-connect-device">reconnect a Bluetooth device</link>
+  later if desired.</p>
 </page>
