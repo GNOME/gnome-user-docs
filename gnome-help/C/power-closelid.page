@@ -6,71 +6,95 @@
   <info>
     <link type="guide" xref="power"/>
     <link type="seealso" xref="power-suspendfail"/>
+
     <revision pkgversion="3.4.0" date="2012-02-20" status="review"/>
-    <revision pkgversion="3.10" date="2013-07-18" status="outdated"/>
+    <revision pkgversion="3.10" date="2013-11-08" status="review"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
-      <email>gnome-doc-list@gnome.org</email>
+      <email its:translate="no">gnome-doc-list@gnome.org</email>
     </credit>
-    <credit type="editor">
+    <credit type="author editor">
       <name>Ekaterina Gerasimova</name>
-      <email>kittykat3756@gmail.com</email>
+      <email its:translate="no">kittykat3756@gmail.com</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Laptops go to sleep when you close the lid, in order to save power.</desc>
+    <desc>Laptops go to sleep when you close the lid, in order to save
+    power.</desc>
   </info>
 
-<title>Why does my computer turn off when I close the lid?</title>
+  <title>Why does my computer turn off when I close the lid?</title>
 
-<p>When you close the lid of your laptop, your computer will <link
-xref="power-suspend"><em>suspend</em></link> in order to save power. This means
-that the computer is not actually turned off - it has just gone to sleep. You
-can resume it by opening the lid. If it does not resume, try clicking the mouse
-or pressing a key. If that still does not work, press the power button.</p>
+  <p>When you close the lid of your laptop, your computer will
+  <link xref="power-suspend"><em>suspend</em></link> in order to save power.
+  This means that the computer is not actually turned off - it has just gone to
+  sleep. You can resume it by opening the lid. If it does not resume, try
+  clicking the mouse or pressing a key. If that still does not work, press the
+  power button.</p>
 
-<p>Some computers are unable to suspend properly, normally because their
-hardware is not completely supported by the operating system (for example, the
-Linux drivers are incomplete). In this case, you may find that you are unable
-to resume your computer after you have closed the lid. You can try to <link
-xref="power-suspendfail">fix the problem with suspend</link>, or you can
-prevent the computer from trying to suspend when you close the lid.</p>
+  <p>Some computers are unable to suspend properly, normally because their
+  hardware is not completely supported by the operating system (for example,
+  the Linux drivers are incomplete). In this case, you may find that you are
+  unable to resume your computer after you have closed the lid. You can try to
+  <link xref="power-suspendfail">fix the problem with suspend</link>, or you
+  can prevent the computer from trying to suspend when you close the lid.</p>
 
-  <comment>
-    <cite date="2013-07-18">Kat</cite>
-    <p>Write instructions on how to change this setting, see https://bugzilla.gnome.org/show_bug.cgi?id=704455</p>
-  </comment>
-
-<!-- TODO: this section is outdated and the instructions no longer work.
 <section id="nosuspend">
- <title>Stop the computer from suspending when the lid is closed</title>
- <p>If you do not want the computer to suspend when you close the lid, you can
- change the settings for that behavior. To set the computer to blank the
- screen, rather than suspend, when the lid is closed:</p>
- <note style="warning">
-   <p>Be very careful if you change this setting. Some laptops can overheat
-   if they are left running with the lid closed, especially if they are in
-   a confined place like a backpack.</p>
- </note>
- <steps>
-   <item>
-     <p>Open the <app>Terminal</app> application from the <gui>Activities</gui> overview.</p>
-   </item>
-   <item>
-     <p>To change the setting used when running on battery power, type this command and press <key>Enter</key>:</p>
-     <screen its:translate="no">
-       gsettings set org.gnome.settings-daemon.plugins.power lid-close-battery-action blank
-     </screen>
-   </item>
-   <item>
-     <p>To change the setting used when running on AC power, type this command and press <key>Enter</key>:</p>
-     <screen its:translate="no">
-       gsettings set org.gnome.settings-daemon.plugins.power lid-close-ac-action blank
-     </screen>
-   </item>
- </steps>
-</section>-->
+  <title>Stop the computer from suspending when the lid is closed</title>
+
+  <note style="important">
+    <p>These instructions will only work if you are using <app>systemd</app>.
+    Contact your distribution for more information.</p>
+  </note>
+
+  <p>If you do not want the computer to suspend when you close the lid, you can
+  change the settings for that behavior. You will need to have an
+  <link xref="user-admin-change">administrator password</link> to change the
+  setting.</p>
+
+  <note style="warning">
+    <p>Be very careful if you change this setting. Some laptops can overheat
+    if they are left running with the lid closed, especially if they are in
+    a confined place like a backpack.</p>
+  </note>
+
+  <steps>
+    <item>
+      <p>Open the <app>Terminal</app> application from the
+      <gui>Activities</gui> overview.</p>
+    </item>
+    <item>
+      <p>Run the following command:</p>
+      <screen its:translate="no"><output style="prompt">$</output> <input>sudoedit /etc/systemd/logind.conf</input></screen>
+    </item>
+    <item>
+      <p>You will now see the contents of the file. Look for
+      <code>HandleLidSwitch=</code> in the file. The line may be quoted out
+      with a <code>#</code> at the start and may be followed by an argument. If
+      the line already exists, unquote it. Otherwise, add the line.</p>
+      <code>
+[Login]
+HandleLidSwitch=<input>lock</input>
+      </code>
+      <p>You can use <input>lock</input> for the screen to lock,
+      <input>ignore</input> for nothing to happen, <input>poweroff</input> for
+      the computer to switch off or <input>suspend</input> to suspend. For more
+      information, see <link href="man:logind.conf">logind.conf help</link>.</p>
+    </item>
+    <item>
+      <p>Once you finish editing the file, save your changes and quit the
+      editor.</p>
+    </item>
+    <item>
+      <p>Run the following command to make your change work:</p>
+      <screen its:translate="no"><output style="prompt">$</output> <input>sudo systemctl restart systemd-logind.service</input></screen>
+      <p>If you do not run that command, the change will only work after your
+      computer is restarted.</p>
+    </item>
+  </steps>
+
+</section>
 
 </page>
