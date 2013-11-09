@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       xmlns:if="http://projectmallard.org/if/1.0/"
       type="guide" style="task" version="1.0 if/1.0"
       id="bluetooth-send-file">
@@ -9,26 +10,27 @@
     <link type="seealso" xref="files-share"/>
 
     <revision pkgversion="3.8.2" version="0.2" date="2013-05-16" status="review"/>
+    <revision pkgversion="3.10" version="0.3" date="2013-11-09" status="review"/>
 
     <desc>Share files to Bluetooth devices such as your phone.</desc>
 
     <credit type="author">
       <name>Jim Campbell</name>
-      <email>jwcampbell@gmail.com</email>
+      <email its:translate="no">jwcampbell@gmail.com</email>
     </credit>
     <credit type="author">
       <name>Paul W. Frields</name>
-      <email>stickster@gmail.com</email>
+      <email its:translate="no">stickster@gmail.com</email>
     </credit>
     <credit type="editor">
       <name>Michael Hill</name>
-      <email>mdhillca@gmail.com</email>
+      <email its:translate="no">mdhillca@gmail.com</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
-  <title>Send a file to a Bluetooth device</title>
+  <title>Send files to a Bluetooth device</title>
 
 <if:choose>
   <if:when test="platform:unity">
@@ -56,54 +58,39 @@
   </note>
 
   <steps>
-    <title>Send files using the Bluetooth icon</title>
     <item>
       <if:choose>
         <if:when test="platform:unity">
-      <p>Click the Bluetooth icon in the menu bar and select <gui>Send Files to Device</gui>.</p>
+      <p>Click the Bluetooth icon in the menu bar and select <gui>Send Files to
+      Device</gui>.</p>
         </if:when>
-      <p>Click the Bluetooth icon on the top bar and select <gui>Send Files to Device</gui>.</p>
-      </if:choose>
+      <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
+      start typing <gui>Bluetooth</gui>.</p>
+    </if:choose>
+    </item>
+    <item>
+    <if:choose>
+      <if:when test="platform:gnome-shell">
+      <p>Click on <gui>Bluetooth</gui> to open the panel.</p>
+      </if:when>
+    </if:choose>
+    </item>
+    <item>
+      <p>In the <gui>Devices</gui> list, select the device to which to send the
+      files to and click <gui>Send Files...</gui>.</p>
+      <p>If the desired device is not shown in the list, you need to
+      <link xref="bluetooth-connect-device">connect</link> to it.</p>
     </item>
     <item>
       <p>Choose the file you want to send and click <gui>Select</gui>.</p>
-      <p>To send more than one file in a folder, hold down <key>Ctrl</key> as you select each file.</p>
+      <p>To send more than one file in a folder, hold down <key>Ctrl</key> as
+      you select each file.</p>
     </item>
     <item>
-      <p>Select the device which you want to send the files to and click <gui>Send</gui>.</p>
-      <p>The list of devices will show both <link xref="bluetooth-connect-device">devices you
-      are already connected to</link> as well as <link xref="bluetooth-visibility">visible
-      devices</link> within range. If you have not already connected to the selected device,
-      you will be prompted to pair with the device after clicking <gui>Send</gui>. This will
-      probably require confirmation on the other device.</p>
-      <p>If there are many devices, you can limit the list to only specific device types
-      using the <gui>Device type</gui> drop-down.</p>
-    </item>
-    <item>
-      <p>The owner of the receiving device usually has to press a button to accept the file. Once the owner accepts or declines, the result of the file transfer will be shown on your screen.</p>
+      <p>The owner of the receiving device usually has to press a button to
+      accept the file. Once the owner accepts or declines, the result of the
+      file transfer will be shown on your screen.</p>
     </item>
   </steps>
 
-  <steps>
-    <title>Send files from the Bluetooth settings</title>
-    <item>
-      <if:choose>
-        <if:when test="platform:unity">
-          <p>Click the Bluetooth icon in the menu bar and select <gui>Bluetooth Settings</gui>.</p>
-        </if:when>
-        <p>Click the Bluetooth icon on the top bar and select <gui>Bluetooth Settings</gui>.</p>
-      </if:choose>
-    </item>
-    <item><p>Select the device to send files to from the list on the left. The list
-    only shows devices you've already connected to. See
-    <link xref="bluetooth-connect-device"/>.</p></item>
-    <item><p>In the device information on the right, click <gui>Send Files</gui>.</p></item>
-    <item>
-      <p>Choose the file you want to send and click <gui>Select</gui>.</p>
-      <p>To send more than one file in a folder, hold down <key>Ctrl</key> as you select each file.</p>
-    </item>
-    <item>
-      <p>The owner of the receiving device usually has to press a button to accept the file. Once the owner accepts or declines, the result of the file transfer will be shown on your screen.</p>
-    </item>
-  </steps>
 </page>

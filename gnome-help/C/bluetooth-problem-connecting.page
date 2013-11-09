@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       xmlns:if="http://projectmallard.org/if/1.0/"
       type="guide" style="problem" version="1.0 if/1.0"
       id="bluetooth-problem-connecting">
@@ -8,20 +9,26 @@
     <link type="seealso" xref="hardware-driver"/>
 
     <revision pkgversion="3.4.0" date="2012-02-19" status="outdated"/>
+    <revision pkgversion="3.10" version="0.2" date="2013-11-09" status="review"/>
 
-    <desc>The adapter could be turned off or may not have drivers, or Bluetooth might be disabled or blocked.</desc>
+    <desc>The adapter could be turned off or may not have drivers, or Bluetooth
+    might be disabled or blocked.</desc>
 
     <credit type="author">
       <name>Phil Bull</name>
-      <email>philbull@gmail.com</email>
+      <email its:translate="no">philbull@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email its:translate="no">mdhillca@gmail.com</email>
     </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
 <title>I can't connect my Bluetooth device</title>
 
-<p>There are a number of reasons why you may not be able to connect to a Bluetooth device,
-such as a phone or headset.</p>
+<p>There are a number of reasons why you may not be able to connect to a
+Bluetooth device, such as a phone or headset.</p>
 
 <terms>
   <item>
@@ -42,22 +49,35 @@ such as a phone or headset.</p>
     <title>Adapter not switched on</title>
       <if:choose>
         <if:when test="platform:unity">
-          <p>Make sure that your Bluetooth adapter is switched on. Click the Bluetooth
-    icon in the <gui>menu bar</gui> and check that it's not <link xref="bluetooth-turn-on-off">disabled</link>.</p>
+          <p>Make sure that your Bluetooth adapter is switched on. Click the
+          Bluetooth icon in the <gui>menu bar</gui> and check that it's not
+          <link xref="bluetooth-turn-on-off">disabled</link>.</p>
         </if:when>
-        <p>Make sure that your Bluetooth adapter is switched on. Click the Bluetooth
-    icon on the top bar and check that it's not <link xref="bluetooth-turn-on-off">disabled</link>.</p>
+        <p>Make sure that your Bluetooth adapter is switched on. Open the
+        Bluetooth panel and check that it's not
+        <link xref="bluetooth-turn-on-off">disabled</link>.</p>
       </if:choose>
   </item>
   <item>
     <title>Device Bluetooth connection switched off</title>
-  <p>Check that Bluetooth is turned on on the device you're trying to connect to. For example, if you're trying to connect to a phone, make sure that it's not in airplane mode.</p>
- </item>
-
- <item>
-  <title>No Bluetooth adapter in your computer</title>
-  <p>Many computers do not have Bluetooth adapters. You can buy an adapter if you want to use Bluetooth.</p>
- </item>
+    <p>Check that Bluetooth is turned on on the device you're trying to connect
+    to, and that it is
+    <link xref="bluetooth-visibility">discoverable or visible</link>. For
+    example, if you're trying to connect to a phone, make sure that it's not in
+    airplane mode.</p>
+  </item>
+  <item>
+    <title>No Bluetooth adapter in your computer</title>
+    <p>Many computers do not have Bluetooth adapters. You can buy an adapter if
+    you want to use Bluetooth.</p>
+  </item>
 </terms>
+
+  <comment>
+    <cite date="2013-11-09" href="mailto:mdhillca@gmail.com">mdhill</cite>
+    <p>Add link to shell-terminology definition of system status *area* of top
+    bar when it has been written, explain that if your network connection is
+    through a bluetooth device it will show up in the system status *menu*.</p>
+  </comment>
 
 </page>

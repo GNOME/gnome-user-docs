@@ -8,16 +8,21 @@
     <link type="guide" xref="bluetooth" group="#first"/>
 
     <revision pkgversion="3.4.0" date="2012-02-19" status="outdated"/>
+    <revision pkgversion="3.10" version="0.2" date="2013-11-09" status="review"/>
 
     <desc>Enable or disable the Bluetooth device on your computer.</desc>
 
     <credit type="author">
       <name>Jim Campbell</name>
-      <email>jwcampbell@gmail.com</email>
+      <email its:translate="no">jwcampbell@gmail.com</email>
     </credit>
     <credit type="author">
       <name>Shaun McCance</name>
-      <email>shaunm@gnome.org</email>
+      <email its:translate="no">shaunm@gnome.org</email>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email its:translate="no">mdhillca@gmail.com</email>
     </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
@@ -28,16 +33,34 @@
   <p its:translate="yes">The Bluetooth icon on the top bar</p>
 </media>
 
+  <comment>
+    <cite date="2013-11-09" href="mailto:mdhillca@gmail.com">mdhill</cite>
+    <p>Add link to shell-terminology definition of system status *area* of top
+    bar when it has been written, explain that if your network connection is
+    through a bluetooth device it will show up in the system status *menu*
+    and only then will its icon be visible as shown.</p>
+  </comment>
+
 <if:choose>
   <if:when test="platform:unity">
-    <p>You can turn Bluetooth on to use Bluetooth devices and send and receive files,
-    but turn it off to conserve power. To turn Bluetooth on, click the Bluetooth icon
-    in the menu bar and click <gui>Turn On Bluetooth</gui>.
-    </p>
+    <p>You can turn Bluetooth on to use Bluetooth devices and send and receive
+    files, but turn it off to conserve power. To turn Bluetooth on, click the
+    Bluetooth icon in the menu bar and click <gui>Turn On Bluetooth</gui>.</p>
   </if:when>
-  <p>You can turn Bluetooth on to use Bluetooth devices and send and receive files,
-  but turn it off to conserve power. To turn Bluetooth on, click the Bluetooth icon
-  on the top bar and switch <gui>Bluetooth</gui> on.</p>
+  <p>You can turn Bluetooth on to use Bluetooth devices and send and receive
+  files, but turn it off to conserve power. To turn Bluetooth on:</p>
+  <steps>
+    <item>
+      <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
+      start typing <gui>Bluetooth</gui>.</p>
+    </item>
+    <item>
+      <p>Click on <gui>Bluetooth</gui> to open the panel.</p>
+    </item>
+    <item>
+      <p>Set the switch in the titlebar to <gui>ON</gui>.</p>
+    </item>
+  </steps>
 </if:choose>
 
 <if:choose>
@@ -45,21 +68,34 @@
     <p>Many laptop computers have a hardware switch or key combination to turn
     Bluetooth on and off. If the Bluetooth hardware is turned off, you will not
     see a Bluetooth icon in the menu bar. Look for a switch on your computer or
-    a key on your keyboard. The keyboard key is often accessed with the help of the
-<key>Fn</key> key.</p>
+    a key on your keyboard. The keyboard key is often accessed with the help of
+    the <key>Fn</key> key.</p>
  </if:when>
  <p>Many laptop computers have a hardware switch or key combination to turn
  Bluetooth on and off. If the Bluetooth hardware is turned off, you will not
  see a Bluetooth icon in the top bar. Look for a switch on your computer or
- a key on your keyboard. The keyboard key is often accessed with the help of the
- <key>Fn</key> key.</p>
+ a key on your keyboard. The keyboard key is often accessed with the help of
+ the <key>Fn</key> key.</p>
 </if:choose>
 
 <if:choose>
   <if:when test="platform:unity">
-    <p>To turn Bluetooth off, click the Bluetooth icon and click <gui>Turn Off Bluetooth</gui>.</p>
+    <p>To turn Bluetooth off, click the Bluetooth icon and click
+    <gui>Turn Off Bluetooth</gui>.</p>
   </if:when>
-  <p>To turn Bluetooth off, click the Bluetooth icon and switch <gui>Bluetooth</gui> off.</p>
+  <p>To turn Bluetooth off:</p>
+  <steps>
+    <item>
+      <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
+      start typing <gui>Bluetooth</gui>.</p>
+    </item>
+    <item>
+      <p>Click on <gui>Bluetooth</gui> to open the panel.</p>
+    </item>
+    <item>
+      <p>Set the switch in the titlebar to <gui>OFF</gui>.</p>
+    </item>
+  </steps>
 </if:choose>
 
 <note><p>You only need to switch <gui>Visibility</gui> on if you are connecting
