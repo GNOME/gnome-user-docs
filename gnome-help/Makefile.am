@@ -289,7 +289,6 @@ HELP_FILES = \
 	net-wireless-airplane.page \
 	net-wireless-connect.page \
 	net-wireless-disconnecting.page \
-	net-wireless-edit-connection.page \
 	net-wireless-find.page \
 	net-wireless-hidden.page \
 	net-wireless-noconnection.page \
