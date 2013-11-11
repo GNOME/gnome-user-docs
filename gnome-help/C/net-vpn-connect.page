@@ -1,40 +1,69 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="net-vpn-connect">
+
   <info>
     <link type="guide" xref="net-wireless"/>
     <link type="guide" xref="net-wired"/>
 
     <revision pkgversion="3.4.0" date="2012-02-19" status="review"/>
+    <revision pkgversion="3.10" version="0.2" date="2013-11-11" status="review"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
-      <email>gnome-doc-list@gnome.org</email>
+      <email its:translate="no">gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email its:translate="no">mdhillca@gmail.com</email>
     </credit>
 
-    <desc>VPNs allow you to connect to a local network over the internet. Learn how to set up a VPN connection.</desc>
+    <desc>Set up a VPN connection to a local network over the internet.</desc>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
 <title>Connect to a VPN</title>
 
-<p>A VPN (or <em>Virtual Private Network</em>) is a way of connecting to a local network over the internet. For example, say you want to connect to the local network at your workplace while you're on a business trip. You would find an internet connection somewhere (like at a hotel) and then connect to your workplace's VPN. It would be as if you were directly connected to the network at work, but the actual network connection would be through the hotel's internet connection. VPN connections are usually <em>encrypted</em> to prevent people from accessing the local network you're connecting to without logging in.</p>
+<p>A VPN (or <em>Virtual Private Network</em>) is a way of connecting to a
+ local network over the internet. For example, say you want to connect to the
+ local network at your workplace while you're on a business trip. You would
+ find an internet connection somewhere (like at a hotel) and then connect to
+ your workplace's VPN. It would be as if you were directly connected to the
+ network at work, but the actual network connection would be through the
+ hotel's internet connection. VPN connections are usually <em>encrypted</em>
+ to prevent people from accessing the local network you're connecting to
+ without logging in.</p>
 
-<p>There are a number of different types of VPN. You may have to install some extra software depending on what type of VPN you're connecting to. Find out the connection details from whoever is in charge of the VPN and see which <em>VPN client</em> you need to use. Then, go to the software installer application and search for the <app>NetworkManager</app> package which works with your VPN (if there is one) and install it.</p>
+<p>There are a number of different types of VPN. You may have to install some
+ extra software depending on what type of VPN you're connecting to. Find out
+ the connection details from whoever is in charge of the VPN and see which
+ <em>VPN client</em> you need to use. Then, go to the software installer
+ application and search for the <app>NetworkManager</app> package which works
+ with your VPN (if there is one) and install it.</p>
 
 <note>
- <p>If there isn't a NetworkManager package for your type of VPN, you will probably have to download and install some client software from the company that provides the VPN software. You'll probably have to follow some different instructions to get that working.</p>
+ <p>If there isn't a NetworkManager package for your type of VPN, you will
+ probably have to download and install some client software from the company
+ that provides the VPN software. You'll probably have to follow some different
+ instructions to get that working.</p>
 </note>
 
 <p>Once that's done, you can set up the VPN connection:</p>
 
 <steps>
  <item>
-  <p>Click the network icon on the top bar and select <gui>Network Settings</gui>.</p>
+      <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
+      start typing <gui>Settings</gui>.</p>
  </item>
-
  <item>
-  <p>In the list on the left, click the <gui>+</gui> button
+      <p>Click on <gui>Settings</gui> to open the control center.</p>
+ </item>
+ <item>
+      <p>Click on <gui>Network</gui> to open the panel.</p>
+ </item>
+ <item>
+  <p>In the list on the left, click the <key>+</key> button
   to add a new connection.</p>
  </item>
 
@@ -47,19 +76,27 @@
  </item>
 
  <item>
-  <p>Click <gui>Create</gui> and follow the instructions on the screen, entering details like your username and password as you go.</p>
+  <p>Click <gui>Create</gui> and follow the instructions on the screen,
+ entering details like your username and password as you go.</p>
  </item>
 
  <item>
-  <p>When you've finished setting-up the VPN, click the network icon on the top bar, go to <gui>VPN Connections</gui> and click on the connection you just created. It will try to establish a VPN connection - the network icon will change as it tries to connect.</p>
+  <p>When you've finished setting-up the VPN, click the system status area on
+ the top bar, click <gui>VPN</gui> and select the connection you just created.
+ It will try to establish a VPN connection - the network icon will change as it
+ tries to connect.</p>
  </item>
 
  <item>
-  <p>Hopefully, you will successfully connect to the VPN. If not, you may need to double-check the VPN settings you entered. You can do this by clicking the network icon, clicking <gui>Network Settings</gui> and going to the <gui>VPN</gui> tab.</p>
+  <p>Hopefully you will successfully connect to the VPN. If not, you may need
+ to double-check the VPN settings you entered. You can do this by clicking the
+ system status area on the top bar, click <gui>VPN</gui> followed by
+ <gui>VPN Settings</gui>, then select the connection you just created.</p>
  </item>
 
  <item>
-  <p>To disconnect from the VPN, click the network icon on the top bar and click <gui>Disconnect</gui> under the name of your VPN connection.</p>
+  <p>To disconnect from the VPN, click the system status area on the top bar
+ and click <gui>Disconnect</gui> under the name of your VPN connection.</p>
  </item>
 </steps>
 
