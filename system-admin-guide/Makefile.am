@@ -23,6 +23,7 @@ HELP_FILES = \
 	fonts.page			\
 	index.page			\
 	keyboard-layout.page		\
+	legal.xml			\
 	login-background.page		\
 	login-banner.page		\
 	login-logo.page			\
