@@ -42,11 +42,10 @@ AutostartCondition=<var>GSettings org.gnome.desktop.background show-desktop-icon
   run the application.</p></item>
   <item><p>You can use the <code>AutostartCondition</code> key to check for a
   value of a GSettings key.</p>
-  <p>The session manager does not run the application automatically if the
-  GSettings key is unset or set to false. If the GSettings key is set to true in
-  the running session, then the session manager starts the application. If the
-  GSettings key is unset or set to false in the running session, then the
-  session manager stops the application.</p>
+  <p>The session manager runs the application automatically if the key's value
+  is true. If the key's value changes in the running session, the session
+  manager starts or stops the application, depending on what the previous value
+  for the key was.</p>
 </item>
 </steps>
 
