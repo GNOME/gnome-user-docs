@@ -3,6 +3,7 @@
       id="overrides">
 
   <info>
+    <link type="guide" xref="index#user" />
     <revision pkgversion="3.6" date="2012-05-21" status="stub"/>
 
     <credit type="author copyright">
@@ -11,25 +12,26 @@
       <years>2012</years>
     </credit>
 
-    <desc></desc>
+    <desc>GSettings overrides are used by distributions to adjust default
+    settings.</desc>
    </info>
 
-  <title>Why shouldn't I use gsettings overrides?</title>
+  <title>Why should not I use GSettings overrides?</title>
 
   <comment>
     <cite date="2012-07-05" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
     <p>Adapted from d-g-o GSettings page. Add a see-also?</p>
   </comment>
 
-  <p>Gsettings overrides are used by distributions to adjust default settings
+  <p>GSettings overrides are used by distributions to adjust default settings
   for the GNOME desktop and apps. dconf overrides were designed for system
   administrators to adjust default settings and set mandatory settings for the
   GNOME desktop and apps.</p>
 
-  <p>GNOME developers are working towards allowing or even requiring <file>/usr/</file>
-  to be mounted read-only with the exception of <file>/usr/local/</file>.</p>
-
 <comment>
+   <p>GNOME developers are working towards allowing or even requiring <file>/usr/</file>
+   to be mounted read-only with the exception of <file>/usr/local/</file>.</p>
+
    <p>Default values are defined in the schemas that get installed by an
    application. Sometimes, it is necessary for a vendor or distributor to adjust
    these defaults. Since patching the XML source for the schema is inconvenient
