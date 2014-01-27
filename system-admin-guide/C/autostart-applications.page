@@ -3,41 +3,51 @@
         id="autostart-applications">
 
   <info>
-    <revision pkgversion="3.8" date="2013-05-15" status="draft"/>
+    <link type="guide" xref="index#session" />
+    <revision pkgversion="3.11" date="2014-01-27" status="draft"/>
 
     <credit type="author copyright">
       <name>Jana Svarova</name>
       <email>jana.svarova@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="author copyright">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2014</years>
+    </credit>
 
-    <desc>How can I set system-wide autostart applications for users?</desc>
+    <desc>How can I add an autostart application for all users?</desc>
   </info>
 
-<title>Set autostart applications</title>
+  <title>Add an autostart application for all users</title>
 
-  <p>To start an application automatically on the startup,
-  you need to create a desktop file in the system directory.</p>
+  <p>To start an application automatically when the user logs in,
+  you need to create a <file>.desktop</file> file for that application in the
+  <file>/etc/xdg/autostart/</file> directory.</p>
 
 <steps>
-<title>To create a desktop file for an autostart application:</title>
-  <item><p>In the <file>/etc/xdg/autostart/</file> directory, create a desktop
-  file.</p></item>
-  <item><p>Insert a desktop file entry for the autostart application into the
-  desktop file.</p></item>
+  <title>To add an autostart application for all users:</title>
+  <item><p>Create a .desktop file in the <file>/etc/xdg/autostart/</file>
+  directory:</p>
+<code>[Desktop Entry]
+Type=Application
+Name=<var>Files</var>
+Exec=<var>nautilus -n</var>
+OnlyShowIn=GNOME;
+AutostartCondition=<var>GSettings org.gnome.desktop.background show-desktop-icons</var></code>
+  </item>
+  <item><p>Replace <var>Files</var> with the name of the application.</p></item>
+  <item><p>Replace <var>nautilus -n</var> with the command you wish to use to
+  run the application.</p></item>
+  <item><p>You can use the <code>AutostartCondition</code> key to check for a
+  value of a GSettings key.</p>
+  <p>The session manager does not run the application automatically if the
+  GSettings key is unset or set to false. If the GSettings key is set to true in
+  the running session, then the session manager starts the application. If the
+  GSettings key is unset or set to false in the running session, then the
+  session manager stops the application.</p>
+</item>
 </steps>
 
-<p>Here is an example of a desktop file content:</p>
-<code>
-[Desktop Entry]
-Type=Application
-Name=Files
-Exec=nautilus -n
-OnlyShowIn=GNOME;Unity;
-AutostartCondition=GSettings org.gnome.desktop.background show-desktop-icons
-</code>
-
-<note>
-  <p>Make sure that the entries in your desktop file follow the GNOME format.</p>
-</note>
 </page>
