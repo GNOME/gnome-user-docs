@@ -4,10 +4,7 @@
 
   <info>
     <link type="guide" xref="index#session" />
-<!--    <link type="seealso" xref="custom-session-classic-mode" />
-    <link type="seealso" xref="custom-session-set" />
-    <link type="seealso" xref="custom-session-change" />-->
-    <revision pkgversion="3.6" date="2012-12-01" status="draft" />
+    <revision pkgversion="3.11" date="2014-01-27" status="draft" />
 
     <credit type="author copyright">
       <name>minnie_eg</name>
@@ -18,6 +15,11 @@
       <name>Jana Svarova</name>
       <email>jana.svarova@gmail.com</email>
       <years>2013</years>
+    </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2014</years>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -36,39 +38,40 @@
     options.</p>
   </comment>
 
- <p>To create a custom session with different options, follow these steps:</p>
+ <p>To create your own session with customized configuration, follow these
+  steps:</p>
 
 <steps>
-  <item><p>Create a desktop file in the 
-  <file>/usr/share/xsessions/new-session.desktop</file> file format. The content 
-  of the desktop file should contain the following entries:</p>
-  <code>
-  [Desktop Entry]
-  Encoding=UTF-8
-  Type=Application
-  Name=Custom session
-  Comment=This is our custom session
-  <input>Exec</input>=gnome-session
-  </code>
+  <item><p>Create a <file>.desktop</file> file in
+  <file>/etc/X11/sessions/<var>new-session</var>.desktop</file>. Make sure that
+  the file specifies the following entries:</p>
+  <code>[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=<input>Custom session</input>
+Comment=<input>This is our custom session</input>
+Exec=<input>gnome-session --session=new-session</input></code>
+   <p>The <code>Exec</code> entry specifies the command, possibly
+   with arguments, to execute. You can run the custom session with the
+   <cmd>gnome-session --session=<var>new-session</var></cmd>
+   command.</p>
+   <p>For more information on parameters that you can use with
+   <cmd>gnome-session</cmd>, see the <cmd>gnome-session</cmd>(1)
+   man page.</p>
   </item>
-  <item><p>Type <cmd>man gnome-session</cmd> into the Terminal to display more 
-  information on session options and
-  parameters that can be used with <code>Exec</code>.</p>
-  </item>
-  <item><p>Save the custom session file that includes various parameters in
-  the <file>/usr/share/gnome-session/sessions/new-session.session</file> 
-  file.</p>
-  </item>
- <item>
-  <p>Run the custom session by using the 
-  <cmd>Exec=gnome-session --session=new-session</cmd> command.</p>
+  <item><p>Create a custom session file in
+   <file>/usr/share/gnome-session/sessions/<var>new-session</var>.session</file>
+   where you can specify the name and required components for the session:</p>
+   <code>[GNOME Session]
+Name=<input>Custom Session</input>
+RequiredComponents=<input>gnome-shell-classic;gnome-settings-daemon;</input></code>
   </item>
 </steps>
 
 <note style="note style">
-  <p>Note that after creating the session desktop file with the user
-  root, the new session will be available on the sessions list of the
-  GDM log-in screen.</p>
+  <p>After configuring the custom session files, the new session will be
+  available in the session list on the GDM login
+  screen.</p>
 </note>
 
   <section id="custom-session-issues">
