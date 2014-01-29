@@ -5,7 +5,7 @@
 
   <info>
     <link type="guide" xref="index#appearance" />
-    <revision pkgversion="3.8" date="2012-05-21" status="draft"/>
+    <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -17,22 +17,54 @@
       <email its:translate="no">jana.svarova@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email its:translate="no">pknbe@volny.cz</email>
+      <years>2014</years>
+    </credit>
 
-    <desc>Set the default desktop background using a GSettings override</desc>
+    <desc>Set the default desktop background using a GSettings override.</desc>
    </info>
 
-  <title>Set the default desktop background</title>
+  <title>Customize the default desktop background</title>
 
-  <p>To set the default desktop background, you need to override the default
-  setting using the <cmd>org.gnome.desktop.background.picture-uri</cmd>
-  <sys its:translate="no">GSettings</sys> key.</p>
+  <p>You can configure the default desktop background and its appearance by
+  setting the relevant GSettings keys in the
+  <sys>org.gnome.desktop.background</sys> schema.</p>
 
-<steps>
-<title>Change the desktop background</title>
-  <item><p>Insert the picture you would like to have as the desktop background
-  in the directory <file>/usr/share/backgrounds/gnome/</file>.</p></item>
-  <item><p>In a terminal window, run the command <cmd>gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/beefy-miracle/default/beefy-miracle.xml'</cmd></p>
-  </item>
-</steps>
+  <steps>
+    <title>Set the default background</title>
+    <item>
+      <p>Create a <sys>local</sys> database for machine-wide settings in
+      <file>/etc/dconf/db/local.d/<var>01-background</var></file>:
+      </p>
+<code># Specify the dconf path
+[org/gnome/desktop/background]
+
+# Specify the path to the desktop background image file
+picture-uri='file:///usr/local/share/backgrounds/wallpaper.jpg'
+# Specify one of the rendering options for the background image:
+# 'none', 'wallpaper', 'centered', 'scaled', 'stretched', 'zoom', 'spanned'
+picture-options='scaled'
+# Specify the left or top color when drawing gradients, or the solid color
+primary-color='000000'
+# Specify the right or bottom color when drawing gradients
+secondary-color='FFFFFF'</code>
+    </item>
+    <item>
+      <p>Override the user's setting and prevent the user from changing it in
+      <file>/etc/dconf/db/local.d/locks/background</file>:</p>
+        <code># List the keys used to configure the desktop background
+/org/gnome/desktop/background/picture-uri
+/org/gnome/desktop/background/picture-options
+/org/gnome/desktop/background/primary-color
+/org/gnome/desktop/background/secondary-color</code>
+    </item>
+    <item>
+      <p>Update the system databases:</p>
+<screen>
+<output># </output><input>dconf update</input></screen>
+    </item>
+  </steps>
 
 </page>
