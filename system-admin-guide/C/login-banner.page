@@ -30,7 +30,9 @@
       <years>2013</years>
     </credit>
 
-    <desc>Edit a <sys its:translate="no">GDM</sys> <sys its:translate="no">dconf</sys> profile to display a text banner on the login screen.</desc>
+    <desc>Edit a <sys its:translate="no">GDM</sys>
+    <sys its:translate="no">dconf</sys> profile to display a text banner on the
+    login screen.</desc>
   </info>
 
   <title>Display a text banner on the login screen</title>
@@ -65,13 +67,14 @@ banner-message-enable=true
 banner-message-text='<input its:translate="yes">Type the banner message here.</input>'
 </screen>
   </item>
-  <item><p>Run the <cmd its:translate="no">dconf update</cmd> command.</p></item>
+  <item><p>Update the system databases:</p>
+  <screen><output># </output><input>dconf update</input></screen>
+  </item>
 </steps>
 
 <note>
-  <p><sys its:translate="no">dconf</sys>
-  <!--<link xref="dconf-keyfiles">-->keyfiles<!--</link>--> are slightly
-  different from <sys its:translate="no">GSettings</sys> override files.</p>
+  <p>You should keep the banner message reasonably short as longer texts do not
+  fit in the screen.</p>
 </note>
 
 <section id="troubleshooting-banner">
@@ -80,12 +83,7 @@ banner-message-text='<input its:translate="yes">Type the banner message here.</i
   <cmd>dconf update</cmd> command.</p>
   <p>In case the banner message does not update, try restarting
   <sys>GDM</sys>. For more information see
-  <link xref="gdm-restart">Restart GDM</link>.</p>
+  <link xref="gdm-restart"/>.</p>
 
-
-<note>
-  <p>You should keep the banner message reasonably short as longer texts do not
-  fit in the screen.</p>
-</note>
 </section>
 </page>
