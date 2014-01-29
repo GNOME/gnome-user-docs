@@ -6,7 +6,7 @@
   <info>
     <link type="guide" xref="index#session" />
     <link type="seealso" xref="gdm-restart"/>
-    <revision version="0.1" date="2012-05-21" status="draft"/>
+    <revision version="0.1" date="2014-01-29" status="draft"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -23,8 +23,14 @@
       <email its:translate="no">jana.svarova@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email its:translate="no">pknbe@volny.cz</email>
+      <years>2014</years>
+    </credit>
 
-    <desc>Edit the <sys its:translate="no">GDM</sys> <sys its:translate="no">dconf</sys> profile</desc>
+    <desc>Edit the <sys its:translate="no">GDM</sys>
+    <sys its:translate="no">dconf</sys> profile</desc>
    </info>
 
   <title>Change the background of the login screen</title>
@@ -35,43 +41,35 @@
   </comment>
 
   <p>The background of the login screen is controlled by the
-  <cmd>org.gnome.desktop.background.picture-uri</cmd>
-  <sys its:translate="no">GSettings</sys> key. <app>GDM</app> uses its own
-  <sys its:translate="no">dconf</sys> profile.</p>
+  <sys>org.gnome.desktop.background.picture-uri</sys>
+  GSettings key. Since <sys>GDM</sys> uses its own
+  <sys>dconf</sys> profile, you can set the default background by
+  changing the settings in that profile.
+  </p>
 
 <steps>
-<title>Change settings in the <app>GDM</app> <sys its:translate="no">dconf</sys> profile</title>
-  <item><p>Place a keyfile in the <file>/etc/dconf/db/gdm.d</file> directory.</p></item>
-    <item>
-      <p>Update the system databases:</p>
-      <screen its:translate="no">
-        <output style="prompt"># </output><input>dconf update</input>
-      </screen>
-    </item>
+<title>Setting the org.gnome.desktop.background.picture-uri Key</title>
+  <item><p>Create a <sys>gdm</sys> database for machine-wide settings in
+  <file>/etc/dconf/db/gdm.d/<var>01-corp-login</var></file>:</p>
+<code>[org/gnome/desktop/background]
+picture-uri='file://<var>/opt/corp/background.jpg</var>'</code>
+  <p>Replace <var>/opt/corp/background.jpg</var> with the path to
+  the image file you want to use as the login screen background.</p>
+  </item>
+  <item><p>Update the system databases:</p>
+  <screen>
+<output># </output><input>dconf update</input></screen>
+  </item>
 </steps>
-
-  <p>Here is an example keyfile that you can store as
-  <file>/etc/dconf/db/gdm.d/corp-login</file>:</p>
-
-<code>
-[org/gnome/desktop/background]
-picture-uri='file:///<input its:translate="yes">opt/corp/background.jpg</input>'
-</code>
-
-  <note>
-    <p><sys its:translate="no">dconf</sys>
-    <!--<link xref="dconf-keyfiles">-->keyfiles<!--</link>--> are slightly
-    different from <sys its:translate="no">GSettings</sys> override files.</p>
-  </note>
 
 <section id="troubleshooting-background">
   <title>Troubleshooting: what if the background does not update?</title>
-  
+
   <p>Make sure that you have run the <cmd its:translate="no">dconf update</cmd>
   command to update the system databases.</p>
 
   <p>In case the logo does not update, try restarting <sys>GDM</sys>. For more
-  information see <link xref="gdm-restart">Restart GDM</link>.</p>
-  
+  information see <link xref="gdm-restart" />.</p>
 </section>
+
 </page>
