@@ -6,8 +6,7 @@
   <info>
     <link type="guide" xref="index#session" />
     <link type="seealso" xref="gdm-restart"/>
-    <revision version="0.1" date="2012-05-21" status="draft"/>
-    <revision pkgversion="3.8" date="2013-04-24" status="review"/>
+    <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -42,42 +41,35 @@
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-  <p>The logo on the login screen is controlled by the
-  <cmd>org.gnome.login-screen.logo</cmd>
-  <sys its:translate="no">GSettings</sys> key. Since
-  <sys its:translate="no">GDM</sys> uses its own
-  <sys its:translate="no">dconf</sys> profile, change settings in the
-  <sys its:translate="no">dconf</sys> profile to add a greeter logo to the login
-  screen.</p>
+  <p>The greeter logo on the login screen is controlled by the
+  <sys>org.gnome.login-screen.logo</sys> 
+  GSettings key. Since <sys>GDM</sys> uses its own
+  <sys>dconf</sys> profile, you can add a greeter logo by changing
+  the settings in that profile.</p>
 
 <steps>
-  <title>Change settings in the <sys its:translate="no">dconf</sys> profile</title>
-  <item><p>Add a keyfile to the <file its:translate="no">/etc/dconf/db/gdm.d</file>
-  directory.</p></item>
-  <item><p>Run the <cmd its:translate="no">dconf update</cmd> command.</p></item>
+  <title>Set the org.gnome.login-screen.logo key</title>
+  <item><p>Create a <sys>gdm</sys> database for machine-wide settings in
+  <file>/etc/dconf/db/gdm.d/<var>01-logo</var></file>:</p>
+<code>[org/gnome/login-screen]
+logo='<var>/usr/share/pixmaps/logo/greeter-logo.png</var>'
+</code>
+  <p>Replace <var>/usr/share/pixmaps/logo/greeter-logo.png</var>
+  with the path to the image file you want to use as the greeter logo.
+  </p></item>
+  <item><p>Update the system databases:</p>
+  <screen><output># </output><input>dconf update</input></screen>
+  </item>
 </steps>
 
-  <p>Below is an example <file its:translate="no">/etc/dconf/db/gdm.d/01-logo</file>
-  file:</p>
-<code its:translate="no">[org/gnome/login-screen]
-logo='<input>/usr/share/pixmaps/logo/greeter-logo.png</input>'
-</code>
+  <section id="login-logo-not-update">
+  <title>What if the logo does not update?</title>
 
-  <note>
-    <p><sys its:translate="no">dconf</sys>
-    <!--<link xref="dconf-keyfiles">-->keyfiles<!--</link>--> are slightly
-    different from <sys its:translate="no">GSettings</sys> override files.</p>
-  </note>
-
-<section id="troubleshooting-logo">
-
-  <title>Troubleshooting: what if the logo does not update?</title>
-  <p>Make sure that you have run the <cmd its:translate="no">dconf update</cmd>
+  <p>Make sure that you have run the <cmd>dconf update</cmd>
   command to update the system databases.</p>
 
-  <p>In case the logo does not update, try restarting <sys>GDM</sys>. For more
-  information see <link xref="gdm-restart">Restart GDM</link>.</p>
-
-</section>
+  <p>In case the logo does not update, try restarting <sys>GDM</sys>.
+  For more information, see <link xref="gdm-restart"/>.</p>
+  </section>
 
 </page>
