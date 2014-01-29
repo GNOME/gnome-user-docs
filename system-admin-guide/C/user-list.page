@@ -1,0 +1,61 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task" id="user-list">
+
+  <info>
+    <link type="guide" xref="index#session" />
+    <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
+
+    <credit type="author copyright">
+      <name>Michael Hill</name>
+      <email its:translate="no">mdhillca@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email its:translate="no">pknbe@volny.cz</email>
+      <years>2014</years>
+    </credit>
+
+    <desc>Edit the GDM dconf profile.</desc>
+   </info>
+
+  <title>Disable the user list</title>
+
+  <p>You can disable the user list shown on the login screen by setting the
+  <sys>org.gnome.login-screen.disable-user-list</sys> GSettings key.</p>
+  <p>When the user list is disabled, users need to type their user name and
+    password at the prompt to log in.</p>
+  <steps>
+    <title>Set the org.gnome.login-screen.disable-user-list key</title>
+    <item>
+      <p>Create a <sys>gdm</sys> database for machine-wide settings in
+      <file>/etc/dconf/db/gdm.d/00-login-screen</file>:</p>
+        <code>[org/gnome/login-screen]
+# Do not show the user list
+disable-user-list=true
+</code>
+    </item>
+    <item>
+      <p>Update the system databases:</p>
+      <screen><output># </output><input>dconf update</input></screen>
+    </item>
+  </steps>
+
+  <!--<p>Login screen user list can be configured through editing
+  <file>/etc/gdm3/custom.conf</file></p>
+
+1- Manually writing a users list:
+Under [greeter] section, add a comma seprated value of the username using the
+'Include' parametar as the following:
+<code>
+[greeter]
+Include=user1,user2,user3
+</code>
+  <steps>
+    <item><p></p></item>
+    <item><p>Second step...</p></item>
+    <item><p>Third step...</p></item>
+  </steps>-->
+
+</page>
