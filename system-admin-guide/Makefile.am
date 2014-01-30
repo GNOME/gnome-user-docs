@@ -9,6 +9,9 @@ HELP_MEDIA =
 HELP_FILES = \
 	background.page			\
 	backgrounds-extra.page		\
+	command-line-access.page		\
+	compose-key.page		\
+	ctrl-alt-backspace.page		\
 	dconf-custom-defaults.page	\
 	dconf-keyfiles.page		\
 	dconf-lockdown.page		\
@@ -20,7 +23,7 @@ HELP_FILES = \
 	extensions-lockdown.page	\
 	extensions-mandatory.page	\
 	extensions.page			\
-	fonts-user.page		\
+	fonts-user.page			\
 	fonts.page			\
 	index.page			\
 	keyboard-layout.page		\

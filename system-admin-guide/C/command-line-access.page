@@ -1,0 +1,99 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="command-line-access">
+
+  <info>
+    <link type="guide" xref="index#user" />
+    <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
+
+    <credit type="author copyright">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2014</years>
+    </credit>
+
+    <desc>Disable command line access for all users.</desc>
+  </info>
+
+  <title>Disable command line access</title>
+  <p>To completely disable command line access, you need to make configuration
+    changes in a number of different contexts:</p>
+  <list>
+    <item>
+      <p>Set the <sys>org.gnome.desktop.lockdown.disable-command-line</sys>
+        GSettings key, which prevents the user from accessing the terminal or
+        specifying a command line to be executed (the
+        <keyseq><key>Alt</key><key>F2</key></keyseq> command prompt).</p>
+    </item>
+    <item>
+      <p>Disable switching to virtual terminals (VTs) with the
+        <keyseq><key>Ctrl</key><key>Alt</key><key><var>function
+        key</var></key></keyseq> shortcuts by modifying the X server
+        configuration.</p>
+    </item>
+    <item>
+      <p>Remove <app>Terminal</app> and any other application that
+        provides access to the
+        terminal from the <gui>Applications</gui> menu and the
+        Activities overview in GNOME Shell.
+        This is done by removing menu items for those applications. <!--For detailed
+        information on how to remove a menu item, see.--></p>
+        <comment>
+          <cite>Petr Kovar</cite>
+          <p>We have yet to cover removing a menu item in this guide. We don't
+          want system admins having to modify .desktop files as those could be
+          overwritten on system update.</p>
+        </comment>
+    </item>
+  </list>
+  <section id="org.gnome.desktop.lockdown.disable-command-line">
+    <title>Set the org.gnome.desktop.lockdown.disable-command-line key</title>
+  <steps>
+    <item>
+      <p>Create a <sys>local</sys> database for machine-wide settings in
+      <file>/etc/dconf/db/local.d/00-lockdown</file>:</p>
+      <code>[org/gnome/desktop/lockdown]
+# Disable command line access
+disable-command-line=true</code>
+    </item>
+    <item>
+      <p>Override the user's setting and prevent the user from changing it in
+      <file>/etc/dconf/db/local.d/locks/lockdown</file>:</p>
+        <code># Lock the disabled command line access
+/org/gnome/desktop/lockdown
+</code>
+    </item>
+    <item>
+      <p>Update the system databases:</p>
+      <screen><output># </output><input>dconf update</input></screen>
+    </item>
+  </steps>
+  </section>
+  <section id="virtual-terminal-switching">
+    <title>Disable virtual terminal switching</title>
+    <p>Users can normally use the
+      <keyseq><key>Ctrl</key><key>Alt</key><key><var>function
+      key</var></key></keyseq> shortcuts (for example
+      <keyseq><key>Ctrl</key><key>Alt</key><key>F2</key></keyseq>)
+      to switch from the GNOME Desktop and X server to a virtual terminal. You
+      can disable access to all virtual terminals by adding a
+      <code>DontVTSwitch</code> option to the <code>Serverflags</code>
+      section in the <file>/etc/X11/xorg.conf.d</file> file.</p>
+    <steps>
+      <title>Disable access to virtual terminals</title>
+      <item>
+        <p>Create or edit an X configuration file in
+          <file>/etc/X11/xorg.conf.d</file>:</p>
+        <code>Section "Serverflags"
+
+Option "DontVTSwitch" "yes"
+
+EndSection</code>
+      </item>
+      <item>
+        <p>Restart the X server for your changes to take effect.</p>
+      </item>
+    </steps>
+  </section>
+
+</page>
