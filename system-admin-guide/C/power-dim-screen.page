@@ -4,7 +4,7 @@
 
   <info>
     <link type="guide" xref="index#user" />
-    <revision pkgversion="3.8" date="2013-07-24" status="draft"/>
+    <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -16,11 +16,16 @@
       <email>jana.svarova@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2014</years>
+    </credit>
 
     <desc>Enable screen dimming, then set the amount and timeout.</desc>
   </info>
 
-  <title>Screen dimming</title>
+  <title>Set screen brightness and idle time</title>
 
   <comment>
     <cite date="2012-07-24" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
@@ -28,40 +33,48 @@
      enforce system-wide custom values for gsettings keys.</p>
   </comment>
 
-  <p>Here are three procedures describing how to <em>dim screens after X minutes</em>.
-  Power management settings are controlled by gsettings keys, so there are three
-  key-values pairs to be set.</p>
+  <p>By setting the following GSettings keys, you can configure the drop in
+  the brightness level, and set brightness level and idle time.</p>
 
-<section id="drop-in-brightness-level">
+  <listing>
   <title>Set the drop in the brightness level</title>
-  <p>Firstly, you need to set the drop in the brightness level when the
-  device has been idle for some time.</p>
+  <desc>To set the drop in the brightness level when the
+  device has been idle for some time, create a <sys>local</sys> database for
+  machine-wide settings in <file>/etc/dconf/db/local.d/00-power</file>,
+  as in the following example:</desc>
+  <code>[org/gnome/settings-daemon/plugins/power]
+idle-dim=<input>true</input></code>
+  </listing>
 
-  <list>
-  <item><p>In the terminal, run the
-  <cmd>gsettings set org.gnome.settings-daemon.plugins.power idle-dim true</cmd>
-  command.</p></item>
-  </list>
-</section>
-
-<section id="brightness-level-after-idle">
+  <listing>
   <title>Set brightness level</title>
-  <p>Then, you might want to change the brightness level:</p>
-  <list>
-  <item><p>In the terminal, run the
-  <cmd>gsettings set org.gnome.settings-daemon.plugins.power idle-brightness 30</cmd> command.</p></item>
-  </list>
-</section>
+  <desc>To change the brightness level, create a <sys>local</sys> database for
+  machine-wide settings in <file>/etc/dconf/db/local.d/00-power</file>, 
+  as in the following example, and replace <var>30</var> with the integer value
+  you want to use:
+  </desc>
+  <code>[org/gnome/settings-daemon/plugins/power]
+idle-brightness=<var>30</var></code>
+  </listing>
 
+  <listing>
+  <title>Set idle time</title>
+  <desc>To set the idle time after which the screen must be blanked and the
+  default screensaver displayed, create a <sys>local</sys> database for
+  machine-wide settings in <file>/etc/dconf/db/local.d/00-session</file>,
+  as in the following example, and replace <var>900</var> with the integer value
+  you want to use:</desc>
+  <code>[org/gnome/desktop/session]
+idle-delay=<var>900</var></code>
+  </listing>
 
-<section id="set-idle-time">
-<title>Set idle time</title>
-  <p>And finally, this following procedure sets the idle time after which the
-  screen must be blanked and the default screensaver displayed.</p>
-  <list>
-  <item><p>In the terminal, run the
-  <cmd>gsettings set org.gnome.desktop.session idle-delay uint32 900</cmd> command.</p></item>
-  </list>
+  <p>Incorporate your changes into the system databases by running the
+  <cmd>dconf update</cmd> command as root.</p>
 
-</section>
+  <note>
+    <p>You can also
+     <link xref="dconf-lockdown">lock down</link> the above
+    settings to prevent users from changing them.</p>
+  </note>
+
 </page>
