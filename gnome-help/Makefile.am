@@ -180,18 +180,6 @@ HELP_FILES = \
 	disk-partitions.page \
 	disk.page \
 	display-dual-monitors.page \
-	documents-collections.page \
-	documents-filter.page \
-	documents-formats.page \
-	documents-info.page \
-	documents.page \
-	documents-previews.page \
-	documents-print.page \
-	documents-search.page \
-	documents-select.page \
-	documents-tracker.page \
-	documents-viewgrid.page \
-	documents-view.page \
 	files-autorun.page \
 	files-browse.page \
 	files-copy.page \
