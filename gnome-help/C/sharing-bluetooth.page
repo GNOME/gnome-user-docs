@@ -8,6 +8,7 @@
 
     <revision pkgversion="3.8.2" version="0.1" date="2013-05-13" status="draft"/>
     <revision pkgversion="3.10" version="0.2" date="2013-11-09" status="review"/>
+    <revision pkgversion="3.12" version="0.3" date="2014-03-08" status="review"/>
 
     <credit type="author">
       <name>Michael Hill</name>
@@ -15,70 +16,22 @@
       <years>2014</years>
     </credit>
 
-    <desc>Set which folders and devices can be to shared over Bluetooth.</desc>
+    <desc>Allow files to be uploaded to your computer over Bluetooth.</desc>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
   <title>Control sharing over Bluetooth</title>
 
-  <comment>
-    <cite date="2013-09-23" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
-    <p>Rewrite Step 1 everywhere. Add an info note about the two technologies
-    involved: ObexFTP and ObexPush.</p>
-  </comment>
-
-  <p>You can allow access to your <file>Public</file> and
-  <file>Downloads</file> folders for Bluetooth file sharing, and also restrict
-  that access to only <em>trusted devices</em>. Configure
-  <gui>Bluetooth Sharing</gui> to control access to the shared folders on your
-  computer.</p>
+  <p>You can allow access to your <file>Downloads</file> folder for Bluetooth
+  file sharing, and also restrict that access to only <em>trusted devices</em>.
+  Configure <gui>Bluetooth Sharing</gui> to control access to the shared folder
+  on your computer.</p>
 
   <note style="info">
     <p>A Bluetooth device is <em>trusted</em> if you have <em>paired</em>, or
     connected your computer to it. See
     <link xref="bluetooth-connect-device"/>.</p>
   </note>
-
-  <steps>
-    <title>Share your <file>Public</file> folder over Bluetooth</title>
-    <item>
-      <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
-      start typing <gui>Sharing</gui>.</p>
-    </item>
-    <item>
-      <p>Click on <gui>Sharing</gui> to open the panel.</p>
-    </item>
-    <item>
-      <p>If <gui>Sharing</gui> is <gui>OFF</gui>, switch it to
-      <gui>ON</gui>.</p>
-
-      <note style="info"><p>If the text below <gui>Computer Name</gui> allows
-      you to edit it, you can change the name your computer displays on the
-      network.</p></note>
-    </item>
-    <item>
-      <p>Select <gui>Bluetooth Sharing</gui>.</p>
-    </item>
-    <item>
-      <p>Switch <gui>Share Public Folder</gui> to <gui>ON</gui>.</p>
-    </item>
-    <item>
-      <p>If you only want to allow trusted devices to access your
-      <file>Public</file> folder, switch
-      <gui>Only share with Trusted Devices</gui> to <gui>ON</gui>.</p>
-
-      <note style="tip">
-        <p>This option is disabled by default. You should enable it if you want
-        to prevent access to your shared files by anyone with a
-        Bluetooth-enabled cell phone or similar device nearby.</p>
-      </note>
- 
-    </item>
-    <item>
-      <p>Click <gui style="button">Close</gui>. Bluetooth-enabled devices will
-      now be able to access files in your <file>Public</file> folder.</p>
-    </item>
-  </steps>
 
   <steps>
     <title>Allow files to be shared into your <file>Downloads</file> folder</title>
@@ -93,9 +46,8 @@
       <p>If <gui>Sharing</gui> is <gui>OFF</gui>, switch it to
       <gui>ON</gui>.</p>
 
-      <note style="info"><p>If the text below <gui>Computer Name</gui> allows
-      you to edit it, you can change the name your computer displays on the
-      network.</p></note>
+      <note style="info"><p>You can <link xref="sharing-displayname">change</link>
+      the name your computer displays to other devices.</p></note>
     </item>
     <item>
       <p>Select <gui>Bluetooth Sharing</gui>.</p>
@@ -125,7 +77,7 @@
   <note style="important">
     <p><gui>Files</gui> allows you to launch the <gui>Sharing</gui> panel
     directly by clicking the <gui>Preferences</gui> button when you visit the
-    <gui>Public</gui> folder.</p>
+    <gui>Downloads</gui> folder.</p>
   </note>
 
 </page>
