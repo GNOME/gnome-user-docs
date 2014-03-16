@@ -10,6 +10,7 @@
     
     <revision pkgversion="3.8.2" version="0.2" date="2013-05-16" status="review"/>
     <revision pkgversion="3.10" version="0.3" date="2013-11-09" status="review"/>
+    <revision pkgversion="3.12" version="0.4" date="2014-03-16" status="incomplete"/>
 
     <desc>Pair Bluetooth devices.</desc>
 
@@ -34,36 +35,25 @@
 
   <title>Connect your computer to a Bluetooth device</title>
 
-<media its:translate="no" type="image" src="figures/bluetooth-menu.png" style="floatend">
-  <p its:translate="yes">The Bluetooth icon on the top bar</p>
-</media>
-
   <p>Before you can use a Bluetooth device like a mouse or a headset, you first
   need to connect your computer to the device. This is also called pairing the
   Bluetooth devices.</p>
 
-  <note style="important">
-    <p>Before you begin, make sure Bluetooth is enabled on your computer.
-    See <link xref="bluetooth-turn-on-off"/>.</p>
-  </note>
-
   <steps>
     <item>
-      <if:choose>
-        <if:when test="platform:unity">
-          <p>Click the Bluetooth icon in the menu bar and select <gui>Set Up
-          New Device</gui>.</p>
-        </if:when>
-      <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
-      start typing <gui>Bluetooth</gui>.</p>
-    </if:choose>
+      <p>Click the system status area of the top bar.</p>
     </item>
     <item>
-    <if:choose>
-      <if:when test="platform:gnome-shell">
-      <p>Click on <gui>Bluetooth</gui> to open the panel.</p>
-      </if:when>
-    </if:choose>
+      <p>Select <gui>Bluetooth</gui>. The Bluetooth section of the menu will
+      expand.</p>
+    </item>
+    <item>
+      <p>Select <gui>Bluetooth Settings</gui> to open the panel.</p>
+    </item>
+    <item>
+      <p>Make sure Bluetooth is enabled: the switch in the titlebar should be
+      set to <gui>ON</gui>. With the panel open and the switch <gui>ON</gui>,
+      your computer will begin searching for devices.</p>
     </item>
     <item>
       <p>Make the other Bluetooth device
@@ -71,14 +61,13 @@
       place it within 10 meters (about 33 feet) of your computer.</p>
     </item>
     <item>
-      <p>Click <key>+</key> below the <gui>Devices</gui> list. The
-      <gui>Bluetooth New Device Setup</gui> panel will open and your computer
-      will begin searching for devices.</p>
+      <p>Click the device in the <gui>Devices</gui> list. The panel for the
+      device will open.</p>
     </item>
     <item>
-      <p>Select a device in the <gui>Device</gui> list. If there are too many
-      devices listed, use the <gui>Device type</gui> drop-down to display only
-      a single type of device in the list.</p>
+      <p>If a PIN is not required, set the <gui>Connection</gui> switch to
+      <gui>ON</gui> and click <gui>Done</gui>. The entry for the device in the
+      <gui>Devices</gui> list will show a status of <gui>Connected</gui>.</p>
     </item>
     <item>
       <p>Click <gui>PIN options</gui> to set how a PIN will be delivered to the
@@ -108,27 +97,32 @@
       <gui>Close</gui>.</p>
     </item>
     <item>
-      <p>The <gui>Setup Summary</gui> appears when the connection successfully
-      completes. It may display additional options applicable to the type of
-      device you're connecting. Select the desired options and click
-      <gui>Quit</gui>.</p>
+      <p>Click <gui>Done</gui>. The entry for the device in the
+      <gui>Devices</gui> list will show a status of <gui>Connected</gui>.</p>
     </item>
   </steps>
 
+  <media its:translate="no" type="image" src="figures/bluetooth-menu.png"
+  style="floatend">
+    <p its:translate="yes">The Bluetooth icon on the top bar</p>
+  </media>
+  <p>When one or more Bluetooth devices are connected, the Bluetooth icon
+  appears in the system status area.</p>
+
   <comment>
-    <cite date="2013-11-09" href="mailto:mdhillca@gmail.com">mdhill</cite>
-    <p>Detail the possible options in the Setup Summary. Also elaborate on
-    bluetooth network connections and system status menu controls.</p>
+    <cite date="2014-03-16" href="mailto:mdhillca@gmail.com">mdhill</cite>
+    <p>The steps detailing a connection that requires a PIN need to be updated
+    for 3.12.</p>
   </comment>
 
   <p>You can
   <link xref="bluetooth-remove-connection">remove a Bluetooth connection</link>
   later if desired.</p>
 
-      <note style="tip">
-        <p>To control access to your shared files, refer to the
-        <gui>Bluetooth Sharing</gui> settings. See
-        <link xref="sharing-bluetooth"/>.</p>
-      </note>
+  <note style="tip">
+    <p>To control sharing to your <file>Downloads</file> folder, refer to the
+    <gui>Bluetooth Sharing</gui> settings. See
+    <link xref="sharing-bluetooth"/>.</p>
+  </note>
 
 </page>
