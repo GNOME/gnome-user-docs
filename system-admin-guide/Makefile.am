@@ -28,15 +28,16 @@ HELP_FILES = \
 	index.page			\
 	keyboard-layout.page		\
 	legal.xml			\
-	login-background.page		\
+	login.page                      \
+	login-automatic.page            \
 	login-banner.page		\
 	login-logo.page			\
+	login-shield.page		\
 	overrides.page			\
 	power-dim-screen.page		\
 	printer-configuration.page	\
 	processes.page			\
 	screen-locking.page		\
 	servers-list.page		\
-	user-autologin.page		\
 	user-session.page		\
 	vpn-list.page
