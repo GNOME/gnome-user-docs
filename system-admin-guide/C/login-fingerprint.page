@@ -1,0 +1,57 @@
+<page  xmlns="http://projectmallard.org/1.0/"
+       xmlns:its="http://www.w3.org/2005/11/its"
+       type="topic" style="task"
+       id="login-fingerprint">
+
+  <info>
+    <link type="guide" xref="login#management" />
+    <revision pkgversion="3.12" date="2014-06-16" status="review" />
+
+    <credit type="author copyright">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc></desc>
+  </info>
+
+  <title>Disable login using the fingerprints</title>
+
+  <!-- see https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Desktop_Migration_and_Administration_Guide/authentication.html#enable-fingerprint-authentication -->
+
+  <p>Users whose computers have a finterprint reader can use their fingerprints
+  instead of a password to log in. Fingerprint login
+  <link href="help:gnome-help#session-fingerprint">needs to be set up by the
+  user</link> before it can be used.</p>
+
+  <p>Fingerprint readers are not always reliable, so you may wish to disable
+  login using the reader for security reasons.</p>
+
+  <steps>
+    <title>Disable login using a fingerprint reader:</title>
+    <item>
+      <p>Create a <sys>local</sys> database for machine-wide settings in
+      <file>/etc/dconf/db/local.d/01-fingerprintreader</file>:
+      </p>
+<code># Specify the dconf path
+[org/gnome/login-screen]
+
+# Disable fingerprint reader
+enable-fingerprint-authentication="false"</code>
+    </item>
+    <item>
+      <p>Override the user's setting and prevent the user from changing it in
+      <file>/etc/dconf/db/local.d/locks/fingerprintreader</file>:</p>
+        <code># List the keys used to configure login
+/org/gnome/login-screen/enable-fingerprint-authentication</code>
+    </item>
+    <item>
+      <p>Update the system databases:</p>
+<screen><output>$ </output><input>dconf update</input></screen>
+    </item>
+  </steps>
+
+</page>
