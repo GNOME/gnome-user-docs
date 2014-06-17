@@ -36,6 +36,8 @@ HELP_FILES = \
 	mime-types.page	\
 	mime-types-application.page	\
 	mime-types-application-user.page	\
+	mime-types-custom.page	\
+	mime-types-custom-user.page	\
 	overrides.page			\
 	power-dim-screen.page		\
 	printer-configuration.page	\
