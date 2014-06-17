@@ -6,6 +6,7 @@
   <info>
     <link type="guide" xref="index#appearance" />
     <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
+    <revision pkgversion="3.14" date="2014-06-17" status="review"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -22,20 +23,25 @@
       <email its:translate="no">pknbe@volny.cz</email>
       <years>2014</years>
     </credit>
+    <credit type="editor">
+      <name>David King</name>
+      <email its:translate="no">davidk@gnome.org</email>
+      <years>2014</years>
+    </credit>
 
-    <desc>Set the default desktop background using a GSettings override.</desc>
+    <desc>Set the default desktop background using a dconf keyfile.</desc>
    </info>
 
   <title>Customize the default desktop background</title>
 
   <p>You can configure the default desktop background and its appearance by
-  setting the relevant GSettings keys in the
-  <sys>org.gnome.desktop.background</sys> schema.</p>
+  setting the relevant GSettings keys from the
+  <sys>org.gnome.desktop.background</sys> schema in a dconf keyfile.</p>
 
   <steps>
     <title>Set the default background</title>
     <item>
-      <p>Create a <sys>local</sys> database for machine-wide settings in
+      <p>Create a <sys>local</sys> keyfile for machine-wide settings in
       <file>/etc/dconf/db/local.d/<var>01-background</var></file>:
       </p>
 <code># Specify the dconf path
@@ -52,8 +58,8 @@ primary-color='000000'
 secondary-color='FFFFFF'</code>
     </item>
     <item>
-      <p>Override the user's setting and prevent the user from changing it in
-      <file>/etc/dconf/db/local.d/locks/background</file>:</p>
+      <p>Optionally, override the user's setting and prevent the user from
+      changing it in <file>/etc/dconf/db/local.d/locks/background</file>:</p>
         <code># List the keys used to configure the desktop background
 /org/gnome/desktop/background/picture-uri
 /org/gnome/desktop/background/picture-options
