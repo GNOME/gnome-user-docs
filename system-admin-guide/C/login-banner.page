@@ -7,6 +7,7 @@
     <link type="guide" xref="login#appearance"/>
     <link type="seealso" xref="gdm-restart"/>
     <revision pkgversion="3.8" date="2013-04-19" status="review"/>
+    <revision pkgversion="3.14" date="2014-06-17" status="review"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -28,10 +29,13 @@
       <email its:translate="no">kittykat3756@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>David King</name>
+      <email its:translate="no">davidk@gnome.org</email>
+      <years>2014</years>
+    </credit>
 
-    <desc>Edit a <sys its:translate="no">GDM</sys>
-    <sys its:translate="no">dconf</sys> profile to display a text banner on the
-    login screen.</desc>
+    <desc>Show extra text on the login screen.</desc>
   </info>
 
   <title>Display a text banner on the login screen</title>
@@ -41,48 +45,32 @@
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-  <p>The text banner on the login screen is controlled by the following
-  <sys its:translate="no">GSettings</sys> keys:</p>
+  <p>You can display extra text on the login screen, such as who to contact for
+  support, by setting the
+  <sys>org.gnome.login-screen.banner-message-enable</sys> and
+  <sys>org.gnome.login-screen.banner-message-text</sys> GSettings keys.</p>
 
-<terms>
-  <item>
-      <title><code>org.gnome.login-screen.banner-message-enable</code></title>
-      <p>enables showing the banner message.</p>
-  </item>
-  <item>
-  <title><code>org.gnome.login-screen.banner-message-text</code></title>
-      <p>shows the text banner message in the login window.</p>
-  </item>
-</terms>
-
-<steps>
-  <title>Display a text banner on the login screen:</title>
-  <item><p>Add a keyfile to the
-  <file its:translate="no">/etc/dconf/db/gdm.d</file> directory and name it,
-  for example, <file>01-banner-message</file>.</p></item>
-  <item><p>Add the following content to the file:</p>
-<screen its:translate="no">[org/gnome/login-screen]
+  <steps>
+    <title>Display a text banner on the login screen:</title>
+    <include href="dconf-profile-gdm.xml"
+      xpointer="xmlns(mal=http://projectmallard.org/1.0/)xpointer(/mal:page/mal:steps/mal:item)"
+      xmlns="http://www.w3.org/2001/XInclude"/>
+    <item><p>Create a <sys>gdm</sys> keyfile for machine-wide settings in
+    <file its:translate="no">/etc/dconf/db/gdm.d/01-banner-message</file>:</p>
+      <code its:translate="no">[org/gnome/login-screen]
 banner-message-enable=true
 banner-message-text='<input its:translate="yes">Type the banner message here.</input>'
-</screen>
-  </item>
-  <item><p>Update the system databases:</p>
-  <screen><output># </output><input>dconf update</input></screen>
-  </item>
-</steps>
+</code>
+    </item>
+    <item>
+      <p>Update the system databases:</p>
+      <screen><output># </output><input>dconf update</input></screen>
+    </item>
+  </steps>
 
-<note>
-  <p>You should keep the banner message reasonably short as longer texts do not
-  fit in the screen.</p>
-</note>
+  <note>
+    <p>You should keep the banner message reasonably short, as longer texts do
+    not fit on the screen.</p>
+  </note>
 
-<section id="troubleshooting-banner">
-<title>Troubleshooting: what if the banner message does not update?</title>
-  <p>If the banner message does not show, make sure you have run the
-  <cmd>dconf update</cmd> command.</p>
-  <p>In case the banner message does not update, try restarting
-  <sys>GDM</sys>. For more information see
-  <link xref="gdm-restart"/>.</p>
-
-</section>
 </page>
