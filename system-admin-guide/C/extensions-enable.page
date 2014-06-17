@@ -5,15 +5,14 @@
 
   <info>
     <link type="guide" xref="index#extension" />
-    <revision pkgversion="3.9" version="0.1" date="2013-08-07" status="stub"/>
-    <link type="seealso" xref="extensions-mandatory" />
+    <revision pkgversion="3.12" date="2014-06-17" status="review"/>
     <link type="seealso" xref="extensions-lockdown" />
     <link type="seealso" xref="extensions" />
 
     <credit type="author copyright">
       <name>Petr Kovar</name>
       <email>pknbe@volny.cz</email>
-      <years>2013</years>
+      <years>2014</years>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -51,12 +50,14 @@ system-db:local
 enabled-extensions=['<input>myextension1@myname.example.com</input>', '<input>myextension2@myname.example.com</input>']
 </code>
       </listing>
+      <p>The <code>enabled-extensions</code> key specifies the enabled
+      extensions using the extensions' uuid
+      (<code>myextension1@myname.example.com</code> and
+      <code>myextension2@myname.example.com</code>).</p>
     </item>
     <item>
       <p>Update the system databases:</p>
-      <screen its:translate="no">
-        <output style="prompt"># </output><input>dconf update</input>
-      </screen>
+      <screen its:translate="no"><output style="prompt"># </output><input>dconf update</input></screen>
     </item>
   </steps>
 
