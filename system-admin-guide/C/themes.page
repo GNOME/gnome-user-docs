@@ -1,0 +1,80 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="themes-plymouth">
+
+  <info>
+    <link type="guide" xref="index#appearance" />
+    <revision pkgversion="3.8" date="2014-06-17" status="draft"/>
+
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <desc>Chose from various static or animated graphical themes to customize 
+    the boot screen.</desc>
+  </info>
+  
+  <title>Customize the Boot Screen Appearance</title>
+  
+  <comment>
+    <cite date="2014-06-17" href="mailto:jana.svarova@gmail.com">Jana Svarova</cite>
+    <p>Adapted from RHEL7 Desktop Migration and Administration Guide.</p>
+  </comment>
+  
+    	<section id="themes-plymouth">
+    <title>Set a  Boot Screen Theme </title>
+	<steps>
+  
+  <item><p>Search for the existing <sys>Plymouth</sys> themes by running the 
+  command below and choose the most preferable one.</p>
+  <screen><cmd># yum search plymouth-theme</cmd></screen>
+  <p>Alternatively, execute the another command to view the installed themes:</p>
+  <screen><cmd>plymouth-set-default-theme --list</cmd></screen>
+  <p>You can also install all the themes by installing all the <sys>plymouth</sys> 
+  packages. However, you will install a number of unnecessary packages as well.</p>
+  <screen><cmd># yum install plymouth\*</cmd></screen></item>
+  
+  <item><p>Set the new theme as default with the 
+  <cmd>plymouth-set-default-theme <var>theme_name</var></cmd>
+  command.</p>
+	<example>
+  <p>For example, you have chosen the <var>spinfinity</var> theme,
+  so you run:</p>
+  <screen><cmd># plymouth-set-default-theme spinfinity</cmd></screen>
+	</example></item>
+     
+  <item><p>Rebuild the <sys>initrd</sys> daemon after editing
+  otherwise your theme will not show in the boot screen. Do so by executing:</p>
+    <screen><cmd># dracut -f</cmd></screen></item>
+    
+	</steps>
+	</section>
+	<section id="creating-new-plymouth-theme">
+  <title>Create a New Boot Screen Theme</title>
+  <p>If you do not want to choose from the given list of themes, you can create your own. 
+  The easiest way is to copy an existing theme and modify it.</p>
+  
+	<steps>
+  
+  <item><p>Copy an entire content of a <file>plymouth/</file> directory of your choice
+  from the <file>/usr/share/plymouth/themes/</file> directory.</p></item>
+    
+  <item><p>Save the <file>.plymouth</file> file with a new name in the
+  <file>/usr/share/plymouth/themes/<var>newtheme</var>/</file>
+  directory, in the following format:</p>
+    <screen><file><var>newtheme</var>.plymouth</file></screen></item>
+    
+  <item><p>Update the settings in your
+  <file>/usr/share/plymouth/themes/<var>newtheme</var>/<var>newtheme</var>.plymouth</file>
+  file according to your preferences, changing color, alignment, or transition.</p></item>
+  
+  <item><p>Set your <var>newtheme</var> as default by executing:</p>
+    <screen><cmd># plymouth-set-default-theme <var>newtheme</var></cmd></screen></item>
+    
+  <item><p>Rebuild the <sys>initrd</sys> daemon after changing the theme. Run:</p>
+    <screen><cmd># dracut -f</cmd></screen></item>
+	</steps>
+	</section>
+</page>
