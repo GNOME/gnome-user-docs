@@ -9,7 +9,7 @@ HELP_MEDIA =
 HELP_FILES = \
 	background.page			\
 	backgrounds-extra.page		\
-	command-line-access.page		\
+	command-line-access.page	\
 	compose-key.page		\
 	ctrl-alt-backspace.page		\
 	dconf-custom-defaults.page	\
@@ -18,10 +18,8 @@ HELP_FILES = \
 	dconf-nfs-home.page		\
 	dconf-profiles.page		\
 	dconf-favorite-applications.page\
-	enterprise-login.page		\
 	extensions-enable.page		\
 	extensions-lockdown.page	\
-	extensions-mandatory.page	\
 	extensions.page			\
 	fonts-user.page			\
 	fonts.page			\
@@ -31,9 +29,11 @@ HELP_FILES = \
 	login.page                      \
 	login-automatic.page            \
 	login-banner.page		\
+	login-enterprise.page		\
 	login-fingerprint.page          \
 	login-logo.page			\
 	login-shield.page		\
+	login-userlist-disable.page	\
 	overrides.page			\
 	power-dim-screen.page		\
 	printer-configuration.page	\
