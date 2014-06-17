@@ -7,7 +7,6 @@ HELP_LINGUAS =
 HELP_MEDIA =
 
 HELP_FILES = \
-	background.page			\
 	backgrounds-extra.page		\
 	command-line-access.page	\
 	compose-key.page		\
@@ -19,6 +18,7 @@ HELP_FILES = \
 	dconf-profiles.page		\
 	dconf-profile-user.xml          \
 	dconf-favorite-applications.page\
+	desktop-background.page		\
 	extensions-enable.page		\
 	extensions-lockdown.page	\
 	extensions.page			\
