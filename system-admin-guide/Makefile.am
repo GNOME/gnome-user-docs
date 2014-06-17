@@ -10,7 +10,6 @@ HELP_FILES = \
 	backgrounds-extra.page		\
 	command-line-access.page	\
 	compose-key.page		\
-	ctrl-alt-backspace.page		\
 	dconf-custom-defaults.page	\
 	dconf-keyfiles.page		\
 	dconf-lockdown.page		\
