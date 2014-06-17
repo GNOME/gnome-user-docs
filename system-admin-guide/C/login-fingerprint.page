@@ -35,17 +35,9 @@
 
   <steps>
     <title>Disable login using a fingerprint reader:</title>
-    <item>
-      <p>Create the <file its:translate="no">user</file> profile if it does not
-      already exist:</p>
-      <listing its:translate="no">
-        <title><file>/etc/dconf/profile/user</file></title>
-        <code>user-db:user
-system-db:local</code>
-      </listing>
-      <p><input its:translate="no">local</input> is the name of a
-      <sys its:translate="no">dconf</sys> database.</p>
-    </item>
+    <include href="dconf-profile-user.xml"
+      xpointer="xmlns(mal=http://projectmallard.org/1.0/)xpointer(/mal:page/mal:steps/mal:item)"
+      xmlns="http://www.w3.org/2001/XInclude"/>
     <item>
       <p>Create a <sys>local</sys> database for machine-wide settings in
       <file>/etc/dconf/db/local.d/01-fingerprintreader</file>:

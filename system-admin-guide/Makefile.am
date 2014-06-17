@@ -17,6 +17,7 @@ HELP_FILES = \
 	dconf-lockdown.page		\
 	dconf-nfs-home.page		\
 	dconf-profiles.page		\
+	dconf-profile-user.xml          \
 	dconf-favorite-applications.page\
 	extensions-enable.page		\
 	extensions-lockdown.page	\
