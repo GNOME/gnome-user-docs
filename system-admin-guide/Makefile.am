@@ -35,6 +35,7 @@ HELP_FILES = \
 	login-logo.page			\
 	login-shield.page		\
 	login-userlist-disable.page	\
+	mime-types.page	\
 	overrides.page			\
 	power-dim-screen.page		\
 	printer-configuration.page	\
