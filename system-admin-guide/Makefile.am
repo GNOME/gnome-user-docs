@@ -33,7 +33,6 @@ HELP_FILES = \
 	login-enterprise.page		\
 	login-fingerprint.page          \
 	login-logo.page			\
-	login-shield.page		\
 	login-userlist-disable.page	\
 	mime-types.page	\
 	overrides.page			\
