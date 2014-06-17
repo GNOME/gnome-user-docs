@@ -8,8 +8,6 @@ HELP_MEDIA =
 
 HELP_FILES = \
 	backgrounds-extra.page		\
-	command-line-access.page	\
-	compose-key.page		\
 	dconf-custom-defaults.page	\
 	dconf-keyfiles.page		\
 	dconf-lockdown.page		\
@@ -17,8 +15,9 @@ HELP_FILES = \
 	dconf-profiles.page		\
 	dconf-profile-gdm.xml		\
 	dconf-profile-user.xml		\
-	dconf-favorite-applications.page\
 	desktop-background.page		\
+	desktop-favorite-applications.page\
+	desktop-lockscreen.page         \
 	extensions-enable.page		\
 	extensions-lockdown.page	\
 	extensions.page			\
@@ -41,7 +40,6 @@ HELP_FILES = \
 	power-dim-screen.page		\
 	printer-configuration.page	\
 	processes.page			\
-	screen-locking.page		\
 	servers-list.page		\
 	user-session.page		\
 	vpn-list.page
