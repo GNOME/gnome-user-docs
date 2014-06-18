@@ -3,6 +3,8 @@
 HELP_ID = system-admin-guide
 
 HELP_FILES = \
+	appearance.page \
+	dconf.page \
 	dconf-custom-defaults.page	\
 	dconf-keyfiles.page		\
 	dconf-lockdown.page		\
@@ -33,16 +35,18 @@ HELP_FILES = \
 	mime-types-application-user.page	\
 	mime-types-custom.page	\
 	mime-types-custom-user.page	\
+	network.page \
 	network-printer-config.page \
-	network-servers-list.page \
+	network-server-list.page \
 	network-vpn.page \
 	overrides.page			\
 	power-dim-screen.page		\
 	processes.page			\
-	servers-list.page		\
 	session-custom.page	\
-	session-user.page	\
-	vpn-list.page
+	session-user.page \
+	setup.page \
+	software.page \
+	user-settings.page
 
 HELP_MEDIA =
 
