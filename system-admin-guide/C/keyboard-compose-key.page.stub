@@ -12,15 +12,16 @@
       <years>2014</years>
     </credit>
 
-    <desc>Enable the Compose key by default for all users.</desc>
+    <desc>Enable the compose key by default for all users.</desc>
   </info>
 
-  <title>Enable the Compose key</title>
-  <p>To enable the Compose key and configure a certain key on
-    your keyboard as the Compose key, set the
-    <sys>org.gnome.desktop.input-sources.xkb-options</sys>
-    GSettings key. That way, the setting will be enabled by default
-    for all users on your system.</p>
+  <title>Enable the compose key</title>
+
+  <p>To enable the Compose key and configure a certain key on your keyboard as
+  the Compose key, set the
+  <sys>org.gnome.desktop.input-sources.xkb-options</sys> GSettings key. That
+  way, the setting will be enabled by default for all users on your system.</p>
+
   <steps>
     <title>Set the Right Alt key as the Compose key</title>
     <item>
@@ -29,21 +30,21 @@
         <code>[org/gnome/desktop/input-sources]
 # Set the Right Alt key as the Compose key and enable it
 xkb-options=['compose:<var>ralt</var>']</code>
-    <p>If you want to set a different key than Right <key>Alt</key>, replace
-      <var>ralt</var> with the name of that key as specified in
-      the <cmd>xkeyboard-config</cmd>(7) man page, section
-      <em>Compose key position</em>.</p>
+      <p>If you want to set a different key than Right <key>Alt</key>, replace
+      <var>ralt</var> with the name of that key as specified in the
+      <cmd>xkeyboard-config</cmd>(7) man page, section <em>Compose key
+      position</em>.</p>
     </item>
     <item>
       <p>Override the user's setting and prevent the user from changing it in
       <file>/etc/dconf/db/local.d/locks/input-sources</file>:</p>
-        <code># Lock the list of enabled XKB options
+      <code># Lock the list of enabled XKB options
 /org/gnome/desktop/input-sources/xkb-options
 </code>
     </item>
     <item>
       <p>Update the system databases for the changes to take effect:</p>
-      <screen><output># </output><input>dconf update</input></screen>
+      <screen><output>$ </output><input>dconf update</input></screen>
     </item>
   </steps>
 
