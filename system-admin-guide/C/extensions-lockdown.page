@@ -4,14 +4,14 @@
       id="extensions-lockdown">
 
   <info>
-    <link type="guide" xref="index#extension" />
-    <revision pkgversion="3.12" date="2014-06-17" status="review"/>
+    <link type="guide" xref="software#extension" />
     <link type="seealso" xref="extensions-enable" />
     <link type="seealso" xref="extensions" />
+    <revision pkgversion="3.12" date="2014-06-17" status="review"/>
 
     <credit type="author copyright">
       <name>Petr Kovar</name>
-      <email>pknbe@volny.cz</email>
+      <email its:translate="no">pknbe@volny.cz</email>
       <years>2014</years>
     </credit>
 
@@ -23,20 +23,22 @@
   <title>Lock down enabled extensions</title>
   
   <p>In GNOME Shell, you can prevent the user from enabling or disabling
-   extensions by locking down the <code>org.gnome.shell.enabled-extensions</code>
-   and <code>org.gnome.shell.development-tools</code> keys. This allows you to
-   provide a set of extensions that the user has to use.</p>
+  extensions by locking down the
+  <code>org.gnome.shell.enabled-extensions</code> and
+  <code>org.gnome.shell.development-tools</code> keys. This allows you to
+  provide a set of extensions that the user has to use.</p>
    
-  <p>Locking down the <code>org.gnome.shell.development-tools</code> key ensures
-  that the user cannot use GNOME Shell's integrated debugger and inspector tool
-  (<app>Looking Glass</app>) to disable any mandatory extensions.</p>
+  <p>Locking down the <code>org.gnome.shell.development-tools</code> key
+  ensures that the user cannot use GNOME Shell's integrated debugger and
+  inspector tool (<app>Looking Glass</app>) to disable any mandatory
+  extensions.</p>
    
   <steps>
     <title>Lock down the org.gnome.shell.enabled-extensions and
     org.gnome.shell.development-tools keys</title>
     <item>
-      <p>Create a <code>user</code> profile in <file>/etc/dconf/profile/user</file>:
-      </p>
+      <p>Create a <code>user</code> profile in
+      <file>/etc/dconf/profile/user</file>:</p>
       <listing>
         <code>
 user-db:user
@@ -85,7 +87,6 @@ development-tools=false
   in <file>~/.local/share/gnome-shell/extensions</file> or
   <file>/usr/share/gnome-shell/extensions</file> that are not listed in the
   <code>org.gnome.shell.enabled-extensions</code> key will not be loaded by
-  GNOME Shell, thus preventing the user from using them.
-  </p>
+  GNOME Shell, thus preventing the user from using them.</p>
 
 </page>
