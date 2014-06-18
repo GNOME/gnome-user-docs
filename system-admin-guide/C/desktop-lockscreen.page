@@ -34,19 +34,19 @@
   locations.</p>
 
   <steps>
-  <title>Enable automatic screen lock</title>
-  <include href="dconf-snippets.xml"
-	   xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
-	   xmlns="http://www.w3.org/2001/XInclude"/>
-  <include href="dconf-snippets.xml"
-	   xpointer="xpointer(/*/*[@xml:id='dconf-profile-user-dir'])"
-	   xmlns="http://www.w3.org/2001/XInclude"/>
-  <item>
-    <p>Create the key file
-    <file>/etc/dconf/db/local.d/00-screensaver</file> to provide
-    information for the <sys>local</sys> database.</p>
-    <listing>
-      <title><file>/etc/dconf/db/local.d/00-screensaver</file></title>
+    <title>Enable automatic screen lock</title>
+    <include href="dconf-snippets.xml"
+	     xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
+	     xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="dconf-snippets.xml"
+	     xpointer="xpointer(/*/*[@xml:id='dconf-profile-user-dir'])"
+	     xmlns="http://www.w3.org/2001/XInclude"/>
+    <item>
+      <p>Create the key file
+      <file>/etc/dconf/db/local.d/00-screensaver</file> to provide
+      information for the <sys>local</sys> database.</p>
+      <listing>
+	<title><file>/etc/dconf/db/local.d/00-screensaver</file></title>
 <code>
 # Specify the dconf path
 [org/gnome/desktop/session]
@@ -66,27 +66,27 @@ lock-delay=uint32 0
       </listing>
       <p>You must include the <code>uint32</code> along with the
       integer key values as shown.</p>
-  </item>
-  <item>
-    <p>To prevent the user from overriding these settings, create the file
-    <file>/etc/dconf/db/local.d/locks/screensaver</file> with the following
-    content:</p>
-    <listing>
-      <title><file>/etc/dconf/db/local.db/locks/screensaver</file></title>
+    </item>
+    <item>
+      <p>To prevent the user from overriding these settings, create the file
+      <file>/etc/dconf/db/local.d/locks/screensaver</file> with the following
+      content:</p>
+      <listing>
+	<title><file>/etc/dconf/db/local.db/locks/screensaver</file></title>
 <code>
 # Lock desktop screensaver settings
 /org/gnome/desktop/session/idle-delay
 /org/gnome/desktop/screensaver/lock-enabled
 /org/gnome/desktop/screensaver/lock-delay
 </code>
-    </listing>
-  </item>
-  <include href="dconf-snippets.xml"
-	   xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
-	   xmlns="http://www.w3.org/2001/XInclude"/>
-  <include href="dconf-snippets.xml"
-	   xpointer="xpointer(/*/*[@xml:id='dconf-logoutin'])"
-	   xmlns="http://www.w3.org/2001/XInclude"/>
+      </listing>
+    </item>
+    <include href="dconf-snippets.xml"
+	     xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+	     xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="dconf-snippets.xml"
+	     xpointer="xpointer(/*/*[@xml:id='dconf-logoutin'])"
+	     xmlns="http://www.w3.org/2001/XInclude"/>
   </steps>
 
 </page>
