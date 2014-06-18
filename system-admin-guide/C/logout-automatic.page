@@ -5,14 +5,22 @@
 
   <info>
     <link type="guide" xref="login#management" />
-    <revision pkgversion="3.10" date="2013-07-17" status="incomplete"/>
     <link type="seealso" xref="dconf-profiles" />
     <link type="seealso" xref="dconf-lockdown" />
+    <link type="seealso" xref="login-automatic" />
+
+    <revision pkgversion="3.12" date="2014-06-18" status="review"/>
 
     <credit type="author copyright">
       <name>Ekaterina Gerasimova</name>
       <email>kittykat3756@gmail.com</email>
       <years>2013</years>
+    </credit>
+
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email its:translate="no">pknbe@volny.cz</email>
+      <years>2014</years>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -21,12 +29,17 @@
 
   </info>
 
-  <title>Automatic logout</title>
+  <title>Configure automatic logout</title>
 
   <p>User sessions that have been idle for a specific period of time can be
   ended automatically. You can set different behaviour based on whether the
   machine is running from a battery or from mains power by setting the
   corresponding <sys its:translate="no">dconf</sys> key, then locking it.</p>
+
+  <note style="warning">
+    <p>Keep in mind that users can potentially lose unsaved data if an idle
+    session is automatically ended.</p>
+  </note>
 
   <steps>
     <title>Set automatic logout for a mains powered machine</title>
@@ -71,7 +84,7 @@ sleep-inactive-ac-type='logout'
   <!-- There will shortly be a way to get key descriptions using gsettings, we
        should recommend this instead of listing the terms here. See
        https://bugzilla.gnome.org/show_bug.cgi?id=668232 -->
-  <p>The following gsettings keys are of interest:</p>
+  <p>The following GSettings keys are of interest:</p>
   <terms>
     <item>
       <title><code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</code></title>
@@ -96,5 +109,15 @@ sleep-inactive-ac-type='logout'
   </terms>
 
   <p>You can run <cmd>gsettings range</cmd> on a key for a list of values which
-  you can use.</p>
+  you can use. For example: </p>
+  
+  <screen>$ <input>gsettings range org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type</input>
+enum
+'blank'
+'suspend'
+'shutdown'
+'hibernate'
+'interactive'
+'nothing'
+'logout'</screen>
 </page>
