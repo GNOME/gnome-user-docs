@@ -3,7 +3,6 @@
 HELP_ID = system-admin-guide
 
 HELP_FILES = \
-	backgrounds-extra.page		\
 	dconf-custom-defaults.page	\
 	dconf-keyfiles.page		\
 	dconf-lockdown.page		\
