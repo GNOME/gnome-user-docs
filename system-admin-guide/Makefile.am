@@ -39,7 +39,10 @@ HELP_FILES = \
 	overrides.page			\
 	power-dim-screen.page		\
 	processes.page			\
-	user-session.page
+	servers-list.page		\
+	session-custom.page	\
+	session-user.page	\
+	vpn-list.page
 
 HELP_MEDIA =
 
