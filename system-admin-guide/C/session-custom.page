@@ -1,10 +1,11 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic" style="task"
-      id="custom-session-create">
+      id="session-custom">
 
   <info>
     <link type="guide" xref="index#session" />
-    <revision pkgversion="3.11" date="2014-01-27" status="draft" />
+    <link type="guide" xref="login#management" />
+    <revision pkgversion="3.12" date="2014-06-17" status="review" />
 
     <credit type="author copyright">
       <name>minnie_eg</name>
@@ -24,7 +25,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Install a desktop session file.</desc>
+    <desc>Create a custom session by installing a desktop session file.</desc>
   </info>
 
   <title>Create a custom session</title>
@@ -56,7 +57,7 @@ Exec=<input>gnome-session --session=new-session</input></code>
    <cmd>gnome-session --session=<var>new-session</var></cmd>
    command.</p>
    <p>For more information on the parameters that you can use with
-   <cmd>gnome-session</cmd>, see the <cmd>gnome-session</cmd>(1)
+   <cmd>gnome-session</cmd>, see the <link href="man:gnome-session">gnome-session</link>
    man page.</p>
   </item>
   <item><p>Create a custom session file in
@@ -65,14 +66,15 @@ Exec=<input>gnome-session --session=new-session</input></code>
    <code>[GNOME Session]
 Name=<input>Custom Session</input>
 RequiredComponents=<input>gnome-shell-classic;gnome-settings-daemon;</input></code>
+  <p>Note that any item that you specify in <code>RequiredComponents</code>
+  needs to have its corresponding <file>.desktop</file> file in
+  <file>/usr/share/applications/</file>.</p>
   </item>
 </steps>
 
-<note style="note style">
   <p>After configuring the custom session files, the new session will be
   available in the session list on the GDM login
   screen.</p>
-</note>
 
   <section id="custom-session-issues">
   <title>Known issues</title>
@@ -83,7 +85,7 @@ RequiredComponents=<input>gnome-shell-classic;gnome-settings-daemon;</input></co
     session.</screen>
 
     <p>Should this happen to you, follow these steps to change the  
-    <file>/etc/X11/Xsession.d/20x11-common_process-args</file> file.</p>
+    <file>/etc/X11/Xsession.d/20x11-common_process-args</file> file:</p>
     <steps>
     <item><p>Change <code>STARTUP_FULL_PATH=$(/usr/bin/which <input>"$1"</input>|| true)</code>
     to <code>STARTUP_FULL_PATH=$(/usr/bin/which <input>$1</input> || true)</code>
