@@ -8,11 +8,18 @@
     <link type="seealso" xref="dconf-profiles" />
     <link type="seealso" xref="dconf-lockdown" />
     <revision pkgversion="3.8" date="2013-08-08" status="review"/>
+    <revision pkgversion="3.14" date="2014-06-18" status="review"/>
 
     <credit type="author copyright">
       <name>Jana Svarova</name>
       <email its:translate="no">jana.svarova@gmail.com</email>
       <years>2013</years>
+    </credit>
+
+    <credit type="editor">
+      <name>Shaun McCance</name>
+      <email its:translate="no">shaunm@gnome.org</email>
+      <years>2014</years>
     </credit>
 
     <desc>Enable the screensaver and make the screen lock automatically when the
@@ -21,32 +28,30 @@
 
   <title>Lock the screen when user is idle</title>
 
-  <p>If you want to enable the screensaver and make the screen lock automatically
-  when the user is idle, you need to create a dconf profile, set the 
-  <sys>GSettings</sys> key pairs and then lock it to prevent users from editing it.</p>
+  <p>You can make the screen lock automatically whenever a user
+  is idle for some amount of time. This is useful if your users
+  may leave their computers unattended in public or unsecure
+  locations.</p>
 
-<section id="setting-screensaver">
-
-  <title>Enable the screensaver</title>
   <steps>
-  <title>To enable the screensaver and lock the screen, follow this procedure:</title>
-    <item>
-      <p>Create a <code>user</code> profile in <file>/etc/dconf/profile/user</file>:</p>
-      <listing>
-        <code>
-user-db:user
-system-db:local
-</code>
-      </listing>
-    </item>
-    <item>
-      <p>As root, create a <code>local</code> database for system-wide settings
-      in <file>/etc/dconf/db/local.d/00-screensaver</file>:</p>
-      <listing>
+  <title>Enable screen lock</title>
+  <include href="dconf-snippets.xml"
+	   xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
+	   xmlns="http://www.w3.org/2001/XInclude"/>
+  <include href="dconf-snippets.xml"
+	   xpointer="xpointer(/*/*[@xml:id='dconf-profile-user-dir'])"
+	   xmlns="http://www.w3.org/2001/XInclude"/>
+  <item>
+    <p>Create the key file
+    <file>/etc/dconf/db/local.d/00-screensaver</file> to provide
+    information for the <sys>local</sys> database.</p>
+    <listing>
+      <title><file>/etc/dconf/db/local.d/00-screensaver</file></title>
 <code>
 [org/gnome/desktop/session]
 # Set the lock time out to 180 seconds before the session is considered idle.
 idle-delay=180
+
 [org/gnome/desktop/screensaver]
 # Set this to true to lock the screen when the screensaver activates
 lock-enabled=true
@@ -54,46 +59,24 @@ lock-enabled=true
 lock-delay=180
 </code>
       </listing>
-    </item>
-    <item>
-      <p>Override the user's setting and prevent the user from changing it in the
-      <file>/etc/dconf/db/local.d/locks/screensaver</file> file:</p>
-      <listing>
+  </item>
+  <item>
+    <p>To prevent the user from overriding these settings, create the file
+    <file>/etc/dconf/db/local.d/locks/screensaver</file> with the following
+    content:</p>
+    <listing>
+      <title><file>/etc/dconf/db/local.db/locks/screensaver</file></title>
 <code>
 # Lock desktop screensaver settings
 /org/gnome/desktop/session/idle-delay
 /org/gnome/desktop/screensaver/lock-enabled
 /org/gnome/desktop/screensaver/lock-delay
 </code>
-      </listing>
-    </item>
-    <item>
-      <p>Run <cmd>dconf update</cmd>.</p>
-    </item>
+    </listing>
+  </item>
+  <include href="dconf-snippets.xml"
+	   xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+	   xmlns="http://www.w3.org/2001/XInclude"/>
   </steps>
 
-</section>
-
-<section id="gsettings-keys-screensaver">
-<title>GSettings keys</title>
-
-  <p>The following <sys>GSettings</sys> keys are of interest:</p>
-
-  <terms>
-    <item>
-      <title><code>org.gnome.desktop.session.idle-delay</code></title>
-      <p>The number of seconds before the session is considered idle.</p>
-    </item>
-    <item>
-      <title><code>org.gnome.desktop.screensaver.lock-delay</code></title>
-      <p>The number of seconds after screensaver activation before locking the
-      screen.</p>
-    </item>
-    <item>
-      <title><code>org.gnome.desktop.screensaver.lock-enabled</code></title>
-      <p>Set to <input>true</input> to lock the screen when the screensaver goes active.</p>
-    </item>
-  </terms>
-
-</section>
 </page>

@@ -1,3 +1,9 @@
+<!--
+To use a step in this file:
+<include href="dconf-snippets.xml"
+         xpointer="xpointer(/*/*[@xml:id='THE_XML_ID'])"
+         xmlns="http://www.w3.org/2001/XInclude"/>
+-->
 <steps xmlns="http://projectmallard.org/1.0/"
        xmlns:its="http://www.w3.org/2005/11/its">
 
@@ -11,6 +17,10 @@ system-db:local</code>
     </listing>
     <p><input its:translate="no">local</input> is the name of a
     <sys its:translate="no" xref="dconf">dconf</sys> database.</p>
+  </item>
+  <item xml:id="dconf-profile-user-dir">
+    <p>Create the directory <file>/etc/dconf/db/local.d/</file>
+    if it does not already exist.</p>
   </item>
 
   <item xml:id="dconf-profile-gdm">
