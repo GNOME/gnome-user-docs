@@ -8,7 +8,7 @@
     <link type="seealso" xref="dconf-profiles" />
     <link type="seealso" xref="dconf-lockdown" />
     <revision pkgversion="3.8" date="2013-08-08" status="review"/>
-    <revision pkgversion="3.14" date="2014-06-18" status="review"/>
+    <revision pkgversion="3.14" date="2014-06-18" status="candidate"/>
 
     <credit type="author copyright">
       <name>Jana Svarova</name>
@@ -48,17 +48,24 @@
     <listing>
       <title><file>/etc/dconf/db/local.d/00-screensaver</file></title>
 <code>
+# Specify the dconf path
 [org/gnome/desktop/session]
-# Set the lock time out to 180 seconds before the session is considered idle.
-idle-delay=180
 
+# Number of seconds of inactivity before the screen goes blank
+idle-delay=uint32 180
+
+# Specify the dconf path
 [org/gnome/desktop/screensaver]
-# Set this to true to lock the screen when the screensaver activates
+
+# Lock the screen after the screen is blank
 lock-enabled=true
-# Set the lock timeout to 180 seconds after the screensaver has been activated
-lock-delay=180
+
+# Number of seconds after the screen is blank before locking the screen
+lock-delay=uint32 0
 </code>
       </listing>
+      <p>You must include the <code>uint32</code> along with the
+      integer key values as shown.</p>
   </item>
   <item>
     <p>To prevent the user from overriding these settings, create the file
@@ -76,6 +83,9 @@ lock-delay=180
   </item>
   <include href="dconf-snippets.xml"
 	   xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+	   xmlns="http://www.w3.org/2001/XInclude"/>
+  <include href="dconf-snippets.xml"
+	   xpointer="xpointer(/*/*[@xml:id='dconf-logoutin'])"
 	   xmlns="http://www.w3.org/2001/XInclude"/>
   </steps>
 
