@@ -8,8 +8,7 @@ HELP_FILES = \
 	dconf-lockdown.page		\
 	dconf-nfs-home.page		\
 	dconf-profiles.page		\
-	dconf-profile-gdm.xml		\
-	dconf-profile-user.xml		\
+	dconf-snippets.xml		\
 	desktop-background.page		\
 	desktop-favorite-applications.page\
 	desktop-lockscreen.page         \

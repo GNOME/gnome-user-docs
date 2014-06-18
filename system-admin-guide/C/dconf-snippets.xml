@@ -1,0 +1,32 @@
+<steps xmlns="http://projectmallard.org/1.0/"
+       xmlns:its="http://www.w3.org/2005/11/its">
+
+  <item xml:id="dconf-profile-user">
+    <p>Create the <file its:translate="no">user</file> profile if it does not
+    already exist:</p>
+    <listing its:translate="no">
+      <title><file>/etc/dconf/profile/user</file></title>
+      <code>user-db:user
+system-db:local</code>
+    </listing>
+    <p><input its:translate="no">local</input> is the name of a
+    <sys its:translate="no" xref="dconf">dconf</sys> database.</p>
+  </item>
+
+  <item xml:id="dconf-profile-gdm">
+    <p>Create the <file its:translate="no">gdm</file> profile if it does not
+    already exist:</p>
+    <listing its:translate="no">
+      <title><file>/etc/dconf/profile/gdm</file></title>
+      <code>user-db:user
+system-db:gdm</code>
+    </listing>
+    <p><input its:translate="no">gdm</input> is the name of a
+    <sys its:translate="no" xref="dconf">dconf</sys> database.</p>
+  </item>
+
+  <item xml:id="dconf-update">
+    <p>Update the system databases:</p>
+    <screen><output style="prompt"># </output><input>dconf update</input></screen>
+  </item>
+</steps>

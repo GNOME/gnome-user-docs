@@ -40,6 +40,9 @@
 
   <steps>
     <title>Set the default background</title>
+    <include href="dconf-snippets.xml"
+      xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
+      xmlns="http://www.w3.org/2001/XInclude"/>
     <item>
       <p>Create a <sys>local</sys> keyfile for machine-wide settings in
       <file>/etc/dconf/db/local.d/<var>01-background</var></file>:
@@ -66,11 +69,9 @@ secondary-color='FFFFFF'</code>
 /org/gnome/desktop/background/primary-color
 /org/gnome/desktop/background/secondary-color</code>
     </item>
-    <item>
-      <p>Update the system databases:</p>
-<screen>
-<output># </output><input>dconf update</input></screen>
-    </item>
+    <include href="dconf-snippets.xml"
+      xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+      xmlns="http://www.w3.org/2001/XInclude"/>
   </steps>
 
 </page>

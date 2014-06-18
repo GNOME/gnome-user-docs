@@ -52,8 +52,8 @@
 
   <steps>
     <title>Display a text banner on the login screen:</title>
-    <include href="dconf-profile-gdm.xml"
-      xpointer="xmlns(mal=http://projectmallard.org/1.0/)xpointer(/mal:page/mal:steps/mal:item)"
+    <include href="dconf-snippets.xml"
+      xpointer="xpointer(/*/*[@xml:id='dconf-profile-gdm'])"
       xmlns="http://www.w3.org/2001/XInclude"/>
     <item><p>Create a <sys>gdm</sys> keyfile for machine-wide settings in
     <file its:translate="no">/etc/dconf/db/gdm.d/01-banner-message</file>:</p>
@@ -62,10 +62,9 @@ banner-message-enable=true
 banner-message-text='<input its:translate="yes">Type the banner message here.</input>'
 </code>
     </item>
-    <item>
-      <p>Update the system databases:</p>
-      <screen><output># </output><input>dconf update</input></screen>
-    </item>
+    <include href="dconf-snippets.xml"
+      xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+      xmlns="http://www.w3.org/2001/XInclude"/>
   </steps>
 
   <note>

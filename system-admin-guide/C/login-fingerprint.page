@@ -36,8 +36,8 @@
 
   <steps>
     <title>Disable login using a fingerprint reader:</title>
-    <include href="dconf-profile-user.xml"
-      xpointer="xmlns(mal=http://projectmallard.org/1.0/)xpointer(/mal:page/mal:steps/mal:item)"
+    <include href="dconf-snippets.xml"
+      xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
       xmlns="http://www.w3.org/2001/XInclude"/>
     <item>
       <p>Create a <sys>local</sys> database for machine-wide settings in
@@ -55,10 +55,9 @@ enable-fingerprint-authentication="false"</code>
         <code># List the keys used to configure login
 /org/gnome/login-screen/enable-fingerprint-authentication</code>
     </item>
-    <item>
-      <p>Update the system databases:</p>
-<screen><output># </output><input>dconf update</input></screen>
-    </item>
+    <include href="dconf-snippets.xml"
+      xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+      xmlns="http://www.w3.org/2001/XInclude"/>
   </steps>
 
 </page>
