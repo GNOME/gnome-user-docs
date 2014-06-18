@@ -6,7 +6,10 @@
   <info>
     <link type="guide" xref="appearance" />
     <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
-    <revision pkgversion="3.14" date="2014-06-17" status="candidate"/>
+    <revision pkgversion="3.14" date="2014-06-17" status="incomplete">
+      <desc>All prose and instructions are up to par. Extra info needs
+      to be provided on picture options, per comment below. --shaunm</desc>
+    </revision>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -34,8 +37,8 @@
       <years>2014</years>
     </credit>
 
-    <desc>Change the default desktop background.</desc>
-   </info>
+    <desc>Change the default desktop background for all users.</desc>
+  </info>
 
   <title>Set custom background</title>
 
@@ -56,8 +59,9 @@
       <file>/etc/dconf/db/local.d/00-background</file> to provide
       information for the <sys>local</sys> database.</p>
       <listing>
-        <title><file>/etc/dconf/db/local.d/00-screensaver</file></title>
-<code># Specify the dconf path
+        <title><file>/etc/dconf/db/local.d/00-background</file></title>
+<code>
+# Specify the dconf path
 [org/gnome/desktop/background]
 
 # Specify the path to the desktop background image file
@@ -70,8 +74,15 @@ picture-options='scaled'
 primary-color='000000'
 
 # Specify the right or bottom color when drawing gradients
-secondary-color='FFFFFF'</code>
+secondary-color='FFFFFF'
+</code>
       </listing>
+      <comment>
+	<cite date="2014-06-18">shaunm</cite>
+	<p>Provide information about the different picture-options
+	values. Possibly also about when and how colors are used
+	and what the gradient does.</p>
+      </comment>
     </item>
     <item>
       <p>To prevent the user from overriding these settings, create the file
@@ -79,11 +90,13 @@ secondary-color='FFFFFF'</code>
       content:</p>
       <listing>
         <title><file>/etc/dconf/db/local.d/locks/background</file></title>
-<code># Lock desktop background settings
+<code>
+# Lock desktop background settings
 /org/gnome/desktop/background/picture-uri
 /org/gnome/desktop/background/picture-options
 /org/gnome/desktop/background/primary-color
-/org/gnome/desktop/background/secondary-color</code>
+/org/gnome/desktop/background/secondary-color
+</code>
       </listing>
     </item>
     <include href="dconf-snippets.xml"
