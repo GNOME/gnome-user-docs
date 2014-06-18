@@ -2,10 +2,6 @@
 
 HELP_ID = system-admin-guide
 
-HELP_LINGUAS =
-
-HELP_MEDIA =
-
 HELP_FILES = \
 	backgrounds-extra.page		\
 	dconf-custom-defaults.page	\
@@ -26,6 +22,7 @@ HELP_FILES = \
 	index.page			\
 	keyboard-layout.page		\
 	legal.xml			\
+	lockdown-command-line.page      \
 	login.page                      \
 	login-automatic.page            \
 	login-banner.page		\
@@ -45,3 +42,7 @@ HELP_FILES = \
 	servers-list.page		\
 	user-session.page		\
 	vpn-list.page
+
+HELP_MEDIA =
+
+HELP_LINGUAS =
