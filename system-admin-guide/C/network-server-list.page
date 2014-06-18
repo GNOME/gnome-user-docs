@@ -1,6 +1,7 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
-      id="servers-list">
+      id="network-server-list">
 
   <info>
     <link type="guide" xref="network" />
@@ -8,21 +9,22 @@
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
-      <email>matthias.clasen@gmail.com</email>
+      <email its:translate="no">matthias.clasen@gmail.com</email>
       <years>2012</years>
     </credit>
    <credit type="editor">
       <name>Jana Svarova</name>
-     <email>jana.svarova@gmail.com</email>
+      <email its:translate="no">jana.svarova@gmail.com</email>
       <years>2013</years>
     </credit>
    <credit type="editor">
       <name>Petr Kovar</name>
-     <email>pknbe@gvolny.cz</email>
+      <email its:translate="no">pknbe@gvolny.cz</email>
       <years>2013</years>
     </credit>
 
-  <desc>How do I make it easy for different users to access different file shares?</desc>
+    <desc>How do I make it easy for different users to access different file
+    shares?</desc>
   </info>
 
   <title>Configure a default server list</title>
@@ -34,18 +36,19 @@
 
   <p><app>Nautilus</app> (the <app>Files</app> application) stores a list of
   file-sharing servers in the file <file>~/.config/nautilus/servers</file> in
-  the XBEL format. Add the list of file-sharing servers to that file to make file
-  shares easily accessible to your user.</p>
+  the XBEL format. Add the list of file-sharing servers to that file to make
+  file shares easily accessible to your user.</p>
   
   <note style="tip">
-  <p><em>XBEL</em> (<em>XML Bookmark Exchange Language</em>) is an XML standard
-  that lets you share URIs (Uniform Resource Identifiers). In GNOME, XBEL is used
-  to share desktop bookmarks in applications such as <app>Nautilus</app>.</p>
+    <p><em>XBEL</em> (<em>XML Bookmark Exchange Language</em>) is an XML
+    standard that lets you share URIs (Uniform Resource Identifiers). In GNOME,
+    XBEL is used to share desktop bookmarks in applications such as
+    <app>Nautilus</app>.</p>
   </note>
 
-<example>
-<p>An example of the <file>~/.config/nautilus/servers</file> file:</p>
-<code><![CDATA[
+  <example>
+    <p>An example of the <file>~/.config/nautilus/servers</file> file:</p>
+    <code><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <xbel version="1.0"
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
@@ -55,8 +58,8 @@
    </bookmark>
 </xbel>
 ]]></code>
-  <p>In the example above, <app>Nautilus</app> creates a bookmark titled
-  <em>GNOME FTP</em> with the URI <code>ftp://ftp.gnome.org/</code>.</p>
-</example>
+    <p>In the example above, <app>Nautilus</app> creates a bookmark titled
+    <em>GNOME FTP</em> with the URI <code>ftp://ftp.gnome.org/</code>.</p>
+  </example>
 
 </page>

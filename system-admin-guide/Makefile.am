@@ -33,13 +33,13 @@ HELP_FILES = \
 	mime-types-application-user.page	\
 	mime-types-custom.page	\
 	mime-types-custom-user.page	\
+	network-printer-config.page \
+	network-servers-list.page \
+	network-vpn.page \
 	overrides.page			\
 	power-dim-screen.page		\
-	printer-configuration.page	\
 	processes.page			\
-	servers-list.page		\
-	user-session.page		\
-	vpn-list.page
+	user-session.page
 
 HELP_MEDIA =
 
