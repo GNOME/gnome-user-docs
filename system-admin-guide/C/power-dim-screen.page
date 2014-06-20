@@ -5,7 +5,9 @@
 
   <info>
     <link type="guide" xref="user-settings#default" />
-    <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
+    <link type="seealso" xref="dconf-profiles" />
+    <link type="seealso" xref="dconf-lockdown" />
+    <revision pkgversion="3.12" date="2014-06-20" status="candidate"/>
 
     <credit type="author copyright">
       <name>Matthias Clasen</name>
@@ -22,60 +24,87 @@
       <email its:translate="no">pknbe@volny.cz</email>
       <years>2014</years>
     </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+      <years>2014</years>
+    </credit>
 
-    <desc>Enable screen dimming, then set the amount and timeout.</desc>
+    <desc>Make the screen dim after a specific amount of time when the user is
+    idle.</desc>
   </info>
 
-  <title>Set screen brightness and idle time</title>
+  <title>Dim screen when user is idle</title>
 
-  <comment>
-    <cite date="2012-07-24" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
-    <p>Adapted from l-g-o SysAdminGuide page. Add link for how to install and
-     enforce system-wide custom values for gsettings keys.</p>
-  </comment>
+  <p>You can make the computer screen dim after the computer has been idle (not
+  used) for some period of time.</p>
 
-  <p>By setting the following GSettings keys, you can configure the drop in
-  the brightness level, and set brightness level and idle time.</p>
+  <steps>
+    <title>Dim screen on idle computer</title>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-profile-user-dir'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
+    <item>
+      <p>Create the key file
+      <file>/etc/dconf/db/local.d/00-power</file> to provide
+      information for the <sys>local</sys> database.</p>
+      <listing>
+        <title><file>/etc/dconf/db/local.d/00-power</file></title>
+<code>
+# Specify the dconf path
+[org/gnome/settings-daemon/plugins/power]
 
-  <listing>
-  <title>Set the drop in the brightness level</title>
-  <desc>To set the drop in the brightness level when the
-  device has been idle for some time, create a <sys>local</sys> database for
-  machine-wide settings in <file>/etc/dconf/db/local.d/00-power</file>,
-  as in the following example:</desc>
-  <code>[org/gnome/settings-daemon/plugins/power]
-idle-dim=<input>true</input></code>
-  </listing>
+# Enable screen dimming
+idle-dim=true
 
-  <listing>
-  <title>Set brightness level</title>
-  <desc>To change the brightness level, create a <sys>local</sys> database for
-  machine-wide settings in <file>/etc/dconf/db/local.d/00-power</file>, 
-  as in the following example, and replace <var>30</var> with the integer value
-  you want to use:
-  </desc>
-  <code>[org/gnome/settings-daemon/plugins/power]
-idle-brightness=<var>30</var></code>
-  </listing>
+# Set brightness after dimming
+idle-brightness=uint32 30
+</code>
+      </listing>
+      <p>You must include the <code>uint32</code> along with the
+      integer key values as shown.</p>
+    </item>
+    <item>
+      <p>Create the key file
+      <file>/etc/dconf/db/local.d/00-session</file> to provide
+      information for the <sys>local</sys> database.</p>
+      <listing>
+        <title><file>/etc/dconf/db/local.d/00-session</file></title>
+<code>
+# Specify the dconf path
+[org/gnome/desktop/session]
 
-  <listing>
-  <title>Set idle time</title>
-  <desc>To set the idle time after which the screen must be blanked and the
-  default screensaver displayed, create a <sys>local</sys> database for
-  machine-wide settings in <file>/etc/dconf/db/local.d/00-session</file>,
-  as in the following example, and replace <var>900</var> with the integer value
-  you want to use:</desc>
-  <code>[org/gnome/desktop/session]
-idle-delay=<var>900</var></code>
-  </listing>
-
-  <p>Incorporate your changes into the system databases by running the
-  <cmd>dconf update</cmd> command as root.</p>
-
-  <note>
-    <p>You can also
-     <link xref="dconf-lockdown">lock down</link> the above
-    settings to prevent users from changing them.</p>
-  </note>
+# The number of seconds of inactivity before the session is considered idle
+idle-delay=uint32 300
+</code>
+      </listing>
+      <p>You must include the <code>uint32</code> along with the
+      integer key values as shown.</p>
+    </item>
+    <item>
+      <p>To prevent the user from overriding these settings, create the file
+      <file>/etc/dconf/db/local.d/locks/power-saving</file> with the following
+      content:</p>
+      <listing>
+        <title><file>/etc/dconf/db/local.db/locks/power-saving</file></title>
+<code>
+# Lock screen dimming and idle timeout
+/org/gnome/settings-daemon/plugins/power/idle-dim
+/org/gnome/settings-daemon/plugins/power/idle-brightness
+/org/gnome/desktop/session/idle-delay
+</code>
+      </listing>
+      <p>If you want to let the user change these settings, skip this step.</p>
+    </item>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-logoutin'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
+  </steps>
 
 </page>
