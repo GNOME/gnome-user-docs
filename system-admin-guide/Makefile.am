@@ -27,11 +27,10 @@ HELP_FILES = \
 	mime-types-application-user.page \
 	mime-types-custom.page \
 	mime-types-custom-user.page \
-	network.page \
 	session-custom.page \
 	session-user.page \
-	setup.page \
 	software.page \
+	sundry.page \
 	user-settings.page
 
 HELP_MEDIA =
