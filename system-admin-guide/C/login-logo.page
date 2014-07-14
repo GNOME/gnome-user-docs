@@ -46,7 +46,17 @@
   GSettings key. Since <sys>GDM</sys> uses its own
   <sys>dconf</sys> profile, you can add a greeter logo by changing
   the settings in that profile.</p>
-
+  <p>When choosing an appropriate picture for the logo to your login screen, 
+  consider the following picture requirements:</p>
+  <list>
+  	<item><p>All the major formats are supported: ANI, BPM, GIF, ICNS, ICO, 
+  	JPEG, JPEG 2000,   PCX, PNM, PBM, PGM, PPM, GTIFF, RAS, TGA, TIFF, XBM, 
+  	WBMP, XPM, and SVG. </p></item>
+  	<item><p>The size of the picture scales proportionally to the height of 
+  	48 pixels. So, if you set the logo to 1920x1080, for example, it changes 
+  	into an 85x48 thumbnail of the original picture. </p></item>
+  </list>
+  
 <steps>
   <title>Set the org.gnome.login-screen.logo key</title>
   <item><p>Create a <sys>gdm</sys> database for machine-wide settings in
