@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic"
       style="problem"
       id="hardware-cardreader">
@@ -7,7 +8,7 @@
     <link type="guide" xref="media#photos"/>
     <link type="guide" xref="hardware#problems"/>
 
-    <desc>Troubleshoot media card readers</desc>
+    <revision pkgversion="3.13.92" date="2014-09-20" status="review"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
@@ -15,6 +16,8 @@
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Troubleshoot media card readers</desc>
   </info>
 
 <title>Media card reader problems</title>
@@ -33,16 +36,21 @@ do not force it.)</p>
 </item>
 
 <item>
-<p> Open <app>Files</app> by using the <gui>Activities</gui> menu. Does the inserted
- card appear in the <gui>Devices</gui> list in the left sidebar? Sometimes the card appears in this list but is not mounted; click it once to mount. (If the sidebar is not visible, press <key>F9</key> or click
- <guiseq><gui>View</gui><gui> Sidebar</gui><gui> Show Sidebar</gui></guiseq>.)
-</p>
+  <p>Open <app>Files</app> from the
+  <gui xref="shell-terminology">Activities</gui> overview. Does the inserted
+  card appear in the <gui>Devices</gui> list in the left sidebar? Sometimes the
+  card appears in this list but is not mounted; click it once to mount. (If the
+  sidebar is not visible, press <key>F9</key> or click the
+  <gui><media its:translate="no" type="image" src="figures/go-down.png"><span its:translate="yes">View options</span></media></gui>
+  button in the toolbar and choose <gui>Show Sidebar</gui>.)</p>
 </item>
 
 <item>
-<p>If your card does not show up in the sidebar, click <guiseq><gui>Go</gui><gui>Computer</gui></guiseq>.
-If your card reader is correctly configured, the reader should come up as a drive
-when no card is present, and the card itself when the card has been mounted (see the picture below).</p>
+  <p>If your card does not show up in the sidebar, press
+  <keyseq><key>Ctrl</key><key>L</key></keyseq>, then type
+  <input>computer:///</input> and press <key>Enter</key>. If your card reader
+  is correctly configured, the reader should come up as a drive when no card is
+  present, and the card itself when the card has been mounted.</p>
 </item>
 
 <item>
@@ -51,11 +59,12 @@ Try a different card or check the card on a different reader if possible.</p>
 </item>
 </steps>
 
-<p>If no cards or drives are available in the <gui>Computer</gui> folder,
-it is possible that your card reader does not work with Linux due to driver issues.
-If your card reader is internal (inside the computer instead of sitting outside)
-this is more likely. The best solution is to directly connect your device
-(camera, cell phone, etc.) to a USB port on the computer. USB external card
-readers are also available, and are far better supported by Linux.</p>
+<p>If no cards or drives are shown when browsing the <gui>Computer</gui>
+location, it is possible that your card reader does not work with Linux due to
+driver issues. If your card reader is internal (inside the computer instead of
+sitting outside) this is more likely. The best solution is to directly connect
+your device (camera, cell phone, etc.) to a USB port on the computer. USB
+external card readers are also available, and are far better supported by
+Linux.</p>
 
 </page>
