@@ -68,6 +68,8 @@ HELP_MEDIA = \
 	figures/printing-select.png \
 	figures/shell-activities-classic.png \
 	figures/shell-activities.png \
+	figures/shell-appmenu-classic.png \
+	figures/shell-appmenu-shell.png \
 	figures/shell-apps-open.png \
 	figures/shell-appts-classic.png \
 	figures/shell-appts.png \
