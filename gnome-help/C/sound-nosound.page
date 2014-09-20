@@ -89,42 +89,33 @@
 </section>
 
 <section id="hardware-detected">
+
  <title>Check that the sound card was detected properly</title>
- <p>Your sound card may not have been detected properly. If this has happened,
- your computer will think that it isn't able to play sound. A possible reason
- for the card not being detected properly is that the drivers for the card are
- not installed.</p>
- <steps>
-  <item>
-   <p>Go to the <gui>Activities</gui> overview and open a Terminal.</p>
-  </item>
-  <item>
-   <p>Type <cmd>aplay -l</cmd> and press <key>Enter</key>.</p>
-  </item>
-  <item>
-   <p>A list of devices will be shown. If there are no <gui>playback hardware
- devices</gui>, your sound card has not been detected.</p>
-  </item>
- </steps>
 
- <p>If your sound card is not detected, you may need to manually install the
- drivers for it. How you do this will depend on the card you have.</p>
+  <p>Your sound card may not have been detected properly. If this has happened,
+  your computer will think that it is not able to play sound. A possible reason
+  for the card not being detected properly is that the drivers for the card are
+  not installed. You may need to manually install the drivers for the card.
+  How you do this will depend on the card you have.</p>
 
- <p>You can see what sound card you have by using the <cmd>lspci</cmd> command
- in the Terminal. You may have to run <cmd>lspci</cmd> as
- <link xref="user-admin-explain">superuser</link>; either type <cmd>sudo lspci</cmd>
- and type your password, or type <cmd>su</cmd>, enter the <em>root</em>
- (administrative) password, then type <cmd>lspci</cmd>. See if an
- <em>audio controller</em> or <em>audio device</em> is listed—it should have the
- sound card's make and model number. <cmd>lspci -v</cmd> will show a list with
- more detailed information.</p>
+  <p>You can see what sound card you have by using the <cmd>lspci</cmd> command
+  in the Terminal. Go to the <gui>Activities</gui> overview and open a Terminal.
+  You may have to run <cmd>lspci</cmd> as
+  <link xref="user-admin-explain">superuser</link>; either type
+  <cmd>sudo lspci</cmd> and type your password, or type <cmd>su</cmd>, enter
+  the <em>root</em> (administrative) password, then type <cmd>lspci</cmd>. See
+  if an <em>audio controller</em> or <em>audio device</em> is listed—it should
+  have the make and model number of the sound card. <cmd>lspci -v</cmd> will
+  show a list with more detailed information.</p>
 
- <p>You may be able to find and install drivers for your card. It's best to ask
- on support forums (or otherwise) for your Linux distribution for instructions.</p>
+  <p>You may be able to find and install drivers for your card. It is best to
+  ask on support forums (or otherwise) for your Linux distribution for
+  instructions.</p>
 
- <p>If you can't get drivers for your sound card, you might prefer to buy a new
- sound card. You can get sound cards that can be installed inside the computer
- and external USB sound cards.</p>
+  <p>If you cannot get drivers for your sound card, you might prefer to buy a
+  new sound card. You can get sound cards that can be installed inside the
+  computer and external USB sound cards.</p>
+
 </section>
 
 </page>
