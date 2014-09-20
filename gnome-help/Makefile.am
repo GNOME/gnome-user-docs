@@ -238,7 +238,6 @@ HELP_FILES = \
 	music-cantplay-drm.page \
 	music-player-ipodtransfer.page \
 	music-player-newipod.page \
-	music-player-notrecognized.page \
 	nautilus-behavior.page \
 	nautilus-bookmarks-edit.page \
 	nautilus-connect.page \
