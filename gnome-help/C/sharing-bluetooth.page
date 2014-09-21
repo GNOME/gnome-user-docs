@@ -2,6 +2,7 @@
       xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="sharing-bluetooth">
+
   <info>
     <link type="guide" xref="bluetooth"/>
     <link type="guide" xref="settings-sharing"/>
@@ -9,23 +10,53 @@
     <revision pkgversion="3.8.2" version="0.1" date="2013-05-13" status="draft"/>
     <revision pkgversion="3.10" version="0.2" date="2013-11-09" status="review"/>
     <revision pkgversion="3.12" date="2014-03-08" status="candidate"/>
+    <revision pkgversion="3.13.92" date="2014-09-21" status="review"/>
 
     <credit type="author">
       <name>Michael Hill</name>
       <email its:translate="no">mdhillca@gmail.com</email>
       <years>2014</years>
     </credit>
+    <credit type="author">
+      <name>David King</name>
+      <email its:translate="no">davidk@gnome.org</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
     <desc>Allow files to be uploaded to your computer over Bluetooth.</desc>
-    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
   <title>Control sharing over Bluetooth</title>
+
+  <comment>
+    <cite date="2014-09-21" href="mailto:davidk@gnome.org">David King</cite>
+    <p>The Bluetooth sharing UI is only shown if the gnome-user-share package
+    is installed. This may change in the future, but currently the sharing
+    panel in gnome-control-center checks to see if the
+    org.gnome.desktop.file-sharing GSettings schema is installed before showing
+    the Bluetooth Sharing UI. To see which package provides that schema (on
+    Fedora) do
+    "repoquery --file /usr/share/glib-2.0/schemas/org.gnome.desktop.file-sharing.gschema.xml"</p>
+  </comment>
 
   <p>You can allow access to your <file>Downloads</file> folder for Bluetooth
   file sharing, and also restrict that access to only <em>trusted devices</em>.
   Configure <gui>Bluetooth Sharing</gui> to control access to the shared folder
   on your computer.</p>
+
+  <note style="info package">
+    <p>You must have the <app>GNOME User Share</app> package installed for
+    <gui>Bluetooth Sharing</gui> to be visible.</p>
+
+    <if:choose xmlns:if="http://projectmallard.org/if/1.0/">
+      <if:when test="action:install">
+        <p><link action="install:gnome-user-share" style="button">Install GNOME
+        User Share</link></p>
+      </if:when>
+    </if:choose>
+  </note>
 
   <note style="info">
     <p>A Bluetooth device is <em>trusted</em> if you have <em>paired</em>, or
@@ -46,8 +77,9 @@
       <p>If <gui>Sharing</gui> is <gui>OFF</gui>, switch it to
       <gui>ON</gui>.</p>
 
-      <note style="info"><p>You can <link xref="sharing-displayname">change</link>
-      the name your computer displays to other devices.</p></note>
+      <note style="info"><p>You can
+      <link xref="sharing-displayname">change</link> the name your computer
+      displays to other devices.</p></note>
     </item>
     <item>
       <p>Select <gui>Bluetooth Sharing</gui>.</p>
@@ -75,9 +107,9 @@
   </steps>
 
   <note style="important">
-    <p><gui>Files</gui> allows you to launch the <gui>Sharing</gui> panel
+    <p><app>Files</app> allows you to launch the <gui>Sharing</gui> panel
     directly by clicking the <gui>Preferences</gui> button when you visit the
-    <gui>Downloads</gui> folder.</p>
+    <file>Downloads</file> folder.</p>
   </note>
 
 </page>
