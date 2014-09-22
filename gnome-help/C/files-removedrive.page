@@ -1,6 +1,7 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic" style="task"
       id="files-removedrive">
+
   <info>
     <link type="guide" xref="files#removable"/>
 
@@ -19,9 +20,11 @@
     </credit>
 
     <revision pkgversion="3.6.0" version="0.2" date="2012-10-08" status="review"/>
+    <revision pkgversion="3.13.92" date="2014-09-22" status="review"/>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
     <desc>Eject or unmount a USB flash drive, CD, DVD, or other device.</desc>
-    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
   </info>
 
   <title>Safely remove an external drive</title>
@@ -35,13 +38,17 @@
 
   <steps>
     <title>To eject a removable device:</title>
-    <item><p>From the <gui>Activities</gui> overview, open <app>Files</app>.</p>
+    <item>
+      <p>From the <gui xref="shell-terminology">Activities</gui> overview,
+      open <app>Files</app>.</p>
     </item>
-    <item><p>Locate the device in the sidebar. It should have a small
-    eject icon next to the name. Click the eject icon to safely
-    remove or eject the device.</p>
-    <p>Alternately, you can right-click the name of the device in the sidebar
-    and select <gui>Eject</gui>.</p></item>
+    <item>
+      <p>Locate the device in the sidebar. It should have a small eject icon
+      next to the name. Click the eject icon to safely remove or eject the
+      device.</p>
+      <p>Alternately, you can right-click the name of the device in the sidebar
+      and select <gui>Eject</gui>.</p>
+    </item>
   </steps>
 
   <section id="remove-busy-device">
@@ -54,21 +61,16 @@
   <steps>
     <item><p>Click <gui>Cancel</gui>.</p></item>
     <item><p>Close all the files on the device.</p></item>
-    <item><p>Click the eject icon to safely remove or eject the device.</p></item>
+    <item><p>Click the eject icon to safely remove or eject the
+    device.</p></item>
     <item><p>Alternately, you can right-click the name of the device in the
     sidebar and select <gui>Eject</gui>.</p></item>
   </steps>
 
-<!--
-  <p>If you can't close one of the files, for example if the application
-  using the file is locked up, you can right-click the file in the
-  <gui>Volume is busy</gui> window and select <gui>End Process</gui>.
-  This will force the entire locked up application to close, which could close
-  other files you have open with that application.</p>
--->
-
   <note style="warning"><p>You can also choose <gui>Eject Anyway</gui> to
   remove the device without closing the files. This may cause errors in
   applications that have those files open.</p></note>
+
   </section>
+
 </page>
