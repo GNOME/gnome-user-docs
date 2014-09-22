@@ -7,8 +7,8 @@
     <link type="guide" xref="bluetooth"/>
     <link type="guide" xref="settings-sharing"/>
 
-    <revision pkgversion="3.8.2" version="0.1" date="2013-05-13" status="draft"/>
-    <revision pkgversion="3.10" version="0.2" date="2013-11-09" status="review"/>
+    <revision pkgversion="3.8.2" date="2013-05-13" status="draft"/>
+    <revision pkgversion="3.10" date="2013-11-09" status="review"/>
     <revision pkgversion="3.12" date="2014-03-08" status="candidate"/>
     <revision pkgversion="3.13.92" date="2014-09-21" status="review"/>
 
@@ -41,10 +41,11 @@
     "repoquery --file /usr/share/glib-2.0/schemas/org.gnome.desktop.file-sharing.gschema.xml"</p>
   </comment>
 
-  <p>You can allow access to your <file>Downloads</file> folder for Bluetooth
-  file sharing, and also restrict that access to only <em>trusted devices</em>.
-  Configure <gui>Bluetooth Sharing</gui> to control access to the shared folder
-  on your computer.</p>
+  <p>You can configure <gui>Bluetooth Sharing</gui> to control access to your
+  <file>Downloads</file> folder for Bluetooth file sharing, and also restrict
+  that access to only <em>trusted devices</em>.  Trusted devices are ones which
+  you have <link xref="bluetooth-connect-device">paired</link> to your computer
+  before.</p>
 
   <note style="info package">
     <p>You must have the <app>GNOME User Share</app> package installed for
@@ -56,12 +57,6 @@
         User Share</link></p>
       </if:when>
     </if:choose>
-  </note>
-
-  <note style="info">
-    <p>A Bluetooth device is <em>trusted</em> if you have <em>paired</em>, or
-    connected your computer to it. See
-    <link xref="bluetooth-connect-device"/>.</p>
   </note>
 
   <steps>
@@ -76,10 +71,6 @@
     <item>
       <p>If <gui>Sharing</gui> is <gui>OFF</gui>, switch it to
       <gui>ON</gui>.</p>
-
-      <note style="info"><p>You can
-      <link xref="sharing-displayname">change</link> the name your computer
-      displays to other devices.</p></note>
     </item>
     <item>
       <p>Select <gui>Bluetooth Sharing</gui>.</p>
@@ -106,10 +97,13 @@
     </item>
   </steps>
 
-  <note style="important">
-    <p><app>Files</app> allows you to launch the <gui>Sharing</gui> panel
-    directly by clicking the <gui>Preferences</gui> button when you visit the
-    <file>Downloads</file> folder.</p>
+  <note style="tip">
+    <p>You can <link xref="sharing-displayname">change</link> the name your
+    computer displays to other devices.</p>
   </note>
+
+  <p><app>Files</app> allows you to launch the <gui>Sharing</gui> panel
+  directly by clicking the <gui>Preferences</gui> button when you visit the
+  <file>Downloads</file> folder.</p>
 
 </page>
