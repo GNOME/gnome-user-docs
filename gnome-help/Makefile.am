@@ -308,6 +308,7 @@ HELP_FILES = \
 	power.page \
 	prefs-display.page \
 	prefs-language.page \
+	prefs-sharing.page \
 	prefs.page \
 	printing-2sided.page \
 	printing-booklet-duplex.page \
@@ -335,7 +336,6 @@ HELP_FILES = \
 	session-formats.page \
 	session-language.page \
 	session-screenlocks.page \
-	settings-sharing.page \
 	sharing.page \
 	sharing-bluetooth.page \
 	sharing-desktop.page \
