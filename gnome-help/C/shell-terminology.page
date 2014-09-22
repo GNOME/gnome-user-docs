@@ -9,6 +9,7 @@
 
     <revision pkgversion="3.8.0" version="0.4" date="2013-04-23" status="outdated"/>
     <revision pkgversion="3.10" date="2013-11-02" status="review"/>
+    <revision pkgversion="3.13.92" date="2014-09-22" status="review"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
@@ -25,12 +26,13 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>An overview of terms used to describe different parts of the desktop.</desc>
+    <desc>An overview of terms used to describe different parts of the
+    desktop.</desc>
   </info>
 
   <title>Activities, dash, top bar… What are they?</title>
 
-<!-- THIS SHOULD BE ALPHABETICALLY SORTED… it is. -->
+<!-- THIS SHOULD BE ALPHABETICALLY SORTED… -->
 
   <terms>
     <item>
@@ -49,12 +51,6 @@
       of the screen. It gives you access to applications organized into
       categories. The <em>activities overview</em> is available by selecting
       the <gui>Activities Overview</gui> item from the menu.</p>
-    </item>
-    <item>
-      <title>Super-Tab window switcher</title>
-      <p>When you hold down the <key xref="keyboard-key-super">Super</key> key
-      and then press <key>Tab</key>, a <em>window switcher</em> appears. This
-      shows the applications that are currently open.</p>
     </item>
     <item>
       <title>Dash</title>
@@ -82,8 +78,8 @@
       screen, telling you that something just happened. For example, when
       someone chatting with you sends a message, a notification will pop up to
       tell you. If you don't want to deal with a message right now, it is
-      hidden in your message tray. Move your mouse to the bottom of the screen
-      (or press
+      hidden in your <em>message tray</em>. Move your mouse to the bottom of
+      the screen (or press
       <keyseq><key xref="keyboard-key-super">Super</key><key>M</key></keyseq>)
       to see your message tray.</p>
     </item>
@@ -103,6 +99,12 @@
       then select the <gui>Settings</gui> panel.</p>
     </item>
     <item>
+      <title>Super-Tab window switcher</title>
+      <p>When you hold down the <key xref="keyboard-key-super">Super</key> key
+      and then press <key>Tab</key>, a <em>window switcher</em> appears. This
+      shows the applications that are currently open.</p>
+    </item>
+    <item>
       <title>System menu</title>
       <p>The <em>system menu</em> is on the right side of the top bar. You can
       update some of your settings, find information about your
@@ -118,6 +120,11 @@
       runs along the very top of the screen. The <gui>Applications</gui> menu
       is on one end of the top bar and the system menu is on the other.</p>
     </item>
+    <item if:test="platform:gnome-classic">
+      <title>Window list</title>
+      <p>The <em>window list</em> is the bar at the very bottom of the screen,
+      which shows buttons for all your open windows.</p>
+    </item>
     <item>
       <title>Workspace</title>
       <p>You can put windows on different <em>workspaces</em>. They are a
@@ -128,11 +135,6 @@
       <p>The <em>workspace selector</em> is the list of workspaces that is
       shown on the right-hand side of the <gui>Windows</gui> view in the
       <gui>Activities</gui> overview.</p>
-    </item>
-    <item if:test="platform:gnome-classic">
-      <title>Window list</title>
-      <p>The <em>window list</em> is the bar at the very bottom of the screen,
-      which shows buttons for all your open windows.</p>
     </item>
   </terms>
 
