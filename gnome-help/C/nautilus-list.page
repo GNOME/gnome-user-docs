@@ -2,11 +2,14 @@
       type="topic" style="ui" id="nautilus-list">
 
   <info>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:type="simple" xlink:href="gnome-help.its"/>
+
     <link type="guide" xref="nautilus-prefs" group="nautilus-list"/>
 
-    <desc>Control what information is displayed in columns in list view.</desc>
-
-    <revision pkgversion="3.5.92" version="0.2" date="2012-09-19" status="review"/>
+    <revision pkgversion="3.5.92" date="2012-09-19" status="review"/>
+    <revision pkgversion="3.14.0" date="2014-09-23" status="review"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -16,84 +19,108 @@
       <name>Michael Hill</name>
       <email>mdhillca@gmail.com</email>
     </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
-    <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
-               xmlns:xlink="http://www.w3.org/1999/xlink"
-               xlink:type="simple" xlink:href="gnome-help.its"/>
+
+    <desc>Control what information is displayed in columns in list view.</desc>
   </info>
 
-<title>File manager list columns preferences</title>
+  <title>Files list columns preferences</title>
 
-<p>There are nine columns of information that you can display in the file manager's list view. Click <gui>Files</gui> in the top bar, pick <gui>Preferences</gui> and choose the <gui>List Columns</gui> tab to select which columns will be visible.</p>
+  <p>There are nine columns of information that you can display in the
+  <gui>Files</gui> list view. Click <gui>Files</gui> in the top bar, pick
+  <gui>Preferences</gui> and choose the <gui>List Columns</gui> tab to select
+  which columns will be visible.</p>
 
-<note style="tip">
-<p>
-  Use the <gui>Move Up</gui> and <gui>Move Down</gui> buttons to choose the order in which the selected columns will appear.
-</p>
-</note>
-<terms>
- <item>
-  <title><gui>Name</gui></title>
-  <p>The name of folders and files in the folder being viewed.</p>
- </item>
- <item>
-  <title><gui>Size</gui></title>
-  <p>The size of a folder is given as the number of items contained in the folder.
-  The size of a file is given as bytes, KB, or MB.</p>
- </item>
- <item>
-  <title><gui>Type</gui></title>
-  <p>Displayed as folder, or file type such as PDF document, JPEG image, MP3 audio, and more.</p>
- </item>
- <item>
-  <title><gui>Modified</gui></title>
-  <p>Gives the date and time of the last time the file was modified.</p>
- </item>
- <item>
-  <title><gui>Owner</gui></title>
-  <p>The name of the user the folder or file is owned by.</p>
- </item>
- <item>
-  <title><gui>Group</gui></title>
-  <p>The group the file is owned by. On my home computers, each user is in their
-  own group. Groups are sometimes used in corporate environments, where users
-  might be in groups according to department or project.</p>
- </item>
-  <item>
-  <title><gui>Permissions</gui></title>
-  <p>Displays the file access permissions e.g. <gui>drwxrw-r--</gui></p>
-  <list>
-   <item>
-    <p>The first character <gui>-</gui> is the file type. <gui>-</gui> means regular file and <gui>d</gui> means directory (folder).</p>
-   </item>
-   <item>
-     <p>The next three characters <gui>rwx</gui> specify permissions for the user who owns the file.</p>
-   </item>
-   <item>
-     <p>The next three <gui>rw-</gui> specify permissions for all members of the group that owns the file.</p>
-   </item>
-   <item>
-    <p>The last three characters in the column <gui>r--</gui> specify permissions for all other users on the system.</p>
-   </item>
-  </list>
-  <p>
-    Each character has the following meanings:
-  </p>
-  <list>
-    <item><p> r : Read permission. </p></item>
-    <item><p> w : Write permission. </p></item>
-    <item><p> x : Execute permission. </p></item>
-    <item><p> - : No permission. </p></item>
-    </list>
- </item>
- <item>
-  <title><gui>MIME Type</gui></title>
-  <p>Displays the MIME type of the item.</p>
- </item>
- <item>
-  <title><gui>Location</gui></title>
-  <p>The path to the location of the file.</p>
- </item>
-</terms>
+  <note style="tip">
+    <p>Use the <gui>Move Up</gui> and <gui>Move Down</gui> buttons to choose
+    the order in which the selected columns will appear.</p>
+  </note>
+
+  <terms>
+    <item>
+      <title><gui>Name</gui></title>
+      <p>The name of folders and files.</p>
+    </item>
+    <item>
+      <title><gui>Size</gui></title>
+      <p>The size of a folder is given as the number of items contained in the
+      folder. The size of a file is given as bytes, KB, or MB.</p>
+    </item>
+    <item>
+      <title><gui>Type</gui></title>
+      <p>Displayed as folder, or file type such as PDF document, JPEG image,
+      MP3 audio, and more.</p>
+    </item>
+    <item>
+      <title><gui>Modified</gui></title>
+      <p>Gives the date and time of the last time the file was modified.</p>
+    </item>
+    <item>
+      <title><gui>Owner</gui></title>
+      <p>The name of the user the folder or file is owned by.</p>
+    </item>
+    <item>
+      <title><gui>Group</gui></title>
+      <p>The group the file is owned by. Each user is normally in their own
+      group, but it is possible to have many users in one group. For example, a
+      department may have their own group in a work environment.</p>
+    </item>
+    <item>
+      <title><gui>Permissions</gui></title>
+      <p>Displays the file access permissions. For example,
+      <gui>drwxrw-r--</gui></p>
+      <list>
+        <item>
+          <p>The first character is the file type. <gui>-</gui> means regular
+          file and <gui>d</gui> means directory (folder). In rare cases, other
+          characters can also be shown.</p>
+        </item>
+        <item>
+          <p>The next three characters <gui>rwx</gui> specify permissions for
+          the user who owns the file.</p>
+        </item>
+        <item>
+          <p>The next three <gui>rw-</gui> specify permissions for all members
+          of the group that owns the file.</p>
+        </item>
+        <item>
+          <p>The last three characters in the column <gui>r--</gui> specify
+          permissions for all other users on the system.</p>
+        </item>
+      </list>
+      <p>Each permission has the following meanings:</p>
+      <list>
+        <item>
+          <p><gui>r</gui>: readable, meaning that you can open the file or
+          folder</p>
+        </item>
+        <item>
+          <p><gui>w</gui>: writable, meaning that you can save changes to it</p>
+        </item>
+        <item>
+          <p><gui>x</gui>: executable, meaning that you can run it if it is a
+          program or script file, or you can access subfolders and files if it
+          is a folder</p>
+        </item>
+        <item>
+          <p><gui>-</gui>: permision not set</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <title><gui>MIME Type</gui></title>
+      <p>Displays the MIME type of the item.</p>
+    </item>
+    <item>
+      <title><gui>Location</gui></title>
+      <p>The path to the location of the file.</p>
+    </item>
+  </terms>
 
 </page>
