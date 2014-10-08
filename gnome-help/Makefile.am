@@ -24,6 +24,7 @@ HELP_MEDIA = \
 	figures/bluetooth-active-symbolic.svg \
 	figures/bluetooth-disabled-symbolic.svg \
 	figures/bluetooth-menu.png \
+	figures/camera-photo-symbolic.svg \
 	figures/color-average.png \
 	figures/color-camera.png \
 	figures/color-display.png \
