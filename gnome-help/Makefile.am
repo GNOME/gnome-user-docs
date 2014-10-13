@@ -331,6 +331,7 @@ HELP_FILES = \
 	printing.page \
 	privacy.page \
 	privacy-history-recent-off.page \
+	privacy-location.page \
 	privacy-purge.page \
 	privacy-screen-lock.page \
 	screen-shot-record.page \
