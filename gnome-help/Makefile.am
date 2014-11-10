@@ -265,6 +265,7 @@ HELP_FILES = \
 	net-install-moonlight.page \
 	net-macaddress.page \
 	net-manual.page \
+	net-mobile.page \
 	net-othersconnect.page \
 	net-othersedit.page \
 	net-problem.page \
