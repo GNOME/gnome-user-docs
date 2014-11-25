@@ -43,15 +43,12 @@
 
   <steps>
     <title>Set automatic logout for a mains powered machine</title>
-    <item>
-      <p>Create a <code>user</code> profile in <file>/etc/dconf/profile/user</file>:</p>
-      <listing>
-        <code>
-user-db:user
-system-db:local
-</code>
-      </listing>
-    </item>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-profile-user-dir'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
     <item>
       <p>Create a <code>local</code> database for machine-wide settings in
       <file>/etc/dconf/db/local.d/00-autologout</file>:</p>
@@ -79,6 +76,9 @@ sleep-inactive-ac-type='logout'
     <include href="dconf-snippets.xml"
       xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
       xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-logoutin'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
   </steps>
 
   <!-- There will shortly be a way to get key descriptions using gsettings, we
