@@ -1,0 +1,61 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="lockdown-file-saving">
+
+  <info>
+    <link type="guide" xref="user-settings#lockdown"/>
+    <revision pkgversion="3.11" date="2014-10-14" status="draft"/>
+    <link type="seealso" xref="dconf-lockdown" />
+    
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email its:translate="no">jana.svarova@gmail.com</email>
+      <years>2014</years>
+    </credit>
+    
+   <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+        
+    <desc>Prevent applications from saving files on disk.</desc>
+  </info>
+  
+  <title>Disable file saving on disk</title>
+  <p>Prevent applications from file saving by locking down the
+  <code>org.gnome.desktop.lockdown.disable-save-to-disk</code> key.</p>
+
+  <steps>
+    <title>Lock down the org.gnome.desktop.lockdown.disable-save-to-disk key</title>
+    <item>
+      <p>Create the <code>user</code> profile in
+      <file>/etc/dconf/profile/user</file> unless it already exists:</p>
+  <screen>
+  user-db:user
+  system-db:local
+  </screen>
+    </item>
+    <item>
+      <p>Create a <code>local</code> database for machine-wide settings in
+      the <file>/etc/dconf/db/local.d/00-lockdown</file> file.</p>
+  <screen>
+  [org/gnome/desktop/lockdown]
+
+  # Prevent the user from saving files on disk
+  disable-save-to-disk=true
+  </screen>
+   </item>
+   <item>
+      <p>Override the user's setting and prevent the user from changing it in
+      <file>/etc/dconf/db/local.d/locks/lockdown</file>:</p>
+  <screen>
+  # Lock this key to disable saving files on disk
+  org.gnome.desktop.lockdown.disable-save-to-disk
+  </screen>
+    </item>
+        <include href="dconf-snippets.xml"
+      xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+      xmlns="http://www.w3.org/2001/XInclude"/>
+  </steps>
+    <p>Having followed these steps, applications supporting this lockdown key,
+    for example <app>Videos</app>, <app>Image Viewer</app>, <app>Evolution</app>,
+    <app>Document Viewer</app>, or <app>GNOME Shell</app> will disable their "Save As" dialogs.</p>
+</page>
