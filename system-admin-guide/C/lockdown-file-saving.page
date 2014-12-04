@@ -28,28 +28,28 @@
     <item>
       <p>Create the <code>user</code> profile in
       <file>/etc/dconf/profile/user</file> unless it already exists:</p>
-  <screen>
-  user-db:user
-  system-db:local
-  </screen>
+<screen>
+user-db:user
+system-db:local
+</screen>
     </item>
     <item>
       <p>Create a <code>local</code> database for machine-wide settings in
       the <file>/etc/dconf/db/local.d/00-lockdown</file> file.</p>
-  <screen>
-  [org/gnome/desktop/lockdown]
+<screen>
+[org/gnome/desktop/lockdown]
 
-  # Prevent the user from saving files on disk
-  disable-save-to-disk=true
-  </screen>
+# Prevent the user from saving files on disk
+disable-save-to-disk=true
+</screen>
    </item>
    <item>
       <p>Override the user's setting and prevent the user from changing it in
       <file>/etc/dconf/db/local.d/locks/lockdown</file>:</p>
-  <screen>
-  # Lock this key to disable saving files on disk
-  org.gnome.desktop.lockdown.disable-save-to-disk
-  </screen>
+<screen>
+# Lock this key to disable saving files on disk
+org.gnome.desktop.lockdown.disable-save-to-disk
+</screen>
     </item>
         <include href="dconf-snippets.xml"
       xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
