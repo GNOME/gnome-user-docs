@@ -30,10 +30,6 @@ HELP_FILES = \
 	login-fingerprint.page \
 	login-userlist-disable.page \
 	mime-types.page	\
-	mime-types-application.page \
-	mime-types-application-user.page \
-	mime-types-custom.page \
-	mime-types-custom-user.page \
 	network-printer-config.page \
 	session-custom.page \
 	session-user.page \
