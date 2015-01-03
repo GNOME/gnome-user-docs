@@ -22,7 +22,7 @@ HELP_FILES = \
 	lockdown-command-line.page \
 	lockdown-file-saving.page \
 	lockdown-printing.page \
-	lockdown-repartioning.page \
+	lockdown-repartitioning.page \
 	login.page \
 	login-automatic.page \
 	login-banner.page \
