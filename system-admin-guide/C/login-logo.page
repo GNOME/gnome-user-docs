@@ -62,6 +62,9 @@
   
   <steps>
   <title>Set the org.gnome.login-screen.logo key</title>
+    <include href="dconf-snippets.xml"
+      xpointer="xpointer(/*/*[@xml:id='dconf-profile-gdm'])"
+      xmlns="http://www.w3.org/2001/XInclude"/>
   <item><p>Create a <sys>gdm</sys> database for machine-wide settings in
   <file>/etc/dconf/db/gdm.d/<var>01-logo</var></file>:</p>
   <code>[org/gnome/login-screen]
