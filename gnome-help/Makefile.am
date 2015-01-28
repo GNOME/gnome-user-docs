@@ -205,6 +205,7 @@ HELP_FILES = \
 	files.page \
 	get-involved.page \
 	gnome-classic.page \
+	gnome-version.page \
 	hardware-auth.page \
 	hardware-cardreader.page \
 	hardware-driver.page \
