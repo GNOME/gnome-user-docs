@@ -1,0 +1,71 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="files-show-directory-path.page">
+
+  <info>
+    <link type="guide" xref="files#more-file-tasks"/>
+
+    <revision pkgversion="3.16" date="2015-01-28" status="candidate"/>
+
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jcampbell@gnome.org</email>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Type your desired directory path in the Location Bar.</desc>
+  </info>
+
+  <title>Show the directory path with text rather than buttons</title>
+
+  <p>By default, the <gui>Location Bar</gui> of the file browser uses buttons
+  to show you which folder you are viewing. In some cases, though, you may not
+  want to not use the buttons, and you may want to type the directory path
+  with text instead. <app>Files</app> allows you to do this, either
+  termporarily or permanently.</p>
+
+  <steps>
+    <title>To temporarily set the <gui>Location Bar</gui> to allow text
+    entry:</title>
+    <item>
+      <p>Press <keyseq><key>Ctrl</key><key>L</key></keyseq>, or select the
+      <gui>Menu Button</gui> in the top-right corner of the window, and select
+      <gui>Enter Location</gui>.</p>
+    </item>
+    <item>
+      <p>The <gui>Location Bar</gui> will display the path to the current
+      directory as text.</p>
+    </item>
+    <item>
+      <p>Type the path to your desired directory, and press <key>Enter</key>.
+      </p>
+    </item>
+  </steps>
+  
+  <p>When you press <key>Enter</key>, the file browser will show you the
+  location that you entered, and the <gui>Location Bar</gui> will change back
+  to using buttons.</p>
+
+  <note style="tip"><p>If you want to show the buttons in the
+  <gui>Location Bar</gui> without pressing <key>Enter</key>, press
+  <key>Esc</key>. The <gui>Location Bar</gui> will revert to showing buttons
+  without changing the current directory.</p></note>
+
+  <section id="set-directory-path-perm">
+    <title>Permanently set the directory path to allow text entry</title>
+
+    <p>You can set <app>Files</app> to permanently show the directory
+    path as text by entering the following command into a terminal window:</p>
+
+    <p><cmd>gsettings set org.gnome.nautilus.preferences always-use-location-entry true</cmd></p>
+
+    <p>To reset the <gui>Location Bar</gui> to use buttons, enter this command
+    into a terminal window:</p>
+    
+    <p><cmd>gsettings set org.gnome.nautilus.preferences always-use-location-entry false</cmd></p>  
+  
+  </section>
+
+</page>
