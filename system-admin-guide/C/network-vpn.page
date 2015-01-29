@@ -28,8 +28,42 @@
     <p>Adapted from l-g-o SysAdminGuide page.</p>
   </comment>
 
-  <p>NetworkManager stores system-wide connections in the
+  <p><app>NetworkManager</app> stores system-wide connections in the
   <file>/etc/NetworkManager/system-connections</file> directory. Preconfigured
   VPN connections can be installed in this directory.</p>
+  
+  <p>Here is a sample cisco VPN configuration:</p>
 
+<screen>
+[connection]
+id=Sample vpnc
+uuid=a9894bc6-aa7c-4296-90e6-094f0b13a14e
+type=vpn
+permissions=
+autoconnect=false
+secondaries=
+ 
+[ipv6]
+method=auto
+dns-search=
+ 
+[ipv4]
+method=auto
+dns-search=
+ 
+[vpn]
+service-type=org.freedesktop.NetworkManager.vpnc
+NAT Traversal Mode=natt
+ipsec-secret-type=ask
+IPSec secret-flags=2
+xauth-password-type=ask
+Vendor=cisco
+Xauth username=dking
+IPSec gateway=my-vpnc.my-domain.com
+Xauth password-flags=2
+IPSec ID=RH-standard
+Perfect Forward Secrecy=server
+IKE DH Group=dh2
+Local Port=0
+</screen>
 </page>
