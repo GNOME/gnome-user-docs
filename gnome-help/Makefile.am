@@ -81,7 +81,6 @@ HELP_MEDIA = \
 	figures/shell-files.png \
 	figures/shell-introduction.png \
 	figures/shell-lock.png \
-	figures/shell-message-tray.png \
 	figures/shell-keyboard-shortcuts.png \
 	figures/shell-notification.png \
 	figures/shell-top-bar-classic.png \
