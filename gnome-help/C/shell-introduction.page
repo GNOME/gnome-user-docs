@@ -11,6 +11,7 @@
     <revision pkgversion="3.6.0" date="2012-10-13" status="review"/>
     <revision pkgversion="3.10" date="2013-11-02" status="review"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="candidate"/>
+    <revision pkgversion="3.15.91" date="2015-03-07" status="review"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
@@ -158,12 +159,12 @@
 </section>
 
 <section id="clock">
-  <title>Clock, calendar &amp; appointments</title>
+  <title>Clock, calendar, appointments &amp; notifications</title>
 
 <if:choose>
   <if:when test="!platform:gnome-classic">
     <media type="image" src="figures/shell-appts.png" width="250" style="floatend floatright" if:test="!target:mobile">
-      <p>Clock, calendar, and appointments</p>
+      <p>Clock, calendar, appointments, and notifications</p>
     </media>
   </if:when>
   <if:when test="platform:gnome-classic">
@@ -173,10 +174,21 @@
   </if:when>
 </if:choose>
 
+<if:choose>
+  <if:when test="!platform:gnome-classic">
+  <p>Click the clock on the top bar to see the current date, a month-by-month
+  calendar, and a list of your upcoming appointments. You can also access the
+  date and time settings and open your full <app>Evolution</app> calendar
+  directly from the menu. If you have outstanding notifications, they are
+  displayed here in the message list.</p>
+  </if:when>
+  <if:when test="platform:gnome-classic">
   <p>Click the clock on the top bar to see the current date, a month-by-month
   calendar, and a list of your upcoming appointments. You can also access the
   date and time settings and open your full <app>Evolution</app> calendar
   directly from the menu.</p>
+  </if:when>
+</if:choose>
 
   <list style="compact">
     <item>
