@@ -21,7 +21,6 @@ HELP_FILES = \
 	legal.xml \
 	lockdown-command-line.page \
 	lockdown-file-saving.page \
-	lockdown-logout.page \
 	lockdown-online-accounts.page \
 	lockdown-printing.page \
 	lockdown-repartitioning.page \
