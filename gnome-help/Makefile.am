@@ -228,7 +228,6 @@ HELP_FILES = \
 	more-help.page \
 	mouse-doubleclick.page \
 	mouse-lefthanded.page \
-	mouse-middleclick.page \
 	mouse-mousekeys.page \
 	mouse-problem-notmoving.page \
 	mouse-sensitivity.page \
