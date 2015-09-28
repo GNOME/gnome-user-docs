@@ -1,31 +1,49 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="accounts-remove">
 
   <info>
-    <link type="guide" xref="accounts"/>
+    <link type="guide" xref="accounts" group="remove"/>
     <link type="seealso" xref="accounts-disable-service"/>
 
     <revision pkgversion="3.5.5" date="2012-08-15" status="draft"/>
     <revision pkgversion="3.9.92" date="2013-09-18" status="draft"/>
     <revision pkgversion="3.13.92" date="2014-09-20" status="candidate"/>
+    <revision pkgversion="3.18" date="2015-09-28" status="candidate"/>
 
     <credit type="author">
       <name>Michael Hill</name>
-      <email its:translate="no">mdhillca@gmail.com</email>
+      <email>mdhillca@gmail.com</email>
     </credit>
     <credit type="editor">
       <name>Ekaterina Gerasimova</name>
-      <email its:translate="no">kittykat3756@gmail.com</email>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+      <years>2015</years>
     </credit>
 
-    <desc>Delete an online account.</desc>
+    <desc>Remove access to an online service provider from your
+    applications.</desc>
   </info>
 
-<title>Remove an account</title>
+  <title>Remove an account</title>
 
   <p>You can remove an online account which you no longer wish to use.</p>
+
+  <note style="tip">
+    <p>Many online services provide an authorization token which GNOME stores
+    instead of your password. If you remove an account, you should also revoke
+    that certificate in the online service. This will ensure that no other
+    application or website can connect to that service using the authorization
+    for GNOME.</p>
+
+    <p>How to revoke the authorization depends on the service provider. Check
+    your settings on the provider's website for authorized or connected apps
+    or sites. Look for an app called "GNOME" and remove it.</p>
+  </note>
 
   <steps>
     <item>
@@ -43,7 +61,7 @@
       window.</p>
     </item>
     <item>
-      <p>Click <gui>Remove</gui>.</p>
+      <p>Click <gui>Remove</gui> in the confirmation dialog.</p>
     </item>
   </steps>
 
@@ -52,7 +70,4 @@
     <link xref="accounts-disable-service">restrict the services</link> accessed
     by your desktop.</p>
   </note>
-
-  <p>To prevent GNOME from accessing the online account, you should revoke the
-  access through the account's website or similar service.</p>
 </page>

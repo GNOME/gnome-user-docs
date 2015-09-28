@@ -123,7 +123,6 @@ HELP_FILES = \
 	a11y-visualalert.page \
 	about-this-guide.page \
 	accounts-add.page \
-	accounts-create.page \
 	accounts-disable-service.page \
 	accounts-provider-not-available.page \
 	accounts-remove.page \
