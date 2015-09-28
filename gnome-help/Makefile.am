@@ -227,7 +227,6 @@ HELP_FILES = \
 	look-resolution.page \
 	media.page \
 	more-help.page \
-	mouse-disabletouchpad.page \
 	mouse-doubleclick.page \
 	mouse-lefthanded.page \
 	mouse-middleclick.page \
