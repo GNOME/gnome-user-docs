@@ -12,6 +12,7 @@
     <revision pkgversion="3.10" date="2013-11-09" status="review"/>
     <revision pkgversion="3.12" date="2014-03-08" status="candidate"/>
     <revision pkgversion="3.14" date="2014-10-13" status="candidate"/>
+    <revision pkgversion="3.18" date="2015-09-28" status="candidate"/>
 
     <credit type="author">
       <name>Michael Hill</name>
@@ -20,8 +21,8 @@
     </credit>
     <credit type="author">
       <name>David King</name>
-      <email its:translate="no">davidk@gnome.org</email>
-      <years>2014</years>
+      <email>davidk@gnome.org</email>
+      <years>2014-2015</years>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -31,70 +32,26 @@
 
   <title>Control sharing over Bluetooth</title>
 
-  <comment>
-    <cite date="2014-09-21" href="mailto:davidk@gnome.org">David King</cite>
-    <p>The Bluetooth sharing UI is only shown if the gnome-user-share package
-    is installed. This may change in the future, but currently the sharing
-    panel in gnome-control-center checks to see if the
-    org.gnome.desktop.file-sharing GSettings schema is installed before showing
-    the Bluetooth Sharing UI. To see which package provides that schema (on
-    Fedora) do
-    "repoquery --file /usr/share/glib-2.0/schemas/org.gnome.desktop.file-sharing.gschema.xml"</p>
-  </comment>
-
-  <p>You can configure <gui>Bluetooth Sharing</gui> to control access to your
-  <file>Downloads</file> folder for Bluetooth file sharing, and also restrict
-  that access to only <em>trusted devices</em>.  Trusted devices are ones which
-  you have <link xref="bluetooth-connect-device">paired</link> to your computer
-  before.</p>
-
-  <note style="info package">
-    <p>You must have the <app>GNOME User Share</app> package installed for
-    <gui>Bluetooth Sharing</gui> to be visible.</p>
-
-    <if:choose xmlns:if="http://projectmallard.org/if/1.0/">
-      <if:when test="action:install">
-        <p><link action="install:gnome-user-share" style="button">Install GNOME
-        User Share</link></p>
-      </if:when>
-    </if:choose>
-  </note>
+  <p>You can enable <gui>Bluetooth</gui> sharing to receive files over
+  Bluetooth in the <file>Downloads</file> folder</p>
 
   <steps>
     <title>Allow files to be shared into your <file>Downloads</file> folder</title>
     <item>
       <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
-      start typing <gui>Sharing</gui>.</p>
+      start typing <gui>Bluetooth</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Sharing</gui> to open the panel.</p>
+      <p>Click on <gui>Bluetooth</gui> to open the panel.</p>
     </item>
     <item>
-      <p>If <gui>Sharing</gui> is <gui>OFF</gui>, switch it to
-      <gui>ON</gui>.</p>
+      <p>Make sure that <link xref="bluetooth-turn-on-off"><gui>Bluetooth</gui>
+      is switched on</link>.</p>
     </item>
     <item>
-      <p>Select <gui>Bluetooth Sharing</gui>.</p>
-    </item>
-    <item>
-      <p>Switch <gui>Save Received Files to Downloads Folder</gui> to
-      <gui>ON</gui>.</p>
-    </item>
-    <item>
-      <p>If you only want to allow trusted devices to access your
-      <file>Downloads</file> folder, switch
-      <gui>Only Receive From Trusted Devices</gui> to <gui>ON</gui>.</p>
-
-      <note style="tip">
-        <p>This option is disabled by default. You should enable it if you want
-        to prevent access to your shared files by anyone with a
-        Bluetooth-enabled cell phone or similar device nearby.</p>
-      </note>
-
-    </item>
-    <item>
-      <p>Click <gui style="button">Close</gui>. Bluetooth-enabled devices will
-      now be able to send files to your <file>Downloads</file> folder.</p>
+      <p>Bluetooth-enabled devices can send files to your
+      <file>Downloads</file> folder only when the <gui>Bluetooth</gui> panel is
+      open.</p>
     </item>
   </steps>
 
@@ -102,9 +59,5 @@
     <p>You can <link xref="sharing-displayname">change</link> the name your
     computer displays to other devices.</p>
   </note>
-
-  <p><app>Files</app> allows you to launch the <gui>Sharing</gui> panel
-  directly by clicking the <gui>Preferences</gui> button when you visit the
-  <file>Downloads</file> folder.</p>
 
 </page>
