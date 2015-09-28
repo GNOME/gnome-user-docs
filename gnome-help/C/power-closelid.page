@@ -1,22 +1,27 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="question"
       id="power-closelid">
 
   <info>
     <link type="guide" xref="power"/>
     <link type="seealso" xref="power-suspendfail"/>
+    <link type="seealso" xref="power-suspend"/>
 
     <revision pkgversion="3.4.0" date="2012-02-20" status="review"/>
     <revision pkgversion="3.10" date="2013-11-08" status="review"/>
+    <revision pkgversion="3.18" date="2015-09-28" status="candidate"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
-      <email its:translate="no">gnome-doc-list@gnome.org</email>
+      <email>gnome-doc-list@gnome.org</email>
     </credit>
     <credit type="author editor">
       <name>Ekaterina Gerasimova</name>
-      <email its:translate="no">kittykat3756@gmail.com</email>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
+    <credit type="author editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -49,10 +54,13 @@
     Contact your distribution for more information.</p>
   </note>
 
+  <note style="important">
+    <p>You need to have the <app>Tweak Tool</app> installed on your computer to
+    change this setting.</p>
+  </note>
+
   <p>If you do not want the computer to suspend when you close the lid, you can
-  change the settings for that behavior. You will need to have an
-  <link xref="user-admin-change">administrator password</link> to change the
-  setting.</p>
+  change the setting for that behavior.</p>
 
   <note style="warning">
     <p>Be very careful if you change this setting. Some laptops can overheat
@@ -62,36 +70,20 @@
 
   <steps>
     <item>
-      <p>Open the <app>Terminal</app> application from the
-      <gui>Activities</gui> overview.</p>
+      <p>Open the <gui xref="shell-terminology">Activities</gui> overview and
+      start typing <gui>Tweak Tool</gui>.</p>
     </item>
     <item>
-      <p>Run the following command:</p>
-      <screen its:translate="no"><output style="prompt">$</output> <input>sudoedit /etc/systemd/logind.conf</input></screen>
+      <p>Click <gui>Tweak Tool</gui> to open the application.</p>
     </item>
     <item>
-      <p>You will now see the contents of the file. Look for
-      <code>HandleLidSwitch=</code> in the file. The line may be quoted out
-      with a <code>#</code> at the start and may be followed by an argument. If
-      the line already exists, unquote it. Otherwise, add the line.</p>
-      <code>
-[Login]
-HandleLidSwitch=<input>lock</input>
-      </code>
-      <p>You can use <input>lock</input> for the screen to lock,
-      <input>ignore</input> for nothing to happen, <input>poweroff</input> for
-      the computer to switch off or <input>suspend</input> to suspend. For more
-      information, see <link href="man:logind.conf">logind.conf help</link>.</p>
+      <p>Click the <gui>Power</gui> tab.</p>
     </item>
     <item>
-      <p>Once you finish editing the file, save your changes and quit the
-      editor.</p>
+      <p>Switch <gui>Don't suspend on lid close</gui> to <gui>ON</gui>.</p>
     </item>
     <item>
-      <p>Run the following command to make your change work:</p>
-      <screen its:translate="no"><output style="prompt">$</output> <input>sudo systemctl restart systemd-logind.service</input></screen>
-      <p>If you do not run that command, the change will only work after your
-      computer is restarted.</p>
+      <p>Close the <gui>Tweak Tool</gui> window.</p>
     </item>
   </steps>
 

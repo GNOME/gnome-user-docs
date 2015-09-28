@@ -5,9 +5,12 @@
   <info>
     <link type="guide" xref="power#problems"/>
     <link type="guide" xref="hardware-problems-graphics"/>
-    <revision pkgversion="3.4.0" date="2012-02-20" status="review"/>
+    <link type="seealso" xref="hardware-driver"/>
 
-    <desc>Some computer hardware causes problems with suspend or hibernate.</desc>
+    <revision pkgversion="3.4.0" date="2012-02-20" status="review"/>
+    <revision pkgversion="3.18" date="2015-09-28" status="final"/>
+
+    <desc>Some computer hardware causes problems with suspend.</desc>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
@@ -23,11 +26,9 @@
 
 <title>Why does my computer not turn back on after I suspended it?</title>
 
-<p>If you <link xref="power-suspend">suspend</link> or <link
-xref="power-hibernate">hibernate</link> your computer, then try to resume it or
-turn it back on, you may find that it does not work as you expected. This could
-be because suspend and hibernate are not supported properly by your
-hardware.</p>
+<p>If you <link xref="power-suspend">suspend</link> your computer, then try to
+resume it, you may find that it does not work as you expected. This could be
+because suspend is not supported properly by your hardware.</p>
 
 <section id="resume">
   <title>My computer is suspended and is not resuming</title>
@@ -48,37 +49,20 @@ hardware.</p>
   </note>
 </section>
 
-<section id="hibernate">
-  <title>None of my applications/documents are open when I turn on the computer
-  again</title>
-  <p>If you hibernated your computer and switched it on again, but none of your
-  documents or applications are open, it probably failed to hibernate properly.
-  Sometimes this happens because of a minor problem, and the computer will be
-  able to hibernate properly the next time you do it. It might also happen
-  because you had installed a software update which required the computer to be
-  restarted; in this case, the computer may have shut down instead of
-  hibernating.</p>
-  <p>It is also possible that the computer is not capable of hibernating
-  because the hardware does not support it properly. This might be because of a
-  problem with Linux drivers for your hardware, for example. You can test this
-  by hibernating again and seeing if it works the second time. If it does not,
-  it is probably a problem with drivers on your computer.</p>
-</section>
-
 <section id="hardware">
   <title>My wireless connection (or other hardware) does not work when I wake
   up my computer</title>
-  <p>If you suspend or hibernate your computer and then resume it again, you
+  <p>If you suspend your computer and then resume it again, you
   may find that your internet connection, mouse, or some other device does not
   work properly. This could be because the driver for the device does not
-  properly support suspend or hibernate. This is a <link
+  properly support suspend. This is a <link
   xref="hardware-driver">problem with the driver</link> and not the device
   itself.</p>
   <p>If the device has a power switch, try turning it off and then on again. In
   most cases, the device will start working again. If it connects via a USB
   cable or similar, unplug the device and then plug it in again and see if it
   works.</p>
-  <p>If you cannot turn off/unplug the device, or if this does not work, you
+  <p>If you cannot turn off or unplug the device, or if this does not work, you
   may need to restart your computer for the device to start working again.</p>
 </section>
 
