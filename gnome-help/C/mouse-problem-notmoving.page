@@ -7,7 +7,7 @@
 
     <revision pkgversion="3.8" date="2013-03-13" status="candidate"/>
     <!-- TODO: reorganise page and tidy because it's one ugly wall of text -->
-    <revision pkgversion="3.18" date="2015-09-28" status="candidate"/>
+    <revision pkgversion="3.18" date="2015-09-29" status="final"/>
 
     <credit type="author">
         <name>Phil Bull</name>
@@ -40,59 +40,6 @@
  than the purple keyboard port. You may need to restart the computer if it was
  not plugged in.
  </p>
-</section>
-
-<section id="connected">
- <title>Check that the mouse was recognized by your computer</title>
- <steps>
-  <item><p>Open the <app>Terminal</app> application from the
-   <gui>Activities</gui> overview.</p></item>
-  <item>
-   <p>
-   In the terminal window, type <cmd>xsetpointer -l | grep Pointer</cmd>,
-    exactly as it appears here,
-   and press <key>Enter</key>.
-   </p>
-  </item>
-  <item>
-   <p>A short list of mouse devices will appear. Check that at least one of the
-   items says <sys>[XExtensionPointer]</sys> next to it, and that one of the
-   <sys>[XExtensionPointer]</sys> items has the name of the mouse to the left of
-   it.</p>
-  </item>
-  <item>
-   <p>If there is no entry that has the name of the mouse followed by
-   <sys>[XExtensionPointer]</sys>, then the mouse was not recognized by your
-   computer. If the entry exists, your mouse was recognized by your computer.
-   In this case you should check that the mouse is
-   <link xref="mouse-problem-notmoving#plugged-in">plugged in</link> and in
-   <link xref="mouse-problem-notmoving#broken">working condition</link>.</p>
-  </item>
- </steps>
-
- <comment>
-   <cite date="2012-02-19">shaunm</cite>
-   <p>If we decide to bless a device manager, investigate using that instead
-   of <cmd>xsetpointer</cmd> in these steps.</p>
- </comment>
-
- <p>
- If your mouse has a serial (RS-232) connector, you may need to perform some
- extra steps to get it working. The steps might depend on the make or model of
- your mouse.
- </p>
-
- <p>
- It can be complicated to fix problems with mouse detection. Ask for support
- from your distribution or vendor if you think that your mouse has not been
- detected properly.
- </p>
-
- <comment>
- <cite date="2012-02-19">Phil Bull</cite>
-  <p>Should provide some useful advice rather than just saying "you might need
-  to perform extra steps".</p>
- </comment>
 </section>
 
 <section id="broken">
