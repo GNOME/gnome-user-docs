@@ -1,5 +1,4 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="accounts-which-application">
 
@@ -9,20 +8,20 @@
 
     <revision pkgversion="3.8.2" date="2013-05-22" status="review"/>
     <revision pkgversion="3.13.92" date="2014-09-20" status="review"/>
-    <revision pkgversion="3.18" date="2015-09-28" status="outdated"/>
+    <revision pkgversion="3.18" date="2015-09-28" status="incomplete"/>
 
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
-      <email its:translate="no">baptistem@gnome.org</email>
+      <email>baptistem@gnome.org</email>
       <years>2012, 2013</years>
     </credit>
     <credit type="editor">
       <name>Michael Hill</name>
-      <email its:translate="no">mdhillca@gmail.com</email>
+      <email>mdhillca@gmail.com</email>
     </credit>
     <credit type="editor">
       <name>Andre Klapper</name>
-      <email its:translate="no">ak-47@gmx.net</email>
+      <email>ak-47@gmx.net</email>
     </credit>
 
     <desc>Applications can use the accounts created in <app>Online
@@ -30,69 +29,95 @@
 
   </info>
 
-<!--
-<title>Which applications take advantage of online accounts?</title>
+  <title>Online services and applications</title>
+
+  <comment>
+    <cite date="2015-09-28">shaunm</cite>
+    <p>Figure out what Maps does. See TODO below.</p>
+  </comment>
+
+  <p>Once you have added an online account, any application can use that
+  account for any of the available services that you have not
+  <link xref="accounts-disable-service">disabled</link>. Different
+  providers provide different services. This page lists the different
+  services and some of the applications that are known to use them.</p>
+
+  <terms>
+    <item>
+      <title>Calendar</title>
+      <p>The Calendar service allows you to view, add, and edit events in
+      an online calendar. It is used by applications like <app>Calendar</app>,
+      <app>Evolution</app>, and <app>California</app>.</p>
+    </item>
+
+    <item>
+      <title>Chat</title>
+      <p>The Chat service allows you to chat with your contacts on popular
+      instant messaging platforms. It is used used by the <app>Empathy</app>
+      application.</p>
+    </item>
+
+    <item>
+      <title>Contacts</title>
+      <p>The Contacts service allows you to see the published details of your
+      contacts on various services. It is used by applications like
+      <app>Contacts</app> and <app>Evolution</app>.</p>
+    </item>
+
+    <item>
+      <title>Documents</title>
+      <p>The Documents service allows you to view your online documents
+      such as those in Google docs. You can view your documents using the
+      <app>Documents</app> application.</p>
+    </item>
+
+    <item>
+      <title>Files</title>
+      <p>The Files service adds a remote file location, as if you had added
+      one using the <link xref="nautilus-connect">Connect to Server</link>
+      functionality in the file manager. You can access remote files using
+      the file manager, as well as through file open and save dialogs in any
+      application.</p>
+    </item>
+
+    <item>
+      <title>Mail</title>
+      <p>The Mail service allows you to send and receive email through an
+      email provider like Google. It is used by <app>Evolution</app>.</p>
+    </item>
+
+<!-- TODO: Not sure what this does. Doesn't seem to do anything in Maps app.
+    <item>
+      <title>Maps</title>
+    </item>
 -->
-<title>Online services and applications</title>
 
-  <p><app>Online Accounts</app> can be used by external applications to
-  automatically configure themselves.</p>
-
-<section id="accounts-google-services">
-  <title>With a Google account</title>
-
-  <list>
     <item>
-      <p><app>Evolution</app>, the email application. Your email account will
-      be added to <app>Evolution</app> automatically, so it will retrieve your
-      mail, give you access to your contacts, and display your calendar items
-      in your Google agenda.</p>
+      <title>Photos</title>
+      <p>The Photos service allows you to view your online photos such as
+      those you post on Facebook. You can view your photos using the
+      <app>Photos</app> application.</p>
     </item>
+
     <item>
-      <p><app>Empathy</app>, the instant messaging application. Your online
-      account will be added and you will be able to communicate with your
-      friends.</p>
+      <title>Printers</title>
+      <p>The Print service allows you to send a PDF copy to a provider from
+      within the print dialog of any application. The provider might provide
+      print services, or it might just serve as storage for the PDF, which
+      you can download and print later.</p>
     </item>
+
     <item>
-      <p><app>Contacts</app>, which will allow to see and edit your
-      contacts.</p>
+      <title>Read Later</title>
+      <p>The Read Later service allows you to save a web page to an external
+      services so that you can read it later on another device. No applications
+      currently use this service.</p>
+      <comment>
+	<cite date="2015-09-28">shaunm</cite>
+	<p>Check this for 3.20. Might get support for Pocket in Epiphany.</p>
+      </comment>
     </item>
-    <item>
-      <p><app>Documents</app> can access your online documents and display
-      them.</p>
-    </item>
-  </list>
-</section>
 
-<section id="accounts-windows-services">
-  <title>With Windows Live, Facebook or Twitter accounts</title>
-
-  <p><app>Empathy</app> can use these accounts to connect you online and chat
-  with your contacts, friends, and followers.</p>
-</section>
-
-<section id="account-windows-skydrive">
-  <title>With a OneDrive account</title>
-
-  <p><app>Documents</app> can access your online documents in Microsoft
-  OneDrive and display them.</p>
-</section>
-
-<section id="account-exchange">
-  <title>With a Exchange account</title>
-
-  <p>Once you have created an Exchange account, <app>Evolution</app> will start
-  retrieving mails from this account.</p>
-</section>
-
-<section id="accounts-ownCloud">
-  <title>With a ownCloud account</title>
-
-  <p>When an ownCloud account is set up, <app>Evolution</app> is able to
-  access and edit contacts and calendar appointments.</p>
-
-  <p><app>Files</app> and other applications will be able to list and access
-  your online files stored in the ownCloud installation.</p>
-</section>
+  </terms>
 
 </page>
