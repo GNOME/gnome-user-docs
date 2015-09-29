@@ -1,3 +1,6 @@
+<?run this:
+xmllint --noout --schematron gnome-help.sct *.page 2>&1 | grep -v 'validates$'
+?>
 <schema xmlns="http://www.ascc.net/xml/schematron" >
   <title>Some sanity checks for the GNOME desktop help</title>
   <ns prefix="mal" uri="http://projectmallard.org/1.0/"/>
@@ -13,10 +16,14 @@
       <assert test="normalize-space(mal:desc) != ''">Must have non-empty desc</assert>
     </rule>
     <rule context="mal:page/mal:info/mal:desc">
-      <assert test="substring(normalize-space(.), string-length(normalize-space(.))) = '.'">Desc must end with a period</assert>
+      <assert test="mal:link or
+                    substring(normalize-space(.), string-length(normalize-space(.))) = '.'"
+                    >Desc must end with a period</assert>
     </rule>
     <rule context="mal:page/mal:info/mal:desc/mal:link">
-      <assert test="substring(normalize-space(..), string-length(normalize-space(..)) - 2) = '...'">Desc with links must end with an ellipsis</assert>
+      <assert test="substring(normalize-space(..), string-length(normalize-space(..)) - 2) = '...' or
+                    substring(normalize-space(..), string-length(normalize-space(..))) = '…'"
+		    >Desc with links must end with an ellipsis</assert>
     </rule>
   </pattern>
 </schema>
