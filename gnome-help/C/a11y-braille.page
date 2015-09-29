@@ -1,5 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       type="topic" style="task a11y"
       id="a11y-braille">
 
@@ -8,17 +8,17 @@
     <link type="seealso" xref="a11y-screen-reader"/>
 
     <revision pkgversion="3.9.92" date="2013-09-18" status="incomplete"/>
-    <revision pkgversion="3.18" date="2015-09-28" status="review"/>
+    <revision pkgversion="3.18" date="2015-09-29" status="final"/>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
-      <email its:translate="no">shaunm@gnome.org</email>
+      <email>shaunm@gnome.org</email>
     </credit>
     <credit type="editor">
       <name>Jana Heves</name>
-      <email its:translate="no">jsvarova@gnome.org</email>
+      <email>jsvarova@gnome.org</email>
     </credit>
 
     <desc>Use the <app>Orca</app> screen reader with a refreshable Braille
@@ -29,8 +29,9 @@
 
   <p>GNOME provides the <app>Orca</app> screen reader to display the user
   interface on a refreshable Braille display. Depending on how you installed
-  GNOME, you might not have Orca installed. If not, start with
-  <link href="install:orca">Install Orca</link> first.</p>
+  GNOME, you might not have Orca installed. If not, install Orca first.</p>
+
+  <p if:test="action:install"><link style="button" action="install:orca">Install Orca</link></p>
 
   <p>Refer to the <link href="help:orca">Orca Help</link> for
   more information.</p>
