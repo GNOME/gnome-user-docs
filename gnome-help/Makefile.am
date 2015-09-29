@@ -296,7 +296,6 @@ HELP_FILES = \
 	power-batterywindows.page \
 	power-closelid.page \
 	power-constantfan.page \
-	power-hibernate.page \
 	power-hotcomputer.page \
 	power-lowpower.page \
 	power-nowireless.page \
