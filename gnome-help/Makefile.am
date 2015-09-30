@@ -182,6 +182,7 @@ HELP_FILES = \
 	disk-format.page \
 	disk-partitions.page \
 	disk.page \
+	display-blank.page \
 	display-brightness.page \
 	display-dual-monitors.page \
 	files-autorun.page \
