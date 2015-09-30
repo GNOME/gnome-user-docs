@@ -148,6 +148,7 @@ HELP_FILES = \
 	clock-calendar.page \
 	clock-set.page \
 	clock-timezone.page \
+	clock-world.page \
 	clock.page \
 	color-assignprofiles.page \
 	color-calibrate-camera.page \
