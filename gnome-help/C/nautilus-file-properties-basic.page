@@ -5,24 +5,29 @@
   <info>
     <link type="guide" xref="files#more-file-tasks"/>
 
-   <desc>View basic file information, set permissions, and choose
-   default applications.</desc>
+    <revision pkgversion="3.5.92" version="0.2" date="2012-09-19" status="review"/>
+    <revision pkgversion="3.18" date="2015-09-29" status="final"/>
 
-   <revision pkgversion="3.5.92" version="0.2" date="2012-09-19" status="review"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <credit type="editor">
+      <name>David King</name>
+      <email>amigadave@amigadave.com</email>
+    </credit>
 
-   <credit type="author">
-     <name>Tiffany Antopolski</name>
-     <email>tiffany@antopolski.com</email>
-   </credit>
-   <credit type="author">
-     <name>Shaun McCance</name>
-     <email>shaunm@gnome.org</email>
-   </credit>
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
-    <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
-               xmlns:xlink="http://www.w3.org/1999/xlink"
-               xlink:type="simple" xlink:href="gnome-help.its"/>
+
+    <desc>View basic file information, set permissions, and choose
+    default applications.</desc>
+
   </info>
+
   <title>File properties</title>
 
   <p>To view information about a file or folder, right-click it and select
@@ -58,7 +63,7 @@
     applications can open the file, among other things. For example, you
     can't open a picture with a music player. See <link xref="files-open"/>
     for more information on this.</p>
-  <p>The <em>MIME type</em> of the file is shown in parentheses; MIME type is
+    <p>The <em>MIME type</em> of the file is shown in parentheses; MIME type is
     a standard way that computers use to refer to the file type.</p>
   </item>
 
@@ -74,19 +79,13 @@
   </item>
 
   <item>
-    <title>Location</title>
-    <p>The location of each file on your computer is given by its <em>absolute path</em>. This is a unique "address" of the file on your computer, made up of a list of the folders that you would need to go into to find the file. For example, if Jim had a file called <file>Resume.pdf</file> in his Home folder, its location would be <file>/home/jim/Resume.pdf</file>.</p>
-  </item>
-
-  <item>
-    <title>Volume</title>
-    <p>The file system or device that the file is stored on. This shows you
-    where the file is physically stored, for example if it is on the hard disk
-    or on a CD, or a
-    <link xref="nautilus-connect">network share or file server</link>. Hard
-    disks can be split up into several
-    <link xref="disk-partitions">disk partitions</link>; the partition will
-    be displayed under <gui>Volume</gui> too.</p>
+    <title>Parent Folder</title>
+    <p>The location of each file on your computer is given by its <em>absolute
+    path</em>. This is a unique "address" of the file on your computer, made up
+    of a list of the folders that you would need to go into to find the file.
+    For example, if Jim had a file called <file>Resume.pdf</file> in his Home
+    folder, its parent folder would be <file>/home/jim</file> and its location
+    would be <file>/home/jim/Resume.pdf</file>.</p>
   </item>
 
   <item>
@@ -95,7 +94,6 @@
     which is available on the disk that the folder is on. This is useful for
     checking if the hard disk is full.</p>
   </item>
-
 
   <item>
     <title>Accessed</title>

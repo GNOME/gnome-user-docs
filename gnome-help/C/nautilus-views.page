@@ -6,9 +6,8 @@
   <info>
     <link type="guide" xref="nautilus-prefs" group="nautilus-views"/>
 
-    <desc>Specify the default view, sort order, and zoom levels for the file manager.</desc>
-
     <revision pkgversion="3.8" version="0.2" date="2013-04-03" status="review"/>
+    <revision pkgversion="3.18" date="2015-09-30" status="candidate"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -26,32 +25,31 @@
       <name>Ekaterina Gerasimova</name>
       <email>kittykat3756@gmail.com</email>
     </credit>
+    <credit type="editor">
+      <name>David King</name>
+      <email>amigadave@amigadave.com</email>
+    </credit>
+
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
     <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
                xmlns:xlink="http://www.w3.org/1999/xlink"
                xlink:type="simple" xlink:href="gnome-help.its"/>
+
+    <desc>Specify the default sort order and grouping for the file
+    manager.</desc>
+
   </info>
 
 <title>Views preferences in <app>Files</app></title>
 
-<p>You can change the default view for new folders, how files and folders are
-sorted by default, the zoom level for the icon and compact views, and whether
-files are displayed in the tree sidebar. Select
-<guiseq><gui style="menu">Files</gui>
+<p>You can change how files and folders are grouped and sorted by default.
+Select <guiseq><gui style="menu">Files</gui>
 <gui style="menuitem">Preferences</gui></guiseq> in the top bar while
 <app>Files</app> is open and select the <gui style="tab">Views</gui> tab.</p>
 
 <section id="default-view">
 <title>Default view</title>
 <terms>
-  <item>
-    <title><gui>View new folders using</gui></title>
-    <p>By default, new folders are shown in icon view. If you prefer the list
-    view, you can set it here as the default. Alternatively, you can select a
-    different view for each folder as you browse by clicking the
-    <gui style="button">View items as a list</gui> or <gui style="button">View
-    items as a grid of icons</gui> button in the toolbar.</p>
-  </item>
   <item>
     <title><gui>Arrange items</gui></title>
     <p>You can change the default sort order that is used in folders using the
@@ -61,62 +59,16 @@ files are displayed in the tree sidebar. Select
     <p its:locNote="TRANSLATORS: use the translation of the tooltip for the
     view selector button that opens the view popover in the main window for
     'View options'">You can change how <link xref="files-sort">files are
-    sorted</link> in an individual folder by clicking the <gui>View
-    options</gui> button in the toolbar and choosing <gui>Name</gui>,
-    <gui>Size</gui>, <gui>Type</gui> or <gui>Last Opened</gui>, or by clicking
-    the list column headers in list view. This menu only affects the current
-    folder.</p>
+    sorted</link> in an individual folder by clicking the view options
+    <!-- FIXME: Get a tooltip added for "View options" -->
+    button in the toolbar and choosing <gui>Name</gui>,
+    <gui>Size</gui>, <gui>Type</gui> or <gui>Last Modified</gui>, or by
+    clicking the list column headers in list view.</p>
   </item>
   <item>
     <title><gui>Sort folders before files</gui></title>
     <p>By default, the file manager no longer shows all folders before files.
     To see all folders listed before files, enable this option.</p>
-  </item>
-  <item>
-    <title><gui>Show hidden and backup files</gui></title>
-    <p>The file manager does not display <link xref="files-hidden">hidden
-    files</link> and folders by default. You can always show hidden files by
-    selecting this option.</p>
-    <p its:locNote="TRANSLATORS: use the translation of the tooltip for the
-    view selector button that opens the view popover in the main window for
-    'View options'">You can also show hidden files in an individual window by
-    selecting <gui>Show Hidden Files</gui>, from the <gui>View options</gui>
-    button menu in the toolbar.</p>
-  </item>
-</terms>
-</section>
-
-<section id="icon-view-defaults">
-<title>Icon view defaults</title>
-<terms>
-  <item>
-    <title><gui>Default zoom level</gui></title>
-    <p its:locNote="TRANSLATORS: use the translation of the tooltip for the
-    view selector button that opens the view popover in the main window for
-    'View options'">You can make the icons and text larger or smaller by
-    default in icon view using this option. You can also change this setting in
-    an individual folder by clicking the <gui>View options</gui> button in the
-    toolbar and adjusting the slider to a position you find comfortable. If you
-    frequently use a larger or smaller zoom level, you can set the default with
-    this option.</p>
-    <p>In icon view, more or fewer
-    <link xref="nautilus-display#icon-captions">captions</link> are shown based
-    on your zoom level.</p>
-   </item>
-  </terms>
-</section>
-
-<section id="list-view-defaults">
-<title>List view defaults</title>
-<terms>
-  <item>
-    <title><gui>Default zoom level</gui></title>
-    <p its:locNote="TRANSLATORS: use the translation of the tooltip for the
-    view selector button that opens the view popover in the main window for
-    'View options'">You can make the icons and text larger or smaller in list
-    view using this option. You can also do this in an individual folder by
-    clicking the <gui>View options</gui> button in the toolbar and adjusting
-    the slider to a position you find comfortable.</p>
   </item>
 </terms>
 </section>
