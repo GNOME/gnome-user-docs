@@ -109,12 +109,20 @@
     </item>
   </steps>
 
-  <p>When switched off, most notifications will not pop up at the bottom of the
-  screen. Very important notifications, such as when your battery is critically
-  low, will still pop up. Notifications will still be available in the message
-  tray when you display it (by moving your mouse to the bottom of the screen,
+  <p if:test="!platform:gnome-classic">When switched off, most notifications will
+  not pop up at the top of the screen. Very important notifications, such as when
+  your battery is critically low, will still pop up. Notifications will still be
+  available in the message tray when you display it (by clicking on the clock,
   or by pressing <keyseq><key>Super</key><key>M</key></keyseq>), and they will
   start popping up again when you switch the toggle to <gui>ON</gui> again.</p>
+
+  <p if:test="platform:gnome-classic">When switched off, most notifications will
+  not pop up at the bottom of the screen. Very important notifications, such as
+  when your battery is critically low, will still pop up. Notifications will
+  still be available in the message tray when you display it (by moving your mouse
+  to the bottom-right corner of the screen, or by pressing <keyseq><key>Super</key>
+  <key>M</key></keyseq>), and they will start popping up again when you switch the
+  toggle to <gui>ON</gui> again.</p>
 
 </section>
 
