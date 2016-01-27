@@ -40,7 +40,6 @@ HELP_MEDIA = \
 	figures/input-keyboard-symbolic.png \
 	figures/input-methods-switcher.png \
 	figures/keyboard-key-menu.svg \
-	figures/nautilus-3-10.png \
 	figures/nautilus-icons.png \
 	figures/network-cellular-3g-symbolic.svg \
 	figures/network-cellular-4g-symbolic.svg \
