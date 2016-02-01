@@ -24,7 +24,6 @@ HELP_MEDIA = \
 	figures/bluetooth-active-symbolic.svg \
 	figures/bluetooth-disabled-symbolic.svg \
 	figures/bluetooth-menu.png \
-	figures/camera-photo-symbolic.svg \
 	figures/color-average.png \
 	figures/color-camera.png \
 	figures/color-display.png \
@@ -77,14 +76,11 @@ HELP_MEDIA = \
 	figures/shell-dash.png \
 	figures/shell-exit-classic.png \
 	figures/shell-exit.png \
-	figures/shell-introduction.png \
 	figures/shell-lock.png \
-	figures/shell-keyboard-shortcuts.png \
 	figures/shell-notification.png \
 	figures/shell-top-bar-classic.png \
 	figures/shell-top-bar.png \
 	figures/shell-window-list-classic.png \
-	figures/shell-windows.png \
 	figures/shell-workspaces.png \
 	figures/shell.png \
 	figures/top-bar-icons-classic.png \
