@@ -86,7 +86,6 @@ HELP_MEDIA = \
 	figures/top-bar-icons-classic.png \
 	figures/top-bar-icons.png \
 	figures/universal-access-menu.png \
-	figures/view-fullscreen-16.png \
 	figures/network-wireless-acquiring-symbolic.svg \
 	figures/network-wireless-connected-symbolic.svg \
 	figures/network-wireless-encrypted-symbolic.svg \
