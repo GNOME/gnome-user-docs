@@ -285,6 +285,8 @@ HELP_FILES = \
 	net-wireless-wepwpa.page \
 	net-wireless.page \
 	net.page \
+	power-autobrightness.page \
+	power-autosuspend.page \
 	power-batteryestimate.page \
 	power-batterylife.page \
 	power-batteryoptimal.page \
@@ -296,10 +298,12 @@ HELP_FILES = \
 	power-lowpower.page \
 	power-nowireless.page \
 	power-othercountry.page \
+	power-status.page \
 	power-suspendfail.page \
 	power-suspend.page \
 	power-whydim.page \
 	power-willnotturnon.page \
+	power-wireless.page \
 	power.page \
 	prefs-display.page \
 	prefs-language.page \
