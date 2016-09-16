@@ -15,15 +15,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-help master\n"
-"POT-Creation-Date: 2016-08-17 00:05+0000\n"
-"PO-Revision-Date: 2016-08-20 13:27+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"POT-Creation-Date: 2016-08-23 09:00+0000\n"
+"PO-Revision-Date: 2016-09-16 16:08+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Launchpad-Export-Date: 2012-03-28 11:04+0000\n"
 
@@ -255,7 +255,9 @@ msgstr ""
 #: C/a11y-font-size.page:39 C/a11y-icon.page:40 C/a11y-mag.page:41
 #: C/a11y-right-click.page:46 C/a11y-screen-reader.page:37
 #: C/a11y-slowkeys.page:49 C/a11y-stickykeys.page:52 C/a11y-visualalert.page:47
-#: C/keyboard-osk.page:49 C/mouse-doubleclick.page:45 C/mouse-mousekeys.page:46
+#: C/keyboard-cursor-blink.page:47 C/keyboard-osk.page:49
+#: C/keyboard-repeat-keys.page:50 C/mouse-doubleclick.page:45
+#: C/mouse-mousekeys.page:46
 msgid ""
 "Open the <gui xref=\"shell-introduction#activities\">Activities</gui> "
 "overview and start typing <gui>Universal Access</gui>."
@@ -267,7 +269,8 @@ msgstr ""
 #: C/a11y-bouncekeys.page:50 C/a11y-contrast.page:47 C/a11y-dwellclick.page:55
 #: C/a11y-font-size.page:43 C/a11y-icon.page:44 C/a11y-mag.page:45
 #: C/a11y-right-click.page:50 C/a11y-slowkeys.page:53 C/a11y-stickykeys.page:56
-#: C/a11y-visualalert.page:51 C/keyboard-osk.page:53
+#: C/a11y-visualalert.page:51 C/keyboard-cursor-blink.page:51
+#: C/keyboard-osk.page:53 C/keyboard-repeat-keys.page:54
 #: C/mouse-doubleclick.page:47 C/mouse-mousekeys.page:55
 msgid "Click on <gui>Universal Access</gui> to open the panel."
 msgstr ""
@@ -1800,10 +1803,6 @@ msgstr "Csevegés"
 
 #. (itstool) path: item/p
 #: C/accounts-which-application.page:55
-#| msgid ""
-#| "The Chat service allows you to chat with your contacts on popular instant "
-#| "messaging platforms. It is used used by the <app>Empathy</app> "
-#| "application."
 msgid ""
 "The Chat service allows you to chat with your contacts on popular instant "
 "messaging platforms. It is used by the <app>Empathy</app> application."
@@ -1901,11 +1900,6 @@ msgstr "Nyomtatás"
 
 #. (itstool) path: item/p
 #: C/accounts-which-application.page:104
-#| msgid ""
-#| "The Print service allows you to send a PDF copy to a provider from within "
-#| "the print dialog of any application. The provider might provide print "
-#| "services, or it might just serve as storage for the PDF, which you can "
-#| "download and print later."
 msgid ""
 "The Printers service allows you to send a PDF copy to a provider from within "
 "the print dialog of any application. The provider might provide print "
@@ -1924,10 +1918,6 @@ msgstr "Elolvasás később"
 
 #. (itstool) path: item/p
 #: C/accounts-which-application.page:112
-#| msgid ""
-#| "The Read Later service allows you to save a web page to an external "
-#| "services so that you can read it later on another device. No applications "
-#| "currently use this service."
 msgid ""
 "The Read Later service allows you to save a web page to external services so "
 "that you can read it later on another device. No applications currently use "
@@ -3601,10 +3591,6 @@ msgstr "Ehhez telepítve kell lennie az <app>Órák</app> alkalmazásnak."
 
 #. (itstool) path: note/p
 #: C/clock-world.page:30
-#| msgid ""
-#| "Most distributions come with <app>Clocks</app> installed by default. If "
-#| "yours does not, you may need to install it using your distribution "
-#| "package manager."
 msgid ""
 "Most distributions come with <app>Clocks</app> installed by default. If "
 "yours does not, you may need to install it using your distribution's package "
@@ -3620,9 +3606,6 @@ msgstr "Világóra hozzáadásához:"
 
 #. (itstool) path: item/p
 #: C/clock-world.page:42
-#| msgid ""
-#| "Click the <gui>Add world clocks...</gui> link under the calendar to "
-#| "launch <app>Clocks</app>."
 msgid ""
 "Click the <gui>Add world clocks…</gui> link under the calendar to launch "
 "<app>Clocks</app>."
@@ -3641,9 +3624,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/clock-world.page:52
-#| msgid ""
-#| "In the <app>Clocks</app> window, click <gui style=\"button\">New</gui> "
-#| "button or <keyseq><key>Ctrl</key><key>N</key></keyseq> to add a new city."
 msgid ""
 "In the <app>Clocks</app> window, click <gui style=\"button\">New</gui> "
 "button or press <keyseq><key>Ctrl</key><key>N</key></keyseq> to add a new "
@@ -4548,16 +4528,20 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\n"
-"<output style=\"prompt\">$ </output><input>gsettings set org.gnome."
-"settings-daemon.plugins.color recalibrate-printer-threshold 180</input>\n"
-"<output style=\"prompt\">$ </output><input>gsettings set org.gnome."
-"settings-daemon.plugins.color recalibrate-display-threshold 90</input>\n"
+"<output style=\"prompt\">$ </output><input>gsettings set "
+"org.gnome.settings-daemon.plugins.color recalibrate-printer-threshold 180<"
+"/input>\n"
+"<output style=\"prompt\">$ </output><input>gsettings set "
+"org.gnome.settings-daemon.plugins.color recalibrate-display-threshold 90<"
+"/input>\n"
 msgstr ""
 "\n"
-"<output style=\"prompt\">$ </output><input>gsettings set org.gnome."
-"settings-daemon.plugins.color recalibrate-printer-threshold 180</input>\n"
-"<output style=\"prompt\">$ </output><input>gsettings set org.gnome."
-"settings-daemon.plugins.color recalibrate-display-threshold 90</input>\n"
+"<output style=\"prompt\">$ </output><input>gsettings set "
+"org.gnome.settings-daemon.plugins.color recalibrate-printer-threshold 180<"
+"/input>\n"
+"<output style=\"prompt\">$ </output><input>gsettings set "
+"org.gnome.settings-daemon.plugins.color recalibrate-display-threshold 90<"
+"/input>\n"
 
 # This is a reference to an external file such as an image or video. When
 # the file changes, the md5 hash will change to let you know you need to
@@ -5500,13 +5484,11 @@ msgstr "Válassza ki a meghajtót a bal oldali listából."
 
 #. (itstool) path: item/p
 #: C/disk-benchmark.page:51
-#| msgid ""
-#| "Click the gear button and select <gui>Benchmark…</gui> from the menu."
 msgid ""
 "Click the menu button and select <gui>Benchmark disk…</gui> from the menu."
 msgstr ""
-"Kattintson a menü gombra, és válassza a <gui>Lemez teljesítménytesztje…</gui> "
-"menüpontot."
+"Kattintson a menü gombra, és válassza a <gui>Lemez teljesítménytesztje…</"
+"gui> menüpontot."
 
 #. (itstool) path: item/p
 #: C/disk-benchmark.page:55
@@ -5764,9 +5746,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/disk-check.page:51
-#| msgid ""
-#| "Click the gear icon and select <gui>SMART Data &amp; Self Tests…</gui>. "
-#| "The <gui>Overall Assessment</gui> should say \"Disk is OK\"."
 msgid ""
 "Click the menu button and select <gui>SMART Data &amp; Self-Tests…</gui>. "
 "The <gui>Overall Assessment</gui> should say \"Disk is OK\"."
@@ -5878,9 +5857,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/disk-format.page:43
-#| msgid ""
-#| "In the toolbar underneath the <gui>Volumes</gui> section, click the gear "
-#| "icon. Then click <gui>Format…</gui>."
 msgid ""
 "In the toolbar underneath the <gui>Volumes</gui> section, click the menu "
 "button. Then click <gui>Format…</gui>."
@@ -6068,14 +6044,6 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/disk-partitions.page:68
-#| msgid ""
-#| "One primary partition must contain information that your computer uses to "
-#| "start up, or <em>boot</em>. For this reason it is sometimes called a boot "
-#| "partition, or boot volume. To determine if a volume is bootable, select "
-#| "the partition and click the gear button in the toolbar underneath the "
-#| "partition list. Then, click <gui>Edit Partition…</gui> and look at its "
-#| "<gui>Flags</gui>. External media such as USB drives and CDs may also "
-#| "contain a bootable volume."
 msgid ""
 "One primary partition must contain information that your computer uses to "
 "start up, or <em>boot</em>. For this reason it is sometimes called a boot "
@@ -6085,14 +6053,14 @@ msgid ""
 "gui>. External media such as USB drives and CDs may also contain a bootable "
 "volume."
 msgstr ""
-"Egy elsődleges partíciónak olyan információkat kell tartalmaznia, amelyeket a "
-"számítógép az elinduláshoz vagy <em>bootoláshoz</em> használ. Emiatt ezt a "
+"Egy elsődleges partíciónak olyan információkat kell tartalmaznia, amelyeket "
+"a számítógép az elinduláshoz vagy <em>bootoláshoz</em> használ. Emiatt ezt a "
 "partíciót indítópartíciónak, boot kötetnek is nevezik. A kötet "
 "indíthatóságának meghatározásához jelölje ki a partíciót, és kattintson a "
-"menü gombra a partíciólista alatti eszköztáron. Ezután válassza a <gui>"
-"Partíció szerkesztése…</gui> menüpontot, és keresse meg a <gui>Jelzőket</gui>."
-" A külső adathordozók, például USB-meghajtók vagy CD-k is tartalmazhatnak "
-"indítható kötetet."
+"menü gombra a partíciólista alatti eszköztáron. Ezután válassza a "
+"<gui>Partíció szerkesztése…</gui> menüpontot, és keresse meg a "
+"<gui>Jelzőket</gui>. A külső adathordozók, például USB-meghajtók vagy CD-k "
+"is tartalmazhatnak indítható kötetet."
 
 #. (itstool) path: info/desc
 #: C/disk.page:15
@@ -6164,9 +6132,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/display-blank.page:46
-#| msgid ""
-#| "Use the <gui>Blank screen</gui> drop-down list under <gui>Power Saving</"
-#| "gui> to set the blank screen time, or disable the blanking completely."
 msgid ""
 "Use the <gui>Blank screen</gui> drop-down list under <gui>Power Saving</gui> "
 "to set the time until the screen blanks, or disable the blanking completely."
@@ -7255,12 +7220,6 @@ msgstr "Minden rejtett fájl megjelenítése"
 
 #. (itstool) path: section/p
 #: C/files-hidden.page:51
-#| msgid ""
-#| "If you want to see all hidden files in a folder, go to that folder and "
-#| "either click the <gui><_:media-1/></gui> button in the toolbar and pick "
-#| "<gui>Show Hidden Files</gui>, or press <keyseq><key>Ctrl</key><key>H</"
-#| "key></keyseq>. You will see all hidden files, along with regular files "
-#| "that are not hidden."
 msgid ""
 "If you want to see all hidden files in a folder, go to that folder and "
 "either click the view options button in the toolbar and pick <gui>Show "
@@ -7268,17 +7227,13 @@ msgid ""
 "You will see all hidden files, along with regular files that are not hidden."
 msgstr ""
 "Ha szeretné látni egy mappa minden rejtett fájlját, akkor lépjen be a "
-"mappába, és nyomja meg a nézetbeállítások gombot az eszköztáron, és "
-"válassza a <gui>Rejtett fájlok megjelenítése</gui> menüpontot, vagy nyomja "
-"meg a <keyseq><key>Ctrl</key><key>H</key></keyseq> billentyűkombinációt. "
-"Ekkor minden rejtett fájl megjelenik a nem rejtettekkel együtt."
+"mappába, és nyomja meg a nézetbeállítások gombot az eszköztáron, és válassza "
+"a <gui>Rejtett fájlok megjelenítése</gui> menüpontot, vagy nyomja meg a "
+"<keyseq><key>Ctrl</key><key>H</key></keyseq> billentyűkombinációt. Ekkor "
+"minden rejtett fájl megjelenik a nem rejtettekkel együtt."
 
 #. (itstool) path: section/p
 #: C/files-hidden.page:58
-#| msgid ""
-#| "To hide these files again, either click the <gui><_:media-1/></gui> "
-#| "button in the toolbar and pick <gui>Show Hidden Files</gui>, or press "
-#| "<keyseq><key>Ctrl</key><key>H</key></keyseq> again."
 msgid ""
 "To hide these files again, either click the view options button in the "
 "toolbar and pick <gui>Show Hidden Files</gui>, or press <keyseq><key>Ctrl</"
@@ -7286,8 +7241,8 @@ msgid ""
 msgstr ""
 "Ezen fájlok ismételt elrejtéséhez nyomja meg a nézetbeállítások gombot az "
 "eszköztáron, és válassza a <gui>Rejtett fájlok megjelenítése</gui> "
-"menüpontot, vagy nyomja meg újra a <keyseq><key>Ctrl</key><key>H</key><"
-"/keyseq> billentyűkombinációt."
+"menüpontot, vagy nyomja meg újra a <keyseq><key>Ctrl</key><key>H</key></"
+"keyseq> billentyűkombinációt."
 
 #. (itstool) path: section/title
 #: C/files-hidden.page:66
@@ -7586,10 +7541,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/files-preview.page:39
-#| msgid ""
-#| "To view a preview full-screen, press <key>f</key> or <key>F11</key>. "
-#| "Press <key>f</key> or <key>F11</key> again to leave full-screen, or press "
-#| "the space bar to exit the preview completely."
 msgid ""
 "To view a preview full-screen, press <key>F</key> or <key>F11</key>. Press "
 "<key>F</key> or <key>F11</key> again to leave full-screen, or press the "
@@ -9367,25 +9318,12 @@ msgstr ""
 "megtalálás érdekében villogóvá teheti."
 
 #. (itstool) path: item/p
-#: C/keyboard-cursor-blink.page:47 C/keyboard-repeat-keys.page:50
-#: C/keyboard-shortcuts-set.page:60 C/tips-specialchars.page:77
-msgid ""
-"Open the <gui xref=\"shell-introduction#activities\">Activities</gui> "
-"overview and start typing <gui>Keyboard</gui>."
-msgstr ""
-"Nyissa meg a <gui xref=\"shell-introduction#activities\">Tevékenységek</gui> "
-"áttekintést, és kezdje el begépelni a <gui>Billentyűzet</gui> szót."
-
-#. (itstool) path: item/p
-#: C/keyboard-cursor-blink.page:51 C/keyboard-repeat-keys.page:54
-#: C/keyboard-shortcuts-set.page:64 C/tips-specialchars.page:81
-msgid "Click on <gui>Keyboard</gui> to open the panel."
-msgstr "Kattintson a <gui>Billentyűzet</gui> ikonra a panel megnyitásához."
-
-#. (itstool) path: item/p
 #: C/keyboard-cursor-blink.page:54
-msgid "Select <gui>Cursor blinks in text fields</gui>."
-msgstr "Jelölje be <gui>A kurzor villogjon szövegmezőkben</gui> négyzetet."
+#| msgid "Press on <gui>Zoom</gui> in the <gui>Seeing</gui> section."
+msgid "Press <gui>Cursor Blinking</gui> in the <gui>Typing</gui> section."
+msgstr ""
+"Nyomja meg a <gui>Kurzor villogása</gui> gombot a <gui>Gépelés</gui> "
+"szakaszban."
 
 #. (itstool) path: item/p
 #: C/keyboard-cursor-blink.page:57
@@ -10284,15 +10222,21 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/keyboard-repeat-keys.page:57
-msgid ""
-"Turn off <gui>Key presses repeat when key is held down</gui> to disable "
-"repeated keys entirely."
+#| msgid ""
+#| "Press <gui>Typing Assist (AccessX)</gui> in the <gui>Typing</gui> section."
+msgid "Press <gui>Repeat Keys</gui> in the <gui>Typing</gui> section."
 msgstr ""
-"Törölje a <gui>Billentyű ismétlése nyomva tartáskor</gui> négyzetet a "
-"billentyűismétlés teljes letiltásához."
+"Nyomja meg a <gui>Billentyűk ismétlése</gui> gombot a <gui>Gépelés</gui> "
+"szakaszban."
 
 #. (itstool) path: item/p
-#: C/keyboard-repeat-keys.page:59
+#: C/keyboard-repeat-keys.page:60
+#| msgid "Switch <gui>Bounce Keys</gui> to <gui>ON</gui>."
+msgid "Switch <gui>Repeat Keys</gui> to <gui>OFF</gui>."
+msgstr "Kapcsolja <gui>KI</gui> a <gui>Billentyűk ismétlését</gui>."
+
+#. (itstool) path: item/p
+#: C/keyboard-repeat-keys.page:61
 msgid ""
 "Alternatively, adjust the <gui>Delay</gui> slider to control how long you "
 "have to hold a key down to begin repeating it, and adjust the <gui>Speed</"
@@ -10318,6 +10262,20 @@ msgstr "Gyorsbillentyűk beállítása"
 #: C/keyboard-shortcuts-set.page:56
 msgid "To change the key or keys to be pressed for a keyboard shortcut:"
 msgstr "Egy gyorsbillentyűhöz használandó billentyű megváltoztatásához:"
+
+#. (itstool) path: item/p
+#: C/keyboard-shortcuts-set.page:60 C/tips-specialchars.page:77
+msgid ""
+"Open the <gui xref=\"shell-introduction#activities\">Activities</gui> "
+"overview and start typing <gui>Keyboard</gui>."
+msgstr ""
+"Nyissa meg a <gui xref=\"shell-introduction#activities\">Tevékenységek</gui> "
+"áttekintést, és kezdje el begépelni a <gui>Billentyűzet</gui> szót."
+
+#. (itstool) path: item/p
+#: C/keyboard-shortcuts-set.page:64 C/tips-specialchars.page:81
+msgid "Click on <gui>Keyboard</gui> to open the panel."
+msgstr "Kattintson a <gui>Billentyűzet</gui> ikonra a panel megnyitásához."
 
 #. (itstool) path: item/p
 #: C/keyboard-shortcuts-set.page:67
@@ -11617,15 +11575,12 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/mouse-doubleclick.page:48
-#| msgid ""
-#| "Under <gui>General</gui>, adjust the <gui>Double-click</gui> slider to a "
-#| "value you find comfortable."
 msgid ""
 "Under <gui>Pointing &amp; Clicking</gui>, adjust the <gui>Double-click</gui> "
 "slider to a value you find comfortable."
 msgstr ""
-"A <gui>Mutatás és kattintás</gui> alatt módosítsa a <gui>Dupla kattintás</gui>"
-" csúszkát az Önnek megfelelő értékre."
+"A <gui>Mutatás és kattintás</gui> alatt módosítsa a <gui>Dupla kattintás</"
+"gui> csúszkát az Önnek megfelelő értékre."
 
 #. (itstool) path: page/p
 #: C/mouse-doubleclick.page:52
@@ -12751,7 +12706,6 @@ msgstr "Kuka"
 
 #. (itstool) path: item/title
 #: C/nautilus-behavior.page:124
-#| msgid "<gui>Ask before emptying the Trash or deleting files</gui>"
 msgid "<gui>Ask before emptying the Trash</gui>"
 msgstr "<gui>Kérdés a Kuka ürítése előtt</gui>"
 
@@ -14747,15 +14701,12 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/net-fixed-ip-address.page:61
-#| msgid ""
-#| "Click on the <gui>IPv4 Settings</gui> or <gui>IPv6 Settings</gui> tab and "
-#| "change the <gui>Addresses</gui> to <em>Manual</em>."
 msgid ""
 "Click on the <gui>IPv4</gui> or <gui>IPv6</gui> tab and change the "
 "<gui>Addresses</gui> to <em>Manual</em>."
 msgstr ""
-"Kattintson az <gui>IPv4</gui> vagy az <gui>IPv6</gui> lapra, és módosítsa a <"
-"gui>Címeket</gui> <em>Kézi</em> értékűre."
+"Kattintson az <gui>IPv4</gui> vagy az <gui>IPv6</gui> lapra, és módosítsa a "
+"<gui>Címeket</gui> <em>Kézi</em> értékűre."
 
 #. (itstool) path: item/p
 #: C/net-fixed-ip-address.page:65
@@ -15615,18 +15566,14 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/net-security.page:17
-#| msgid ""
-#| "<link xref=\"net-antivirus\">Antivirus software</link>, <link xref=\"net-"
-#| "antivirus\">basic firewalls</link>, <link xref=\"net-firewall-on-off"
-#| "\">firewall ports</link>…"
 msgid ""
 "<link xref=\"net-antivirus\">Antivirus software</link>, <link xref=\"net-"
 "firewall-on-off\">basic firewalls</link>, <link xref=\"net-firewall-ports"
 "\">firewall ports</link>…"
 msgstr ""
-"<link xref=\"net-antivirus\">Vírusirtó szoftverek</link>, <link "
-"xref=\"net-firewall-on-off\">alapszintű tűzfalak</link>, <link "
-"xref=\"net-firewall-ports\">tűzfalportok</link>…"
+"<link xref=\"net-antivirus\">Vírusirtó szoftverek</link>, <link xref=\"net-"
+"firewall-on-off\">alapszintű tűzfalak</link>, <link xref=\"net-firewall-ports"
+"\">tűzfalportok</link>…"
 
 #. (itstool) path: page/title
 #: C/net-security.page:24
@@ -17477,10 +17424,6 @@ msgstr "A parancssor használata"
 
 #. (itstool) path: note/p
 #: C/net-wireless-troubleshooting.page:60
-#| msgid ""
-#| "Some of the instructions in this guide ask you to type commands into the "
-#| "<em>command line</em> (Terminal). You can find the Terminal application "
-#| "in the <gui>Activities</gui> overview."
 msgid ""
 "Some of the instructions in this guide ask you to type commands into the "
 "<em>command line</em> (Terminal). You can find the <app>Terminal</app> "
@@ -17606,30 +17549,27 @@ msgid ""
 "always easy to see in different ambient light conditions, and helps to "
 "reduce battery consumption."
 msgstr ""
+"Ha számítógépe rendelkezik integrált fényérzékelővel, akkor az használható a "
+"képernyő fényerejének automatikus szabályozására. Ez biztosítja, hogy a "
+"képernyő mindig jól látható legyen különböző környezeti fényviszonyok között "
+"is, és segít csökkenteni az akkumulátorfogyasztást is."
 
 #. (itstool) path: item/p
 #: C/power-autobrightness.page:40
-#| msgid ""
-#| "In the <gui>General</gui> section, switch <gui>Primary button</gui> to "
-#| "<gui>Right</gui>."
 msgid ""
 "In the <gui>Power Saving</gui> section, ensure that <gui>Automatic "
 "brightness</gui> is set to <gui>ON</gui>."
 msgstr ""
-"Az <gui>Energiatakarékosság</gui> szakaszban győződjön meg arról, hogy az <"
-"gui>Automatikus fényerő</gui> <gui>BE</gui> állásba van-e kapcsolva."
+"Az <gui>Energiatakarékosság</gui> szakaszban győződjön meg arról, hogy az "
+"<gui>Automatikus fényerő</gui> <gui>BE</gui> állásba van-e kapcsolva."
 
 #. (itstool) path: page/p
 #: C/power-autobrightness.page:46
-#| msgid ""
-#| "To disable alert sounds entirely, switch the <gui>Alert volume</gui> to "
-#| "<gui>OFF</gui>."
 msgid "To disable automatic screen brightness, switch it to <gui>OFF</gui>."
 msgstr "Az automatikus képernyő fényerő letiltásához kapcsolja <gui>KI</gui>."
 
 #. (itstool) path: info/desc
 #: C/power-autosuspend.page:21
-#| msgid "Connect your computer to a Bluetooth device"
 msgid "Configure your computer to suspend automatically."
 msgstr "Számítógép beállítása az automatikus felfüggesztéshez."
 
@@ -17644,14 +17584,18 @@ msgid ""
 "You can configure your computer to automatically suspend when idle. "
 "Different intervals can be specified for running on battery or plugged in."
 msgstr ""
+"Beállíthatja számítógépét az automatikus felfüggesztésre üresjáratban. "
+"Különböző időtartamok adhatók meg akkumulátoros és a hálózatra "
+"csatlakoztatott működés esetére."
 
 #. (itstool) path: item/p
 #: C/power-autosuspend.page:39
-#| msgid "In the <gui>Touchpad</gui> section, check <gui>Tap to click</gui>."
 msgid ""
 "In the <gui>Suspend &amp; Power Button</gui> section, click <gui>Automatic "
 "suspend</gui>."
 msgstr ""
+"A <gui>Felfüggesztés és bekapcsológomb</gui> szakaszban kattintson az <gui>"
+"Automatikus felfüggesztés</gui> lehetőségre."
 
 #. (itstool) path: item/p
 #: C/power-autosuspend.page:43
@@ -17660,12 +17604,16 @@ msgid ""
 "to <gui>ON</gui>, and select a <gui>Delay</gui>. Both options can be "
 "configured."
 msgstr ""
+"Válassza az <gui>Akkumulátoron</gui> vagy a <gui>Csatlakoztatva</gui> "
+"lehetőséget, a kapcsolót állítsa <gui>BE</gui> állásba, és válasszon egy <gui>"
+"Késleltetést</gui>. Mindkét lehetőség beállítható."
 
 #. (itstool) path: note/p
 #: C/power-autosuspend.page:48
 msgid ""
 "On a desktop computer, there is one option labeled <gui>When Idle</gui>."
 msgstr ""
+"Asztali számítógépen csak egy, <gui>Üresjáratban</gui> feliratú beállítás van."
 
 #. (itstool) path: info/desc
 #: C/power-batteryestimate.page:12
@@ -17808,14 +17756,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/power-batterylife.page:62
-#| msgid ""
-#| "Use the <gui>Power</gui> panel in <app>Settings</app> to change your "
-#| "power settings. There are a number of options that will help to save "
-#| "power: you can <link xref=\"power-whydim\">automatically dim the screen</"
-#| "link> after a certain time, reduce the <link xref=\"display-brightness"
-#| "\">screen brightness</link>, and have the computer <link xref=\"power-"
-#| "suspend\">automatically suspend</link> if you have not used it for a "
-#| "certain period of time."
 msgid ""
 "Use the <gui>Power</gui> panel in <app>Settings</app> to change your power "
 "settings. There are a number of options that will help to save power: you "
@@ -17828,10 +17768,10 @@ msgstr ""
 "A <app>Beállítások</app> <gui>Energiagazdálkodás</gui> panelén módosítsa "
 "energiagazdálkodási beállításait. Számos beállítás segíti az "
 "energiatakarékosságot: <link xref=\"display-blank\">automatikusan "
-"elsötétítheti a kijelzőt</link>, csökkentheti a <link "
-"xref=\"display-brightness\">kijelző fényerejét</link>, és a számítógépet <"
-"link xref=\"power-autosuspend\">automatikusan felfüggesztheti</link>, ha "
-"adott ideig nem használta."
+"elsötétítheti a kijelzőt</link>, csökkentheti a <link xref=\"display-"
+"brightness\">kijelző fényerejét</link>, és a számítógépet <link xref=\"power-"
+"autosuspend\">automatikusan felfüggesztheti</link>, ha adott ideig nem "
+"használta."
 
 #. (itstool) path: item/p
 #: C/power-batterylife.page:71
@@ -18542,25 +18482,26 @@ msgstr ""
 #: C/power-status.page:21
 msgid "Display the status of the battery and connected devices."
 msgstr ""
+"Az akkumulátor és a csatlakoztatott eszközök állapotának megjelenítése."
 
 #. (itstool) path: page/title
 #: C/power-status.page:24
-#| msgid "Check that the mouse actually works"
 msgid "Check the battery status"
-msgstr ""
+msgstr "Akkumulátorállapot ellenőrzése"
 
 #. (itstool) path: steps/title
 #: C/power-status.page:28
 msgid "Display the status of the battery and connected devices"
-msgstr ""
+msgstr "Az akkumulátor és a csatlakoztatott eszközök állapotának megjelenítése"
 
 #. (itstool) path: item/p
 #: C/power-status.page:35
-#| msgid "Click on <gui>Color</gui> to open the panel and select your device."
 msgid ""
 "Click <gui>Power</gui> to open the panel. The status of known devices is "
 "displayed."
 msgstr ""
+"Kattintson az <gui>Energiagazdálkodás</gui> ikonra a panel megnyitásához. "
+"Megjelenik az ismert eszközök állapota."
 
 #. (itstool) path: page/p
 #: C/power-status.page:41
@@ -18570,12 +18511,19 @@ msgid ""
 "percent charged, as well as time until fully charged if plugged in, and time "
 "remaining when running on battery power."
 msgstr ""
+"Belső akkumulátor észlelése esetén az <gui>Akkumulátor</gui> szakasz "
+"megjeleníti a laptop-akkumulátorok állapotát. A jelzősáv megjeleníti a "
+"százalékos töltöttséget, valamint a teljes feltöltésig hátralévő időt, ha "
+"csatlakozik a hálózatra, illetve a lemerülésig hátralévő időt, ha a gép "
+"akkumulátorról működik."
 
 #. (itstool) path: page/p
 #: C/power-status.page:58
 msgid ""
 "The <gui>Devices</gui> section displays the status of connected devices."
 msgstr ""
+"Az <gui>Eszközök</gui> szakasz megjeleníti a csatlakoztatott eszközök "
+"állapotát."
 
 #. (itstool) path: info/desc
 #: C/power-suspendfail.page:13
@@ -18782,15 +18730,11 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/power-whydim.page:45
-#| msgid "You can stop the screen from dimming itself:"
 msgid "To stop the screen from dimming itself:"
-msgstr ""
+msgstr "A képernyő elhalványulásának megakadályozásához:"
 
 #. (itstool) path: item/p
 #: C/power-whydim.page:56
-#| msgid ""
-#| "Switch <gui>Blank screen</gui> to <gui>OFF</gui> in the <gui>Power "
-#| "Saving</gui> section."
 msgid ""
 "Switch <gui>Dim screen when inactive</gui> to <gui>OFF</gui> in the "
 "<gui>Power Saving</gui> section."
@@ -18909,11 +18853,13 @@ msgid ""
 "Bluetooth, wi-fi and mobile broadband can be switched off to reduce battery "
 "use."
 msgstr ""
+"Kikapcsolható a Bluetooth, Wi-Fi és a mobil széles sáv az "
+"akkumulátorhasználat csökkentéséhez."
 
 #. (itstool) path: page/title
 #: C/power-wireless.page:23
 msgid "Switch off unused wireless technologies"
-msgstr ""
+msgstr "Nem használt vezeték nélküli technológiák kikapcsolása"
 
 #. (itstool) path: page/p
 #: C/power-wireless.page:25
@@ -18921,6 +18867,8 @@ msgid ""
 "You can reduce battery use by switching off bluetooth, wi-fi or mobile "
 "broadband when they are not in use."
 msgstr ""
+"Az akkumulátorhasználat csökkenthető, ha kikapcsolja az éppen nem használt "
+"Bluetooth, Wi-Fi vagy mobil széles sávú eszközt."
 
 #. (itstool) path: item/p
 #: C/power-wireless.page:38
@@ -18930,6 +18878,10 @@ msgid ""
 "services to <gui>OFF</gui>. Re-enable when needed by switching to <gui>ON</"
 "gui>."
 msgstr ""
+"Az <gui>Energiatakarékosság</gui> szakasz kapcsolóival <gui>KI</gui> állásba "
+"kapcsolhatja a <gui>Wi-Fi</gui>, <gui>Mobil széles sávú</gui> és <gui>"
+"Bluetooth</gui> eszközt. Amikor szüksége van valamelyikre, bármikor <gui>BE<"
+"/gui> állásba kapcsolhatja a megfelelő eszközt."
 
 #. (itstool) path: credit/name
 #: C/power.page:13
@@ -18938,17 +18890,13 @@ msgstr "Natalia Ruz"
 
 #. (itstool) path: info/desc
 #: C/power.page:23
-#| msgid ""
-#| "<link xref=\"power-suspend\">Suspend</link>, <link xref=\"shell-"
-#| "exit#shutdown\">power off</link>, <link xref=\"power-whydim\">screen "
-#| "dimming</link>…"
 msgid ""
 "<link xref=\"power-status\">Battery status</link>, <link xref=\"power-suspend"
 "\">suspend</link>, <link xref=\"power-whydim\">screen dimming</link>…"
 msgstr ""
-"<link xref=\"power-status\">Akkumulátor állapot</link>, <link "
-"xref=\"power-suspend\">felfüggesztés</link>, <link xref=\"power-whydim\">"
-"képernyő elhalványítása</link>…"
+"<link xref=\"power-status\">Akkumulátor állapot</link>, <link xref=\"power-"
+"suspend\">felfüggesztés</link>, <link xref=\"power-whydim\">képernyő "
+"elhalványítása</link>…"
 
 #. (itstool) path: page/title
 #: C/power.page:31
@@ -18957,13 +18905,11 @@ msgstr "Energiagazdálkodás és akkumulátorok"
 
 #. (itstool) path: section/title
 #: C/power.page:39
-#| msgid "Your personal settings"
 msgid "Power saving settings"
 msgstr "Energiatakarékossági beállítások"
 
 #. (itstool) path: section/title
 #: C/power.page:43
-#| msgid "Resolution"
 msgid "Questions"
 msgstr "Kérdések"
 
@@ -21601,7 +21547,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/sharing-desktop.page:161
-#| msgid "Toggle the <gui>Screen Sharing</gui> slider to <gui>Off.</gui>"
 msgid "Toggle the <gui>Screen Sharing</gui> slider to <gui>Off</gui>."
 msgstr "Kapcsolja <gui>KI</gui> a <gui>Képernyőmegosztás</gui> kapcsolót."
 
@@ -22940,25 +22885,21 @@ msgstr ""
 
 #. (itstool) path: td/p
 #: C/shell-keyboard-shortcuts.page:97
-#| msgid "<keyseq><key>Ctrl</key><key>Alt</key><key>←</key></keyseq>"
 msgid "<keyseq><key>Super</key><key>Shift</key><key>←</key></keyseq>"
 msgstr "<keyseq><key>Super</key><key>Shift</key><key>←</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shell-keyboard-shortcuts.page:98
-#| msgid "Move window one workspace to the left"
 msgid "Move the current window one monitor to the left."
 msgstr "A jelenlegi ablak áthelyezése a balra lévő monitorra."
 
 #. (itstool) path: td/p
 #: C/shell-keyboard-shortcuts.page:101
-#| msgid "<keyseq><key>Ctrl</key><key>Alt</key><key>→</key></keyseq>"
 msgid "<keyseq><key>Super</key><key>Shift</key><key>→</key></keyseq>"
 msgstr "<keyseq><key>Super</key><key>Shift</key><key>→</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shell-keyboard-shortcuts.page:102
-#| msgid "Move window one workspace to the right"
 msgid "Move the current window one monitor to the right."
 msgstr "A jelenlegi ablak áthelyezése a jobbra lévő monitorra."
 
@@ -26745,7 +26686,6 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/wacom-left-handed.page:22
-#| msgid "Switch the Wacom tablet to <gui>Left-Handed Orientation.</gui>"
 msgid "Switch the Wacom tablet to <gui>Left-Handed Orientation</gui>."
 msgstr "Wacom rajztábla <gui>Balkezes tájolásúra</gui> állítása."
 
@@ -26988,3 +26928,12 @@ msgstr ""
 msgid "Wacom Graphics Tablet"
 msgstr "Wacom rajztábla"
 
+#~ msgid "Select <gui>Cursor blinks in text fields</gui>."
+#~ msgstr "Jelölje be <gui>A kurzor villogjon szövegmezőkben</gui> négyzetet."
+
+#~ msgid ""
+#~ "Turn off <gui>Key presses repeat when key is held down</gui> to disable "
+#~ "repeated keys entirely."
+#~ msgstr ""
+#~ "Törölje a <gui>Billentyű ismétlése nyomva tartáskor</gui> négyzetet a "
+#~ "billentyűismétlés teljes letiltásához."
