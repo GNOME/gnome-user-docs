@@ -388,4 +388,4 @@ HELP_FILES = \
 	wacom-stylus.page \
 	wacom.page
 
-HELP_LINGUAS = as ca cs de el fi fr es gl gu he hi hu id it ja kn lv mr nl pa pt_BR ru sl sr sr@latin sv te vi ta zh_CN
+HELP_LINGUAS = as ca cs da de el fi fr es gl gu he hi hu id it ja kn lv mr nl pa pt_BR ru sl sr sr@latin sv te vi ta zh_CN
