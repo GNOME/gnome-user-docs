@@ -12,6 +12,7 @@ HELP_FILES = \
 	dconf-profiles.page \
 	dconf-snippets.xml \
 	desktop-favorite-applications.page \
+	desktop-shield.page \
 	extensions-enable.page \
 	extensions-lockdown.page \
 	extensions.page	\
