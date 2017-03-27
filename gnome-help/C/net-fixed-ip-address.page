@@ -10,6 +10,7 @@
     <revision pkgversion="3.4.0" date="2012-03-13" status="final"/>
     <revision pkgversion="3.15" date="2014-12-04" status="final"/>
     <revision pkgversion="3.18" date="2015-09-28" status="final"/>
+    <revision pkgversion="3.24" date="2017-03-26" status="final"/>
 
     <credit type="author">
       <name>Jim Campbell</name>
@@ -38,9 +39,10 @@
   computer when you connect to the network. These details can change
   periodically, but you might want to have a fixed IP address for the computer
   so you always know what its address is (for example, if it is a file
-  server).</p> <p>To give your computer a fixed (static) IP address:</p>
+  server).</p>
 
   <steps>
+    <title>To give your computer a fixed (static) IP address:</title>
     <item>
       <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
       start typing <gui>Network</gui>.</p>
@@ -49,7 +51,7 @@
       <p>Click on <gui>Network</gui> to open the panel.</p>
     </item>
     <item>
-      <p>In the left pane, select the network connection that you want to give
+      <p>In the left pane, select the network connection that you want to have
       a fixed address. If you plug in to the network with a cable, click
       <gui>Wired</gui>, then click the
       <media its:translate="no" type="image" src="figures/emblem-system.png"><span its:translate="yes">settings</span></media> button in the lower right corner of
@@ -58,20 +60,23 @@
       button will be located next to the active network.</p>
     </item>
     <item>
-      <p>Click on the <gui>IPv4</gui> or <gui>IPv6</gui> tab
+      <p>Click on <gui>IPv4</gui> or <gui>IPv6</gui> in the left pane
       and change the <gui>Addresses</gui> to <em>Manual</em>.</p>
     </item>
     <item>
-      <p>Enter the <em>Address</em>, <em>Netmask</em>, and <em>Gateway</em>
-      information into the appropriate boxes. How you choose these will depend
-      on your network setup; there are specific rules governing which IP
-      addresses and netmasks are valid for a given network.</p>
+      <p>Type in the <gui xref="net-what-is-ip-address">IP Address</gui> and
+      <gui>Gateway</gui>, as well as the appropriate <gui>Netmask</gui>.</p>
     </item>
     <item>
-      <p>If necessary, enter a <em>Domain Name Server</em> address into the
-      <gui>DNS servers</gui> box. This is the IP address of a server which
-      looks up domain names; most corporate networks and internet providers
-      have dedicated DNS servers.</p>
+      <p>In the <gui>DNS</gui> section, switch <gui>Automatic</gui> to
+      <gui>OFF</gui>. Enter the IP address of a DNS server you want to use.
+      Enter additional DNS server addresses using the <gui>+</gui> button.</p>
+    </item>
+    <item>
+      <p>In the <gui>Routes</gui> section, switch <gui>Automatic</gui> to
+      <gui>OFF</gui>. Enter the <gui>Address</gui>, <gui>Netmask</gui>,
+      <gui>Gateway</gui> and <gui>Metric</gui> for a route you want to use.
+      Enter additional routes using the <gui>+</gui> button.</p>
     </item>
     <item>
       <p>Click <gui>Apply</gui>. The network connection should now have a fixed
