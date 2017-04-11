@@ -1,6 +1,6 @@
-AC_INIT([gnome-user-docs], [3.22.0],
+AC_INIT([gnome-user-docs], [3.24.0],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-user-docs])
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([1.11 tar-ustar dist-xz no-dist-gzip])
 AM_SILENT_RULES([yes])
 
 YELP_HELP_INIT

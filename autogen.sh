@@ -4,21 +4,19 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="gnome-user-docs"
-
 (test -f $srcdir/configure.ac \
   && test -d $srcdir/gnome-help) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
-    echo " top-level $PKG_NAME directory"
+    echo " top-level gnome-user-docs directory"
     exit 1
 }
 
 which gnome-autogen.sh || {
-    echo "You need to install gnome-common from the GNOME CVS"
+    echo "You need to install gnome-common from the GNOME Git"
     exit 1
 }
 
-REQUIRED_AUTOMAKE_VERSION=1.6
+REQUIRED_AUTOMAKE_VERSION=1.11
 export REQUIRED_AUTOMAKE_VERSION
 
-USE_GNOME2_MACROS=1 . gnome-autogen.sh
+. gnome-autogen.sh
