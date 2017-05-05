@@ -38,7 +38,24 @@ HELP_MEDIA = \
 	figures/go-down.png \
 	figures/input-keyboard-symbolic.png \
 	figures/input-methods-switcher.png \
+	figures/keyboard-key-calculator.svg \
+	figures/keyboard-key-computer.svg \
+	figures/keyboard-key-eject.svg \
+	figures/keyboard-key-folder.svg \
+	figures/keyboard-key-home.svg \
+	figures/keyboard-key-mail.svg \
+	figures/keyboard-key-media.svg \
 	figures/keyboard-key-menu.svg \
+	figures/keyboard-key-mute.svg \
+	figures/keyboard-key-next.svg \
+	figures/keyboard-key-pause.svg \
+	figures/keyboard-key-play.svg \
+	figures/keyboard-key-previous.svg \
+	figures/keyboard-key-search.svg \
+	figures/keyboard-key-stop.svg \
+	figures/keyboard-key-voldown.svg \
+	figures/keyboard-key-volup.svg \
+	figures/keyboard-key-world.svg \
 	figures/nautilus-icons.png \
 	figures/network-cellular-3g-symbolic.svg \
 	figures/network-cellular-4g-symbolic.svg \
