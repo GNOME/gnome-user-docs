@@ -1,0 +1,57 @@
+help_files = [
+  'appearance.page',
+  'dconf.page',
+  'dconf-custom-defaults.page',
+  'dconf-keyfiles.page',
+  'dconf-lockdown.page',
+  'dconf-nfs-home.page',
+  'dconf-profiles.page',
+  'dconf-snippets.xml',
+  'desktop-favorite-applications.page',
+  'desktop-shield.page',
+  'extensions-enable.page',
+  'extensions-lockdown.page',
+  'extensions.page',
+  'fonts-user.page',
+  'index.page',
+  'keyboard-layout.page',
+  'legal.xml',
+  'lockdown-command-line.page',
+  'lockdown-file-saving.page',
+  'lockdown-online-accounts.page',
+  'lockdown-printing.page',
+  'lockdown-repartitioning.page',
+  'login.page',
+  'login-automatic.page',
+  'login-banner.page',
+  'login-enterprise.page',
+  'login-fingerprint.page',
+  'login-userlist-disable.page',
+  'mime-types.page',
+  'mime-types-application.page',
+  'mime-types-application-user.page',
+  'mime-types-custom.page',
+  'mime-types-custom-user.page',
+  'network-printer-config.page',
+  'session-custom.page',
+  'session-user.page',
+  'software.page',
+  'sundry.page',
+  'user-settings.page',
+]
+
+help_media = [
+]
+
+help_linguas = [
+  'de',
+  'es',
+  'pt_BR,
+]
+
+gnome.yelp('system-admin-guide',
+  sources: help_files,
+  media: help_media,
+  languages: help_linguas,
+  symlink_media: true,
+)
