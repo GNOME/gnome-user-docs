@@ -46,7 +46,7 @@ help_media = [
 help_linguas = [
   'de',
   'es',
-  'pt_BR,
+  'pt_BR',
 ]
 
 gnome.yelp('system-admin-guide',
