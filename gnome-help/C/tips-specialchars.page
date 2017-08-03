@@ -9,6 +9,7 @@
 
     <revision pkgversion="3.8.2" version="0.3" date="2013-05-18" status="review"/>
     <revision pkgversion="3.10" date="2013-11-01" status="review"/>
+    <revision pkgversion="3.26" date="2017-08-03" status="review"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
@@ -21,6 +22,10 @@
     <credit type="editor">
       <name>Ekaterina Gerasimova</name>
       <email>kittykat3756@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -70,27 +75,36 @@
     then <key>e</key>.</p>
     <p>Keyboards don’t have specific compose keys. Instead, you can define
     one of the existing keys on your keyboard as a compose key.</p>
-
+    <note style="important">
+      <p>You need to have the <app>Tweak Tool</app> installed on your computer to
+      change this setting.</p>
+      <if:if test="action:install" xmlns:if="http://projectmallard.org/if/1.0/">
+        <p><link style="button" action="install:gnome-tweak-tool">Install
+        <app>Tweak Tool</app></link></p>
+      </if:if>
+    </note>
     <steps>
       <title>Define a compose key</title>
       <item>
-        <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
-        start typing <gui>Keyboard</gui>.</p>
-      </item>
-      <item>
-        <p>Click on <gui>Keyboard</gui> to open the panel.</p>
-      </item>
-      <item><p>Select the <gui>Shortcuts</gui> tab and click
-      <gui>Typing</gui>.</p></item>
-      <item><p>Click on <gui>Compose Key</gui> in the right pane.</p></item>
-      <item><p>Click on <gui>Disabled</gui> and select the key you would like to
-      behave as a compose key from the drop-down menu. You can choose either of
-      the <key>Ctrl</key> keys, the right <key>Alt</key> key, the right
-      <key>Win</key> or <key xref="keyboard-key-super">Super</key> key if
-      you have one, the <key xref="keyboard-key-menu">Menu</key> key or
-      <key>Caps Lock</key>. Any key you select will then only work as a compose
-      key, and will no longer work for its original purpose.</p></item>
-    </steps>
+      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
+      start typing <gui>Tweak Tool</gui>.</p>
+    </item>
+    <item>
+      <p>Click <gui>Tweak Tool</gui> to open the application.</p>
+    </item>
+    <item>
+      <p>Click the <gui>Typing</gui> tab.</p>
+    </item>
+    <item>
+      <p>Expand <gui>Position of Compose key</gui>.</p>
+    </item>
+    <item>
+      <p>Tick the checkbox of the key that you want to set as the Compose key.</p>
+    </item>
+    <item>
+      <p>Close the <gui>Tweak Tool</gui> window.</p>
+    </item>
+  </steps>
     <p>You can type many common characters using the compose key, for
     example:</p>
     <list>
