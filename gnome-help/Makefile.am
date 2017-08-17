@@ -191,6 +191,8 @@ HELP_FILES = \
 	disk-check.page \
 	disk-format.page \
 	disk-partitions.page \
+	disk-repair.page \
+	disk-resize.page \
 	disk.page \
 	display-blank.page \
 	display-brightness.page \
