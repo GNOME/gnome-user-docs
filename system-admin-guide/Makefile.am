@@ -45,4 +45,4 @@ HELP_FILES = \
 
 HELP_MEDIA =
 
-HELP_LINGUAS = de es gl pt_BR
+HELP_LINGUAS = cs de es gl pt_BR
