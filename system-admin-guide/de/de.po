@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2017-08-30 17:36+0000\n"
-"PO-Revision-Date: 2017-09-07 22:29+0200\n"
+"POT-Creation-Date: 2017-09-08 07:55+0000\n"
+"PO-Revision-Date: 2017-09-10 22:54+0200\n"
 "Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -127,14 +127,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/dconf.page:52
-#, fuzzy
-#| msgid ""
-#| "A <em>profile</em> is a list of configuration databases. The first "
-#| "database in a profile is the write-to database and the remaining "
-#| "databases are read-only. Each of the system databases is generated from a "
-#| "key file directory. Each key file directory contains one or more key "
-#| "files. Each key file contains at least one dconf patch and one or more "
-#| "keys and the corresponding values."
 msgid ""
 "A <em>profile</em> is a list of configuration databases. The first database "
 "in a profile is the write-to database and the remaining databases are read-"
@@ -144,11 +136,11 @@ msgid ""
 "values."
 msgstr ""
 "Ein <em>Profil</em> ist eine Liste von Konfigurationsdatenbanken. Die erste "
-"Datenbank in einem Profil ist jene, in die geschrieben wird, die "
+"Datenbank in einem Profil ist jene, in die geschrieben wird, und die "
 "verbleibenden Datenbanken sind schreibgeschützt. Jede der Systemdatenbanken "
 "wird aus einem Schlüsseldatei-Ordner erzeugt. Jeder Schlüsseldatei-Ordner "
-"enthält eine oder mehrere Schlüsseldateien. Jeder der Schlüsseldateien "
-"enthält mindestens einen dconf-Patch sowie einen oder mehrere Schlüssel und "
+"enthält eine oder mehrere Schlüsseldateien. Jede der Schlüsseldateien "
+"enthält mindestens einen dconf-Pfad sowie einen oder mehrere Schlüssel und "
 "deren zugehörige Werte."
 
 #. (itstool) path: page/p
@@ -158,9 +150,9 @@ msgid ""
 "the default settings unless there is a problem with the value that you have "
 "set."
 msgstr ""
-"Schlüsselpaare, die einem <sys>dconf</sys>-<em>Profil</em> gesetzt werden, "
-"setzen die Standardeinstellungen außer Kraft, außer wenn es ein Problem mit "
-"dem von Ihnen gesetzten Wert gibt."
+"Schlüsselpaare, die in einem <sys>dconf</sys>-<em>Profil</em> gesetzt "
+"werden, setzen die Standardeinstellungen außer Kraft, außer wenn es ein "
+"Problem mit dem von Ihnen gesetzten Wert gibt."
 
 #. (itstool) path: section/title
 #: C/dconf.page:68
@@ -338,7 +330,7 @@ msgstr ""
 "im GVDB-Format vorliegen. Um Systemeinstellungen mit einem Texteditor zu "
 "bearbeiten, können Sie die in <em>Schlüsseldatei-Ordnern</em> befindlichen "
 "<em>Schlüsseldateien</em> bearbeiten. Jeder Schlüsseldatei-Ordner "
-"korrespondiert zu einer bestimmten Systemdatanbankdatei und trägt den "
+"korrespondiert zu einer bestimmten Systemdatenbankdatei und trägt den "
 "gleichen Namen wie diese, lediglich um die Endung ».d« erweitert (zum "
 "Beispiel <file>/etc/dconf/db/local.d</file>). Alle Schlüsseldatei-Ordner "
 "befinden sich in <_:file-2/> und jeder enthält Dateien in einem speziellen "
@@ -478,6 +470,10 @@ msgid ""
 "performance reasons; you may not yet lock entire subpaths. There are plans "
 "to address this in future releases."
 msgstr ""
+"Seit Version <_:app-1/> 0.7.4 ist das Anpassen von Zugriffsrechten aus "
+"Geschwindigkeitsgründen nur pro Schlüssel möglich. Es können keine "
+"vollständigen Unterpfade angepasst werden Es gibt Pläne diese Möglichkeit in "
+"der Zukunft anzugehen."
 
 #. (itstool) path: credit/name
 #: C/dconf-nfs-home.page:24 C/desktop-shield.page:27
@@ -536,6 +532,10 @@ msgid ""
 "that the user logs in. It polls the keyfile to determine whether updates "
 "have been made, so settings may not be updated immediately."
 msgstr ""
+"Das <_:sys-1/>-<em>Schlüsseldatei-Backend</em> wird erst bei der nächsten "
+"Anmeldung des Benutzers wirksam. Es schaut in der Schlüsseldatei, um zu "
+"ermitteln, ob diese aktualisiert worden ist, daher könnten Einstellungen "
+"nicht sofort aktualisiert werden."
 
 #. (itstool) path: page/p
 #: C/dconf-nfs-home.page:79
@@ -543,6 +543,8 @@ msgid ""
 "If a <em>keyfile back end</em> is not used, the user settings may not be "
 "retrieved or updated correctly."
 msgstr ""
+"Wenn kein <em>Schlüsseldatei-Backend</em> verwendet wird, könnten die "
+"Benutzereinstellungen nicht korrekt ermittelt oder aktualisiert werden."
 
 #. (itstool) path: credit/name
 #: C/dconf-profiles.page:18
@@ -568,6 +570,12 @@ msgid ""
 "sys> attempts to open the profile named “user”. If that fails, it will fall "
 "back to an internal hard-wired configuration."
 msgstr ""
+"Beim Start schaut <sys>dconf</sys> nach der Umgebungsvariable DCONF_PROFILE. "
+"Sofern diese gesetzt ist, versucht <sys>dconf</sys> das genannte Profil zu "
+"öffnen. Bei einem Fehlschlag bricht es ab. Wenn die Umgebungsvariable nicht "
+"gesetzt ist, versucht <sys>dconf</sys> das Profil namens »user« (Benutzer) "
+"zu öffnen. Wenn auch dies fehlschlägt, wird eine intern vorgegebene "
+"Konfiguration verwendet."
 
 #. (itstool) path: page/p
 #: C/dconf-profiles.page:35
@@ -688,7 +696,7 @@ msgstr ""
 "Sie können die voreingestellten Favoriten für jeden Benutzer festlegen, "
 "indem Sie die jeweilige Benutzerdatenbank in <_:file-1/> bearbeiten. Das "
 "folgende Beispiel verwendet <_:sys-2/>, um <app>gedit</app>, <app>Terminal</"
-"app> and <app>Nautilus</app> als vorgegebene Favoriten für einen Benutzer "
+"app> und <app>Nautilus</app> als vorgegebene Favoriten für einen Benutzer "
 "festzulegen. Der Beispielcode ermöglicht Benutzern, später die Liste "
 "anzupassen, sofern gewünscht."
 
@@ -753,6 +761,12 @@ msgid ""
 "keyfile to set default favorite applications for all employees in the first "
 "floor of an organization."
 msgstr ""
+"Damit alle Benutzer die gleichen Favoriten haben, müssen Sie die "
+"Systemdatenbankdateien mit Hilfe von <link xref=\"dconf-keyfiles\">dconf-"
+"Schlüsseldateien</link> anpassen. Die folgenden Code-Schnipsel bearbeiten "
+"das Profil <_:sys-1/> und erstellen anschließend eine Schlüsseldatei, die "
+"voreingestellte Favoriten-Anwendungen für alle Mitarbeiter in der ersten "
+"Etage einer Abteilung festlegen."
 
 #. (itstool) path: listing/code
 #: C/desktop-favorite-applications.page:83
@@ -780,6 +794,10 @@ msgid ""
 "\"dconf-lockdown\">locks</link> introduced in the <code>first_floor</code> "
 "database file will take priority over those present in <code>user</code>."
 msgstr ""
+"Einstellungen der Datenbank <code>user</code> (Benutzer) haben Vorrang vor "
+"Einstellungen der Datenbankdatei <code>first_floor</code>, aber <link xref="
+"\"dconf-lockdown\">angepasste Zugriffsrechte</link> der Datenbankdatei "
+"<code>first_floor</code> haben Vorrang vor jenen in <code>user</code>."
 
 #. (itstool) path: listing/code
 #: C/desktop-favorite-applications.page:102
@@ -845,6 +863,12 @@ msgid ""
 "Since <sys>GDM</sys> uses its own <sys>dconf</sys> profile, you can set the "
 "default background by changing the settings in that profile."
 msgstr ""
+"Der <em>Sperrbildschirm</em> fährt vor die Arbeitsumgebung, sobald diese "
+"gesperrt wird. Der Hintergrund des Sperrbildschirms wird durch den GSettings-"
+"Schlüssel <sys>org.gnome.desktop.screensaver.picture-uri</sys> gesteuert. "
+"Weil <sys>GDM</sys> ein eigenes <sys>dconf</sys>-Profil verwendet, können "
+"Sie den Vorgabe-Hintergrund festlegen, indem Sie die Einstellungen dieses "
+"Profils anpassen."
 
 #. (itstool) path: steps/title
 #: C/desktop-shield.page:46
@@ -876,7 +900,7 @@ msgid ""
 "Replace <var>/opt/corp/background.jpg</var> with the path to the image file "
 "you want to use as the lock screen background."
 msgstr ""
-"Ersetzen SIe <var>/opt/corp/background.jpg</var> mit dem Pfad zur Bilddatei, "
+"Ersetzen Sie <var>/opt/corp/background.jpg</var> mit dem Pfad zur Bilddatei, "
 "die Sie als festgelegten Sperrbildschirmhintergrund verwenden wollen."
 
 #. (itstool) path: item/p
@@ -2030,16 +2054,16 @@ msgstr ""
 msgid "Save the changes."
 msgstr "Speichern Sie die Änderungen."
 
+# Der erwähnte String stammt aus udisks. Ein Fehler ist auch noch drin, das Original heißt »Authentication is required to modify drive settings«
 #. (itstool) path: page/p
 #: C/lockdown-repartitioning.page:79
-#, fuzzy
 msgid ""
 "When the user tries to change the disk settings, the following message is "
 "shown: <gui>Authentication is required to modify the disks settings</gui>."
 msgstr ""
-"Wenn der Benutzer versucht, Datenträgereinstellungen zu ändern, wird die "
-"folgende Meldung angezeigt: <gui>Authentication is required to modify the "
-"disks settings</gui>."
+"Wenn der Benutzer versucht, die Datenträgereinstellungen zu ändern, wird die "
+"folgende Meldung angezeigt: <gui>Legitimierung ist zum Ändern von "
+"Laufwerkseinstellungen erforderlich</gui>."
 
 #. (itstool) path: page/title
 #: C/login.page:10
@@ -2233,6 +2257,9 @@ msgid ""
 "can do so at the <gui>Welcome</gui> screens that are part of the <app>GNOME "
 "Initial Setup</app> program."
 msgstr ""
+"Wenn die Maschine noch nicht für eine Unternehmensanmeldung eingestellt ist, "
+"so können Sie das in den <gui>Willkommens</gui>bildschirmen der <app>GNOME-"
+"Ersteinrichtung</app> nachholen."
 
 #. (itstool) path: steps/title
 #: C/login-enterprise.page:44 C/login-enterprise.page:70
@@ -2245,6 +2272,8 @@ msgid ""
 "At the <gui>Login</gui> welcome screen, choose <gui>Set Up Enterprise Login</"
 "gui>."
 msgstr ""
+"Wählen Sie im <gui>Anmeldebildschirm</gui> den Punkt "
+"<gui>Unternehmensanmeldung einrichten</gui>."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:50
@@ -2252,11 +2281,15 @@ msgid ""
 "Type the name of your domain in the <gui>Domain</gui> field if it is not "
 "already prefilled."
 msgstr ""
+"Geben Sie den Namen Ihrer Domäne in das Feld <gui>Domäne</gui> ein, falls es "
+"nicht bereits schon ausgefüllt ist."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:54
 msgid "Type your domain account user and password in the relevant fields."
 msgstr ""
+"Geben Sie den Benutzernamen und das Passwort Ihres Domänenkontos in die "
+"entsprechenden Felder ein."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:58
@@ -2269,11 +2302,14 @@ msgid ""
 "Depending on how the domain is configured, a prompt may show up asking for "
 "the domain administrator’s name and password in order to proceed."
 msgstr ""
+"Je nach Einstellungen in der Domäne kann ein Fragefenster erscheinen, dass "
+"nach Benutzername und Passwort des Domänenverwalters fragt, um fortzufahren."
 
 #. (itstool) path: section/title
 #: C/login-enterprise.page:65
 msgid "Change to use enterprise credentials to log into GNOME"
 msgstr ""
+"So stellen Sie die Anmeldung bei GNOME auf eine Unternehmensanmeldung um"
 
 #. (itstool) path: section/p
 #: C/login-enterprise.page:66
@@ -2282,6 +2318,9 @@ msgid ""
 "account to log into GNOME, then you can accomplish this from the Users panel "
 "in the GNOME Settings."
 msgstr ""
+"Wenn Sie bereits die Ersteinrichtung abgeschlossen haben und ein "
+"Domänenkonto zur Anmeldung in GNOME verwenden möchten, so nutzen Sie bitte "
+"das Benutzer-Panel der GNOME-Einstellungen."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:72
@@ -2316,7 +2355,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/login-enterprise.page:87
 msgid "Click the <gui>Enterprise Login</gui> button."
-msgstr ""
+msgstr "Klicken Sie auf den Knopf <gui>Unternehmensanmeldung</gui>."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:90
@@ -2324,6 +2363,8 @@ msgid ""
 "Enter the domain, user, and password for your Enterprise account, and click "
 "<gui>Add</gui>."
 msgstr ""
+"Geben Sie den Domänennamen, Benutzernamen und das Passwort Ihres "
+"Unternehmenskontos ein. Klicken Sie anschließend auf <gui>Hinzufügen</gui>."
 
 #. (itstool) path: section/p
 #: C/login-enterprise.page:94
@@ -2331,6 +2372,8 @@ msgid ""
 "Depending on how your domain is configured, a prompt may show up asking for "
 "the domain administrator’s name and password in order to proceed."
 msgstr ""
+"Je nach Einstellungen in der Domäne kann ein Fragefenster erscheinen, dass "
+"nach Benutzername und Passwort des Domänenverwalters fragt, um fortzufahren."
 
 #. (itstool) path: section/title
 #: C/login-enterprise.page:99
@@ -2344,6 +2387,10 @@ msgid ""
 "troubleshoot the enterprise login feature. For example, to see whether the "
 "machine has been configured for enterprise logins, run the following command:"
 msgstr ""
+"Der Befehl <cmd>realm</cmd> und die zugehörigen Unterbefehle ermöglichen "
+"eine Fehlerdiagnose der Unternehmensanmeldung. Führen Sie den folgenden "
+"Befehl aus, um beispielsweise zu sehen, ob die Maschine für eine "
+"Unternehmensanmeldung eingerichtet ist:"
 
 #. (itstool) path: section/screen
 #: C/login-enterprise.page:104
@@ -2358,12 +2405,16 @@ msgid ""
 "domain. This can be done using the kickstart <cmd>realm join</cmd> command, "
 "or running <cmd>realm join</cmd> in an automated fashion from a script."
 msgstr ""
+"Netzwerk-Administratoren wird empfohlen, Workstations vorsorglich einer "
+"relevanten Domäne zuzuordnen. Das kann mit dem Befehl <cmd>realm join</cmd> "
+"geschehen, oder auch automatisiert über ein Skript."
 
 #. (itstool) path: section/title
 #: C/login-enterprise.page:111 C/mime-types.page:107
 msgid "Get more information"
 msgstr "Weitere Informationen"
 
+# Das Dokument gibt es nicht auf deutsch.
 #. (itstool) path: item/p
 #: C/login-enterprise.page:114
 msgid ""
@@ -2371,6 +2422,9 @@ msgid ""
 "Administrative Guide</link> provides more detailed information on using the "
 "enterprise login feature."
 msgstr ""
+"Der <link href=\"http://www.freedesktop.org/software/realmd/docs/\"> "
+"Administrative Guide (Verwaltungsleitfaden)</link> von realmd zeigt weitere "
+"Details zur Verwendung der Unternehmensanmeldung auf."
 
 #. (itstool) path: info/desc
 #: C/login-fingerprint.page:24
@@ -2798,7 +2852,7 @@ msgstr ""
 "Dies setzt die voreingestellte registrierte Anwendung für den MIME-Typ "
 "<code>text/html</code> auf <code>myapplication1.desktop</code> und für den "
 "MIME-Typ <code>application/xhtml+xml</code> auf <code>myapplication2."
-"desktop</code>"
+"desktop</code>."
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:71 C/mime-types-application-user.page:73
@@ -2908,6 +2962,11 @@ msgid ""
 "and a <file>.desktop</file> file in the <file>/usr/share/applications/</"
 "file> directory."
 msgstr ""
+"Um einen benutzerdefinierten MIME-Typ für alle Benutzer des Systems "
+"hinzuzufügen und eine Vorgabeanwendung für diesen MIME-Typ zu registrieren, "
+"müssen Sie eine neue MIME-Typ-Spezifikationsdatei im Ordner <file>/usr/share/"
+"mime/packages/</file> und eine <file>.desktop</file>-Datei im Ordner <file>/"
+"usr/share/applications/</file> erstellen."
 
 #. (itstool) path: steps/title
 #: C/mime-types-custom.page:29
@@ -2952,6 +3011,9 @@ msgid ""
 "MIME type <sys>application/x-newtype</sys> and assigns file names with the "
 "<file>.xyz</file> extension to that MIME type."
 msgstr ""
+"Das Beispiel <file>application-x-newtype.xml</file> oben definiert einen "
+"neuen MIME-Typ <sys>application/x-newtype</sys> und verknüpft Dateinamen mit "
+"der Erweiterung <file>.xyz</file> mit diesem MIME-Typ."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:51
@@ -2960,6 +3022,9 @@ msgid ""
 "<file>myapplication1.desktop</file>, and place it in the <file>/usr/share/"
 "applications/</file> directory:"
 msgstr ""
+"Legen Sie eine neue <file>.desktop</file>-Datei mit dem beispielhaften Namen "
+"<file>myapplication1.desktop</file> an und legen Sie diese im Ordner <file>/"
+"usr/share/applications/</file> ab:"
 
 #. (itstool) path: item/code
 #: C/mime-types-custom.page:56 C/mime-types-custom-user.page:55
@@ -2984,6 +3049,10 @@ msgid ""
 "<sys>application/x-newtype</sys> MIME type with an application named <app>My "
 "Application 1</app>, which is run by a command <cmd>myapplication1</cmd>."
 msgstr ""
+"Die beispielhafte Datei <file>myapplication1.desktop</file> oben ordnet den "
+"MIME-Typ <sys>application/x-newtype</sys> einer Anwendung namens <app>My "
+"Application 1</app> zu, die mit dem Befehl <cmd>myapplication1</cmd> "
+"aufgerufen wird."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:69
@@ -3057,6 +3126,10 @@ msgid ""
 "the default registered application for the <sys>application/x-newtype</sys> "
 "MIME type, run the <cmd>gio mime</cmd> command:"
 msgstr ""
+"Um sicherzustellen, dass <file>myapplication1.desktop</file> korrekt als "
+"voreingestellte registrierte Anwendung für den MIME-Typ <sys>application/x-"
+"newtype</sys> eingerichtet wurde, führen Sie den Befehl <cmd>gio mime</cmd> "
+"aus:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:99 C/mime-types-custom-user.page:98
@@ -3090,6 +3163,11 @@ msgid ""
 "directory and a <file>.desktop</file> file in the <file>~/.local/share/"
 "applications/</file> directory."
 msgstr ""
+"Um einen benutzerdefinierten MIME-Typ für einzelne Benutzer hinzuzufügen und "
+"eine Vorgabeanwendung für diesen MIME-Typ zu registrieren, müssen Sie eine "
+"neue MIME-Typ-Spezifikationsdatei im Ordner <file>~/.local/share/mime/"
+"packages/</file> und eine <file>.desktop</file>-Datei im Ordner <file>~/."
+"local/share/applications/</file> erstellen."
 
 #. (itstool) path: steps/title
 #: C/mime-types-custom-user.page:28
@@ -3097,6 +3175,8 @@ msgid ""
 "Add a custom <code>application/x-newtype</code> MIME type for individual "
 "users"
 msgstr ""
+"So legen Sie einen eigenen MIME-Typ <code>application/x-newtype</code> für "
+"bestimmte Benutzer an"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:31
@@ -3114,6 +3194,9 @@ msgid ""
 "<file>myapplication1.desktop</file>, and place it in the <file>~/.local/"
 "share/applications/</file> directory:"
 msgstr ""
+"Legen Sie eine neue <file>.desktop</file>-Datei mit dem beispielhaften Namen "
+"<file>myapplication1.desktop</file> an und legen Sie diese im Ordner "
+"<file>~/.local/share/applications/</file> ab:"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:60
@@ -3123,6 +3206,10 @@ msgid ""
 "<app>My Application 1</app>, which is run by a command <cmd>myapplication1</"
 "cmd>."
 msgstr ""
+"Die beispielhafte Datei <file>myapplication1.desktop</file> oben ordnet den "
+"MIME-Typ <code>application/x-newtype</code> einer Anwendung namens <app>My "
+"Application 1</app> zu, die mit dem Befehl <cmd>myapplication1</cmd> "
+"aufgerufen wird."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:68
@@ -3181,6 +3268,10 @@ msgid ""
 "using gnome-control-center. To add a new Samba printer to your CUPS (Common "
 "UNIX Printing System) server, simply follow the steps below."
 msgstr ""
+"Es ist keine Vorkonfiguration notwendig, um Samba-Drucker im GNOME-"
+"Kontrollzentrum installieren zu können. Um einen neuen Samba-Drucker zu "
+"Ihrem CUPS-Server hinzuzufügen (Common UNIX Printing System), folgen Sie "
+"einfach den nachfolgend beschriebenen Schritten."
 
 #. (itstool) path: steps/title
 #: C/network-printer-config.page:36
@@ -3527,6 +3618,9 @@ msgid ""
 "the next time the user logs in, unless the user selects a different session "
 "from the login screen."
 msgstr ""
+"Nach dem Festlegen einer Vorgabe-Sitzung für einen Benutzer wird diese bei "
+"der nächsten Anmeldung des Benutzers verwendet, es sei denn, dass der "
+"Benutzer eine andere Sitzung im Anmeldebildschirm auswählt."
 
 #. (itstool) path: page/title
 #: C/software.page:11
@@ -3538,11 +3632,11 @@ msgstr "Software"
 msgid "Extensions"
 msgstr "Erweiterungen"
 
+# https://help.gnome.org/admin/system-admin-guide/stable/sundry.html.en
 #. (itstool) path: page/title
 #: C/sundry.page:11
-#, fuzzy
 msgid "Other"
-msgstr "Andere"
+msgstr "Weitere Einstellungen"
 
 #. (itstool) path: section/title
 #: C/sundry.page:14
