@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-help\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-11 04:35+0000\n"
-"PO-Revision-Date: 2017-09-11 12:37+0200\n"
-"Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
+"POT-Creation-Date: 2017-09-14 13:35+0000\n"
+"PO-Revision-Date: 2017-09-30 01:43+0200\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
@@ -1054,13 +1054,14 @@ msgstr "Några tips om hur man använder hjälpguiden för skrivbordet."
 #: C/backup-restore.page:15 C/backup-thinkabout.page:17 C/backup-what.page:12 C/backup-where.page:13
 #: C/backup-why.page:13 C/clock-calendar.page:17 C/clock-set.page:14 C/clock-timezone.page:15
 #: C/disk-benchmark.page:14 C/disk-capacity.page:8 C/disk-check.page:9 C/disk-format.page:9
-#: C/disk-partitions.page:9 C/display-brightness.page:16 C/files-autorun.page:18 C/files-lost.page:14
-#: C/files-recover.page:14 C/files-rename.page:13 C/files-search.page:13 C/gnome-classic.page:12
-#: C/hardware-cardreader.page:14 C/hardware-driver.page:11 C/keyboard-key-super.page:14
-#: C/look-background.page:14 C/look-display-fuzzy.page:14 C/look-resolution.page:15 C/music-cantplay-drm.page:9
-#: C/music-player-ipodtransfer.page:9 C/music-player-newipod.page:9 C/net-antivirus.page:12
-#: C/net-mobile.page:14 C/net-vpn-connect.page:15 C/net-wired-connect.page:13 C/net-wireless-airplane.page:15
-#: C/net-wireless-connect.page:16 C/net-wireless-find.page:17 C/net-wireless-hidden.page:14
+#: C/disk-partitions.page:9 C/disk-repair.page:9 C/disk-resize.page:9 C/display-brightness.page:16
+#: C/files-autorun.page:18 C/files-lost.page:14 C/files-recover.page:14 C/files-rename.page:13
+#: C/files-search.page:13 C/gnome-classic.page:12 C/hardware-cardreader.page:14 C/hardware-driver.page:11
+#: C/keyboard-key-super.page:14 C/look-background.page:14 C/look-display-fuzzy.page:14
+#: C/look-resolution.page:15 C/music-cantplay-drm.page:9 C/music-player-ipodtransfer.page:9
+#: C/music-player-newipod.page:9 C/net-antivirus.page:12 C/net-mobile.page:14 C/net-vpn-connect.page:15
+#: C/net-wired-connect.page:13 C/net-wireless-airplane.page:15 C/net-wireless-connect.page:16
+#: C/net-wireless-find.page:17 C/net-wireless-hidden.page:14
 #: C/net-wireless-troubleshooting-hardware-check.page:18 C/net-wireless-troubleshooting-hardware-info.page:18
 #: C/net-wireless-troubleshooting-initial-check.page:18 C/net-wireless-troubleshooting.page:18
 #: C/net-wireless-wepwpa.page:14 C/power-batteryestimate.page:15 C/power-batterylife.page:20
@@ -4848,7 +4849,7 @@ msgid "Check your disk’s health using the Disks application"
 msgstr "Kontrollera din hårddisks hälsa med programmet Diskar"
 
 #. (itstool) path: item/p
-#: C/disk-check.page:44 C/disk-format.page:31
+#: C/disk-check.page:44 C/disk-format.page:31 C/disk-repair.page:33 C/disk-repair.page:76 C/disk-resize.page:34
 msgid "Open <app>Disks</app> from the <gui>Activities</gui> overview."
 msgstr "Öppna <app>Diskar</app> från översiktsvyn <gui>Aktiviteter</gui>."
 
@@ -5122,6 +5123,296 @@ msgstr ""
 "en volym är startbar så välj partitionen och klicka på menyknappen i verktygsfältet under partitionslistan. "
 "Klicka sedan på <gui>Redigera partition…</gui> och titta på dess <gui>Flaggor</gui>. Externa media så som "
 "USB-enheter och cd kan också innehålla startbara volymer."
+
+#. (itstool) path: info/desc
+#: C/disk-repair.page:15
+msgid "Check if a filesystem is damaged and bring it back into a usable state."
+msgstr "Kontrollera om ett filsystem är skadat och för tillbaka det till ett användbart tillstånd."
+
+#. (itstool) path: page/title
+#: C/disk-repair.page:20
+msgid "Repair a damaged filesystem"
+msgstr "Reparera ett skadat filsystem"
+
+#. (itstool) path: page/p
+#: C/disk-repair.page:22
+msgid ""
+"Filesystems can be corrupted due to unexpected power loss, system crashes and unsafe removal of the drive. "
+"After such an incident it is recommended to <em>repair</em> or at least <em>check</em> the filesystem to "
+"prevent future data loss."
+msgstr ""
+"Filsystem kan förvanskas på grund av oväntad strömförlust, systemkrascher och osäker borttagning av enheten. "
+"Efter en sådan incident rekommenderas det att <em>reparera</em> eller åtminstone <em>kontrollera</em> "
+"filsystemet för att förhindra framtida dataförlust."
+
+#. (itstool) path: page/p
+#: C/disk-repair.page:26
+msgid ""
+"Sometimes a repair is required in order to mount or modify a filesystem. Even if a <em>check</em> does not "
+"report any damage the filesystem might still be marked as ‘dirty’ internally and require a repair."
+msgstr ""
+"Ibland krävs en reparation för att montera eller ändra ett filsystem. Även om en <em>kontroll</em> inte "
+"rapporterar någon skada kan filsystemet fortfarande vara markerat som ”smutsigt” internt och behöva en "
+"reparation."
+
+#. (itstool) path: steps/title
+#: C/disk-repair.page:31
+msgid "Check if a filesystem is damaged"
+msgstr "Kontrollera om ett filsystem är skadat"
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:36 C/disk-repair.page:79 C/disk-resize.page:37
+msgid ""
+"Select the disk containing the filesystem in question from the list of storage devices on the left. If there "
+"is more than one volume on the disk, select the volume which contains the filesystem."
+msgstr ""
+"Välj disken som innehåller filsystemet i fråga från listan över lagringsenheter till vänster. Om det finns "
+"mer än en volym på disken, välj volymen som innehåller filsystemet."
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:41
+msgid ""
+"In the toolbar underneath the <gui>Volumes</gui> section, click the menu button. Then click <gui>Check "
+"Filesystem…</gui>."
+msgstr ""
+"I verktygsfältet under avsnittet <gui>Volymer</gui>, klicka på menyknappen. Klicka sedan på <gui>Kontrollera "
+"filsystem…</gui>."
+
+# TODO: https://forum.wordreference.com/threads/longer-time-vs-more-time.2787347/
+#. (itstool) path: item/p
+#: C/disk-repair.page:45
+msgid ""
+"Depending on how much data is stored in the filesystem a check may take longer time. Confirm to start the "
+"action in the dialog that pops up."
+msgstr ""
+"Beroende på hur mycket data som finns lagrade på filsystemet kan en kontroll ta längre tid. Bekräfta att "
+"starta åtgärden i dialogrutan som visas."
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:47
+msgid ""
+"The action will not modify the filesystem but will unmount it if needed. Be patient while the filesystem is "
+"checked."
+msgstr ""
+"Åtgärden kommer inte att ändra filsystemet men kommer att avmontera det om detta krävs. Vänta tålmodigt "
+"medan filsystemet kontrolleras."
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:51
+msgid ""
+"After completion you will be notified whether the filesystem is damaged. Note that in some cases even if the "
+"filesystem is undamaged it still may need to be repaired to reset an internal ‘dirty’ marker."
+msgstr ""
+"Då det är klart kommer du att meddelas om huruvida filsystemet är skadat. Observera att i vissa fall kan "
+"filsystemet behöva repareras även om det är oskadat för att återställa en intern ”smutsig”-markering."
+
+#. (itstool) path: note/title
+#: C/disk-repair.page:58
+msgid "Possible data loss when repairing"
+msgstr "Möjlig dataförlust vid reparation"
+
+#. (itstool) path: note/p
+#: C/disk-repair.page:59
+msgid ""
+"If the filesystem structure is damaged it can affect the files stored in it. In some cases these files can "
+"not be brought into a valid form again and will be deleted or moved to a special directory. It is normally "
+"the <em>lost+found</em> folder in the top level directory of the filesystem where these recovered file parts "
+"can be found."
+msgstr ""
+"Om filsystemets struktur är skadad kan det påverka filerna som lagras i det. I vissa fall kan dessa filer "
+"inte tas tillbaka till en giltig form igen och kommer att tas bort eller flyttas till en speciell katalog. "
+"Dessa återtagna fildelar kan vanligen hittas i katalogen <em>lost+found</em> i toppnivåkatalogen för "
+"filsystemet."
+
+#. (itstool) path: note/p
+#: C/disk-repair.page:64
+msgid ""
+"If the data is too valuable to be lost during this process, you are advised to back it up by saving an image "
+"of the volume before repairing."
+msgstr ""
+"Om data är för värdefulla för att förloras under denna process rekommenderas du att säkerhetskopiera dem "
+"genom att spara en avbild av volymen innan reparation."
+
+#. (itstool) path: note/p
+#: C/disk-repair.page:67
+msgid ""
+"This image can be then processed with forensic analysis tools like <app>sleuthkit</app> to further recover "
+"missing files and data parts which were not restored during the repair, and also previously removed files."
+msgstr ""
+"Denna avbild kan sedan behandlas med forensiska analysverktyg som <app>sleuthkit</app> för att vidare "
+"återhämta saknade filer och datadelar som inte återställdes under reparationen, och även tidigare borttagna "
+"filer."
+
+#. (itstool) path: steps/title
+#: C/disk-repair.page:74
+msgid "Repair a filesystem"
+msgstr "Reparera ett filsystem"
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:84
+msgid ""
+"In the toolbar underneath the <gui>Volumes</gui> section, click the menu button. Then click <gui>Repair "
+"Filesystem…</gui>."
+msgstr ""
+"I verktygsfältet under avsnittet <gui>Volymer</gui>, klicka på menyknappen. Klicka sedan på <gui>Reparera "
+"filsystem…</gui>."
+
+# TODO: https://forum.wordreference.com/threads/longer-time-vs-more-time.2787347/
+#. (itstool) path: item/p
+#: C/disk-repair.page:88
+msgid ""
+"Depending on how much data is stored in the filesystem a repair may take longer time. Confirm to start the "
+"action in the dialog that pops up."
+msgstr ""
+"Beroende på hur mycket data som finns lagrade på filsystemet kan en reparation ta längre tid. Bekräfta att "
+"starta åtgärden i dialogrutan som visas."
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:90
+msgid ""
+"The action will unmount the filesystem if needed. The repair action tries to bring the filesystem into a "
+"consistent state and moves files which were damaged in a special folder. Be patient while the filesystem is "
+"repaired."
+msgstr ""
+"Åtgärden kommer att avmontera filsystemet om detta krävs. Reparationsåtgärden försöker återföra filsystemet "
+"till ett konsistent tillstånd och flyttar skadade filer till en speciell mapp. Vänta tålmodigt medan "
+"filsystemet repareras."
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:96
+msgid ""
+"After completion you will be notified whether the filesystem could be successfully repaired. In case of "
+"success it can be used again in the normal way."
+msgstr ""
+"Då det är klart kommer du att meddelas om huruvida filsystemet kunde repareras. Om det lyckades kan det "
+"användas igen som vanligt."
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:99
+msgid ""
+"If the filesystem could not be repaired, back it up by saving an image of the volume to be able to retrieve "
+"important files later. This can be done by mounting the image read-only or using forensic analysis tools "
+"like <app>sleuthkit</app>."
+msgstr ""
+"Om filsystemet inte kunde repareras, säkerhetskopiera det genom att spara en avbild av volymen för att kunna "
+"återfå viktiga filer senare. Detta kan göras genom att montera avbilden skrivskyddat eller genom att använda "
+"forensiska analysverktyg som <app>sleuthkit</app>."
+
+#. (itstool) path: item/p
+#: C/disk-repair.page:103
+msgid ""
+"To make use of the volume again it has to be <link xref=\"disk-format\">formatted</link> with a new "
+"filesystem. All data will be discarded."
+msgstr ""
+"För att använda volymen igen måste den <link xref=\"disk-format\">formateras</link> med ett nytt filsystem. "
+"Alla data kommer att förkastas."
+
+#. (itstool) path: info/desc
+#: C/disk-resize.page:15
+msgid "Shrink or grow a filesystem and its partition."
+msgstr "Förminska eller förstora ett filsystem och dess partition."
+
+#. (itstool) path: page/title
+#: C/disk-resize.page:19
+msgid "Adjust the size of a filesystem"
+msgstr "Justera storleken på ett filsystem"
+
+#. (itstool) path: page/p
+#: C/disk-resize.page:21
+msgid ""
+"A filesystem can be grown to make use of the free space after its partition. Often this is even possible "
+"while the filesystem is mounted."
+msgstr ""
+"Ett filsystem kan förstoras så att det använder det fria utrymmet efter sin partition. Ofta är detta även "
+"möjligt medan filsystemet är monterat."
+
+#. (itstool) path: page/p
+#: C/disk-resize.page:24
+msgid ""
+"To make space for another partition after the filesystem, it can be shrunk according to the free space "
+"within it."
+msgstr ""
+"För att skapa utrymme för en annan partition efter filsystemet kan det krympas i enlighet med det fria "
+"utrymme som finns inuti det."
+
+#. (itstool) path: page/p
+#: C/disk-resize.page:26
+msgid "Not all filesystems have resize support."
+msgstr "Alla filsystem har inte stöd för storleksändring."
+
+#. (itstool) path: page/p
+#: C/disk-resize.page:27
+msgid ""
+"The partition size will be changed together with the filesystem size. It is also possible to resize a "
+"partition without a filesystem in the same way."
+msgstr ""
+"Partitionsstorleken kommer att ändras tillsammans med filsystemets storlek. Det är också möjligt att ändra "
+"storleken på en partition utan ett filsystem på samma sätt."
+
+#. (itstool) path: steps/title
+#: C/disk-resize.page:32
+msgid "Resize a filesystem/partition"
+msgstr "Ändra storlek på filsystem/partition"
+
+#. (itstool) path: item/p
+#: C/disk-resize.page:42
+msgid ""
+"In the toolbar underneath the <gui>Volumes</gui> section, click the menu button. Then click <gui>Resize "
+"Filesystem…</gui> or <gui>Resize…</gui> if there is no filesystem."
+msgstr ""
+"I verktygsfältet under avsnittet <gui>Volymer</gui>, klicka på menyknappen. Klicka sedan på <gui>Ändra "
+"storlek på filsystem…</gui> eller <gui>Ändra storlek…</gui> om det inte finns något filsystem."
+
+#. (itstool) path: item/p
+#: C/disk-resize.page:47
+msgid ""
+"A dialog will open where the new size can be chosen. The filesystem will be mounted to calculate the minimum "
+"size by the amount of current content. If shrinking is not supported the minimum size is the current size. "
+"Leave enough space within the filesystem when shrinking to ensure that it can work fast and reliably."
+msgstr ""
+"En dialogruta kommer att öppnas där den nya storleken kan väljas. Filsystemet kommer att monteras för att "
+"beräkna den minsta storleken utifrån aktuellt innehåll. Om storleksminskning inte stöds är den minsta "
+"storleken den aktuella storleken. Lämna tillräckligt med utrymme i filsystemet då du krymper det så att det "
+"kan arbeta snabbt och pålitligt."
+
+# TODO: https://forum.wordreference.com/threads/longer-time-vs-more-time.2787347/
+#. (itstool) path: item/p
+#: C/disk-resize.page:52
+msgid ""
+"Depending on how much data has to be moved from the shrunk part, the filesystem resize may take longer time."
+msgstr ""
+"Beroende på hur mycket data som måste flyttas från den krympta delen så kan storleksändringen av filsystemet "
+"ta längre tid."
+
+#. (itstool) path: note/p
+#: C/disk-resize.page:55
+msgid ""
+"The filesystem resize automatically involves <link xref=\"disk-repair\">repairing</link> of the filesystem. "
+"Therefore it is advised to back up important data before starting. The action must not be stopped or it will "
+"result in a damaged filesystem."
+msgstr ""
+"Storleksändringen av filsystemet involverar automatisk <link xref=\"disk-repair\">reparation</link> av "
+"filsystemet. Det är därför rekommenderat att säkerhetskopiera viktiga data innan du startar. Åtgärden får "
+"inte stoppas, i annat fall leder det till att filsystemet skadas."
+
+#. (itstool) path: item/p
+#: C/disk-resize.page:62
+msgid "Confirm to start the action by clicking <gui style=\"button\">Resize</gui>."
+msgstr "Bekräfta att starta åtgärden genom att klicka på <gui style=\"button\">Ändra storlek</gui>."
+
+#. (itstool) path: item/p
+#: C/disk-resize.page:64
+msgid ""
+"The action will unmount the filesystem if resizing a mounted filesystem is not supported. Be patient while "
+"the filesystem is resized."
+msgstr ""
+"Åtgärden kommer att avmontera filsystemet om stöd för storleksändring på ett monterat filsystem saknas. "
+"Vänta tålmodigt medan filsystemets storlek ändras."
+
+#. (itstool) path: item/p
+#: C/disk-resize.page:68
+msgid "After completion of the needed resize and repair actions the filesystem is ready to be used again."
+msgstr "Då de nödvändiga åtgärderna för storleksändring och reparation är klara kan filsystemet användas igen."
 
 #. (itstool) path: info/desc
 #: C/disk.page:15
@@ -8277,18 +8568,12 @@ msgstr ""
 "markera radioknappar från en grupp."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:76
-msgid "In a tree view, use the left and right arrow keys to collapse and expand items with children."
-msgstr ""
-"I en trädvy, använd vänster och höger piltangent för att fälla ut och ihop objekt med underordnade objekt."
-
-#. (itstool) path: td/p
-#: C/keyboard-nav.page:81
+#: C/keyboard-nav.page:79
 msgid "<keyseq><key>Ctrl</key>Arrow keys</keyseq>"
 msgstr "<keyseq><key>Ctrl</key>Piltangenter</keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:82
+#: C/keyboard-nav.page:80
 msgid ""
 "In a list or icon view, move the keyboard focus to another item without changing which item is selected."
 msgstr ""
@@ -8296,45 +8581,56 @@ msgstr ""
 "markerat."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:86
+#: C/keyboard-nav.page:84
 msgid "<keyseq><key>Shift</key>Arrow keys</keyseq>"
 msgstr "<keyseq><key>Shift</key>Piltangenter</keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:87
+#: C/keyboard-nav.page:85
 msgid "In a list or icon view, select all items from the currently selected item to the newly focused item."
 msgstr ""
 "I en list- eller ikonvy, markera alla objekt från och med det för närvarande valda objektet till och med det "
 "nyligen fokuserade objektet."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:91
+#: C/keyboard-nav.page:87
+msgid ""
+"In a tree view, items that have children can be expanded or collapsed, to show or hide their children: "
+"expand by pressing <keyseq><key>Shift</key><key>→</key></keyseq>, and collapse by pressing "
+"<keyseq><key>Shift</key><key>←</key></keyseq>."
+msgstr ""
+"I en trädvy kan objekt med underordnade objekt expanderas och fällas ihop så att de underordnade objekten "
+"visas eller döljs. Expandera genom att trycka <keyseq><key>Skift</key><key>→</key></keyseq>, fäll ihop genom "
+"att trycka <keyseq><key>Skift</key><key>←</key></keyseq>."
+
+#. (itstool) path: td/p
+#: C/keyboard-nav.page:93
 msgid "<key>Space</key>"
 msgstr "<key>Blanksteg</key>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:92
+#: C/keyboard-nav.page:94
 msgid "Activate a focused item such as a button, check box, or list item."
 msgstr "Aktivera ett fokuserat objekt som exempelvis en knapp, kryssruta eller listobjekt."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:96
+#: C/keyboard-nav.page:98
 msgid "<keyseq><key>Ctrl</key><key>Space</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Blanksteg</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:97
+#: C/keyboard-nav.page:99
 msgid "In a list or icon view, select or deselect the focused item without deselecting other items."
 msgstr ""
 "I en list- eller ikonvy, markera eller avmarkera det fokuserade objektet utan att avmarkera andra objekt."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:101
+#: C/keyboard-nav.page:103
 msgid "<key>Alt</key>"
 msgstr "<key>Alt</key>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:102
+#: C/keyboard-nav.page:104
 msgid ""
 "Hold down the <key>Alt</key> key to reveal <em>accelerators</em>: underlined letters on menu items, buttons, "
 "and other controls. Press <key>Alt</key> plus the underlined letter to activate a control, just as if you "
@@ -8345,52 +8641,52 @@ msgstr ""
 "kontroll, precis som om du hade klickat på den."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:108
+#: C/keyboard-nav.page:110
 msgid "<key>Esc</key>"
 msgstr "<key>Esc</key>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:109
+#: C/keyboard-nav.page:111
 msgid "Exit a menu, popup, switcher, or dialog window."
 msgstr "Stäng en meny, snabbvalsmeny, växlare eller dialogruta."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:112
+#: C/keyboard-nav.page:114
 msgid "<key>F10</key>"
 msgstr "<key>F10</key>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:113
+#: C/keyboard-nav.page:115
 msgid "Open the first menu on the menubar of a window. Use the arrow keys to navigate the menus."
 msgstr "Öppna den första menyn på menyraden i ett fönster. Använd piltangenterna för att navigera i menyerna."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:117
+#: C/keyboard-nav.page:119
 msgid "<keyseq><key xref=\"keyboard-key-super\">Super</key> <key>F10</key></keyseq>"
 msgstr "<keyseq><key xref=\"keyboard-key-super\">Super</key> <key>F10</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:119
+#: C/keyboard-nav.page:121
 msgid "Open the application menu on the top bar."
 msgstr "Öppna programmenyn på systemraden."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:122
+#: C/keyboard-nav.page:124
 msgid "<keyseq><key>Shift</key><key>F10</key></keyseq> or <key xref=\"keyboard-key-menu\">Menu</key>"
 msgstr "<keyseq><key>Skift</key><key>F10</key></keyseq> eller <key xref=\"keyboard-key-menu\">Menu</key>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:125
+#: C/keyboard-nav.page:127
 msgid "Pop up the context menu for the current selection, as if you had right-clicked."
 msgstr "Poppa upp snabbvalsmenyn för den aktuella markeringen som om du hade högerklickat."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:130
+#: C/keyboard-nav.page:132
 msgid "<keyseq><key>Ctrl</key><key>F10</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>F10</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:131
+#: C/keyboard-nav.page:133
 msgid ""
 "In the file manager, pop up the context menu for the current folder, as if you had right-clicked on the "
 "background and not on any item."
@@ -8399,29 +8695,29 @@ msgstr ""
 "och inte på något objekt."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:135
+#: C/keyboard-nav.page:137
 msgid ""
 "<keyseq><key>Ctrl</key><key>PageUp</key></keyseq> and <keyseq><key>Ctrl</key><key>PageDown</key></keyseq>"
 msgstr ""
 "<keyseq><key>Ctrl</key><key>PageUp</key></keyseq> och <keyseq><key>Ctrl</key><key>PageDown</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:137
+#: C/keyboard-nav.page:139
 msgid "In a tabbed interface, switch to the tab to the left or right."
 msgstr "I ett gränssnitt med flikar, växla till fliken till vänster eller höger."
 
 #. (itstool) path: table/title
-#: C/keyboard-nav.page:143
+#: C/keyboard-nav.page:145
 msgid "Navigate the desktop"
 msgstr "Navigera skrivbordet"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:160 C/keyboard-shortcuts-set.page:174
+#: C/keyboard-nav.page:162 C/keyboard-shortcuts-set.page:174
 msgid "<keyseq><key>Alt</key><key>F6</key></keyseq>"
 msgstr "<keyseq><key>Alt</key><key>F6</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:161
+#: C/keyboard-nav.page:163
 msgid ""
 "Cycle through windows in the same application. Hold down the <key>Alt</key> key and press <key>F6</key> "
 "until the window you want is highlighted, then release <key>Alt</key>. This is similar to the "
@@ -8432,22 +8728,22 @@ msgstr ""
 "<keyseq><key>Alt</key><key>`</key></keyseq>."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:167 C/keyboard-shortcuts-set.page:170
+#: C/keyboard-nav.page:169 C/keyboard-shortcuts-set.page:170
 msgid "<keyseq><key>Alt</key><key>Esc</key></keyseq>"
 msgstr "<keyseq><key>Alt</key><key>Esc</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:168
+#: C/keyboard-nav.page:170
 msgid "Cycle through all open windows on a workspace."
 msgstr "Växla mellan alla öppna fönster på en arbetsyta."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:171 C/keyboard-shortcuts-set.page:315 C/shell-keyboard-shortcuts.page:121
+#: C/keyboard-nav.page:173 C/keyboard-shortcuts-set.page:315 C/shell-keyboard-shortcuts.page:121
 msgid "<keyseq><key>Super</key><key>M</key></keyseq>"
 msgstr "<keyseq><key>Super</key><key>M</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:172
+#: C/keyboard-nav.page:174
 msgid ""
 "<link xref=\"shell-notifications#messagetray\">Open the message tray.</link> Press <key>Esc</key> to close."
 msgstr ""
@@ -8455,27 +8751,27 @@ msgstr ""
 "att stänga."
 
 #. (itstool) path: table/title
-#: C/keyboard-nav.page:178
+#: C/keyboard-nav.page:180
 msgid "Navigate windows"
 msgstr "Navigera mellan fönster"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:180 C/keyboard-shortcuts-set.page:420
+#: C/keyboard-nav.page:182 C/keyboard-shortcuts-set.page:420
 msgid "<keyseq><key>Alt</key><key>F4</key></keyseq>"
 msgstr "<keyseq><key>Alt</key><key>F4</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:181
+#: C/keyboard-nav.page:183
 msgid "Close the current window."
 msgstr "Stäng det aktuella fönstret."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:184
+#: C/keyboard-nav.page:186
 msgid "<keyseq><key>Alt</key><key>F5</key></keyseq> or <keyseq><key>Super</key><key>↓</key></keyseq>"
 msgstr "<keyseq><key>Alt</key><key>F5</key></keyseq> eller <keyseq><key>Super</key><key>↓</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:186
+#: C/keyboard-nav.page:188
 msgid ""
 "Restore a maximized window to its original size. Use <keyseq><key>Alt</key><key>F10</key></keyseq> to "
 "maximize. <keyseq><key>Alt</key><key>F10</key></keyseq> both maximizes and restores."
@@ -8484,12 +8780,12 @@ msgstr ""
 "keyseq> för att maximera. <keyseq><key>Alt</key><key>F10</key></keyseq> både maximerar och återställer."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:192 C/keyboard-shortcuts-set.page:428
+#: C/keyboard-nav.page:194 C/keyboard-shortcuts-set.page:428
 msgid "<keyseq><key>Alt</key><key>F7</key></keyseq>"
 msgstr "<keyseq><key>Alt</key><key>F7</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:193
+#: C/keyboard-nav.page:195
 msgid ""
 "Move the current window. Press <keyseq><key>Alt</key><key>F7</key></keyseq>, then use the arrow keys to move "
 "the window. Press <key>Enter</key> to finish moving the window, or <key>Esc</key> to return it to its "
@@ -8500,12 +8796,12 @@ msgstr ""
 "fönstret, eller på <key>Esc</key> för att flytta tillbaka det till dess originalposition."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:199 C/keyboard-shortcuts-set.page:432
+#: C/keyboard-nav.page:201 C/keyboard-shortcuts-set.page:432
 msgid "<keyseq><key>Alt</key><key>F8</key></keyseq>"
 msgstr "<keyseq><key>Alt</key><key>F8</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:200
+#: C/keyboard-nav.page:202
 msgid ""
 "Resize the current window. Press <keyseq><key>Alt</key><key>F8</key></keyseq>, then use the arrow keys to "
 "resize the window. Press <key>Enter</key> to finish resizing the window, or <key>Esc</key> to return it to "
@@ -8516,12 +8812,12 @@ msgstr ""
 "fönstret, eller på <key>Esc</key> för att återställa det till dess originalstorlek."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:215
+#: C/keyboard-nav.page:217
 msgid "<keyseq><key>Alt</key><key>F10</key></keyseq> or <keyseq><key>Super</key><key>↑</key></keyseq>"
 msgstr "<keyseq><key>Alt</key><key>F10</key></keyseq> eller <keyseq><key>Super</key><key>↑</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:218
+#: C/keyboard-nav.page:220
 msgid ""
 "<link xref=\"shell-windows-maximize\">Maximize</link> a window. Press <keyseq><key>Alt</key><key>F10</key></"
 "keyseq> or <keyseq><key>Super</key><key>↓</key></keyseq> to restore a maximized window to its original size."
@@ -8531,22 +8827,22 @@ msgstr ""
 "till dess originalstorlek."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:224 C/keyboard-shortcuts-set.page:424
+#: C/keyboard-nav.page:226 C/keyboard-shortcuts-set.page:424
 msgid "<keyseq><key>Super</key><key>H</key></keyseq>"
 msgstr "<keyseq><key>Super</key><key>H</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:225
+#: C/keyboard-nav.page:227
 msgid "Minimize a window."
 msgstr "Minimera ett fönster."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:228 C/keyboard-shortcuts-set.page:460
+#: C/keyboard-nav.page:230 C/keyboard-shortcuts-set.page:460
 msgid "<keyseq><key>Super</key><key>←</key></keyseq>"
 msgstr "<keyseq><key>Super</key><key>←</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:229
+#: C/keyboard-nav.page:231
 msgid ""
 "Maximize a window vertically along the left side of the screen. Press again to restore the window to its "
 "previous size. Press <keyseq><key>Super</key><key>→</key></keyseq> to switch sides."
@@ -8555,12 +8851,12 @@ msgstr ""
 "dess tidigare storlek. Tryck <keyseq><key>Super</key><key>→</key></keyseq> för att växla sida."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:235 C/keyboard-shortcuts-set.page:464
+#: C/keyboard-nav.page:237 C/keyboard-shortcuts-set.page:464
 msgid "<keyseq><key>Super</key><key>→</key></keyseq>"
 msgstr "<keyseq><key>Super</key><key>→</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:236
+#: C/keyboard-nav.page:238
 msgid ""
 "Maximize a window vertically along the right side of the screen. Press again to restore the window to its "
 "previous size. Press <keyseq><key>Super</key><key>←</key></keyseq> to switch sides."
@@ -8569,12 +8865,12 @@ msgstr ""
 "tidigare storlek. Tryck <keyseq><key>Super</key><key>←</key></keyseq> för att växla sida."
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:242 C/keyboard-shortcuts-set.page:396
+#: C/keyboard-nav.page:244 C/keyboard-shortcuts-set.page:396
 msgid "<keyseq><key>Alt</key><key>Space</key></keyseq>"
 msgstr "<keyseq><key>Alt</key><key>Blanksteg</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/keyboard-nav.page:243
+#: C/keyboard-nav.page:245
 msgid "Pop up the window menu, as if you had right-clicked on the titlebar."
 msgstr "Öppna fönstermenyn, som om du hade högerklickat på namnlisten."
 
@@ -20117,13 +20413,8 @@ msgstr ""
 "ner när du klickar genom dem. Håll ner <key xref=\"keyboard-key-super\">Super</key> och tryck <key>`</key> "
 "(eller tangenten ovanför <key>Tabb</key>) för att stega genom listan."
 
-#. (itstool) path: note/p
-#: C/shell-windows-switching.page:73
-msgid "In the window switcher, applications from different workspaces are divided by vertical separators."
-msgstr "I fönsterväxlaren separeras program från olika arbetsytor med vertikala barriärer."
-
 #. (itstool) path: page/p
-#: C/shell-windows-switching.page:77
+#: C/shell-windows-switching.page:72
 msgid ""
 "You can also move between the application icons in the window switcher with the <key>→</key> or <key>←</key> "
 "keys, or select one by clicking it with the mouse."
@@ -20132,12 +20423,12 @@ msgstr ""
 "tangenterna eller välja en genom att klicka på den med musen."
 
 #. (itstool) path: page/p
-#: C/shell-windows-switching.page:81
+#: C/shell-windows-switching.page:76
 msgid "Previews of applications with a single window can be displayed with the <key>↓</key> key."
 msgstr "Förhandsvisningar av program med ett enda fönster kan visas med <key>↓</key>-tangenten."
 
 #. (itstool) path: page/p
-#: C/shell-windows-switching.page:84
+#: C/shell-windows-switching.page:79
 msgid ""
 "From the <gui>Activities</gui> overview, click on a <link xref=\"shell-windows\">window</link> to switch to "
 "it and leave the overview. If you have multiple <link xref=\"shell-windows#working-with-workspaces"
@@ -22903,6 +23194,13 @@ msgstr ""
 #: C/wacom.page:29
 msgid "Wacom Graphics Tablet"
 msgstr "Wacom ritplatta"
+
+#~ msgid "In the window switcher, applications from different workspaces are divided by vertical separators."
+#~ msgstr "I fönsterväxlaren separeras program från olika arbetsytor med vertikala barriärer."
+
+#~ msgid "In a tree view, use the left and right arrow keys to collapse and expand items with children."
+#~ msgstr ""
+#~ "I en trädvy, använd vänster och höger piltangent för att fälla ut och ihop objekt med underordnade objekt."
 
 #~ msgid "Select the <gui>Shortcuts</gui> tab and click <gui>Typing</gui>."
 #~ msgstr "Välj fliken <gui>Genvägar</gui> och klicka på <gui>Skriva</gui>."
