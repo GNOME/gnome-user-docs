@@ -1,4 +1,4 @@
-AC_INIT([gnome-user-docs], [3.26.0.1],
+AC_INIT([gnome-user-docs], [3.26.1],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-user-docs])
 AM_INIT_AUTOMAKE([1.11 tar-ustar dist-xz no-dist-gzip])
 AM_SILENT_RULES([yes])
