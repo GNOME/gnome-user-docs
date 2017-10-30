@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2017-08-17 15:57+0000\n"
-"PO-Revision-Date: 2017-08-17 17:49+0200\n"
+"Project-Id-Version: gnome-user-docs gnome-3.26\n"
+"POT-Creation-Date: 2017-10-30 19:16+0000\n"
+"PO-Revision-Date: 2017-10-30 22:25+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -1439,14 +1439,14 @@ msgstr "Zamezení přístupu k příkazové řádce"
 #: C/lockdown-command-line.page:28
 msgid ""
 "You can prevent users from being able to access the command-line through "
-"virtual terminals and terminal applications by in three areas:"
+"virtual terminals and terminal applications by following the steps described "
+"below."
 msgstr ""
 "Můžete uživatelům zabránit, aby měli přístup k příkazovému řádku přes "
-"virtuální terminály a terminálové aplikace, ale musíte to udělat na třech "
-"místech:"
+"virtuální terminály a terminálové aplikace pomocí kroků popsaných níže."
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:33
+#: C/lockdown-command-line.page:34
 msgid ""
 "Prevent users from accessing the <keyseq><key>Alt</key><key>F2</key></"
 "keyseq> command prompt."
@@ -1455,12 +1455,12 @@ msgstr ""
 "key><key>F2</key></keyseq>"
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:37
+#: C/lockdown-command-line.page:38
 msgid "Disable dropping to a virtual terminal (VT)."
 msgstr "zakázat přepnutí do virtuálního terminálu (VT)"
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:40
+#: C/lockdown-command-line.page:41
 msgid ""
 "Remove <app>Terminal</app> and all other terminal applications from the "
 "<gui>Activities</gui> overview in GNOME Shell. You will also need to prevent "
@@ -1471,12 +1471,12 @@ msgstr ""
 "nových terminálových aplikací"
 
 #. (itstool) path: section/title
-#: C/lockdown-command-line.page:53
+#: C/lockdown-command-line.page:54
 msgid "Disable the command prompt"
 msgstr "Zakázání příkazového řádku"
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:60
+#: C/lockdown-command-line.page:61
 msgid ""
 "Create a <sys>local</sys> database for machine-wide settings in <file>/etc/"
 "dconf/db/local.d/00-lockdown</file>:"
@@ -1485,7 +1485,7 @@ msgstr ""
 "dconf/db/local.d/00-lockdown</file>:"
 
 #. (itstool) path: item/code
-#: C/lockdown-command-line.page:62
+#: C/lockdown-command-line.page:63
 #, no-wrap
 msgid ""
 "# Specify the dconf path\n"
@@ -1501,7 +1501,7 @@ msgstr ""
 "disable-command-line=true"
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:69
+#: C/lockdown-command-line.page:70
 msgid ""
 "Override the user’s setting and prevent the user from changing it in <file>/"
 "etc/dconf/db/local.d/locks/lockdown</file>:"
@@ -1510,7 +1510,7 @@ msgstr ""
 "<file>/etc/dconf/db/local.d/locks/lockdown</file>:"
 
 #. (itstool) path: item/code
-#: C/lockdown-command-line.page:71
+#: C/lockdown-command-line.page:72
 #, no-wrap
 msgid ""
 "# List the keys used to configure lockdown\n"
@@ -1520,12 +1520,12 @@ msgstr ""
 "/org/gnome/desktop/lockdown/disable-command-line"
 
 #. (itstool) path: section/title
-#: C/lockdown-command-line.page:84
+#: C/lockdown-command-line.page:85
 msgid "Disable dropping to a virtual terminal"
 msgstr "Zablokování přepnutí do virtuálního terminálu"
 
 #. (itstool) path: section/p
-#: C/lockdown-command-line.page:86
+#: C/lockdown-command-line.page:87
 msgid ""
 "Users can normally use the <keyseq><key>Ctrl</key><key>Alt</"
 "key><key><var>function key</var></key></keyseq> shortcuts (for example, "
@@ -1538,7 +1538,7 @@ msgstr ""
 "uživatelského prostředí GNOME do virtuálního terminálu."
 
 #. (itstool) path: section/p
-#: C/lockdown-command-line.page:92
+#: C/lockdown-command-line.page:93
 msgid ""
 "If the computer is running the <em>X Window System</em>, you can disable "
 "access to all virtual terminals by adding a <code>DontVTSwitch</code> option "
@@ -1551,7 +1551,7 @@ msgstr ""
 "d</file>."
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:99
+#: C/lockdown-command-line.page:100
 msgid ""
 "Create or edit an X configuration file in <file>/etc/X11/xorg.conf.d</file>:"
 msgstr ""
@@ -1559,7 +1559,7 @@ msgstr ""
 "file>:"
 
 #. (itstool) path: item/code
-#: C/lockdown-command-line.page:101
+#: C/lockdown-command-line.page:102
 #, no-wrap
 msgid ""
 "Section \"Serverflags\"\n"
@@ -1575,7 +1575,7 @@ msgstr ""
 "EndSection"
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:108
+#: C/lockdown-command-line.page:109
 msgid "Restart GDM for the change to take effect."
 msgstr "Restartujte GDM, aby se změny projevily."
 
@@ -1888,11 +1888,11 @@ msgstr "<file>/etc/dconf/db/local.db/locks/printing</file>"
 #, no-wrap
 msgid ""
 "\n"
-"# Lock file saving settings\n"
+"# Lock printing settings\n"
 "/org/gnome/desktop/lockdown/disable-printing\n"
 msgstr ""
 "\n"
-"# Uzamyká nastavení pro ukládání souborů\n"
+"# Uzamyká nastavení pro tisk\n"
 "/org/gnome/desktop/lockdown/disable-printing\n"
 
 #. (itstool) path: info/desc
@@ -1970,8 +1970,8 @@ msgstr ""
 msgid ""
 "\n"
 "  &lt;action id=\"org.freedesktop.udisks2.modify-device\"&gt;\n"
-"     &lt;description&gt;Modify the disks settings&lt;/description&gt;\n"
-"     &lt;message&gt;Authentication is required to modify the disks settings&lt;/message&gt;\n"
+"     &lt;description&gt;Modify the drive settings&lt;/description&gt;\n"
+"     &lt;message&gt;Authentication is required to modify drive settings&lt;/message&gt;\n"
 "    &lt;defaults&gt;\n"
 "      &lt;allow_any&gt;no&lt;/allow_any&gt;\n"
 "      &lt;allow_inactive&gt;no&lt;/allow_inactive&gt;\n"
@@ -1981,8 +1981,8 @@ msgid ""
 msgstr ""
 "\n"
 "  &lt;action id=\"org.freedesktop.udisks2.modify-device\"&gt;\n"
-"     &lt;description&gt;Modify the disks settings&lt;/description&gt;\n"
-"     &lt;message&gt;Authentication is required to modify the disks settings&lt;/message&gt;\n"
+"     &lt;description&gt;Modify the drive settings&lt;/description&gt;\n"
+"     &lt;message&gt;Authentication is required to modify drive settings&lt;/message&gt;\n"
 "    &lt;defaults&gt;\n"
 "      &lt;allow_any&gt;no&lt;/allow_any&gt;\n"
 "      &lt;allow_inactive&gt;no&lt;/allow_inactive&gt;\n"
@@ -2008,7 +2008,7 @@ msgstr "Uložte změny."
 #: C/lockdown-repartitioning.page:79
 msgid ""
 "When the user tries to change the disk settings, the following message is "
-"shown: <gui>Authentication is required to modify the disks settings</gui>."
+"shown: <gui>Authentication is required to modify drive settings</gui>."
 msgstr ""
 "Když se uživatel pokusí změnit nastavení disku, zobrazí se mu následující "
 "zpráva: <gui>Pro změnu nastavení disku je vyžadováno ověření</gui>."
@@ -3168,7 +3168,7 @@ msgstr "Nastavení tiskárny"
 #. (itstool) path: page/p
 #: C/network-printer-config.page:28
 msgid ""
-"This topic explains how to make printers, windows printers in particular, "
+"This topic explains how to make printers, Windows printers in particular, "
 "available in GNOME."
 msgstr ""
 "Tato kapitola vysvětluje, jak nastavit tiskárny, zejména tiskárny sdílené ve "
@@ -3216,19 +3216,19 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/network-printer-config.page:49
-msgid "Click the <key>+</key> key below the list of printers."
-msgstr "Klikněte na tlačítko <key>+</key> pod seznamem tiskáren."
+msgid "Click the <gui>+</gui> button below the list of printers."
+msgstr "Klikněte na tlačítko <gui>+</gui> pod seznamem tiskáren."
 
 #. (itstool) path: item/p
 #: C/network-printer-config.page:52
 msgid ""
 "If your printers are public, wait for the printers which are available on "
-"your windows network to appear. Otherwise, type the address of the Samba "
+"your Windows network to appear. Otherwise, type the address of the Samba "
 "server and press <key>Enter</key>."
 msgstr ""
-"V případě, že je kýžená tiskárna veřejná, vyčkejte, než se objeví v okně "
-"mezi dostupnými tiskárnami. V opačném případě zadejte její adresu serveru "
-"Samba a zmáčkněte <key>Enter</key>."
+"V případě, že je kýžená tiskárna veřejná, vyčkejte, než se objeví "
+"mezitiskárnami sdílenými z Windows. V opačném případě zadejte její adresu "
+"serveru Samba a zmáčkněte <key>Enter</key>."
 
 #. (itstool) path: item/p
 #: C/network-printer-config.page:57
@@ -3246,7 +3246,7 @@ msgstr "Vyberte tiskárnu, která se má nainstalovat."
 
 #. (itstool) path: item/p
 #: C/network-printer-config.page:64
-msgid "Press the <key>Add</key> key."
+msgid "Press the <gui>Add</gui> button."
 msgstr "Zmáčkněte tlačítko <gui>Přidat</gui>."
 
 #. (itstool) path: item/p
