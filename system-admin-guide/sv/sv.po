@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2017-10-23 15:33+0000\n"
-"PO-Revision-Date: 2017-10-05 23:35+0200\n"
+"Project-Id-Version: gnome-user-docs gnome-3-26\n"
+"POT-Creation-Date: 2017-10-30 19:58+0000\n"
+"PO-Revision-Date: 2017-10-30 21:19+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -1446,18 +1446,18 @@ msgstr "Förhindra användare från att komma åt kommandoraden."
 msgid "Disable command-line access"
 msgstr "Inaktivera kommandoradsåtkomst"
 
-# TODO: Weird grammar in end. *applications by in three areas*
 #. (itstool) path: page/p
 #: C/lockdown-command-line.page:28
 msgid ""
 "You can prevent users from being able to access the command-line through "
-"virtual terminals and terminal applications by in three areas:"
+"virtual terminals and terminal applications by following the steps described "
+"below."
 msgstr ""
 "Du kan förhindra användare från att komma åt kommandoraden genom virtuella "
-"terminaler och terminalprogram genom ändringar på tre områden:"
+"terminaler och terminalprogram genom att följa stegen nedan."
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:33
+#: C/lockdown-command-line.page:34
 msgid ""
 "Prevent users from accessing the <keyseq><key>Alt</key><key>F2</key></"
 "keyseq> command prompt."
@@ -1466,12 +1466,12 @@ msgstr ""
 "key><key>F2</key></keyseq>."
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:37
+#: C/lockdown-command-line.page:38
 msgid "Disable dropping to a virtual terminal (VT)."
 msgstr "Inaktivera hopp till en virtuell terminal (VT)."
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:40
+#: C/lockdown-command-line.page:41
 msgid ""
 "Remove <app>Terminal</app> and all other terminal applications from the "
 "<gui>Activities</gui> overview in GNOME Shell. You will also need to prevent "
@@ -1482,12 +1482,12 @@ msgstr ""
 "användaren från att installera ett nytt terminalprogram."
 
 #. (itstool) path: section/title
-#: C/lockdown-command-line.page:53
+#: C/lockdown-command-line.page:54
 msgid "Disable the command prompt"
 msgstr "Inaktivera kommandoprompten"
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:60
+#: C/lockdown-command-line.page:61
 msgid ""
 "Create a <sys>local</sys> database for machine-wide settings in <file>/etc/"
 "dconf/db/local.d/00-lockdown</file>:"
@@ -1496,7 +1496,7 @@ msgstr ""
 "<file>/etc/dconf/db/local.d/00-lockdown</file>:"
 
 #. (itstool) path: item/code
-#: C/lockdown-command-line.page:62
+#: C/lockdown-command-line.page:63
 #, no-wrap
 msgid ""
 "# Specify the dconf path\n"
@@ -1512,7 +1512,7 @@ msgstr ""
 "disable-command-line=true"
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:69
+#: C/lockdown-command-line.page:70
 msgid ""
 "Override the user’s setting and prevent the user from changing it in <file>/"
 "etc/dconf/db/local.d/locks/lockdown</file>:"
@@ -1521,7 +1521,7 @@ msgstr ""
 "den i <file>/etc/dconf/db/local.d/locks/lockdown</file>:"
 
 #. (itstool) path: item/code
-#: C/lockdown-command-line.page:71
+#: C/lockdown-command-line.page:72
 #, no-wrap
 msgid ""
 "# List the keys used to configure lockdown\n"
@@ -1531,12 +1531,12 @@ msgstr ""
 "/org/gnome/desktop/lockdown/disable-command-line"
 
 #. (itstool) path: section/title
-#: C/lockdown-command-line.page:84
+#: C/lockdown-command-line.page:85
 msgid "Disable dropping to a virtual terminal"
 msgstr "Inaktivera hopp till en virtuell terminal"
 
 #. (itstool) path: section/p
-#: C/lockdown-command-line.page:86
+#: C/lockdown-command-line.page:87
 msgid ""
 "Users can normally use the <keyseq><key>Ctrl</key><key>Alt</"
 "key><key><var>function key</var></key></keyseq> shortcuts (for example, "
@@ -1549,7 +1549,7 @@ msgstr ""
 "från GNOME-skrivbordet till en virtuell terminal."
 
 #. (itstool) path: section/p
-#: C/lockdown-command-line.page:92
+#: C/lockdown-command-line.page:93
 msgid ""
 "If the computer is running the <em>X Window System</em>, you can disable "
 "access to all virtual terminals by adding a <code>DontVTSwitch</code> option "
@@ -1562,7 +1562,7 @@ msgstr ""
 "file>."
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:99
+#: C/lockdown-command-line.page:100
 msgid ""
 "Create or edit an X configuration file in <file>/etc/X11/xorg.conf.d</file>:"
 msgstr ""
@@ -1570,7 +1570,7 @@ msgstr ""
 "file>:"
 
 #. (itstool) path: item/code
-#: C/lockdown-command-line.page:101
+#: C/lockdown-command-line.page:102
 #, no-wrap
 msgid ""
 "Section \"Serverflags\"\n"
@@ -1586,7 +1586,7 @@ msgstr ""
 "EndSection"
 
 #. (itstool) path: item/p
-#: C/lockdown-command-line.page:108
+#: C/lockdown-command-line.page:109
 msgid "Restart GDM for the change to take effect."
 msgstr "Starta om GDM för att ändringen ska börja gälla."
 
@@ -1898,13 +1898,12 @@ msgstr ""
 msgid "<file>/etc/dconf/db/local.db/locks/printing</file>"
 msgstr "<file>/etc/dconf/db/local.db/locks/printing</file>"
 
-# TODO: file saving -> printing
 #. (itstool) path: listing/code
 #: C/lockdown-printing.page:68
 #, no-wrap
 msgid ""
 "\n"
-"# Lock file saving settings\n"
+"# Lock printing settings\n"
 "/org/gnome/desktop/lockdown/disable-printing\n"
 msgstr ""
 "\n"
@@ -1987,8 +1986,8 @@ msgstr ""
 msgid ""
 "\n"
 "  &lt;action id=\"org.freedesktop.udisks2.modify-device\"&gt;\n"
-"     &lt;description&gt;Modify the disks settings&lt;/description&gt;\n"
-"     &lt;message&gt;Authentication is required to modify the disks settings&lt;/message&gt;\n"
+"     &lt;description&gt;Modify the drive settings&lt;/description&gt;\n"
+"     &lt;message&gt;Authentication is required to modify drive settings&lt;/message&gt;\n"
 "    &lt;defaults&gt;\n"
 "      &lt;allow_any&gt;no&lt;/allow_any&gt;\n"
 "      &lt;allow_inactive&gt;no&lt;/allow_inactive&gt;\n"
@@ -1999,7 +1998,7 @@ msgstr ""
 "\n"
 "  &lt;action id=\"org.freedesktop.udisks2.modify-device\"&gt;\n"
 "     &lt;description&gt;Ändra diskinställningarna&lt;/description&gt;\n"
-"     &lt;message&gt;Autentisering krävs för att ändra diskinställningarna&lt;/message&gt;\n"
+"     &lt;message&gt;Autentisering krävs för att ändra enhetsinställningar&lt;/message&gt;\n"
 "    &lt;defaults&gt;\n"
 "      &lt;allow_any&gt;no&lt;/allow_any&gt;\n"
 "      &lt;allow_inactive&gt;no&lt;/allow_inactive&gt;\n"
@@ -2021,16 +2020,14 @@ msgstr ""
 msgid "Save the changes."
 msgstr "Spara ändringarna."
 
-# TODO: modify *drive* settings?
-# In udisks: "Authentication is required to modify drive settings"
 #. (itstool) path: page/p
 #: C/lockdown-repartitioning.page:79
 msgid ""
 "When the user tries to change the disk settings, the following message is "
-"shown: <gui>Authentication is required to modify the disks settings</gui>."
+"shown: <gui>Authentication is required to modify drive settings</gui>."
 msgstr ""
 "Då användaren försöker ändra diskinställningarna visas följande meddelande: "
-"<gui>Autentisering krävs för att ändra diskinställningarna</gui>."
+"<gui>Autentisering krävs för att ändra enhetsinställningar</gui>."
 
 #. (itstool) path: page/title
 #: C/login.page:10
@@ -3193,11 +3190,10 @@ msgstr "Hur förkonfigurerar jag min Samba-skrivare"
 msgid "Configure a printer"
 msgstr "Konfigurera en skrivare"
 
-# TODO: windows -> Windows
 #. (itstool) path: page/p
 #: C/network-printer-config.page:28
 msgid ""
-"This topic explains how to make printers, windows printers in particular, "
+"This topic explains how to make printers, Windows printers in particular, "
 "available in GNOME."
 msgstr ""
 "Detta ämne förklarar hur man kan göra skrivare, i synnerhet Windows-"
@@ -3242,18 +3238,16 @@ msgstr ""
 "Lås upp panelen <gui>Skrivare</gui> genom att klicka på knappen <gui>Lås "
 "upp</gui>."
 
-# TODO: key -> button?
 #. (itstool) path: item/p
 #: C/network-printer-config.page:49
-msgid "Click the <key>+</key> key below the list of printers."
+msgid "Click the <gui>+</gui> button below the list of printers."
 msgstr "Klicka på <key>+</key>-knappen under listan över skrivare."
 
-# TODO: windows -> Windows
 #. (itstool) path: item/p
 #: C/network-printer-config.page:52
 msgid ""
 "If your printers are public, wait for the printers which are available on "
-"your windows network to appear. Otherwise, type the address of the Samba "
+"your Windows network to appear. Otherwise, type the address of the Samba "
 "server and press <key>Enter</key>."
 msgstr ""
 "Om dina skrivare är publika, vänta på att skrivarna som finns tillgängliga "
@@ -3274,10 +3268,9 @@ msgstr ""
 msgid "Select the printer to be installed."
 msgstr "Välj skrivaren som ska installeras."
 
-# TODO: key -> button
 #. (itstool) path: item/p
 #: C/network-printer-config.page:64
-msgid "Press the <key>Add</key> key."
+msgid "Press the <gui>Add</gui> button."
 msgstr "Tryck på knappen <key>Lägg till</key>."
 
 #. (itstool) path: item/p
