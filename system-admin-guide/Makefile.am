@@ -54,7 +54,6 @@ HELP_FILES = \
 	setup.page \
 	software.page \
 	sundry.page \
-	troubleshooting.page \
 	user-settings.page
 
 HELP_MEDIA =
