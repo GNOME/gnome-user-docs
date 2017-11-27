@@ -154,12 +154,12 @@ HELP_FILES = \
 	bluetooth-send-file.page \
 	bluetooth-turn-on-off.page \
 	bluetooth-visibility.page \
-	color.page \
 	clock-calendar.page \
 	clock-set.page \
 	clock-timezone.page \
 	clock-world.page \
 	clock.page \
+	color.page \
 	color-assignprofiles.page \
 	color-calibrate-camera.page \
 	color-calibrate-printer.page \
