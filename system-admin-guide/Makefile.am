@@ -58,4 +58,4 @@ HELP_FILES = \
 
 HELP_MEDIA =
 
-HELP_LINGUAS = cs de es gl pt_BR sv
+HELP_LINGUAS = cs de es gl ko pt_BR sv
