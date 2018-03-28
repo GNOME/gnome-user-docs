@@ -1,5 +1,5 @@
 AC_INIT([gnome-user-docs], [3.28.0],
-        [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-user-docs])
+        [https://gitlab.gnome.org/GNOME/gnome-user-docs/issues])
 AM_INIT_AUTOMAKE([1.11 check-news tar-ustar dist-xz no-dist-gzip foreign])
 AM_SILENT_RULES([yes])
 
