@@ -1,0 +1,7 @@
+build-fedora:
+  image: fedora:latest
+  before_script:
+    - dnf install -y git autoconf automake gettext itstool yelp-tools
+  script:
+    - ./autogen.sh
+    - make
