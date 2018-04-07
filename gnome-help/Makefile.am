@@ -31,7 +31,6 @@ HELP_MEDIA = \
 	figures/color-profile-default.png \
 	figures/color-space.png \
 	figures/display-dual-monitors.webm \
-	figures/documents-icon.png \
 	figures/emblem-system-symbolic.svg \
 	figures/emblem-system.png \
 	figures/gnome.png \
@@ -87,14 +86,12 @@ HELP_MEDIA = \
 	figures/shell-activities.png \
 	figures/shell-appmenu-classic.png \
 	figures/shell-appmenu-shell.png \
-	figures/shell-apps-open.png \
 	figures/shell-appts-classic.png \
 	figures/shell-appts.png \
 	figures/shell-dash.png \
 	figures/shell-exit-classic.png \
 	figures/shell-exit.png \
 	figures/shell-lock.png \
-	figures/shell-notification.png \
 	figures/shell-top-bar-classic.png \
 	figures/shell-top-bar.png \
 	figures/shell-window-list-classic.png \
@@ -111,7 +108,6 @@ HELP_MEDIA = \
 	figures/network-wireless-signal-none-symbolic.svg \
 	figures/network-wireless-signal-ok-symbolic.svg \
 	figures/network-wireless-signal-weak-symbolic.svg \
-	figures/notification-buttons.png \
 	figures/system-run-symbolic.svg \
 	figures/view-more-symbolic.svg \
 	figures/yelp-icon-big.png
