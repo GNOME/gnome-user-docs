@@ -9,6 +9,7 @@
     <revision pkgversion="3.8.0" version="0.3" date="2013-03-09" status="candidate"/>
     <revision pkgversion="3.9.92" date="2013-10-11" status="candidate"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="review"/>
+    <revision pkgversion="3.28" date="2018-07-28" status="review"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
@@ -36,61 +37,51 @@
     <desc>The screen resolution may be set incorrectly.</desc>
   </info>
 
-<title>Why do things look fuzzy/pixelated on my screen?</title>
+  <title>Why do things look fuzzy/pixelated on my screen?</title>
 
-<p>This can happen because the display resolution that you have set it is not
-the right one for your screen.</p>
+  <p>The display resolution that is configured may not be the correct one for
+  your screen. To solve this:</p>
 
-<p>To solve this, open the <gui xref="shell-introduction#activities">Activities</gui>
-overview and start typing <gui>Displays</gui>. Click on <gui>Displays</gui>
-to open the panel. Try some of the <gui>Resolution</gui> options and set the
-one that makes the screen look better.</p>
-
-<comment>
-  <cite date="2012-02-19">shaunm</cite>
-  <p>Would like a little more explanation on native resolution, which
-  is generally only applicable on LCDs. There's a stub for using two
-  monitors. Link from section below when it's added.</p>
-</comment>
+  <steps>
+    <item>
+      <p>Open the <gui xref="shell-introduction#activities">Activities</gui>
+      overview and start typing <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click on <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click <gui>Devices</gui> in the sidebar.</p>
+    </item>
+    <item>
+      <p>Click <gui>Displays</gui> in the sidebar to open the panel.</p>
+    </item>
+    <item>
+      <p>Try some of the <gui>Resolution</gui> options and select the one that
+      makes the screen look better.</p>
+    </item>
+  </steps>
 
 <section id="multihead">
   <title>When multiple displays are connected</title>
 
+  <comment>
+    <cite date="2018-07-29" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
+    <p>Describe Displays:Presentation Mode when it can be tested.</p>
+  </comment>
+
   <p>If you have two displays connected to the computer (for example, a normal
-  monitor and a projector), the displays might have different resolutions.
-  However, the computer’s graphics card can only display the screen in one
-  resolution at a time, so at least one of the displays might look fuzzy.</p>
+  monitor and a projector), the displays might have different optimal, or
+  <link xref="look-resolution#native">native</link>, resolutions.</p>
 
-  <p>You can set it so that the two displays have different resolutions, but
-  you will not be able to display the same thing on both screens
-  simultaneously. In effect, you will have two independent screens connected at
-  the same time. You can move windows from one screen to another, but you
-  cannot show the same window on both screens at once.</p>
+  <p>Using <link xref="display-dual-monitors#modes">Mirror</link> mode, you can
+  display the same thing on two screens. Both screens use the same resolution,
+  which may not match the native resolution of either screen, so the sharpness
+  of the image may suffer on both screens.</p>
 
-  <p>To set up the displays so that they each have their own resolution:</p>
-
-  <steps>
-    <item>
-      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
-      start typing <gui>Displays</gui>.</p>
-    </item>
-    <item>
-      <p>Click on <gui>Displays</gui> to open the panel.</p>
-    </item>
-    <item>
-      <p>The displays should be listed as <gui>Mirrored</gui>. Select your main
-      display.</p>
-    </item>
-    <item>
-      <p>Select <gui>Primary</gui> in the list of display configurations, and
-      then click <gui style="button">Apply</gui> to save.</p>
-    </item>
-    <item>
-      <p>Select each display in turn from the gray box at the top of the
-      <gui>Displays</gui> window. Change the <gui>Resolution</gui> until that
-      display looks right.</p>
-    </item>
-  </steps>
+  <p>Using <link xref="display-dual-monitors#modes">Join Displays</link> mode,
+  the resolution of each screen can be set independently, so they can both be
+  set to their native resolution.</p>
 
 </section>
 
