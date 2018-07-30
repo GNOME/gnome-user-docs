@@ -197,6 +197,7 @@ HELP_FILES = \
 	display-blank.page \
 	display-brightness.page \
 	display-dual-monitors.page \
+	display-night-light.page \
 	files-autorun.page \
 	files-browse.page \
 	files-copy.page \
