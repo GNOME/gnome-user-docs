@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2018-08-01 08:00+0000\n"
-"PO-Revision-Date: 2018-08-03 13:01+0200\n"
+"POT-Creation-Date: 2018-08-05 10:47+0000\n"
+"PO-Revision-Date: 2018-08-08 11:16+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -269,6 +269,14 @@ msgid ""
 "to the system <sys>Dbus</sys>, which in turn notifies all running "
 "applications to reread their settings."
 msgstr ""
+"Debe ejecutar <cmd>dconf update</cmd> cuando modifique un archivo de claves. "
+"Cuando lo haga, <_:sys-1/> compara la marca de tiempo en el archivo de la "
+"base de datos del sistema con la del archivo de claves en la carpeta "
+"correspondiente. Si la marca de tiempo en la carpeta de archivos de claves "
+"es más reciente que la del archivo de base de datos, <_:sys-2/> regenera el "
+"archivo <code>system-db</code> y envía una notificación al bus de sistema de "
+"<sys>Dbus</sys>, que a su vez notifica a todas las aplicaciones en ejecución "
+"para que vuelvan a cargar sus ajustes."
 
 #. (itstool) path: credit/years
 #: C/dconf-lockdown.page:22
@@ -298,6 +306,12 @@ msgid ""
 "number of files to this directory. Here is an example of what one might look "
 "like:"
 msgstr ""
+"Para <em>bloquear</em> una clave <_:sys-1/>, deberá crear una subcarpeta <_:"
+"file-2/> en la carpeta de archivos de claves. Los archivos dentro de esta "
+"carpeta contienen usa lista de claves que bloquear. Así como con los "
+"archivos de claves, puede añadir cualquier número de archivos a esta "
+"carpeta. A continuación tiene un ejemplo de como debería ser una carpeta "
+"como esta:"
 
 #. (itstool) path: steps/title
 #: C/dconf-lockdown.page:44
@@ -313,6 +327,12 @@ msgid ""
 "\">a <sys>user</sys> profile</link> and <link xref=\"dconf-keyfiles\">a "
 "keyfile</link> with the settings that you want to lock down."
 msgstr ""
+"Antes de que pueda bloquear una clave, necesita configurarla. Este ejemplo "
+"muestra como bloquear <link xref=\"desktop-background\">un ajuste del fondo "
+"de pantalla</link> una vez lo ha configurado. En ese punto debería tener "
+"<link xref=\"dconf-profiles\">un perfil de <sys>usuario</sys></link> y <link "
+"xref=\"dconf-keyfiles\">un archivo de claves</link> con los ajustes que "
+"desea bloquear."
 
 #. (itstool) path: item/p
 #: C/dconf-lockdown.page:54
@@ -422,6 +442,10 @@ msgid ""
 "that the user logs in. It polls the keyfile to determine whether updates "
 "have been made, so settings may not be updated immediately."
 msgstr ""
+"El <em>soporte de archivos de claves</em> <_:sys-1/> sólo surtirá efecto la "
+"próxima vez que el usuario inicie sesión. Comprobará el archivo de claves "
+"para determinar que actualizaciones se han realizado, de manera que los "
+"ajustes pueden no actualizarse de forma inmediata."
 
 #. (itstool) path: page/p
 #: C/dconf-nfs-home.page:79
@@ -463,6 +487,12 @@ msgid ""
 "within the user interface, but which <em>can</em> be changed by using "
 "<sys>dconf</sys>."
 msgstr ""
+"Para que pueda hacerse una idea de la potencia de <sys>dconf</sys> en GNOME, "
+"existe una clave de <sys>dconf</sys> para casi cualquier ajuste en el que un "
+"usuario puede hacer click en el escritorio de GNOME o aplicaciones de GNOME. "
+"Además, hay algunos ajustes de sistema y aplicaciones que no se pueden "
+"modificar desde la interfaz de usuario, pero que si pueden modificarse "
+"usando <sys>dconf</sys>."
 
 #. (itstool) path: page/p
 #: C/dconf.page:46
@@ -471,6 +501,9 @@ msgid ""
 "will help you to customize GNOME and GNOME-based applications to best suit "
 "the needs of your particular environment."
 msgstr ""
+"Como administrador, conocer el uso de <sys>dconf</sys> le ayudará a "
+"personalizar GNOME y aplicaciones basadas en GNOME para adaptarlo lo mejor "
+"posible a su entorno en particular."
 
 #. (itstool) path: page/p
 #: C/dconf.page:52
@@ -482,6 +515,13 @@ msgid ""
 "contains at least one dconf path and one or more keys and the corresponding "
 "values."
 msgstr ""
+"Un <em>perfil</em> es una lista de bases de datos de configuración. La "
+"primera base de datos en un perfil es la base de datos de escritura, y el "
+"resto de bases de datos son de sólo lectura. Cada una de las bases de datos "
+"del sistema se genera a partir de una carpeta de archivos de claves. Cada "
+"carpeta de archivos de claves contiene uno o más archivos de claves. Cada "
+"archivo de claves contiene al menos una ruta de dconf y una o más claves con "
+"sus correspondientes valores."
 
 #. (itstool) path: page/p
 #: C/dconf.page:59
@@ -490,6 +530,9 @@ msgid ""
 "the default settings unless there is a problem with the value that you have "
 "set."
 msgstr ""
+"Las parejas de claves que se configuran en un <em>perfil</m> de <sys>dconf</"
+"sys> ignorarán los ajustes predeterminados excepto si hay un problema con el "
+"valor que usted haya configurado."
 
 #. (itstool) path: section/title
 #: C/dconf.page:68
@@ -515,6 +558,10 @@ msgid ""
 "the name of the user database which can normally be found in <file>~/.config/"
 "dconf</file>."
 msgstr ""
+"La primera línea en un perfil es la base de datos en la que se escribirán "
+"los cambios. Normalmente es <code>user-db:<input>user</input></code>. "
+"<input>user</input> es el nombre de la base de datos del usuario que "
+"normalmente se encuentra en <file>~/.config/dconf</file>."
 
 #. (itstool) path: listing/title
 #: C/dconf.page:78
@@ -546,6 +593,11 @@ msgid ""
 "sys> attempts to open the profile named “user”. If that fails, it will fall "
 "back to an internal hard-wired configuration."
 msgstr ""
+"Al iniciar, <sys>dconf</sys> consulta la variable de entorno DCONF_PROFILE. "
+"Si tiene algún valor, <sys>dconf</sys> intenta abrir el perfil especificado "
+"y finaliza si falla. Si la variable no está configurada, <sys>dconf</sys> "
+"intenta abrir el perfil llamado «user». Si esto también falla, utilizará una "
+"configuración especificada internamente."
 
 #. (itstool) path: page/p
 #: C/dconf-profiles.page:35
@@ -554,6 +606,10 @@ msgid ""
 "line indicates the database used to write changes, and the remaining lines "
 "indicate read-only databases. Here is an example:"
 msgstr ""
+"Cada línea de un perfil especifica una base de datos de <sys>dconf</sys>. La "
+"primera línea indica la base de datos utilizada para escribir cambios, y las "
+"demás líneas indican bases de datos de solo lectura. A continuación tiene un "
+"ejemplo:"
 
 #. (itstool) path: page/code
 #: C/dconf-profiles.page:38
@@ -576,6 +632,9 @@ msgid ""
 "will have to log out and log in to apply a new <sys>dconf</sys> user profile "
 "to their session."
 msgstr ""
+"El perfil de <sys>dconf</sys> de una sesión se determina al iniciar sesión, "
+"por lo tanto los usuarios deberán cerrar la sesión actual y volver a iniciar "
+"sesión para aplicar un nuevo perfil de <sys>dconf</sys> a su sesión."
 
 #. (itstool) path: item/p
 #: C/dconf-snippets.xml:11 C/dconf-snippets.xml:27
