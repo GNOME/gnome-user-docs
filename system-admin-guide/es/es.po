@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2018-08-08 09:25+0000\n"
-"PO-Revision-Date: 2018-08-08 16:42+0200\n"
+"POT-Creation-Date: 2018-08-08 14:53+0000\n"
+"PO-Revision-Date: 2018-08-20 10:02+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -713,7 +713,7 @@ msgid ""
 "For example, you may want to use a background with your company or "
 "university logo instead of the default GNOME background."
 msgstr ""
-"Puede cambiar el fondo de escritorio predeterminado por uno que desee "
+"Puede cambiar el fondo de escritorio predeterminado por uno que quiera "
 "utilizar. Por ejemplo, puede querer usar un fondo con el logo de su empresa "
 "o universidad en vez del fondo predeterminado de GNOME."
 
@@ -848,7 +848,7 @@ msgstr ""
 "usuario modificando su archivo de base de datos de usuario ubicado en <_:"
 "file-1/>. El siguiente código de ejemplo utiliza <_:sys-2/> para configurar "
 "<app>gedit</app>, <app>Terminal</app> y <app>Nautilus</app> como "
-"aplicaciones favoritas por defecto para un usuario. El código de ejemplo "
+"aplicaciones favoritas predeterminadas para un usuario. El código de ejemplo "
 "permite a los usuarios modificar la lista posteriormente si quieren."
 
 #. (itstool) path: listing/title
@@ -1135,6 +1135,12 @@ msgid ""
 "Since <sys>GDM</sys> uses its own <sys>dconf</sys> profile, you can set the "
 "default background by changing the settings in that profile."
 msgstr ""
+"La <em>pantalla de bloqueo</em> es la pantalla que se desliza rápidamente "
+"hacia abajo cuando se bloquea el sistema. El fondo de la pantalla de bloqueo "
+"lo controla la clave de GSettings <sys>org.gnome.desktop.screensaver.picture-"
+"uri</sys>. Dado que <sys>GDM</sys> utiliza su propio perfil de <sys>dconf</"
+"sys>, puede configurar el fondo predeterminado cambiando los ajustes en ese "
+"perfil."
 
 #. (itstool) path: steps/title
 #: C/desktop-shield.page:46
@@ -1234,6 +1240,12 @@ msgid ""
 "extensions for all users, you need to set the <code>org.gnome.shell.enabled-"
 "extensions</code> key."
 msgstr ""
+"Para hacer que las extensiones estén disponibles para todos los usuarios del "
+"sistema, instálelas en la carpeta <file>/usr/share/gnome-shell/extensions</"
+"file>. Tenga en cuenta que las extensiones para todo el sistema instaladas "
+"recientemente están desactivadas de manera predeterminada. Para activar las "
+"extensiones para todos los usuarios, debe configurar la clave <code>org."
+"gnome.shell.enabled-extensions</code>."
 
 #. (itstool) path: steps/title
 #: C/extensions-enable.page:32
@@ -1289,6 +1301,9 @@ msgid ""
 "using the extensions’ uuid (<code>myextension1@myname.example.com</code> and "
 "<code>myextension2@myname.example.com</code>)."
 msgstr ""
+"La clave <code>enabled-extensions</code> especifica las extensiones activas "
+"usando el UUID de las extensiones (<code>myextension1@myname.example.com</"
+"code> y <code>myextension2@myname.example.com</code>)."
 
 #. (itstool) path: info/desc
 #: C/extensions-lockdown.page:20
@@ -1308,6 +1323,10 @@ msgid ""
 "code> and <code>org.gnome.shell.development-tools</code> keys. This allows "
 "you to provide a set of extensions that the user has to use."
 msgstr ""
+"En GNOME Shell, puede evitar que el usuario active y desactive extensiones "
+"bloqueando las claves <code>org.gnome.shell.enabled-extensions</code> y "
+"<code>org.gnome.shell.development-tools</code>. Esto le permite facilitar un "
+"grupo de extensiones que el usuario tenga que usar."
 
 #. (itstool) path: page/p
 #: C/extensions-lockdown.page:31
@@ -1316,6 +1335,10 @@ msgid ""
 "that the user cannot use GNOME Shell’s integrated debugger and inspector "
 "tool (<app>Looking Glass</app>) to disable any mandatory extensions."
 msgstr ""
+"Bloqueando la clave <code>org.gnome.shell.development-tools</code> se "
+"asegura de que el usuario no pueda utilizar el depurador integrado y la "
+"herramienta de inspección (<app>Looking Glass</app>) de GNOME Shell para "
+"desactivar cualquier extensión obligatoria."
 
 #. (itstool) path: steps/title
 #: C/extensions-lockdown.page:37
@@ -1386,6 +1409,12 @@ msgid ""
 "gnome.shell.enabled-extensions</code> key will not be loaded by GNOME Shell, "
 "thus preventing the user from using them."
 msgstr ""
+"Después de bloquear las claves <code>org.gnome.shell.enabled-extensions</"
+"code> y <code>org.gnome.shell.development-tools</code>, cualquier extensión "
+"instalada en <file>~/.local/share/gnome-shell/extensions</file> o <file>/usr/"
+"share/gnome-shell/extensions</file> que no esté especificada en la clave "
+"<code>org.gnome.shell.enabled-extensions</code> no se cargará en GNOME "
+"Shell, evitando que el usuario la utilice."
 
 #. (itstool) path: info/desc
 #: C/extensions.page:20
@@ -1419,6 +1448,11 @@ msgid ""
 "share/gnome-shell/extensions/&lt;uuid&gt;</file>, or machine-wide in <file>/"
 "usr/share/gnome-shell/extensions/&lt;uuid&gt;</file>."
 msgstr ""
+"Cada extensión de GNOME Shell está identificada por un identificador único, "
+"el UUID. El UUID se utiliza también como nombre de la carpeta donde se "
+"instala la extensión. Puede instalar la extensión por usuario en <file>~/."
+"local/share/gnome-shell/extensions/&lt;uuid&gt;</file> o para todo el "
+"sistema en <file>/usr/share/gnome-shell/extensions/&lt;uuid&gt;</file>."
 
 #. (itstool) path: page/p
 #: C/extensions.page:36
@@ -1454,17 +1488,13 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/fonts.page:32
-#, fuzzy
-#| msgid "Add extra fonts for individual users."
 msgid "Add extra fonts for all users."
-msgstr "Añadir tipografías adicionales para usuarios individuales."
+msgstr "Añadir tipografías adicionales para todos los usuarios."
 
 #. (itstool) path: page/title
 #: C/fonts.page:35
-#, fuzzy
-#| msgid "Add an extra font for individual users"
 msgid "Add an extra font for all users"
-msgstr "Añadir una tipografía adicional para usuarios individuales"
+msgstr "Añadir una tipografía adicional para todos los usuarios"
 
 #. (itstool) path: page/p
 #: C/fonts.page:43
@@ -1522,6 +1552,12 @@ msgid ""
 "conf</file> containing the directory you want to use. See the <cmd>fonts-"
 "conf</cmd>(5) man page for more information."
 msgstr ""
+"Alternativamente, puede instalar tipografías en otra carpeta del sistema que "
+"no sea <file>/usr/local/share/fonts/</file> si esa carpeta está especificada "
+"en el archivo <file>/etc/fonts/fonts.conf</file>. Si no lo está, debe crear "
+"su propio archivo de configuración para todo el sistema en <file>/etc/fonts/"
+"local.conf</file> incluyendo la carpeta que desea usar. Consulte la página "
+"de manual <cmd>fonts-conf</cmd>(5) para obtener más información."
 
 #. (itstool) path: page/p
 #: C/fonts.page:68
@@ -1555,6 +1591,9 @@ msgid ""
 "You can install an extra font which will be available to a specific user on "
 "your system in applications that use <sys>fontconfig</sys> for font handling."
 msgstr ""
+"Puede instalar una tipografía adicional que estará disponible para un "
+"usuario específico de su sistema en aplicaciones que usen <sys>fontconfig</"
+"sys> para administrar tipografías."
 
 #. (itstool) path: item/p
 #: C/fonts-user.page:45
@@ -1616,6 +1655,12 @@ msgid ""
 "default and who want to have those keyboard layouts available at the login "
 "screen."
 msgstr ""
+"Puede cambiar los ajustes de la distribución de teclado del sistema para "
+"añadir distribuciones de teclado alternativas que los usuarios puedan "
+"seleccionar en la pantalla de inicio de sesión. Esto puede ser util para "
+"usuarios que normalmente utilizan una distribución de teclado distinta a la "
+"predeterminada y que quieran tener esas distribuciones de teclado "
+"disponibles en la pantalla de inicio de sesión."
 
 #. (itstool) path: steps/title
 #: C/keyboard-layout.page:46 C/keyboard-layout.page:79
@@ -1628,6 +1673,9 @@ msgid ""
 "Find the codes of the desired language layouts in the <file>/usr/share/X11/"
 "xkb/rules/base.lst</file> file under the section named <sys>! layout</sys>."
 msgstr ""
+"Busque los códigos de las distribuciones del lenguaje que desee en el "
+"archivo <file>/usr/share/X11/xkb/rules/base.lst</file> bajo la sección "
+"llamada <sys>! layout</sys>."
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:53
@@ -1635,6 +1683,8 @@ msgid ""
 "Use the <cmd>localectl</cmd> tool to change the system keyboard layout "
 "settings as follows:"
 msgstr ""
+"Utilice la herramienta <cmd>localectl</cmd> para cambiar los ajustes de la "
+"distribución de teclado del sistema de la siguiente manera:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:55
@@ -1649,6 +1699,9 @@ msgid ""
 "set <sys>es</sys> as the default layout, and <sys>us</sys> as the secondary "
 "layout, run the following command:"
 msgstr ""
+"Puede especificar múltiples distribuciones en una lista separada por comas. "
+"Por ejemplo, para configurar <sys>es</sys> como distribución predeterminada, "
+"y <sys>us</sys> como secundaria, ejecute el siguiente comando:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:60
@@ -1672,6 +1725,10 @@ msgid ""
 "machine-wide default keyboard model, variant, and options. See the "
 "<cmd>localectl</cmd>(1) man page for more information."
 msgstr ""
+"Tenga en cuenta que también puede usar la herramienta <cmd>localectl</cmd> "
+"para especificar el modelo de teclado, variante y opciones globales "
+"predeterminadas. Para más información consulte la página del manual "
+"<cmd>localectl</cmd>(1)."
 
 #. (itstool) path: section/title
 #: C/keyboard-layout.page:72
@@ -1685,6 +1742,9 @@ msgid ""
 "the system keyboard layout settings by editing a configuration file in "
 "<file>/usr/share/X11/xorg.conf.d/</file>."
 msgstr ""
+"En sistemas que no facilitan la herramienta <cmd>localectl</cmd>, puede "
+"cambiar los ajustes de la distribución de teclado global editando un archivo "
+"de configuración en <file>/usr/share/X11/xorg.conf.d/</file>."
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:86
@@ -1692,6 +1752,8 @@ msgid ""
 "Add the layout codes to <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</"
 "file> in the following way:"
 msgstr ""
+"Añada los códigos de distribución a <file>/usr/share/X11/xorg.conf.d/10-"
+"evdev.conf</file> de la siguiente manera:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:89
