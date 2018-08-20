@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2018-08-08 14:53+0000\n"
-"PO-Revision-Date: 2018-08-20 10:02+0200\n"
+"POT-Creation-Date: 2018-08-20 08:11+0000\n"
+"PO-Revision-Date: 2018-08-20 15:24+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -1785,6 +1785,9 @@ msgid ""
 "Multiple layouts can be added as a comma separated list, as shown in the "
 "example for English (<sys>en</sys>) and French (<sys>fr</sys>) layouts."
 msgstr ""
+"Pueden añadirse múltiples distribuciones en una lista separada por comas, "
+"como se muestra en el ejemplo para las distribuciones Inglés (<sys>en</sys>) "
+"y Francés (<sys>fr</sys>)."
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
@@ -1813,6 +1816,9 @@ msgid ""
 "virtual terminals and terminal applications by following the steps described "
 "below."
 msgstr ""
+"Puede evitar que los usuarios puedan acceder a la línea de comandos usando "
+"terminales virtuales y aplicaciones de terminal siguiendo los pasos "
+"descritos a continuación:"
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:34
@@ -1820,11 +1826,13 @@ msgid ""
 "Prevent users from accessing the <keyseq><key>Alt</key><key>F2</key></"
 "keyseq> command prompt."
 msgstr ""
+"Prevenir que los usuarios accedan al símbolo del sistema con "
+"<keyseq><key>Alt</key><key>F2</key></keyseq>."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:38
 msgid "Disable dropping to a virtual terminal (VT)."
-msgstr ""
+msgstr "Desactivar la salida a una terminal virtual (VT)."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:41
@@ -1833,6 +1841,9 @@ msgid ""
 "<gui>Activities</gui> overview in GNOME Shell. You will also need to prevent "
 "the user from installing a new terminal application."
 msgstr ""
+"Quite la aplicación <app>Terminal</app> y todas las otras aplicaciones de "
+"terminal de la lista de actividades en GNOME Shell. También deberá evitar "
+"que el usuario instale una nueva aplicación de terminal."
 
 #. (itstool) path: section/title
 #: C/lockdown-command-line.page:54
@@ -1845,6 +1856,8 @@ msgid ""
 "Create a <sys>local</sys> database for machine-wide settings in <file>/etc/"
 "dconf/db/local.d/00-lockdown</file>:"
 msgstr ""
+"Cree una base de datos <sys>local</sys> para ajustes a nivel de máquina en "
+"<file>/etc/dconf/db/local.d/00-lockdown</file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:63
@@ -1868,6 +1881,8 @@ msgid ""
 "Override the user’s setting and prevent the user from changing it in <file>/"
 "etc/dconf/db/local.d/locks/lockdown</file>:"
 msgstr ""
+"Ignore los ajustes del usuario y evite que el usuario los cambie en <file>/"
+"etc/dconf/db/local.d/locks/lockdown</file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:72
@@ -1882,7 +1897,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/lockdown-command-line.page:85
 msgid "Disable dropping to a virtual terminal"
-msgstr ""
+msgstr "Desactivar la salida a un terminal virtual"
 
 #. (itstool) path: section/p
 #: C/lockdown-command-line.page:87
@@ -1892,6 +1907,10 @@ msgid ""
 "<keyseq><key>Ctrl</key><key>Alt</key><key>F2</key></keyseq>) to switch from "
 "the GNOME desktop to a virtual terminal."
 msgstr ""
+"Los usuarios por lo general pueden usar atajos de teclado con "
+"<keyseq><key>Ctrl</key><key>Alt</key><key><var>function key</var></key></"
+"keyseq> (por ejemplo, <keyseq><key>Ctrl</key><key>Alt</key><key>F2</key></"
+"keyseq>) para cambiar del escritorio GNOME a una terminal virtual."
 
 #. (itstool) path: section/p
 #: C/lockdown-command-line.page:93
@@ -1901,12 +1920,18 @@ msgid ""
 "to the <code>Serverflags</code> section in the <file>/etc/X11/xorg.conf.d</"
 "file> file."
 msgstr ""
+"Si el equipo está ejecutando el <em>Sistema de ventanas X</em>, puede "
+"desactivar el acceso a todas las terminales virtuales añadiendo la opción "
+"<code>DontVTSwitch</code> en la sección <code>Serverflags</code> del archivo "
+"<file>/etc/X11/xorg.conf.d</file>."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:100
 msgid ""
 "Create or edit an X configuration file in <file>/etc/X11/xorg.conf.d</file>:"
 msgstr ""
+"Cree o modifique un archivo de configuración de X en <file>/etc/X11/xorg."
+"conf.d</file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:102
@@ -1947,6 +1972,9 @@ msgid ""
 "be useful if you are giving temporary access to a user or you do not want "
 "the user to save files to the computer."
 msgstr ""
+"Puede desactivar los diálogos <gui>Guardar</gui> y <gui>Guardar como</gui>. "
+"Esto puede ser útils si está dando acceso temporal a un usuario o si no "
+"quiere que el usuario guarde archivos en el equipo."
 
 #. (itstool) path: note/p
 #: C/lockdown-file-saving.page:34 C/lockdown-printing.page:34
@@ -1955,6 +1983,10 @@ msgid ""
 "and third party applications have this feature enabled. These changes will "
 "have no effect on applications which do not support this feature."
 msgstr ""
+"Esta característica solo funcionará en aplicaciones que lo soporten. No "
+"todas las aplicaciones GNOME y de terceras partes tienen activada esta "
+"característica. Estos cambios no tendrán efecto en aplicaciones que no lo "
+"soportan."
 
 #. (itstool) path: item/p
 #: C/lockdown-file-saving.page:48
