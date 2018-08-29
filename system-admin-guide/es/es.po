@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2018-08-20 08:11+0000\n"
-"PO-Revision-Date: 2018-08-20 15:24+0200\n"
+"POT-Creation-Date: 2018-08-25 08:45+0000\n"
+"PO-Revision-Date: 2018-08-29 09:19+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -2026,6 +2026,8 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/filesaving</file> with the following content:"
 msgstr ""
+"Para evitar que el usuario ignore estos ajustes, cree el archivo <file>/etc/"
+"dconf/db/local.d/locks/filesaving</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-file-saving.page:67
@@ -2068,6 +2070,11 @@ msgid ""
 "Google, Facebook, Flickr, ownCloud, etc. via the <app>Online Accounts</app> "
 "application."
 msgstr ""
+"Las aplicación de <app>Cuentas en línea de GNOME</app> (GOA) se usa para "
+"configurar cuentas de red personales que se integran automáticamente con el "
+"escritorio GNOME y las aplicaciones. El usuario puede añadir sus propias "
+"cuentas en linea, como Google, Facebook, Flickr, ownCloud, etc. usando la "
+"aplicación <app>Cuentas en línea</app>"
 
 #. (itstool) path: page/p
 #: C/lockdown-online-accounts.page:29
@@ -2165,6 +2172,8 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/goa</file> with the following content:"
 msgstr ""
+"Para evitar que el usuario ignore estos ajustes, cree el archivo <file>/etc/"
+"dconf/db/local.d/locks/goa</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-online-accounts.page:69
@@ -2243,6 +2252,8 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/printing</file> with the following content:"
 msgstr ""
+"Para evitar que el usuario ignore estos ajustes, cree el archivo <file>/etc/"
+"dconf/db/local.d/locks/printing</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-printing.page:67
@@ -2264,7 +2275,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/lockdown-repartitioning.page:24
 msgid "Prevent the user from changing disk partitions."
-msgstr ""
+msgstr "Evitar que el usuario cambie las particiones del disco."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
@@ -2281,6 +2292,12 @@ msgid ""
 "freedesktop.udisks2.policy</file>. This file contains a set of actions and "
 "default values, which can be overridden by system administrator."
 msgstr ""
+"<sys>polkit</sys> le permite establecer permisos para operaciones "
+"individuales. Para <sys>udisks2</sys>, la herramienta de servicios de "
+"administración de discos, la configuración se encuentra en <file>/usr/share/"
+"polkit-1/actions/org.freedesktop.udisks2.policy</file>. Este archivo "
+"contiene una serie de acciones y valores predeterminados que el "
+"administrador del sistema puede modificar."
 
 #. (itstool) path: note/p
 #: C/lockdown-repartitioning.page:37
@@ -2322,6 +2339,9 @@ msgid ""
 "element and add the following lines to the <file>/etc/polkit-1/actions/org."
 "freedesktop.udisks2.policy</file> file:"
 msgstr ""
+"Elimine cualquiera de las acciones que no necesite del elemento "
+"<code>policyconfig</code> y añada las siguientes líneas al archivo <file>/"
+"etc/polkit-1/actions/org.freedesktop.udisks2.policy</file>:"
 
 #. (itstool) path: listing/code
 #: C/lockdown-repartitioning.page:59
@@ -2369,6 +2389,9 @@ msgid ""
 "When the user tries to change the disk settings, the following message is "
 "shown: <gui>Authentication is required to modify drive settings</gui>."
 msgstr ""
+"Cuando el usuario intente cambiar los ajustes del disco, se mostrará el "
+"siguiente mensaje: <gui>Se requiere autenticación para modificar los ajustes "
+"de la unidad</gui>."
 
 #. (itstool) path: credit/years
 #: C/login-automatic.page:20
@@ -2378,7 +2401,7 @@ msgstr "2012, 2013"
 #. (itstool) path: info/desc
 #: C/login-automatic.page:30
 msgid "Log in automatically into a user account on startup."
-msgstr ""
+msgstr "Iniciar sesión de forma automática al inicio."
 
 #. (itstool) path: page/title
 #: C/login-automatic.page:33
@@ -2395,6 +2418,11 @@ msgid ""
 "<app>Settings</app></link> panel. You can also set up autologin manually in "
 "the <_:sys-1/> custom configuration file, as follows."
 msgstr ""
+"Un usuario con una cuenta de tipo <em>Administrador</em> puede <link href="
+"\"help:gnome-help/user-autologin\">activar el <em>inicio de sesión "
+"automático</em> desde el panel de <app>Ajustes</app></link>. Puede también "
+"configurar el inicio automático manualmente en el archivo personalizado de "
+"configuración <_:sys-1/>, de la siguiente manera."
 
 #. (itstool) path: page/p
 #: C/login-automatic.page:51
@@ -2402,6 +2430,8 @@ msgid ""
 "Edit the <_:file-1/> file and make sure that the <code>[daemon]</code> "
 "section in the file specifies the following:"
 msgstr ""
+"Edite el archivo <_:file-1/> y asegúrese de que la sección <code>[daemon]</"
+"code> en el archivo especifica lo siguiente:"
 
 #. (itstool) path: page/p
 #: C/login-automatic.page:64
@@ -2409,6 +2439,8 @@ msgid ""
 "Replace the <_:input-1/> with the user that you want to be automatically "
 "logged in."
 msgstr ""
+"Reemplace el <_:input-1/> con el usuario que desea que inicie sesión de "
+"forma automática."
 
 #. (itstool) path: note/p
 #: C/login-automatic.page:68
@@ -2416,6 +2448,8 @@ msgid ""
 "The <_:file-1/> file can usually be found in <_:file-2/>, but the location "
 "may differ depending on your distribution."
 msgstr ""
+"El archivo <_:file-1/> se puede encontrar normalmente en <_:file-2/>, pero "
+"la localización puede diferir dependiendo de su distribución."
 
 #. (itstool) path: info/desc
 #: C/login-banner.page:40
@@ -2425,7 +2459,7 @@ msgstr "Mostrar texto adicional en la pantalla de inicio de sesión."
 #. (itstool) path: page/title
 #: C/login-banner.page:43
 msgid "Display a text banner on the login screen"
-msgstr ""
+msgstr "Mostrar un titular de texto en la pantalla de inicio de sesión"
 
 #. (itstool) path: page/p
 #: C/login-banner.page:50
@@ -2435,11 +2469,15 @@ msgid ""
 "sys> and <sys>org.gnome.login-screen.banner-message-text</sys> GSettings "
 "keys."
 msgstr ""
+"Puede mostrar texto adicional en la pantalla de inicio, como con quién "
+"contactar para obtener soporte, configurando las claves de GSettings "
+"<sys>org.gnome.login-screen.banner-message-enable</sys> y <sys>org.gnome."
+"login-screen.banner-message-text</sys>."
 
 #. (itstool) path: steps/title
 #: C/login-banner.page:56
 msgid "Display a text banner on the login screen:"
-msgstr ""
+msgstr "Mostrar un titular de texto en la pantalla de inicio:"
 
 #. (itstool) path: item/p
 #: C/login-banner.page:60
@@ -2461,6 +2499,9 @@ msgid ""
 "You should keep the banner message short, as longer messages do not fit on "
 "the screen. The banner message cannot be read from an external file."
 msgstr ""
+"Debe usar un mensaje del titular corto, ya que los mensajes muy largos no "
+"encajan en la pantalla. El mensaje del titular no puede leerse desde un "
+"archivo externo."
 
 #. (itstool) path: info/desc
 #: C/login-enterprise.page:19
@@ -2480,6 +2521,9 @@ msgid ""
 "If your network has an Active Directory or IPA domain available, and you "
 "have a domain account, you can use your domain credentials to log into GNOME."
 msgstr ""
+"Si su red tiene un dominio de Directorio Activo o IPA, y tiene una cuenta de "
+"dominio, puede utilizar sus credenciales de dominio para iniciar sesión en "
+"GNOME."
 
 #. (itstool) path: page/p
 #: C/login-enterprise.page:28
