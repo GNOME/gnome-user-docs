@@ -12,6 +12,7 @@
     <revision pkgversion="3.9.92" date="2013-10-11" status="candidate"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="candidate"/>
     <revision pkgversion="3.17.90" date="2015-08-30" status="candidate"/>
+    <revision pkgversion="3.29" date="2018-08-27" status="review"/>
 
     <credit type="author">
       <name>Michael Hill</name>
@@ -59,19 +60,21 @@
 
   <steps>
     <item>
-      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
-      start typing <gui>Keyboard</gui>.</p>
+      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> 
+      overview and start typing <gui>Settings</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Keyboard</gui> to open the panel.</p>
+      <p>Click on <gui>Settings</gui>.</p>
     </item>
     <item>
-      <p>Select the <gui>Shortcuts</gui> tab.</p>
+      <p>Click <gui>Devices</gui> in the sidebar.</p>
     </item>
     <item>
-      <p>Select a category in the left pane, and the row for the desired action
-      on the right. The current shortcut definition will change to
-      <gui>New accelerator…</gui></p>
+      <p>Click <gui>Keyboard</gui> in the sidebar to open the panel.</p>
+    </item>
+    <item>
+      <p>Click the row for the desired action. The <gui>Set shortcut</gui>
+      window will be shown.</p>
     </item>
     <item>
       <p>Hold down the desired key combination, or press <key>Backspace</key> to
@@ -88,8 +91,8 @@
 <table rules="rows" frame="top bottom" ui:expanded="false">
 <title>Launchers</title>
   <tr>
-	<td><p>Launch help browser</p></td>
-	<td><p>Disabled</p></td>
+	<td><p>Home folder</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-folder.svg"> <key>Explorer</key> key symbol</media> or <media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-computer.svg"> <key>Explorer</key> key symbol</media> or <key>Explorer</key></p></td>
   </tr>
   <tr>
 	<td><p>Launch calculator</p></td>
@@ -100,24 +103,73 @@
 	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-mail.svg"> <key>Mail</key> key symbol</media> or <key>Mail</key></p></td>
   </tr>
   <tr>
-	<td><p>Launch web browser</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-world.svg"> <key>WWW</key> key symbol</media> or <media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-home.svg"> <key>WWW</key> key symbol</media> or <key>WWW</key></p></td>
+	<td><p>Launch help browser</p></td>
+	<td><p>Disabled</p></td>
   </tr>
   <tr>
-	<td><p>Home folder</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-folder.svg"> <key>Explorer</key> key symbol</media> or <media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-computer.svg"> <key>Explorer</key> key symbol</media> or <key>Explorer</key></p></td>
+	<td><p>Launch web browser</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-world.svg"> <key>WWW</key> key symbol</media> or <media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-home.svg"> <key>WWW</key> key symbol</media> or <key>WWW</key></p></td>
   </tr>
   <tr>
 	<td><p>Search</p></td>
 	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-search.svg"> <key>Search</key> key symbol</media> or <key>Search</key></p></td>
   </tr>
+  <tr>
+	<td><p>Settings</p></td>
+	<td><p><key>Tools</key></p></td>
+  </tr>
+
 </table>
 
 <table rules="rows" frame="top bottom" ui:expanded="false">
 <title>Navigation</title>
   <tr>
-	<td><p>Move window to workspace 1</p></td>
+	<td><p>Hide all normal windows</p></td>
 	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Move to workspace above</p></td>
+	<td><p><keyseq><key>Super</key><key>Page Up</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Move to workspace below</p></td>
+	<td><p><keyseq><key>Super</key><key>Page Down</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Move window one monitor down</p></td>
+	<td><p><keyseq><key>Shift</key><key xref="keyboard-key-super">Super</key><key>&#8595;</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Move window one monitor to the left</p></td>
+	<td><p><keyseq><key>Shift</key><key>Super</key><key>&#8592;</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Move window one monitor to the right</p></td>
+	<td><p><keyseq><key>Shift</key><key>Super</key><key>&#8594;</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Move window one monitor up</p></td>
+	<td><p><keyseq><key>Shift</key><key>Super</key><key>&#8593;</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Move window one workspace down</p></td>
+	<td><p><keyseq><key>Shift</key><key>Super</key><key>Page Down</key></keyseq>
+  </p></td>
+  </tr>
+  <tr>
+	<td><p>Move window one workspace up</p></td>
+	<td><p><keyseq><key>Shift</key><key>Super</key>
+  <key>Page Up</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Move window to last workspace</p></td>
+	<td><p><keyseq><key>Shift</key><key>Super</key><key>End</key></keyseq>
+  </p></td>
+  </tr>
+  <tr>
+	<td><p>Move window to workspace 1</p></td>
+	<td><p><keyseq><key>Shift</key><key>Super</key><key>Home</key></keyseq>
+  </p></td>
   </tr>
   <tr>
 	<td><p>Move window to workspace 2</p></td>
@@ -132,58 +184,24 @@
 	<td><p>Disabled</p></td>
   </tr>
   <tr>
-	<td><p>Move window one workspace to the left</p></td>
-	<td><p><keyseq><key>Shift</key><key>Ctrl</key><key>Alt</key><key>&#8592;</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Move window one workspace to the right</p></td>
-	<td><p><keyseq><key>Shift</key><key>Ctrl</key><key>Alt</key><key>&#8594;</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Move window one workspace up</p></td>
-	<td><p><keyseq><key>Shift</key><key xref="keyboard-key-super">Super</key>
-  <key>Page Up</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Move window one workspace down</p></td>
-	<td><p><keyseq><key>Shift</key><key>Super</key><key>Page Down</key></keyseq>
-  </p></td>
-  </tr>
-  <tr>
 	<td><p>Switch applications</p></td>
 	<td><p><keyseq><key>Super</key><key>Tab</key></keyseq></p></td>
-  </tr>
-  <tr>
-  <td><p>Switch windows</p></td>
-  <td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>Switch windows of an application</p></td>
-	<td><p>Disabled</p></td>
   </tr>
   <tr>
 	<td><p>Switch system controls</p></td>
 	<td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Tab</key></keyseq></p></td>
   </tr>
   <tr>
-	<td><p>Switch windows directly</p></td>
-	<td><p><keyseq><key>Alt</key><key>Esc</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Switch windows of an app directly</p></td>
-	<td><p><keyseq><key>Alt</key><key>F6</key></keyseq></p></td>
-  </tr>
-  <tr>
 	<td><p>Switch system controls directly</p></td>
 	<td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Esc</key></keyseq></p></td>
   </tr>
   <tr>
-	<td><p>Hide all normal windows</p></td>
-	<td><p>Disabled</p></td>
+	<td><p>Switch to last workspace</p></td>
+	<td><p><keyseq><key>Super</key><key>End</key></keyseq></p></td>
   </tr>
   <tr>
 	<td><p>Switch to workspace 1</p></td>
-	<td><p>Disabled</p></td>
+	<td><p><keyseq><key>Super</key><key>Home</key></keyseq></p></td>
   </tr>
   <tr>
 	<td><p>Switch to workspace 2</p></td>
@@ -198,41 +216,25 @@
 	<td><p>Disabled</p></td>
   </tr>
   <tr>
-	<td><p>Move to workspace left</p></td>
-	<td><p><keyseq><key>Ctrl</key><key>Alt</key><key>&#8592;</key></keyseq></p></td>
+        <td><p>Switch windows</p></td>
+        <td><p>Disabled</p></td>
   </tr>
   <tr>
-	<td><p>Move to workspace right</p></td>
-	<td><p><keyseq><key>Ctrl</key><key>Alt</key><key>&#8594;</key></keyseq></p></td>
+	<td><p>Switch windows directly</p></td>
+	<td><p><keyseq><key>Alt</key><key>Esc</key></keyseq></p></td>
   </tr>
   <tr>
-	<td><p>Move to workspace above</p></td>
-	<td><p><keyseq><key>Super</key><key>Page Up</key></keyseq></p></td>
+	<td><p>Switch windows of an app directly</p></td>
+	<td><p><keyseq><key>Alt</key><key>F6</key></keyseq></p></td>
   </tr>
   <tr>
-	<td><p>Move to workspace below</p></td>
-	<td><p><keyseq><key>Super</key><key>Page Down</key></keyseq></p></td>
+	<td><p>Switch windows of an application</p></td>
+	<td><p>Disabled</p></td>
   </tr>
 </table>
 
 <table rules="rows" frame="top bottom" ui:expanded="false">
 <title>Screenshots</title>
-  <tr>
-	<td><p>Save a screenshot to file</p></td>
-	<td><p><key>Print</key></p></td>
-  </tr>
-  <tr>
-	<td><p>Save a screenshot of a window to file</p></td>
-	<td><p><keyseq><key>Alt</key><key>Print</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Save a screenshot of an area to file</p></td>
-	<td><p><keyseq><key>Shift</key><key>Print</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Copy a screenshot to clipboard</p></td>
-	<td><p><keyseq><key>Ctrl</key><key>Print</key></keyseq></p></td>
-  </tr>
   <tr>
 	<td><p>Copy a screenshot of a window to clipboard</p></td>
 	<td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Print</key></keyseq></p></td>
@@ -242,89 +244,112 @@
 	<td><p><keyseq><key>Shift</key><key>Ctrl</key><key>Print</key></keyseq></p></td>
   </tr>
   <tr>
-  <td><p>Record a screencast</p></td>
-  <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>Alt</key><key>R</key>
-  </keyseq></p></td>
+	<td><p>Copy a screenshot to clipboard</p></td>
+	<td><p><keyseq><key>Ctrl</key><key>Print</key></keyseq></p></td>
+  </tr>
+  <tr>
+        <td><p>Record a short screencast</p></td>
+        <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>Alt</key><key>R</key>
+        </keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Save a screenshot of a window to Pictures</p></td>
+	<td><p><keyseq><key>Alt</key><key>Print</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Save a screenshot of an area to Pictures</p></td>
+	<td><p><keyseq><key>Shift</key><key>Print</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Save a screenshot to Pictures</p></td>
+	<td><p><key>Print</key></p></td>
   </tr>
 </table>
 
 <table rules="rows" frame="top bottom" ui:expanded="false">
 <title>Sound and Media</title>
   <tr>
-	<td><p>Volume mute</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-mute.svg"> <key>Mute</key> key symbol</media> (Audio mute)</p></td>
-  </tr>
-  <tr>
-	<td><p>Volume down</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-voldown.svg"> <key>Volume Down</key> key symbol</media> (Audio lower volume)</p></td>
-  </tr>
-  <tr>
-	<td><p>Volume up</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-volup.svg"> <key>Volume Up</key> key symbol</media> (Audio raise volume)</p></td>
+	<td><p>Eject</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-eject.svg"> <key>Eject</key> key symbol</media> (Eject)</p></td>
   </tr>
   <tr>
 	<td><p>Launch media player</p></td>
 	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-media.svg"> <key>Media</key> key symbol</media> (Audio media)</p></td>
   </tr>
   <tr>
-	<td><p>Play (or play/pause)</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-play.svg"> <key>Play</key> key symbol</media> (Audio play)</p></td>
-  </tr>
-  <tr>
+	<td><p>Next track</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-next.svg"> <key>Next</key> key symbol</media> (Audio next)</p></td>
+  </tr>  <tr>
 	<td><p>Pause playback</p></td>
 	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-pause.svg"> <key>Pause</key> key symbol</media> (Audio pause)</p></td>
   </tr>
   <tr>
-	<td><p>Stop playback</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-stop.svg"> <key>Stop</key> key symbol</media> (Audio stop)</p></td>
+	<td><p>Play (or play/pause)</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-play.svg"> <key>Play</key> key symbol</media> (Audio play)</p></td>
   </tr>
   <tr>
 	<td><p>Previous track</p></td>
 	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-previous.svg"> <key>Previous</key> key symbol</media> (Audio previous)</p></td>
   </tr>
   <tr>
-	<td><p>Next track</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-next.svg"> <key>Next</key> key symbol</media> (Audio next)</p></td>
+	<td><p>Stop playback</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-stop.svg"> <key>Stop</key> key symbol</media> (Audio stop)</p></td>
   </tr>
   <tr>
-	<td><p>Eject</p></td>
-	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-eject.svg"> <key>Eject</key> key symbol</media> (Eject)</p></td>
+	<td><p>Volume down</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-voldown.svg"> <key>Volume Down</key> key symbol</media> (Audio lower volume)</p></td>
+  </tr>
+  <tr>
+	<td><p>Volume mute</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-mute.svg"> <key>Mute</key> key symbol</media> (Audio mute)</p></td>
+  </tr>
+  <tr>
+	<td><p>Volume up</p></td>
+	<td><p><media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-volup.svg"> <key>Volume Up</key> key symbol</media> (Audio raise volume)</p></td>
   </tr>
 </table>
 
 <table rules="rows" frame="top bottom" ui:expanded="false">
 <title>System</title>
   <tr>
-	<td><p>Show the run command prompt</p></td>
-	<td><p><keyseq><key>Alt</key><key>F2</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Show the activities overview</p></td>
-	<td><p><keyseq><key>Alt</key><key>F1</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Log out</p></td>
-	<td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Delete</key></keyseq></p></td>
+        <td><p>Focus the active notification</p></td>
+        <td><p><keyseq><key>Super</key><key>N</key></keyseq></p></td>
   </tr>
   <tr>
 	<td><p>Lock screen</p></td>
 	<td><p><keyseq><key>Super</key><key>L</key></keyseq></p></td>
   </tr>
   <tr>
-  <td><p>Show the message tray</p></td>
-  <td><p><keyseq><key>Super</key><key>M</key></keyseq></p></td>
+	<td><p>Log out</p></td>
+	<td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Delete</key></keyseq></p></td>
   </tr>
   <tr>
-  <td><p>Focus the active notification</p></td>
-  <td><p><keyseq><key>Super</key><key>N</key></keyseq></p></td>
+        <td><p>Open the application menu</p></td>
+        <td><p><keyseq><key>Super</key><key>F10</key></keyseq></p></td>
   </tr>
   <tr>
-  <td><p>Show all applications</p></td>
-  <td><p><keyseq><key>Super</key><key>A</key></keyseq></p></td>
+        <td><p>Restore the keyboard shortcuts</p></td>
+        <td><p><keyseq><key>Super</key><key>Esc</key></keyseq></p></td>
   </tr>
   <tr>
-  <td><p>Open the application menu</p></td>
-  <td><p><keyseq><key>Super</key><key>F10</key></keyseq></p></td>
+        <td><p>Show all applications</p></td>
+        <td><p><keyseq><key>Super</key><key>A</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Show the activities overview</p></td>
+	<td><p><keyseq><key>Alt</key><key>F1</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Show the notification list</p></td>
+	<td><p><keyseq><key>Super</key><key>V</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Show the overview</p></td>
+	<td><p><keyseq><key>Super</key><key>S</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Show the run command prompt</p></td>
+	<td><p><keyseq><key>Alt</key><key>F2</key></keyseq></p></td>
   </tr>
 </table>
 
@@ -337,24 +362,32 @@
 
   <tr>
   <td><p>Switch to previous input source</p></td>
-  <td><p>Disabled</p></td>
-  </tr>
-  <tr>
-  <td><p>Modifiers-only switch to next source</p></td>
-  <td><p>Disabled</p></td>
-  </tr>
-  <tr>
-  <td><p>Compose Key</p></td>
-  <td><p>Disabled</p></td>
-  </tr>
-  <tr>
-  <td><p>Alternative Characters Key</p></td>
-  <td><p>Disabled</p></td>
+  <td><p><keyseq><key>Shift</key><key>Super</key><key>Space</key></keyseq></p></td>
   </tr>
 </table>
 
 <table rules="rows" frame="top bottom" ui:expanded="false">
 <title>Universal Access</title>
+  <tr>
+	<td><p>Decrease text size</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>High contrast on or off</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Increase text size</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Turn on-screen keyboard on or off</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Turn screen reader on or off</p></td>
+	<td><p><keyseq><key>Alt</key><key>Super</key><key>S</key></keyseq></p></td>
+  </tr>
   <tr>
 	<td><p>Turn zoom on or off</p></td>
 	<td><p><keyseq><key>Alt</key><key>Super</key><key>8</key></keyseq></p></td>
@@ -367,26 +400,6 @@
 	<td><p>Zoom out</p></td>
   <td><p><keyseq><key>Alt</key><key>Super</key><key>-</key></keyseq></p></td>
   </tr>
-  <tr>
-	<td><p>Turn screen reader on or off</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>Turn on-screen keyboard on or off</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>Increase text size</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>Decrease text size</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>High contrast on or off</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
 </table>
 
 <table rules="rows" frame="top bottom" ui:expanded="false">
@@ -394,6 +407,50 @@
   <tr>
 	<td><p>Activate the window menu</p></td>
 	<td><p><keyseq><key>Alt</key><key>Space</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Close window</p></td>
+	<td><p><keyseq><key>Alt</key><key>F4</key></keyseq></p></td>
+  </tr>
+  <tr>
+        <td><p>Hide window</p></td>
+        <td><p><keyseq><key>Super</key><key>H</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Lower window below other windows</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Maximize window</p></td>
+	<td><p><keyseq><key>Super</key><key>&#8593;</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Maximize window horizontally</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Maximize window vertically</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Move window</p></td>
+	<td><p><keyseq><key>Alt</key><key>F7</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Raise window above other windows</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Raise window if covered, otherwise lower it</p></td>
+	<td><p>Disabled</p></td>
+  </tr>
+  <tr>
+	<td><p>Resize window</p></td>
+	<td><p><keyseq><key>Alt</key><key>F8</key></keyseq></p></td>
+  </tr>
+  <tr>
+	<td><p>Restore window</p></td>
+        <td><p><keyseq><key>Super</key><key>&#8595;</key></keyseq></p></td>
   </tr>
   <tr>
 	<td><p>Toggle fullscreen mode</p></td>
@@ -404,64 +461,16 @@
 	<td><p><keyseq><key>Alt</key><key>F10</key></keyseq></p></td>
   </tr>
   <tr>
-	<td><p>Maximize window</p></td>
-	<td><p><keyseq><key>Super</key><key>&#8593;</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Restore window</p></td>
-  <td><p><keyseq><key>Super</key><key>&#8595;</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Toggle shaded state</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>Close window</p></td>
-	<td><p><keyseq><key>Alt</key><key>F4</key></keyseq></p></td>
-  </tr>
-  <tr>
-  <td><p>Hide window</p></td>
-  <td><p><keyseq><key>Super</key><key>H</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Move window</p></td>
-	<td><p><keyseq><key>Alt</key><key>F7</key></keyseq></p></td>
-  </tr>
-  <tr>
-	<td><p>Resize window</p></td>
-	<td><p><keyseq><key>Alt</key><key>F8</key></keyseq></p></td>
-  </tr>
-  <tr>
 	<td><p>Toggle window on all workspaces or one</p></td>
 	<td><p>Disabled</p></td>
   </tr>
   <tr>
-	<td><p>Raise window if covered, otherwise lower it</p></td>
-	<td><p>Disabled</p></td>
+        <td><p>View split on left</p></td>
+        <td><p><keyseq><key>Super</key><key>&#8592;</key></keyseq></p></td>
   </tr>
   <tr>
-	<td><p>Raise window above other windows</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>Lower window below other windows</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>Maximize window vertically</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-	<td><p>Maximize window horizontally</p></td>
-	<td><p>Disabled</p></td>
-  </tr>
-  <tr>
-  <td><p>View split on left</p></td>
-  <td><p><keyseq><key>Super</key><key>&#8592;</key></keyseq></p></td>
-  </tr>
-  <tr>
-  <td><p>View split on right</p></td>
-  <td><p><keyseq><key>Super</key><key>&#8594;</key></keyseq></p></td>
+        <td><p>View split on right</p></td>
+        <td><p><keyseq><key>Super</key><key>&#8594;</key></keyseq></p></td>
   </tr>
 </table>
 
@@ -475,7 +484,7 @@
 
   <steps>
     <item>
-      <p>Click the <gui style="button">+</gui> button. The <gui>Custom
+      <p>Click the <gui style="button">+</gui> button. The <gui>Add Custom
       Shortcut</gui> window will appear.</p>
     </item>
     <item>
@@ -486,9 +495,9 @@
       command.</p>
     </item>
     <item>
-      <p>Click <gui>Disabled</gui> in the row that was just added. When it
-      changes to <gui>New accelerator…</gui>, hold down the desired shortcut
-      key combination.</p>
+      <p>Click the row that was just added. When the
+      <gui>Set Custom Shortcut</gui> window opens, hold down the desired
+      shortcut key combination.</p>
     </item>
   </steps>
 

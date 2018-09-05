@@ -11,6 +11,7 @@
     <revision pkgversion="3.10" date="2013-11-02" status="review"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="review"/>
     <revision pkgversion="3.16" date="2015-03-02" status="outdated"/>
+    <revision pkgversion="3.29" date="2018-08-27" status="review"/>
 
     <credit type="author">
       <name>Marina Zhurakhinskaya</name>
@@ -31,7 +32,7 @@
     <desc>Messages drop down from the top of the screen telling you when
     certain events happen.</desc> </info>
 
-<title>Notifications and the message tray</title>
+<title>Notifications and the notification list</title>
 
 <section id="what">
   <title>What is a notification?</title>
@@ -40,7 +41,9 @@
   notification will be shown at the top of the screen.</p>
 
   <p>For example, if you get a new chat message or a new email, you will get a
-  notification informing you.</p>
+  notification informing you. Chat notifications are given special treatment,
+  and are represented by the individual contacts who sent you the chat
+  messages.</p>
 
 <!--  <p>To minimize distraction, some notifications first appear as a single line.
   You can move your mouse over them to see their full content.</p>-->
@@ -50,37 +53,28 @@
   button.</p>
 
   <p>Clicking the close button on some notifications dismisses them. Others,
-  like Rhythmbox or your chat application, will stay hidden in the message 
-  tray.</p>
+  like Rhythmbox or your chat application, will stay hidden in the notification 
+  list.</p>
 
 </section>
 
-<section id="messagetray">
+<section id="notificationlist">
 
-  <title>The message tray</title>
+  <title>The notification list</title>
 
-  <p if:test="!platform:gnome-classic">The message tray gives you a way to get
-  back to your notifications when it is convenient for you. It appears when you
-  click on the clock, or press
-  <keyseq><key xref="keyboard-key-super">Super</key><key>M</key></keyseq>. The
-  message tray contains all the notifications that you have not acted upon or
-  that permanently reside in it.</p>
+  <p>The notification list gives you a way to
+  get back to your notifications when it is convenient for you. It appears when
+  you click on the clock, or press
+  <keyseq><key xref="keyboard-key-super">Super</key><key>V</key></keyseq>. The
+  notification list contains all the notifications that you have not acted upon
+  or that permanently reside in it.</p>
 
-  <p if:test="platform:gnome-classic">The message tray gives you a way to get
-  back to your notifications when it is convenient for you. It appears when you
-  move your mouse to the bottom-right corner of the screen, or press <keyseq>
-  <key xref="keyboard-key-super">Super</key><key>M</key></keyseq>. You can also
-  show the message tray by clicking the blue number icon at the right-hand
-  side of the window list. The message tray contains all the notifications that
-  you have not acted upon or that permanently reside in it.</p>
+  <p>You can view a notification by clicking on it in the list. You can close
+  the notification list by pressing
+  <keyseq><key>Super</key><key>V</key></keyseq> again or <key>Esc</key>.</p>
 
-  <p>You can view the notifications by clicking on the message tray items.
-  These are usually messages sent by applications. However, chat notifications
-  are given special treatment, and are represented by the individual contacts
-  who sent you the chat messages.</p>
-
-  <p>You can close the message tray by pressing
-  <keyseq><key>Super</key><key>M</key></keyseq> again or <key>Esc</key>.</p>
+  <p>Click the <gui>Clear List</gui> button to empty the list of
+  notifications.</p>
 
 </section>
 
@@ -93,35 +87,30 @@
 
   <steps>
     <item>
-      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
-      start typing <gui>Notifications</gui>.</p>
+      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> 
+      overview and start typing <gui>Settings</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Notifications</gui> to open the panel.</p>
+      <p>Click on <gui>Settings</gui>.</p>
     </item>
     <item>
-      <p>Switch <gui>Notification Banners</gui> to <gui>OFF</gui>.</p>
+      <p>Click on <gui>Notifications</gui> in the sidebar to open the panel.</p>
+    </item>
+    <item>
+      <p>Switch <gui>Notification Popups</gui> to <gui>OFF</gui>.</p>
     </item>
   </steps>
 
-  <p if:test="!platform:gnome-classic">When switched off, most notifications
-  will not pop up at the top of the screen. <!--Very important notifications, such
-  as when your battery is critically low, will still pop up.--> Notifications will
-  still be available in the message tray when you display it (by clicking on
-  the clock, or by pressing <keyseq><key>Super</key><key>M</key></keyseq>), and
-  they will start popping up again when you switch the toggle to <gui>ON</gui>
-  again.</p>
+  <p>When switched off, most notifications will not pop up at the top of the
+  screen. <!--Very important notifications, such as when your battery is
+  critically low, will still pop up.--> Notifications will still be available
+  in the notification list when you display it (by clicking on the clock, or by
+  pressing <keyseq><key>Super</key><key>V</key></keyseq>), and they will start
+  popping up again when you switch the toggle back to <gui>ON</gui>.</p>
 
   <p>You can also disable or re-enable notifications for individual
   applications from the <gui>Notifications</gui> panel.</p>
 
-  <p if:test="platform:gnome-classic">When switched off, most notifications will
-  not pop up at the bottom of the screen. Very important notifications, such as
-  when your battery is critically low, will still pop up. Notifications will
-  still be available in the message tray when you display it (by moving your mouse
-  to the bottom-right corner of the screen, or by pressing <keyseq><key>Super</key>
-  <key>M</key></keyseq>), and they will start popping up again when you switch the
-  toggle to <gui>ON</gui> again.</p>
 
 </section>
 
