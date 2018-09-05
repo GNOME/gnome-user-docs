@@ -195,7 +195,6 @@ HELP_FILES = \
 	display-brightness.page \
 	display-dual-monitors.page \
 	display-night-light.page \
-	emoji-flags-symbolic.svg \
 	files-autorun.page \
 	files-browse.page \
 	files-copy.page \
@@ -218,7 +217,6 @@ HELP_FILES = \
 	get-involved.page \
 	gnome-classic.page \
 	gnome-version.page \
-	go-down-symbolic.svg \
 	hardware-auth.page \
 	hardware-cardreader.page \
 	hardware-driver.page \
