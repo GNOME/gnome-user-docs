@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2018-09-05 07:56+0000\n"
-"PO-Revision-Date: 2018-09-05 11:21+0200\n"
+"POT-Creation-Date: 2018-09-16 14:56+0000\n"
+"PO-Revision-Date: 2018-09-19 14:59+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -2716,6 +2716,10 @@ msgid ""
 "domain. This can be done using the kickstart <cmd>realm join</cmd> command, "
 "or running <cmd>realm join</cmd> in an automated fashion from a script."
 msgstr ""
+"Se recomienda a los administradores de red que unan previamente las "
+"estaciones de trabajo a un dominio. Se puede hacer usando el comando "
+"<cmd>realm join</cmd> o ejecutando <cmd>realm join</cmd> de forma "
+"automatizada desde un guión de comandos."
 
 #. (itstool) path: section/title
 #: C/login-enterprise.page:111 C/mime-types.page:107
@@ -2729,11 +2733,16 @@ msgid ""
 "Administrative Guide</link> provides more detailed information on using the "
 "enterprise login feature."
 msgstr ""
+"La <link href=\"http://www.freedesktop.org/software/realmd/docs/\">Guía "
+"Administrativa</link> de realmd contiene información más detallada sobre "
+"cómo usar la característica de inicio de sesión corporativo."
 
 #. (itstool) path: info/desc
 #: C/login-fingerprint.page:24
 msgid "Prevent the user from being able to log in using a fingerprint scanner."
 msgstr ""
+"Evitar que el usuario pueda iniciar sesión usando un lector de huella "
+"digital."
 
 #. (itstool) path: page/title
 #: C/login-fingerprint.page:28
@@ -2747,6 +2756,10 @@ msgid ""
 "password to log in. Fingerprint login <link href=\"help:gnome-help#session-"
 "fingerprint\">needs to be set up by the user</link> before it can be used."
 msgstr ""
+"Los usuarios con un lector de huella digital puede usar sus huellas "
+"digitales en vez de una contraseña para iniciar sesión. El inicio de sesión "
+"con huella digital <link href=\"help:gnome-help#session-fingerprint\"> "
+"requiere configuración por parte del usuario</link> antes de poder usarlo."
 
 #. (itstool) path: page/p
 #: C/login-fingerprint.page:35
@@ -2801,6 +2814,8 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/login</file> with the following content:"
 msgstr ""
+"Para evitar que un usuario pueda cambiar estos ajustes, cree el archivo "
+"<file>/etc/dconf/db/local.d/locks/login</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/login-fingerprint.page:66
@@ -2824,13 +2839,13 @@ msgstr ""
 msgid ""
 "Edit a <_:sys-1/> <_:sys-2/> profile to display an image on the login screen."
 msgstr ""
+"Edite un perfil <_:sys-1/> <_:sys-2/> para mostrar una imagen en la pantalla "
+"de inicio de sesión."
 
 #. (itstool) path: page/title
 #: C/login-logo.page:37
-#, fuzzy
-#| msgid "Show extra text on the login screen."
 msgid "Add a greeter logo to the login screen"
-msgstr "Mostrar texto adicional en la pantalla de inicio de sesión."
+msgstr "Mostrar logotipo en la pantalla de inicio de sesión."
 
 #. (itstool) path: page/p
 #: C/login-logo.page:44
@@ -2840,6 +2855,10 @@ msgid ""
 "<sys>dconf</sys> profile, you can add a greeter logo by changing the "
 "settings in that profile."
 msgstr ""
+"El logotipo en la pantalla de inicio de sesión se controla con la clave "
+"<sys>org.gnome.login-screen.logo</sys>. Como <sys>GDM</sys> usa su propio "
+"perfil de <sys>dconf</sys>, puede añadir un logo cabiando los ajustes en ese "
+"perfil."
 
 #. (itstool) path: page/p
 #: C/login-logo.page:51
@@ -2847,6 +2866,8 @@ msgid ""
 "When choosing an appropriate picture for the logo to your login screen, "
 "consider the following picture requirements:"
 msgstr ""
+"Cuando elija una imagen apropiada para el logo de su pantalla de inicio de "
+"sesión, considere los siguientes requisitos de imagen:"
 
 #. (itstool) path: item/p
 #: C/login-logo.page:55
@@ -2855,6 +2876,9 @@ msgid ""
 "2000, PCX, PNM, PBM, PGM, PPM, GTIFF, RAS, TGA, TIFF, XBM, WBMP, XPM, and "
 "SVG."
 msgstr ""
+"Están soportados todos los formatos más utilizados: ANI, BPM, GIF, ICNS, "
+"ICO, JPEG, JPEG 2000, PCX, PNM, PBM, PGM, PPM, GTIFF, RAS, TGA, TIFF, XBM, "
+"WBMP, XPM, y SVG."
 
 #. (itstool) path: item/p
 #: C/login-logo.page:58
@@ -2863,26 +2887,23 @@ msgid ""
 "So, if you set the logo to 1920x1080, for example, it changes into an 85x48 "
 "thumbnail of the original picture."
 msgstr ""
+"El tamaño de la imagen escala proporcionalmente a un alto de 48 píxeles. "
+"Así, si configura el logo a 1920x1080, por ejemplo, cambiará a una miniatura "
+"de la imagen original de 85x48."
 
 #. (itstool) path: steps/title
 #: C/login-logo.page:64
-#, fuzzy
-#| msgid "Set the org.gnome.desktop.screensaver.picture-uri key"
 msgid "Set the org.gnome.login-screen.logo key"
-msgstr "Establezca la clave org.gnome.desktop.screensaver.picture-uri"
+msgstr "Configure la clave org.gnome.login-screen.logo"
 
 #. (itstool) path: item/p
 #: C/login-logo.page:68
-#, fuzzy
-#| msgid ""
-#| "Create a <sys>gdm</sys> database for machine-wide settings in <file>/etc/"
-#| "dconf/db/gdm.d/<var>01-screensaver</var></file>:"
 msgid ""
 "Create a <sys>gdm</sys> database for machine-wide settings in <file>/etc/"
 "dconf/db/gdm.d/<var>01-logo</var></file>:"
 msgstr ""
 "Cree una base de datos <sys>gdm</sys> para opciones que apliquen a todo el "
-"sistema en <file>/etc/dconf/db/gdm.d/<var>01-screensaver</var></file>:"
+"sistema en <file>/etc/dconf/db/gdm.d/<var>01-logo</var></file>:"
 
 #. (itstool) path: item/code
 #: C/login-logo.page:70
@@ -2898,44 +2919,31 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/login-logo.page:73
-#, fuzzy
-#| msgid ""
-#| "Replace <var>/opt/corp/background.jpg</var> with the path to the image "
-#| "file you want to use as the lock screen background."
 msgid ""
 "Replace <var>/usr/share/pixmaps/logo/greeter-logo.png</var> with the path to "
 "the image file you want to use as the greeter logo."
 msgstr ""
-"Reemplace <var>/opt/corp/background.jpg</var> por la ruta de la imagen que "
-"quiere usar como fondo de la pantalla de bloqueo."
+"Reemplace <var>/usr/share/pixmaps/logo/greeter-logo.png</var> por la ruta de "
+"la imagen que quiere usar como logotipo de la pantalla de inicio de sesión."
 
 #. (itstool) path: section/title
 #: C/login-logo.page:82
-#, fuzzy
-#| msgid "What if the background does not update?"
 msgid "What if the logo does not update?"
-msgstr "¿Qué hacer si el fondo no se actualiza?"
+msgstr "¿Qué hacer si el logotipo no se actualiza?"
 
 #. (itstool) path: section/p
 #: C/login-logo.page:84
-#, fuzzy
-#| msgid ""
-#| "Make sure that you have run the <_:cmd-1/> command to update the system "
-#| "databases."
 msgid ""
 "Make sure that you have run the <cmd>dconf update</cmd> command to update "
 "the system databases."
 msgstr ""
-"Asegúrese de que ha ejecutado el comando <_:cmd-1/> para actualizar las "
-"bases de datos del sistema."
+"Asegúrese de que ha ejecutado el comando <cmd>dconf update</cmd> para "
+"actualizar las bases de datos del sistema."
 
 #. (itstool) path: section/p
 #: C/login-logo.page:87
-#, fuzzy
-#| msgid ""
-#| "In case the background does not update, try restarting <sys>GDM</sys>."
 msgid "In case the logo does not update, try restarting <sys>GDM</sys>."
-msgstr "Si el fondo no se actualiza, pruebe a reniciar <sys>GDM</sys>."
+msgstr "Si el logo no se actualiza, pruebe a reniciar <sys>GDM</sys>."
 
 #. (itstool) path: page/title
 #: C/login.page:10
@@ -2965,6 +2973,9 @@ msgid ""
 "You can disable the user list shown on the login screen by setting the "
 "<sys>org.gnome.login-screen.disable-user-list</sys> GSettings key."
 msgstr ""
+"Puede desactivar la lista de usuarios mostrados en la pantalla de inicio de "
+"sesión modificando la clave <sys>org.gnome.login-screen.disable-user-list</"
+"sys."
 
 #. (itstool) path: page/p
 #: C/login-userlist-disable.page:36
@@ -2972,6 +2983,8 @@ msgid ""
 "When the user list is disabled, users need to type their user name and "
 "password at the prompt to log in."
 msgstr ""
+"Cuando la lista de usuarios está desactivada, los usuarios deberán escribir "
+"su nombre de usuario y contraseña en la pantalla para iniciar sesión"
 
 #. (itstool) path: steps/title
 #: C/login-userlist-disable.page:39
@@ -2984,6 +2997,8 @@ msgid ""
 "Create a <sys>gdm</sys> keyfile for machine-wide settings in <file>/etc/"
 "dconf/db/gdm.d/00-login-screen</file>:"
 msgstr ""
+"Cree una base de datos <sys>gdm</sys> para opciones que apliquen a todo el "
+"sistema en <file>/etc/dconf/db/gdm.d/00-login-screen</file>:"
 
 #. (itstool) path: item/code
 #: C/login-userlist-disable.page:46
@@ -3004,10 +3019,8 @@ msgstr "Finalizar una sesión de usuario que no está en uso."
 
 #. (itstool) path: page/title
 #: C/logout-automatic.page:32
-#, fuzzy
-#| msgid "Configure automatic login"
 msgid "Configure automatic logout"
-msgstr "Configurar el inicio de sesión automático"
+msgstr "Configurar cierre de sesión automático"
 
 #. (itstool) path: page/p
 #: C/logout-automatic.page:34
@@ -3029,6 +3042,8 @@ msgid ""
 "Keep in mind that users can potentially lose unsaved data if an idle session "
 "is automatically ended."
 msgstr ""
+"Recuerde que los usuarios pueden perder datos no guardados si una sesión "
+"inactiva se cierra automáticamente."
 
 #. (itstool) path: steps/title
 #: C/logout-automatic.page:45
@@ -3038,16 +3053,12 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:53
-#, fuzzy
-#| msgid ""
-#| "Create a <sys>gdm</sys> database for machine-wide settings in <file>/etc/"
-#| "dconf/db/gdm.d/<var>01-screensaver</var></file>:"
 msgid ""
 "Create a <code>local</code> database for machine-wide settings in <file>/etc/"
 "dconf/db/local.d/00-autologout</file>:"
 msgstr ""
-"Cree una base de datos <sys>gdm</sys> para opciones que apliquen a todo el "
-"sistema en <file>/etc/dconf/db/gdm.d/<var>01-screensaver</var></file>:"
+"Cree un base de datos <sys>local</sys> para opciones que apliquen a todo el "
+"sistema en <file>/etc/dconf/db/local.d/00-autologout</file>:"
 
 #. (itstool) path: listing/code
 #: C/logout-automatic.page:56
