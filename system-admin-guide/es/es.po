@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2018-08-08 09:25+0000\n"
-"PO-Revision-Date: 2018-08-08 16:42+0200\n"
+"POT-Creation-Date: 2018-09-16 14:56+0000\n"
+"PO-Revision-Date: 2018-09-19 14:59+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -530,7 +530,7 @@ msgid ""
 "the default settings unless there is a problem with the value that you have "
 "set."
 msgstr ""
-"Las parejas de claves que se configuran en un <em>perfil</m> de <sys>dconf</"
+"Las parejas de claves que se configuran en un <em>perfil</em> de <sys>dconf</"
 "sys> ignorarán los ajustes predeterminados excepto si hay un problema con el "
 "valor que usted haya configurado."
 
@@ -713,7 +713,7 @@ msgid ""
 "For example, you may want to use a background with your company or "
 "university logo instead of the default GNOME background."
 msgstr ""
-"Puede cambiar el fondo de escritorio predeterminado por uno que desee "
+"Puede cambiar el fondo de escritorio predeterminado por uno que quiera "
 "utilizar. Por ejemplo, puede querer usar un fondo con el logo de su empresa "
 "o universidad en vez del fondo predeterminado de GNOME."
 
@@ -848,7 +848,7 @@ msgstr ""
 "usuario modificando su archivo de base de datos de usuario ubicado en <_:"
 "file-1/>. El siguiente código de ejemplo utiliza <_:sys-2/> para configurar "
 "<app>gedit</app>, <app>Terminal</app> y <app>Nautilus</app> como "
-"aplicaciones favoritas por defecto para un usuario. El código de ejemplo "
+"aplicaciones favoritas predeterminadas para un usuario. El código de ejemplo "
 "permite a los usuarios modificar la lista posteriormente si quieren."
 
 #. (itstool) path: listing/title
@@ -1135,6 +1135,12 @@ msgid ""
 "Since <sys>GDM</sys> uses its own <sys>dconf</sys> profile, you can set the "
 "default background by changing the settings in that profile."
 msgstr ""
+"La <em>pantalla de bloqueo</em> es la pantalla que se desliza rápidamente "
+"hacia abajo cuando se bloquea el sistema. El fondo de la pantalla de bloqueo "
+"lo controla la clave de GSettings <sys>org.gnome.desktop.screensaver.picture-"
+"uri</sys>. Dado que <sys>GDM</sys> utiliza su propio perfil de <sys>dconf</"
+"sys>, puede configurar el fondo predeterminado cambiando los ajustes en ese "
+"perfil."
 
 #. (itstool) path: steps/title
 #: C/desktop-shield.page:46
@@ -1234,6 +1240,12 @@ msgid ""
 "extensions for all users, you need to set the <code>org.gnome.shell.enabled-"
 "extensions</code> key."
 msgstr ""
+"Para hacer que las extensiones estén disponibles para todos los usuarios del "
+"sistema, instálelas en la carpeta <file>/usr/share/gnome-shell/extensions</"
+"file>. Tenga en cuenta que las extensiones para todo el sistema instaladas "
+"recientemente están desactivadas de manera predeterminada. Para activar las "
+"extensiones para todos los usuarios, debe configurar la clave <code>org."
+"gnome.shell.enabled-extensions</code>."
 
 #. (itstool) path: steps/title
 #: C/extensions-enable.page:32
@@ -1289,6 +1301,9 @@ msgid ""
 "using the extensions’ uuid (<code>myextension1@myname.example.com</code> and "
 "<code>myextension2@myname.example.com</code>)."
 msgstr ""
+"La clave <code>enabled-extensions</code> especifica las extensiones activas "
+"usando el UUID de las extensiones (<code>myextension1@myname.example.com</"
+"code> y <code>myextension2@myname.example.com</code>)."
 
 #. (itstool) path: info/desc
 #: C/extensions-lockdown.page:20
@@ -1308,6 +1323,10 @@ msgid ""
 "code> and <code>org.gnome.shell.development-tools</code> keys. This allows "
 "you to provide a set of extensions that the user has to use."
 msgstr ""
+"En GNOME Shell, puede evitar que el usuario active y desactive extensiones "
+"bloqueando las claves <code>org.gnome.shell.enabled-extensions</code> y "
+"<code>org.gnome.shell.development-tools</code>. Esto le permite facilitar un "
+"grupo de extensiones que el usuario tenga que usar."
 
 #. (itstool) path: page/p
 #: C/extensions-lockdown.page:31
@@ -1316,6 +1335,10 @@ msgid ""
 "that the user cannot use GNOME Shell’s integrated debugger and inspector "
 "tool (<app>Looking Glass</app>) to disable any mandatory extensions."
 msgstr ""
+"Bloqueando la clave <code>org.gnome.shell.development-tools</code> se "
+"asegura de que el usuario no pueda utilizar el depurador integrado y la "
+"herramienta de inspección (<app>Looking Glass</app>) de GNOME Shell para "
+"desactivar cualquier extensión obligatoria."
 
 #. (itstool) path: steps/title
 #: C/extensions-lockdown.page:37
@@ -1386,6 +1409,12 @@ msgid ""
 "gnome.shell.enabled-extensions</code> key will not be loaded by GNOME Shell, "
 "thus preventing the user from using them."
 msgstr ""
+"Después de bloquear las claves <code>org.gnome.shell.enabled-extensions</"
+"code> y <code>org.gnome.shell.development-tools</code>, cualquier extensión "
+"instalada en <file>~/.local/share/gnome-shell/extensions</file> o <file>/usr/"
+"share/gnome-shell/extensions</file> que no esté especificada en la clave "
+"<code>org.gnome.shell.enabled-extensions</code> no se cargará en GNOME "
+"Shell, evitando que el usuario la utilice."
 
 #. (itstool) path: info/desc
 #: C/extensions.page:20
@@ -1419,6 +1448,11 @@ msgid ""
 "share/gnome-shell/extensions/&lt;uuid&gt;</file>, or machine-wide in <file>/"
 "usr/share/gnome-shell/extensions/&lt;uuid&gt;</file>."
 msgstr ""
+"Cada extensión de GNOME Shell está identificada por un identificador único, "
+"el UUID. El UUID se utiliza también como nombre de la carpeta donde se "
+"instala la extensión. Puede instalar la extensión por usuario en <file>~/."
+"local/share/gnome-shell/extensions/&lt;uuid&gt;</file> o para todo el "
+"sistema en <file>/usr/share/gnome-shell/extensions/&lt;uuid&gt;</file>."
 
 #. (itstool) path: page/p
 #: C/extensions.page:36
@@ -1454,17 +1488,13 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/fonts.page:32
-#, fuzzy
-#| msgid "Add extra fonts for individual users."
 msgid "Add extra fonts for all users."
-msgstr "Añadir tipografías adicionales para usuarios individuales."
+msgstr "Añadir tipografías adicionales para todos los usuarios."
 
 #. (itstool) path: page/title
 #: C/fonts.page:35
-#, fuzzy
-#| msgid "Add an extra font for individual users"
 msgid "Add an extra font for all users"
-msgstr "Añadir una tipografía adicional para usuarios individuales"
+msgstr "Añadir una tipografía adicional para todos los usuarios"
 
 #. (itstool) path: page/p
 #: C/fonts.page:43
@@ -1522,6 +1552,12 @@ msgid ""
 "conf</file> containing the directory you want to use. See the <cmd>fonts-"
 "conf</cmd>(5) man page for more information."
 msgstr ""
+"Alternativamente, puede instalar tipografías en otra carpeta del sistema que "
+"no sea <file>/usr/local/share/fonts/</file> si esa carpeta está especificada "
+"en el archivo <file>/etc/fonts/fonts.conf</file>. Si no lo está, debe crear "
+"su propio archivo de configuración para todo el sistema en <file>/etc/fonts/"
+"local.conf</file> incluyendo la carpeta que desea usar. Consulte la página "
+"de manual <cmd>fonts-conf</cmd>(5) para obtener más información."
 
 #. (itstool) path: page/p
 #: C/fonts.page:68
@@ -1555,6 +1591,9 @@ msgid ""
 "You can install an extra font which will be available to a specific user on "
 "your system in applications that use <sys>fontconfig</sys> for font handling."
 msgstr ""
+"Puede instalar una tipografía adicional que estará disponible para un "
+"usuario específico de su sistema en aplicaciones que usen <sys>fontconfig</"
+"sys> para administrar tipografías."
 
 #. (itstool) path: item/p
 #: C/fonts-user.page:45
@@ -1616,6 +1655,12 @@ msgid ""
 "default and who want to have those keyboard layouts available at the login "
 "screen."
 msgstr ""
+"Puede cambiar los ajustes de la distribución de teclado del sistema para "
+"añadir distribuciones de teclado alternativas que los usuarios puedan "
+"seleccionar en la pantalla de inicio de sesión. Esto puede ser util para "
+"usuarios que normalmente utilizan una distribución de teclado distinta a la "
+"predeterminada y que quieran tener esas distribuciones de teclado "
+"disponibles en la pantalla de inicio de sesión."
 
 #. (itstool) path: steps/title
 #: C/keyboard-layout.page:46 C/keyboard-layout.page:79
@@ -1628,6 +1673,9 @@ msgid ""
 "Find the codes of the desired language layouts in the <file>/usr/share/X11/"
 "xkb/rules/base.lst</file> file under the section named <sys>! layout</sys>."
 msgstr ""
+"Busque los códigos de las distribuciones del lenguaje que desee en el "
+"archivo <file>/usr/share/X11/xkb/rules/base.lst</file> bajo la sección "
+"llamada <sys>! layout</sys>."
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:53
@@ -1635,6 +1683,8 @@ msgid ""
 "Use the <cmd>localectl</cmd> tool to change the system keyboard layout "
 "settings as follows:"
 msgstr ""
+"Utilice la herramienta <cmd>localectl</cmd> para cambiar los ajustes de la "
+"distribución de teclado del sistema de la siguiente manera:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:55
@@ -1649,6 +1699,9 @@ msgid ""
 "set <sys>es</sys> as the default layout, and <sys>us</sys> as the secondary "
 "layout, run the following command:"
 msgstr ""
+"Puede especificar múltiples distribuciones en una lista separada por comas. "
+"Por ejemplo, para configurar <sys>es</sys> como distribución predeterminada, "
+"y <sys>us</sys> como secundaria, ejecute el siguiente comando:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:60
@@ -1672,6 +1725,10 @@ msgid ""
 "machine-wide default keyboard model, variant, and options. See the "
 "<cmd>localectl</cmd>(1) man page for more information."
 msgstr ""
+"Tenga en cuenta que también puede usar la herramienta <cmd>localectl</cmd> "
+"para especificar el modelo de teclado, variante y opciones globales "
+"predeterminadas. Para más información consulte la página del manual "
+"<cmd>localectl</cmd>(1)."
 
 #. (itstool) path: section/title
 #: C/keyboard-layout.page:72
@@ -1685,6 +1742,9 @@ msgid ""
 "the system keyboard layout settings by editing a configuration file in "
 "<file>/usr/share/X11/xorg.conf.d/</file>."
 msgstr ""
+"En sistemas que no facilitan la herramienta <cmd>localectl</cmd>, puede "
+"cambiar los ajustes de la distribución de teclado global editando un archivo "
+"de configuración en <file>/usr/share/X11/xorg.conf.d/</file>."
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:86
@@ -1692,6 +1752,8 @@ msgid ""
 "Add the layout codes to <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</"
 "file> in the following way:"
 msgstr ""
+"Añada los códigos de distribución a <file>/usr/share/X11/xorg.conf.d/10-"
+"evdev.conf</file> de la siguiente manera:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:89
@@ -1723,6 +1785,9 @@ msgid ""
 "Multiple layouts can be added as a comma separated list, as shown in the "
 "example for English (<sys>en</sys>) and French (<sys>fr</sys>) layouts."
 msgstr ""
+"Pueden añadirse múltiples distribuciones en una lista separada por comas, "
+"como se muestra en el ejemplo para las distribuciones Inglés (<sys>en</sys>) "
+"y Francés (<sys>fr</sys>)."
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
@@ -1751,6 +1816,9 @@ msgid ""
 "virtual terminals and terminal applications by following the steps described "
 "below."
 msgstr ""
+"Puede evitar que los usuarios puedan acceder a la línea de comandos usando "
+"terminales virtuales y aplicaciones de terminal siguiendo los pasos "
+"descritos a continuación:"
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:34
@@ -1758,11 +1826,13 @@ msgid ""
 "Prevent users from accessing the <keyseq><key>Alt</key><key>F2</key></"
 "keyseq> command prompt."
 msgstr ""
+"Prevenir que los usuarios accedan al símbolo del sistema con "
+"<keyseq><key>Alt</key><key>F2</key></keyseq>."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:38
 msgid "Disable dropping to a virtual terminal (VT)."
-msgstr ""
+msgstr "Desactivar la salida a una terminal virtual (VT)."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:41
@@ -1771,6 +1841,9 @@ msgid ""
 "<gui>Activities</gui> overview in GNOME Shell. You will also need to prevent "
 "the user from installing a new terminal application."
 msgstr ""
+"Quite la aplicación <app>Terminal</app> y todas las otras aplicaciones de "
+"terminal de la lista de actividades en GNOME Shell. También deberá evitar "
+"que el usuario instale una nueva aplicación de terminal."
 
 #. (itstool) path: section/title
 #: C/lockdown-command-line.page:54
@@ -1783,6 +1856,8 @@ msgid ""
 "Create a <sys>local</sys> database for machine-wide settings in <file>/etc/"
 "dconf/db/local.d/00-lockdown</file>:"
 msgstr ""
+"Cree una base de datos <sys>local</sys> para ajustes a nivel de máquina en "
+"<file>/etc/dconf/db/local.d/00-lockdown</file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:63
@@ -1806,6 +1881,8 @@ msgid ""
 "Override the user’s setting and prevent the user from changing it in <file>/"
 "etc/dconf/db/local.d/locks/lockdown</file>:"
 msgstr ""
+"Ignore los ajustes del usuario y evite que el usuario los cambie en <file>/"
+"etc/dconf/db/local.d/locks/lockdown</file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:72
@@ -1820,7 +1897,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/lockdown-command-line.page:85
 msgid "Disable dropping to a virtual terminal"
-msgstr ""
+msgstr "Desactivar la salida a un terminal virtual"
 
 #. (itstool) path: section/p
 #: C/lockdown-command-line.page:87
@@ -1830,6 +1907,10 @@ msgid ""
 "<keyseq><key>Ctrl</key><key>Alt</key><key>F2</key></keyseq>) to switch from "
 "the GNOME desktop to a virtual terminal."
 msgstr ""
+"Los usuarios por lo general pueden usar atajos de teclado con "
+"<keyseq><key>Ctrl</key><key>Alt</key><key><var>function key</var></key></"
+"keyseq> (por ejemplo, <keyseq><key>Ctrl</key><key>Alt</key><key>F2</key></"
+"keyseq>) para cambiar del escritorio GNOME a una terminal virtual."
 
 #. (itstool) path: section/p
 #: C/lockdown-command-line.page:93
@@ -1839,12 +1920,18 @@ msgid ""
 "to the <code>Serverflags</code> section in the <file>/etc/X11/xorg.conf.d</"
 "file> file."
 msgstr ""
+"Si el equipo está ejecutando el <em>Sistema de ventanas X</em>, puede "
+"desactivar el acceso a todas las terminales virtuales añadiendo la opción "
+"<code>DontVTSwitch</code> en la sección <code>Serverflags</code> del archivo "
+"<file>/etc/X11/xorg.conf.d</file>."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:100
 msgid ""
 "Create or edit an X configuration file in <file>/etc/X11/xorg.conf.d</file>:"
 msgstr ""
+"Cree o modifique un archivo de configuración de X en <file>/etc/X11/xorg."
+"conf.d</file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:102
@@ -1885,6 +1972,9 @@ msgid ""
 "be useful if you are giving temporary access to a user or you do not want "
 "the user to save files to the computer."
 msgstr ""
+"Puede desactivar los diálogos <gui>Guardar</gui> y <gui>Guardar como</gui>. "
+"Esto puede ser útils si está dando acceso temporal a un usuario o si no "
+"quiere que el usuario guarde archivos en el equipo."
 
 #. (itstool) path: note/p
 #: C/lockdown-file-saving.page:34 C/lockdown-printing.page:34
@@ -1893,6 +1983,10 @@ msgid ""
 "and third party applications have this feature enabled. These changes will "
 "have no effect on applications which do not support this feature."
 msgstr ""
+"Esta característica solo funcionará en aplicaciones que lo soporten. No "
+"todas las aplicaciones GNOME y de terceras partes tienen activada esta "
+"característica. Estos cambios no tendrán efecto en aplicaciones que no lo "
+"soportan."
 
 #. (itstool) path: item/p
 #: C/lockdown-file-saving.page:48
@@ -1932,6 +2026,8 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/filesaving</file> with the following content:"
 msgstr ""
+"Para evitar que el usuario ignore estos ajustes, cree el archivo <file>/etc/"
+"dconf/db/local.d/locks/filesaving</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-file-saving.page:67
@@ -1974,6 +2070,11 @@ msgid ""
 "Google, Facebook, Flickr, ownCloud, etc. via the <app>Online Accounts</app> "
 "application."
 msgstr ""
+"Las aplicación de <app>Cuentas en línea de GNOME</app> (GOA) se usa para "
+"configurar cuentas de red personales que se integran automáticamente con el "
+"escritorio GNOME y las aplicaciones. El usuario puede añadir sus propias "
+"cuentas en linea, como Google, Facebook, Flickr, ownCloud, etc. usando la "
+"aplicación <app>Cuentas en línea</app>"
 
 #. (itstool) path: page/p
 #: C/lockdown-online-accounts.page:29
@@ -2071,6 +2172,8 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/goa</file> with the following content:"
 msgstr ""
+"Para evitar que el usuario ignore estos ajustes, cree el archivo <file>/etc/"
+"dconf/db/local.d/locks/goa</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-online-accounts.page:69
@@ -2149,6 +2252,8 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/printing</file> with the following content:"
 msgstr ""
+"Para evitar que el usuario ignore estos ajustes, cree el archivo <file>/etc/"
+"dconf/db/local.d/locks/printing</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-printing.page:67
@@ -2170,7 +2275,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/lockdown-repartitioning.page:24
 msgid "Prevent the user from changing disk partitions."
-msgstr ""
+msgstr "Evitar que el usuario cambie las particiones del disco."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
@@ -2187,6 +2292,12 @@ msgid ""
 "freedesktop.udisks2.policy</file>. This file contains a set of actions and "
 "default values, which can be overridden by system administrator."
 msgstr ""
+"<sys>polkit</sys> le permite establecer permisos para operaciones "
+"individuales. Para <sys>udisks2</sys>, la herramienta de servicios de "
+"administración de discos, la configuración se encuentra en <file>/usr/share/"
+"polkit-1/actions/org.freedesktop.udisks2.policy</file>. Este archivo "
+"contiene una serie de acciones y valores predeterminados que el "
+"administrador del sistema puede modificar."
 
 #. (itstool) path: note/p
 #: C/lockdown-repartitioning.page:37
@@ -2228,6 +2339,9 @@ msgid ""
 "element and add the following lines to the <file>/etc/polkit-1/actions/org."
 "freedesktop.udisks2.policy</file> file:"
 msgstr ""
+"Elimine cualquiera de las acciones que no necesite del elemento "
+"<code>policyconfig</code> y añada las siguientes líneas al archivo <file>/"
+"etc/polkit-1/actions/org.freedesktop.udisks2.policy</file>:"
 
 #. (itstool) path: listing/code
 #: C/lockdown-repartitioning.page:59
@@ -2275,6 +2389,9 @@ msgid ""
 "When the user tries to change the disk settings, the following message is "
 "shown: <gui>Authentication is required to modify drive settings</gui>."
 msgstr ""
+"Cuando el usuario intente cambiar los ajustes del disco, se mostrará el "
+"siguiente mensaje: <gui>Se requiere autenticación para modificar los ajustes "
+"de la unidad</gui>."
 
 #. (itstool) path: credit/years
 #: C/login-automatic.page:20
@@ -2284,7 +2401,7 @@ msgstr "2012, 2013"
 #. (itstool) path: info/desc
 #: C/login-automatic.page:30
 msgid "Log in automatically into a user account on startup."
-msgstr ""
+msgstr "Iniciar sesión de forma automática al inicio."
 
 #. (itstool) path: page/title
 #: C/login-automatic.page:33
@@ -2301,6 +2418,11 @@ msgid ""
 "<app>Settings</app></link> panel. You can also set up autologin manually in "
 "the <_:sys-1/> custom configuration file, as follows."
 msgstr ""
+"Un usuario con una cuenta de tipo <em>Administrador</em> puede <link href="
+"\"help:gnome-help/user-autologin\">activar el <em>inicio de sesión "
+"automático</em> desde el panel de <app>Ajustes</app></link>. Puede también "
+"configurar el inicio automático manualmente en el archivo personalizado de "
+"configuración <_:sys-1/>, de la siguiente manera."
 
 #. (itstool) path: page/p
 #: C/login-automatic.page:51
@@ -2308,6 +2430,8 @@ msgid ""
 "Edit the <_:file-1/> file and make sure that the <code>[daemon]</code> "
 "section in the file specifies the following:"
 msgstr ""
+"Edite el archivo <_:file-1/> y asegúrese de que la sección <code>[daemon]</"
+"code> en el archivo especifica lo siguiente:"
 
 #. (itstool) path: page/p
 #: C/login-automatic.page:64
@@ -2315,6 +2439,8 @@ msgid ""
 "Replace the <_:input-1/> with the user that you want to be automatically "
 "logged in."
 msgstr ""
+"Reemplace el <_:input-1/> con el usuario que desea que inicie sesión de "
+"forma automática."
 
 #. (itstool) path: note/p
 #: C/login-automatic.page:68
@@ -2322,6 +2448,8 @@ msgid ""
 "The <_:file-1/> file can usually be found in <_:file-2/>, but the location "
 "may differ depending on your distribution."
 msgstr ""
+"El archivo <_:file-1/> se puede encontrar normalmente en <_:file-2/>, pero "
+"la localización puede diferir dependiendo de su distribución."
 
 #. (itstool) path: info/desc
 #: C/login-banner.page:40
@@ -2331,7 +2459,7 @@ msgstr "Mostrar texto adicional en la pantalla de inicio de sesión."
 #. (itstool) path: page/title
 #: C/login-banner.page:43
 msgid "Display a text banner on the login screen"
-msgstr ""
+msgstr "Mostrar un titular de texto en la pantalla de inicio de sesión"
 
 #. (itstool) path: page/p
 #: C/login-banner.page:50
@@ -2341,11 +2469,15 @@ msgid ""
 "sys> and <sys>org.gnome.login-screen.banner-message-text</sys> GSettings "
 "keys."
 msgstr ""
+"Puede mostrar texto adicional en la pantalla de inicio, como con quién "
+"contactar para obtener soporte, configurando las claves de GSettings "
+"<sys>org.gnome.login-screen.banner-message-enable</sys> y <sys>org.gnome."
+"login-screen.banner-message-text</sys>."
 
 #. (itstool) path: steps/title
 #: C/login-banner.page:56
 msgid "Display a text banner on the login screen:"
-msgstr ""
+msgstr "Mostrar un titular de texto en la pantalla de inicio:"
 
 #. (itstool) path: item/p
 #: C/login-banner.page:60
@@ -2367,6 +2499,9 @@ msgid ""
 "You should keep the banner message short, as longer messages do not fit on "
 "the screen. The banner message cannot be read from an external file."
 msgstr ""
+"Debe usar un mensaje del titular corto, ya que los mensajes muy largos no "
+"encajan en la pantalla. El mensaje del titular no puede leerse desde un "
+"archivo externo."
 
 #. (itstool) path: info/desc
 #: C/login-enterprise.page:19
@@ -2386,6 +2521,9 @@ msgid ""
 "If your network has an Active Directory or IPA domain available, and you "
 "have a domain account, you can use your domain credentials to log into GNOME."
 msgstr ""
+"Si su red tiene un dominio de Directorio Activo o IPA, y tiene una cuenta de "
+"dominio, puede utilizar sus credenciales de dominio para iniciar sesión en "
+"GNOME."
 
 #. (itstool) path: page/p
 #: C/login-enterprise.page:28
@@ -2396,6 +2534,12 @@ msgid ""
 "name. For example, if your domain name is <var>example.com</var> and the "
 "user name is <var>User</var>, type:"
 msgstr ""
+"Si el sistema se configuró correctamente para cuentas de dominio, los "
+"usuarios pueden iniciar sesión en GNOME usando sus cuentas. En la pantalla "
+"de inicio de sesión, escriba el nombre de usuario de dominio seguido de una "
+"<sys>@</sys>, y a continuación su nombre de dominio. Por ejemplo, si su "
+"nombre de dominio es <var>ejemplo.com</var> y su nombre de usuario es "
+"<var>Usuario</var>, escriba:"
 
 #. (itstool) path: page/screen
 #: C/login-enterprise.page:34
@@ -2409,6 +2553,9 @@ msgid ""
 "In cases where the machine is already configured for domain accounts, you "
 "should see a helpful hint describing the login format."
 msgstr ""
+"En los casos en los que el sistema ya esté configurado para cuentas de "
+"dominio, debería ver una pista muy util describiendo el formato de inicio de "
+"sesión."
 
 #. (itstool) path: section/title
 #: C/login-enterprise.page:39
@@ -2422,6 +2569,9 @@ msgid ""
 "can do so at the <gui>Welcome</gui> screens that are part of the <app>GNOME "
 "Initial Setup</app> program."
 msgstr ""
+"Si no ha configurado aún el sistema para credenciales corporativas, puede "
+"hacerlo en las pantallas de <gui>Bienvenida</gui> que forman parte de el "
+"programa de <app>Configuración Inicial de GNOME</app> "
 
 #. (itstool) path: steps/title
 #: C/login-enterprise.page:44 C/login-enterprise.page:70
@@ -2434,6 +2584,8 @@ msgid ""
 "At the <gui>Login</gui> welcome screen, choose <gui>Set Up Enterprise Login</"
 "gui>."
 msgstr ""
+"En la pantalla de bienvenida de <gui>Inicio de sesión</gui> elija "
+"<gui>Configurar Inicio de Sesión Corporativo</gui>."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:50
@@ -2441,11 +2593,13 @@ msgid ""
 "Type the name of your domain in the <gui>Domain</gui> field if it is not "
 "already prefilled."
 msgstr ""
+"Escriba el nombre de su dominio en el campo <gui>Dominio</gui> si no está ya "
+"rellenado previamente."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:54
 msgid "Type your domain account user and password in the relevant fields."
-msgstr ""
+msgstr "Escriba su usuario y contraseña de dominio en los campos relevantes."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:58
@@ -2458,11 +2612,15 @@ msgid ""
 "Depending on how the domain is configured, a prompt may show up asking for "
 "the domain administrator’s name and password in order to proceed."
 msgstr ""
+"Dependiendo de como esté configurado el dominio, se podría mostrar una "
+"pantalla solicitando el nombre del administrador del dominio y su contraseña "
+"para continuar."
 
 #. (itstool) path: section/title
 #: C/login-enterprise.page:65
 msgid "Change to use enterprise credentials to log into GNOME"
 msgstr ""
+"Cambiar al uso de credenciales corporativas para iniciar sesión en GNOME"
 
 #. (itstool) path: section/p
 #: C/login-enterprise.page:66
@@ -2471,6 +2629,9 @@ msgid ""
 "account to log into GNOME, then you can accomplish this from the Users panel "
 "in the GNOME Settings."
 msgstr ""
+"Si ha completado ya la configuración inicial y desea empezar a usar una "
+"cuenta de dominio para iniciar sesión en GNOME, deberá hacerlo desde el "
+"panel de Usuarios en la Configuración de GNOME"
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:72
@@ -2521,6 +2682,9 @@ msgid ""
 "Depending on how your domain is configured, a prompt may show up asking for "
 "the domain administrator’s name and password in order to proceed."
 msgstr ""
+"Dependiendo de como esté configurado el dominio, se podría mostrar una "
+"pantalla solicitando el nombre del administrador del dominio y su contraseña "
+"para continuar."
 
 #. (itstool) path: section/title
 #: C/login-enterprise.page:99
@@ -2534,6 +2698,10 @@ msgid ""
 "troubleshoot the enterprise login feature. For example, to see whether the "
 "machine has been configured for enterprise logins, run the following command:"
 msgstr ""
+"El comando <cmd>realm</cmd> y sus variados subcomandos se pueden usar para "
+"descubrir errores de la característica de inicio de sesión corporativo. Por "
+"ejemplo, para comprobar si un sistema se ha configurado para inicio de "
+"sesión corporativo, ejecute el siguiente comando:"
 
 #. (itstool) path: section/screen
 #: C/login-enterprise.page:104
@@ -2548,6 +2716,10 @@ msgid ""
 "domain. This can be done using the kickstart <cmd>realm join</cmd> command, "
 "or running <cmd>realm join</cmd> in an automated fashion from a script."
 msgstr ""
+"Se recomienda a los administradores de red que unan previamente las "
+"estaciones de trabajo a un dominio. Se puede hacer usando el comando "
+"<cmd>realm join</cmd> o ejecutando <cmd>realm join</cmd> de forma "
+"automatizada desde un guión de comandos."
 
 #. (itstool) path: section/title
 #: C/login-enterprise.page:111 C/mime-types.page:107
@@ -2561,11 +2733,16 @@ msgid ""
 "Administrative Guide</link> provides more detailed information on using the "
 "enterprise login feature."
 msgstr ""
+"La <link href=\"http://www.freedesktop.org/software/realmd/docs/\">Guía "
+"Administrativa</link> de realmd contiene información más detallada sobre "
+"cómo usar la característica de inicio de sesión corporativo."
 
 #. (itstool) path: info/desc
 #: C/login-fingerprint.page:24
 msgid "Prevent the user from being able to log in using a fingerprint scanner."
 msgstr ""
+"Evitar que el usuario pueda iniciar sesión usando un lector de huella "
+"digital."
 
 #. (itstool) path: page/title
 #: C/login-fingerprint.page:28
@@ -2579,6 +2756,10 @@ msgid ""
 "password to log in. Fingerprint login <link href=\"help:gnome-help#session-"
 "fingerprint\">needs to be set up by the user</link> before it can be used."
 msgstr ""
+"Los usuarios con un lector de huella digital puede usar sus huellas "
+"digitales en vez de una contraseña para iniciar sesión. El inicio de sesión "
+"con huella digital <link href=\"help:gnome-help#session-fingerprint\"> "
+"requiere configuración por parte del usuario</link> antes de poder usarlo."
 
 #. (itstool) path: page/p
 #: C/login-fingerprint.page:35
@@ -2633,6 +2814,8 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/login</file> with the following content:"
 msgstr ""
+"Para evitar que un usuario pueda cambiar estos ajustes, cree el archivo "
+"<file>/etc/dconf/db/local.d/locks/login</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/login-fingerprint.page:66
@@ -2656,13 +2839,13 @@ msgstr ""
 msgid ""
 "Edit a <_:sys-1/> <_:sys-2/> profile to display an image on the login screen."
 msgstr ""
+"Edite un perfil <_:sys-1/> <_:sys-2/> para mostrar una imagen en la pantalla "
+"de inicio de sesión."
 
 #. (itstool) path: page/title
 #: C/login-logo.page:37
-#, fuzzy
-#| msgid "Show extra text on the login screen."
 msgid "Add a greeter logo to the login screen"
-msgstr "Mostrar texto adicional en la pantalla de inicio de sesión."
+msgstr "Mostrar logotipo en la pantalla de inicio de sesión."
 
 #. (itstool) path: page/p
 #: C/login-logo.page:44
@@ -2672,6 +2855,10 @@ msgid ""
 "<sys>dconf</sys> profile, you can add a greeter logo by changing the "
 "settings in that profile."
 msgstr ""
+"El logotipo en la pantalla de inicio de sesión se controla con la clave "
+"<sys>org.gnome.login-screen.logo</sys>. Como <sys>GDM</sys> usa su propio "
+"perfil de <sys>dconf</sys>, puede añadir un logo cabiando los ajustes en ese "
+"perfil."
 
 #. (itstool) path: page/p
 #: C/login-logo.page:51
@@ -2679,6 +2866,8 @@ msgid ""
 "When choosing an appropriate picture for the logo to your login screen, "
 "consider the following picture requirements:"
 msgstr ""
+"Cuando elija una imagen apropiada para el logo de su pantalla de inicio de "
+"sesión, considere los siguientes requisitos de imagen:"
 
 #. (itstool) path: item/p
 #: C/login-logo.page:55
@@ -2687,6 +2876,9 @@ msgid ""
 "2000, PCX, PNM, PBM, PGM, PPM, GTIFF, RAS, TGA, TIFF, XBM, WBMP, XPM, and "
 "SVG."
 msgstr ""
+"Están soportados todos los formatos más utilizados: ANI, BPM, GIF, ICNS, "
+"ICO, JPEG, JPEG 2000, PCX, PNM, PBM, PGM, PPM, GTIFF, RAS, TGA, TIFF, XBM, "
+"WBMP, XPM, y SVG."
 
 #. (itstool) path: item/p
 #: C/login-logo.page:58
@@ -2695,26 +2887,23 @@ msgid ""
 "So, if you set the logo to 1920x1080, for example, it changes into an 85x48 "
 "thumbnail of the original picture."
 msgstr ""
+"El tamaño de la imagen escala proporcionalmente a un alto de 48 píxeles. "
+"Así, si configura el logo a 1920x1080, por ejemplo, cambiará a una miniatura "
+"de la imagen original de 85x48."
 
 #. (itstool) path: steps/title
 #: C/login-logo.page:64
-#, fuzzy
-#| msgid "Set the org.gnome.desktop.screensaver.picture-uri key"
 msgid "Set the org.gnome.login-screen.logo key"
-msgstr "Establezca la clave org.gnome.desktop.screensaver.picture-uri"
+msgstr "Configure la clave org.gnome.login-screen.logo"
 
 #. (itstool) path: item/p
 #: C/login-logo.page:68
-#, fuzzy
-#| msgid ""
-#| "Create a <sys>gdm</sys> database for machine-wide settings in <file>/etc/"
-#| "dconf/db/gdm.d/<var>01-screensaver</var></file>:"
 msgid ""
 "Create a <sys>gdm</sys> database for machine-wide settings in <file>/etc/"
 "dconf/db/gdm.d/<var>01-logo</var></file>:"
 msgstr ""
 "Cree una base de datos <sys>gdm</sys> para opciones que apliquen a todo el "
-"sistema en <file>/etc/dconf/db/gdm.d/<var>01-screensaver</var></file>:"
+"sistema en <file>/etc/dconf/db/gdm.d/<var>01-logo</var></file>:"
 
 #. (itstool) path: item/code
 #: C/login-logo.page:70
@@ -2730,44 +2919,31 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/login-logo.page:73
-#, fuzzy
-#| msgid ""
-#| "Replace <var>/opt/corp/background.jpg</var> with the path to the image "
-#| "file you want to use as the lock screen background."
 msgid ""
 "Replace <var>/usr/share/pixmaps/logo/greeter-logo.png</var> with the path to "
 "the image file you want to use as the greeter logo."
 msgstr ""
-"Reemplace <var>/opt/corp/background.jpg</var> por la ruta de la imagen que "
-"quiere usar como fondo de la pantalla de bloqueo."
+"Reemplace <var>/usr/share/pixmaps/logo/greeter-logo.png</var> por la ruta de "
+"la imagen que quiere usar como logotipo de la pantalla de inicio de sesión."
 
 #. (itstool) path: section/title
 #: C/login-logo.page:82
-#, fuzzy
-#| msgid "What if the background does not update?"
 msgid "What if the logo does not update?"
-msgstr "¿Qué hacer si el fondo no se actualiza?"
+msgstr "¿Qué hacer si el logotipo no se actualiza?"
 
 #. (itstool) path: section/p
 #: C/login-logo.page:84
-#, fuzzy
-#| msgid ""
-#| "Make sure that you have run the <_:cmd-1/> command to update the system "
-#| "databases."
 msgid ""
 "Make sure that you have run the <cmd>dconf update</cmd> command to update "
 "the system databases."
 msgstr ""
-"Asegúrese de que ha ejecutado el comando <_:cmd-1/> para actualizar las "
-"bases de datos del sistema."
+"Asegúrese de que ha ejecutado el comando <cmd>dconf update</cmd> para "
+"actualizar las bases de datos del sistema."
 
 #. (itstool) path: section/p
 #: C/login-logo.page:87
-#, fuzzy
-#| msgid ""
-#| "In case the background does not update, try restarting <sys>GDM</sys>."
 msgid "In case the logo does not update, try restarting <sys>GDM</sys>."
-msgstr "Si el fondo no se actualiza, pruebe a reniciar <sys>GDM</sys>."
+msgstr "Si el logo no se actualiza, pruebe a reniciar <sys>GDM</sys>."
 
 #. (itstool) path: page/title
 #: C/login.page:10
@@ -2797,6 +2973,9 @@ msgid ""
 "You can disable the user list shown on the login screen by setting the "
 "<sys>org.gnome.login-screen.disable-user-list</sys> GSettings key."
 msgstr ""
+"Puede desactivar la lista de usuarios mostrados en la pantalla de inicio de "
+"sesión modificando la clave <sys>org.gnome.login-screen.disable-user-list</"
+"sys."
 
 #. (itstool) path: page/p
 #: C/login-userlist-disable.page:36
@@ -2804,6 +2983,8 @@ msgid ""
 "When the user list is disabled, users need to type their user name and "
 "password at the prompt to log in."
 msgstr ""
+"Cuando la lista de usuarios está desactivada, los usuarios deberán escribir "
+"su nombre de usuario y contraseña en la pantalla para iniciar sesión"
 
 #. (itstool) path: steps/title
 #: C/login-userlist-disable.page:39
@@ -2816,6 +2997,8 @@ msgid ""
 "Create a <sys>gdm</sys> keyfile for machine-wide settings in <file>/etc/"
 "dconf/db/gdm.d/00-login-screen</file>:"
 msgstr ""
+"Cree una base de datos <sys>gdm</sys> para opciones que apliquen a todo el "
+"sistema en <file>/etc/dconf/db/gdm.d/00-login-screen</file>:"
 
 #. (itstool) path: item/code
 #: C/login-userlist-disable.page:46
@@ -2836,10 +3019,8 @@ msgstr "Finalizar una sesión de usuario que no está en uso."
 
 #. (itstool) path: page/title
 #: C/logout-automatic.page:32
-#, fuzzy
-#| msgid "Configure automatic login"
 msgid "Configure automatic logout"
-msgstr "Configurar el inicio de sesión automático"
+msgstr "Configurar cierre de sesión automático"
 
 #. (itstool) path: page/p
 #: C/logout-automatic.page:34
@@ -2861,6 +3042,8 @@ msgid ""
 "Keep in mind that users can potentially lose unsaved data if an idle session "
 "is automatically ended."
 msgstr ""
+"Recuerde que los usuarios pueden perder datos no guardados si una sesión "
+"inactiva se cierra automáticamente."
 
 #. (itstool) path: steps/title
 #: C/logout-automatic.page:45
@@ -2870,16 +3053,12 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:53
-#, fuzzy
-#| msgid ""
-#| "Create a <sys>gdm</sys> database for machine-wide settings in <file>/etc/"
-#| "dconf/db/gdm.d/<var>01-screensaver</var></file>:"
 msgid ""
 "Create a <code>local</code> database for machine-wide settings in <file>/etc/"
 "dconf/db/local.d/00-autologout</file>:"
 msgstr ""
-"Cree una base de datos <sys>gdm</sys> para opciones que apliquen a todo el "
-"sistema en <file>/etc/dconf/db/gdm.d/<var>01-screensaver</var></file>:"
+"Cree un base de datos <sys>local</sys> para opciones que apliquen a todo el "
+"sistema en <file>/etc/dconf/db/local.d/00-autologout</file>:"
 
 #. (itstool) path: listing/code
 #: C/logout-automatic.page:56
