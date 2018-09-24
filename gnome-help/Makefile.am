@@ -33,8 +33,10 @@ HELP_MEDIA = \
 	figures/display-dual-monitors.webm \
 	figures/emblem-system-symbolic.svg \
 	figures/emblem-system.png \
+	figures/emoji-flags-symbolic.svg \
 	figures/gnome.png \
 	figures/go-down.png \
+	figures/go-down-symbolic.svg \
 	figures/input-keyboard-symbolic.png \
 	figures/input-methods-switcher.png \
 	figures/keyboard-key-calculator.svg \
