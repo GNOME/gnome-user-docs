@@ -2,16 +2,16 @@
 # Copyright (C) 2017 gnome-user-docs's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-user-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Oliver Gutierrez <ogutsua@gmail.com>, 2018.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2017, 2018.
+# Oliver Gutierrez <ogutsua@gmail.com>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2018-09-26 04:50+0000\n"
-"PO-Revision-Date: 2018-10-04 12:06+0200\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: es <gnome-es-list@gnome.org>\n"
+"POT-Creation-Date: 2018-10-04 10:15+0000\n"
+"PO-Revision-Date: 2018-10-11 10:49+0100\n"
+"Last-Translator: Oliver Gutierrez <ogutsua@gmail.com>\n"
+"Language-Team: Spanish; Castilian <gnome-es-list@gnome.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3393,6 +3393,12 @@ msgid ""
 "desktop</file> files can be stored in <file>~/.local/share/applications/</"
 "file>."
 msgstr ""
+"La aplicación predeterminada (<app>Epiphany</app>) se define especificando "
+"su archivo <file>.desktop</file> correspondiente (<file>epiphany.desktop</"
+"file>).La localización predeterminada del sistema de los archivos <file>."
+"desktop</file> de otras aplicaciones es <file>/usr/share/applications/</"
+"file>. Los archivos <file>.desktop</file> de usuarios individuales se pueden "
+"guardar en <file>~/.local/share/applications/</file>."
 
 #. (itstool) path: item/p
 #: C/mime-types-application-user.page:54
@@ -3401,6 +3407,9 @@ msgid ""
 "the file, specify the MIME types and their corresponding default registered "
 "applications:"
 msgstr ""
+"Cree el archivo <file>~/.local/share/applications/mimeapps.list</file>. En "
+"el archivo especifique los tipos MIME y sus aplicaciones registradas "
+"predeterminadas."
 
 #. (itstool) path: page/title
 #: C/mime-types-custom.page:20
@@ -3416,6 +3425,11 @@ msgid ""
 "and a <file>.desktop</file> file in the <file>/usr/share/applications/</"
 "file> directory."
 msgstr ""
+"Para añadir un tipo MIME personalizado para todos los usuarios del sistema y "
+"registrar una aplicación para ese tipo MIME, debe crear un nuevo archivo de "
+"especificación de tipo MIME en la carpeta <file>/usr/share/mime/packages/</"
+"file> y un archivo <file>.desktop</file> en la carpeta <file>/usr/share/"
+"applications/</file>."
 
 #. (itstool) path: steps/title
 #: C/mime-types-custom.page:29
@@ -3460,6 +3474,9 @@ msgid ""
 "MIME type <sys>application/x-newtype</sys> and assigns file names with the "
 "<file>.xyz</file> extension to that MIME type."
 msgstr ""
+"El archivo de ejemplo <file>application-x-newtype.xml</file> más arriba "
+"define un nuevo tipo MIME <sys>application/x-newtype</sys> y asigna nombres "
+"de archivo con la extensión <file>.xyz</file> a ese tipo MIME."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:51
@@ -3468,6 +3485,9 @@ msgid ""
 "<file>myapplication1.desktop</file>, and place it in the <file>/usr/share/"
 "applications/</file> directory:"
 msgstr ""
+"Cree un nuevo archivo <file>.desktop</file> llamado por ejemplo, "
+"<file>myapplication1.desktop</file> y colóquelo en la carpeta <file>/usr/"
+"share/applications/</file>:"
 
 #. (itstool) path: item/code
 #: C/mime-types-custom.page:56 C/mime-types-custom-user.page:55
@@ -3492,6 +3512,10 @@ msgid ""
 "<sys>application/x-newtype</sys> MIME type with an application named <app>My "
 "Application 1</app>, which is run by a command <cmd>myapplication1</cmd>."
 msgstr ""
+"El archivo de ejemplo <file>myapplication1.desktop</file> más arriba, asocia "
+"el tipo MIME <sys>application/x-newtype</sys> con una aplicación llamada "
+"<app>My Application 1</app>, que se ejecuta con el comando "
+"<cmd>myapplication1</cmd>."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:69
@@ -3530,6 +3554,9 @@ msgid ""
 "with the <sys>application/x-newtype</sys> MIME type, first create an empty "
 "file, for example <file>test.xyz</file>:"
 msgstr ""
+"Para verificar que ha asociado correctamente los archivos <file>*.xyz</file> "
+"con el tipo MIME <sys>application/x-newtype</sys>, primero cree un archivo "
+"vacío, por ejemplo <file>test.xyz</file>:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:85 C/mime-types-custom-user.page:84
@@ -3539,10 +3566,9 @@ msgstr "<output>$ </output><input>touch test.xyz</input>"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:86 C/mime-types-custom-user.page:85
-#, fuzzy
 #| msgid "Then run the <cmd>gvfs-info</cmd> command:"
 msgid "Then run the <cmd>gio info</cmd> command:"
-msgstr "Ejecute el comando <cmd>gvfs-info</cmd>:"
+msgstr "Entonces ejecute el comando <cmd>gio info</cmd>:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:89 C/mime-types-custom-user.page:88
@@ -3561,6 +3587,9 @@ msgid ""
 "the default registered application for the <sys>application/x-newtype</sys> "
 "MIME type, run the <cmd>gio mime</cmd> command:"
 msgstr ""
+"Para verificar que el archivo <file>myapplication1.desktop</file> se ha "
+"configurado como la aplicación registrada predeterminada para el tipo MIME "
+"<sys>application/x-newtype</sys>, ejecute el comando <cmd>gio mime</cmd>:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:99 C/mime-types-custom-user.page:98
@@ -3594,6 +3623,11 @@ msgid ""
 "directory and a <file>.desktop</file> file in the <file>~/.local/share/"
 "applications/</file> directory."
 msgstr ""
+"Para añadir un tipo MIME personalizado para usuarios individuales y "
+"registrar una aplicación predeterminada para ese tipo MIME, debe crear un "
+"nuevo archivo de especificación de tipo MIME en la carpeta <file>~/.local/"
+"share/mime/packages/</file> y un archivo <file>.desktop</file> en la carpeta "
+"<file>~/.local/share/applications/</file>."
 
 #. (itstool) path: steps/title
 #: C/mime-types-custom-user.page:28
@@ -3632,6 +3666,10 @@ msgid ""
 "<app>My Application 1</app>, which is run by a command <cmd>myapplication1</"
 "cmd>."
 msgstr ""
+"El archivo de ejemplo <file>myapplication1.desktop</file> más arriba, asocia "
+"el tipo MIME <code>application/x-newtype</code> con una aplicación llamada "
+"<app>My Application 1</app>, la cual se ejecuta con el comando "
+"<cmd>myapplication1</cmd>."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:68
@@ -3748,6 +3786,8 @@ msgid ""
 "GNOME follows the <em>freedesktop.org Shared MIME Info</em> specification to "
 "determine:"
 msgstr ""
+"GNOME sigue la especificación de <em>Información compartida MIME de "
+"freedesktop.org</em> para determinar:"
 
 #. (itstool) path: item/p
 #: C/mime-types.page:72
@@ -3755,6 +3795,8 @@ msgid ""
 "The machine-wide and user-specific location to store all MIME type "
 "specification files."
 msgstr ""
+"La localización para guardar todos archivos de especificación de los tipos "
+"MIME globales del sistema y específicos del usuario."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:78
@@ -3762,6 +3804,8 @@ msgid ""
 "How to register a MIME type so that the desktop environment knows which "
 "applications can be used to open a specific file format."
 msgstr ""
+"Cómo registrar un tipo MIME para que el entorno de escritorio conozca que "
+"aplicaciones deben ser usadas para abrir un tipo específico de archivo."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:84
@@ -3797,6 +3841,14 @@ msgid ""
 "types available on the system by default. That file is provided by the "
 "<sys>shared-mime-info</sys> package."
 msgstr ""
+"La parte más importante de la base de datos de tipos MIME desde el punto de "
+"vista del administrador es la carpeta <file>/usr/share/mime/packages/</file> "
+"donde se almacenan los archivos relacionados con los tipos MIME que "
+"especifican la información de los tipos MIME conocidos. Un ejemplo de "
+"archivo de este tipo es <file>/usr/share/mime/packages/freedesktop.org.xml</"
+"file> que especifica información acerca de los tipos MIME estándar "
+"disponibles en el sistema de forma predeterminada. Ese archivo se suministra "
+"con el paquete <sys>shared-mime-info</sys>."
 
 #. (itstool) path: section/p
 #: C/mime-types.page:108
