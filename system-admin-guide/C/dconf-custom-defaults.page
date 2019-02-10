@@ -8,7 +8,7 @@
     <link type="seealso" xref="dconf-profiles" />
     <link type="seealso" xref="dconf-lockdown" />
     <link type="seealso" xref="dconf" />
-    <revision pkgversion="3.6" version="0.1" date="2012-05-21" status="draft"/>
+    <revision pkgversion="3.30" date="2019-02-08" status="draft"/>
 
     <credit type="author copyright">
       <name>Ryan Lortie</name>
@@ -35,6 +35,11 @@
       <email>kittykat3756@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2019</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
@@ -44,8 +49,6 @@
   </info>
 
   <title>Custom default values for system settings</title>
-
-  <!-- TODO: reveiw against dconf-lockdown.page -->
 
   <p>System-wide default settings can be set by providing a default for a key
   in a <sys its:translate="no">dconf</sys> profile. These defaults can be
@@ -67,13 +70,15 @@
   </comment>
 
   <steps>
-    <title>An example demonstrating how to set the default background</title>
+    <title>An example setting the default background</title>
     <item>
       <p>Create the <file its:translate="no">user</file> profile:</p>
       <listing its:translate="no">
         <title><file>/etc/dconf/profile/user</file></title>
-        <code>user-db:user
-system-db:local</code>
+<code>
+user-db:user
+system-db:local
+</code>
       </listing>
       <p><input its:translate="no">local</input> is the name of a
       <sys its:translate="no">dconf</sys> database.</p>
@@ -83,14 +88,16 @@ system-db:local</code>
       database which contains the default settings:</p>
       <listing its:translate="no">
         <title><file>/etc/dconf/db/local.d/01-background</file></title>
-<code># <span its:translate="yes">dconf path</span>
+<code>
+# <span its:translate="yes">dconf path</span>
 [org/gnome/desktop/background]
 
 # <span its:translate="yes">dconf key names and their corresponding values</span>
 picture-uri='file:///usr/local/share/backgrounds/wallpaper.jpg'
 picture-options='scaled'
 primary-color='000000'
-secondary-color='FFFFFF'</code>
+secondary-color='FFFFFF'
+</code>
       </listing>
     </item>
     <include href="dconf-snippets.xml"
@@ -103,6 +110,13 @@ secondary-color='FFFFFF'</code>
     changed, the user will need to log out and log in again before the changes
     will be applied.</p>
   </note>
+
+  <p>If you want to avoid creating the <sys its:translate="no">user</sys>
+  profile, you can use the <cmd>dconf</cmd> command-line utility to read and
+  write individual values or entire directories from and to a
+  <sys its:translate="no">dconf</sys> database. For more information, see the
+  <link its:translate="no" href="man:dconf"><cmd>dconf</cmd>(1)</link> man
+  page.</p>
 
 </section>
 

@@ -1,0 +1,116 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="lockdown-single-app-mode">
+     
+  <info>
+    <link type="guide" xref="user-settings#lockdown"/>
+    <link type="seealso" xref="lockdown-printing" />
+    <link type="seealso" xref="lockdown-file-saving" />
+    <link type="seealso" xref="lockdown-repartitioning" />
+    <link type="seealso" xref="lockdown-command-line" />
+    <link type="seealso" xref="login-automatic" />
+
+    <revision pkgversion="3.30" date="2019-02-08" status="review"/>
+
+    <credit type="author copyright">
+      <name>Matthias Clasen</name>
+      <email>mclasen@redhat.com</email>
+      <years>2014</years>
+    </credit>
+    <credit type="editor">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+        <years>2014</years>
+    </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2019</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+       
+    <desc>Set up a kiosk-like, single-application system.</desc>
+  </info>
+  
+  <title>Configure single-application mode</title>
+
+  <p>Single-application mode is a modified GNOME Shell which configures the
+  Shell as an interactive kiosk. The administrator locks down some behavior to
+  make the standard desktop more restrictive for users, letting them focus on
+  selected features.</p>
+
+  <p>Set up single-application mode for a wide range of functions in a number
+  of fields (from communication to entertainment or education), and use it as a
+  self-serve machine, event manager, registration point, and so on.</p>
+
+  <steps>
+  <title>Set up single-application mode</title>
+    <item>
+      <p>Lock down settings to prevent printing, terminal access, and so on.</p>
+      <list type="disc">
+        <item><p><link xref="lockdown-command-line" /></p></item>
+        <item><p><link xref="lockdown-printing" /></p></item>
+        <item><p><link xref="lockdown-file-saving" /></p></item>
+        <item><p><link xref="lockdown-repartitioning" /></p></item>
+      </list>
+    </item>
+    <item>
+      <p>Configure automatic login in the <file>/etc/gdm/custom.conf</file>
+      file for the user.</p>
+      <p>See <link xref="login-automatic" /> for more information.</p>
+    </item>
+    <item>
+      <p>Create a new user with a name, which follows typical naming conventions
+      (no space or special characters, do not start with a digit or a dash).
+      Also, make sure the user name matches with the related names, such as when
+      referring to a session. A good example is <em>kiosk-user</em>.</p>
+    </item>
+    <item>
+      <p>Create a session with a name matching the user name (for example, for
+      the <em>kiosk-user</em> mentioned above, <em>kiosk</em> is a good match).
+      To do so, create a <file>/usr/share/xsessions/<var>kiosk</var>.desktop</file>
+      file and set the <code>Exec</code> line as follows:</p>
+<code>
+Exec=gnome-session --session kiosk
+</code>
+    </item>
+    <item>
+      <p>Set the default session for <em>kiosk-user</em> by adding the following
+      line to the <file>/var/lib/AccountsService/users/<var>kiosk-user</var>
+      </file> file:</p>
+<code>
+XSession=kiosk
+</code>
+    </item>
+    <item>
+      <p>Define the <em>kiosk</em> session by writing a custom session
+      definition, containing the following line:</p>
+<code>
+RequiredComponents=kiosk-app;gnome-settings-daemon;kiosk-shell;
+</code>
+      <p>This creates a session that runs three programs: <sys>kiosk-app</sys>
+      (a sample application), <sys>gnome-settings-daemon</sys> (a standard
+      component in the GNOME session), and <sys>kiosk-shell</sys> (which is a
+      customized version of GNOME Shell).</p>
+    </item>
+    <item>
+      <p>Create a desktop file for <sys>kiosk-shell</sys> in
+      <file>/usr/share/applications/kiosk-shell.desktop</file>, containing the
+      following line:</p>
+<code>
+Exec=gnome-shell --mode=kiosk
+</code>
+    </item>
+    <item>
+      <p>Create a mode definition <file>/usr/share/gnome-shell/modes/kiosk.json</file>.
+      This is a simple json file defining the available <sys>gnome-shell</sys>
+      user interface.</p>
+      <p>As the starting point, look at <file>/usr/share/gnome-shell/modes/classic.json</file>
+      and <file>/usr/share/gnome-shell/modes/initial-setup.json</file> for
+      examples.</p>
+    </item>
+  </steps>
+
+</page>

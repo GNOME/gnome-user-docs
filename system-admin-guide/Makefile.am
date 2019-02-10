@@ -4,6 +4,8 @@ HELP_ID = system-admin-guide
 
 HELP_FILES = \
 	appearance.page \
+	autostart-applications.page \
+	backgrounds-extra.page \
 	dconf-custom-defaults.page \
 	dconf-keyfiles.page \
 	dconf-lockdown.page \
@@ -20,14 +22,18 @@ HELP_FILES = \
 	extensions.page	\
 	fonts.page \
 	fonts-user.page	\
+	gsettings-browse.page \
 	index.page \
+	keyboard-compose-key.page \
 	keyboard-layout.page \
 	legal.xml \
 	lockdown-command-line.page \
 	lockdown-file-saving.page \
+	lockdown-logout.page \
 	lockdown-online-accounts.page \
 	lockdown-printing.page \
 	lockdown-repartitioning.page \
+	lockdown-single-app-mode.page \
 	login-automatic.page \
 	login-banner.page \
 	login-enterprise.page \
