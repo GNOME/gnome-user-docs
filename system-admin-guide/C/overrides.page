@@ -1,15 +1,21 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="overrides">
 
   <info>
     <link type="guide" xref="setup" />
-    <revision pkgversion="3.6" date="2012-05-21" status="stub"/>
+    <revision pkgversion="3.30" date="2019-02-08" status="review"/>
 
     <credit type="author copyright">
       <name>Michael Hill</name>
       <email>mdhillca@gmail.com</email>
       <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2019</years>
     </credit>
 
     <desc>GSettings overrides are used by distributions to adjust default
@@ -28,24 +34,19 @@
   administrators to adjust default settings and set mandatory settings for the
   GNOME desktop and apps.</p>
 
-<comment>
-   <p>GNOME developers are working towards allowing or even requiring <file>/usr/</file>
-   to be mounted read-only with the exception of <file>/usr/local/</file>.</p>
+  <section id="what-are-vendor-overrides">
+  <title>What are vendor overrides?</title>
 
-   <p>Default values are defined in the schemas that get installed by an
+   <p>Default values are defined in the schemas that are installed by an
    application. Sometimes, it is necessary for a vendor or distributor to adjust
-   these defaults. Since patching the XML source for the schema is inconvenient
-   and error-prone, glib-compile-schemas reads so-called
-   <em>"vendor override"</em>  files. These are keyfiles in the same directory
-   as the XML schema sources which can override default values. The schema id
-   serves as the group name in the key file, and the values are expected in
-   serialized GVariant form, as in the following example:</p>
+   these defaults.</p>
 
-<code>
-[org.gtk.Example]
-key1='string'
-key2=1.5
-</code>
-</comment>
+   <p>Since patching the XML source for the schema is inconvenient and
+   error-prone, <link its:translate="no" href="man:glib-compile-schemas">
+   <sys>glib-compile-schemas</sys></link> reads so-called <em>vendor override</em>
+   files. These are keyfiles in the same directory as the XML schema sources,
+   which can override default values.</p>
+
+  </section>
 
 </page>

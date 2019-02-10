@@ -1,16 +1,19 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="keyboard-compose-key">
 
   <info>
-    <link type="guide" xref="setup" />
-    <revision pkgversion="3.11" date="2014-01-29" status="draft"/>
+    <link type="guide" xref="user-settings" />
+    <revision pkgversion="3.30" date="2019-02-08" status="draft"/>
 
     <credit type="author copyright">
       <name>Petr Kovar</name>
       <email>pknbe@volny.cz</email>
       <years>2014</years>
     </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
     <desc>Enable the compose key by default for all users.</desc>
   </info>
@@ -24,6 +27,12 @@
 
   <steps>
     <title>Set the Right Alt key as the Compose key</title>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-profile-user-dir'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
     <item>
       <p>Create a <sys>local</sys> database for machine-wide settings in
       <file>/etc/dconf/db/local.d/00-input-sources</file>:</p>
@@ -32,8 +41,8 @@
 xkb-options=['compose:<var>ralt</var>']</code>
       <p>If you want to set a different key than Right <key>Alt</key>, replace
       <var>ralt</var> with the name of that key as specified in the
-      <cmd>xkeyboard-config</cmd>(7) man page, section <em>Compose key
-      position</em>.</p>
+      <link href="man:xkeyboard-config"><cmd>xkeyboard-config</cmd>(7)</link>
+      man page, section <em>Position of Compose key</em>.</p>
     </item>
     <item>
       <p>Override the user's setting and prevent the user from changing it in
@@ -42,10 +51,12 @@ xkb-options=['compose:<var>ralt</var>']</code>
 /org/gnome/desktop/input-sources/xkb-options
 </code>
     </item>
-    <item>
-      <p>Update the system databases for the changes to take effect:</p>
-      <screen><output>$ </output><input>dconf update</input></screen>
-    </item>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="dconf-snippets.xml"
+             xpointer="xpointer(/*/*[@xml:id='dconf-logoutin'])"
+             xmlns="http://www.w3.org/2001/XInclude"/>
   </steps>
 
 </page>

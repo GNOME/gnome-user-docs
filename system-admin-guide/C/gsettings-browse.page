@@ -1,0 +1,70 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="gsettings-browse">
+
+  <info>
+    <link type="guide" xref="setup" />
+    <link type="seealso" xref="dconf" />
+    <link type="seealso" xref="overrides" />
+    <revision pkgversion="3.30" date="2019-02-08" status="draft"/>
+
+    <credit type="author copyright">
+      <name>Matthias Clasen</name>
+      <email>matthias.clasen@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="author copyright">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2019</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>What tool can I use to explore system and application settings?</desc>
+  </info>
+
+  <title>Browse GSettings values for your applications</title>
+
+  <p>There are two tools you can use to browse system and application
+  preferences stored as GSettings values, the <app>dconf-editor</app> graphical
+  utility and the <cmd>gsettings</cmd> command line utility.</p>
+
+  <p>Both <app>dconf-editor</app> and <cmd>gsettings</cmd> also allows you to
+  change preferences for the current user.</p>
+
+  <note style="warning"><p>Note that these tools always operate using the
+  current user's GSettings database, so you should not run these
+  applications as root.</p>
+  
+  <p>Both <app>dconf-editor</app> and <cmd>gsettings</cmd> require a
+  D-Bus session bus in order to make any changes. This is because the
+  <sys>dconf</sys> daemon must be activated using D-Bus.</p>
+
+  <p>You can get the required session bus by running <cmd>gsettings</cmd> under
+  the <sys>dbus-launch</sys> utility, like this:</p>
+
+  <screen><output>$ </output><input>dbus-launch gsettings set org.gnome.desktop.background draw-background true</input></screen>
+  </note>
+
+  <p><app>dconf-editor</app> may be better to use if you are not familiar with
+  the options available in an application. It shows the hierarchy of settings
+  in a tree-view and also displays additional information about each setting,
+  including the description, type and default value.</p>
+
+  <p><cmd>gsettings</cmd> is more powerful than <app>dconf-editor</app>.
+  Bash completion is provided for <cmd>gsettings</cmd>, and you can write
+  scripts that include <cmd>gsettings</cmd> commands for automated
+  configuration.</p>
+
+  <p>For a complete list of <cmd>gsettings</cmd> options, see the
+  <link its:translate="no" href="man:gsettings"><cmd>gsettings</cmd>(1)</link>
+  man page.</p>
+
+</page>

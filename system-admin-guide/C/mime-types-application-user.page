@@ -6,7 +6,7 @@
     <link type="guide" xref="software#management" />
     <link type="seealso" xref="mime-types-custom-user" />
     <link type="seealso" xref="mime-types-custom" />
-    <revision pkgversion="3.12" date="2014-06-17" status="review"/>
+    <revision pkgversion="3.30" date="2019-02-08" status="review"/>
 
     <credit type="author">
       <name>Petr Kovar</name>
@@ -18,22 +18,26 @@
   </info>
 
     <title>Override the default registered application for individual users</title>
+
     <p>
-      The <file>/usr/share/applications/defaults.list</file> file
-      specifies which application is registered to open specific MIME types by
-      default. To override the system defaults for individual users, you need to
-      create a <file>~/.local/share/applications/mimeapps.list</file>
-      file with a list of MIME types for which you want to override the default
-      registered application.
+      The <file>/usr/share/applications/mimeapps.list</file> and
+      <file>/usr/share/applications/gnome-mimeapps.list</file> files
+      specify which application is registered to open specific MIME types by
+      default. These files are provided by the distribution.
+    </p>
+    <p>
+      To override the system defaults for individual users, you need to
+      create a <file>~/.config/mimeapps.list</file> file with a list of MIME
+      types for which you want to override the default registered application.
     </p>
     <steps>
       <title>Override the default registered application for individual users</title>
       <item>
         <p>
-          Consult the <file>/usr/share/applications/defaults.list</file>
+          Consult the <file>/usr/share/applications/mimeapps.list</file>
           file to determine the MIME types for which you want to change the
           default registered application. For example, the following sample of
-          the <file>defaults.list</file> file specifies the default
+          the <file>mimeapps.list</file> file specifies the default
           registered application for the <code>text/html</code> and
           <code>application/xhtml+xml</code> MIME types:
         </p>
@@ -52,9 +56,9 @@ application/xhtml+xml=epiphany.desktop</code>
       </item>
       <item>
         <p>
-          Create the <file>~/.local/share/applications/mimeapps.list</file>
-          file. In the file, specify the MIME types and their corresponding
-          default registered applications:
+          Create the <file>~/.config/mimeapps.list</file> file. In the file,
+          specify the MIME types and their corresponding default registered
+          applications:
         </p>
         <code>[Default Applications]
 text/html=<var>myapplication1.desktop</var>
@@ -73,7 +77,9 @@ application/xhtml+xml=<var>myapplication2.desktop</var>;</code>
         <p>For these settings to function properly, ensure that both the
         <file>myapplication1.desktop</file> and
         <file>myapplication2.desktop</file> files are placed in the
-        <file>/usr/share/applications/</file> directory.
+        <file>/usr/share/applications/</file> directory. Individual users’
+        <file>.desktop</file> files can be stored in
+        <file>~/.local/share/applications/</file>.
       </p>
       </item>
       <item>

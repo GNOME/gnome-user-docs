@@ -5,8 +5,9 @@
 
   <info>
     <link type="guide" xref="setup" />
-<!--    <link type="seealso" xref="dconf-profiles" />-->
-    <revision pkgversion="3.9" date="2013-08-06" status="stub"/>
+    <link type="seealso" xref="dconf" />
+    <link type="seealso" xref="dconf-profiles" />
+    <revision pkgversion="3.30" date="2019-02-08" status="review"/>
 
     <credit type="author copyright">
       <name>Ryan Lortie</name>
@@ -17,6 +18,11 @@
       <name>Aruna Sankaranarayanan</name>
       <email>aruna.evam@gmail.com</email>
     </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2019</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
@@ -25,19 +31,6 @@
   </info>
 
   <title>Control system settings with keyfiles</title>
-
-  <comment>
-    <cite date="2013-08-06" href="mailto:mdhillca@gmail.com">Michael Hill</cite>
-    <p>Separate page incorporating description from dconf.page.stub and
-    paragraph from dconf-favorite-applications#all-users, but including an
-    example?</p>
-
-    <p>To support the ability to configure the system with a text editor, 
-    <sys its:translate="no">dconf</sys> has introduced
-    <em>keyfile directories</em>. For any given system database, a corresponding
-    directory can be created (with ".d" added to the filename, for example
-    <file>/etc/dconf/db/local.d</file>).</p>
-  </comment>
 
   <p>System database files, located in
   <file its:translate="no">/etc/dconf/db</file>, cannot be edited because
@@ -73,8 +66,18 @@ picture-uri='file:///usr/local/rupert-corp/company-wallpaper.jpeg'
     recent than the one on the database file,
     <sys its:translate="no">dconf</sys> regenerates the
     <code>system-db</code> file and sends a notification to the system
-    <sys>Dbus</sys>, which in turn notifies all running applications to
+    <sys>D-Bus</sys>, which in turn notifies all running applications to
     reread their settings.</p>
   </note>
+
+  <p>The group name in the keyfile references a
+  <link href="https://developer.gnome.org/GSettings/">GSettings schema ID</link>.
+  For example, <code>org/gnome/desktop/background</code> references the
+  schema <code>org.gnome.desktop.background</code>, which contains the key
+  <code>picture-uri</code>.</p>
+
+  <p>The values under a group are expected in
+  <link href="https://developer.gnome.org/glib/stable/gvariant-text.html">serialized
+  GVariant form</link>.</p>
 
 </page>

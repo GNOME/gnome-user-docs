@@ -1,0 +1,141 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="backgrounds-extra">
+
+  <info>
+    <link type="guide" xref="appearance" />
+    <revision pkgversion="3.30" date="2019-02-08" status="draft"/>
+
+    <credit type="author copyright">
+      <name>Matthias Clasen</name>
+      <email>matthias.clasen@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2013</years>
+    </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2019</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>How do I make extra backgrounds available to my users?</desc>
+  </info>
+
+  <title>Add extra backgrounds</title>
+
+  <p>You can make extra backgrounds available to users on your system by
+  following the steps below.</p>
+
+  <steps>
+  <title>Set extra backgrounds</title>
+  <item>
+  <p>Create an XML file, for example <file><var>filename</var>.xml</file>.
+  In this file, use keys from the <sys>org.gnome.desktop.background</sys>
+  GSettings schema to specify extra backgrounds and their appearance.</p>
+
+  <p>Below is a list of the most frequently used keys:</p>
+
+  <table frame="top bottom" rules="all" shade="rows">
+    <title>org.gnome.desktop.background schemas GSettings keys</title>
+    <tbody>
+    <tr>
+      <td><p>Key name</p></td>
+      <td><p>Possible values</p></td>
+      <td><p>Description</p></td>
+    </tr>
+    <tr>
+      <td><p>picture-options</p></td>
+      <td><p>"none", "wallpaper", "centered", "scaled", "stretched", "zoom", "spanned"</p></td>
+      <td><p>Determines how the image set by <var>wallpaper_filename</var> is rendered.</p></td>
+    </tr>
+    <tr>
+      <td><p>color-shading-type</p></td>
+      <td><p>"horizontal", "vertical", and "solid"</p></td>
+      <td><p>How to shade the background color.</p></td>
+    </tr>
+    <tr>
+      <td><p>primary-color</p></td>
+      <td><p>default: #023c88</p></td>
+      <td><p>Left or top color when drawing gradients, or the solid color.</p></td>
+    </tr>
+    <tr>
+      <td><p>secondary-color</p></td>
+      <td><p>default: #5789ca</p></td>
+      <td><p>Right or bottom color when drawing gradients, not used for solid color.</p></td>
+    </tr>
+  </tbody>
+  </table>
+
+  <p>You can view a complete list of <sys>org.gnome.desktop.background</sys>
+  keys and possible values using <app>dconf-editor</app> or the <cmd>gsettings</cmd>
+  command-line utility. See <link xref="gsettings-browse"/> for more information.
+  </p>
+  <p>Below is a sample <file><var>filename</var>.xml</file> file:</p>
+
+<code><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper deleted="false">
+    <name>Company Background</name>
+    <name xml:lang="de">Firmenhintergrund</name>
+    <filename>/usr/local/share/backgrounds/company-wallpaper.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+</wallpapers>
+]]>
+</code>
+
+  </item>
+  <item>
+  <p>Place the <file><var>filename</var>.xml</file> file in the
+  <file>/usr/share/gnome-background-properties/</file> directory.</p>
+  <p>Users will have the extra backgrounds available for configuration from
+  <guiseq><gui>Settings</gui> <gui>Background</gui></guiseq>.</p>
+  </item>
+  </steps>
+
+
+  <section id="backgrounds-extra-two-wallpapers">
+  <title>Specify multiple backgrounds</title>
+  <p>In one configuration file, you can specify multiple
+  <code>&lt;wallpaper&gt;</code> elements to add more backgrounds.</p>
+  <p>See the following example with two <code>&lt;wallpaper&gt;</code> elements,
+  adding two different backgrounds:</p>
+
+<code><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper deleted="false">
+    <name>Company Background</name>
+    <name xml:lang="de">Firmenhintergrund</name>
+    <filename>/usr/local/share/backgrounds/company-wallpaper.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Company Background 2</name>
+    <name xml:lang="de">Firmenhintergrund 2</name>
+    <filename>/usr/local/share/backgrounds/company-wallpaper-2.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#ff0000</pcolor>
+    <scolor>#00ffff</scolor>
+  </wallpaper>
+</wallpapers>
+]]></code>
+
+</section>
+</page>

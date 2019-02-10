@@ -6,7 +6,7 @@
   <info>
     <link type="guide" xref="software#management" />
     <link type="guide" xref="user-settings#lockdown"/>
-    <revision pkgversion="3.12" date="2014-06-18" status="review" />
+    <revision pkgversion="3.30" date="2019-02-08" status="review"/>
 
     <credit type="author copyright">
       <name>Petr Kovar</name>
@@ -18,6 +18,11 @@
       <email>kittykat3756@gmail.com</email>
       <years>2014</years>
     </credit>
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2015</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
@@ -26,17 +31,27 @@
 
   <title>Disable command-line access</title>
 
-  <p>You can prevent users from being able to access the command-line through
-  virtual terminals and terminal applications by following the steps described
-  below.</p>
+  <p>To disable command-line access for your desktop user, you need to make
+  configuration changes in a number of different contexts. Bear in mind that the
+  following steps do not remove the desktop user's permissions to access a
+  command line, but rather remove the ways that the desktop user could access
+  the command line.</p>
 
   <list>
     <item>
-      <p>Prevent users from accessing the
-      <keyseq><key>Alt</key><key>F2</key></keyseq> command prompt.</p>
+      <p>Set the <code>org.gnome.desktop.lockdown.disable-command-line</code>
+      GSettings key, which prevents the user from accessing the terminal or
+      specifying a command line to be executed (the <keyseq><key>Alt</key>
+      <key>F2</key></keyseq> command prompt).</p>
     </item>
     <item>
-      <p>Disable dropping to a virtual terminal (VT).</p>
+      <p>Prevent users from accessing the <keyseq><key>Alt</key><key>F2</key>
+      </keyseq> command prompt.</p>
+    </item>
+    <item>
+      <p>Disable switching to virtual terminals (VTs) with the <keyseq>
+      <key>Ctrl</key><key>Alt</key><key><var>function key</var></key></keyseq>
+      shortcuts by modifying the X server configuration.</p>
     </item>
     <item>
       <p>Remove <app>Terminal</app> and all other terminal applications from
@@ -93,21 +108,26 @@ disable-command-line=true</code>
 
   <p>If the computer is running the <em>X Window System</em>, you can disable
   access to all virtual terminals by adding a <code>DontVTSwitch</code> option
-  to the <code>Serverflags</code> section in the
-  <file>/etc/X11/xorg.conf.d</file> file.</p>
+  to the <code>Serverflags</code> section in an X configuration file in the
+  <file>/etc/X11/xorg.conf.d/</file> directory.</p>
 
   <steps>
     <item>
       <p>Create or edit an X configuration file in
-      <file>/etc/X11/xorg.conf.d</file>:</p>
-      <code>Section "Serverflags"
+      <file>/etc/X11/xorg.conf.d/</file>. For example,
+      <file>/etc/X11/xorg.conf.d/10-xorg.conf</file>:</p>
+    <listing>
+    <title><file>/etc/X11/xorg.conf.d/10-xorg.conf</file></title>
+<code>Section "Serverflags"
 
 Option "DontVTSwitch" "yes"
 
-EndSection</code>
+EndSection
+</code>
+    </listing>
     </item>
     <item>
-      <p>Restart GDM for the change to take effect.</p>
+      <p>Restart the X server for the changes to take effect.</p>
     </item>
   </steps>
 

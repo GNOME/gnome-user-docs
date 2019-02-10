@@ -1,0 +1,77 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="lockdown-logout">
+
+  <info>
+    <link type="guide" xref="user-settings#lockdown"/>
+    <link type="seealso" xref="dconf-lockdown" />
+    <revision pkgversion="3.30" date="2019-02-08" status="review"/>
+
+    <credit type="author copyright">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+      <years>2015</years>
+    </credit>
+    <credit type="editor">
+      <name>Petr Kovar</name>
+      <email>pknbe@volny.cz</email>
+      <years>2019</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Prevent the user from logging out and from switching a user.</desc>
+  </info>
+
+  <title>Disable user logout and user switching</title>
+
+  <p>Preventing the user from logging out is useful for special kind of GNOME
+  deployments (unmanned kiosks, public internet access terminals, and so on).</p>
+
+  <note style="important">
+  <p>Users can evade the logout lockdown by switching to a different user. That
+  is the reason why it is recommended to also disable <em>user switching</em>
+  when configuring the system.</p>
+  </note>
+
+  <steps>
+  <title>Disable user logout and user switching</title>
+  <include href="dconf-snippets.xml"
+           xpointer="xpointer(/*/*[@xml:id='dconf-profile-user'])"
+           xmlns="http://www.w3.org/2001/XInclude"/>
+  <include href="dconf-snippets.xml"
+           xpointer="xpointer(/*/*[@xml:id='dconf-profile-user-dir'])"
+           xmlns="http://www.w3.org/2001/XInclude"/>
+  <item>
+  <p>Create the key file <file>/etc/dconf/db/local.d/00-logout</file> to provide
+  information for the <sys>local</sys> database:</p>
+<screen>
+[org/gnome/desktop/lockdown]
+# Prevent the user from logging out
+disable-log-out=true
+
+# Prevent the user from user switching
+disable-user-switching=true
+</screen>
+  </item>
+  <item>
+  <p>Override the user's setting and prevent the user from changing it in
+  <file>/etc/dconf/db/local.d/locks/lockdown</file>:</p>
+<screen>
+# Lock user logout
+/org/gnome/desktop/lockdown/disable-log-out
+
+# Lock user switching
+/org/gnome/desktop/lockdown/disable-user-switching
+</screen>
+  </item>
+  <include href="dconf-snippets.xml"
+           xpointer="xpointer(/*/*[@xml:id='dconf-update'])"
+           xmlns="http://www.w3.org/2001/XInclude"/>
+  <item>
+  <p>Restart the system for the system-wide settings to take effect.</p>
+  </item>
+  </steps>
+
+</page>

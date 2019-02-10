@@ -7,13 +7,17 @@
     <link type="guide" xref="software#extension" />
     <link type="seealso" xref="extensions-lockdown" />
     <link type="seealso" xref="extensions" />
-    <revision pkgversion="3.12" date="2014-06-17" status="review"/>
+    <revision pkgversion="3.30" date="2019-02-08" status="review"/>
 
     <credit type="author copyright">
       <name>Petr Kovar</name>
       <email>pknbe@volny.cz</email>
       <years>2014</years>
     </credit>
+    <credit type="author">
+      <name>Jana Svarova</name>
+      <email>jana.svarova@gmail.com</email>
+   </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
@@ -24,9 +28,13 @@
   
   <p>To make extensions available to all users on the system, install them in
   the <file>/usr/share/gnome-shell/extensions</file> directory. Note that
-  newly-installed machine-wide extensions are disabled by default. To enable
-  the extensions for all users, you need to set the
-  <code>org.gnome.shell.enabled-extensions</code> key.</p>
+  newly-installed machine-wide extensions are disabled by default.</p>
+
+  <p>You need to set the <code>org.gnome.shell.enabled-extensions</code> key in
+  order to set the default enabled extensions. However, there is currently no
+  way to enable additional extensions for users who have already logged in. This
+  does not apply for existing users who have installed and enabled their own
+  GNOME extensions.</p>
 
   <steps>
     <title>Setting the org.gnome.shell.enabled-extensions key</title>
