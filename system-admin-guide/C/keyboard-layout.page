@@ -86,15 +86,15 @@
       <p>Add the layout codes to
       <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</file> in the following
       way:</p>
-      <screen>
-        Section "InputClass"
-          Identifier "evdev keyboard catchall"
-          MatchIsKeyboard "on"
-          MatchDevicePath "/dev/input/event*"
-          Driver "evdev"
-          <input>Option "XkbLayout" "en,fr"</input>
-        EndSection
-      </screen>
+<screen>
+Section "InputClass"
+  Identifier "evdev keyboard catchall"
+  MatchIsKeyboard "on"
+  MatchDevicePath "/dev/input/event*"
+  Driver "evdev"
+  <input>Option "XkbLayout" "en,fr"</input>
+EndSection
+</screen>
       <p>Multiple layouts can be added as a comma separated list, as shown in
       the example for English (<sys>en</sys>) and French (<sys>fr</sys>)
       layouts.</p>

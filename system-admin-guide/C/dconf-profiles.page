@@ -7,7 +7,7 @@
     <link type="guide" xref="setup" />
     <link type="seealso" xref="dconf-custom-defaults" />
     <link type="seealso" xref="dconf" />
-    <revision pkgversion="3.30" date="2019-02-08" status="incomplete"/>
+    <revision pkgversion="3.30" date="2019-02-22" status="incomplete"/>
 
     <credit type="author copyright">
       <name>Ryan Lortie</name>
@@ -59,8 +59,8 @@
       <title>Sample profile</title>
 <code its:translate="no">
 user-db:user
-system-db:<input>local</input>
-system-db:<input>site</input>
+system-db:<var>local</var>
+system-db:<var>site</var>
 </code>
     </listing>
   </example>
@@ -68,11 +68,24 @@ system-db:<input>site</input>
   <!-- TODO: explain the profile syntax (maybe new page) -->
   <!--TODO: explain local and site -->
 
+  <p>Configuring a single user and multiple system databases allows for layering
+  of preferences. Settings from the <code>user</code> database file take
+  precedence over the settings in the <code>local</code> database file, and the
+  <code>local</code> database file in turn takes precedence over the
+  <code>site</code> database file.</p>
+
+  <p>However, the order of precedence for <link xref="dconf-lockdown">locks</link>
+  is reversed. Locks introduced in the <code>site</code> or <code>local</code>
+  database files take priority over those present in <code>user</code>.</p>
+
   <note style="important">
   <p>The <sys>dconf</sys> profile for a session is determined at login, so users
   will have to log out and log in to apply a new <sys>dconf</sys> user profile
   to their session.</p>
   </note>
+
+  <p>For more information, see the <link its:translate="no" href="man:dconf(7)">
+  <cmd>dconf</cmd>(7)</link> man page.</p>
 
   <section id="dconf-profiles">
 
@@ -87,6 +100,9 @@ system-db:<input>site</input>
   named profile and aborts if that fails. If the variable is not set,
   <sys>dconf</sys> attempts to open the profile named “user”. If that
   fails, it will fall back to an internal hard-wired configuration.</p>
+
+  <p>For more information, see the <link its:translate="no" href="man:dconf(7)">
+  <cmd>dconf</cmd>(7)</link> man page.</p>
 
   </section>
 
