@@ -11,20 +11,20 @@
 # 
 # 
 # Oliver Gutierrez <ogutsua@gmail.com>, 2019.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2017, 2018, 2019.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-help.master\n"
-"POT-Creation-Date: 2019-01-12 18:15+0000\n"
-"PO-Revision-Date: 2019-01-17 11:40+0100\n"
+"POT-Creation-Date: 2019-02-17 20:33+0000\n"
+"PO-Revision-Date: 2019-02-26 16:04+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 3.31.90\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. (itstool) path: p/link
@@ -6133,6 +6133,11 @@ msgid ""
 "<em>repair</em> or at least <em>check</em> the filesystem to prevent future "
 "data loss."
 msgstr ""
+"Los sistemas de archivos se pueden corromper debido a una pérdida de energía "
+"inesperada, cuelgues del sistema y desconexión insegura de la unidad. "
+"Después de un incidente de este tipo es recomendable <em>reparar</em> o al "
+"menos <em>comprobar</em> el sistema de archivos para prevenir futuras "
+"pérdidas de datos."
 
 #. (itstool) path: page/p
 #: C/disk-repair.page:26
@@ -6198,6 +6203,10 @@ msgid ""
 "Note that in some cases even if the filesystem is undamaged it still may "
 "need to be repaired to reset an internal ‘dirty’ marker."
 msgstr ""
+"Después de finalizar se le notificará en caso de que el sistema de archivos "
+"esté dañado. Tenga en cuenta que en algunos caso, incluso si el sistema de "
+"archivos no está dañado, todavía puede ser necesario repararlo para "
+"reinicializar un marcador interno «desordenado»."
 
 #. (itstool) path: note/title
 #: C/disk-repair.page:58
@@ -6213,6 +6222,12 @@ msgid ""
 "+found</em> folder in the top level directory of the filesystem where these "
 "recovered file parts can be found."
 msgstr ""
+"Si la estructura del sistema de archivos está dañada puede afectar a los "
+"archivos guardados en el sistema de archivos. En algunos casos, estos "
+"archivos no se pueden recuperar a un estado válido y se eliminarán o moverán "
+"a una carpeta especial.- Normalmente es la carpeta <em>lost+found</em> en la "
+"raiz del sistema de archivos en el que podrá encontrar las partes de "
+"archivos recuperadas."
 
 #. (itstool) path: note/p
 #: C/disk-repair.page:64
@@ -6231,6 +6246,10 @@ msgid ""
 "<app>sleuthkit</app> to further recover missing files and data parts which "
 "were not restored during the repair, and also previously removed files."
 msgstr ""
+"Esta imagen se puede procesar con herramientas de análisis forense como "
+"<app>sleuthkit</app> para posteriormente recuperar archivos y partes de "
+"archivo que no se haya podido recuperar durante la reparación, e incluso "
+"archivos eliminados."
 
 #. (itstool) path: steps/title
 #: C/disk-repair.page:74
@@ -6264,6 +6283,10 @@ msgid ""
 "bring the filesystem into a consistent state and moves files which were "
 "damaged in a special folder. Be patient while the filesystem is repaired."
 msgstr ""
+"La acción desmontará el sistema de archivos si es necesario. La acción de "
+"reparar intenta llevar el sistema de archivos a un estado consistente y "
+"mueve los archivos que estén dañados a una carpeta especial. Sea paciente "
+"mientras el sistema de archivos se repara."
 
 #. (itstool) path: item/p
 #: C/disk-repair.page:96
@@ -6283,6 +6306,10 @@ msgid ""
 "mounting the image read-only or using forensic analysis tools like "
 "<app>sleuthkit</app>."
 msgstr ""
+"Si el sistema de archivos no puede repararse, saque una copia guardando una "
+"imagen del volumen para recuperar archivos importantes posteriormente. Puede "
+"hacerlo montando la imagen en modo sólo lectura o usando herramientas de "
+"análisis forense como <app>sleuthkit</app>."
 
 #. (itstool) path: item/p
 #: C/disk-repair.page:103
@@ -6290,6 +6317,9 @@ msgid ""
 "To make use of the volume again it has to be <link xref=\"disk-format"
 "\">formatted</link> with a new filesystem. All data will be discarded."
 msgstr ""
+"Para hacer uso del volumen de nuevo debe <link xref=\"disk-format"
+"\">formatearse</link> con un nuevo sistema de archivos. Todos los datos se "
+"perderán."
 
 #. (itstool) path: info/desc
 #: C/disk-resize.page:15
@@ -6360,6 +6390,11 @@ msgid ""
 "enough space within the filesystem when shrinking to ensure that it can work "
 "fast and reliably."
 msgstr ""
+"Se abrirá un diálogo en el que podrá elegir el nuevo tamaño. El sistema de "
+"archivos se montará para calcular el tamaño mínimo por la cantidad de "
+"contenido actual. Si la reducción no está soportada, el tamaño mínimo será "
+"el tamaño actual. Deje suficiente espacio en el sistema de archivos cuando "
+"lo reduzca para asegurar que podrá funcionar rápidamente y de forma fiable."
 
 #. (itstool) path: item/p
 #: C/disk-resize.page:52
@@ -6378,6 +6413,11 @@ msgid ""
 "important data before starting. The action must not be stopped or it will "
 "result in a damaged filesystem."
 msgstr ""
+"El redimensionamiento del sistema de archivos implica automáticamente la "
+"<link xref=\"disk-repair\">reparación</link> del sistema de archivos. En "
+"cualquier caso, se recomienda hacer una copia de seguridad de los datos "
+"importantes antes de empezar. La acción no deberá interrumpirse o podría "
+"resultar en un sistema de archivos dañado."
 
 #. (itstool) path: item/p
 #: C/disk-resize.page:62
