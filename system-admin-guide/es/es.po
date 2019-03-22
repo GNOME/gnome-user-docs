@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2019-03-12 20:32+0000\n"
-"PO-Revision-Date: 2019-03-14 12:46+0100\n"
+"POT-Creation-Date: 2019-03-19 11:40+0000\n"
+"PO-Revision-Date: 2019-03-22 15:21+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -165,11 +165,17 @@ msgid ""
 "OnlyShowIn=GNOME;\n"
 "AutostartCondition=<var>GSettings org.gnome.desktop.background show-desktop-icons</var>"
 msgstr ""
+"[Desktop Entry]\n"
+"Type=Application\n"
+"Name=<var>Archivos</var>\n"
+"Exec=<var>nautilus -n</var>\n"
+"OnlyShowIn=GNOME;\n"
+"AutostartCondition=<var>GSettings org.gnome.desktop.background show-desktop-icons</var>"
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:42
 msgid "Replace <var>Files</var> with the name of the application."
-msgstr ""
+msgstr "Reemplace <var>Archivos</var> por el nombre de la aplicación."
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:43
@@ -177,6 +183,8 @@ msgid ""
 "Replace <var>nautilus -n</var> with the command you wish to use to run the "
 "application."
 msgstr ""
+"Reemplace <var>nautilus -n</var> por el comando que quiera para ejecutar la "
+"aplicación."
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:45
@@ -184,6 +192,8 @@ msgid ""
 "You can use the <code>AutostartCondition</code> key to check for a value of "
 "a GSettings key."
 msgstr ""
+"Puede usar la clave <code>AutostartCondition</code> para comprobar el valor "
+"de una clave GSettings."
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:47
@@ -193,6 +203,10 @@ msgid ""
 "starts or stops the application, depending on what the previous value for "
 "the key was."
 msgstr ""
+"El administrador de sesiones ejecuta la aplicación automáticamente si el "
+"valor de la clave es verdadero. Si el valor de la clave cambia durante la "
+"sesión en curso, el administrador de sesiones inicia o detiene la "
+"aplicación, dependiendo del valor que tenía la clave previamente."
 
 #. (itstool) path: credit/name
 #: C/backgrounds-extra.page:10 C/desktop-background.page:16
@@ -264,6 +278,9 @@ msgid ""
 "this file, use keys from the <sys>org.gnome.desktop.background</sys> "
 "GSettings schema to specify extra backgrounds and their appearance."
 msgstr ""
+"Cree un archivo XML, por ejemplo <file><var>archivo</var>.xml</file>. En "
+"este archivo, use claves del esquema GSettings <sys>org.gnome.desktop."
+"background</sys> para especificar fondos adicionales y su apariencia."
 
 #. (itstool) path: item/p
 #: C/backgrounds-extra.page:42
@@ -302,22 +319,26 @@ msgid ""
 "\"none\", \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
 "\"spanned\""
 msgstr ""
+"\"none\", \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", "
+"\"spanned\""
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:55
 msgid ""
 "Determines how the image set by <var>wallpaper_filename</var> is rendered."
 msgstr ""
+"Determina como se visualiza la imagen especificada por "
+"<var>wallpaper_filename</var>"
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:58
 msgid "color-shading-type"
-msgstr ""
+msgstr "color-shading-type"
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:59
 msgid "\"horizontal\", \"vertical\", and \"solid\""
-msgstr ""
+msgstr "\"horizontal\", \"vertical\", y \"solid\""
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:60
@@ -327,12 +348,12 @@ msgstr "Cómo sombrear el color de fondo."
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:63
 msgid "primary-color"
-msgstr ""
+msgstr "primary-color"
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:64
 msgid "default: #023c88"
-msgstr ""
+msgstr "predeterminado: #023c88"
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:65
@@ -344,12 +365,12 @@ msgstr ""
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:68
 msgid "secondary-color"
-msgstr ""
+msgstr "secondary-color"
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:69
 msgid "default: #5789ca"
-msgstr ""
+msgstr "predeterminado: #5789ca"
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:70
@@ -394,6 +415,21 @@ msgid ""
 "&lt;/wallpapers&gt;\n"
 "\n"
 msgstr ""
+"\n"
+"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n"
+"&lt;!DOCTYPE wallpapers SYSTEM \"gnome-wp-list.dtd\"&gt;\n"
+"&lt;wallpapers&gt;\n"
+"  &lt;wallpaper deleted=\"false\"&gt;\n"
+"    &lt;name&gt;Company Background&lt;/name&gt;\n"
+"    &lt;name xml:lang=\"es\"&gt;Fondo de la empresa&lt;/name&gt;\n"
+"    &lt;filename&gt;/usr/local/share/backgrounds/company-wallpaper.jpg&lt;/filename&gt;\n"
+"    &lt;options&gt;zoom&lt;/options&gt;\n"
+"    &lt;shade_type&gt;solid&lt;/shade_type&gt;\n"
+"    &lt;pcolor&gt;#ffffff&lt;/pcolor&gt;\n"
+"    &lt;scolor&gt;#000000&lt;/scolor&gt;\n"
+"  &lt;/wallpaper&gt;\n"
+"&lt;/wallpapers&gt;\n"
+"\n"
 
 #. (itstool) path: item/p
 #: C/backgrounds-extra.page:100
@@ -408,6 +444,8 @@ msgid ""
 "Users will have the extra backgrounds available for configuration from "
 "<guiseq><gui>Settings</gui> <gui>Background</gui></guiseq>."
 msgstr ""
+"Lo usuarios dispondrán de los fondos de pantalla extra en "
+"<guiseq><gui>Ajustes</gui> <gui>Fondo de pantalla</gui></guiseq>."
 
 #. (itstool) path: section/title
 #: C/backgrounds-extra.page:109
@@ -456,6 +494,29 @@ msgid ""
 "  &lt;/wallpaper&gt;\n"
 "&lt;/wallpapers&gt;\n"
 msgstr ""
+"\n"
+"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n"
+"&lt;!DOCTYPE wallpapers SYSTEM \"gnome-wp-list.dtd\"&gt;\n"
+"&lt;wallpapers&gt;\n"
+"  &lt;wallpaper deleted=\"false\"&gt;\n"
+"    &lt;name&gt;Company Background&lt;/name&gt;\n"
+"    &lt;name xml:lang=\"es\"&gt;Fondo de la empresa&lt;/name&gt;\n"
+"    &lt;filename&gt;/usr/local/share/backgrounds/company-wallpaper.jpg&lt;/filename&gt;\n"
+"    &lt;options&gt;zoom&lt;/options&gt;\n"
+"    &lt;shade_type&gt;solid&lt;/shade_type&gt;\n"
+"    &lt;pcolor&gt;#ffffff&lt;/pcolor&gt;\n"
+"    &lt;scolor&gt;#000000&lt;/scolor&gt;\n"
+"  &lt;/wallpaper&gt;\n"
+"  &lt;wallpaper deleted=\"false\"&gt;\n"
+"    &lt;name&gt;Company Background 2&lt;/name&gt;\n"
+"    &lt;name xml:lang=\"es\"&gt;Fondo de la empresa 2&lt;/name&gt;\n"
+"    &lt;filename&gt;/usr/local/share/backgrounds/company-wallpaper-2.jpg&lt;/filename&gt;\n"
+"    &lt;options&gt;zoom&lt;/options&gt;\n"
+"    &lt;shade_type&gt;solid&lt;/shade_type&gt;\n"
+"    &lt;pcolor&gt;#ff0000&lt;/pcolor&gt;\n"
+"    &lt;scolor&gt;#00ffff&lt;/scolor&gt;\n"
+"  &lt;/wallpaper&gt;\n"
+"&lt;/wallpapers&gt;\n"
 
 #. (itstool) path: credit/name
 #: C/dconf-custom-defaults.page:14 C/dconf-keyfiles.page:13
@@ -1388,28 +1449,16 @@ msgstr "Establecer las aplicaciones favoritas predeterminadas"
 
 #. (itstool) path: item/p
 #: C/desktop-favorite-applications.page:89
-#, fuzzy
-#| msgid ""
-#| "Create the key file <file>/etc/dconf/db/local.d/00-login</file> to "
-#| "provide information for the <sys>local</sys> database."
 msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-favorite-apps</file> to "
 "provide information for the <sys>local</sys> database."
 msgstr ""
-"Cree el archivo <file>/etc/dconf/db/local.d/00-login</file> para "
+"Cree el archivo <file>/etc/dconf/db/local.d/00-favorite-apps</file> para "
 "proporcionar información a la base de datos <sys>local</sys>."
 
 #. (itstool) path: listing/code
 #: C/desktop-favorite-applications.page:96
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "      # Snippet sets gedit, terminal and nautilus as default favorites\n"
-#| "      # for all users in the first floor\n"
-#| "\n"
-#| "      [org/gnome/shell]\n"
-#| "      favorite-apps = [<input>'gedit.desktop'</input>, <input>'gnome-terminal.desktop'</input>, <input>'nautilus.desktop'</input>]\n"
-#| "      "
+#, no-wrap
 msgid ""
 "\n"
 "# Snippet sets gedit, terminal and nautilus as default favorites for all users\n"
@@ -1417,25 +1466,18 @@ msgid ""
 "favorite-apps = [<var>'gedit.desktop'</var>, <var>'gnome-terminal.desktop'</var>, <var>'nautilus.desktop'</var>]\n"
 msgstr ""
 "\n"
-"      # Snippet sets gedit, terminal and nautilus as default favorites\n"
-"      # for all users in the first floor\n"
-"\n"
-"      [org/gnome/shell]\n"
-"      favorite-apps = [<input>'gedit.desktop'</input>, <input>'gnome-terminal.desktop'</input>, <input>'nautilus.desktop'</input>]\n"
-"      "
+"# Este ejemplo establece gedit, terminal y nautilus como favoritos predeterminados para todos los usuarios\n"
+"[org/gnome/shell]\n"
+"favorite-apps = [<var>'gedit.desktop'</var>, <var>'gnome-terminal.desktop'</var>, <var>'nautilus.desktop'</var>]\n"
 
 #. (itstool) path: item/p
 #: C/desktop-favorite-applications.page:104
-#, fuzzy
-#| msgid ""
-#| "To prevent the user from overriding these settings, create the file "
-#| "<file>/etc/dconf/db/local.d/locks/goa</file> with the following content:"
 msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/favorite-apps</file> with the following content:"
 msgstr ""
 "Para evitar que el usuario ignore estos ajustes, cree el archivo <file>/etc/"
-"dconf/db/local.d/locks/goa</file> con el siguiente contenido:"
+"dconf/db/local.d/locks/favorite-apps</file> con el siguiente contenido:"
 
 #. (itstool) path: listing/title
 #: C/desktop-favorite-applications.page:108
@@ -1450,6 +1492,9 @@ msgid ""
 "# Lock default favorite applications\n"
 "/org/gnome/shell/favorite-apps\n"
 msgstr ""
+"\n"
+"# Bloquear las aplicaciones favoritas por defecto\n"
+"/org/gnome/shell/favorite-apps\n"
 
 #. (itstool) path: credit/name
 #: C/desktop-lockscreen.page:18
@@ -1502,23 +1547,7 @@ msgstr "<file>/etc/dconf/db/local.d/00-screensaver</file>"
 
 #. (itstool) path: listing/code
 #: C/desktop-lockscreen.page:53
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "# Specify the dconf path\n"
-#| "[org/gnome/desktop/session]\n"
-#| "\n"
-#| "# Number of seconds of inactivity before the screen goes blank\n"
-#| "idle-delay=uint32 180\n"
-#| "\n"
-#| "# Specify the dconf path\n"
-#| "[org/gnome/desktop/screensaver]\n"
-#| "\n"
-#| "# Lock the screen after the screen is blank\n"
-#| "lock-enabled=true\n"
-#| "\n"
-#| "# Number of seconds after the screen is blank before locking the screen\n"
-#| "lock-delay=uint32 0\n"
+#, no-wrap
 msgid ""
 "\n"
 "# Specify the dconf path\n"
@@ -1535,19 +1564,17 @@ msgid ""
 "lock-delay=uint32 0\n"
 msgstr ""
 "\n"
-"# Specify the dconf path\n"
+"# Especificar la ruta dconf\n"
 "[org/gnome/desktop/session]\n"
 "\n"
-"# Number of seconds of inactivity before the screen goes blank\n"
+"# Número de segundos de inactividad antes de que la pantalla quede en blanco\n"
+"# Especificar 0 segundos si quiere desactivar el salvapantallas\n"
 "idle-delay=uint32 180\n"
 "\n"
-"# Specify the dconf path\n"
+"# Especificar la ruta dconf\n"
 "[org/gnome/desktop/screensaver]\n"
 "\n"
-"# Lock the screen after the screen is blank\n"
-"lock-enabled=true\n"
-"\n"
-"# Number of seconds after the screen is blank before locking the screen\n"
+"# Número de segundos para bloquear la pantalla después de que la pantalla quede en blanco.\n"
 "lock-delay=uint32 0\n"
 
 #. (itstool) path: item/p
@@ -2404,17 +2431,7 @@ msgstr ""
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:89
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "        Section \"InputClass\"\n"
-#| "          Identifier \"evdev keyboard catchall\"\n"
-#| "          MatchIsKeyboard \"on\"\n"
-#| "          MatchDevicePath \"/dev/input/event*\"\n"
-#| "          Driver \"evdev\"\n"
-#| "          <input>Option \"XkbLayout\" \"en,fr\"</input>\n"
-#| "        EndSection\n"
-#| "      "
+#, no-wrap
 msgid ""
 "\n"
 "Section \"InputClass\"\n"
@@ -2426,14 +2443,13 @@ msgid ""
 "EndSection\n"
 msgstr ""
 "\n"
-"        Section \"InputClass\"\n"
-"          Identifier \"evdev keyboard catchall\"\n"
-"          MatchIsKeyboard \"on\"\n"
-"          MatchDevicePath \"/dev/input/event*\"\n"
-"          Driver \"evdev\"\n"
-"          <input>Option \"XkbLayout\" \"en,fr\"</input>\n"
-"        EndSection\n"
-"      "
+"Section \"InputClass\"\n"
+"  Identifier \"evdev keyboard catchall\"\n"
+"  MatchIsKeyboard \"on\"\n"
+"  MatchDevicePath \"/dev/input/event*\"\n"
+"  Driver \"evdev\"\n"
+"  <input>Option \"XkbLayout\" \"en,fr\"</input>\n"
+"EndSection\n"
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:98
@@ -2754,15 +2770,11 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/lockdown-logout.page:47
-#, fuzzy
-#| msgid ""
-#| "Create the key file <file>/etc/dconf/db/local.d/00-login</file> to "
-#| "provide information for the <sys>local</sys> database."
 msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-logout</file> to provide "
 "information for the <sys>local</sys> database:"
 msgstr ""
-"Cree el archivo <file>/etc/dconf/db/local.d/00-login</file> para "
+"Cree el archivo <file>/etc/dconf/db/local.d/00-logout</file> para "
 "proporcionar información a la base de datos <sys>local</sys>."
 
 #. (itstool) path: item/screen
@@ -2787,10 +2799,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/lockdown-logout.page:59
-#, fuzzy
-#| msgid ""
-#| "Override the user’s setting and prevent the user from changing it in "
-#| "<file>/etc/dconf/db/local.d/locks/lockdown</file>:"
 msgid ""
 "Override the user's setting and prevent the user from changing it in <file>/"
 "etc/dconf/db/local.d/locks/lockdown</file>:"
@@ -4158,13 +4166,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/mime-types-application.page:20
-#, fuzzy
-#| msgid ""
-#| "Determine which application should open a specific file format by default."
 msgid "Customize which application opens a specific MIME type."
-msgstr ""
-"Determinar qué aplicación debe abrir un formato específico de archivo de "
-"manera predeterminada."
+msgstr "Personalizar qué aplicaciones abren un tipo MIME específico."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
@@ -4920,16 +4923,12 @@ msgstr "Configurar una impresora de red"
 
 #. (itstool) path: page/p
 #: C/network-printer-config.page:28
-#, fuzzy
-#| msgid ""
-#| "This topic explains how to make printers, Windows printers in particular, "
-#| "available in GNOME."
 msgid ""
 "This topic explains how to make network printers, Windows printers in "
 "particular, available in GNOME."
 msgstr ""
-"Este apartado explica cómo hacer que impresoras de Windows en concreto esté "
-"disponibles en GNOME."
+"Este apartado explica cómo hacer que impresoras de red, en concreto de "
+"Windows, estén disponibles en GNOME."
 
 #. (itstool) path: page/p
 #: C/network-printer-config.page:31
