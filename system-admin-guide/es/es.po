@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2019-03-19 11:40+0000\n"
-"PO-Revision-Date: 2019-03-22 15:21+0100\n"
+"POT-Creation-Date: 2019-03-27 21:45+0000\n"
+"PO-Revision-Date: 2019-03-29 14:15+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 3.31.90\n"
+"X-Generator: Gtranslator 3.32.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -33,6 +33,10 @@ msgid ""
 "xref=\"desktop-favorite-applications\">default favorite applications</link>, "
 "<link xref=\"desktop-lockscreen\">lock the screen when idle</link>…"
 msgstr ""
+"<link xref=\"desktop-shield\">Cambiar la pantalla de bloqueo deslizante</"
+"link>, <link xref=\"desktop-favorite-applications\">aplicaciones favoritas "
+"predeterminadas</link>, <link xref=\"desktop-lockscreen\">bloquear la "
+"pantalla por inactividad</link>…"
 
 #. (itstool) path: page/title
 #. (itstool) path: section/title
@@ -138,6 +142,9 @@ msgid ""
 "create a <file>.desktop</file> file for that application in the <file>/etc/"
 "xdg/autostart/</file> directory."
 msgstr ""
+"Para iniciar una aplicación automaticamente cuando el usuario inicia sesión, "
+"debe crear un archivo <file>.desktop</file> para esa aplicación en la "
+"carpeta <file>/etc/xdg/autostart/</file>."
 
 #. (itstool) path: steps/title
 #: C/autostart-applications.page:32
@@ -387,6 +394,10 @@ msgid ""
 "cmd> command-line utility. See <link xref=\"gsettings-browse\"/> for more "
 "information."
 msgstr ""
+"Puede ver una lista completa de claves y valores posibles para <sys>org."
+"gnome.desktop.background</sys> usando <app>dconf-editor</app> o la utilidad "
+"de línea de comandos <cmd>gsettings</cmd>. Para más información, consulte "
+"<link xref=\"gsettings-browse\"/>."
 
 #. (itstool) path: item/p
 #: C/backgrounds-extra.page:79
@@ -437,6 +448,8 @@ msgid ""
 "Place the <file><var>filename</var>.xml</file> file in the <file>/usr/share/"
 "gnome-background-properties/</file> directory."
 msgstr ""
+"Coloque el archivo <file><var>archivo</var>.xml</file> en la carpeta <file>/"
+"usr/share/gnome-background-properties/</file>."
 
 #. (itstool) path: item/p
 #: C/backgrounds-extra.page:102
@@ -458,6 +471,8 @@ msgid ""
 "In one configuration file, you can specify multiple <code>&lt;wallpaper&gt;</"
 "code> elements to add more backgrounds."
 msgstr ""
+"En un archivo de configuración puede especificar múltiples elementos "
+"<code>&lt;wallpaper&gt;</code> para añadir más fondos de pantalla."
 
 #. (itstool) path: section/p
 #: C/backgrounds-extra.page:112
@@ -465,6 +480,8 @@ msgid ""
 "See the following example with two <code>&lt;wallpaper&gt;</code> elements, "
 "adding two different backgrounds:"
 msgstr ""
+"Consulte el siguiente ejemplo con dos elementos <code>&lt;wallpaper&gt;</"
+"code>, añadiendo dos fondos distintos:"
 
 #. (itstool) path: section/code
 #: C/backgrounds-extra.page:115
@@ -635,6 +652,10 @@ msgid ""
 "entire directories from and to a <_:sys-2/> database. For more information, "
 "see the <_:link-3/> man page."
 msgstr ""
+"Si quiere evitar crear el perfil <_:sys-1/>, puede usar la utilidad de línea "
+"de comandos <cmd>dconf</cmd> para leer y escribir valores individuales o "
+"carpetas completas desde y hasta una base de datos <_:sys-2/>. Para más "
+"información, consulte la página de manual <_:link-3/>."
 
 #. (itstool) path: credit/name
 #: C/dconf-keyfiles.page:18 C/desktop-favorite-applications.page:11
@@ -738,6 +759,11 @@ msgid ""
 "gnome/desktop/background</code> references the schema <code>org.gnome."
 "desktop.background</code>, which contains the key <code>picture-uri</code>."
 msgstr ""
+"El nombre del grupo en el archivo de claves hace referencia a <link href="
+"\"https://developer.gnome.org/GSettings/\">ID de esquema GSettings</link>. "
+"Por ejemplo, <code>org/gnome/desktop/background</code> hace referencia al "
+"esquema <code>org.gnome.desktop.background</code>, que contiene la clave "
+"<code>picture-uri</code>."
 
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:79
@@ -745,6 +771,9 @@ msgid ""
 "The values under a group are expected in <link href=\"https://developer."
 "gnome.org/glib/stable/gvariant-text.html\">serialized GVariant form</link>."
 msgstr ""
+"Se espera que los valores bajo un grupo tengan un <link href=\"https://"
+"developer.gnome.org/glib/stable/gvariant-text.html\">formato de GVariant "
+"serializado</link>."
 
 #. (itstool) path: credit/years
 #: C/dconf-lockdown.page:21
@@ -772,16 +801,12 @@ msgid ""
 "specific settings. Without locking down the system settings, user settings "
 "take precedence over the system settings."
 msgstr ""
+"Usando el modo de bloqueo en dconf, puede evitar que los usuarios cambien "
+"determinados ajustes. Sin bloquear un ajuste del sistema, la configuración "
+"del usuario tiene precedencia sobre la configuración del sistema."
 
 #. (itstool) path: page/p
 #: C/dconf-lockdown.page:41
-#, fuzzy
-#| msgid ""
-#| "To <em>lock down</em> a <_:sys-1/> key, you will need to create a <_:"
-#| "file-2/> subdirectory in the keyfile directory. The files inside this "
-#| "directory contain a list of keys to lock. Just as with the keyfiles, you "
-#| "may add any number of files to this directory. Here is an example of what "
-#| "one might look like:"
 msgid ""
 "To <em>lock down</em> a <_:sys-1/> key or subpath, you will need to create a "
 "<_:file-2/> subdirectory in the keyfile directory. The files inside this "
@@ -789,12 +814,11 @@ msgid ""
 "xref=\"dconf-keyfiles\">keyfiles</link>, you may add any number of files to "
 "this directory."
 msgstr ""
-"Para <em>bloquear</em> una clave <_:sys-1/>, deberá crear una subcarpeta <_:"
-"file-2/> en la carpeta de archivos de claves. Los archivos dentro de esta "
-"carpeta contienen usa lista de claves que bloquear. Así como con los "
-"archivos de claves, puede añadir cualquier número de archivos a esta "
-"carpeta. A continuación tiene un ejemplo de como debería ser una carpeta "
-"como esta:"
+"Para <em>bloquear</em> una clave <_:sys-1/> o subcarpeta, deberá crear una "
+"subcarpeta <_:file-2/> en la carpeta de archivos de claves. Los archivos "
+"dentro de esta carpeta contienen usa lista de claves o subcarpetas a "
+"bloquear. Como con los <link xref=\"dconf-keyfiles\">archivos de claves</"
+"link>, puede añadir cualquier número de archivos a esta carpeta."
 
 #. (itstool) path: steps/title
 #: C/dconf-lockdown.page:48
@@ -978,6 +1002,9 @@ msgid ""
 "Users can override the customized defaults with their own settings, unless "
 "the administrator locks these defaults to prevent overriding."
 msgstr ""
+"Los usuarios pueden ignorar los valores predeterminados personalizados con "
+"sus propios ajustes, excepto si el administrador bloquea dichos valores para "
+"evitar que se puedan ignorar."
 
 #. (itstool) path: credit/name
 #: C/dconf-profiles.page:18
@@ -1122,13 +1149,9 @@ msgstr ""
 #. (itstool) path: page/p
 #. (itstool) path: section/p
 #: C/dconf-profiles.page:87 C/dconf-profiles.page:104
-#, fuzzy
-#| msgid ""
-#| "For more information on the systemd journal, see the <_:link-1/> man page."
 msgid "For more information, see the <_:link-1/> man page."
 msgstr ""
-"Para obtener más información sobre el registro de systemd consulte la página "
-"del manual <_:link-1/>."
+"Para obtener más información, consulte la página del manual <_:link-1/>."
 
 #. (itstool) path: section/title
 #: C/dconf-profiles.page:92
