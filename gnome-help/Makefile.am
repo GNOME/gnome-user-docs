@@ -146,6 +146,7 @@ HELP_FILES = \
 	backup-why.page \
 	bluetooth.page \
 	bluetooth-connect-device.page \
+	bluetooth-device-specific-pairing.page \
 	bluetooth-problem-connecting.page \
 	bluetooth-remove-connection.page \
 	bluetooth-send-file.page \
