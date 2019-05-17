@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2019-04-11 06:13+0000\n"
-"PO-Revision-Date: 2019-04-26 13:36+0200\n"
+"POT-Creation-Date: 2019-05-14 21:57+0000\n"
+"PO-Revision-Date: 2019-05-17 17:15+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -2164,6 +2164,11 @@ msgid ""
 "in a tree-view and also displays additional information about each setting, "
 "including the description, type and default value."
 msgstr ""
+"Podría ser mejor utilizar <app>dconf-editor</app> si no está familiarizado "
+"con las opciones disponibles en una aplicación. La aplicación muestra una "
+"lista de los ajustes en una vista de arbol y también muestra información "
+"adicional acerca de cada ajuste, incluida la descripción, el tipo y el valor "
+"predeterminado."
 
 #. (itstool) path: page/p
 #: C/gsettings-browse.page:61
@@ -2172,6 +2177,10 @@ msgid ""
 "completion is provided for <cmd>gsettings</cmd>, and you can write scripts "
 "that include <cmd>gsettings</cmd> commands for automated configuration."
 msgstr ""
+"<cmd>gsettings</cmd> es más potente que <app>dconf-editor</app>. "
+"<cmd>gsettings</cmd> permite completado de comandos en Bash, y puede "
+"escribir guiones de comandos que incluyan comandos de <cmd>gsettings</cmd> "
+"para automatizar configuraciones."
 
 #. (itstool) path: page/p
 #: C/gsettings-browse.page:66
@@ -2202,13 +2211,13 @@ msgstr "Guía de administración de sistemas de GNOME"
 #: C/keyboard-compose-key.page:18
 msgid "Enable the compose key by default for all users."
 msgstr ""
-"Habilitar la tecla de composición de forma predeterminada para todos los "
+"Activar la tecla de composición de forma predeterminada para todos los "
 "usuarios."
 
 #. (itstool) path: page/title
 #: C/keyboard-compose-key.page:21
 msgid "Enable the compose key"
-msgstr "Habilitar la tecla de composición"
+msgstr "Activar la tecla de composición"
 
 #. (itstool) path: page/p
 #: C/keyboard-compose-key.page:23
@@ -2218,7 +2227,7 @@ msgid ""
 "sys> GSettings key. That way, the setting will be enabled by default for all "
 "users on your system."
 msgstr ""
-"Para habilitar la tecla de composición y configurar una tecla concreta en su "
+"Para activar la tecla de composición y configurar una tecla concreta en su "
 "teclado como tecla de composición, establezca la  clave de GSettings "
 "<sys>org.gnome.desktop.input-sources.xkb-options</sys>. De esa manera, el "
 "ajuste se activará de forma predeterminada para todos los usuarios en su "
@@ -2247,7 +2256,7 @@ msgid ""
 "xkb-options=['compose:<var>ralt</var>']"
 msgstr ""
 "[org/gnome/desktop/input-sources]\n"
-"# Configurar  y habilitar la tecla Alt Derecho como tecla de composición\n"
+"# Configurar y activar la tecla Alt Derecho como tecla de composición\n"
 "xkb-options=['compose:<var>ralt</var>']"
 
 #. (itstool) path: item/p
@@ -2279,7 +2288,7 @@ msgid ""
 "# Lock the list of enabled XKB options\n"
 "/org/gnome/desktop/input-sources/xkb-options\n"
 msgstr ""
-"# Bloquear la lista de opciones XKB habilitadas\n"
+"# Bloquear la lista de opciones XKB activadas\n"
 "/org/gnome/desktop/input-sources/xkb-options\n"
 
 #. (itstool) path: credit/name
@@ -2478,6 +2487,12 @@ msgid ""
 "command line, but rather remove the ways that the desktop user could access "
 "the command line."
 msgstr ""
+"Para desactivar el acceso de su usuario de escritorio a la línea de "
+"comandos, necesita hacer cambios de configuración en múltiples contextos "
+"diferentes. Tenga en cuenta que los siguientes pasos no eliminarán los "
+"permisos del usuario del escritorio para acceder a la línea de comandos, "
+"pero sin embargo elimina las formas que tiene el usuario de acceder a la "
+"línea de comandos."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:42
@@ -2487,6 +2502,10 @@ msgid ""
 "specifying a command line to be executed (the <keyseq><key>Alt</key> "
 "<key>F2</key></keyseq> command prompt)."
 msgstr ""
+"Configure la clave de GSettings <code>org.gnome.desktop.lockdown.disable-"
+"command-line</code>, que evita que el usuario acceda al terminal o "
+"especificar la ejecución de una línea de comandos (el diálogo de ejecución "
+"de comandos <keyseq><key>Alt</key> <key>F2</key></keyseq>)."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:48
@@ -2504,6 +2523,9 @@ msgid ""
 "key><key>Alt</key><key><var>function key</var></key></keyseq> shortcuts by "
 "modifying the X server configuration."
 msgstr ""
+"Desactive la opción de cambiar a las terminales virtuales (VTs) con los "
+"atajos <keyseq> <key>Ctrl</key><key>Alt</key><key><var>Tecla de función</"
+"var></key></keyseq> modificado la configuración del servidor X."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:57
@@ -2741,6 +2763,9 @@ msgid ""
 "Preventing the user from logging out is useful for special kind of GNOME "
 "deployments (unmanned kiosks, public internet access terminals, and so on)."
 msgstr ""
+"Evitar que el usuario pueda cerrar la sesión es util para algunos tipos de "
+"despliegue de GNOME (kioscos desatendidos, terminales de acceso público a "
+"internet, y otros)."
 
 #. (itstool) path: note/p
 #: C/lockdown-logout.page:33
@@ -2749,6 +2774,9 @@ msgid ""
 "is the reason why it is recommended to also disable <em>user switching</em> "
 "when configuring the system."
 msgstr ""
+"Los usuarios pueden evitar el bloqueo del cierre de sesión cambiando a un "
+"usuario distinto. Es por ello que se recomienda desactivar también el "
+"<em>cambio de usuario</em> cuando configure el sistema."
 
 #. (itstool) path: item/p
 #: C/lockdown-logout.page:47
@@ -3167,12 +3195,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/lockdown-single-app-mode.page:37
 msgid "Set up a kiosk-like, single-application system."
-msgstr ""
+msgstr "Configurar un sistema de una aplicación única tipo kiosco."
 
 #. (itstool) path: page/title
 #: C/lockdown-single-app-mode.page:40
 msgid "Configure single-application mode"
-msgstr ""
+msgstr "Configurar el modo de aplicación única."
 
 #. (itstool) path: page/p
 #: C/lockdown-single-app-mode.page:42
@@ -3182,6 +3210,11 @@ msgid ""
 "the standard desktop more restrictive for users, letting them focus on "
 "selected features."
 msgstr ""
+"El modo de aplicación única es una interfaz de GNOME modificada que "
+"configura la Shell como un kiosco interactivo. El administrador bloquea "
+"algunos de los comportamientos estándar para hacer el escritorio más "
+"restrictivo para los usuarios, permitiéndoles concentrarse en las funciones "
+"seleccionadas."
 
 #. (itstool) path: page/p
 #: C/lockdown-single-app-mode.page:47
@@ -3194,7 +3227,7 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/lockdown-single-app-mode.page:52
 msgid "Set up single-application mode"
-msgstr ""
+msgstr "Configurar el modo de aplicación única"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:54
@@ -3211,7 +3244,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:65
 msgid "See <link xref=\"login-automatic\"/> for more information."
-msgstr ""
+msgstr "Consulte la <link xref=\"login-automatic\"/> para más información."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:68
@@ -3238,6 +3271,8 @@ msgid ""
 "\n"
 "Exec=gnome-session --session kiosk\n"
 msgstr ""
+"\n"
+"Exec=gnome-session --session kiosk\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:83
@@ -3271,6 +3306,8 @@ msgid ""
 "Define the <em>kiosk</em> session by writing a custom session definition, "
 "containing the following line:"
 msgstr ""
+"Especifique la sesión <em>kiosco</em> escribiendo una definición de sesión "
+"personalizada, que contenga la siguiente línea:"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:93
@@ -3279,6 +3316,8 @@ msgid ""
 "\n"
 "RequiredComponents=kiosk-app;gnome-settings-daemon;kiosk-shell;\n"
 msgstr ""
+"\n"
+"RequiredComponents=kiosk-app;gnome-settings-daemon;kiosk-shell;\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:96
@@ -3303,6 +3342,8 @@ msgid ""
 "\n"
 "Exec=gnome-shell --mode=kiosk\n"
 msgstr ""
+"\n"
+"Exec=gnome-shell --mode=kiosk\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:110
