@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2019-05-14 21:57+0000\n"
-"PO-Revision-Date: 2019-05-17 17:15+0200\n"
+"POT-Creation-Date: 2019-05-17 15:17+0000\n"
+"PO-Revision-Date: 2019-05-23 12:05+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -3232,7 +3232,7 @@ msgstr "Configurar el modo de aplicación única"
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:54
 msgid "Lock down settings to prevent printing, terminal access, and so on."
-msgstr ""
+msgstr "Bloquear ajustes para evitar impresión, acceso al terminal y otros."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:63
@@ -3240,6 +3240,8 @@ msgid ""
 "Configure automatic login in the <file>/etc/gdm/custom.conf</file> file for "
 "the user."
 msgstr ""
+"Configurar el inicio de sesión automático para el usuario en el archivo "
+"<file>/etc/gdm/custom.conf</file>."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:65
@@ -3276,19 +3278,14 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:83
-#, fuzzy
-#| msgid ""
-#| "To specify a default session for a user, update the user’s <sys>account "
-#| "service</sys> in the <file>/var/lib/AccountsService/users/<var>username</"
-#| "var></file> file:"
 msgid ""
 "Set the default session for <em>kiosk-user</em> by adding the following line "
 "to the <file>/var/lib/AccountsService/users/<var>kiosk-user</var> </file> "
 "file:"
 msgstr ""
-"Para especificar una sesión predeterminada para un usuario, actualice el "
-"<sys>servicio de cuenta</sys> del usuario en el archivo <file>/var/lib/"
-"AccountsService/users/<var>username</var></file>:"
+"Especificar la sesión predeterminada para <em>kiosk-user</em> añadiendo la "
+"siguiente línea al archivo <file>/var/lib/AccountsService/users/<var>kiosk-"
+"user</var> </file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:86
@@ -3334,6 +3331,9 @@ msgid ""
 "Create a desktop file for <sys>kiosk-shell</sys> in <file>/usr/share/"
 "applications/kiosk-shell.desktop</file>, containing the following line:"
 msgstr ""
+"Crear un archivo desktop para <sys>kiosk-shell</sys> en el archivo <file>/"
+"usr/share/applications/kiosk-shell.desktop</file> que contenga la siguiente "
+"línea:"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:105
@@ -3471,7 +3471,7 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/login-banner.page:74
 msgid "The banner message cannot be read from an external file."
-msgstr ""
+msgstr "El titular no puede leerse de un archivo externo."
 
 #. (itstool) path: info/desc
 #: C/login-enterprise.page:19
@@ -3922,6 +3922,10 @@ msgid ""
 "xref=\"session-user\">configure a user default session</link>, <link xref="
 "\"login-automatic\">automatic login</link>…"
 msgstr ""
+"<link xref=\"login-userlist-disable\">Desactivar la lista de usuarios</"
+"link>, <link xref=\"session-user\">configurar una sesión de usuario "
+"pedeterminada</link>, <link xref=\"login-automatic\">inicio de sesión "
+"automático</link>…"
 
 #. (itstool) path: page/title
 #: C/login.page:17
@@ -4207,29 +4211,23 @@ msgid ""
 "registered to open specific MIME types by default. These files are provided "
 "by the distribution."
 msgstr ""
+"Los archivos <file>/usr/share/applications/mimeapps.list</file> y <file>/usr/"
+"share/applications/gnome-mimeapps.list</file> especifican qué aplicación "
+"está registrada para abrir tipos MIME específicos de forma predeterminada. "
+"Estos archivos los aporta la distribución."
 
 #. (itstool) path: page/p
 #: C/mime-types-application.page:30
-#, fuzzy
-#| msgid ""
-#| "The <file>/usr/share/applications/defaults.list</file> file specifies "
-#| "which application is registered to open specific MIME types by default. "
-#| "To override the system defaults for all users on the system, you need to "
-#| "create a <file>/usr/share/applications/mimeapps.list</file> file with a "
-#| "list of MIME types for which you want to override the default registered "
-#| "application."
 msgid ""
 "To override the system defaults for all users on the system, you need to "
 "create a <file>/etc/xdg/mimeapps.list</file> or <file>/etc/xdg/gnome-"
 "mimeapps.list</file> file with a list of MIME types for which you want to "
 "override the default registered application."
 msgstr ""
-"El archivo <file>/usr/share/applications/defaults.list</file> especifica qué "
-"aplicación predeterminada está registrada para abrir tipos MIME específicos. "
-"Para ignorar los valores predeterminados del sistema para todos los "
-"usuarios, debe crear un archivo <file>/usr/share/applications/mimeapps.list</"
-"file> con una lista de los tipos MIME para los que quiere ignorar la "
-"aplicación predeterminada registrada."
+"Para ignorar los ajustes predeterminados del sistema para todos los "
+"usuarios, debe crear un arvhivo <file>/etc/xdg/mimeapps.list</file> o <file>/"
+"etc/xdg/gnome-mimeapps.list</file> con la lista de tipos MIME para los que "
+"quiere ignorar la aplicación predeterminada registrada."
 
 #. (itstool) path: note/p
 #: C/mime-types-application.page:36
@@ -4240,6 +4238,11 @@ msgid ""
 "file>, but can be overridden by the user's configuration in <file>~/.config/"
 "mimeapps.list</file>."
 msgstr ""
+"Los archivos situados en <file>/etc/xdg/</file> tienen prioridad sobre los "
+"archivos en <file>/usr/share/applications/</file>. Además, <file>/etc/xdg/"
+"gnome-mimeapps.list</file> tiene prioridad sobre <file>/etc/xdg/mimeapps."
+"list</file>, pero puede la configuración del usuario puede ignorarla en "
+"<file>~/.config/mimeapps.list</file>."
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:46 C/mime-types-application-user.page:39
@@ -4928,6 +4931,10 @@ msgid ""
 "<link xref=\"network-printer-config\">a network printer</link>, <link xref="
 "\"network-vpn\">default VPN settings</link>…"
 msgstr ""
+"<link xref=\"network-server-list\">Configurar una lista de servidores "
+"predeterminada</link>, <link xref=\"network-printer-config\">una impresora "
+"de red</link>, <link xref=\"network-vpn\">ajustes predeterminados de VPN</"
+"link>…"
 
 #. (itstool) path: page/title
 #: C/network.page:18
