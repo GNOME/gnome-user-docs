@@ -84,6 +84,8 @@ HELP_MEDIA = \
 	figures/network-wired-symbolic.svg \
 	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
+	figures/rotation-allowed-symbolic.svg \
+	figures/rotation-locked-symbolic.svg \
 	figures/shell-activities-classic.png \
 	figures/shell-activities.png \
 	figures/shell-appmenu-classic.png \
