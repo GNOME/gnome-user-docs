@@ -10,6 +10,7 @@
     <revision pkgversion="3.10.2" date="2013-11-03" status="candidate"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="final"/>
     <revision pkgversion="3.18" date="2015-09-29" status="final"/>
+    <revision pkgversion="3.33.3" date="2019-07-19" status="candidate"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -34,24 +35,22 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Set up a printer that is connected to your computer.</desc>
+    <desc>Set up a printer that is connected to your computer, or your local
+    network.</desc>
   </info>
 
   <title>Set up a local printer</title>
 
-  <p>Your system can recognize many types of printers automatically once
-  they are connected. Most printers are connected with a USB cable that
-  attaches to your computer.</p>
+  <p>Your system can recognize many types of printers automatically once they
+  are connected. Most printers are connected with a USB cable that attaches to
+  your computer, but some printers connect to your wired or wireless
+  network.</p>
 
   <note style="tip">
-    <p>You do not need to select whether you want to install a network or local
-    printer now. They are listed in one window.</p>
+    <p>If your printer is connected to the network, it will not be set up
+    automatically - you should add it from the <gui>Printers</gui> panel in
+    <gui>Settings</gui>.</p>
   </note>
-
-  <comment>
-    <cite date="2012-02-19">shaunm</cite>
-    <p>Do we have anything on what to do when your printer isn't found? 3.0.1?</p>
-  </comment>
 
   <steps>
     <item>
@@ -74,8 +73,8 @@
 
   <steps>
     <item>
-      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
-      start typing <gui>Printers</gui>.</p>
+      <p>Open the <gui xref="shell-introduction#activities">Activities</gui>
+      overview and start typing <gui>Printers</gui>.</p>
     </item>
     <item>
       <p>Click <gui>Printers</gui>.</p>
@@ -85,16 +84,21 @@
       type in your password when prompted.</p>
     </item>
     <item>
-      <p>Click the <gui style="button">Add a Printer…</gui> button.</p>
+      <p>Press the <gui style="button">Add…</gui> button.</p>
     </item>
     <item>
-      <p>In the pop-up window, select your new printer. Click
-      <gui>Add</gui>.</p>
+      <p>In the pop-up window, select your new printer and press
+      <gui style="button">Add</gui>.</p>
+      <note style="tip">
+        <p>If your printer is not discovered automatically, but you know its
+        network address, enter it into the text field at the bottom of the
+        dialog and then press <gui style="button">Add</gui></p>
+      </note>
     </item>
   </steps>
 
-  <p>If your printer does not appear in the Add a New Printer window, you may
-  need to install print drivers.</p>
+  <p>If your printer does not appear in the <gui>Add Printer</gui> window, you
+  may need to install print drivers.</p>
 
 <comment>
 <p>Add link to above when page is ready.
