@@ -1,8 +1,12 @@
 build-fedora:
   image: fedora:latest
   before_script:
-    - dnf install -y git autoconf automake make gettext itstool yelp-tools
+    - dnf install -y git autoconf automake make gettext itstool libxslt yelp-tools
   script:
+    - yelp-check ids gnome-help/C system-admin-guide/C
+    - yelp-check links gnome-help/C system-admin-guide/C
+    - yelp-check orphans gnome-help/C system-admin-guide/C
+    - yelp-check validate gnome-help/C system-admin-guide/C
     - ./autogen.sh
     - make
     - make check
