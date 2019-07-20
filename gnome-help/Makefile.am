@@ -5,6 +5,9 @@ EXTRA_DIST = C/gnome-help.its
 HELP_ID = gnome-help
 
 HELP_MEDIA = \
+	figures/3-finger-hold-and-tap.svg \
+	figures/3-finger-pinch.svg \
+	figures/4-finger-drag.svg \
 	figures/audio-volume-high-symbolic.svg \
 	figures/audio-volume-low-symbolic.svg \
 	figures/audio-volume-medium-symbolic.svg \
@@ -32,6 +35,9 @@ HELP_MEDIA = \
 	figures/color-space.png \
 	figures/display-dual-monitors.webm \
 	figures/edit-find-symbolic.svg \
+	figures/edge-drag-right.svg \
+	figures/edge-drag-down.svg \
+	figures/edge-drag-up.svg \
 	figures/emblem-system-symbolic.svg \
 	figures/emblem-system.png \
 	figures/emoji-flags-symbolic.svg \
@@ -85,6 +91,7 @@ HELP_MEDIA = \
 	figures/network-wired-symbolic.svg \
 	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
+	figures/right-edge-drag-down.svg \
 	figures/rotation-allowed-symbolic.svg \
 	figures/rotation-locked-symbolic.svg \
 	figures/shell-activities-classic.png \
@@ -391,6 +398,7 @@ HELP_FILES = \
 	status-icons.page \
 	tips-specialchars.page \
 	tips.page \
+	touchscreen-gestures.page \
 	translate.page \
 	user-accounts.page \
 	user-add.page \
