@@ -48,7 +48,6 @@ HELP_FILES = \
 	mime-types-custom-user.page \
 	mime-types.page	\
 	network.page \
-	network-printer-config.page \
 	network-server-list.page \
 	network-vpn.page \
 	overrides.page \
