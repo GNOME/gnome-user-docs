@@ -31,6 +31,7 @@ HELP_MEDIA = \
 	figures/color-profile-default.png \
 	figures/color-space.png \
 	figures/display-dual-monitors.webm \
+	figures/edit-find-symbolic.svg \
 	figures/emblem-system-symbolic.svg \
 	figures/emblem-system.png \
 	figures/emoji-flags-symbolic.svg \
