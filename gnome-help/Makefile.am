@@ -364,6 +364,7 @@ HELP_FILES = \
 	sharing-displayname.page \
 	sharing-media.page \
 	sharing-personal.page \
+	shell-apps-auto-start.page \
 	shell-apps-favorites.page \
 	shell-apps-open.page \
 	shell-exit.page \
