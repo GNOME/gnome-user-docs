@@ -41,6 +41,13 @@ HELP_MEDIA = \
 	figures/emblem-system-symbolic.svg \
 	figures/emblem-system.png \
 	figures/emoji-flags-symbolic.svg \
+	figures/gesture-drag.png \
+	figures/gesture-hold.png \
+	figures/gesture-pinch-symbolic.svg \
+	figures/gesture-rotate-anticlockwise-symbolic.svg \
+	figures/gesture-rotate-clockwise-symbolic.svg \
+	figures/gesture-stretch-symbolic.svg \
+	figures/gesture-tap.png \
 	figures/gnome.png \
 	figures/go-down.png \
 	figures/go-down-symbolic.svg \
