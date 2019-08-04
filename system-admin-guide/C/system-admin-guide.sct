@@ -8,7 +8,9 @@ xmllint --noout --schematron gnome-help.sct *.page 2>&1 | grep -v 'validates$'
   <pattern name="Info element checks">
     <rule context="mal:page/mal:info">
       <assert test="not(mal:license)">Must not include license directly</assert>
+      <!-- FIXME: https://gitlab.gnome.org/GNOME/gnome-user-docs/issues/9
       <assert test="xi:include[@href='legal.xml']">Must include legal.xml</assert>
+      -->
     </rule>
   </pattern>
   <pattern name="Desc checks">
