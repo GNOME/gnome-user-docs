@@ -3,10 +3,7 @@ build-fedora:
   before_script:
     - dnf install -y git autoconf automake make gettext itstool libxslt yelp-tools
   script:
-    - yelp-check ids gnome-help/C system-admin-guide/C
-    - yelp-check links gnome-help/C system-admin-guide/C
-    - yelp-check orphans gnome-help/C system-admin-guide/C
-    - yelp-check validate gnome-help/C system-admin-guide/C
+    - ./check.sh
     - ./autogen.sh ITSTOOL="/usr/bin/itstool --strict"
     - make
     - make check
