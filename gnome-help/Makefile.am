@@ -31,7 +31,6 @@ HELP_MEDIA = \
 	figures/color-camera.png \
 	figures/color-display.png \
 	figures/color-printer.png \
-	figures/color-profile-default.png \
 	figures/color-space.png \
 	figures/display-dual-monitors.webm \
 	figures/edit-find-symbolic.svg \
