@@ -109,7 +109,6 @@ HELP_MEDIA = \
 	figures/shell-dash.png \
 	figures/shell-exit-classic.png \
 	figures/shell-exit.png \
-	figures/shell-lock.png \
 	figures/shell-top-bar-classic.png \
 	figures/shell-top-bar.png \
 	figures/shell-window-list-classic.png \
