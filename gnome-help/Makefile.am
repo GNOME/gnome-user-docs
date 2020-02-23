@@ -113,8 +113,6 @@ HELP_MEDIA = \
 	figures/shell-top-bar.png \
 	figures/shell-window-list-classic.png \
 	figures/shell-workspaces.png \
-	figures/top-bar-icons-classic.png \
-	figures/top-bar-icons.png \
 	figures/universal-access-menu.png \
 	figures/network-wireless-acquiring-symbolic.svg \
 	figures/network-wireless-connected-symbolic.svg \
