@@ -100,12 +100,11 @@ HELP_MEDIA = \
 	figures/right-edge-drag-down.svg \
 	figures/rotation-allowed-symbolic.svg \
 	figures/rotation-locked-symbolic.svg \
-	figures/shell-activities.png \
+	figures/shell-activities-dash.png \
 	figures/shell-appmenu-classic.png \
 	figures/shell-appmenu-shell.png \
 	figures/shell-appts-classic.png \
 	figures/shell-appts.png \
-	figures/shell-dash.png \
 	figures/shell-exit-classic.png \
 	figures/shell-exit.png \
 	figures/shell-top-bar-classic.png \
