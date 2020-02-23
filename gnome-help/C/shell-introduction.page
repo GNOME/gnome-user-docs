@@ -13,6 +13,7 @@
     <revision pkgversion="3.13.92" date="2014-09-22" status="candidate"/>
     <revision pkgversion="3.29" date="2018-08-28" status="review"/>
     <revision pkgversion="3.33.3" date="2019-07-19" status="review"/>
+    <revision pkgversion="3.35.91" date="2020-07-19" status="review"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
@@ -25,6 +26,10 @@
     <credit type="editor">
       <name>Ekaterina Gerasimova</name>
       <email>kittykat3756@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -61,21 +66,14 @@
 
 <links type="section"/>
 
+<!-- TODO: Replace "Activities overview" title for classic mode with something
+like "Application windows" by using if:when and if:else ? -->
 <section id="activities">
   <title><gui>Activities</gui> overview</title>
 
-<if:choose>
-  <if:when test="!platform:gnome-classic">
-    <media type="image" src="figures/shell-activities.png" style="floatend floatright" if:test="!target:mobile">
-      <p>Activities button</p>
-    </media>
-  </if:when>
-  <if:when test="platform:gnome-classic">
-    <media type="image" src="figures/shell-activities-classic.png" width="108" height="69" style="floatend floatright" if:test="!target:mobile">
-      <p>Activities button</p>
-    </media>
-  </if:when>
-</if:choose>
+<media type="image" src="figures/shell-activities.png" style="floatend floatright" if:test="!target:mobile, !platform:gnome-classic">
+  <p>Activities button</p>
+</media>
 
   <p if:test="!platform:gnome-classic">To access your windows and applications,
   click the <gui>Activities</gui> button, or just move your mouse pointer to
@@ -85,33 +83,35 @@
   typing to search your applications, files, folders, and the web.</p>
 
   <p if:test="platform:gnome-classic">To access your windows and applications,
-  click the <gui xref="shell-introduction#activities">Applications</gui> menu
-  at the top left of the screen and select the <gui>Activities Overview</gui>
-  item. You can also press the <key xref="keyboard-key-super">Super</key> key
-  to see your windows and applications in the <gui>Activities</gui> overview. 
-  Just start typing to search your applications, files, and folders.</p>
+  click the button at the bottom left of the screen in the window list. You can
+  also press the <key xref="keyboard-key-super">Super</key> key to see an
+  overview with live thumbnails of all the windows on the current workspace.</p>
 
+<if:choose>
+  <if:when test="!platform:gnome-classic">
   <!-- TODO: retake without the flashy bit -->
   <media type="image" src="figures/shell-dash.png" height="300" style="floatstart floatleft" if:test="!target:mobile">
     <p>The dash</p>
   </media>
+  </if:when>
+</if:choose>
 
-  <p>On the left of the overview, you will find the <em>dash</em>. The dash
+  <p if:test="!platform:gnome-classic">On the left of the overview, you will find the <em>dash</em>. The dash
   shows you your favorite and running applications. Click any icon in the
   dash to open that application; if the application is already running, it will
   have a small dot below its icon. Clicking its icon will bring up the most
   recently used window. You can also drag the icon to the overview, or onto any
   workspace on the right.</p>
 
-  <p>Right-clicking the icon displays a menu that allows you to pick any window
+  <p if:test="!platform:gnome-classic">Right-clicking the icon displays a menu that allows you to pick any window
   in a running application, or to open a new window. You can also click the
   icon while holding down <key>Ctrl</key> to open a new window.</p>
 
-  <p>When you enter the overview, you will initially be in the windows
+  <p if:test="!platform:gnome-classic">When you enter the overview, you will initially be in the windows
   overview. This shows you live thumbnails of all the windows on the current
   workspace.</p>
 
-  <p>Click the grid button at the bottom of the dash to display the
+  <p if:test="!platform:gnome-classic">Click the grid button at the bottom of the dash to display the
   applications overview. This shows you all the applications installed on your
   computer. Click any application to run it, or drag an application to the
   overview or onto a workspace thumbnail. You can also drag an application onto

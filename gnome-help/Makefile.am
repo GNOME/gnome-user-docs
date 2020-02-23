@@ -100,7 +100,6 @@ HELP_MEDIA = \
 	figures/right-edge-drag-down.svg \
 	figures/rotation-allowed-symbolic.svg \
 	figures/rotation-locked-symbolic.svg \
-	figures/shell-activities-classic.png \
 	figures/shell-activities.png \
 	figures/shell-appmenu-classic.png \
 	figures/shell-appmenu-shell.png \
