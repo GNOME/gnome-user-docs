@@ -10,10 +10,15 @@
     <revision pkgversion="3.8.0" date="2013-04-23" status="review"/>
     <revision pkgversion="3.10.3" date="2014-01-26" status="review"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="candidate"/>
+    <revision pkgversion="3.35.91" date="2020-02-27" status="candidate"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="editor">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -48,25 +53,28 @@
 <list>
   <item>
     <p if:test="!platform:gnome-classic">In the
-    <gui xref="shell-introduction#activities">Activities</gui> overview, move your cursor
-    to the right-most side of the screen.</p>
-    <p if:test="platform:gnome-classic">Press the
+    <gui xref="shell-introduction#activities">Activities</gui> overview, move
+    your cursor to the right-most side of the screen.</p>
+    <p if:test="platform:gnome-classic">Click the button at the bottom left of
+    the screen in the window list, or press the
     <key xref="keyboard-key-super">Super</key> key to open the
-    <gui>Activities</gui> overview and then move your cursor to the right-most
-    side of the screen.</p>
+    <gui>Activities</gui> overview.</p>
   </item>
   <item>
-    <p if:test="!platform:gnome-classic">A vertical panel will appear showing
+    <p if:test="!platform:gnome-classic">A vertical panel will expand showing
     workspaces in use, plus an empty workspace. This is the
     workspace selector.</p>
-    <p if:test="platform:gnome-classic">A vertical panel will appear showing
-    available workspaces. This is the workspace selector.</p>
+    <p if:test="platform:gnome-classic">In the bottom right corner, you see four
+    boxes. This is the workspace selector.</p>
   </item>
-  <item if:test="!platform:gnome-classic">
-    <p>To add a workspace, drag and drop a window from an existing workspace
-    onto the empty workspace in the workspace selector. This workspace now
-    contains the window you have dropped,
-    and a new empty workspace will appear below it.</p>
+  <item>
+    <p if:test="!platform:gnome-classic">To add a workspace, drag and drop a
+    window from an existing workspace onto the empty workspace in the workspace
+    selector. This workspace now contains the window you have dropped, and a new
+    empty workspace will appear below it.</p>
+    <p if:test="platform:gnome-classic">Drag and drop a window from your current
+    workspace onto an empty workspace in the workspace selector. This workspace
+    now contains the window you have dropped.</p>
   </item>
   <item if:test="!platform:gnome-classic">
     <p>To remove a workspace, simply close all of its windows or move them to

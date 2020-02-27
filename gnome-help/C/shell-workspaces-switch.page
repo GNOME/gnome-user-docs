@@ -9,10 +9,15 @@
 
     <revision pkgversion="3.4.0" date="2012-02-19" status="review"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="candidate"/>
+    <revision pkgversion="3.35.91" date="2020-02-27" status="candidate"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
       <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="editor">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -25,40 +30,40 @@
  <steps>  
  <title>Using the mouse:</title>
  <item>
-    <p if:test="!platform:gnome-classic">Open the
-    <gui xref="shell-introduction#activities">Activities</gui> overview.</p>
-  <p if:test="platform:gnome-classic">At the top left of the screen, click the
-  <gui xref="shell-introduction#activities">Applications</gui> menu and choose 
-  <gui>Activities Overview</gui>.</p>
+  <p if:test="!platform:gnome-classic">Open the
+  <gui xref="shell-introduction#activities">Activities</gui> overview.</p>
+  <p if:test="platform:gnome-classic">At the bottom right of the screen, click
+  on one of the four workspaces to activate the workspace.</p>
  </item>
- <item>
+ <item if:test="!platform:gnome-classic">
   <p>Click on a workspace in the <link xref="shell-workspaces">workspace
   selector</link> on the right side of the screen to view the open windows on
   that workspace.</p>
  </item>
- <item>
+ <item if:test="!platform:gnome-classic">
   <p>Click on any window thumbnail to activate the workspace.</p>
  </item>
  </steps>
  
-  <p if:test="platform:gnome-classic">Alternatively, you can switch between
-  workspaces by clicking the workspace identifier at the right-hand side of
-  the window list on the bottom bar and selecting the workspace you want to
-  use from the menu.</p>
-
  <list>
  <title>Using the keyboard:</title>  
   <item>
-    <p>Press
+    <p if:test="!platform:gnome-classic">Press
     <keyseq><key xref="keyboard-key-super">Super</key><key>Page Up</key></keyseq>
     or <keyseq><key>Ctrl</key><key>Alt</key><key>Up</key></keyseq> to move to
     the workspace shown above the current workspace in the workspace selector.
     </p>
+    <p if:test="platform:gnome-classic">Press <keyseq><key>Ctrl</key>
+    <key>Alt</key><key>←</key></keyseq> to move to the workspace shown left of
+    of the current workspace on the <em>workspace selector</em>.</p>
   </item>
   <item>
-    <p>Press <keyseq><key>Super</key><key>Page Down</key></keyseq> or
+    <p if:test="!platform:gnome-classic">Press <keyseq><key>Super</key><key>Page Down</key></keyseq> or
     <keyseq><key>Ctrl</key><key>Alt</key><key>Down</key></keyseq> to move to the
     workspace shown below the current workspace in the workspace selector.</p>
+    <p if:test="platform:gnome-classic">Press <keyseq><key>Ctrl</key>
+    <key>Alt</key><key>→</key></keyseq> to move to the workspace shown right of
+    the current workspace on the <em>workspace selector</em>.</p>
   </item>
  </list>
 

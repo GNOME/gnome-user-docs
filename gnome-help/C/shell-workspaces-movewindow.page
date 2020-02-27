@@ -11,6 +11,7 @@
     <revision pkgversion="3.8" version="0.3" date="2013-05-10" status="review"/>
     <revision pkgversion="3.10" date="2013-11-04" status="candidate"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="candidate"/>
+    <revision pkgversion="3.35.91" date="2020-02-27" status="candidate"/>
 
     <credit type="author">
       <name>GNOME Documentation Project</name>
@@ -19,6 +20,10 @@
     <credit type="editor">
       <name>Michael Hill</name>
       <email>mdhillca@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -29,32 +34,45 @@
 
   <title>Move a window to a different workspace</title>
 
+ <if:choose>
+ <if:when test="platform:gnome-classic">
   <steps>
     <title>Using the mouse:</title>
     <item>
-      <p if:test="!platform:gnome-classic">Open the
-      <gui xref="shell-introduction#activities">Activities</gui> overview.</p>
-      <p if:test="platform:gnome-classic">Open the
-      <gui xref="shell-introduction#activities">Activities Overview</gui> from the
-      <gui xref="shell-introduction#activities">Applications</gui> menu
-      at the top left of the screen.</p>
+      <p>Press the button at the bottom left of the screen in the window list.</p>
+    </item>
+    <item>
+      <p>Click and drag the window towards the bottom right of the screen.</p>
+    </item>
+    <item>
+      <p>Drop the window onto one of the workspaces in the <em>workspace
+      selector</em> at the right-hand side of the window list. This workspace
+      now contains the window you have dropped.</p>
+    </item>
+  </steps>
+ </if:when>
+ <if:when test="!platform:gnome-classic">
+  <steps>
+    <title>Using the mouse:</title>
+    <item>
+      <p>Open the <gui xref="shell-introduction#activities">Activities</gui>
+      overview.</p>
     </item>
     <item>
       <p>Click and drag the window toward the right of the screen.</p>
     </item>
     <item>
       <p>The <em xref="shell-workspaces">workspace selector</em> will
-      appear.</p>
+      expand.</p>
     </item>
     <item>
-      <p if:test="!platform:gnome-classic">Drop the window onto an empty
-      workspace. This workspace now contains the window you have dropped, and a
-      new empty workspace appears at the bottom of the <em>workspace
-      selector</em>.</p>
-      <p if:test="platform:gnome-classic">Drop the window onto an empty
-      workspace. This workspace now contains the window you have dropped.</p>
+      <p>Drop the window onto an empty workspace. This workspace now contains
+      the window you have dropped, and a new empty workspace appears at the
+      bottom of the <em>workspace selector</em>.</p>
     </item>
   </steps>
+ </if:when>
+ </if:choose>
 
   <steps>
     <title>Using the keyboard:</title>
@@ -64,12 +82,18 @@
       <em xref="shell-windows-switching">window switcher</em>).</p>
     </item>
     <item>
-      <p>Press <keyseq><key>Super</key><key>Shift</key><key>Page
+      <p if:test="!platform:gnome-classic">Press <keyseq><key>Super</key><key>Shift</key><key>Page
       Up</key></keyseq> to move the window to a workspace which is above the
       current workspace on the <em>workspace selector</em>.</p>
-      <p>Press <keyseq><key>Super</key><key>Shift</key><key>Page
+      <p if:test="!platform:gnome-classic">Press <keyseq><key>Super</key><key>Shift</key><key>Page
       Down</key></keyseq> to move the window to a workspace which is below the
       current workspace on the <em>workspace selector</em>.</p>
+      <p if:test="platform:gnome-classic">Press <keyseq><key>Shift</key><key>Ctrl</key>
+      <key>Alt</key><key>→</key></keyseq> to move the window to a workspace which
+      is left of the current workspace on the <em>workspace selector</em>.</p>
+      <p if:test="platform:gnome-classic">Press <keyseq><key>Shift</key><key>Ctrl</key>
+      <key>Alt</key><key>←</key></keyseq> to move the window to a workspace which
+      is right of the current workspace on the <em>workspace selector</em>.</p>
     </item>
   </steps>
 
