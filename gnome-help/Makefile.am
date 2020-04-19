@@ -121,7 +121,7 @@ HELP_MEDIA = \
 	figures/network-wireless-signal-weak-symbolic.svg \
 	figures/system-run-symbolic.svg \
 	figures/view-more-symbolic.svg \
-	figures/yelp-icon-big.png
+	figures/yelp-icon-big.svg
 
 HELP_FILES = \
 	legal.xml \
