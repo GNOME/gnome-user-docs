@@ -38,7 +38,6 @@ HELP_MEDIA = \
 	figures/edge-drag-down.svg \
 	figures/edge-drag-up.svg \
 	figures/emblem-system-symbolic.svg \
-	figures/emblem-system.png \
 	figures/emoji-flags-symbolic.svg \
 	figures/gesture-drag.png \
 	figures/gesture-hold.png \
