@@ -47,7 +47,6 @@ HELP_MEDIA = \
 	figures/gesture-stretch-symbolic.svg \
 	figures/gesture-tap.png \
 	figures/gnome.png \
-	figures/go-down.png \
 	figures/go-down-symbolic.svg \
 	figures/input-keyboard-symbolic.png \
 	figures/input-methods-switcher.png \
