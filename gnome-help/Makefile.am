@@ -26,7 +26,7 @@ HELP_MEDIA = \
 	figures/battery-missing-symbolic.svg \
 	figures/bluetooth-active-symbolic.svg \
 	figures/bluetooth-disabled-symbolic.svg \
-	figures/bluetooth-menu.png \
+	figures/bluetooth-symbolic.svg \
 	figures/color-average.png \
 	figures/color-camera.png \
 	figures/color-display.png \
@@ -46,7 +46,7 @@ HELP_MEDIA = \
 	figures/gesture-rotate-clockwise-symbolic.svg \
 	figures/gesture-stretch-symbolic.svg \
 	figures/gesture-tap.png \
-	figures/gnome.png \
+	figures/gnome.svg \
 	figures/go-down-symbolic.svg \
 	figures/input-keyboard-symbolic.png \
 	figures/input-methods-switcher.png \
@@ -109,7 +109,6 @@ HELP_MEDIA = \
 	figures/shell-top-bar.png \
 	figures/shell-window-list-classic.png \
 	figures/shell-workspaces.png \
-	figures/universal-access-menu.png \
 	figures/network-wireless-acquiring-symbolic.svg \
 	figures/network-wireless-connected-symbolic.svg \
 	figures/network-wireless-encrypted-symbolic.svg \
