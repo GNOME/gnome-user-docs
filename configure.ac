@@ -1,4 +1,4 @@
-AC_INIT([gnome-user-docs], [3.36.2],
+AC_INIT([gnome-user-docs], [3.36.6],
         [https://gitlab.gnome.org/GNOME/gnome-user-docs/issues])
 AM_INIT_AUTOMAKE([1.11 check-news tar-ustar dist-xz no-dist-gzip foreign])
 AM_SILENT_RULES([yes])
