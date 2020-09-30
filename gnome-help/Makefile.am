@@ -281,7 +281,6 @@ HELP_FILES = \
 	net-firewall-ports.page \
 	net-fixed-ip-address.page \
 	net-general.page \
-	net-install-flash.page \
 	net-macaddress.page \
 	net-manual.page \
 	net-mobile.page \
