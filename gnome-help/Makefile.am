@@ -118,6 +118,15 @@ HELP_MEDIA = \
 	figures/network-wireless-signal-ok-symbolic.svg \
 	figures/network-wireless-signal-weak-symbolic.svg \
 	figures/system-run-symbolic.svg \
+	figures/tile-a11y.svg \
+	figures/tile-files.svg \
+	figures/tile-hardware.svg \
+	figures/tile-media.svg \
+	figures/tile-help.svg \
+	figures/tile-net.svg \
+	figures/tile-settings.svg \
+	figures/tile-home.svg \
+	figures/tile-tips.svg \
 	figures/view-more-symbolic.svg \
 	figures/yelp-icon-big.svg
 
