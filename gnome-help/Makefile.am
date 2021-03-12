@@ -4,29 +4,48 @@ EXTRA_DIST = C/gnome-help.its
 
 HELP_ID = gnome-help
 
+HELP_LINGUAS = as ca cs da de el fa fi fr es gl gu he hi hr hu id it ja kn lv lt mr nl pa pl pt pt_BR ro ru sl sr sr@latin sv te uk vi ta zh_CN
+
 HELP_MEDIA = \
 	figures/3-finger-hold-and-tap.svg \
 	figures/3-finger-pinch.svg \
 	figures/4-finger-drag.svg \
-	figures/audio-volume-high-symbolic.svg \
-	figures/audio-volume-low-symbolic.svg \
-	figures/audio-volume-medium-symbolic.svg \
-	figures/audio-volume-muted-symbolic.svg \
-	figures/battery-caution-charging-symbolic.svg \
-	figures/battery-caution-symbolic.svg \
-	figures/battery-empty-charging-symbolic.svg \
-	figures/battery-empty-symbolic.svg \
-	figures/battery-full-charged-symbolic.svg \
-	figures/battery-full-charging-symbolic.svg \
-	figures/battery-full-symbolic.svg \
-	figures/battery-good-charging-symbolic.svg \
-	figures/battery-good-symbolic.svg \
-	figures/battery-low-charging-symbolic.svg \
-	figures/battery-low-symbolic.svg \
-	figures/battery-missing-symbolic.svg \
 	figures/bluetooth-active-symbolic.svg \
-	figures/bluetooth-disabled-symbolic.svg \
 	figures/bluetooth-symbolic.svg \
+	figures/classic-topbar-accessibility.svg \
+	figures/classic-topbar-airplane-mode.svg \
+	figures/classic-topbar-audio-volume-muted.svg \
+	figures/classic-topbar-audio-volume.svg \
+	figures/classic-topbar-battery-charging.svg \
+	figures/classic-topbar-battery-discharging.svg \
+	figures/classic-topbar-battery-level-100-charged.svg \
+	figures/classic-topbar-battery-level-100.svg \
+	figures/classic-topbar-bluetooth-active.svg \
+	figures/classic-topbar-find-location.svg \
+	figures/classic-topbar-input-method.svg \
+	figures/classic-topbar-media-record.svg \
+	figures/classic-topbar-microphone-sensitivity-muted.svg \
+	figures/classic-topbar-microphone-sensitivity.svg \
+	figures/classic-topbar-network-cellular-acquiring.svg \
+	figures/classic-topbar-network-cellular-connected.svg \
+	figures/classic-topbar-network-cellular-signal-none.svg \
+	figures/classic-topbar-network-cellular-signal.svg \
+	figures/classic-topbar-network-vpn-acquiring.svg \
+	figures/classic-topbar-network-vpn.svg \
+	figures/classic-topbar-network-wired-acquiring.svg \
+	figures/classic-topbar-network-wired-disconnected.svg \
+	figures/classic-topbar-network-wired-no-route.svg \
+	figures/classic-topbar-network-wireless-acquiring.svg \
+	figures/classic-topbar-network-wireless-connected.svg \
+	figures/classic-topbar-network-wireless-no-route.svg \
+	figures/classic-topbar-network-wireless-strength-excellent.svg \
+	figures/classic-topbar-network-wireless-strength-none.svg \
+	figures/classic-topbar-network-wireless-strength.svg \
+	figures/classic-topbar-night-light.svg \
+	figures/classic-topbar-pointer.svg \
+	figures/classic-topbar-screen-shared.svg \
+	figures/classic-topbar-system-shutdown.svg \
+	figures/classic-topbar-thunderbolt-acquiring.svg \
 	figures/color-average.png \
 	figures/color-camera.png \
 	figures/color-display.png \
@@ -69,30 +88,6 @@ HELP_MEDIA = \
 	figures/keyboard-key-volup.svg \
 	figures/keyboard-key-world.svg \
 	figures/nautilus-icons.png \
-	figures/network-cellular-3g-symbolic.svg \
-	figures/network-cellular-4g-symbolic.svg \
-	figures/network-cellular-acquiring-symbolic.svg \
-	figures/network-cellular-connected-symbolic.svg \
-	figures/network-cellular-edge-symbolic.svg \
-	figures/network-cellular-gprs-symbolic.svg \
-	figures/network-cellular-signal-excellent-symbolic.svg \
-	figures/network-cellular-signal-good-symbolic.svg \
-	figures/network-cellular-signal-none-symbolic.svg \
-	figures/network-cellular-signal-ok-symbolic.svg \
-	figures/network-cellular-signal-weak-symbolic.svg \
-	figures/network-cellular-umts-symbolic.svg \
-	figures/network-error-symbolic.svg \
-	figures/network-idle-symbolic.svg \
-	figures/network-no-route-symbolic.svg \
-	figures/network-offline-symbolic.svg \
-	figures/network-receive-symbolic.svg \
-	figures/network-transmit-receive-symbolic.svg \
-	figures/network-transmit-symbolic.svg \
-	figures/network-vpn-acquiring-symbolic.svg \
-	figures/network-vpn-symbolic.svg \
-	figures/network-wired-acquiring-symbolic.svg \
-	figures/network-wired-disconnected-symbolic.svg \
-	figures/network-wired-symbolic.svg \
 	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
 	figures/right-edge-drag-down.svg \
@@ -109,14 +104,6 @@ HELP_MEDIA = \
 	figures/shell-top-bar.png \
 	figures/shell-window-list-classic.png \
 	figures/shell-workspaces.png \
-	figures/network-wireless-acquiring-symbolic.svg \
-	figures/network-wireless-connected-symbolic.svg \
-	figures/network-wireless-encrypted-symbolic.svg \
-	figures/network-wireless-signal-excellent-symbolic.svg \
-	figures/network-wireless-signal-good-symbolic.svg \
-	figures/network-wireless-signal-none-symbolic.svg \
-	figures/network-wireless-signal-ok-symbolic.svg \
-	figures/network-wireless-signal-weak-symbolic.svg \
 	figures/system-run-symbolic.svg \
 	figures/tile-a11y.svg \
 	figures/tile-files.svg \
@@ -127,6 +114,41 @@ HELP_MEDIA = \
 	figures/tile-settings.svg \
 	figures/tile-home.svg \
 	figures/tile-tips.svg \
+	figures/topbar-accessibility.svg \
+	figures/topbar-airplane-mode.svg \
+	figures/topbar-audio-volume-muted.svg \
+	figures/topbar-audio-volume.svg \
+	figures/topbar-battery-charging.svg \
+	figures/topbar-battery-discharging.svg \
+	figures/topbar-battery-level-100-charged.svg \
+	figures/topbar-battery-level-100.svg \
+	figures/topbar-bluetooth-active.svg \
+	figures/topbar-find-location.svg \
+	figures/topbar-input-method.svg \
+	figures/topbar-media-record.svg \
+	figures/topbar-microphone-sensitivity-muted.svg \
+	figures/topbar-microphone-sensitivity.svg \
+	figures/topbar-network-cellular-acquiring.svg \
+	figures/topbar-network-cellular-connected.svg \
+	figures/topbar-network-cellular-signal-none.svg \
+	figures/topbar-network-cellular-signal.svg \
+	figures/topbar-network-vpn-acquiring.svg \
+	figures/topbar-network-vpn.svg \
+	figures/topbar-network-wired-acquiring.svg \
+	figures/topbar-network-wired-disconnected.svg \
+	figures/topbar-network-wired-no-route.svg \
+	figures/topbar-network-wired.svg \
+	figures/topbar-network-wireless-acquiring.svg \
+	figures/topbar-network-wireless-connected.svg \
+	figures/topbar-network-wireless-no-route.svg \
+	figures/topbar-network-wireless-strength-excellent.svg \
+	figures/topbar-network-wireless-strength-none.svg \
+	figures/topbar-network-wireless-strength.svg \
+	figures/topbar-night-light.svg \
+	figures/topbar-pointer.svg \
+	figures/topbar-screen-shared.svg \
+	figures/topbar-system-shutdown.svg \
+	figures/topbar-thunderbolt-acquiring.svg \
 	figures/view-more-symbolic.svg \
 	figures/yelp-icon-big.svg
 
@@ -424,5 +446,3 @@ HELP_FILES = \
 	wacom-multi-monitor.page \
 	wacom-stylus.page \
 	wacom.page
-
-HELP_LINGUAS = as ca cs da de el fa fi fr es gl gu he hi hr hu id it ja kn lv lt mr nl pa pl pt pt_BR ro ru sl sr sr@latin sv te uk vi ta zh_CN

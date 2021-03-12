@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
       xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="net-wireless-connect">
@@ -39,8 +40,7 @@
   </item>
   <item>
     <p>Select
-    <gui><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-signal-excellent-symbolic.svg" width="16" height="16"/>
-      Wi-Fi Not Connected</gui>. The Wi-Fi section of the menu will expand.</p>
+    <gui>Wi-Fi Not Connected</gui>. The Wi-Fi section of the menu will expand.</p>
   </item>
   <item>
     <p>Click <gui>Select Network</gui>.</p>
@@ -66,11 +66,20 @@
     connect to the network.</p>
   </item>
   <item>
+    <if:choose>
+    <if:when test="platform:gnome-classic">
     <p>If the connection is successful, the icon will change to a dot with
     several curved bars above it
-    (<media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-signal-excellent-symbolic.svg" width="16" height="16"/>). More bars
+    (<media its:translate="no" type="image" mime="image/svg" src="figures/classic-topbar-network-wireless-strength-excellent.svg" width="28" height="28"/>). More bars
     indicate a stronger connection to the network. Fewer bars mean the
     connection is weaker and might not be very reliable.</p>
+    </if:when>
+    <p>If the connection is successful, the icon will change to a dot with
+    several curved bars above it
+    (<media its:translate="no" type="image" mime="image/svg" src="figures/topbar-network-wireless-strength-excellent.svg" width="28" height="28"/>). More bars
+    indicate a stronger connection to the network. Fewer bars mean the
+    connection is weaker and might not be very reliable.</p>
+    </if:choose>
   </item>
 </steps>
 

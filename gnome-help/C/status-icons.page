@@ -5,14 +5,54 @@
       id="status-icons">
 
   <info>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:type="simple" xlink:href="gnome-help.its"/>
+
     <link type="guide" xref="shell-overview#apps"/>
 
-    <revision version="0.1" date="2013-02-23" status="review"/>
+    <!--
+    Recommended statuses: stub incomplete draft outdated review candidate final
+    -->
+    <revision version="gnome:40" date="2021-03-12" status="candidate"/>
+    <!--
+    FIXME: I'm tentatively marking this final for GNOME 40, because it's at
+    least no longer incorrect. But here's a lot to improve:
+
+    * I'm not super happy with the "Other" catchall section at the end, but I also
+      don't want to add lots of singleton sections. Tweak the presentation.
+
+    * gnome-shell references network-wireless-disconnected but it doesn't exist:
+      https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/3827
+
+    * The icons for disconnected states might change:
+      https://gitlab.gnome.org/GNOME/adwaita-icon-theme/-/issues/102
+
+    * topbar-audio-volume-overamplified: Write docs on overamplification:
+      https://gitlab.gnome.org/GNOME/gnome-user-docs/-/issues/117
+
+    * Write docs on setting mic sensitivity, and link in a learn more item:
+      https://gitlab.gnome.org/GNOME/gnome-user-docs/-/issues/116
+
+    * topbar-network-wireless-connected: We're super handwavy about when this is
+      used. We could use some docs on ad hoc networks.
+
+    * topbar-screen-shared: We have no docs on the screen share portal:
+      https://gitlab.gnome.org/GNOME/gnome-user-docs/-/issues/118
+
+    * topbar-thunderbolt-acquiring: We have no docs on Thunderbolt:
+      https://gitlab.gnome.org/GNOME/gnome-user-docs/-/issues/119
+    -->
 
     <credit type="author copyright">
       <name>Monica Kochofar</name>
       <email>monicakochofar@gmail.com</email>
       <years>2012</years>
+    </credit>
+    <credit type="author copyright">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+      <years>2021</years>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -21,281 +61,523 @@
   </info>
 
   <title>What do the icons in the top bar mean?</title>
-<p>This section explains the meaning of icons located on the top right corner of the screen. More specifically, the different variations of the icons provided by the system are described.</p>
+
+<p>This page explains the meaning of icons located on the top right corner of the screen. More specifically, the different variations of the icons provided by the system are described.</p>
 
 <links type="section"/>
 
-<section id="universalicons">
-<title>Accessibility Menu Icons</title>
 
- <table shade="rows">
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/preferences-desktop-accessibility-symbolic.svg"/></td>
-      <td><p>Leads to a menu that turns on accessibility settings.</p></td>
-    </tr>
-    
-  </table>
+<section id="universalicons">
+<title>Accessibility icons</title>
+
+<table shade="rows">
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-accessibility.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-accessibility.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Allows you to quickly toggle various accessibility settings.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no" align="right">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-pointer.svg"/>
+        </if:when>
+        <media src="figures/topbar-pointer.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Indicates the type of click that will happen when using Hover Click.</p></td>
+  </tr>
+</table>
+
+<list style="compact">
+  <item><p><link xref="a11y">Learn more about accessibility.</link></p></item>
+  <item><p><link xref="a11y-dwellclick">Learn more about Hover Click.</link></p></item>
+</list>
 </section>
 
 
 <section id="audioicons">
-<title>Volume Control Icons</title>
+<title>Audio icons</title>
 
- <table shade="rows">
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/audio-volume-high-symbolic.svg"/></td>
-      <td><p>The volume is set to high.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/audio-volume-medium-symbolic.svg"/></td>
-      <td><p>The volume is set to medium.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/audio-volume-low-symbolic.svg"/></td>
-      <td><p>The volume is set to low.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/audio-volume-muted-symbolic.svg"/></td>
-      <td><p>The volume is muted.</p></td>
-    </tr>
-  </table>
+<table shade="rows">
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-audio-volume.svg"/>
+        </if:when>
+        <media src="figures/topbar-audio-volume.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Indicates the volume of the speakers or headphones.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-audio-volume-muted.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-audio-volume-muted.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>The speakers or headphones are muted.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-microphone-sensitivity.svg"/>
+        </if:when>
+        <media src="figures/topbar-microphone-sensitivity.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Indicates the sensitivity of the microphone.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-microphone-sensitivity-muted.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-microphone-sensitivity-muted.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>The microphone is muted.</p></td>
+  </tr>
+</table>
+
+<list style="compact">
+  <item><p><link xref="sound-volume">Learn more about sound volume.</link></p></item>
+</list>
+</section>
+
+
+<section id="batteryicons">
+<title>Battery icons</title>
+
+<table shade="rows">
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-battery-charging.svg"/>
+        </if:when>
+        <media src="figures/topbar-battery-charging.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Indicates the battery level while the battery is charging.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-battery-level-100-charged.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-battery-level-100-charged.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>The battery is fully charged and charging.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-battery-discharging.svg"/>
+        </if:when>
+        <media src="figures/topbar-battery-discharging.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Indicates the battery level while the battery is not charging.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-battery-level-100.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-battery-level-100.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>The battery is fully charged and not charging.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-system-shutdown.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-system-shutdown.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Power icon displayed on systems without a battery.</p></td>
+  </tr>
+</table>
 </section>
 
 
 <section id="bluetoothicons">
-<title>Bluetooth Manager Icons</title>
+<title>Bluetooth icons</title>
 
- <table shade="rows">
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/bluetooth-active-symbolic.svg"/></td>
-      <td><p>Bluetooth has been activated.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/bluetooth-disabled-symbolic.svg"/></td>
-      <td><p>Bluetooth has been disabled.</p></td>
-    </tr>
-  </table>
+<table shade="rows">
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-airplane-mode.svg"/>
+        </if:when>
+        <media src="figures/topbar-airplane-mode.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Airplane mode is on. Bluetooth is disabled when airplane mode is on.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-bluetooth-active.svg"/>
+        </if:when>
+        <media src="figures/topbar-bluetooth-active.svg"/>
+      </if:choose>
+    </td>
+    <td><p>A Bluetooth device is paired and in use.
+    This icon is only shown when there is an active device,
+    not just whenever Bluetooth is enabled.</p></td>
+  </tr>
+</table>
+
+<list style="compact">
+  <item><p><link xref="net-wireless-airplane">Learn more about airplane mode.</link></p></item>
+  <item><p><link xref="bluetooth">Learn more about Bluetooth.</link></p></item>
+</list>
 </section>
+
 
 <section id="networkicons">
-
 <info>
-  <desc>Explains the meanings of the Network Manager icons.</desc>
+  <desc type="link" role="seealso">Explains the meanings of the networking icons in the top bar.</desc>
 </info>
+<title>Networking icons</title>
 
-<title>Network Manager Icons</title>
-
-<p><app>Cellular Connection</app></p>
- <table shade="rows">
-
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-3g-symbolic.svg"/></td>
-      <td><p>Connected to a 3G network.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-4g-symbolic.svg"/></td>
-      <td><p>Connected to a 4G network.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-edge-symbolic.svg"/></td>
-      <td><p>Connected to an EDGE network.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-gprs-symbolic.svg"/></td>
-      <td><p>Connected to a GPRS network.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-umts-symbolic.svg"/></td>
-      <td><p>Connected to a UMTS network.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-connected-symbolic.svg"/></td>
-      <td><p>Connected to a cellular network.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-acquiring-symbolic.svg"/></td>
-      <td><p>Acquiring a cellular network connection.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-signal-excellent-symbolic.svg"/></td>
-      <td><p>Very high signal strength.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-signal-good-symbolic.svg"/></td>
-      <td><p>High signal strength.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-signal-ok-symbolic.svg"/></td>
-      <td><p>Medium signal strength.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-signal-weak-symbolic.svg"/></td>
-      <td><p>Low signal strength.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-cellular-signal-none-symbolic.svg"/></td>
-      <td><p>Extremely low signal strength.</p></td>
-    </tr></table>
-
-
-
-
-<p><app>Local Area Network (LAN) Connection</app></p>
- <table shade="rows">
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-error-symbolic.svg"/></td>
-      <td><p>There has been an error in finding the network.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-idle-symbolic.svg"/></td>
-      <td><p>The network is inactive.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-no-route-symbolic.svg"/></td>
-      <td><p>There is no route found for the network.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-offline-symbolic.svg"/></td>
-      <td><p>The network is offline.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-receive-symbolic.svg"/></td>
-      <td><p>The network is receiving data.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-transmit-receive-symbolic.svg"/></td>
-      <td><p>The network is transmitting and receiving data.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-transmit-symbolic.svg"/></td>
-      <td><p>The network is transmitting data.</p></td>
-    </tr>
+<table shade="rows">
+  <title>Wireless (Wi-Fi) connections</title>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-airplane-mode.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-airplane-mode.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Airplane mode is on. Wireless networking is disabled when airplane mode is on.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wireless-acquiring.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-network-wireless-acquiring.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Connecting to a wireless network.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wireless-strength.svg"/>
+        </if:when>
+        <media src="figures/topbar-network-wireless-strength.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Indicates the strength of a wireless network connection.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wireless-strength-none.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-network-wireless-strength-none.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Connected to a wireless network, but there is no signal.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wireless-connected.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-network-wireless-connected.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Connected to a wireless network. This icon is only shown if the signal
+    strength cannot be determined, such as when connecting to ad hoc networks.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wireless-no-route.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-network-wireless-no-route.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Connected to a wireless network, but there is no route to the internet.
+    This could be due to a misconfiguration of your network, or it could be due to
+    an outage with your internet service provider.</p></td>
+  </tr>
 </table>
 
+<list style="compact">
+  <item><p><link xref="net-wireless-airplane">Learn more about airplane mode.</link></p></item>
+  <item><p><link xref="net-wireless-connect">Learn more about wireless networking.</link></p></item>
+</list>
 
-
-<p><app>Virtual Private Network (VPN) Connection</app></p>
- <table shade="rows">
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-vpn-acquiring-symbolic.svg"/></td>
-      <td><p>Acquiring a network connection.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-vpn-symbolic.svg"/></td>
-      <td><p>Connected to a VPN network.</p></td>
-    </tr>
+<table shade="rows">
+  <title>Cellular networking (mobile broadband)</title>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-airplane-mode.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-airplane-mode.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Airplane mode is on. Cellular networking is disabled when airplane mode is on.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-cellular-acquiring.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-network-cellular-acquiring.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Connecting to a cellular network.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-cellular-signal.svg"/>
+        </if:when>
+        <media src="figures/topbar-network-cellular-signal.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Indicates the strength of a cellular network connection.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-cellular-signal-none.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-network-cellular-signal-none.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Connected to a cellular network, but there is no signal.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-cellular-connected.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-network-cellular-connected.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Connected to a cellular network. This icon is only shown if the signal
+    strength cannot be determined, such as when connecting over Bluetooth. If the
+    signal strength can be determined, a signal strength icon is shown instead.</p></td>
+  </tr>
 </table>
 
+<list style="compact">
+  <item><p><link xref="net-wireless-airplane">Learn more about airplane mode.</link></p></item>
+  <item><p><link xref="net-mobile">Learn more about cellular networking.</link></p></item>
+</list>
 
-<p><app>Wired Connection</app></p>
- <table shade="rows">
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wired-acquiring-symbolic.svg"/></td>
-      <td><p>Acquiring a network connection.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wired-disconnected-symbolic.svg"/></td>
-      <td><p>Disconnected from the network.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wired-symbolic.svg"/></td>
-      <td><p>Connected to a wired network.</p></td>
-    </tr>
+<table shade="rows">
+  <title>Wired connections</title>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wired-acquiring.svg"/>
+        </if:when>
+        <media src="figures/topbar-network-wired-acquiring.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Connecting to a wired connection.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wired.svg"/>
+        </if:when>
+        <media src="figures/topbar-network-wired.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Connected to a wired network.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wired-disconnected.svg"/>
+        </if:when>
+        <media src="figures/topbar-network-wired-disconnected.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Disconnected from the network.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-wired-no-route.svg"/>
+        </if:when>
+        <media src="figures/topbar-network-wired-no-route.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Connected to a wired network, but there is no route to the internet.
+    This could be due to a misconfiguration of your network, or it could be due to
+    an outage with your internet service provider.</p></td>
+  </tr>
 </table>
 
+<list style="compact">
+  <item><p><link xref="net-wired-connect">Learn more about wired networking.</link></p></item>
+</list>
 
-<p><app>Wireless Connection</app></p>
- <table shade="rows">
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-acquiring-symbolic.svg"/></td>
-      <td><p>Acquiring a wireless connection.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-encrypted-symbolic.svg"/></td>
-      <td><p>The wireless network is encrypted.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-connected-symbolic.svg"/></td>
-      <td><p>Connected to a wireless network.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-signal-excellent-symbolic.svg"/></td>
-      <td><p>Very high signal strength.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-signal-good-symbolic.svg"/></td>
-      <td><p>High signal strength.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-signal-ok-symbolic.svg"/></td>
-      <td><p>Medium signal strength.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-signal-weak-symbolic.svg"/></td>
-      <td><p>Low signal strength.</p></td>
-    </tr>
-<tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/network-wireless-signal-none-symbolic.svg"/></td>
-      <td><p>Very low signal strength.</p></td>
-    </tr>
+<table shade="rows">
+  <title>VPN (virtual private networking)</title>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-vpn-acquiring.svg"/>
+        </if:when>
+        <media src="figures/topbar-network-vpn-acquiring.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Connecting to a virual private network.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-network-vpn.svg"/>
+        </if:when>
+        <media src="figures/topbar-network-vpn.svg"/>
+      </if:choose>
+    </td>
+    <td><p>Connected to a virtual private network.</p></td>
+  </tr>
+</table>
 
-  </table>
+<list style="compact">
+  <item><p><link xref="net-vpn-connect">Learn more about virtual private networks.</link></p></item>
+</list>
+
 </section>
 
-<section id="batteryicons">
-<title>Power Manager Icons</title>
 
- <table shade="rows">
-   <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-full-symbolic.svg"/></td>
-      <td><p>The battery is full.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-good-symbolic.svg"/></td>
-      <td><p>The battery is partially drained.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-low-symbolic.svg"/></td>
-      <td><p>The battery is low.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-caution-symbolic.svg"/></td>
-      <td><p>Caution: The battery is very low.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-empty-symbolic.svg"/></td>
-      <td><p>The battery is extremely low.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-missing-symbolic.svg"/></td>
-      <td><p>The battery has been unplugged.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-full-charged-symbolic.svg"/></td>
-      <td><p>The battery is fully charged.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-full-charging-symbolic.svg"/></td>
-      <td><p>The battery is full and charging.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-good-charging-symbolic.svg"/></td>
-      <td><p>The battery is partially full and charging.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-low-charging-symbolic.svg"/></td>
-      <td><p>The battery is low and charging.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-caution-charging-symbolic.svg"/></td>
-      <td><p>The battery is very low and charging.</p></td>
-    </tr>
-    <tr>
-      <td><media its:translate="no" type="image" mime="image/svg" src="figures/battery-empty-charging-symbolic.svg"/></td>
-      <td><p>The battery is empty and charging.</p></td>
-    </tr>
-  </table>
+<section id="othericons">
+<title>Other icons</title>
+<table shade="rows">
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-input-method.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-input-method.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Indicates the keyboard layout or input method currently in use.
+    Click to select another layout. The keyboard layout menu is only shown
+    if you have multiple input methods configured.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-find-location.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-find-location.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>An app is currently accessing your location.
+    You can disable location access from the menu.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-night-light.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-night-light.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Night light has changed the color tempterature of the display
+    to reduce eye strain. You can temporarily disable night light from
+    the mneu.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-media-record.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-media-record.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>You are currently recording a screencast of your entire screen.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-screen-shared.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-screen-shared.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>An app is currently sharing the screen or another window.</p></td>
+  </tr>
+  <tr>
+    <td its:translate="no">
+      <if:choose>
+        <if:when test="platform:gnome-classic">
+          <media src="figures/classic-topbar-thunderbolt-acquiring.svg" style="floatend"/>
+        </if:when>
+        <media src="figures/topbar-thunderbolt-acquiring.svg" style="floatend"/>
+      </if:choose>
+    </td>
+    <td><p>Connecting to a Thunderbolt device, such as a dock.</p></td>
+  </tr>
+</table>
+
+<list style="compact">
+  <item><p><link xref="keyboard-layouts">Learn more about keyboard layouts.</link></p></item>
+  <item><p><link xref="net-privacy-location">Learn more about privacy and location services.</link></p></item>
+  <item><p><link xref="display-night-light">Learn more about night light and color temperature.</link></p></item>
+  <item><p><link xref="screen-shot-record">Learn more about screenshots and screencasts.</link></p></item>
+</list>
+
 </section>
-
 
 </page>

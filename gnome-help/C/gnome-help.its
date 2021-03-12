@@ -11,4 +11,13 @@
                 (parent::mal:title or parent::mal:p) and
                 not(preceding-sibling::node() or following-sibling::node())]"
       withinText="no"/>
+
+  <!--
+  It's common to use a link element alone in a paragraph in a list item.
+  Make it so translators don't have to deal with this extra markup.
+  -->
+  <its:withinTextRule
+      selector="//mal:item/mal:p/mal:link[
+                not(preceding-sibling::node() or following-sibling::node())]"
+      withinText="no"/>
 </its:rules>
