@@ -83,7 +83,7 @@
     <td><p>Allows you to quickly toggle various accessibility settings.</p></td>
   </tr>
   <tr>
-    <td its:translate="no" align="right">
+    <td its:translate="no">
       <if:choose>
         <if:when test="platform:gnome-classic">
           <media src="figures/classic-topbar-pointer.svg"/>
@@ -260,7 +260,13 @@
 
 <section id="networkicons">
 <info>
+<!--
+FIXME: I don't want a bare desc, because it ends up in the section links above.
+But this section also gets a seealso from net-wireless.page, and we'd like a
+desc for that. In Mallard 1.2, we can use role on desc. It works in Yelp, but
+it's not in a schema yet, so it will cause validation errors in CI.
   <desc type="link" role="seealso">Explains the meanings of the networking icons in the top bar.</desc>
+-->
 </info>
 <title>Networking icons</title>
 
