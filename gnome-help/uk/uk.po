@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
 "POT-Creation-Date: 2021-03-13 07:33+0000\n"
-"PO-Revision-Date: 2021-03-13 22:09+0200\n"
+"PO-Revision-Date: 2021-03-14 16:52+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -4651,6 +4651,7 @@ msgid ""
 "manufactured, and does not contain much other information for color "
 "correction."
 msgstr ""
+"Типовий профіль кольорів для будь-якого монітора створено автоматично на основі <link href=\"https://en.wikipedia.org/wiki/Extended_Display_Identification_Data\">EDID</link>, який зберігається у мікросхемі пам'яті всередині монітора. EDID надає нам лише миттєвий знімок доступних для показу на моніторі кольорів на момент, коли монітор було виготовлено, і не містить багато інших відомостей для виправлення кольорів."
 
 #. (itstool) path: note/p
 #: C/color-notspecifiededid.page:29
@@ -4797,6 +4798,7 @@ msgid ""
 "managed workflow</em>. With this kind of workflow you can be sure that "
 "colors are not being lost or modified."
 msgstr ""
+"У кожного пристрою, який працює з кольорами, має бути власний профіль ICC. Якщо ця умова справджується, кажуть, що у системі реалізовано <em>повний цикл роботи із керуванням кольорами</em>. Такий цикл роботи забезпечує обробку кольорів без втрат або змін."
 
 #. (itstool) path: info/desc
 #: C/color-whatisspace.page:9
@@ -4828,6 +4830,7 @@ msgid ""
 "using three values, which restricts up to encoding a <em>triangle</em> of "
 "colors."
 msgstr ""
+"Зорова система людини не є простим датчиком RGB, але реакцію ока можна наблизити за допомогою діаграми колірності CIE 1931, яка показує візуальне сприйняття людини у формі фігури, подібної до копита коня. Можна бачити, що люди візуально сприймають набагато більше відтінків зеленого кольору, ніж синього або червоного кольору. У тритоновому просторі кольорів, подібному до RGB, ми представляємо кольори на комп'ютері за допомогою трьох значень, які обмежують кодування до <em>трикутника</em> кольорів."
 
 #. (itstool) path: note/p
 #: C/color-whatisspace.page:37
@@ -4838,6 +4841,7 @@ msgid ""
 "sometimes be misleading, so if you want to see the 3D hull, use the "
 "<code>gcm-viewer</code> application."
 msgstr ""
+"Використання моделей, зокрема діаграми колірності CIE 1931, є значним спрощенням зорової системи людини. Насправді справжні зорові діапазони є просторовими областями, а не плоскими проєкціями. Плоска проєкція просторової форми іноді може бути оманливою, тому якщо ви хочете побачити просторову обгортку, скористайтеся програмою <code>gcm-viewer</code>."
 
 #. (itstool) path: figure/desc
 #: C/color-whatisspace.page:48
@@ -4853,6 +4857,7 @@ msgid ""
 "<em>least-common-denominator</em> standard and is used in a large number of "
 "applications (including the Internet)."
 msgstr ""
+"Спочатку розглянемо sRGB, який є найменшим простором. У ньому можна закодувати найменшу кількість кольорів. Це апроксимація електро-променевого дисплея десятирічної давнини і тому більшість сучасних моніторів без проблем можуть показувати більше кольорів. sRGB є стандартом <em>найбазовішого рівня</em>. Його використовують у великій кількості програм (зокрема в інтернеті)."
 
 #. (itstool) path: page/p
 #: C/color-whatisspace.page:60
@@ -4862,6 +4867,7 @@ msgid ""
 "worrying too much that the most vivid colors are being clipped or the blacks "
 "crushed."
 msgstr ""
+"AdobeRGB часто використовують як <em>простір редагування</em>. У ньому передбачено можливість кодування ширшого спектра кольорів, ніж у sRGB. Це означає, що ви можете змінювати кольори фотографії не надто переймаючись тим, що найяскравіші кольори буде обрізано, а спектр темних кольорів буде стиснено."
 
 #. (itstool) path: page/p
 #: C/color-whatisspace.page:66
@@ -4870,6 +4876,7 @@ msgid ""
 "archival. It can encode nearly the whole range of colors detected by the "
 "human eye, and even encode colors that the eye cannot detect!"
 msgstr ""
+"ProPhoto — найбільший із доступних просторів. Його часто використовують для архівування документів. У ньому можна закодувати майже увесь діапазон кольорів, які здатне бачити людське око, і навіть кольори, які є невидимими для нас!"
 
 #. (itstool) path: page/p
 #: C/color-whatisspace.page:73
@@ -4879,6 +4886,7 @@ msgid ""
 "levels) to encode each channel, then a larger range is going to have bigger "
 "steps between each value."
 msgstr ""
+"Гаразд, якщо ProPhoto є очевидно кращим, чому його не використовують для усього? Відповідь проста — <em>квантизація</em>. Якщо для кодування кожного з каналів у вас є лише 8 бітів (256 рівнів), чим більшим є діапазон, тим більшими є кроки між значеннями."
 
 #. (itstool) path: page/p
 #: C/color-whatisspace.page:79
@@ -4888,6 +4896,7 @@ msgid ""
 "colors, like skin colors are very important, and even small errors will make "
 "untrained viewers notice that something in a photograph looks wrong."
 msgstr ""
+"Більші кроки — більша похибка між кольором на датчику і збереженим кольором, для деяких кольорів це є значною проблемою. Виявляється, ключові кольори, зокрема кольори шкіри, є дуже важливими. Навіть незначні похибки у таких кольорах можуть призвести до того, що непрофесійний споглядач помітить те, що щось на фотографії виглядає не так."
 
 #. (itstool) path: page/p
 #: C/color-whatisspace.page:86
@@ -4896,6 +4905,7 @@ msgid ""
 "smaller quantization error, but this doubles the size of each image file. "
 "Most content in existence today is 8bpp, i.e. 8 bits-per-pixel."
 msgstr ""
+"Звичайно ж, використання 16-бітового режиму зберігання зображення надасть набагато більше кроків і призведе до набагато меншої похибки квантизації, але також призведе до збільшення розмірів усіх файлів зображень удвічі. Більшу частину наявних зображень за писано у режимі 8 бітів на піксель."
 
 #. (itstool) path: page/p
 #: C/color-whatisspace.page:92
@@ -4904,6 +4914,7 @@ msgid ""
 "another, where a color space can be a well known defined space like sRGB, or "
 "a custom space such as your monitor or printer profile."
 msgstr ""
+"Керування кольорами є процесом перетворення з одного простору кольорів до іншого. Простором кольорів може бути добре відомий простір, подібний до sRGB, або нетиповий простір, зокрема профіль вашого монітор або принтера."
 
 #. (itstool) path: info/desc
 #: C/color-why-calibrate.page:8
@@ -4940,6 +4951,7 @@ msgid ""
 "changing the type or weight of paper can invalidate the characterization "
 "state and make the profile inaccurate."
 msgstr ""
+"Характеристики панелей дисплеїв значно різняться від екземпляра до екземпляра і суттєво змінюються із віком дисплея. Для принтерів усе іще складніше, оскільки проста зміна типу або щільності паперу може зробити нечинним стан характеризації, а отже профіль стане неточним."
 
 #. (itstool) path: page/p
 #: C/color-why-calibrate.page:37
@@ -4948,6 +4960,7 @@ msgid ""
 "calibration yourself, or by letting an external company supply you with a "
 "profile based on your exact characterization state."
 msgstr ""
+"Найкращим способом забезпечення точності профілю є виконання калібрування власноруч або за допомогою послуг спеціалізованої компанії, яка створить для вас профіль на основі точного стану характеризації."
 
 #. (itstool) path: info/desc
 #: C/color-whyimportant.page:8
@@ -4967,6 +4980,7 @@ msgid ""
 "displaying it on a screen, and printing it all whilst managing the exact "
 "colors and the range of colors on each medium."
 msgstr ""
+"Керування кольорами є процесом визначення кольору за допомогою пристрою отримання даних, показ кольору на екрані і друк кольору із постійним збереженням точності кольорів і діапазону кольорів на усіх носіях."
 
 #. (itstool) path: page/p
 #: C/color-whyimportant.page:24
@@ -5017,6 +5031,7 @@ msgid ""
 "different range of colors. So while you might be able to take a photo of "
 "electric blue, most printers are not going to be able to reproduce it."
 msgstr ""
+"Базовою проблемою є те, що діапазони кольорів, із якими здатен працювати кожен із пристроїв, є різними. Отже, хоча ви можете зробити фотографію із дуже яскравим синім кольором, більшість принтерів не здатні відтворити такий колір."
 
 #. (itstool) path: page/p
 #: C/color-whyimportant.page:60
@@ -5026,6 +5041,7 @@ msgid ""
 "you can’t have <em>white</em> ink, and so the whiteness can only be as good "
 "as the paper color."
 msgstr ""
+"Більшість пристроїв для отримання зображень записують дані у RGB (червоний, зелений, синій канали). Ці дані доведеться перетворити до CMYK (блакитний, малиновий, жовтий та чорний канали) для друку. Ще однією проблемою є те, що немає <em>білого</em> чорнила, тому білизна зображення може бути лише настільки високою, наскільки високою вона є у паперу."
 
 #. (itstool) path: page/p
 #: C/color-whyimportant.page:67
@@ -5037,6 +5053,7 @@ msgid ""
 "driven 7 units of distance, without the unit you don’t know if that’s 7 "
 "kilometers or 7 meters."
 msgstr ""
+"Наступна проблема полягає в одиницях. Без визначення масштабу вимірювання кольору не можна визначити, є 100% червоний майже інфрачервоним чи просто найтемнішим червоним кольором чорнила у принтері. Те, що є 50% червоним на одному дисплеї, ймовірно, може бути чимось на 62% червоним на іншому. Це чимось схоже на повідомлення про те, що пройдено 7 одиниць відстані. Без зазначення одиниці виміру не можна визначити, пройдено 7 кілометрів чи 7 метрів."
 
 #. (itstool) path: page/p
 #: C/color-whyimportant.page:77
@@ -5047,6 +5064,7 @@ msgid ""
 "projector has a very small gamut and all the colors are going to look "
 "“washed out”."
 msgstr ""
+"Коли йдеться про кольори, одиницею вважають гаму. Гама — діапазон кольорів, які можна відтворити. Пристрій подібний до цифрової дзеркальної фотокамери може мати дуже широку гаму, бути здатним реєструвати усі кольори заходу сонця, але проєктор має дуже вузьку гаму і усі кольори виглядатимуть «вицвілими»."
 
 #. (itstool) path: page/p
 #: C/color-whyimportant.page:85
@@ -5056,6 +5074,7 @@ msgid ""
 "electric blue) we need to show the user what the result is going to look "
 "like."
 msgstr ""
+"У деяких випадках дані, які виводить пристрій, можна <em>виправити</em> шляхом внесення змін до даних, які надсилають на пристрій, але у інших випадках, коли це коригування неможливе (не можна надрукувати дуже яскравий синій колір), доведеться якось показати користувачеві, як має виглядати результат."
 
 #. (itstool) path: page/p
 #: C/color-whyimportant.page:92
@@ -5066,6 +5085,7 @@ msgid ""
 "to print a custom mug with the Red Hat logo that <em>has</em> to be the "
 "exact Red Hat Red."
 msgstr ""
+"Для фотографів має сенс використання повного тонального діапазону пристрою для відтворення кольорів, щоб переходи у кольорах були плавними. Для іншої графіки може виникнути потреба у точній відповідності кольорів, яка є важливою, коли ви, наприклад, хочете надрукувати на чашці логотип Red Hat і маєте бути <em>певні</em>, що кольором буде саме червоний з логотипу Red Hat."
 
 #. (itstool) path: credit/name
 #: C/contacts-add-remove.page:15
@@ -5109,6 +5129,7 @@ msgid ""
 "information. Press the drop down box next to each field to choose the type "
 "of detail."
 msgstr ""
+"У діалоговому вікні <gui>Новий контакт</gui> введіть ім'я контакту та відомості щодо нього. Натисніть кнопку спадного списку поряд і кожним полем, щоб вибрати тип параметрів запису контакту."
 
 #. (itstool) path: media/span
 #: C/contacts-add-remove.page:52 C/contacts-add-remove.page:66
@@ -5257,6 +5278,7 @@ msgid ""
 "fill in the details on the next empty field of the type (phone number, "
 "email, etc.) you want to add."
 msgstr ""
+"Щоб додати <em>подробиці</em>, зокрема новий номер телефону або електронну адресу, просто заповніть наступне порожнє поле відповідного типу (номер телефону, адреса електронної пошти тощо)."
 
 #. (itstool) path: note/p
 #: C/contacts-edit-details.page:52
@@ -5297,6 +5319,7 @@ msgid ""
 "accounts into one <app>Contacts</app> entry. This feature helps you keep "
 "your address book organized, with all details about one contact in one place."
 msgstr ""
+"Ви можете поєднати контакти-дублікати з вашої локальної адресної книги і облікових записів у інтернеті в одному записі програми <app>Контакти</app>. Ця можливість допоможе вам в упорядкуванні вашої адресної книги — зібрати усі подробиці щодо контакту в одному записі."
 
 #. (itstool) path: item/p
 #: C/contacts-link-unlink.page:43
@@ -13070,6 +13093,7 @@ msgstr "Власник"
 #: C/nautilus-list.page:77
 msgid "The name of the user the folder or file is owned by."
 msgstr ""
+"Назва облікового запису власника теки або файла."
 
 #. (itstool) path: title/gui
 #: C/nautilus-list.page:80
@@ -13094,6 +13118,7 @@ msgstr "Права доступу"
 msgid ""
 "Displays the file access permissions. For example, <gui>drwxrw-r--</gui>"
 msgstr ""
+"Показує права доступу до файла. Наприклад, <gui>drwxrw-r--</gui>"
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:91
@@ -13109,6 +13134,7 @@ msgid ""
 "The next three characters <gui>rwx</gui> specify permissions for the user "
 "who owns the file."
 msgstr ""
+"Наступні три символи, <gui>rwx</gui>, вказують на права доступу для власника файла."
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:100
@@ -13116,6 +13142,7 @@ msgid ""
 "The next three <gui>rw-</gui> specify permissions for all members of the "
 "group that owns the file."
 msgstr ""
+"Наступні три символи, <gui>rw-</gui>, вказують на права доступу для усіх учасників групи, яка є власником файла."
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:104
@@ -13123,21 +13150,25 @@ msgid ""
 "The last three characters in the column <gui>r--</gui> specify permissions "
 "for all other users on the system."
 msgstr ""
+"Останні три символи у стовпчику, <gui>r--</gui>, вказують на права доступу для усіх інших користувачів системи."
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:108
 msgid "Each permission has the following meanings:"
 msgstr ""
+"Значення записів прав доступу:"
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:111
 msgid "<gui>r</gui>: readable, meaning that you can open the file or folder"
 msgstr ""
+"<gui>r</gui>: придатний до читання, означає, що ви можете відкрити файл або теку"
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:115
 msgid "<gui>w</gui>: writable, meaning that you can save changes to it"
 msgstr ""
+"<gui>w</gui>: придатний до запису, означає, що ви можете зберігати внесені зміни до файла"
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:118
@@ -13145,11 +13176,13 @@ msgid ""
 "<gui>x</gui>: executable, meaning that you can run it if it is a program or "
 "script file, or you can access subfolders and files if it is a folder"
 msgstr ""
+"<gui>x</gui>: виконуваний, означає, що ви можете запускати файл так, наче він є програмою або скриптом, або можете отримувати доступ до підтек і файлів, якщо об'єктом є тека"
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:123
 msgid "<gui>-</gui>: permission not set"
 msgstr ""
+"<gui>-</gui>: права доступу не встановлено"
 
 #. (itstool) path: title/gui
 #: C/nautilus-list.page:128
@@ -13160,6 +13193,7 @@ msgstr "Тип MIME"
 #: C/nautilus-list.page:129
 msgid "Displays the MIME type of the item."
 msgstr ""
+"Показує тип MIME об'єкта."
 
 #. (itstool) path: title/gui
 #: C/nautilus-list.page:132
@@ -13170,6 +13204,7 @@ msgstr "Розташування"
 #: C/nautilus-list.page:133
 msgid "The path to the location of the file."
 msgstr ""
+"Шлях до місця зберігання файла."
 
 #. (itstool) path: title/gui
 #: C/nautilus-list.page:136
@@ -13180,11 +13215,13 @@ msgstr "Змінено — Час"
 #: C/nautilus-list.page:137
 msgid "Gives the date and time of the last time the file was modified."
 msgstr ""
+"Дає дату і час моменту, коли файл було востаннє змінено."
 
 #. (itstool) path: item/p
 #: C/nautilus-list.page:141
 msgid "Gives the date or time of the last time the file was modified."
 msgstr ""
+"Дає дату або час моменту, коли файл було востаннє змінено."
 
 #. (itstool) path: info/title
 #: C/nautilus-prefs.page:11
@@ -13196,21 +13233,25 @@ msgstr "Параметри"
 #: C/nautilus-prefs.page:12
 msgid "View and set preferences for the file browser."
 msgstr ""
+"Перегляд і встановлення налаштувань для програми для керування файлами."
 
 #. (itstool) path: page/title
 #: C/nautilus-prefs.page:17
 msgid "File manager preferences"
 msgstr ""
+"Налаштування програми для керування файлами"
 
 #. (itstool) path: info/desc
 #: C/nautilus-preview.page:27
 msgid "Control when thumbnails are used for files."
 msgstr ""
+"Керування режимом використання мініатюр для позначок файлів."
 
 #. (itstool) path: page/title
 #: C/nautilus-preview.page:30
 msgid "File manager preview preferences"
 msgstr ""
+"Налаштування попереднього перегляду у програмі для керування файлами"
 
 #. (itstool) path: page/p
 #: C/nautilus-preview.page:32
@@ -13226,6 +13267,7 @@ msgstr ""
 #: C/nautilus-preview.page:40
 msgid "<gui>Files</gui>"
 msgstr ""
+"<gui>Файли</gui>"
 
 #. (itstool) path: item/p
 #: C/nautilus-preview.page:41
@@ -13267,16 +13309,19 @@ msgid ""
 "You can turn this feature on or off, or turn it on only for files on your "
 "computer and local external drives."
 msgstr ""
+"Ви можете увімкнути чи вимкнути цю можливість або увімкнути її лише для файлів на вашому комп'ютері і локальних зовнішніх дисках."
 
 #. (itstool) path: info/desc
 #: C/nautilus-views.page:38
 msgid "Specify the default sort order and grouping for the file manager."
 msgstr ""
+"Визначення типового режиму упорядковування та групування для програми для керування файлами."
 
 #. (itstool) path: page/title
 #: C/nautilus-views.page:43
 msgid "Views preferences in <app>Files</app>"
 msgstr ""
+"Налаштування перегляду у <app>Файлах</app>"
 
 #. (itstool) path: page/p
 #: C/nautilus-views.page:45
@@ -13296,6 +13341,7 @@ msgstr "Типовий перегляд"
 #: C/nautilus-views.page:54
 msgid "Arrange items"
 msgstr ""
+"Упорядковування записів"
 
 #. (itstool) path: item/p
 #. TRANSLATORS: use the translation of the tooltip for the view selector
@@ -13312,6 +13358,7 @@ msgstr ""
 #: C/nautilus-views.page:64
 msgid "Sort folders before files"
 msgstr ""
+"Впорядковувати теки перед файлами"
 
 #. (itstool) path: item/p
 #: C/nautilus-views.page:65
@@ -13319,17 +13366,20 @@ msgid ""
 "By default, the file manager no longer shows all folders before files. To "
 "see all folders listed before files, enable this option."
 msgstr ""
+"Типово, у новій версії програми для керування файлами не буде показано теки перед файлами. Щоб усі теки було показано до файлів, позначте цей пункт."
 
 #. (itstool) path: info/desc
 #: C/net-antivirus.page:18
 msgid ""
 "There are few Linux viruses, so you probably don’t need anti-virus software."
 msgstr ""
+"Для Linux написано дуже мало вірусів, тому, ймовірно, у вас не буде потреби у антивірусному програмному забезпеченні."
 
 #. (itstool) path: page/title
 #: C/net-antivirus.page:22
 msgid "Do I need anti-virus software?"
 msgstr ""
+"Чи потрібне антивірусне програмне забезпечення?"
 
 #. (itstool) path: page/p
 #: C/net-antivirus.page:24
