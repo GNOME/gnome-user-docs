@@ -138,9 +138,11 @@ HELP_MEDIA = \
 	figures/touch-hold.svg \
 	figures/touch-overview.svg \
 	figures/touch-pinch-to-zoom.svg \
+	figures/touch-osk.svg \
 	figures/touch-rotate.svg \
 	figures/touch-scroll.svg \
 	figures/touch-tap.svg \
+	figures/touch-unfullscreen.svg \
 	figures/touch-workspaces.svg \
 	figures/view-more-symbolic.svg \
 	figures/yelp-icon-big.svg
