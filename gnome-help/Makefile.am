@@ -7,9 +7,6 @@ HELP_ID = gnome-help
 HELP_LINGUAS = as ca cs da de el fa fi fr es gl gu he hi hr hu id it ja kn lv lt mr nl pa pl pt pt_BR ro ru sl sr sr@latin sv te uk vi ta zh_CN
 
 HELP_MEDIA = \
-	figures/3-finger-hold-and-tap.svg \
-	figures/3-finger-pinch.svg \
-	figures/4-finger-drag.svg \
 	figures/bluetooth-active-symbolic.svg \
 	figures/bluetooth-symbolic.svg \
 	figures/classic-topbar-accessibility.svg \
@@ -53,18 +50,8 @@ HELP_MEDIA = \
 	figures/color-space.png \
 	figures/display-dual-monitors.webm \
 	figures/edit-find-symbolic.svg \
-	figures/edge-drag-right.svg \
-	figures/edge-drag-down.svg \
-	figures/edge-drag-up.svg \
 	figures/emblem-system-symbolic.svg \
 	figures/emoji-flags-symbolic.svg \
-	figures/gesture-drag.png \
-	figures/gesture-hold.png \
-	figures/gesture-pinch-symbolic.svg \
-	figures/gesture-rotate-anticlockwise-symbolic.svg \
-	figures/gesture-rotate-clockwise-symbolic.svg \
-	figures/gesture-stretch-symbolic.svg \
-	figures/gesture-tap.png \
 	figures/gnome.svg \
 	figures/go-down-symbolic.svg \
 	figures/input-keyboard-symbolic.png \
@@ -90,7 +77,6 @@ HELP_MEDIA = \
 	figures/nautilus-icons.png \
 	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
-	figures/right-edge-drag-down.svg \
 	figures/rotation-allowed-symbolic.svg \
 	figures/rotation-locked-symbolic.svg \
 	figures/shell-activities-dash.png \
@@ -149,6 +135,15 @@ HELP_MEDIA = \
 	figures/topbar-screen-shared.svg \
 	figures/topbar-system-shutdown.svg \
 	figures/topbar-thunderbolt-acquiring.svg \
+	figures/touch-hold.svg \
+	figures/touch-overview.svg \
+	figures/touch-pinch-to-zoom.svg \
+	figures/touch-osk.svg \
+	figures/touch-rotate.svg \
+	figures/touch-scroll.svg \
+	figures/touch-tap.svg \
+	figures/touch-unfullscreen.svg \
+	figures/touch-workspaces.svg \
 	figures/view-more-symbolic.svg \
 	figures/yelp-icon-big.svg
 
