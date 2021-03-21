@@ -350,6 +350,8 @@ HELP_FILES = \
 	power-lowpower.page \
 	power-nowireless.page \
 	power-othercountry.page \
+	power-percentage.page \
+	power-profile.page \
 	power-status.page \
 	power-suspendfail.page \
 	power-suspend.page \
