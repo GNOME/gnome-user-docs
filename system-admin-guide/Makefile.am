@@ -63,4 +63,4 @@ HELP_FILES = \
 
 HELP_MEDIA =
 
-HELP_LINGUAS = ca cs de es gl hu ko pt_BR sv uk
+HELP_LINGUAS = ca cs de es gl hu id ko pt_BR sv tr uk
