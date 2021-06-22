@@ -29,6 +29,7 @@ HELP_MEDIA = \
 	figures/classic-topbar-network-cellular-signal.svg \
 	figures/classic-topbar-network-vpn-acquiring.svg \
 	figures/classic-topbar-network-vpn.svg \
+	figures/classic-topbar-network-wired.svg \
 	figures/classic-topbar-network-wired-acquiring.svg \
 	figures/classic-topbar-network-wired-disconnected.svg \
 	figures/classic-topbar-network-wired-no-route.svg \
