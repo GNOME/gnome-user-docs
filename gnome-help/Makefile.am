@@ -76,6 +76,7 @@ HELP_MEDIA = \
 	figures/keyboard-key-volup.svg \
 	figures/keyboard-key-world.svg \
 	figures/nautilus-icons.png \
+	figures/net-wired-ethernet-diagram.svg \
 	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
 	figures/rotation-allowed-symbolic.svg \
