@@ -77,6 +77,7 @@ HELP_MEDIA = \
 	figures/keyboard-key-world.svg \
 	figures/nautilus-icons.png \
 	figures/net-wired-ethernet-diagram.svg \
+	figures/network-wired-symbolic.svg \
 	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
 	figures/rotation-allowed-symbolic.svg \
