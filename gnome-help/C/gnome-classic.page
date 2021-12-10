@@ -73,10 +73,17 @@
 <section id="gnome-classic-switch">
 <title>Switch to and from GNOME Classic</title>
 
-<note if:test="!platform:gnome-classic" style="important">
+<note if:test="!platform:gnome-classic !platform:ubuntu" style="important">
 <p>GNOME Classic is only available on systems with certain GNOME Shell extensions
  installed. Some Linux distributions may not have these extensions available or
  installed by default.</p>
+</note>
+
+<note if:test="!platform:gnome-classic platform:ubuntu" style="important">
+<p its:locNote="Translators: Ubuntu only string">You need to have the
+ <sys>gnome-shell-extensions</sys> package installed to make GNOME Classic available.</p>
+<p its:locNote="Translators: Ubuntu only string"><link style="button"
+ action="install:gnome-shell-extensions">Install <sys>gnome-shell-extensions</sys></link></p>
 </note>
 
   <steps>
