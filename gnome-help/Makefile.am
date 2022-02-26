@@ -287,8 +287,6 @@ HELP_FILES = \
 	mouse-wakeup.page \
 	mouse.page \
 	music-cantplay-drm.page \
-	music-player-ipodtransfer.page \
-	music-player-newipod.page \
 	nautilus-behavior.page \
 	nautilus-bookmarks-edit.page \
 	nautilus-connect.page \
