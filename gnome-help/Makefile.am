@@ -440,6 +440,7 @@ HELP_FILES = \
 	video-dvd.page \
 	video-sending.page \
 	wacom-left-handed.page \
+	wacom-map-buttons.page \
 	wacom-mode.page \
 	wacom-multi-monitor.page \
 	wacom-stylus.page \
