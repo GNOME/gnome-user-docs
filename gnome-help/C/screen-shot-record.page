@@ -1,13 +1,15 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic" style="task"
+      xmlns:if="http://projectmallard.org/if/1.0/"
+      xmlns:ui="http://projectmallard.org/ui/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task" version="1.0 if/1.0 ui/1.0"
       id="screen-shot-record">
-
+      
   <info>
     <link type="guide" xref="tips"/>
 
-    <revision pkgversion="3.6.1" date="2012-11-10" status="review"/>
-    <revision pkgversion="3.13.92" date="2014-09-22" status="review"/>
     <revision pkgversion="3.14.0" date="2015-01-14" status="review"/>
+    <revision version="gnome:42" status="final" date="2022-04-05"/>
 
     <credit type="author copyright">
       <name>Tiffany Antopolski</name>
@@ -37,6 +39,14 @@
 
 <title>Screenshots and screencasts</title>
 
+  <list>
+    <item><p><gui>Capture all or part of your screen as an image</gui></p></item>
+    <item><p><gui>Send it as a file or paste it from the clipboard</gui></p></item>
+    <item><p><gui>Save a video of your screen activity</gui></p></item>
+  </list>
+
+  <media type="image" src="figures/screenshot-tool.png" width="500"/>
+
   <p>You can take a picture of your screen (a <em>screenshot</em>) or record a
   video of what is happening on the screen (a <em>screencast</em>). This is
   useful if you want to show someone how to do something on the computer, for
@@ -48,64 +58,62 @@
 
   <steps>
     <item>
-      <p>Open <app>Screenshot</app> from the
-      <gui xref="shell-introduction#activities">Activities</gui> overview.</p>
+      <p>Press the <key>Print</key> key or launch <app>Take a Screenshot</app>
+      from the <gui xref="shell-introduction#activities">Activities</gui>
+      overview.</p>
     </item>
     <item>
-      <p>In the <app>Screenshot</app> window, select whether to grab the whole
-      screen, the current window, or an area of the screen. Set a delay if you
-      need to select a window or otherwise set up your desktop for the
-      screenshot.</p>
+      <p>The screenshot overlay presents you with handles to select the area to
+      capture, and
+      <media its:translate="no" type="image" src="figures/camera-photo-symbolic.svg"/>
+      indicates screenshot (still image) mode.</p>
+       <note>
+         <p>Click the pointer button to include the pointer in the screenshot.</p>
+       </note>
     </item>
     <item>
-       <p>Click <gui>Take Screenshot</gui>.</p>
-       <p>If you selected <gui>Selection</gui>, the pointer changes
-       into a crosshair. Click and drag the area you want for the
-       screenshot.</p>
+      <p>Click and drag the area you want for the screenshot using the handles
+      or the crosshair pointer.</p>
     </item>
     <item>
-      <p>In the <gui>Save Screenshot</gui> window, enter a file name and choose
-      a folder, then click <gui>Save</gui>.</p>
-      <p>Alternatively, import the screenshot directly into an image-editing
-      application without saving it first. Click <gui>Copy to Clipboard</gui>
-      then paste the image in the other application, or drag the screenshot
-      thumbnail to the application.</p>
+       <p>To capture the selected area, click the big round button.</p>
+    </item>
+    <item>
+       <p>To capture the entire screen, click <gui>Screen</gui> and then click
+       the big round button.</p>
+    </item>
+    <item>
+       <p>To capture a window, click <gui>Window</gui>. An overview of all the
+       open windows is displayed with the active window checked. Click to choose
+       a window and then click the big round button.</p>
     </item>
   </steps>
 
-  <section id="keyboard-shortcuts">
-    <title>Keyboard shortcuts</title>
-
-    <p>Quickly take a screenshot of the desktop, a window, or an area at any
-    time using these global keyboard shortcuts:</p>
-
-    <list style="compact">
-      <item>
-        <p><key>Print Screen</key> to take a screenshot of the desktop.</p>
-      </item>
-      <item>
-        <p><keyseq><key>Alt</key><key>Print Screen</key></keyseq> to take a
-        screenshot of a window.</p>
-      </item>
-      <item>
-        <p><keyseq><key>Shift</key><key>Print Screen</key></keyseq> to take a
-        screenshot of an area you select.</p>
-      </item>
-    </list>
-
-    <p>When you use a keyboard shortcut, the image is automatically saved in
-    your <file>Pictures</file> folder in your home folder with a file name that
-    begins with <file>Screenshot</file> and includes the date and time it was
-    taken.</p>
-    <note style="note">
-      <p>If you do not have a <file>Pictures</file> folder, the images will be
-      saved in your home folder instead.</p>
-    </note>
-    <p>You can also hold down <key>Ctrl</key> with any of the above shortcuts
-    to copy the screenshot image to the clipboard instead of saving it.</p>
   </section>
+  
+  <section id="locations">
+  <title>Where do they go?</title>
 
-</section>
+  <list>
+    <item>
+      <p>A screenshot image is automatically saved in the
+      <file>Pictures/Screenshots</file> folder in your home folder with a file
+      name that begins with <file>Screenshot</file> and includes the date and
+      time it was taken.</p>
+    </item>
+    <item>
+      <p>The image is also saved in the clipboard, so you can immediately
+      paste it into an image-editing application or share it on social media.</p>
+    </item>
+    <item>
+      <p>A screencast video is automatically saved in your
+      <file>Videos/Screencasts</file> folder in your home folder, with a file
+      name that starts with <file>Screencast</file> and includes the date and
+      time it was taken.</p>
+    </item>
+  </list>
+    
+  </section>
 
 <section id="screencast">
   <title>Make a screencast</title>
@@ -114,29 +122,89 @@
 
   <steps>
     <item>
-      <p>Press
-      <keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>R</key></keyseq>
-      to start recording what is on your screen.</p>
-      <p>A red circle is displayed in the top right corner of the screen
-      when the recording is in progress.</p>
+      <p>Press the <key>Print</key> key or launch <app>Take a Screenshot</app>
+      from the <gui xref="shell-introduction#activities">Activities</gui>
+      overview.</p>
     </item>
     <item>
-      <p>Once you have finished, press
-      <keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>R</key></keyseq>
-      again to stop the recording.</p>
+      <p>Click
+      <media its:translate="no" type="image" src="figures/camera-video-symbolic.svg"/>
+      to switch to screencast mode.</p>
+       <note>
+         <p>Click the pointer button to include the pointer in the screencast.</p>
+       </note>
     </item>
     <item>
-      <p>The video is automatically saved in your <file>Videos</file> folder
-      in your home folder, with a file name that starts with
-      <file>Screencast</file> and includes the date and time it was taken.</p>
+      <p>Choose <gui>Selection</gui> or <gui>Screen</gui>. For
+      <gui>Selection</gui>, click and drag the area you want for the screencast
+      using the handles or the crosshair pointer.</p>
+    </item>
+    <item>
+      <p>Click the big round red button to start recording what is on your
+      screen.</p>
+      <p>A red indicator is displayed in the top right corner of the screen
+      when the recording is in progress, showing the elapsed seconds.</p>
+    </item>
+    <item>
+      <p>Once you have finished, click the red indicator or press
+      <keyseq><key>Shift</key><key>Ctrl</key><key>Alt</key><key>R</key></keyseq>
+      to stop the recording.</p>
     </item>
   </steps>
 
-  <note style="note">
-    <p>If you do not have a <file>Videos</file> folder, the videos will be
-    saved in your home folder instead.</p>
-  </note>
-
 </section>
+  
+  <section id="keyboard-shortcuts">
+    <title>Keyboard shortcuts</title>
+
+    <p>Within the screenshot feature, you can use these keyboard shortcuts:</p>
+
+<table rules="rows" frame="top bottom">
+
+  <tr>
+    <td><p><key>S</key></p></td>
+    <td><p>Select area</p></td>
+  </tr>
+  <tr>
+    <td><p><key>C</key></p></td>
+    <td><p>Capture screen</p></td>
+  </tr>
+  <tr>
+    <td><p><key>W</key></p></td>
+    <td><p>Capture window</p></td>
+  </tr>
+  <tr>
+    <td><p><key>P</key></p></td>
+    <td><p>Toggle between show and hide pointer</p></td>
+  </tr>
+  <tr>
+    <td><p><key>V</key></p></td>
+    <td><p>Toggle between screenshot and screencast</p></td>
+  </tr>
+  <tr>
+    <td><p><key>Enter</key></p></td>
+    <td><p>Capture, also activated by <key>Space</key> or
+    <keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+  </tr>
+</table>
+
+    <p>These shortcuts can be used to bypass the screenshot feature:</p>
+
+<table rules="rows" frame="top bottom">
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Print</key></keyseq></p></td>
+    <td><p>Capture the window that currently has focus</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Shift</key><key>Print</key></keyseq></p></td>
+    <td><p>Capture the entire screen</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>Alt</key><key>R</key></keyseq></p></td>
+    <td><p>Start and stop recording a screencast</p></td>
+  </tr>
+</table>
+
+  </section>
 
 </page>

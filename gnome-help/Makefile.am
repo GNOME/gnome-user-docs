@@ -9,6 +9,8 @@ HELP_LINGUAS = as ca cs da de el fa fi fr es gl gu he hi hr hu id it ja kn ko lv
 HELP_MEDIA = \
 	figures/bluetooth-active-symbolic.svg \
 	figures/bluetooth-symbolic.svg \
+	figures/camera-photo-symbolic.svg \
+	figures/camera-video-symbolic.svg \
 	figures/classic-topbar-accessibility.svg \
 	figures/classic-topbar-airplane-mode.svg \
 	figures/classic-topbar-audio-volume-muted.svg \
@@ -82,6 +84,7 @@ HELP_MEDIA = \
 	figures/printing-select.png \
 	figures/rotation-allowed-symbolic.svg \
 	figures/rotation-locked-symbolic.svg \
+	figures/screenshot-tool.png \
 	figures/shell-activities-dash.png \
 	figures/shell-appmenu-classic.png \
 	figures/shell-appmenu-shell.png \
