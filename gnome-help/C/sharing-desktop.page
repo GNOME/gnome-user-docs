@@ -1,4 +1,6 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:if="http://projectmallard.org/if/1.0/"
+      xmlns:ui="http://projectmallard.org/ui/1.0/"
       xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task" version="1.0 if/1.0"
       id="sharing-desktop">
@@ -7,10 +9,8 @@
     <link type="guide" xref="sharing"/>
     <link type="guide" xref="prefs-sharing"/>
 
-    <revision pkgversion="3.14" date="2015-01-25" status="candidate"/>
-    <revision pkgversion="3.18" date="2015-09-28" status="review"/>
-    <revision pkgversion="3.29" date="2018-08-28" status="review"/>
     <revision pkgversion="3.33.3" date="2019-07-21" status="review"/>
+    <revision version="gnome:42" status="final" date="2022-04-09"/>
 
     <credit type="author">
       <name>Ekaterina Gerasimova</name>
@@ -32,28 +32,27 @@
   <title>Share your desktop</title>
 
   <comment>
-    <cite date="2014-09-22">David King</cite>
-    <p>The controls for sharing with specific networks, under the Networks
-    section needs to be explained, perhaps as a separate page.</p>
-  </comment>
-  <comment>
-    <cite date="2014-10-13">Michael Hill</cite>
-    <p>Networks section added without explanatory details.</p>
-  </comment>
-  <comment>
     <cite date="2022-07-27">Andre Klapper</cite>
     <p>GNOME 42 moved from VNC to RDP in https://gitlab.gnome.org/GNOME/gnome-control-center/-/merge_requests/1205</p>
     <p>TODO: See also https://gitlab.gnome.org/GNOME/gnome-user-docs/-/issues/135</p>
   </comment>
+  <comment>
+    <cite date="2022-04-09">Michael Hill</cite>
+    <p>Referencing Pascal Nowack's comments on #135 (above) and the RDP setup
+    guide, https://gitlab.gnome.org/-/snippets/1778, particularly his comment of
+    2022-02-26.</p>
+    <p>TODO: Add Connections, the GNOME client, to the Connecting: Linux
+    section when it's ready for RDP.</p>
+  </comment>
 
   <p>You can let other people view and control your desktop from another
-  computer with a desktop viewing application. Configure <gui>Screen
-  Sharing</gui> to allow others to access your desktop and set the security
+  computer with a desktop viewing application. Configure <gui>Remote
+  Desktop</gui> to allow others to access your desktop and set the security
   preferences.</p>
 
   <note style="info package">
     <p>You must have the <app>GNOME Remote Desktop</app> package installed for
-     <gui>Screen Sharing</gui> to be visible.</p>
+     <gui>Remote Desktop</gui> to be visible.</p>
 
     <if:choose xmlns:if="http://projectmallard.org/if/1.0/">
       <if:when test="action:install">
@@ -65,66 +64,60 @@
   <steps>
     <item>
       <p>Open the <gui xref="shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      overview and start typing <gui>Sharing</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
-    </item>
-    <item>
-      <p>Click on <gui>Sharing</gui> in the sidebar to open the panel.</p>
+      <p>Click on <gui>Sharing</gui> to open the panel.</p>
     </item>
     <item>
       <p>If the <gui>Sharing</gui> switch in the top-right of the window is set
-      to off, switch it to on.</p>
+      to off, click to switch it on.</p>
 
       <note style="info"><p>If the text below <gui>Computer Name</gui> allows
       you to edit it, you can <link xref="sharing-displayname">change</link>
       the name your computer displays on the network.</p></note>
     </item>
     <item>
-      <p>Select <gui>Screen Sharing</gui>.</p>
+      <p>Click <gui>Remote Desktop</gui>.</p>
     </item>
     <item>
-      <p>To let others view your desktop, switch the <gui>Screen Sharing</gui>
+      <p>To let others view your desktop, set the <gui>Remote Desktop</gui>
       switch to on. This means that other people will be able to attempt to
       connect to your computer and view what’s on your screen.</p>
     </item>
     <item>
-      <p>To let others interact with your desktop, ensure that <gui>Allow
-      connections to control the screen</gui> is checked. This may allow the
-      other person to move your mouse, run applications, and browse files on
-      your computer, depending on the security settings which you are currently
-      using.</p>
+      <p>To let others interact with your desktop, set the
+      <gui>Remote Control</gui> switch to on. This may allow the other person to
+      move your mouse, run applications, and browse files on your computer,
+      depending on the security settings which you are currently using.</p>
     </item>
   </steps>
 
   <section id="security">
   <title>Security</title>
 
-  <p>It is important that you consider the full extent of what each security
-  option means before changing it.</p>
-
+  <p>The <gui>Authentication</gui> section displays the login credentials to be
+  used in the client software on the connecting device.</p>
   <terms>
     <item>
-      <title>New connections must ask for access</title>
-      <p>If you want to be able to choose whether to allow someone to access
-      your desktop, enable <gui>New connections must ask for access</gui>.  If
-      you disable this option, you will not be asked whether you want to allow
-      someone to connect to your computer.</p>
-      <note style="tip">
-        <p>This option is enabled by default.</p>
-      </note>
+      <title>User Name</title>
+      <p>Use the suggested value or enter your own.</p>
     </item>
     <item>
-      <title>Require a Password</title>
-      <p>To require other people to use a password when connecting to your
-      desktop, enable <gui>Require a Password</gui>. If you do not use this
-      option, anyone can attempt to view your desktop.</p>
-      <note style="tip">
-        <p>This option is disabled by default, but you should enable it and set
-        a secure password.</p>
-      </note>
+      <title>Password</title>
+      <p>Use the suggested value or enter your own.</p>
+    <note style="tip">
+      <p>Click the button next to each entry if you want to place it in the
+      clipboard.</p>
+    </note>
     </item>
+    <item>
+      <title>Verify Encryption</title>
+      <p>Click the <gui>Verify Encryption</gui> button to display the
+      encryption fingerprint. Compare it with the value displayed by the client
+      when connecting: they should be identical.</p>
+    </item>
+
 <!-- TODO: check whether this option exists.
     <item>
       <title>Allow access to your desktop over the Internet</title>
@@ -138,15 +131,63 @@
       </note>
     </item>
 -->
+
   </terms>
   </section>
 
-  <section id="networks">
-  <title>Networks</title>
+  <section id="connecting">
+  <title>Connecting</title>
 
-  <p>The <gui>Networks</gui> section lists the networks to which you are
-  currently connected. Use the switch next to each to choose where your
-  desktop can be shared.</p>
+  <p>The <gui>How to Connect</gui> section displays the
+  <gui>Device Name</gui> and <gui>Remote Desktop Address</gui> that can be used
+  on the connecting computer. Click the button next to each entry if you want to
+  place it in the clipboard. A connection can also be made using your
+  <link xref="net-findip">IP address</link>.</p>
+  <p>When the other computer is successfully connected to your desktop, you
+  will see the <gui>Screen is being shared</gui> icon,
+  <media its:translate="no" type="image" src="figures/topbar-screen-shared.svg" style="floatend"/>
+  in your system status area.</p>
+  </section>
+
+  <section id="clients">
+  <title>Clients</title>
+
+  <p>To connect to your desktop from another computer, the following clients are
+  known to work.</p>
+  <terms>
+    <item>
+      <title>From Linux:</title>
+      <list>
+        <item><p><app>Remmina</app>, a GTK client, is available as a package in
+        most distributions, and also as a
+        <link href="https://flathub.org/apps/details/org.remmina.Remmina">flatpak</link>.
+        Use default settings, particularly <gui>Color depth</gui> 'Automatic'
+        in the connection profile settings.</p>
+        </item>
+        <item><p><app>xfreerdp</app> is a command line client available as a
+        package in most distributions. The option <cmd>/network:auto</cmd>
+        should be passed to the client on the command line.</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <title>From Microsoft Windows:</title>
+      <list>
+        <item><p><app>mstsc</app> is the built-in Windows client. Default
+        settings are recommended.</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <title>From Linux, Windows, or macOS:</title>
+      <list>
+        <item><p><app>Thincast</app> is a proprietary client. The Linux version
+        is available as a <link href="https://flathub.org/apps/details/com.thincast.client">flatpak</link>.
+        Default settings are recommended.</p>
+        </item>
+      </list>
+    </item>
+  </terms>
   </section>
 
   <section id="disconnect">
@@ -156,25 +197,38 @@
 
   <steps>
     <item>
-      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Click the system menu on the right side of the top bar.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Click <gui>Screen is being shared</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Sharing</gui> in the sidebar to open the panel.</p>
-    </item>
-    <item>
-      <p><gui>Screen Sharing</gui> will show as <gui>Active</gui>. Click on
-      it.</p>
-    </item>
-    <item>
-      <p>Toggle the switch at the top to off.</p>
+      <p>Click <gui>Turn off</gui>.</p>
     </item>
   </steps>
 
   </section>
+  
+  <section id="advanced">
+  <!-- ui:expanded="false"> -->
+  <title>Advanced Topics</title>
 
+  <terms>
+    <item>
+      <title>Command line configuration</title>
+      <p>The <cmd>grdctl</cmd> utility allows you to configure your host
+      settings in a console window. For usage details, type
+      <cmd>grdctl --help</cmd>.</p>
+    </item>
+<!--     <item>
+      <title>H.264</title>
+      <p>H.264 video encoding heavily reduces bandwidth.
+      <app>GNOME Remote Desktop</app> will use H.264 when: the graphics pipeline
+      is used (a requirement of the protocol), the client supports it, and
+      NVENC is available.</p>
+    </item>
+-->
+  </terms>
+  </section>
 
 </page>

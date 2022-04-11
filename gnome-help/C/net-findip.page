@@ -7,10 +7,8 @@
     <link type="guide" xref="net-general"/>
     <link type="seealso" xref="net-what-is-ip-address"/>
 
-    <revision pkgversion="3.7.1" version="0.2" date="2012-11-16" status="outdated"/>
-    <revision pkgversion="3.10" date="2013-10-30" status="review"/>
-    <revision pkgversion="3.18" date="2015-09-28" status="final"/>
     <revision pkgversion="3.37.3" date="2020-08-05" status="final"/>
+    <revision version="gnome:42" status="final" date="2022-04-09"/>
 
     <credit type="author">
       <name>Shaun McCance</name>
@@ -44,9 +42,10 @@
   internet connection. You may be surprised to learn that you have <em>two</em>
   IP addresses: an IP address for your computer on the internal network and an
   IP address for your computer on the internet.</p>
-
-  <steps>
+  
+  <section id="wired">
     <title>Find your wired connection’s internal (network) IP address</title>
+  <steps>
     <item>
       <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
       start typing <gui>Settings</gui>.</p>
@@ -56,26 +55,25 @@
     </item>
     <item>
       <p>Click on <gui>Network</gui> in the sidebar to open the panel.</p>
+      <note style="info">
+        <p its:locNote="TRANSLATORS: See NetworkManager for 'PCI', 'USB' and 'Ethernet'">
+        If more than one type of wired connected is available, you might see
+        names like <gui>PCI Ethernet</gui> or <gui>USB Ethernet</gui> instead
+        of <gui>Wired</gui>.</p>
+      </note>
     </item>
     <item>
-      <p>The IP address for a <gui>Wired</gui> connection will be displayed
-      on the right along with some information.</p>
-      
       <p>Click the
       <media its:translate="no" type="image" src="figures/emblem-system-symbolic.svg"><span its:translate="yes">settings</span></media>
-      button for more details on your connection.</p>
+      button next to the active connection for the IP address and other details.</p>
     </item>
   </steps>
 
-  <note style="info">
-    <p its:locNote="TRANSLATORS: See NetworkManager for 'PCI', 'USB' and 'Ethernet'">
-    If more than one type of wired connected is available, you might see
-    names like <gui>PCI Ethernet</gui> or <gui>USB Ethernet</gui> instead
-    of <gui>Wired</gui>.</p>
-  </note>
-
-  <steps>
+  </section>
+  
+  <section id="wireless">
     <title>Find your wireless connection’s internal (network) IP address</title>
+  <steps>
     <item>
       <p>Open the <gui xref="shell-introduction#activities">Activities</gui> overview and
       start typing <gui>Settings</gui>.</p>
@@ -89,12 +87,14 @@
     <item>
       <p>Click the
       <media its:translate="no" type="image" src="figures/emblem-system-symbolic.svg"><span its:translate="yes">settings</span></media>
-      for the IP address and more details on your connection.</p>
+      button next to the active connection for the IP address and other details.</p>
     </item>
   </steps>
-
-  <steps>
+  </section>
+  
+  <section id="external">
   	<title>Find your external (internet) IP address</title>
+  <steps>
     <item>
       <p>Visit
       <link href="https://whatismyipaddress.com/">whatismyipaddress.com</link>.</p>
@@ -103,8 +103,8 @@
       <p>The site will display your external IP address for you.</p>
     </item>
   </steps>
-
-  <p>Depending on how your computer connects to the internet, both of these
-  addresses may be the same.</p>
+  <p>Depending on how your computer connects to the internet, the internal and
+  external addresses may be the same.</p>  
+  </section>
 
 </page>
