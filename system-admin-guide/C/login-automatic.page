@@ -47,22 +47,27 @@
   from the <app>Settings</app></link> panel. You can also set up autologin
   manually in the <sys its:translate="no">GDM</sys> custom configuration
   file, as follows.</p>
-
-  <p>Edit the <file its:translate="no">/etc/gdm/custom.conf</file> file and make
-  sure that the <code>[daemon]</code> section in the file specifies the
-  following:</p>
-
-  <listing its:translate="no">
-    <title><file>custom.conf</file></title>
+  
+  <steps>
+    <title>Configure automatic login</title>
+    <item>
+      <p>Edit the <file its:translate="no">/etc/gdm/custom.conf</file> file and make
+      sure that the <code>[daemon]</code> section in the file specifies the
+      following:</p>
+      <listing its:translate="no">
+        <title><file>custom.conf</file></title>
 <code>
 [daemon]
 AutomaticLoginEnable=<input>True</input>
 AutomaticLogin=<input>username</input>
 </code>
-  </listing>
-
-  <p>Replace the <input its:translate="no">username</input> with the user that
-  you want to be automatically logged in.</p>
+      </listing>
+    </item>
+    <item>
+      <p>Replace the <input its:translate="no">username</input> with the user that
+      you want to be automatically logged in.</p>
+    </item>
+  </steps>
 
   <note>
     <p>The <file its:translate="no">custom.conf</file> file can usually be found
