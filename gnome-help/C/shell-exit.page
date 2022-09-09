@@ -62,6 +62,19 @@
 <section id="logout">
   <title>Log out or switch users</title>
 
+  <if:choose>
+    <if:when test="!platform:gnome-classic">
+      <media type="image" src="figures/shell-exit-expanded.png" width="250" style="floatend floatright" if:test="!target:mobile">
+        <p>User menu</p>
+      </media>
+    </if:when>
+    <if:when test="platform:gnome-classic">
+      <media type="image" src="figures/shell-exit-classic-expanded.png" width="250" style="floatend floatright" if:test="!target:mobile">
+        <p>User menu</p>
+      </media>
+    </if:when>
+  </if:choose>
+
   <p>To let other users use your computer, you can either log out, or leave
   yourself logged in and just switch users. If you switch users, all of
   your applications will continue running, and everything will be where you
@@ -69,7 +82,11 @@
 
   <p>To <gui>Log Out</gui> or <gui>Switch User</gui>, click the
   <link xref="shell-introduction#systemmenu">system menu</link> on the right
-  side of the top bar, expand <gui>Power Off / Log Out</gui>, and select the correct option.</p>
+  side of the top bar, click the
+    <media type="image" its:translate="no" src="figures/system-shutdown-symbolic.svg">
+      Shutdown
+    </media>
+  button, and select the correct option.</p>
 
   <note if:test="!platform:gnome-classic">
     <p>The <gui>Log Out</gui> and <gui>Switch User</gui> entries only appear in
@@ -98,7 +115,11 @@
   automatically after a certain amount of time.</p>
 
   <p>To lock your screen, click the system menu on the right side of the top
-  bar and select <gui>Lock</gui> from the menu.</p>
+  bar and click the
+    <media type="image" its:translate="no" src="figures/system-lock-screen-symbolic.svg">
+      Lock
+    </media>
+  button.</p>
 
   <p>When your screen is locked, other users can log in to their own accounts
   by clicking <gui>Log in as another user</gui> at the bottom right of the login
@@ -121,8 +142,11 @@
   suspend.</p>
 
   <p>To suspend your computer manually, click the system menu on the right side
-  of the top bar, expand <gui>Power Off / Log Out</gui>, and select
-  <gui>Suspend</gui>.</p>
+  of the top bar, click the
+    <media type="image" its:translate="no" src="figures/system-shutdown-symbolic.svg">
+      Shutdown
+    </media>
+  button, and select <gui>Suspend</gui>.</p>
 
 </section>
 
@@ -134,8 +158,11 @@
   <title>Power off or restart</title>
 
   <p>If you want to power off your computer entirely, or do a full restart,
-  click the system menu on the right side of the top bar, expand <gui>Power Off
-  / Log Out</gui>, and select either <gui>Restart…</gui> or <gui>Power Off…</gui>.</p>
+  click the system menu on the right side of the top bar, click the
+    <media type="image" its:translate="no" src="figures/system-shutdown-symbolic.svg">
+      Shutdown
+    </media>
+  button, and select either <gui>Restart…</gui> or <gui>Power Off…</gui>.</p>
 
   <p>If there are other users logged in, you may not be allowed to power off or
   restart the computer because this will end their sessions.  If you are an

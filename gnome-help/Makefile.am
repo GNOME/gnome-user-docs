@@ -91,12 +91,16 @@ HELP_MEDIA = \
 	figures/shell-appts-classic.png \
 	figures/shell-appts.png \
 	figures/shell-exit-classic.png \
+	figures/shell-exit-classic-expanded.png \
+	figures/shell-exit-expanded.png \
 	figures/shell-exit.png \
 	figures/shell-top-bar-classic.png \
 	figures/shell-top-bar.png \
 	figures/shell-window-list-classic.png \
 	figures/shell-workspaces.png \
+	figures/system-lock-screen-symbolic.svg \
 	figures/system-run-symbolic.svg \
+	figures/system-shutdown-symbolic.svg \
 	figures/tile-a11y.svg \
 	figures/tile-files.svg \
 	figures/tile-hardware.svg \
