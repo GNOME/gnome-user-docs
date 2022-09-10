@@ -80,6 +80,7 @@ HELP_MEDIA = \
 	figures/nautilus-icons.png \
 	figures/net-wired-ethernet-diagram.svg \
 	figures/network-wired-symbolic.svg \
+	figures/network-wireless-disabled-symbolic.svg \
 	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
 	figures/rotation-allowed-symbolic.svg \
