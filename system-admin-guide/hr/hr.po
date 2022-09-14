@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
 "POT-Creation-Date: 2022-09-13 11:29+0000\n"
-"PO-Revision-Date: 2022-09-14 19:44+0200\n"
+"PO-Revision-Date: 2022-09-14 21:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -501,12 +501,12 @@ msgstr "Aruna Sankaranarayanan"
 #. (itstool) path: info/desc
 #: C/dconf-keyfiles.page:29
 msgid "Use <_:sys-1/> <em>keyfiles</em> to configure specific settings with a text editor."
-msgstr ""
+msgstr "Koristite <_:sys-1/> <em>datoteke ključeva</em> za podešavanje određenih postavki pomoću uređivača teksta."
 
 #. (itstool) path: page/title
 #: C/dconf-keyfiles.page:33
 msgid "Control system settings with keyfiles"
-msgstr ""
+msgstr "Upravljanje postavkama sustava pomoću datoteka ključeva"
 
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:35
@@ -518,11 +518,17 @@ msgid ""
 "directories are found in <_:file-2/>, and each one contains keyfiles in a special format that can be compiled into "
 "the <_:sys-3/> database."
 msgstr ""
+"Datoteke baze podataka sustava, koje se nalaze u <_:file-1/>, ne mogu se uređivati jer su napisane u GVDB formatu. "
+"Kako bi promijenili postavke sustava pomoću uređivača teksta, možete promijeniti <em>datoteke ključeva</em> "
+"sadržane u <em>direktorijima datoteka ključeva</em>. Svaki direktorij datoteke ključeva odgovara određenoj "
+"datoteci baze podataka sustava i ima isti naziv kao datoteka baze podataka s dodanim datotečnim proširenjem “."
+"d” (primjerice, <file>/etc/dconf/db/local.d</file>) . Svi direktoriji datoteka ključeva nalaze se u <_:file-2/>, a "
+"svaki sadrži datoteke ključeva u posebnom formatu koji se mogu kompilirati u bazu podataka <_:sys-3/>."
 
 #. (itstool) path: listing/title
 #: C/dconf-keyfiles.page:48
 msgid "A keyfile in this directory will look something like this:"
-msgstr ""
+msgstr "Datoteka ključa u ovom direktoriju izgledat će otprilike ovako:"
 
 #. (itstool) path: listing/code
 #: C/dconf-keyfiles.page:49
@@ -539,6 +545,16 @@ msgid ""
 "picture-uri='file:///usr/local/rupert-corp/company-wallpaper.jpeg'\n"
 "      "
 msgstr ""
+"\n"
+"# Određena korisna zadana postavka za našu stranicu\n"
+"\n"
+"[system/proxy/http]\n"
+"host='172.16.0.1'\n"
+"enabled=true\n"
+"\n"
+"[org/gnome/desktop/background]\n"
+"picture-uri='file:///usr/local/linux-zajednica/gnome-pozadina.jpeg'\n"
+"      "
 
 #. (itstool) path: note/p
 #: C/dconf-keyfiles.page:62
@@ -549,6 +565,11 @@ msgid ""
 "db</code> file and sends a notification to the system <sys>D-Bus</sys>, which in turn notifies all running "
 "applications to reread their settings."
 msgstr ""
+"<cmd>dconf nadopuna</cmd> mora se pokrenuti uvijek kada promijenite datoteku ključa. Kada to učinite, <_:sys-1/> "
+"uspoređuje vremensku oznaku u datoteci baze podataka sustava s vremenskom oznakom u odgovarajućem direktoriju "
+"datoteke ključa. Ako je vremenska oznaka u direktoriju datoteke ključa novija od one u datoteci baze podataka, <_:"
+"sys-2/> ponovno stvara <code>system-db</code> datoteku i šalje obavijest <sys>D-Busu</sys> sustava, koji zauzvrat "
+"obavještava sve pokrenute aplikacije da ponovno pročitaju svoje postavke."
 
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:73
@@ -557,6 +578,9 @@ msgid ""
 "ID</link>. For example, <code>org/gnome/desktop/background</code> references the schema <code>org.gnome.desktop."
 "background</code>, which contains the key <code>picture-uri</code>."
 msgstr ""
+"Naziv grupe u ključnoj datoteci upućuje na <link href=\"https://developer.gnome.org/GSettings/\">GSettings ID "
+"sheme</link>. Primjerice, <code>org/gnome/desktop/background</code> upućuje na shemu <code>org.gnome.desktop."
+"background</code>, koja sadrži ključ <code>picture-uri</code>."
 
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:79
@@ -564,6 +588,8 @@ msgid ""
 "The values under a group are expected in <link href=\"https://developer.gnome.org/glib/stable/gvariant-text."
 "html\">serialized GVariant form</link>."
 msgstr ""
+"Vrijednosti unutar grupe očekuju se u <link href=\"https://developer.gnome.org/glib/stable/gvariant-text."
+"html\">serializiranom GVariant obliku</link>."
 
 #. (itstool) path: credit/years
 #: C/dconf-lockdown.page:21
