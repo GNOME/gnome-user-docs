@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
 "POT-Creation-Date: 2022-09-13 11:29+0000\n"
-"PO-Revision-Date: 2022-09-15 11:15+0200\n"
+"PO-Revision-Date: 2022-09-15 18:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -608,6 +608,8 @@ msgstr "2013, 2015"
 #: C/dconf-lockdown.page:31
 msgid "Use the <em>lockdown</em> mode in <_:sys-1/> to prevent users from changing specific settings."
 msgstr ""
+"Koristite način <em>zaključavanja</em> u <_:sys-1/> pomagalu kako bi spriječili korisnike u mijenjaju određene "
+"postavke."
 
 #. (itstool) path: page/title
 #: C/dconf-lockdown.page:35
@@ -620,6 +622,8 @@ msgid ""
 "By using the lockdown mode in dconf, you can prevent users from changing specific settings. Without locking down "
 "the system settings, user settings take precedence over the system settings."
 msgstr ""
+"Korištenjem načina zaključavanja u dconf pomagalu, možete spriječiti korisnike u mijenjaju određene postavke. Bez "
+"zaključavanja postavki sustava, korisničke postavke imaju prednost nad postavkama sustava."
 
 #. (itstool) path: page/p
 #: C/dconf-lockdown.page:41
@@ -628,6 +632,10 @@ msgid ""
 "keyfile directory. The files inside this directory contain a list of keys or subpaths to lock. Just as with the "
 "<link xref=\"dconf-keyfiles\">keyfiles</link>, you may add any number of files to this directory."
 msgstr ""
+"Za <em>zaključavanje</em> <_:sys-1/> ključa ili podputanje, morat ćete stvoriti poddirektorij <_:file-2/> u "
+"direktoriju datoteke ključa. Datoteke unutar ovog direktorija sadrže popis ključeva ili podputanje za "
+"zaključavanje. Kao i kod <link xref=\"dconf-keyfiles\">datoteka ključeva</link>, u ovaj direktorij možete dodati "
+"bilo koji broj datoteka."
 
 #. (itstool) path: steps/title
 #: C/dconf-lockdown.page:48
@@ -640,6 +648,8 @@ msgid ""
 "Before you can lock down a key or subpath, you need to set it. This example shows how to lock <link xref=\"desktop-"
 "background\">a background setting</link> once it has been set."
 msgstr ""
+"Prije nego što možete zaključati ključ ili podputanju, morate ga postaviti. Ovaj primjer pokazuje kako zaključati "
+"<link xref=\"desktop-background\">postavku pozadine</link> nakon što je postavljena."
 
 #. (itstool) path: item/p
 #: C/dconf-lockdown.page:54
@@ -647,23 +657,27 @@ msgid ""
 "At this point, you should have <link xref=\"dconf-profiles\">a <sys>user</sys> profile</link> and <link "
 "xref=\"dconf-keyfiles\">a keyfile</link> with the settings that you want to lock down."
 msgstr ""
+"U ovom trenutku, trebali bi imati <link xref=\"dconf-profiles\"><sys>korisnički</sys> profil</link> i <link "
+"xref=\"dconf-keyfiles\">datoteku ključa</link> s postavkama koje želite zaključati."
 
 #. (itstool) path: item/p
 #: C/dconf-lockdown.page:60
 msgid "Create a directory named <_:file-1/>."
-msgstr ""
+msgstr "Stvorite direktorij naziva <_:file-1/>."
 
 #. (itstool) path: item/p
 #: C/dconf-lockdown.page:64
 msgid ""
 "Create a file in the <_:file-1/> directory and list one key or subpath per line. For example, create <_:file-2/>:"
 msgstr ""
+"Stvorite datoteku u direktoriju <_:file-1/> i navedite jedan ključ ili podputanju po retku. Primjerice, stvorite <_:"
+"file-2/>:"
 
 #. (itstool) path: code/span
 #: C/dconf-lockdown.page:69
 #, no-wrap
 msgid "prevent changes to the background"
-msgstr ""
+msgstr "spriječi promjene pozadine"
 
 #. (itstool) path: info/desc
 #: C/dconf-nfs-home.page:32
@@ -1340,7 +1354,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/extensions-enable.page:42 C/extensions-lockdown.page:41
 msgid "Create a <code>user</code> profile in <file>/etc/dconf/profile/user</file>:"
-msgstr ""
+msgstr "Stvorite <code>user</code> profil u <file>/etc/dconf/profile/user</file>:"
 
 #. (itstool) path: listing/code
 #: C/extensions-enable.page:45 C/extensions-lockdown.page:44
@@ -1356,6 +1370,8 @@ msgstr ""
 msgid ""
 "Create a <code>local</code> database for machine-wide settings in <file>/etc/dconf/db/local.d/00-extensions</file>:"
 msgstr ""
+"Stvorite <code>local</code> bazu podataka za postavke na cijelom sustavu u <file>/etc/dconf/db/local.d/00-"
+"extensions</file>:"
 
 #. (itstool) path: listing/code
 #: C/extensions-enable.page:55
@@ -1373,16 +1389,18 @@ msgid ""
 "The <code>enabled-extensions</code> key specifies the enabled extensions using the extensions’ uuid "
 "(<code>myextension1@myname.example.com</code> and <code>myextension2@myname.example.com</code>)."
 msgstr ""
+"Ključ <code>enabled-extensions</code> navodi omogućena proširenja pomoću uuid-a proširenja "
+"(<code>mojeproširenje1@mojeime.primjer.com</code> i <code>mojeproširenje2@mojeime.primjer.com</code >)."
 
 #. (itstool) path: info/desc
 #: C/extensions-lockdown.page:21
 msgid "Disallow the user to enable or disable GNOME Shell extensions."
-msgstr ""
+msgstr "Sprječavanje korisniku u omogućavanju ili onemogućavanju proširenja GNOME ljuske."
 
 #. (itstool) path: page/title
 #: C/extensions-lockdown.page:24
 msgid "Lock down enabled extensions"
-msgstr ""
+msgstr "Zaključavanje omogućenih proširenja"
 
 #. (itstool) path: page/p
 #: C/extensions-lockdown.page:26
@@ -1391,6 +1409,9 @@ msgid ""
 "shell.enabled-extensions</code> and <code>org.gnome.shell.development-tools</code> keys. This allows you to provide "
 "a set of extensions that the user has to use."
 msgstr ""
+"U GNOME ljusci možete spriječiti korisnika da omogući ili onemogući proširenja zaključavanjem <code>org.gnome.shell."
+"enabled-extensions</code> i <code>org.gnome.shell.development-tools</code > ključeva. To vam omogućuje da pružite "
+"skup proširenja koje korisnik mora koristiti."
 
 #. (itstool) path: page/p
 #: C/extensions-lockdown.page:32
@@ -1398,11 +1419,14 @@ msgid ""
 "Locking down the <code>org.gnome.shell.development-tools</code> key ensures that the user cannot use GNOME Shell’s "
 "integrated debugger and inspector tool (<app>Looking Glass</app>) to disable any mandatory extensions."
 msgstr ""
+"Zaključavanje <code>org.gnome.shell.development-tools</code> ključa osigurava da korisnik ne može koristiti "
+"integrirani alat ispravljanja grešaka i alat inspekcije GNOME ljuske (<app>Looking Glass</app>) za onemogućavanje "
+"bilo kojeg obveznog proširenja."
 
 #. (itstool) path: steps/title
 #: C/extensions-lockdown.page:38
 msgid "Lock down the org.gnome.shell.enabled-extensions and org.gnome.shell.development-tools keys"
-msgstr ""
+msgstr "Zaključavanje org.gnome.shell.enabled-extensions i org.gnome.shell.development-tools ključeva"
 
 #. (itstool) path: listing/code
 #: C/extensions-lockdown.page:54
@@ -1415,11 +1439,17 @@ msgid ""
 "# Disable access to Looking Glass\n"
 "development-tools=false\n"
 msgstr ""
+"\n"
+"[org/gnome/shell]\n"
+"# Navedi sva proširenja koja treba omogućiti ili onemogućiti za sve korisnike\n"
+"enabled-extensions=['<input>myextension1@myname.example.com</input>', '<input>myextension2@myname.example.com</input>']\n"
+"# Onemogući pristup Looking Glassu\n"
+"development-tools=false\n"
 
 #. (itstool) path: item/p
 #: C/extensions-lockdown.page:66
 msgid "The <code>development-tools</code> key is set to false to disable access to Looking Glass."
-msgstr ""
+msgstr "Ključ <code>development-tools</code> postavljen je na laž kako bi se onemogućio pristup Looking Glassu."
 
 #. (itstool) path: item/p
 #: C/extensions-lockdown.page:70
@@ -1427,6 +1457,8 @@ msgid ""
 "Override the user’s setting and prevent the user from changing it in <file>/etc/dconf/db/local.d/locks/extensions</"
 "file>:"
 msgstr ""
+"Zaobiđite korisničku postavku i spriječite korisnika da je promijeni u <file>/etc/dconf/db/local.d/locks/"
+"extensions</file>:"
 
 #. (itstool) path: listing/code
 #: C/extensions-lockdown.page:73
@@ -1437,6 +1469,10 @@ msgid ""
 "/org/gnome/shell/enabled-extensions\n"
 "/org/gnome/shell/development-tools\n"
 msgstr ""
+"\n"
+"# Zaključaj popis omogućenih proširenja\n"
+"/org/gnome/shell/enabled-extensions\n"
+"/org/gnome/shell/development-tools\n"
 
 #. (itstool) path: page/p
 #: C/extensions-lockdown.page:85
@@ -1446,6 +1482,10 @@ msgid ""
 "gnome-shell/extensions</file> that are not listed in the <code>org.gnome.shell.enabled-extensions</code> key will "
 "not be loaded by GNOME Shell, thus preventing the user from using them."
 msgstr ""
+"Nakon zaključavanja <code>org.gnome.shell.enabled-extensions</code> i <code>org.gnome.shell.development-tools</"
+"code> ključeva, sva proširenja instalirana u <file>~/.local /share/gnome-shell/extensions</file> ili <file>/usr/"
+"share/gnome-shell/extensions</file> koja nisu navedena u <code>org.gnome.shell.enabled-extensions</code> ključu "
+"neće biti učitana od strane GNOME ljuske, čime se korisnik sprječava da ih koristi."
 
 #. (itstool) path: info/desc
 #: C/extensions.page:20
@@ -1894,12 +1934,12 @@ msgstr "2015"
 #. (itstool) path: info/desc
 #: C/lockdown-command-line.page:29
 msgid "Prevent users from accessing the command-line."
-msgstr ""
+msgstr "Sprječavanje korisnika u pristupu naredbenom retku."
 
 #. (itstool) path: page/title
 #: C/lockdown-command-line.page:32
 msgid "Disable command-line access"
-msgstr ""
+msgstr "Onemogućavanje pristupa naredbenom retku"
 
 #. (itstool) path: page/p
 #: C/lockdown-command-line.page:34
@@ -1908,6 +1948,9 @@ msgid ""
 "different contexts. Bear in mind that the following steps do not remove the desktop user's permissions to access a "
 "command line, but rather remove the ways that the desktop user could access the command line."
 msgstr ""
+"Kako bi onemogućili pristup naredbenom retku za korisnika računala, morate učiniti promjene podešavanja u više "
+"različitih sadržaja. Zapamtite da sljedeći koraci ne uklanjaju dopuštenja korisnika računala za pristup naredbenom "
+"retku, već uklanjaju načine na koje korisnik računala može pristupiti naredbenom retku."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:42
@@ -1916,11 +1959,14 @@ msgid ""
 "accessing the terminal or specifying a command line to be executed (the <keyseq><key>Alt</key> <key>F2</key></"
 "keyseq> command prompt)."
 msgstr ""
+"Postavite <code>org.gnome.desktop.lockdown.disable-command-line</code> GSettings ključ, koji sprječava korisnika da "
+"pristupi terminalu ili odredi naredbeni redak koji će se izvršiti (<keyseq><key>Alt </key> <key>F2</key></keyseq> "
+"naredbeni redak)."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:48
 msgid "Prevent users from accessing the <keyseq><key>Alt</key><key>F2</key> </keyseq> command prompt."
-msgstr ""
+msgstr "Spriječite korisnike da pristupe <keyseq><key>Alt</key><key>F2</key> </keyseq> naredbenom retku."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:52
@@ -1928,6 +1974,8 @@ msgid ""
 "Disable switching to virtual terminals (VTs) with the <keyseq> <key>Ctrl</key><key>Alt</key><key><var>function key</"
 "var></key></keyseq> shortcuts by modifying the X server configuration."
 msgstr ""
+"Onemogućite prebacivanje na virtualne terminale (VT) pomoću <keyseq> <key>Ctrl</key><key>Alt</"
+"key><key><var>funkcijska tipka</var></key></keyseq> prečaca promjenom podešavanja X poslužitelja."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:57
@@ -1935,17 +1983,21 @@ msgid ""
 "Remove <app>Terminal</app> and all other terminal applications from the <gui>Activities</gui> overview in GNOME "
 "Shell. You will also need to prevent the user from installing a new terminal application."
 msgstr ""
+"Uklonite <app>Terminal</app> i sve ostale terminalske aplikacije iz <gui>Aktivnosti</gui> pregleda u GNOME ljusci. "
+"Još ćete morati spriječiti korisnika da instalira novu terminalsku aplikaciju."
 
 #. (itstool) path: section/title
 #: C/lockdown-command-line.page:70
 msgid "Disable the command prompt"
-msgstr ""
+msgstr "Onemogućavanje naredbenog retka"
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:77
 msgid ""
 "Create a <sys>local</sys> database for machine-wide settings in <file>/etc/dconf/db/local.d/00-lockdown</file>:"
 msgstr ""
+"Stvorite <sys>lokalnu</sys> bazu podataka za postavke na cijelom sustavu u <file>/etc/dconf/db/local.d/00-lockdown</"
+"file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:79
@@ -1957,6 +2009,11 @@ msgid ""
 "# Disable the command prompt\n"
 "disable-command-line=true"
 msgstr ""
+"# Navedi dconf putanju\n"
+"[org/gnome/desktop/lockdown]\n"
+"\n"
+"# Onemogući naredbeni redak\n"
+"disable-command-line=true"
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:86
@@ -1964,6 +2021,8 @@ msgid ""
 "Override the user’s setting and prevent the user from changing it in <file>/etc/dconf/db/local.d/locks/lockdown</"
 "file>:"
 msgstr ""
+"Zaobiđite korisničku postavku i spriječite korisnika da je promijeni u <file>/etc/dconf/db/local.d/locks/lockdown</"
+"file>:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:88
@@ -1972,11 +2031,13 @@ msgid ""
 "# List the keys used to configure lockdown\n"
 "/org/gnome/desktop/lockdown/disable-command-line"
 msgstr ""
+"# Navedi ključeve koji se koriste za podešavanje zaključavanja\n"
+"/org/gnome/desktop/lockdown/disable-command-line"
 
 #. (itstool) path: section/title
 #: C/lockdown-command-line.page:101
 msgid "Disable dropping to a virtual terminal"
-msgstr ""
+msgstr "Onemogućavanje prebacivanja na virtualni terminal"
 
 #. (itstool) path: section/p
 #: C/lockdown-command-line.page:103
@@ -1985,6 +2046,9 @@ msgid ""
 "shortcuts (for example, <keyseq><key>Ctrl</key><key>Alt</key><key>F2</key></keyseq>) to switch from the GNOME "
 "desktop to a virtual terminal."
 msgstr ""
+"Korisnici mogu uobičajeno koristiti <keyseq><key>Ctrl</key><key>Alt</key><key><var>funkcijske tipke</var></key></"
+"keyseq> prečace (primjerice, <keyseq><key>Ctrl</key><key>Alt</key><key>F2</key></keyseq>) za prebacivanje s GNOME "
+"radne površine na virtualni terminal."
 
 #. (itstool) path: section/p
 #: C/lockdown-command-line.page:109
@@ -1993,6 +2057,9 @@ msgid ""
 "a <code>DontVTSwitch</code> option to the <code>Serverflags</code> section in an X configuration file in the <file>/"
 "etc/X11/xorg.conf.d/</file> directory."
 msgstr ""
+"Ako računalo pokreće <em>X prozorski sustav</em>, možete onemogućiti pristup svim virtualnim terminalima dodavanjem "
+"mogućnosti <code>DontVTSwitch</code> u odjeljak <code>Serverflags</code> u X datoteku podešavanja u direktoriju "
+"<file>/etc/X11/xorg.conf.d/</file>."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:116
@@ -2000,11 +2067,13 @@ msgid ""
 "Create or edit an X configuration file in <file>/etc/X11/xorg.conf.d/</file>. For example, <file>/etc/X11/xorg.conf."
 "d/10-xorg.conf</file>:"
 msgstr ""
+"Stvorite ili uredite X datoteku podešavanja u <file>/etc/X11/xorg.conf.d/</file>. Primjerice, <file>/etc/X11/xorg."
+"conf.d/10-xorg.conf</file>:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-command-line.page:120
 msgid "<file>/etc/X11/xorg.conf.d/10-xorg.conf</file>"
-msgstr ""
+msgstr "<file>/etc/X11/xorg.conf.d/10-xorg.conf</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-command-line.page:121
@@ -2016,22 +2085,27 @@ msgid ""
 "\n"
 "EndSection\n"
 msgstr ""
+"Section \"Serverflags\"\n"
+"\n"
+"Option \"DontVTSwitch\" \"yes\"\n"
+"\n"
+"EndSection\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:130
 msgid "Restart the X server for the changes to take effect."
-msgstr ""
+msgstr "Ponovno pokrenite X poslužitelja kako bi se promjene primijenile."
 
 #. (itstool) path: info/desc
 #: C/lockdown-file-saving.page:24
 msgid "Prevent the user from saving files to disk."
-msgstr ""
+msgstr "Sprječavanje korisnika u spremanju datoteka na disk."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/lockdown-file-saving.page:27 C/lockdown-file-saving.page:40
 msgid "Disable file saving"
-msgstr ""
+msgstr "Onemogućavanje spremanja datoteke"
 
 #. (itstool) path: page/p
 #: C/lockdown-file-saving.page:29
@@ -2039,6 +2113,8 @@ msgid ""
 "You can disable the <gui>Save</gui> and <gui>Save As</gui> dialogs. This can be useful if you are giving temporary "
 "access to a user or you do not want the user to save files to the computer."
 msgstr ""
+"Možete onemogućiti <gui>Spremi</gui> i <gui>Spremi kao</gui> dijaloge. Ovo je korisno ako korisniku dajete "
+"privremeni pristup ili ne želite da korisnik sprema datoteke na računalo."
 
 #. (itstool) path: note/p
 #: C/lockdown-file-saving.page:34 C/lockdown-printing.page:34
@@ -2046,6 +2122,8 @@ msgid ""
 "This feature will only work in applications which support it! Not all GNOME and third party applications have this "
 "feature enabled. These changes will have no effect on applications which do not support this feature."
 msgstr ""
+"Ova značajka će raditi samo u aplikacijama koje je podržavaju! Nemaju sve GNOME aplikacije i aplikacije trećih "
+"strana omogućenu ovu značajku. Ove promjene neće imati utjecaja na aplikacije koje ne podržavaju ovu značajku."
 
 #. (itstool) path: item/p
 #: C/lockdown-file-saving.page:48
@@ -2053,11 +2131,13 @@ msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-filesaving</file> to provide information for the <sys>local</"
 "sys> database."
 msgstr ""
+"Stvorite datoteku ključa <file>/etc/dconf/db/local.d/00-filesaving:</file> kako bi pružili informacija za "
+"<sys>lokalnu</sys> bazu podataka."
 
 #. (itstool) path: listing/title
 #: C/lockdown-file-saving.page:52
 msgid "<file>/etc/dconf/db/local.d/00-filesaving</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.d/00-filesaving</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-file-saving.page:53
@@ -2070,6 +2150,12 @@ msgid ""
 "# Prevent the user from saving files on disk\n"
 "disable-save-to-disk=true\n"
 msgstr ""
+"\n"
+"# Navedi dconf putanju\n"
+"[org/gnome/desktop/lockdown]\n"
+"\n"
+"# Spriječi korisnika da sprema datoteke na disk\n"
+"disable-save-to-disk=true\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-file-saving.page:63
@@ -2077,11 +2163,13 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/etc/dconf/db/local.d/locks/filesaving</"
 "file> with the following content:"
 msgstr ""
+"Kako bi spriječili korisnika da zaobiđe ove postavke, stvorite datoteku <file>/etc/dconf/db/local.d/locks/"
+"filesaving</file> sa sljedećim sadržajem:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-file-saving.page:67
 msgid "<file>/etc/dconf/db/local.db/locks/filesaving</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.db/locks/filesaving</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-file-saving.page:68
@@ -2091,17 +2179,20 @@ msgid ""
 "# Lock file saving settings\n"
 "/org/gnome/desktop/lockdown/disable-save-to-disk\n"
 msgstr ""
+"\n"
+"# Zaključaj postavke spremanja datoteke\n"
+"/org/gnome/desktop/lockdown/disable-save-to-disk\n"
 
 #. (itstool) path: info/desc
 #: C/lockdown-logout.page:24
 msgid "Prevent the user from logging out and from switching a user."
-msgstr ""
+msgstr "Sprječavanje korisnika u odjavi i zamijeni korisnika."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/lockdown-logout.page:27 C/lockdown-logout.page:39
 msgid "Disable user logout and user switching"
-msgstr ""
+msgstr "Onemogućavanje odjave korisnika i zamjene korisnika"
 
 #. (itstool) path: page/p
 #: C/lockdown-logout.page:29
@@ -2109,6 +2200,8 @@ msgid ""
 "Preventing the user from logging out is useful for special kind of GNOME deployments (unmanned kiosks, public "
 "internet access terminals, and so on)."
 msgstr ""
+"Sprječavanje korisnika u odjavi korisno je za posebne vrste implementacija GNOMA (kiosci bez osoblja, javni "
+"terminali za pristup internetu itd.)."
 
 #. (itstool) path: note/p
 #: C/lockdown-logout.page:33
@@ -2116,6 +2209,8 @@ msgid ""
 "Users can evade the logout lockdown by switching to a different user. That is the reason why it is recommended to "
 "also disable <em>user switching</em> when configuring the system."
 msgstr ""
+"Korisnici mogu izbjeći blokadu odjave zamjenom za drugog korisnika. To je razlog zašto se isto preporučuje "
+"onemogućiti <em>zamjenu korisnika</em> pri podešavanju sustava."
 
 #. (itstool) path: item/p
 #: C/lockdown-logout.page:47
@@ -2123,6 +2218,8 @@ msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-logout</file> to provide information for the <sys>local</sys> "
 "database:"
 msgstr ""
+"Stvorite datoteku ključa <file>/etc/dconf/db/local.d/00-logout</file> kako bi pružili informacija za <sys>lokalnu</"
+"sys> bazu podataka:"
 
 #. (itstool) path: item/screen
 #: C/lockdown-logout.page:49
@@ -2136,6 +2233,13 @@ msgid ""
 "# Prevent the user from user switching\n"
 "disable-user-switching=true\n"
 msgstr ""
+"\n"
+"[org/gnome/desktop/lockdown]\n"
+"# Spriječi korisnika da se odjavi\n"
+"disable-log-out=true\n"
+"\n"
+"# Spriječi korisnika da zamijeni korisnika\n"
+"disable-user-switching=true\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-logout.page:59
@@ -2143,6 +2247,8 @@ msgid ""
 "Override the user's setting and prevent the user from changing it in <file>/etc/dconf/db/local.d/locks/lockdown</"
 "file>:"
 msgstr ""
+"Zaobiđite korisničku postavku i spriječite korisnika da je promijeni u <file>/etc/dconf/db/local.d/locks/lockdown</"
+"file>:"
 
 #. (itstool) path: item/screen
 #: C/lockdown-logout.page:61
@@ -2155,21 +2261,27 @@ msgid ""
 "# Lock user switching\n"
 "/org/gnome/desktop/lockdown/disable-user-switching\n"
 msgstr ""
+"\n"
+"# Zaključaj odjavu korisnika\n"
+"/org/gnome/desktop/lockdown/disable-log-out\n"
+"\n"
+"# Zaključaj zamjenu korisnika\n"
+"/org/gnome/desktop/lockdown/disable-user-switching\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-logout.page:73
 msgid "Restart the system for the system-wide settings to take effect."
-msgstr ""
+msgstr "Ponovno pokrenite sustav kako bi se postavke primijenile za cijeli sustav."
 
 #. (itstool) path: info/desc
 #: C/lockdown-online-accounts.page:24
 msgid "Enable or disable some or all online accounts."
-msgstr ""
+msgstr "Omogućavanje ili onemogućavanje pojedinih ili svih mrežnih računa."
 
 #. (itstool) path: page/title
 #: C/lockdown-online-accounts.page:26
 msgid "Allow or disallow online accounts"
-msgstr ""
+msgstr "Omogućavanje ili onemogućavanje mrežnih računa"
 
 #. (itstool) path: page/p
 #: C/lockdown-online-accounts.page:28
@@ -2178,36 +2290,39 @@ msgid ""
 "Desktop and applications. The user can add their online accounts, such as Google, Facebook, Flickr, ownCloud, and "
 "others using the <app>Online Accounts</app> application."
 msgstr ""
+"<app>GNOME mrežni računi</app> (GOA) koriste se za integraciju osobnih mrežnih računa s GNOME radnom površinom i "
+"aplikacijama. Korisnik može dodati svoje mrežne račune, poput Googla, Facebooka, Flickra, ownClouda i ostalih "
+"pomoću aplikacije <app>Mrežni računi</app>."
 
 #. (itstool) path: page/p
 #: C/lockdown-online-accounts.page:33
 msgid "As a system administrator, you can:"
-msgstr ""
+msgstr "Kao administrator sustava, možete:"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:35
 msgid "enable all online accounts;"
-msgstr ""
+msgstr "omogućiti mrežne račune;"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:36
 msgid "selectively enable a few online accounts;"
-msgstr ""
+msgstr "omogućiti pojedine mrežne račune;"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:37
 msgid "disable all online accounts."
-msgstr ""
+msgstr "onemogućiti sve mrežne račune."
 
 #. (itstool) path: steps/title
 #: C/lockdown-online-accounts.page:41
 msgid "Configure online accounts"
-msgstr ""
+msgstr "Podešavanje mrežnih računa"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:42
 msgid "Make sure that you have the <sys>gnome-online-accounts</sys> package installed on your system."
-msgstr ""
+msgstr "Provjerite imate li instaliran <sys>gnome-online-accounts</sys> paket na vašem sustavu."
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:52
@@ -2215,11 +2330,13 @@ msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-goa</file> to provide information for the <sys>local</sys> "
 "database containing the following configuration."
 msgstr ""
+"Stvorite datoteku ključa <file>/etc/dconf/db/local.d/00-goa</file> kako bi pružili informacije za <sys>lokalnu</"
+"sys> bazu podataka koja sadrži sljedeće podešavanje."
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:56
 msgid "To enable specific providers:"
-msgstr ""
+msgstr "Za omogućavanje pojedinih pružatelja usluga:"
 
 #. (itstool) path: item/code
 #: C/lockdown-online-accounts.page:57
@@ -2229,11 +2346,14 @@ msgid ""
 "[org/gnome/online-accounts]\n"
 "whitelisted-providers= ['google', 'facebook']\n"
 msgstr ""
+"\n"
+"[org/gnome/online-accounts]\n"
+"whitelisted-providers= ['google', 'facebook']\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:67
 msgid "To disable all providers:"
-msgstr ""
+msgstr "Za onemogućavanje svih pružatelja usluga:"
 
 #. (itstool) path: item/code
 #: C/lockdown-online-accounts.page:68
@@ -2243,11 +2363,14 @@ msgid ""
 "[org/gnome/online-accounts]\n"
 "whitelisted-providers= ['']\n"
 msgstr ""
+"\n"
+"[org/gnome/online-accounts]\n"
+"whitelisted-providers= ['']\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:73
 msgid "To allow all available providers:"
-msgstr ""
+msgstr "Za omogućavanje svih dostupnih pružatelja usluga:"
 
 #. (itstool) path: item/code
 #: C/lockdown-online-accounts.page:74
@@ -2257,11 +2380,14 @@ msgid ""
 "[org/gnome/online-accounts]\n"
 "whitelisted-providers= ['all']\n"
 msgstr ""
+"\n"
+"[org/gnome/online-accounts]\n"
+"whitelisted-providers= ['all']\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:78
 msgid "This is the default setting."
-msgstr ""
+msgstr "Ovo je zadana postavka."
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:82
@@ -2269,11 +2395,13 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/etc/dconf/db/local.d/locks/goa</file> "
 "with the following content:"
 msgstr ""
+"Kako bi spriječili korisnika da zaobiđe ove postavke, stvorite datoteku <file>/etc/dconf/db/local.d/locks/goa</"
+"file> sa sljedećim sadržajem:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-online-accounts.page:86
 msgid "<file>/etc/dconf/db/local.db/locks/goa</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.db/locks/goa</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-online-accounts.page:87
@@ -2283,17 +2411,20 @@ msgid ""
 "# Lock the list of providers that are allowed to be loaded\n"
 "/org/gnome/online-accounts/whitelisted-providers\n"
 msgstr ""
+"\n"
+"# Zaključavanje popisa pružatelja usluga kojima je dopušteno učitavanje\n"
+"/org/gnome/online-accounts/whitelisted-providers\n"
 
 #. (itstool) path: info/desc
 #: C/lockdown-printing.page:24
 msgid "Prevent the user from printing documents."
-msgstr ""
+msgstr "Sprječavanje korisnika u ispisivanju dokumenata."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/lockdown-printing.page:27 C/lockdown-printing.page:40
 msgid "Disable printing"
-msgstr "Onemogući ispisivanje"
+msgstr "Onemogućavanje ispisivanja"
 
 #. (itstool) path: page/p
 #: C/lockdown-printing.page:29
@@ -2301,6 +2432,8 @@ msgid ""
 "You can disable the print dialog from being shown to users. This can be useful if you are giving temporary access "
 "to a user or you do not want the user to print to network printers."
 msgstr ""
+"Možete onemogućiti prikaz dijaloga ispisa korisnicima. Ovo može biti korisno ako korisniku dajete privremeni "
+"pristup ili ne želite da korisnik ispisuje na mrežnim pisačima."
 
 #. (itstool) path: item/p
 #: C/lockdown-printing.page:48
@@ -2308,11 +2441,13 @@ msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-printing</file> to provide information for the <sys>local</sys> "
 "database."
 msgstr ""
+"Stvorite datoteku ključa <file>/etc/dconf/db/local.d/00-printing</file> kako bi pružili informacija za "
+"<sys>lokalnu</sys> bazu podataka."
 
 #. (itstool) path: listing/title
 #: C/lockdown-printing.page:52
 msgid "<file>/etc/dconf/db/local.d/00-printing</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.d/00-printing</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-printing.page:53
@@ -2325,6 +2460,12 @@ msgid ""
 "# Prevent applications from printing\n"
 "disable-printing=true\n"
 msgstr ""
+"\n"
+"# Navedi dconf putanju\n"
+"[org/gnome/desktop/lockdown]\n"
+" \n"
+"# Spriječi ispis aplikacija\n"
+"disable-printing=true\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-printing.page:63
@@ -2332,11 +2473,13 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/etc/dconf/db/local.d/locks/printing</"
 "file> with the following content:"
 msgstr ""
+"Kako bi spriječili korisnika da zaobiđe ove postavke, stvorite datoteku <file>/etc/dconf/db/local.d/locks/printing</"
+"file> sa sljedećim sadržajem:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-printing.page:67
 msgid "<file>/etc/dconf/db/local.db/locks/printing</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.db/locks/printing</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-printing.page:68
@@ -2346,17 +2489,20 @@ msgid ""
 "# Lock printing settings\n"
 "/org/gnome/desktop/lockdown/disable-printing\n"
 msgstr ""
+"\n"
+"# Zaključava postavke ispisa\n"
+"/org/gnome/desktop/lockdown/disable-printing\n"
 
 #. (itstool) path: info/desc
 #: C/lockdown-repartitioning.page:24
 msgid "Prevent the user from changing disk partitions."
-msgstr ""
+msgstr "Sprječavanje korisnika u particioniranju diska."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/lockdown-repartitioning.page:27 C/lockdown-repartitioning.page:42
 msgid "Disable repartitioning"
-msgstr ""
+msgstr "Onemogućavanje particioniranja"
 
 #. (itstool) path: page/p
 #: C/lockdown-repartitioning.page:29
@@ -2366,6 +2512,10 @@ msgid ""
 "policy</file>. This file contains a set of actions and default values, which can be overridden by system "
 "administrator."
 msgstr ""
+"<sys>polkit</sys> vam omogućuje postavljanje dopuštenja za pojedinačne radnje. Za <sys>udisks2</sys>, pomagalo "
+"usluga upravljanja diskom, podešavanje se nalazi u putanji <file>/usr/share/polkit-1/actions/org.freedesktop."
+"udisks2.policy</file>. Ova datoteka sadrži skup radnji i zadanih vrijednosti, koje administrator sustava može "
+"zaobići."
 
 #. (itstool) path: note/p
 #: C/lockdown-repartitioning.page:37
@@ -2373,6 +2523,7 @@ msgid ""
 "The <sys>polkit</sys> configuration in <file>/etc</file> overrides that shipped by packages in <file>/usr/share</"
 "file>."
 msgstr ""
+"Podešavanje <sys>polkit</sys> u <file>/etc</file> zaobilazi onu isporučenu paketima u <file>/usr/share</file>."
 
 #. (itstool) path: item/p
 #: C/lockdown-repartitioning.page:44
@@ -2381,6 +2532,9 @@ msgid ""
 "<cmd>cp /usr/share/polkit-1/actions/org.freedesktop.udisks2.policy /etc/share/polkit-1/actions/org.freedesktop."
 "udisks2.policy</cmd>"
 msgstr ""
+"Stvorite datoteku s istim sadržajem kao u <file>/usr/share/polkit-1/actions/org.freedesktop.udisks2.policy</file>: "
+"<cmd>cp /usr/share/polkit-1/actions/ org.freedesktop.udisks2.policy /etc/share/polkit-1/actions/org.freedesktop."
+"udisks2.policy</cmd>"
 
 #. (itstool) path: note/p
 #: C/lockdown-repartitioning.page:48
@@ -2388,6 +2542,8 @@ msgid ""
 "Do not change the <file>/usr/share/polkit-1/actions/org.freedesktop.udisks2.policy</file> file, your changes will "
 "be overwritten by the next package update."
 msgstr ""
+"Ne mijenjate <file>/usr/share/polkit-1/actions/org.freedesktop.udisks2.policy</file> datoteku, vaše će promjene "
+"biti prebrisane sljedećom nadopunom paketa."
 
 #. (itstool) path: item/p
 #: C/lockdown-repartitioning.page:54
@@ -2395,6 +2551,8 @@ msgid ""
 "Delete any actions you do not need from within the <code>policyconfig</code> element and add the following lines to "
 "the <file>/etc/polkit-1/actions/org.freedesktop.udisks2.policy</file> file:"
 msgstr ""
+"Obrišite sve radnje koje vam nisu potrebne unutar <code>policyconfig</code> elementa i dodajte sljedeće retke u "
+"<file>/etc/polkit-1/actions/org.freedesktop.udisks2.policy</file> datoteku:"
 
 #. (itstool) path: listing/code
 #: C/lockdown-repartitioning.page:59
@@ -2411,6 +2569,16 @@ msgid ""
 "    &lt;/defaults&gt;\n"
 "&lt;/action&gt;\n"
 msgstr ""
+"\n"
+"  &lt;action id=\"org.freedesktop.udisks2.modify-device\"&gt;\n"
+"     &lt;description&gt;Modify the drive settings&lt;/description&gt;\n"
+"     &lt;message&gt;Authentication is required to modify drive settings&lt;/message&gt;\n"
+"    &lt;defaults&gt;\n"
+"      &lt;allow_any&gt;no&lt;/allow_any&gt;\n"
+"      &lt;allow_inactive&gt;no&lt;/allow_inactive&gt;\n"
+"      &lt;allow_active&gt;yes&lt;/allow_active&gt;\n"
+"    &lt;/defaults&gt;\n"
+"&lt;/action&gt;\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-repartitioning.page:71
@@ -2418,11 +2586,13 @@ msgid ""
 "Replace <code>no</code> by <code>auth_admin</code> if you want to ensure only the root user is able to carry out "
 "the action."
 msgstr ""
+"Zamijenite <code>no</code> s <code>auth_admin</code> ako želite osigurati da samo korijenski korisnik može izvršiti "
+"radnju."
 
 #. (itstool) path: item/p
 #: C/lockdown-repartitioning.page:75
 msgid "Save the changes."
-msgstr ""
+msgstr "Spremite promjene."
 
 #. (itstool) path: page/p
 #: C/lockdown-repartitioning.page:79
@@ -2430,16 +2600,18 @@ msgid ""
 "When the user tries to change the disk settings, the following message is shown: <gui>Authentication is required to "
 "modify drive settings</gui>."
 msgstr ""
+"Kada korisnik pokuša promijeniti postavke diska, prikazuje se sljedeća poruka: <gui>Potrebna je ovjera za promjenu "
+"postavki uređaja</gui>."
 
 #. (itstool) path: info/desc
 #: C/lockdown-single-app-mode.page:37
 msgid "Set up a kiosk-like, single-application system."
-msgstr ""
+msgstr "Postavljanje sustava s jednom aplikacijom nalik kiosku."
 
 #. (itstool) path: page/title
 #: C/lockdown-single-app-mode.page:40
 msgid "Configure single-application mode"
-msgstr ""
+msgstr "Podešavanje načina rada jedne aplikacije"
 
 #. (itstool) path: page/p
 #: C/lockdown-single-app-mode.page:42
@@ -2448,6 +2620,9 @@ msgid ""
 "administrator locks down some behavior to make the standard desktop more restrictive for users, letting them focus "
 "on selected features."
 msgstr ""
+"Način rada s jednom aplikacijom prilagođena je GNOME ljuska koja podešava ljusku kao interaktivni kiosk. "
+"Administrator zaključava određena ponašanja kako bi standardnu radnu površinu učinio restriktivnijom za korisnike, "
+"dopuštajući im da se usredotoče na odabrane značajke."
 
 #. (itstool) path: page/p
 #: C/lockdown-single-app-mode.page:47
@@ -2455,26 +2630,28 @@ msgid ""
 "Set up single-application mode for a wide range of functions in a number of fields (from communication to "
 "entertainment or education), and use it as a self-serve machine, event manager, registration point, and so on."
 msgstr ""
+"Postavite način rada s jednom aplikacijom za širok raspon funkcija u brojnim poljima (od komunikacije do zabave ili "
+"obrazovanja) i koristite ga kao samouslužni stroj, upravitelj događaja, mjesto registracije itd."
 
 #. (itstool) path: steps/title
 #: C/lockdown-single-app-mode.page:52
 msgid "Set up single-application mode"
-msgstr ""
+msgstr "Postavljanje načina rada jedne aplikacije"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:54
 msgid "Lock down settings to prevent printing, terminal access, and so on."
-msgstr ""
+msgstr "Zaključajte postavke kako bi spriječili ispis, pristup terminalu itd.."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:63
 msgid "Configure automatic login in the <file>/etc/gdm/custom.conf</file> file for the user."
-msgstr ""
+msgstr "Podesite automatsku prijavu u <file>/etc/gdm/custom.conf</file> datoteci za korisnika."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:65
 msgid "See <link xref=\"login-automatic\"/> for more information."
-msgstr ""
+msgstr "Pogledajte <link xref=\"login-automatic\"/> za više informacija."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:68
@@ -2483,6 +2660,9 @@ msgid ""
 "start with a digit or a dash). Also, make sure the user name matches with the related names, such as when referring "
 "to a session. A good example is <em>kiosk-user</em>."
 msgstr ""
+"Stvorite novog korisnika s imenom koje slijedi tipična pravila imenovanja (bez razmaka ili posebnih znakova, ne "
+"započinjite znamenkom ili crticom). Isto, provjerite podudara li se korisničko ime s povezanim imenima, primjerice "
+"kada se govori o sesiji. Dobar primjer je <em>kiosk-user</em>."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:74
@@ -2491,6 +2671,9 @@ msgid ""
 "<em>kiosk</em> is a good match). To do so, create a <file>/usr/share/xsessions/<var>kiosk</var>.desktop</file> file "
 "and set the <code>Exec</code> line as follows:"
 msgstr ""
+"Stvorite sesiju s imenom koje odgovara korisničkom imenu (primjerice, za <em>kiosk-user</em> koji je gore spomenut, "
+"<em>kiosk</em> dobro odgovara). Kako bi to učinili, stvorite datoteku <file>/usr/share/xsessions/<var>kiosk</var>."
+"desktop</file> i postavite redak <code>Exec</code> na sljedeći način:"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:78
@@ -2499,6 +2682,8 @@ msgid ""
 "\n"
 "Exec=gnome-session --session kiosk\n"
 msgstr ""
+"\n"
+"Exec=gnome-session --session kiosk\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:83
@@ -2506,6 +2691,8 @@ msgid ""
 "Set the default session for <em>kiosk-user</em> by adding the following line to the <file>/var/lib/AccountsService/"
 "users/<var>kiosk-user</var> </file> file:"
 msgstr ""
+"Postavite zadanu sesiju za <em>kiosk-user</em> dodavanjem sljedećeg retka u <file>/var/lib/AccountsService/users/"
+"<var>kiosk-user</var> </file> datoteku:"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:86
@@ -2514,11 +2701,13 @@ msgid ""
 "\n"
 "XSession=kiosk\n"
 msgstr ""
+"\n"
+"XSession=kiosk\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:91
 msgid "Define the <em>kiosk</em> session by writing a custom session definition, containing the following line:"
-msgstr ""
+msgstr "Definirajte <em>kiosk</em> sesiju pisanjem prilagođene definicije sesije koja sadrži sljedeći redak:"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:93
@@ -2527,6 +2716,8 @@ msgid ""
 "\n"
 "RequiredComponents=kiosk-app;gnome-settings-daemon;kiosk-shell;\n"
 msgstr ""
+"\n"
+"RequiredComponents=kiosk-app;gnome-settings-daemon;kiosk-shell;\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:96
@@ -2535,6 +2726,8 @@ msgid ""
 "daemon</sys> (a standard component in the GNOME session), and <sys>kiosk-shell</sys> (which is a customized version "
 "of GNOME Shell)."
 msgstr ""
+"Ovo stvara sesiju koja pokreće tri programa: <sys>kiosk-app</sys> (uzorak aplikacije), <sys>gnome-settings-daemon</"
+"sys> (standardna komponenta u GNOME sesiji) i <sys >kiosk-shell</sys> (koji je prilagođena inačica GNOME ljuske)."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:102
@@ -2542,6 +2735,8 @@ msgid ""
 "Create a desktop file for <sys>kiosk-shell</sys> in <file>/usr/share/applications/kiosk-shell.desktop</file>, "
 "containing the following lines:"
 msgstr ""
+"Stvorite .desktop datoteku za <sys>kiosk-shell</sys> u <file>/usr/share/applications/kiosk-shell.desktop</file>, "
+"koja sadrži sljedeće retke:"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:105
@@ -2551,6 +2746,9 @@ msgid ""
 "[Desktop Entry]\n"
 "Exec=gnome-shell --mode=kiosk\n"
 msgstr ""
+"\n"
+"[Desktop Entry]\n"
+"Exec=gnome-shell --mode=kiosk\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:111
@@ -2558,6 +2756,8 @@ msgid ""
 "Create a mode definition <file>/usr/share/gnome-shell/modes/kiosk.json</file>. This is a simple json file defining "
 "the available <sys>gnome-shell</sys> user interface."
 msgstr ""
+"Stvorite definiciju načina rada <file>/usr/share/gnome-shell/modes/kiosk.json</file>. Ovo je jednostavna json "
+"datoteka koja definira dostupno <sys>gnome-shell</sys> korisničko sučelje."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:114
@@ -2565,6 +2765,8 @@ msgid ""
 "As the starting point, look at <file>/usr/share/gnome-shell/modes/classic.json</file> and <file>/usr/share/gnome-"
 "shell/modes/initial-setup.json</file> for examples."
 msgstr ""
+"Kao polazište, pogledajte <file>/usr/share/gnome-shell/modes/classic.json</file> i <file>/usr/share/gnome-shell/"
+"modes/initial-setup.json</file> za primjere."
 
 #. (itstool) path: credit/years
 #: C/login-automatic.page:20
@@ -2827,12 +3029,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/login-fingerprint.page:24
 msgid "Prevent the user from being able to log in using a fingerprint scanner."
-msgstr ""
+msgstr "Sprječavanje prijave korisnika pomoću skenera otiska prsta."
 
 #. (itstool) path: page/title
 #: C/login-fingerprint.page:28
 msgid "Disallow login using a fingerprint"
-msgstr ""
+msgstr "Onemogućavanje prijave otiskom prsta"
 
 #. (itstool) path: page/p
 #: C/login-fingerprint.page:30
@@ -2840,17 +3042,21 @@ msgid ""
 "Users with a fingerprint scanner can use their fingerprints instead of a password to log in. Fingerprint login "
 "<link href=\"help:gnome-help#session-fingerprint\">needs to be set up by the user</link> before it can be used."
 msgstr ""
+"Korisnici sa skenerom otiska prsta mogu koristiti svoje otiske prstiju umjesto lozinke za prijavu. Prijavu otiskom "
+"prsta <link href=\"help:gnome-help#session-fingerprint\">treba postaviti korisnik</link> prije nego što ju može "
+"koristiti."
 
 #. (itstool) path: page/p
 #: C/login-fingerprint.page:35
 msgid ""
 "Fingerprint readers are not always reliable, so you may wish to disable login using the reader for security reasons."
 msgstr ""
+"Čitači otisaka prstiju nisu uvijek pouzdani, stoga možete onemogućiti prijavu pomoću čitača iz sigurnosnih razloga."
 
 #. (itstool) path: steps/title
 #: C/login-fingerprint.page:39
 msgid "Disable login using a fingerprint reader:"
-msgstr ""
+msgstr "Onemogućavanje prijave pomoću čitača otiska prsta:"
 
 #. (itstool) path: item/p
 #: C/login-fingerprint.page:47
@@ -2858,11 +3064,13 @@ msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-login</file> to provide information for the <sys>local</sys> "
 "database."
 msgstr ""
+"Stvorite datoteku ključa <file>/etc/dconf/db/local.d/00-login:</file> kako bi pružili informacija za <sys>lokalnu</"
+"sys> bazu podataka."
 
 #. (itstool) path: listing/title
 #: C/login-fingerprint.page:51
 msgid "<file>/etc/dconf/db/local.d/00-login</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.d/00-login</file>"
 
 #. (itstool) path: listing/code
 #: C/login-fingerprint.page:52
@@ -2875,6 +3083,12 @@ msgid ""
 "# Disable fingerprint reader\n"
 "enable-fingerprint-authentication=false\n"
 msgstr ""
+"\n"
+"# Navedi dconf putanju\n"
+"[org/gnome/login-screen]\n"
+"\n"
+"# Onemogući čitača otiska prsta\n"
+"enable-fingerprint-authentication=false\n"
 
 #. (itstool) path: item/p
 #: C/login-fingerprint.page:62
@@ -2882,11 +3096,13 @@ msgid ""
 "To prevent the user from overriding these settings, create the file <file>/etc/dconf/db/local.d/locks/login</file> "
 "with the following content:"
 msgstr ""
+"Kako bi spriječili korisnika da zaobiđe ove postavke, stvorite datoteku <file>/etc/dconf/db/local.d/locks/login</"
+"file> sa sljedećim sadržajem:"
 
 #. (itstool) path: listing/title
 #: C/login-fingerprint.page:66
 msgid "<file>/etc/dconf/db/local.d/locks/fingerprintreader</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.d/locks/fingerprintreader</file>"
 
 #. (itstool) path: listing/code
 #: C/login-fingerprint.page:67
@@ -2896,6 +3112,9 @@ msgid ""
 "# List the keys used to configure login\n"
 "/org/gnome/login-screen/enable-fingerprint-authentication\n"
 msgstr ""
+"\n"
+"# Navedi ključeve koji se koriste za podešavanje prijave\n"
+"/org/gnome/login-screen/enable-fingerprint-authentication\n"
 
 #. (itstool) path: info/desc
 #: C/login-logo.page:33
