@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
 "POT-Creation-Date: 2022-09-13 11:29+0000\n"
-"PO-Revision-Date: 2022-09-15 18:08+0200\n"
+"PO-Revision-Date: 2022-09-15 19:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -3894,12 +3894,12 @@ msgstr "Mreža i hardver"
 #. (itstool) path: info/desc
 #: C/network-server-list.page:26
 msgid "How do I make it easy for different users to access different file shares?"
-msgstr ""
+msgstr "Kako se korisnicima može olakšati pristup različitim dijeljenjima datoteka?"
 
 #. (itstool) path: page/title
 #: C/network-server-list.page:30
 msgid "Configure a default server list"
-msgstr ""
+msgstr "Podešavanje zadanog popisa poslužitelja"
 
 #. (itstool) path: page/p
 #: C/network-server-list.page:37
@@ -3908,6 +3908,9 @@ msgid ""
 "config/gtk-3.0/servers</file> in the XBEL format. Add the list of file-sharing servers to that file to make file "
 "shares easily accessible to your user."
 msgstr ""
+"<app>Nautilus</app> (aplikacija <app>Datoteke</app>) pohranjuje popis poslužitelja za dijeljenje datoteka u "
+"datoteci <file>~/.config/gtk-3.0/servers</file> u XBEL format. Dodajte popis poslužitelja za dijeljenje datoteka "
+"toj datoteci kako bi dijeljenje datoteka bilo lako dostupno vašem korisniku."
 
 #. (itstool) path: note/p
 #: C/network-server-list.page:43
@@ -3916,11 +3919,14 @@ msgid ""
 "Resource Identifiers). In GNOME, XBEL is used to share desktop bookmarks in applications such as <app>Nautilus</"
 "app>."
 msgstr ""
+"<em>XBEL</em> (<em>XML Bookmark Exchange Language</em>) je XML standard koji omogućuje URI (Uniform Resource "
+"Identifiers) dijeljenje. U GNOMU, XBEL se koristi za dijeljenje zabilješki radne površine u aplikacijama poput "
+"<app>Nautilusa</app>."
 
 #. (itstool) path: example/p
 #: C/network-server-list.page:50
 msgid "An example of the <file>~/.config/gtk-3.0/servers</file> file:"
-msgstr ""
+msgstr "Primjer <file>~/.config/gtk-3.0/servers</file> datoteke:"
 
 #. (itstool) path: example/code
 #: C/network-server-list.page:51
@@ -3936,6 +3942,15 @@ msgid ""
 "   &lt;/bookmark&gt;\n"
 "&lt;/xbel&gt;\n"
 msgstr ""
+"\n"
+"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n"
+"&lt;xbel version=\"1.0\"\n"
+"      xmlns:bookmark=\"http://www.freedesktop.org/standards/desktop-bookmarks\"\n"
+"      xmlns:mime=\"http://www.freedesktop.org/standards/shared-mime-info\"&gt;\n"
+"   &lt;bookmark href=\"<input>ftp://ftp.gnome.org/</input>\"&gt;\n"
+"      &lt;title&gt;<input>GNOME FTP</input>&lt;/title&gt;\n"
+"   &lt;/bookmark&gt;\n"
+"&lt;/xbel&gt;\n"
 
 #. (itstool) path: example/p
 #: C/network-server-list.page:61
@@ -3943,16 +3958,18 @@ msgid ""
 "In the example above, <app>Nautilus</app> creates a bookmark titled <em>GNOME FTP</em> with the URI <code>ftp://ftp."
 "gnome.org/</code>."
 msgstr ""
+"U gornjem primjeru, <app>Nautilus</app> stvara zabilješku pod nazivom <em>GNOME FTP</em> s URI-jem <code>ftp://ftp."
+"gnome.org/</code>."
 
 #. (itstool) path: info/desc
 #: C/network-vpn.page:21
 msgid "How do I preconfigure VPN for all my users?"
-msgstr ""
+msgstr "Kako se predpodešava VPN za sve korisnike?"
 
 #. (itstool) path: page/title
 #: C/network-vpn.page:24
 msgid "Default VPN settings"
-msgstr ""
+msgstr "Zadane VPN postavke"
 
 #. (itstool) path: page/p
 #: C/network-vpn.page:31
@@ -3960,11 +3977,13 @@ msgid ""
 "<app>NetworkManager</app> stores system-wide connections in the <file>/etc/NetworkManager/system-connections</file> "
 "directory. Preconfigured VPN connections can be installed in this directory."
 msgstr ""
+"<app>Mrežni upravitelj</app> pohranjuje povezivanja cijelog sustava u <file>/etc/NetworkManager/system-connections</"
+"file> direktorij. Predpodešena VPN povezivanja mogu se instalirati u ovaj direktorij."
 
 #. (itstool) path: page/p
 #: C/network-vpn.page:35
 msgid "Here is a sample Cisco VPN configuration:"
-msgstr ""
+msgstr "Ovdje je primjer Cisco VPN podešavanja:"
 
 #. (itstool) path: page/screen
 #: C/network-vpn.page:37
@@ -4002,6 +4021,37 @@ msgid ""
 "IKE DH Group=dh2\n"
 "Local Port=0\n"
 msgstr ""
+"\n"
+"[connection]\n"
+"id=Sample vpnc\n"
+"uuid=a9894bc6-aa7c-4296-90e6-094f0b13a14e\n"
+"type=vpn\n"
+"permissions=\n"
+"autoconnect=false\n"
+"secondaries=\n"
+" \n"
+"[ipv6]\n"
+"method=auto\n"
+"dns-search=\n"
+" \n"
+"[ipv4]\n"
+"method=auto\n"
+"dns-search=\n"
+" \n"
+"[vpn]\n"
+"service-type=org.freedesktop.NetworkManager.vpnc\n"
+"NAT Traversal Mode=natt\n"
+"ipsec-secret-type=ask\n"
+"IPSec secret-flags=2\n"
+"xauth-password-type=ask\n"
+"Vendor=cisco\n"
+"Xauth username=dking\n"
+"IPSec gateway=my-vpnc.my-domain.com\n"
+"Xauth password-flags=2\n"
+"IPSec ID=RH-standard\n"
+"Perfect Forward Secrecy=server\n"
+"IKE DH Group=dh2\n"
+"Local Port=0\n"
 
 #. (itstool) path: info/desc
 #: C/overrides.page:21
