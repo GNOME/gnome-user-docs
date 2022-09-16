@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
 "POT-Creation-Date: 2022-09-13 11:29+0000\n"
-"PO-Revision-Date: 2022-09-16 01:07+0200\n"
+"PO-Revision-Date: 2022-09-16 20:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -1962,12 +1962,12 @@ msgstr "minnie_eg"
 #. (itstool) path: info/desc
 #: C/keyboard-layout.page:27
 msgid "Populate the keyboard layout chooser on the login screen."
-msgstr ""
+msgstr "Prikaz rasporeda tipkovnica na zaslonu prijave."
 
 #. (itstool) path: page/title
 #: C/keyboard-layout.page:30
 msgid "Display multiple keyboard layouts on the login screen"
-msgstr ""
+msgstr "Prikaz više rasporeda tipkovnice na zaslonu prijave"
 
 #. (itstool) path: page/p
 #: C/keyboard-layout.page:40
@@ -1976,11 +1976,14 @@ msgid ""
 "the login screen. This can be helpful for users who normally use different keyboard layouts from the default and "
 "who want to have those keyboard layouts available at the login screen."
 msgstr ""
+"Možete promijeniti postavke rasporeda tipkovnice sustava kako bi dodali alternativne rasporede tipkovnice koje "
+"korisnici mogu odabrati na zaslonu prijave. Ovo može biti od pomoći korisnicima koji uobičajeno koriste rasporede "
+"tipkovnice različite od zadanih i koji žele imati te rasporede tipkovnice dostupne na zaslonu prijave."
 
 #. (itstool) path: steps/title
 #: C/keyboard-layout.page:46 C/keyboard-layout.page:79
 msgid "Change the system keyboard layout settings"
-msgstr ""
+msgstr "Promjena postavki rasporeda tipkovnice sustava"
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:48 C/keyboard-layout.page:81
@@ -1988,17 +1991,19 @@ msgid ""
 "Find the codes of the desired language layouts in the <file>/usr/share/X11/xkb/rules/base.lst</file> file under the "
 "section named <sys>! layout</sys>."
 msgstr ""
+"Potražite kôdove željenih jezičnih rasporeda u datoteci <file>/usr/share/X11/xkb/rules/base.lst</file> u odjeljku "
+"naziva <sys>! layout</sys>."
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:53
 msgid "Use the <cmd>localectl</cmd> tool to change the system keyboard layout settings as follows:"
-msgstr ""
+msgstr "Koristite <cmd>localectl</cmd> alat za promjenu postavki rasporeda tipkovnice sustava na sljedeći način:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:55
 #, no-wrap
 msgid "<cmd>localectl set-x11-keymap <var>layout</var></cmd>"
-msgstr ""
+msgstr "<cmd>localectl set-x11-keymap <var>layout</var></cmd>"
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:56
@@ -2006,17 +2011,19 @@ msgid ""
 "You can specify multiple layouts as a comma-separated list. For example, to set <sys>es</sys> as the default "
 "layout, and <sys>us</sys> as the secondary layout, run the following command:"
 msgstr ""
+"Možete navesti više rasporeda kao popis odvojen zarezom. Primjerice, kako bi postavili <sys>hr</sys> kao zadani "
+"raspored, a <sys>us</sys> kao pomoćni raspored, pokrenite sljedeću naredbu:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:60
 #, no-wrap
 msgid "<output>$ </output><input>localectl set-x11-keymap es,us</input>"
-msgstr ""
+msgstr "<output>$ </output><input>localectl set-x11-keymap hr,us</input>"
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:63 C/keyboard-layout.page:103
 msgid "Log out to find that the defined layouts are available at the top bar on the login screen."
-msgstr ""
+msgstr "Odjavite se kako bi vidjeli jesu li postavljeni rasporedi dostupni na gornjoj traci zaslona prijave."
 
 #. (itstool) path: page/p
 #: C/keyboard-layout.page:67
@@ -2024,11 +2031,13 @@ msgid ""
 "Note that you can also use the <cmd>localectl</cmd> tool to specify the machine-wide default keyboard model, "
 "variant, and options. See the <cmd>localectl</cmd>(1) man page for more information."
 msgstr ""
+"Zapamtite da možete koristiti <cmd>localectl</cmd> alat za određivanje zadanog modela, varijante i mogućnosti "
+"tipkovnice za cijeli sustav. Za više informacija pogledajte <cmd>localectl</cmd>(1) stranicu priručnika."
 
 #. (itstool) path: section/title
 #: C/keyboard-layout.page:72
 msgid "Display multiple keyboard layouts without using localectl"
-msgstr ""
+msgstr "Prikaz više rasporeda tipkovnice bez localectl korištenja"
 
 #. (itstool) path: section/p
 #: C/keyboard-layout.page:74
@@ -2036,11 +2045,13 @@ msgid ""
 "On systems that do not provide the <cmd>localectl</cmd> tool, you can change the system keyboard layout settings by "
 "editing a configuration file in <file>/usr/share/X11/xorg.conf.d/</file>."
 msgstr ""
+"Na sustavima koji ne pružaju <cmd>localectl</cmd> alat, možete promijeniti postavke rasporeda tipkovnice sustava "
+"uređivanjem datoteke podešavanja u <file>/usr/share/X11/xorg.conf.d/</file >."
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:86
 msgid "Add the layout codes to <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</file> in the following way:"
-msgstr ""
+msgstr "Dodajte kôdove jezičnih rasporeda u <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</file> na sljedeći način:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:89
@@ -2055,6 +2066,14 @@ msgid ""
 "  <input>Option \"XkbLayout\" \"en,fr\"</input>\n"
 "EndSection\n"
 msgstr ""
+"\n"
+"Section \"InputClass\"\n"
+"  Identifier \"evdev keyboard catchall\"\n"
+"  MatchIsKeyboard \"on\"\n"
+"  MatchDevicePath \"/dev/input/event*\"\n"
+"  Driver \"evdev\"\n"
+"  <input>Option \"XkbLayout\" \"hr,en\"</input>\n"
+"EndSection\n"
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:98
@@ -2062,6 +2081,8 @@ msgid ""
 "Multiple layouts can be added as a comma separated list, as shown in the example for English (<sys>en</sys>) and "
 "French (<sys>fr</sys>) layouts."
 msgstr ""
+"Više rasporeda može se dodati kao popis odvojen zarezom, kao što je prikazano u primjeru za hrvatski (<sys>hr</"
+"sys>) i engleski (<sys>en</sys>) raspored."
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
@@ -3462,12 +3483,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/logout-automatic.page:28
 msgid "End an idle user session."
-msgstr ""
+msgstr "Završetak neaktivne korisničke sesije."
 
 #. (itstool) path: page/title
 #: C/logout-automatic.page:32
 msgid "Configure automatic logout"
-msgstr ""
+msgstr "Podešavanje automatske odjave"
 
 #. (itstool) path: page/p
 #: C/logout-automatic.page:34
@@ -3476,22 +3497,28 @@ msgid ""
 "behaviour based on whether the machine is running from a battery or from mains power by setting the corresponding "
 "<_:sys-1/> key, then locking it."
 msgstr ""
+"Korisničke sesije koje su bile neaktivne određeno vrijeme mogu se automatski završiti. Možete postaviti različito "
+"ponašanje ovisno o tome radi li sustav na bateriju ili na napajanje tako da postavite odgovarajući <_:sys-1/> "
+"ključ, a zatim je zaključate."
 
 #. (itstool) path: note/p
 #: C/logout-automatic.page:40
 msgid "Keep in mind that users can potentially lose unsaved data if an idle session is automatically ended."
 msgstr ""
+"Zapamtite da korisnici potencijalno mogu izgubiti nespremljene podatke ako se sesija mirovanja automatski završi."
 
 #. (itstool) path: steps/title
 #: C/logout-automatic.page:45
 msgid "Set automatic logout for a mains powered machine"
-msgstr ""
+msgstr "Postavljanje automatske odjave za sustav s napajanjem"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:53
 msgid ""
 "Create a <code>local</code> database for machine-wide settings in <file>/etc/dconf/db/local.d/00-autologout</file>:"
 msgstr ""
+"Stvorite <code>local</code> bazu podataka za postavke na cijelom računalu u <file>/etc/dconf/db/local.d/00-"
+"autologout</file>:"
 
 #. (itstool) path: listing/code
 #: C/logout-automatic.page:56
@@ -3504,6 +3531,12 @@ msgid ""
 "# Set action after timeout to be logout when on mains power\n"
 "sleep-inactive-ac-type='logout'\n"
 msgstr ""
+"\n"
+"[org/gnome/settings-daemon/plugins/power]\n"
+"# Postavi vrijeme čekanja na 900 sekundi kada je sustav na napajanju\n"
+"sleep-inactive-ac-timeout=900\n"
+"# Postavi radnju nakon isteka vremena za odjavu kada je sustav na napajanju\n"
+"sleep-inactive-ac-type='logout'\n"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:66
@@ -3511,6 +3544,8 @@ msgid ""
 "Override the user's setting and prevent the user from changing it in <file>/etc/dconf/db/local.d/locks/autologout</"
 "file>:"
 msgstr ""
+"Zaobilaženje korisničke postavke i sprječavanje korisnika da je promijeni u <file>/etc/dconf/db/local.d/locks/"
+"autologout</file>:"
 
 #. (itstool) path: listing/code
 #: C/logout-automatic.page:69
@@ -3521,37 +3556,42 @@ msgid ""
 "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-timeout\n"
 "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type\n"
 msgstr ""
+"\n"
+"# Zaključavanje postavke automatske odjave\n"
+"/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-timeout\n"
+"/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type\n"
 
 #. (itstool) path: page/p
 #: C/logout-automatic.page:87
 msgid "The following GSettings keys are of interest:"
-msgstr ""
+msgstr "Sljedeći GSettings ključevi su od interesa:"
 
 #. (itstool) path: item/title
 #: C/logout-automatic.page:90
 msgid "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</code>"
-msgstr ""
+msgstr "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</code>"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:91
 msgid ""
 "The number of seconds that the computer needs to be inactive before it goes to sleep if it is running from AC power."
 msgstr ""
+"Broj sekundi za koliko računalo treba biti neaktivno prije nego što uđe u stanje mirovanja ako radi na napajanju."
 
 #. (itstool) path: item/title
 #: C/logout-automatic.page:95
 msgid "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</code>"
-msgstr ""
+msgstr "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</code>"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:96
 msgid "What should happen when the timeout has passed if the computer is running from AC power."
-msgstr ""
+msgstr "Što se treba dogoditi kada istekne vrijeme čekanja ako računalo radi na napajanju."
 
 #. (itstool) path: item/title
 #: C/logout-automatic.page:100
 msgid "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout</code>"
-msgstr ""
+msgstr "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout</code>"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:101
@@ -3559,21 +3599,24 @@ msgid ""
 "The number of seconds that the computer needs to be inactive before it goes to sleep if it is running from battery "
 "power."
 msgstr ""
+"Broj sekundi za koliko računalo treba biti neaktivno prije nego što uđe u stanje mirovanja ako radi na bateriji."
 
 #. (itstool) path: item/title
 #: C/logout-automatic.page:105
 msgid "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</code>"
-msgstr ""
+msgstr "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</code>"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:106
 msgid "What should happen when the timeout has passed if the computer is running from battery power."
-msgstr ""
+msgstr "Što se treba dogoditi kada istekne vrijeme čekanja ako računalo radi na bateriji."
 
 #. (itstool) path: page/p
 #: C/logout-automatic.page:111
 msgid "You can run <cmd>gsettings range</cmd> on a key for a list of values which you can use. For example:"
 msgstr ""
+"Možete pokrenuti <cmd>gsettings range</cmd> naredbu na ključu za prikaz vrijednosti koje možete koristiti. "
+"Primjerice:"
 
 #. (itstool) path: page/screen
 #: C/logout-automatic.page:114
@@ -3589,6 +3632,15 @@ msgid ""
 "'nothing' # does nothing\n"
 "'logout' # log out from the session"
 msgstr ""
+"$ <input>gsettings range org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type</input>\n"
+"enum\n"
+"'blank' # zatamnjuje zaslon\n"
+"'suspend' # suspendira računalo\n"
+"'shutdown' # pokreće standardnu proceduru isključivanja\n"
+"'hibernate' # hibernira računalo\n"
+"'interactive' # prikazuje skočni upit koji pita korisnika što učiniti\n"
+"'nothing' # ne čini ništa\n"
+"'logout' # odjava iz sesije"
 
 #. (itstool) path: info/desc
 #: C/mime-types-application.page:20
@@ -4588,17 +4640,17 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/session-custom.page:29
 msgid "Create a custom session by installing a desktop session file."
-msgstr ""
+msgstr "Stvaranje prilagođene sesije instaliranjem datoteke radne površine sesije."
 
 #. (itstool) path: page/title
 #: C/session-custom.page:32
 msgid "Create a custom session"
-msgstr ""
+msgstr "Stvaranje prilagođene sesiju"
 
 #. (itstool) path: page/p
 #: C/session-custom.page:43
 msgid "To create your own session with customized configuration, follow these steps:"
-msgstr ""
+msgstr "Za stvaranje vlastite sesije s prilagođenim podešavanjem, slijedite ove korake:"
 
 #. (itstool) path: item/p
 #: C/session-custom.page:47
@@ -4606,6 +4658,8 @@ msgid ""
 "Create a <file>.desktop</file> file in <file>/etc/X11/sessions/<var>new-session</var>.desktop</file>. Make sure "
 "that the file specifies the following entries:"
 msgstr ""
+"Stvorite <file>.desktop</file> datoteku u <file>/etc/X11/sessions/<var>new-session</var>.desktop</file>. Provjerite "
+"sadrži li datoteka sljedeće unose:"
 
 #. (itstool) path: item/code
 #: C/session-custom.page:50
@@ -4618,6 +4672,12 @@ msgid ""
 "Comment=<input>This is our custom session</input>\n"
 "Exec=<input>gnome-session --session=new-session</input>"
 msgstr ""
+"[Desktop Entry]\n"
+"Encoding=UTF-8\n"
+"Type=Application\n"
+"Name=<input>Custom session</input>\n"
+"Comment=<input>This is our custom session</input>\n"
+"Exec=<input>gnome-session --session=new-session</input>"
 
 #. (itstool) path: item/p
 #: C/session-custom.page:56
@@ -4625,12 +4685,16 @@ msgid ""
 "The <code>Exec</code> entry specifies the command, possibly with arguments, to execute. You can run the custom "
 "session with the <cmd>gnome-session --session=<var>new-session</var></cmd> command."
 msgstr ""
+"<code>Exec</code> unos navodi naredbu, po mogućnosti s argumentima, koju treba izvršiti. Prilagođenu sesiju možete "
+"pokrenuti pomoću naredbe <cmd>gnome-session --session=<var>new-session</var></cmd>."
 
 #. (itstool) path: item/p
 #: C/session-custom.page:60
 msgid ""
 "For more information on the parameters that you can use with <cmd>gnome-session</cmd>, see the <_:link-1/> man page."
 msgstr ""
+"Za više informacija o parametrima koje možete koristiti s <cmd>gnome-session</cmd>, pogledajte <_:link-1/> stranicu "
+"priručnika."
 
 #. (itstool) path: item/p
 #: C/session-custom.page:65
@@ -4638,6 +4702,8 @@ msgid ""
 "Create a custom session file in <file>/usr/share/gnome-session/sessions/<var>new-session</var>.session</file> where "
 "you can specify the name and required components for the session:"
 msgstr ""
+"Stvorite prilagođenu datoteku sesije u <file>/usr/share/gnome-session/sessions/<var>new-session</var>.session</"
+"file> gdje možete navesti naziv i potrebne komponente za sesiju:"
 
 #. (itstool) path: item/code
 #: C/session-custom.page:68
@@ -4647,6 +4713,9 @@ msgid ""
 "Name=<input>Custom Session</input>\n"
 "RequiredComponents=<input>gnome-shell-classic;gnome-settings-daemon;</input>"
 msgstr ""
+"[GNOME Session]\n"
+"Name=<input>Custom Session</input>\n"
+"RequiredComponents=<input>gnome-shell-classic;gnome-settings-daemon;</input>"
 
 #. (itstool) path: item/p
 #: C/session-custom.page:71
@@ -4654,6 +4723,8 @@ msgid ""
 "Note that any item that you specify in <code>RequiredComponents</code> needs to have its corresponding <file>."
 "desktop</file> file in <file>/usr/share/applications/</file>."
 msgstr ""
+"Zapamtite da svaka stavka koju navedete u <code>RequiredComponents</code> mora imati odgovarajuću <file>.desktop</"
+"file> datoteku u <file>/usr/share/applications/</file>."
 
 #. (itstool) path: page/p
 #: C/session-custom.page:77
@@ -4661,11 +4732,12 @@ msgid ""
 "After configuring the custom session files, the new session will be available in the session list on the GDM login "
 "screen."
 msgstr ""
+"Nakon podešavanja prilagođenih datoteka sesije, nova će sesija biti dostupna u popisu sesija na GDM zaslonu prijave."
 
 #. (itstool) path: section/title
 #: C/session-custom.page:82
 msgid "Known issues"
-msgstr ""
+msgstr "Poznati problemi"
 
 #. (itstool) path: section/p
 #: C/session-custom.page:83
@@ -4680,6 +4752,9 @@ msgid ""
 "    Xsession --- \"\" not found; falling back to default\n"
 "    session."
 msgstr ""
+"Xsession: unable to launch \"\"\n"
+"    Xsession --- \"\" not found; falling back to default\n"
+"    session."
 
 #. (itstool) path: section/p
 #: C/session-custom.page:89
@@ -4687,6 +4762,8 @@ msgid ""
 "Should this happen to you, follow these steps to change the <file>/etc/X11/Xsession.d/20x11-common_process-args</"
 "file> file:"
 msgstr ""
+"Ako vam se ovo dogodi, slijedite ove korake za promjenu <file>/etc/X11/Xsession.d/20x11-common_process-args</file> "
+"datoteke:"
 
 #. (itstool) path: item/p
 #: C/session-custom.page:92
@@ -4694,11 +4771,13 @@ msgid ""
 "Change <code>STARTUP_FULL_PATH=$(/usr/bin/which <input>\"$1\"</input>|| true)</code> to <code>STARTUP_FULL_PATH=$(/"
 "usr/bin/which <input>$1</input> || true)</code>"
 msgstr ""
+"Promijenite <code>STARTUP_FULL_PATH=$(/usr/bin/which <input>\"$1\"</input>|| true)</code> to "
+"<code>STARTUP_FULL_PATH=$(/usr/bin/which <input>$1</input> || true)</code>"
 
 #. (itstool) path: item/p
 #: C/session-custom.page:95
 msgid "Change <code>STARTUP=<input>\"$1\"</input></code> to <code>STARTUP=<input>$1</input></code>"
-msgstr ""
+msgstr "Promijenite <code>STARTUP=<input>\"$1\"</input></code> to <code>STARTUP=<input>$1</input></code>"
 
 #. (itstool) path: info/desc
 #: C/session-debug.page:25
