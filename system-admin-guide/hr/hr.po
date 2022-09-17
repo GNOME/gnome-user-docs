@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
 "POT-Creation-Date: 2022-09-13 11:29+0000\n"
-"PO-Revision-Date: 2022-09-16 22:57+0200\n"
+"PO-Revision-Date: 2022-09-17 02:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -112,16 +112,18 @@ msgid ""
 "To start an application automatically when the user logs in, you need to create a <file>.desktop</file> file for "
 "that application in the <file>/etc/xdg/autostart/</file> directory."
 msgstr ""
+"Kako bi automatski pokrenuli aplikaciju kada se korisnik prijavi, trebate stvoriti <file>.desktop</file> datoteku "
+"za tu aplikaciju u <file>/etc/xdg/autostart/</file> direktoriju."
 
 #. (itstool) path: steps/title
 #: C/autostart-applications.page:32
 msgid "To add an autostart application for all users:"
-msgstr ""
+msgstr "Za dodavanje automatskog pokretanja aplikacije za sve korisnike:"
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:33
 msgid "Create a <file>.desktop</file> file in the <file>/etc/xdg/autostart/</file> directory:"
-msgstr ""
+msgstr "Stvorite <file>.desktop</file> datoteku u <file>/etc/xdg/autostart/</file> direktoriju:"
 
 #. (itstool) path: item/code
 #: C/autostart-applications.page:35
@@ -134,21 +136,27 @@ msgid ""
 "OnlyShowIn=GNOME;\n"
 "AutostartCondition=<var>GSettings org.gnome.desktop.background show-desktop-icons</var>"
 msgstr ""
+"[Desktop Entry]\n"
+"Type=Application\n"
+"Name=<var>Files</var>\n"
+"Exec=<var>nautilus -n</var>\n"
+"OnlyShowIn=GNOME;\n"
+"AutostartCondition=<var>GSettings org.gnome.desktop.background show-desktop-icons</var>"
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:42
 msgid "Replace <var>Files</var> with the name of the application."
-msgstr ""
+msgstr "Zamijenite <var>Files</var> nazivom aplikacije."
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:43
 msgid "Replace <var>nautilus -n</var> with the command you wish to use to run the application."
-msgstr ""
+msgstr "Zamijenite <var>nautilus -n</var> naredbom koju želite koristiti za pokretanje aplikacije."
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:45
 msgid "You can use the <code>AutostartCondition</code> key to check for a value of a GSettings key."
-msgstr ""
+msgstr "Možete koristiti <code>AutostartCondition</code> ključ za provjeru vrijednosti GSettings ključa."
 
 #. (itstool) path: item/p
 #: C/autostart-applications.page:47
@@ -157,6 +165,9 @@ msgid ""
 "the running session, the session manager starts or stops the application, depending on what the previous value for "
 "the key was."
 msgstr ""
+"Upravitelj sesije automatski pokreće aplikaciju ako je vrijednost ključa istina. Ako se vrijednost ključa promijeni "
+"u sesiji koja se izvodi, upravitelj sesije pokreće ili zaustavlja aplikaciju, ovisno o tome koja je bila prijašnja "
+"vrijednost ključa."
 
 #. (itstool) path: credit/name
 #: C/backgrounds-extra.page:10 C/desktop-background.page:16 C/desktop-shield.page:11 C/fonts.page:12
@@ -980,12 +991,12 @@ msgstr "Nadopunite bazu podataka sustava:"
 #. (itstool) path: screen/output
 #: C/dconf-snippets.xml:41
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #. (itstool) path: screen/input
 #: C/dconf-snippets.xml:41
 msgid "dconf update"
-msgstr ""
+msgstr "dconf update"
 
 #. (itstool) path: item/p
 #: C/dconf-snippets.xml:44
@@ -998,6 +1009,8 @@ msgid ""
 "All prose and instructions are up to par. Extra info needs to be provided on picture options, per comment below. --"
 "shaunm"
 msgstr ""
+"Sve proze i upute su na nivou. Potrebno je navesti dodatne informacije o mogućnostima slike, po komentaru ispod. --"
+"shaunm"
 
 #. (itstool) path: credit/name
 #: C/desktop-background.page:31 C/login-banner.page:32 C/login-fingerprint.page:17 C/login-userlist-disable.page:17
@@ -1459,12 +1472,12 @@ msgstr "U slučaju da se pozadina ne nadopuni, pokušajte ponovno pokrenuti <sys
 #. (itstool) path: info/desc
 #: C/extensions-enable.page:24
 msgid "Enable GNOME Shell extensions for all users."
-msgstr ""
+msgstr "Omogućavanje proširenja GNOME ljuske za sve korisnike."
 
 #. (itstool) path: page/title
 #: C/extensions-enable.page:27
 msgid "Enable machine-wide extensions"
-msgstr ""
+msgstr "Omogućavanje proširenja na cijelom sustavu"
 
 #. (itstool) path: page/p
 #: C/extensions-enable.page:29
@@ -1472,6 +1485,8 @@ msgid ""
 "To make extensions available to all users on the system, install them in the <file>/usr/share/gnome-shell/"
 "extensions</file> directory. Note that newly-installed machine-wide extensions are disabled by default."
 msgstr ""
+"Kako bi proširenja bila dostupna svim korisnicima sustava, instalirajte ih u direktorij <file>/usr/share/gnome-"
+"shell/extensions</file>. Zapamtite da su novoinstalirana proširenja za cijeli sustav onemogućena po zadanome."
 
 #. (itstool) path: page/p
 #: C/extensions-enable.page:33
@@ -1480,11 +1495,14 @@ msgid ""
 "extensions. However, there is currently no way to enable additional extensions for users who have already logged "
 "in. This does not apply for existing users who have installed and enabled their own GNOME extensions."
 msgstr ""
+"Morate postaviti <code>org.gnome.shell.enabled-extensions</code> ključ kako bi postavili zadano omogućena "
+"proširenja. Ipak, još ne postoji način za omogućavanje dodatnih proširenja trenutno prijavljenih korisnika. Ovo se "
+"ne odnosi na postojeće korisnike koji su instalirali i omogućili vlastita GNOME proširenja."
 
 #. (itstool) path: steps/title
 #: C/extensions-enable.page:40
 msgid "Setting the org.gnome.shell.enabled-extensions key"
-msgstr ""
+msgstr "Postavljanje org.gnome.shell.enabled-extensions ključa"
 
 #. (itstool) path: item/p
 #: C/extensions-enable.page:42 C/extensions-lockdown.page:41
@@ -1499,6 +1517,9 @@ msgid ""
 "user-db:user\n"
 "system-db:local\n"
 msgstr ""
+"\n"
+"user-db:user\n"
+"system-db:local\n"
 
 #. (itstool) path: item/p
 #: C/extensions-enable.page:52 C/extensions-lockdown.page:51
@@ -1517,6 +1538,10 @@ msgid ""
 "# List all extensions that you want to have enabled for all users\n"
 "enabled-extensions=['<input>myextension1@myname.example.com</input>', '<input>myextension2@myname.example.com</input>']\n"
 msgstr ""
+"\n"
+"[org/gnome/shell]\n"
+"# Navedi sva proširenja koje želite omogućiti za sve korisnike\n"
+"enabled-extensions=['<input>mojeproširenje1@mojeime.primjer.com</input>', '<input>mojeproširenje2@mojeime.primjer.com</input>']\n"
 
 #. (itstool) path: item/p
 #: C/extensions-enable.page:61 C/extensions-lockdown.page:62
@@ -1625,7 +1650,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/extensions.page:20
 msgid "GNOME Shell extensions allow customizing the default GNOME Shell interface."
-msgstr ""
+msgstr "Proširenja GNOME ljuske omogućuju prilagodbu zadanog sučelja GNOME ljuske."
 
 #. (itstool) path: page/title
 #: C/extensions.page:24
@@ -1638,6 +1663,8 @@ msgid ""
 "GNOME Shell extensions allow customizing the default GNOME Shell interface and its parts, such as window management "
 "and application launching."
 msgstr ""
+"Proširenja GNOME ljuske omogućuju prilagodbu zadanog sučelja GNOME ljuske i njegovih dijelova, poput upravljanja "
+"prozorima i pokretanja aplikacija."
 
 #. (itstool) path: page/p
 #: C/extensions.page:29
@@ -1647,6 +1674,10 @@ msgid ""
 "share/gnome-shell/extensions/&lt;uuid&gt;</file>, or machine-wide in <file>/usr/share/gnome-shell/extensions/&lt;"
 "uuid&gt;</file>."
 msgstr ""
+"Svako proširenje GNOME ljuske identificirano je jedinstvenim identifikatorom, uuid. uuid se još koristi za naziv "
+"direktorija u koji je instalirano proširenje. Proširenje možete instalirati po pojedinom korisniku u <file>~/.local/"
+"share/gnome-shell/extensions/&lt;uuid&gt;</file> ili za cijeli sustav u <file>/usr/share/gnome-shell/extensions/&lt;"
+"uuid&gt;</file>."
 
 #. (itstool) path: page/p
 #: C/extensions.page:36
@@ -1654,11 +1685,13 @@ msgid ""
 "To view installed extensions, you can use <app>Looking Glass</app>, GNOME Shell’s integrated debugger and inspector "
 "tool."
 msgstr ""
+"Za prikaz instaliranih proširenja možete koristiti <app>Looking Glass</app>, integrirani alat otklanjanja grešaka "
+"GNOME ljuske."
 
 #. (itstool) path: steps/title
 #: C/extensions.page:40
 msgid "View installed extensions"
-msgstr ""
+msgstr "Prikaz instaliranih proširenja"
 
 #. (itstool) path: item/p
 #: C/extensions.page:42
@@ -1666,12 +1699,16 @@ msgid ""
 "Press <keyseq type=\"combo\"><key>Alt</key><key>F2</key></keyseq>, type in <em>lg</em> and press <key>Enter</key> "
 "to open <app>Looking Glass</app>."
 msgstr ""
+"Pritisnite <keyseq type=\"combo\"><key>Alt</key><key>F2</key></keyseq> tipke, upišite <em>lg</em> i pritisnite "
+"<key>Enter</key> tipku za otvaranje <app>Looking Glass</app> alata."
 
 #. (itstool) path: item/p
 #: C/extensions.page:47
 msgid ""
 "On the top bar of <app>Looking Glass</app>, click <gui>Extensions</gui> to open the list of installed extensions."
 msgstr ""
+"Na gornjoj traci <app>Looking Glass</app> alata kliknite na <gui>Extensions</gui> za otvaranje popisa instaliranih "
+"proširenja."
 
 #. (itstool) path: info/desc
 #: C/fonts.page:32
@@ -3645,13 +3682,13 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/mime-types-application.page:20
 msgid "Customize which application opens a specific MIME type."
-msgstr ""
+msgstr "Prilagodba koja aplikacija otvara određenu MIME vrstu."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/mime-types-application.page:23 C/mime-types-application.page:44
 msgid "Override the default registered application for all users"
-msgstr ""
+msgstr "Zaobilaženje zadane registrirane aplikacije za sve korisnike"
 
 #. (itstool) path: page/p
 #: C/mime-types-application.page:24 C/mime-types-application-user.page:25
@@ -3660,6 +3697,9 @@ msgid ""
 "files specify which application is registered to open specific MIME types by default. These files are provided by "
 "the distribution."
 msgstr ""
+"Datoteke <file>/usr/share/applications/mimeapps.list</file> i <file>/usr/share/applications/gnome-mimeapps.list</"
+"file> određuju koja je aplikacija registrirana za otvaranje određenih MIME vrsta po zadanome. Ove datoteke "
+"omogućuje distribucija."
 
 #. (itstool) path: page/p
 #: C/mime-types-application.page:30
@@ -3668,6 +3708,9 @@ msgid ""
 "file> or <file>/etc/xdg/gnome-mimeapps.list</file> file with a list of MIME types for which you want to override "
 "the default registered application."
 msgstr ""
+"Kako bi zaobišli zadane postavke sustava za sve korisnike u sustavu, morate stvoriti <file>/etc/xdg/mimeapps.list</"
+"file> ili <file>/etc/xdg/gnome-mimeapps.list</file> datoteku s popisom MIME vrsta za koje želite zaobići zadanu "
+"registriranu aplikaciju."
 
 #. (itstool) path: note/p
 #: C/mime-types-application.page:36
@@ -3676,6 +3719,9 @@ msgid ""
 "Additionally, <file>/etc/xdg/gnome-mimeapps.list</file> takes precedence over <file>/etc/xdg/mimeapps.list</file>, "
 "but can be overridden by the user's configuration in <file>~/.config/mimeapps.list</file>."
 msgstr ""
+"Datoteke koje se nalaze u <file>/etc/xdg/</file> imaju prednost nad datotekama koje se nalaze u <file>/usr/share/"
+"applications/</file>. Dodatno, <file>/etc/xdg/gnome-mimeapps.list</file> ima prednost nad <file>/etc/xdg/mimeapps."
+"list</file>, ali ga može zaobići korisničko podešavanje u <file> ~/.config/mimeapps.list</file>."
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:46 C/mime-types-application-user.page:39
@@ -3685,6 +3731,9 @@ msgid ""
 "file specifies the default registered application for the <code>text/html</code> and <code>application/xhtml+xml</"
 "code> MIME types:"
 msgstr ""
+"Pogledajte <file>/usr/share/applications/mimeapps.list</file> datoteku kako bi odredili MIME vrste za koje želite "
+"promijeniti zadanu registriranu aplikaciju. Primjerice, sljedeći primjer datoteke <file>mimeapps.list</file> "
+"određuje zadanu registriranu aplikaciju za <code>text/html</code> i <code>application/xhtml+xml</code> MIME vrste:"
 
 #. (itstool) path: item/code
 #: C/mime-types-application.page:54 C/mime-types-application-user.page:47
@@ -3694,6 +3743,9 @@ msgid ""
 "text/html=epiphany.desktop\n"
 "application/xhtml+xml=epiphany.desktop"
 msgstr ""
+"[Default Applications]\n"
+"text/html=epiphany.desktop\n"
+"application/xhtml+xml=epiphany.desktop"
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:57
@@ -3702,6 +3754,9 @@ msgid ""
 "(<file>epiphany.desktop</file>). The default location for other applications’ <file>.desktop</file> files is <file>/"
 "usr/share/applications/</file>."
 msgstr ""
+"Zadana aplikacija (<app>Epiphany</app>) definirana je određivanjem odgovarajuće <file>.desktop</file> datoteke "
+"(<file>epiphany.desktop</file>). Zadana lokacija za <file>.desktop</file> datoteke ostalih aplikacija je <file>/usr/"
+"share/applications/</file>."
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:66
@@ -3709,6 +3764,8 @@ msgid ""
 "Create the <file>/etc/xdg/mimeapps.list</file> file. In the file, specify the MIME types and their corresponding "
 "default registered applications:"
 msgstr ""
+"Stvorite <file>/etc/xdg/mimeapps.list</file> datoteku. U datoteci navedite MIME vrste i njihove odgovarajuće zadane "
+"registrirane aplikacije:"
 
 #. (itstool) path: item/code
 #: C/mime-types-application.page:71 C/mime-types-application-user.page:66
@@ -3722,6 +3779,13 @@ msgid ""
 "text/html=<var>myapplication1.desktop</var>;\n"
 "application/xhtml+xml=<var>myapplication2.desktop</var>;"
 msgstr ""
+"[Default Applications]\n"
+"text/html=<var>mojaaplikacija1.desktop</var>\n"
+"application/xhtml+xml=<var>mojaaplikacija2.desktop</var>\n"
+"\n"
+"[Added Associations]\n"
+"text/html=<var>mojaaplikacija1.desktop</var>;\n"
+"application/xhtml+xml=<var>mojaplikacija2.desktop</var>;"
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:78 C/mime-types-application-user.page:73
@@ -3730,6 +3794,9 @@ msgid ""
 "desktop</code>, and the default registered application for the <code>application/xhtml+xml</code> MIME type to "
 "<code>myapplication2.desktop</code>."
 msgstr ""
+"Ovo postavlja zadanu registriranu aplikaciju za <code>text/html</code> MIME vrstu na <code>mojaaplikacij1.desktop</"
+"code>, i zadanu registriranu aplikaciju za <code>application/xhtml+xml</code > MIME vrstu na <code>mojaaplikacija2."
+"desktop</code>."
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:84
@@ -3737,6 +3804,8 @@ msgid ""
 "For these settings to function properly, ensure that both the <file>myapplication1.desktop</file> and "
 "<file>myapplication2.desktop</file> files are placed in the <file>/usr/share/applications/</file> directory."
 msgstr ""
+"Kako bi ove postavke ispravno funkcionirale, provjerite jesu li datoteke <file>mojaplikacija1.desktop</file> i "
+"<file>mojaplikacija2.desktop</file> smještene u <file>/usr/share/applications/</file > direktorij."
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:91 C/mime-types-application-user.page:89
@@ -3744,6 +3813,7 @@ msgid ""
 "You can use the <cmd>gio mime</cmd> command to verify that the default registered application has been set "
 "correctly:"
 msgstr ""
+"Možete koristiti <cmd>gio mime</cmd> naredbu za provjeriu je li zadana registrirana aplikacija ispravno postavljena:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-application.page:95 C/mime-types-application-user.page:93
@@ -3758,17 +3828,25 @@ msgid ""
 "\tmyapplication1.desktop\n"
 "\tepiphany.desktop"
 msgstr ""
+"<output>$ </output><input>gio mime text/html</input>\n"
+"Default application for “text/html”: mojaaplikacija1.desktop\n"
+"Registered applications:\n"
+"\tmojaaplikacija1.desktop\n"
+"\tepiphany.desktop\n"
+"Recommended applications:\n"
+"\tmojaaplikacija1.desktop\n"
+"\tepiphany.desktop"
 
 #. (itstool) path: info/desc
 #: C/mime-types-application-user.page:19
 msgid "Customize per user which application opens a specific MIME type."
-msgstr ""
+msgstr "Prilagodba koja aplikacija otvara određenu MIME vrstu za pojedinog korisnika."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/mime-types-application-user.page:23 C/mime-types-application-user.page:37
 msgid "Override the default registered application for individual users"
-msgstr ""
+msgstr "Zaobilaženje zadane registrirane aplikacije za pojedine korisnike"
 
 #. (itstool) path: page/p
 #: C/mime-types-application-user.page:31
@@ -3776,6 +3854,8 @@ msgid ""
 "To override the system defaults for individual users, you need to create a <file>~/.config/mimeapps.list</file> "
 "file with a list of MIME types for which you want to override the default registered application."
 msgstr ""
+"Kako bi zaobišli zadane postavke sustava za pojedine korisnike, morate stvoriti datoteku <file>~/.config/mimeapps."
+"list</file> s popisom MIME vrsta za koje želite zaobići zadanu registriranu aplikaciju."
 
 #. (itstool) path: item/p
 #: C/mime-types-application-user.page:50
@@ -3785,6 +3865,10 @@ msgid ""
 "<file>/usr/share/applications/</file>. Individual users’ <file>.desktop</file> files can be stored in <file>~/."
 "local/share/applications/</file>."
 msgstr ""
+"Zadana aplikacija (<app>Epiphany</app>) definirana je određivanjem odgovarajuće <file>.desktop</file> datoteke "
+"(<file>epiphany.desktop</file>). Zadana lokacija sustava za <file>.desktop</file> datoteke ostalih aplikacija je "
+"<file>/usr/share/applications/</file>. <file>.desktop</file> datoteke pojedinih korisnika mogu se pohraniti u "
+"<file>~/.local/share/applications/</file>."
 
 #. (itstool) path: item/p
 #: C/mime-types-application-user.page:61
@@ -3792,6 +3876,8 @@ msgid ""
 "Create the <file>~/.config/mimeapps.list</file> file. In the file, specify the MIME types and their corresponding "
 "default registered applications:"
 msgstr ""
+"Stvorite <file>~/.config/mimeapps.list</file> datoteku. U datoteci navedite MIME vrste i njihove odgovarajuće "
+"zadane registrirane aplikacije:"
 
 #. (itstool) path: item/p
 #: C/mime-types-application-user.page:80
@@ -3800,16 +3886,19 @@ msgid ""
 "<file>myapplication2.desktop</file> files are placed in the <file>/usr/share/applications/</file> directory. "
 "Individual users’ <file>.desktop</file> files can be stored in <file>~/.local/share/applications/</file>."
 msgstr ""
+"Kako bi ove postavke ispravno funkcionirale, provjerite jesu li <file>myapplication1.desktop</file> i "
+"<file>myapplication2.desktop</file> datoteke smještene u <file>/usr/share/applications/</file > direktorij. <file>."
+"desktop</file> datoteke pojedinih korisnika mogu se pohraniti u <file>~/.local/share/applications/</file>."
 
 #. (itstool) path: info/desc
 #: C/mime-types-custom.page:19
 msgid "Create a MIME type specification and register a default application."
-msgstr ""
+msgstr "Stvaranje specifikacija MIME vrste i registracija zadane aplikacije."
 
 #. (itstool) path: page/title
 #: C/mime-types-custom.page:23
 msgid "Add a custom MIME type for all users"
-msgstr ""
+msgstr "Dodavanje prilagođene MIME vrste za sve korisnike"
 
 #. (itstool) path: page/p
 #: C/mime-types-custom.page:24
@@ -3818,16 +3907,19 @@ msgid ""
 "need to create a new MIME type specification file in the <file>/usr/share/mime/packages/</file> directory and a "
 "<file>.desktop</file> file in the <file>/usr/share/applications/</file> directory."
 msgstr ""
+"Kako bi dodali prilagođenu MIME vrstu za sve korisnike u sustavu i registrirali zadanu aplikaciju za tu MIME vrstu, "
+"morate stvoriti novu datoteku specifikacije MIME vrste u <file>/usr/share/mime/packages/</file> direktoriju i "
+"<file>.desktop</file> datoteku u direktoriju <file>/usr/share/applications/</file>."
 
 #. (itstool) path: steps/title
 #: C/mime-types-custom.page:32
 msgid "Add a custom <sys>application/x-newtype</sys> MIME Type for All Users"
-msgstr ""
+msgstr "Dodavanje prilagođene <sys>aplikacija/x-novavrsta</sys> MIME vrste za sve korisnike"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:35
 msgid "Create the <file>/usr/share/mime/packages/application-x-newtype.xml</file> file:"
-msgstr ""
+msgstr "Stvorite <file>/usr/share/mime/packages/applikacija-x-novavrsta.xml</file> datoteku:"
 
 #. (itstool) path: item/code
 #: C/mime-types-custom.page:39 C/mime-types-custom-user.page:38
@@ -3841,6 +3933,13 @@ msgid ""
 "  &lt;/mime-type&gt;\n"
 "&lt;/mime-info&gt;"
 msgstr ""
+"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n"
+"&lt;mime-info xmlns=\"http://www.freedesktop.org/standards/shared-mime-info\"&gt;\n"
+"  &lt;mime-type type=\"aplikacija/x-novavrsta\"&gt;\n"
+"    &lt;comment&gt;nova mime vrsta&lt;/comment&gt;\n"
+"    &lt;glob pattern=\"*.xyz\"/&gt;\n"
+"  &lt;/mime-type&gt;\n"
+"&lt;/mime-info&gt;"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:46 C/mime-types-custom-user.page:45
@@ -3848,6 +3947,8 @@ msgid ""
 "The sample <file>application-x-newtype.xml</file> file above defines a new MIME type <sys>application/x-newtype</"
 "sys> and assigns file names with the <file>.xyz</file> extension to that MIME type."
 msgstr ""
+"Primjer <file>aplikacija-x-novavrsta.xml</file> datoteke iznad definira novu MIME vrstu <sys>aplikacija/x-"
+"novavrsta</sys> i dodjeljuje nazive datoteka s <file>.xyz</file> datotečnim proširenjem za MIME vrstu."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:54
@@ -3855,6 +3956,8 @@ msgid ""
 "Create a new <file>.desktop</file> file named, for example, <file>myapplication1.desktop</file>, and place it in "
 "the <file>/usr/share/applications/</file> directory:"
 msgstr ""
+"Stvorite novu <file>.desktop</file> datoteku pod nazivom, primjerice, <file>mojaplikacija1.desktop</file> i "
+"smjestite je u direktorij <file>/usr/share/applications/</file>:"
 
 #. (itstool) path: item/code
 #: C/mime-types-custom.page:59 C/mime-types-custom-user.page:58
@@ -3866,6 +3969,11 @@ msgid ""
 "Name=<var>My Application 1</var>\n"
 "Exec=<var>myapplication1</var>"
 msgstr ""
+"[Desktop Entry]\n"
+"Type=Aplikacija\n"
+"MimeType=aplikacija/x-novavrsta\n"
+"Name=<var>Moja aplikacija 1</var>\n"
+"Exec=<var>mojaaplikacija1</var>"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:64
@@ -3873,11 +3981,13 @@ msgid ""
 "The sample <file>myapplication1.desktop</file> file above associates the <sys>application/x-newtype</sys> MIME type "
 "with an application named <app>My Application 1</app>, which is run by a command <cmd>myapplication1</cmd>."
 msgstr ""
+"Primjer <file>mojaaplikacija1.desktop</file> datoteka iznad pridružuje <sys>aplikacija/x-novavrsta</sys> MIME vrstu "
+"s aplikacijom pod nazivom <app>Moja aplikacija 1</app>, koju pokreće naredba <cmd>mojaaplikacija1</cmd>."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:72
 msgid "As root, update the MIME database for your changes to take effect:"
-msgstr ""
+msgstr "Kao korijenski korisnik, nadopunite MIME bazu podataka kako bi se vaše promjene primijenile:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:73
@@ -3886,11 +3996,13 @@ msgid ""
 "<output># </output><input>update-mime-database /usr/share/mime</input>\n"
 "        "
 msgstr ""
+"<output># </output><input>update-mime-database /usr/share/mime</input>\n"
+"        "
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:77
 msgid "As root, update the application database:"
-msgstr ""
+msgstr "Kao korijenski korisnik, nadopunite bazu podataka aplikacije:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:78
@@ -3899,6 +4011,8 @@ msgid ""
 "<output># </output><input>update-desktop-database /usr/share/applications</input>\n"
 "        "
 msgstr ""
+"<output># </output><input>update-desktop-database /usr/share/applications</input>\n"
+"        "
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:82 C/mime-types-custom-user.page:81
@@ -3906,17 +4020,19 @@ msgid ""
 "To verify that you have successfully associated <file>*.xyz</file> files with the <sys>application/x-newtype</sys> "
 "MIME type, first create an empty file, for example <file>test.xyz</file>:"
 msgstr ""
+"Kako bi potvrdili da ste uspješno pridružili <file>*.xyz</file> datoteke s MIME vrstom <sys>aplikacija/x-novavrsta</"
+"sys>, prvo stvorite praznu datoteku, primjerice <file>test.xyz</file>:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:88 C/mime-types-custom-user.page:87
 #, no-wrap
 msgid "<output>$ </output><input>touch test.xyz</input>"
-msgstr ""
+msgstr "<output>$ </output><input>touch test.xyz</input>"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:89 C/mime-types-custom-user.page:88
 msgid "Then run the <cmd>gio info</cmd> command:"
-msgstr ""
+msgstr "Zatim pokrenite <cmd>gio info</cmd> naredbu:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:92 C/mime-types-custom-user.page:91
@@ -3925,6 +4041,8 @@ msgid ""
 "<output>$ </output><input>gio info test.xyz | grep \"standard::content-type\"</input>\n"
 "  standard::content-type: application/x-newtype"
 msgstr ""
+"<output>$ </output><input>gio info test.xyz | grep \"standard::content-type\"</input>\n"
+"  standard::content-type: aplikacija/x-novavrsta"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:96 C/mime-types-custom-user.page:95
@@ -3932,6 +4050,8 @@ msgid ""
 "To verify that <file>myapplication1.desktop</file> has been correctly set as the default registered application for "
 "the <sys>application/x-newtype</sys> MIME type, run the <cmd>gio mime</cmd> command:"
 msgstr ""
+"Kako bi provjerili je li <file>mojaplikacija1.desktop</file> ispravno postavljena kao zadana registrirana "
+"aplikacija za <sys>aplikacija/x-novavrsta</sys> MIME vrstu, pokrenite <cmd>gio mime</cmd> naredba:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom.page:102 C/mime-types-custom-user.page:101
@@ -3944,16 +4064,22 @@ msgid ""
 "Recommended applications:\n"
 "\tmyapplication1.desktop"
 msgstr ""
+"<output>$ </output><input>gio mime aplikacija/x-novavrsta</input>\n"
+"Default application for “aplikacija/x-novavrsta”: mojaplikacija1.desktop\n"
+"Registered applications:\n"
+"\tmojaplikacija1.desktop\n"
+"Recommended applications:\n"
+"\tmojaplikacija1.desktop"
 
 #. (itstool) path: info/desc
 #: C/mime-types-custom-user.page:18
 msgid "Create a user's MIME type specification and register a default application."
-msgstr ""
+msgstr "Stvaranje specifikacija MIME vrste za korisnika i registracija zadane aplikacije."
 
 #. (itstool) path: page/title
 #: C/mime-types-custom-user.page:22
 msgid "Add a custom MIME type for individual users"
-msgstr ""
+msgstr "Dodavanje prilagođene MIME vrste za pojedine korisnike"
 
 #. (itstool) path: page/p
 #: C/mime-types-custom-user.page:23
@@ -3962,16 +4088,19 @@ msgid ""
 "create a new MIME type specification file in the <file>~/.local/share/mime/packages/</file> directory and a <file>."
 "desktop</file> file in the <file>~/.local/share/applications/</file> directory."
 msgstr ""
+"Kako bi dodali prilagođenu MIME vrstu za pojedine korisnike i registrirali zadanu aplikaciju za tu MIME vrstu, "
+"morate stvoriti novu datoteku specifikacije MIME vrste u <file>~/.local/share/mime/packages/</file> direktoriju i "
+"<file>.desktop</file> datoteku u <file>~/.local/share/applications/</file> direktoriju."
 
 #. (itstool) path: steps/title
 #: C/mime-types-custom-user.page:31
 msgid "Add a custom <code>application/x-newtype</code> MIME type for individual users"
-msgstr ""
+msgstr "Dodavanje prilagođene <code>aplikacija/x-novavrsta</code> MIME vrste za pojedine korisnike"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:34
 msgid "Create the <file>~/.local/share/mime/packages/application-x-newtype.xml</file> file:"
-msgstr ""
+msgstr "Stvorite <file>~/.local/share/mime/packages/applikacija-x-novavrsta.xml</file> datoteku:"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:53
@@ -3979,6 +4108,8 @@ msgid ""
 "Create a new <file>.desktop</file> file named, for example, <file>myapplication1.desktop</file>, and place it in "
 "the <file>~/.local/share/applications/</file> directory:"
 msgstr ""
+"Stvorite novu <file>.desktop</file> datoteku pod nazivom, primjerice, <file>mojaplikacija1.desktop</file> i "
+"smjestite je u direktorij <file>~/.local/share/applications/</file>:"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:63
@@ -3986,11 +4117,13 @@ msgid ""
 "The sample <file>myapplication1.desktop</file> file above associates the <code>application/x-newtype</code> MIME "
 "type with an application named <app>My Application 1</app>, which is run by a command <cmd>myapplication1</cmd>."
 msgstr ""
+"Primjer <file>mojaaplikacija1.desktop</file> datoteka iznad pridružuje <sys>aplikacija/x-novavrsta</sys> MIME vrstu "
+"s aplikacijom pod nazivom <app>Moja aplikacija 1</app>, koju pokreće naredba <cmd>mojaaplikacija1</cmd>."
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:71
 msgid "Update the MIME database for your changes to take effect:"
-msgstr ""
+msgstr "Nadopunite MIME bazu podataka kako bi se vaše promjene primijenile:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom-user.page:72
@@ -3999,11 +4132,13 @@ msgid ""
 "<output>$ </output><input>update-mime-database ~/.local/share/mime</input>\n"
 "        "
 msgstr ""
+"<output># </output><input>update-mime-database ~/.local/share/mime</input>\n"
+"        "
 
 #. (itstool) path: item/p
 #: C/mime-types-custom-user.page:76
 msgid "Update the application database:"
-msgstr ""
+msgstr "Nadopunite bazu podataka aplikacije:"
 
 #. (itstool) path: item/screen
 #: C/mime-types-custom-user.page:77
@@ -4012,16 +4147,18 @@ msgid ""
 "<output>$ </output><input>update-desktop-database ~/.local/share/applications</input>\n"
 "        "
 msgstr ""
+"<output># </output><input>update-desktop-database ~/.local/share/applications</input>\n"
+"        "
 
 #. (itstool) path: info/desc
 #: C/mime-types.page:20
 msgid "MIME types are used to identify the format of a file."
-msgstr ""
+msgstr "MIME vrste se koriste za identifikaciju formata datoteke."
 
 #. (itstool) path: page/title
 #: C/mime-types.page:23
 msgid "What are MIME types?"
-msgstr ""
+msgstr "Što su MIME vrste?"
 
 #. (itstool) path: page/p
 #: C/mime-types.page:24
@@ -4029,16 +4166,18 @@ msgid ""
 "In GNOME, MIME (<em>Multipurpose Internet Mail Extension</em>) types are used to identify the format of a file. The "
 "GNOME Desktop uses MIME types to:"
 msgstr ""
+"U GNOMU, MIME (<em>Višenamjensko proširenje internetske pošte</em>) vrste koriste se za identifikaciju formata "
+"datoteke. GNOME radna površina koristi MIME vrste za:"
 
 #. (itstool) path: item/p
 #: C/mime-types.page:31
 msgid "Determine which application should open a specific file format by default."
-msgstr ""
+msgstr "Određivanje koja aplikacija treba otvoriti određeni format datoteke po zadanome."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:37
 msgid "Register other applications that can also open a specific file format."
-msgstr ""
+msgstr "Registraciju drugih aplikacija koje isto mogu otvoriti određeni format datoteke."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:42
@@ -4046,6 +4185,7 @@ msgid ""
 "Provide a string describing the type of a file, for example, in a file properties dialog of the <app>Files</app> "
 "application."
 msgstr ""
+"Upis izraza koji opisuje vrstu datoteke, primjerice, u dijalogu svojstava datoteke aplikacije <app>Datoteke</app>."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:49
@@ -4053,11 +4193,13 @@ msgid ""
 "Provide an icon representing a specific file format, for example, in a file properties dialog of the <app>Files</"
 "app> application."
 msgstr ""
+"Određivanje ikone koja predstavlja određeni format datoteke, primjerice, u dijalogu svojstava datoteke aplikacije "
+"<app>Datoteke</app>."
 
 #. (itstool) path: page/p
 #: C/mime-types.page:56
 msgid "MIME type names follow a given format:"
-msgstr ""
+msgstr "Nazivi MIME vrsta slijede zadani format:"
 
 #. (itstool) path: page/screen
 #: C/mime-types.page:59
@@ -4066,6 +4208,8 @@ msgid ""
 "\n"
 "<var>media-type</var>/<var>subtype-identifier</var>\n"
 msgstr ""
+"\n"
+"<var>media-type</var>/<var>subtype-identifier</var>\n"
 
 #. (itstool) path: page/p
 #: C/mime-types.page:62
@@ -4073,16 +4217,18 @@ msgid ""
 "<sys>image/jpeg</sys> is an example of a MIME type where <sys>image</sys> is the media type, and <sys>jpeg</sys> is "
 "the subtype identifier."
 msgstr ""
+"<sys>image/jpeg</sys> je primjer MIME vrste gdje je <sys>image</sys> vrsta medija, a <sys>jpeg</sys> identifikator "
+"podvrste."
 
 #. (itstool) path: page/p
 #: C/mime-types.page:67
 msgid "GNOME follows the <em>freedesktop.org Shared MIME Info</em> specification to determine:"
-msgstr ""
+msgstr "GNOME slijedi <em>freedesktop.org Shared MIME Info</em> specifikaciju kako bi odredio:"
 
 #. (itstool) path: item/p
 #: C/mime-types.page:73
 msgid "The machine-wide and user-specific location to store all MIME type specification files."
-msgstr ""
+msgstr "Lokacije cijelog sustava i specifičnog korisnika za pohranu svih datoteka specifikacije MIME vrste."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:79
@@ -4090,16 +4236,18 @@ msgid ""
 "How to register a MIME type so that the desktop environment knows which applications can be used to open a specific "
 "file format."
 msgstr ""
+"Kako registrirati MIME vrstu tako da okruženje radne površine zna koje se aplikacije mogu koristiti za otvaranje "
+"određenog formata datoteke."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:85
 msgid "How the user can change which applications should open what file formats."
-msgstr ""
+msgstr "Kako korisnik može promijeniti koje aplikacije trebaju otvarati koje formate datoteka."
 
 #. (itstool) path: section/title
 #: C/mime-types.page:91
 msgid "What is the MIME database?"
-msgstr ""
+msgstr "Što je MIME baza podataka?"
 
 #. (itstool) path: section/p
 #: C/mime-types.page:92
@@ -4107,6 +4255,8 @@ msgid ""
 "The MIME database is a collection of all MIME type specification files that GNOME uses to store information about "
 "known MIME types."
 msgstr ""
+"MIME baza podataka je zbirka svih specifikacijskih datoteka MIME vrste koje GNOME koristi za pohranjivanje "
+"informacija o poznatim MIME vrstama."
 
 #. (itstool) path: section/p
 #: C/mime-types.page:96
@@ -4117,6 +4267,11 @@ msgid ""
 "information about the standard MIME types available on the system by default. That file is provided by the "
 "<sys>shared-mime-info</sys> package."
 msgstr ""
+"Najbitniji dio MIME baze podataka sa stajališta administratora sustava je <file>/usr/share/mime/packages/</file> "
+"direktorij gdje su pohranjene datoteke povezane s MIME vrstom koje navode informacije o poznatim MIME vrstama. "
+"Jedan primjer takve datoteke je <file>/usr/share/mime/packages/freedesktop.org.xml</file>, koja specificira "
+"informacije o standardnim MIME vrstama dostupnim na sustavu po zadanome. Tu datoteku osigurava paket <sys>shared-"
+"mime-info</sys>."
 
 #. (itstool) path: section/p
 #: C/mime-types.page:109
@@ -4124,6 +4279,8 @@ msgid ""
 "For detailed information describing the MIME type system, see the <em>freedesktop.org Shared MIME Info "
 "specification</em> located at the freedesktop.org website:"
 msgstr ""
+"Za opširnije informacije koje opisuju sustav MIME vrste, pogledajte <em>freedesktop.org Shared MIME Info "
+"specification</em> koja se nalazi na web stranici freedesktop.org:"
 
 #. (itstool) path: item/p
 #: C/mime-types.page:116
@@ -4131,6 +4288,8 @@ msgid ""
 "<link href=\"http://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/\"> http://www.freedesktop.org/"
 "wiki/Specifications/shared-mime-info-spec/</link>"
 msgstr ""
+"<link href=\"http://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/\"> http://www.freedesktop.org/"
+"wiki/Specifications/shared-mime-info-spec/</link>"
 
 #. (itstool) path: info/desc
 #: C/network.page:10
