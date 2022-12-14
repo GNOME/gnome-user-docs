@@ -181,6 +181,7 @@ HELP_FILES = \
 	accounts-which-application.page \
 	accounts-whyadd.page \
 	accounts.page \
+	account-activity.page \
 	backup-check.page \
 	backup-frequency.page \
 	backup-how.page \
@@ -346,6 +347,7 @@ HELP_FILES = \
 	net-wireless.page \
 	net-wrongnetwork.page \
 	net.page \
+	parental-controls.page \
 	power-autobrightness.page \
 	power-autosuspend.page \
 	power-batteryestimate.page \
