@@ -181,7 +181,6 @@ HELP_FILES = \
 	accounts-which-application.page \
 	accounts-whyadd.page \
 	accounts.page \
-	account-activity.page \
 	backup-check.page \
 	backup-frequency.page \
 	backup-how.page \
