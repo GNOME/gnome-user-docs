@@ -173,6 +173,8 @@ HELP_FILES = \
 	a11y-slowkeys.page \
 	a11y-stickykeys.page \
 	a11y-visualalert.page \
+	about.page \
+	about-hostname.page \
 	about-this-guide.page \
 	accounts-add.page \
 	accounts-disable-service.page \
