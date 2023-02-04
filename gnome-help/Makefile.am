@@ -407,7 +407,6 @@ HELP_FILES = \
 	sharing.page \
 	sharing-bluetooth.page \
 	sharing-desktop.page \
-	sharing-displayname.page \
 	sharing-media.page \
 	sharing-personal.page \
 	shell-apps-auto-start.page \
