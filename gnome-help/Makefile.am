@@ -176,6 +176,7 @@ HELP_FILES = \
 	about.page \
 	about-hardware.page \
 	about-hostname.page \
+	about-os.page \
 	about-this-guide.page \
 	accounts-add.page \
 	accounts-disable-service.page \
