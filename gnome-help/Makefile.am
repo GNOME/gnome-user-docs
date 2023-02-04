@@ -174,6 +174,7 @@ HELP_FILES = \
 	a11y-stickykeys.page \
 	a11y-visualalert.page \
 	about.page \
+	about-hardware.page \
 	about-hostname.page \
 	about-this-guide.page \
 	accounts-add.page \
