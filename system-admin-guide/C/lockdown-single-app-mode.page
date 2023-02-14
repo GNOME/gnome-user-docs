@@ -31,6 +31,11 @@
       <email>pknbe@volny.cz</email>
       <years>2019</years>
     </credit>
+    <credit type="author">
+      <name>Marek Suchánek</name>
+      <email>msuchane@redhat.com</email>
+      <years>2023</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
        
@@ -65,55 +70,114 @@
       <p>See <link xref="login-automatic" /> for more information.</p>
     </item>
     <item>
-      <p>Create a new user with a name, which follows typical naming conventions
-      (no space or special characters, do not start with a digit or a dash).
-      Also, make sure the user name matches with the related names, such as when
-      referring to a session. A good example is <em>kiosk-user</em>.</p>
-    </item>
-    <item>
-      <p>Create a session with a name matching the user name (for example, for
-      the <em>kiosk-user</em> mentioned above, <em>kiosk</em> is a good match).
-      To do so, create a <file>/usr/share/xsessions/<var>kiosk</var>.desktop</file>
-      file and set the <code>Exec</code> line as follows:</p>
-<code>
-Exec=gnome-session --session kiosk
-</code>
-    </item>
-    <item>
-      <p>Set the default session for <em>kiosk-user</em> by adding the following
-      line to the <file>/var/lib/AccountsService/users/<var>kiosk-user</var>
-      </file> file:</p>
-<code>
-XSession=kiosk
-</code>
-    </item>
-    <item>
-      <p>Define the <em>kiosk</em> session by writing a custom session
-      definition, containing the following line:</p>
-<code>
-RequiredComponents=kiosk-app;gnome-settings-daemon;kiosk-shell;
-</code>
-      <p>This creates a session that runs three programs: <sys>kiosk-app</sys>
-      (a sample application), <sys>gnome-settings-daemon</sys> (a standard
-      component in the GNOME session), and <sys>kiosk-shell</sys> (which is a
-      customized version of GNOME Shell).</p>
-    </item>
-    <item>
-      <p>Create a desktop file for <sys>kiosk-shell</sys> in
-      <file>/usr/share/applications/kiosk-shell.desktop</file>, containing the
-      following lines:</p>
+      <p>Create the following files with the listed content:</p>
+      <terms>
+        <item>
+          <title>
+            <file>/usr/share/applications/org.gnome.Kiosk.Script.desktop</file>
+          </title>
 <code>
 [Desktop Entry]
-Exec=gnome-shell --mode=kiosk
+Name=Kiosk
+Type=Application
+Exec=gnome-kiosk
+</code>
+        </item>
+        <item>
+          <title>
+            <file>/usr/share/applications/org.gnome.Kiosk.WindowManager.desktop</file>
+          </title>
+<code>
+[Desktop Entry]
+Type=Application
+Name=Mutter
+Comment=Window manager
+Exec=/usr/bin/mutter
+Categories=GNOME;GTK;Core;
+OnlyShowIn=GNOME;
+NoDisplay=true
+X-GNOME-Autostart-Phase=DisplayServer
+X-GNOME-Provides=windowmanager;
+X-GNOME-Autostart-Notify=true
+X-GNOME-AutoRestart=false
+X-GNOME-HiddenUnderSystemd=true
+</code>
+        </item>
+        <item>
+          <title>
+            <file>/usr/share/gnome-session/sessions/gnome-kiosk.session</file>
+          </title>
+<code>
+[GNOME Session]
+Name=Kiosk
+RequiredComponents=org.gnome.Kiosk.WindowManager;org.gnome.Kiosk.Script;
+</code>
+        </item>
+        <item>
+          <title>
+            <file>/usr/share/X11/xorg.conf.d/20-gnome-kiosk.conf</file>
+          </title>
+<code>
+Section "ServerFlags"
+    Option "DontVTSwitch" "on"
+EndSection
+</code>
+        </item>
+        <item>
+          <title>
+            <file>/usr/share/xsessions/org.gnome.Kiosk.desktop</file>
+          </title>
+<code>
+[Desktop Entry]
+Name=Kiosk
+Comment=Kiosk mode
+Exec=/usr/bin/gnome-session --session=gnome-kiosk
+DesktopNames=GNOME-Kiosk;GNOME;
+</code>
+        </item>
+      </terms>
+    </item>
+    <item>
+      <p>As the user that will open the single-application session,
+      create the <file>/home/<var>user</var>/.local/bin/gnome-kiosk</file> file:</p>
+<code>
+[<var>user</var>]$ mkdir -p ~/.local/bin
+
+[<var>user</var>]$ touch ~/.local/bin/gnome-kiosk
 </code>
     </item>
     <item>
-      <p>Create a mode definition <file>/usr/share/gnome-shell/modes/kiosk.json</file>.
-      This is a simple json file defining the available <sys>gnome-shell</sys>
-      user interface.</p>
-      <p>As the starting point, look at <file>/usr/share/gnome-shell/modes/classic.json</file>
-      and <file>/usr/share/gnome-shell/modes/initial-setup.json</file> for
-      examples.</p>
+      <p>Edit the <file>/home/<var>user</var>/.local/bin/gnome-kiosk</file> file and enter
+      the executable name of the application that you want to launch in single-application mode.</p>
+      <p>For example, to launch the Firefox browser in single-application mode,
+      enter the following content:</p>
+<code>
+#!/bin/sh
+
+while true; do
+    firefox --kiosk https://example.org
+done
+</code>
+      <p>The <code>while true</code> loop ensures that the application restarts
+      if it terminates for any reason.</p>
+    </item>
+    <item>
+      <p>Make the file executable:</p>
+<code>
+[<var>user</var>]$ chmod +x ~/.local/bin/gnome-kiosk
+</code>
+    </item>
+    <item>
+      <p>If you created the file or its containing directories as a different
+      user than the single-application user, such as root, ensure that the file
+      has the correct permissions:</p>
+<code>
+# chown -R <var>user</var>:<var>group</var> ~<var>user</var>/.local
+</code>
+    </item>
+    <item>
+      <p>At the GNOME login screen, select the Kiosk session from the cogwheel
+      button menu and log in as the single-application user.</p>
     </item>
   </steps>
 
