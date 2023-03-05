@@ -2,13 +2,13 @@
 # Copyright (C) 2018 gnome-user-docs's authors
 # This file is distributed under the same license as the gnome-user-docs package.
 # Jaeun_Cho <ckr971028@gmail.com>, 2018.
-# Seong-ho Cho <shcho@gnome.org>, 2019, 2021.
+# Seong-ho Cho <shcho@gnome.org>, 2019, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2021-06-08 16:09+0000\n"
-"PO-Revision-Date: 2021-08-31 15:51+0900\n"
+"POT-Creation-Date: 2023-01-25 20:01+0000\n"
+"PO-Revision-Date: 2023-03-05 04:02+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -23,13 +23,14 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "조재은 <ckr971028@gmail.com>, 2018\n"
-"조성호 <shcho@gnome.org>, 2019, 2021."
+"조성호 <shcho@gnome.org>, 2019, 2021, 2023."
 
 #. (itstool) path: info/desc
 #: C/appearance.page:10
 msgid ""
-"<link xref=\"desktop-shield\">Change the lock screen shield</link>, <link xref=\"desktop-favorite-applications"
-"\">default favorite applications</link>, <link xref=\"desktop-lockscreen\">lock the screen when idle</link>…"
+"<link xref=\"desktop-shield\">Change the lock screen shield</link>, <link xref=\"desktop-favorite-"
+"applications\">default favorite applications</link>, <link xref=\"desktop-lockscreen\">lock the screen when idle</"
+"link>…"
 msgstr ""
 "<link xref=\"desktop-shield\">잠금 화면 보호 설정 바꾸기</link>, <link xref=\"desktop-favorite-applications\">기본 "
 "선호 프로그램</link>, <link xref=\"desktop-lockscreen\">대기중일 때 화면 잠그기</link>…"
@@ -644,8 +645,8 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:79
 msgid ""
-"The values under a group are expected in <link href=\"https://developer.gnome.org/glib/stable/gvariant-text.html"
-"\">serialized GVariant form</link>."
+"The values under a group are expected in <link href=\"https://developer.gnome.org/glib/stable/gvariant-text."
+"html\">serialized GVariant form</link>."
 msgstr ""
 "그룹에 있는 값은 <link href=\"https://developer.gnome.org/glib/stable/gvariant-text.html\">직렬화한 GVariant 형태</"
 "link>를 갖춥니다."
@@ -702,8 +703,8 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/dconf-lockdown.page:54
 msgid ""
-"At this point, you should have <link xref=\"dconf-profiles\">a <sys>user</sys> profile</link> and <link xref="
-"\"dconf-keyfiles\">a keyfile</link> with the settings that you want to lock down."
+"At this point, you should have <link xref=\"dconf-profiles\">a <sys>user</sys> profile</link> and <link "
+"xref=\"dconf-keyfiles\">a keyfile</link> with the settings that you want to lock down."
 msgstr ""
 "여기서 잠그려는 설정이 들어간 <link xref=\"dconf-profiles\"><sys>user</sys> 프로파일</link> 과 <link xref=\"dconf-"
 "keyfiles\">keyfile</link>이 있어야합니다."
@@ -1593,19 +1594,26 @@ msgstr ""
 #. (itstool) path: listing/code
 #: C/extensions-lockdown.page:73
 #, no-wrap
+#| msgid ""
+#| "\n"
+#| "# Lock the list of enabled extensions\n"
+#| "/org/gnome/shell/enabled-extensions\n"
+#| "/org/gnome/shell/development-tools\n"
 msgid ""
 "\n"
 "# Lock the list of enabled extensions\n"
 "/org/gnome/shell/enabled-extensions\n"
+"/org/gnome/shell/disabled-extensions\n"
 "/org/gnome/shell/development-tools\n"
 msgstr ""
 "\n"
 "# Lock the list of enabled extensions\n"
 "/org/gnome/shell/enabled-extensions\n"
+"/org/gnome/shell/disabled-extensions\n"
 "/org/gnome/shell/development-tools\n"
 
 #. (itstool) path: page/p
-#: C/extensions-lockdown.page:85
+#: C/extensions-lockdown.page:86
 msgid ""
 "After locking down the <code>org.gnome.shell.enabled-extensions</code> and <code>org.gnome.shell.development-tools</"
 "code> keys, any extensions installed in <file>~/.local/share/gnome-shell/extensions</file> or <file>/usr/share/"
@@ -1924,9 +1932,9 @@ msgid ""
 "specified in the <link href=\"man:xkeyboard-config\"><cmd>xkeyboard-config</cmd>(7)</link> man page, section "
 "<em>Position of Compose key</em>."
 msgstr ""
-"우측 <key>Alt</key>키 대신 다른 키로 설정하려면, <var>ralt</var>를 <link href=\"man:xkeyboard-config"
-"\"><cmd>xkeyboard-config</cmd>(7)</link> 맨 페이지의 <em>Position of Compose key</em> 장에 있는 다른 키 아름으로 바"
-"꾸십시오."
+"우측 <key>Alt</key>키 대신 다른 키로 설정하려면, <var>ralt</var>를 <link href=\"man:xkeyboard-"
+"config\"><cmd>xkeyboard-config</cmd>(7)</link> 맨 페이지의 <em>Position of Compose key</em> 장에 있는 다른 키 아름으"
+"로 바꾸십시오."
 
 #. (itstool) path: item/p
 #: C/keyboard-compose-key.page:48
@@ -2896,9 +2904,6 @@ msgstr ""
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:105
 #, no-wrap
-#| msgid ""
-#| "\n"
-#| "Exec=gnome-shell --mode=kiosk\n"
 msgid ""
 "\n"
 "[Desktop Entry]\n"
@@ -5030,8 +5035,8 @@ msgstr "구성"
 #. (itstool) path: info/desc
 #: C/software.page:10
 msgid ""
-"<link xref=\"extensions\">GNOME Shell extensions</link>, <link xref=\"mime-types\">MIME types</link>, <link xref="
-"\"mime-types-application\">override default applications</link>…"
+"<link xref=\"extensions\">GNOME Shell extensions</link>, <link xref=\"mime-types\">MIME types</link>, <link "
+"xref=\"mime-types-application\">override default applications</link>…"
 msgstr ""
 "<link xref=\"extensions\">그놈 셸 확장</link>, <link xref=\"mime-types\">MIME 형식</link>, <link xref=\"mime-types-"
 "application\">기본 프로그램 우선 적용</link>…"
