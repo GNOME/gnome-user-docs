@@ -83,6 +83,8 @@ HELP_MEDIA = \
 	figures/network-wireless-disabled-symbolic.svg \
 	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
+	figures/ps-button.svg \
+	figures/ps-create.svg \
 	figures/rotation-allowed-symbolic.svg \
 	figures/rotation-locked-symbolic.svg \
 	figures/screenshot-tool.png \
@@ -146,6 +148,7 @@ HELP_MEDIA = \
 	figures/topbar-screen-shared.svg \
 	figures/topbar-system-shutdown.svg \
 	figures/topbar-thunderbolt-acquiring.svg \
+	figures/touch-edge-scroll.svg \
 	figures/touch-hold.svg \
 	figures/touch-overview.svg \
 	figures/touch-pinch-to-zoom.svg \
