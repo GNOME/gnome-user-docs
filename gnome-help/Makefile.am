@@ -81,7 +81,6 @@ HELP_MEDIA = \
 	figures/net-wired-ethernet-diagram.svg \
 	figures/network-wired-symbolic.svg \
 	figures/network-wireless-disabled-symbolic.svg \
-	figures/preferences-desktop-accessibility-symbolic.svg \
 	figures/printing-select.png \
 	figures/ps-button.svg \
 	figures/ps-create.svg \
