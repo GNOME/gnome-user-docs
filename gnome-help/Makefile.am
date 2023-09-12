@@ -38,9 +38,9 @@ HELP_MEDIA = \
 	figures/classic-topbar-network-wireless-acquiring.svg \
 	figures/classic-topbar-network-wireless-connected.svg \
 	figures/classic-topbar-network-wireless-no-route.svg \
-	figures/classic-topbar-network-wireless-strength-excellent.svg \
-	figures/classic-topbar-network-wireless-strength-none.svg \
-	figures/classic-topbar-network-wireless-strength.svg \
+	figures/classic-topbar-network-wireless-signal-excellent.svg \
+	figures/classic-topbar-network-wireless-signal-none.svg \
+	figures/classic-topbar-network-wireless-signal.svg \
 	figures/classic-topbar-night-light.svg \
 	figures/classic-topbar-pointer.svg \
 	figures/classic-topbar-screen-shared.svg \
@@ -139,9 +139,9 @@ HELP_MEDIA = \
 	figures/topbar-network-wireless-acquiring.svg \
 	figures/topbar-network-wireless-connected.svg \
 	figures/topbar-network-wireless-no-route.svg \
-	figures/topbar-network-wireless-strength-excellent.svg \
-	figures/topbar-network-wireless-strength-none.svg \
-	figures/topbar-network-wireless-strength.svg \
+	figures/topbar-network-wireless-signal-excellent.svg \
+	figures/topbar-network-wireless-signal-none.svg \
+	figures/topbar-network-wireless-signal.svg \
 	figures/topbar-night-light.svg \
 	figures/topbar-pointer.svg \
 	figures/topbar-screen-shared.svg \
