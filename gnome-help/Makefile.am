@@ -273,7 +273,6 @@ HELP_FILES = \
 	hardware-problems-graphics.page \
 	hardware.page \
 	help-irc.page \
-	help-mailing-list.page \
 	index.page \
 	keyboard-cursor-blink.page \
 	keyboard-key-menu.page \
