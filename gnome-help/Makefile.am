@@ -88,8 +88,6 @@ HELP_MEDIA = \
 	figures/rotation-locked-symbolic.svg \
 	figures/screenshot-tool.png \
 	figures/shell-activities-dash.png \
-	figures/shell-appmenu-classic.png \
-	figures/shell-appmenu-shell.png \
 	figures/shell-appts-classic.png \
 	figures/shell-appts.png \
 	figures/shell-exit-classic.png \
