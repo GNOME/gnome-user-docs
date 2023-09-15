@@ -275,6 +275,7 @@ HELP_FILES = \
 	hardware-problems-graphics.page \
 	hardware.page \
 	help-irc.page \
+	help-matrix.page \
 	index.page \
 	keyboard-cursor-blink.page \
 	keyboard-key-menu.page \
