@@ -8,7 +8,6 @@ GNOME and have general GNOME applicability.
 The GNOME Documentation Project (GDP) is responsible for this documentation.
 
 GDP homepage: https://wiki.gnome.org/DocumentationProject
-GDP mailing list: https://mail.gnome.org/mailman/listinfo/gnome-doc-list
 
 
 ## Reporting Problems
