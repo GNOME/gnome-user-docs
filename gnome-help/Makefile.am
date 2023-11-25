@@ -4,7 +4,7 @@ EXTRA_DIST = C/gnome-help.its
 
 HELP_ID = gnome-help
 
-HELP_LINGUAS = as ca cs da de el fa fi fr es gl gu he hi hr hu id it ja kn ko lv lt mr nl pa pl pt pt_BR ro ru sl sr sr@latin sv te tr uk vi ta zh_CN
+HELP_LINGUAS = as ca cs da de el es eu fa fi fr gl gu he hi hr hu id it ja kn ko lv lt mr nl pa pl pt pt_BR ro ru sl sr sr@latin sv te tr uk vi ta zh_CN
 
 HELP_MEDIA = \
 	figures/bluetooth-active-symbolic.svg \
