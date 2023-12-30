@@ -57,7 +57,7 @@ HELP_MEDIA = \
 	figures/emoji-flags-symbolic.svg \
 	figures/gnome.svg \
 	figures/go-down-symbolic.svg \
-	fugiures/go-next-symbolic.svg \
+	figures/go-next-symbolic.svg \
 	figures/input-keyboard-symbolic.png \
 	figures/input-methods-switcher.png \
 	figures/keyboard-key-calculator.svg \
