@@ -57,6 +57,7 @@ HELP_MEDIA = \
 	figures/emoji-flags-symbolic.svg \
 	figures/gnome.svg \
 	figures/go-down-symbolic.svg \
+	fugiures/go-next-symbolic.svg \
 	figures/input-keyboard-symbolic.png \
 	figures/input-methods-switcher.png \
 	figures/keyboard-key-calculator.svg \
@@ -399,6 +400,7 @@ HELP_FILES = \
 	privacy-location.page \
 	privacy-purge.page \
 	privacy-screen-lock.page \
+	quick-settings.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
 	session-formats.page \
