@@ -11,6 +11,7 @@
 
     <revision pkgversion="3.33.3" date="2019-07-21" status="review"/>
     <revision version="gnome:42" status="final" date="2022-04-09"/>
+    <revision version="gnome:46" status="final" date="2024-03-02"/>
 
     <credit type="author">
       <name>Ekaterina Gerasimova</name>
@@ -64,21 +65,14 @@
   <steps>
     <item>
       <p>Open the <gui xref="shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Sharing</gui>.</p>
+      overview and start typing <gui>System</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Sharing</gui> to open the panel.</p>
+      <p>Select <guiseq><gui>Settings</gui><gui>System</gui></guiseq> from the
+      results. This will open the <gui>System</gui> panel.</p>
     </item>
     <item>
-      <p>If the <gui>Sharing</gui> switch in the top-right of the window is set
-      to off, click to switch it on.</p>
-
-      <note style="info"><p>If the text below <gui>Device Name</gui> allows
-      you to edit it, you can <link xref="about-hostname">change</link>
-      the name your computer displays on the network.</p></note>
-    </item>
-    <item>
-      <p>Click <gui>Remote Desktop</gui>.</p>
+      <p>Select <gui>Remote Desktop</gui> to open the panel.</p>
     </item>
     <item>
       <p>To let others view your desktop, set the <gui>Remote Desktop</gui>
@@ -92,6 +86,25 @@
       depending on the security settings which you are currently using.</p>
     </item>
   </steps>
+
+  <section id="connecting">
+  <title>Connecting</title>
+
+  <p>The <gui>How to Connect</gui> section displays the
+  <gui>Device Name</gui> and <gui>Remote Desktop Address</gui> that can be used
+  on the connecting computer. Click the button next to each entry if you want to
+  place it in the clipboard. A connection can also be made using your
+  <link xref="net-findip">IP address</link>.</p>
+  <p>When the other computer is successfully connected to your desktop, you
+  will see the <gui>Screen is being shared</gui> icon,
+  <media its:translate="no" type="image" src="figures/topbar-screen-shared.svg" style="floatend"/>
+  in your system status area.</p>
+
+  <note style="info"><p>If the text set as <gui>Device Name</gui> allows
+  you to edit it, you can <link xref="about-hostname">change</link>
+  the name your computer displays on the network.</p></note>
+
+  </section>
 
   <section id="security">
   <title>Security</title>
@@ -117,36 +130,7 @@
       encryption fingerprint. Compare it with the value displayed by the client
       when connecting: they should be identical.</p>
     </item>
-
-<!-- TODO: check whether this option exists.
-    <item>
-      <title>Allow access to your desktop over the Internet</title>
-      <p>If your router supports UPnP Internet Gateway Device Protocol and it
-      is enabled, you can allow other people who are not on your local network
-      to view your desktop. To allow this, select <gui>Automatically configure
-      UPnP router to open and forward ports</gui>. Alternatively, you can
-      configure your router manually.</p>
-      <note style="tip">
-        <p>This option is disabled by default.</p>
-      </note>
-    </item>
--->
-
   </terms>
-  </section>
-
-  <section id="connecting">
-  <title>Connecting</title>
-
-  <p>The <gui>How to Connect</gui> section displays the
-  <gui>Device Name</gui> and <gui>Remote Desktop Address</gui> that can be used
-  on the connecting computer. Click the button next to each entry if you want to
-  place it in the clipboard. A connection can also be made using your
-  <link xref="net-findip">IP address</link>.</p>
-  <p>When the other computer is successfully connected to your desktop, you
-  will see the <gui>Screen is being shared</gui> icon,
-  <media its:translate="no" type="image" src="figures/topbar-screen-shared.svg" style="floatend"/>
-  in your system status area.</p>
   </section>
 
   <section id="clients">
