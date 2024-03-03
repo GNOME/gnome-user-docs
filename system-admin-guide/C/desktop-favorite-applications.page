@@ -31,35 +31,27 @@
   for one user, or to set the same favorite applications
   for all users. For both cases, you must first edit the
   <sys its:translate="no">dconf</sys> profile found in
-  <file its:translate="no">/etc/dconf/profile</file>.</p>
+  <file its:translate="no">/etc/dconf/profile/user</file>.</p>
 
 <section id="per-user">
   <title>Set different favorite applications for different users</title>
 
   <p>You can set the default favorite applications for each user by modifying
-  their user database file found in
-  <file its:translate="no">~/.config/dconf/user</file>. The following example
-  snippet uses <sys its:translate="no">dconf</sys> to set <app>gedit</app>,
+  their user database via <cmd>gsettings</cmd>. The following example
+  command sets <app>Text Editor</app>,
   <app>Terminal</app> and <app>Files</app> (<sys>nautilus</sys>) as default
-  favorites for a user. The example code allows users to modify the list later,
-  if they wish to do so.</p>
+  favorites for a user.</p>
 
   <listing>
-    <title>Contents of <file its:translate="no">/etc/dconf/profile</file>:</title>
+    <title>Contents of <file its:translate="no">/etc/dconf/profile/user</file>:</title>
 <code its:translate="no">
 # <span its:translate="yes">This line allows the user to change the default favorites later</span>
 user-db:user
 </code>
   </listing>
 
-  <listing>
-    <title>Contents of <file its:translate="no">~/.config/dconf/user</file>:</title>
-<code its:translate="no">
-# <span its:translate="yes">Set gedit, terminal and nautilus as default favorites</span>
-[org/gnome/shell]
-favorite-apps = [<var>'gedit.desktop'</var>, <var>'gnome-terminal.desktop'</var>, <var>'nautilus.desktop'</var>]
-</code>
-  </listing>
+<p>Set Text Editor, Terminal and Files as default favorites:</p>
+<screen><output style="prompt"># </output><input>gsettings set org.gnome.shell favorite-apps "['org.gnome.TextEditor.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop']"</input></screen>
 
   <note style="tip">
     <p>You can also <link xref="dconf-lockdown">lock down</link> the above
