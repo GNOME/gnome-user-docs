@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.5.92" version="0.2" date="2012-09-19" status="review"/>
     <revision pkgversion="3.18" date="2015-09-29" status="final"/>
+    <revision version="gnome:46" date="2024-03-05" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -40,21 +41,22 @@
   can have it displayed in <link xref="nautilus-list">list view columns</link>
   or <link xref="nautilus-display#icon-captions">icon captions</link>.</p>
 
-  <p>The information given on the <gui>Basic</gui> tab is explained below.
-  There are also
-  <gui><link xref="nautilus-file-properties-permissions">Permissions</link></gui>
-  and <gui><link xref="files-open#default">Open With</link></gui> tabs. For
-  certain types of files, such as images and videos, there will be an extra tab
-  that provides information like the dimensions, duration, and codec.</p>
+  <p>For certain types of files, such as images and videos, there will be an
+  extra <gui>Properties</gui> entry that provides information like the
+  dimensions, duration, and codec.</p>
+
+  <p>For the <gui>Permissions</gui> entry see
+  <link xref="nautilus-file-properties-permissions"/>.</p>
 
 <section id="basic">
  <title>Basic properties</title>
  <terms>
   <item>
     <title><gui>Name</gui></title>
-    <p>You can rename the file by changing this field.
-    You can also rename a file outside the properties window. See
-    <link xref="files-rename"/>.</p>
+    <p>The name of the file or folder.</p>
+    <note style="tip">
+      <p>To rename a file, see <link xref="files-rename"/>.</p>
+    </note>
   </item>
   <item>
     <title><gui>Type</gui></title>
@@ -63,8 +65,9 @@
     applications can open the file, among other things. For example, you
     can’t open a picture with a music player. See <link xref="files-open"/>
     for more information on this.</p>
-    <p>The <em>MIME type</em> of the file is shown in parentheses; MIME type is
-    a standard way that computers use to refer to the file type.</p>
+    <note style="tip">
+      <p>To change the default application to open a file type, see <link xref="files-open#default"/>.</p>
+    </note>
   </item>
 
   <item>
@@ -79,6 +82,13 @@
   </item>
 
   <item>
+    <title>Free Space</title>
+    <p>This is only displayed for folders. It gives the amount of disk space
+    which is available on the disk that the folder is on. This is useful for
+    checking if the hard disk is full.</p>
+  </item>
+
+  <item>
     <title>Parent Folder</title>
     <p>The location of each file on your computer is given by its <em>absolute
     path</em>. This is a unique “address” of the file on your computer, made up
@@ -89,13 +99,6 @@
   </item>
 
   <item>
-    <title>Free Space</title>
-    <p>This is only displayed for folders. It gives the amount of disk space
-    which is available on the disk that the folder is on. This is useful for
-    checking if the hard disk is full.</p>
-  </item>
-
-  <item>
     <title>Accessed</title>
     <p>The date and time when the file was last opened.</p>
   </item>
@@ -103,6 +106,11 @@
   <item>
     <title>Modified</title>
     <p>The date and time when the file was last changed and saved.</p>
+  </item>
+
+  <item>
+    <title>Created</title>
+    <p>The date and time when the file was created.</p>
   </item>
  </terms>
 </section>
