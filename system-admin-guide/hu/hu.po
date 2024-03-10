@@ -1,14 +1,14 @@
 # Hungarian translation for gnome-user-docs.
-# Copyright (C) 2018, 2019, 2020, 2021, 2023 Free Software Foundation, Inc.
+# Copyright (C) 2018, 2019, 2020, 2021, 2023, 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-user-docs package.
 #
-# Balázs Úr <ur.balazs at fsf dot hu>, 2018, 2019, 2020, 2021, 2023.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2018, 2019, 2020, 2021, 2023, 2024.
 # Gabor Kelemen <kelemeng at ubuntu dot com>, 2018, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2023-09-14 15:49+0000\n"
-"PO-Revision-Date: 2023-09-19 21:16+0200\n"
+"POT-Creation-Date: 2024-03-03 17:36+0000\n"
+"PO-Revision-Date: 2024-03-10 17:53+0100\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -16,12 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Úr Balázs <ur.balazs at fsf dot hu>, 2018, 2019, 2020, 2021, 2023."
+msgstr ""
+"Úr Balázs <ur.balazs at fsf dot hu>, 2018, 2019, 2020, 2021, 2023, 2024."
 
 #. (itstool) path: info/desc
 #: C/appearance.page:10
@@ -1344,45 +1345,62 @@ msgstr "Különböző kedvenc alkalmazások beállítása különböző felhaszn
 
 #. (itstool) path: section/p
 #: C/desktop-favorite-applications.page:39
+#| msgid ""
+#| "You can set the default favorite applications for each user by modifying "
+#| "their user database file found in <_:file-1/>. The following example "
+#| "snippet uses <_:sys-2/> to set <app>gedit</app>, <app>Terminal</app> and "
+#| "<app>Files</app> (<sys>nautilus</sys>) as default favorites for a user. "
+#| "The example code allows users to modify the list later, if they wish to "
+#| "do so."
 msgid ""
 "You can set the default favorite applications for each user by modifying "
-"their user database file found in <_:file-1/>. The following example snippet "
-"uses <_:sys-2/> to set <app>gedit</app>, <app>Terminal</app> and <app>Files</"
-"app> (<sys>nautilus</sys>) as default favorites for a user. The example code "
-"allows users to modify the list later, if they wish to do so."
+"their user database via <cmd>gsettings</cmd>. The following example command "
+"sets <app>Text Editor</app>, <app>Terminal</app> and <app>Files</app> "
+"(<sys>nautilus</sys>) as default favorites for a user."
 msgstr ""
-"Beállíthatja az alapértelmezett kedvenc alkalmazásokat minden egyes "
-"felhasználóhoz a <_:file-1/> fájlban található felhasználói adatbázisuk "
-"módosításával. A következő példa kódrészlet a <_:sys-2/> szerkesztőt "
-"használja a <app>gedit</app>, a <app>Terminál</app> és a <app>Fájlok</app> "
-"(<sys>nautilus</sys>) alapértelmezett kedvencekként történő beállításához "
-"egy felhasználó számára. A példakód lehetővé teszi a felhasználóknak, hogy "
-"később módosítsák a listát, ha ezt szeretnék."
+"Beállíthatja az alapértelmezett kedvenc alkalmazásokat minden egyes"
+" felhasználóhoz a felhasználói adatbázisuknak a <cmd>gsettings</cmd>"
+" parancson keresztüli módosításával. A következő példaparancs beállítja a <"
+"app>Szövegszerkesztő</app>, a <app>Terminál</app> és a <app>Fájlok</app> (<"
+"sys>nautilus</sys>) alkalmazásokat alapértelmezett kedvencekként egy"
+" felhasználónál."
 
 #. (itstool) path: listing/title
-#: C/desktop-favorite-applications.page:48
-#: C/desktop-favorite-applications.page:56
-#: C/desktop-favorite-applications.page:93
+#: C/desktop-favorite-applications.page:46
+#: C/desktop-favorite-applications.page:85
 msgid "Contents of <_:file-1/>:"
 msgstr "<_:file-1/> fájl tartalma:"
 
 #. (itstool) path: code/span
-#: C/desktop-favorite-applications.page:50
+#: C/desktop-favorite-applications.page:48
 #, no-wrap
 msgid "This line allows the user to change the default favorites later"
 msgstr ""
 "Ez a sor lehetővé teszi a felhasználónak, hogy később megváltoztassa az"
 " alapértelmezett kedvenceket"
 
-#. (itstool) path: code/span
-#: C/desktop-favorite-applications.page:58
-#, no-wrap
-msgid "Set gedit, terminal and nautilus as default favorites"
+#. (itstool) path: section/p
+#: C/desktop-favorite-applications.page:53
+#| msgid "Set gedit, terminal and nautilus as default favorites"
+msgid "Set Text Editor, Terminal and Files as default favorites:"
 msgstr ""
-"A gedit, a terminál és a nautilus beállítása alapértelmezett kedvencekként"
+"A Szövegszerkesztő, a Terminál és a Fájlok beállítása alapértelmezett"
+" kedvencekként:"
+
+#. (itstool) path: section/screen
+#: C/desktop-favorite-applications.page:54
+#, no-wrap
+msgid ""
+"<output style=\"prompt\"># </output><input>gsettings set org.gnome.shell"
+" favorite-apps \"['org.gnome.TextEditor.desktop',"
+" 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop']\"</input>"
+msgstr ""
+"<output style=\"prompt\"># </output><input>gsettings set org.gnome.shell"
+" favorite-apps \"['org.gnome.TextEditor.desktop',"
+" 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop']\"</input>"
 
 #. (itstool) path: note/p
-#: C/desktop-favorite-applications.page:65
+#: C/desktop-favorite-applications.page:57
 msgid ""
 "You can also <link xref=\"dconf-lockdown\">lock down</link> the above "
 "settings to prevent users from changing them."
@@ -1391,12 +1409,12 @@ msgstr ""
 "hogy megakadályozza a felhasználókat azok megváltoztatásában."
 
 #. (itstool) path: section/title
-#: C/desktop-favorite-applications.page:72
+#: C/desktop-favorite-applications.page:64
 msgid "Set the same favorite applications for all users"
 msgstr "Ugyanazon kedvenc alkalmazások beállítása az összes felhasználónak"
 
 #. (itstool) path: section/p
-#: C/desktop-favorite-applications.page:74
+#: C/desktop-favorite-applications.page:66
 msgid ""
 "In order to have the same favorites for all users, you must modify system "
 "database files using <link xref=\"dconf-keyfiles\">dconf keyfiles</link>. "
@@ -1412,12 +1430,12 @@ msgstr ""
 "beállítási adatbázisban lévő összes felhasználónál."
 
 #. (itstool) path: steps/title
-#: C/desktop-favorite-applications.page:81
+#: C/desktop-favorite-applications.page:73
 msgid "Set the favorite applications"
 msgstr "A kedvenc alkalmazások beállítása"
 
 #. (itstool) path: item/p
-#: C/desktop-favorite-applications.page:89
+#: C/desktop-favorite-applications.page:81
 msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-favorite-apps</file> to "
 "provide information for the <sys>local</sys> database."
@@ -1426,7 +1444,7 @@ msgstr ""
 "kulcsfájlt, hogy információkat biztosítson a <sys>local</sys> adatbázisnak."
 
 #. (itstool) path: listing/code
-#: C/desktop-favorite-applications.page:96
+#: C/desktop-favorite-applications.page:88
 #, no-wrap
 msgid ""
 "\n"
@@ -1444,7 +1462,7 @@ msgstr ""
 "/var>, <var>'nautilus.desktop'</var>]\n"
 
 #. (itstool) path: item/p
-#: C/desktop-favorite-applications.page:104
+#: C/desktop-favorite-applications.page:96
 msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/favorite-apps</file> with the following content:"
@@ -1454,12 +1472,13 @@ msgstr ""
 "következő tartalommal:"
 
 #. (itstool) path: listing/title
-#: C/desktop-favorite-applications.page:108
-msgid "<file>/etc/dconf/db/local.db/locks/favorite-apps</file>"
-msgstr "<file>/etc/dconf/db/local.db/locks/favorite-apps</file>"
+#: C/desktop-favorite-applications.page:100
+#| msgid "<file>/etc/dconf/db/local.db/locks/favorite-apps</file>"
+msgid "<file>/etc/dconf/db/local.d/locks/favorite-apps</file>"
+msgstr "<file>/etc/dconf/db/local.d/locks/favorite-apps</file>"
 
 #. (itstool) path: listing/code
-#: C/desktop-favorite-applications.page:109
+#: C/desktop-favorite-applications.page:101
 #, no-wrap
 msgid ""
 "\n"
@@ -1576,7 +1595,6 @@ msgstr ""
 
 #. (itstool) path: listing/title
 #: C/desktop-lockscreen.page:76
-#| msgid "<file>/etc/dconf/db/local.db/locks/screensaver</file>"
 msgid "<file>/etc/dconf/db/local.d/locks/screensaver</file>"
 msgstr "<file>/etc/dconf/db/local.d/locks/screensaver</file>"
 
@@ -2784,8 +2802,9 @@ msgstr ""
 
 #. (itstool) path: listing/title
 #: C/lockdown-file-saving.page:67
-msgid "<file>/etc/dconf/db/local.db/locks/filesaving</file>"
-msgstr "<file>/etc/dconf/db/local.db/locks/filesaving</file>"
+#| msgid "<file>/etc/dconf/db/local.db/locks/filesaving</file>"
+msgid "<file>/etc/dconf/db/local.d/locks/filesaving</file>"
+msgstr "<file>/etc/dconf/db/local.d/locks/filesaving</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-file-saving.page:68
@@ -3031,8 +3050,9 @@ msgstr ""
 
 #. (itstool) path: listing/title
 #: C/lockdown-online-accounts.page:86
-msgid "<file>/etc/dconf/db/local.db/locks/goa</file>"
-msgstr "<file>/etc/dconf/db/local.db/locks/goa</file>"
+#| msgid "<file>/etc/dconf/db/local.db/locks/goa</file>"
+msgid "<file>/etc/dconf/db/local.d/locks/goa</file>"
+msgstr "<file>/etc/dconf/db/local.d/locks/goa</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-online-accounts.page:87
@@ -3113,8 +3133,9 @@ msgstr ""
 
 #. (itstool) path: listing/title
 #: C/lockdown-printing.page:67
-msgid "<file>/etc/dconf/db/local.db/locks/printing</file>"
-msgstr "<file>/etc/dconf/db/local.db/locks/printing</file>"
+#| msgid "<file>/etc/dconf/db/local.db/locks/printing</file>"
+msgid "<file>/etc/dconf/db/local.d/locks/printing</file>"
+msgstr "<file>/etc/dconf/db/local.d/locks/printing</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-printing.page:68
@@ -5523,8 +5544,9 @@ msgstr ""
 
 #. (itstool) path: listing/title
 #: C/power-dim-screen.page:90
-msgid "<file>/etc/dconf/db/local.db/locks/power-saving</file>"
-msgstr "<file>/etc/dconf/db/local.db/locks/power-saving</file>"
+#| msgid "<file>/etc/dconf/db/local.db/locks/power-saving</file>"
+msgid "<file>/etc/dconf/db/local.d/locks/power-saving</file>"
+msgstr "<file>/etc/dconf/db/local.d/locks/power-saving</file>"
 
 #. (itstool) path: listing/code
 #: C/power-dim-screen.page:91
