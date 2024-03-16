@@ -52,7 +52,6 @@ HELP_MEDIA = \
 	figures/color-printer.png \
 	figures/color-space.png \
 	figures/display-dual-monitors.webm \
-	figures/edit-find-symbolic.svg \
 	figures/emblem-system-symbolic.svg \
 	figures/emoji-flags-symbolic.svg \
 	figures/gnome.svg \
@@ -78,6 +77,7 @@ HELP_MEDIA = \
 	figures/keyboard-key-voldown.svg \
 	figures/keyboard-key-volup.svg \
 	figures/keyboard-key-world.svg \
+	figures/nautilus-folder-search-symbolic.svg \
 	figures/nautilus-icons.png \
 	figures/net-wired-ethernet-diagram.svg \
 	figures/network-wired-symbolic.svg \
