@@ -1,23 +1,23 @@
 # Basque translation for gnome-user-docs.
 # Copyright (C) 2023 gnome-user-docs's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-user-docs package.
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2023
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2023, 2024
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2023-11-05 10:05+0000\n"
-"PO-Revision-Date: 2023-11-08 10:05+0000\n"
+"POT-Creation-Date: 2024-03-03 17:36+0000\n"
+"PO-Revision-Date: 2024-03-21 10:05+0000\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <eu@li.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: eu\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2023"
+msgstr "translator-credits"
 
 #. (itstool) path: info/desc
 #: C/appearance.page:10
@@ -124,7 +124,7 @@ msgid ""
 "To start an application automatically when the user logs in, you need to "
 "create a <file>.desktop</file> file for that application in the <file>/etc/"
 "xdg/autostart/</file> directory."
-msgstr ""
+msgstr "Erabiltzaileak saioa hasten duenean aplikazio bat automatikoki abiarazteko, sortu aplikazio horretarako <file>.desktop</file> fitxategi bat <file>/etc/xdg/autostart/</file> direktorioan."
 
 #. (itstool) path: steps/title
 #: C/autostart-applications.page:32
@@ -248,7 +248,7 @@ msgid ""
 "Create an XML file, for example <file><var>filename</var>.xml</file>. In "
 "this file, use keys from the <sys>org.gnome.desktop.background</sys> "
 "GSettings schema to specify extra backgrounds and their appearance."
-msgstr ""
+msgstr "Sortu XML fitxategi bat, adibidez <file><var>fitxategi-izena</var>.xml</file>. Fitxategi horretan, erabili <sys>org.gnome.desktop.background</sys> GSettings eskemako gakoak atzeko plano gehigarriak eta haien itxura zehazteko."
 
 #. (itstool) path: item/p
 #: C/backgrounds-extra.page:42
@@ -306,7 +306,7 @@ msgstr "\"horizontal\", \"vertical\" eta \"solid\""
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:60
 msgid "How to shade the background color."
-msgstr ""
+msgstr "Nola eman itzala atzeko planoko koloreari."
 
 #. (itstool) path: td/p
 #: C/backgrounds-extra.page:63
@@ -1108,45 +1108,48 @@ msgstr "Ezarri gogoko aplikazio desberdinak erabiltzaile desberdinentzako"
 #: C/desktop-favorite-applications.page:39
 msgid ""
 "You can set the default favorite applications for each user by modifying "
-"their user database file found in <_:file-1/>. The following example snippet "
-"uses <_:sys-2/> to set <app>gedit</app>, <app>Terminal</app> and <app>Files</"
-"app> (<sys>nautilus</sys>) as default favorites for a user. The example code "
-"allows users to modify the list later, if they wish to do so."
+"their user database via <cmd>gsettings</cmd>. The following example command "
+"sets <app>Text Editor</app>, <app>Terminal</app> and <app>Files</app> "
+"(<sys>nautilus</sys>) as default favorites for a user."
 msgstr ""
 
 #. (itstool) path: listing/title
-#: C/desktop-favorite-applications.page:48
-#: C/desktop-favorite-applications.page:56
-#: C/desktop-favorite-applications.page:93
+#: C/desktop-favorite-applications.page:46
+#: C/desktop-favorite-applications.page:85
 msgid "Contents of <_:file-1/>:"
 msgstr "<_:file-1/> fitxategiaren edukiak"
 
 #. (itstool) path: code/span
-#: C/desktop-favorite-applications.page:50
+#: C/desktop-favorite-applications.page:48
 #, no-wrap
 msgid "This line allows the user to change the default favorites later"
 msgstr "Lerro honi esker, erabiltzaileak gogoko lehenetsiak aldatu ahal izango ditu geroago"
 
-#. (itstool) path: code/span
-#: C/desktop-favorite-applications.page:58
+#. (itstool) path: section/p
+#: C/desktop-favorite-applications.page:53
+msgid "Set Text Editor, Terminal and Files as default favorites:"
+msgstr ""
+
+#. (itstool) path: section/screen
+#: C/desktop-favorite-applications.page:54
 #, no-wrap
-msgid "Set gedit, terminal and nautilus as default favorites"
-msgstr "Ezarri gedit, terminal eta nautilus gogoko lehenetsi gisa"
+msgid "<output style=\"prompt\"># </output><input>gsettings set org.gnome.shell favorite-apps \"['org.gnome.TextEditor.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop']\"</input>"
+msgstr ""
 
 #. (itstool) path: note/p
-#: C/desktop-favorite-applications.page:65
+#: C/desktop-favorite-applications.page:57
 msgid ""
 "You can also <link xref=\"dconf-lockdown\">lock down</link> the above "
 "settings to prevent users from changing them."
 msgstr ""
 
 #. (itstool) path: section/title
-#: C/desktop-favorite-applications.page:72
+#: C/desktop-favorite-applications.page:64
 msgid "Set the same favorite applications for all users"
 msgstr "Ezarri gogoko aplikazio berak erabiltzaile guztientzat"
 
 #. (itstool) path: section/p
-#: C/desktop-favorite-applications.page:74
+#: C/desktop-favorite-applications.page:66
 msgid ""
 "In order to have the same favorites for all users, you must modify system "
 "database files using <link xref=\"dconf-keyfiles\">dconf keyfiles</link>. "
@@ -1156,19 +1159,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: steps/title
-#: C/desktop-favorite-applications.page:81
+#: C/desktop-favorite-applications.page:73
 msgid "Set the favorite applications"
 msgstr "Ezarri gogoko aplikazioak"
 
 #. (itstool) path: item/p
-#: C/desktop-favorite-applications.page:89
+#: C/desktop-favorite-applications.page:81
 msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-favorite-apps</file> to "
 "provide information for the <sys>local</sys> database."
 msgstr ""
 
 #. (itstool) path: listing/code
-#: C/desktop-favorite-applications.page:96
+#: C/desktop-favorite-applications.page:88
 #, no-wrap
 msgid ""
 "\n"
@@ -1178,19 +1181,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: item/p
-#: C/desktop-favorite-applications.page:104
+#: C/desktop-favorite-applications.page:96
 msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/favorite-apps</file> with the following content:"
 msgstr ""
 
 #. (itstool) path: listing/title
-#: C/desktop-favorite-applications.page:108
-msgid "<file>/etc/dconf/db/local.db/locks/favorite-apps</file>"
-msgstr "<file>/etc/dconf/db/local.db/locks/favorite-apps</file>"
+#: C/desktop-favorite-applications.page:100
+msgid "<file>/etc/dconf/db/local.d/locks/favorite-apps</file>"
+msgstr ""
 
 #. (itstool) path: listing/code
-#: C/desktop-favorite-applications.page:109
+#: C/desktop-favorite-applications.page:101
 #, no-wrap
 msgid ""
 "\n"
@@ -1798,12 +1801,12 @@ msgstr "GNOME sistemaren administrazioaren eskuliburua"
 #. (itstool) path: info/desc
 #: C/keyboard-compose-key.page:18
 msgid "Enable the compose key by default for all users."
-msgstr ""
+msgstr "Gaitu compose tekla modu lehenetsian erabiltzaile guztientzat."
 
 #. (itstool) path: page/title
 #: C/keyboard-compose-key.page:21
 msgid "Enable the compose key"
-msgstr ""
+msgstr "Gaitu compose tekla"
 
 #. (itstool) path: page/p
 #: C/keyboard-compose-key.page:23
@@ -1888,7 +1891,7 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/keyboard-layout.page:46 C/keyboard-layout.page:79
 msgid "Change the system keyboard layout settings"
-msgstr ""
+msgstr "Aldatu sistemaren teklatu-diseinuaren ezarpenak"
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:48 C/keyboard-layout.page:81
@@ -1902,13 +1905,13 @@ msgstr ""
 msgid ""
 "Use the <cmd>localectl</cmd> tool to change the system keyboard layout "
 "settings as follows:"
-msgstr ""
+msgstr "Erabili <cmd>localectl</cmd> tresna sistemaren teklatu-diseinuaren ezarpenak aldatzeko, honela:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:55
 #, no-wrap
 msgid "<cmd>localectl set-x11-keymap <var>layout</var></cmd>"
-msgstr ""
+msgstr "<cmd>localectl set-x11-keymap <var>layout</var></cmd>"
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:56
@@ -1922,7 +1925,7 @@ msgstr ""
 #: C/keyboard-layout.page:60
 #, no-wrap
 msgid "<output>$ </output><input>localectl set-x11-keymap es,us</input>"
-msgstr ""
+msgstr "<output>$ </output><input>localectl set-x11-keymap es,us</input>"
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:63 C/keyboard-layout.page:103
@@ -2204,7 +2207,7 @@ msgstr ""
 
 #. (itstool) path: listing/title
 #: C/lockdown-file-saving.page:67
-msgid "<file>/etc/dconf/db/local.db/locks/filesaving</file>"
+msgid "<file>/etc/dconf/db/local.d/locks/filesaving</file>"
 msgstr ""
 
 #. (itstool) path: listing/code
@@ -2289,7 +2292,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/lockdown-online-accounts.page:24
 msgid "Enable or disable some or all online accounts."
-msgstr ""
+msgstr "Gaitu edo desgaitu lineako kontu batzuk edo guztiak."
 
 #. (itstool) path: page/title
 #: C/lockdown-online-accounts.page:26
@@ -2308,34 +2311,34 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/lockdown-online-accounts.page:33
 msgid "As a system administrator, you can:"
-msgstr ""
+msgstr "Sistemaren administratzaile gisa, honakoak egin ditzakezu:"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:35
 msgid "enable all online accounts;"
-msgstr ""
+msgstr "lineako kontu guztiak gaitu;"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:36
 msgid "selectively enable a few online accounts;"
-msgstr ""
+msgstr "lineako kontu batzuk gaitu;"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:37
 msgid "disable all online accounts."
-msgstr ""
+msgstr "lineako kontu guztiak desgaitu."
 
 #. (itstool) path: steps/title
 #: C/lockdown-online-accounts.page:41
 msgid "Configure online accounts"
-msgstr ""
+msgstr "Konfiguratu lineako kontuak"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:42
 msgid ""
 "Make sure that you have the <sys>gnome-online-accounts</sys> package "
 "installed on your system."
-msgstr ""
+msgstr "Ziurtatu <sys>gnome-online-accounts</sys> paketea sisteman instalatuta duzula."
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:52
@@ -2348,7 +2351,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:56
 msgid "To enable specific providers:"
-msgstr ""
+msgstr "Hornitzaile zehatzak gaitzeko:"
 
 #. (itstool) path: item/code
 #: C/lockdown-online-accounts.page:57
@@ -2358,11 +2361,14 @@ msgid ""
 "[org/gnome/online-accounts]\n"
 "whitelisted-providers= ['google', 'facebook']\n"
 msgstr ""
+"\n"
+"[org/gnome/online-accounts]\n"
+"whitelisted-providers= ['google', 'facebook']\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:67
 msgid "To disable all providers:"
-msgstr ""
+msgstr "Hornitzaile guztiak desgaitzeko:"
 
 #. (itstool) path: item/code
 #: C/lockdown-online-accounts.page:68
@@ -2372,11 +2378,14 @@ msgid ""
 "[org/gnome/online-accounts]\n"
 "whitelisted-providers= ['']\n"
 msgstr ""
+"\n"
+"[org/gnome/online-accounts]\n"
+"whitelisted-providers= ['']\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:73
 msgid "To allow all available providers:"
-msgstr ""
+msgstr "Eskuragarri dauden hornitzaile guztiak onartzeko:"
 
 #. (itstool) path: item/code
 #: C/lockdown-online-accounts.page:74
@@ -2386,23 +2395,26 @@ msgid ""
 "[org/gnome/online-accounts]\n"
 "whitelisted-providers= ['all']\n"
 msgstr ""
+"\n"
+"[org/gnome/online-accounts]\n"
+"whitelisted-providers= ['all']\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:78
 msgid "This is the default setting."
-msgstr ""
+msgstr "Hori da ezarpen lehenetsia."
 
 #. (itstool) path: item/p
 #: C/lockdown-online-accounts.page:82
 msgid ""
 "To prevent the user from overriding these settings, create the file <file>/"
 "etc/dconf/db/local.d/locks/goa</file> with the following content:"
-msgstr ""
+msgstr "Erabiltzaileek ezarpen hauek indargabetu ditzaten eragozteko, sortu <file>/etc/dconf/db/local.d/locks/goa</file> fitxategia honako edukiekin:"
 
 #. (itstool) path: listing/title
 #: C/lockdown-online-accounts.page:86
-msgid "<file>/etc/dconf/db/local.db/locks/goa</file>"
-msgstr ""
+msgid "<file>/etc/dconf/db/local.d/locks/goa</file>"
+msgstr "<file>/etc/dconf/db/local.d/locks/goa</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-online-accounts.page:87
@@ -2412,17 +2424,20 @@ msgid ""
 "# Lock the list of providers that are allowed to be loaded\n"
 "/org/gnome/online-accounts/whitelisted-providers\n"
 msgstr ""
+"\n"
+"# Blokeatu kargatzea ahalbidetuta duten hornitzaileen zerrenda\n"
+"/org/gnome/online-accounts/whitelisted-providers\n"
 
 #. (itstool) path: info/desc
 #: C/lockdown-printing.page:24
 msgid "Prevent the user from printing documents."
-msgstr ""
+msgstr "Eragotzi erabiltzaileak dokumentuak inprimatu ditzan."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/lockdown-printing.page:27 C/lockdown-printing.page:40
 msgid "Disable printing"
-msgstr ""
+msgstr "Desgaitu inprimatzea"
 
 #. (itstool) path: page/p
 #: C/lockdown-printing.page:29
@@ -2430,19 +2445,19 @@ msgid ""
 "You can disable the print dialog from being shown to users. This can be "
 "useful if you are giving temporary access to a user or you do not want the "
 "user to print to network printers."
-msgstr ""
+msgstr "Erabiltzaileek inprimatzeko elkarrizketa-koadroa ikusi dezaten desgaitu dezakezu. Erabilgarria izan daiteke erabiltzailea bati behin-behineko sarbidea ematen badiozu eta ez baduzu nahi erabiltzaileak sareko inprimagailuetan inprimatu dezan."
 
 #. (itstool) path: item/p
 #: C/lockdown-printing.page:48
 msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-printing</file> to "
 "provide information for the <sys>local</sys> database."
-msgstr ""
+msgstr "Sortu <file>/etc/dconf/db/local.d/00-printing</file> gako-fitxategia <sys>local</sys> datu-baseari buruzko informazioa emateko."
 
 #. (itstool) path: listing/title
 #: C/lockdown-printing.page:52
 msgid "<file>/etc/dconf/db/local.d/00-printing</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.d/00-printing</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-printing.page:53
@@ -2455,6 +2470,12 @@ msgid ""
 "# Prevent applications from printing\n"
 "disable-printing=true\n"
 msgstr ""
+"\n"
+"# Zehaztu dconf bide-izena\n"
+"[org/gnome/desktop/lockdown]\n"
+" \n"
+"# Eragotzi aplikazioek inprimatu dezaten\n"
+"disable-printing=true\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-printing.page:63
@@ -2465,8 +2486,8 @@ msgstr ""
 
 #. (itstool) path: listing/title
 #: C/lockdown-printing.page:67
-msgid "<file>/etc/dconf/db/local.db/locks/printing</file>"
-msgstr ""
+msgid "<file>/etc/dconf/db/local.d/locks/printing</file>"
+msgstr "<file>/etc/dconf/db/local.d/locks/printing</file>"
 
 #. (itstool) path: listing/code
 #: C/lockdown-printing.page:68
@@ -2480,13 +2501,13 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/lockdown-repartitioning.page:24
 msgid "Prevent the user from changing disk partitions."
-msgstr ""
+msgstr "Eragotzi erabiltzaileek disko-partizioak aldatu ditzaten."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/lockdown-repartitioning.page:27 C/lockdown-repartitioning.page:42
 msgid "Disable repartitioning"
-msgstr ""
+msgstr "Desgaitu partizioak moldatzea"
 
 #. (itstool) path: page/p
 #: C/lockdown-repartitioning.page:29
@@ -2578,12 +2599,12 @@ msgstr "2023"
 #. (itstool) path: info/desc
 #: C/lockdown-single-app-mode.page:42
 msgid "Set up a kiosk-like, single-application system."
-msgstr ""
+msgstr "Konfiguratu kiosko moduko aplikazio bakarreko sistema bat."
 
 #. (itstool) path: page/title
 #: C/lockdown-single-app-mode.page:45
 msgid "Configure single-application mode"
-msgstr ""
+msgstr "Konfiguratu aplikazio bakarreko modua"
 
 #. (itstool) path: page/p
 #: C/lockdown-single-app-mode.page:47
@@ -2614,34 +2635,34 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/lockdown-single-app-mode.page:65
 msgid "Set up single-application mode"
-msgstr ""
+msgstr "Konfiguratu aplikazio bakarreko modua"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:67
 msgid "Lock down settings to prevent printing, terminal access, and so on."
-msgstr ""
+msgstr "Blokeatu ezarpenak inprimatzea, terminala erabiltzea eta abar eragozteko."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:76
 msgid ""
 "Configure automatic login in the <file>/etc/gdm/custom.conf</file> file for "
 "the user."
-msgstr ""
+msgstr "Konfiguratu erabiltzailearen saio-hasiera automatikoa <file>/etc/gdm/custom.conf</file> fitxategian."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:78
 msgid "See <link xref=\"login-automatic\"/> for more information."
-msgstr ""
+msgstr "Ikus <link xref=\"login-automatic\"/> informazio gehiagorako."
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:81
 msgid "Create the following files with the listed content:"
-msgstr ""
+msgstr "Sortu honako fitxategiak, zerrendatutako edukiarekin:"
 
 #. (itstool) path: item/title
 #: C/lockdown-single-app-mode.page:84
 msgid "<file>/usr/share/applications/org.gnome.Kiosk.Script.desktop</file>"
-msgstr ""
+msgstr "<file>/usr/share/applications/org.gnome.Kiosk.Script.desktop</file>"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:87
@@ -2653,12 +2674,17 @@ msgid ""
 "Type=Application\n"
 "Exec=gnome-kiosk\n"
 msgstr ""
+"\n"
+"[Desktop Entry]\n"
+"Name=Kioskoa\n"
+"Type=Application\n"
+"Exec=gnome-kiosk\n"
 
 #. (itstool) path: item/title
 #: C/lockdown-single-app-mode.page:95
 msgid ""
 "<file>/usr/share/applications/org.gnome.Kiosk.WindowManager.desktop</file>"
-msgstr ""
+msgstr "<file>/usr/share/applications/org.gnome.Kiosk.WindowManager.desktop</file>"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:98
@@ -2679,11 +2705,25 @@ msgid ""
 "X-GNOME-AutoRestart=false\n"
 "X-GNOME-HiddenUnderSystemd=true\n"
 msgstr ""
+"\n"
+"[Desktop Entry]\n"
+"Type=Application\n"
+"Name=Mutter\n"
+"Comment=Leiho-kudeatzailea\n"
+"Exec=/usr/bin/mutter\n"
+"Categories=GNOME;GTK;Core;\n"
+"OnlyShowIn=GNOME;\n"
+"NoDisplay=true\n"
+"X-GNOME-Autostart-Phase=DisplayServer\n"
+"X-GNOME-Provides=windowmanager;\n"
+"X-GNOME-Autostart-Notify=true\n"
+"X-GNOME-AutoRestart=false\n"
+"X-GNOME-HiddenUnderSystemd=true\n"
 
 #. (itstool) path: item/title
 #: C/lockdown-single-app-mode.page:115
 msgid "<file>/usr/share/gnome-session/sessions/gnome-kiosk.session</file>"
-msgstr ""
+msgstr "<file>/usr/share/gnome-session/sessions/gnome-kiosk.session</file>"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:118
@@ -2694,11 +2734,15 @@ msgid ""
 "Name=Kiosk\n"
 "RequiredComponents=org.gnome.Kiosk.WindowManager;org.gnome.Kiosk.Script;\n"
 msgstr ""
+"\n"
+"[GNOME Session]\n"
+"Name=Kioskoa\n"
+"RequiredComponents=org.gnome.Kiosk.WindowManager;org.gnome.Kiosk.Script;\n"
 
 #. (itstool) path: item/title
 #: C/lockdown-single-app-mode.page:125
 msgid "<file>/usr/share/X11/xorg.conf.d/20-gnome-kiosk.conf</file>"
-msgstr ""
+msgstr "<file>/usr/share/X11/xorg.conf.d/20-gnome-kiosk.conf</file>"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:128
@@ -2709,11 +2753,15 @@ msgid ""
 "    Option \"DontVTSwitch\" \"on\"\n"
 "EndSection\n"
 msgstr ""
+"\n"
+"Section \"ServerFlags\"\n"
+"    Option \"DontVTSwitch\" \"on\"\n"
+"EndSection\n"
 
 #. (itstool) path: item/title
 #: C/lockdown-single-app-mode.page:135
 msgid "<file>/usr/share/xsessions/org.gnome.Kiosk.desktop</file>"
-msgstr ""
+msgstr "<file>/usr/share/xsessions/org.gnome.Kiosk.desktop</file>"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:138
@@ -2726,6 +2774,12 @@ msgid ""
 "Exec=/usr/bin/gnome-session --session=gnome-kiosk\n"
 "DesktopNames=GNOME-Kiosk;GNOME;\n"
 msgstr ""
+"\n"
+"[Desktop Entry]\n"
+"Name=Kioskoa\n"
+"Comment=Kiosko modua\n"
+"Exec=/usr/bin/gnome-session --session=gnome-kiosk\n"
+"DesktopNames=GNOME-Kiosk;GNOME;\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:149
@@ -2743,6 +2797,10 @@ msgid ""
 "\n"
 "[<var>user</var>]$ touch ~/.local/bin/gnome-kiosk\n"
 msgstr ""
+"\n"
+"[<var>user</var>]$ mkdir -p ~/.local/bin\n"
+"\n"
+"[<var>user</var>]$ touch ~/.local/bin/gnome-kiosk\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:158
@@ -2770,6 +2828,12 @@ msgid ""
 "    firefox --kiosk https://example.org\n"
 "done\n"
 msgstr ""
+"\n"
+"#!/bin/sh\n"
+"\n"
+"while true; do\n"
+"    firefox --kiosk https://adibidea.org\n"
+"done\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:169
@@ -2781,7 +2845,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:173
 msgid "Make the file executable:"
-msgstr ""
+msgstr "Egin fitxategia exekutagarria izan dadin:"
 
 #. (itstool) path: item/code
 #: C/lockdown-single-app-mode.page:174
@@ -2790,6 +2854,8 @@ msgid ""
 "\n"
 "[<var>user</var>]$ chmod +x ~/.local/bin/gnome-kiosk\n"
 msgstr ""
+"\n"
+"[<var>user</var>]$ chmod +x ~/.local/bin/gnome-kiosk\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:179
@@ -2806,6 +2872,8 @@ msgid ""
 "\n"
 "# chown -R <var>user</var>:<var>group</var> ~<var>user</var>/.local\n"
 msgstr ""
+"\n"
+"# chown -R <var>user</var>:<var>group</var> ~<var>user</var>/.local\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-single-app-mode.page:187
@@ -2822,12 +2890,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/login-automatic.page:30
 msgid "Log in automatically into a user account on startup."
-msgstr ""
+msgstr "Hasi saioa automatikoki abioan erabiltzaile-kontu batekin."
 
 #. (itstool) path: page/title
 #: C/login-automatic.page:33
 msgid "Configure automatic login"
-msgstr ""
+msgstr "Konfiguratu saio-hasiera automatikoa"
 
 #. (itstool) path: page/p
 #. TRANSLATORS: 'Administrator' and 'Automatic Login' are strings from the
@@ -2864,12 +2932,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/login-banner.page:39
 msgid "Show extra text on the login screen."
-msgstr ""
+msgstr "Erakutsi testu gehiago saioa hasteko pantailan."
 
 #. (itstool) path: page/title
 #: C/login-banner.page:42
 msgid "Display a text banner on the login screen"
-msgstr ""
+msgstr "Bistaratu testua saioa hasteko pantailan"
 
 #. (itstool) path: page/p
 #: C/login-banner.page:49
@@ -2883,7 +2951,7 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/login-banner.page:55
 msgid "Display a text banner on the login screen:"
-msgstr ""
+msgstr "Bistaratu testua saioa hasteko pantailan:"
 
 #. (itstool) path: item/p
 #: C/login-banner.page:59
@@ -2895,7 +2963,7 @@ msgstr ""
 #: C/login-banner.page:63
 #, no-wrap
 msgid "Type the banner message here."
-msgstr ""
+msgstr "Idatzi mezua hemen."
 
 #. (itstool) path: note/p
 #: C/login-banner.page:72
@@ -2907,17 +2975,17 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/login-banner.page:74
 msgid "The banner message cannot be read from an external file."
-msgstr ""
+msgstr "Mezua ezin da irakurri kanpoko fitxategi batetik."
 
 #. (itstool) path: info/desc
 #: C/login-enterprise.page:19
 msgid "Use your Active Directory or IPA domain credentials to log into GNOME."
-msgstr ""
+msgstr "Erabili zure Active Directory edo IPA domeinuko kredentzialak GNOMEn saioa hasteko."
 
 #. (itstool) path: page/title
 #: C/login-enterprise.page:23
 msgid "Use enterprise credentials to log into GNOME"
-msgstr ""
+msgstr "Erabili enpresako kredentzialak GNOMEn saioa hasteko."
 
 #. (itstool) path: page/p
 #: C/login-enterprise.page:25
@@ -2940,7 +3008,7 @@ msgstr ""
 #: C/login-enterprise.page:34
 #, no-wrap
 msgid "<input>User@example.com</input>"
-msgstr ""
+msgstr "<input>Erabiltzailea@adibidea.com</input>"
 
 #. (itstool) path: page/p
 #: C/login-enterprise.page:35
@@ -2952,7 +3020,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/login-enterprise.page:39
 msgid "Use enterprise credentials during Welcome screens"
-msgstr ""
+msgstr "Erabili enpresako kredentzialak ongi etorriko pantailetan"
 
 #. (itstool) path: section/p
 #: C/login-enterprise.page:40
@@ -2965,7 +3033,7 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/login-enterprise.page:44 C/login-enterprise.page:70
 msgid "Configure enterprise credentials"
-msgstr ""
+msgstr "Konfiguratu enpresako kredentzialak"
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:46
@@ -2979,17 +3047,17 @@ msgstr ""
 msgid ""
 "Type the name of your domain in the <gui>Domain</gui> field if it is not "
 "already prefilled."
-msgstr ""
+msgstr "Idatzi zure domeinuaren izena <gui>Domeinua</gui> eremuan, jadanik beteta ez badago."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:54
 msgid "Type your domain account user and password in the relevant fields."
-msgstr ""
+msgstr "Idatzi zure domeinuko kontuaren erabiltzaile-izena eta pasahitza dagozkien eremuetan."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:58
 msgid "Click <gui>Next</gui>."
-msgstr ""
+msgstr "Sakatu <gui>Hurrengoa</gui>."
 
 #. (itstool) path: section/p
 #: C/login-enterprise.page:61
@@ -3001,7 +3069,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/login-enterprise.page:65
 msgid "Change to use enterprise credentials to log into GNOME"
-msgstr ""
+msgstr "Aldatu enpresako kredentzialak GNOMEn saioa hasteko."
 
 #. (itstool) path: section/p
 #: C/login-enterprise.page:66
@@ -3016,24 +3084,24 @@ msgstr ""
 msgid ""
 "Open the <gui href=\"help:gnome-help/shell-terminology\">Activities</gui> "
 "overview and start typing <gui>Users</gui>."
-msgstr ""
+msgstr "Ireki <gui href=\"help:gnome-help/shell-terminology\">Jarduerak</gui> ikuspegia eta hasi <gui>Erabiltzaileak</gui> idazten."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:76
 msgid "Click on <gui>Users</gui> to open the panel."
-msgstr ""
+msgstr "Sakatu <gui>Erabiltzaileak</gui> panela irekitzeko."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:79
 msgid ""
 "Click the <gui>Unlock</gui> button and type the computer administrator’s "
 "password."
-msgstr ""
+msgstr "Egin klik <gui>Desblokeatu</gui> botoian eta idatzi ordenagailuaren administratzaile-pasahitza."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:83
 msgid "Click the <gui>[+]</gui> button in the lower left of the window."
-msgstr ""
+msgstr "Egin klik leihoaren beheko ezkerreko izkinan dagoen <gui>[+]</gui> botoian."
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:87
@@ -3057,7 +3125,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/login-enterprise.page:99
 msgid "Troubleshoot and advanced setup"
-msgstr ""
+msgstr "Arazoak konpontzea eta konfigurazio aurreratua"
 
 #. (itstool) path: section/p
 #: C/login-enterprise.page:100
@@ -3084,7 +3152,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/login-enterprise.page:111 C/mime-types.page:108
 msgid "Get more information"
-msgstr ""
+msgstr "Eskuratu informazio gehiago"
 
 #. (itstool) path: item/p
 #: C/login-enterprise.page:114
@@ -3102,7 +3170,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/login-fingerprint.page:28
 msgid "Disallow login using a fingerprint"
-msgstr ""
+msgstr "Desgaitu hatz-marka erabiliz saioa hastea"
 
 #. (itstool) path: page/p
 #: C/login-fingerprint.page:30
@@ -3129,12 +3197,12 @@ msgstr ""
 msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-login</file> to provide "
 "information for the <sys>local</sys> database."
-msgstr ""
+msgstr "Sortu <file>/etc/dconf/db/local.d/00-login</file> gako-fitxategia <sys>local</sys> datu-baseari buruzko informazioa emateko."
 
 #. (itstool) path: listing/title
 #: C/login-fingerprint.page:51
 msgid "<file>/etc/dconf/db/local.d/00-login</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.d/00-login</file>"
 
 #. (itstool) path: listing/code
 #: C/login-fingerprint.page:52
@@ -3178,7 +3246,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/login-logo.page:38
 msgid "Add a greeter logo to the login screen"
-msgstr ""
+msgstr "Gehitu ongietorriko logo bat saioa hasteko pantailari"
 
 #. (itstool) path: page/p
 #: C/login-logo.page:45
@@ -3215,7 +3283,7 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/login-logo.page:65
 msgid "Set the org.gnome.login-screen.logo key"
-msgstr ""
+msgstr "Ezarri org.gnome.login-screen.logo gakoa"
 
 #. (itstool) path: item/p
 #: C/login-logo.page:69
@@ -3243,19 +3311,19 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/login-logo.page:83
 msgid "What if the logo does not update?"
-msgstr ""
+msgstr "Logoa eguneratzen ez bada, zer?"
 
 #. (itstool) path: section/p
 #: C/login-logo.page:85
 msgid ""
 "Make sure that you have run the <cmd>dconf update</cmd> command to update "
 "the system databases."
-msgstr ""
+msgstr "Ziurtatu <cmd>dconf update</cmd> komandoa exekutatu duzula sistemaren datu-baseak eguneratzeko."
 
 #. (itstool) path: section/p
 #: C/login-logo.page:88
 msgid "In case the logo does not update, try restarting <sys>GDM</sys>."
-msgstr ""
+msgstr "Logoa eguneratzen ez bada, saiatu <sys>GDM</sys> berrabiarazten."
 
 #. (itstool) path: info/desc
 #: C/login.page:9
@@ -3268,22 +3336,22 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/login.page:17
 msgid "Login"
-msgstr ""
+msgstr "Saio-hasiera"
 
 #. (itstool) path: section/title
 #: C/login.page:25 C/software.page:31
 msgid "Management"
-msgstr ""
+msgstr "Kudeaketa"
 
 #. (itstool) path: info/desc
 #: C/login-userlist-disable.page:29
 msgid "Make users type in their username on the login screen."
-msgstr ""
+msgstr "Behartu erabiltzaileek beren erabiltzaile-izena idaztera saioa hasteko pantailan."
 
 #. (itstool) path: page/title
 #: C/login-userlist-disable.page:32
 msgid "Disable the user list"
-msgstr ""
+msgstr "Desgaitu erabiltzaileen zerrenda"
 
 #. (itstool) path: page/p
 #: C/login-userlist-disable.page:34
@@ -3297,12 +3365,12 @@ msgstr ""
 msgid ""
 "When the user list is disabled, users need to type their user name and "
 "password at the prompt to log in."
-msgstr ""
+msgstr "Erabiltzaileen zerrenda desgaituta badago, erabiltzaileek beren erabiltzaile-izena eta pasahitza idatzi beharko dute saioa hasteko."
 
 #. (itstool) path: steps/title
 #: C/login-userlist-disable.page:39
 msgid "Set the org.gnome.login-screen.disable-user-list key"
-msgstr ""
+msgstr "Konfiguratu org.gnome.login-screen.disable-user-list gakoa"
 
 #. (itstool) path: item/p
 #: C/login-userlist-disable.page:44
@@ -3319,16 +3387,19 @@ msgid ""
 "# Do not show the user list\n"
 "disable-user-list=true\n"
 msgstr ""
+"[org/gnome/login-screen]\n"
+"# Ez erakutsi erabiltzaileen zerrenda\n"
+"disable-user-list=true\n"
 
 #. (itstool) path: info/desc
 #: C/logout-automatic.page:28
 msgid "End an idle user session."
-msgstr ""
+msgstr "Amaitu erabiltzaile-saio inaktibo bat."
 
 #. (itstool) path: page/title
 #: C/logout-automatic.page:32
 msgid "Configure automatic logout"
-msgstr ""
+msgstr "Konfiguratu saio-amaiera automatikoa"
 
 #. (itstool) path: page/p
 #: C/logout-automatic.page:34
@@ -3344,7 +3415,7 @@ msgstr ""
 msgid ""
 "Keep in mind that users can potentially lose unsaved data if an idle session "
 "is automatically ended."
-msgstr ""
+msgstr "Kontuan izan erabiltzaileek datuak galdu ditzaketela inaktibo dagoen saio bat automatikoki amaitzen bada."
 
 #. (itstool) path: steps/title
 #: C/logout-automatic.page:45
@@ -3375,7 +3446,7 @@ msgstr ""
 msgid ""
 "Override the user's setting and prevent the user from changing it in <file>/"
 "etc/dconf/db/local.d/locks/autologout</file>:"
-msgstr ""
+msgstr "Indargabetu erabiltzailearen ezarpena eta eragotzi aldatu dezala <file>/etc/dconf/db/local.d/locks/autologout</file> fitxategian:"
 
 #. (itstool) path: listing/code
 #: C/logout-automatic.page:69
@@ -3390,14 +3461,14 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/logout-automatic.page:87
 msgid "The following GSettings keys are of interest:"
-msgstr ""
+msgstr "Interesgarriak dira honako GSettings gakoak:"
 
 #. (itstool) path: item/title
 #: C/logout-automatic.page:90
 msgid ""
 "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</"
 "code>"
-msgstr ""
+msgstr "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-timeout</code>"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:91
@@ -3410,7 +3481,7 @@ msgstr ""
 #: C/logout-automatic.page:95
 msgid ""
 "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</code>"
-msgstr ""
+msgstr "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-ac-type</code>"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:96
@@ -3424,7 +3495,7 @@ msgstr ""
 msgid ""
 "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-"
 "timeout</code>"
-msgstr ""
+msgstr "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-timeout</code>"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:101
@@ -3438,7 +3509,7 @@ msgstr ""
 msgid ""
 "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</"
 "code>"
-msgstr ""
+msgstr "<code>org.gnome.settings-daemon.plugins.power.sleep-inactive-battery-type</code>"
 
 #. (itstool) path: item/p
 #: C/logout-automatic.page:106
@@ -3472,13 +3543,13 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/mime-types-application.page:20
 msgid "Customize which application opens a specific MIME type."
-msgstr ""
+msgstr "Pertsonalizatu zein aplikaziok irekitzen duen MIME mota bakoitza."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/mime-types-application.page:23 C/mime-types-application.page:44
 msgid "Override the default registered application for all users"
-msgstr ""
+msgstr "Indargabetu erabiltzaile guztietarako erregistratutako aplikazio lehenetsiak"
 
 #. (itstool) path: page/p
 #: C/mime-types-application.page:24 C/mime-types-application-user.page:25
@@ -3526,6 +3597,9 @@ msgid ""
 "text/html=epiphany.desktop\n"
 "application/xhtml+xml=epiphany.desktop"
 msgstr ""
+"[Default Applications]\n"
+"text/html=epiphany.desktop\n"
+"application/xhtml+xml=epiphany.desktop"
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:57
@@ -3555,6 +3629,13 @@ msgid ""
 "text/html=<var>myapplication1.desktop</var>;\n"
 "application/xhtml+xml=<var>myapplication2.desktop</var>;"
 msgstr ""
+"[Default Applications]\n"
+"text/html=<var>nireaplikazioa1.desktop</var>\n"
+"application/xhtml+xml=<var>nireaplikazioa2.desktop</var>\n"
+"\n"
+"[Added Associations]\n"
+"text/html=<var>nireaplikazioa1.desktop</var>;\n"
+"application/xhtml+xml=<var>nireaplikazioa2.desktop</var>;"
 
 #. (itstool) path: item/p
 #: C/mime-types-application.page:78 C/mime-types-application-user.page:73
@@ -3597,13 +3678,13 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/mime-types-application-user.page:19
 msgid "Customize per user which application opens a specific MIME type."
-msgstr ""
+msgstr "Pertsonalizatu zein aplikaziok irekitzen duen MIME mota bakoitza, erabiltzaile bakoitzerako."
 
 #. (itstool) path: page/title
 #. (itstool) path: steps/title
 #: C/mime-types-application-user.page:23 C/mime-types-application-user.page:37
 msgid "Override the default registered application for individual users"
-msgstr ""
+msgstr "Indargabetu banakako erabiltzaileentzako erregistratutako aplikazio lehenetsiak"
 
 #. (itstool) path: page/p
 #: C/mime-types-application-user.page:31
@@ -3644,12 +3725,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/mime-types-custom.page:19
 msgid "Create a MIME type specification and register a default application."
-msgstr ""
+msgstr "Sortu MIME motaren espezifikazio bat eta erregistratu aplikazio lehenetsi bat."
 
 #. (itstool) path: page/title
 #: C/mime-types-custom.page:23
 msgid "Add a custom MIME type for all users"
-msgstr ""
+msgstr "Gehitu MIME mota pertsonalizatu bat erabiltzaile guztientzako"
 
 #. (itstool) path: page/p
 #: C/mime-types-custom.page:24
@@ -3664,14 +3745,14 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/mime-types-custom.page:32
 msgid "Add a custom <sys>application/x-newtype</sys> MIME Type for All Users"
-msgstr ""
+msgstr "Gehitu <sys>application/x-newtype</sys> MIME mota pertsonalizatu bat erabiltzaile guztientzako"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:35
 msgid ""
 "Create the <file>/usr/share/mime/packages/application-x-newtype.xml</file> "
 "file:"
-msgstr ""
+msgstr "Sortu <file>/usr/share/mime/packages/application-x-newtype.xml</file> fitxategia:"
 
 #. (itstool) path: item/code
 #: C/mime-types-custom.page:39 C/mime-types-custom-user.page:38
@@ -3685,6 +3766,13 @@ msgid ""
 "  &lt;/mime-type&gt;\n"
 "&lt;/mime-info&gt;"
 msgstr ""
+"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n"
+"&lt;mime-info xmlns=\"http://www.freedesktop.org/standards/shared-mime-info\"&gt;\n"
+"  &lt;mime-type type=\"application/x-newtype\"&gt;\n"
+"    &lt;comment&gt;new mime type&lt;/comment&gt;\n"
+"    &lt;glob pattern=\"*.xyz\"/&gt;\n"
+"  &lt;/mime-type&gt;\n"
+"&lt;/mime-info&gt;"
 
 #. (itstool) path: item/p
 #: C/mime-types-custom.page:46 C/mime-types-custom-user.page:45
@@ -3880,7 +3968,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/mime-types.page:23
 msgid "What are MIME types?"
-msgstr ""
+msgstr "Zer dira MIME motak?"
 
 #. (itstool) path: page/p
 #: C/mime-types.page:24
@@ -3893,12 +3981,12 @@ msgstr ""
 #: C/mime-types.page:31
 msgid ""
 "Determine which application should open a specific file format by default."
-msgstr ""
+msgstr "Zehaztu zein aplikaziok irekiko duen fitxategi-formatu jakin bat modu lehenetsian."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:37
 msgid "Register other applications that can also open a specific file format."
-msgstr ""
+msgstr "Erregistratu fitxategi-formatu zehatz bat ireki dezaketen beste aplikazio batzuk."
 
 #. (itstool) path: item/p
 #: C/mime-types.page:42
@@ -3917,7 +4005,7 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/mime-types.page:56
 msgid "MIME type names follow a given format:"
-msgstr ""
+msgstr "MIME moten izenek honako formatua jarraitzen dute:"
 
 #. (itstool) path: page/screen
 #: C/mime-types.page:59
@@ -3926,13 +4014,15 @@ msgid ""
 "\n"
 "<var>media-type</var>/<var>subtype-identifier</var>\n"
 msgstr ""
+"\n"
+"<var>media-mota</var>/<var>azpimota-identifikatzailea</var>\n"
 
 #. (itstool) path: page/p
 #: C/mime-types.page:62
 msgid ""
 "<sys>image/jpeg</sys> is an example of a MIME type where <sys>image</sys> is "
 "the media type, and <sys>jpeg</sys> is the subtype identifier."
-msgstr ""
+msgstr "<sys>image/jpeg</sys> MIME motan, adibidez, <sys>image</sys> media mota da eta <sys>jpeg</sys> is azpimotaren identifikatzailea da."
 
 #. (itstool) path: page/p
 #: C/mime-types.page:67
@@ -3959,12 +4049,12 @@ msgstr ""
 #: C/mime-types.page:85
 msgid ""
 "How the user can change which applications should open what file formats."
-msgstr ""
+msgstr "Nola aldatu dezaketen erabiltzaileek zein aplikazio erabiliko den fitxategi-formatu bakoitza irekitzeko."
 
 #. (itstool) path: section/title
 #: C/mime-types.page:91
 msgid "What is the MIME database?"
-msgstr ""
+msgstr "Zer da MIME datu-basea?"
 
 #. (itstool) path: section/p
 #: C/mime-types.page:92
@@ -4011,18 +4101,18 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/network.page:17
 msgid "Network &amp; hardware"
-msgstr ""
+msgstr "Sarea eta hardwarea"
 
 #. (itstool) path: info/desc
 #: C/network-server-list.page:26
 msgid ""
 "How do I make it easy for different users to access different file shares?"
-msgstr ""
+msgstr "Nola erraztu dezaket erabiltzaile desberdinek fitxategi-partekatze desberdinetara sartu daitezen?"
 
 #. (itstool) path: page/title
 #: C/network-server-list.page:30
 msgid "Configure a default server list"
-msgstr ""
+msgstr "Konfiguratu zerbitzarien zerrenda lehenetsi bat"
 
 #. (itstool) path: page/p
 #: C/network-server-list.page:37
@@ -4071,12 +4161,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/network-vpn.page:21
 msgid "How do I preconfigure VPN for all my users?"
-msgstr ""
+msgstr "Nola aurrekonfiguratu dezaket VPN bat nire erabiltzaile guztientzako?"
 
 #. (itstool) path: page/title
 #: C/network-vpn.page:24
 msgid "Default VPN settings"
-msgstr ""
+msgstr "VPN ezarpen lehenetsiak"
 
 #. (itstool) path: page/p
 #: C/network-vpn.page:31
@@ -4089,7 +4179,7 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/network-vpn.page:35
 msgid "Here is a sample Cisco VPN configuration:"
-msgstr ""
+msgstr "Hona hemen Cisco VPN konfigurazio baten adibidea:"
 
 #. (itstool) path: page/screen
 #: C/network-vpn.page:37
@@ -4127,6 +4217,37 @@ msgid ""
 "IKE DH Group=dh2\n"
 "Local Port=0\n"
 msgstr ""
+"\n"
+"[connection]\n"
+"id=Sample vpnc\n"
+"uuid=a9894bc6-aa7c-4296-90e6-094f0b13a14e\n"
+"type=vpn\n"
+"permissions=\n"
+"autoconnect=false\n"
+"secondaries=\n"
+" \n"
+"[ipv6]\n"
+"method=auto\n"
+"dns-search=\n"
+" \n"
+"[ipv4]\n"
+"method=auto\n"
+"dns-search=\n"
+" \n"
+"[vpn]\n"
+"service-type=org.freedesktop.NetworkManager.vpnc\n"
+"NAT Traversal Mode=natt\n"
+"ipsec-secret-type=ask\n"
+"IPSec secret-flags=2\n"
+"xauth-password-type=ask\n"
+"Vendor=cisco\n"
+"Xauth username=dking\n"
+"IPSec gateway=my-vpnc.my-domain.com\n"
+"Xauth password-flags=2\n"
+"IPSec ID=RH-standard\n"
+"Perfect Forward Secrecy=server\n"
+"IKE DH Group=dh2\n"
+"Local Port=0\n"
 
 #. (itstool) path: info/desc
 #: C/overrides.page:21
@@ -4137,7 +4258,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/overrides.page:25
 msgid "Why should I not use GSettings overrides?"
-msgstr ""
+msgstr "Zergatik erabili beharko nituzke GSettings indargabetzeak?"
 
 #. (itstool) path: page/p
 #: C/overrides.page:32
@@ -4151,7 +4272,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/overrides.page:38
 msgid "What are vendor overrides?"
-msgstr ""
+msgstr "Zer dira hornitzaile-indargabetzeak?"
 
 #. (itstool) path: section/p
 #: C/overrides.page:40
@@ -4179,7 +4300,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/power-dim-screen.page:37
 msgid "Dim screen when user is idle"
-msgstr ""
+msgstr "Ilundu pantaila erabiltzailea inaktibo dagoenean"
 
 #. (itstool) path: page/p
 #: C/power-dim-screen.page:39
@@ -4191,7 +4312,7 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/power-dim-screen.page:43
 msgid "Dim screen on idle computer"
-msgstr ""
+msgstr "Ilundu pantaila ordenagailua inaktibo dagoenean"
 
 #. (itstool) path: item/p
 #: C/power-dim-screen.page:51
@@ -4203,7 +4324,7 @@ msgstr ""
 #. (itstool) path: listing/title
 #: C/power-dim-screen.page:55
 msgid "<file>/etc/dconf/db/local.d/00-power</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.d/00-power</file>"
 
 #. (itstool) path: listing/code
 #: C/power-dim-screen.page:56
@@ -4230,7 +4351,7 @@ msgstr ""
 #. (itstool) path: listing/title
 #: C/power-dim-screen.page:73
 msgid "<file>/etc/dconf/db/local.d/00-session</file>"
-msgstr ""
+msgstr "<file>/etc/dconf/db/local.d/00-session</file>"
 
 #. (itstool) path: listing/code
 #: C/power-dim-screen.page:74
@@ -4253,7 +4374,7 @@ msgstr ""
 
 #. (itstool) path: listing/title
 #: C/power-dim-screen.page:90
-msgid "<file>/etc/dconf/db/local.db/locks/power-saving</file>"
+msgid "<file>/etc/dconf/db/local.d/locks/power-saving</file>"
 msgstr ""
 
 #. (itstool) path: listing/code
@@ -4270,12 +4391,12 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/power-dim-screen.page:98
 msgid "If you want to let the user change these settings, skip this step."
-msgstr ""
+msgstr "Erabiltzaileek ezarpen hauek aldatu ahal ditzaten nahi baduzu, saltatu urrats hau."
 
 #. (itstool) path: credit/name
 #: C/processes.page:18
 msgid "Sindhu S"
-msgstr ""
+msgstr "Sindhu S"
 
 #. (itstool) path: info/desc
 #: C/processes.page:30
@@ -4287,7 +4408,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/processes.page:34
 msgid "Typical processes"
-msgstr ""
+msgstr "Prozesu tipikoak"
 
 #. (itstool) path: page/p
 #: C/processes.page:36
@@ -4300,7 +4421,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/processes.page:42
 msgid "dbus-daemon"
-msgstr ""
+msgstr "dbus-daemon"
 
 #. (itstool) path: item/p
 #: C/processes.page:43
@@ -4321,7 +4442,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/processes.page:51
 msgid "gnome-keyring-daemon"
-msgstr ""
+msgstr "gnome-keyring-daemon"
 
 #. (itstool) path: item/p
 #: C/processes.page:52
@@ -4336,12 +4457,12 @@ msgstr ""
 #: C/processes.page:56 C/processes.page:68 C/processes.page:77
 #: C/processes.page:86 C/processes.page:95
 msgid "For extended information, see the man page for <_:link-1/>."
-msgstr ""
+msgstr "Informazio gehiagorako, ikusi <_:link-1/> laguntza-orria."
 
 #. (itstool) path: item/title
 #: C/processes.page:61
 msgid "gnome-session"
-msgstr ""
+msgstr "gnome-session"
 
 #. (itstool) path: item/p
 #: C/processes.page:62
@@ -4357,7 +4478,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/processes.page:73
 msgid "gnome-settings-daemon"
-msgstr ""
+msgstr "gnome-settings-daemon"
 
 #. (itstool) path: item/p
 #: C/processes.page:74
@@ -4369,7 +4490,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/processes.page:82
 msgid "gnome-shell"
-msgstr ""
+msgstr "gnome-shell"
 
 #. (itstool) path: item/p
 #: C/processes.page:83
@@ -4382,7 +4503,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/processes.page:91
 msgid "pulseaudio"
-msgstr ""
+msgstr "pulseaudio"
 
 #. (itstool) path: item/p
 #: C/processes.page:92
@@ -4396,7 +4517,7 @@ msgstr ""
 msgid ""
 "Depending on the user's setup, you may also see some of the following, among "
 "others:"
-msgstr ""
+msgstr "Erabiltzailearen konfigurazioaren arabera, honakoak ere eduki ditzakezu, besteak beste:"
 
 #. (itstool) path: list/title
 #: C/processes.page:103
