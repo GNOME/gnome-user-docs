@@ -12,7 +12,11 @@
     <revision pkgversion="3.33.3" date="2019-07-21" status="review"/>
     <revision version="gnome:42" status="final" date="2022-04-09"/>
     <revision version="gnome:46" status="final" date="2024-03-02"/>
-
+    <revision version="gnome:46" status="draft" date="2024-04-21"/>    
+    <credit type="author">
+      <name>Marie Stará</name>
+      <email>413827@mail.muni.cz</email>
+    </credit>
     <credit type="author">
       <name>Ekaterina Gerasimova</name>
       <email>kittykat3756@gmail.com</email>
@@ -45,15 +49,23 @@
     <p>TODO: Add Connections, the GNOME client, to the Connecting: Linux
     section when it's ready for RDP.</p>
   </comment>
-
+  <comment>
+    <cite date="2024-04-22">Marie Stará</cite>  
+    <p>I've added Connections. It might need a reality check.</p>  
+  </comment>
+  
   <p>You can let other people view and control your desktop from another
-  computer with a desktop viewing application. Configure <gui>Remote
-  Desktop</gui> to allow others to access your desktop and set the security
-  preferences.</p>
-
+  device with a desktop viewing application. Configure <gui>Desktop Sharing
+  </gui> to allow others to access your desktop and set the security
+  preferences.</p> 
+  
+  <p>If you want to log in to your user account remotely, see 
+  <link xref="remote">Remote Login</link>.</p>    
+  
   <note style="info package">
     <p>You must have the <app>GNOME Remote Desktop</app> package installed for
-     <gui>Remote Desktop</gui> to be visible.</p>
+     <guiseq><gui>Remote Desktop</gui><gui>Desktop Sharing</gui></guiseq> to be 
+     visible.</p>
 
     <if:choose xmlns:if="http://projectmallard.org/if/1.0/">
       <if:when test="action:install">
@@ -72,18 +84,19 @@
       results. This will open the <gui>System</gui> panel.</p>
     </item>
     <item>
-      <p>Select <gui>Remote Desktop</gui> to open the panel.</p>
+      <p>Select <gui>Remote Desktop</gui> to open the 
+      <gui>Desktop Sharing</gui> panel.</p>
     </item>
     <item>
-      <p>To let others view your desktop, set the <gui>Remote Desktop</gui>
-      switch to on. This means that other people will be able to attempt to
-      connect to your computer and view what’s on your screen.</p>
+      <p>To let others view your desktop, switch on <gui>Desktop Sharing</gui>. 
+      This means that others will be able to try and connect to your device and view 
+      your screen.</p>
     </item>
     <item>
-      <p>To let others interact with your desktop, set the
-      <gui>Remote Control</gui> switch to on. This may allow the other person to
-      move your mouse, run applications, and browse files on your computer,
-      depending on the security settings which you are currently using.</p>
+      <p>To let others interact with your desktop switch on <gui>Remote Control</gui>. 
+      This may allow the other person to move your cursor, run applications, and 
+      browse your files, depending on the security settings which you are currently 
+      using.</p>
     </item>
   </steps>
 
@@ -91,34 +104,43 @@
   <title>Connecting</title>
 
   <p>The <gui>How to Connect</gui> section displays the
-  <gui>Device Name</gui> and <gui>Remote Desktop Address</gui> that can be used
-  on the connecting computer. Click the button next to each entry if you want to
-  place it in the clipboard. A connection can also be made using your
+  <gui>Hostname</gui> and <gui>Port</gui> that can be used
+  on the connecting device. Click the button next to each entry if you want to
+  place it in the clipboard. A connection can also be established using your
   <link xref="net-findip">IP address</link>.</p>
-  <p>When the other computer is successfully connected to your desktop, you
-  will see the <gui>Screen is being shared</gui> icon,
-  <media its:translate="no" type="image" src="figures/topbar-screen-shared.svg" style="floatend"/>
-  in your system status area.</p>
+  
+  <note style="important">
+  <p>If you enable <link xref="remote">Remote Login</link>, the port number for 
+  <gui>Desktop Sharing</gui> will be set to 3390 instead of 3389 (which is the usual 
+  remote desktop port number).</p> 
+  <p>If the port number is not 3389, specify the port number when connecting.</p> 
+  </note>
+  
+  <p>When the other device is successfully connected to your desktop, you
+  will see the <gui>Screen is being shared</gui> icon
+  <media its:translate="no" type="image" src="figures/topbar-screen-shared.svg" style="floatend"/> in your system status area.</p>
 
-  <note style="info"><p>If the text set as <gui>Device Name</gui> allows
-  you to edit it, you can <link xref="about-hostname">change</link>
-  the name your computer displays on the network.</p></note>
+  <note style="info"><p>If the text set as <gui>Device Name</gui> can be edited, 
+  you can <link xref="about-hostname">change</link>
+  the name of your device on the network.</p></note>
 
   </section>
 
   <section id="security">
   <title>Security</title>
 
-  <p>The <gui>Authentication</gui> section displays the login credentials to be
-  used in the client software on the connecting device.</p>
+  <p>The <gui>Login Details</gui> section displays login credentials to be used in the
+  client software used for connecting to your desktop.</p>  
+
   <terms>
     <item>
-      <title>User Name</title>
+      <title>Username</title>
       <p>Use the suggested value or enter your own.</p>
     </item>
     <item>
       <title>Password</title>
-      <p>Use the suggested value or enter your own.</p>
+      <p>Enter a password or click <gui>Generate New Password</gui> to automatically 
+      generate a random password.</p>    
     <note style="tip">
       <p>Click the button next to each entry if you want to place it in the
       clipboard.</p>
@@ -126,7 +148,7 @@
     </item>
     <item>
       <title>Verify Encryption</title>
-      <p>Click the <gui>Verify Encryption</gui> button to display the
+      <p>Click <gui>Verify Encryption</gui> to display the
       encryption fingerprint. Compare it with the value displayed by the client
       when connecting: they should be identical.</p>
     </item>
@@ -136,7 +158,7 @@
   <section id="clients">
   <title>Clients</title>
 
-  <p>To connect to your desktop from another computer, the following clients are
+  <p>To connect to your desktop from another device, the following clients are
   known to work.</p>
   <terms>
     <item>
@@ -145,9 +167,12 @@
         <item><p><app>Remmina</app>, a GTK client, is available as a package in
         most distributions, and also as a
         <link href="https://flathub.org/apps/details/org.remmina.Remmina">flatpak</link>.
-        Use default settings, particularly <gui>Color depth</gui> 'Automatic'
+        Use default settings, particularly <gui>Color depth</gui> “Automatic”
         in the connection profile settings.</p>
         </item>
+        <item><p><app>Connections</app>, a GTK client, is available as a package
+        in most distributions, and also as a <link href="https://flathub.org/apps/org.gnome.Connections">flatpak</link>.</p>
+        </item>        
         <item><p><app>xfreerdp</app> is a command line client available as a
         package in most distributions. The option <cmd>/network:auto</cmd>
         should be passed to the client on the command line.</p>
@@ -173,11 +198,28 @@
     </item>
   </terms>
   </section>
+  
+  <section id="checking-connection">
+  <title>Checking connection</title>
+  <steps>
+    <item>
+      <p>In your chosen client, enter the <gui>Hostname</gui> or IP address.</p> 
+     <note style="tip">
+      <p>If the port number differs from 3389, specify it (address:port).</p> 
+      <p>On many networks you need to add a “.local” suffix to the d's name
+      for the connection to work.</p>
+    </note>
+    </item>
+    <item>
+      <p>Fill in the username and password for Desktop Sharing.</p>
+    </item>
+  </steps>
+  </section>
 
   <section id="disconnect">
   <title>Stop sharing your desktop</title>
 
-  <p>To disconnect someone who is viewing your desktop:</p>
+  <p>To disconnect someone who is viewing your desktop follow the steps below.</p>
 
   <steps>
     <item>
