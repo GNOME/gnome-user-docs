@@ -12,7 +12,7 @@
     <revision pkgversion="3.33.3" date="2019-07-21" status="review"/>
     <revision version="gnome:42" status="final" date="2022-04-09"/>
     <revision version="gnome:46" status="final" date="2024-03-02"/>
-    <revision version="gnome:46" status="draft" date="2024-04-21"/>    
+    <revision version="gnome:46" status="draft" date="2024-04-21"/>
     <credit type="author">
       <name>Marie Stará</name>
       <email>413827@mail.muni.cz</email>
@@ -50,33 +50,21 @@
     section when it's ready for RDP.</p>
   </comment>
   <comment>
-    <cite date="2024-04-22">Marie Stará</cite>  
-    <p>I've added Connections. It might need a reality check.</p>  
+    <cite date="2024-04-22">Marie Stará</cite>
+    <p>I've added Connections. It might need a reality check.</p>
   </comment>
-  
+
   <p>You can let other people view and control your desktop from another
   device with a desktop viewing application. Configure <gui>Desktop Sharing
   </gui> to allow others to access your desktop and set the security
-  preferences.</p> 
-  
-  <p>If you want to log in to your user account remotely, see 
-  <link xref="remote">Remote Login</link>.</p>    
-  
-  <note style="info package">
-    <p>You must have the <app>GNOME Remote Desktop</app> package installed for
-     <guiseq><gui>Remote Desktop</gui><gui>Desktop Sharing</gui></guiseq> to be 
-     visible.</p>
+  preferences.</p>
 
-    <if:choose xmlns:if="http://projectmallard.org/if/1.0/">
-      <if:when test="action:install">
-        <p><link action="install:gnome-remote-desktop" style="button">Install GNOME Remote Desktop</link></p>
-      </if:when>
-    </if:choose>
-  </note>
+  <p>If you want to log in to your user account remotely, see
+  <link xref="remote-login">Remote Login</link>.</p>
 
   <steps>
     <item>
-      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> 
+      <p>Open the <gui xref="shell-introduction#activities">Activities</gui>
       overview and start typing <gui>System</gui>.</p>
     </item>
     <item>
@@ -84,18 +72,18 @@
       results. This will open the <gui>System</gui> panel.</p>
     </item>
     <item>
-      <p>Select <gui>Remote Desktop</gui> to open the 
+      <p>Select <gui>Remote Desktop</gui> to open the
       <gui>Desktop Sharing</gui> panel.</p>
     </item>
     <item>
-      <p>To let others view your desktop, switch on <gui>Desktop Sharing</gui>. 
-      This means that others will be able to try and connect to your device and view 
+      <p>To let others view your desktop, switch on <gui>Desktop Sharing</gui>.
+      This means that others will be able to try and connect to your device and view
       your screen.</p>
     </item>
     <item>
-      <p>To let others interact with your desktop switch on <gui>Remote Control</gui>. 
-      This may allow the other person to move your cursor, run applications, and 
-      browse your files, depending on the security settings which you are currently 
+      <p>To let others interact with your desktop switch on <gui>Remote Control</gui>.
+      This may allow the other person to move your cursor, run applications, and
+      browse your files, depending on the security settings which you are currently
       using.</p>
     </item>
   </steps>
@@ -108,51 +96,36 @@
   on the connecting device. Click the button next to each entry if you want to
   place it in the clipboard. A connection can also be established using your
   <link xref="net-findip">IP address</link>.</p>
-  
+
   <note style="important">
-  <p>If you enable <link xref="remote">Remote Login</link>, the port number for 
-  <gui>Desktop Sharing</gui> will be set to 3390 instead of 3389 (which is the usual 
-  remote desktop port number).</p> 
-  <p>If the port number is not 3389, specify the port number when connecting.</p> 
+    <p>If you also enable <link xref="remote-login">Remote Login</link>, it will set its port
+    number to 3389. This means <gui>Desktop Sharing</gui> will use a different port, for
+    example, 3390.</p>
+    <p>If the port number is not 3389, specify it when connecting.</p>
   </note>
-  
+
+
   <p>When the other device is successfully connected to your desktop, you
   will see the <gui>Screen is being shared</gui> icon
   <media its:translate="no" type="image" src="figures/topbar-screen-shared.svg" style="floatend"/> in your system status area.</p>
 
-  <note style="info"><p>If the text set as <gui>Device Name</gui> can be edited, 
+  <note style="info"><p>If the text set as <gui>Device Name</gui> can be edited,
   you can <link xref="about-hostname">change</link>
   the name of your device on the network.</p></note>
 
   </section>
 
-  <section id="security">
-  <title>Security</title>
+  <section id="authentication">
+  <title>Authentication</title>
 
-  <p>The <gui>Login Details</gui> section displays login credentials to be used in the
-  client software used for connecting to your desktop.</p>  
+  <p>The <gui>Login Details</gui> section displays the username and password to be used in the
+  client software used for connecting to your desktop.</p>
 
-  <terms>
-    <item>
-      <title>Username</title>
-      <p>Use the suggested value or enter your own.</p>
-    </item>
-    <item>
-      <title>Password</title>
-      <p>Enter a password or click <gui>Generate New Password</gui> to automatically 
-      generate a random password.</p>    
-    <note style="tip">
-      <p>Click the button next to each entry if you want to place it in the
-      clipboard.</p>
-    </note>
-    </item>
-    <item>
-      <title>Verify Encryption</title>
-      <p>Click <gui>Verify Encryption</gui> to display the
-      encryption fingerprint. Compare it with the value displayed by the client
-      when connecting: they should be identical.</p>
-    </item>
-  </terms>
+  <note style="tip">
+    <p>Click <gui>Verify Encryption</gui> to display the encryption
+    fingerprint. Compare it with the value displayed by the client when
+    connecting: they should be identical.</p>
+  </note>
   </section>
 
   <section id="clients">
@@ -172,7 +145,7 @@
         </item>
         <item><p><app>Connections</app>, a GTK client, is available as a package
         in most distributions, and also as a <link href="https://flathub.org/apps/org.gnome.Connections">flatpak</link>.</p>
-        </item>        
+        </item>
         <item><p><app>xfreerdp</app> is a command line client available as a
         package in most distributions. The option <cmd>/network:auto</cmd>
         should be passed to the client on the command line.</p>
@@ -198,15 +171,15 @@
     </item>
   </terms>
   </section>
-  
+
   <section id="checking-connection">
   <title>Checking connection</title>
   <steps>
     <item>
-      <p>In your chosen client, enter the <gui>Hostname</gui> or IP address.</p> 
+      <p>In your chosen client, enter the <gui>Hostname</gui> or IP address.</p>
      <note style="tip">
-      <p>If the port number differs from 3389, specify it (address:port).</p> 
-      <p>On many networks you need to add a “.local” suffix to the d's name
+      <p>If the port number differs from 3389, specify it (address:port).</p>
+      <p>On many networks you need to add a “.local” suffix to the computer's name
       for the connection to work.</p>
     </note>
     </item>
@@ -234,7 +207,7 @@
   </steps>
 
   </section>
-  
+
   <section id="advanced" ui:expanded="false">
   <title>Advanced Topics</title>
 
