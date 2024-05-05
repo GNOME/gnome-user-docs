@@ -4,10 +4,10 @@
       xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task" version="1.0 if/1.0 ui/1.0"
       id="remote-login">
-  <info>
 
-    <revision version="gnome:40" date="2024-04-21" status="draft"/> 
-    <link type="guide" xref="remote"/>    
+  <info>
+    <revision version="gnome:46" date="2024-04-21" status="draft"/>
+    <link type="guide" xref="sharing"/>
 
     <credit type="author copyright">
       <name>Marie Stará</name>
@@ -16,48 +16,32 @@
     </credit>
         <credit type="collaborator">
       <name>Felipe Borges</name>
-    </credit>    
+    </credit>
     <credit type="collaborator">
       <name>Jeremy Bicha</name>
-    </credit>    
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
-    
+
     <desc>Log in to your device remotely using RDP.</desc>
   </info>
 
   <title>Log in remotely to your device</title>
-  
-  <p>You can log in to your user account from another device by using a 
-  remote desktop connection application. Configure <gui>Remote Login</gui> to 
-  access your device and set the security preferences.</p>  
-  
-  <p>If you want to let others to view or control your desktop, see 
-  <link xref="sharing">Desktop Sharing</link>.</p>    
 
-  <note style="info package">
-    <p>You must have the <app>GNOME Remote Desktop</app> package installed for
-     <guiseq><gui>Remote Desktop</gui><gui>Desktop Sharing</gui></guiseq> to be 
-     visible.</p>
+  <p>You can log in to your user account from another device by using a
+  remote desktop connection application. Configure <gui>Remote Login</gui> to
+  access your device and set the security preferences.</p>
 
-    <if:choose xmlns:if="http://projectmallard.org/if/1.0/">
-      <if:when test="action:install">
-        <p><link action="install:gnome-remote-desktop" style="button">Install GNOME Remote Desktop</link></p>
-      </if:when>
-    </if:choose>
-  </note>
-  <note style="tip">
-    <p>Remote Login requires Wayland to work.</p>
-  </note>
+  <p>If you want to let others to view or control your desktop, see
+  <link xref="sharing-desktop">Desktop Sharing</link>.</p>
 
-  <p>To log in to your device remotely, follow the steps below.</p>
   <steps>
     <item>
-      <p>Open the <gui xref="shell-introduction#activities">Activities</gui> 
+      <p>Open the <gui xref="shell-introduction#activities">Activities</gui>
       overview and start typing <gui>System</gui>.</p>
     </item>
     <item>
-      <p>Select <guiseq><gui>Settings</gui><gui>System</gui></guiseq> from 
+      <p>Select <guiseq><gui>Settings</gui><gui>System</gui></guiseq> from
       the results. This will open the <gui>System</gui> panel.</p>
     </item>
     <item>
@@ -66,9 +50,9 @@
     </item>
     <item>
       <p>Click <gui>Unlock</gui> and authenticate to change the settings.</p>
-    </item>    
+    </item>
     <item>
-      <p>To be able to login to your user account remotely, switch on <gui>Remote 
+      <p>To be able to login to your user account remotely, switch on <gui>Remote
       Login</gui>.</p>
     </item>
   </steps>
@@ -76,46 +60,30 @@
   <section id="connecting">
   <title>Connecting</title>
 
-  <p>The <gui>How to Connect</gui> section displays the <gui>Hostname</gui> 
-  and <gui>Port</gui> that can be used on the connecting device. Click the 
-  button next to each entry if you want to place it in the clipboard. A 
+  <p>The <gui>How to Connect</gui> section displays the <gui>Hostname</gui>
+  and <gui>Port</gui> that can be used on the connecting device. Click the
+  button next to each entry if you want to place it in the clipboard. A
   connection can also be established using your <link xref="net-findip">IP address</link>.</p>
 
   <note style="important">
-  <p>If <gui>Remote Login</gui> is switched on, it sets its port number to 
-  3389. If you also use <link xref="sharing">Desktop Sharing</link>, its 
-  port number will be set to 3390.</p>
+    <p>If <gui>Remote Login</gui> is switched on, it sets its port number to 3389. If you also
+    use <link xref="sharing-desktop">Desktop Sharing</link>, it will use a different port, for example,
+    3390.</p>
   </note>
 
   </section>
 
-  <section id="security">
-  <title>Security</title>
+  <section id="authentication">
+  <title>Authentication</title>
 
-  <p>The <gui>Login Details</gui> section displays login credentials you will need to 
-  enter in the client software used for connecting to your user account.</p>  
-  <terms>
-    <item>
-      <title>Username</title>
-      <p>Use the suggested value or enter your own.</p>
-    </item>
-    <item>
-      <title>Password</title>
-      <p>Enter a password.</p>
-    <note style="tip">
-      <p>Click the button next to each entry if you want to place it in the 
-      clipboard.</p>
-      <p>You can click <gui>Generate New Password</gui> to automatically 
-      generate a random password.</p>    
-    </note>
-    </item>
-    <item>
-      <title>Verify Encryption</title>
-      <p>Click <gui>Verify Encryption</gui> to display the encryption       
-      fingerprint. Compare it with the value displayed by the client when 
-      connecting: they should be identical.</p>
-    </item>
-  </terms>
+  <p>The <gui>Login Details</gui> section displays the username and password you will need to
+  enter in the client software used for connecting to your user account.</p>
+
+  <note style="tip">
+    <p>Click <gui>Verify Encryption</gui> to display the encryption
+    fingerprint. Compare it with the value displayed by the client when
+    connecting: they should be identical.</p>
+  </note>
   </section>
 
   <section id="clients">
@@ -135,7 +103,7 @@
         </item>
         <item><p><app>Connections</app>, a GTK client, is available as a package
         in most distributions, and also as a <link href="https://flathub.org/apps/org.gnome.Connections">flatpak</link>.</p>
-        </item>        
+        </item>
         <item><p><app>xfreerdp</app> is a command line client available as a
         package in most distributions. The option <cmd>/network:auto</cmd>
         should be passed to the client on the command line.</p>
@@ -161,18 +129,18 @@
     </item>
   </terms>
   </section>
-  
+
   <section id="checking-connection">
   <title>Checking connection</title>
-  
+
   <p>To check that the connection works, follow the steps below.</p>
 
   <steps>
     <item>
-      <p>In your chosen client, enter the <gui>Hostname</gui> or IP address.</p> 
+      <p>In your chosen client, enter the <gui>Hostname</gui> or IP address.</p>
     </item>
     <item>
-      <p>Fill in the username and password for Desktop Sharing.</p>
+      <p>Fill in the username and password for Remote Login.</p>
     </item>
   </steps>
   </section>
