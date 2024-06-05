@@ -458,4 +458,5 @@ HELP_FILES = \
 	wacom-mode.page \
 	wacom-multi-monitor.page \
 	wacom-stylus.page \
+	wacom-tablet-unknown.page \
 	wacom.page

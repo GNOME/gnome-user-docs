@@ -1,0 +1,47 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="question"
+      id="wacom-tablet-unknown">
+
+  <info>
+    <link type="guide" xref="wacom"/>
+
+    <desc>Tablets need to be known to GNOME to initialize the right capabilities.</desc>
+
+    <credit type="author">
+      <name>Peter Hutterer</name>
+      <email>peter.hutterer@redhat.com</email>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+  <title>Why is my tablet unknown?</title>
+
+  <p>
+    For GNOME to initialize a tablet with the correct capabilities such as
+    pressure, tilt, mapable buttons, etc. it needs to first know which
+    capabilities are available.
+    This information is not provided by the devices but resides in a
+    static device database provided by the
+    <link href="http://github.com/linuxwacom/libwacom">libwacom library</link>.
+    Devices must be individually added to this database and thus
+    may not yet be available in the version of libwacom provided by
+    your distribution.
+  </p>
+
+  <p>
+    If a tablet is not supported by libwacom, GNOME cannot know which
+    capabilities are available. GNOME then defaults to assuming the
+    tablet is built into one of the outputs (the built-in one if available)
+    and it has no external buttons. The pen (stylus) tool defaults to a
+    standard two-button tool. This usually has little effect on the
+    functionality of the tablet but it does limit the configuration
+    of the tablet.
+  </p>
+  <p>
+    For instructions on how to add a device please see the instructions
+    in the <link href="http://github.com/linuxwacom/libwacom">libwacom repository</link>.
+  </p>
+
+</page>
+
