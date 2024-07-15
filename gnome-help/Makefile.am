@@ -411,6 +411,7 @@ HELP_FILES = \
 	sharing-desktop.page \
 	sharing-media.page \
 	sharing-personal.page \
+	sharing-secure-shell.page \
 	shell-apps-auto-start.page \
 	shell-apps-favorites.page \
 	shell-apps-open.page \
