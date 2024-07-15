@@ -401,6 +401,7 @@ HELP_FILES = \
 	privacy-purge.page \
 	privacy-screen-lock.page \
 	quick-settings.page \
+	remote-login.page \
 	screen-shot-record.page \
 	session-fingerprint.page \
 	session-formats.page \
