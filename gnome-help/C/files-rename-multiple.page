@@ -1,0 +1,83 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="files-rename-multiple">
+
+  <info>
+    <link type="guide" xref="files#common-file-tasks"/>
+    <link type="seealso" xref="files-rename"/>
+    <link type="seealso" xref="files-rename-music-metadata"/>
+
+    <revision version="gnome:47" date="2024-08-31" status="candidate"/>
+
+    <credit type="author">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Rename more than one file at once.</desc>
+  </info>
+
+  <title>Rename multiple files</title>
+
+  <p><app>Files</app> can be used to change the names of a group of files. You
+  can <gui>Rename using a template</gui> or <gui>Find and replace text</gui>.</p>
+
+  <steps>
+    <title>To rename using a template:</title>
+    <item><p>Select two or more files in <app>Files</app>.</p></item>
+    <item><p>Press <key>F2</key> or right-click on the selection and pick
+    <gui>Rename</gui>. The <gui>Rename</gui> window opens.</p></item>
+    <item><p>Make sure <gui>Rename using a template</gui> is selected.</p>
+      <note>
+        <p>The name field contains "[Original filename]" as a placeholder. It
+        can be deleted or added back from the <gui>+ Add</gui> menu.</p>
+      </note>
+    <p>Click before or after "[Original filename]" to add letters, words,
+    or numbers to create the pattern you want.</p>
+      <note style="warning">
+        <p>Certain <link xref="files-rename#valid-chars">characters</link>
+        should be avoided on some devices.</p>
+      </note>
+    <p>To number the files sequentially, click <gui>+ Add</gui> to choose
+    the number of digits in the number you want added automatically. If you are
+    renaming 10 or more files but fewer than 100, choose two digits (<gui>01,
+    02, 03, 04</gui>). Choose three (<gui>001, 002, 003, 004</gui>) if you have
+    more than 99 files to rename.</p>
+    <p>The preview list will show the current filenames on the left and the
+    resulting filenames on the right.</p></item>
+    <item><p>Click the <gui>Rename</gui> button to apply the pattern you have
+    created, and the files will be renamed.</p></item>
+  </steps>
+  
+  <p>When you rename a file, only the first part of the name of the file is
+  selected, not the file extension (the part after the last <file>.</file>).
+  The extension normally denotes what type of file it is (for example,
+  <file>file.pdf</file> is a PDF document), and you usually do not want to
+  change that. If you need to change the extension as well, select the entire
+  file name and change it.</p>
+  
+  <steps>
+    <title>To rename using find and replace text:</title>
+    <item><p>Select two or more files in <app>Files</app>.</p></item>
+    <item><p>Press <key>F2</key> or right-click on the selection and pick
+    <gui>Rename</gui>.</p></item>
+    <item><p>Select <gui>Find and replace text</gui>.</p></item>
+    <item><p>For <gui>Existing Text</gui> type the text to be replaced. For
+    <gui>Replace With</gui>, type the new text. The preview list will show the
+    current filenames on the left and the resulting filenames on the
+    right.</p></item>
+    <item><p>Click the <gui>Rename</gui> button to accept the replacement in the
+    preview, and the files will be renamed.</p></item>
+  </steps>
+
+  <note style="tip">
+    <p>If you renamed the wrong file, or named your file improperly, you can
+    undo the rename. To revert the action, immediately click the menu button in
+    the sidebar and select <gui>Undo Rename</gui>, or press
+    <keyseq><key>Ctrl</key><key>Z</key></keyseq>, to restore the former
+    name.</p>
+  </note>
+
+</page>

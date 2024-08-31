@@ -258,6 +258,8 @@ HELP_FILES = \
 	files-recover.page \
 	files-removedrive.page \
 	files-rename.page \
+	files-rename-multiple.page \
+	files-rename-music-metadata.page \
 	files-search.page \
 	files-select.page \
 	files-share.page \
