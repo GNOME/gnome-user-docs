@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-user-docs master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-29 12:14+0000\n"
-"PO-Revision-Date: 2024-10-02 19:54+0200\n"
-"Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
+"POT-Creation-Date: 2024-10-02 19:23+0000\n"
+"PO-Revision-Date: 2024-10-02 22:29+0200\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -116,13 +116,13 @@ msgstr "Phil Bull"
 #: C/disk-capacity.page:16 C/disk-check.page:17 C/display-blank.page:24 C/display-brightness.page:32
 #: C/display-dual-monitors.page:17 C/display-night-light.page:11 C/files-autorun.page:19 C/files-browse.page:28
 #: C/files-copy.page:23 C/files-delete.page:27 C/files-disc-write.page:13 C/files-hidden.page:20
-#: C/files-lost.page:23 C/files-removedrive.page:17 C/files-rename.page:25 C/files-search.page:25
-#: C/files-share.page:20 C/files-sort.page:22 C/files-templates.page:17 C/files-tilde.page:19 C/files.page:20
-#: C/hardware-cardreader.page:19 C/keyboard-cursor-blink.page:27 C/keyboard-layouts.page:26
-#: C/keyboard-nav.page:15 C/keyboard-osk.page:24 C/keyboard-repeat-keys.page:27
-#: C/keyboard-shortcuts-set.page:15 C/keyboard.page:24 C/look-background.page:33 C/look-display-fuzzy.page:26
-#: C/look-resolution.page:23 C/media.page:16 C/mouse-doubleclick.page:25 C/mouse-lefthanded.page:24
-#: C/mouse-middleclick.page:22 C/mouse-mousekeys.page:25 C/mouse-sensitivity.page:29
+#: C/files-lost.page:23 C/files-removedrive.page:17 C/files-rename.page:25 C/files-rename-multiple.page:13
+#: C/files-rename-music-metadata.page:11 C/files-search.page:25 C/files-share.page:20 C/files-sort.page:22
+#: C/files-templates.page:17 C/files-tilde.page:19 C/files.page:20 C/hardware-cardreader.page:19
+#: C/keyboard-cursor-blink.page:27 C/keyboard-layouts.page:26 C/keyboard-nav.page:15 C/keyboard-osk.page:24
+#: C/keyboard-repeat-keys.page:27 C/keyboard-shortcuts-set.page:15 C/keyboard.page:24 C/look-background.page:33
+#: C/look-display-fuzzy.page:26 C/look-resolution.page:23 C/media.page:16 C/mouse-doubleclick.page:25
+#: C/mouse-lefthanded.page:24 C/mouse-middleclick.page:22 C/mouse-mousekeys.page:25 C/mouse-sensitivity.page:29
 #: C/mouse-touchpad-click.page:27 C/mouse-wakeup.page:22 C/mouse.page:23 C/nautilus-behavior.page:24
 #: C/nautilus-bookmarks-edit.page:18 C/nautilus-connect.page:19 C/nautilus-display.page:18
 #: C/nautilus-file-properties-permissions.page:27 C/nautilus-list.page:22 C/nautilus-preview.page:18
@@ -7337,7 +7337,7 @@ msgstr ""
 "<gui>Umbenennen</gui>."
 
 #. (itstool) path: page/p
-#: C/files-rename.page:51
+#: C/files-rename.page:51 C/files-rename-multiple.page:54
 msgid ""
 "When you rename a file, only the first part of the name of the file is selected, not the file extension (the "
 "part after the last <file>.</file>). The extension normally denotes what type of file it is (for example, "
@@ -7350,7 +7350,7 @@ msgstr ""
 "Wenn Sie auch die Endung ändern wollen, markieren Sie den gesamten Dateinamen und ändern Sie ihn."
 
 #. (itstool) path: note/p
-#: C/files-rename.page:59
+#: C/files-rename.page:59 C/files-rename-multiple.page:76 C/files-rename-music-metadata.page:45
 msgid ""
 "If you renamed the wrong file, or named your file improperly, you can undo the rename. To revert the action, "
 "immediately click the menu button in the sidebar and select <gui>Undo Rename</gui>, or press "
@@ -7449,6 +7449,165 @@ msgstr ""
 "Falls <gui>Umbenennen</gui> ausgegraut ist, haben Sie nicht das Recht, die Datei umzubenennen. Sie sollten "
 "beim Umbenennen solcher geschützter Dateien vorsichtig sein, da dies Ihr System instabil machen könnte. "
 "Lesen Sie <link xref=\"nautilus-file-properties-permissions\"/>."
+
+#. (itstool) path: info/desc
+#: C/files-rename-multiple.page:19
+#, fuzzy
+#| msgid "The name of the file or folder."
+msgid "Rename more than one file at once."
+msgstr "Der Name der Datei oder des Ordners."
+
+#. (itstool) path: page/title
+#: C/files-rename-multiple.page:22
+#, fuzzy
+#| msgid "Rename a file or folder"
+msgid "Rename multiple files"
+msgstr "Eine Datei oder einen Ordner umbenennen"
+
+#. (itstool) path: page/p
+#: C/files-rename-multiple.page:24
+msgid ""
+"<app>Files</app> can be used to change the names of a group of files. You can <gui>Rename using a template</"
+"gui> or <gui>Find and replace text</gui>."
+msgstr ""
+
+#. (itstool) path: steps/title
+#: C/files-rename-multiple.page:28
+msgid "To rename using a template:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:29 C/files-rename-multiple.page:63
+#, fuzzy
+#| msgid "Views preferences in <app>Files</app>"
+msgid "Select two or more files in <app>Files</app>."
+msgstr "Die Einstellungen von <app>Dateien</app> zeigen"
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:30
+msgid ""
+"Press <key>F2</key> or right-click on the selection and pick <gui>Rename</gui>. The <gui>Rename</gui> window "
+"opens."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:32
+msgid "Make sure <gui>Rename using a template</gui> is selected."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/files-rename-multiple.page:34 C/files-rename-music-metadata.page:31
+msgid ""
+"The name field contains \"[Original filename]\" as a placeholder. It can be deleted or added back from the "
+"<gui>+ Add</gui> menu."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:37
+msgid ""
+"Click before or after \"[Original filename]\" to add letters, words, or numbers to create the pattern you "
+"want."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/files-rename-multiple.page:40
+msgid "Certain <link xref=\"files-rename#valid-chars\">characters</link> should be avoided on some devices."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:43
+msgid ""
+"To number the files sequentially, click <gui>+ Add</gui> to choose the number of digits in the number you "
+"want added automatically. If you are renaming 10 or more files but fewer than 100, choose two digits "
+"(<gui>01, 02, 03, 04</gui>). Choose three (<gui>001, 002, 003, 004</gui>) if you have more than 99 files to "
+"rename."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:48 C/files-rename-music-metadata.page:38
+msgid "The preview list will show the current filenames on the left and the resulting filenames on the right."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:50 C/files-rename-music-metadata.page:40
+#, fuzzy
+#| msgid "Click the <gui>-</gui> button in the lower-left corner of the window."
+msgid ""
+"Click the <gui>Rename</gui> button to apply the pattern you have created, and the files will be renamed."
+msgstr "Klicken Sie auf den Knopf <gui>-</gui> in der linken unteren Ecke des Fensters."
+
+#. (itstool) path: steps/title
+#: C/files-rename-multiple.page:62
+msgid "To rename using find and replace text:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:64
+msgid "Press <key>F2</key> or right-click on the selection and pick <gui>Rename</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:66
+#, fuzzy
+#| msgid "Select <gui>File Sharing</gui>."
+msgid "Select <gui>Find and replace text</gui>."
+msgstr "Wählen Sie <gui>Dateifreigabe</gui>."
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:67
+msgid ""
+"For <gui>Existing Text</gui> type the text to be replaced. For <gui>Replace With</gui>, type the new text. "
+"The preview list will show the current filenames on the left and the resulting filenames on the right."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-multiple.page:71
+#, fuzzy
+#| msgid "Click the <gui>-</gui> button in the lower-left corner of the window."
+msgid ""
+"Click the <gui>Rename</gui> button to accept the replacement in the preview, and the files will be renamed."
+msgstr "Klicken Sie auf den Knopf <gui>-</gui> in der linken unteren Ecke des Fensters."
+
+#. (itstool) path: info/desc
+#: C/files-rename-music-metadata.page:17
+msgid "Rename music files using metadata they contain."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/files-rename-music-metadata.page:20
+msgid "Rename music files using metadata"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/files-rename-music-metadata.page:22
+msgid "You can add the embedded metadata from music files to their filenames."
+msgstr ""
+
+#. (itstool) path: steps/title
+#: C/files-rename-music-metadata.page:25
+msgid "To add metadata to a filename:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-music-metadata.page:26
+#, fuzzy
+#| msgid "Views preferences in <app>Files</app>"
+msgid "Select two or more music files in <app>Files</app>."
+msgstr "Die Einstellungen von <app>Dateien</app> zeigen"
+
+#. (itstool) path: item/p
+#: C/files-rename-music-metadata.page:27
+msgid ""
+"Press <key>F2</key> or right-click on the selection and pick <gui>Rename</gui>. The <gui>Rename</gui> window "
+"opens with <gui>Rename using a template</gui> selected."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/files-rename-music-metadata.page:35
+msgid ""
+"Click <gui>+ Add</gui> to show the menu of available metadata, like <gui>Album</gui> and <gui>Title</gui>. "
+"Select each item to place it into the filename template in the order you want."
+msgstr ""
 
 #. (itstool) path: info/title
 #: C/files-search.page:39
@@ -8161,8 +8320,8 @@ msgid ""
 "link> for the issue to see if something similar already exists."
 msgstr ""
 "Sobald Sie ein Konto haben, melden Sie sich in der <link href=\"https://gitlab.gnome.org/GNOME/gnome-user-"
-"docs/issues\">Fehlerdatenbank der Dokumentation</link> an und klicken Sie auf <gui>New issue</link></gui>. "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-user-docs/issues\">Durchsuchen</link> Sie bitte vor dem "
+"docs/issues\">Fehlerdatenbank der Dokumentation</link> an und klicken Sie auf <gui>New issue</gui>. <link "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-user-docs/issues\">Durchsuchen</link> Sie bitte vor dem "
 "Berichten eines neuen Fehlers die Datenbank, ob nicht ein ähnlicher Fehler bereits gemeldet worden ist."
 
 # Die Gitlab-Webseite ist nicht lokalisiert, daher »Labels« statt »Komponenten«.
@@ -10899,8 +11058,12 @@ msgstr "Variable Aktualisierungsrate (VRR)"
 
 #. (itstool) path: section/p
 #: C/look-resolution.page:134
+#, fuzzy
+#| msgid ""
+#| "For smoother visuals and to optimize power comsumption you can synchronize monitor's refresh rate with "
+#| "content output."
 msgid ""
-"For smoother visuals and to optimize power comsumption you can synchronize monitor's refresh rate with "
+"For smoother visuals and to optimize power consumption you can synchronize monitor's refresh rate with "
 "content output."
 msgstr ""
 "Synchronisieren Sie die Bildwiederholungsrate des Bildschirms mit dem Bildsignal für eine gleichmäßigere "
@@ -25346,6 +25509,47 @@ msgid ""
 msgstr ""
 "Klicken Sie auf <gui>Testen Sie Ihre Einstellungen</gui> in der Kopfleiste, um ein Skizzenfeld "
 "herunterzuklappen, auf dem Sie die Einstellungen Ihres Stylus prüfen können."
+
+#. (itstool) path: info/desc
+#: C/wacom-tablet-unknown.page:9
+msgid "Tablets need to be known to GNOME to initialize the right capabilities."
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/wacom-tablet-unknown.page:12
+msgid "Peter Hutterer"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/wacom-tablet-unknown.page:18
+msgid "Why is my tablet unknown?"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/wacom-tablet-unknown.page:20
+msgid ""
+"For GNOME to initialize a tablet with the correct capabilities such as pressure, tilt, mapable buttons, etc. "
+"it needs to first know which capabilities are available. This information is not provided by the devices but "
+"resides in a static device database provided by the <link href=\"http://github.com/linuxwacom/"
+"libwacom\">libwacom library</link>. Devices must be individually added to this database and thus may not yet "
+"be available in the version of libwacom provided by your distribution."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/wacom-tablet-unknown.page:32
+msgid ""
+"If a tablet is not supported by libwacom, GNOME cannot know which capabilities are available. GNOME then "
+"defaults to assuming the tablet is built into one of the outputs (the built-in one if available) and it has "
+"no external buttons. The pen (stylus) tool defaults to a standard two-button tool. This usually has little "
+"effect on the functionality of the tablet but it does limit the configuration of the tablet."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/wacom-tablet-unknown.page:41
+msgid ""
+"For instructions on how to add a device please see the instructions in the <link href=\"http://github.com/"
+"linuxwacom/libwacom\">libwacom repository</link>."
+msgstr ""
 
 #. (itstool) path: info/title
 #: C/wacom.page:7
