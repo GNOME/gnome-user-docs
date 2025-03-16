@@ -1,4 +1,28 @@
-build-fedora:
+include:
+  - component: "gitlab.gnome.org/GNOME/citemplates/release-service@master"
+    inputs:
+      job-stage: "release"
+      dist-job-name: "build-release-tarball"
+      tarball-artifact-path: "${TARBALL_ARTIFACT_PATH}"
+
+stages:
+  - "test"
+  - "build"
+  - "release"
+
+variables:
+  TARBALL_ARTIFACT_PATH: "${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.xz"
+
+codespell:
+  stage: "test"
+  image: registry.gitlab.gnome.org/gnome/gnome-user-docs:latest
+  when: manual
+  allow_failure: true
+  script:
+    - codespell -S "*.png,*.po,.git,*.jpg,*.webm" -f --skip="*.po,./NEWS,*/Makefile*"
+
+build-release-tarball:
+  stage: "build"
   image: fedora:latest
   before_script:
     - dnf install -y git autoconf automake make gettext itstool libxslt yelp-tools
@@ -6,11 +30,9 @@ build-fedora:
     - ./check.sh
     - ./autogen.sh ITSTOOL="/usr/bin/itstool --strict"
     - make
-    - make check
-
-codespell:
-  image: registry.gitlab.gnome.org/gnome/gnome-user-docs:latest
-  when: manual
-  allow_failure: true
-  script:
-    - codespell -S "*.png,*.po,.git,*.jpg,*.webm" -f --skip="*.po,./NEWS,*/Makefile*"
+    - make distcheck
+  artifacts:
+    name: "${CI_JOB_NAME}-${CI_COMMIT_REF_NAME}"
+    when: "always"
+    paths:
+      - "${TARBALL_ARTIFACT_PATH}"
