@@ -424,7 +424,6 @@ HELP_FILES = \
 	shell-lockscreen.page \
 	shell-notifications.page \
 	shell-overview.page \
-	shell-wellbeing.page \
 	shell-windows-lost.page \
 	shell-windows-maximize.page \
 	shell-windows-states.page \
