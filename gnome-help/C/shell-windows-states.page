@@ -8,11 +8,16 @@
 
     <revision pkgversion="3.4.0" date="2012-03-24" status="candidate"/>
     <revision pkgversion="3.13.92" date="2014-09-22" status="candidate"/>
+    <revision pkgversion="48" date="2025-07-29" status="review"/>
 
     <credit type="author copyright">
       <name>Shaun McCance</name>
       <email>shaunm@gnome.org</email>
       <years>2012</years>
+    </credit>
+    <credit type="author">
+      <name>Damilola Oladele</name>
+      <email>damilolamohammed2@hotmail.com</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -23,9 +28,9 @@
 
   <title>Move and resize windows</title>
 
-  <p>You can move and resize windows to help you work more efficiently. In
-  addition to the dragging behavior you might expect, the system features
-  shortcuts and modifiers to help you arrange windows quickly.</p>
+  <p>You can move and resize windows by dragging them. The system also
+  provides the following shortcuts and modifiers to help you efficiently
+  arrange windows:</p>
 
   <list>
     <item>
@@ -35,25 +40,31 @@
       edges of the screen and other windows.</p>
     </item>
     <item>
-      <p>Resize a window by dragging the edges or corner of the window. Hold
+      <p>Resize a window by dragging the edges or the corners of the window. Hold
       down <key>Shift</key> while resizing to snap the window to the edges
       of the screen and other windows.</p>
       <p if:test="platform:gnome-classic">You can also resize a maximized
       window by clicking the maximize button in the titlebar.</p>
     </item>
     <item>
-      <p>Move or resize a window using only the keyboard. Press
-      <keyseq><key>Alt</key><key>F7</key></keyseq> to move a window or
-      <keyseq><key>Alt</key><key>F8</key></keyseq> to resize. Use the arrow
-      keys to move or resize, then press <key>Enter</key> to finish, or press
-      <key>Esc</key> to return to the original position and size.</p>
-    </item>
-    <item>
       <p><link xref="shell-windows-maximize">Maximize a window</link> by
       dragging it to the top of the screen. Drag a window to one side of the
-      screen to maximize it along the side, allowing you to
-      <link xref="shell-windows-tiled">tile windows side by side</link>.</p>
+      screen to snap it to that side, allowing you
+      to <link xref="shell-windows-tiled">tile windows side by side</link>.</p>
+    </item>
+    <item>
+      <p>Move or resize a window using only the keyboard by pressing
+      <keyseq><key>Alt</key><key>F7</key></keyseq> to move or
+      <keyseq><key>Alt</key><key>F8</key></keyseq> to resize. Use the arrow
+      keys to move or resize the window, then press <key>Enter</key> to confirm or
+      <key>Esc</key> to return to the original position and size.</p>
     </item>
   </list>
+  
+  <note style="tip">
+    <p>In <app>GTK3</app> and <app>GTK4</app> applications, you can move
+    a window by clicking and dragging anywhere in the header bar, including
+    buttons and icons.</p>
+  </note>
 
 </page>
