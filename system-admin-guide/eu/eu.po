@@ -5,8 +5,8 @@
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2025-02-13 01:41+0000\n"
-"PO-Revision-Date: 2025-04-21 10:05+0000\n"
+"POT-Creation-Date: 2025-09-04 17:01+0000\n"
+"PO-Revision-Date: 2025-10-19 10:05+0000\n"
 "Last-Translator: Asier Saratsua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "Language: eu\n"
@@ -578,7 +578,7 @@ msgid ""
 "<cmd>dconf</cmd> command-line utility to read and write individual values or "
 "entire directories from and to a <_:sys-2/> database. For more information, "
 "see the <_:link-3/> man page."
-msgstr ""
+msgstr "<_:sys-1/> profila sortzea saihestu nahi baduzu, erabili komando-lerroko <cmd>dconf</cmd> aplikazioa <_:sys-2/> datu-baseko banakako balioak edo direktorio osoak irakurri eta idazteko. Informazio gehiagorako, ikus <_:link-3/> laguntza-orria."
 
 #. (itstool) path: credit/name
 #: C/dconf-keyfiles.page:18 C/desktop-favorite-applications.page:11
@@ -609,7 +609,7 @@ msgid ""
 "appended (for example, <file>/etc/dconf/db/local.d</file>). All keyfile "
 "directories are found in <_:file-2/>, and each one contains keyfiles in a "
 "special format that can be compiled into the <_:sys-3/> database."
-msgstr ""
+msgstr "Sistemaren datu-baseko fitxategiak, <_:file-1/> kokalekuan daudenak, ezin dira editatu, GVDB formatuan idatzita baitaude. Sistemaren ezarpenak testu-editore batekin aldatzeko, moldatu <em>gako-fitxategien direktorioetan</em> dauden <em>gako-fitxategiak</em>. Gako-fitxategien direktorio bakoitza sistemaren datu-baseko fitxategi bati dagokio, eta datu-baseko fitxategiaren izen bera du, baina “.d” luzapena erantsita (adibidez, <file>/etc/dconf/db/local.d</file>). Gako-fitxategien direktorio guztiak <_:file-2/> kokalekuan daude, eta haietako bakoitzak <_:sys-3/> datu-basean konpilatu daitekeen formatu berezi batean dituzte gako-fitxategi horiek."
 
 #. (itstool) path: listing/title
 #: C/dconf-keyfiles.page:48
@@ -648,27 +648,29 @@ msgid ""
 "<cmd>dconf update</cmd> must be run whenever you modify a keyfile. When you "
 "do this, <_:sys-1/> compares the timestamp on a system database file with "
 "the timestamp on the corresponding keyfile directory. If the timestamp on "
-"the keyfile directory is more recent than the one on the database file, <_:"
-"sys-2/> regenerates the <code>system-db</code> file and sends a notification "
-"to the system <sys>D-Bus</sys>, which in turn notifies all running "
-"applications to reread their settings."
+"the keyfile directory is more recent than the one on the database file, "
+"<_:sys-2/> regenerates the <code>system-db</code> file and sends a "
+"notification to the system <sys>D-Bus</sys>, which in turn notifies all "
+"running applications to reread their settings."
 msgstr ""
 
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:73
 msgid ""
-"The group name in the keyfile references a <link href=\"https://developer."
-"gnome.org/GSettings/\">GSettings schema ID</link>. For example, <code>org/"
-"gnome/desktop/background</code> references the schema <code>org.gnome."
-"desktop.background</code>, which contains the key <code>picture-uri</code>."
+"The group name in the keyfile references a <link href=\"https://"
+"developer.gnome.org/GSettings/\">GSettings schema ID</link>. For example, "
+"<code>org/gnome/desktop/background</code> references the schema "
+"<code>org.gnome.desktop.background</code>, which contains the key "
+"<code>picture-uri</code>."
 msgstr ""
 
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:79
 msgid ""
-"The values under a group are expected in <link href=\"https://developer."
-"gnome.org/glib/stable/gvariant-text.html\">serialized GVariant form</link>."
-msgstr ""
+"The values under a group are expected in <link href=\"https://"
+"developer.gnome.org/glib/stable/gvariant-text.html\">serialized GVariant "
+"form</link>."
+msgstr "Taldeetako balioak <link href=\"https://developer.gnome.org/glib/stable/gvariant-text.html\">GVariant forma serializatuan</link> egotea espero da."
 
 #. (itstool) path: credit/years
 #: C/dconf-lockdown.page:21
@@ -815,7 +817,7 @@ msgid ""
 "are some system and application settings that cannot even be changed from "
 "within the user interface, but which <em>can</em> be changed by using "
 "<sys>dconf</sys>."
-msgstr ""
+msgstr "<sys>dconf</sys> sistemakGNOMEn duen botere hain handia da, <sys>dconf</sys> gakoak daudela erabiltzaile batek GNOME mahaigain batean edo ia edozein GNOME aplikaziotan egin daitekeen ia klik egite guztiei dagokien ezarpen bakoitzerako. Horrez gain, badaude sistemaren eta aplikazioen zenbait ezarpen ezin daitezkeenak aldatu erabiltzaile-interfazetik, baina <sys>dconf</sys> erabiliz <em>aldatu daitezkeenak</em>."
 
 #. (itstool) path: page/p
 #: C/dconf.page:50
@@ -855,7 +857,7 @@ msgid ""
 "only. Each of the system databases is generated from a keyfile directory. "
 "Each keyfile directory contains one or more keyfiles. Each keyfile contains "
 "at least one dconf path and one or more keys and the corresponding values."
-msgstr ""
+msgstr "<em>Profil</em> bat konfigurazioko datu-baseen zerrenda bat da. Profil bateko lehen datu-basea idazgarria da eta gainerako datu-baseak irakurtzeko soilik dira. Sistemaren datu-baseak gako-fitxategien direktorio batetik abiatuz sortzen dira. Gako-fitxategien direktorio bakoitzak gako-fitxategi bat edo gehiago ditu. Gako-fitxategi bakoitzak gutxienez dconf bide-izen bat eta gako bat edo gehiago eta haiei dagozkien balioak ditu."
 
 #. (itstool) path: page/p
 #: C/dconf-profiles.page:41
@@ -863,7 +865,7 @@ msgid ""
 "Key pairs which are set in a <sys>dconf</sys> <em>profile</em> will override "
 "the default settings unless there is a problem with the value that you have "
 "set."
-msgstr ""
+msgstr "<sys>dconf</sys> <em>profil</em> batean ezarrita dauden gako-bikoteek ezarpen lehenetsiak indargabetuko dituzte, ezarri duzun balioan arazoren bat dagoenean salbu."
 
 #. (itstool) path: page/p
 #: C/dconf-profiles.page:45
@@ -938,7 +940,7 @@ msgid ""
 "environment variable. The variable can specify a relative path to a file in "
 "<file>/etc/dconf/profile/</file>, or an absolute path, for example, to the "
 "user's home directory."
-msgstr ""
+msgstr "Abioan, <sys>dconf-ek</sys> <sys>DCONF_PROFILE</sys> ingurune-aldagaia kontsultatzen du. Aldagaiak <file>/etc/dconf/profile/</file> fitxategira doan bide-izen erlatibo bat zehaztu dezake, edo bide-izen absolutu bat, adibidez erabiltzailearen karpeta nagusira doana."
 
 #. (itstool) path: section/p
 #: C/dconf-profiles.page:99
@@ -1113,12 +1115,12 @@ msgstr "Ezarri gogoko aplikazio lehenetsiak"
 #. (itstool) path: page/p
 #: C/desktop-favorite-applications.page:28
 msgid ""
-"Favorite applications are those visible on the GNOME Shell <link href=\"help:"
-"gnome-help/shell-introduction#activities\">dash</link>. You can use <_:sys-1/"
-"> to set favorite applications for one user, or to set the same favorite "
-"applications for all users. For both cases, you must first edit the <_:sys-2/"
-"> profile found in <_:file-3/>."
-msgstr ""
+"Favorite applications are those visible on the GNOME Shell <link "
+"href=\"help:gnome-help/shell-introduction#activities\">dash</link>. You can "
+"use <_:sys-1/> to set favorite applications for one user, or to set the same "
+"favorite applications for all users. For both cases, you must first edit the "
+"<_:sys-2/> profile found in <_:file-3/>."
+msgstr "Gogoko aplikazioak GNOME Shell <link href=\"help:gnome-help/shell-introduction#activities\">panelean</link> ikusgai daudenak dira. <_:sys-1/> erabili daiteke erabiltzaile baten gogoko aplikazioak ezartzeko edo erabiltzaile guztientzat ezartzeko. Kasu bietan, lehenengo <_:file-3/> fitxategian dagoen <_:sys-2/> profila editatu behar da."
 
 #. (itstool) path: section/title
 #: C/desktop-favorite-applications.page:37
@@ -1162,7 +1164,7 @@ msgstr "<output style=\"prompt\"># </output><input>gsettings set org.gnome.shell
 msgid ""
 "You can also <link xref=\"dconf-lockdown\">lock down</link> the above "
 "settings to prevent users from changing them."
-msgstr ""
+msgstr "Goiko ezarpena <link xref=\"dconf-lockdown\">blokeatu</link> egin daiteke, erabiltzaileek hura aldatu ez dezaten."
 
 #. (itstool) path: section/title
 #: C/desktop-favorite-applications.page:64
@@ -1177,7 +1179,7 @@ msgid ""
 "The following steps edit the <_:sys-1/> profile and then create a keyfile to "
 "set default favorite applications for all users in the <code>local</code> "
 "configuration database."
-msgstr ""
+msgstr "Erabiltzaile guztiek gogoko berak izan ditzaten, aldatu sistemaren datu-baseko fitxategiak <link xref=\"dconf-keyfiles\">dconf gako-fitxategiak</link> erabiliz. Hurrengo urratsek <_:sys-1/> profila editatzen dute eta gako-fitxategi bat sortzen dute konfigurazioko <code>local</code> datu-basean dauden erabiltzaile guztientzako gogoko aplikazio lehenetsiak ezartzeko."
 
 #. (itstool) path: steps/title
 #: C/desktop-favorite-applications.page:73
@@ -1189,7 +1191,7 @@ msgstr "Ezarri gogoko aplikazioak"
 msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-favorite-apps</file> to "
 "provide information for the <sys>local</sys> database."
-msgstr ""
+msgstr "Sortu <file>/etc/dconf/db/local.d/00-favorite-apps</file> gako-fitxategia <sys>local</sys> datu-baserako informazioa emateko."
 
 #. (itstool) path: listing/code
 #: C/desktop-favorite-applications.page:88
@@ -1200,6 +1202,10 @@ msgid ""
 "[org/gnome/shell]\n"
 "favorite-apps = [<var>'gedit.desktop'</var>, <var>'gnome-terminal.desktop'</var>, <var>'nautilus.desktop'</var>]\n"
 msgstr ""
+"\n"
+"# Kode-zati honek gedit, terminal eta nautilus ezartzen ditu erabiltzaile guztientzako gogoko gisa\n"
+"[org/gnome/shell]\n"
+"favorite-apps = [<var>'gedit.desktop'</var>, <var>'gnome-terminal.desktop'</var>, <var>'nautilus.desktop'</var>]\n"
 
 #. (itstool) path: item/p
 #: C/desktop-favorite-applications.page:96
@@ -1373,7 +1379,7 @@ msgstr "Ezarri org.gnome.desktop.screensaver.picture-uri gakoa"
 msgid ""
 "Create a <sys>gdm</sys> database for machine-wide settings in <file>/etc/"
 "dconf/db/gdm.d/<var>01-screensaver</var></file>:"
-msgstr ""
+msgstr "Sortu makina osorako diren ezarpenak gordetzeko <sys>gdm</sys> datu-base bat <file>/etc/dconf/db/gdm.d/<var>01-screensaver</var></file> fitxategian:"
 
 #. (itstool) path: item/code
 #: C/desktop-shield.page:51
@@ -1485,7 +1491,7 @@ msgstr ""
 msgid ""
 "Create a <code>local</code> database for machine-wide settings in <file>/etc/"
 "dconf/db/local.d/00-extensions</file>:"
-msgstr ""
+msgstr "Sortu makina osorako diren ezarpenak gordetzeko <sys>local</sys> datu-base bat <file>/etc/dconf/db/local.d/00-extensions</file> fitxategian:"
 
 #. (itstool) path: listing/code
 #: C/extensions-enable.page:55
@@ -1496,6 +1502,10 @@ msgid ""
 "# List all extensions that you want to have enabled for all users\n"
 "enabled-extensions=['<input>myextension1@myname.example.com</input>', '<input>myextension2@myname.example.com</input>']\n"
 msgstr ""
+"\n"
+"[org/gnome/shell]\n"
+"# Zerrendatu erabiltzaile guztientzat gaitu nahi dituzun hedapen guztiak\n"
+"enabled-extensions=['<input>nirehedapena1@nireizena.adibidea.com</input>', '<input>nirehedapena2@nireizena.adibidea.com</input>']\n"
 
 #. (itstool) path: item/p
 #: C/extensions-enable.page:61 C/extensions-lockdown.page:62
@@ -1535,8 +1545,8 @@ msgstr ""
 #. (itstool) path: steps/title
 #: C/extensions-lockdown.page:38
 msgid ""
-"Lock down the org.gnome.shell.enabled-extensions and org.gnome.shell."
-"development-tools keys"
+"Lock down the org.gnome.shell.enabled-extensions and "
+"org.gnome.shell.development-tools keys"
 msgstr "Blokeatu org.gnome.shell.enabled-extensions eta org.gnome.shell.development-tools gakoak"
 
 #. (itstool) path: listing/code
@@ -1556,7 +1566,7 @@ msgstr ""
 msgid ""
 "The <code>development-tools</code> key is set to false to disable access to "
 "Looking Glass."
-msgstr ""
+msgstr "<code>development-tools</code> gakoaren balioa 'faltsua' da ikuskatzailera sartzea desgaituta egon dadin."
 
 #. (itstool) path: item/p
 #: C/extensions-lockdown.page:70
@@ -1587,9 +1597,9 @@ msgid ""
 "After locking down the <code>org.gnome.shell.enabled-extensions</code> and "
 "<code>org.gnome.shell.development-tools</code> keys, any extensions "
 "installed in <file>~/.local/share/gnome-shell/extensions</file> or <file>/"
-"usr/share/gnome-shell/extensions</file> that are not listed in the <code>org."
-"gnome.shell.enabled-extensions</code> key will not be loaded by GNOME Shell, "
-"thus preventing the user from using them."
+"usr/share/gnome-shell/extensions</file> that are not listed in the "
+"<code>org.gnome.shell.enabled-extensions</code> key will not be loaded by "
+"GNOME Shell, thus preventing the user from using them."
 msgstr ""
 
 #. (itstool) path: info/desc
@@ -1625,7 +1635,7 @@ msgstr ""
 msgid ""
 "To view installed extensions, you can use <app>Looking Glass</app>, GNOME "
 "Shell’s integrated debugger and inspector tool."
-msgstr ""
+msgstr "Instalatutako hedapenak ikusteko, erabili GNOME Shell-en integratuta dagoen <app>Ikuskatzailea</app> arazte- eta ikuskatze-tresna."
 
 #. (itstool) path: steps/title
 #: C/extensions.page:40
@@ -1699,9 +1709,9 @@ msgid ""
 "Alternatively, you can also install fonts in another system directory than "
 "<file>/usr/local/share/fonts/</file> if that directory is listed in the "
 "<file>/etc/fonts/fonts.conf</file> file. If it is not, then you need to "
-"create your own machine-wide configuration file in <file>/etc/fonts/local."
-"conf</file> containing the directory you want to use. See the <cmd>fonts-"
-"conf</cmd>(5) man page for more information."
+"create your own machine-wide configuration file in <file>/etc/fonts/"
+"local.conf</file> containing the directory you want to use. See the "
+"<cmd>fonts-conf</cmd>(5) man page for more information."
 msgstr ""
 
 #. (itstool) path: page/p
@@ -1763,7 +1773,7 @@ msgid ""
 "There are two tools you can use to browse system and application preferences "
 "stored as GSettings values, the <app>dconf-editor</app> graphical utility "
 "and the <cmd>gsettings</cmd> command line utility."
-msgstr ""
+msgstr "Bi tresna daude GSettings balio gisa gordetako sistema- eta aplikazio-hobespenak arakatzeko, <app>dconf-editor</app> utilitate grafikoa eta komando-lerroko <cmd>gsettings</cmd> utilitatea."
 
 #. (itstool) path: page/p
 #: C/gsettings-browse.page:39
@@ -1879,6 +1889,9 @@ msgid ""
 "# Set the Right Alt key as the Compose key and enable it\n"
 "xkb-options=['compose:<var>ralt</var>']"
 msgstr ""
+"[org/gnome/desktop/input-sources]\n"
+"# Ezarri eskuineko Alt tekla konposatzaile-tekla gisa\n"
+"xkb-options=['compose:<var>ralt</var>']"
 
 #. (itstool) path: item/p
 #: C/keyboard-compose-key.page:42
@@ -1915,7 +1928,7 @@ msgstr "minnie_eg"
 #. (itstool) path: info/desc
 #: C/keyboard-layout.page:27
 msgid "Populate the keyboard layout chooser on the login screen."
-msgstr ""
+msgstr "Bete saioa hasteko pantailan ageri den teklatu-diseinuen aukeratzailea."
 
 #. (itstool) path: page/title
 #: C/keyboard-layout.page:30
@@ -2004,7 +2017,7 @@ msgstr ""
 msgid ""
 "Add the layout codes to <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</"
 "file> in the following way:"
-msgstr ""
+msgstr "gehitu diseinu-kodeak <file>/usr/share/X11/xorg.conf.d/10-evdev.conf</file> fitxategian, honako moduan:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:89
@@ -2113,7 +2126,7 @@ msgstr "Desgaitu komando-gonbita"
 msgid ""
 "Create a <sys>local</sys> database for machine-wide settings in <file>/etc/"
 "dconf/db/local.d/00-lockdown</file>:"
-msgstr ""
+msgstr "Sortu makina osorako diren ezarpenak gordetzeko <sys>local</sys> datu-base bat <file>/etc/dconf/db/local.d/00-lockdown</file> fitxategian:"
 
 #. (itstool) path: item/code
 #: C/lockdown-command-line.page:79
@@ -2229,7 +2242,7 @@ msgid ""
 "This feature will only work in applications which support it! Not all GNOME "
 "and third party applications have this feature enabled. These changes will "
 "have no effect on applications which do not support this feature."
-msgstr ""
+msgstr "Eginbide honek hura onartzen duten aplikazioetan soilik funtzionatuko du. GNOMEren zein hirugarrenen aplikazio batzuk ez dute eginbide hau gaituta. Aldaketek ez dute eraginik izango eginbidea onartzen ez duten aplikazioetan."
 
 #. (itstool) path: item/p
 #: C/lockdown-file-saving.page:48
@@ -2301,7 +2314,7 @@ msgstr "Desgaitu erabiltzaileak saioa amaitu dezan eta erabitzailez aldatu dadin
 msgid ""
 "Preventing the user from logging out is useful for special kind of GNOME "
 "deployments (unmanned kiosks, public internet access terminals, and so on)."
-msgstr ""
+msgstr "Erabiltzaileek saioa amaitu dezaten eragoztea erabilgarria izan daiteke GNOMEren zenbait instalaziotan (kioskoetan, internetera sartzeko terminal publikoetan  eta abar)."
 
 #. (itstool) path: note/p
 #: C/lockdown-logout.page:33
@@ -2309,7 +2322,7 @@ msgid ""
 "Users can evade the logout lockdown by switching to a different user. That "
 "is the reason why it is recommended to also disable <em>user switching</em> "
 "when configuring the system."
-msgstr ""
+msgstr "Erabiltzaileek saioa amaitzeko blokeoa gainditu dezakete beste erabiltzaile batekin sartzen badira. Horregatik, gomendagarria da kasu horietan <em>erabiltzailez aldatzeko</em> aukera ere desgaitzea sistema konfiguratzen denean."
 
 #. (itstool) path: item/p
 #: C/lockdown-logout.page:47
@@ -2385,7 +2398,7 @@ msgid ""
 "network accounts with the GNOME Desktop and applications. The user can add "
 "their online accounts, such as Google, Facebook, Flickr, ownCloud, and "
 "others using the <app>Online Accounts</app> application."
-msgstr ""
+msgstr "<app>GNOMEren lineako kontuak</app> (GOA) sareko kontu pertsonalak GNOMEren mahaigainarekin integratzeko erabiltzen da. Google, Facebook, Flickr, ownCloud eta beste kontu batzuk integratu daitezke <app>Lineako kontuak</app> aplikazioaren bidez."
 
 #. (itstool) path: page/p
 #: C/lockdown-online-accounts.page:33
@@ -2596,9 +2609,9 @@ msgstr "Desgaitu partizioak moldatzea"
 msgid ""
 "<sys>polkit</sys> enables you to set permissions for individual operations. "
 "For <sys>udisks2</sys>, the utility for disk management services, the "
-"configuration is located at <file>/usr/share/polkit-1/actions/org."
-"freedesktop.udisks2.policy</file>. This file contains a set of actions and "
-"default values, which can be overridden by system administrator."
+"configuration is located at <file>/usr/share/polkit-1/actions/"
+"org.freedesktop.udisks2.policy</file>. This file contains a set of actions "
+"and default values, which can be overridden by system administrator."
 msgstr ""
 
 #. (itstool) path: note/p
@@ -2606,31 +2619,31 @@ msgstr ""
 msgid ""
 "The <sys>polkit</sys> configuration in <file>/etc</file> overrides that "
 "shipped by packages in <file>/usr/share</file>."
-msgstr ""
+msgstr "<file>/etc</file> fitxategiko <sys>polkit</sys> konfigurazioak <file>/usr/share</file> fitxategian ageri den konfigurazioa indargabetzen du."
 
 #. (itstool) path: item/p
 #: C/lockdown-repartitioning.page:44
 msgid ""
 "Create a file with the same content as in <file>/usr/share/polkit-1/actions/"
 "org.freedesktop.udisks2.policy</file>: <cmd>cp /usr/share/polkit-1/actions/"
-"org.freedesktop.udisks2.policy /etc/share/polkit-1/actions/org.freedesktop."
-"udisks2.policy</cmd>"
+"org.freedesktop.udisks2.policy /etc/share/polkit-1/actions/"
+"org.freedesktop.udisks2.policy</cmd>"
 msgstr ""
 
 #. (itstool) path: note/p
 #: C/lockdown-repartitioning.page:48
 msgid ""
-"Do not change the <file>/usr/share/polkit-1/actions/org.freedesktop.udisks2."
-"policy</file> file, your changes will be overwritten by the next package "
-"update."
-msgstr ""
+"Do not change the <file>/usr/share/polkit-1/actions/"
+"org.freedesktop.udisks2.policy</file> file, your changes will be overwritten "
+"by the next package update."
+msgstr "Ez aldatu <file>/usr/share/polkit-1/actions/org.freedesktop.udisks2.policy</file> fitxategia, zure aldaketak paketeen hurrengo eguneratzean gainidatziko dira."
 
 #. (itstool) path: item/p
 #: C/lockdown-repartitioning.page:54
 msgid ""
 "Delete any actions you do not need from within the <code>policyconfig</code> "
-"element and add the following lines to the <file>/etc/polkit-1/actions/org."
-"freedesktop.udisks2.policy</file> file:"
+"element and add the following lines to the <file>/etc/polkit-1/actions/"
+"org.freedesktop.udisks2.policy</file> file:"
 msgstr ""
 
 #. (itstool) path: listing/code
@@ -2648,13 +2661,23 @@ msgid ""
 "    &lt;/defaults&gt;\n"
 "&lt;/action&gt;\n"
 msgstr ""
+"\n"
+"  &lt;action id=\"org.freedesktop.udisks2.modify-device\"&gt;\n"
+"     &lt;description&gt;Aldatu unitatearen ezarpenak&lt;/description&gt;\n"
+"     &lt;message&gt;Autentifikazioa behar da unitate-ezarpenak aldatzeko&lt;/message&gt;\n"
+"    &lt;defaults&gt;\n"
+"      &lt;allow_any&gt;no&lt;/allow_any&gt;\n"
+"      &lt;allow_inactive&gt;no&lt;/allow_inactive&gt;\n"
+"      &lt;allow_active&gt;yes&lt;/allow_active&gt;\n"
+"    &lt;/defaults&gt;\n"
+"&lt;/action&gt;\n"
 
 #. (itstool) path: item/p
 #: C/lockdown-repartitioning.page:71
 msgid ""
 "Replace <code>no</code> by <code>auth_admin</code> if you want to ensure "
 "only the root user is able to carry out the action."
-msgstr ""
+msgstr "Ordeztu <code>no</code> kodea <code>auth_admin</code> kodearekin ekintza gauzatzeko boterea erro-erabiltzaileak soilik izan dezan."
 
 #. (itstool) path: item/p
 #: C/lockdown-repartitioning.page:75
@@ -2984,10 +3007,10 @@ msgstr "Konfiguratu saio-hasiera automatikoa"
 #. Users dialog in the Settings panel user interface.
 #: C/login-automatic.page:44
 msgid ""
-"A user with an <em>Administrator</em> account type can <link href=\"help:"
-"gnome-help/user-autologin\">enable <em>Automatic Login</em> from the "
-"<app>Settings</app></link> panel. You can also set up autologin manually in "
-"the <_:sys-1/> custom configuration file, as follows."
+"A user with an <em>Administrator</em> account type can <link "
+"href=\"help:gnome-help/user-autologin\">enable <em>Automatic Login</em> from "
+"the <app>Settings</app></link> panel. You can also set up autologin manually "
+"in the <_:sys-1/> custom configuration file, as follows."
 msgstr ""
 
 #. (itstool) path: item/p
@@ -3342,10 +3365,10 @@ msgstr "Gehitu ongietorriko logo bat saioa hasteko pantailari"
 #. (itstool) path: page/p
 #: C/login-logo.page:45
 msgid ""
-"The greeter logo on the login screen is controlled by the <sys>org.gnome."
-"login-screen.logo</sys> GSettings key. Since <sys>GDM</sys> uses its own "
-"<sys>dconf</sys> profile, you can add a greeter logo by changing the "
-"settings in that profile."
+"The greeter logo on the login screen is controlled by the "
+"<sys>org.gnome.login-screen.logo</sys> GSettings key. Since <sys>GDM</sys> "
+"uses its own <sys>dconf</sys> profile, you can add a greeter logo by "
+"changing the settings in that profile."
 msgstr ""
 
 #. (itstool) path: page/p
@@ -3798,9 +3821,9 @@ msgid ""
 "The default application (<app>Epiphany</app>) is defined by specifying its "
 "corresponding <file>.desktop</file> file (<file>epiphany.desktop</file>). "
 "The system default location for other applications’ <file>.desktop</file> "
-"files is <file>/usr/share/applications/</file>. Individual users’ <file>."
-"desktop</file> files can be stored in <file>~/.local/share/applications/</"
-"file>."
+"files is <file>/usr/share/applications/</file>. Individual users’ "
+"<file>.desktop</file> files can be stored in <file>~/.local/share/"
+"applications/</file>."
 msgstr ""
 
 #. (itstool) path: item/p
@@ -3816,8 +3839,8 @@ msgid ""
 "For these settings to function properly, ensure that both the "
 "<file>myapplication1.desktop</file> and <file>myapplication2.desktop</file> "
 "files are placed in the <file>/usr/share/applications/</file> directory. "
-"Individual users’ <file>.desktop</file> files can be stored in <file>~/."
-"local/share/applications/</file>."
+"Individual users’ <file>.desktop</file> files can be stored in "
+"<file>~/.local/share/applications/</file>."
 msgstr ""
 
 #. (itstool) path: info/desc
