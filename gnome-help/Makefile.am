@@ -301,6 +301,11 @@ HELP_FILES = \
 	mouse-touchpad-click.page \
 	mouse-wakeup.page \
 	mouse.page \
+	multitasking.page \
+	multitasking-app-switching.page \
+	multitasking-hot-corner.page \
+	multitasking-screen-edges.page \
+	multitasking-workspace-behavior.page \
 	music-cantplay-drm.page \
 	nautilus-behavior.page \
 	nautilus-bookmarks-edit.page \
