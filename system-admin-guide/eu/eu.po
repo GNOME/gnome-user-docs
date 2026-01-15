@@ -1,12 +1,12 @@
 # Basque translation for gnome-user-docs.
 # Copyright (C) 2023 gnome-user-docs's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-user-docs package.
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2023, 2024
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2023, 2024, 2026.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-user-docs master\n"
-"POT-Creation-Date: 2025-09-04 17:01+0000\n"
-"PO-Revision-Date: 2025-10-19 10:05+0000\n"
+"POT-Creation-Date: 2025-12-10 19:00+0000\n"
+"PO-Revision-Date:2026-01-15 10:05+0000\n"
 "Last-Translator: Asier Saratsua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "Language: eu\n"
@@ -652,7 +652,7 @@ msgid ""
 "<_:sys-2/> regenerates the <code>system-db</code> file and sends a "
 "notification to the system <sys>D-Bus</sys>, which in turn notifies all "
 "running applications to reread their settings."
-msgstr ""
+msgstr "Gako-fitxategi bat aldatzen denean, <cmd>dconf update</cmd> exekutatu behar da. Hori egiten denean, <_:sys-1/> komandoak sistemako datu-base bateko denbora-zigilua hari dagokion gako-fitxategiaren direktorioaren denbora-zigiluarekin konparatzen du. Gako-fitxategiaren direktorioaren denbora-zigilua berriagoa bada, <_:sys-2/> komandoak <code>system-db</code> fitxategia berritzen du eta jakinarazpen bat bidaltzen dio sistemaren <sys>D-Bus</sys> bitartekariari, eta horrek exekutatzen ari diren aplikazio guztiei jakinarazten die beren ezarpenak berriro irakurri ditzaten."
 
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:73
@@ -662,7 +662,7 @@ msgid ""
 "<code>org/gnome/desktop/background</code> references the schema "
 "<code>org.gnome.desktop.background</code>, which contains the key "
 "<code>picture-uri</code>."
-msgstr ""
+msgstr "Gako-fitxategiko talde-izenak <link href=\"https://developer.gnome.org/GSettings/\">GSettings eskema baten IDari</link> egiten dio erreferentzia. Adibidez, <code>org/gnome/desktop/background</code> izenak <code>org.gnome.desktop.background</code> eskemari egiten dio erreferentzia, horretan baitago <code>picture-uri</code> gakoa."
 
 #. (itstool) path: page/p
 #: C/dconf-keyfiles.page:79
@@ -705,7 +705,7 @@ msgid ""
 "directory contain a list of keys or subpaths to lock. Just as with the <link "
 "xref=\"dconf-keyfiles\">keyfiles</link>, you may add any number of files to "
 "this directory."
-msgstr ""
+msgstr "<_:sys-1/> gako edo azpibide bat <em>blokeatzeko</em>, <_:file-2/> azpidirektorio bat sortu behar da gako-fitxategiaren direktorioan. Direktorio horretako fitxategiek blokeatuko diren gakoen edo azpibideen zerrenda bat dute. <link xref=\"dconf-keyfiles\">Gako-fitxategietan</link> bezala, nahi duzun adin fitxategi sartu dezakezu direktorio horretan."
 
 #. (itstool) path: steps/title
 #: C/dconf-lockdown.page:48
@@ -873,7 +873,7 @@ msgid ""
 "You will usually want your <sys>dconf</sys> profile to consist of a <em>user "
 "database</em> and at least one system database. The profile must list one "
 "database per line."
-msgstr ""
+msgstr "Normalean <sys>dconf</sys> profila izango da <em>erabiltzaileen datu-base</em> bat eta gutxienez sistemaren datu-base bat. Profilak datu-base bat zerrendatu behar du lerro bakoitzeko."
 
 #. (itstool) path: page/p
 #: C/dconf-profiles.page:49
@@ -882,7 +882,7 @@ msgid ""
 "is usually <code>user-db:<input>user</input></code>. <input>user</input> is "
 "the name of the user database which can normally be found in <file>~/.config/"
 "dconf</file>."
-msgstr ""
+msgstr "Profil bateko lehen lerroa aldaketak idatziko diren datu-basea da. Normalean <code>user-db:<input>erabiltzailea</input></code> da. <input>erabiltzailea</input> <file>~/.config/dconf</file>. fitxategian dagoen datu-basearen izena da normalean."
 
 #. (itstool) path: page/p
 #: C/dconf-profiles.page:54
@@ -904,7 +904,7 @@ msgid ""
 "precedence over the settings in the <code>local</code> database file, and "
 "the <code>local</code> database file in turn takes precedence over the "
 "<code>site</code> database file."
-msgstr ""
+msgstr "Erabiltzaile bakarra eta sistemaren datu-base anitz konfiguratzen badira, posible da hobespenak geruzetan antolatzea. <code>erabiltzailea</code> datu-basearen ezarpenek lehentasuna dute <code>lokala</code> datu-baseko ezarpenen aurretik, eta <code>lokala</code> datu-baseak, berriz, lehenetasuna du <code>gunea</code> datu-basearen aurretik."
 
 #. (itstool) path: page/p
 #: C/dconf-profiles.page:77
@@ -912,7 +912,7 @@ msgid ""
 "However, the order of precedence for <link xref=\"dconf-lockdown\">locks</"
 "link> is reversed. Locks introduced in the <code>site</code> or <code>local</"
 "code> database files take priority over those present in <code>user</code>."
-msgstr ""
+msgstr "Hala ere, <link xref=\"dconf-lockdown\">blokeoen</link> lehentasun-ordena alderantzizkoa da. <code>gunea</code> edo <code>lokala</code> datu-baseetan sartutako blokeoek lehentasuna dute <code>erabiltzailea</code> datu-basearen aurretik."
 
 #. (itstool) path: note/p
 #: C/dconf-profiles.page:82
@@ -949,7 +949,7 @@ msgid ""
 "named profile and aborts if that fails. If the variable is not set, "
 "<sys>dconf</sys> attempts to open the profile named “user”. If that fails, "
 "it will fall back to an internal hard-wired configuration."
-msgstr ""
+msgstr "Ingurune-aldagaia ezarrita badago, <sys>dconf</sys> komandoak izendun profil bat irekitzen saiatuko da, eta abortatu egingo da huts egiten badu. Aldagaia ez badago ezarrita, <sys>dconf</sys> “erabiltzailea” izeneko profila irekitzen saiatuko da. Horrek huts egiten badu, barnean integratutako konfigurazio bat erabiliko du."
 
 #. (itstool) path: item/p
 #: C/dconf-snippets.xml:11 C/dconf-snippets.xml:27
@@ -993,7 +993,7 @@ msgstr "Erabiltzaileek saioa amaitu eta berriro hasi behar dute sistema-ezarpena
 msgid ""
 "All prose and instructions are up to par. Extra info needs to be provided on "
 "picture options, per comment below. --shaunm"
-msgstr ""
+msgstr "Prosa eta argibide guztiak egokiak dira. Informazio gehigarria eman behar da iruene aukeretan, ikus beheko iruzkina. --shaunm"
 
 #. (itstool) path: credit/name
 #: C/desktop-background.page:31 C/login-banner.page:32
@@ -1134,7 +1134,7 @@ msgid ""
 "their user database via <cmd>gsettings</cmd>. The following example command "
 "sets <app>Text Editor</app>, <app>Terminal</app> and <app>Files</app> "
 "(<sys>nautilus</sys>) as default favorites for a user."
-msgstr ""
+msgstr "Erabiltzaile bakoitzaren gogoko aplikazio lehenetsiak ezartzeko, aldatu bere erabiltzailearen datu-basea <cmd>gsettings</cmd> erabiliz. Hurrengo adibidean, <app>Testu-editorea</app>, <app>Terminala</app> eta  <app>Fitxategiak</app> (<sys>nautilus</sys>) aplikazioak ezartzen dira erabiltzailearen gogoko gisa."
 
 #. (itstool) path: listing/title
 #: C/desktop-favorite-applications.page:46
@@ -1367,7 +1367,7 @@ msgid ""
 "by the <sys>org.gnome.desktop.screensaver.picture-uri</sys> GSettings key. "
 "Since <sys>GDM</sys> uses its own <sys>dconf</sys> profile, you can set the "
 "default background by changing the settings in that profile."
-msgstr ""
+msgstr "<em>Blokeo-pantaila blindatua</em> sistema blokeatzen denean beherantz mugitzen den pantaila da. Blokeo-pantaila blindatuaren atzeko planoa <sys>org.gnome.desktop.screensaver.picture-uri</sys> GSettings gakoaren bidez kontrolatzen da. <sys>GDM</sys> aplikazioak bere <sys>dconf</sys> profil propioa erabiltzen duenez, profil horretako ezarpenak moldatuz ezarri dezakezu atzeko plano lehenetsia."
 
 #. (itstool) path: steps/title
 #: C/desktop-shield.page:45
@@ -1451,7 +1451,7 @@ msgid ""
 "To make extensions available to all users on the system, install them in the "
 "<file>/usr/share/gnome-shell/extensions</file> directory. Note that newly-"
 "installed machine-wide extensions are disabled by default."
-msgstr ""
+msgstr "Hedapenak sistemako erabiltzaile guztientzat eskuragarri egon daitezen, instalatu haiek <file>/usr/share/gnome-shell/extensions</file> direktorioan. Kontuan izan instalatu berri diren hedapenak desgaituta egoten direla modu lehenetsian."
 
 #. (itstool) path: page/p
 #: C/extensions-enable.page:33
@@ -1461,7 +1461,7 @@ msgid ""
 "way to enable additional extensions for users who have already logged in. "
 "This does not apply for existing users who have installed and enabled their "
 "own GNOME extensions."
-msgstr ""
+msgstr "<code>org.gnome.shell.enabled-extensions</code> gakoa ezarri behar da lehenespenez gaitutako hedapenak ezartzeko. Hala ere, momentuz ez dago modurik hedapen gehigarriak jadanik saioa hasita duten erabitlzaileentzat gaitzeko. Horrek ez die eragiten beren GNOME hedapen propioak instalatu dituzten erabiltzaileei."
 
 #. (itstool) path: steps/title
 #: C/extensions-enable.page:40
@@ -1513,7 +1513,7 @@ msgid ""
 "The <code>enabled-extensions</code> key specifies the enabled extensions "
 "using the extensions’ uuid (<code>myextension1@myname.example.com</code> and "
 "<code>myextension2@myname.example.com</code>)."
-msgstr ""
+msgstr "<code>enabled-extensions</code> gakoak gaituta dauden hedapenak zehazten ditu, horretarako hedapenen UUIDa erabiliz (<code>nirehedapena1@nireizena.adibidea.com</code> eta <code>nirehedapena2@nireizena.adibidea.com</code>)."
 
 #. (itstool) path: info/desc
 #: C/extensions-lockdown.page:21
@@ -1532,7 +1532,7 @@ msgid ""
 "extensions by locking down the <code>org.gnome.shell.enabled-extensions</"
 "code> and <code>org.gnome.shell.development-tools</code> keys. This allows "
 "you to provide a set of extensions that the user has to use."
-msgstr ""
+msgstr "GNOME Shell ingurunean erabiltzaileek hedapenak gaitu edo desgaitu ditzaten eragotzi dezakezu. Horretarako, blokeatu <code>org.gnome.shell.enabled-extensions</code> eta <code>org.gnome.shell.development-tools</code> gakoak. Horrela, erabiltzaileak erabiliko dituen hedapenak ezarri ditzakezu."
 
 #. (itstool) path: page/p
 #: C/extensions-lockdown.page:32
@@ -1540,7 +1540,7 @@ msgid ""
 "Locking down the <code>org.gnome.shell.development-tools</code> key ensures "
 "that the user cannot use GNOME Shell’s integrated debugger and inspector "
 "tool (<app>Looking Glass</app>) to disable any mandatory extensions."
-msgstr ""
+msgstr "<code>org.gnome.shell.development-tools</code> gakoa blokeatuz, erabiltzaileak ezin izango ditu GNOME Shell ingurunean integratutako araztailea eta ikuskatzailea (<app>Ikuskatzailea</app>) erabili nahitaezko hedapenak desgaitzeko."
 
 #. (itstool) path: steps/title
 #: C/extensions-lockdown.page:38
@@ -1560,6 +1560,12 @@ msgid ""
 "# Disable access to Looking Glass\n"
 "development-tools=false\n"
 msgstr ""
+"\n"
+"[org/gnome/shell]\n"
+"# Zerrendatu erabiltzailearentzat gaituta egongo diren hedapen guztiak\n"
+"enabled-extensions=['<input>myextension1@myname.example.com</input>', '<input>myextension2@myname.example.com</input>']\n"
+"# Desgaitu Ikuskatzailea aplikaziora sartzeko aukera\n"
+"development-tools=false\n"
 
 #. (itstool) path: item/p
 #: C/extensions-lockdown.page:66
@@ -1600,7 +1606,7 @@ msgid ""
 "usr/share/gnome-shell/extensions</file> that are not listed in the "
 "<code>org.gnome.shell.enabled-extensions</code> key will not be loaded by "
 "GNOME Shell, thus preventing the user from using them."
-msgstr ""
+msgstr "<code>org.gnome.shell.enabled-extensions</code> eta <code>org.gnome.shell.development-tools</code> gakoak blokeatu ondoren, GNOME Shell-ek ez du kargatuko <file>~/.local/share/gnome-shell/extensions</file> edo <file>/usr/share/gnome-shell/extensions</file> direktorioetan instalatuta dauden baina <code>org.gnome.shell.enabled-extensions</code> gakoan zerrendatuta ez dauden hedapenak, eta erabiltzaileak ezin izango ditu erabili."
 
 #. (itstool) path: info/desc
 #: C/extensions.page:20
@@ -1628,7 +1634,7 @@ msgid ""
 "installed. You can either install the extension per-user in <file>~/.local/"
 "share/gnome-shell/extensions/&lt;uuid&gt;</file>, or machine-wide in <file>/"
 "usr/share/gnome-shell/extensions/&lt;uuid&gt;</file>."
-msgstr ""
+msgstr "GNOME Shell hedapen bakoitzak identifikatzaile bakarra du, UUID deritzona. UUIDa hedapena instalatzeko erabiltzen den direktorioaren izenerako ere erabiltzen da. Hedapena erabiltzaile bakar baterako instalatu daiteke <file>~/.local/share/gnome-shell/extensions/&lt;uuid&gt;</file> direktorioan, edo guztientzako <file>/usr/share/gnome-shell/extensions/&lt;uuid&gt;</file> direktorioan."
 
 #. (itstool) path: page/p
 #: C/extensions.page:36
@@ -1671,7 +1677,7 @@ msgstr "Gehitu letra-tipo bat gehiago erabiltzaile guztientzat"
 msgid ""
 "You can install an extra font which will be available to users in "
 "applications that use <sys>fontconfig</sys> for font handling."
-msgstr ""
+msgstr "Letra-tipo gehigarriak instalatu daitezke, letra-tipoak maneiatzeko <sys>fontconfig</sys> erabiltzen duten aplikazioetako erabiltzaileek tipo horiek eskuragarri izan ditzaten."
 
 #. (itstool) path: steps/title
 #: C/fonts.page:47 C/fonts-user.page:43
@@ -1712,7 +1718,7 @@ msgid ""
 "create your own machine-wide configuration file in <file>/etc/fonts/"
 "local.conf</file> containing the directory you want to use. See the "
 "<cmd>fonts-conf</cmd>(5) man page for more information."
-msgstr ""
+msgstr "Letra-tipoak <file>/usr/local/share/fonts/</file> ez den direktorio batean ere instalatu daitezke, direktorio hori <file>/etc/fonts/fonts.conf</file> fitxategian zerrendatuta badago. Ez badago, ordenagailu osorako izango den konfigurazio-fitxategi bat sortu beharko duzu <file>/etc/fonts/local.conf</file> direktorioan, erabili nahi duzun direktorioarekin. Ikus <cmd>fonts-conf</cmd>(5) laguntza-orria informazio gehiagorako."
 
 #. (itstool) path: page/p
 #: C/fonts.page:68
@@ -1742,7 +1748,7 @@ msgstr "Gehitu letra-tipo bat gehiago erabiltzaile bakanentzat"
 msgid ""
 "You can install an extra font which will be available to a specific user on "
 "your system in applications that use <sys>fontconfig</sys> for font handling."
-msgstr ""
+msgstr "Letra-tipo gehigarriak instalatu daitezke erabiltzaile zehatz baterako, letra-tipoak maneiatzeko <sys>fontconfig</sys> erabiltzen duten aplikazioek tipo horiek eskuragarri izan ditzaten."
 
 #. (itstool) path: item/p
 #: C/fonts-user.page:45
@@ -1795,20 +1801,20 @@ msgid ""
 "Both <app>dconf-editor</app> and <cmd>gsettings</cmd> require a D-Bus "
 "session bus in order to make any changes. This is because the <sys>dconf</"
 "sys> daemon must be activated using D-Bus."
-msgstr ""
+msgstr "<app>dconf-editor</app> eta <cmd>gsettings</cmd> komandoek D-Bus saio-bus bat behar dute aldaketak egin ahal izateko. Hori gertatzen da <sys>dconf</sys> daemon-a D-Bus bidez aktibatu behar delako."
 
 #. (itstool) path: note/p
 #: C/gsettings-browse.page:50
 msgid ""
 "You can get the required session bus by running <cmd>gsettings</cmd> under "
 "the <sys>dbus-launch</sys> utility, like this:"
-msgstr ""
+msgstr "Beharrezkoa den bus-a eskuratzeko, exekutatu <sys>dbus-launch</sys> utilitatearen <cmd>gsettings</cmd> komandoa, honela:"
 
 #. (itstool) path: note/screen
 #: C/gsettings-browse.page:53
 #, no-wrap
 msgid "<output>$ </output><input>dbus-launch gsettings set org.gnome.desktop.background draw-background true</input>"
-msgstr ""
+msgstr "<output>$ </output><input>dbus-launch gsettings set org.gnome.desktop.background draw-background true</input>"
 
 #. (itstool) path: page/p
 #: C/gsettings-browse.page:56
@@ -1817,7 +1823,7 @@ msgid ""
 "the options available in an application. It shows the hierarchy of settings "
 "in a tree-view and also displays additional information about each setting, "
 "including the description, type and default value."
-msgstr ""
+msgstr "<app>dconf-editor</app> komandoaren kasuan, aplikazio baten aukerak ongi ezagutzen ez direnean erabiltzen da gehienetan. Ezarpenen hierarkia zuhaitz eran erakusten du eta ezarpen bakoitzari buruzko informazio gehigarria ere bistaratzen du, deskribapena, mota eta balio lehenetsia barne."
 
 #. (itstool) path: page/p
 #: C/gsettings-browse.page:61
@@ -1825,7 +1831,7 @@ msgid ""
 "<cmd>gsettings</cmd> is more powerful than <app>dconf-editor</app>. Bash "
 "completion is provided for <cmd>gsettings</cmd>, and you can write scripts "
 "that include <cmd>gsettings</cmd> commands for automated configuration."
-msgstr ""
+msgstr "<cmd>gsettings</cmd> <app>dconf-editor</app> baino boteretsuagoa da. <cmd>gsettings</cmd> aplikazioak bash osatzea eskaintzen du eta <cmd>gsettings</cmd> komandoak barne hartzen dituen scriptak idatzi daitezke konfigurazioa automatizatzeko."
 
 #. (itstool) path: page/p
 #: C/gsettings-browse.page:66
@@ -1867,7 +1873,7 @@ msgid ""
 "the Compose key, set the <sys>org.gnome.desktop.input-sources.xkb-options</"
 "sys> GSettings key. That way, the setting will be enabled by default for all "
 "users on your system."
-msgstr ""
+msgstr "Compose tekla gaitzeko eta teklatuko tekla bat compose tekla gisa konfiguratzeko, ezarri <sys>org.gnome.desktop.input-sources.xkb-options</sys> GSettings gakoa. Ezarpena sistemaren erabiltzaile guztientzako gaituko da modu lehenetsian."
 
 #. (itstool) path: steps/title
 #: C/keyboard-compose-key.page:29
@@ -1943,7 +1949,7 @@ msgid ""
 "helpful for users who normally use different keyboard layouts from the "
 "default and who want to have those keyboard layouts available at the login "
 "screen."
-msgstr ""
+msgstr "Sistemaren teklatu-diseinuaren ezarpenak aldatu daitezke ordezko diseinuak gehitzeko eta erabiltzaileek saio-hasierako pantailan haiek aukeratu ahal izan ditzaten. Lehenetsia ez den teklatu-diseinua erabiltzen duten pertsonentzat pentsatuta dago aukera hori. Saio-hasierako pantailan aukeratu ahal dute zein diseinu erabili."
 
 #. (itstool) path: steps/title
 #: C/keyboard-layout.page:46 C/keyboard-layout.page:79
@@ -1955,7 +1961,7 @@ msgstr "Aldatu sistemaren teklatu-diseinuaren ezarpenak"
 msgid ""
 "Find the codes of the desired language layouts in the <file>/usr/share/X11/"
 "xkb/rules/base.lst</file> file under the section named <sys>! layout</sys>."
-msgstr ""
+msgstr "Bilatu erabili nahi dituzun hizkuntza-diseinuak <sys>! layout</sys> izeneko sekzioaren <file>/usr/share/X11/xkb/rules/base.lst</file> zerrendan."
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:53
@@ -1976,7 +1982,7 @@ msgid ""
 "You can specify multiple layouts as a comma-separated list. For example, to "
 "set <sys>es</sys> as the default layout, and <sys>us</sys> as the secondary "
 "layout, run the following command:"
-msgstr ""
+msgstr "Diseinu bat baino gehiago zehaztu daiteke, komaz banandutako zerrenda gisa. Adibidez, <sys>es</sys> diseinu lehenetsi gisa eta <sys>us</sys> bigarren mailako diseinu gisa ezartzeko, exekutatu honako komandoa:"
 
 #. (itstool) path: item/screen
 #: C/keyboard-layout.page:60
@@ -1989,7 +1995,7 @@ msgstr "<output>$ </output><input>localectl set-x11-keymap es,us</input>"
 msgid ""
 "Log out to find that the defined layouts are available at the top bar on the "
 "login screen."
-msgstr ""
+msgstr "Amaitu saioa definitutako diseinuak saio-hasierako pantailaren goiko barran ageri direla egiaztatzeko."
 
 #. (itstool) path: page/p
 #: C/keyboard-layout.page:67
@@ -1997,7 +2003,7 @@ msgid ""
 "Note that you can also use the <cmd>localectl</cmd> tool to specify the "
 "machine-wide default keyboard model, variant, and options. See the "
 "<cmd>localectl</cmd>(1) man page for more information."
-msgstr ""
+msgstr "Kontuan izan <cmd>localectl</cmd> tresna ere erabili daitekeela sistema osorako teklatu-modelo, -aldaera eta -aukera lehenetsiak zehazteko. Ikus <cmd>localectl</cmd>(1) laguntza-orria informazio gehiagorako."
 
 #. (itstool) path: section/title
 #: C/keyboard-layout.page:72
@@ -2010,7 +2016,7 @@ msgid ""
 "On systems that do not provide the <cmd>localectl</cmd> tool, you can change "
 "the system keyboard layout settings by editing a configuration file in "
 "<file>/usr/share/X11/xorg.conf.d/</file>."
-msgstr ""
+msgstr "<cmd>localectl</cmd> tresna ez duten sistemetan, <file>/usr/share/X11/xorg.conf.d/</file> direktorioko konfigurazio-fitxategi bat editatu daiteke sistemaren teklatuaren diseinuaren ezarpena aldatzeko."
 
 #. (itstool) path: item/p
 #: C/keyboard-layout.page:86
@@ -2046,7 +2052,7 @@ msgstr ""
 msgid ""
 "Multiple layouts can be added as a comma separated list, as shown in the "
 "example for English (<sys>en</sys>) and French (<sys>fr</sys>) layouts."
-msgstr ""
+msgstr "Komaz banandutako zerrenda baten bidez diseinu anitz gehitu daitezke, adibidez ingelesa (<sys>en</sys>) eta frantsesa (<sys>fr</sys>)."
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
@@ -2082,7 +2088,7 @@ msgid ""
 "the following steps do not remove the desktop user's permissions to access a "
 "command line, but rather remove the ways that the desktop user could access "
 "the command line."
-msgstr ""
+msgstr "Zure mahaigaineko erabiltzailea komando-lerrora sartzea desgaitzeko, konfigurazio-aldaketak leku desberdinetan egin behar dira. Kontuan izan hurrengo urratsek ez dituztela mahaiganeko erabiltzaileak komando-lerrora sartzeko dituen baimenak kentzen, baizik eta komando-lerrora sartzeko dituen *bideak* kentzen dituela."
 
 #. (itstool) path: item/p
 #: C/lockdown-command-line.page:42
@@ -2114,7 +2120,7 @@ msgid ""
 "Remove <app>Terminal</app> and all other terminal applications from the "
 "<gui>Activities</gui> overview in GNOME Shell. You will also need to prevent "
 "the user from installing a new terminal application."
-msgstr ""
+msgstr "Kendu <app>Terminala</app> eta beste antzeko aplikazioak GNOME Shell.-en <gui>Jarduerak</gui> ikuspegitik. Erabiltzaileak terminaleko aplikazio gehiago instalatu ditzan ere eragotzi beharko duzu."
 
 #. (itstool) path: section/title
 #: C/lockdown-command-line.page:70
@@ -2644,7 +2650,7 @@ msgid ""
 "Delete any actions you do not need from within the <code>policyconfig</code> "
 "element and add the following lines to the <file>/etc/polkit-1/actions/"
 "org.freedesktop.udisks2.policy</file> file:"
-msgstr ""
+msgstr "Ezabatu beharrezkoak ez dituzun ekintzak <code>policyconfig</code> elementutik eta gehitu honako lerroak <file>/etc/polkit-1/actions/org.freedesktop.udisks2.policy</file> fitxategiari:"
 
 #. (itstool) path: listing/code
 #: C/lockdown-repartitioning.page:59
@@ -2689,7 +2695,7 @@ msgstr "Gorde aldaketak."
 msgid ""
 "When the user tries to change the disk settings, the following message is "
 "shown: <gui>Authentication is required to modify drive settings</gui>."
-msgstr ""
+msgstr "Erabiltzailea disko-ezarpenak aldatzen saiatzen denean, honako mezua agertzen da: <gui>Autentifikazioa behar da unitate-ezarpenak aldatzeko</gui>."
 
 #. (itstool) path: credit/name
 #: C/lockdown-single-app-mode.page:35
@@ -2718,7 +2724,7 @@ msgid ""
 "as an interactive kiosk. The administrator locks down some behavior to make "
 "the standard desktop more restrictive for users, letting them focus on "
 "selected features."
-msgstr ""
+msgstr "Aplikazio bakarreko moduan, GNOME Shell kiosko interaktibo gisa konfiguratzen da. Administratzaileak zenbait portaera blokeatzen ditu mahagain estandarra mugatuagoa izan dadin erabiltzaileentzat, eta horrela, hautatu diren eginbideetan soilik jarri dezaten arreta."
 
 #. (itstool) path: page/p
 #: C/lockdown-single-app-mode.page:52
@@ -4480,13 +4486,22 @@ msgid ""
 "# Set brightness after dimming\n"
 "idle-brightness=30\n"
 msgstr ""
+"\n"
+"# Zehaztu dconf bidea\n"
+"[org/gnome/settings-daemon/plugins/power]\n"
+"\n"
+"# Gaitu pantaila iluntzea\n"
+"idle-dim=true\n"
+"\n"
+"# Ezarri iluntzearen ondorengo distira\n"
+"idle-brightness=30\n"
 
 #. (itstool) path: item/p
 #: C/power-dim-screen.page:69
 msgid ""
 "Create the key file <file>/etc/dconf/db/local.d/00-session</file> to provide "
 "information for the <sys>local</sys> database."
-msgstr ""
+msgstr "Sortu <file>/etc/dconf/db/local.d/00-session</file> gako-fitxategia <sys>lokala</sys> datu-baserako informazioa emateko."
 
 #. (itstool) path: listing/title
 #: C/power-dim-screen.page:73
@@ -4504,6 +4519,12 @@ msgid ""
 "# The number of seconds of inactivity before the session is considered idle\n"
 "idle-delay=uint32 300\n"
 msgstr ""
+"\n"
+"# Zehaztu dconf bidea\n"
+"[org/gnome/desktop/session]\n"
+"\n"
+"# Jarduerarik gabeko segundo kopurua saioa inaktiboa dela esateko\n"
+"idle-delay=uint32 300\n"
 
 #. (itstool) path: item/p
 #: C/power-dim-screen.page:86
@@ -4561,7 +4582,7 @@ msgid ""
 "In a stock <app>GNOME</app> session, programs called daemons or services run "
 "on the system as background processes. You should find the following daemons "
 "running by default:"
-msgstr ""
+msgstr "<app>GNOME</app> saio arrunt batean, badaude daemon deritzen programak edo zerbitzuak, sistemaren atzeko planoan exekutatzen direnak. Modu lehenetsian, honako daemon-ak exekutatuko dira:"
 
 #. (itstool) path: item/title
 #: C/processes.page:42
@@ -4643,7 +4664,7 @@ msgid ""
 "<app>gnome-shell</app> provides the core user interface functionality for "
 "GNOME such as launching programs, browsing directories, viewing files and so "
 "on."
-msgstr ""
+msgstr "<app>gnome-shell</app> daemon-ak GNOMEren funtsezko funtzionaltasuna eskaintzen dio erabiltzaileari: aplikazioak abiaraztea, direktorioak arakatzea, fitxategiak ikustea eta abar."
 
 #. (itstool) path: item/title
 #: C/processes.page:91
@@ -4655,7 +4676,7 @@ msgstr "pulseaudio"
 msgid ""
 "<app>PulseAudio</app> is a sound server for Linux, POSIX and Windows systems "
 "that lets programs output audio via the <app>Pulseaudio</app> daemon."
-msgstr ""
+msgstr "<app>PulseAudio</app> Linux, POSIX eta Windows sistemetarako soinu-zerbitzari bat da, <app>Pulseaudio</app> daemon-aren bidez aplikazioei soinua sortzeko aukera ematen diena."
 
 #. (itstool) path: page/p
 #: C/processes.page:100
@@ -4731,7 +4752,7 @@ msgid ""
 "Create a <file>.desktop</file> file in <file>/etc/X11/sessions/<var>new-"
 "session</var>.desktop</file>. Make sure that the file specifies the "
 "following entries:"
-msgstr ""
+msgstr "Sortu <file>.desktop</file> fitxategi bat <file>/etc/X11/sessions/<var>new-session</var>.desktop</file> direktorioan. Ziurtatu fitxategiak honako sarrerak dituela:"
 
 #. (itstool) path: item/code
 #: C/session-custom.page:50
@@ -4757,7 +4778,7 @@ msgid ""
 "The <code>Exec</code> entry specifies the command, possibly with arguments, "
 "to execute. You can run the custom session with the <cmd>gnome-session --"
 "session=<var>new-session</var></cmd> command."
-msgstr ""
+msgstr "<code>Exec</code> sarrerak exekutatuko den komandoa zehazten du. batzuetan argumentuak ere baditu. Saio pertsonalizatua exekutatzeko, <cmd>gnome-session --session=<var>new-session</var></cmd> komandoa erabiliko duzu."
 
 #. (itstool) path: item/p
 #: C/session-custom.page:60
@@ -4772,7 +4793,7 @@ msgid ""
 "Create a custom session file in <file>/usr/share/gnome-session/sessions/"
 "<var>new-session</var>.session</file> where you can specify the name and "
 "required components for the session:"
-msgstr ""
+msgstr "Sortu saio pertsonalizatu baterako fitxategia <file>/usr/share/gnome-session/sessions/<var>new-session</var>.session</file> kokalekuan, non saioaren izena eta behar diren osagaiak zehaztu daitezkeen:"
 
 #. (itstool) path: item/code
 #: C/session-custom.page:68
@@ -4792,7 +4813,7 @@ msgid ""
 "Note that any item that you specify in <code>RequiredComponents</code> needs "
 "to have its corresponding <file>.desktop</file> file in <file>/usr/share/"
 "applications/</file>."
-msgstr ""
+msgstr "Kontuan izan <code>RequiredComponents</code> barruan zehaztutako elementuek beren <file>.desktop</file> fitxategia izan behar dutela <file>/usr/share/applications/</file> direktorioan."
 
 #. (itstool) path: page/p
 #: C/session-custom.page:77
@@ -4828,7 +4849,7 @@ msgstr ""
 msgid ""
 "Should this happen to you, follow these steps to change the <file>/etc/X11/"
 "Xsession.d/20x11-common_process-args</file> file:"
-msgstr ""
+msgstr "Hori gertatzen bazaizu, jarraitu honako urratsak <file>/etc/X11/Xsession.d/20x11-common_process-args</file> fitxategia aldatzeko:"
 
 #. (itstool) path: item/p
 #: C/session-custom.page:92
@@ -4861,14 +4882,14 @@ msgid ""
 "If you want to find more information about a problem in a session or want to "
 "fix it, consult the system log, which stores log data for your user session "
 "and applications."
-msgstr ""
+msgstr "Saio batean izandako arazoren bati buruzko informazio gehiago nahi baduzu edo arazoa konpondu nahi baduzu, begiratu sistemaren erregistroa, bertan gordetzen baitira zure erabiltzaile-saioaren eta aplikazioen erregistro-datuak."
 
 #. (itstool) path: page/p
 #: C/session-debug.page:41
 msgid ""
 "The <file>~/.xsession-errors</file> X session log file has been deprecated "
 "and is no longer used."
-msgstr ""
+msgstr "<file>~/.xsession-errors</file> X saioaren erregistro-fitxategia zaharkituta geratu da eta jadanik ez da erabiltzen."
 
 #. (itstool) path: section/title
 #: C/session-debug.page:45
@@ -4881,7 +4902,7 @@ msgid ""
 "On systemd-based systems, you can find the session log data in the "
 "<app>systemd</app> journal, which stores the data in a binary format. To "
 "view the logs, use the <cmd>journalctl</cmd> command."
-msgstr ""
+msgstr "systemd-n oinarritutako sistemetan, saioaren erregistro-datuak <app>systemd</app> egunkarian daude. Datuak formatu bitarrean gordetzen dira. Erregistroak ikusteko, erabili <cmd>journalctl</cmd> komandoa."
 
 #. (itstool) path: steps/title
 #: C/session-debug.page:51
@@ -4907,7 +4928,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/session-debug.page:56
 msgid "View the journal logs for the user ID determined above:"
-msgstr ""
+msgstr "Egunkariko erregistroan, begiratu goian zehaztutako erabiltzailearen IDa:"
 
 #. (itstool) path: item/screen
 #: C/session-debug.page:57
@@ -4919,7 +4940,7 @@ msgstr "<output>$ </output><input>journalctl _UID=1000</input>"
 #: C/session-debug.page:61
 msgid ""
 "For more information on the systemd journal, see the <_:link-1/> man page."
-msgstr ""
+msgstr "systemd egunkariari buruzko informazio gehiagorako, ikus <_:link-1/> laguntza-orria."
 
 #. (itstool) path: info/desc
 #: C/session-user.page:32
@@ -4937,14 +4958,14 @@ msgid ""
 "The default session is retrieved from a program called <app>AccountsService</"
 "app>. <app>AccountsService</app> stores this information in the <file>/var/"
 "lib/AccountsService/users/</file> directory."
-msgstr ""
+msgstr "Saio lehenetsia <app>AccountsService</app> deritzon aplikazio batetik erauzten da. <app>AccountsService</app> aplikazioak <file>/var/lib/AccountsService/users/</file> direktorioan gordetzen du informazioa."
 
 #. (itstool) path: note/p
 #: C/session-user.page:50
 msgid ""
 "In GNOME 2, the <file>.dmrc</file> file in the user home directory was used "
 "to create default sessions. This <file>.dmrc</file> file is no longer used."
-msgstr ""
+msgstr "GNOME 2 bertsioan, erabiltzailearen direktorio nagusiko <file>.dmrc</file> fitxategia erabiltzen da saio lehenetsiak sortzeko. <file>.dmrc</file> fitxategi hori ez da jadanik erabiltzen."
 
 #. (itstool) path: steps/title
 #: C/session-user.page:55
@@ -4965,7 +4986,7 @@ msgid ""
 "find <file>.desktop</file> files for each of the available sessions. Consult "
 "the contents of the <file>.desktop</file> files to determine the session you "
 "want to use."
-msgstr ""
+msgstr "Joan <file>/usr/share/xsessions</file> direktoriora, eta bertan, erabilgarri dagoen saio bakoitzerako <file>.desktop</file> fitxategiak daude. Kontsultatu <file>.desktop</file> fitxategien edukiak erabili nahi duzun saioa zehazteko."
 
 #. (itstool) path: item/p
 #: C/session-user.page:72
@@ -4973,7 +4994,7 @@ msgid ""
 "To specify a default session for a user, update the user’s <sys>account "
 "service</sys> in the <file>/var/lib/AccountsService/users/<var>username</"
 "var></file> file:"
-msgstr ""
+msgstr "Erabiltzaile batentzako saio lehenetsi bat zehazteko, eguneratu erabiltzailearen <sys>kontu-zerbitzua</sys> <file>/var/lib/AccountsService/users/<var>erabiltzaile-izena</var></file> fitxategian:"
 
 #. (itstool) path: item/code
 #: C/session-user.page:78
@@ -4993,7 +5014,7 @@ msgid ""
 "In this sample, <link href=\"help:gnome-help/gnome-classic\">GNOME Classic</"
 "link> has been set as the default session, using the <file>/usr/share/"
 "xsessions/gnome-classic.desktop</file> file."
-msgstr ""
+msgstr "Adibide honetan, <link href=\"help:gnome-help/gnome-classic\">GNOME Klasikoa</link> ezarri da saio lehenetsi gida, <file>/usr/share/xsessions/gnome-classic.desktop</file> fitxategia erabiliz."
 
 #. (itstool) path: page/p
 #: C/session-user.page:90
@@ -5001,7 +5022,7 @@ msgid ""
 "After specifying a default session for the user, that session will be used "
 "the next time the user logs in, unless the user selects a different session "
 "from the login screen."
-msgstr ""
+msgstr "Erabiltzailearen saio lehenetsia zehaztu ondoren, erabiltzaileak saioa hasten duenean saio hori erabiliko da, erabiltzaileak berak ez badu beste saio bat hautatzen saio-hasierako pantailan."
 
 #. (itstool) path: info/desc
 #: C/setup.page:11
