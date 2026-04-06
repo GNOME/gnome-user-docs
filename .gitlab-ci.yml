@@ -11,7 +11,7 @@ stages:
   - "release"
 
 variables:
-  TARBALL_ARTIFACT_PATH: "${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.xz"
+  TARBALL_ARTIFACT_PATH: "_build/meson-dist/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.xz"
 
 codespell:
   stage: "test"
@@ -25,12 +25,12 @@ build-release-tarball:
   stage: "build"
   image: fedora:latest
   before_script:
-    - dnf install -y git autoconf automake make gawk gettext itstool libxslt yelp-tools
+    - dnf install -y git meson ninja-build gettext itstool libxslt yelp-tools
   script:
-    - ./check.sh
-    - ./autogen.sh ITSTOOL="/usr/bin/itstool --strict"
-    - make
-    - make distcheck
+    - meson setup --prefix /usr --libdir lib64 _build
+    - meson compile -C _build
+    - meson test -C _build
+    - meson dist -C _build
   artifacts:
     name: "${CI_JOB_NAME}-${CI_COMMIT_REF_NAME}"
     when: "always"
