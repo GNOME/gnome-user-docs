@@ -62,3 +62,53 @@ gnome.yelp(
   'system-admin-guide',
   sources: sysadmin_help_files,
 )
+
+if get_option('tests')
+  foreach h: sysadmin_help_files
+    test('sysadmin-help-schema-check-@0@'.format(h),
+      xmllint,
+      args: [
+        '--noout',
+        '--schematron', meson.current_source_dir() / 'C' / 'system-admin-guide.sct',
+        meson.current_source_dir() / 'C' / h,
+      ],
+      suite: ['lint', 'schema'],
+    )
+  endforeach
+
+  test('sysadmin-help-ids-check',
+    yelp_check,
+    args: [
+      'ids',
+      meson.current_source_dir() / 'C',
+    ],
+    suite: ['lint', 'yelp'],
+  )
+
+  test('sysadmin-help-links-check',
+    yelp_check,
+    args: [
+      'links',
+      meson.current_source_dir() / 'C',
+    ],
+    suite: ['lint', 'yelp'],
+  )
+
+  test('sysadmin-help-orphans-check',
+    yelp_check,
+    args: [
+      'orphans',
+      meson.current_source_dir() / 'C',
+    ],
+    suite: ['lint', 'yelp'],
+  )
+
+  test('sysadmin-help-validate-check',
+    yelp_check,
+    args: [
+      'validate',
+      meson.current_source_dir() / 'C',
+    ],
+    suite: ['lint', 'yelp'],
+  )
+endif

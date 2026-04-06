@@ -470,3 +470,53 @@ gnome.yelp(
   sources: gnome_help_files,
   media: gnome_help_media,
 )
+
+if get_option('tests')
+  foreach h: gnome_help_files
+    test('gnome-help-schema-check-@0@'.format(h),
+      xmllint,
+      args: [
+        '--noout',
+        '--schematron', meson.current_source_dir() / 'C' / 'gnome-help.sct',
+        meson.current_source_dir() / 'C' / h,
+      ],
+      suite: ['lint', 'schema'],
+    )
+  endforeach
+
+  test('gnome-help-ids-check',
+    yelp_check,
+    args: [
+      'ids',
+      meson.current_source_dir() / 'C',
+    ],
+    suite: ['lint', 'yelp'],
+  )
+
+  test('gnome-help-links-check',
+    yelp_check,
+    args: [
+      'links',
+      meson.current_source_dir() / 'C',
+    ],
+    suite: ['lint', 'yelp'],
+  )
+
+  test('gnome-help-orphans-check',
+    yelp_check,
+    args: [
+      'orphans',
+      meson.current_source_dir() / 'C',
+    ],
+    suite: ['lint', 'yelp'],
+  )
+
+  test('gnome-help-validate-check',
+    yelp_check,
+    args: [
+      'validate',
+      meson.current_source_dir() / 'C',
+    ],
+    suite: ['lint', 'yelp'],
+  )
+endif
