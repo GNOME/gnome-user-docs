@@ -20,9 +20,10 @@ The issue tracker is meant to be used for actionable issues only.
 ## Prerequisites
 
 In order to contribute to the GNOME user documentation project, you should
-follows the same rules as with every other GNOME project, as presented on
+follow the same rules as with every other GNOME project, as presented on
 the [GNOME Handbook](https://handbook.gnome.org):
 
+- [Code of Conduct](https://conduct.gnome.org/)
 - [Issue tracking](https://handbook.gnome.org/issues.html)
 - [Development](https://handbook.gnome.org/development.html)
 
