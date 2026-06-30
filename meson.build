@@ -1,5 +1,5 @@
 project('gnome-user-docs',
-  version: '51.alpha',
+  version: '51.beta',
   meson_version: '>= 1.7',
 )
 
