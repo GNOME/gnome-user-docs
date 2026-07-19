@@ -88,6 +88,7 @@ HELP_MEDIA = \
 	figures/rotation-allowed-symbolic.svg \
 	figures/rotation-locked-symbolic.svg \
 	figures/screenshot-tool.png \
+	figures/search-results-order.png \
 	figures/shell-activities-dash.png \
 	figures/shell-appts-classic.png \
 	figures/shell-appts.png \
@@ -410,6 +411,11 @@ HELP_FILES = \
 	quick-settings.page \
 	remote-login.page \
 	screen-shot-record.page \
+	search.page \
+	search-all-app.page \
+	search-filesystem-locations.page \
+	search-order.page \
+	search-specific-app.page \
 	session-fingerprint.page \
 	session-formats.page \
 	session-language.page \
