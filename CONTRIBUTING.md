@@ -12,10 +12,11 @@ managing the project.
 Please, do not use the project's issue tracker for support questions. If you
 have questions on the user documentation, you can use:
 
- - the [Docs room on Matrix](https://matrix.to/#/#docs:gnome.org)
- - the [`documentation` tag on GNOME's Discourse](https://discourse.gnome.org/tags/documentation)
+ - [Docs room on Matrix](https://matrix.to/#/#docs:gnome.org)
+ - [`documentation` tag on GNOME's Discourse](https://discourse.gnome.org/tags/documentation)
 
-The issue tracker is meant to be used for actionable issues only.
+The [issue tracker](https://gitlab.gnome.org/GNOME/gnome-user-docs/-/work_items)
+is meant to be used for actionable issues only.
 
 ## Prerequisites
 
@@ -27,15 +28,36 @@ the [GNOME Handbook](https://handbook.gnome.org):
 - [Issue tracking](https://handbook.gnome.org/issues.html)
 - [Development](https://handbook.gnome.org/development.html)
 
-The user documentation is written using the
-[Mallard](https://web.archive.org/web/20250117135803/http://projectmallard.org/) format.
+## Documentation format & tools
 
-## Directory Structure
+The gnome-user-docs guides are written using the
+[Mallard](https://teams.pages.gitlab.gnome.org/documentation/projectmallard.org/index.html)
+format.
+
+It can be viewed using the [yelp](https://teams.pages.gitlab.gnome.org/documentation/yelp.io/index.html)
+help viewer:
+
+```bash
+yelp --editor-mode gnome-help/C/index.page
+yelp --editor-mode system-admin-guide/C/index.page
+```
+
+Use [yelp-tools](https://teams.pages.gitlab.gnome.org/documentation/yelp.io/tools/index.html)
+to create, manage, check and build Mallard documentation.
+
+## Directory structure
 
 Please respect the directory structure:
 
-- `gnome-user-docs/<docname>/<locale>/<docname>.xml`
-- `gnome-user-docs/<docname>/<locale>/figures/`
+- `<guidename>/<locale>/<pagename>.page`
+- `<guidename>/<locale>/figures/`
+
+`C` is the default locale with the US English content.
 
 In some cases, it may make sense to nest things one level deeper. However,
 do not nest things less deep.
+
+## Translations
+
+You can contribute translations by submitting them through the
+[Damned Lies translation platform](https://l10n.gnome.org/module/gnome-user-docs/).
