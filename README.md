@@ -25,10 +25,10 @@ contribute to the gnome-user-docs guides.
 
 If you find problems in the documentation, please report issues:
 
-- https://gitlab.gnome.org/GNOME/gnome-user-docs/issues/
+- [https://gitlab.gnome.org/GNOME/gnome-user-docs/issues/](https://gitlab.gnome.org/GNOME/gnome-user-docs/issues/)
 
 ## Discussion
 
 If you have questions related to gnome-user-docs, you can join the
-[Docs room on Matrix](https://matrix.to/#/#docs:gnome.org). 
-Alternatively, you can ask on [GNOME's Discourse instance](https://discourse.gnome.org/tag/documentation).
+[Docs room on Matrix](https://matrix.to/#/#docs:gnome.org).
+Alternatively, you can ask on the [GNOME Discourse instance](https://discourse.gnome.org/tag/documentation).
