@@ -2,8 +2,9 @@
 set -euo pipefail
 
 BASE_URL="https://teams.pages.gitlab.gnome.org/documentation/projectmallard.org"
-MALLARD_DIR="$HOME/.local/share/xml/mallard"
-CATALOG_DIR="$HOME/.local/share/xml/catalogs"
+XDG_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}"
+MALLARD_DIR="$XDG_DATA_DIR/xml/mallard"
+CATALOG_DIR="$XDG_DATA_DIR/xml/catalogs"
 CATALOG_FILE="$CATALOG_DIR/user-catalog.xml"
 
 ADD_BASHRC=false
@@ -96,7 +97,7 @@ for entry in "${TO_INSTALL[@]}"; do
 done
 
 if [ "$ADD_BASHRC" = true ]; then
-  echo "Environment export will be added to ~/.bashrc"
+  echo "Environment variable export will be added to ~/.bashrc"
 fi
 echo "=========================="
 
@@ -157,14 +158,14 @@ if [ "$ADD_BASHRC" = true ]; then
     {
       echo ""
       echo "# Export local XML catalog path for libxml2 / xmllint / LemMinX"
-      echo 'export XML_CATALOG_FILES="$HOME/.local/share/xml/catalogs/user-catalog.xml"'
+      echo 'export XML_CATALOG_FILES="${XDG_DATA_HOME:-$HOME/.local/share}/xml/catalogs/user-catalog.xml"'
     } >> "$HOME/.bashrc"
   fi
 fi
 
 echo "Installation complete!"
 
-# Print environment notice
+# Print environment variable notice
 if [ "$ADD_BASHRC" = true ]; then
   echo ""
   echo "Notice: Your profile settings have been updated. To reload them, run:"
