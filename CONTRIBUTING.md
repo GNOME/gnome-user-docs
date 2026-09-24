@@ -45,24 +45,33 @@ yelp --editor-mode system-admin-guide/C/index.page
 Use [yelp-tools](https://teams.pages.gitlab.gnome.org/documentation/yelp.io/tools/index.html)
 to create, manage, check and build Mallard documentation.
 
+For more information, see the following Documentation Team's resources:
+
+- [Documentation Team: Contributing](https://gitlab.gnome.org/Teams/documentation/general/-/wikis/home/Contributing)
+- [Documentation Team: Writing in Mallard](https://gitlab.gnome.org/Teams/documentation/general/-/wikis/home/Contributing/Writing-in-Mallard)
+
 ### Validation
 
-To validate Mallard XML pages, make sure you have the RELAX NG schemas for
-Mallard installed on your system. Then run `yelp-check validate`, for example:
+Before submitting your changes to Mallard XML pages, make sure you validate
+them. To do so, you need to have the RELAX NG schemas for Mallard installed on
+your system. For validation, run `yelp-check validate`, for example:
 
 ```bash
 yelp-check validate gnome-help/C/*.page
 ```
 
-To download and register all available Mallard schemas for your local user, you
-can use the helper script:
+Note that `yelp-check` reads a guide-specific configuration in `gnome-help/C/.yelp-tools.cfg`
+before validating pages in `gnome-help/C/`.
+
+To download and register all available Mallard schemas for your local user in
+case you do not have them already installed, you can use the helper script:
 
 ```bash
 ./build-aux/install-mallard-schemas.sh
 ```
 
-To download and register a specific schema, for example, `ui-1.0.rng` which may
-not be packaged in many distributions, run:
+To download and register a specific schema which may not be packaged for your
+distribution, for example, `ui-1.0.rng`, run:
 
 ```bash
 ./build-aux/install-mallard-schemas.sh ui/1.0
